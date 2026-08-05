@@ -202,6 +202,8 @@ a.stat:hover { text-decoration: none; transform: translateY(-2px); box-shadow: v
 .res-list li { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .res-list li:last-child { border-bottom: none; }
 .res-list a { font-weight: 600; word-break: break-word; }
+.res-dead { font-weight: 600; }
+.res-note { color: var(--muted); font-weight: 400; font-size: .9em; }
 .guest-list li { padding: 6px 0; font-weight: 600; }
 .ext { color: var(--muted); font-weight: 400; }
 
