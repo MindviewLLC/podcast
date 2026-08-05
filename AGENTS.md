@@ -26,6 +26,13 @@ sources below and (re)write the HTML/CSS/images. Keep any generator you write
   Manual overrides for titles without "with": #117 Bill Venners & Dianne Marsh,
   #105 Nathan Sobo.
 - **Host bios:** mindviewllc.com/about (Bruce), jamesward.com (James).
+- **Social accounts (fixed, keep on every regen):**
+  - Show Bluesky: `https://bsky.app/profile/happypathprogramming.com` and show
+    X/Twitter: `https://x.com/happypathprog` → footer "Community" column.
+    `@happypathprog` is also the `twitter:site` meta tag on every page.
+  - Bruce: `https://bsky.app/profile/bruceeckel.bsky.social`, `https://x.com/BruceEckel`
+  - James: `https://bsky.app/profile/jamesward.com`, `https://x.com/JamesWard`
+  - Both hosts' handles go on their home-page host cards as chips.
 - **Topics:** tag each episode by matching a curated keyword→topic map against
   its title+description; each topic gets a page listing its episodes.
 
