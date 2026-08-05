@@ -45,11 +45,28 @@ sources below and (re)write the HTML/CSS/images. Keep any generator you write
   resource/repo links or you get wrong faces/org logos). Resolve via
   `github.com/<user>.png` or `unavatar.io/{twitter|linkedin}/<user>` or
   `unavatar.io/<domain>`. No photo → deterministic gradient initials avatar.
-- **Share card:** `images/og-default.jpg` — a fixed 1200×630 branded card (ink
-  background + green glow, logo, wordmark, tagline, domain). It is the
-  OpenGraph/Twitter image for every page that has no real artwork of its own.
-  Treat it as a **stable asset**: keep the existing file rather than
-  re-rendering it, so daily regens don't churn a new binary.
+- **Share cards (`images/og/…`) — WRITE ONCE, NEVER RE-RENDER.** Every episode
+  and guest page has its own 1200×630 OpenGraph card so a shared link shows that
+  page's own title/name, not generic show branding:
+  - `images/og-default.jpg` — the branded fallback (ink background + green glow,
+    logo, wordmark, tagline, domain) used by the home, list and topic pages.
+  - `images/og/episodes/<slug>.jpg` — `EPISODE #NNN` kicker in accent yellow,
+    the short display title (the `.ep-card-title` form, guest stripped) auto-fit
+    to at most 4 lines, a `with <guests>` line in mint, `date · duration` in
+    mono, and the domain. Right side: the episode's YouTube thumbnail in a
+    rounded panel, else the logo.
+  - `images/og/guests/<slug>.jpg` — `PODCAST GUEST` kicker, the name auto-fit to
+    at most 3 lines, the line "on the Happy Path Programming podcast", the
+    domain, and a circular crop of the guest photo (or the same deterministic
+    gradient-initials avatar the site uses when there is no photo).
+  - All inputs are **immutable facts** — episode number, title, guests, air date,
+    duration, guest name — so a card never goes stale. Deliberately keep counts
+    and other changing values OFF the images; they live in `twitter:label/data`,
+    which is rewritten on every regen for free. On a regen, render a card only
+    when the file is MISSING (i.e. for a new episode or guest) and leave every
+    existing file byte-for-byte alone. The one time to delete a card and let it
+    re-render is when an episode's YouTube thumbnail first appears after the
+    audio-only card was made.
 - **Episodes → `images/episodes/<slug>.jpg`:** from the YouTube channel
   (`UCJXWVm6uAKh_Nd1mqkKLW5A`). Spotify has NO per-episode art (show cover only).
   YouTube uses `lockupViewModel` (contentId+title); paginate via
@@ -68,11 +85,11 @@ to the feed, then `og:type` / `og:site_name` / `og:locale` / `og:title` /
 `og:description` / `og:url` / `og:image` (+ `:type` `:width` `:height` `:alt`),
 then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
 `:description` / `:image` / `:image:alt`, then `author` and `theme-color`.
-- **Image + card type.** Real 16:9 episode thumbnail → that image (1280×720) with
-  `summary_large_image`. Guest with a real photo → the square photo with
-  `summary` (a face reads better small than a letterboxed banner). Everything
-  else → `images/og-default.jpg` (1200×630) with `summary_large_image`. Never
-  point a `summary_large_image` at the square logo.
+- **Image + card type.** Always `summary_large_image` at 1200×630: episode pages
+  point at `images/og/episodes/<slug>.jpg`, guest pages at
+  `images/og/guests/<slug>.jpg`, and the home/list/topic pages at
+  `images/og-default.jpg`. Never point a `summary_large_image` at the square
+  logo or at a raw guest photo.
 - **Episode pages** additionally: `og:type=article`, `article:published_time`
   (ISO-8601 from the RSS `pubDate`), `article:section=Technology`, one
   `article:tag` per topic, one `article:author` per host, `og:audio` +

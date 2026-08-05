@@ -32,7 +32,8 @@ Professional, yet fun podcast site for Happy Path Programming.
   share row — Bluesky, X, LinkedIn, Hacker News, Reddit, "Copy link", plus a
   native `navigator.share` button that only appears where supported. The share
   row is a `.share-card` band above the footer on every page except episode
-  pages, where it is a "Share this episode" panel in the sidebar. Share cards
-  use the branded 1200×630 `images/og-default.jpg` unless the page has real
-  artwork of its own (episode thumbnail, guest photo).
+  pages, where it is a "Share this episode" panel in the sidebar. Every episode
+  and guest page has its own 1200×630 share card under `images/og/` carrying
+  that episode's title or that guest's name and face; the home, list and topic
+  pages use the branded `images/og-default.jpg`.
 - In episode cards, if we have a chip for the guest, we can omit the "with <guest>" in the displayed title
