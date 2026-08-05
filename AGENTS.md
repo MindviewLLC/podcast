@@ -27,8 +27,9 @@ sources below and (re)write the HTML/CSS/images. Keep any generator you write
   #105 Nathan Sobo.
 - **Host bios:** mindviewllc.com/about (Bruce), jamesward.com (James).
 - **Social accounts (fixed, keep on every regen):**
-  - Show Bluesky: `https://bsky.app/profile/happypathprogramming.com` → footer
-    "Community" column. The show has NO X/Twitter account — don't invent one.
+  - Show Bluesky: `https://bsky.app/profile/happypathprogramming.com` and show
+    X/Twitter: `https://x.com/happypathprog` → footer "Community" column.
+    `@happypathprog` is also the `twitter:site` meta tag on every page.
   - Bruce: `https://bsky.app/profile/bruceeckel.bsky.social`, `https://x.com/BruceEckel`
   - James: `https://bsky.app/profile/jamesward.com`, `https://x.com/JamesWard`
   - Both hosts' handles go on their home-page host cards as chips.
