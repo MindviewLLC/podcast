@@ -14,8 +14,9 @@ python3 .scripts/update.py --refresh
 ```
 
 which draws share cards for anything new, rewrites every page's
-OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml`, and verifies
-the result. **You are responsible for the HTML pages; the tools own everything
+OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml`, verifies the
+result, and requests every outbound link to see that it still resolves.
+**You are responsible for the HTML pages; the tools own everything
 in "Social sharing" below, plus `sitemap.xml`.** Don't hand-write those — write
 the pages, then run the pass. If the tools need to change, change them there
 (they are committed, and shared modules `brand.py`/`hpp.py` keep them in
@@ -30,14 +31,20 @@ secrets in `.scripts/` — it is served publicly like everything else.
 - `topics/index.html` (tag cloud) + `topics/<slug>.html` (episodes per topic)
 - `images/`, `sitemap.xml` (written by `.scripts/make_sitemap.py`), `robots.txt`, `CNAME`
 - No `hosts.html` (hosts live on index). Nav = Episodes / Guests / Topics (the logo links home).
-- `.scripts/` is tooling, not site content — the only directory at the root that
-  isn't served as part of the site.
+- `.scripts/` is tooling and `.claude/` is agent config — the two directories at
+  the root that aren't served as part of the site.
 
 ## Data sources
 - **Episodes (canonical):** RSS `https://anchor.fm/s/2ed56aa0/podcast/rss`
   (120+ items). Per item: title (`#NNN …`), description(HTML), `<link>` (Spotify),
   pubDate, `enclosure` mp3, `itunes:duration`, `itunes:episode`. Discord link +
   resource links are parsed out of the description.
+  **The descriptions run text into URLs** — `"…to Python.https://github.com/suned/
+  statelessPrior attempt at…"` is one URL followed by the words "Prior attempt
+  at", not a repo called `statelessPrior`. Same for a URL that swallows the next
+  bullet's `-`, a stray `\`, a word-joiner (U+2060) or the word `Discuss`. When a
+  URL abuts text, split it where the real URL ends and put the leftover words
+  back into the prose; `.scripts/check_links.py` catches what you miss.
 - **Guests:** derived from the `"… with <Name>"` pattern in episode titles
   (use the LAST " with "; split on `&`/`,`/` and `; a name inside parens like
   "Kyo (Flavio Brasil)" → the person). Reject non-names (digits/`;`/stopwords).
@@ -139,12 +146,25 @@ then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
   band just before `</main>`.
 
 ## Verify before finishing
-- `python3 .scripts/verify.py` must pass (it is the last step of `update.py`).
+- `python3 .scripts/verify.py` must pass (it is a step of `update.py`).
   It checks that every page parses, that there are **0 absolute-internal links**
   (must be relative — the absolute prod URLs in `canonical`/`og:`/JSON-LD/share
-  links are intentional), 0 broken links, that referenced images exist, and that
-  every page has a valid JSON-LD block, a share row, the full `og:`/`twitter:`
-  set, and an `og:image` that is its own card at exactly 1200×630.
+  links are intentional), 0 broken internal links, that referenced images exist,
+  and that every page has a valid JSON-LD block, a share row, the full
+  `og:`/`twitter:` set, and an `og:image` that is its own card at 1200×630.
+- `python3 .scripts/check_links.py` must pass — that is the *outbound* half, and
+  it is the last step of `update.py`. It requests every external link on the
+  site (cached for 30 days, so a routine run only checks new ones) and fails on
+  a link that is definitively wrong. Whenever you touch a page's links, run
+  `python3 .scripts/check_links.py --changed` before you finish; a `Stop` hook in
+  `.claude/settings.json` runs exactly that and will hand you the report if you
+  forget. Fix what it reports: nearly always the URL ran into the text beside it
+  in the RSS description. If the target is genuinely gone from the web, drop the
+  `<a>` and keep its text as
+  `<span class="res-dead">…</span> <span class="res-note">(link no longer
+  online)</span>` rather than shipping a 404 or deleting the reference.
+  Links it calls **unverified** (LinkedIn, Medium, X and friends refuse robots)
+  are not failures — leave them alone.
 - Then serve the parent dir and confirm assets 200 under
   `/happypathprogramming/…` — that path prefix is the one thing the checker
   can't see.

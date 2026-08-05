@@ -45,6 +45,35 @@ individual tools, in the order `update.py` runs them:
 | `social.py` | Rewrites each page's `canonical`…`theme-color` head block, its JSON-LD, its share row and the inline share script. | Yes, idempotent — it replaces its own output. |
 | `make_sitemap.py` | Rebuilds `sitemap.xml` from the pages on disk, with `<lastmod>` from the feed. | Yes. |
 | `verify.py` | Parses every page and checks metadata, JSON-LD, links, assets and card sizes. Exits non-zero on any problem. | Yes, read-only. |
+| `check_links.py` | Requests every **outbound** link and reports the dead ones. Exits non-zero on a definite 404. | Yes. Only re-requests links it has not seen in 30 days. |
+
+`verify.py` and `check_links.py` split the two halves of "the links work":
+`verify.py` proves the *internal* ones are relative and point at files that
+exist; `check_links.py` proves the *outbound* ones still answer. Outbound links
+come out of the RSS descriptions, where text runs into a URL often enough that a
+link is usually wrong the day it is written rather than years later
+(`…to Python.https://github.com/suned/statelessPrior attempt at…`), so:
+
+```sh
+python3 .scripts/check_links.py             # everything (cached, ~40s cold)
+python3 .scripts/check_links.py --changed   # only pages you have edited
+python3 .scripts/check_links.py --all       # ignore the cache, recheck all
+```
+
+The `--changed` form is what the `Stop` hook in `.claude/settings.json` runs, so
+an AI session that edits a page gets told about a bad link before it finishes.
+Results live in `.scripts/.cache/links.json` (gitignored); successes are trusted
+for 30 days and failures are never cached. Three verdicts:
+
+- **broken** — a 404/410, a hostname that cannot exist (`ollama.com\`), an
+  invisible character swept into the URL, a GitHub repo `git ls-remote` cannot
+  find, or a YouTube/Spotify ID of the wrong length (those two hosts answer a
+  mangled ID with a cheerful 200). This fails the run.
+- **unverified** — the host refused an automated request (LinkedIn's 999,
+  Medium's 403, a site whose certificate chain is incomplete). Reported, never
+  fatal; check by hand if the link matters. `BOT_HOSTILE` in the script lists
+  the hosts where even a 404 means nothing.
+- **ok** — it answered.
 
 Two more, run by hand only:
 
@@ -84,6 +113,7 @@ make_cards.py        per-episode and per-guest cards
 social.py            OpenGraph/Twitter/JSON-LD/share rows
 make_sitemap.py      sitemap.xml
 verify.py            pre-publish checks
+check_links.py       outbound link checking, cached in .scripts/.cache/
 update.py            runs the above in order
 ```
 
