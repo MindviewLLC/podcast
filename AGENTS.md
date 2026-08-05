@@ -45,6 +45,11 @@ sources below and (re)write the HTML/CSS/images. Keep any generator you write
   resource/repo links or you get wrong faces/org logos). Resolve via
   `github.com/<user>.png` or `unavatar.io/{twitter|linkedin}/<user>` or
   `unavatar.io/<domain>`. No photo → deterministic gradient initials avatar.
+- **Share card:** `images/og-default.jpg` — a fixed 1200×630 branded card (ink
+  background + green glow, logo, wordmark, tagline, domain). It is the
+  OpenGraph/Twitter image for every page that has no real artwork of its own.
+  Treat it as a **stable asset**: keep the existing file rather than
+  re-rendering it, so daily regens don't churn a new binary.
 - **Episodes → `images/episodes/<slug>.jpg`:** from the YouTube channel
   (`UCJXWVm6uAKh_Nd1mqkKLW5A`). Spotify has NO per-episode art (show cover only).
   YouTube uses `lockupViewModel` (contentId+title); paginate via
@@ -56,7 +61,48 @@ sources below and (re)write the HTML/CSS/images. Keep any generator you write
   must be dropped (cutoff `#109`). Result: ~12 real thumbnails; the rest use the
   logo.
 
+## Social sharing (every page — regenerate all of this)
+Head, in this order, ending with `theme-color` (rewriters key off that):
+`<link rel="canonical">`, `<link rel="alternate" type="application/rss+xml">`
+to the feed, then `og:type` / `og:site_name` / `og:locale` / `og:title` /
+`og:description` / `og:url` / `og:image` (+ `:type` `:width` `:height` `:alt`),
+then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
+`:description` / `:image` / `:image:alt`, then `author` and `theme-color`.
+- **Image + card type.** Real 16:9 episode thumbnail → that image (1280×720) with
+  `summary_large_image`. Guest with a real photo → the square photo with
+  `summary` (a face reads better small than a letterboxed banner). Everything
+  else → `images/og-default.jpg` (1200×630) with `summary_large_image`. Never
+  point a `summary_large_image` at the square logo.
+- **Episode pages** additionally: `og:type=article`, `article:published_time`
+  (ISO-8601 from the RSS `pubDate`), `article:section=Technology`, one
+  `article:tag` per topic, one `article:author` per host, `og:audio` +
+  `og:audio:type` from the RSS `enclosure` (note early episodes are `.m4a`), and
+  `twitter:label1/data1` = Duration, `label2/data2` = Guest(s) (else Published).
+- **Guest pages:** `og:type=profile` + `profile:first_name` / `:last_name`,
+  `twitter:label1/data1` = Episodes count. **Topic/list pages:** the same
+  Episodes count pair.
+- **JSON-LD** — one `<script type="application/ld+json">` per page, a
+  `{"@context","@graph":[…]}`, placed at the end of `<head>`: home →
+  `PodcastSeries` (`webFeed`, hosts as `author`, `sameAs` the show's socials) +
+  `WebSite`; episode → `PodcastEpisode` (`episodeNumber`, `datePublished`,
+  `timeRequired`, `associatedMedia` AudioObject, guests as `actor`, topics as
+  `keywords`, `partOfSeries`); guest → `ProfilePage` + `Person` (`performerIn`);
+  topic and index pages → `CollectionPage` + `ItemList`. Every page except home
+  also gets a `BreadcrumbList`.
+- **On-page share row.** `.share-row` of `.share-btn`s: Bluesky
+  (`bsky.app/intent/compose`), X (`x.com/intent/post…&via=happypathprog`),
+  LinkedIn (`sharing/share-offsite`), Hacker News (`submitlink`), Reddit
+  (`submit`), a `.js-copy` clipboard button, and a `.js-native` button that a
+  small inline script before `</body>` un-hides only when `navigator.share`
+  exists. Share URLs are the absolute prod URLs. Episode pages put the row in a
+  `.panel.share-panel` ("Share this episode") at the end of `.ep-aside`; every
+  other page gets a `<section class="wrap share-section">` with a `.share-card`
+  band just before `</main>`.
+
 ## Verify before finishing
-- Every page parses; **0 absolute-internal links** (must be relative); 0 broken
-  links; images referenced exist. Serve the parent dir and confirm assets 200
-  under `/happypathprogramming/…`.
+- Every page parses; **0 absolute-internal links** (must be relative — the
+  absolute prod URLs in `canonical`/`og:`/JSON-LD/share links are intentional);
+  0 broken links; images referenced exist. Serve the parent dir and confirm
+  assets 200 under `/happypathprogramming/…`.
+- Every page has a valid JSON-LD block, a share row, and the full
+  `og:`/`twitter:` set; `og:image`/`twitter:image` resolve to files that exist.

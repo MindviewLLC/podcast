@@ -27,5 +27,12 @@ Professional, yet fun podcast site for Happy Path Programming.
   Topics page (`topics/index.html`) is a tag cloud with counts, and each topic
   has its own page (`topics/<slug>.html`) listing its episodes. Nav =
   Episodes / Guests / Topics (the logo links home).
-- Every page has OpenGraph/Twitter + canonical tags (absolute prod URLs).
+- **Social sharing:** every page carries a full OpenGraph/Twitter-card head
+  (canonical + RSS `alternate`, `og:*`, `twitter:*`, JSON-LD) and an on-page
+  share row — Bluesky, X, LinkedIn, Hacker News, Reddit, "Copy link", plus a
+  native `navigator.share` button that only appears where supported. The share
+  row is a `.share-card` band above the footer on every page except episode
+  pages, where it is a "Share this episode" panel in the sidebar. Share cards
+  use the branded 1200×630 `images/og-default.jpg` unless the page has real
+  artwork of its own (episode thumbnail, guest photo).
 - In episode cards, if we have a chip for the guest, we can omit the "with <guest>" in the displayed title
