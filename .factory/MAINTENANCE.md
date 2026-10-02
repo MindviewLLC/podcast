@@ -51,11 +51,16 @@ nothing is not an action: even "waiting on the contributor" gets recorded.
 
 ## 4. Update the site
 
-- Install the tools' dependencies first (cloud VM, Ubuntu 24.04, as root):
-  `apt-get install -y -qq python3-pil fonts-liberation fonts-dejavu-core`
-- Re-read the RSS feed **and** the YouTube channel (see `AGENTS.md` "Data sources"). Add every new
-  episode, plus its guests, topics and images. Update anything the feed changed, including YouTube
-  thumbnails that appeared after an episode's audio-only card was made (`AGENTS.md` "Images").
+- Install the tools' dependencies first, for the `python3` on your `PATH` (in the cloud VM that's
+  `/usr/local/bin/python3`, not the system Python, so don't use apt's `python3-pil`):
+  `apt-get install -y -qq fonts-liberation fonts-dejavu-core && python3 -m pip install -q -r .scripts/requirements.txt`.
+  Check it with `python3 -c "from PIL import Image"` before running the tools.
+- Re-read the RSS feed and add every new episode, plus its guests, topics and images. Update anything
+  the feed changed. `update.py --refresh` re-fetches only the feed.
+- Check the YouTube channel separately (`AGENTS.md` "Images": list the channel's videos through
+  `youtubei/v1/browse` and match them to episodes by `#NNN`). Add the thumbnail for any episode that
+  gained a video, and delete that episode's audio-only share card so it redraws. Report how many
+  videos you found and how many episodes changed.
 - Regenerate exactly as `AGENTS.md` describes, then run `python3 .scripts/update.py --refresh`. Run it
   on every run, even with no new episodes: it refreshes the feed-derived metadata and re-checks links.
   If it fails, fix the cause (for example a missing dependency) and run it again.
@@ -65,8 +70,10 @@ nothing is not an action: even "waiting on the contributor" gets recorded.
 ## 5. Check SEO, agent readiness and performance
 
 - **SEO:** use a well-regarded SEO Skill if one is available, and fix what applies.
-- **Agent readiness:** run https://isitagentready.com against https://www.happypathprogramming.com
-  (`POST /api/scan`, or the page itself) and fix what applies. Skip auth-related checks; the site is
+- **Agent readiness:** scan the public site with
+  `curl -s -X POST https://isitagentready.com/api/scan -H 'Content-Type: application/json' -d '{"url":"https://happypathprogramming.com"}'`
+  (pre-approved in `.claude/settings.json`; it only sends the site's public URL). Report the level and
+  the failing checks, and fix what applies. Skip auth-related checks; the site is
   public.
 - **Performance:** run Lighthouse against your local working copy. These commands are tested on the
   cloud VM's OS (Ubuntu 24.04, as root):
