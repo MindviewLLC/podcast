@@ -41,7 +41,7 @@ James Ward: https://www.jamesward.com
 
 ## Updates
 
-This website is regenerated daily and deployed to https://www.happypathprogramming.com
+This website is updated weekly by the maintenance routine (`.factory/MAINTENANCE.md`) and deployed to https://www.happypathprogramming.com on every push to `main`.
 
 ## Architecture
 
@@ -49,4 +49,4 @@ This website is regenerated daily and deployed to https://www.happypathprogrammi
 - Static files in this repo are served directly to the production website - URL paths root are this repo and dir / file names here are exposed directly on the production website.
 - You can update @AGENTS.md and @DESIGN.md to make it easier to update the site.
 - Maintenance tooling lives in `.scripts/` - see @.scripts/README.md. It is dependency-light Python that the AI runs by hand when updating the site (share-card rendering, social metadata, sitemap, verification). It is NOT a build step: nothing serves it, nothing runs it automatically, and the site is complete and publishable without it. Prefer extending a tool there over re-deriving the same work by hand each time, and keep genuinely one-off scratch code outside the repo.
-- `.scripts/` MUST NOT contain secrets - no tokens, no keys, no private URLs. Dot-directories aren't published by GitHub Pages, but this repo is the website's source and everything the tooling reads is already public (the podcast RSS feed and the site's own pages); keep it that way.
+- `.scripts/` MUST NOT contain secrets - no tokens, no keys, no private URLs. `.slugignore` keeps `.scripts/` off the site, but this repo is the website's source and everything the tooling reads is already public (the podcast RSS feed and the site's own pages); keep it that way.

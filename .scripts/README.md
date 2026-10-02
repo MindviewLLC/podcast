@@ -7,9 +7,8 @@ runs them automatically, and the site in the repo root is complete and
 publishable without them ever running. The HTML/CSS is still written by the AI
 from [`../SPEC.md`](../SPEC.md), following [`../AGENTS.md`](../AGENTS.md).
 
-This directory lives in the repo that *is* the website. GitHub Pages does not
-publish dot-directories, so `.scripts/` should not appear at
-`happypathprogramming.com/.scripts/` — but don't lean on that. **Never put
+This directory lives in the repo that *is* the website. `.slugignore` keeps
+`.scripts/` off `happypathprogramming.com` — but don't lean on that. **Never put
 secrets here**: no tokens, no keys, no private URLs. Everything these tools read
 is already public (the podcast RSS feed and the site's own pages), and it should
 stay that way.
@@ -88,7 +87,7 @@ Two more, run by hand only:
 **Share cards are write-once.** Everything drawn on a card is an immutable fact
 about that episode or guest — number, title, guests, air date, duration, name,
 photo — so a card can never go stale, and `make_cards.py` skips any file that
-already exists. A daily update therefore adds one card for the new episode plus
+already exists. A routine update therefore adds one card for the new episode plus
 one per new guest, and rewrites no existing binary.
 
 Anything that *can* change is deliberately kept **off** the images. A guest's

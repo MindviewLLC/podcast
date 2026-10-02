@@ -1,3 +1,11 @@
+# Happy Path Programming site
+
+Follow the `zen-of-projects` Skill (https://start.jamesward.com, "Website Projects"); the maintenance
+routine is `.factory/MAINTENANCE.md` and runs weekly. Publishing: every push to `main` is deployed to
+https://www.happypathprogramming.com by the `staticSite` entry for `MindviewLLC/podcast` in
+`jamesward/domains` (`domains.pkl`), which syncs the repo to S3 except the globs in `.slugignore`. CI
+(`.github/workflows/ci.yml`) runs `python3 .scripts/verify.py`.
+
 # Regenerating this site (for AI runs)
 
 Generate/update the website from @SPEC.md, following @DESIGN.md. The repo root
@@ -21,7 +29,7 @@ in "Social sharing" below, plus `sitemap.xml`.** Don't hand-write those — writ
 the pages, then run the pass. If the tools need to change, change them there
 (they are committed, and shared modules `brand.py`/`hpp.py` keep them in
 agreement); keep genuinely one-off scratch code outside the repo, and never put
-secrets in `.scripts/` — it is served publicly like everything else.
+secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is public.
 
 ## Output layout (all at repo root; links are RELATIVE so IntelliJ preview at
 `/happypathprogramming/…` and prod at `/` both work)
@@ -31,8 +39,8 @@ secrets in `.scripts/` — it is served publicly like everything else.
 - `topics/index.html` (tag cloud) + `topics/<slug>.html` (episodes per topic)
 - `images/`, `sitemap.xml` (written by `.scripts/make_sitemap.py`), `robots.txt`, `CNAME`
 - No `hosts.html` (hosts live on index). Nav = Episodes / Guests / Topics (the logo links home).
-- `.scripts/` is tooling and `.claude/` is agent config — the two directories at
-  the root that aren't served as part of the site.
+- `.scripts/`, `.claude/`, `.factory/` and `.github/` are tooling and config; `.slugignore` keeps
+  them (and the Markdown docs) off the site. Add any new non-site file to `.slugignore`.
 
 ## Data sources
 - **Episodes (canonical):** RSS `https://anchor.fm/s/2ed56aa0/podcast/rss`
