@@ -2,8 +2,10 @@
 
 If there are other open PRs for this work, update that PR instead of creating a new one.
 
-Every step below is required. Don't skip or shorten a step because the run looks quick, and don't call
-any step optional. Merging to `main` publishes the site within minutes, so every merge is a production
+Every step below is required on every run, including runs that find nothing new: "nothing changed"
+is a result to report, not a reason to skip a step. Don't skip or shorten a step because the run
+looks quick, and don't call any step optional. The report (step 7) must show the outcome of every
+step. Merging to `main` publishes the site within minutes, so every merge is a production
 deploy.
 
 ## 1. Load guidance
@@ -49,9 +51,14 @@ nothing is not an action: even "waiting on the contributor" gets recorded.
 
 ## 4. Update the site
 
-- Re-read the RSS feed and the YouTube channel (see `AGENTS.md` "Data sources"). Add every new episode,
-  plus its guests, topics and images. Update anything the feed changed.
-- Regenerate exactly as `AGENTS.md` describes, then run `python3 .scripts/update.py --refresh`.
+- Install the tools' dependencies first (cloud VM, Ubuntu 24.04, as root):
+  `apt-get install -y -qq python3-pil fonts-liberation fonts-dejavu-core`
+- Re-read the RSS feed **and** the YouTube channel (see `AGENTS.md` "Data sources"). Add every new
+  episode, plus its guests, topics and images. Update anything the feed changed, including YouTube
+  thumbnails that appeared after an episode's audio-only card was made (`AGENTS.md` "Images").
+- Regenerate exactly as `AGENTS.md` describes, then run `python3 .scripts/update.py --refresh`. Run it
+  on every run, even with no new episodes: it refreshes the feed-derived metadata and re-checks links.
+  If it fails, fix the cause (for example a missing dependency) and run it again.
 - Fix what `check_links.py` reports, following `AGENTS.md`. Don't draw share cards by hand, and never
   re-render existing cards.
 
