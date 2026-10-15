@@ -7,7 +7,7 @@
             "type": "command",
             "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/check_links.py\"",
             "timeout": 180,
-            "statusMessage": "Validating links on edited pages…"
+            "statusMessage": "Validating links on edited pages\u2026"
           }
         ]
       }
@@ -15,7 +15,8 @@
   },
   "permissions": {
     "allow": [
-      "Bash(curl -s -X POST https://isitagentready.com/api/scan:*)"
+      "Bash(curl -s -X POST https://isitagentready.com/api/scan:*)",
+      "Bash(git clone -q --depth 1 https://github.com/jamesward/skills /tmp/jamesward-skills || git -C /tmp/jamesward-skills pull -q)"
     ]
   }
 }
