@@ -23,11 +23,12 @@ python3 .scripts/update.py --refresh
 
 which first fetches the feed once and checks it isn't a stale copy (`feed.py`:
 it fails when the feed has an episode without a page, or when YouTube has an
-episode newer than the feed — see "Episodes (canonical)"), then draws share cards for anything new, rewrites every page's
+episode newer than the feed — see "Episodes (canonical)"), then adds each
+episode's Apple Podcasts and YouTube video pills, draws share cards for anything new, rewrites every page's
 OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml`, verifies the
 result, and requests every outbound link to see that it still resolves.
 **You are responsible for the HTML pages; the tools own everything
-in "Social sharing" below, plus `sitemap.xml`.** Don't hand-write those — write
+in "Social sharing" below, the `pill--apple`/`pill--youtube` episode pills, plus `sitemap.xml`.** Don't hand-write those — write
 the pages, then run the pass. If the tools need to change, change them there
 (they are committed, and shared modules `brand.py`/`hpp.py` keep them in
 agreement); keep genuinely one-off scratch code outside the repo, and never put
@@ -113,17 +114,27 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
 - **Episodes → `images/episodes/<slug>.jpg`:** from the YouTube channel
   (`UCJXWVm6uAKh_Nd1mqkKLW5A`). Spotify has NO per-episode art (show cover only).
   `python3 .scripts/youtube.py` lists the channel and reports (or with
-  `--apply` saves) every missing byte-unique thumbnail; then update that
+  `--apply` saves) every missing real-video thumbnail; then update that
   episode's page and cards to use it. How it works: YouTube uses
   `lockupViewModel` (contentId+title); paginate via
   `youtubei/v1/browse` with the grid's `continuationItemRenderer` token +
   `INNERTUBE_API_KEY` (not the sort chips' tokens, which end in HTTP 403). Match
   video→episode by `#NNN`. Use `maxresdefault`/`mqdefault` (NOT sd/hqdefault —
-  those return a gray placeholder). **Only keep an image that is byte-unique**
-  across the channel: audio-only episodes reuse the logo as their thumbnail, and
-  video only started ~episode #109, so early "unique" logo-letterbox variants
-  must be dropped (cutoff `#109`). Result: ~12 real thumbnails; the rest use the
+  those return a gray placeholder). **Only use real videos.** The channel also
+  holds the podcast audio that YouTube re-publishes from the feed, often under
+  the same title as the real video, with the logo as a still; its thumbnail is
+  the logo, sometimes with unique bytes, so `youtube.real_videos` compares each
+  thumbnail with `images/hpp.jpg` instead of comparing bytes. Video only started
+  at episode #109 (cutoff `#109`). Result: ~13 real thumbnails; the rest use the
   logo.
+- **Per-episode listen/watch links (hero `.pills`, written by
+  `.scripts/episode_links.py`):** you write the hero row with "Play on Spotify"
+  (the RSS `<link>`) and "Discuss on Discord" when the description has one. The
+  tool then adds "Play on Apple Podcasts" (the episode's own Apple page, from
+  the iTunes lookup API for show id `1531666706`) and "Watch on YouTube" (the
+  real video from `youtube.real_videos`, never the podcast re-publish; no pill
+  when there is no real video) after the Spotify pill. Don't hand-write the
+  `pill--apple`/`pill--youtube` pills; the tool replaces them on every run.
 
 ## Social sharing (every page — written by `.scripts/social.py`)
 This whole section is what `social.py` emits. It is idempotent and derives

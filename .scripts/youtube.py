@@ -5,14 +5,17 @@
     python3 .scripts/youtube.py --apply    # also save them to images/episodes/<slug>.jpg
 
 The channel listing is the page's ytInitialData plus `youtubei/v1/browse`
-continuations (AGENTS.md "Images"). A thumbnail is only used when its bytes are
-unique across the channel: audio-only episodes reuse the logo, and video only
-started at CUTOFF. Saving a thumbnail deletes that episode's audio-only share
-card so `make_cards.py` redraws it with the photo.
+continuations (AGENTS.md "Images"). The channel holds two kinds of upload: real
+videos, and the podcast's audio re-published from the RSS feed with the show
+logo as a still image. `real_videos` tells them apart by comparing each
+thumbnail with images/hpp.jpg (the logo uploads score under 5, real videos over
+60), so a re-publish never supplies a thumbnail or a "Watch on YouTube" link.
+Video only started at CUTOFF. Saving a thumbnail deletes that episode's
+audio-only share card so `make_cards.py` redraws it with the photo.
 """
 from __future__ import annotations
 
-import hashlib
+import io
 import json
 import os
 import re
@@ -115,28 +118,42 @@ def thumbnail(vid: str) -> bytes | None:
     return None
 
 
-def missing_thumbnails(vids: dict[str, str]) -> dict[int, tuple[str, bytes]]:
-    """Episode number -> (video id, image) for episodes >= CUTOFF that have a
-    byte-unique thumbnail on YouTube but no images/episodes/<slug>.jpg."""
-    thumbs = {vid: thumbnail(vid) for vid in vids}
-    counts: dict[str, int] = {}
-    for b in thumbs.values():
-        if b:
-            h = hashlib.md5(b).hexdigest()
-            counts[h] = counts.get(h, 0) + 1
-    slugs = hpp.episode_slugs()
+LOGO_DIFF = 30  # mean grey-level difference below which a thumbnail is the logo
+
+
+def is_logo(image: bytes) -> bool:
+    """True when a thumbnail is the show logo (letterboxed or not), i.e. the
+    upload is the podcast audio re-published from the feed, not a real video."""
+    from PIL import Image, ImageChops, ImageStat
+    logo = Image.open(os.path.join(hpp.ROOT, "images", "hpp.jpg")).convert("L").resize((64, 64))
+    im = Image.open(io.BytesIO(image)).convert("L")
+    w, h = im.size
+    side = min(w, h)
+    left, top = (w - side) // 2, (h - side) // 2
+    square = im.crop((left, top, left + side, top + side)).resize((64, 64))
+    return ImageStat.Stat(ImageChops.difference(square, logo)).mean[0] < LOGO_DIFF
+
+
+def real_videos(vids: dict[str, str]) -> dict[int, tuple[str, bytes]]:
+    """Episode number -> (video id, thumbnail) of its real video, for every
+    episode that has one; podcast re-publishes (logo thumbnails) are skipped."""
     out: dict[int, tuple[str, bytes]] = {}
     for num, ids in sorted(by_episode(vids).items()):
-        if num < CUTOFF or num not in slugs:
-            continue
-        if os.path.exists(f"images/episodes/{slugs[num]}.jpg"):
-            continue
         for vid in ids:
-            b = thumbs.get(vid)
-            if b and counts[hashlib.md5(b).hexdigest()] == 1:
+            b = thumbnail(vid)
+            if b and not is_logo(b):
                 out[num] = (vid, b)
                 break
     return out
+
+
+def missing_thumbnails(real: dict[int, tuple[str, bytes]]) -> dict[int, tuple[str, bytes]]:
+    """The entries of `real_videos` for episodes >= CUTOFF that have a page but
+    no images/episodes/<slug>.jpg yet."""
+    slugs = hpp.episode_slugs()
+    return {num: v for num, v in real.items()
+            if num >= CUTOFF and num in slugs
+            and not os.path.exists(f"images/episodes/{slugs[num]}.jpg")}
 
 
 def main() -> None:
@@ -148,7 +165,9 @@ def main() -> None:
     no_page = sorted(n for n in eps if n not in slugs)
     if no_page:
         print("on YouTube but no episode page yet: " + ", ".join(f"#{n}" for n in no_page))
-    missing = missing_thumbnails(vids)
+    real = real_videos(vids)
+    print(f"episodes with a real video (not a podcast re-publish): {len(real)}")
+    missing = missing_thumbnails(real)
     if not missing:
         print("thumbnails: none missing")
         return

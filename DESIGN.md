@@ -29,7 +29,9 @@ Professional, yet fun podcast site for Happy Path Programming.
   `--green-dark`. The mint `#9fe7c2` "back" link and `#9aa3b2` cast text are
   only for dark (`--ink`) backgrounds; on white the back link is `--green-dark`.
 - **Episodes:** unique shareable URL each, cover/thumbnail hero, audio player,
-  "Play on Spotify", per-episode Discord link, resources list, guest chips.
+  "Play on Spotify", "Play on Apple Podcasts" and (when the episode has a real
+  video) "Watch on YouTube" pills linking that episode on each platform,
+  per-episode Discord link, resources list, guest chips.
 - **Topics:** episodes are tagged with topics (derived from title/description via
   a curated keyword map). Topic chips show on episode cards and episode pages; a
   Topics page (`topics/index.html`) is a tag cloud with counts, and each topic
