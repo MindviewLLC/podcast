@@ -21,7 +21,9 @@ have (re)written the pages, run:
 python3 .scripts/update.py --refresh
 ```
 
-which draws share cards for anything new, rewrites every page's
+which first fetches the feed once and checks it isn't a stale copy (`feed.py`:
+it fails when the feed has an episode without a page, or when YouTube has an
+episode newer than the feed — see "Episodes (canonical)"), then draws share cards for anything new, rewrites every page's
 OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml`, verifies the
 result, and requests every outbound link to see that it still resolves.
 **You are responsible for the HTML pages; the tools own everything
@@ -53,11 +55,18 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
   bullet's `-`, a stray `\`, a word-joiner (U+2060) or the word `Discuss`. When a
   URL abuts text, split it where the real URL ends and put the leftover words
   back into the prose; `.scripts/check_links.py` catches what you miss.
+  **The feed's CDN can serve a copy up to a week old** (`s-maxage=605009`; it
+  ignores cache-busting query strings and `Cache-Control: no-cache`), so a
+  single fetch can be missing the newest episode. `hpp.fetch_feed` retries and
+  never replaces a newer cached copy with an older one. A YouTube video numbered
+  past the feed's newest episode means the feed copy is stale, not that the
+  episode is "for next run": `feed.py` fails on it until a fresh copy arrives.
 - **Guests:** derived from the `"… with <Name>"` pattern in episode titles
   (use the LAST " with "; split on `&`/`,`/` and `; a name inside parens like
   "Kyo (Flavio Brasil)" → the person). Reject non-names (digits/`;`/stopwords).
   Manual overrides for titles without "with": #117 Bill Venners & Dianne Marsh,
-  #105 Nathan Sobo.
+  #105 Nathan Sobo, #122 Barry Warsaw (the title is just the name, so the card
+  title is the name too).
 - **Host bios:** mindviewllc.com/about (Bruce), jamesward.com (James).
 - **Social accounts (fixed, keep on every regen):**
   - Show Bluesky: `https://bsky.app/profile/happypathprogramming.com` and show
@@ -103,8 +112,12 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
     card was made.
 - **Episodes → `images/episodes/<slug>.jpg`:** from the YouTube channel
   (`UCJXWVm6uAKh_Nd1mqkKLW5A`). Spotify has NO per-episode art (show cover only).
-  YouTube uses `lockupViewModel` (contentId+title); paginate via
-  `youtubei/v1/browse` with the continuation token + `INNERTUBE_API_KEY`. Match
+  `python3 .scripts/youtube.py` lists the channel and reports (or with
+  `--apply` saves) every missing byte-unique thumbnail; then update that
+  episode's page and cards to use it. How it works: YouTube uses
+  `lockupViewModel` (contentId+title); paginate via
+  `youtubei/v1/browse` with the grid's `continuationItemRenderer` token +
+  `INNERTUBE_API_KEY` (not the sort chips' tokens, which end in HTTP 403). Match
   video→episode by `#NNN`. Use `maxresdefault`/`mqdefault` (NOT sd/hqdefault —
   those return a gray placeholder). **Only keep an image that is byte-unique**
   across the channel: audio-only episodes reuse the logo as their thumbnail, and

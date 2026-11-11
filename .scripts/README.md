@@ -40,6 +40,7 @@ individual tools, in the order `update.py` runs them:
 
 | Tool | What it does | Safe to re-run? |
 | --- | --- | --- |
+| `feed.py` | Fetches the feed once (with `--refresh`), retrying past a stale CDN copy, and fails if the feed has an episode without a page or YouTube is ahead of the feed (`--feed-behind-ok` turns the last into a warning). Every later step reads the copy it saved. | Yes, read-only apart from the feed cache. |
 | `make_cards.py` | Draws `images/og/episodes/<slug>.jpg` and `images/og/guests/<slug>.jpg` — the per-page 1200×630 OpenGraph cards. | Yes. Draws only files that are **missing**. |
 | `social.py` | Rewrites each page's `canonical`…`theme-color` head block, its JSON-LD, its share row and the inline share script. | Yes, idempotent — it replaces its own output. |
 | `make_sitemap.py` | Rebuilds `sitemap.xml` from the pages on disk, with `<lastmod>` from the feed. | Yes. |
@@ -74,7 +75,12 @@ for 30 days and failures are never cached. Three verdicts:
   the hosts where even a 404 means nothing.
 - **ok** — it answered.
 
-Two more, run by hand only:
+Run by hand:
+
+- `youtube.py` — lists the YouTube channel by episode number and reports
+  episodes (from `#109`) whose byte-unique thumbnail isn't in
+  `images/episodes/` yet; `--apply` saves them and deletes the audio-only share
+  card so it redraws. The pages then need to point at the new image.
 
 - `make_og_default.py --force` — redraws `images/og-default.jpg`, the branded
   fallback card for the home, list and topic pages. Only needed if the brand

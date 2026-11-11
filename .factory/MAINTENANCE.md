@@ -61,12 +61,16 @@ nothing is not an action: even "waiting on the contributor" gets recorded.
   `--ignore-installed` matters: without it pip counts apt's `/usr/lib/python3/dist-packages/PIL` as
   installed, skips Pillow, and the import then fails with `cannot import name '_imaging'`.
   Check it with `python3 -c "from PIL import Image"` before running the tools.
-- Re-read the RSS feed and add every new episode, plus its guests, topics and images. Update anything
-  the feed changed. `update.py --refresh` re-fetches only the feed.
-- Check the YouTube channel separately (`AGENTS.md` "Images": list the channel's videos through
-  `youtubei/v1/browse` and match them to episodes by `#NNN`). Add the thumbnail for any episode that
-  gained a video, and delete that episode's audio-only share card so it redraws. Report how many
-  videos you found and how many episodes changed.
+- Run `python3 .scripts/feed.py --refresh` first. It fetches the RSS feed with a guard against the
+  CDN's stale copies and lists every episode that's in the feed but has no page. Add each one, plus its
+  guests, topics and images, and update anything the feed changed.
+- **A YouTube episode newer than the feed's newest means the feed copy is stale.** Never write it off
+  as "the next run picks it up". `feed.py` fails on it; re-run it a few minutes later. Only if a fresh
+  feed still lacks the episode (a video published before the audio) report that in the run report and
+  continue with `update.py --refresh --feed-behind-ok`.
+- Check the YouTube channel with `python3 .scripts/youtube.py` (`--apply` saves missing thumbnails
+  and deletes those episodes' audio-only share cards so they redraw; then point the pages at the
+  image). Report how many videos it found and how many episodes changed.
 - Regenerate exactly as `AGENTS.md` describes, then run `python3 .scripts/update.py --refresh`. Run it
   on every run, even with no new episodes: it refreshes the feed-derived metadata and re-checks links.
   If it fails, fix the cause (for example a missing dependency) and run it again.

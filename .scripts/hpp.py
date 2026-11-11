@@ -55,15 +55,61 @@ def require_root() -> None:
 
 
 # ------------------------------------------------------------------- feed
-def fetch_feed(refresh: bool = False) -> str:
-    """The podcast RSS, cached under .scripts/.cache (gitignored)."""
+def feed_facts(data: bytes) -> tuple[str, int]:
+    """(lastBuildDate as ISO-8601 UTC, newest episode number) of a feed body."""
+    root = ET.fromstring(data)
+    built = ""
+    try:
+        built = parsedate_to_datetime(root.findtext(".//channel/lastBuildDate") or "") \
+            .astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    except Exception:
+        pass
+    nums = [int(m.group(1)) for t in root.iterfind(".//item/title")
+            if (m := re.match(r"\s*#(\d+)", t.text or ""))]
+    return built, max(nums, default=0)
+
+
+def episode_slugs() -> dict[int, str]:
+    """Episode number -> slug, for every episode page on disk."""
+    out = {}
+    for f in os.listdir(os.path.join(ROOT, "episodes")):
+        m = re.match(r"(\d+)-.*\.html$", f)
+        if m:
+            out[int(m.group(1))] = f[:-5]
+    return out
+
+
+def fetch_feed(refresh: bool = False, expect: int = 0,
+               attempts: int = 6, wait: int = 20) -> str:
+    """The podcast RSS, cached under .scripts/.cache (gitignored).
+
+    anchor.fm serves the feed through a CDN that may keep a copy for about a week
+    (`s-maxage=605009`) and ignores cache-busting query strings and
+    `Cache-Control: no-cache`, so one request can return a feed missing the
+    newest episode. On refresh this keeps whichever copy has the newest
+    `lastBuildDate` (never going backwards from the cached one), and retries
+    while the newest episode is older than `expect` or than the site's own
+    newest episode page.
+    """
+    import time
     os.makedirs(CACHE, exist_ok=True)
     path = os.path.join(CACHE, "podcast.rss")
     if refresh or not os.path.exists(path):
-        with urllib.request.urlopen(FEED, timeout=60) as r:
-            data = r.read()
+        best = open(path, "rb").read() if os.path.exists(path) else None
+        want = max(expect, max(episode_slugs(), default=0))
+        for i in range(attempts):
+            with urllib.request.urlopen(FEED, timeout=60) as r:
+                data = r.read()
+            if best is None or feed_facts(data)[0] >= feed_facts(best)[0]:
+                best = data
+            built, newest = feed_facts(best)
+            if newest >= want or i == attempts - 1:
+                break
+            print(f"feed: got a stale CDN copy (built {built}, newest #{newest}, "
+                  f"expected #{want}); retrying in {wait}s", file=sys.stderr)
+            time.sleep(wait)
         with open(path, "wb") as f:
-            f.write(data)
+            f.write(best)
     return path
 
 

@@ -6,7 +6,8 @@ draws cards for anything new, brings every page's social metadata back into
 agreement, refreshes the sitemap, and checks the result.
 
     python3 .scripts/update.py
-    python3 .scripts/update.py --refresh    # re-fetch the podcast feed first
+    python3 .scripts/update.py --refresh    # re-fetch the podcast feed first (stale-copy guarded)
+    python3 .scripts/update.py --refresh --feed-behind-ok  # YouTube ahead of the feed is a warning
     python3 .scripts/update.py --skip-links # no network check of outbound links
 
 It does NOT generate the site's pages; that is the AI's job, per AGENTS.md.
@@ -16,6 +17,7 @@ import sys
 import os
 
 STEPS = [
+    ("feed.py", "fetch the feed once, guard against a stale copy, find episodes without pages"),
     ("make_cards.py", "draw share cards for new episodes and guests"),
     ("social.py", "rewrite OpenGraph/Twitter/JSON-LD and share rows"),
     ("make_sitemap.py", "regenerate sitemap.xml"),
@@ -26,13 +28,15 @@ STEPS = [
 
 def main() -> None:
     here = os.path.dirname(os.path.abspath(__file__))
-    passthrough = [a for a in sys.argv[1:] if a == "--refresh"]
+    # Only feed.py fetches: one guarded download that every later step reads, so
+    # no step can pick up a different (possibly stale) CDN copy of the feed.
+    feed_args = [a for a in sys.argv[1:] if a in ("--refresh", "--feed-behind-ok")]
     for script, what in STEPS:
         if script == "check_links.py" and "--skip-links" in sys.argv[1:]:
             print(f"\n==> {script}: skipped (--skip-links)")
             continue
         print(f"\n==> {script}: {what}")
-        args = passthrough if script in ("social.py", "make_sitemap.py") else []
+        args = feed_args if script == "feed.py" else []
         result = subprocess.run([sys.executable, os.path.join(here, script), *args])
         if result.returncode != 0:
             sys.exit(f"\n{script} failed ({result.returncode})")
