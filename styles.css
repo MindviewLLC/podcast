@@ -1,6 +1,7 @@
 :root {
   --green: #0f9d58;
   --green-dark: #0b7a44;
+  --green-darker: #08603a;
   --green-soft: #e7f6ee;
   --accent: #facc15;
   --coral: #fb7185;
@@ -82,9 +83,9 @@ img { max-width: 100%; }
 .pill--discord { background: #5865F2; border-color: #5865F2; }
 .btn {
   display: inline-block; margin-top: 14px; font-weight: 700; padding: 11px 18px; border-radius: 12px;
-  background: var(--green); color: #fff; border: 1px solid var(--green);
+  background: var(--green-dark); color: #fff; border: 1px solid var(--green-dark);
 }
-.btn:hover { background: var(--green-dark); text-decoration: none; }
+.btn:hover { background: var(--green-darker); border-color: var(--green-darker); text-decoration: none; }
 
 .stats { display: flex; gap: 12px; }
 .stat { flex: 1; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; text-align: center; box-shadow: var(--shadow); color: var(--ink); transition: transform .15s ease, box-shadow .15s ease; }
@@ -103,6 +104,7 @@ a.stat:hover { text-decoration: none; transform: translateY(-2px); box-shadow: v
 .latest-title:hover { text-decoration: none; }
 .latest-title.stretch::after { content: ""; position: absolute; inset: 0; z-index: 0; }
 .latest-meta { color: #c9cfdb; font-size: .92rem; }
+.latest-meta .cast { color: #9aa3b2; }
 .latest-meta .chip { background: rgba(255,255,255,.12); color: #fff; position: relative; z-index: 1; }
 
 /* Section heads */
@@ -163,7 +165,7 @@ a.stat:hover { text-decoration: none; transform: translateY(-2px); box-shadow: v
   border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; font-weight: 700;
   color: var(--ink); box-shadow: var(--shadow); }
 .topic-tag:hover { text-decoration: none; border-color: var(--green); color: var(--green-dark); transform: translateY(-2px); }
-.topic-count { font-family: var(--mono); font-size: .8rem; color: #fff; background: var(--green);
+.topic-count { font-family: var(--mono); font-size: .8rem; color: #fff; background: var(--green-dark);
   border-radius: 999px; padding: 1px 8px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 
@@ -182,8 +184,10 @@ a.stat:hover { text-decoration: none; transform: translateY(-2px); box-shadow: v
 /* Episode detail */
 .ep-hero { background: var(--ink); color: #fff; padding: 48px 20px 40px; }
 .ep-hero-inner { max-width: 1080px; margin: 0 auto; }
-.back { color: #9fe7c2; font-weight: 600; font-size: .9rem; }
-.back:hover { color: #fff; }
+.back { color: var(--green-dark); font-weight: 600; font-size: .9rem; }
+.back:hover { color: var(--ink); }
+.ep-hero .back { color: #9fe7c2; }
+.ep-hero .back:hover { color: #fff; }
 .ep-badge { display: inline-block; font-family: var(--mono); color: var(--accent); font-size: .85rem;
   margin: 14px 0 6px; letter-spacing: .08em; }
 .ep-title { font-size: clamp(1.8rem, 4.5vw, 3rem); margin: 0 0 10px; }

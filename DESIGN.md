@@ -20,7 +20,14 @@ Professional, yet fun podcast site for Happy Path Programming.
   and X (Twitter), and the t-shirt shop (brand icons, same style as the platform
   buttons). Host cards on the home page carry Bluesky + X chips alongside their
   other links. Footer column headings are `<h2>` (sized down by
-  `.site-footer h2`), so heading levels never skip on any page.
+  `.site-footer h2`), so heading levels never skip on any page. Episode-card
+  titles (`.ep-card-title`) are `<h3>` under a section `<h2>` (home, guest
+  pages) and `<h2>` on pages where they follow the `<h1>` directly (episodes
+  list, topic pages).
+- **Contrast:** all text meets WCAG AA (4.5:1). White text sits on
+  `--green-dark`, never on `--green` (3.5:1), so `.btn` and `.topic-count` use
+  `--green-dark`. The mint `#9fe7c2` "back" link and `#9aa3b2` cast text are
+  only for dark (`--ink`) backgrounds; on white the back link is `--green-dark`.
 - **Episodes:** unique shareable URL each, cover/thumbnail hero, audio player,
   "Play on Spotify", per-episode Discord link, resources list, guest chips.
 - **Topics:** episodes are tagged with topics (derived from title/description via

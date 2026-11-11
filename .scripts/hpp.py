@@ -156,9 +156,9 @@ def classify(path: str) -> tuple[str, str, str]:
 def display_titles() -> dict[str, str]:
     """slug -> the short episode title used on cards site-wide (guest stripped)."""
     doc = open("episodes/index.html", encoding="utf-8").read()
-    return {s: unesc(t) for s, t in re.findall(
-        r'<h3 class="ep-card-title"><a href="\.\./episodes/([^"]+)\.html">'
-        r'(.*?)</a></h3>', doc)}
+    return {s: unesc(t) for _, s, t in re.findall(
+        r'<h([23]) class="ep-card-title"><a href="\.\./episodes/([^"]+)\.html">'
+        r'(.*?)</a></h\1>', doc)}
 
 
 def episode_page(doc: str) -> dict:
@@ -221,6 +221,6 @@ def topic_index_items() -> list[tuple[str, str]]:
 
 def appearances(doc: str) -> list[tuple[str, str]]:
     """(slug, title) of every episode card listed on the page, in page order."""
-    return [(s, unesc(t)) for s, t in re.findall(
-        r'<h3 class="ep-card-title"><a href="\.\./episodes/([^"]+)\.html">'
-        r'(.*?)</a></h3>', doc)]
+    return [(s, unesc(t)) for _, s, t in re.findall(
+        r'<h([23]) class="ep-card-title"><a href="\.\./episodes/([^"]+)\.html">'
+        r'(.*?)</a></h\1>', doc)]
