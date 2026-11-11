@@ -19,7 +19,8 @@ Professional, yet fun podcast site for Happy Path Programming.
 - **Social:** the footer "Community" column links Discord, the podcast's Bluesky
   and X (Twitter), and the t-shirt shop (brand icons, same style as the platform
   buttons). Host cards on the home page carry Bluesky + X chips alongside their
-  other links.
+  other links. Footer column headings are `<h2>` (sized down by
+  `.site-footer h2`), so heading levels never skip on any page.
 - **Episodes:** unique shareable URL each, cover/thumbnail hero, audio player,
   "Play on Spotify", per-episode Discord link, resources list, guest chips.
 - **Topics:** episodes are tagged with topics (derived from title/description via
