@@ -57,7 +57,9 @@ nothing is not an action: even "waiting on the contributor" gets recorded.
 
 - Install the tools' dependencies first, for the `python3` on your `PATH` (in the cloud VM that's
   `/usr/local/bin/python3`, not the system Python, so don't use apt's `python3-pil`):
-  `apt-get install -y -qq fonts-liberation fonts-dejavu-core && python3 -m pip install -q -r .scripts/requirements.txt`.
+  `apt-get install -y -qq fonts-liberation fonts-dejavu-core && python3 -m pip install -q --ignore-installed -r .scripts/requirements.txt`.
+  `--ignore-installed` matters: without it pip counts apt's `/usr/lib/python3/dist-packages/PIL` as
+  installed, skips Pillow, and the import then fails with `cannot import name '_imaging'`.
   Check it with `python3 -c "from PIL import Image"` before running the tools.
 - Re-read the RSS feed and add every new episode, plus its guests, topics and images. Update anything
   the feed changed. `update.py --refresh` re-fetches only the feed.
@@ -83,14 +85,17 @@ nothing is not an action: even "waiting on the contributor" gets recorded.
   cloud VM's OS (Ubuntu 24.04, as root):
 
   ```bash
-  npx -y playwright@1 install-deps chromium >/dev/null 2>&1
-  npx -y playwright@1 install chromium >/dev/null 2>&1
-  CHROME="$(find ~/.cache/ms-playwright -type f -path '*chrome-linux*/chrome' | head -1)"
-  python3 -m http.server 8765 >/dev/null 2>&1 &
+  CHROME="$(readlink -f /opt/pw-browsers/chromium 2>/dev/null)"   # pre-installed in the cloud VM
+  if [ ! -x "$CHROME" ]; then
+    npx -y playwright@1 install-deps chromium >/dev/null 2>&1
+    npx -y playwright@1 install chromium >/dev/null 2>&1
+    CHROME="$(find ~/.cache/ms-playwright -type f -path '*chrome-linux*/chrome' | head -1)"
+  fi
+  python3 -m http.server 8765 >/dev/null 2>&1 & SERVER=$!
   CHROME_PATH="$CHROME" npx -y lighthouse@12 http://localhost:8765/ --chrome-path="$CHROME" \
     --chrome-flags="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu" \
     --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=/tmp/lh.json --quiet
-  kill %1
+  kill "$SERVER"   # not pkill: the auto mode classifier denies it
   python3 -c "import json; d=json.load(open('/tmp/lh.json')); print({k: v['score'] for k, v in d['categories'].items()})"
   ```
 
