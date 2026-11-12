@@ -10,15 +10,17 @@ deploy.
 
 ## 1. Load guidance
 
-- This is a static site with no build, so there are no SkillsJars to extract. Read the `zen-of-projects`
-  Skill from `.factory/skills/zen-of-projects/SKILL.md` if that file exists (an unreleased version is
-  being tested). Otherwise get it from its repository (a fetch of https://start.jamesward.com gets
+- This is a static site with no build, so there are no SkillsJars to extract. Read the `zen-of-websites`
+  and `zen-of-projects` Skills from their repository (a fetch of https://start.jamesward.com gets
   HTTP 403 in cloud sessions):
   `git clone -q --depth 1 https://github.com/jamesward/skills /tmp/jamesward-skills || git -C /tmp/jamesward-skills pull -q`,
-  then read `/tmp/jamesward-skills/skills/zen-of-projects/SKILL.md`. Follow its "Maintenance Routine"
+  then read `/tmp/jamesward-skills/skills/zen-of-websites/SKILL.md` and
+  `/tmp/jamesward-skills/skills/zen-of-projects/SKILL.md` (or their `.factory/skills/<skill>/SKILL.md`
+  copies while an unreleased version is being tested). Follow zen-of-projects' "Maintenance Routine"
   steps that apply to a site, including step 8 ("Improve the factory").
-- Follow its general rules: one source of truth, the rolling PR, the merge / human-review / escalation
-  policy, and the "Website Projects" section. Its sbt, Maven and Gradle sections don't apply.
+- `zen-of-websites` holds everything specific to sites; this file refers to it rather than repeating
+  it. From `zen-of-projects`, follow the general rules: one source of truth, the rolling PR, the merge /
+  human-review / escalation policy. Its sbt, Maven and Gradle sections don't apply.
 - Read `AGENTS.md` (how to regenerate the site, data sources, images, social sharing, verification),
   `SPEC.md`, `DESIGN.md` and `.scripts/README.md`. `AGENTS.md` is the authority on how the pages are
   produced; this file only says what a maintenance run does.
@@ -85,27 +87,10 @@ nothing is not an action: even "waiting on the contributor" gets recorded.
   (pre-approved in `.claude/settings.json`; it only sends the site's public URL). Report the level and
   the failing checks, and fix what applies. Skip auth-related checks; the site is
   public.
-- **Performance:** run Lighthouse against your local working copy. These commands are tested on the
-  cloud VM's OS (Ubuntu 24.04, as root):
-
-  ```bash
-  CHROME="$(readlink -f /opt/pw-browsers/chromium 2>/dev/null)"   # pre-installed in the cloud VM
-  if [ ! -x "$CHROME" ]; then
-    npx -y playwright@1 install-deps chromium >/dev/null 2>&1
-    npx -y playwright@1 install chromium >/dev/null 2>&1
-    CHROME="$(find ~/.cache/ms-playwright -type f -path '*chrome-linux*/chrome' | head -1)"
-  fi
-  python3 -m http.server 8765 >/dev/null 2>&1 & SERVER=$!
-  CHROME_PATH="$CHROME" npx -y lighthouse@12 http://localhost:8765/ --chrome-path="$CHROME" \
-    --chrome-flags="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu" \
-    --only-categories=performance,accessibility,best-practices,seo --output=json --output-path=/tmp/lh.json --quiet
-  kill "$SERVER"   # not pkill: the auto mode classifier denies it
-  python3 -c "import json; d=json.load(open('/tmp/lh.json')); print({k: v['score'] for k, v in d['categories'].items()})"
-  ```
-
-  Also run it against one episode page (`episodes/<slug>.html`). Fix regressions caused by this run's
-  changes, and fix cheap improvements. Report the scores. If Lighthouse can't run, report the exact
-  error and carry on.
+- **Performance:** run Lighthouse with the recipe in `zen-of-websites` "Checks" (the image's Chromium,
+  `lh`, the baseline on a worktree of `main`, the noise rule). Check `/` and one episode page (`episodes/<slug>.html`), each against the same page of the baseline. Fix regressions
+  caused by this run's changes, and fix cheap improvements. Report the four scores for this run and the
+  baseline, and the failing audits. If Lighthouse can't run, report the exact error and carry on.
 - Any fix to the page templates has to go in the pages *and* in the tools or `AGENTS.md` that produce
   them, so the next regeneration keeps it.
 
