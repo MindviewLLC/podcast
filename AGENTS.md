@@ -1,6 +1,6 @@
 # Happy Path Programming site
 
-Follow the `zen-of-projects` Skill (https://start.jamesward.com, "Website Projects"); the maintenance
+Follow the `zen-of-websites` and `zen-of-projects` Skills (in https://github.com/jamesward/skills); the maintenance
 routine is `.factory/MAINTENANCE.md` and runs weekly. Publishing: every push to `main` is deployed to
 https://www.happypathprogramming.com by the `staticSite` entry for `MindviewLLC/podcast` in
 `jamesward/domains` (`domains.pkl`), which syncs the repo to S3 except the globs in `.slugignore`. CI
