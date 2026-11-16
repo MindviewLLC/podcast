@@ -80,6 +80,9 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
   its title+description; each topic gets a page listing its episodes.
 
 ## Images (store in `images/`)
+Every `<img>` carries `width`/`height` set to the image file's pixel size (CSS
+scales it, with `height: auto`), so the layout doesn't shift as it loads;
+`verify.py` fails on an unsized one.
 - **Logo:** `images/hpp.jpg` (also the fallback everywhere).
 - **Hosts:** real photos `images/bruce-eckel.jpg`, `images/james-ward.jpg`
   (mindviewllc.com/publicity/BruceEckel.jpg; jamesward.com about-page photo).
@@ -179,7 +182,7 @@ then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
 
 ## Verify before finishing
 - `python3 .scripts/verify.py` must pass (it is a step of `update.py`).
-  It checks that every page parses, that there are **0 absolute-internal links**
+  It checks that every page parses, that every `<img>` has `width`/`height`, that there are **0 absolute-internal links**
   (must be relative — the absolute prod URLs in `canonical`/`og:`/JSON-LD/share
   links are intentional), 0 broken internal links, that referenced images exist,
   and that every page has a valid JSON-LD block, a share row, the full

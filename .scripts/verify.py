@@ -115,6 +115,11 @@ def main() -> None:
             if f'"{tag}"' not in doc:
                 problems.append(f"{path}: missing {tag}")
 
+        # sized images keep the layout from shifting as they load (Lighthouse unsized-images)
+        for img in re.findall(r"<img\b[^>]*>", doc):
+            if not re.search(r'\swidth="\d+"', img) or not re.search(r'\sheight="\d+"', img):
+                problems.append(f"{path}: <img> without width/height: {img[:80]}")
+
         base = os.path.dirname(path)
         for m in re.finditer(r'(?:href|src)="([^"]+)"', doc):
             url = m.group(1)
