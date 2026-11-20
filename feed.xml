@@ -7,7 +7,7 @@
     <description>No-frills discussions between Bruce Eckel and James Ward about programming, what it is, and what it should be.</description>
     <language>en-us</language>
     <copyright>Bruce Eckel &amp; James Ward</copyright>
-    <lastBuildDate>Wed, 11 Nov 2026 06:20:41 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 22:39:50 GMT</lastBuildDate>
     <image>
       <url>https://happypathprogramming.com/images/hpp.jpg</url>
       <title>Happy Path Programming</title>
@@ -17,6 +17,41 @@
     <itunes:image href="https://happypathprogramming.com/images/hpp.jpg"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>#123 Beyond 4GL with Leo Gorodinski</title>
+      <link>https://happypathprogramming.com/episodes/123-beyond-4gl-with-leo-gorodinski.html</link>
+      <guid isPermaLink="true">https://happypathprogramming.com/episodes/123-beyond-4gl-with-leo-gorodinski.html</guid>
+      <pubDate>Fri, 20 Nov 2026 22:39:50 GMT</pubDate>
+      <category>AI &amp; LLMs</category>
+      <category>Language Design</category>
+      <category>Types</category>
+      <category>Architecture &amp; Design</category>
+      <category>Databases &amp; Data</category>
+      <description><![CDATA[<p>James and Bruce talk with Leo Gorodinski, formerly of Jet.com and Alvys, about Cohesive, a language he's building for describing whole SaaS systems instead of individual computations. Leo argues that English won't replace code, and that the real bottleneck in agentic coding is trust: you have to be able to verify that what the AI built matches what you meant. Cohesive works at a higher level than general-purpose languages. You define entities, relationships, processes, APIs and infrastructure bindings, and Cohesive compiles them down to C# and TypeScript. They discuss why Leo chose term-level invariants over ever more powerful type systems, how categorical systems theory, CRDTs and the CALM theorem shaped the design, what SQL and 4GLs got right, escape hatches and the capability cliff, and Leo's benchmarks comparing agents building with Cohesive against agents using conventional stacks.</p>
+<h3>Resources &amp; links</h3>
+<ul class="res-list"><li><a href="https://x.com/eulerfx" target="_blank" rel="noopener">Leo on Twitter/X</a></li>
+<li><a href="https://cohesive.sh" target="_blank" rel="noopener">Cohesive website</a></li>
+<li><a href="https://github.com/cohesivesystems" target="_blank" rel="noopener">Cohesive Systems on GitHub</a></li>
+<li><a href="https://github.com/cohesivesystems/cohesive" target="_blank" rel="noopener">Cohesive .NET libraries</a></li>
+<li><a href="https://github.com/cohesivesystems/cohesive-evals" target="_blank" rel="noopener">Cohesive evals (the benchmarks)</a></li>
+<li><a href="https://github.com/cohesivesystems/knowledge" target="_blank" rel="noopener">Knowledge graph</a></li>
+<li><a href="https://github.com/cohesivesystems/agentlanguages" target="_blank" rel="noopener">Catalogue of agent languages</a></li>
+<li><a href="https://medium.com/@eulerfx" target="_blank" rel="noopener">Leo's writing on Medium</a></li>
+<li><a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html" target="_blank" rel="noopener">Dijkstra, "On the foolishness of 'natural language programming'" (EWD667)</a></li>
+<li><a href="https://arxiv.org/abs/2312.00990" target="_blank" rel="noopener">Niu &amp; Spivak, Polynomial Functors: A Mathematical Theory of Interaction</a></li>
+<li><a href="https://arxiv.org/abs/1901.01930" target="_blank" rel="noopener">Hellerstein &amp; Alvaro, "Keeping CALM: When Distributed Consistency Is Easy"</a></li>
+<li><a href="https://jepsen.io" target="_blank" rel="noopener">Jepsen (Kyle Kingsbury's database testing)</a></li>
+<li><a href="https://effect.website" target="_blank" rel="noopener">Effect (TypeScript)</a></li>
+<li><a href="https://zio.dev" target="_blank" rel="noopener">ZIO (Scala)</a></li>
+<li><a href="https://lean-lang.org" target="_blank" rel="noopener">Lean</a></li>
+<li><a href="https://www.idris-lang.org" target="_blank" rel="noopener">Idris 2</a></li>
+<li><a href="https://granule-project.github.io" target="_blank" rel="noopener">Granule</a></li>
+<li><a href="https://www.wintertechforum.com" target="_blank" rel="noopener">Winter Tech Forum</a></li></ul>]]></description>
+      <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/129833326/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-20%2F437256451-44100-2-98a51644ed81a.m4a" length="67171348" type="audio/x-m4a"/>
+      <itunes:episode>123</itunes:episode>
+      <itunes:duration>4153</itunes:duration>
+      <itunes:image href="https://happypathprogramming.com/images/og/episodes/123-beyond-4gl-with-leo-gorodinski.jpg"/>
+    </item>
     <item>
       <title>#122 Barry Warsaw</title>
       <link>https://happypathprogramming.com/episodes/122-barry-warsaw.html</link>
