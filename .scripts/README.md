@@ -41,7 +41,7 @@ individual tools, in the order `update.py` runs them:
 | Tool | What it does | Safe to re-run? |
 | --- | --- | --- |
 | `feed.py` | Fetches the feed once (with `--refresh`), retrying past a stale CDN copy, and fails if the feed has an episode without a page or YouTube is ahead of the feed (`--feed-behind-ok` turns the last into a warning). Every later step reads the copy it saved. | Yes, read-only apart from the feed cache. |
-| `episode_links.py` | Adds "Play on Apple Podcasts" (iTunes lookup API) and "Watch on YouTube" (the real video, never the podcast re-publish) to each episode page's hero pills. Leaves the pages alone if either source can't be fetched. | Yes, idempotent — it replaces its own `pill--apple`/`pill--youtube` pills. |
+| `episode_links.py` | Adds "Play on Apple Podcasts" (iTunes lookup API), "Watch on YouTube" (the real video, never the podcast re-publish) and "Discuss on Discord" (the show's invite from the feed description) to each episode page's hero pills. Leaves the pages alone if Apple or YouTube can't be fetched. | Yes, idempotent — it replaces its own `pill--apple`/`pill--youtube`/`pill--discord` pills. |
 | `make_cards.py` | Draws `images/og/episodes/<slug>.jpg` and `images/og/guests/<slug>.jpg` — the per-page 1200×630 OpenGraph cards. | Yes. Draws only files that are **missing**. |
 | `social.py` | Rewrites each page's `canonical`…`theme-color` head block, its JSON-LD, its share row and the inline share script. | Yes, idempotent — it replaces its own output. |
 | `make_sitemap.py` | Rebuilds `sitemap.xml` from the pages on disk, with `<lastmod>` from the feed. | Yes. |
@@ -120,7 +120,7 @@ hpp.py               site constants, the RSS feed (cached in .scripts/.cache/),
 make_og_default.py   the branded fallback card
 make_cards.py        per-episode and per-guest cards
 social.py            OpenGraph/Twitter/JSON-LD/share rows
-episode_links.py     per-episode Apple Podcasts and YouTube pills
+episode_links.py     per-episode Apple Podcasts, YouTube and Discord pills
 make_sitemap.py      sitemap.xml
 make_feed.py         feed.xml (the site's RSS feed of episodes)
 make_llms.py         llms.txt and llms-full.txt

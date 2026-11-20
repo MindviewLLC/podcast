@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add each episode's own Apple Podcasts and YouTube links to its page.
+"""Add each episode's own Apple Podcasts, YouTube and Discord links to its page.
 
     python3 .scripts/episode_links.py
 
@@ -10,8 +10,11 @@ Writes two pills into the hero `.pills` row of every episode page, right after
 - "Watch on YouTube": the episode's real video, from `youtube.real_videos`.
   The podcast audio that YouTube re-publishes from the feed (a still of the
   logo) is never linked; episodes without a real video get no YouTube pill.
+And one at the end of the row:
+- "Discuss on Discord": the show's invite from the episode's feed description
+  (the last `discord.gg/…` link), when it has one.
 
-The pills carry `pill--apple` / `pill--youtube`, which is how a re-run finds
+The pills carry `pill--apple` / `pill--youtube` / `pill--discord`, which is how a re-run finds
 and replaces its own output; everything else in the row is the page's own.
 If either source can't be fetched, the run changes nothing and says so (a
 warning, exit 0), so an outage never strips links from the site.
@@ -35,7 +38,7 @@ APPLE_LIMIT = 200  # the lookup API's maximum
 APPLE_LOOKUP = (f"https://itunes.apple.com/lookup?id={APPLE_ID}"
                 f"&entity=podcastEpisode&limit={APPLE_LIMIT}")
 RE_PILLS = re.compile(r'(<div class="pills">)(.*?)(</div>)', re.S)
-RE_OWN = re.compile(r'<a class="pill pill--(?:apple|youtube)"[^>]*>.*?</a>', re.S)
+RE_OWN = re.compile(r'<a class="pill pill--(?:apple|youtube|discord)"[^>]*>.*?</a>', re.S)
 RE_VIDEO_ID = re.compile(r"[A-Za-z0-9_-]{11}")
 
 
@@ -85,7 +88,8 @@ def main() -> None:
         print(f"WARNING: Apple returned {APPLE_LIMIT} episodes, its maximum; older "
               "episodes keep the Apple link they already have", file=sys.stderr)
 
-    counts = {"apple": 0, "youtube": 0}
+    feed = hpp.episodes_from_feed()
+    counts = {"apple": 0, "youtube": 0, "discord": 0}
     for num, slug in sorted(hpp.episode_slugs().items()):
         path = f"episodes/{slug}.html"
         doc = open(path, encoding="utf-8").read()
@@ -110,11 +114,15 @@ def main() -> None:
         # after the first pill ("Play on Spotify"), before Discord and the rest
         cut = rest.find("</a>") + 4 if "</a>" in rest else 0
         row = rest[:cut] + added + rest[cut:]
+        discord = feed.get(num, {}).get("discord")
+        if discord:
+            row += pill("discord", discord, "Discuss on Discord")
+            counts["discord"] += 1
         new = doc[:m.start(2)] + row + doc[m.end(2):]
         if new != doc:
             open(path, "w", encoding="utf-8").write(new)
     print(f"episode links: Apple Podcasts on {counts['apple']} pages, "
-          f"YouTube video on {counts['youtube']}")
+          f"YouTube video on {counts['youtube']}, Discord on {counts['discord']}")
 
 
 if __name__ == "__main__":

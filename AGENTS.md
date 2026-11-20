@@ -24,11 +24,11 @@ python3 .scripts/update.py --refresh
 which first fetches the feed once and checks it isn't a stale copy (`feed.py`:
 it fails when the feed has an episode without a page, or when YouTube has an
 episode newer than the feed — see "Episodes (canonical)"), then adds each
-episode's Apple Podcasts and YouTube video pills, draws share cards for anything new, rewrites every page's
+episode's Apple Podcasts, YouTube video and Discord pills, draws share cards for anything new, rewrites every page's
 OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml` and `feed.xml`, verifies the
 result, and requests every outbound link to see that it still resolves.
 **You are responsible for the HTML pages; the tools own everything
-in "Social sharing" below, the `pill--apple`/`pill--youtube` episode pills, plus `sitemap.xml`, `feed.xml`,
+in "Social sharing" below, the `pill--apple`/`pill--youtube`/`pill--discord` episode pills, plus `sitemap.xml`, `feed.xml`,
 `llms.txt` and `llms-full.txt`.** Don't hand-write those — write
 the pages, then run the pass. If the tools need to change, change them there
 (they are committed, and shared modules `brand.py`/`hpp.py` keep them in
@@ -164,12 +164,15 @@ they must not (`verify.py` fails if they are).
   logo.
 - **Per-episode listen/watch links (hero `.pills`, written by
   `.scripts/episode_links.py`):** you write the hero row with "Play on Spotify"
-  (the RSS `<link>`) and "Discuss on Discord" when the description has one. The
-  tool then adds "Play on Apple Podcasts" (the episode's own Apple page, from
-  the iTunes lookup API for show id `1531666706`) and "Watch on YouTube" (the
-  real video from `youtube.real_videos`, never the podcast re-publish; no pill
-  when there is no real video) after the Spotify pill. Don't hand-write the
-  `pill--apple`/`pill--youtube` pills; the tool replaces them on every run.
+  (the RSS `<link>`). The tool then adds "Play on Apple Podcasts" (the
+  episode's own Apple page, from the iTunes lookup API for show id
+  `1531666706`) and "Watch on YouTube" (the real video from
+  `youtube.real_videos`, never the podcast re-publish; no pill when there is no
+  real video) after the Spotify pill, and "Discuss on Discord" at the end when
+  the feed description has a `discord.gg/…` invite (the last one: an earlier
+  link can be a project's own server, as on #115). Don't hand-write the
+  `pill--apple`/`pill--youtube`/`pill--discord` pills; the tool replaces them on
+  every run.
 
 ## Social sharing (every page — written by `.scripts/social.py`)
 This whole section is what `social.py` emits. It is idempotent and derives
