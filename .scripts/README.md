@@ -45,6 +45,7 @@ individual tools, in the order `update.py` runs them:
 | `make_cards.py` | Draws `images/og/episodes/<slug>.jpg` and `images/og/guests/<slug>.jpg` — the per-page 1200×630 OpenGraph cards. | Yes. Draws only files that are **missing**. |
 | `social.py` | Rewrites each page's `canonical`…`theme-color` head block, its JSON-LD, its share row and the inline share script. | Yes, idempotent — it replaces its own output. |
 | `make_sitemap.py` | Rebuilds `sitemap.xml` from the pages on disk, with `<lastmod>` from the feed. | Yes. |
+| `make_feed.py` | Rebuilds `feed.xml`, the site's own RSS feed: one item per episode page, newest first, linking to that page, with the podcast feed's audio enclosure. `lastBuildDate` is the newest air date, so it is byte-stable. | Yes. |
 | `verify.py` | Parses every page and checks metadata, JSON-LD, links, assets, image width/height and card sizes. Exits non-zero on any problem. | Yes, read-only. |
 | `check_links.py` | Requests every **outbound** link and reports the dead ones. Exits non-zero on a definite 404. | Yes. Only re-requests links it has not seen in 30 days. |
 
@@ -120,6 +121,7 @@ make_cards.py        per-episode and per-guest cards
 social.py            OpenGraph/Twitter/JSON-LD/share rows
 episode_links.py     per-episode Apple Podcasts and YouTube pills
 make_sitemap.py      sitemap.xml
+make_feed.py         feed.xml (the site's RSS feed of episodes)
 verify.py            pre-publish checks
 check_links.py       outbound link checking, cached in .scripts/.cache/
 update.py            runs the above in order

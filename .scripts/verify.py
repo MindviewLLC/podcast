@@ -12,6 +12,7 @@ Covers the "Verify before finishing" list in AGENTS.md:
   - every <img> has width/height (no layout shift as it loads), and the
     above-the-fold hero images are not lazy-loaded
   - every referenced .jpg really is a JPEG
+  - feed.xml parses and has one item per episode page, each linking to it
 
     python3 .scripts/verify.py
 """
@@ -22,6 +23,7 @@ import os
 import re
 import struct
 import sys
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
 import hpp
@@ -80,6 +82,21 @@ def jpeg_size(path: str) -> tuple[int, int] | None:
     return None
 
 
+def check_feed() -> None:
+    """feed.xml lists every episode page, linked by its absolute URL."""
+    try:
+        root = ET.parse("feed.xml").getroot()
+    except (OSError, ET.ParseError) as e:
+        problems.append(f"feed.xml: {e}")
+        return
+    links = {(i.findtext("link") or "") for i in root.iterfind("./channel/item")}
+    want = {f"{SITE}/episodes/{s}.html" for s in hpp.episode_slugs().values()}
+    for url in sorted(want - links):
+        problems.append(f"feed.xml: no item for {url}")
+    for url in sorted(links - want):
+        problems.append(f"feed.xml: item links to a missing page {url}")
+
+
 def main() -> None:
     hpp.require_root()
     paths = hpp.pages()
@@ -134,8 +151,8 @@ def main() -> None:
             url = m.group(1)
             if url.startswith(("http://", "https://", "mailto:", "#", "data:")):
                 if url.startswith(SITE):
-                    before = doc[max(0, m.start() - 60):m.start()]
-                    if 'rel="canonical"' not in before:
+                    tag = doc[doc.rfind("<", 0, m.start()):m.start()]
+                    if not re.match(r'<link rel="(canonical|alternate)"', tag):
                         problems.append(f"{path}: absolute internal link {url}")
                 continue
             target = os.path.normpath(os.path.join(base, url.split("#")[0]))
@@ -158,6 +175,7 @@ def main() -> None:
                 if local != want:
                     problems.append(f"{path}: og:image is {local}, expected {want}")
 
+    check_feed()
     print(f"pages: {len(paths)}  json-ld: {ld_blocks}  share rows: {share_rows}")
     if problems:
         print(f"\n{len(problems)} problem(s):")
