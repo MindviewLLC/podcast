@@ -9,6 +9,9 @@ Covers the "Verify before finishing" list in AGENTS.md:
   - every page has the full og:/twitter: set, a valid JSON-LD block and a
     share row
   - every referenced share image exists and is the right size
+  - every <img> has width/height (no layout shift as it loads), and the
+    above-the-fold hero images are not lazy-loaded
+  - every referenced .jpg really is a JPEG
   - feed.xml parses and has one item per episode page, each linking to it
 
     python3 .scripts/verify.py
@@ -132,6 +135,17 @@ def main() -> None:
             if f'"{tag}"' not in doc:
                 problems.append(f"{path}: missing {tag}")
 
+        # sized images keep the layout from shifting as they load (Lighthouse unsized-images)
+        for img in re.findall(r"<img\b[^>]*>", doc):
+            if not re.search(r'\swidth="\d+"', img) or not re.search(r'\sheight="\d+"', img):
+                problems.append(f"{path}: <img> without width/height: {img[:80]}")
+            # the hero art is above the fold (the page's LCP image): never lazy-load it
+            if re.search(r'class="latest-art"', img) and 'loading="lazy"' in img:
+                problems.append(f"{path}: above-the-fold <img> is lazy-loaded: {img[:80]}")
+        for img in re.findall(r'<div class="ep-hero-art"><img\b[^>]*>', doc):
+            if 'loading="lazy"' in img:
+                problems.append(f"{path}: above-the-fold <img> is lazy-loaded: {img[:80]}")
+
         base = os.path.dirname(path)
         for m in re.finditer(r'(?:href|src)="([^"]+)"', doc):
             url = m.group(1)
@@ -144,6 +158,8 @@ def main() -> None:
             target = os.path.normpath(os.path.join(base, url.split("#")[0]))
             if not os.path.exists(target):
                 problems.append(f"{path}: missing link target {url}")
+            elif target.endswith(".jpg") and jpeg_size(target) is None:
+                problems.append(f"{path}: {url} is not a JPEG (wrong extension?)")
 
         # the page's own share card must exist and be exactly 1200x630
         card = re.search(r'<meta property="og:image" content="([^"]+)"', doc)
