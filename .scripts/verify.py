@@ -9,6 +9,7 @@ Covers the "Verify before finishing" list in AGENTS.md:
   - every page has the full og:/twitter: set, a valid JSON-LD block and a
     share row
   - every referenced share image exists and is the right size
+  - every <img> has width/height (no layout shift as it loads)
 
     python3 .scripts/verify.py
 """
