@@ -28,7 +28,8 @@ episode's Apple Podcasts and YouTube video pills, draws share cards for anything
 OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml` and `feed.xml`, verifies the
 result, and requests every outbound link to see that it still resolves.
 **You are responsible for the HTML pages; the tools own everything
-in "Social sharing" below, the `pill--apple`/`pill--youtube` episode pills, plus `sitemap.xml` and `feed.xml`.** Don't hand-write those — write
+in "Social sharing" below, the `pill--apple`/`pill--youtube` episode pills, plus `sitemap.xml`, `feed.xml`,
+`llms.txt` and `llms-full.txt`.** Don't hand-write those — write
 the pages, then run the pass. If the tools need to change, change them there
 (they are committed, and shared modules `brand.py`/`hpp.py` keep them in
 agreement); keep genuinely one-off scratch code outside the repo, and never put
@@ -41,6 +42,14 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
 - `guests/index.html` + `guests/<slug>.html`
 - `topics/index.html` (tag cloud) + `topics/<slug>.html` (episodes per topic)
 - `images/`, `sitemap.xml` (written by `.scripts/make_sitemap.py`), `robots.txt`, `CNAME`
+- `robots.txt` allows everything and carries the owners' Content Signals choice
+  (contentsignals.org): `Content-Signal: search=yes, ai-input=yes, ai-train=yes`.
+  Keep it on every regen; changing it is the owners' decision.
+- `llms.txt` and `llms-full.txt` (llmstxt.org; written by `.scripts/make_llms.py` from the
+  pages). `llms.txt` is the index: the show, the hosts, and a link with a one-line note
+  for every episode, guest and topic page. `llms-full.txt` is the full text: each
+  episode's facts, listen links, description and resources in Markdown. Both use
+  absolute URLs, since they are read on their own.
 - `feed.xml` — the site's own RSS feed (episodes only; written by `.scripts/make_feed.py`).
   Each item links to its page here (`<link>` and `guid`), carries the page's description and
   resources, the episode's share card and the audio enclosure. **Every RSS link on the site
@@ -206,11 +215,16 @@ then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
   links are intentional), 0 broken internal links, that referenced images exist,
   and that every page has a valid JSON-LD block, a share row, the full
   `og:`/`twitter:` set, and an `og:image` that is its own card at 1200×630.
-  It also checks that `feed.xml` parses and has exactly one item per episode page.
+  It also checks that `feed.xml` parses and has exactly one item per episode page,
+  and that `llms.txt` links every episode, guest and topic page and `llms-full.txt`
+  has a section for every episode.
 - `python3 .scripts/check_links.py` must pass — that is the *outbound* half, and
   it is the last step of `update.py`. It requests every external link on the
-  site (cached for 30 days, so a routine run only checks new ones) and fails on
-  a link that is definitively wrong. Whenever you touch a page's links, run
+  site and fails on
+  a link that is definitively wrong. Results are cached for 30 days in
+  `.scripts/.cache/` (gitignored), so a local re-run only checks new links; a
+  fresh cloud session starts with no cache and checks every link (~80 s).
+  Whenever you touch a page's links, run
   `python3 .scripts/check_links.py --changed` before you finish; a `Stop` hook in
   `.claude/settings.json` runs exactly that and will hand you the report if you
   forget. Fix what it reports: nearly always the URL ran into the text beside it

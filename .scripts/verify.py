@@ -13,6 +13,8 @@ Covers the "Verify before finishing" list in AGENTS.md:
     above-the-fold hero images are not lazy-loaded
   - every referenced .jpg really is a JPEG
   - feed.xml parses and has one item per episode page, each linking to it
+  - llms.txt links every episode, guest and topic page, and llms-full.txt has
+    a section for every episode
 
     python3 .scripts/verify.py
 """
@@ -97,6 +99,27 @@ def check_feed() -> None:
         problems.append(f"feed.xml: item links to a missing page {url}")
 
 
+def check_llms() -> None:
+    """llms.txt links every page it should; llms-full.txt covers every episode."""
+    try:
+        index = open("llms.txt", encoding="utf-8").read()
+        full = open("llms-full.txt", encoding="utf-8").read()
+    except OSError as e:
+        problems.append(f"llms: {e}")
+        return
+    linked = set(re.findall(r"\]\((" + re.escape(SITE) + r"/[^)\s]+)\)", index))
+    want = {f"{SITE}/{p}" for p in hpp.pages()
+            if hpp.classify(p)[0] in ("episode", "guest", "topic")}
+    for url in sorted(want - linked):
+        problems.append(f"llms.txt: no link to {url}")
+    for url in sorted(linked):
+        if not os.path.exists(url[len(SITE) + 1:]):
+            problems.append(f"llms.txt: links to a missing file {url}")
+    sections = set(re.findall(r"^- Page: (\S+)$", full, re.M))
+    for url in sorted(u for u in want - sections if "/episodes/" in u):
+        problems.append(f"llms-full.txt: no section for {url}")
+
+
 def main() -> None:
     hpp.require_root()
     paths = hpp.pages()
@@ -176,6 +199,7 @@ def main() -> None:
                     problems.append(f"{path}: og:image is {local}, expected {want}")
 
     check_feed()
+    check_llms()
     print(f"pages: {len(paths)}  json-ld: {ld_blocks}  share rows: {share_rows}")
     if problems:
         print(f"\n{len(problems)} problem(s):")

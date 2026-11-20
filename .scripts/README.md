@@ -46,6 +46,7 @@ individual tools, in the order `update.py` runs them:
 | `social.py` | Rewrites each page's `canonical`…`theme-color` head block, its JSON-LD, its share row and the inline share script. | Yes, idempotent — it replaces its own output. |
 | `make_sitemap.py` | Rebuilds `sitemap.xml` from the pages on disk, with `<lastmod>` from the feed. | Yes. |
 | `make_feed.py` | Rebuilds `feed.xml`, the site's own RSS feed: one item per episode page, newest first, linking to that page, with the podcast feed's audio enclosure. `lastBuildDate` is the newest air date, so it is byte-stable. | Yes. |
+| `make_llms.py` | Rebuilds `llms.txt` (the show, hosts, and a link with a short note for every episode, guest and topic page) and `llms-full.txt` (every episode's facts, listen links, description and resources), read from the pages on disk. | Yes. Byte-stable. |
 | `verify.py` | Parses every page and checks metadata, JSON-LD, links, assets, image width/height and card sizes. Exits non-zero on any problem. | Yes, read-only. |
 | `check_links.py` | Requests every **outbound** link and reports the dead ones. Exits non-zero on a definite 404. | Yes. Only re-requests links it has not seen in 30 days. |
 
@@ -57,7 +58,7 @@ link is usually wrong the day it is written rather than years later
 (`…to Python.https://github.com/suned/statelessPrior attempt at…`), so:
 
 ```sh
-python3 .scripts/check_links.py             # everything (cached, ~40s cold)
+python3 .scripts/check_links.py             # everything (cached; ~80s cold, as in every fresh cloud session)
 python3 .scripts/check_links.py --changed   # only pages you have edited
 python3 .scripts/check_links.py --all       # ignore the cache, recheck all
 ```
@@ -122,6 +123,7 @@ social.py            OpenGraph/Twitter/JSON-LD/share rows
 episode_links.py     per-episode Apple Podcasts and YouTube pills
 make_sitemap.py      sitemap.xml
 make_feed.py         feed.xml (the site's RSS feed of episodes)
+make_llms.py         llms.txt and llms-full.txt
 verify.py            pre-publish checks
 check_links.py       outbound link checking, cached in .scripts/.cache/
 update.py            runs the above in order

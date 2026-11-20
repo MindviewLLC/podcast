@@ -9,6 +9,8 @@ The website has:
 - Host list
 - Episode list
 - Guest list
+- `llms.txt` and `llms-full.txt` (llmstxt.org): the show, hosts and every episode, guest and topic page, for LLMs and agents
+- `robots.txt` allowing all crawlers, with Content Signals `search=yes, ai-input=yes, ai-train=yes`
 
 ## Site Structure
 
