@@ -25,10 +25,10 @@ which first fetches the feed once and checks it isn't a stale copy (`feed.py`:
 it fails when the feed has an episode without a page, or when YouTube has an
 episode newer than the feed — see "Episodes (canonical)"), then adds each
 episode's Apple Podcasts and YouTube video pills, draws share cards for anything new, rewrites every page's
-OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml`, verifies the
+OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml` and `feed.xml`, verifies the
 result, and requests every outbound link to see that it still resolves.
 **You are responsible for the HTML pages; the tools own everything
-in "Social sharing" below, the `pill--apple`/`pill--youtube` episode pills, plus `sitemap.xml`.** Don't hand-write those — write
+in "Social sharing" below, the `pill--apple`/`pill--youtube` episode pills, plus `sitemap.xml` and `feed.xml`.** Don't hand-write those — write
 the pages, then run the pass. If the tools need to change, change them there
 (they are committed, and shared modules `brand.py`/`hpp.py` keep them in
 agreement); keep genuinely one-off scratch code outside the repo, and never put
@@ -41,12 +41,19 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
 - `guests/index.html` + `guests/<slug>.html`
 - `topics/index.html` (tag cloud) + `topics/<slug>.html` (episodes per topic)
 - `images/`, `sitemap.xml` (written by `.scripts/make_sitemap.py`), `robots.txt`, `CNAME`
+- `feed.xml` — the site's own RSS feed (episodes only; written by `.scripts/make_feed.py`).
+  Each item links to its page here (`<link>` and `guid`), carries the page's description and
+  resources, the episode's share card and the audio enclosure. **Every RSS link on the site
+  points at it, never at the anchor.fm feed:** the head `alternate` link and JSON-LD `webFeed`
+  use `https://www.happypathprogramming.com/feed.xml`; the hero, "Listen anywhere" and footer
+  RSS links use the relative `feed.xml` / `../feed.xml` (no `target="_blank"`).
 - No `hosts.html` (hosts live on index). Nav = Episodes / Guests / Topics (the logo links home).
 - `.scripts/`, `.claude/`, `.factory/` and `.github/` are tooling and config; `.slugignore` keeps
   them (and the Markdown docs) off the site. Add any new non-site file to `.slugignore`.
 
 ## Data sources
-- **Episodes (canonical):** RSS `https://anchor.fm/s/2ed56aa0/podcast/rss`
+- **Episodes (canonical):** RSS `https://anchor.fm/s/2ed56aa0/podcast/rss` (read by the
+  tools only; the site links to its own `feed.xml` instead)
   (120+ items). Per item: title (`#NNN …`), description(HTML), `<link>` (Spotify),
   pubDate, `enclosure` mp3, `itunes:duration`, `itunes:episode`. Discord link +
   resource links are parsed out of the description.
@@ -142,7 +149,7 @@ everything from the pages plus the feed, so just run it rather than hand-writing
 any of this; the spec below is here so you can change the tool deliberately.
 Head, in this order, ending with `theme-color` (the tool keys off that):
 `<link rel="canonical">`, `<link rel="alternate" type="application/rss+xml">`
-to the feed, then `og:type` / `og:site_name` / `og:locale` / `og:title` /
+to the site's `feed.xml`, then `og:type` / `og:site_name` / `og:locale` / `og:title` /
 `og:description` / `og:url` / `og:image` (+ `:type` `:width` `:height` `:alt`),
 then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
 `:description` / `:image` / `:image:alt`, then `author` and `theme-color`.
@@ -161,7 +168,7 @@ then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
   Episodes count pair.
 - **JSON-LD** — one `<script type="application/ld+json">` per page, a
   `{"@context","@graph":[…]}`, placed at the end of `<head>`: home →
-  `PodcastSeries` (`webFeed`, hosts as `author`, `sameAs` the show's socials) +
+  `PodcastSeries` (`webFeed` = the site's `feed.xml`, hosts as `author`, `sameAs` the show's socials) +
   `WebSite`; episode → `PodcastEpisode` (`episodeNumber`, `datePublished`,
   `timeRequired`, `associatedMedia` AudioObject, guests as `actor`, topics as
   `keywords`, `partOfSeries`); guest → `ProfilePage` + `Person` (`performerIn`);
@@ -180,10 +187,11 @@ then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
 ## Verify before finishing
 - `python3 .scripts/verify.py` must pass (it is a step of `update.py`).
   It checks that every page parses, that there are **0 absolute-internal links**
-  (must be relative — the absolute prod URLs in `canonical`/`og:`/JSON-LD/share
+  (must be relative — the absolute prod URLs in `canonical`/`alternate`/`og:`/JSON-LD/share
   links are intentional), 0 broken internal links, that referenced images exist,
   and that every page has a valid JSON-LD block, a share row, the full
   `og:`/`twitter:` set, and an `og:image` that is its own card at 1200×630.
+  It also checks that `feed.xml` parses and has exactly one item per episode page.
 - `python3 .scripts/check_links.py` must pass — that is the *outbound* half, and
   it is the last step of `update.py`. It requests every external link on the
   site (cached for 30 days, so a routine run only checks new ones) and fails on

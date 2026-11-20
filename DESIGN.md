@@ -14,7 +14,7 @@ Professional, yet fun podcast site for Happy Path Programming.
 - **Home hero:** big title, platform buttons, and 3 stat boxes that link out —
   Episodes → episodes page, Guests → guests page, Hosts → `#hosts`.
 - **Platform buttons** (Spotify, Apple, Amazon, Overcast, Pocket Casts, YouTube,
-  RSS, Discord): inline brand icons (Simple Icons; Amazon Music has none → a
+  RSS → the site's own `feed.xml`, Discord): inline brand icons (Simple Icons; Amazon Music has none → a
   generic music glyph).
 - **Social:** the footer "Community" column links Discord, the podcast's Bluesky
   and X (Twitter), and the t-shirt shop (brand icons, same style as the platform

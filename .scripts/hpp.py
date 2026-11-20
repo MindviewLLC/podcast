@@ -20,7 +20,8 @@ SITE_NAME = "Happy Path Programming"
 TAGLINE = ("No-frills discussions between Bruce Eckel and James Ward about "
            "programming, what it is, and what it should be.")
 TWITTER = "@happypathprog"
-FEED = "https://anchor.fm/s/2ed56aa0/podcast/rss"
+FEED = "https://anchor.fm/s/2ed56aa0/podcast/rss"   # the source: read, never linked
+SITE_FEED = f"{SITE}/feed.xml"                        # the site's own feed: linked everywhere
 
 OG_DEFAULT = f"{SITE}/images/og-default.jpg"
 OG_DEFAULT_ALT = f"{SITE_NAME} — the podcast"
@@ -161,6 +162,7 @@ def episodes_from_feed(refresh: bool = False) -> dict[int, dict]:
             "seconds": seconds,
             "audio": enc.get("url", "") if enc is not None else "",
             "audio_type": enc.get("type", "audio/mpeg") if enc is not None else "",
+            "audio_length": enc.get("length", "") if enc is not None else "",
         }
     return out
 

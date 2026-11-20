@@ -25,7 +25,7 @@ import sys
 import urllib.parse
 
 import hpp
-from hpp import (FEED, HOSTS, OG_DEFAULT, OG_DEFAULT_ALT, SERIES_SAME_AS, SITE,
+from hpp import (SITE_FEED, HOSTS, OG_DEFAULT, OG_DEFAULT_ALT, SERIES_SAME_AS, SITE,
                  SITE_NAME, TAGLINE, TWITTER, unesc)
 
 # Brand icon paths from Simple Icons (simpleicons.org), plus two utility glyphs.
@@ -171,7 +171,7 @@ def build_meta(*, page_url, title, description, image, image_w, image_h,
     lines = [
         f'<link rel="canonical" href="{esc(page_url)}">',
         f'<link rel="alternate" type="application/rss+xml" '
-        f'title="{esc(SITE_NAME)} podcast feed" href="{esc(FEED)}">',
+        f'title="{esc(SITE_NAME)} episodes" href="{esc(SITE_FEED)}">',
         meta("og:type", og_type, prop=True),
         meta("og:site_name", SITE_NAME, prop=True),
         meta("og:locale", "en_US", prop=True),
@@ -367,7 +367,7 @@ def process(path: str, feed: dict[int, dict]) -> None:
     else:  # home
         ld = [{"@type": "PodcastSeries", "@id": f"{SITE}/#podcast",
                "name": SITE_NAME, "url": f"{SITE}/", "description": TAGLINE,
-               "webFeed": FEED, "image": f"{SITE}/images/hpp.jpg",
+               "webFeed": SITE_FEED, "image": f"{SITE}/images/hpp.jpg",
                "inLanguage": "en", "author": HOSTS, "sameAs": SERIES_SAME_AS},
               {"@type": "WebSite", "@id": f"{SITE}/#website", "url": f"{SITE}/",
                "name": SITE_NAME, "description": TAGLINE,
