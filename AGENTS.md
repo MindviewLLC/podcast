@@ -72,6 +72,12 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
   bullet's `-`, a stray `\`, a word-joiner (U+2060) or the word `Discuss`. When a
   URL abuts text, split it where the real URL ends and put the leftover words
   back into the prose; `.scripts/check_links.py` catches what you miss.
+  **A description's own "Resources" list goes in the page's Resources list, not
+  in the "About this episode" prose**: each `- Label - URL` (or `<li><a>`) item
+  becomes a `.res-list` link with the label as its text, the prose keeps only
+  the sentences before "Resources", and a sentence that runs into the next one
+  (`…explains itself.Aver is…`) gets its space back. Write the head's
+  `<meta name="description">` from that same prose.
   **The feed's CDN can serve a copy up to a week old** (`s-maxage=605009`; it
   ignores cache-busting query strings and `Cache-Control: no-cache`), so a
   single fetch can be missing the newest episode. `hpp.fetch_feed` retries and
