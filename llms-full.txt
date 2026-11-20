@@ -1,0 +1,1584 @@
+# Happy Path Programming: full episode notes
+
+> No-frills discussions between Bruce Eckel and James Ward about programming, what it is, and what it should be.
+
+Every episode of the Happy Path Programming podcast by Bruce Eckel and James Ward, newest first. The index is [llms.txt](https://happypathprogramming.com/llms.txt).
+
+## #122 Barry Warsaw
+
+- Page: https://happypathprogramming.com/episodes/122-barry-warsaw.html
+- Aired: November 11, 2026 · 1h 08m · with Barry Warsaw
+- Topics: Python
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/122-Barry-Warsaw-e3s6jp7), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/122-barry-warsaw/id1531666706?i=1000801160697), [Watch on YouTube](https://www.youtube.com/watch?v=gAaR70ibI3A)
+
+We chat with Barry Warsaw, one of the core Python maintainers. In the episode we mention the late Tim Peters who had a significant impact on Python and we are grateful for all his contributions.
+
+Resources:
+
+- <https://www.bratleyfamilyfuneralhomes.com/obituary/timothy-peters>
+
+## #121 Effect Oriented Python with Sune Debel
+
+- Page: https://happypathprogramming.com/episodes/121-effect-oriented-python-with-sune-debel.html
+- Aired: August 03, 2026 · 1h 07m · with Sune Debel
+- Topics: Scala, Python, Effect Oriented
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/121-Effect-Oriented-Python-with-Sune-Debel-e3msu2q), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/121-effect-oriented-python-with-sune-debel/id1531666706?i=1000779630811), [Watch on YouTube](https://www.youtube.com/watch?v=4ofVX9PGBSk)
+
+In this episode we chat with Sune Debel about his Stateless library which brings Effect Oriented Programming to Python. Prior attempt at a Scala ZIO port to Python: pfun
+
+Resources:
+
+- <https://github.com/suned/stateless>
+- <https://github.com/suned/pfun>
+
+## #120 Aver AI-Native Programming Language with Szymon Teżewski
+
+- Page: https://happypathprogramming.com/episodes/120-aver-ai-native-programming-language-with-szymon-tezewski.html
+- Aired: June 02, 2026 · 1h 10m · with Szymon Teżewski
+- Topics: Effect Oriented, AI & LLMs, Types, Testing, Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/120-Aver-AI-Native-Programming-Language-with-Szymon-Teewski-e3k8i8o), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/120-aver-ai-native-programming-language-with-szymon/id1531666706?i=1000770840671), [Watch on YouTube](https://www.youtube.com/watch?v=D_mPxGtSzbQ), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We dive into the new Aver programming language with its creator, Szymon Teżewski: The AI-native language where code explains itself.
+
+Aver is a language where every function carries its intent, side effects are visible in the type system, and tests are executable specs next to the code. The optimization target is the reviewer, not the generator.
+
+Resources:
+
+- [Aver](https://averlang.dev/)
+- [Agent Languages](https://agentlanguages.dev/)
+
+## #119 FP Reaches the Masses with Paul Snively
+
+- Page: https://happypathprogramming.com/episodes/119-fp-reaches-the-masses-with-paul-snively.html
+- Aired: January 24, 2026 · 1h 29m · with Paul Snively
+- Topics: Functional Programming
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/119-FP-Reaches-the-Masses-with-Paul-Snively-e3e4fmp), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/119-fp-reaches-the-masses-with-paul-snively/id1531666706?i=1000746489517), [Watch on YouTube](https://www.youtube.com/watch?v=M1MRCjzq--w), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Paul Snively about how Functional Programming has gone mainstream.
+
+Resources:
+
+- [Paul Snively](https://x.com/JustDeezGuy)
+- [Winter Tech Forum](https://www.wintertechforum.com)
+- [Paul Snively's LambdaConf Talk on Verse](https://www.youtube.com/watch?v=VBT0j14rn5c)
+- [Paul Snively's Blog Post on the Verse Calculus](https://paul-snively.github.io/posts/2022-12-15-verse-calculus.html)
+- [Eugenio Moggi, "Notions of Computation and Monads" (1991)](https://www.cs.cmu.edu/~crary/819-f09/Moggi91.pdf)
+- ["Implementing Lazy Functional Languages on Stock Hardware: The Spineless Tagless G-machine" by Simon Peyton Jones](https://www.microsoft.com/en-us/research/wp-content/uploads/1992/04/spineless-tagless-gmachine.pdf)
+- [The Verse Calculus Paper](https://simon.peytonjones.org/verse-calculus/)
+- ["How to Solve It" by George Pólya](https://press.princeton.edu/books/paperback/9780691164076/how-to-solve-it)
+- [Fidelity Framework](https://github.com/FidelityFramework)
+- [Happy Path Programming Episode #37 from Aug 14, 2021 "The Future of Everything with Paul Snively"](https://open.spotify.com/episode/62iyGUUwh5CBkxkDpJmUuo)
+
+## #118 Effects of 2025
+
+- Page: https://happypathprogramming.com/episodes/118-effects-of-2025.html
+- Aired: January 02, 2026 · 1h 11m
+- Topics: Effect Oriented, Types, Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/118-Effects-of-2025-e3d3kas), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/118-effects-of-2025/id1531666706?i=1000743553833), [Watch on YouTube](https://www.youtube.com/watch?v=U3AUlfVv73o), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Bruce & James recap the technology shifts of 2025 and look ahead to what may be ahead in 2026.
+
+Resources:
+
+- [Register for the Winter Tech Forum](https://www.wintertechforum.com/)
+- [The Eternal Return of Abstraction: Why Programming Was Never About Code](https://generativeai.pub/the-eternal-return-of-abstraction-why-programming-was-never-about-code-18412033b517)
+- [Thinking in Types](https://thinkingintypes.com/)
+- [javadocs.dev](https://www.javadocs.dev)
+- [What's New in Embabel](https://www.youtube.com/watch?v=Cn6F4dATx6s)
+
+## #117 Special Episode: Entering Computer Science as a New Graduate
+
+- Page: https://happypathprogramming.com/episodes/117-special-episode-entering-computer-science-as-a-new-graduate.html
+- Aired: November 18, 2025 · 1h 12m · with Bill Venners, Dianne Marsh
+- Topics: AI & LLMs
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/117-Special-Episode-Entering-Computer-Science-as-a-New-Graduate-e3b1q8a), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/117-special-episode-entering-computer-science-as-a/id1531666706?i=1000737336225), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+At Western State Colorado University in Gunnison on Sept 11, 2025, Bruce Eckel, Bill Venners and Dianne Marsh each give their own 10-minute perspectives on finding fulfillment in the field, especially considering the impact of AI and other recent changes in computing. The remainder of the session answers questions from the student audience.
+
+## #116 Infrastructure as Effects with Sam Goodwin
+
+- Page: https://happypathprogramming.com/episodes/116-infrastructure-as-effects-with-sam-goodwin.html
+- Aired: September 19, 2025 · 58m 57s · with Sam Goodwin
+- Topics: Effect Oriented, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/116-Infrastructure-as-Effects-with-Sam-Goodwin-e38fbg3), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/116-infrastructure-as-effects-with-sam-goodwin/id1531666706?i=1000727576032), [Watch on YouTube](https://www.youtube.com/watch?v=YEn4A7XxgF4), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Infrastructure as Code (IaC) is "code" but without most of the benefits of being code. Sam Goodwin is reinventing IaC with Alchemy and an upcoming Alchemy Effect project which aims to manage infrastructure dependencies & provisioning in the same way we manage requirements in Effect Oriented Programming.
+
+Resources:
+
+- [Sam Goodwin](https://x.com/samgoodwin89)
+- [Alchemy](https://alchemy.run)
+
+## #115 More Python Type Checking! Pyrefly with Aaron Pollack & Steven Troxler
+
+- Page: https://happypathprogramming.com/episodes/115-more-python-type-checking-pyrefly-with-aaron-pollack-and-steven-troxler.html
+- Aired: August 11, 2025 · 1h 02m · with Aaron Pollack, Steven Troxler
+- Topics: Python, Rust, AI & LLMs, Types
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/115-More-Python-Type-Checking--Pyrefly-with-Aaron-Pollack--Steven-Troxler-e36o4jv), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/115-more-python-type-checking-pyrefly-with-aaron/id1531666706?i=1000721575066), [Watch on YouTube](https://www.youtube.com/watch?v=huHF0Rv8L14), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Excitement around Python type checking continues to grow and the tools continue to evolve. We chat with Aaron Pollack and Steven Troxler about Pyrefly - a Rust-based Python type checker and IDE extension. We also touch on the adoption and sentiment around types in Python's ecosystem.
+
+Resources:
+
+- [Aaron Pollack](https://www.linkedin.com/in/pollackaaron/)
+- [Steven Troxler](https://www.linkedin.com/in/steventroxler/)
+- [Pyrefly](https://github.com/facebook/pyrefly)
+- [Pyrefly Discord](https://discord.com/invite/Cf7mFQtW7W)
+- [Package Type Coverage Report](https://python-type-checking.com/)
+- [Packages being tracked for moving types from typeshed to the source project](https://docs.google.com/spreadsheets/d/1s1W24KGMu0mrbXhHIcFKraAaJY5OOc2CjJvRvGx68d4/edit?gid=1884751978#gid=1884751978)
+- [Typing Survey Slides](https://docs.google.com/presentation/d/1VoXuPAjac2WMcOezrgokkcxMkTGxSWyn1n7a8V9HI-A/edit)
+- [Blog post with survey analysis](https://engineering.fb.com/2024/12/09/developer-tools/typed-python-2024-survey-meta/)
+- [Python typing community forum](https://discuss.python.org/c/typing/32)
+- MCP Pyrefly (link no longer online)
+
+## #114 ty: Fast Python Type Checking with Carl Meyer
+
+- Page: https://happypathprogramming.com/episodes/114-ty-fast-python-type-checking-with-carl-meyer.html
+- Aired: July 25, 2025 · 1h 05m · with Carl Meyer
+- Topics: Python, Rust, Types, Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/114-ty-Fast-Python-Type-Checking-with-Carl-Meyer-e3615v2), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/114-ty-fast-python-type-checking-with-carl-meyer/id1531666706?i=1000719030922), [Watch on YouTube](https://www.youtube.com/watch?v=V1OmqEYoSz4), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Carl Meyer works on the ty Python type checker, built in Rust by Astral the creators of Ruff and uv. We chat about type systems, the evolution of static typing in Python, and the focus on performance.
+
+Resources:
+
+- [Carl Meyer](https://www.linkedin.com/in/carljm/)
+- [ty](https://docs.astral.sh/ty/)
+- [Ruff](https://docs.astral.sh/ruff/)
+- [uv](https://docs.astral.sh/uv/)
+- [Richard Feldman: Roc compiler moving from Rust to Zig](https://gist.github.com/rtfeldman/77fb430ee57b42f5f2ca973a3992532f)
+
+## #113 Graph & RAG with Jennifer Reif
+
+- Page: https://happypathprogramming.com/episodes/113-graph-and-rag-with-jennifer-reif.html
+- Aired: July 21, 2025 · 1h 05m · with Jennifer Reif
+- Topics: AI & LLMs, Databases & Data
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/113-Graph--RAG-with-Jennifer-Reif-e35r02d), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/113-graph-rag-with-jennifer-reif/id1531666706?i=1000718366312), [Watch on YouTube](https://www.youtube.com/watch?v=J3vKUmIEYS4), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Jennifer Reif about integrating LLMs with data using RAG, vectorized data, and Graph databases.
+
+Resources:
+
+- [Jennifer Reif](https://jmhreif.com/)
+
+## #112 AI Agents Get More 9's with Rod Johnson
+
+- Page: https://happypathprogramming.com/episodes/112-ai-agents-get-more-9-s-with-rod-johnson.html
+- Aired: July 02, 2025 · 1h 14m · with Rod Johnson
+- Topics: Java & JVM, AI & LLMs, Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/112-AI-Agents-Get-More-9s-with-Rod-Johnson-e3515pd), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/112-ai-agents-get-more-9s-with-rod-johnson/id1531666706?i=1000715516634), [Watch on YouTube](https://www.youtube.com/watch?v=kvIwtLpZW08), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Rod Johnson, creator of the Spring Framework, has created a JVM-based AI Agent framework called Embabel. We dive in and learn how enterprises can build more reliable Agents using deterministic planning and domain-driven orchestration.
+
+Resources:
+
+- [Rod Johnson](https://www.linkedin.com/in/johnsonroda/)
+- [Embabel](https://github.com/embabel/embabel-agent)
+
+## #111 Wasm & MCP with Steve Manuel
+
+- Page: https://happypathprogramming.com/episodes/111-wasm-and-mcp-with-steve-manuel.html
+- Aired: April 10, 2025 · 51m 09s · with Steve Manuel
+- Topics: WebAssembly, AI & LLMs
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/111-Wasm--MCP-with-Steve-Manuel-e3156pn), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/111-wasm-mcp-with-steve-manuel/id1531666706?i=1000703010768), [Watch on YouTube](https://www.youtube.com/watch?v=U5jCBDgUzD0), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Steve Manuel (of dylibso.com and mcp.run) about LLM "plugins" with Wasm & MCP (Model Context Protocol).
+
+Resources:
+
+- [Steve Manuel](https://x.com/nilslice)
+
+## #110 Unlocking Developer Productivity with Justin Reock
+
+- Page: https://happypathprogramming.com/episodes/110-unlocking-developer-productivity-with-justin-reock.html
+- Aired: April 09, 2025 · 1h 05m · with Justin Reock
+- Topics: Developer Productivity, Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/110-Unlocking-Developer-Productivity-with-Justin-Reock-e314ggn), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/110-unlocking-developer-productivity-with-justin-reock/id1531666706?i=1000702798007), [Watch on YouTube](https://www.youtube.com/watch?v=JZ4As6fk5UY), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Justin Reock has spent a lot of his career thinking about how to help developers be more productive. In this episode we learn about the methodologies that can help developers spend more time in "flow state" - happily coding the fun stuff. Further reading: Measuring developer productivity with the DX Core 4
+
+Resources:
+
+- [Justin Reock](https://www.linkedin.com/in/justinreock/)
+- [Measuring developer productivity with the DX Core 4](https://getdx.com/research/measuring-developer-productivity-with-the-dx-core-4/)
+
+## #109 AI, LLMs, and MCP with Lize Raes
+
+- Page: https://happypathprogramming.com/episodes/109-ai-llms-and-mcp-with-lize-raes.html
+- Aired: February 21, 2025 · 1h 12m · with Lize Raes
+- Topics: AI & LLMs, Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/109-AI--LLMs--and-MCP-with-Lize-Raes-e2v6rdv), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/109-ai-llms-and-mcp-with-lize-raes/id1531666706?i=1000694878922), [Watch on YouTube](https://www.youtube.com/watch?v=rhvbQl9txFc), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Lize Raes teaches us about AI models, LLMs, Tools, Agents, and MCP. Article from Anthropic on Agent architectures: Building effective agents
+
+Resources:
+
+- [Lize Raes](https://x.com/LizeRaes)
+- [Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+
+## #108 Winter Tech Forum and Current Projects
+
+- Page: https://happypathprogramming.com/episodes/108-winter-tech-forum-and-current-projects.html
+- Aired: January 30, 2025 · 43m 58s
+- Topics: Python, Effect Oriented, TypeScript, Build Tools
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/108-Winter-Tech-Forum-and-Current-Projects-e2u71qd), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/108-winter-tech-forum-and-current-projects/id1531666706?i=1000687258483)
+
+Join us at the 2025 Winter Tech Forum! www.wintertechforum.com
+
+Projects Mentioned
+
+uv for Python
+
+TypeScript Effect
+
+Pkl CloudFormation Extras
+
+Pkl GitHub Actions
+
+Other Episodes Mentioned
+
+#81 TypeScript & Effects with Michael Arnaldi
+
+#97 The Pkl Configuration Language with Philip Hölzenspies
+
+Resources:
+
+- [www.wintertechforum.com](https://www.wintertechforum.com/)
+- [uv for Python](https://github.com/astral-sh/uv)
+- [TypeScript Effect](https://effect.website/)
+- [Pkl CloudFormation Extras](https://github.com/jamesward/cfn-pkl-extras)
+- [Pkl GitHub Actions](https://github.com/jamesward/pklgha)
+- [#81 TypeScript & Effects with Michael Arnaldi](https://creators.spotify.com/pod/show/happypathprogramming/episodes/81-TypeScript--Effects-with-Michael-Arnaldi-e26d91o)
+- [#97 The Pkl Configuration Language with Philip Hölzenspies](https://creators.spotify.com/pod/show/happypathprogramming/episodes/97-The-Pkl-Configuration-Language-with-Philip-Hlzenspies-e2hntq1)
+
+## #107 The Joy of Programming with Dave Thomas
+
+- Page: https://happypathprogramming.com/episodes/107-the-joy-of-programming-with-dave-thomas.html
+- Aired: December 30, 2024 · 1h 09m · with Dave Thomas
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/107-The-Joy-of-Programming-with-Dave-Thomas-e2sq78t), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/107-the-joy-of-programming-with-dave-thomas/id1531666706?i=1000682141166), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Dave Thomas, co-author of The Pragmatic Programmer, about the joy of programming and the tensions between our and others needs.
+
+Resources:
+
+- [Dave Thomas](https://pragdave.me/)
+
+## #106 Agile Organizations with Jutta Eckstein
+
+- Page: https://happypathprogramming.com/episodes/106-agile-organizations-with-jutta-eckstein.html
+- Aired: December 03, 2024 · 1h 04m · with Jutta Eckstein
+- Topics: Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/106-Agile-Organizations-with-Jutta-Eckstein-e2rpcko), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/106-agile-organizations-with-jutta-eckstein/id1531666706?i=1000679108460), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Jutta Eckstein is expanding the concepts of Agile to be a company-wide model, instead of a niche process for software developers. We chat with her about the book "Company-wide Agility with Beyond Budgeting, Open Space & Sociocracy" which she co-authored on this subject. For more details on the book and many free resources, see: www.agilebossanova.com
+
+Resources:
+
+- [Jutta Eckstein](http://jeckstein.com/)
+- [www.agilebossanova.com](https://www.agilebossanova.com/)
+
+## #105 Nathan Sobo's Pursuit of the Ultimate Code Editor
+
+- Page: https://happypathprogramming.com/episodes/105-nathan-sobo-s-pursuit-of-the-ultimate-code-editor.html
+- Aired: October 13, 2024 · 1h 23m · with Nathan Sobo
+- Topics: Rust, AI & LLMs, Databases & Data
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/105-Nathan-Sobos-Pursuit-of-the-Ultimate-Code-Editor-e2p8mmm), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/105-nathan-sobos-pursuit-of-the-ultimate-code-editor/id1531666706?i=1000672951464), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Nathan Sobo is co-founder of Zed, a super-fast, collaborative, AI-powered, code editor. We chat about his journey to build the ultimate code editor: lessons learned from building Atom, Electron and its challenges, CRDTs, Rust native GPU GUIs, AI Code Assistants, and more CRDTs.
+
+See also
+
+Nathan on the Software Unscripted podcast
+
+Resources:
+
+- [Zed](https://zed.dev/)
+- [Nathan on the Software Unscripted podcast](https://shows.acast.com/software-unscripted/episodes/664fde448c77cc0013b33384)
+
+## #104 Effect Oriented Programming: The Book
+
+- Page: https://happypathprogramming.com/episodes/104-effect-oriented-programming-the-book.html
+- Aired: October 07, 2024 · 58m 21s
+- Topics: Effect Oriented, AI & LLMs
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/104-Effect-Oriented-Programming-The-Book-e2p75tn), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/104-effect-oriented-programming-the-book/id1531666706?i=1000672005323), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+After 4 years in development, our book is out! Along with our friend and lead-author, Bill Frasure, we we discuss the book, its motivation and the process we used to create it. Now available in digital and print forms at: effectorientedprogramming.com
+
+At the end of the episode we step into the "twilight zone" with a 7 minute NotebookLM AI-generated podcast based on the book.
+
+Resources:
+
+- [effectorientedprogramming.com](https://effectorientedprogramming.com/)
+
+## #103 AI Augmented Programming with Stephan Janssen
+
+- Page: https://happypathprogramming.com/episodes/103-ai-augmented-programming-with-stephan-janssen.html
+- Aired: August 20, 2024 · 1h 07m · with Stephan Janssen
+- Topics: Java & JVM, AI & LLMs, Testing
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/103-AI-Augmented-Programming-with-Stephan-Janssen-e2nckk5), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/103-ai-augmented-programming-with-stephan-janssen/id1531666706?i=1000666025198), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Stephan Janssen is always on the bleeding edge of both helping developers grow and with how he uses technology to accomplish amazing things. He led the creation of Devoxx but is a coder at heart. Stephan shares his journey with AI, both as a "library" in his applications and also as an "assistant" that helps him iterate and program more quickly.
+
+Resources
+
+DevoxxGenie IntelliJ Plugin
+
+Ollama
+
+LangChain for Java
+
+LMstudio
+
+Llama.cpp
+
+James on The AI Native Dev Podcast: Rethinking Software Development: James Ward on AI's Role in Software Testing and Coding
+
+Resources:
+
+- [Stephan Janssen](https://twitter.com/Stephan007)
+- [DevoxxGenie IntelliJ Plugin](https://plugins.jetbrains.com/plugin/24169-devoxxgenie)
+- [Ollama](https://ollama.com)
+- [LangChain for Java](https://github.com/langchain4j/langchain4j)
+- [LMstudio](https://lmstudio.ai)
+- [Llama.cpp](https://github.com/ggerganov/llama.cpp)
+- Rethinking Software Development: James Ward on AI's Role in Software Testing and Coding (link no longer online)
+
+## #102 Gathering Nerds and Java Gatherers with Venkat Subramaniam
+
+- Page: https://happypathprogramming.com/episodes/102-gathering-nerds-and-java-gatherers-with-venkat-subramaniam.html
+- Aired: August 17, 2024 · 52m 33s · with Venkat Subramaniam
+- Topics: Java & JVM
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/102-Gathering-Nerds-and-Java-Gatherers-with-Venkat-Subramaniam-e2n9i18), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/102-gathering-nerds-and-java-gatherers-with/id1531666706?i=1000665724427), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Venkat about his upcoming dev2next conference and the new Stream Gatherers API (preview in JDK 22).
+
+Resources:
+
+- [dev2next](https://www.dev2next.com/)
+- [Stream Gatherers API](https://docs.oracle.com/en/java/javase/22/core/stream-gatherers.html)
+
+## #101 Effects and Local-First with Johannes Schickling
+
+- Page: https://happypathprogramming.com/episodes/101-effects-and-local-first-with-johannes-schickling.html
+- Aired: July 07, 2024 · 1h 13m · with Johannes Schickling
+- Topics: Effect Oriented, TypeScript, Databases & Data
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/101-Effects-and-Local-First-with-Johannes-Schickling-e2lkhkj), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/101-effects-and-local-first-with-johannes-schickling/id1531666706?i=1000661447550), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Johannes Schickling (@schickling | schickling.dev) gets us up-to-speed on Effect, the ZIO-inspired Effect System for TypeScript, and the Local-First movement. Resources
+
+Local-First Podcast: www.localfirst.fm
+
+Ink & Switch's Local-First Essay: www.inkandswitch.com/local-first
+
+Effect (TypeScript Library): effect.website
+
+Riffle research project: riffle.systems
+
+LiveStore: github.com/livestorejs
+
+Overtone: overtone.pro
+
+Related Episodes
+
+#81 TypeScript & Effects with Michael Arnaldi
+
+#62 Musing About Local-First Sync & CRDTs with Mark McGranaghan
+
+Resources:
+
+- [@schickling](https://x.com/schickling)
+- [schickling.dev](http://schickling.dev/)
+- [www.localfirst.fm](https://www.localfirst.fm/)
+- [www.inkandswitch.com/local-first](https://www.inkandswitch.com/local-first/)
+- [effect.website](https://effect.website/)
+- [riffle.systems](https://riffle.systems/)
+- [github.com/livestorejs](http://github.com/livestorejs)
+- [overtone.pro](https://overtone.pro/)
+- [#81 TypeScript & Effects with Michael Arnaldi](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/81-TypeScript--Effects-with-Michael-Arnaldi-e26d91o)
+- [#62 Musing About Local-First Sync & CRDTs with Mark McGranaghan](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/62-Musing-About-Local-First-Sync--CRDTs-with-Mark-McGranaghan-e1j5l8o/a-a66th96)
+
+## #100 Thinking about Thinking with Diana Montalion
+
+- Page: https://happypathprogramming.com/episodes/100-thinking-about-thinking-with-diana-montalion.html
+- Aired: June 18, 2024 · 1h 31m · with Diana Montalion
+- Topics: Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/100-Thinking-about-Thinking-with-Diana-Montalion-e2kt8jv), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/100-thinking-about-thinking-with-diana-montalion/id1531666706?i=1000659454700), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+Diana Montalion teaches us about Systems Thinking and why it matters for those of us building software. Diana is founder of Mentrix, which teaches "systems architecture skills for an increasingly complex world."
+
+Pre-Order Diana's book: Learning Systems Thinking: Essential Nonlinear Skills and Practices for Software Professionals
+
+Resources:
+
+- [Diana Montalion](https://twitter.com/dianamontalion)
+- [Mentrix](https://mentrixgroup.com/)
+- [Learning Systems Thinking: Essential Nonlinear Skills and Practices for Software Professionals](https://a.co/d/11IV4B9)
+
+## #99 The Agile Illusion with Trond Hjorteland
+
+- Page: https://happypathprogramming.com/episodes/99-the-agile-illusion-with-trond-hjorteland.html
+- Aired: June 10, 2024 · 55m 54s · with Trond Hjorteland
+- Topics: Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/99-The-Agile-Illusion-with-Trond-Hjorteland-e2kmka7), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/99-the-agile-illusion-with-trond-hjorteland/id1531666706?i=1000658441989)
+
+We chat with Trond Hjorteland about Agile and why it hasn't led to successful outcomes in many traditional organizations.
+
+Mentioned and related resources
+
+Trond & João Rosa's training on Agile + DP2
+
+Open Systems Theory
+
+LinkedIn Group for Open Systems Theory
+
+More material on Open Systems Theory
+
+Resource List from Trond
+
+Some of Trond's recorded talks
+
+Resources:
+
+- [Trond Hjorteland](https://trond.hjorteland.com/)
+- [Trond & João Rosa's training on Agile + DP2](https://www.avanscoperta.it/en/training/intentional-architecture-workshop/)
+- [Open Systems Theory](https://opensystemstheory.org/)
+- [More material on Open Systems Theory](https://www.socialsciencethatactuallyworks.com/)
+- [Resource List from Trond](https://www.linkedin.com/pulse/core-ost-sts-sources-trond-hjorteland/)
+- [Some of Trond's recorded talks](https://youtube.com/playlist?list=PLQINfssfGUzopoXURH3WwQ64QBY8--hyu)
+
+## #98 Continuous Deployment with Valentina Servile
+
+- Page: https://happypathprogramming.com/episodes/98-continuous-deployment-with-valentina-servile.html
+- Aired: April 21, 2024 · 1h 06m · with Valentina Servile
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/98-Continuous-Deployment-with-Valentina-Servile-e2ikace), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/98-continuous-deployment-with-valentina-servile/id1531666706?i=1000653122196), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Valentina Servile about her upcoming book on Continuous Deployment and reducing the risks to keeping HEAD not just always deployable, but automatically deployed to production.
+
+Book for preorder on Amazon: Continuous Deployment: Enable Faster Feedback, Safer Releases, and More Reliable Software
+
+Resources:
+
+- [Valentina Servile](https://twitter.com/EsseValentina)
+- [Continuous Deployment: Enable Faster Feedback, Safer Releases, and More Reliable Software](https://a.co/d/5MUEwzs)
+
+## #97 The Pkl Configuration Language with Philip Hölzenspies
+
+- Page: https://happypathprogramming.com/episodes/97-the-pkl-configuration-language-with-philip-holzenspies.html
+- Aired: April 05, 2024 · 1h 14m · with Philip Hölzenspies
+- Topics: Build Tools
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/97-The-Pkl-Configuration-Language-with-Philip-Hlzenspies-e2hntq1), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/97-the-pkl-configuration-language-with-philip-h%C3%B6lzenspies/id1531666706?i=1000651515160), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Philip Hölzenspies, one of the maintainers of the new Pkl configuration language (pkl-lang.org).
+
+Resources
+
+James' Pkl for GitHub Actions: github.com/jamesward/pklgha
+
+Resources:
+
+- [pkl-lang.org](https://pkl-lang.org/)
+- [github.com/jamesward/pklgha](https://github.com/jamesward/pklgha)
+
+## #96 Compassionate Coding with April Wensel
+
+- Page: https://happypathprogramming.com/episodes/96-compassionate-coding-with-april-wensel.html
+- Aired: March 22, 2024 · 59m 13s · with April Wensel
+- Topics: Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/96-Compassionate-Coding-with-April-Wensel-e2heehh), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/96-compassionate-coding-with-april-wensel/id1531666706?i=1000650163561), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with April Wensel, founder of Compassionate Coding, about helping programmers bring more compassion to themselves and others.
+
+Resources
+
+Confessions of a Recovering Jerk Programmer
+
+Marshall Rosenberg - Nonviolent Communication
+
+Kristin Neff - Self-Compassion
+
+Karen Armstrong - Twelve Steps to a Compassionate Life
+
+UC Berkeley Greater Good Science Center definition of compassion
+
+Oren Jay Sofer's Needs & Feelings Lists
+
+Resources:
+
+- [April Wensel](https://twitter.com/aprilwensel)
+- [Compassionate Coding](https://compassionatecoding.com/)
+- [Confessions of a Recovering Jerk Programmer](https://aprilwensel.medium.com/confessions-of-a-recovering-jerk-programmer-b9d531a05ea9)
+- [Marshall Rosenberg - Nonviolent Communication](https://www.amazon.com/Nonviolent-Communication-Language-Life-Changing-Relationships/dp/189200528X)
+- [Kristin Neff - Self-Compassion](https://www.amazon.com/Self-Compassion-Proven-Power-Being-Yourself/dp/0061733520)
+- [Karen Armstrong - Twelve Steps to a Compassionate Life](https://www.amazon.com/Twelve-Steps-Compassionate-Karen-Armstrong/dp/0307742881)
+- [UC Berkeley Greater Good Science Center definition of compassion](https://greatergood.berkeley.edu/topic/compassion/definition)
+- [Oren Jay Sofer's Needs & Feelings Lists](https://www.orenjaysofer.com/book-audio)
+
+## #95 21st Century Databases with Gwen Shapira
+
+- Page: https://happypathprogramming.com/episodes/95-21st-century-databases-with-gwen-shapira.html
+- Aired: March 10, 2024 · 1h 00m · with Gwen Shapira
+- Topics: Databases & Data, Architecture & Design, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/95-21st-Century-Databases-with-Gwen-Shapira-e2gqorn), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/95-21st-century-databases-with-gwen-shapira/id1531666706?i=1000648659040), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Gwen Shapira, co-founder of Nile, about her journey to creating a virtualized, serverless Postgres database service. We also dive into the challenges with traditional data architectures and approaches like ORMs.
+
+Resources:
+
+- [Gwen Shapira](https://twitter.com/gwenshap)
+- [Nile](https://www.thenile.dev/)
+
+## #94 Build Ops & Developer Productivity With Trisha Gee
+
+- Page: https://happypathprogramming.com/episodes/94-build-ops-and-developer-productivity-with-trisha-gee.html
+- Aired: February 16, 2024 · 1h 07m · with Trisha Gee
+- Topics: Testing, Developer Productivity
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/94-Build-Ops--Developer-Productivity-With-Trisha-Gee-e2fsk7p), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/94-build-ops-developer-productivity-with-trisha-gee/id1531666706?i=1000645628047), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+We chat with Trisha Gee about Test Driven Development (TDD), flaky tests, ops & observability for builds, and developer productivity.
+
+Mentioned TDD Article
+
+The beautiful theory of TDD and the reality check of practice
+
+Resources:
+
+- [Trisha Gee](https://twitter.com/trisha_gee)
+- [The beautiful theory of TDD and the reality check of practice](https://www.bitecode.dev/p/the-beautiful-theory-of-tdd-and-the)
+
+## #93 Nerd Sniping via the 1B Row Challenge with Gunnar Morling
+
+- Page: https://happypathprogramming.com/episodes/93-nerd-sniping-via-the-1b-row-challenge-with-gunnar-morling.html
+- Aired: January 19, 2024 · 59m 06s · with Gunnar Morling
+- Topics: Scala, Rust, Effect Oriented
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/93-Nerd-Sniping-via-the-1B-Row-Challenge-with-Gunnar-Morling-e2elv9l), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/93-nerd-sniping-via-the-1b-row-challenge-with-gunnar-morling/id1531666706?i=1000642269405), [Discuss on Discord](https://discord.gg/XVKD2uPKyF)
+
+When Gunnar Morling announced the 1 Billion Row Challenge a few weeks ago, he had no idea it'd go crazy viral.
+
+Resources
+
+Challenge details: www.morling.dev/blog/one-billion-row-challenge
+
+Rust 1BRC Blog: aminediro.com/posts/billion_row/
+
+Cliff Click's implementation walkthrough: www.youtube.com/watch?v=NJNIbgV6j-Y
+
+James' very slow Scala ZIO implementation: github.com/jamesward/1brc-zio/blob/main/src/main/scala/Main.scala
+
+Resources:
+
+- [www.morling.dev/blog/one-billion-row-challenge](https://www.morling.dev/blog/one-billion-row-challenge)
+- [aminediro.com/posts/billion_row/](https://aminediro.com/posts/billion_row/)
+- [www.youtube.com/watch?v=NJNIbgV6j-Y](https://www.youtube.com/watch?v=NJNIbgV6j-Y)
+- [github.com/jamesward/1brc-zio/blob/main/src/main/scala/Main.scala](https://github.com/jamesward/1brc-zio/blob/main/src/main/scala/Main.scala)
+
+## #92 Virtual Threads Looming with Adam Warski
+
+- Page: https://happypathprogramming.com/episodes/92-virtual-threads-looming-with-adam-warski.html
+- Aired: January 12, 2024 · 1h 07m · with Adam Warski
+- Topics: Scala, Kotlin, Java & JVM, Concurrency
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/92-Virtual-Threads-Looming-with-Adam-Warski-e2ec9d0), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/92-virtual-threads-looming-with-adam-warski/id1531666706?i=1000641482247), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We chat with Adam Warski about Loom, Virtual Threads, and his Loom-based Scala library, Ox, for structured concurrency & Go-Like Channels.
+
+Referenced articles & code
+
+Ox EasyRacer Client
+
+Go statement considered harmful
+
+Go-like selects using jox channels in Java
+
+Limits of Loom's performance
+
+Fast and Scalable Channels in Kotlin Coroutines
+
+Resources:
+
+- [Adam Warski](https://twitter.com/adamwarski)
+- [Ox](https://github.com/softwaremill/ox)
+- [Ox EasyRacer Client](https://github.com/jamesward/easyracer/blob/main/scala-ox/src/main/scala/EasyRacerClient.scala)
+- [Go statement considered harmful](https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/)
+- [Go-like selects using jox channels in Java](https://softwaremill.com/go-like-selects-using-jox-channels-in-java/)
+- [Limits of Loom's performance](https://softwaremill.com/limits-of-looms-performance/)
+- [Fast and Scalable Channels in Kotlin Coroutines](https://arxiv.org/abs/2211.04986)
+
+## #91 'Tis The Season For Reducing Gradle Friction
+
+- Page: https://happypathprogramming.com/episodes/91-tis-the-season-for-reducing-gradle-friction.html
+- Aired: December 22, 2023 · 1h 07m
+- Topics: Build Tools
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/91-Tis-The-Season-For-Reducing-Gradle-Friction-e2dj3k3), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/91-tis-the-season-for-reducing-gradle-friction/id1531666706?i=1000639487642), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Announcing Graboo, a collection of experiments to reduce friction with Gradle. Repo
+
+Buy your Happy Path Programming Shirt
+
+Resources:
+
+- <https://github.com/jamesward/graboo>
+- <https://happy-path.printify.me/products>
+
+## #90 The Best Manager with Sushila Sahay
+
+- Page: https://happypathprogramming.com/episodes/90-the-best-manager-with-sushila-sahay.html
+- Aired: December 15, 2023 · 44m 42s · with Sushila Sahay
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/90-The-Best-Manager-with-Sushila-Sahay-e2da33v), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/90-the-best-manager-with-sushila-sahay/id1531666706?i=1000638734620), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Most of us have managers but they aren't always great. We chat with James' best manager, Sushila Sahay, about what makes her such a great manager. We also dive a bit into open source business models since Sushila has deep experience in that realm.
+
+## #89 Algebraic Effects with Kyo (Flavio Brasil)
+
+- Page: https://happypathprogramming.com/episodes/89-algebraic-effects-with-kyo-flavio-brasil.html
+- Aired: December 08, 2023 · 1h 07m · with Flavio Brasil
+- Topics: Scala, Functional Programming, Effect Oriented
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/89-Algebraic-Effects-with-Kyo-Flavio-Brasil-e2d0s4c), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/89-algebraic-effects-with-kyo-flavio-brasil/id1531666706?i=1000637976624), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We learn about Algebraic Effects with the Scala library Kyo ( getkyo.io) from the creator, Flavio Brasil.
+
+Resources:
+
+- [getkyo.io](https://getkyo.io)
+
+## #88 Developers Thriving In the Flow with Arty Starr
+
+- Page: https://happypathprogramming.com/episodes/88-developers-thriving-in-the-flow-with-arty-starr.html
+- Aired: October 20, 2023 · 1h 15m · with Arty Starr
+- Topics: Java & JVM, Developer Productivity
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/88-Developers-Thriving-In-the-Flow-with-Arty-Starr-e2arlmf), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/88-developers-thriving-in-the-flow-with-arty-starr/id1531666706?i=1000632058233), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Arty Starr is a PhD student and entrepreneur focused on helping developers thrive. We chat about her research on developer momentum and ways that developers can find joy through more time in the flow state.
+
+Referenced resources
+
+SpringOne Talk
+
+Arty's Idea Flow Book
+
+FlowInsight
+
+Resources:
+
+- [SpringOne Talk](https://www.youtube.com/watch?v=4NPArs4eR3c)
+- [Arty's Idea Flow Book](https://leanpub.com/ideaflow)
+- [FlowInsight](https://www.flowinsight.com/)
+
+## #87 Diving Deeper into Wasm with Zalim Bashorov
+
+- Page: https://happypathprogramming.com/episodes/87-diving-deeper-into-wasm-with-zalim-bashorov.html
+- Aired: October 06, 2023 · 1h 07m · with Zalim Bashorov
+- Topics: Kotlin, WebAssembly
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/87-Diving-Deeper-into-Wasm-with-Zalim-Bashorov-e2a8em1), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/87-diving-deeper-into-wasm-with-zalim-bashorov/id1531666706?i=1000630482471), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Zalim Bashorov (@bashorov) works on Kotlin/Wasm at JetBrains and answers our many questions about Wasm, GC, the Component Model, and other future proposals.
+
+Resources:
+
+- [@bashorov](https://twitter.com/bashorov)
+
+## #86 The Journey to OCaml with Sabine
+
+- Page: https://happypathprogramming.com/episodes/86-the-journey-to-ocaml-with-sabine.html
+- Aired: September 29, 2023 · 1h 10m · with Sabine
+- Topics: Python, Functional Programming
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/86-The-Journey-to-OCaml-with-Sabine-e29v23q), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/86-the-journey-to-ocaml-with-sabine/id1531666706?i=1000629688702), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Sabine went from acedemia and a PhD in formal methods, to Python, Elm, Haskell, and now OCaml. We chat about this journey and some of the reasons why OCaml is an awesome modern language.
+
+## #85 Scala, Rust, and Durable Computing with John De Goes
+
+- Page: https://happypathprogramming.com/episodes/85-scala-rust-and-durable-computing-with-john-de-goes.html
+- Aired: September 15, 2023 · 1h 19m · with John De Goes
+- Topics: Scala, Rust, WebAssembly, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/85-Scala--Rust--and-Durable-Computing-with-John-De-Goes-e29ca1s), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/85-scala-rust-and-durable-computing-with-john-de-goes/id1531666706?i=1000628044679), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Our chat with John De Goes starts with his Scala & Rust journeys, then goes into Golem Cloud, a serverless durable computing platform underpinned by Wasm, and ends with a discussion about whether business applications really need parallelism.
+
+## #84 Inevitable Failure with Dormain Drewitz
+
+- Page: https://happypathprogramming.com/episodes/84-inevitable-failure-with-dormain-drewitz.html
+- Aired: September 06, 2023 · 1h 09m · with Dormain Drewitz
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/84-Inevitable-Failure-with-Dormain-Drewitz-e29010h), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/84-inevitable-failure-with-dormain-drewitz/id1531666706?i=1000626989990), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We chat with Dormain Drewitz about failure and reliability. Ironically our recording software crashed near the end of the episode but we recovered and wrapped things up.
+
+Referenced Article: 10 Years of Failure Friday at PagerDuty: Fostering Resilience, Learning and Reliability
+
+Resources:
+
+- 10 Years of Failure Friday at PagerDuty: Fostering Resilience, Learning and Reliability (link no longer online)
+
+## #83 Rust Developer Retreat & Structured Concurrency
+
+- Page: https://happypathprogramming.com/episodes/83-rust-developer-retreat-and-structured-concurrency.html
+- Aired: August 21, 2023 · 58m 12s
+- Topics: Rust, Concurrency
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/83-Rust-Developer-Retreat--Structured-Concurrency-e28bo0k), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/83-rust-developer-retreat-structured-concurrency/id1531666706?i=1000625157596), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+At the Rust Developer Retreat we explored Structured Concurrency with Tokio. With the attendees we chat about our projects and things learned, liked, and disliked about Rust. Then dive into Structured Concurrency generally and specific implementations.
+
+## #82 The Future of Programming
+
+- Page: https://happypathprogramming.com/episodes/82-the-future-of-programming.html
+- Aired: July 07, 2023 · 1h 12m
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/82-The-Future-of-Programming-e26mb3o), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/82-the-future-of-programming/id1531666706?i=1000619939421), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce and James chat about the future of programming.
+
+## #81 TypeScript & Effects with Michael Arnaldi
+
+- Page: https://happypathprogramming.com/episodes/81-typescript-and-effects-with-michael-arnaldi.html
+- Aired: June 30, 2023 · 1h 06m · with Michael Arnaldi
+- Topics: Scala, Functional Programming, Effect Oriented, TypeScript
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/81-TypeScript--Effects-with-Michael-Arnaldi-e26d91o), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/81-typescript-effects-with-michael-arnaldi/id1531666706?i=1000618916180), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Michael created Effect, a functional effect system inspired by Scala ZIO, for TypeScript. We chat about Functional Programming, the TypeScript language, and Effects.
+
+Resources:
+
+- [Effect](https://effect.website/)
+
+## #80 Investing in Developer Tools with Renee Shah
+
+- Page: https://happypathprogramming.com/episodes/80-investing-in-developer-tools-with-renee-shah.html
+- Aired: May 13, 2023 · 45m 37s · with Renee Shah
+- Topics: Functional Programming, WebAssembly
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/80-Investing-in-Developer-Tools-with-Renee-Shah-e23vkqu), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/80-investing-in-developer-tools-with-renee-shah/id1531666706?i=1000612915981), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Renee Shah is a partner at Amplify Partners, an early stage venture capital firm. We discuss some broad industry trends: Edge, Wasm, Distributed Systems, Functional Programming, and much more!
+
+## #79 Domain-Driven Design and Moduliths with Oliver Drotbohm
+
+- Page: https://happypathprogramming.com/episodes/79-domain-driven-design-and-moduliths-with-oliver-drotbohm.html
+- Aired: May 06, 2023 · 1h 02m · with Oliver Drotbohm
+- Topics: Java & JVM, Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/79-Domain-Driven-Design-and-Moduliths-with-Oliver-Drotbohm-e23ik8h), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/79-domain-driven-design-and-moduliths-with-oliver-drotbohm/id1531666706?i=1000611984996), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We chat with Oliver Drotbohm about what Domain-Driven Design is and how it might intersect with Microservices, Monoliths, or Moduliths. Mentioned resources
+
+Parnas on modularity
+
+Chris Richardson – Introducing Assemblage - a microservice architecture definition process
+
+Spring Modulith Project
+
+Introducing Spring Modulith
+
+Resources:
+
+- [Oliver Drotbohm](https://www.odrotbohm.de/)
+- [Parnas on modularity](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)
+- [Chris Richardson – Introducing Assemblage](https://microservices.io/post/architecture/2023/02/09/assemblage-architecture-definition-process.html)
+- [Spring Modulith Project](https://github.com/spring-projects/spring-modulith)
+- [Introducing Spring Modulith](https://spring.io/blog/2022/10/21/introducing-spring-modulith)
+
+## #78 Immutability & IDLs for Declarative Services with Jakub Kozłowski
+
+- Page: https://happypathprogramming.com/episodes/78-immutability-and-idls-for-declarative-services-with-jakub-koz-owski.html
+- Aired: April 28, 2023 · 1h 16m · with Jakub Kozłowski
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/78-Immutability--IDLs-for-Declarative-Services-with-Jakub-Kozowski-e236ktg), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/78-immutability-idls-for-declarative-services-with/id1531666706?i=1000611066012), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+First a short rant about mutability followed by learning about Smithy, an Interface Description Language (IDL), with Jakub Kozłowski.
+
+## #77 Quarkus and Microservices with Holly Cummins
+
+- Page: https://happypathprogramming.com/episodes/77-quarkus-and-microservices-with-holly-cummins.html
+- Aired: April 05, 2023 · 1h 00m · with Holly Cummins
+- Topics: Java & JVM, Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/77-Quarkus-and-Microservices-with-Holly-Cummins-e212gaa), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/77-quarkus-and-microservices-with-holly-cummins/id1531666706?i=1000607573429), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Holly Cummins, a Senior Principal Software Engineer on Quarkus at Redhat, joins us to chat about Microservices and Quarkus.
+
+## #76 WebAssembly (Wasm) "The Web Finds a Way" with Vivek Sekhar
+
+- Page: https://happypathprogramming.com/episodes/76-webassembly-wasm-the-web-finds-a-way-with-vivek-sekhar.html
+- Aired: February 27, 2023 · 1h 01m · with Vivek Sekhar
+- Topics: WebAssembly, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/76-WebAssembly-Wasm-The-Web-Finds-a-Way-with-Vivek-Sekhar-e1uvs6d), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/76-webassembly-wasm-the-web-finds-a-way-with-vivek-sekhar/id1531666706?i=1000601856619), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+WebAssembly (Wasm) finds a way for the web to move forward to near-native performance while avoiding the limitations of JavaScript. In this episode we chat with Vivek Sekhar, a product manager on the Chrome team, about all the Wasm things and how they relate to a better foundation for cross-platform, high performance apps, in the browser, on the cloud, and maybe just everywhere.
+
+## #75 Haskell "Not as Scary as You Think" with Kris Jenkins
+
+- Page: https://happypathprogramming.com/episodes/75-haskell-not-as-scary-as-you-think-with-kris-jenkins.html
+- Aired: February 18, 2023 · 1h 07m · with Kris Jenkins
+- Topics: Functional Programming
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/75-Haskell-Not-as-Scary-as-You-Think-with-Kris-Jenkins-e1v4r9e), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/75-haskell-not-as-scary-as-you-think-with-kris-jenkins/id1531666706?i=1000600341360), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We learn the motivations behind Haskell and why it is the pinnacle of Functional Programming from Kris Jenkins, a Developer Advocate at Confluent.
+
+## #74 Developer Joy = Developer Productivity with Justin Reock
+
+- Page: https://happypathprogramming.com/episodes/74-developer-joy-developer-productivity-with-justin-reock.html
+- Aired: January 13, 2023 · 1h 07m · with Justin Reock
+- Topics: Build Tools, Developer Productivity, Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/74-Developer-Joy--Developer-Productivity-with-Justin-Reock-e1tf0t6), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/74-developer-joy-developer-productivity-with-justin-reock/id1531666706?i=1000594386191), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Developer Productivity Engineering (DPE) is a set of tools & practices that help engineers be more productive. We chat with Justin Reock, field CTO at Gradle, about why more organizations need DPE and what that really means. Learn more at
+
+Resources:
+
+- <https://gradle.com/developer-productivity-engineering/>
+
+## #73 Nix - Functional Programming for Software Packaging with Domen Kožar
+
+- Page: https://happypathprogramming.com/episodes/73-nix-functional-programming-for-software-packaging-with-domen-kozar.html
+- Aired: January 06, 2023 · 1h 02m · with Domen Kožar
+- Topics: Functional Programming, Build Tools
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/73-Nix---Functional-Programming-for-Software-Packaging-with-Domen-Koar-e1t5onm), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/73-nix-functional-programming-for-software-packaging/id1531666706?i=1000592921943), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+After being told many times that Nix is all we dream for when it comes to software packaging, we finally chat with Domen Kožar and learn all about Nix.
+
+## #72 Pants Makes Developers Happier & More Productive with Benjy Weinberger
+
+- Page: https://happypathprogramming.com/episodes/72-pants-makes-developers-happier-and-more-productive-with-benjy-weinberger.html
+- Aired: December 16, 2022 · 1h 08m · with Benjy Weinberger
+- Topics: Scala, Kotlin, Python, Java & JVM, Build Tools
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/72-Pants-Makes-Developers-Happier--More-Productive-with-Benjy-Weinberger-e1sc1uj), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/72-pants-makes-developers-happier-more-productive-with/id1531666706?i=1000590440138), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+The Pants build tool is polyglot (Python, Java, Kotlin, Scala, Go, etc) and focused on helping developers be more productive and happier. We chat with a co-creator of Pants, Benjy Weinberger, about the history, motivations, and future of the build tool.
+
+## #71 Functional Programming in Kotlin with Simon Vergauwen (Sorry about the terrible audio)
+
+- Page: https://happypathprogramming.com/episodes/71-functional-programming-in-kotlin-with-simon-vergauwen-sorry-about-the-terrible-audio.html
+- Aired: December 01, 2022 · 1h 03m · with Simon Vergauwen
+- Topics: Kotlin, Functional Programming
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/71-Functional-Programming-in-Kotlin-with-Simon-Vergauwen-Sorry-about-the-terrible-audio-e1r03ki), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/71-functional-programming-in-kotlin-with-simon/id1531666706?i=1000588386023), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Simon Vergauwen shares about Arrow, a collection of Functional Programming libraries for Kotlin. Sincere apologies for Bruce & James' bad audio. We forgot to change our input device but figured we'd still publish this as it is tolerable and Simon has so much good stuff to say. (His audio is great)
+
+## #70 Understanding Software Through Bees & Biology With Grace Jansen
+
+- Page: https://happypathprogramming.com/episodes/70-understanding-software-through-bees-and-biology-with-grace-jansen.html
+- Aired: October 31, 2022 · 1h 03m · with Grace Jansen
+- Topics: Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/70-Understanding-Software-Through-Bees--Biology-With-Grace-Jansen-e1ptdvm), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/70-understanding-software-through-bees-biology-with/id1531666706?i=1000584537970), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Grace Jansen joins us to chat about how bees and biology can help us better understand software development tools & paradigms like Reactive, Kubernetes, and maybe parts of the 15 Factor App methodology (a modernized version of the Twelve-Factor App methodology).
+
+## #69 Polymorphism Unbound
+
+- Page: https://happypathprogramming.com/episodes/69-polymorphism-unbound.html
+- Aired: September 30, 2022 · 1h 07m
+- Topics: Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/69-Polymorphism-Unbound-e1ok80m), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/69-polymorphism-unbound/id1531666706?i=1000581183550), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce continues his archaeological dig into the foundations of mainstream programming.
+
+Referenced blog: Why Are There Functions?
+
+Resources:
+
+- [Why Are There Functions?](https://www.bruceeckel.com/2022/09/29/why-are-there-functions/)
+
+## #68 The End of Ivory Tower Architecture with Andrew Harmel-Law
+
+- Page: https://happypathprogramming.com/episodes/68-the-end-of-ivory-tower-architecture-with-andrew-harmel-law.html
+- Aired: September 03, 2022 · 1h 08m · with Andrew Harmel-Law
+- Topics: Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/68-The-End-of-Ivory-Tower-Architecture-with-Andrew-Harmel-Law-e1nae6t), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/68-the-end-of-ivory-tower-architecture-with/id1531666706?i=1000578260537), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Andrew Harmel-Law shares a better way to make decisions in software teams using the "Advice Process" which he has used in a number of teams resulting in happier, more productive programmers.
+
+Resources:
+
+- [Andrew Harmel-Law](https://twitter.com/al94781)
+
+## #67 Swallowed by a Python with Luciano Ramalho
+
+- Page: https://happypathprogramming.com/episodes/67-swallowed-by-a-python-with-luciano-ramalho.html
+- Aired: August 31, 2022 · 1h 23m · with Luciano Ramalho
+- Topics: Python
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/67-Swallowed-by-a-Python-with-Luciano-Ramalho-e1n60m9), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/67-swallowed-by-a-python-with-luciano-ramalho/id1531666706?i=1000577941568), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Finally Bruce gets a whole episode about Python with our friend Luciano Ramalho, author of Fluent Python. In the words of Luciano
+
+"Thanks James and Bruce for the most enjoyable podcast panel I ever had!"
+
+Resources:
+
+- [Luciano Ramalho](https://twitter.com/ramalhoorg)
+- [Fluent Python](https://www.fluentpython.com/)
+
+## #66 The Journey to Rust with Christopher Hunt
+
+- Page: https://happypathprogramming.com/episodes/66-the-journey-to-rust-with-christopher-hunt.html
+- Aired: August 13, 2022 · 1h 20m · with Christopher Hunt
+- Topics: Scala, Rust, Java & JVM
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/66-The-Journey-to-Rust-with-Christopher-Hunt-e1meaqh), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/66-the-journey-to-rust-with-christopher-hunt/id1531666706?i=1000575993883), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+No doubt that Rust is hot right now. We chat with Christopher Hunt about his journey through Java, Scala, and many other languages and learn why he is now using Rust.
+
+## #65 Rod's Gambit - Spring, Scala, TypeScript, and Chess with Rod Johnson
+
+- Page: https://happypathprogramming.com/episodes/65-rod-s-gambit-spring-scala-typescript-and-chess-with-rod-johnson.html
+- Aired: August 08, 2022 · 1h 04m · with Rod Johnson
+- Topics: Scala, Java & JVM, TypeScript
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/65-Rods-Gambit---Spring--Scala--TypeScript--and-Chess-with-Rod-Johnson-e1m50ui), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/65-rods-gambit-spring-scala-typescript-and-chess-with/id1531666706?i=1000575375268), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Rod Johnson (creator of Spring Framework) reflects on his programming and chess journeys.
+
+References
+
+ScalaDays 2013 Talk
+
+Stockfish Chess Engine
+
+Resources:
+
+- [ScalaDays 2013 Talk](https://www.youtube.com/watch?v=DBu6zmrZ_50)
+- [Stockfish Chess Engine](https://stockfishchess.org/)
+
+## #64 Building Build Tools is Hard with Josh Suereth
+
+- Page: https://happypathprogramming.com/episodes/64-building-build-tools-is-hard-with-josh-suereth.html
+- Aired: July 22, 2022 · 1h 03m · with Josh Suereth
+- Topics: Scala, Build Tools
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/64-Building-Build-Tools-is-Hard-with-Josh-Suereth-e1lildd), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/64-building-build-tools-is-hard-with-josh-suereth/id1531666706?i=1000570851537), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce and James often rant about build tools but it turns out they are hard to get right. We dive into the reasons with Josh Suereth who maintained sbt (a Scala build tool) for a number of years.
+
+## #63 ZIO 2 dot Ohhhhh! with Bill Frasure
+
+- Page: https://happypathprogramming.com/episodes/63-zio-2-dot-ohhhhh-with-bill-frasure.html
+- Aired: July 01, 2022 · 1h 26m · with Bill Frasure
+- Topics: Effect Oriented
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/63-ZIO-2-dot-Ohhhhh--with-Bill-Frasure-e1kn3uk), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/63-zio-2-dot-ohhhhh-with-bill-frasure/id1531666706?i=1000568491863), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Our co-author on Effect Oriented Programming, Bill Frasure, joins us to chat about his programming journey and his involvement in last week's ZIO 2.0 release.
+
+Book repo
+
+Resources:
+
+- <https://github.com/EffectOrientedProgramming/book>
+
+## #62 Musing About Local-First Sync & CRDTs with Mark McGranaghan
+
+- Page: https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html
+- Aired: May 27, 2022 · 1h 06m · with Mark McGranaghan
+- Topics: Types, Databases & Data
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/62-Musing-About-Local-First-Sync--CRDTs-with-Mark-McGranaghan-e1j5l8o), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/62-musing-about-local-first-sync-crdts-with-mark/id1531666706?i=1000564233656), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization.
+
+More details on Local-first
+
+Referenced article about hybrid logical clocks
+
+Resources:
+
+- [Muse app](https://museapp.com/)
+- <https://www.inkandswitch.com/local-first/>
+- <https://archive.jlongster.com/using-crdts-in-the-wild>
+
+## #61 Compassionate Communities with Tonya Moore
+
+- Page: https://happypathprogramming.com/episodes/61-compassionate-communities-with-tonya-moore.html
+- Aired: May 13, 2022 · 1h 04m · with Tonya Moore
+- Topics: Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/61-Compassionate-Communities-with-Tonya-Moore-e1igd1c), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/61-compassionate-communities-with-tonya-moore/id1531666706?i=1000561184095), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Tonya Moore has been helping build developer communities for years. We discuss how to deal with jerks and the importance of building on a foundation of compassion.
+
+Referenced blog from Bill Venners
+
+Resources:
+
+- <https://www.artima.com/articles/compassion-in-our-community>
+
+## #60 Kotlin Language Design with Roman Elizarov
+
+- Page: https://happypathprogramming.com/episodes/60-kotlin-language-design-with-roman-elizarov.html
+- Aired: April 12, 2022 · 1h 02m · with Roman Elizarov
+- Topics: Kotlin, Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/60-Kotlin-Language-Design-with-Roman-Elizarov-e1gu9sa), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/60-kotlin-language-design-with-roman-elizarov/id1531666706?i=1000557235521), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Kotlin Language designer Roman Elizarov, joins us to talk about finding the right balances when designing Kotlin.
+
+## #59 Goetz's Law, Dhall, and Nix (With Gabriella Gonzalez)
+
+- Page: https://happypathprogramming.com/episodes/59-goetz-s-law-dhall-and-nix-with-gabriella-gonzalez.html
+- Aired: March 29, 2022 · 59m 49s
+- Topics: Functional Programming, Testing, Build Tools
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/59-Goetzs-Law--Dhall--and-Nix-With-Gabriella-Gonzalez-e1g8vfe), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/59-goetzs-law-dhall-and-nix-with-gabriella-gonzalez/id1531666706?i=1000555609691), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Gabriella Gonzalez joins to teach us about the Dhall configuration language they created and Nix.
+
+References
+
+The Dhall configuration language
+
+Henk: a typed intermediate language
+
+Pants Build Tool
+
+The Purely Functional Software Deployment Model
+
+Haskell for all: How to use NixOS for lightweight integration tests
+
+How to market Haskell to a mainstream programmer
+
+Resources:
+
+- [Gabriella Gonzalez](https://twitter.com/GabriellaG439)
+- [The Dhall configuration language](https://dhall-lang.org/)
+- [Henk: a typed intermediate language](https://www.microsoft.com/en-us/research/publication/henk-a-typed-intermediate-language/)
+- [Pants Build Tool](https://www.pantsbuild.org/)
+- [The Purely Functional Software Deployment Model](https://edolstra.github.io/pubs/phd-thesis.pdf)
+- [Haskell for all: How to use NixOS for lightweight integration tests](https://www.haskellforall.com/2020/11/how-to-use-nixos-for-lightweight.html)
+- How to market Haskell to a mainstream programmer (link no longer online)
+
+## #58 Scala 3: Significant indentation and other things we love (With Martin Odersky)
+
+- Page: https://happypathprogramming.com/episodes/58-scala-3-significant-indentation-and-other-things-we-love-with-martin-odersky.html
+- Aired: March 20, 2022 · 1h 08m
+- Topics: Scala, Effect Oriented, Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/58-Scala-3-Significant-indentation-and-other-things-we-love-With-Martin-Odersky-e1ftvp2), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/58-scala-3-significant-indentation-and-other-things/id1531666706?i=1000554625155), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Martin Odersky, creator of Scala, joins us to chat about Scala, Effects, Exceptions, Experiments, and other Exciting stuff.
+
+## #57 Technology Trade Offs: Python & Kotlin (With Matt Anger)
+
+- Page: https://happypathprogramming.com/episodes/57-technology-trade-offs-python-and-kotlin-with-matt-anger.html
+- Aired: March 15, 2022 · 1h 00m
+- Topics: Kotlin, Python
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/57-Technology-Trade-Offs-Python--Kotlin-With-Matt-Anger-e1fj49f), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/57-technology-trade-offs-python-kotlin-with-matt-anger/id1531666706?i=1000554114319), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We explore with Matt Anger a blog he wrote about migrating from Python to Kotlin and the trade offs engineering teams make when deciding which technologies to use.
+
+Resources:
+
+- [a blog he wrote about migrating from Python to Kotlin](https://doordash.engineering/2021/05/04/migrating-from-python-to-kotlin-for-our-backend-services/)
+
+## #56 Feedback Loops & Software is Like Surgery (With Daniel Terhorst-North)
+
+- Page: https://happypathprogramming.com/episodes/56-feedback-loops-and-software-is-like-surgery-with-daniel-terhorst-north.html
+- Aired: March 10, 2022 · 1h 26m
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/56-Feedback-Loops--Software-is-Like-Surgery-With-Daniel-Terhorst-North-e1fhk8t), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/56-feedback-loops-software-is-like-surgery-with-daniel/id1531666706?i=1000553639755), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We explore with Daniel Terhorst-North how social and technical feedback loops can help us build the right thing faster.
+
+## #55 Apache Kafka - Like Functional Programming but for Data (With Anna McDonald)
+
+- Page: https://happypathprogramming.com/episodes/55-apache-kafka-like-functional-programming-but-for-data-with-anna-mcdonald.html
+- Aired: March 03, 2022 · 1h 08m
+- Topics: Functional Programming, Databases & Data
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/55-Apache-Kafka---Like-Functional-Programming-but-for-Data-With-Anna-McDonald-e1f6vkv), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/55-apache-kafka-like-functional-programming-but-for/id1531666706?i=1000552867024), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We chat with the Kafka Duchess, Anna McDonald, about Apache Kafka, CQRS, Event Sourcing, and of-course Functional Programming.
+
+Note: There was a bit of echo for a few minutes but we did resolve it around 8 minutes in.
+
+Resources:
+
+- [Anna McDonald](https://twitter.com/jbfletch_)
+
+## #54 Flix: Designing a principled programming language with Magnus Madsen
+
+- Page: https://happypathprogramming.com/episodes/54-flix-designing-a-principled-programming-language-with-magnus-madsen.html
+- Aired: February 05, 2022 · 1h 16m · with Magnus Madsen
+- Topics: Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/54-Flix-Designing-a-principled-programming-language-with-Magnus-Madsen-e1dueb2), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/54-flix-designing-a-principled-programming-language/id1531666706?i=1000550155697), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Magnus Madsen, language designer for the Flix programming language, joins us to talk about the driving principles and innovative features of the language.
+
+## #53 Open Source: Free as in Hot Dogs (With Donald Fischer)
+
+- Page: https://happypathprogramming.com/episodes/53-open-source-free-as-in-hot-dogs-with-donald-fischer.html
+- Aired: January 21, 2022 · 1h 01m
+- Topics: Types
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/53-Open-Source-Free-as-in-Hot-Dogs-With-Donald-Fischer-e1d94dr), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/53-open-source-free-as-in-hot-dogs-with-donald-fischer/id1531666706?i=1000548616818), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Open Source is an essential foundation for pretty much everything. How do we fund it appropriately? What do we do about Log4Shell-types of issues? Donald Fischer of Tidelift joins us to discuss these economic and human issues.
+
+## #52 Reveling in Nonsense With Josh Long
+
+- Page: https://happypathprogramming.com/episodes/52-reveling-in-nonsense-with-josh-long.html
+- Aired: January 14, 2022 · 1h 22m · with Josh Long
+- Topics: Java & JVM
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/52-Reveling-in-Nonsense-With-Josh-Long-e1cvd3f), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/52-reveling-in-nonsense-with-josh-long/id1531666706?i=1000547932685), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+A stroll through 20 years of Spring with Josh Long. Also: Bruce, James, and Josh announce their new Ska band.
+
+## #51 James' New Kotlin PM Job
+
+- Page: https://happypathprogramming.com/episodes/51-james-new-kotlin-pm-job.html
+- Aired: December 24, 2021 · 1h 03m
+- Topics: Kotlin
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/51-James-New-Kotlin-PM-Job-e1c4t0f), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/51-james-new-kotlin-pm-job/id1531666706?i=1000546062964), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Hope you all have a happy & healthy holiday!
+
+## #50 Testcontainers (Like Uber but for Integration Tests) with Sergei Egorov
+
+- Page: https://happypathprogramming.com/episodes/50-testcontainers-like-uber-but-for-integration-tests-with-sergei-egorov.html
+- Aired: December 17, 2021 · 1h 05m · with Sergei Egorov
+- Topics: Testing, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/50-Testcontainers-Like-Uber-but-for-Integration-Tests-with-Sergei-Egorov-e1bs1i5), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/50-testcontainers-like-uber-but-for-integration-tests/id1531666706?i=1000545320589), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Testcontainers are one of James' favorite modern technologies and in this episode we chat with Sergei Egorov, one of the project creators. We learn about what Testcontainers are and the new Testcontainers Cloud service created by Sergei's new company, AtomicJar.
+
+## #49 Smart Types (Like Regular Types, Only Smarter) with Jorge Vasquez
+
+- Page: https://happypathprogramming.com/episodes/49-smart-types-like-regular-types-only-smarter-with-jorge-vasquez.html
+- Aired: December 10, 2021 · 1h 04m · with Jorge Vasquez
+- Topics: Effect Oriented, Types
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/49-Smart-Types-Like-Regular-Types--Only-Smarter-with-Jorge-Vasquez-e1bhoth), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/49-smart-types-like-regular-types-only-smarter-with/id1531666706?i=1000544601670), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Jorge Vasquez has been working on a way to have more precise data modeling while not sacrificing performance or ergonomics. Smart Types in ZIO Prelude are the answer, and they are amazing!
+
+## #48 Composability in Distributed Systems - Because Math! With Heather Miller
+
+- Page: https://happypathprogramming.com/episodes/48-composability-in-distributed-systems-because-math-with-heather-miller.html
+- Aired: November 19, 2021 · 1h 02m · with Heather Miller
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/48-Composability-in-Distributed-Systems---Because-Math--With-Heather-Miller-e1ahjvc), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/48-composability-in-distributed-systems-because-math/id1531666706?i=1000542513531), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Heather Miller, Computer Science professor at Carnegie Mellon, joins us to talk about her research into composability in distributed systems, the challenges with serialization, and a better approach to Chaos Engineering.
+
+## #47 The Future of Programming Rocs! With Richard Feldman
+
+- Page: https://happypathprogramming.com/episodes/47-the-future-of-programming-rocs-with-richard-feldman.html
+- Aired: November 17, 2021 · 1h 00m · with Richard Feldman
+- Topics: Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/47-The-Future-of-Programming-Rocs--With-Richard-Feldman-e1ae3u5), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/47-the-future-of-programming-rocs-with-richard-feldman/id1531666706?i=1000542268037), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+The creator of the new Roc programming language, Richard Feldman, joins us to talk about rocking developers worlds' with better tools & paradigms.
+
+## #46 What Problem Does GraalVM Solve? All of them. Featuring Alina Yurenko
+
+- Page: https://happypathprogramming.com/episodes/46-what-problem-does-graalvm-solve-all-of-them-featuring-alina-yurenko.html
+- Aired: November 05, 2021 · 59m 59s
+- Topics: Java & JVM
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/46-What-Problem-Does-GraalVM-Solve--All-of-them--Featuring-Alina-Yurenko-e19qveh), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/46-what-problem-does-graalvm-solve-all-of-them/id1531666706?i=1000540911904), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We dive deep on GraalVM and learn from Alina Yurenko about all the problems it solves.
+
+## #45 ZIO 2 - Better, Faster, Friendlier with Adam Fraser
+
+- Page: https://happypathprogramming.com/episodes/45-zio-2-better-faster-friendlier-with-adam-fraser.html
+- Aired: October 29, 2021 · 1h 01m · with Adam Fraser
+- Topics: Scala, Effect Oriented
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/45-ZIO-2---Better--Faster--Friendlier-with-Adam-Fraser-e19gqmf), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/45-zio-2-better-faster-friendlier-with-adam-fraser/id1531666706?i=1000540182913), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Adam Fraser is a core contributor to Scala ZIO. He joins us to chat about improvements in ZIO 2 and how we can grow adoption.
+
+## #44 Tired of Getting N+1'd by Your ORM? A Chat With Alexander Ioffe.
+
+- Page: https://happypathprogramming.com/episodes/44-tired-of-getting-n-1-d-by-your-orm-a-chat-with-alexander-ioffe.html
+- Aired: October 29, 2021 · 59m 47s · with Alexander Ioffe
+- Topics: Scala, Databases & Data
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/44-Tired-of-Getting-N1d-by-Your-ORM--A-Chat-With-Alexander-Ioffe-e19ghoc), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/44-tired-of-getting-n-1d-by-your-orm-a-chat/id1531666706?i=1000540165813), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We chat with Alexander Ioffe, maintainer of the Quill library, about database access approaches and Scala metaprogramming.
+
+## #43 Rúnar Bjarnason is Jackhammering the Foundations of Programming
+
+- Page: https://happypathprogramming.com/episodes/43-runar-bjarnason-is-jackhammering-the-foundations-of-programming.html
+- Aired: October 25, 2021 · 1h 04m
+- Topics: Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/43-Rnar-Bjarnason-is-Jackhammering-the-Foundations-of-Programming-e195sgu), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/43-r%C3%BAnar-bjarnason-is-jackhammering-the-foundations/id1531666706?i=1000539665048), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We've mentioned the futuristic Unision programming language many times but now we dive deep with one of the co-founders.
+
+## #42 The answer to life, the universe, and everything is an abstraction with Viktor Klang
+
+- Page: https://happypathprogramming.com/episodes/42-the-answer-to-life-the-universe-and-everything-is-an-abstraction-with-viktor-klang.html
+- Aired: October 05, 2021 · 1h 26m · with Viktor Klang
+- Topics: Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/42-The-answer-to-life--the-universe--and-everything-is-an-abstraction-with-Viktor-Klang-e1864j3), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/42-the-answer-to-life-the-universe-and/id1531666706?i=1000537658026), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+The legendary Viktor Klang chats with Bruce & James about information loss, reactive, emergence, and many other mind expanding topics.
+
+## #41 "Never gonna give you up" (FP that is) with Wiem Zine Elabidine
+
+- Page: https://happypathprogramming.com/episodes/41-never-gonna-give-you-up-fp-that-is-with-wiem-zine-elabidine.html
+- Aired: September 26, 2021 · 1h 00m · with Wiem Zine Elabidine
+- Topics: Scala, Functional Programming, Effect Oriented
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/41-Never-gonna-give-you-up-FP-that-is-with-Wiem-Zine-Elabidine-e17rl4h), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/41-never-gonna-give-you-up-fp-that-is-with-wiem-zine-elabidine/id1531666706?i=1000536671947), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce and James hear about Wiem's journey in Functional Programming, her contributions to Scala ZIO, and how she never gave up despite the challenges she faced.
+
+Resources:
+
+- [never gave up](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+## #40 Poisoned Agile with Barry Hawkins
+
+- Page: https://happypathprogramming.com/episodes/40-poisoned-agile-with-barry-hawkins.html
+- Aired: September 17, 2021 · 1h 16m · with Barry Hawkins
+- Topics: Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/40-Poisoned-Agile-with-Barry-Hawkins-e17gmi3), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/40-poisoned-agile-with-barry-hawkins/id1531666706?i=1000535798214), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce and James chat with Barry Hawkins about software methodologies, their triumphs and abuses.
+
+## #39 Cracking the Company Culture Conundrum with Sharon Schmidt
+
+- Page: https://happypathprogramming.com/episodes/39-cracking-the-company-culture-conundrum-with-sharon-schmidt.html
+- Aired: September 10, 2021 · 1h 02m · with Sharon Schmidt
+- Topics: Process & Careers, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/39-Cracking-the-Company-Culture-Conundrum-with-Sharon-Schmidt-e176i6n), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/39-cracking-the-company-culture-conundrum-with/id1531666706?i=1000534965462), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+According to James, Heroku had the best company culture / vibe of anywhere he has worked. Bruce & James talk with Sharon Schmidt who is in large part responsible for creating that magical experience.
+
+## #38 Databases are Insufficient with Jonas Bonér
+
+- Page: https://happypathprogramming.com/episodes/38-databases-are-insufficient-with-jonas-boner.html
+- Aired: August 27, 2021 · 1h 04m · with Jonas Bonér
+- Topics: Databases & Data, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/38-Databases-are-Insufficient-with-Jonas-Bonr-e16i22j), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/38-databases-are-insufficient-with-jonas-bon%C3%A9r/id1531666706?i=1000533330085), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+James rants about databases with Jonas Bonér, CEO of Lightbend and creator of Akka. Bruce & James also learn about the actor model, Reactive, and Akka Serverless.
+
+Resources:
+
+- [Jonas Bonér](https://twitter.com/jboner)
+
+## #37 The Future of Everything with Paul Snively
+
+- Page: https://happypathprogramming.com/episodes/37-the-future-of-everything-with-paul-snively.html
+- Aired: August 14, 2021 · 1h 17m · with Paul Snively
+- Topics: Types, Testing
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/37-The-Future-of-Everything-with-Paul-Snively-e15soti), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/37-the-future-of-everything-with-paul-snively/id1531666706?i=1000531977557), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Paul Snively helps us see the future of programming. Spoiler: It's Typed & Functional.
+
+Referenced talks
+
+Types vs. Tests: An Epic Battle?
+
+Type Systems - The Good, Bad and Ugly
+
+Resources:
+
+- [Types vs. Tests: An Epic Battle?](https://www.infoq.com/presentations/Types-Tests/)
+- [Type Systems - The Good, Bad and Ugly](https://www.youtube.com/watch?v=SWTWkYbcWU0)
+
+## #36 The Freedom of Structured Unconferences
+
+- Page: https://happypathprogramming.com/episodes/36-the-freedom-of-structured-unconferences.html
+- Aired: August 06, 2021 · 53m 09s
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/36-The-Freedom-of-Structured-Unconferences-e15i9ii), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/36-the-freedom-of-structured-unconferences/id1531666706?i=1000531238750), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce describes his multi-decade journey running conferences and how letting go of control, while still having a structure, has led to conferences where attendees connect in meaningful ways.
+
+## #35 The Pattern of Design Patterns
+
+- Page: https://happypathprogramming.com/episodes/35-the-pattern-of-design-patterns.html
+- Aired: July 23, 2021 · 1h 11m
+- Topics: Functional Programming, Types, Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/35-The-Pattern-of-Design-Patterns-e14tmjb), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/35-the-pattern-of-design-patterns/id1531666706?i=1000529846066), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+As usual, Bruce & James try to figure out monads & type classes. Then something new, as they go meta on design patterns.
+
+## #34 Fear, Uncertainty, and Monads with Dick Wall
+
+- Page: https://happypathprogramming.com/episodes/34-fear-uncertainty-and-monads-with-dick-wall.html
+- Aired: July 09, 2021 · 1h 01m · with Dick Wall
+- Topics: Scala, Functional Programming
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/34-Fear--Uncertainty--and-Monads-with-Dick-Wall-e146lfo), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/34-fear-uncertainty-and-monads-with-dick-wall/id1531666706?i=1000528395095), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+FEE, FOO, FUD, and FUM (Fear, Uncertainty, and Monads) - Scala Giant, Dick Wall, joins Bruce and James to talk about life, work, and Functional Programming.
+
+## #33 Rethinking "Thinking in Objects"
+
+- Page: https://happypathprogramming.com/episodes/33-rethinking-thinking-in-objects.html
+- Aired: July 02, 2021 · 1h 02m
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/33-Rethinking-Thinking-in-Objects-e13r2te), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/33-rethinking-thinking-in-objects/id1531666706?i=1000527650125), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Object Oriented Programming might just be a series of solutions to self-created problems.
+
+## #32 Adopting Kotlin & FP with Katie Levy
+
+- Page: https://happypathprogramming.com/episodes/32-adopting-kotlin-and-fp-with-katie-levy.html
+- Aired: June 18, 2021 · 59m 43s · with Katie Levy
+- Topics: Kotlin, Functional Programming
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/32-Adopting-Kotlin--FP-with-Katie-Levy-e131ou5), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/32-adopting-kotlin-fp-with-katie-levy/id1531666706?i=1000526061763), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Katie Levy joins Bruce & James to talk about how to help teams adopt Kotlin and Functional Programming.
+
+Resources:
+
+- [Katie Levy](https://twitter.com/klevy110)
+
+## #31 "ZIO's not a library it's a state of mind" with Kit Langton
+
+- Page: https://happypathprogramming.com/episodes/31-zio-s-not-a-library-it-s-a-state-of-mind-with-kit-langton.html
+- Aired: June 11, 2021 · 1h 00m · with Kit Langton
+- Topics: Effect Oriented
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/31-ZIOs-not-a-library-its-a-state-of-mind-with-Kit-Langton-e12k2u6), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/31-zios-not-a-library-its-a-state-of-mind-with-kit-langton/id1531666706?i=1000525195839), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce and James' coauthor Bill Frasure, joins to talk with Kit Langton, creator of ZIO Magic and many other magical ZIO tools & libraries.
+
+## #30 Programming in (not with) Scala 3 but with Bill Venners
+
+- Page: https://happypathprogramming.com/episodes/30-programming-in-not-with-scala-3-but-with-bill-venners.html
+- Aired: May 28, 2021 · 1h 04m · with Bill Venners
+- Topics: Scala
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/30-Programming-in-not-with-Scala-3-but-with-Bill-Venners-e11p70u), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/30-programming-in-not-with-scala-3-but-with-bill-venners/id1531666706?i=1000523436688), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce and James chat with their long time friend Bill Venners about Scala 3 and the updates to his "Programming in Scala" book.
+
+## #29 Contemplating Computer Cognition with Julie Amundson
+
+- Page: https://happypathprogramming.com/episodes/29-contemplating-computer-cognition-with-julie-amundson.html
+- Aired: May 18, 2021 · 1h 01m · with Julie Amundson
+- Topics: AI & LLMs
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/29-Contemplating-Computer-Cognition-with-Julie-Amundson-e1144in), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/29-contemplating-computer-cognition-with-julie-amundson/id1531666706?i=1000522263557), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce and James chat with their friend Julie Amundson about AI, Machine Learning, and many related complexities. They explore what the journey is like for Data Scientists at medium / large companies where everything from data access to productionizing models, has challenges. Also we learn about the Metaflow system Julie's team built to make this journey smoother at Netflix.
+
+## #28 PREP - Performant, Reliable, Expressive, and Productive
+
+- Page: https://happypathprogramming.com/episodes/28-prep-performant-reliable-expressive-and-productive.html
+- Aired: April 30, 2021 · 59m 09s
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/28-PREP---Performant--Reliable--Expressive--and-Productive-e100kko), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/28-prep-performant-reliable-expressive-and-productive/id1531666706?i=1000519484751), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce, James, and their friend Bill are working on a new book about systems that are Performant, Reliable, Expressive, and Productive. This episode explores those themes with some significant detours along the way.
+
+## #27 Side-Effects of a Scala 3 Release
+
+- Page: https://happypathprogramming.com/episodes/27-side-effects-of-a-scala-3-release.html
+- Aired: April 23, 2021 · 1h 03m
+- Topics: Scala, Effect Oriented
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/27-Side-Effects-of-a-Scala-3-Release-evh2nc), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/27-side-effects-of-a-scala-3-release/id1531666706?i=1000518363240), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+With the eminent release of Scala 3, we chat about the language changes, effect systems (ZIO), and reliability.
+
+## #26 Dependency Injection - Why Do We Even...
+
+- Page: https://happypathprogramming.com/episodes/26-dependency-injection-why-do-we-even.html
+- Aired: April 16, 2021 · 1h 02m
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/26-Dependency-Injection---Why-Do-We-Even-ev222n), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/26-dependency-injection-why-do-we-even/id1531666706?i=1000517439862), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+All about Dependency Injection, why we do it, and why James thinks it is terrible.
+
+## #25 No Good Build Tools. Blocked on Reactive.
+
+- Page: https://happypathprogramming.com/episodes/25-no-good-build-tools-blocked-on-reactive.html
+- Aired: April 09, 2021 · 1h 05m
+- Topics: Build Tools, Concurrency
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/25-No-Good-Build-Tools--Blocked-on-Reactive-euipf3), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/25-no-good-build-tools-blocked-on-reactive/id1531666706?i=1000516470098), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Once again we lament build tools. Then we get blocked talking about Reactive, async, non-blocking, actors, and concurrency.
+
+## #24 Vulnerability & Additive Hiring with Dianne Marsh
+
+- Page: https://happypathprogramming.com/episodes/24-vulnerability-and-additive-hiring-with-dianne-marsh.html
+- Aired: April 02, 2021 · 1h 04m · with Dianne Marsh
+- Topics: Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/24-Vulnerability--Additive-Hiring-with-Dianne-Marsh-eu4359), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/24-vulnerability-additive-hiring-with-dianne-marsh/id1531666706?i=1000515536730), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce & James have a delightful chat with long-time friend Dianne Marsh about changing tech culture to be more vulnerable and diverse.
+
+Note: The Non-Violent Communication trainer mentioned in the episode is Karl Steyaert.
+
+## #23 The Modern Java Platform - 2021 Edition
+
+- Page: https://happypathprogramming.com/episodes/23-the-modern-java-platform-2021-edition.html
+- Aired: March 19, 2021 · 1h 00m
+- Topics: Java & JVM
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/23-The-Modern-Java-Platform---2021-Edition-et182q), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/23-the-modern-java-platform-2021-edition/id1531666706?i=1000513699544), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+James shares about a blog he posted this week titled: "The Modern Java Platform - 2021 Edition"
+
+## #22 Be the Kindness You Want to See in the Programming World
+
+- Page: https://happypathprogramming.com/episodes/22-be-the-kindness-you-want-to-see-in-the-programming-world.html
+- Aired: March 08, 2021 · 1h 03m
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/22-Be-the-Kindness-You-Want-to-See-in-the-Programming-World-ervtsg), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/22-be-the-kindness-you-want-to-see-in-the-programming-world/id1531666706?i=1000512091049), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Special guest Oli joins us to chat about Recursion Schemes, tech conferences, podcasts, and kindness.
+
+## #21 Statically-Dynamic Programming or Dynamically-Static Programming? And Death by 1000 Language Quirks
+
+- Page: https://happypathprogramming.com/episodes/21-statically-dynamic-programming-or-dynamically-static-programming-and-death-by-1000-language-quirks.html
+- Aired: February 26, 2021 · 51m 29s
+- Topics: Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/21-Statically-Dynamic-Programming-or-Dynamically-Static-Programming--And-Death-by-1000-Language-Quirks-er51r2), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/21-statically-dynamic-programming-or-dynamically-static/id1531666706?i=1000510828187), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+James is a Dynamic Programming Language Denier but realizes only a part of his code is actually statically typed. And programming languages so full of quirks that you have to hold the quick reference book in your teeth.
+
+## #20 Cultures (not the petri dish variety) & Developer Marketing (also not the petri dish variety)
+
+- Page: https://happypathprogramming.com/episodes/20-cultures-not-the-petri-dish-variety-and-developer-marketing-also-not-the-petri-dish-variety.html
+- Aired: February 12, 2021 · 1h 03m
+- Topics: Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/20-Cultures-not-the-petri-dish-variety--Developer-Marketing-also-not-the-petri-dish-variety-eqauqt), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/20-cultures-not-the-petri-dish-variety-developer/id1531666706?i=1000508802301), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Culture - the hidden force that sometimes reveals itself through code reviews. What is it & how does it form / change?
+
+Also, Developer Marketing and how most companies do it wrong.
+
+## #19 Technology Evolution & Adoption - Why So Slow?
+
+- Page: https://happypathprogramming.com/episodes/19-technology-evolution-and-adoption-why-so-slow.html
+- Aired: February 05, 2021 · 55m 33s
+- Topics: Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/19-Technology-Evolution--Adoption---Why-So-Slow-eq0h4g), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/19-technology-evolution-adoption-why-so-slow/id1531666706?i=1000507931628), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Change happens, but slowwwwly. How can we accelerate the adoption of new & better programming language features? Should we?
+
+## #18 "But Will it Scale?" and Other Illusions of Control
+
+- Page: https://happypathprogramming.com/episodes/18-but-will-it-scale-and-other-illusions-of-control.html
+- Aired: January 18, 2021 · 1h 10m
+- Topics: Architecture & Design, Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/18-But-Will-it-Scale--and-Other-Illusions-of-Control-ep1134), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/18-but-will-it-scale-and-other-illusions-of-control/id1531666706?i=1000505700787), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Software architectures, organizational management, hiring practices, and many other normal part of life give us an illusion of control. But is there another way?
+
+## #17 The Problem with Gradle; Java 11; SemVer Isn't
+
+- Page: https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html
+- Aired: January 07, 2021 · 1h 08m
+- Topics: Java & JVM, Build Tools
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/17-The-Problem-with-Gradle-Java-11-SemVer-Isnt-eom1bq), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/17-the-problem-with-gradle-java-11-semver-isnt/id1531666706?i=1000504654935), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle. This prompted a lengthy response from Cédric Champeau.
+
+James has mostly stuck to Java 8 and Bruce is exploring Java 11.
+
+Finally, James rants about SemVer for the 3.1.4'th time.
+
+Resources:
+
+- [The Problem with Gradle](https://www.bruceeckel.com/2021/01/02/the-problem-with-gradle/)
+- [a lengthy response from Cédric Champeau](https://melix.github.io/blog/2021/01/the-problem-with-gradle.html)
+
+## #16 Kotlin for Scala Devs. Reflection is the Devil. Meta-Programming.
+
+- Page: https://happypathprogramming.com/episodes/16-kotlin-for-scala-devs-reflection-is-the-devil-meta-programming.html
+- Aired: December 19, 2020 · 1h 07m
+- Topics: Scala, Kotlin
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/16-Kotlin-for-Scala-Devs--Reflection-is-the-Devil--Meta-Programming-eo16o4), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/16-kotlin-for-scala-devs-reflection-is-the-devil-meta/id1531666706?i=1000502955110), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+James, as a Scala "True Believer," talks about his experiences with Kotlin and how they compare to Scala. Then he switches gears to rant about runtime reflection which leads to a deeper conversation about meta-programming and alternatives to runtime reflection.
+
+## #15 Atomic Kotlin Done! Cloud Events. TestContainers / Serverless Cassandra. Scala ZIO CLI.
+
+- Page: https://happypathprogramming.com/episodes/15-atomic-kotlin-done-cloud-events-testcontainers-serverless-cassandra-scala-zio-cli.html
+- Aired: December 14, 2020 · 1h 06m
+- Topics: Scala, Kotlin, Java & JVM, Effect Oriented, Testing, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/15-Atomic-Kotlin-Done--Cloud-Events--TestContainers--Serverless-Cassandra--Scala-ZIO-CLI-enpukj), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/15-atomic-kotlin-done-cloud-events-testcontainers-serverless/id1531666706?i=1000502370704), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Bruce shares exciting news about completing the Atomic Kotlin book. The rest is a mishmash of topics related to newsworthy announcements including Spring Boot Cloud Event support, Serverless + TestContainer + Kubernetes Cassandra support, and Scala ZIO CLI.
+
+## #14 Poly-Polymorphism
+
+- Page: https://happypathprogramming.com/episodes/14-poly-polymorphism.html
+- Aired: December 04, 2020 · 1h 01m
+- Topics: Types, Architecture & Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/14-Poly-Polymorphism-encdpk), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/14-poly-polymorphism/id1531666706?i=1000501391751), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Most developers have been exposed to inheritance based polymorphism but there are other ways to deal with overlapping functionality. In this episode we talk about ad-hoc polymorphism, parametric polymorphism, and type classes.
+
+## #12 The Rise of Python & (Unrelated) Making Illegal States Unrepresentable
+
+- Page: https://happypathprogramming.com/episodes/12-the-rise-of-python-and-unrelated-making-illegal-states-unrepresentable.html
+- Aired: November 06, 2020 · 35m 47s
+- Topics: Python, Java & JVM, Developer Productivity
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/12-The-Rise-of-Python--Unrelated-Making-Illegal-States-Unrepresentable-em4el1), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/12-the-rise-of-python-unrelated-making-illegal/id1531666706?i=1000497510696), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Python usage surpasses Java to second place on the Tiobe Index (behind C). Is developer productivity the primary driver? We then switch gears to talk about the concept of "Making Illegal States Unrepresentable" where James continues his crusade against the Builder Pattern.
+
+## #11 Small talk about Smalltalk
+
+- Page: https://happypathprogramming.com/episodes/11-small-talk-about-smalltalk.html
+- Aired: October 30, 2020 · 1h 06m
+- Topics: Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/11-Small-talk-about-Smalltalk-elq7tp), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/11-small-talk-about-smalltalk/id1531666706?i=1000496652332), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Our friend Joey Gibson joins us to talk about Smalltalk, the well known grandfather of Object Oriented Programming. James is assigned some homework to get a Smalltalk web app running on Google Cloud Run, which he did (after recording). Check out the source
+
+Resources:
+
+- <https://github.com/jamesward/hello-pharo>
+
+## #10 Gazing Into the Programming Crystal Ball and Can Organizations Adopt Inner Source?
+
+- Page: https://happypathprogramming.com/episodes/10-gazing-into-the-programming-crystal-ball-and-can-organizations-adopt-inner-source.html
+- Aired: October 20, 2020 · 1h 06m
+- Topics: Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/10-Gazing-Into-the-Programming-Crystal-Ball-and-Can-Organizations-Adopt-Inner-Source-elb32k), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/10-gazing-into-the-programming-crystal-ball-and/id1531666706?i=1000495435258), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We start off discussing what the future of programming might be... Can developers stop thinking about resource limitations? Can we make the "right path" easy? Then we dive into Inner Source and the organizational & cultural challenges with adopting it.
+
+## #9 Buildpacks, Containers, Kubernetes, Happy Path Programming, Rust, and gRPC
+
+- Page: https://happypathprogramming.com/episodes/9-buildpacks-containers-kubernetes-happy-path-programming-rust-and-grpc.html
+- Aired: October 16, 2020 · 1h 07m
+- Topics: Rust, Cloud & Serverless
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/9-Buildpacks--Containers--Kubernetes--Happy-Path-Programming--Rust--and-gRPC-el5i7t), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/9-buildpacks-containers-kubernetes-happy-path-programming/id1531666706?i=1000495015599), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We start off talking about Cloud Native Buildpacks and Containers which of-course leads to James trying to explain Kubernetes. Then we dive into what "Happy Path Programming" means and how, while the term is somewhat derogatory, it is what we ultimately want. We end with a discussion about Bruce's recent explorations into Rust and gRPC.
+
+## #8 Kotlin Revisited with Cedric Beust
+
+- Page: https://happypathprogramming.com/episodes/8-kotlin-revisited-with-cedric-beust.html
+- Aired: October 06, 2020 · 1h 06m · with Cedric Beust
+- Topics: Kotlin, Java & JVM, Functional Programming
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/8-Kotlin-Revisited-with-Cedric-Beust-ekmpdn), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/8-kotlin-revisited-with-cedric-beust/id1531666706?i=1000493831847), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+Long-time Java author & expert, Cedric Beust, joins us to revisit some of the topics from our Kotlin episodes. We talk more deeply about checked exceptions, null safety, the builder pattern, build systems, and of-course Monads.
+
+## #7 Why Adopt New Technology? And Monads! Monads! Monads!
+
+- Page: https://happypathprogramming.com/episodes/7-why-adopt-new-technology-and-monads-monads-monads.html
+- Aired: September 29, 2020 · 56m 29s
+- Topics: Functional Programming
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/7-Why-Adopt-New-Technology--And-Monads--Monads--Monads-ekc5td), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/7-why-adopt-new-technology-and-monads-monads-monads/id1531666706?i=1000493010760), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+What are the reasons to adopt or migrate to a new technology? What prevents you from doing so? We explore that question and the differences between green-field and brown-field. Then we finally dive deep into Monads trying to conquer the Curse of the Monad.
+
+## #6 The Crusade Against Custom Declarative Languages and Meta-Bike-Shedding
+
+- Page: https://happypathprogramming.com/episodes/6-the-crusade-against-custom-declarative-languages-and-meta-bike-shedding.html
+- Aired: September 25, 2020 · 1h 07m
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/6-The-Crusade-Against-Custom-Declarative-Languages-and-Meta-Bike-Shedding-ek5uk4), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/6-the-crusade-against-custom-declarative-languages/id1531666706?i=1000492534289), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+James officially launches his crusade against custom declarative languages and then we bike-shed about bike-shedding; exploring ways to make decisions for trivial problems.
+
+## #5 Developer Productivity, Non-Violent Agile, and Organizational Structures
+
+- Page: https://happypathprogramming.com/episodes/5-developer-productivity-non-violent-agile-and-organizational-structures.html
+- Aired: September 17, 2020 · 1h 03m
+- Topics: Developer Productivity, Process & Careers
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/5-Developer-Productivity--Non-Violent-Agile--and-Organizational-Structures-ejnqj9), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/5-developer-productivity-non-violent-agile-and/id1531666706?i=1000491615526), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+We begin by talking about personal developer productivity but then expand the scope to "collective" / team productivity. This leads us to grapple with some challenging ideas around Agile, non-violent communication, organization structures, diversity, and inclusion.
+
+## #4 Why is Developer Experience Often Terrible?
+
+- Page: https://happypathprogramming.com/episodes/4-why-is-developer-experience-often-terrible.html
+- Aired: September 16, 2020 · 1h 02m
+- Topics: Developer Productivity
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/4-Why-is-Developer-Experience-Often-Terrible-eje4fq), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/4-why-is-developer-experience-often-terrible/id1531666706?i=1000491162241), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+In this episode we discuss things that are often overlooked in developer experience and what underlying values make developer experience an afterthought.
+
+## #3 Nulls, ADTs, and Code Formatting
+
+- Page: https://happypathprogramming.com/episodes/3-nulls-adts-and-code-formatting.html
+- Aired: September 15, 2020 · 1h 02m
+- Topics: Types
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/3-Nulls--ADTs--and-Code-Formatting-ejkkur), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/3-nulls-adts-and-code-formatting/id1531666706?i=1000491457029), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+A bike-shedless discussion about nulls, algebraic data types, and code formatting.
+
+## #2 More Kotlin!
+
+- Page: https://happypathprogramming.com/episodes/2-more-kotlin.html
+- Aired: September 14, 2020 · 59m 23s
+- Topics: Kotlin
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/2-More-Kotlin-ejkiq7), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/2-more-kotlin/id1531666706?i=1000491457028), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+In episode 2 we continue the conversation about Kotlin, things we enjoy and things that could be better.
+
+## #1 Adventures in Kotlin
+
+- Page: https://happypathprogramming.com/episodes/1-adventures-in-kotlin.html
+- Aired: September 13, 2020 · 29m 39s
+- Topics: Kotlin, Language Design
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/1-Adventures-in-Kotlin-ehgpjc), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/1-adventures-in-kotlin/id1531666706?i=1000491363400), [Discuss on Discord](https://discord.gg/nPa76qF)
+
+In our first episode we discuss features of the Kotlin programming language that we like.

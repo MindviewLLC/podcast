@@ -2,7 +2,8 @@
 
 Follow the `zen-of-websites` and `zen-of-projects` Skills (in https://github.com/jamesward/skills); the maintenance
 routine is `.factory/MAINTENANCE.md` and runs weekly. Publishing: every push to `main` is deployed to
-https://www.happypathprogramming.com by the `staticSite` entry for `MindviewLLC/podcast` in
+https://happypathprogramming.com (`www.` redirects to it, so every absolute URL the
+tools write uses the bare domain; `SITE` in `.scripts/hpp.py`) by the `staticSite` entry for `MindviewLLC/podcast` in
 `jamesward/domains` (`domains.pkl`), which syncs the repo to S3 except the globs in `.slugignore`. CI
 (`.github/workflows/ci.yml`) runs `python3 .scripts/verify.py`.
 
@@ -24,11 +25,12 @@ python3 .scripts/update.py --refresh
 which first fetches the feed once and checks it isn't a stale copy (`feed.py`:
 it fails when the feed has an episode without a page, or when YouTube has an
 episode newer than the feed — see "Episodes (canonical)"), then adds each
-episode's Apple Podcasts and YouTube video pills, draws share cards for anything new, rewrites every page's
+episode's Apple Podcasts, YouTube video and Discord pills, draws share cards for anything new, rewrites every page's
 OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml` and `feed.xml`, verifies the
 result, and requests every outbound link to see that it still resolves.
 **You are responsible for the HTML pages; the tools own everything
-in "Social sharing" below, the `pill--apple`/`pill--youtube` episode pills, plus `sitemap.xml` and `feed.xml`.** Don't hand-write those — write
+in "Social sharing" below, the `pill--apple`/`pill--youtube`/`pill--discord` episode pills, plus `sitemap.xml`, `feed.xml`,
+`llms.txt` and `llms-full.txt`.** Don't hand-write those — write
 the pages, then run the pass. If the tools need to change, change them there
 (they are committed, and shared modules `brand.py`/`hpp.py` keep them in
 agreement); keep genuinely one-off scratch code outside the repo, and never put
@@ -41,11 +43,19 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
 - `guests/index.html` + `guests/<slug>.html`
 - `topics/index.html` (tag cloud) + `topics/<slug>.html` (episodes per topic)
 - `images/`, `sitemap.xml` (written by `.scripts/make_sitemap.py`), `robots.txt`, `CNAME`
+- `robots.txt` allows everything and carries the owners' Content Signals choice
+  (contentsignals.org): `Content-Signal: search=yes, ai-input=yes, ai-train=yes`.
+  Keep it on every regen; changing it is the owners' decision.
+- `llms.txt` and `llms-full.txt` (llmstxt.org; written by `.scripts/make_llms.py` from the
+  pages). `llms.txt` is the index: the show, the hosts, and a link with a one-line note
+  for every episode, guest and topic page. `llms-full.txt` is the full text: each
+  episode's facts, listen links, description and resources in Markdown. Both use
+  absolute URLs, since they are read on their own.
 - `feed.xml` — the site's own RSS feed (episodes only; written by `.scripts/make_feed.py`).
   Each item links to its page here (`<link>` and `guid`), carries the page's description and
   resources, the episode's share card and the audio enclosure. **Every RSS link on the site
   points at it, never at the anchor.fm feed:** the head `alternate` link and JSON-LD `webFeed`
-  use `https://www.happypathprogramming.com/feed.xml`; the hero, "Listen anywhere" and footer
+  use `https://happypathprogramming.com/feed.xml`; the hero, "Listen anywhere" and footer
   RSS links use the relative `feed.xml` / `../feed.xml` (no `target="_blank"`).
 - No `hosts.html` (hosts live on index). Nav = Episodes / Guests / Topics (the logo links home).
 - `.scripts/`, `.claude/`, `.factory/` and `.github/` are tooling and config; `.slugignore` keeps
@@ -63,6 +73,12 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
   bullet's `-`, a stray `\`, a word-joiner (U+2060) or the word `Discuss`. When a
   URL abuts text, split it where the real URL ends and put the leftover words
   back into the prose; `.scripts/check_links.py` catches what you miss.
+  **A description's own "Resources" list goes in the page's Resources list, not
+  in the "About this episode" prose**: each `- Label - URL` (or `<li><a>`) item
+  becomes a `.res-list` link with the label as its text, the prose keeps only
+  the sentences before "Resources", and a sentence that runs into the next one
+  (`…explains itself.Aver is…`) gets its space back. Write the head's
+  `<meta name="description">` from that same prose.
   **The feed's CDN can serve a copy up to a week old** (`s-maxage=605009`; it
   ignores cache-busting query strings and `Cache-Control: no-cache`), so a
   single fetch can be missing the newest episode. `hpp.fetch_feed` retries and
@@ -149,12 +165,15 @@ they must not (`verify.py` fails if they are).
   logo.
 - **Per-episode listen/watch links (hero `.pills`, written by
   `.scripts/episode_links.py`):** you write the hero row with "Play on Spotify"
-  (the RSS `<link>`) and "Discuss on Discord" when the description has one. The
-  tool then adds "Play on Apple Podcasts" (the episode's own Apple page, from
-  the iTunes lookup API for show id `1531666706`) and "Watch on YouTube" (the
-  real video from `youtube.real_videos`, never the podcast re-publish; no pill
-  when there is no real video) after the Spotify pill. Don't hand-write the
-  `pill--apple`/`pill--youtube` pills; the tool replaces them on every run.
+  (the RSS `<link>`). The tool then adds "Play on Apple Podcasts" (the
+  episode's own Apple page, from the iTunes lookup API for show id
+  `1531666706`) and "Watch on YouTube" (the real video from
+  `youtube.real_videos`, never the podcast re-publish; no pill when there is no
+  real video) after the Spotify pill, and "Discuss on Discord" at the end when
+  the feed description has a `discord.gg/…` invite (the last one: an earlier
+  link can be a project's own server, as on #115). Don't hand-write the
+  `pill--apple`/`pill--youtube`/`pill--discord` pills; the tool replaces them on
+  every run.
 
 ## Social sharing (every page — written by `.scripts/social.py`)
 This whole section is what `social.py` emits. It is idempotent and derives
@@ -206,11 +225,16 @@ then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
   links are intentional), 0 broken internal links, that referenced images exist,
   and that every page has a valid JSON-LD block, a share row, the full
   `og:`/`twitter:` set, and an `og:image` that is its own card at 1200×630.
-  It also checks that `feed.xml` parses and has exactly one item per episode page.
+  It also checks that `feed.xml` parses and has exactly one item per episode page,
+  and that `llms.txt` links every episode, guest and topic page and `llms-full.txt`
+  has a section for every episode.
 - `python3 .scripts/check_links.py` must pass — that is the *outbound* half, and
   it is the last step of `update.py`. It requests every external link on the
-  site (cached for 30 days, so a routine run only checks new ones) and fails on
-  a link that is definitively wrong. Whenever you touch a page's links, run
+  site and fails on
+  a link that is definitively wrong. Results are cached for 30 days in
+  `.scripts/.cache/` (gitignored), so a local re-run only checks new links; a
+  fresh cloud session starts with no cache and checks every link (~80 s).
+  Whenever you touch a page's links, run
   `python3 .scripts/check_links.py --changed` before you finish; a `Stop` hook in
   `.claude/settings.json` runs exactly that and will hand you the report if you
   forget. Fix what it reports: nearly always the URL ran into the text beside it

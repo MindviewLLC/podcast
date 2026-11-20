@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ET
 from datetime import timezone
 from email.utils import parsedate_to_datetime
 
-SITE = "https://www.happypathprogramming.com"
+SITE = "https://happypathprogramming.com"  
 SITE_NAME = "Happy Path Programming"
 TAGLINE = ("No-frills discussions between Bruce Eckel and James Ward about "
            "programming, what it is, and what it should be.")
@@ -46,6 +46,7 @@ SERIES_SAME_AS = [
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 ITUNES = "{http://www.itunes.com/dtds/podcast-1.0.dtd}"
+RE_DISCORD = re.compile(r"\bdiscord\.gg/[A-Za-z0-9-]+")
 
 
 def require_root() -> None:
@@ -163,6 +164,10 @@ def episodes_from_feed(refresh: bool = False) -> dict[int, dict]:
             "audio": enc.get("url", "") if enc is not None else "",
             "audio_type": enc.get("type", "audio/mpeg") if enc is not None else "",
             "audio_length": enc.get("length", "") if enc is not None else "",
+            # the show's invite closes the description ("Discuss this episode: …");
+            # an earlier discord link can be a project's own server
+            "discord": (["https://" + d for d in RE_DISCORD.findall(
+                item.findtext("description") or "")] or [""])[-1],
         }
     return out
 
