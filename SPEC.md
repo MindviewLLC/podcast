@@ -43,7 +43,7 @@ James Ward: https://www.jamesward.com
 
 ## Updates
 
-This website is updated weekly by the maintenance routine (`.factory/MAINTENANCE.md`) and deployed to https://www.happypathprogramming.com on every push to `main`.
+This website is updated weekly by the maintenance routine (`.factory/MAINTENANCE.md`) and deployed to https://happypathprogramming.com on every push to `main`.
 
 ## Architecture
 

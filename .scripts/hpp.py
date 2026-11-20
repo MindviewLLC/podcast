@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ET
 from datetime import timezone
 from email.utils import parsedate_to_datetime
 
-SITE = "https://www.happypathprogramming.com"
+SITE = "https://happypathprogramming.com"  
 SITE_NAME = "Happy Path Programming"
 TAGLINE = ("No-frills discussions between Bruce Eckel and James Ward about "
            "programming, what it is, and what it should be.")

@@ -13,6 +13,7 @@ Covers the "Verify before finishing" list in AGENTS.md:
     above-the-fold hero images are not lazy-loaded
   - every referenced .jpg really is a JPEG
   - feed.xml parses and has one item per episode page, each linking to it
+  - no URL uses www.happypathprogramming.com (it only redirects)
   - llms.txt links every episode, guest and topic page, and llms-full.txt has
     a section for every episode
 
@@ -200,6 +201,11 @@ def main() -> None:
 
     check_feed()
     check_llms()
+    # www. only redirects to the bare domain (domains.pkl), so no URL may use it
+    for path in [*paths, "feed.xml", "sitemap.xml", "robots.txt", "llms.txt", "llms-full.txt"]:
+        if "www.happypathprogramming.com" in open(path, encoding="utf-8").read():
+            problems.append(f"{path}: uses www.happypathprogramming.com, which redirects; "
+                            f"use {SITE}")
     print(f"pages: {len(paths)}  json-ld: {ld_blocks}  share rows: {share_rows}")
     if problems:
         print(f"\n{len(problems)} problem(s):")

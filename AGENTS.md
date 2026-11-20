@@ -2,7 +2,8 @@
 
 Follow the `zen-of-websites` and `zen-of-projects` Skills (in https://github.com/jamesward/skills); the maintenance
 routine is `.factory/MAINTENANCE.md` and runs weekly. Publishing: every push to `main` is deployed to
-https://www.happypathprogramming.com by the `staticSite` entry for `MindviewLLC/podcast` in
+https://happypathprogramming.com (`www.` redirects to it, so every absolute URL the
+tools write uses the bare domain; `SITE` in `.scripts/hpp.py`) by the `staticSite` entry for `MindviewLLC/podcast` in
 `jamesward/domains` (`domains.pkl`), which syncs the repo to S3 except the globs in `.slugignore`. CI
 (`.github/workflows/ci.yml`) runs `python3 .scripts/verify.py`.
 
@@ -54,7 +55,7 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
   Each item links to its page here (`<link>` and `guid`), carries the page's description and
   resources, the episode's share card and the audio enclosure. **Every RSS link on the site
   points at it, never at the anchor.fm feed:** the head `alternate` link and JSON-LD `webFeed`
-  use `https://www.happypathprogramming.com/feed.xml`; the hero, "Listen anywhere" and footer
+  use `https://happypathprogramming.com/feed.xml`; the hero, "Listen anywhere" and footer
   RSS links use the relative `feed.xml` / `../feed.xml` (no `target="_blank"`).
 - No `hosts.html` (hosts live on index). Nav = Episodes / Guests / Topics (the logo links home).
 - `.scripts/`, `.claude/`, `.factory/` and `.github/` are tooling and config; `.slugignore` keeps
