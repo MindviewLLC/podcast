@@ -86,6 +86,9 @@ fixed size plus `object-fit`, as on cards and avatars) use the displayed size,
 e.g. `480`×`270` or `84`×`84`. Where CSS sets only the width (`height: auto`,
 as on `.ep-hero-art`) use the file's pixel size (`1280`×`720` for a YouTube
 thumbnail, `400`×`400` for the logo) so the reserved box has the image's shape.
+Images below the fold get `loading="lazy"`; the episode hero art
+(`.ep-hero-art img`) and the home page's `.latest-art` are above the fold, so
+they must not (`verify.py` fails if they are).
 - **Logo:** `images/hpp.jpg` (also the fallback everywhere).
 - **Hosts:** real photos `images/bruce-eckel.jpg`, `images/james-ward.jpg`
   (mindviewllc.com/publicity/BruceEckel.jpg; jamesward.com about-page photo).
@@ -94,6 +97,10 @@ thumbnail, `400`×`400` for the logo) so the reserved box has the image's shape.
   resource/repo links or you get wrong faces/org logos). Resolve via
   `github.com/<user>.png` or `unavatar.io/{twitter|linkedin}/<user>` or
   `unavatar.io/<domain>`. No photo → deterministic gradient initials avatar.
+  Those sources often return PNG: convert to a real JPEG before saving as
+  `.jpg`, flattening any transparency onto the `.avatar` gradient (`#0f9d58` →
+  `#34d399`, 135°) so it looks the same as it would on the page. `verify.py`
+  fails on a `.jpg` that isn't a JPEG.
 - **Share cards (`images/og/…`) — WRITE ONCE, NEVER RE-RENDER.** Rendered by
   `.scripts/make_cards.py`; don't draw these by hand. Every episode and guest
   page has its own 1200×630 OpenGraph card so a shared link shows that page's own
@@ -185,7 +192,8 @@ then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
 
 ## Verify before finishing
 - `python3 .scripts/verify.py` must pass (it is a step of `update.py`).
-  It checks that every page parses, that every `<img>` has `width`/`height`,
+  It checks that every page parses, that every `<img>` has `width`/`height`
+  (and the hero art isn't lazy-loaded), that every `.jpg` is a real JPEG,
   that there are **0 absolute-internal links**
   (must be relative — the absolute prod URLs in `canonical`/`og:`/JSON-LD/share
   links are intentional), 0 broken internal links, that referenced images exist,
