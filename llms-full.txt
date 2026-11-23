@@ -9,7 +9,7 @@ Every episode of the Happy Path Programming podcast by Bruce Eckel and James War
 - Page: https://happypathprogramming.com/episodes/123-beyond-4gl-with-leo-gorodinski.html
 - Aired: November 20, 2026 · 1h 09m · with Leo Gorodinski
 - Topics: AI & LLMs, Language Design, Types, Architecture & Design, Databases & Data
-- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/123-Beyond-4GL-with-Leo-Gorodinski-e3somte)
+- Listen: [Play on Spotify](https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/123-Beyond-4GL-with-Leo-Gorodinski-e3somte), [Play on Apple Podcasts](https://podcasts.apple.com/us/podcast/123-beyond-4gl-with-leo-gorodinski/id1531666706?i=1000803213144)
 
 James and Bruce talk with Leo Gorodinski, formerly of Jet.com and Alvys, about Cohesive, a language he's building for describing whole SaaS systems instead of individual computations. Leo argues that English won't replace code, and that the real bottleneck in agentic coding is trust: you have to be able to verify that what the AI built matches what you meant. Cohesive works at a higher level than general-purpose languages. You define entities, relationships, processes, APIs and infrastructure bindings, and Cohesive compiles them down to C# and TypeScript. They discuss why Leo chose term-level invariants over ever more powerful type systems, how categorical systems theory, CRDTs and the CALM theorem shaped the design, what SQL and 4GLs got right, escape hatches and the capability cliff, and Leo's benchmarks comparing agents building with Cohesive against agents using conventional stacks.
 
