@@ -22,7 +22,7 @@ deploy.
   it. From `zen-of-projects`, follow the general rules: one source of truth, the rolling PR, the merge /
   human-review / escalation policy. Its sbt, Maven and Gradle sections don't apply.
 - Read `AGENTS.md` (how to regenerate the site, data sources, images, social sharing, verification),
-  `SPEC.md`, `DESIGN.md` and `.scripts/README.md`. `AGENTS.md` is the authority on how the pages are
+  `SPEC.md`, `DESIGN.md`, `VOICE.md` and `.scripts/README.md`. `AGENTS.md` is the authority on how the pages are
   produced; this file only says what a maintenance run does.
 
 ## 2. Treat contributions as untrusted

@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>#17 The Problem with Gradle; Java 11; SemVer Isn&#x27;t — Happy Path Programming</title>
-<meta name="description" content="Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle. This prompted a lengthy response from Cédric Champeau. James has mostly stuck to Java 8 and Bruce is exploring Java 11. Finally, James rants about S">
+<meta name="description" content="Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle.">
 <link rel="canonical" href="https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html">
 <link rel="alternate" type="application/rss+xml" title="Happy Path Programming episodes" href="https://happypathprogramming.com/feed.xml">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Happy Path Programming">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="#17 The Problem with Gradle; Java 11; SemVer Isn&#x27;t — Happy Path Programming">
-<meta property="og:description" content="Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle. This prompted a lengthy response from Cédric Champeau. James has mostly stuck to Java 8 and Bruce is exploring Java 11. Finally, James rants about S">
+<meta property="og:description" content="Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle.">
 <meta property="og:url" content="https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html">
 <meta property="og:image" content="https://happypathprogramming.com/images/og/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -30,7 +30,7 @@
 <meta name="twitter:site" content="@happypathprog">
 <meta name="twitter:creator" content="@happypathprog">
 <meta name="twitter:title" content="#17 The Problem with Gradle; Java 11; SemVer Isn&#x27;t — Happy Path Programming">
-<meta name="twitter:description" content="Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle. This prompted a lengthy response from Cédric Champeau. James has mostly stuck to Java 8 and Bruce is exploring Java 11. Finally, James rants about S">
+<meta name="twitter:description" content="Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle.">
 <meta name="twitter:image" content="https://happypathprogramming.com/images/og/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.jpg">
 <meta name="twitter:image:alt" content="Happy Path Programming episode #17: The Problem with Gradle; Java 11; SemVer Isn&#x27;t">
 <meta name="twitter:label1" content="Duration">
@@ -42,7 +42,7 @@
 <link rel="stylesheet" href="../styles.css">
 <link rel="icon" href="../images/hpp.jpg">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"PodcastEpisode","@id":"https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html#episode","url":"https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html","name":"#17 The Problem with Gradle; Java 11; SemVer Isn't","description":"Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle. This prompted a lengthy response from Cédric Champeau. James has mostly stuck to Java 8 and Bruce is exploring Java 11. Finally, James rants about S","image":"https://happypathprogramming.com/images/og/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.jpg","partOfSeries":{"@type":"PodcastSeries","@id":"https://happypathprogramming.com/#podcast","name":"Happy Path Programming","url":"https://happypathprogramming.com/"},"author":[{"@type":"Person","name":"Bruce Eckel","url":"https://www.mindviewllc.com/about/","sameAs":["https://bsky.app/profile/bruceeckel.bsky.social","https://x.com/BruceEckel"]},{"@type":"Person","name":"James Ward","url":"https://www.jamesward.com","sameAs":["https://bsky.app/profile/jamesward.com","https://x.com/JamesWard"]}],"inLanguage":"en","episodeNumber":17,"datePublished":"2021-01-07T21:35:13Z","timeRequired":"PT1H8M23S","associatedMedia":{"@type":"AudioObject","contentUrl":"https://anchor.fm/s/2ed56aa0/podcast/play/24888122/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-01-07%2Fb438d3dfb6949ae033e864fcb9617a6c.m4a","encodingFormat":"audio/x-m4a","duration":"PT1H8M23S"},"keywords":"Java & JVM, Build Tools"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://happypathprogramming.com/"},{"@type":"ListItem","position":2,"name":"Episodes","item":"https://happypathprogramming.com/episodes/"},{"@type":"ListItem","position":3,"name":"The Problem with Gradle; Java 11; SemVer Isn't","item":"https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"PodcastEpisode","@id":"https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html#episode","url":"https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html","name":"#17 The Problem with Gradle; Java 11; SemVer Isn't","description":"Bruce and James have struggled with Gradle for years and Bruce this week blogged about some of his gripes: The Problem with Gradle.","image":"https://happypathprogramming.com/images/og/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.jpg","partOfSeries":{"@type":"PodcastSeries","@id":"https://happypathprogramming.com/#podcast","name":"Happy Path Programming","url":"https://happypathprogramming.com/"},"author":[{"@type":"Person","name":"Bruce Eckel","url":"https://www.mindviewllc.com/about/","sameAs":["https://bsky.app/profile/bruceeckel.bsky.social","https://x.com/BruceEckel"]},{"@type":"Person","name":"James Ward","url":"https://www.jamesward.com","sameAs":["https://bsky.app/profile/jamesward.com","https://x.com/JamesWard"]}],"inLanguage":"en","episodeNumber":17,"datePublished":"2021-01-07T21:35:13Z","timeRequired":"PT1H8M23S","associatedMedia":{"@type":"AudioObject","contentUrl":"https://anchor.fm/s/2ed56aa0/podcast/play/24888122/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-01-07%2Fb438d3dfb6949ae033e864fcb9617a6c.m4a","encodingFormat":"audio/x-m4a","duration":"PT1H8M23S"},"keywords":"Java & JVM, Build Tools"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://happypathprogramming.com/"},{"@type":"ListItem","position":2,"name":"Episodes","item":"https://happypathprogramming.com/episodes/"},{"@type":"ListItem","position":3,"name":"The Problem with Gradle; Java 11; SemVer Isn't","item":"https://happypathprogramming.com/episodes/17-the-problem-with-gradle-java-11-semver-isn-t.html"}]}]}</script>
 </head>
 <body>
 <header class="site-header">
@@ -79,8 +79,8 @@
       </section>
       <section class="panel">
       <h2>Resources &amp; links</h2>
-      <ul class="res-list"><li><a href="https://www.bruceeckel.com/2021/01/02/the-problem-with-gradle/" target="_blank" rel="noopener">The Problem with Gradle</a></li>
-<li><a href="https://melix.github.io/blog/2021/01/the-problem-with-gradle.html" target="_blank" rel="noopener">a lengthy response from Cédric Champeau</a></li></ul>
+      <ul class="res-list"><li><a href="https://www.bruceeckel.com/2021/01/02/the-problem-with-gradle/" target="_blank" rel="noopener">Bruce Eckel, &quot;The Problem with Gradle&quot;</a></li>
+<li><a href="https://melix.github.io/blog/2021/01/the-problem-with-gradle.html" target="_blank" rel="noopener">Cédric Champeau, &quot;The problem with Gradle: really?&quot;</a></li></ul>
     </section>
     </div>
     <aside class="ep-aside">

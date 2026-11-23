@@ -7,7 +7,7 @@
     <description>No-frills discussions between Bruce Eckel and James Ward about programming, what it is, and what it should be.</description>
     <language>en-us</language>
     <copyright>Bruce Eckel &amp; James Ward</copyright>
-    <lastBuildDate>Fri, 20 Nov 2026 22:39:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 06:20:41 GMT</lastBuildDate>
     <image>
       <url>https://happypathprogramming.com/images/hpp.jpg</url>
       <title>Happy Path Programming</title>
@@ -21,7 +21,6 @@
       <title>#123 Beyond 4GL with Leo Gorodinski</title>
       <link>https://happypathprogramming.com/episodes/123-beyond-4gl-with-leo-gorodinski.html</link>
       <guid isPermaLink="true">https://happypathprogramming.com/episodes/123-beyond-4gl-with-leo-gorodinski.html</guid>
-      <pubDate>Fri, 20 Nov 2026 22:39:50 GMT</pubDate>
       <category>AI &amp; LLMs</category>
       <category>Language Design</category>
       <category>Types</category>
@@ -29,7 +28,7 @@
       <category>Databases &amp; Data</category>
       <description><![CDATA[<p>James and Bruce talk with Leo Gorodinski, formerly of Jet.com and Alvys, about Cohesive, a language he's building for describing whole SaaS systems instead of individual computations. Leo argues that English won't replace code, and that the real bottleneck in agentic coding is trust: you have to be able to verify that what the AI built matches what you meant. Cohesive works at a higher level than general-purpose languages. You define entities, relationships, processes, APIs and infrastructure bindings, and Cohesive compiles them down to C# and TypeScript. They discuss why Leo chose term-level invariants over ever more powerful type systems, how categorical systems theory, CRDTs and the CALM theorem shaped the design, what SQL and 4GLs got right, escape hatches and the capability cliff, and Leo's benchmarks comparing agents building with Cohesive against agents using conventional stacks.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://x.com/eulerfx" target="_blank" rel="noopener">Leo on Twitter/X</a></li>
+<ul class="res-list"><li><a href="https://x.com/eulerfx" target="_blank" rel="noopener">Leo Gorodinski</a></li>
 <li><a href="https://cohesive.sh" target="_blank" rel="noopener">Cohesive website</a></li>
 <li><a href="https://github.com/cohesivesystems" target="_blank" rel="noopener">Cohesive Systems on GitHub</a></li>
 <li><a href="https://github.com/cohesivesystems/cohesive" target="_blank" rel="noopener">Cohesive .NET libraries</a></li>
@@ -47,9 +46,8 @@
 <li><a href="https://www.idris-lang.org" target="_blank" rel="noopener">Idris 2</a></li>
 <li><a href="https://granule-project.github.io" target="_blank" rel="noopener">Granule</a></li>
 <li><a href="https://www.wintertechforum.com" target="_blank" rel="noopener">Winter Tech Forum</a></li></ul>]]></description>
-      <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/129833326/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-20%2F437256451-44100-2-98a51644ed81a.m4a" length="67171348" type="audio/x-m4a"/>
+      <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/129833326/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-20%2F437256451-44100-2-98a51644ed81a.m4a" length="0" type="audio/mpeg"/>
       <itunes:episode>123</itunes:episode>
-      <itunes:duration>4153</itunes:duration>
       <itunes:image href="https://happypathprogramming.com/images/og/episodes/123-beyond-4gl-with-leo-gorodinski.jpg"/>
     </item>
     <item>
@@ -60,7 +58,7 @@
       <category>Python</category>
       <description><![CDATA[<p>We chat with Barry Warsaw, one of the core Python maintainers. In the episode we mention the late Tim Peters who had a significant impact on Python and we are grateful for all his contributions.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.bratleyfamilyfuneralhomes.com/obituary/timothy-peters" target="_blank" rel="noopener">https://www.bratleyfamilyfuneralhomes.com/obituary/timothy-peters</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://www.bratleyfamilyfuneralhomes.com/obituary/timothy-peters" target="_blank" rel="noopener">Tim Peters obituary</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/129240295/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-11%2F436465073-44100-2-fbdc2f6059f468.mp3" length="65466617" type="audio/mpeg"/>
       <itunes:episode>122</itunes:episode>
       <itunes:duration>4091</itunes:duration>
@@ -74,10 +72,10 @@
       <category>Scala</category>
       <category>Python</category>
       <category>Effect Oriented</category>
-      <description><![CDATA[<p>In this episode we chat with Sune Debel about his Stateless library which brings Effect Oriented Programming to Python. Prior attempt at a Scala ZIO port to Python: pfun</p>
+      <description><![CDATA[<p>In this episode we chat with Sune Debel about his Stateless library which brings Effect Oriented Programming to Python.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://github.com/suned/stateless" target="_blank" rel="noopener">https://github.com/suned/stateless</a></li>
-<li><a href="https://github.com/suned/pfun" target="_blank" rel="noopener">https://github.com/suned/pfun</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://github.com/suned/stateless" target="_blank" rel="noopener">Stateless</a></li>
+<li><a href="https://github.com/suned/pfun" target="_blank" rel="noopener">pfun (Sune&#x27;s earlier Scala ZIO port to Python)</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/123680282/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-3%2F429102210-44100-2-01f76f144b943.mp3" length="64745638" type="audio/mpeg"/>
       <itunes:episode>121</itunes:episode>
       <itunes:duration>4046</itunes:duration>
@@ -119,7 +117,7 @@
 <li><a href="https://simon.peytonjones.org/verse-calculus/" target="_blank" rel="noopener">The Verse Calculus Paper</a></li>
 <li><a href="https://press.princeton.edu/books/paperback/9780691164076/how-to-solve-it" target="_blank" rel="noopener">&quot;How to Solve It&quot; by George Pólya</a></li>
 <li><a href="https://github.com/FidelityFramework" target="_blank" rel="noopener">Fidelity Framework</a></li>
-<li><a href="https://open.spotify.com/episode/62iyGUUwh5CBkxkDpJmUuo" target="_blank" rel="noopener">Happy Path Programming Episode #37 from Aug 14, 2021 &quot;The Future of Everything with Paul Snively&quot;</a></li></ul>]]></description>
+<li><a href="https://happypathprogramming.com/37-the-future-of-everything-with-paul-snively.html">Happy Path Programming #37: The Future of Everything with Paul Snively</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/114490521/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-24%2F416752305-44100-2-a9ea53f14bc8e.mp3" length="85705455" type="audio/mpeg"/>
       <itunes:episode>119</itunes:episode>
       <itunes:duration>5356</itunes:duration>
@@ -274,10 +272,10 @@
       <pubDate>Wed, 09 Apr 2025 03:23:30 GMT</pubDate>
       <category>Developer Productivity</category>
       <category>Process &amp; Careers</category>
-      <description><![CDATA[<p>Justin Reock has spent a lot of his career thinking about how to help developers be more productive. In this episode we learn about the methodologies that can help developers spend more time in &quot;flow state&quot; - happily coding the fun stuff. Further reading: Measuring developer productivity with the DX Core 4</p>
+      <description><![CDATA[<p>Justin Reock has spent a lot of his career thinking about how to help developers be more productive. In this episode we learn about the methodologies that can help developers spend more time in &quot;flow state&quot; - happily coding the fun stuff.</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://www.linkedin.com/in/justinreock/" target="_blank" rel="noopener">Justin Reock</a></li>
-<li><a href="https://getdx.com/research/measuring-developer-productivity-with-the-dx-core-4/" target="_blank" rel="noopener">Measuring developer productivity with the DX Core 4</a></li></ul>]]></description>
+<li><a href="https://getdx.com/research/measuring-developer-productivity-with-the-dx-core-4/" target="_blank" rel="noopener">DX, &quot;Measuring developer productivity with the DX Core 4&quot;</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/100859863/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-3-4%2F397848431-44100-2-4885ae730b256.mp3" length="62477791" type="audio/mpeg"/>
       <itunes:episode>110</itunes:episode>
       <itunes:duration>3904</itunes:duration>
@@ -290,11 +288,10 @@
       <pubDate>Fri, 21 Feb 2025 22:26:58 GMT</pubDate>
       <category>AI &amp; LLMs</category>
       <category>Architecture &amp; Design</category>
-      <description><![CDATA[<p>Lize Raes teaches us about AI models, LLMs, Tools, Agents, and MCP.
-Article from Anthropic on Agent architectures: Building effective agents</p>
+      <description><![CDATA[<p>Lize Raes teaches us about AI models, LLMs, Tools, Agents, and MCP.</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://x.com/LizeRaes" target="_blank" rel="noopener">Lize Raes</a></li>
-<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">Building effective agents</a></li></ul>]]></description>
+<li><a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">Anthropic, &quot;Building effective agents&quot;</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/98839423/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-1-21%2F395306263-44100-2-d0562e302e919.mp3" length="70039927" type="audio/mpeg"/>
       <itunes:episode>109</itunes:episode>
       <itunes:duration>4377</itunes:duration>
@@ -310,22 +307,14 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>TypeScript</category>
       <category>Build Tools</category>
       <description><![CDATA[<p>Join us at the 2025 Winter Tech Forum! www.wintertechforum.com</p>
-<p>Projects Mentioned</p>
-<p>uv for Python</p>
-<p>TypeScript Effect</p>
-<p>Pkl CloudFormation Extras</p>
-<p>Pkl GitHub Actions</p>
-<p>Other Episodes Mentioned</p>
-<p>#81 TypeScript &amp; Effects with Michael Arnaldi</p>
-<p>#97 The Pkl Configuration Language with Philip Hölzenspies</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.wintertechforum.com/" target="_blank" rel="noopener">www.wintertechforum.com</a></li>
+<ul class="res-list"><li><a href="https://www.wintertechforum.com/" target="_blank" rel="noopener">Winter Tech Forum</a></li>
 <li><a href="https://github.com/astral-sh/uv" target="_blank" rel="noopener">uv for Python</a></li>
 <li><a href="https://effect.website/" target="_blank" rel="noopener">TypeScript Effect</a></li>
 <li><a href="https://github.com/jamesward/cfn-pkl-extras" target="_blank" rel="noopener">Pkl CloudFormation Extras</a></li>
 <li><a href="https://github.com/jamesward/pklgha" target="_blank" rel="noopener">Pkl GitHub Actions</a></li>
-<li><a href="https://creators.spotify.com/pod/show/happypathprogramming/episodes/81-TypeScript--Effects-with-Michael-Arnaldi-e26d91o" target="_blank" rel="noopener">#81 TypeScript &amp; Effects with Michael Arnaldi</a></li>
-<li><a href="https://creators.spotify.com/pod/show/happypathprogramming/episodes/97-The-Pkl-Configuration-Language-with-Philip-Hlzenspies-e2hntq1" target="_blank" rel="noopener">#97 The Pkl Configuration Language with Philip Hölzenspies</a></li></ul>]]></description>
+<li><a href="https://happypathprogramming.com/81-typescript-and-effects-with-michael-arnaldi.html">Happy Path Programming #81: TypeScript &amp; Effects with Michael Arnaldi</a></li>
+<li><a href="https://happypathprogramming.com/97-the-pkl-configuration-language-with-philip-holzenspies.html">Happy Path Programming #97: The Pkl Configuration Language with Philip Hölzenspies</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/97797389/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-0-30%2F394004519-44100-2-30c58e86a73df.mp3" length="42218056" type="audio/mpeg"/>
       <itunes:episode>108</itunes:episode>
       <itunes:duration>2638</itunes:duration>
@@ -353,7 +342,7 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <description><![CDATA[<p>Jutta Eckstein is expanding the concepts of Agile to be a company-wide model, instead of a niche process for software developers. We chat with her about the book &quot;Company-wide Agility with Beyond Budgeting, Open Space &amp; Sociocracy&quot; which she co-authored on this subject. For more details on the book and many free resources, see: www.agilebossanova.com</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="http://jeckstein.com/" target="_blank" rel="noopener">Jutta Eckstein</a></li>
-<li><a href="https://www.agilebossanova.com/" target="_blank" rel="noopener">www.agilebossanova.com</a></li></ul>]]></description>
+<li><a href="https://www.agilebossanova.com/" target="_blank" rel="noopener">Agile Bossa Nova (the book&#x27;s site and free resources)</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/95252568/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-11-2%2F390843179-44100-2-9f129e2ee3962.mp3" length="61513977" type="audio/mpeg"/>
       <itunes:episode>106</itunes:episode>
       <itunes:duration>3844</itunes:duration>
@@ -368,8 +357,6 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>AI &amp; LLMs</category>
       <category>Databases &amp; Data</category>
       <description><![CDATA[<p>Nathan Sobo is co-founder of Zed, a super-fast, collaborative, AI-powered, code editor. We chat about his journey to build the ultimate code editor: lessons learned from building Atom, Electron and its challenges, CRDTs, Rust native GPU GUIs, AI Code Assistants, and more CRDTs.</p>
-<p>See also</p>
-<p>Nathan on the Software Unscripted podcast</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://zed.dev/" target="_blank" rel="noopener">Zed</a></li>
 <li><a href="https://shows.acast.com/software-unscripted/episodes/664fde448c77cc0013b33384" target="_blank" rel="noopener">Nathan on the Software Unscripted podcast</a></li></ul>]]></description>
@@ -388,7 +375,7 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <description><![CDATA[<p>After 4 years in development, our book is out! Along with our friend and lead-author, Bill Frasure, we we discuss the book, its motivation and the process we used to create it. Now available in digital and print forms at: effectorientedprogramming.com</p>
 <p>At the end of the episode we step into the &quot;twilight zone&quot; with a 7 minute NotebookLM AI-generated podcast based on the book.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://effectorientedprogramming.com/" target="_blank" rel="noopener">effectorientedprogramming.com</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://effectorientedprogramming.com/" target="_blank" rel="noopener">Effect Oriented Programming (the book)</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/92558711/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-9-7%2Fc485d396-eb9b-90cc-0243-2f5b372db6da.mp3" length="28013105" type="audio/mpeg"/>
       <itunes:episode>104</itunes:episode>
       <itunes:duration>3501</itunes:duration>
@@ -403,13 +390,6 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>AI &amp; LLMs</category>
       <category>Testing</category>
       <description><![CDATA[<p>Stephan Janssen is always on the bleeding edge of both helping developers grow and with how he uses technology to accomplish amazing things. He led the creation of Devoxx but is a coder at heart. Stephan shares his journey with AI, both as a &quot;library&quot; in his applications and also as an &quot;assistant&quot; that helps him iterate and program more quickly.</p>
-<p>Resources</p>
-<p>DevoxxGenie IntelliJ Plugin</p>
-<p>Ollama</p>
-<p>LangChain for Java</p>
-<p>LMstudio</p>
-<p>Llama.cpp</p>
-<p>James on The AI Native Dev Podcast: Rethinking Software Development: James Ward on AI&#x27;s Role in Software Testing and Coding</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://twitter.com/Stephan007" target="_blank" rel="noopener">Stephan Janssen</a></li>
 <li><a href="https://plugins.jetbrains.com/plugin/24169-devoxxgenie" target="_blank" rel="noopener">DevoxxGenie IntelliJ Plugin</a></li>
@@ -446,27 +426,18 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Effect Oriented</category>
       <category>TypeScript</category>
       <category>Databases &amp; Data</category>
-      <description><![CDATA[<p>Johannes Schickling (@schickling | schickling.dev) gets us up-to-speed on Effect, the ZIO-inspired Effect System for TypeScript, and the Local-First movement. Resources</p>
-<p>Local-First Podcast: www.localfirst.fm</p>
-<p>Ink &amp; Switch&#x27;s Local-First Essay: www.inkandswitch.com/local-first</p>
-<p>Effect (TypeScript Library): effect.website</p>
-<p>Riffle research project: riffle.systems</p>
-<p>LiveStore: github.com/livestorejs</p>
-<p>Overtone: overtone.pro</p>
-<p>Related Episodes</p>
-<p>#81 TypeScript &amp; Effects with Michael Arnaldi</p>
-<p>#62 Musing About Local-First Sync &amp; CRDTs with Mark McGranaghan</p>
+      <description><![CDATA[<p>Johannes Schickling (@schickling | schickling.dev) gets us up-to-speed on Effect, the ZIO-inspired Effect System for TypeScript, and the Local-First movement.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://x.com/schickling" target="_blank" rel="noopener">@schickling</a></li>
-<li><a href="http://schickling.dev/" target="_blank" rel="noopener">schickling.dev</a></li>
-<li><a href="https://www.localfirst.fm/" target="_blank" rel="noopener">www.localfirst.fm</a></li>
-<li><a href="https://www.inkandswitch.com/local-first/" target="_blank" rel="noopener">www.inkandswitch.com/local-first</a></li>
-<li><a href="https://effect.website/" target="_blank" rel="noopener">effect.website</a></li>
-<li><a href="https://riffle.systems/" target="_blank" rel="noopener">riffle.systems</a></li>
-<li><a href="http://github.com/livestorejs" target="_blank" rel="noopener">github.com/livestorejs</a></li>
-<li><a href="https://overtone.pro/" target="_blank" rel="noopener">overtone.pro</a></li>
-<li><a href="https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/81-TypeScript--Effects-with-Michael-Arnaldi-e26d91o" target="_blank" rel="noopener">#81 TypeScript &amp; Effects with Michael Arnaldi</a></li>
-<li><a href="https://podcasters.spotify.com/pod/show/happypathprogramming/episodes/62-Musing-About-Local-First-Sync--CRDTs-with-Mark-McGranaghan-e1j5l8o/a-a66th96" target="_blank" rel="noopener">#62 Musing About Local-First Sync &amp; CRDTs with Mark McGranaghan</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://x.com/schickling" target="_blank" rel="noopener">Johannes Schickling</a></li>
+<li><a href="https://schickling.dev/" target="_blank" rel="noopener">Johannes&#x27; website</a></li>
+<li><a href="https://www.localfirst.fm/" target="_blank" rel="noopener">Local-First Podcast</a></li>
+<li><a href="https://www.inkandswitch.com/local-first/" target="_blank" rel="noopener">Ink &amp; Switch&#x27;s Local-First Essay</a></li>
+<li><a href="https://effect.website/" target="_blank" rel="noopener">Effect (TypeScript library)</a></li>
+<li><a href="https://riffle.systems/" target="_blank" rel="noopener">Riffle research project</a></li>
+<li><a href="https://github.com/livestorejs" target="_blank" rel="noopener">LiveStore</a></li>
+<li><a href="https://overtone.pro/" target="_blank" rel="noopener">Overtone</a></li>
+<li><a href="https://happypathprogramming.com/81-typescript-and-effects-with-michael-arnaldi.html">Happy Path Programming #81: TypeScript &amp; Effects with Michael Arnaldi</a></li>
+<li><a href="https://happypathprogramming.com/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html">Happy Path Programming #62: Musing About Local-First Sync &amp; CRDTs with Mark McGranaghan</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/88802387/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-6-3%2F382366014-44100-2-3392ff63bea96.m4a" length="71000814" type="audio/x-m4a"/>
       <itunes:episode>101</itunes:episode>
       <itunes:duration>4390</itunes:duration>
@@ -479,11 +450,10 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <pubDate>Tue, 18 Jun 2024 23:02:13 GMT</pubDate>
       <category>Architecture &amp; Design</category>
       <description><![CDATA[<p>Diana Montalion teaches us about Systems Thinking and why it matters for those of us building software. Diana is founder of Mentrix, which teaches &quot;systems architecture skills for an increasingly complex world.&quot;</p>
-<p>Pre-Order Diana&#x27;s book: Learning Systems Thinking: Essential Nonlinear Skills and Practices for Software Professionals</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://twitter.com/dianamontalion" target="_blank" rel="noopener">Diana Montalion</a></li>
 <li><a href="https://mentrixgroup.com/" target="_blank" rel="noopener">Mentrix</a></li>
-<li><a href="https://a.co/d/11IV4B9" target="_blank" rel="noopener">Learning Systems Thinking: Essential Nonlinear Skills and Practices for Software Professionals</a></li></ul>]]></description>
+<li><a href="https://a.co/d/11IV4B9" target="_blank" rel="noopener">Diana&#x27;s book: Learning Systems Thinking: Essential Nonlinear Skills and Practices for Software Professionals</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/88039487/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-5-14%2F380703021-44100-2-16e92a13f3e9f.m4a" length="89233154" type="audio/x-m4a"/>
       <itunes:episode>100</itunes:episode>
       <itunes:duration>5517</itunes:duration>
@@ -496,17 +466,11 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <pubDate>Mon, 10 Jun 2024 10:40:27 GMT</pubDate>
       <category>Process &amp; Careers</category>
       <description><![CDATA[<p>We chat with Trond Hjorteland about Agile and why it hasn&#x27;t led to successful outcomes in many traditional organizations.</p>
-<p>Mentioned and related resources</p>
-<p>Trond &amp; João Rosa&#x27;s training on Agile + DP2</p>
-<p>Open Systems Theory</p>
-<p>LinkedIn Group for Open Systems Theory</p>
-<p>More material on Open Systems Theory</p>
-<p>Resource List from Trond</p>
-<p>Some of Trond&#x27;s recorded talks</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://trond.hjorteland.com/" target="_blank" rel="noopener">Trond Hjorteland</a></li>
 <li><a href="https://www.avanscoperta.it/en/training/intentional-architecture-workshop/" target="_blank" rel="noopener">Trond &amp; João Rosa&#x27;s training on Agile + DP2</a></li>
 <li><a href="https://opensystemstheory.org/" target="_blank" rel="noopener">Open Systems Theory</a></li>
+<li><a href="https://www.linkedin.com/groups/14292719/" target="_blank" rel="noopener">LinkedIn Group for Open Systems Theory</a></li>
 <li><a href="https://www.socialsciencethatactuallyworks.com/" target="_blank" rel="noopener">More material on Open Systems Theory</a></li>
 <li><a href="https://www.linkedin.com/pulse/core-ost-sts-sources-trond-hjorteland/" target="_blank" rel="noopener">Resource List from Trond</a></li>
 <li><a href="https://youtube.com/playlist?list=PLQINfssfGUzopoXURH3WwQ64QBY8--hyu" target="_blank" rel="noopener">Some of Trond&#x27;s recorded talks</a></li></ul>]]></description>
@@ -521,10 +485,9 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <guid isPermaLink="true">https://happypathprogramming.com/episodes/98-continuous-deployment-with-valentina-servile.html</guid>
       <pubDate>Sun, 21 Apr 2024 16:25:59 GMT</pubDate>
       <description><![CDATA[<p>We chat with Valentina Servile about her upcoming book on Continuous Deployment and reducing the risks to keeping HEAD not just always deployable, but automatically deployed to production.</p>
-<p>Book for preorder on Amazon: Continuous Deployment: Enable Faster Feedback, Safer Releases, and More Reliable Software</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://twitter.com/EsseValentina" target="_blank" rel="noopener">Valentina Servile</a></li>
-<li><a href="https://a.co/d/5MUEwzs" target="_blank" rel="noopener">Continuous Deployment: Enable Faster Feedback, Safer Releases, and More Reliable Software</a></li></ul>]]></description>
+<li><a href="https://a.co/d/5MUEwzs" target="_blank" rel="noopener">Valentina&#x27;s book: Continuous Deployment: Enable Faster Feedback, Safer Releases, and More Reliable Software</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/85649230/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F85649230%2F41777ffb0b5cbd2839df4aede5f6a977.m4a" length="64110720" type="audio/x-m4a"/>
       <itunes:episode>98</itunes:episode>
       <itunes:duration>3964</itunes:duration>
@@ -537,11 +500,9 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <pubDate>Fri, 05 Apr 2024 06:47:50 GMT</pubDate>
       <category>Build Tools</category>
       <description><![CDATA[<p>We chat with Philip Hölzenspies, one of the maintainers of the new Pkl configuration language (pkl-lang.org).</p>
-<p>Resources</p>
-<p>James&#x27; Pkl for GitHub Actions: github.com/jamesward/pklgha</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://pkl-lang.org/" target="_blank" rel="noopener">pkl-lang.org</a></li>
-<li><a href="https://github.com/jamesward/pklgha" target="_blank" rel="noopener">github.com/jamesward/pklgha</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://pkl-lang.org/" target="_blank" rel="noopener">Pkl</a></li>
+<li><a href="https://github.com/jamesward/pklgha" target="_blank" rel="noopener">James&#x27; Pkl for GitHub Actions</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/84718849/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F84718849%2Fa719ae1e40719aaf9d2568a5bea9219c.m4a" length="72398618" type="audio/x-m4a"/>
       <itunes:episode>97</itunes:episode>
       <itunes:duration>4476</itunes:duration>
@@ -554,13 +515,6 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <pubDate>Fri, 22 Mar 2024 21:05:53 GMT</pubDate>
       <category>Process &amp; Careers</category>
       <description><![CDATA[<p>We chat with April Wensel, founder of Compassionate Coding, about helping programmers bring more compassion to themselves and others.</p>
-<p>Resources</p>
-<p>Confessions of a Recovering Jerk Programmer</p>
-<p>Marshall Rosenberg - Nonviolent Communication</p>
-<p>Kristin Neff - Self-Compassion</p>
-<p>Karen Armstrong - Twelve Steps to a Compassionate Life</p>
-<p>UC Berkeley Greater Good Science Center definition of compassion</p>
-<p>Oren Jay Sofer&#x27;s Needs &amp; Feelings Lists</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://twitter.com/aprilwensel" target="_blank" rel="noopener">April Wensel</a></li>
 <li><a href="https://compassionatecoding.com/" target="_blank" rel="noopener">Compassionate Coding</a></li>
@@ -600,8 +554,6 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Testing</category>
       <category>Developer Productivity</category>
       <description><![CDATA[<p>We chat with Trisha Gee about Test Driven Development (TDD), flaky tests, ops &amp; observability for builds, and developer productivity.</p>
-<p>Mentioned TDD Article</p>
-<p>The beautiful theory of TDD and the reality check of practice</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://twitter.com/trisha_gee" target="_blank" rel="noopener">Trisha Gee</a></li>
 <li><a href="https://www.bitecode.dev/p/the-beautiful-theory-of-tdd-and-the" target="_blank" rel="noopener">The beautiful theory of TDD and the reality check of practice</a></li></ul>]]></description>
@@ -619,16 +571,11 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Rust</category>
       <category>Effect Oriented</category>
       <description><![CDATA[<p>When Gunnar Morling announced the 1 Billion Row Challenge a few weeks ago, he had no idea it&#x27;d go crazy viral.</p>
-<p>Resources</p>
-<p>Challenge details: www.morling.dev/blog/one-billion-row-challenge</p>
-<p>Rust 1BRC Blog: aminediro.com/posts/billion_row/</p>
-<p>Cliff Click&#x27;s implementation walkthrough: www.youtube.com/watch?v=NJNIbgV6j-Y</p>
-<p>James&#x27; very slow Scala ZIO implementation: github.com/jamesward/1brc-zio/blob/main/src/main/scala/Main.scala</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.morling.dev/blog/one-billion-row-challenge" target="_blank" rel="noopener">www.morling.dev/blog/one-billion-row-challenge</a></li>
-<li><a href="https://aminediro.com/posts/billion_row/" target="_blank" rel="noopener">aminediro.com/posts/billion_row/</a></li>
-<li><a href="https://www.youtube.com/watch?v=NJNIbgV6j-Y" target="_blank" rel="noopener">www.youtube.com/watch?v=NJNIbgV6j-Y</a></li>
-<li><a href="https://github.com/jamesward/1brc-zio/blob/main/src/main/scala/Main.scala" target="_blank" rel="noopener">github.com/jamesward/1brc-zio/blob/main/src/main/scala/Main.scala</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://www.morling.dev/blog/one-billion-row-challenge" target="_blank" rel="noopener">Gunnar Morling, &quot;The One Billion Row Challenge&quot;</a></li>
+<li><a href="https://aminediro.com/posts/billion_row/" target="_blank" rel="noopener">Amine Diro, &quot;Billion-row challenge: Rust walkthrough&quot;</a></li>
+<li><a href="https://www.youtube.com/watch?v=NJNIbgV6j-Y" target="_blank" rel="noopener">Cliff Click&#x27;s implementation walkthrough</a></li>
+<li><a href="https://github.com/jamesward/1brc-zio/blob/main/src/main/scala/Main.scala" target="_blank" rel="noopener">James&#x27; very slow Scala ZIO implementation</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/81509109/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F81509109%2F599dd5e2a8088267e1670ed0c42878a7.m4a" length="57361261" type="audio/x-m4a"/>
       <itunes:episode>93</itunes:episode>
       <itunes:duration>3546</itunes:duration>
@@ -644,16 +591,10 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Java &amp; JVM</category>
       <category>Concurrency</category>
       <description><![CDATA[<p>We chat with Adam Warski about Loom, Virtual Threads, and his Loom-based Scala library, Ox, for structured concurrency &amp; Go-Like Channels.</p>
-<p>Referenced articles &amp; code</p>
-<p>Ox EasyRacer Client</p>
-<p>Go statement considered harmful</p>
-<p>Go-like selects using jox channels in Java</p>
-<p>Limits of Loom&#x27;s performance</p>
-<p>Fast and Scalable Channels in Kotlin Coroutines</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://twitter.com/adamwarski" target="_blank" rel="noopener">Adam Warski</a></li>
 <li><a href="https://github.com/softwaremill/ox" target="_blank" rel="noopener">Ox</a></li>
-<li><a href="https://github.com/jamesward/easyracer/blob/main/scala-ox/src/main/scala/EasyRacerClient.scala" target="_blank" rel="noopener">Ox EasyRacer Client</a></li>
+<li><a href="https://github.com/jamesward/easyracer/blob/main/scala-ox/src/main/scala/EasyRacerClient.scala" target="_blank" rel="noopener">James&#x27; Ox EasyRacer client</a></li>
 <li><a href="https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/" target="_blank" rel="noopener">Go statement considered harmful</a></li>
 <li><a href="https://softwaremill.com/go-like-selects-using-jox-channels-in-java/" target="_blank" rel="noopener">Go-like selects using jox channels in Java</a></li>
 <li><a href="https://softwaremill.com/limits-of-looms-performance/" target="_blank" rel="noopener">Limits of Loom&#x27;s performance</a></li>
@@ -669,11 +610,10 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <guid isPermaLink="true">https://happypathprogramming.com/episodes/91-tis-the-season-for-reducing-gradle-friction.html</guid>
       <pubDate>Fri, 22 Dec 2023 20:53:58 GMT</pubDate>
       <category>Build Tools</category>
-      <description><![CDATA[<p>Announcing Graboo, a collection of experiments to reduce friction with Gradle. Repo</p>
-<p>Buy your Happy Path Programming Shirt</p>
+      <description><![CDATA[<p>Announcing Graboo, a collection of experiments to reduce friction with Gradle.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://github.com/jamesward/graboo" target="_blank" rel="noopener">https://github.com/jamesward/graboo</a></li>
-<li><a href="https://happy-path.printify.me/products" target="_blank" rel="noopener">https://happy-path.printify.me/products</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://github.com/jamesward/graboo" target="_blank" rel="noopener">Graboo on GitHub</a></li>
+<li><a href="https://happy-path.printify.me/products" target="_blank" rel="noopener">Happy Path Programming shirts</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/80366659/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F80366659%2Fc9963975bc233215eb986c0eefb23a50.m4a" length="65397761" type="audio/x-m4a"/>
       <itunes:episode>91</itunes:episode>
       <itunes:duration>4043</itunes:duration>
@@ -700,7 +640,7 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Effect Oriented</category>
       <description><![CDATA[<p>We learn about Algebraic Effects with the Scala library Kyo ( getkyo.io) from the creator, Flavio Brasil.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://getkyo.io" target="_blank" rel="noopener">getkyo.io</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://getkyo.io" target="_blank" rel="noopener">Kyo</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/79769164/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F79769164%2F82cbbae93dfe1cf769864a6812ca421e.m4a" length="65753369" type="audio/x-m4a"/>
       <itunes:episode>89</itunes:episode>
       <itunes:duration>4065</itunes:duration>
@@ -714,12 +654,8 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Java &amp; JVM</category>
       <category>Developer Productivity</category>
       <description><![CDATA[<p>Arty Starr is a PhD student and entrepreneur focused on helping developers thrive. We chat about her research on developer momentum and ways that developers can find joy through more time in the flow state.</p>
-<p>Referenced resources</p>
-<p>SpringOne Talk</p>
-<p>Arty&#x27;s Idea Flow Book</p>
-<p>FlowInsight</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.youtube.com/watch?v=4NPArs4eR3c" target="_blank" rel="noopener">SpringOne Talk</a></li>
+<ul class="res-list"><li><a href="https://www.youtube.com/watch?v=4NPArs4eR3c" target="_blank" rel="noopener">Arty Starr at SpringOne 2021 (talk)</a></li>
 <li><a href="https://leanpub.com/ideaflow" target="_blank" rel="noopener">Arty&#x27;s Idea Flow Book</a></li>
 <li><a href="https://www.flowinsight.com/" target="_blank" rel="noopener">FlowInsight</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/77501583/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F77501583%2F8bc03cd6763bb8cbc72e8489e20b730f.m4a" length="72922504" type="audio/x-m4a"/>
@@ -736,7 +672,7 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>WebAssembly</category>
       <description><![CDATA[<p>Zalim Bashorov (@bashorov) works on Kotlin/Wasm at JetBrains and answers our many questions about Wasm, GC, the Component Model, and other future proposals.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://twitter.com/bashorov" target="_blank" rel="noopener">@bashorov</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://twitter.com/bashorov" target="_blank" rel="noopener">Zalim Bashorov</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/76871809/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F76871809%2F968ac8da3a6f0dcacfa3c1a1f3ef5cb0.m4a" length="65203052" type="audio/x-m4a"/>
       <itunes:episode>87</itunes:episode>
       <itunes:duration>4031</itunes:duration>
@@ -776,7 +712,6 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <guid isPermaLink="true">https://happypathprogramming.com/episodes/84-inevitable-failure-with-dormain-drewitz.html</guid>
       <pubDate>Wed, 06 Sep 2023 15:29:46 GMT</pubDate>
       <description><![CDATA[<p>We chat with Dormain Drewitz about failure and reliability. Ironically our recording software crashed near the end of the episode but we recovered and wrapped things up.</p>
-<p>Referenced Article: 10 Years of Failure Friday at PagerDuty: Fostering Resilience, Learning and Reliability</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><span class="res-dead">10 Years of Failure Friday at PagerDuty: Fostering Resilience, Learning and Reliability</span> <span class="res-note">(link no longer online)</span></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/75547089/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F75547089%2Ff622e91fb7df5f66587185f4b8c4438e.m4a" length="67144527" type="audio/x-m4a"/>
@@ -845,15 +780,11 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <pubDate>Sat, 06 May 2023 14:20:39 GMT</pubDate>
       <category>Java &amp; JVM</category>
       <category>Architecture &amp; Design</category>
-      <description><![CDATA[<p>We chat with Oliver Drotbohm about what Domain-Driven Design is and how it might intersect with Microservices, Monoliths, or Moduliths. Mentioned resources</p>
-<p>Parnas on modularity</p>
-<p>Chris Richardson – Introducing Assemblage - a microservice architecture definition process</p>
-<p>Spring Modulith Project</p>
-<p>Introducing Spring Modulith</p>
+      <description><![CDATA[<p>We chat with Oliver Drotbohm about what Domain-Driven Design is and how it might intersect with Microservices, Monoliths, or Moduliths.</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://www.odrotbohm.de/" target="_blank" rel="noopener">Oliver Drotbohm</a></li>
-<li><a href="https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf" target="_blank" rel="noopener">Parnas on modularity</a></li>
-<li><a href="https://microservices.io/post/architecture/2023/02/09/assemblage-architecture-definition-process.html" target="_blank" rel="noopener">Chris Richardson – Introducing Assemblage</a></li>
+<li><a href="https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf" target="_blank" rel="noopener">David Parnas, &quot;On the Criteria To Be Used in Decomposing Systems into Modules&quot;</a></li>
+<li><a href="https://microservices.io/post/architecture/2023/02/09/assemblage-architecture-definition-process.html" target="_blank" rel="noopener">Chris Richardson, &quot;Introducing Assemblage&quot; (a microservice architecture definition process)</a></li>
 <li><a href="https://github.com/spring-projects/spring-modulith" target="_blank" rel="noopener">Spring Modulith Project</a></li>
 <li><a href="https://spring.io/blog/2022/10/21/introducing-spring-modulith" target="_blank" rel="noopener">Introducing Spring Modulith</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/69865169/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F69865169%2Ffedcabf9c72a027f990aa521acd13d19.m4a" length="60388653" type="audio/x-m4a"/>
@@ -918,9 +849,9 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Build Tools</category>
       <category>Developer Productivity</category>
       <category>Process &amp; Careers</category>
-      <description><![CDATA[<p>Developer Productivity Engineering (DPE) is a set of tools &amp; practices that help engineers be more productive. We chat with Justin Reock, field CTO at Gradle, about why more organizations need DPE and what that really means.  Learn more at</p>
+      <description><![CDATA[<p>Developer Productivity Engineering (DPE) is a set of tools &amp; practices that help engineers be more productive. We chat with Justin Reock, field CTO at Gradle, about why more organizations need DPE and what that really means.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://gradle.com/developer-productivity-engineering/" target="_blank" rel="noopener">https://gradle.com/developer-productivity-engineering/</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://gradle.com/developer-productivity-engineering/" target="_blank" rel="noopener">Developer Productivity Engineering (Gradle)</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/63455590/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F63455590%2F2ca74212bc2c19427cc5892a6d35680b.m4a" length="65984266" type="audio/x-m4a"/>
       <itunes:episode>74</itunes:episode>
       <itunes:duration>4079</itunes:duration>
@@ -987,9 +918,8 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <pubDate>Fri, 30 Sep 2022 17:57:38 GMT</pubDate>
       <category>Architecture &amp; Design</category>
       <description><![CDATA[<p>Bruce continues his archaeological dig into the foundations of mainstream programming.</p>
-<p>Referenced blog: Why Are There Functions?</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.bruceeckel.com/2022/09/29/why-are-there-functions/" target="_blank" rel="noopener">Why Are There Functions?</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://www.bruceeckel.com/2022/09/29/why-are-there-functions/" target="_blank" rel="noopener">Bruce Eckel, &quot;Why Are There Functions?&quot;</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/58383830/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F58383830%2F39dde863660c929fbf883f85023d1800.m4a" length="65034227" type="audio/x-m4a"/>
       <itunes:episode>69</itunes:episode>
       <itunes:duration>4021</itunes:duration>
@@ -1048,11 +978,8 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Java &amp; JVM</category>
       <category>TypeScript</category>
       <description><![CDATA[<p>Rod Johnson (creator of Spring Framework) reflects on his programming and chess journeys.</p>
-<p>References</p>
-<p>ScalaDays 2013 Talk</p>
-<p>Stockfish Chess Engine</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.youtube.com/watch?v=DBu6zmrZ_50" target="_blank" rel="noopener">ScalaDays 2013 Talk</a></li>
+<ul class="res-list"><li><a href="https://www.youtube.com/watch?v=DBu6zmrZ_50" target="_blank" rel="noopener">Rod Johnson&#x27;s ScalaDays 2013 keynote</a></li>
 <li><a href="https://stockfishchess.org/" target="_blank" rel="noopener">Stockfish Chess Engine</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/55787922/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F55787922%2F4e6b90d9e12afe2f21098dd7594eff89.m4a" length="62638692" type="audio/x-m4a"/>
       <itunes:episode>65</itunes:episode>
@@ -1079,9 +1006,8 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <pubDate>Fri, 01 Jul 2022 21:53:42 GMT</pubDate>
       <category>Effect Oriented</category>
       <description><![CDATA[<p>Our co-author on Effect Oriented Programming, Bill Frasure, joins us to chat about his programming journey and his involvement in last week&#x27;s ZIO 2.0 release.</p>
-<p>Book repo</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://github.com/EffectOrientedProgramming/book" target="_blank" rel="noopener">https://github.com/EffectOrientedProgramming/book</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://github.com/EffectOrientedProgramming/book" target="_blank" rel="noopener">Effect Oriented Programming book on GitHub</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/54283668/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F54283668%2F90514f964d8567969b246eec4fe46042.m4a" length="83741378" type="audio/x-m4a"/>
       <itunes:episode>63</itunes:episode>
       <itunes:duration>5177</itunes:duration>
@@ -1095,12 +1021,10 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Types</category>
       <category>Databases &amp; Data</category>
       <description><![CDATA[<p>Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization.</p>
-<p>More details on Local-first</p>
-<p>Referenced article about hybrid logical clocks</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://museapp.com/" target="_blank" rel="noopener">Muse app</a></li>
-<li><a href="https://www.inkandswitch.com/local-first/" target="_blank" rel="noopener">https://www.inkandswitch.com/local-first/</a></li>
-<li><a href="https://archive.jlongster.com/using-crdts-in-the-wild" target="_blank" rel="noopener">https://archive.jlongster.com/using-crdts-in-the-wild</a></li></ul>]]></description>
+<li><a href="https://www.inkandswitch.com/local-first/" target="_blank" rel="noopener">Ink &amp; Switch, &quot;Local-first software&quot;</a></li>
+<li><a href="https://archive.jlongster.com/using-crdts-in-the-wild" target="_blank" rel="noopener">James Long, &quot;Using CRDTs in the Wild&quot; (hybrid logical clocks)</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/52663000/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F52663000%2F0da69c4c82885a0a99105b1b1bf2d10f.m4a" length="64137901" type="audio/x-m4a"/>
       <itunes:episode>62</itunes:episode>
       <itunes:duration>3965</itunes:duration>
@@ -1113,9 +1037,8 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <pubDate>Fri, 13 May 2022 20:26:32 GMT</pubDate>
       <category>Process &amp; Careers</category>
       <description><![CDATA[<p>Tonya Moore has been helping build developer communities for years. We discuss how to deal with jerks and the importance of building on a foundation of compassion.</p>
-<p>Referenced blog from Bill Venners</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.artima.com/articles/compassion-in-our-community" target="_blank" rel="noopener">https://www.artima.com/articles/compassion-in-our-community</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://www.artima.com/articles/compassion-in-our-community" target="_blank" rel="noopener">Bill Venners, &quot;Compassion in our Community&quot;</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/51966444/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F51966444%2F62951fa67c52f4d24a8b18cb84c0b9b9.m4a" length="62953570" type="audio/x-m4a"/>
       <itunes:episode>61</itunes:episode>
       <itunes:duration>3892</itunes:duration>
@@ -1143,20 +1066,13 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Testing</category>
       <category>Build Tools</category>
       <description><![CDATA[<p>Gabriella Gonzalez joins to teach us about the Dhall configuration language they created and Nix.</p>
-<p>References</p>
-<p>The Dhall configuration language</p>
-<p>Henk: a typed intermediate language</p>
-<p>Pants Build Tool</p>
-<p>The Purely Functional Software Deployment Model</p>
-<p>Haskell for all: How to use NixOS for lightweight integration tests</p>
-<p>How to market Haskell to a mainstream programmer</p>
 <h3>Resources &amp; links</h3>
 <ul class="res-list"><li><a href="https://twitter.com/GabriellaG439" target="_blank" rel="noopener">Gabriella Gonzalez</a></li>
 <li><a href="https://dhall-lang.org/" target="_blank" rel="noopener">The Dhall configuration language</a></li>
-<li><a href="https://www.microsoft.com/en-us/research/publication/henk-a-typed-intermediate-language/" target="_blank" rel="noopener">Henk: a typed intermediate language</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/publication/henk-a-typed-intermediate-language/" target="_blank" rel="noopener">Simon Peyton Jones &amp; Erik Meijer, &quot;Henk: a typed intermediate language&quot;</a></li>
 <li><a href="https://www.pantsbuild.org/" target="_blank" rel="noopener">Pants Build Tool</a></li>
-<li><a href="https://edolstra.github.io/pubs/phd-thesis.pdf" target="_blank" rel="noopener">The Purely Functional Software Deployment Model</a></li>
-<li><a href="https://www.haskellforall.com/2020/11/how-to-use-nixos-for-lightweight.html" target="_blank" rel="noopener">Haskell for all: How to use NixOS for lightweight integration tests</a></li>
+<li><a href="https://edolstra.github.io/pubs/phd-thesis.pdf" target="_blank" rel="noopener">Eelco Dolstra, &quot;The Purely Functional Software Deployment Model&quot; (PhD thesis)</a></li>
+<li><a href="https://www.haskellforall.com/2020/11/how-to-use-nixos-for-lightweight.html" target="_blank" rel="noopener">Gabriella Gonzalez, &quot;How to use NixOS for lightweight integration tests&quot;</a></li>
 <li><span class="res-dead">How to market Haskell to a mainstream programmer</span> <span class="res-note">(link no longer online)</span></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/49626030/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F49626030%2Fc6667ea56a3638c6d7ee46c578ed51de.m4a" length="58051692" type="audio/x-m4a"/>
       <itunes:episode>59</itunes:episode>
@@ -1186,7 +1102,7 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Python</category>
       <description><![CDATA[<p>We explore with Matt Anger a blog he wrote about migrating from Python to Kotlin and the trade offs engineering teams make when deciding which technologies to use.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://doordash.engineering/2021/05/04/migrating-from-python-to-kotlin-for-our-backend-services/" target="_blank" rel="noopener">a blog he wrote about migrating from Python to Kotlin</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://doordash.engineering/2021/05/04/migrating-from-python-to-kotlin-for-our-backend-services/" target="_blank" rel="noopener">Matt Anger, &quot;Migrating From Python to Kotlin for Our Backend Services&quot;</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/48910063/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F48910063%2F31dbed502cb5f6e06a00d53accd29ed8.m4a" length="58264588" type="audio/x-m4a"/>
       <itunes:episode>57</itunes:episode>
       <itunes:duration>3602</itunes:duration>
@@ -1388,7 +1304,7 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Effect Oriented</category>
       <description><![CDATA[<p>Bruce and James hear about Wiem&#x27;s journey in Functional Programming, her contributions to Scala ZIO, and how she never gave up despite the challenges she faced.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">never gave up</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">Rick Astley, &quot;Never Gonna Give You Up&quot;</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/40800849/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-09-26%2Fa4f490965f1b1d5ed4a8af558efa4e6c.m4a" length="58264496" type="audio/x-m4a"/>
       <itunes:episode>41</itunes:episode>
       <itunes:duration>3602</itunes:duration>
@@ -1442,12 +1358,9 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <category>Types</category>
       <category>Testing</category>
       <description><![CDATA[<p>Paul Snively helps us see the future of programming. Spoiler: It&#x27;s Typed &amp; Functional.</p>
-<p>Referenced talks</p>
-<p>Types vs. Tests: An Epic Battle?</p>
-<p>Type Systems - The Good, Bad and Ugly</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.infoq.com/presentations/Types-Tests/" target="_blank" rel="noopener">Types vs. Tests: An Epic Battle?</a></li>
-<li><a href="https://www.youtube.com/watch?v=SWTWkYbcWU0" target="_blank" rel="noopener">Type Systems - The Good, Bad and Ugly</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://www.infoq.com/presentations/Types-Tests/" target="_blank" rel="noopener">Amanda Laucher &amp; Paul Snively, &quot;Types vs. Tests: An Epic Battle?&quot; (talk)</a></li>
+<li><a href="https://www.youtube.com/watch?v=SWTWkYbcWU0" target="_blank" rel="noopener">Paul Snively &amp; Amanda Laucher, &quot;Type Systems - The Good, Bad and Ugly&quot; (talk)</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/38740338/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-08-14%2F0bd925eb1b245d9a592acc6f9bd03c65.m4a" length="75502181" type="audio/x-m4a"/>
       <itunes:episode>37</itunes:episode>
       <itunes:duration>4668</itunes:duration>
@@ -1698,8 +1611,8 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
 <p>James has mostly stuck to Java 8 and Bruce is exploring Java 11.</p>
 <p>Finally, James rants about SemVer for the 3.1.4&#x27;th time.</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://www.bruceeckel.com/2021/01/02/the-problem-with-gradle/" target="_blank" rel="noopener">The Problem with Gradle</a></li>
-<li><a href="https://melix.github.io/blog/2021/01/the-problem-with-gradle.html" target="_blank" rel="noopener">a lengthy response from Cédric Champeau</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://www.bruceeckel.com/2021/01/02/the-problem-with-gradle/" target="_blank" rel="noopener">Bruce Eckel, &quot;The Problem with Gradle&quot;</a></li>
+<li><a href="https://melix.github.io/blog/2021/01/the-problem-with-gradle.html" target="_blank" rel="noopener">Cédric Champeau, &quot;The problem with Gradle: really?&quot;</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/24888122/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-01-07%2Fb438d3dfb6949ae033e864fcb9617a6c.m4a" length="66360086" type="audio/x-m4a"/>
       <itunes:episode>17</itunes:episode>
       <itunes:duration>4103</itunes:duration>
@@ -1768,9 +1681,9 @@ Article from Anthropic on Agent architectures: Building effective agents</p>
       <guid isPermaLink="true">https://happypathprogramming.com/episodes/11-small-talk-about-smalltalk.html</guid>
       <pubDate>Fri, 30 Oct 2020 21:05:53 GMT</pubDate>
       <category>Cloud &amp; Serverless</category>
-      <description><![CDATA[<p>Our friend Joey Gibson joins us to talk about Smalltalk, the well known grandfather of Object Oriented Programming.  James is assigned some homework to get a Smalltalk web app running on Google Cloud Run, which he did (after recording). Check out the source</p>
+      <description><![CDATA[<p>Our friend Joey Gibson joins us to talk about Smalltalk, the well known grandfather of Object Oriented Programming.  James is assigned some homework to get a Smalltalk web app running on Google Cloud Run, which he did (after recording).</p>
 <h3>Resources &amp; links</h3>
-<ul class="res-list"><li><a href="https://github.com/jamesward/hello-pharo" target="_blank" rel="noopener">https://github.com/jamesward/hello-pharo</a></li></ul>]]></description>
+<ul class="res-list"><li><a href="https://github.com/jamesward/hello-pharo" target="_blank" rel="noopener">James&#x27; hello-pharo: Smalltalk on Cloud Run</a></li></ul>]]></description>
       <enclosure url="https://anchor.fm/s/2ed56aa0/podcast/play/21880185/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-10-31%2F6ba2b3565b314b74db026cccb81042b6.m4a" length="64741843" type="audio/x-m4a"/>
       <itunes:episode>11</itunes:episode>
       <itunes:duration>4003</itunes:duration>
