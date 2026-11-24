@@ -17,4 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - run: python3 .scripts/verify.py
+      # 3.11 is the python3 in the maintenance routine's cloud environment (.scripts/README.md)
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - run: python -m compileall -q .scripts .claude/hooks
+      - run: python .scripts/verify.py

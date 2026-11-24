@@ -29,7 +29,7 @@ def text(fragment: str) -> str:
     def link(m):
         href, label = hpp.unesc(m.group(1)), plain(m.group(2))
         if not href.startswith(("http://", "https://")):
-            href = f"{SITE}/{re.sub(r'^(\.\./)+', '', href)}"
+            href = SITE + "/" + re.sub(r'^(\.\./)+', '', href)
         links.append(f"<{href}>" if label == href else
                      "[" + label.replace("[", r"\[").replace("]", r"\]") + f"]({href})")
         return f"\x00{len(links) - 1}\x00"

@@ -15,7 +15,10 @@ stay that way.
 
 ## Setup
 
-Python 3.9+ and Pillow:
+Python 3.11+ and Pillow. 3.11 is the `python3` in the cloud environment the
+maintenance routine runs in, so new code can't use syntax from later versions
+(for example a backslash inside an f-string's `{…}`, which needs 3.12). CI
+compiles every tool with 3.11 to catch that.
 
 ```sh
 pip install -r .scripts/requirements.txt

@@ -4,8 +4,8 @@ Follow the `zen-of-websites` and `zen-of-projects` Skills (in https://github.com
 routine is `.factory/MAINTENANCE.md` and runs weekly. Publishing: every push to `main` is deployed to
 https://happypathprogramming.com (`www.` redirects to it, so every absolute URL the
 tools write uses the bare domain; `SITE` in `.scripts/hpp.py`) by the `staticSite` entry for `MindviewLLC/podcast` in
-`jamesward/domains` (`domains.pkl`), which syncs the repo to S3 except the globs in `.slugignore`. CI
-(`.github/workflows/ci.yml`) runs `python3 .scripts/verify.py`.
+`jamesward/domains` (`domains.pkl`), which syncs the repo to S3 except the globs in `.slugignore`. CI (`.github/workflows/ci.yml`) compiles `.scripts/` with Python 3.11, the routine environment's
+`python3`, and runs `.scripts/verify.py`.
 
 # Regenerating this site (for AI runs)
 
@@ -102,8 +102,43 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
   - Bruce: `https://bsky.app/profile/bruceeckel.bsky.social`, `https://x.com/BruceEckel`
   - James: `https://bsky.app/profile/jamesward.com`, `https://x.com/JamesWard`
   - Both hosts' handles go on their home-page host cards as chips.
-- **Topics:** tag each episode by matching a curated keyword→topic map against
-  its title+description; each topic gets a page listing its episodes.
+- **Topics:** tag each episode by matching the keyword→topic map in
+  "Topic keywords" below against its title + "About this episode" prose; each
+  topic gets a page listing its episodes.
+
+## Topic keywords
+An episode gets every topic with at least one keyword in its title or "About"
+prose (case-insensitive, whole words or phrases: `ai` matches "AI" and
+"AI-native", not "said"). Then use judgement on the result. Drop a topic that
+only a passing mention matched, and add one the conversation is clearly about
+even if no keyword matched (say which in the run report). When that happens,
+add the missing keyword to the row so the next run matches it. A new topic gets
+a row here and a `topics/<slug>.html` page. Don't retag published episodes to
+fit the map: their topics were chosen before it existed (it reproduces 191 of
+their 222 tags).
+
+| Topic (`topics/<slug>.html`) | Keywords |
+|---|---|
+| `ai-and-llms` | ai, llm, llms, agent, agents, agentic, mcp, machine learning, chatgpt, copilot, claude, gpt, genai, generative ai, prompt |
+| `architecture-and-design` | architecture, architect, design pattern, design patterns, microservices, modulith, moduliths, domain-driven, ddd, event sourcing, system design, object-oriented, oop, polymorphism, scalability, separation of concerns |
+| `build-tools` | build tool, build tools, sbt, maven, gradle, bazel, mill, build system, nix, dhall, pkl, configuration language, package manager, packaging |
+| `cloud-and-serverless` | cloud, serverless, aws, lambda, kubernetes, docker, containers, heroku, gcp, azure, infrastructure |
+| `concurrency` | concurrency, concurrent, parallelism, threads, virtual threads, loom, async, structured concurrency, actors |
+| `databases-and-data` | database, databases, sql, postgres, sqlite, nosql, datomic, crdt, crdts, kafka, streaming, local-first, data engineering |
+| `developer-productivity` | productivity, developer experience, dx, ide, intellij, code editor, flow state, developer joy |
+| `effect-oriented` | effect, effects, effect oriented, effect system, algebraic effects, zio, kyo, cats effect |
+| `functional-programming` | functional programming, functional, fp, monad, monads, haskell, pure functions, immutability, category theory, clojure, elm, ocaml, f#, nix |
+| `java-and-jvm` | java, jvm, jdk, openjdk, graalvm, spring, quarkus, clojure, groovy, gatherers, virtual threads, loom |
+| `kotlin` | kotlin, kotlinconf, ktor, jetbrains |
+| `language-design` | language design, programming language, new language, compiler, compilers, syntax, significant indentation, ai-native |
+| `process-and-careers` | career, careers, hiring, interview, management, manager, agile, culture, company culture, community, communities, compassionate, mentoring, organization, software factories |
+| `python` | python, pythonic, pypi, django, mojo |
+| `rust` | rust, cargo, borrow checker |
+| `scala` | scala, scala 3, dotty, akka |
+| `testing` | testing, tdd, test-driven, property-based, unit tests, testcontainers |
+| `types` | types, type system, type systems, static typing, type checking, type checker, type safety, type inference, dependent types, polymorphism, adts, algebraic data types |
+| `typescript` | typescript, javascript, deno, bun |
+| `webassembly` | webassembly, wasm, wasi |
 
 ## Writing descriptions and resource links
 Follow @VOICE.md whenever you write words that describe an episode: drafting a

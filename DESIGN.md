@@ -39,7 +39,7 @@ Professional, yet fun podcast site for Happy Path Programming.
   panel (max 70vh) and a `#t-<seconds>` link opens it and highlights that
   paragraph.
 - **Topics:** episodes are tagged with topics (derived from title/description via
-  a curated keyword map). Topic chips show on episode cards and episode pages; a
+  the keyword map in `AGENTS.md`, "Topic keywords"). Topic chips show on episode cards and episode pages; a
   Topics page (`topics/index.html`) is a tag cloud with counts, and each topic
   has its own page (`topics/<slug>.html`) listing its episodes. Nav =
   Episodes / Guests / Topics (the logo links home).
