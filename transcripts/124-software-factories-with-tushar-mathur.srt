@@ -1,0 +1,5185 @@
+1
+00:00:01,080 --> 00:00:03,400
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,760 --> 00:00:05,560
+I'm Bruce Eckle. 
+I'm James Ward. 
+
+3
+00:00:07,760 --> 00:00:09,720
+All right. 
+Well, welcome to Happy Path 
+
+4
+00:00:09,720 --> 00:00:13,120
+Programming. 
+It is a cold day in Crested 
+
+5
+00:00:13,120 --> 00:00:17,400
+Butte, Colorado, and but you 
+know it, we've got the winter 
+
+6
+00:00:17,400 --> 00:00:20,640
+tech forum coming up. 
+And if you like cold and skiing 
+
+7
+00:00:20,640 --> 00:00:25,120
+and other winter activities or 
+just hanging out with nerds in 
+
+8
+00:00:25,120 --> 00:00:28,040
+the mountains, when is what's 
+the dates for that? 
+
+9
+00:00:29,080 --> 00:00:33,800
+March 1st through 5th and you go
+to wintertechforum.com. 
+
+10
+00:00:34,080 --> 00:00:39,800
+I'm in the process of of 
+rebuilding the site just oh, 
+
+11
+00:00:40,320 --> 00:00:44,200
+it's, it's just taken me maybe 
+an hour so far. 
+
+12
+00:00:44,560 --> 00:00:47,800
+Can you believe it? 
+You've seen all the HTML and CSS
+
+13
+00:00:47,800 --> 00:00:49,240
+you have to write by hand, huh? 
+Yeah. 
+
+14
+00:00:49,880 --> 00:00:53,400
+Yeah. 
+So yeah, it's it's looking good.
+
+15
+00:00:54,040 --> 00:00:57,240
+I think I'll be switching over 
+to it fairly quickly. 
+
+16
+00:00:57,240 --> 00:01:01,360
+So yeah, yeah. 
+So when the new website and 
+
+17
+00:01:02,040 --> 00:01:06,320
+we're hoping to post some, 
+figure out how to post some of 
+
+18
+00:01:06,320 --> 00:01:09,960
+the talks from last year so 
+people get a sense of what it's 
+
+19
+00:01:09,960 --> 00:01:12,400
+like. 
+Yeah, yeah, great conversations,
+
+20
+00:01:12,400 --> 00:01:14,080
+but plan for it. 
+Yeah, you. 
+
+21
+00:01:14,160 --> 00:01:15,080
+Plan for it. 
+It's. 
+
+22
+00:01:15,120 --> 00:01:18,440
+In my calendar now it is. 
+So yeah, I will be there this 
+
+23
+00:01:18,440 --> 00:01:19,200
+year. 
+Yeah, this. 
+
+24
+00:01:19,400 --> 00:01:21,800
+It would be nice to have. 
+You, I know at the conference, 
+
+25
+00:01:21,920 --> 00:01:24,400
+Yeah, Yeah, Yeah. 
+OK, cool. 
+
+26
+00:01:24,480 --> 00:01:28,000
+Well, let's dive in. 
+So we have Tushar Mather. 
+
+27
+00:01:28,080 --> 00:01:29,680
+I get that right. 
+Yeah. 
+
+28
+00:01:30,200 --> 00:01:35,480
+Yeah, and T-shirt, you and I go 
+way back, you know, and and you 
+
+29
+00:01:35,480 --> 00:01:39,080
+know, been in the same realms. 
+But we don't have to dwell on 
+
+30
+00:01:39,080 --> 00:01:42,680
+the past because I think the 
+most exciting thing right now is
+
+31
+00:01:42,680 --> 00:01:44,480
+the topic we're going to get 
+into, which is software 
+
+32
+00:01:44,480 --> 00:01:47,880
+factories. 
+And so maybe introduce yourself 
+
+33
+00:01:47,880 --> 00:01:51,040
+and then and then we'll dive in 
+and and talk about software 
+
+34
+00:01:51,040 --> 00:01:52,880
+factories. 
+Sure. 
+
+35
+00:01:53,840 --> 00:01:57,240
+My name is Tushar. 
+I'm the founder CEO of a company
+
+36
+00:01:57,240 --> 00:01:59,680
+called Forge Code. 
+We're building a software 
+
+37
+00:01:59,680 --> 00:02:05,560
+factory ourselves and I've been 
+in the industry for about 16 odd
+
+38
+00:02:05,560 --> 00:02:09,919
+years worked. 
+There was a time like you guys, 
+
+39
+00:02:10,000 --> 00:02:14,400
+we used to code with hand and 
+that was a fun time. 
+
+40
+00:02:15,000 --> 00:02:19,400
+And I worked in various 
+organizations from startups to 
+
+41
+00:02:20,240 --> 00:02:26,120
+large enterprises and like also 
+did a lot of leadership roles. 
+
+42
+00:02:26,680 --> 00:02:30,560
+And very surprisingly though, I 
+was very passionate about, you 
+
+43
+00:02:30,560 --> 00:02:34,600
+know, I see kind of work where 
+you can, where you're doing real
+
+44
+00:02:34,600 --> 00:02:37,680
+technical work. 
+Surprisingly, when it comes to 
+
+45
+00:02:37,680 --> 00:02:43,000
+AI, having that leadership 
+experience kind of turns in very
+
+46
+00:02:43,000 --> 00:02:46,640
+handy, you know, So that's, 
+that's a lot of fun for me 
+
+47
+00:02:46,640 --> 00:02:49,520
+because I'm kind of thinking 
+about how would I do it if I had
+
+48
+00:02:49,520 --> 00:02:53,560
+a real team and then orchestrate
+my agents that way. 
+
+49
+00:02:53,560 --> 00:02:56,680
+And somehow it just works. 
+Yeah, yeah. 
+
+50
+00:02:56,680 --> 00:02:59,880
+One of the interesting 
+observations that I had 
+
+51
+00:03:00,560 --> 00:03:06,320
+recently, just in the last month
+or so, was that most of the very
+
+52
+00:03:06,320 --> 00:03:10,480
+senior engineers that I know 
+have have moved in the last few 
+
+53
+00:03:10,480 --> 00:03:15,280
+months from actually building 
+things to building software to 
+
+54
+00:03:15,640 --> 00:03:18,000
+software factories to build the 
+things. 
+
+55
+00:03:18,280 --> 00:03:21,240
+And so, so I think exactly what 
+you're saying is right, is that 
+
+56
+00:03:21,480 --> 00:03:26,440
+the people who have this depth 
+of experience around SDLC and 
+
+57
+00:03:26,600 --> 00:03:31,240
+you know, the complexities of, 
+of going from idea to, to 
+
+58
+00:03:31,240 --> 00:03:36,160
+maintenance, all those things, 
+they can take all of that and 
+
+59
+00:03:36,160 --> 00:03:42,120
+encode it in a way that then the
+AI can, can start participating 
+
+60
+00:03:42,120 --> 00:03:44,760
+more effectively into that 
+process. 
+
+61
+00:03:44,760 --> 00:03:49,920
+Well, because as as more of a 
+manager, you have learned how to
+
+62
+00:03:49,920 --> 00:03:53,800
+ask for things rather than just 
+go, oh, I'll just go in and code
+
+63
+00:03:53,800 --> 00:03:56,920
+it myself. 
+And that's basically what we're 
+
+64
+00:03:56,920 --> 00:03:59,120
+doing now is we're learning how 
+to ask for things. 
+
+65
+00:03:59,120 --> 00:04:02,880
+But before we get ahead of 
+ourselves, yeah, let us define 
+
+66
+00:04:02,880 --> 00:04:10,000
+what is a software factory. 
+OK, so so here's my take. 
+
+67
+00:04:10,000 --> 00:04:12,960
+So there's so many, you know, 
+versions of it. 
+
+68
+00:04:12,960 --> 00:04:18,680
+So if you look at tools like 
+cloud and codecs, they work like
+
+69
+00:04:18,680 --> 00:04:22,000
+personal assistants. 
+So you give it a task and does 
+
+70
+00:04:22,000 --> 00:04:25,720
+it for you and, but, and it 
+works. 
+
+71
+00:04:25,720 --> 00:04:27,520
+It makes you productive as an 
+individual. 
+
+72
+00:04:28,000 --> 00:04:31,960
+And the hope is if everybody in 
+my team is more productive, my 
+
+73
+00:04:31,960 --> 00:04:33,960
+organization should be more 
+productive. 
+
+74
+00:04:34,640 --> 00:04:37,920
+But what we actually observe is 
+that's not true. 
+
+75
+00:04:38,560 --> 00:04:42,120
+Just giving everyone an 
+assistant and especially in a 
+
+76
+00:04:42,120 --> 00:04:46,080
+large organization, if you have 
+a say 500 member engineering 
+
+77
+00:04:46,080 --> 00:04:49,680
+team and everybody's got an 
+assistant, suddenly it's not 
+
+78
+00:04:49,680 --> 00:04:53,680
+going to start shipping higher 
+quality software or better 
+
+79
+00:04:53,680 --> 00:04:57,880
+quality software and a software.
+Before you go on, how much of 
+
+80
+00:04:57,880 --> 00:05:01,800
+that is just because of what we 
+just talked about, because 
+
+81
+00:05:01,800 --> 00:05:05,400
+people who are aren't, they're 
+not used to using this tool, 
+
+82
+00:05:05,400 --> 00:05:07,960
+They're not used to asking 
+somebody else to do things for 
+
+83
+00:05:07,960 --> 00:05:09,480
+them. 
+And maybe it's just a learning 
+
+84
+00:05:09,480 --> 00:05:13,440
+curve issue. 
+It could be that it's also the 
+
+85
+00:05:13,920 --> 00:05:17,680
+you're right, like so leaders in
+general have a better 
+
+86
+00:05:19,360 --> 00:05:24,880
+articulation so they do a better
+job, but generally ICS would 
+
+87
+00:05:24,880 --> 00:05:27,480
+not. 
+And then even with, even if 
+
+88
+00:05:27,480 --> 00:05:31,880
+you're prompting continuously, I
+feel you don't get, you don't 
+
+89
+00:05:31,880 --> 00:05:35,080
+put an equal amount of effort 
+every single day. 
+
+90
+00:05:35,080 --> 00:05:37,880
+Or if you do put an equal amount
+of effort in prompting, 
+
+91
+00:05:38,800 --> 00:05:44,600
+sometimes you need to do more. 
+So the the output is not very 
+
+92
+00:05:45,160 --> 00:05:46,720
+reliable. 
+That's number one. 
+
+93
+00:05:46,720 --> 00:05:52,680
+That's from #1 the problem #2 is
+in a typical large team, you 
+
+94
+00:05:52,680 --> 00:05:56,720
+have developers, you have QA, 
+you have DevOps, SRE, you know, 
+
+95
+00:05:56,720 --> 00:06:02,480
+so, so many roles. 
+If a developer is writing code, 
+
+96
+00:06:02,800 --> 00:06:07,920
+maybe through cloud, the QA's, 
+basically they have no context, 
+
+97
+00:06:07,920 --> 00:06:11,240
+neither do they agents. 
+And when the artifact is moved 
+
+98
+00:06:11,240 --> 00:06:15,920
+from dev to QA, the QA has no 
+context essentially of what all 
+
+99
+00:06:15,920 --> 00:06:18,600
+was done, what were the design 
+decisions that were made, 
+
+100
+00:06:18,600 --> 00:06:22,040
+trade-offs that were made. 
+And then everybody feel that 
+
+101
+00:06:22,040 --> 00:06:24,840
+it's a context problem. 
+Let's put a let's create a 
+
+102
+00:06:24,840 --> 00:06:28,640
+context layer and everything 
+should be on gate or some 
+
+103
+00:06:28,960 --> 00:06:32,880
+document and stuff. 
+But then that also quite very 
+
+104
+00:06:32,880 --> 00:06:37,840
+quickly starts becoming stale 
+because it's essentially, you 
+
+105
+00:06:37,840 --> 00:06:41,760
+know, documents that are more 
+optimized for humans and doesn't
+
+106
+00:06:41,760 --> 00:06:44,640
+scale if you have a 500 people 
+team, right? 
+
+107
+00:06:44,640 --> 00:06:47,520
+So you lose our own context and 
+coordination is still happening 
+
+108
+00:06:47,720 --> 00:06:51,440
+at a human layer. 
+And the last thing I feel is, 
+
+109
+00:06:52,200 --> 00:06:55,280
+OK, you can have some sort of 
+automations, but most of the 
+
+110
+00:06:55,280 --> 00:06:58,680
+work is still done when the 
+developers or the engineering 
+
+111
+00:06:58,680 --> 00:07:01,840
+team is in office. 
+So they're actually prompting 
+
+112
+00:07:01,840 --> 00:07:03,640
+and work is getting done when 
+they're home. 
+
+113
+00:07:03,880 --> 00:07:06,920
+Yes, a couple of, you know, 
+automations are happening, but 
+
+114
+00:07:06,920 --> 00:07:09,840
+majority of the work is not 
+happening, right. 
+
+115
+00:07:09,840 --> 00:07:13,120
+So you're not really getting 
+that level of productivity 
+
+116
+00:07:13,920 --> 00:07:18,320
+because that automation pipeline
+doesn't exist, That quality 
+
+117
+00:07:19,440 --> 00:07:21,600
+guarantee doesn't exist in your 
+pipelines. 
+
+118
+00:07:22,000 --> 00:07:25,880
+So that's why I think you need 
+something at a organization 
+
+119
+00:07:25,880 --> 00:07:28,160
+level and not at an individual 
+level. 
+
+120
+00:07:29,720 --> 00:07:34,360
+And part of the the way that I'm
+looking at this is that we've 
+
+121
+00:07:34,360 --> 00:07:37,520
+always had bottlenecks in our 
+development process. 
+
+122
+00:07:37,840 --> 00:07:41,080
+And it used to be that one of 
+the biggest bottlenecks was 
+
+123
+00:07:41,080 --> 00:07:45,560
+actually writing the code. 
+And now that is clearly gone, 
+
+124
+00:07:45,800 --> 00:07:49,520
+but some of the other 
+bottlenecks are still there and 
+
+125
+00:07:49,520 --> 00:07:52,840
+some of them became actually 
+larger bottlenecks. 
+
+126
+00:07:53,080 --> 00:07:56,120
+So there's an old thing, I think
+it was somebody at Google that 
+
+127
+00:07:56,120 --> 00:07:58,000
+wrote about coordination 
+headwinds. 
+
+128
+00:07:58,480 --> 00:08:04,040
+And the, the, the thing that 
+they observed was that that as 
+
+129
+00:08:04,160 --> 00:08:08,680
+teams and systems grew in size 
+and complexity hit the pace of 
+
+130
+00:08:08,680 --> 00:08:10,720
+development slowed down 
+dramatically. 
+
+131
+00:08:11,200 --> 00:08:15,840
+And now this has even gotten 
+worse because now me as an 
+
+132
+00:08:15,840 --> 00:08:19,800
+individual developer on a team, 
+I'm not just an individual 
+
+133
+00:08:19,800 --> 00:08:22,080
+anymore. 
+I'm actually an individual with 
+
+134
+00:08:22,160 --> 00:08:24,440
+an army of agents building 
+things. 
+
+135
+00:08:24,720 --> 00:08:27,640
+And then, you know, the person 
+next to me on the team, they 
+
+136
+00:08:27,640 --> 00:08:30,800
+also have their army of agents. 
+And so the coordination 
+
+137
+00:08:30,800 --> 00:08:34,480
+headwinds just grew massively 
+because our team, the bottleneck
+
+138
+00:08:35,120 --> 00:08:38,640
+now it's, it's the, the 
+coordination. 
+
+139
+00:08:38,960 --> 00:08:42,159
+You know, if you're working in a
+silo, you know, and it's just 
+
+140
+00:08:42,159 --> 00:08:45,320
+you, then you don't you, you 
+likely don't have many 
+
+141
+00:08:45,320 --> 00:08:48,200
+coordination headwinds. 
+But you know, most large systems
+
+142
+00:08:48,200 --> 00:08:51,400
+are built by teams and we've 
+just dramatically increased the 
+
+143
+00:08:51,400 --> 00:08:53,640
+coordination headwinds across 
+the team. 
+
+144
+00:08:53,920 --> 00:08:57,040
+So I think we've defined the 
+problem. 
+
+145
+00:08:57,040 --> 00:09:00,520
+How do software what? 
+What is it about a software 
+
+146
+00:09:00,520 --> 00:09:03,480
+factory or how does it work to 
+solve this problem? 
+
+147
+00:09:04,840 --> 00:09:10,400
+So a software factory is focused
+on a business outcome for an 
+
+148
+00:09:10,400 --> 00:09:14,840
+organization and less of 
+individual productivity gains. 
+
+149
+00:09:15,280 --> 00:09:23,520
+So you would set up a goal like 
+I want to have 90% coverage with
+
+150
+00:09:23,520 --> 00:09:27,520
+my competition, right? 
+So now how do we get to that? 
+
+151
+00:09:28,880 --> 00:09:32,280
+Basically, I want to implement 
+all the features up until 90% 
+
+152
+00:09:32,280 --> 00:09:35,360
+of, you know, coverage of 
+whatever the market is. 
+
+153
+00:09:35,720 --> 00:09:39,080
+Then you set up this goal and 
+now the factory has to figure 
+
+154
+00:09:39,080 --> 00:09:41,800
+out how to get to that goal, 
+right? 
+
+155
+00:09:42,280 --> 00:09:46,080
+And you could set up some 
+automation, but you have to 
+
+156
+00:09:46,080 --> 00:09:49,000
+really think about scale. 
+The ambition of scale is very, 
+
+157
+00:09:49,000 --> 00:09:51,760
+very different. 
+You want to ship every feature 
+
+158
+00:09:51,760 --> 00:09:55,280
+with that level of quality. 
+Sometimes a feature might be 
+
+159
+00:09:55,280 --> 00:09:58,640
+required to refactor the 
+underlying architecture from and
+
+160
+00:09:58,800 --> 00:10:00,960
+perhaps just rebuild it from 
+scratch. 
+
+161
+00:10:01,320 --> 00:10:03,840
+The factory should have the 
+ability to do that and should 
+
+162
+00:10:03,840 --> 00:10:06,480
+not take shortcuts and do it the
+right way. 
+
+163
+00:10:07,400 --> 00:10:12,120
+So, so, so our factory is 
+allowing us to define higher 
+
+164
+00:10:12,120 --> 00:10:15,800
+level goals, whereas many 
+developers today are just in 
+
+165
+00:10:15,800 --> 00:10:19,160
+this, like, I'm working on this 
+one little thing and I'm going 
+
+166
+00:10:19,160 --> 00:10:22,600
+to do a bunch of prompts and, 
+you know, and, and get that 
+
+167
+00:10:22,600 --> 00:10:24,520
+feature done or that bug fix 
+done, whatever. 
+
+168
+00:10:24,800 --> 00:10:28,040
+And so generally with the 
+factory, we're, we're defining, 
+
+169
+00:10:28,040 --> 00:10:31,160
+we're telling the factory that 
+its job is to do something 
+
+170
+00:10:31,160 --> 00:10:33,560
+higher level than an individual 
+feature. 
+
+171
+00:10:33,840 --> 00:10:38,480
+And it could be that that thing 
+we've told it to do is when a 
+
+172
+00:10:38,480 --> 00:10:43,400
+new issue gets gets created, 
+triage it and see if you can fix
+
+173
+00:10:43,400 --> 00:10:46,080
+it. 
+But the but it's not it's it's 
+
+174
+00:10:46,080 --> 00:10:51,600
+generalized across across all 
+kind of issue response dealing 
+
+175
+00:10:51,600 --> 00:10:54,560
+with issues instead of just like
+like a developer, like, you 
+
+176
+00:10:54,560 --> 00:10:57,400
+know, OK, go look at this issue 
+and and handle it AI. 
+
+177
+00:10:58,120 --> 00:11:04,040
+OK, but I'm using like. 
+OK, so one of my projects is I'm
+
+178
+00:11:04,680 --> 00:11:10,040
+using, I'm, I'm creating a proof
+of concept version of Python 
+
+179
+00:11:10,040 --> 00:11:14,400
+that has built in effect 
+tracking and effect management. 
+
+180
+00:11:14,720 --> 00:11:17,680
+All right. 
+But I just went into Claude's 
+
+181
+00:11:17,680 --> 00:11:22,080
+plan mode and I gave it this 
+high level thing and I said, OK,
+
+182
+00:11:22,080 --> 00:11:24,120
+you know, figure it out. 
+And I haven't really. 
+
+183
+00:11:24,120 --> 00:11:26,680
+I've just been going do the next
+steps. 
+
+184
+00:11:27,880 --> 00:11:30,920
+And how is so? 
+How is so that that's different 
+
+185
+00:11:30,920 --> 00:11:34,640
+from a software factory in that 
+I'm solving a particular 
+
+186
+00:11:34,640 --> 00:11:37,360
+problem? 
+Or because it seems kind of 
+
+187
+00:11:37,360 --> 00:11:41,120
+factory like? 
+I think it's similar to what you
+
+188
+00:11:41,120 --> 00:11:44,400
+would do with a factory. 
+I think the the one of the. 
+
+189
+00:11:44,400 --> 00:11:49,240
+To enable a software factory to 
+actually work, you have to 
+
+190
+00:11:49,240 --> 00:11:54,800
+encode a lot of things into it 
+so that it doesn't just like run
+
+191
+00:11:54,800 --> 00:11:58,160
+in circles or create slop. 
+You have to give it what are 
+
+192
+00:11:58,160 --> 00:12:01,880
+your standards? 
+What what is the, what is the 
+
+193
+00:12:01,920 --> 00:12:05,200
+task success actually look like 
+and how do we measure it? 
+
+194
+00:12:05,400 --> 00:12:08,800
+Like you have to give the 
+factory this all of the 
+
+195
+00:12:08,800 --> 00:12:13,520
+knowledge that you have in your 
+head around what you want or an 
+
+196
+00:12:13,520 --> 00:12:16,360
+organization and what they want.
+You know, in terms of like 
+
+197
+00:12:16,360 --> 00:12:19,040
+coding standards and, you know, 
+production standards. 
+
+198
+00:12:19,040 --> 00:12:22,440
+Like we don't break APIs, 
+whatever it is, those have to be
+
+199
+00:12:22,440 --> 00:12:26,000
+encoded into the factory so that
+the factory actually is 
+
+200
+00:12:26,160 --> 00:12:28,840
+efficient and moves forward. 
+OK. 
+
+201
+00:12:28,920 --> 00:12:33,160
+And I think in my case it's 
+taking all that information from
+
+202
+00:12:33,160 --> 00:12:35,920
+the work that I've done on 
+thinking in Python And saying, 
+
+203
+00:12:36,200 --> 00:12:39,760
+oh, well, OK, we want, you know,
+we want to make sure everything 
+
+204
+00:12:39,760 --> 00:12:43,600
+is tested and then, you know, 
+test pass at every stage and all
+
+205
+00:12:43,600 --> 00:12:44,840
+that kind of stuff. 
+Yeah. 
+
+206
+00:12:45,000 --> 00:12:49,200
+And the code follows, you know, 
+types everywhere, etcetera, 
+
+207
+00:12:49,200 --> 00:12:50,280
+etcetera. 
+Exactly. 
+
+208
+00:12:50,280 --> 00:12:53,240
+So you've given it that 
+foundation you like. 
+
+209
+00:12:53,240 --> 00:12:56,280
+In some ways you've already 
+created the the factory by 
+
+210
+00:12:57,040 --> 00:13:00,760
+instituting the constraints of 
+the factory. 
+
+211
+00:13:00,760 --> 00:13:04,600
+OK, OK. 
+But, but what we're talking 
+
+212
+00:13:04,600 --> 00:13:10,560
+about with software factories, 
+is there a framework that you're
+
+213
+00:13:10,560 --> 00:13:14,720
+starting from or do you just 
+have this concept that you're 
+
+214
+00:13:14,720 --> 00:13:20,800
+saying this is what I want and 
+you're, I mean, what's, how are 
+
+215
+00:13:20,800 --> 00:13:24,720
+you generalizing? 
+This is that I feel there's the 
+
+216
+00:13:24,720 --> 00:13:27,040
+main difference. 
+Like the example that he gave 
+
+217
+00:13:27,040 --> 00:13:31,280
+right is a very good example, 
+but the ambition of scale is 
+
+218
+00:13:31,280 --> 00:13:33,080
+very different with a software 
+factory. 
+
+219
+00:13:33,480 --> 00:13:36,840
+So OK, I want to build an effect
+system in Python. 
+
+220
+00:13:37,920 --> 00:13:40,080
+Next step, I want to add 
+durability to it. 
+
+221
+00:13:40,360 --> 00:13:43,160
+I want to make it run in a 
+distributed environment. 
+
+222
+00:13:43,400 --> 00:13:46,920
+I want to support, you know, 
+other 300 things so that it just
+
+223
+00:13:46,920 --> 00:13:51,120
+is a very resilient, robust 
+application that a company like 
+
+224
+00:13:51,120 --> 00:13:55,000
+AWS to use. 
+And you build this like 
+
+225
+00:13:55,000 --> 00:13:57,280
+distributed it and now you find 
+a bug. 
+
+226
+00:13:57,280 --> 00:14:01,640
+Three months later you find a 
+bug, the ability to reproduce 
+
+227
+00:14:01,840 --> 00:14:06,800
+the bug and to solve the bug as 
+you and and based on the 
+
+228
+00:14:06,800 --> 00:14:10,800
+trade-offs you made while 
+designing 3 months back, a 
+
+229
+00:14:10,800 --> 00:14:13,000
+factory would be able to do it. 
+If you do, if you give it to 
+
+230
+00:14:13,000 --> 00:14:16,000
+Claude or some agent, it's 
+starting a new conversation 
+
+231
+00:14:16,000 --> 00:14:19,400
+every single time. 
+So it it's lost all that context
+
+232
+00:14:19,400 --> 00:14:21,080
+in that. 
+Retaining context. 
+
+233
+00:14:21,880 --> 00:14:24,120
+Yeah. 
+Yeah, so that it doesn't have to
+
+234
+00:14:24,120 --> 00:14:27,200
+rebuild the whole. 
+OK, I think retaining. 
+
+235
+00:14:27,200 --> 00:14:29,560
+Context maybe like different 
+right? 
+
+236
+00:14:29,600 --> 00:14:33,000
+Like you're really thinking 
+about a very large application 
+
+237
+00:14:33,000 --> 00:14:36,400
+which with it's own runtime and 
+everything. 
+
+238
+00:14:36,400 --> 00:14:40,360
+And then when you fix. 
+Which exists over over a long 
+
+239
+00:14:40,360 --> 00:14:41,760
+period of time. 
+And maybe that's what's 
+
+240
+00:14:41,760 --> 00:14:45,760
+different is that if you can do 
+something with, you know, 
+
+241
+00:14:45,760 --> 00:14:48,800
+spending three hours in your 
+code assistant, like you don't 
+
+242
+00:14:48,800 --> 00:14:50,960
+need a factory for that. 
+Like what you need the factory 
+
+243
+00:14:50,960 --> 00:14:54,880
+for is the longevity of like, 
+OK, now we now we've got to add 
+
+244
+00:14:54,880 --> 00:14:57,800
+new features over time. 
+We've got to maintain this 
+
+245
+00:14:57,800 --> 00:15:00,320
+thing, we've got to respond on 
+the security incidents, you 
+
+246
+00:15:00,320 --> 00:15:05,080
+know, all those like the the 
+long scope of things. 
+
+247
+00:15:05,080 --> 00:15:07,720
+And this is where the factory 
+metaphor like kind of works, but
+
+248
+00:15:07,720 --> 00:15:11,520
+kind of doesn't is that a 
+factory generally like produces 
+
+249
+00:15:11,520 --> 00:15:13,080
+the same widget, you know, every
+time. 
+
+250
+00:15:13,080 --> 00:15:17,640
+And that's what it's, you know 
+for and what we what isn't a 
+
+251
+00:15:17,640 --> 00:15:20,560
+software factory is a one off 
+widget. 
+
+252
+00:15:21,720 --> 00:15:25,640
+But we do want to take all the 
+things that we want to do with 
+
+253
+00:15:25,640 --> 00:15:30,520
+our project over the next many 
+years and add as much automation
+
+254
+00:15:30,520 --> 00:15:34,760
+into that creation and delivery 
+as possible. 
+
+255
+00:15:34,880 --> 00:15:37,560
+And then when a bug comes in, it
+goes. 
+
+256
+00:15:38,040 --> 00:15:44,200
+It just goes, oh, I'll, I'll 
+take care of that for you and 
+
+257
+00:15:44,200 --> 00:15:48,000
+rely on the human rebooting 
+their knowledge of this project 
+
+258
+00:15:48,000 --> 00:15:50,280
+to remove figure out where that 
+bug is. 
+
+259
+00:15:50,320 --> 00:15:52,440
+But an important part of 
+software factories is that the 
+
+260
+00:15:52,440 --> 00:15:55,440
+factory should know when it 
+needs to escalate to a human. 
+
+261
+00:15:56,160 --> 00:15:59,240
+And so there is definitely the 
+opportunity for the factory be 
+
+262
+00:15:59,240 --> 00:16:01,880
+like, hey, you know, I, I 
+couldn't, I need some guidance 
+
+263
+00:16:01,880 --> 00:16:04,360
+on this. 
+And then and then the expert can
+
+264
+00:16:04,360 --> 00:16:07,280
+jump in and give it the guidance
+it needs to move forward. 
+
+265
+00:16:08,960 --> 00:16:13,600
+And in this specific case, I 
+think a factory should be able 
+
+266
+00:16:13,600 --> 00:16:18,520
+to identify such a bug before 
+the user actually reports it. 
+
+267
+00:16:18,800 --> 00:16:22,200
+So once the application is 
+built, the factory should have 
+
+268
+00:16:22,200 --> 00:16:26,640
+the primitives to build complex 
+applications using the library 
+
+269
+00:16:26,640 --> 00:16:29,480
+that you just built and try to 
+reproduce different kind of 
+
+270
+00:16:29,480 --> 00:16:33,000
+scenarios where it could 
+potentially fail, right? 
+
+271
+00:16:33,000 --> 00:16:35,120
+So the factory does the whole 
+thing. 
+
+272
+00:16:35,240 --> 00:16:38,880
+It should do the testing also 
+and to a degree that really 
+
+273
+00:16:38,880 --> 00:16:42,160
+truly distributed systems with 
+some chaos testing running 
+
+274
+00:16:42,160 --> 00:16:45,680
+throughout 24/7, you know, 365 
+days ago. 
+
+275
+00:16:46,080 --> 00:16:48,240
+Yeah. 
+Then you have some. 
+
+276
+00:16:48,280 --> 00:16:51,360
+So the ambition of scale is so 
+different here, right? 
+
+277
+00:16:51,360 --> 00:16:53,920
+So I'm not just building a small
+library anymore. 
+
+278
+00:16:54,240 --> 00:16:57,320
+I'm thinking about a really 
+robust battle tested system. 
+
+279
+00:16:58,480 --> 00:17:02,000
+And, and moving away from you 
+having to think of all the 
+
+280
+00:17:02,000 --> 00:17:06,400
+things that need to be done and 
+instead like give the factory 
+
+281
+00:17:06,400 --> 00:17:10,839
+some autonomy to like, like, OK,
+here's the, here's the goal that
+
+282
+00:17:10,839 --> 00:17:14,520
+I want a reliable library. 
+And then it should be able to 
+
+283
+00:17:14,520 --> 00:17:19,599
+design and do come up with the 
+chaos testing, come up with, you
+
+284
+00:17:19,599 --> 00:17:21,880
+know, whatever it needs to to 
+get to that goal. 
+
+285
+00:17:23,640 --> 00:17:25,599
+OK. 
+Sounds like an improvement. 
+
+286
+00:17:26,440 --> 00:17:27,520
+It's. 
+Yeah. 
+
+287
+00:17:27,520 --> 00:17:30,280
+I mean it's it really is for 
+scale. 
+
+288
+00:17:30,280 --> 00:17:33,440
+I like that you pointed that out
+because because you know well. 
+
+289
+00:17:33,440 --> 00:17:36,080
+Scale and longevity. 
+Scale and longevity. 
+
+290
+00:17:36,200 --> 00:17:38,840
+Yeah, yeah. 
+And if you don't, if you're 
+
+291
+00:17:38,840 --> 00:17:42,160
+working on a problem that 
+doesn't need those things, then 
+
+292
+00:17:42,160 --> 00:17:43,840
+then maybe you don't. 
+Yeah. 
+
+293
+00:17:43,880 --> 00:17:46,280
+A factory is overkill. 
+Yeah. 
+
+294
+00:17:46,760 --> 00:17:49,080
+Yeah. 
+So maybe too sharp. 
+
+295
+00:17:49,080 --> 00:17:51,880
+Talk a little bit about the 
+difference between like a dark 
+
+296
+00:17:51,880 --> 00:17:55,840
+factory and a lights on factory 
+and everything in between, 
+
+297
+00:17:55,840 --> 00:17:57,760
+because I think that's a 
+interesting area. 
+
+298
+00:17:58,680 --> 00:18:03,000
+Yeah. 
+So I mean simple things, lights 
+
+299
+00:18:03,000 --> 00:18:05,920
+on factories, basically in the 
+engineer there work is getting 
+
+300
+00:18:05,920 --> 00:18:09,240
+done. 
+Dock factories work is also 
+
+301
+00:18:09,240 --> 00:18:11,320
+getting done when engineers are 
+not there. 
+
+302
+00:18:11,320 --> 00:18:15,000
+So you set up the factory in a 
+way where things are shipping 
+
+303
+00:18:15,000 --> 00:18:19,920
+continuously and humans are 
+essentially supervisors and not 
+
+304
+00:18:19,920 --> 00:18:23,400
+orchestrators. 
+With Cloud, you are essentially 
+
+305
+00:18:23,400 --> 00:18:26,960
+orchestrating AQ agent and a dev
+agent and a review agent and 
+
+306
+00:18:26,960 --> 00:18:31,760
+you're all working in that way. 
+But in with the factory, you are
+
+307
+00:18:31,760 --> 00:18:34,880
+a supervisor and the supervisor 
+comes in in the morning, you 
+
+308
+00:18:34,880 --> 00:18:37,760
+know gets a set of things that 
+they need to sort of sign off 
+
+309
+00:18:37,800 --> 00:18:40,800
+on. 
+Once it's sign off sign off the 
+
+310
+00:18:41,040 --> 00:18:43,720
+the factory knows what are the 
+next steps and starts working on
+
+311
+00:18:43,720 --> 00:18:45,880
+it. 
+So if you reach a stage, the. 
+
+312
+00:18:45,880 --> 00:18:52,480
+Supervisor can then go do fun 
+things and rejuvenate themselves
+
+313
+00:18:52,480 --> 00:18:55,080
+and not yeah, trust. 
+Themselves, That's the hope. 
+
+314
+00:18:55,080 --> 00:18:58,040
+That's the hope. 
+But I don't think any of these 
+
+315
+00:18:58,040 --> 00:19:00,880
+agents are making life easier 
+for any software developed. 
+
+316
+00:19:00,880 --> 00:19:03,240
+I think everybody's working 
+harder, yeah. 
+
+317
+00:19:03,440 --> 00:19:07,360
+Well, that's, that's the 
+capitalism problem that that we 
+
+318
+00:19:07,360 --> 00:19:11,560
+hope that the AI, that's what we
+need a factory for, is to solve 
+
+319
+00:19:11,560 --> 00:19:13,320
+the capitalism problem. 
+Sure. 
+
+320
+00:19:13,640 --> 00:19:17,600
+Yeah, So what I what I've 
+noticed is that in the places 
+
+321
+00:19:17,600 --> 00:19:20,840
+where I've set up software 
+factories, like all the menial 
+
+322
+00:19:20,840 --> 00:19:23,400
+work is now gone. 
+Like I don't have to do any of 
+
+323
+00:19:23,400 --> 00:19:26,840
+the menial mindless stuff. 
+Web Jars is a software factory. 
+
+324
+00:19:27,160 --> 00:19:31,280
+Web Jars has a software factory.
+Yep, our website for the podcast
+
+325
+00:19:31,280 --> 00:19:33,880
+Happy Path Programming is a 
+software factory driven by a 
+
+326
+00:19:33,880 --> 00:19:38,200
+software factory. 
+So yeah, I've set up a ton of. 
+
+327
+00:19:38,320 --> 00:19:42,520
+I have one factory that then has
+about 50 projects that it 
+
+328
+00:19:42,520 --> 00:19:44,600
+maintains. 
+And some of those are production
+
+329
+00:19:44,600 --> 00:19:48,120
+sites and some are libraries and
+some are SPT plug insurance and 
+
+330
+00:19:48,120 --> 00:19:50,200
+some are websites. 
+So I've got a lot of different 
+
+331
+00:19:50,200 --> 00:19:53,800
+things in the factory, but but 
+now I've got, you know, almost 
+
+332
+00:19:53,800 --> 00:19:56,320
+everything automated that can be
+automated. 
+
+333
+00:19:56,640 --> 00:20:01,520
+And So what I've noticed is that
+the work that now I'm doing is 
+
+334
+00:20:01,680 --> 00:20:05,160
+the places where decisions need 
+to be made around what should. 
+
+335
+00:20:05,240 --> 00:20:08,760
+Be done what should be built. 
+And so, you know, the the 
+
+336
+00:20:08,760 --> 00:20:11,280
+factory will escalate an issue 
+to me, it can actually like 
+
+337
+00:20:11,520 --> 00:20:14,440
+create an issue in GitHub and 
+put A tag on that says needs 
+
+338
+00:20:14,440 --> 00:20:17,400
+human. 
+And so my cue now is just a 
+
+339
+00:20:17,400 --> 00:20:20,400
+bunch of things that the factory
+has decided needs human. 
+
+340
+00:20:20,600 --> 00:20:24,280
+And often times those are things
+where the requirements were 
+
+341
+00:20:24,280 --> 00:20:29,080
+ambiguous enough that or the 
+factory, you know, didn't know 
+
+342
+00:20:29,080 --> 00:20:30,840
+what to do. 
+And so now it's a product 
+
+343
+00:20:30,840 --> 00:20:32,960
+decision. 
+What should this library do? 
+
+344
+00:20:32,960 --> 00:20:37,480
+How should it handle this thing?
+And so so these come up all the 
+
+345
+00:20:37,480 --> 00:20:40,320
+time because the factory is, you
+know, always running, creating 
+
+346
+00:20:40,320 --> 00:20:42,680
+things. 
+And then it's identifying the 
+
+347
+00:20:42,680 --> 00:20:48,680
+ambiguities that need a a 
+product engineer is the new 
+
+348
+00:20:48,680 --> 00:20:52,280
+terminology around this to 
+intervene and give it the 
+
+349
+00:20:52,280 --> 00:20:57,920
+instructions for for what to do.
+So is this, I mean, what is the,
+
+350
+00:20:59,120 --> 00:21:02,480
+the essence of what's in a 
+factory? 
+
+351
+00:21:02,480 --> 00:21:08,200
+Is it, is it, oh, here are all 
+these a way to handle events 
+
+352
+00:21:08,200 --> 00:21:12,200
+that happen that come in? 
+And I mean, like, is there a 
+
+353
+00:21:12,200 --> 00:21:16,280
+framework? 
+Are are we, will the AI 
+
+354
+00:21:16,280 --> 00:21:23,600
+companies come up with a way to 
+say, oh, slash factory and that 
+
+355
+00:21:23,600 --> 00:21:26,080
+allows you to, you know, it 
+walks you through building a 
+
+356
+00:21:26,080 --> 00:21:28,000
+software factory. 
+How is this going to work? 
+
+357
+00:21:28,920 --> 00:21:32,040
+I feel you have to build the 
+right set of primitives. 
+
+358
+00:21:32,040 --> 00:21:36,280
+It's essentially infrastructure 
+to scale your agents to work on 
+
+359
+00:21:36,280 --> 00:21:40,040
+software development tasks, 
+right? 
+
+360
+00:21:40,040 --> 00:21:45,080
+So infrastructure includes 
+automations, yes, foreign jobs, 
+
+361
+00:21:45,600 --> 00:21:50,320
+but it also includes a messaging
+system, which is robust because 
+
+362
+00:21:50,320 --> 00:21:54,640
+if you have large enough scale, 
+nothing is running in process. 
+
+363
+00:21:55,360 --> 00:21:56,960
+Everything is on different 
+machines. 
+
+364
+00:21:57,600 --> 00:22:00,000
+And these, there's so many 
+agents, they're not reliable. 
+
+365
+00:22:00,080 --> 00:22:01,600
+So your assistant message 
+exists. 
+
+366
+00:22:01,720 --> 00:22:03,160
+There's a lot of coordination 
+there. 
+
+367
+00:22:04,520 --> 00:22:10,000
+You need some form of, you know,
+capturing data. 
+
+368
+00:22:10,000 --> 00:22:14,480
+You need some capability to 
+capture data, which could be in 
+
+369
+00:22:14,480 --> 00:22:19,320
+the form of some tables that you
+can kind of aggregate and sort 
+
+370
+00:22:19,320 --> 00:22:21,960
+of create reports which the 
+agent can then eventually 
+
+371
+00:22:21,960 --> 00:22:23,800
+optimize for. 
+So basically some place where 
+
+372
+00:22:23,800 --> 00:22:28,360
+you can, you know, push a lot of
+data, introspect and generate 
+
+373
+00:22:28,360 --> 00:22:30,880
+data and look at what's 
+happening in the factory. 
+
+374
+00:22:30,880 --> 00:22:33,320
+So that's another primitive that
+you want to kind of add to your 
+
+375
+00:22:33,320 --> 00:22:36,200
+factory. 
+You want to have some sort of 
+
+376
+00:22:36,680 --> 00:22:40,000
+project management system which 
+is highly optimized for the 
+
+377
+00:22:40,080 --> 00:22:43,600
+agents where things can run in 
+battle. 
+
+378
+00:22:44,080 --> 00:22:47,360
+You need a sandboxing 
+environment and then that 
+
+379
+00:22:47,360 --> 00:22:50,840
+sandboxing environment has to be
+smart enough and fast enough and
+
+380
+00:22:50,840 --> 00:22:54,440
+you want to scale that also. 
+So they essentially want to 
+
+381
+00:22:54,440 --> 00:22:57,480
+build all get all these 
+primitives together and then 
+
+382
+00:22:57,480 --> 00:23:00,280
+give a seamless experience for 
+the for the human to kind of 
+
+383
+00:23:00,280 --> 00:23:07,320
+just, OK, look at it at a 10,000
+feet and just walk the street or
+
+384
+00:23:07,320 --> 00:23:09,080
+just supervise what's happening 
+in the. 
+
+385
+00:23:09,680 --> 00:23:12,320
+Didn't you just describe a 
+computer program? 
+
+386
+00:23:12,960 --> 00:23:15,480
+It's got to have a database, 
+it's got to have deal with 
+
+387
+00:23:15,480 --> 00:23:18,000
+events. 
+It's got to have way to manage 
+
+388
+00:23:18,000 --> 00:23:22,120
+it. 
+If we just moved ourselves up to
+
+389
+00:23:22,160 --> 00:23:25,520
+this new level of abstraction, 
+that kind of looks like the one 
+
+390
+00:23:25,520 --> 00:23:30,160
+that we were working on before. 
+Yep, Yeah, there's powerful 
+
+391
+00:23:30,160 --> 00:23:32,720
+primitives. 
+So I think we're we're still 
+
+392
+00:23:32,720 --> 00:23:35,680
+generally as an industry 
+uncovering what the right 
+
+393
+00:23:35,680 --> 00:23:38,080
+primitives are. 
+But yeah, I think there's a lot 
+
+394
+00:23:38,080 --> 00:23:40,240
+of similarity in those 
+primitives to what we've already
+
+395
+00:23:40,240 --> 00:23:43,000
+had. 
+It's just that they're the needs
+
+396
+00:23:43,000 --> 00:23:46,800
+are slightly different because 
+the automation is happening at 
+
+397
+00:23:47,240 --> 00:23:51,840
+generally at such a scale that 
+some of our old techniques that 
+
+398
+00:23:51,840 --> 00:23:55,440
+were human oriented don't work 
+very well in the factory. 
+
+399
+00:23:55,680 --> 00:23:59,840
+So as an example, some, some 
+folks have moved their factories
+
+400
+00:23:59,840 --> 00:24:03,360
+off of Git because Git was too 
+constrained and, you know, 
+
+401
+00:24:03,360 --> 00:24:05,520
+created for humans to 
+collaborate. 
+
+402
+00:24:05,880 --> 00:24:10,240
+And so there's alternatives to 
+to Git that are better oriented 
+
+403
+00:24:10,240 --> 00:24:15,480
+to the factory. 
+The like Delta DB from the Z 
+
+404
+00:24:15,560 --> 00:24:20,360
+folks, I think is in that realm.
+The the guy that was a GitHub 
+
+405
+00:24:20,360 --> 00:24:24,280
+CEO went off and created some 
+new foundation for factories. 
+
+406
+00:24:24,280 --> 00:24:27,400
+I think that one's still based 
+on loosely on git or something, 
+
+407
+00:24:28,000 --> 00:24:31,560
+but that's just one piece where 
+we've, we've, we've had these 
+
+408
+00:24:31,560 --> 00:24:34,480
+human oriented primitives and 
+the factory. 
+
+409
+00:24:35,040 --> 00:24:37,800
+You can generally build it 
+around the human oriented 
+
+410
+00:24:37,800 --> 00:24:40,600
+primitives, but they do a bunch.
+Of extra work. 
+
+411
+00:24:40,600 --> 00:24:45,040
+And yeah, yeah, I think it's 
+what like what we've talked 
+
+412
+00:24:45,040 --> 00:24:49,040
+about with languages, some, so 
+many language features are human
+
+413
+00:24:49,040 --> 00:24:52,280
+affordances and the AI doesn't 
+need those. 
+
+414
+00:24:52,600 --> 00:24:54,440
+And so it kind of clutters 
+things up. 
+
+415
+00:24:55,000 --> 00:24:58,240
+Yeah, Yep. 
+And the, the kind of primitives 
+
+416
+00:24:58,240 --> 00:25:03,800
+are different also because like 
+what's going to happen is if I'm
+
+417
+00:25:03,960 --> 00:25:08,560
+reducing, say 1 pull request a 
+day and reviewing 3 or 4 pull 
+
+418
+00:25:08,560 --> 00:25:12,840
+requests, it's manageable. 
+But if I'm myself producing 100 
+
+419
+00:25:12,840 --> 00:25:16,560
+full requests a day and my team 
+is producing 100 full requests a
+
+420
+00:25:16,560 --> 00:25:18,440
+day, there's no way I can review
+them. 
+
+421
+00:25:19,240 --> 00:25:22,160
+Now I have to make a trade off 
+where I actually understand 
+
+422
+00:25:22,160 --> 00:25:26,320
+what's going in my code or I 
+have a much higher level view of
+
+423
+00:25:26,640 --> 00:25:28,920
+how much code are we pushing? 
+What's the entropy? 
+
+424
+00:25:28,920 --> 00:25:32,760
+What's, what's the bug density? 
+What's the children of code? 
+
+425
+00:25:32,760 --> 00:25:36,040
+How many, what components are we
+just, can you see rewriting that
+
+426
+00:25:36,040 --> 00:25:39,840
+kind of stuff? 
+So the, the, the, the, the 
+
+427
+00:25:40,160 --> 00:25:42,760
+abstraction that you're working 
+with is very different. 
+
+428
+00:25:43,360 --> 00:25:47,040
+Even as an engineer, you need 
+those primitives available that 
+
+429
+00:25:48,560 --> 00:25:52,480
+the that the agent can kind of 
+feed in and you can kind of look
+
+430
+00:25:52,680 --> 00:25:57,160
+at from a 50,000 feet and just 
+see, OK, is my factory working 
+
+431
+00:25:57,760 --> 00:26:01,680
+optimally or do we need to make 
+some fundamental changes in its 
+
+432
+00:26:01,680 --> 00:26:04,360
+architecture design? 
+Is there more guidance or 
+
+433
+00:26:04,360 --> 00:26:07,720
+context that the factory itself 
+needs so that it, you know, it 
+
+434
+00:26:07,720 --> 00:26:10,000
+went off the rails here. 
+OK, let's add in a thing. 
+
+435
+00:26:10,000 --> 00:26:12,400
+And this was a lot of when I 
+first started building the 
+
+436
+00:26:12,400 --> 00:26:16,720
+software factory, it was a lot 
+of my work was just around the 
+
+437
+00:26:16,840 --> 00:26:20,680
+the maintenance of the factory 
+itself because the factory would
+
+438
+00:26:20,680 --> 00:26:24,040
+not do the right thing and said,
+OK, let me add some information 
+
+439
+00:26:24,040 --> 00:26:26,640
+to the factory so that it 
+doesn't do that again, you know,
+
+440
+00:26:26,640 --> 00:26:30,760
+it improves and. 
+This is similar to what you were
+
+441
+00:26:30,760 --> 00:26:35,640
+saying earlier about management.
+It's like in the end, the only 
+
+442
+00:26:35,640 --> 00:26:41,720
+thing that matters is does it 
+meet the specifications or the 
+
+443
+00:26:42,120 --> 00:26:47,840
+the system test or whatever. 
+And it's like that's kind of the
+
+444
+00:26:47,840 --> 00:26:53,200
+only thing that we should have 
+to do is say, describe what it 
+
+445
+00:26:53,200 --> 00:26:57,640
+is that this thing is supposed 
+to do in a way that it can set 
+
+446
+00:26:57,640 --> 00:27:00,920
+up tests and it can do 
+everything else. 
+
+447
+00:27:01,520 --> 00:27:05,040
+And it just as long as it meets 
+the tests, we're good. 
+
+448
+00:27:05,040 --> 00:27:06,760
+Yeah. 
+Are users happy? 
+
+449
+00:27:07,400 --> 00:27:10,200
+Are they paying money? 
+Like, yeah, that's a test. 
+
+450
+00:27:10,200 --> 00:27:12,840
+Yeah, yeah, that's one of many 
+criteria. 
+
+451
+00:27:12,840 --> 00:27:15,840
+Yeah. 
+So the other piece to the 
+
+452
+00:27:15,840 --> 00:27:19,920
+factory, how the factory 
+operates and one of the, I 
+
+453
+00:27:19,920 --> 00:27:23,680
+believe primitives to a software
+factory is a self improvement 
+
+454
+00:27:23,680 --> 00:27:26,800
+loop. 
+And so the factory itself should
+
+455
+00:27:26,920 --> 00:27:31,520
+be able to look at what it's 
+done and then see if there's 
+
+456
+00:27:31,520 --> 00:27:34,320
+adjustments that need to be made
+to the factory itself. 
+
+457
+00:27:34,320 --> 00:27:37,200
+And so one of the, the first 
+things that I got into the 
+
+458
+00:27:37,200 --> 00:27:39,840
+factory was the self improvement
+loop. 
+
+459
+00:27:39,840 --> 00:27:43,240
+So the way that I did it was 
+after each time the factory did 
+
+460
+00:27:43,240 --> 00:27:46,680
+something, I would tell it, Hey,
+look at the full transcript of 
+
+461
+00:27:46,680 --> 00:27:48,040
+everything thing that just 
+happened. 
+
+462
+00:27:48,360 --> 00:27:51,360
+And then if there's something 
+that needs to be improved in the
+
+463
+00:27:51,360 --> 00:27:55,520
+factory, go send me a poll 
+request and or, or send a poll 
+
+464
+00:27:55,520 --> 00:27:57,960
+request. 
+And if you need me, you know, 
+
+465
+00:27:58,120 --> 00:28:01,280
+tagging the needs human on that 
+issue and I can review it. 
+
+466
+00:28:01,280 --> 00:28:04,240
+But a lot of the factory self 
+improvement. 
+
+467
+00:28:04,240 --> 00:28:07,160
+Now at this point, my factory 
+just happens automatically. 
+
+468
+00:28:07,160 --> 00:28:09,600
+Like, I don't even, I don't even
+like who knows where what the 
+
+469
+00:28:09,600 --> 00:28:12,240
+factory is doing now, which is a
+little scary. 
+
+470
+00:28:12,640 --> 00:28:15,440
+Need to. 
+You can throw in a rubric and 
+
+471
+00:28:15,720 --> 00:28:19,840
+LLM as a judge and then make it 
+a little more scientific. 
+
+472
+00:28:20,320 --> 00:28:20,800
+Yep. 
+Yeah. 
+
+473
+00:28:20,800 --> 00:28:24,960
+So you use an agent itself to 
+then analyze the transcript of 
+
+474
+00:28:24,960 --> 00:28:29,000
+something it did and then use 
+and then tell it to come up with
+
+475
+00:28:29,000 --> 00:28:34,000
+ways to improve the factory. 
+So, yeah, sorry, don't know why 
+
+476
+00:28:34,000 --> 00:28:36,160
+you're coming. 
+That's rude. 
+
+477
+00:28:37,720 --> 00:28:39,560
+Yeah. 
+So, OK, so self improvement, 
+
+478
+00:28:39,560 --> 00:28:41,440
+that's one, one piece of the 
+factory. 
+
+479
+00:28:42,880 --> 00:28:48,200
+One of the other areas that that
+is I think under explored at 
+
+480
+00:28:48,200 --> 00:28:52,680
+this point with factories is 
+around collaboration because you
+
+481
+00:28:52,680 --> 00:28:55,560
+can get stuff working in the 
+factory and it can be producing 
+
+482
+00:28:55,560 --> 00:28:59,480
+things. 
+But in a large system, you have 
+
+483
+00:28:59,560 --> 00:29:03,880
+team, many teams of many 
+developers that need to have 
+
+484
+00:29:03,880 --> 00:29:08,000
+some form of collaboration. 
+And what I I don't know if we've
+
+485
+00:29:08,000 --> 00:29:11,680
+fully uncovered the right 
+primitive for that collaboration
+
+486
+00:29:11,720 --> 00:29:15,320
+yet in in the non factory sense,
+This has been called like 
+
+487
+00:29:15,320 --> 00:29:19,320
+multiplayer, the idea that 
+multiple developers can go into 
+
+488
+00:29:19,320 --> 00:29:22,960
+like a shared AI session and 
+work together, but it still is 
+
+489
+00:29:22,960 --> 00:29:25,360
+not the like factory orientation
+of that. 
+
+490
+00:29:25,360 --> 00:29:27,800
+So I don't know too sharp. 
+Tell us what you, what you've 
+
+491
+00:29:27,800 --> 00:29:30,200
+seen or what you're, what you're
+working on around. 
+
+492
+00:29:30,400 --> 00:29:32,960
+I don't multiplayer 
+collaboration in the in the 
+
+493
+00:29:32,960 --> 00:29:36,920
+context of a factory. 
+That's something I'm struggling 
+
+494
+00:29:36,920 --> 00:29:42,720
+with myself because most of the 
+tools that exist either are 
+
+495
+00:29:42,720 --> 00:29:46,880
+multiplayer in the sense like 
+multi human but not agent 
+
+496
+00:29:47,880 --> 00:29:49,800
+supported. 
+For example if you did GitHub 
+
+497
+00:29:50,400 --> 00:29:54,080
+and if most of my work and we 
+are working in the team, most of
+
+498
+00:29:54,120 --> 00:29:58,000
+my work is done by a factory. 
+There's no pull request that 
+
+499
+00:29:58,440 --> 00:30:02,440
+either one of us are creating. 
+So every pull request that is 
+
+500
+00:30:02,440 --> 00:30:08,000
+created is created by 1 user, 
+the factory user, right? 
+
+501
+00:30:08,400 --> 00:30:14,760
+And it's reviewed by a factory. 
+So all the commits are by one 
+
+502
+00:30:14,920 --> 00:30:18,520
+account, and all the reviews, 
+review comments are by one 
+
+503
+00:30:18,520 --> 00:30:21,160
+account. 
+So it stops making any sense 
+
+504
+00:30:21,160 --> 00:30:22,840
+who's accountable for that 
+software? 
+
+505
+00:30:23,520 --> 00:30:26,480
+So who's accountable for that 
+batch or change? 
+
+506
+00:30:27,960 --> 00:30:31,240
+And I think I do. 
+Things can possibly happen, like
+
+507
+00:30:31,240 --> 00:30:34,880
+we could potentially have more 
+collaboration and like every 
+
+508
+00:30:35,240 --> 00:30:37,280
+change and path is assigned to a
+human. 
+
+509
+00:30:37,640 --> 00:30:42,120
+Or we could go in the complete 
+extreme opposite direction where
+
+510
+00:30:43,400 --> 00:30:46,480
+each collaboration is happening 
+at a very different layer. 
+
+511
+00:30:47,040 --> 00:30:51,480
+It's not happening at Git and 
+there's all softwares where it's
+
+512
+00:30:51,480 --> 00:30:55,560
+actually built, but it's 
+happening during creation of 
+
+513
+00:30:55,560 --> 00:31:00,360
+specs, creation of goals and not
+that clear right So. 
+
+514
+00:31:01,280 --> 00:31:06,320
+Defining defining the the 
+business requirements and, and 
+
+515
+00:31:06,320 --> 00:31:09,080
+the product that you're 
+delivering and the ability is 
+
+516
+00:31:09,080 --> 00:31:10,840
+that you care about and all 
+those things. 
+
+517
+00:31:10,840 --> 00:31:16,640
+It's like do we multiplayer on 
+those or or are is are we going 
+
+518
+00:31:16,640 --> 00:31:20,320
+to get to the place where we can
+essentially assign a single 
+
+519
+00:31:20,320 --> 00:31:24,200
+human to to those things and not
+have to multiplayer and 
+
+520
+00:31:24,200 --> 00:31:25,440
+collaborate? 
+I don't know. 
+
+521
+00:31:25,800 --> 00:31:29,200
+Yeah, it depends on the system 
+and how complex and it is. 
+
+522
+00:31:29,360 --> 00:31:30,320
+Well. 
+Exactly, people. 
+
+523
+00:31:30,520 --> 00:31:34,400
+Bring different ideas. 
+So it seems like that will be 
+
+524
+00:31:34,400 --> 00:31:38,600
+the value of a of a team. 
+And the system is fairly 
+
+525
+00:31:38,600 --> 00:31:41,680
+complex, you wouldn't interact 
+with it directly either. 
+
+526
+00:31:41,680 --> 00:31:45,320
+So once your factory becomes 
+very complex, you would have 
+
+527
+00:31:45,320 --> 00:31:49,040
+assistants who would manage the 
+factory on your behalf. 
+
+528
+00:31:50,000 --> 00:31:54,880
+And then how do you do people 
+who are in different teams using
+
+529
+00:31:54,880 --> 00:31:58,560
+the same factory to ship 
+software collaborate? 
+
+530
+00:31:59,080 --> 00:32:02,440
+Is it do they collaborate 
+directly or do they collaborate 
+
+531
+00:32:02,960 --> 00:32:05,960
+while their personal agents were
+managing the factory? 
+
+532
+00:32:06,280 --> 00:32:08,840
+So it becomes very interesting 
+very quickly because what's 
+
+533
+00:32:08,840 --> 00:32:11,800
+happening in the last six 
+months, we're just moving up the
+
+534
+00:32:11,800 --> 00:32:14,120
+stack, right? 
+Like we're just going one after 
+
+535
+00:32:14,120 --> 00:32:17,920
+the other abstraction and just 
+going up and we're thinking, I 
+
+536
+00:32:17,920 --> 00:32:21,240
+mean, stack, it's becoming very 
+difficult to build products 
+
+537
+00:32:21,240 --> 00:32:27,920
+because every few months you 
+want a new layer of attraction 
+
+538
+00:32:27,920 --> 00:32:29,960
+and you want to talk from that 
+abstract. 
+
+539
+00:32:31,720 --> 00:32:34,680
+Yeah, right. 
+One of the interesting ideas I 
+
+540
+00:32:34,680 --> 00:32:39,760
+heard recently around this was 
+that that often times as a 
+
+541
+00:32:40,320 --> 00:32:43,560
+especially like a lead developer
+on a team, people come to you 
+
+542
+00:32:43,560 --> 00:32:46,160
+with questions and you know, 
+they're asking you something 
+
+543
+00:32:46,160 --> 00:32:48,920
+about, about, you know, what 
+you've built, how to integrate 
+
+544
+00:32:48,920 --> 00:32:53,840
+with it, whatever it may be. 
+And instead of asking me as the 
+
+545
+00:32:53,840 --> 00:32:57,400
+team lead, why don't you go ask 
+my factory that question. 
+
+546
+00:32:57,760 --> 00:33:00,680
+And so I think there's going to 
+be this like, like level of 
+
+547
+00:33:00,680 --> 00:33:05,040
+collaboration where if I have 
+done a good job of encoding 
+
+548
+00:33:05,760 --> 00:33:08,480
+everything that's needed into 
+the factory, nobody should have 
+
+549
+00:33:08,480 --> 00:33:12,560
+to come to me to ask a question 
+about how this thing works or 
+
+550
+00:33:12,640 --> 00:33:15,240
+how to use it. 
+They should be able to actually 
+
+551
+00:33:15,240 --> 00:33:17,160
+just ask my factory those 
+questions. 
+
+552
+00:33:19,040 --> 00:33:24,280
+That's right. 
+And the factory well, in my, in 
+
+553
+00:33:24,280 --> 00:33:27,280
+the experience that I'm having 
+with the Thinking in Python 
+
+554
+00:33:27,280 --> 00:33:32,120
+book, I got it to the point 
+where if I ask a question about 
+
+555
+00:33:32,120 --> 00:33:35,360
+a sentence or something, I'm 
+going this isn't clear to me. 
+
+556
+00:33:35,920 --> 00:33:42,920
+It will then say, oh, because 
+you didn't get that maybe I need
+
+557
+00:33:42,920 --> 00:33:46,720
+to go someplace else or I need 
+to, you know, I need to improve 
+
+558
+00:33:46,720 --> 00:33:50,160
+this somehow. 
+And so anytime a question comes 
+
+559
+00:33:50,160 --> 00:33:53,880
+in from a human, that should be 
+another kind of trigger to your 
+
+560
+00:33:53,880 --> 00:33:57,360
+factory to go, oh, something 
+about this isn't clear. 
+
+561
+00:33:57,640 --> 00:34:01,120
+So I need to, you know, make it 
+better that way. 
+
+562
+00:34:01,840 --> 00:34:04,120
+Yeah. 
+Yeah. 
+
+563
+00:34:04,120 --> 00:34:07,080
+That becomes part of the self 
+improvement of the factory 
+
+564
+00:34:07,080 --> 00:34:12,639
+itself is any questions that you
+come across should have answers 
+
+565
+00:34:12,639 --> 00:34:15,000
+by the factory. 
+And if they don't, we've got an 
+
+566
+00:34:15,000 --> 00:34:17,280
+improvement that's needed in the
+factory itself. 
+
+567
+00:34:17,880 --> 00:34:23,760
+Yeah, yeah, right, right. 
+Yeah, I mean, there's some 
+
+568
+00:34:24,120 --> 00:34:28,760
+existential questions around 
+what do I, what do I do like 
+
+569
+00:34:28,760 --> 00:34:33,280
+once I build my my factory and 
+get it just humming along, you 
+
+570
+00:34:33,280 --> 00:34:39,199
+know, am I just this, I don't 
+know, I don't know, decision 
+
+571
+00:34:39,199 --> 00:34:44,800
+maker on on product decisions or
+do I determine what good is? 
+
+572
+00:34:44,840 --> 00:34:47,199
+Is that is that all that I'm 
+good for? 
+
+573
+00:34:47,760 --> 00:35:00,040
+You're, you're an ideator and A,
+and a decider of value AI guess.
+
+574
+00:35:00,280 --> 00:35:03,800
+Well, in nonviolent 
+communication, probably the most
+
+575
+00:35:03,800 --> 00:35:06,720
+important thing that you get out
+of it is understanding what your
+
+576
+00:35:06,720 --> 00:35:09,720
+needs are and which are hard to 
+figure out. 
+
+577
+00:35:10,080 --> 00:35:12,480
+It's, it's hard to come to we, 
+we mask them. 
+
+578
+00:35:12,880 --> 00:35:20,160
+And so these systems should meet
+our needs, help us find our 
+
+579
+00:35:20,160 --> 00:35:24,080
+needs and meet them. 
+And so that's, that's our job is
+
+580
+00:35:24,080 --> 00:35:28,040
+to figure out what those are and
+express them. 
+
+581
+00:35:29,240 --> 00:35:32,760
+And traditionally that was the 
+job of a product manager and so.
+
+582
+00:35:32,960 --> 00:35:36,920
+Well, and traditionally, 
+originally that's what marketing
+
+583
+00:35:36,920 --> 00:35:39,200
+was supposed to do. 
+They were supposed to figure out
+
+584
+00:35:39,200 --> 00:35:44,240
+what the customer wanted, not 
+push whatever we built onto the 
+
+585
+00:35:44,240 --> 00:35:49,320
+customer. 
+But I also feel accountability 
+
+586
+00:35:49,320 --> 00:35:52,600
+is not going to change. 
+So you can use any kind of. 
+
+587
+00:35:53,640 --> 00:35:57,720
+So software engineering team is 
+still accountable for the 
+
+588
+00:35:57,720 --> 00:36:00,880
+software they ship. 
+That's now going to change. 
+
+589
+00:36:01,400 --> 00:36:04,080
+You will not. 
+No matter how many software 
+
+590
+00:36:04,080 --> 00:36:10,360
+factories you end up building or
+using, accountability will be 
+
+591
+00:36:10,360 --> 00:36:11,960
+with the human. 
+Eventually. 
+
+592
+00:36:12,000 --> 00:36:14,320
+There has to be a human snake on
+the line. 
+
+593
+00:36:15,400 --> 00:36:17,920
+You will never move that to a 
+agent. 
+
+594
+00:36:18,760 --> 00:36:21,000
+So if there's. 
+So I, I can't just be like, I'm 
+
+595
+00:36:21,000 --> 00:36:24,760
+sorry that I broke that it was 
+my software factory and I, you 
+
+596
+00:36:24,760 --> 00:36:29,480
+know, yes, you can, but but I 
+like. 
+
+597
+00:36:29,520 --> 00:36:31,480
+The argument is that you're 
+still accountable. 
+
+598
+00:36:31,760 --> 00:36:35,160
+Businesses I I don't think are 
+going to be OK with with trying 
+
+599
+00:36:35,160 --> 00:36:37,760
+to place blame on the factory. 
+Oh, sure. 
+
+600
+00:36:38,400 --> 00:36:42,320
+I mean, until we change that, 
+this is, I mean, my grand hope 
+
+601
+00:36:42,320 --> 00:36:47,000
+for AI is that it will help us 
+change as humans because every 
+
+602
+00:36:47,000 --> 00:36:50,240
+time we come up with humans, 
+come up with a new technology, 
+
+603
+00:36:50,440 --> 00:36:54,280
+people are going, oh, it's the 
+technology that's caused this 
+
+604
+00:36:54,280 --> 00:36:56,440
+kind of thing. 
+And it's like, no, it's the 
+
+605
+00:36:56,440 --> 00:36:58,960
+humans behind it. 
+But you don't want to face that,
+
+606
+00:36:58,960 --> 00:37:02,720
+I guess, because then you're 
+also culpable. 
+
+607
+00:37:03,920 --> 00:37:05,960
+Yeah. 
+So that's interesting that that 
+
+608
+00:37:06,560 --> 00:37:10,240
+and maybe a area that we haven't
+fully figured out on the 
+
+609
+00:37:10,240 --> 00:37:15,560
+factories yet is how do we hold 
+on to that accountability 
+
+610
+00:37:15,840 --> 00:37:20,120
+without reviewing every line of 
+code And and like what it had, 
+
+611
+00:37:20,160 --> 00:37:23,240
+like, I don't, I don't have a 
+good picture of at least in the 
+
+612
+00:37:23,240 --> 00:37:26,880
+large scale, how that would 
+potentially work, like what the 
+
+613
+00:37:26,880 --> 00:37:31,280
+interaction between the the 
+factory and the humans that are 
+
+614
+00:37:31,280 --> 00:37:33,640
+responsible for it. 
+Like what is that? 
+
+615
+00:37:33,640 --> 00:37:36,720
+Because I don't take I, I don't 
+take responsibility for the 
+
+616
+00:37:36,720 --> 00:37:39,160
+machine code that my compiler 
+generates. 
+
+617
+00:37:40,240 --> 00:37:42,160
+That's deterministic, right? 
+Yeah. 
+
+618
+00:37:42,440 --> 00:37:46,960
+Yeah, it is. 
+Is that really the difference is
+
+619
+00:37:46,960 --> 00:37:50,280
+that that generally compilers 
+are mostly deterministic. 
+
+620
+00:37:50,280 --> 00:37:55,920
+And so so we, we, we can, we 
+can, we don't have to be 
+
+621
+00:37:55,920 --> 00:37:58,480
+responsible for the machine code
+generated by a compiler, but 
+
+622
+00:37:58,760 --> 00:38:02,760
+because we're in the realm of 
+nondeterministic systems with 
+
+623
+00:38:02,880 --> 00:38:07,520
+factories that we still have to,
+to be involved in some way. 
+
+624
+00:38:07,840 --> 00:38:10,240
+Oh, but that actually reminds me
+of one of the other core 
+
+625
+00:38:10,240 --> 00:38:14,400
+primitives of a factory is 
+actually setting up as much 
+
+626
+00:38:14,400 --> 00:38:17,040
+deterministic validation as we 
+possibly can. 
+
+627
+00:38:17,480 --> 00:38:22,120
+And that's maybe how we can get 
+to the almost compiler level in 
+
+628
+00:38:22,120 --> 00:38:24,360
+some cases. 
+Like maybe the the factory is 
+
+629
+00:38:24,360 --> 00:38:28,320
+deciding, you know, how to solve
+a particular bug or whatever, 
+
+630
+00:38:28,320 --> 00:38:31,760
+how to fix a bug. 
+But the there's so many 
+
+631
+00:38:32,480 --> 00:38:36,520
+deterministic layers to get it 
+get that bug actually, you know,
+
+632
+00:38:36,880 --> 00:38:40,440
+fixed and committed whatever 
+that that then we can be pretty 
+
+633
+00:38:40,440 --> 00:38:43,480
+confident in in what it's 
+create, what it's done for that 
+
+634
+00:38:43,480 --> 00:38:46,120
+bug fix. 
+Yeah, because otherwise, if 
+
+635
+00:38:46,120 --> 00:38:49,080
+you're saying that, Oh well, 
+ultimately we're responsible, 
+
+636
+00:38:49,480 --> 00:38:57,440
+then our job is to solve the 
+effing trolley problem back to 
+
+637
+00:38:57,640 --> 00:39:02,000
+we all have to become 
+philosophers because that's the 
+
+638
+00:39:02,000 --> 00:39:03,640
+part that the machine can't 
+solve. 
+
+639
+00:39:04,880 --> 00:39:12,840
+Yeah, yeah, yeah. 
+I so in in my factory now I've 
+
+640
+00:39:12,840 --> 00:39:17,280
+given it, I think generally 
+sufficient enough deterministic 
+
+641
+00:39:17,280 --> 00:39:22,200
+ways to to write and validate 
+code that I'm at the point where
+
+642
+00:39:22,200 --> 00:39:24,840
+generally I don't look at the 
+code anymore. 
+
+643
+00:39:25,520 --> 00:39:27,680
+But it was because I put in a 
+lot of constraints. 
+
+644
+00:39:27,680 --> 00:39:30,840
+So I'm using, you know, good 
+type systems, I'm using the fax.
+
+645
+00:39:30,840 --> 00:39:36,400
+I've got good. 
+I don't know other ways to 
+
+646
+00:39:36,400 --> 00:39:40,880
+validate that the thing works as
+expected that are deterministic.
+
+647
+00:39:41,960 --> 00:39:48,360
+But because I've, I've set up a 
+lot of those validation steps in
+
+648
+00:39:48,360 --> 00:39:52,120
+the factory, I feel, I feel, and
+I've, and I went through a phase
+
+649
+00:39:52,120 --> 00:39:55,480
+of kind of trust, getting to 
+trust with the factory because 
+
+650
+00:39:55,480 --> 00:39:58,800
+after, you know, seeing 
+thousands of lines of code that 
+
+651
+00:39:58,800 --> 00:40:02,160
+it created and being OK with 
+everything it created and I can 
+
+652
+00:40:02,160 --> 00:40:04,760
+then let them let my hands off 
+the wheel a bit. 
+
+653
+00:40:04,920 --> 00:40:06,880
+But what do you mean by 
+determinism? 
+
+654
+00:40:07,520 --> 00:40:13,280
+Because if I say I want the 
+system to do this and I clearly 
+
+655
+00:40:13,280 --> 00:40:16,520
+specify it and it can come up 
+with all the tests to do that, 
+
+656
+00:40:17,080 --> 00:40:21,400
+and then we say as long as you 
+meet the tests, the particular 
+
+657
+00:40:21,400 --> 00:40:24,600
+implementation is not important 
+to me. 
+
+658
+00:40:26,040 --> 00:40:28,760
+Is that deterministic or is it 
+non deterministic? 
+
+659
+00:40:30,840 --> 00:40:36,040
+But I think when you're writing 
+code and in a high level 
+
+660
+00:40:36,040 --> 00:40:39,480
+language and compiling it to 
+machine code, that is clear 
+
+661
+00:40:39,480 --> 00:40:42,400
+determinism. 
+My expectation from the compiler
+
+662
+00:40:42,400 --> 00:40:46,520
+is it should work in the way I 
+have programmed. 
+
+663
+00:40:47,640 --> 00:40:51,800
+When I'm working with an agent, 
+I'm not exactly specifying what 
+
+664
+00:40:51,800 --> 00:40:59,200
+I wanted to do, I'm specifying 
+very vaguely what I need. 
+
+665
+00:41:00,000 --> 00:41:04,880
+I needed to do certain things, 
+very vague statement typically, 
+
+666
+00:41:05,080 --> 00:41:09,880
+so it will not necessarily 
+translate to what I actually end
+
+667
+00:41:09,880 --> 00:41:12,440
+up what I actually need, right? 
+Yeah. 
+
+668
+00:41:12,840 --> 00:41:16,360
+There, that's where the the 
+challenge is in a lot of this is
+
+669
+00:41:16,360 --> 00:41:23,960
+that I have intent and the AI is
+going to do its best job as well
+
+670
+00:41:23,960 --> 00:41:27,000
+as it knows to implement my 
+intention. 
+
+671
+00:41:27,600 --> 00:41:32,160
+But how do you validate that 
+that the code that was 
+
+672
+00:41:32,160 --> 00:41:35,720
+generated, the thing that the 
+system does, is consistent with 
+
+673
+00:41:35,720 --> 00:41:38,680
+my intent? 
+And I would argue that I mean, 
+
+674
+00:41:38,680 --> 00:41:42,200
+because we said, Oh well, a 
+compiler is deterministic. 
+
+675
+00:41:42,440 --> 00:41:44,600
+Well, what if you turn on the 
+optimizer? 
+
+676
+00:41:44,720 --> 00:41:47,800
+Now you have two different ways 
+of generating code. 
+
+677
+00:41:48,680 --> 00:41:52,080
+There's been some interesting 
+debates around compilers being 
+
+678
+00:41:52,600 --> 00:41:55,480
+essentially non deterministic, 
+but they're like deterministic 
+
+679
+00:41:55,480 --> 00:41:57,880
+enough. 
+OK. 
+
+680
+00:41:58,480 --> 00:42:03,720
+And if I give you a set of tests
+that you need that the system 
+
+681
+00:42:03,720 --> 00:42:09,080
+needs to meet, and you meet them
+deterministic enough. 
+
+682
+00:42:10,720 --> 00:42:13,160
+Yeah, it's hard. 
+Like it wasn't. 
+
+683
+00:42:13,200 --> 00:42:18,000
+It was only four or five months 
+ago that the AI wrote a test for
+
+684
+00:42:18,000 --> 00:42:21,560
+me which was assert true. 
+Like it was just like like, you 
+
+685
+00:42:21,560 --> 00:42:23,360
+know, a nothing burger test. 
+Oh yeah. 
+
+686
+00:42:23,560 --> 00:42:26,160
+And maybe a review agent would 
+have caught that. 
+
+687
+00:42:26,480 --> 00:42:32,600
+But but still, agents do 
+sometimes take shortcuts and and
+
+688
+00:42:32,640 --> 00:42:35,160
+they're what they create doesn't
+match my intent. 
+
+689
+00:42:35,600 --> 00:42:39,120
+And can you deterministically 
+validate that? 
+
+690
+00:42:39,120 --> 00:42:40,960
+I don't think so. 
+And that's where there's been 
+
+691
+00:42:40,960 --> 00:42:43,400
+some debate online around formal
+verification. 
+
+692
+00:42:43,400 --> 00:42:46,360
+So some people are like, oh, if 
+you just formally verify it, 
+
+693
+00:42:46,360 --> 00:42:48,320
+then then we're good, you're 
+covered. 
+
+694
+00:42:48,600 --> 00:42:52,800
+And it's actually generally not.
+It's not going to, no, it will 
+
+695
+00:42:52,800 --> 00:42:55,160
+not help you. 
+Formal verification will not 
+
+696
+00:42:55,160 --> 00:42:59,200
+help you determine if your 
+intent was correctly specified. 
+
+697
+00:42:59,760 --> 00:43:02,040
+But that gap still exists no 
+matter what. 
+
+698
+00:43:02,040 --> 00:43:05,720
+Like like there has to be a 
+human that validates that. 
+
+699
+00:43:06,000 --> 00:43:10,240
+However, I want to express a 
+system and what it should do. 
+
+700
+00:43:10,920 --> 00:43:14,960
+I have to match that with the 
+intent and validate that and 
+
+701
+00:43:14,960 --> 00:43:17,080
+human validate that. 
+Not like a program count. 
+
+702
+00:43:17,280 --> 00:43:20,800
+Like if you tell the if you tell
+AAI to write a formal 
+
+703
+00:43:20,800 --> 00:43:24,760
+verification of something and 
+then you don't actually review 
+
+704
+00:43:24,760 --> 00:43:28,080
+it, if you just tell another AI 
+to review it, you've done 
+
+705
+00:43:28,080 --> 00:43:31,320
+nothing to actually validate 
+that your intent was was 
+
+706
+00:43:32,000 --> 00:43:35,880
+withheld or upheld. 
+So do you suppose we're going to
+
+707
+00:43:35,880 --> 00:43:39,720
+get to the point which small 
+talk was supposed to give us 
+
+708
+00:43:39,720 --> 00:43:43,160
+where you're just, you're just 
+going along and you go, oh, my, 
+
+709
+00:43:43,200 --> 00:43:45,480
+here my sister, I'm doing 
+something with my system. 
+
+710
+00:43:45,480 --> 00:43:48,600
+Oh, I need a new feature. 
+I'll just, well, in that case, 
+
+711
+00:43:48,600 --> 00:43:53,040
+inherit and add the feature. 
+And now my system is extended. 
+
+712
+00:43:53,320 --> 00:43:59,040
+And so it'll just become an 
+interaction with the person who 
+
+713
+00:43:59,040 --> 00:44:02,120
+is trying to solve the problem. 
+And each time they hit a 
+
+714
+00:44:02,120 --> 00:44:05,920
+frontier, they go, oh, I can't 
+do this thing that I want to do 
+
+715
+00:44:05,920 --> 00:44:09,880
+in the, I guess software factory
+or whatever kicks in and it adds
+
+716
+00:44:09,880 --> 00:44:14,480
+the feature and then the person 
+goes on and tries to solve 
+
+717
+00:44:14,480 --> 00:44:15,840
+whatever problem they're trying 
+to solve. 
+
+718
+00:44:16,320 --> 00:44:22,120
+One of the first instances I saw
+of a real world software factory
+
+719
+00:44:22,120 --> 00:44:25,440
+before as even call the software
+factory was Versal had talked 
+
+720
+00:44:25,440 --> 00:44:29,240
+about how they wired their 
+support agent up to of course 
+
+721
+00:44:29,240 --> 00:44:31,160
+their knowledge bases. 
+The support agent could answer 
+
+722
+00:44:31,160 --> 00:44:37,400
+questions, but if, if the agent 
+uncovered that the user actually
+
+723
+00:44:37,400 --> 00:44:41,280
+had encountered a bug to the 
+best the agent understands or 
+
+724
+00:44:41,280 --> 00:44:45,480
+was making a feature request, 
+then the agent underneath the 
+
+725
+00:44:45,520 --> 00:44:50,200
+support bot would actually go 
+and just like create APR and try
+
+726
+00:44:50,200 --> 00:44:53,640
+to actually, you add the 
+feature, fix the bug, whatever. 
+
+727
+00:44:53,840 --> 00:44:57,200
+And so I, I think that's what 
+you're saying is like, like, 
+
+728
+00:44:57,200 --> 00:45:00,360
+what are your, what are your 
+signals? 
+
+729
+00:45:00,400 --> 00:45:03,360
+How do they come in? 
+And then how, how do I get my 
+
+730
+00:45:03,360 --> 00:45:06,200
+factory to, to respond to those 
+signals? 
+
+731
+00:45:07,040 --> 00:45:09,800
+And then where is the human 
+needed to make those? 
+
+732
+00:45:09,800 --> 00:45:13,840
+Decisions. 
+When I was getting started, 
+
+733
+00:45:13,840 --> 00:45:20,520
+there was this idea of what was 
+it structured develop, design 
+
+734
+00:45:20,520 --> 00:45:22,160
+and development. 
+You know, they were still 
+
+735
+00:45:22,160 --> 00:45:25,400
+flailing around, but they had 
+this idea of the system 
+
+736
+00:45:25,400 --> 00:45:29,840
+specification, which was all is 
+all you figured out everything 
+
+737
+00:45:29,840 --> 00:45:32,040
+that the system was going to do 
+upfront. 
+
+738
+00:45:32,640 --> 00:45:38,560
+And what we're talking about is 
+now realizing that, which we 
+
+739
+00:45:38,560 --> 00:45:43,360
+realized then, oh, you never 
+know what that is until you 
+
+740
+00:45:43,360 --> 00:45:46,800
+start using the system and you 
+go, oh, this isn't working the 
+
+741
+00:45:46,800 --> 00:45:54,080
+way I imagined in this, you 
+know, single shot system where 
+
+742
+00:45:54,080 --> 00:45:57,160
+you're supposed to know 
+everything it was going to do 
+
+743
+00:45:57,400 --> 00:46:00,160
+right up front. 
+That never happens because we 
+
+744
+00:46:00,160 --> 00:46:04,840
+learn and we go, oh, actually I 
+need this or I wanted it to work
+
+745
+00:46:04,840 --> 00:46:07,040
+this way. 
+So maybe that's where we're 
+
+746
+00:46:07,040 --> 00:46:08,000
+headed. 
+I don't know. 
+
+747
+00:46:09,800 --> 00:46:14,200
+There's, there's another concept
+that's been emerging, which is 
+
+748
+00:46:14,560 --> 00:46:17,960
+has been called software. 
+And I don't love the the name, 
+
+749
+00:46:17,960 --> 00:46:22,320
+but it actually it, it 
+describes, it's a descriptive 
+
+750
+00:46:22,320 --> 00:46:26,560
+name that is this idea that 
+let's say that I'm using some 
+
+751
+00:46:26,560 --> 00:46:29,640
+software system and I want it to
+work differently. 
+
+752
+00:46:30,120 --> 00:46:34,040
+I can just go in and tell the 
+system change to accommodate my 
+
+753
+00:46:34,040 --> 00:46:37,240
+needs here. 
+And so I think this is already 
+
+754
+00:46:37,240 --> 00:46:40,760
+happening. 
+Many of us now as developers are
+
+755
+00:46:40,800 --> 00:46:43,480
+software in our own things 
+instead of going and getting 
+
+756
+00:46:43,480 --> 00:46:45,240
+something off the shelf or 
+whatever. 
+
+757
+00:46:45,520 --> 00:46:50,760
+And so when when this concept 
+reaches the masses of software 
+
+758
+00:46:50,760 --> 00:46:54,480
+users and we have the way for 
+them to actually adapt the 
+
+759
+00:46:54,480 --> 00:46:58,120
+software to exactly what they 
+need without having to even file
+
+760
+00:46:58,120 --> 00:47:01,280
+a feature request or talk to 
+support, you know, they should 
+
+761
+00:47:01,280 --> 00:47:03,400
+be able to just customize it for
+their needs. 
+
+762
+00:47:03,640 --> 00:47:08,040
+And I think what's yet to be 
+figured out is, but how does 
+
+763
+00:47:08,040 --> 00:47:10,000
+somebody customize something for
+them? 
+
+764
+00:47:10,320 --> 00:47:15,240
+And then when do those changes 
+then propagate to like a product
+
+765
+00:47:15,240 --> 00:47:17,760
+manager says, oh, that is 
+actually a really, really good 
+
+766
+00:47:17,760 --> 00:47:20,480
+idea that everyone needs. 
+How do we roll that into the 
+
+767
+00:47:20,480 --> 00:47:22,400
+system for everyone? 
+Bayes theorem. 
+
+768
+00:47:23,880 --> 00:47:27,000
+Tell me more. 
+Bayes theorem just says with the
+
+769
+00:47:27,000 --> 00:47:32,640
+more data we get that supports 
+this hypothesis, the more likely
+
+770
+00:47:32,640 --> 00:47:36,040
+the hypothesis is. 
+So as more and more people ask 
+
+771
+00:47:36,040 --> 00:47:39,880
+for this feature or incorporate 
+this feature, then it kind of 
+
+772
+00:47:39,880 --> 00:47:44,600
+slowly morphs into the system 
+itself without the product 
+
+773
+00:47:44,600 --> 00:47:48,120
+manager needing to be there. 
+Yep, just directly serves the. 
+
+774
+00:47:48,240 --> 00:47:51,760
+User and the difference is that 
+it's not users asking for 
+
+775
+00:47:51,760 --> 00:47:55,800
+something, it's users actually 
+be adapting the software in the 
+
+776
+00:47:55,800 --> 00:47:59,920
+way that they want it and then 
+some way to then then up level 
+
+777
+00:47:59,920 --> 00:48:03,160
+those things to to a more 
+general. 
+
+778
+00:48:04,000 --> 00:48:07,520
+OK, I want to observe that's 
+that we're not making enough use
+
+779
+00:48:07,560 --> 00:48:10,040
+of of. 
+Sorry I've been rambling. 
+
+780
+00:48:10,240 --> 00:48:12,960
+Yes, I'm very excited about that
+for fact. 
+
+781
+00:48:13,280 --> 00:48:17,040
+I really like this idea of I 
+think Deep Sea came up with this
+
+782
+00:48:18,440 --> 00:48:24,720
+self improving harness, but it 
+only works if the software is 
+
+783
+00:48:24,720 --> 00:48:27,840
+actually with the user. 
+If the software is running on 
+
+784
+00:48:27,840 --> 00:48:32,120
+cloud, how do you make it work 
+and how do you scale? 
+
+785
+00:48:32,960 --> 00:48:37,280
+And that becomes a challenge. 
+Yeah, I don't think we've 
+
+786
+00:48:37,280 --> 00:48:41,200
+discovered the right systems for
+this yet, because you're right. 
+
+787
+00:48:41,200 --> 00:48:44,480
+Like like, let's just take as an
+example, Salesforce.com, 
+
+788
+00:48:44,720 --> 00:48:48,760
+ifsalesforce.com enabled their 
+users to do software, you know, 
+
+789
+00:48:48,760 --> 00:48:52,320
+beyond anything that is 
+available with their API, but 
+
+790
+00:48:52,320 --> 00:48:55,400
+like radically customize what 
+Salesforce can do. 
+
+791
+00:48:56,280 --> 00:49:01,320
+Are they going to take their 25 
+gig war and spin up a version of
+
+792
+00:49:01,320 --> 00:49:04,760
+that, you know, with customized 
+databases and, you know, entire 
+
+793
+00:49:04,760 --> 00:49:08,040
+duplication of their system 
+just, you know, as a fork for 
+
+794
+00:49:08,040 --> 00:49:10,800
+one customer and then do that 
+across there like millions of 
+
+795
+00:49:10,800 --> 00:49:12,960
+customers. 
+Like, like, no, like, like. 
+
+796
+00:49:13,040 --> 00:49:15,880
+We're not at the place where we 
+have the foundations to enable 
+
+797
+00:49:15,880 --> 00:49:18,920
+that. 
+It needs to be extensible in the
+
+798
+00:49:18,920 --> 00:49:23,480
+way that small talk was supposed
+to be, but not that way. 
+
+799
+00:49:23,880 --> 00:49:26,840
+You know, it's just like 
+somebody goes, oh, I'd like to 
+
+800
+00:49:26,840 --> 00:49:29,440
+extend it this way, or I'd like 
+to modify it this way and it 
+
+801
+00:49:29,440 --> 00:49:33,120
+goes, oh, here's the piece that 
+does that modification. 
+
+802
+00:49:33,400 --> 00:49:36,800
+And if that, you know, appears 
+enough times or that can be sent
+
+803
+00:49:36,800 --> 00:49:40,400
+back, whatever to the cloud. 
+So it almost requires a 
+
+804
+00:49:40,400 --> 00:49:42,840
+different programming paradigm 
+maybe, I don't know. 
+
+805
+00:49:43,200 --> 00:49:44,520
+I think it will, because I 
+don't. 
+
+806
+00:49:44,720 --> 00:49:48,920
+I think our current programming 
+paradigms are too static to 
+
+807
+00:49:48,920 --> 00:49:50,640
+support this. 
+Intentionally static, 
+
+808
+00:49:50,920 --> 00:49:53,720
+intentionally deterministic, and
+we're going to need. 
+
+809
+00:49:54,920 --> 00:49:58,960
+People have talked about 
+actually, oh this is weird, but 
+
+810
+00:49:59,240 --> 00:50:03,760
+imagine that your software is 
+not code and being executed. 
+
+811
+00:50:03,760 --> 00:50:06,200
+What if your software is a model
+itself? 
+
+812
+00:50:07,440 --> 00:50:11,200
+Yeah, yeah. 
+I mean, that's all. 
+
+813
+00:50:11,560 --> 00:50:14,680
+That's all we do in science is 
+create models, and the 
+
+814
+00:50:14,680 --> 00:50:17,920
+implementation is typically in 
+math of some form. 
+
+815
+00:50:17,920 --> 00:50:22,680
+But the goal is a model is 
+something that fits the data and
+
+816
+00:50:22,680 --> 00:50:28,000
+is predictive, and how the model
+is implemented is not as 
+
+817
+00:50:28,000 --> 00:50:31,520
+important as fitting the data 
+and being predictive. 
+
+818
+00:50:33,400 --> 00:50:35,840
+Yeah, but. 
+So there is the hypothesis that 
+
+819
+00:50:35,920 --> 00:50:38,080
+you build everything from 
+scratch. 
+
+820
+00:50:38,400 --> 00:50:41,120
+Like every software that you do,
+you build it from scratch. 
+
+821
+00:50:41,400 --> 00:50:43,440
+No, I don't. 
+I don't maybe that. 
+
+822
+00:50:43,440 --> 00:50:47,360
+No, the idea would more be like 
+like back to Salesforce. 
+
+823
+00:50:47,360 --> 00:50:51,400
+Imagine that Salesforce wasn't a
+bunch of code executed on the 
+
+824
+00:50:51,400 --> 00:50:55,200
+JVM. 
+What if all of Salesforce Day as
+
+825
+00:50:55,200 --> 00:50:59,160
+it operates the the, the and the
+execution plan of it. 
+
+826
+00:50:59,160 --> 00:51:01,360
+Obviously the data plan is 
+different, but the execution 
+
+827
+00:51:01,360 --> 00:51:03,200
+plan of it. 
+What if all of that could 
+
+828
+00:51:03,200 --> 00:51:09,040
+actually be in a model instead 
+of being in deterministic JVM 
+
+829
+00:51:09,040 --> 00:51:10,200
+executing code? 
+Right. 
+
+830
+00:51:10,560 --> 00:51:14,240
+And I don't think that we have 
+the technology to actually 
+
+831
+00:51:14,240 --> 00:51:17,560
+achieve this today. 
+But if you did have it in a 
+
+832
+00:51:17,560 --> 00:51:22,120
+model instead of in code, then 
+just like we do with our agents,
+
+833
+00:51:22,160 --> 00:51:26,000
+our AIS today, users could 
+actually then instruct their 
+
+834
+00:51:26,000 --> 00:51:29,440
+agent to operate differently, 
+instruct this model, you know, 
+
+835
+00:51:29,440 --> 00:51:32,400
+add some instructions on top of 
+the model, maybe even do like 
+
+836
+00:51:32,400 --> 00:51:35,440
+their own fine tuning of their, 
+you know, instance of their, 
+
+837
+00:51:35,520 --> 00:51:37,320
+their model, whatever it would 
+would be. 
+
+838
+00:51:37,640 --> 00:51:43,400
+So all that is I think further 
+out closer to us is what I what 
+
+839
+00:51:43,400 --> 00:51:47,640
+I actually want today, which is 
+anything that is in a settings 
+
+840
+00:51:48,040 --> 00:51:50,640
+like anything that I could go in
+and search around in settings 
+
+841
+00:51:50,640 --> 00:51:53,320
+and find the right setting. 
+All of that at this point should
+
+842
+00:51:53,320 --> 00:51:56,640
+just be natural language like. 
+Like I should be able to control
+
+843
+00:51:56,840 --> 00:52:00,040
+the settings of my software 
+through natural language instead
+
+844
+00:52:00,040 --> 00:52:03,480
+of having to tweak knobs in the 
+in this and. 
+
+845
+00:52:03,560 --> 00:52:05,240
+Search through the settings file
+and go. 
+
+846
+00:52:05,440 --> 00:52:09,480
+Is this even possible? 
+So that that should be 100% 
+
+847
+00:52:09,480 --> 00:52:12,800
+possible and easy today, and I 
+I'm sure that'll be the first 
+
+848
+00:52:12,800 --> 00:52:19,240
+place where users experience 
+mild software, not radical 
+
+849
+00:52:19,240 --> 00:52:22,320
+software. 
+Well, I mean, already I do, 
+
+850
+00:52:22,320 --> 00:52:26,960
+because if I want to adjust my 
+editor somehow, I'm going, well,
+
+851
+00:52:26,960 --> 00:52:30,520
+I guess I could spend a lot of 
+time hunting to even find out if
+
+852
+00:52:30,520 --> 00:52:34,080
+the editor is capable of this, 
+or I'll ask the AI. 
+
+853
+00:52:34,360 --> 00:52:35,400
+Absolutely. 
+Yeah. 
+
+854
+00:52:35,400 --> 00:52:38,160
+I mean, if there's a config file
+that can be edited, then the AI 
+
+855
+00:52:38,640 --> 00:52:41,080
+absolutely should be doing that 
+at this point. 
+
+856
+00:52:41,320 --> 00:52:44,720
+Right, yeah, I, I also feel like
+most of the products will 
+
+857
+00:52:44,720 --> 00:52:47,160
+eventually become headless, 
+right. 
+
+858
+00:52:47,160 --> 00:52:51,120
+So you would just they become 
+data stores and you run programs
+
+859
+00:52:51,120 --> 00:52:55,440
+on them and connect with them by
+API and basically it's your 
+
+860
+00:52:55,440 --> 00:52:57,280
+personal assistant which is 
+doing all the work. 
+
+861
+00:52:57,720 --> 00:53:02,760
+I've been using Grokbot for the 
+last few weeks and I I stopped 
+
+862
+00:53:02,760 --> 00:53:06,000
+going to my Gmail and basically 
+every single other app. 
+
+863
+00:53:06,920 --> 00:53:10,000
+My Grokbot is doing everything 
+for me. 
+
+864
+00:53:10,880 --> 00:53:12,640
+Yeah. 
+I mean, do you need an interface
+
+865
+00:53:12,640 --> 00:53:18,240
+beyond a personal assistant? 
+And and I, I think especially 
+
+866
+00:53:18,240 --> 00:53:21,000
+with things like MCP apps and 
+MCP events we were talking about
+
+867
+00:53:21,000 --> 00:53:23,440
+earlier, we're getting a lot of 
+foundations. 
+
+868
+00:53:23,640 --> 00:53:25,720
+So that can actually be fully 
+real. 
+
+869
+00:53:25,720 --> 00:53:28,160
+There's and then there's all the
+integrations that Rockbot and 
+
+870
+00:53:28,160 --> 00:53:31,000
+some of these other personal 
+assistants are doing to existing
+
+871
+00:53:31,440 --> 00:53:36,200
+legacy services to the point 
+where, yeah, my, maybe in the 
+
+872
+00:53:36,200 --> 00:53:38,760
+future, I don't need 100 apps on
+my phone. 
+
+873
+00:53:38,760 --> 00:53:40,680
+I need just my personal 
+assistant, my well. 
+
+874
+00:53:40,680 --> 00:53:43,280
+There was that phone that tried 
+to jump the gun on that, 
+
+875
+00:53:43,360 --> 00:53:44,960
+remember? 
+That's right. 
+
+876
+00:53:45,280 --> 00:53:46,280
+Rabbit or. 
+Something. 
+
+877
+00:53:46,280 --> 00:53:48,040
+Oh yeah, the, the wearable one, 
+Yeah. 
+
+878
+00:53:48,240 --> 00:53:51,760
+And I think it was. 
+And it was just too far ahead. 
+
+879
+00:53:52,160 --> 00:53:55,640
+But I think we'll end up seeing 
+that our interface to the world 
+
+880
+00:53:55,800 --> 00:53:59,600
+and to software likely will just
+be an assistant and an 
+
+881
+00:53:59,600 --> 00:54:02,400
+assistant. 
+Yeah, because why do I want to 
+
+882
+00:54:02,400 --> 00:54:07,480
+learn a whole bunch of 
+different, you know, user 
+
+883
+00:54:07,480 --> 00:54:11,240
+interfaces? 
+I I use the GitHub UI very 
+
+884
+00:54:11,240 --> 00:54:15,720
+little these days because I just
+tell my AI like hey go do this 
+
+885
+00:54:15,720 --> 00:54:20,120
+thing for me. 
+But when it comes to consumption
+
+886
+00:54:20,120 --> 00:54:26,200
+of information, actually like 
+visual stuff is more it's high 
+
+887
+00:54:26,200 --> 00:54:28,800
+bandwidth right? 
+Like, imagine if everything is. 
+
+888
+00:54:29,760 --> 00:54:32,520
+So if I'm talking to my bot, I 
+can use voice, which is very 
+
+889
+00:54:32,520 --> 00:54:34,800
+high bandwidth for sending 
+information. 
+
+890
+00:54:35,280 --> 00:54:38,240
+But imagine if you're driving 
+and there are no signals, 
+
+891
+00:54:38,240 --> 00:54:43,360
+there's no signs, and there are 
+only audio signals for left or 
+
+892
+00:54:43,360 --> 00:54:47,520
+right or red or green. 
+That's going to be noise. 
+
+893
+00:54:47,800 --> 00:54:51,320
+So you still need this. 
+There's the case to be made for 
+
+894
+00:54:52,080 --> 00:54:55,440
+a UI which is highly, highly 
+optimized for a problem that 
+
+895
+00:54:55,440 --> 00:54:59,560
+you're solving, and not use a 
+assistant for that kind of use 
+
+896
+00:54:59,560 --> 00:55:04,600
+case, right? 
+But with like what is it a 2A 
+
+897
+00:55:04,600 --> 00:55:09,160
+and then a GUI, it's we're 
+getting to the place where we 
+
+898
+00:55:09,160 --> 00:55:14,680
+can, we can dynamically generate
+UIS and then pull those into our
+
+899
+00:55:14,680 --> 00:55:17,680
+assistant when needed. 
+And so if you want to see a 
+
+900
+00:55:17,680 --> 00:55:22,040
+chart rendering some telemetry, 
+it can go off and generate the 
+
+901
+00:55:22,040 --> 00:55:24,160
+UI and pull it into your 
+assistant and or you. 
+
+902
+00:55:24,440 --> 00:55:28,080
+Say I, I don't understand this. 
+Can you show it to me in a way 
+
+903
+00:55:28,080 --> 00:55:30,760
+that will be easier for me to 
+understand? 
+
+904
+00:55:31,160 --> 00:55:34,440
+And it goes Well, Tushar, I know
+how you think. 
+
+905
+00:55:34,840 --> 00:55:38,000
+So I know how to present it to 
+you in a way that's going to be 
+
+906
+00:55:38,000 --> 00:55:42,280
+easier for you to understand. 
+Yeah, yeah, yeah. 
+
+907
+00:55:42,280 --> 00:55:47,240
+And so for a lot of these 
+existing systems, their value is
+
+908
+00:55:47,240 --> 00:55:51,440
+being reduced in some ways to be
+in the like system of record and
+
+909
+00:55:51,440 --> 00:55:57,840
+the the processes and security 
+and integrations around them and
+
+910
+00:55:57,840 --> 00:56:02,400
+and the web UI and the mobile 
+app have almost 0 value in this 
+
+911
+00:56:02,400 --> 00:56:05,720
+new world. 
+I started writing long, long 
+
+912
+00:56:05,720 --> 00:56:07,200
+ago. 
+I started writing a science 
+
+913
+00:56:07,200 --> 00:56:13,280
+fiction story where the the I 
+don't know, the robots, how they
+
+914
+00:56:13,280 --> 00:56:18,640
+would interact with each other 
+was initially I don't trust you.
+
+915
+00:56:19,360 --> 00:56:23,640
+So they have to, well, like the 
+way humans do initially, Maybe I
+
+916
+00:56:23,640 --> 00:56:26,200
+don't know who you are. 
+I don't necessarily trust what 
+
+917
+00:56:26,200 --> 00:56:29,720
+you're saying. 
+And they slowly, by interacting 
+
+918
+00:56:29,720 --> 00:56:32,840
+with each other, develop a level
+of trust. 
+
+919
+00:56:33,720 --> 00:56:35,360
+So. 
+Yeah, How do we? 
+
+920
+00:56:35,680 --> 00:56:37,800
+How do we? 
+Which is what you need. 
+
+921
+00:56:37,800 --> 00:56:42,240
+Yeah, how do we know? 
+Well, you know, the game theory 
+
+922
+00:56:42,240 --> 00:56:45,760
+stuff is involved here, 
+Prisoner's dilemma stuff where 
+
+923
+00:56:45,760 --> 00:56:50,120
+you go, oh, you said something, 
+maybe it was a mistake, maybe 
+
+924
+00:56:50,120 --> 00:56:52,240
+you were trying to hack me. 
+I don't know. 
+
+925
+00:56:52,240 --> 00:56:55,080
+So I'm going to be more 
+suspicious for a while until I 
+
+926
+00:56:55,080 --> 00:57:00,320
+can start trusting you more. 
+Yeah, Tushar, so you've been 
+
+927
+00:57:00,320 --> 00:57:03,040
+building, have you been building
+a factory or you've been 
+
+928
+00:57:03,040 --> 00:57:06,400
+building a like product for 
+other people to build their 
+
+929
+00:57:06,400 --> 00:57:10,360
+factories on with forge code? 
+Yeah, so we're building a 
+
+930
+00:57:10,360 --> 00:57:15,000
+product that people can use as 
+factories for their software 
+
+931
+00:57:15,000 --> 00:57:18,240
+development. 
+Specific kinds of factories? 
+
+932
+00:57:18,240 --> 00:57:20,840
+Or is this a general? 
+You're trying to come up with a 
+
+933
+00:57:20,840 --> 00:57:24,000
+general framework. 
+The idea is to build a platform 
+
+934
+00:57:24,200 --> 00:57:28,200
+and build the right set of 
+primitives with no hard coded 
+
+935
+00:57:28,200 --> 00:57:33,160
+workflows so that the agent can 
+figure out how to get work done 
+
+936
+00:57:33,160 --> 00:57:38,520
+and just use those primitives as
+their data plane and a sandbox 
+
+937
+00:57:38,520 --> 00:57:41,480
+environment where you can just 
+paralyze and execute things. 
+
+938
+00:57:42,720 --> 00:57:44,760
+Nice. 
+And is this available, have you 
+
+939
+00:57:44,920 --> 00:57:48,520
+talked about this publicly? 
+Is this product is launched and?
+
+940
+00:57:49,040 --> 00:57:55,800
+Yes, it's called Forge code. 
+You can check it out and it's it
+
+941
+00:57:55,800 --> 00:57:58,960
+can get little difficult in the 
+beginning because there's just 
+
+942
+00:57:58,960 --> 00:58:01,720
+too many confidence. 
+But once you get get a hang of 
+
+943
+00:58:01,720 --> 00:58:05,880
+it, it can be very large 
+projects very easy. 
+
+944
+00:58:06,400 --> 00:58:09,480
+You, it sounded like you said 
+that one of the big challenges 
+
+945
+00:58:09,480 --> 00:58:12,680
+you're running into is figuring 
+out what the primitives are. 
+
+946
+00:58:13,240 --> 00:58:16,000
+Yeah, I mean effectively 
+designing the language. 
+
+947
+00:58:16,800 --> 00:58:19,360
+Exactly. 
+And one thing we didn't discuss 
+
+948
+00:58:19,360 --> 00:58:23,520
+was perhaps self-sufficiency of 
+a factory. 
+
+949
+00:58:24,160 --> 00:58:28,080
+The factory which has to go 
+outside to get information will 
+
+950
+00:58:28,080 --> 00:58:31,280
+always be confused because it 
+might not make the right 
+
+951
+00:58:31,280 --> 00:58:35,640
+decisions about where to get 
+that information from and. 
+
+952
+00:58:35,840 --> 00:58:37,880
+How do you give access to your 
+internal wiki? 
+
+953
+00:58:38,600 --> 00:58:41,280
+Yeah, and that's why. 
+And then maybe it has 
+
+954
+00:58:41,280 --> 00:58:44,520
+contradictions or stale 
+information which is far away 
+
+955
+00:58:44,520 --> 00:58:49,400
+from growth, a factory. 
+For us to scale the factory, we 
+
+956
+00:58:49,400 --> 00:58:52,040
+very quickly realized that the 
+factory has to be 
+
+957
+00:58:52,040 --> 00:58:55,960
+self-sufficient and it has to 
+have the same world view as the 
+
+958
+00:58:56,040 --> 00:58:58,360
+human who's driving that 
+factory. 
+
+959
+00:58:58,840 --> 00:59:02,040
+So we can't have different 
+perspectives of what reality is 
+
+960
+00:59:02,360 --> 00:59:03,480
+that should be able to bring 
+that. 
+
+961
+00:59:03,480 --> 00:59:09,280
+Information in Yeah, yeah. 
+So well, that's cool that you're
+
+962
+00:59:09,280 --> 00:59:12,040
+you're building that and it 
+seems like you're you're on the 
+
+963
+00:59:12,040 --> 00:59:16,360
+frontier of of what's happening 
+and and uncovering, you know how
+
+964
+00:59:16,360 --> 00:59:20,560
+we how we enable teams to to 
+build software in the future. 
+
+965
+00:59:20,560 --> 00:59:24,000
+So I'm glad you're you're you're
+the right mind to be tackling 
+
+966
+00:59:24,000 --> 00:59:25,200
+this. 
+Yeah. 
+
+967
+00:59:26,440 --> 00:59:29,920
+Yeah. 
+And I, I, we, we usually don't 
+
+968
+00:59:29,920 --> 00:59:33,960
+talk this much. 
+We usually ask more questions 
+
+969
+00:59:34,160 --> 00:59:38,800
+and I know we kind of, I think 
+it's because we're so 
+
+970
+00:59:38,800 --> 00:59:43,240
+enthusiastic about the 
+possibilities for this. 
+
+971
+00:59:43,680 --> 00:59:49,440
+And even if I don't, I don't 
+think AI is going to kill us 
+
+972
+00:59:49,440 --> 00:59:51,320
+all. 
+Humans have been trying to kill 
+
+973
+00:59:51,320 --> 00:59:56,160
+us all for a long time. 
+And so I think, I mean, fingers 
+
+974
+00:59:56,160 --> 01:00:02,160
+crossed, it's I I my hope is 
+that it has more of a chance of 
+
+975
+01:00:02,160 --> 01:00:07,120
+saving us than killing us 
+because we've been fighting with
+
+976
+01:00:07,200 --> 01:00:11,480
+humans trying to kill us and, 
+and, and doing it. 
+
+977
+01:00:12,480 --> 01:00:17,640
+Oh my God, yeah. 
+So Forge code. 
+
+978
+01:00:17,640 --> 01:00:22,160
+So Forge Code is online and 
+people can go check it out and 
+
+979
+01:00:22,160 --> 01:00:24,600
+start building their software 
+factories. 
+
+980
+01:00:24,600 --> 01:00:29,400
+And you've got the primitives 
+for, you know, you need source 
+
+981
+01:00:29,400 --> 01:00:32,000
+code, you need issue management,
+you need. 
+
+982
+01:00:33,240 --> 01:00:34,960
+What else do we talk about for 
+primitives? 
+
+983
+01:00:35,280 --> 01:00:37,480
+Yeah, there's. 
+Well, in a new. 
+
+984
+01:00:37,480 --> 01:00:39,360
+Kind of knowledge base. 
+System. 
+
+985
+01:00:40,160 --> 01:00:42,880
+Yeah. 
+If you could build one, yeah. 
+
+986
+01:00:44,680 --> 01:00:48,120
+Yeah, but I think a lot of where
+we're at with this is that 
+
+987
+01:00:48,320 --> 01:00:50,480
+people need to be able to build 
+their factories on the 
+
+988
+01:00:50,480 --> 01:00:51,920
+infrastructure that they already
+have. 
+
+989
+01:00:51,920 --> 01:00:56,280
+So if they're using Git, then, 
+you know, SCM, it probably needs
+
+990
+01:00:56,280 --> 01:00:58,440
+to be get for now. 
+Maybe there's a future you 
+
+991
+01:00:58,440 --> 01:01:00,960
+migrate off of that. 
+But but it's like, how do we, 
+
+992
+01:01:01,160 --> 01:01:03,360
+how do we take what would 
+already exists and get it into 
+
+993
+01:01:03,360 --> 01:01:07,160
+the factory and then and then, 
+you know, optimize the factory 
+
+994
+01:01:07,160 --> 01:01:10,080
+later? 
+Yeah, Yes, that's right. 
+
+995
+01:01:10,160 --> 01:01:11,600
+Yeah. 
+So that we can. 
+
+996
+01:01:11,960 --> 01:01:15,440
+Yeah, that. 
+Don't reinvent from ground up. 
+
+997
+01:01:16,160 --> 01:01:19,960
+Work with what we have and then 
+slowly evolve the pieces that 
+
+998
+01:01:19,960 --> 01:01:23,120
+aren't. 
+Anthropic talked about this with
+
+999
+01:01:23,120 --> 01:01:25,520
+Git. 
+They initially their factory was
+
+1000
+01:01:25,520 --> 01:01:28,400
+based on Git and then they 
+replaced git at some point with 
+
+1001
+01:01:28,840 --> 01:01:30,200
+something they opening AI. 
+What's that? 
+
+1002
+01:01:31,920 --> 01:01:33,840
+Open AI. 
+Open AI also did it. 
+
+1003
+01:01:34,000 --> 01:01:38,360
+Yeah, yeah, yeah. 
+Well, I mean, git is old and 
+
+1004
+01:01:38,360 --> 01:01:42,600
+clunky and designed for 
+something a problem, and I've 
+
+1005
+01:01:42,600 --> 01:01:44,680
+never for humans. 
+I've never really understood it 
+
+1006
+01:01:44,840 --> 01:01:47,920
+completely. 
+Tushar, are you building forge 
+
+1007
+01:01:47,920 --> 01:01:50,400
+code with forge code? 
+Yeah, of course. 
+
+1008
+01:01:50,880 --> 01:01:54,280
+Of course, of course, I think. 
+That's funny as we speak. 
+
+1009
+01:01:55,160 --> 01:01:58,240
+Yeah, that's, it's, it's like 
+right now in the hour that we've
+
+1010
+01:01:58,240 --> 01:02:00,400
+been talking, like what is your 
+factory done? 
+
+1011
+01:02:00,400 --> 01:02:02,920
+Probably all sorts of stuff. 
+Lot of work. 
+
+1012
+01:02:02,920 --> 01:02:05,280
+Yeah, I was just looking at the 
+number of agents that are 
+
+1013
+01:02:05,280 --> 01:02:09,600
+running right now. 
+Well, and what a perfect proof 
+
+1014
+01:02:09,600 --> 01:02:13,000
+of concept is to build it using 
+itself. 
+
+1015
+01:02:13,520 --> 01:02:15,960
+Yep, Yep. 
+And this speed has accelerated. 
+
+1016
+01:02:16,680 --> 01:02:20,560
+Yeah, the correlation with 
+compilers is like usually you 
+
+1017
+01:02:20,560 --> 01:02:23,640
+know, you know, you had a good 
+compiler in language when you 
+
+1018
+01:02:23,640 --> 01:02:26,000
+could self host. 
+And so the same thing is now 
+
+1019
+01:02:26,000 --> 01:02:27,880
+true for factories. 
+It's like at the point when you 
+
+1020
+01:02:27,880 --> 01:02:30,440
+can self host the factory 
+development on the factory, 
+
+1021
+01:02:30,720 --> 01:02:34,680
+that's like. 
+If you can't, it seems like 
+
+1022
+01:02:34,680 --> 01:02:37,560
+something's wrong. 
+Yeah, there's. 
+
+1023
+01:02:37,880 --> 01:02:39,040
+A. 
+Problem in your design? 
+
+1024
+01:02:39,200 --> 01:02:43,560
+Yeah, you can't do that. 
+Yeah, awesome. 
+
+1025
+01:02:43,600 --> 01:02:45,960
+Well, yeah, thanks for chatting 
+with us, Tushar. 
+
+1026
+01:02:45,960 --> 01:02:48,520
+Super interesting. 
+I appreciate all your your 
+
+1027
+01:02:48,520 --> 01:02:51,640
+wisdom on this. 
+And yeah, sorry we we were more 
+
+1028
+01:02:51,640 --> 01:02:53,320
+chatty than usual. 
+That's. 
+
+1029
+01:02:54,000 --> 01:02:55,520
+Right. 
+Everyone's building a factory 
+
+1030
+01:02:55,520 --> 01:02:58,080
+today. 
+So there's there's a lot of 
+
+1031
+01:02:58,080 --> 01:03:00,920
+point of views. 
+Yeah, well, and instead of 
+
+1032
+01:03:00,920 --> 01:03:02,720
+building your own, you can just 
+go use Forge code. 
+
+1033
+01:03:03,440 --> 01:03:05,800
+Right, right. 
+Well, yeah, good luck with that.
+
+1034
+01:03:05,800 --> 01:03:09,680
+I hope that hope that works out 
+and moves everything forward, 
+
+1035
+01:03:10,520 --> 01:03:11,960
+which it sounds like it is 
+already. 
+
+1036
+01:03:13,320 --> 01:03:15,560
+Yeah, Awesome, awesome. 
+Thank you. 
+
+1037
+01:03:16,480 --> 01:03:18,040
+Bye. 
+It's James Bruce.
+
