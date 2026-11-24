@@ -105,6 +105,14 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
 - **Topics:** tag each episode by matching a curated keyword→topic map against
   its title+description; each topic gets a page listing its episodes.
 
+## Writing descriptions and resource links
+Follow @VOICE.md whenever you write words that describe an episode: drafting a
+new episode's show notes (description + resources) for the hosts, writing a
+page's `<meta name="description">`, or labeling a resource link that the feed
+gave as a bare URL or a vague label. Don't rewrite the hosts' published
+description on the site. Copy it and make only the mechanical fixes under
+"Episodes (canonical)" above.
+
 ## Images (store in `images/`)
 Every `<img>` carries `width`/`height` so the layout doesn't shift as it loads;
 `verify.py` fails on an unsized one. Where CSS sets the box (`aspect-ratio` or a

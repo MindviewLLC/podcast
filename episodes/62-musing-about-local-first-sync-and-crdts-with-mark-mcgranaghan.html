@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>#62 Musing About Local-First Sync &amp; CRDTs with Mark McGranaghan — Happy Path Programming</title>
-<meta name="description" content="Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization. More details on Local-first Referenced article about hybrid logical clocks">
+<meta name="description" content="Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization.">
 <link rel="canonical" href="https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html">
 <link rel="alternate" type="application/rss+xml" title="Happy Path Programming episodes" href="https://happypathprogramming.com/feed.xml">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Happy Path Programming">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="#62 Musing About Local-First Sync &amp; CRDTs with Mark McGranaghan — Happy Path Programming">
-<meta property="og:description" content="Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization. More details on Local-first Referenced article about hybrid logical clocks">
+<meta property="og:description" content="Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization.">
 <meta property="og:url" content="https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html">
 <meta property="og:image" content="https://happypathprogramming.com/images/og/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -30,7 +30,7 @@
 <meta name="twitter:site" content="@happypathprog">
 <meta name="twitter:creator" content="@happypathprog">
 <meta name="twitter:title" content="#62 Musing About Local-First Sync &amp; CRDTs with Mark McGranaghan — Happy Path Programming">
-<meta name="twitter:description" content="Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization. More details on Local-first Referenced article about hybrid logical clocks">
+<meta name="twitter:description" content="Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization.">
 <meta name="twitter:image" content="https://happypathprogramming.com/images/og/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.jpg">
 <meta name="twitter:image:alt" content="Happy Path Programming episode #62: Musing About Local-First Sync &amp; CRDTs with Mark McGranaghan">
 <meta name="twitter:label1" content="Duration">
@@ -42,7 +42,7 @@
 <link rel="stylesheet" href="../styles.css">
 <link rel="icon" href="../images/hpp.jpg">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"PodcastEpisode","@id":"https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html#episode","url":"https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html","name":"#62 Musing About Local-First Sync & CRDTs with Mark McGranaghan","description":"Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization. More details on Local-first Referenced article about hybrid logical clocks","image":"https://happypathprogramming.com/images/og/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.jpg","partOfSeries":{"@type":"PodcastSeries","@id":"https://happypathprogramming.com/#podcast","name":"Happy Path Programming","url":"https://happypathprogramming.com/"},"author":[{"@type":"Person","name":"Bruce Eckel","url":"https://www.mindviewllc.com/about/","sameAs":["https://bsky.app/profile/bruceeckel.bsky.social","https://x.com/BruceEckel"]},{"@type":"Person","name":"James Ward","url":"https://www.jamesward.com","sameAs":["https://bsky.app/profile/jamesward.com","https://x.com/JamesWard"]}],"inLanguage":"en","episodeNumber":62,"datePublished":"2022-05-27T18:28:03Z","timeRequired":"PT1H6M5S","associatedMedia":{"@type":"AudioObject","contentUrl":"https://anchor.fm/s/2ed56aa0/podcast/play/52663000/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F52663000%2F0da69c4c82885a0a99105b1b1bf2d10f.m4a","encodingFormat":"audio/x-m4a","duration":"PT1H6M5S"},"actor":[{"@type":"Person","name":"Mark McGranaghan","url":"https://happypathprogramming.com/guests/mark-mcgranaghan.html"}],"keywords":"Types, Databases & Data"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://happypathprogramming.com/"},{"@type":"ListItem","position":2,"name":"Episodes","item":"https://happypathprogramming.com/episodes/"},{"@type":"ListItem","position":3,"name":"Musing About Local-First Sync & CRDTs with Mark McGranaghan","item":"https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"PodcastEpisode","@id":"https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html#episode","url":"https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html","name":"#62 Musing About Local-First Sync & CRDTs with Mark McGranaghan","description":"Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization.","image":"https://happypathprogramming.com/images/og/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.jpg","partOfSeries":{"@type":"PodcastSeries","@id":"https://happypathprogramming.com/#podcast","name":"Happy Path Programming","url":"https://happypathprogramming.com/"},"author":[{"@type":"Person","name":"Bruce Eckel","url":"https://www.mindviewllc.com/about/","sameAs":["https://bsky.app/profile/bruceeckel.bsky.social","https://x.com/BruceEckel"]},{"@type":"Person","name":"James Ward","url":"https://www.jamesward.com","sameAs":["https://bsky.app/profile/jamesward.com","https://x.com/JamesWard"]}],"inLanguage":"en","episodeNumber":62,"datePublished":"2022-05-27T18:28:03Z","timeRequired":"PT1H6M5S","associatedMedia":{"@type":"AudioObject","contentUrl":"https://anchor.fm/s/2ed56aa0/podcast/play/52663000/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2F2ed56aa0%2F52663000%2F0da69c4c82885a0a99105b1b1bf2d10f.m4a","encodingFormat":"audio/x-m4a","duration":"PT1H6M5S"},"actor":[{"@type":"Person","name":"Mark McGranaghan","url":"https://happypathprogramming.com/guests/mark-mcgranaghan.html"}],"keywords":"Types, Databases & Data"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://happypathprogramming.com/"},{"@type":"ListItem","position":2,"name":"Episodes","item":"https://happypathprogramming.com/episodes/"},{"@type":"ListItem","position":3,"name":"Musing About Local-First Sync & CRDTs with Mark McGranaghan","item":"https://happypathprogramming.com/episodes/62-musing-about-local-first-sync-and-crdts-with-mark-mcgranaghan.html"}]}]}</script>
 </head>
 <body>
 <header class="site-header">
@@ -73,15 +73,13 @@
     <div class="ep-main">
       <section class="panel">
         <h2>About this episode</h2>
-        <div class="prose"><p>Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization.</p>
-<p>More details on Local-first</p>
-<p>Referenced article about hybrid logical clocks</p></div>
+        <div class="prose"><p>Mark McGranaghan joins us to talk about how the Muse app uses Conflict-free Replicated Data Types (CRDTs) for local-first data synchronization.</p></div>
       </section>
       <section class="panel">
       <h2>Resources &amp; links</h2>
       <ul class="res-list"><li><a href="https://museapp.com/" target="_blank" rel="noopener">Muse app</a></li>
-<li><a href="https://www.inkandswitch.com/local-first/" target="_blank" rel="noopener">https://www.inkandswitch.com/local-first/</a></li>
-<li><a href="https://archive.jlongster.com/using-crdts-in-the-wild" target="_blank" rel="noopener">https://archive.jlongster.com/using-crdts-in-the-wild</a></li></ul>
+<li><a href="https://www.inkandswitch.com/local-first/" target="_blank" rel="noopener">Ink &amp; Switch, &quot;Local-first software&quot;</a></li>
+<li><a href="https://archive.jlongster.com/using-crdts-in-the-wild" target="_blank" rel="noopener">James Long, &quot;Using CRDTs in the Wild&quot; (hybrid logical clocks)</a></li></ul>
     </section>
       <!-- transcript -->
       <section class="panel transcript" id="transcript">
