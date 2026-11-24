@@ -238,6 +238,18 @@ they must not (`verify.py` fails if they are).
   128px tall, so the attributes give the file's shape). The episode page's
   `.ep-hero-art` and the share cards use the full-size file. `verify.py` fails
   on a missing `-sm.jpg` or a card that uses the full one.
+- **Topic icons → `images/topics/<slug>.svg` (optional):** only topics that
+  name a language or technology with its own logo get one (Scala, Kotlin,
+  Python, Rust, Java & JVM, TypeScript, WebAssembly); general topics such as
+  Functional Programming or Testing don't. Take the SVG from Simple Icons
+  (simpleicons.org, `icons/<name>.svg`), set the brand `hex` as its `fill`
+  (black ones use `--ink`, `#14161f`), and keep the comment with its source and
+  license. Java & JVM uses OpenJDK's Duke. Show it in two places: before the
+  name in that topic's `.topic-tag` on `topics/index.html`
+  (`<img class="topic-icon" … width="20" height="20">`) and above the kicker
+  on the topic page (`class="topic-icon topic-icon--lg"`, `48`×`48`), both
+  with `alt=""` since the name is right beside it. `verify.py` fails when an
+  icon has no topic page or either place doesn't show it.
 - **Per-episode listen/watch links (hero `.pills`, written by
   `.scripts/episode_links.py`):** you write the hero row with "Play on Spotify"
   (the RSS `<link>`). The tool then adds "Play on Apple Podcasts" (the

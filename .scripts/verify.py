@@ -15,6 +15,8 @@ Covers the "Verify before finishing" list in AGENTS.md:
   - every episode thumbnail has its small copy (<slug>-sm.jpg), and the episode
     cards and the home page's .latest-art use it, not the 1280x720 original
   - every episode card's summary is its episode page's <meta name="description">
+  - every topic icon (images/topics/<slug>.svg) belongs to a topic page and is
+    shown on it and on its tag in the topics index
   - feed.xml parses and has one item per episode page, each linking to it
   - no URL uses www.happypathprogramming.com (it only redirects)
   - llms.txt links every episode, guest and topic page, and llms-full.txt has
@@ -162,6 +164,24 @@ def check_small_thumbnails() -> None:
                 problems.append(f"{small} missing (python3 .scripts/youtube.py --apply)")
 
 
+def check_topic_icons() -> None:
+    """images/topics/<slug>.svg is optional; when it exists, both places show it."""
+    cloud = open("topics/index.html", encoding="utf-8").read()
+    for f in sorted(os.listdir("images/topics")):
+        slug = f[:-4]
+        img = f'<img class="topic-icon'
+        src = f'src="../images/topics/{f}"'
+        if not os.path.exists(f"topics/{slug}.html"):
+            problems.append(f"images/topics/{f}: no topics/{slug}.html")
+            continue
+        if not re.search(rf'<a class="topic-tag" href="\.\./topics/{re.escape(slug)}\.html">'
+                         rf'{img}[^>]*{re.escape(src)}', cloud):
+            problems.append(f"topics/index.html: the {slug} tag doesn't show images/topics/{f}")
+        if not re.search(rf'{img} topic-icon--lg" {re.escape(src)}',
+                         open(f"topics/{slug}.html", encoding="utf-8").read()):
+            problems.append(f"topics/{slug}.html: doesn't show images/topics/{f}")
+
+
 CARD_SUMMARY = re.compile(
     r'<a href="(?:\.\./)?episodes/([^"]+)\.html">(?:(?!<article).)*?'
     r'<p class="ep-card-summary">(.*?)</p>', re.S)
@@ -266,6 +286,7 @@ def main() -> None:
                     problems.append(f"{path}: og:image is {local}, expected {want}")
 
     check_small_thumbnails()
+    check_topic_icons()
     check_feed()
     check_llms()
     check_transcripts()

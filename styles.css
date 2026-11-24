@@ -165,6 +165,8 @@ a.stat:hover { text-decoration: none; transform: translateY(-2px); box-shadow: v
   border: 1px solid var(--line); border-radius: 999px; padding: 9px 16px; font-weight: 700;
   color: var(--ink); box-shadow: var(--shadow); }
 .topic-tag:hover { text-decoration: none; border-color: var(--green); color: var(--green-dark); transform: translateY(-2px); }
+.topic-icon { width: 20px; height: 20px; flex: none; }
+.topic-icon--lg { width: 48px; height: 48px; display: block; margin: 18px 0 14px; }
 .topic-count { font-family: var(--mono); font-size: .8rem; color: #fff; background: var(--green-dark);
   border-radius: 999px; padding: 1px 8px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }

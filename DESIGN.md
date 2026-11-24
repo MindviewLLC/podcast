@@ -41,7 +41,9 @@ Professional, yet fun podcast site for Happy Path Programming.
 - **Topics:** episodes are tagged with topics (derived from title/description via
   the keyword map in `AGENTS.md`, "Topic keywords"). Topic chips show on episode cards and episode pages; a
   Topics page (`topics/index.html`) is a tag cloud with counts, and each topic
-  has its own page (`topics/<slug>.html`) listing its episodes. Nav =
+  has its own page (`topics/<slug>.html`) listing its episodes. Topics that
+  name a language or technology show its logo, in brand color, on their tag
+  in the cloud and above their page's heading; the rest have none. Nav =
   Episodes / Guests / Topics (the logo links home).
 - **Social sharing:** every page carries a full OpenGraph/Twitter-card head
   (canonical + RSS `alternate`, `og:*`, `twitter:*`, JSON-LD) and an on-page
