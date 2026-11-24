@@ -35,7 +35,7 @@ import hpp  # noqa: E402
 
 DIR = "transcripts"
 START, END = "<!-- transcript -->", "<!-- /transcript -->"
-RE_OWN = re.compile(r"\n*" + re.escape(START) + r".*?" + re.escape(END), re.S)
+RE_OWN = re.compile(r"\n*[ \t]*" + re.escape(START) + r".*?" + re.escape(END), re.S)
 RE_MAIN_END = re.compile(r'\n([ \t]*)</div>\s*<aside class="ep-aside">')
 RE_TIME = re.compile(r"(\d+):(\d\d):(\d\d)[,.](\d{3})\s*-->\s*(\d+):(\d\d):(\d\d)[,.](\d{3})")
 PARAGRAPH_SECONDS = 45   # start a new paragraph after this long, at a sentence end
