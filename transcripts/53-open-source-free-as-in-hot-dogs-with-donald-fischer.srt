@@ -1,0 +1,5410 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,799 --> 00:00:05,799
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:08,000 --> 00:00:10,000
+All right. 
+Well, welcome everyone. 
+
+4
+00:00:10,000 --> 00:00:13,500
+Today, we have with us. 
+Donald Fisher who I worked with 
+
+5
+00:00:13,500 --> 00:00:15,900
+back at typesafe. 
+Now, light Bend. 
+
+6
+00:00:16,000 --> 00:00:18,300
+And I kind of hate that I always
+have to say typesafe. 
+
+7
+00:00:18,300 --> 00:00:23,600
+Now, light Bend name changes are
+hard, but really enjoyed working
+
+8
+00:00:23,600 --> 00:00:26,199
+with Donald. 
+He was the interim, CEO of type 
+
+9
+00:00:26,199 --> 00:00:28,600
+safe, for at least a couple of 
+years, I think. 
+
+10
+00:00:29,000 --> 00:00:32,100
+And that was when you were with 
+black rock, is that right, 
+
+11
+00:00:32,600 --> 00:00:36,700
+Greylock Greylock, Rock off. 
+Okay, Divya Rock so many rocks 
+
+12
+00:00:36,700 --> 00:00:41,100
+in the VC world. 
+And so so super fun to work with
+
+13
+00:00:41,100 --> 00:00:42,600
+Donald. 
+He really got the, the 
+
+14
+00:00:42,600 --> 00:00:44,100
+foundation in that company 
+going. 
+
+15
+00:00:44,100 --> 00:00:48,299
+And and so, anyways, now, he's 
+off to a new start up the. 
+
+16
+00:00:48,299 --> 00:00:52,700
+He co-created her credit or you 
+the formal rag, three 
+
+17
+00:00:52,700 --> 00:00:55,799
+co-founders, three. 
+Come back, awesome. 
+
+18
+00:00:56,299 --> 00:00:58,600
+So great to have you tell us 
+about Ted left. 
+
+19
+00:00:59,299 --> 00:01:02,799
+Yeah, thanks for the invitation 
+to join and super excited to 
+
+20
+00:01:02,799 --> 00:01:04,500
+check. 
+Always excited to chat with, 
+
+21
+00:01:04,599 --> 00:01:07,700
+with you, James and Bruce Greek 
+to to chat with you. 
+
+22
+00:01:09,000 --> 00:01:11,400
+Yeah. 
+So tide lifts sort of a mission 
+
+23
+00:01:11,400 --> 00:01:15,400
+oriented company. 
+Our stated mission is to make 
+
+24
+00:01:15,400 --> 00:01:18,700
+open source, work better for 
+everyone and what we mean by 
+
+25
+00:01:18,700 --> 00:01:23,500
+that is both the teams that 
+build applications with open 
+
+26
+00:01:23,500 --> 00:01:26,200
+source software, as well as for 
+the creators of Open Source 
+
+27
+00:01:26,200 --> 00:01:28,000
+software. 
+We think there's really, you 
+
+28
+00:01:28,000 --> 00:01:31,799
+know, kind of almost obvious 
+opportunity to align the 
+
+29
+00:01:31,799 --> 00:01:36,000
+interests of those two 
+participants in the open-source 
+
+30
+00:01:36,000 --> 00:01:38,799
+phenomenon. 
+And Talk some potential for 
+
+31
+00:01:38,799 --> 00:01:43,000
+everybody to get some, you know,
+to do better by working together
+
+32
+00:01:43,000 --> 00:01:45,400
+and collaborating. 
+So that's what we're about. 
+
+33
+00:01:45,900 --> 00:01:48,900
+And yeah, happy to get into as 
+much detail as you want in terms
+
+34
+00:01:48,900 --> 00:01:51,400
+of how our approach works and 
+the and our perspective on 
+
+35
+00:01:51,400 --> 00:01:55,299
+things. 
+So I have a story which is, I 
+
+36
+00:01:55,299 --> 00:01:59,400
+have a friend who runs a hot dog
+stand in Crested Butte and 
+
+37
+00:01:59,400 --> 00:02:04,599
+during covid, I think there was 
+one day when he just he had way 
+
+38
+00:02:04,599 --> 00:02:08,400
+too many hot dogs and they were 
+I don't he To get rid of them. 
+
+39
+00:02:08,407 --> 00:02:13,000
+So he decided to just give them 
+away for this one day and then 
+
+40
+00:02:13,000 --> 00:02:16,400
+people started sponsoring him. 
+So, every Saturday, he gives 
+
+41
+00:02:16,400 --> 00:02:22,699
+away like 300, hot dogs and and 
+it doesn't hurt him because he 
+
+42
+00:02:22,699 --> 00:02:25,000
+gets sponsored. 
+So he's, and then people leave 
+
+43
+00:02:25,000 --> 00:02:29,699
+tips and stuff, but every once 
+in a while, somebody will come 
+
+44
+00:02:29,699 --> 00:02:34,099
+up and get angry at him because 
+he's not doing capitalism, 
+
+45
+00:02:34,099 --> 00:02:39,300
+right? 
+And, you know, they'll just the,
+
+46
+00:02:39,300 --> 00:02:42,599
+yeah, they'll go off on him 
+because he shouldn't be giving 
+
+47
+00:02:42,599 --> 00:02:46,599
+away hot dogs and, you know, it 
+doesn't matter what he explains 
+
+48
+00:02:46,599 --> 00:02:51,199
+or anything and I feel like 
+there's some relationship to, 
+
+49
+00:02:51,400 --> 00:02:55,099
+you know, open source and and 
+what's happening. 
+
+50
+00:02:55,099 --> 00:02:58,699
+And I mean, it's kind of a 
+reverse thing because the 
+
+51
+00:02:58,699 --> 00:03:02,599
+open-source developers are not 
+getting paid and they're 
+
+52
+00:03:02,599 --> 00:03:07,000
+creating tremendous value. 
+They're creating much more value
+
+53
+00:03:07,300 --> 00:03:11,800
+than Source programmers in 
+general and, and and the 
+
+54
+00:03:11,800 --> 00:03:14,699
+closed-source programmers, of 
+course, are using a ton of Open 
+
+55
+00:03:14,699 --> 00:03:17,699
+Source in order to create their 
+programs. 
+
+56
+00:03:18,000 --> 00:03:21,800
+And I just find the whole thing 
+so frustrating, and I beat my 
+
+57
+00:03:21,800 --> 00:03:25,199
+head against the wall, trying to
+come up with some different 
+
+58
+00:03:25,199 --> 00:03:29,800
+model that I'll cuz what I want.
+I mean, my understanding is that
+
+59
+00:03:29,800 --> 00:03:33,400
+what you're doing is, you know, 
+working on. 
+
+60
+00:03:33,400 --> 00:03:36,699
+Okay, let's do maintenance. 
+Let's do any and there's the 
+
+61
+00:03:36,699 --> 00:03:39,000
+Consulting model. 
+Oil and all that kind of stuff. 
+
+62
+00:03:39,199 --> 00:03:43,500
+And I would really like to 
+figure out a way that we can pay
+
+63
+00:03:43,500 --> 00:03:47,900
+for the development. 
+Not just the maintenance of Open
+
+64
+00:03:47,900 --> 00:03:50,500
+Source. 
+So and I'm sure you've thought 
+
+65
+00:03:50,500 --> 00:03:53,599
+of this even though I don't 
+think tide lifts works. 
+
+66
+00:03:53,599 --> 00:03:55,900
+Stop way. 
+Is that correct? 
+
+67
+00:03:56,300 --> 00:03:57,800
+Yeah. 
+Well look, first of all I love 
+
+68
+00:03:57,800 --> 00:04:00,099
+the hot dog story and I thought 
+you were going a different 
+
+69
+00:04:00,099 --> 00:04:01,599
+direction with it. 
+I thought you were going to say 
+
+70
+00:04:01,599 --> 00:04:03,000
+that. 
+Once you started giving away the
+
+71
+00:04:03,000 --> 00:04:05,699
+hot dogs, all of a sudden, all 
+the people who had been happy to
+
+72
+00:04:05,699 --> 00:04:07,699
+pay for it, came back and 
+started complaining. 
+
+73
+00:04:07,800 --> 00:04:10,800
+About all of the parts of the 
+hot dogs that they didn't like 
+
+74
+00:04:10,800 --> 00:04:14,099
+the button seems a little stale 
+or, you know, should have had 
+
+75
+00:04:14,099 --> 00:04:17,600
+more ketchup on it that really 
+Square similar to open source 
+
+76
+00:04:17,600 --> 00:04:18,800
+on. 
+Yeah, that's like the 
+
+77
+00:04:18,800 --> 00:04:21,500
+open-source maintainer 
+experience, you know, it's like 
+
+78
+00:04:21,500 --> 00:04:24,800
+you give this gift to the world,
+they really. 
+
+79
+00:04:24,800 --> 00:04:28,800
+They just love, you know, and 
+they're always surprised and and
+
+80
+00:04:28,800 --> 00:04:31,500
+they just, you know, they're 
+just amazed that this thing is 
+
+81
+00:04:31,500 --> 00:04:33,600
+happening. 
+But I think that's because 
+
+82
+00:04:33,600 --> 00:04:37,199
+they're face-to-face with him 
+and maybe Paris, you know? 
+
+83
+00:04:37,800 --> 00:04:40,300
+When you download some of the 
+source and it doesn't work 
+
+84
+00:04:40,300 --> 00:04:42,600
+right? 
+You're just going software it's 
+
+85
+00:04:42,608 --> 00:04:44,699
+not working right? 
+You you idiot. 
+
+86
+00:04:44,699 --> 00:04:48,899
+You should make it work, right? 
+And they're not conscious that 
+
+87
+00:04:48,899 --> 00:04:53,699
+this isn't a commercial product.
+Yeah, I mean and I think that 
+
+88
+00:04:53,800 --> 00:04:58,199
+you know, unfortunately the the 
+open source world is maybe less 
+
+89
+00:04:58,199 --> 00:05:03,300
+and less enlightened than the 
+hot dog pay space hot dog vendor
+
+90
+00:05:03,300 --> 00:05:06,899
+situation because you know like 
+the the so often especially like
+
+91
+00:05:06,899 --> 00:05:09,899
+maintainers of highwomen. 
+Scale widely used open-source 
+
+92
+00:05:09,899 --> 00:05:12,699
+components. 
+You know, they do all this work,
+
+93
+00:05:12,699 --> 00:05:16,199
+typically not directly 
+compensate, especially in the 
+
+94
+00:05:16,199 --> 00:05:19,199
+sort of, like, application 
+libraries Frameworks kind of 
+
+95
+00:05:19,199 --> 00:05:22,699
+world. 
+And then, you know, their reward
+
+96
+00:05:22,699 --> 00:05:25,699
+is GitHub issues. 
+Complaining of this didn't work 
+
+97
+00:05:25,699 --> 00:05:30,300
+on my Commodore 64 or, you know,
+I disagree with this technical 
+
+98
+00:05:30,300 --> 00:05:33,300
+decision over there. 
+So it's sort of a strange form 
+
+99
+00:05:33,300 --> 00:05:38,300
+of reciprocity operating there. 
+Maybe we need to have Have a go 
+
+100
+00:05:38,300 --> 00:05:41,000
+open source card so we can get 
+face to face. 
+
+101
+00:05:41,000 --> 00:05:44,100
+That's pretty pretty, a pretty 
+good option. 
+
+102
+00:05:45,300 --> 00:05:50,399
+Perhaps Perhaps part of Open 
+Source training should be 
+
+103
+00:05:51,000 --> 00:05:55,000
+nonviolent communication because
+not a bad idea. 
+
+104
+00:05:55,300 --> 00:05:59,000
+Does it encourage you know, if 
+somebody is just complaining? 
+
+105
+00:05:59,300 --> 00:06:04,399
+I mean they're underneath it. 
+There's kind of a compliment. 
+
+106
+00:06:04,399 --> 00:06:07,600
+Well, I'm using your software, 
+it's not as great as I want it 
+
+107
+00:06:07,600 --> 00:06:10,100
+to Be. 
+So there's a, you know, there's 
+
+108
+00:06:10,100 --> 00:06:12,100
+a compliment in a need 
+underneath there. 
+
+109
+00:06:12,100 --> 00:06:15,199
+It's just Express badly, it's 
+because they're frustrated. 
+
+110
+00:06:15,899 --> 00:06:16,899
+I think you're also, right, 
+that. 
+
+111
+00:06:16,899 --> 00:06:20,199
+In part of it is just the an 
+animal ization of it. 
+
+112
+00:06:20,399 --> 00:06:24,100
+How it's Anonymous, right? 
+And so it's sort of I think it's
+
+113
+00:06:24,600 --> 00:06:27,500
+lost on a lot of individuals and
+more. 
+
+114
+00:06:27,500 --> 00:06:31,699
+So on organizations that most of
+the software that their 
+
+115
+00:06:31,699 --> 00:06:37,399
+applications are built out of is
+created by humans for not 
+
+116
+00:06:37,699 --> 00:06:40,300
+directly commercial reasons, 
+right? 
+
+117
+00:06:40,300 --> 00:06:43,800
+For impact is typically the 
+number one reason why we, you 
+
+118
+00:06:43,800 --> 00:06:47,199
+know, when we've gone and 
+surveyed, you know, open-source 
+
+119
+00:06:47,199 --> 00:06:50,600
+maintainer, why do you do this? 
+Why do you spend time giving 
+
+120
+00:06:50,600 --> 00:06:53,100
+this gift to the world? 
+Typically what we have heard 
+
+121
+00:06:53,100 --> 00:06:55,300
+especially from this audience of
+the sort of, you know, 
+
+122
+00:06:55,300 --> 00:06:59,300
+application development 
+libraries that, you know, flow 
+
+123
+00:06:59,300 --> 00:07:04,100
+into into people's applications 
+that they build its they like 
+
+124
+00:07:04,100 --> 00:07:06,699
+having impact on the world 
+knowing that their creative work
+
+125
+00:07:06,699 --> 00:07:10,500
+is is being Etc. 
+Right and I think so many 
+
+126
+00:07:10,500 --> 00:07:13,399
+organizations are used to more 
+of the traditional Bender model 
+
+127
+00:07:13,699 --> 00:07:16,399
+where like you know the 
+components used to flow in from 
+
+128
+00:07:16,399 --> 00:07:18,500
+Oracle or Microsoft or something
+like that and they were all 
+
+129
+00:07:18,500 --> 00:07:20,699
+written there and there's this 
+more kind of, you know, 
+
+130
+00:07:20,699 --> 00:07:23,300
+commercial element to is like, 
+hey I have a complaint about 
+
+131
+00:07:23,300 --> 00:07:24,699
+this thing. 
+I don't, you know, I want to 
+
+132
+00:07:24,707 --> 00:07:28,600
+file a support ticket and I've 
+seen, you know, recently I saw 
+
+133
+00:07:28,699 --> 00:07:32,600
+on Twitter, go around, you know,
+a maintainer of the widely used 
+
+134
+00:07:32,600 --> 00:07:34,699
+project. 
+They got this big, like, 
+
+135
+00:07:34,699 --> 00:07:37,500
+procurement form sent to them 
+from some companies. 
+
+136
+00:07:37,699 --> 00:07:40,899
+Saying like we demand that you 
+fill out this form, talking 
+
+137
+00:07:40,899 --> 00:07:43,800
+about all the, you know, 
+practices around your project 
+
+138
+00:07:43,800 --> 00:07:46,699
+and the maintainers just like 
+this doesn't even compute, you 
+
+139
+00:07:46,699 --> 00:07:48,500
+know, I know buddy, I'm not 
+your. 
+
+140
+00:07:48,500 --> 00:07:51,000
+I didn't sign up to be your 
+software supply chain, even if 
+
+141
+00:07:51,008 --> 00:07:54,399
+that's the reality, you know, 
+I'm like doing a creative effort
+
+142
+00:07:54,399 --> 00:07:56,100
+over here and your, you want me 
+to fill out? 
+
+143
+00:07:56,100 --> 00:07:58,600
+TPS reports. 
+It's, it's kind of a broken 
+
+144
+00:07:59,100 --> 00:08:02,300
+broken mentality, but I think it
+mostly stems from a lack of 
+
+145
+00:08:02,300 --> 00:08:04,899
+understanding because it's kind 
+of an amazing thing that it 
+
+146
+00:08:04,899 --> 00:08:07,199
+works, right? 
+That that the that Creative 
+
+147
+00:08:07,199 --> 00:08:12,899
+Energy He creates this set of 
+technologies that then, you 
+
+148
+00:08:12,899 --> 00:08:15,600
+know, individuals but also 
+organizations and governments, 
+
+149
+00:08:15,600 --> 00:08:18,500
+and everybody can can build on. 
+And now, is sort of dependent 
+
+150
+00:08:18,500 --> 00:08:21,500
+on. 
+It's a gift economy. 
+
+151
+00:08:23,199 --> 00:08:24,600
+It was like burning man, bring 
+it. 
+
+152
+00:08:24,600 --> 00:08:26,000
+Bring it back to the Burning 
+Man. 
+
+153
+00:08:26,000 --> 00:08:29,100
+Well, I mean they come that goes
+back to what is it? 
+
+154
+00:08:29,100 --> 00:08:32,600
+The Potlatch Native Americans or
+something. 
+
+155
+00:08:32,899 --> 00:08:35,299
+Hey, you know, there have been 
+there is a history even. 
+
+156
+00:08:35,399 --> 00:08:38,100
+Yeah, we're there have 
+definitely been gifted Enemies 
+
+157
+00:08:38,100 --> 00:08:43,200
+before burning man. 
+But but the problem with that is
+
+158
+00:08:43,200 --> 00:08:47,600
+that it's got to be reciprocal, 
+it can't be, I'm giving you 
+
+159
+00:08:47,600 --> 00:08:52,600
+things and you take them and you
+make a lot of money off of them 
+
+160
+00:08:52,600 --> 00:08:55,600
+and you don't to gift. 
+It has to be bi-directional. 
+
+161
+00:08:56,399 --> 00:08:57,899
+Yeah, yeah. 
+Good work. 
+
+162
+00:08:58,000 --> 00:09:01,100
+Well is this hot Burning Man? 
+Works is like, like, I mean it's
+
+163
+00:09:01,100 --> 00:09:04,000
+you don't have to bring gifts 
+but it just kind of works that 
+
+164
+00:09:04,000 --> 00:09:07,500
+everyone so nice. 
+Oh yes. 
+
+165
+00:09:07,700 --> 00:09:09,600
+Them something. 
+And that's it. 
+
+166
+00:09:09,600 --> 00:09:14,200
+It's not a recipe. 
+There is no reciprocity, built 
+
+167
+00:09:14,200 --> 00:09:18,399
+is no expected. 
+You just, you know, you just 
+
+168
+00:09:18,399 --> 00:09:23,100
+give the people that show up are
+generally want to give gifts to 
+
+169
+00:09:23,100 --> 00:09:25,899
+people, that's how it works. 
+It's like, oh, somebody gave 
+
+170
+00:09:25,899 --> 00:09:27,799
+something to me. 
+I want to give something to 
+
+171
+00:09:27,799 --> 00:09:30,899
+somebody else. 
+And so that's, that's kind of 
+
+172
+00:09:30,899 --> 00:09:34,200
+what we end up with. 
+But, you know, based on a 
+
+173
+00:09:34,399 --> 00:09:37,500
+traditionally traditional quote 
+economy. 
+
+174
+00:09:37,700 --> 00:09:41,200
+Yeah, there's just like, no, 
+that doesn't make sense you. 
+
+175
+00:09:41,200 --> 00:09:44,299
+It's a transaction where as a 
+gift economy isn't a 
+
+176
+00:09:44,307 --> 00:09:49,500
+transaction. 
+It's just unidirectional, but if
+
+177
+00:09:49,500 --> 00:09:53,399
+it's only ever unidirectional, 
+it just takes the wind out of 
+
+178
+00:09:53,399 --> 00:09:54,600
+your sails. 
+You just go. 
+
+179
+00:09:54,600 --> 00:09:58,899
+Oh, if you're just taking an 
+expecting. 
+
+180
+00:09:59,600 --> 00:10:05,100
+So here's an example that has 
+always frustrated me, Apple like
+
+181
+00:10:05,399 --> 00:10:10,799
+richest company in the world or 
+whatever. um, they so there's a 
+
+182
+00:10:10,799 --> 00:10:14,600
+tool to do installs. 
+What is it called? 
+
+183
+00:10:16,799 --> 00:10:20,899
+Brew brew, right? 
+Apple has never mean, that is an
+
+184
+00:10:20,899 --> 00:10:26,700
+essential part of the ecosystem 
+and apples never given them any 
+
+185
+00:10:26,700 --> 00:10:31,000
+money. 
+Yeah, I mean, for a long time it
+
+186
+00:10:31,000 --> 00:10:38,899
+was Ben Tre, and Jay frog, were 
+the ones that are funding all 
+
+187
+00:10:38,899 --> 00:10:42,899
+the like, I don't know, millions
+of dollars of downloads through 
+
+188
+00:10:42,899 --> 00:10:44,500
+brew. 
+And I don't know if they still 
+
+189
+00:10:44,500 --> 00:10:46,799
+do or not. 
+But yeah, it was interesting. 
+
+190
+00:10:46,799 --> 00:10:50,399
+How that? 
+How Brew found someone to 
+
+191
+00:10:50,399 --> 00:10:52,000
+sponsor. 
+At, that was an apple. 
+
+192
+00:10:52,100 --> 00:10:54,899
+But yeah, weird that it's so 
+essential to the Apple 
+
+193
+00:10:55,600 --> 00:10:58,600
+ecosystem. 
+And apple wouldn't even notice. 
+
+194
+00:10:58,700 --> 00:11:03,000
+I mean, you, It's it's yeah. 
+Anyway that stuff like that, 
+
+195
+00:11:03,000 --> 00:11:07,100
+just really bother you. 
+It is frustrating, right? 
+
+196
+00:11:07,299 --> 00:11:11,200
+And you know, the Homebrew 
+example is, that is a good is a 
+
+197
+00:11:11,208 --> 00:11:13,200
+good reference point. 
+I mean, I may be going back to 
+
+198
+00:11:13,200 --> 00:11:16,100
+the gift economy idea, actually 
+think. 
+
+199
+00:11:16,100 --> 00:11:20,100
+Maybe that is an expense that is
+part of what explains why open 
+
+200
+00:11:20,100 --> 00:11:22,600
+source works as well as it does,
+right? 
+
+201
+00:11:22,600 --> 00:11:25,500
+Like there is an element of that
+that sort of driving and like 
+
+202
+00:11:26,399 --> 00:11:29,100
+Baseline like open source Works 
+amazing, right? 
+
+203
+00:11:29,100 --> 00:11:33,100
+Like, it's It's like every day I
+wake up astounded that this is a
+
+204
+00:11:33,100 --> 00:11:37,200
+thing that humans sort of 
+organically started doing. 
+
+205
+00:11:37,200 --> 00:11:40,500
+It's like an emergent phenomenon
+when you combine like, you know,
+
+206
+00:11:41,899 --> 00:11:46,799
+the internet, you know, personal
+computers and optimistic people 
+
+207
+00:11:47,299 --> 00:11:51,000
+that they've and programmers, 
+you know, that they this thing 
+
+208
+00:11:51,000 --> 00:11:53,100
+happens. 
+And I think probably some of 
+
+209
+00:11:53,100 --> 00:11:55,100
+those gift economy, Dynamics 
+underlie. 
+
+210
+00:11:55,100 --> 00:11:59,299
+It, I think the challenge 
+though, is that it doesn't do 
+
+211
+00:11:59,600 --> 00:12:03,700
+Anything that doesn't drive 
+incentives around everything 
+
+212
+00:12:03,700 --> 00:12:08,200
+that every participant in the 
+system might want to have happen
+
+213
+00:12:08,700 --> 00:12:13,200
+and like go back to that example
+of the ridiculous procurement 
+
+214
+00:12:13,299 --> 00:12:16,100
+you know Assurance report that 
+was presented to the open-source
+
+215
+00:12:16,100 --> 00:12:17,700
+maintainer. 
+You know. 
+
+216
+00:12:17,700 --> 00:12:20,799
+It's like ridiculous to the 
+open-source maintainer to the 
+
+217
+00:12:20,799 --> 00:12:22,700
+organization that's making that 
+request. 
+
+218
+00:12:22,700 --> 00:12:24,200
+No they're actually serious 
+right there. 
+
+219
+00:12:24,200 --> 00:12:26,299
+Like we're I don't know what it 
+was an insurance company or 
+
+220
+00:12:26,307 --> 00:12:28,299
+something like that, you know. 
+They like they have customers 
+
+221
+00:12:28,299 --> 00:12:30,600
+that they have to take care of 
+Our data, like they're trying to
+
+222
+00:12:30,600 --> 00:12:31,799
+do the right thing as well, 
+right? 
+
+223
+00:12:31,799 --> 00:12:34,700
+So could for them, maybe a 
+compliance issue, like maybe the
+
+224
+00:12:34,700 --> 00:12:37,500
+government is. 
+Yeah, firing since this from the
+
+225
+00:12:37,500 --> 00:12:41,100
+Newman, yeah, I'm sure they're, 
+I'm sure they're doing it for 
+
+226
+00:12:41,100 --> 00:12:43,399
+actually good reasons. 
+It just kind of comes off, kind 
+
+227
+00:12:43,399 --> 00:12:45,500
+of weird when it gets projected 
+through that channel. 
+
+228
+00:12:45,500 --> 00:12:49,299
+So, you know, that's like, 
+that's where, you know, with, 
+
+229
+00:12:49,500 --> 00:12:51,799
+with tied love with, with our 
+initiative and our company. 
+
+230
+00:12:52,200 --> 00:12:55,799
+We're trying to explore. 
+Hey, can we kind of expand the 
+
+231
+00:12:55,799 --> 00:12:59,500
+boundary of what gets done to 
+give creators? 
+
+232
+00:12:59,600 --> 00:13:02,799
+Want to would be interested in 
+doing more where there are some 
+
+233
+00:13:02,899 --> 00:13:06,600
+additional incentives and 
+guardrails and help process and 
+
+234
+00:13:06,600 --> 00:13:10,500
+Tool. 
+Help would they be interested in
+
+235
+00:13:10,500 --> 00:13:14,899
+doing more around their open 
+source projects in order to you 
+
+236
+00:13:14,899 --> 00:13:18,200
+know, satisfy a demand that's 
+coming from especially big 
+
+237
+00:13:18,200 --> 00:13:21,700
+organizations and governments 
+and so on who want to have more 
+
+238
+00:13:21,700 --> 00:13:25,600
+consistency of the sort of 
+vetting that's happening around 
+
+239
+00:13:25,600 --> 00:13:27,700
+the open source that flows into 
+their organization. 
+
+240
+00:13:27,700 --> 00:13:31,899
+And we think that's kind of like
+gay You know, it's like a it's a
+
+241
+00:13:31,907 --> 00:13:37,899
+it's a business opportunity that
+only has positive externalities,
+
+242
+00:13:37,899 --> 00:13:40,299
+like it's optional. 
+So nobody is mandated to 
+
+243
+00:13:40,299 --> 00:13:42,299
+participate. 
+And, you know, for the 
+
+244
+00:13:42,299 --> 00:13:46,399
+organizations that, you know, by
+the service of vetted 
+
+245
+00:13:46,399 --> 00:13:51,100
+open-source components that have
+been, you know, you know, 
+
+246
+00:13:51,100 --> 00:13:53,500
+determined to meet certain 
+security licensing and 
+
+247
+00:13:53,500 --> 00:13:55,700
+maintenance requirements. 
+They're happy to pay for it, 
+
+248
+00:13:56,100 --> 00:13:57,600
+right? 
+And for the open source 
+
+249
+00:13:57,600 --> 00:13:59,399
+maintainers that opt into the 
+system. 
+
+250
+00:14:00,200 --> 00:14:02,899
+Once adopted they say, yeah, I'm
+interested in doing this and you
+
+251
+00:14:02,899 --> 00:14:05,799
+know, because it's this is like 
+part of the really boring part 
+
+252
+00:14:05,799 --> 00:14:09,799
+of open-source maintainer ship. 
+I appreciate the incentive of 
+
+253
+00:14:10,700 --> 00:14:13,899
+some tools, some process help 
+and also some direct being able 
+
+254
+00:14:13,899 --> 00:14:16,899
+to participate in the value that
+I create participating in the 
+
+255
+00:14:16,899 --> 00:14:20,200
+economics by getting paid to do 
+some of this more tedious, work 
+
+256
+00:14:20,200 --> 00:14:26,600
+around the open source projects.
+yeah, it's No. 
+
+257
+00:14:26,799 --> 00:14:33,000
+It's, it's, I mean, most of 
+these companies I suspect the 
+
+258
+00:14:33,000 --> 00:14:36,899
+idea of Open Source even though 
+we live and breathe. 
+
+259
+00:14:36,899 --> 00:14:40,700
+The thing for them, it's like 
+wait a minute, a free thing that
+
+260
+00:14:40,700 --> 00:14:44,299
+we and they don't know. 
+And they're used to paying for 
+
+261
+00:14:44,299 --> 00:14:47,200
+things and they have the money 
+to pay for things Etc. 
+
+262
+00:14:47,500 --> 00:14:51,100
+And this is a relative typically
+relatively small amount of money
+
+263
+00:14:51,100 --> 00:14:55,399
+that they're talking about 
+compared to procuring, you know?
+
+264
+00:14:56,000 --> 00:15:01,100
+Regular software and but it's 
+just like it doesn't fit in 
+
+265
+00:15:01,100 --> 00:15:05,399
+their model and a huge number of
+ways, it doesn't fit in their 
+
+266
+00:15:05,399 --> 00:15:07,700
+model. 
+So one of my previous companies 
+
+267
+00:15:08,200 --> 00:15:12,299
+we were trying to sponsor an 
+open source project with a 
+
+268
+00:15:12,299 --> 00:15:15,899
+incredibly low sum of money. 
+It was like a couple thousand 
+
+269
+00:15:15,899 --> 00:15:19,700
+dollars and you would not 
+believe the number of meetings 
+
+270
+00:15:19,700 --> 00:15:22,799
+and things that I had to go 
+through just to give a couple 
+
+271
+00:15:22,799 --> 00:15:25,700
+thousand dollars to an open 
+source project like law. 
+
+272
+00:15:25,799 --> 00:15:29,299
+Lawyers and accountants and like
+it. 
+
+273
+00:15:29,399 --> 00:15:32,899
+And it was extremely hard 
+because it's like, is this a 
+
+274
+00:15:32,907 --> 00:15:36,299
+donation? 
+Like should this go through the 
+
+275
+00:15:36,700 --> 00:15:40,700
+foundation and not through him? 
+It was, it was just so out of 
+
+276
+00:15:40,700 --> 00:15:45,700
+the ordinary to do that. 
+It was incredibly hard. 
+
+277
+00:15:45,799 --> 00:15:47,700
+It was wild. 
+And who knows? 
+
+278
+00:15:47,700 --> 00:15:50,200
+Maybe that is. 
+What's holding people back so 
+
+279
+00:15:50,200 --> 00:15:52,000
+much? 
+It's like, no, this is too 
+
+280
+00:15:52,000 --> 00:15:54,000
+weird. 
+We don't know how to do it and 
+
+281
+00:15:54,000 --> 00:15:56,899
+it would take so much time. 
+If it's for two thousand 
+
+282
+00:15:56,899 --> 00:16:00,600
+dollars, it's not worth it if 
+you make it twenty thousand 
+
+283
+00:16:00,600 --> 00:16:06,200
+dollars than you know the amount
+could be too low, right? 
+
+284
+00:16:06,200 --> 00:16:08,899
+Yeah. 
+I James you're reminding me of a
+
+285
+00:16:09,399 --> 00:16:11,700
+conversation. 
+I had a number of years ago with
+
+286
+00:16:12,600 --> 00:16:19,299
+really senior person at a big 
+tech company and in their annual
+
+287
+00:16:19,299 --> 00:16:22,399
+budget spreadsheet, they had a 
+row where I believe they were 
+
+288
+00:16:22,399 --> 00:16:25,600
+making a donate, you know, a 
+contribution to an open source 
+
+289
+00:16:25,600 --> 00:16:27,399
+found. 
+Foundation and so they sent it 
+
+290
+00:16:27,399 --> 00:16:30,200
+in in the finance department, 
+you know, sent the sheet back 
+
+291
+00:16:30,500 --> 00:16:34,600
+and they added a comment in that
+cell or that row, and the 
+
+292
+00:16:34,600 --> 00:16:41,299
+comment was broad question mark,
+their argument was wait. 
+
+293
+00:16:41,299 --> 00:16:44,000
+So you want to just take our 
+money and the company's money 
+
+294
+00:16:44,000 --> 00:16:46,299
+and give it to your friends on 
+the internet in exchange for 
+
+295
+00:16:46,299 --> 00:16:49,100
+nothing. 
+That's actually fraud by our 
+
+296
+00:16:49,100 --> 00:16:51,399
+definition. 
+And, you know, obviously was 
+
+297
+00:16:51,399 --> 00:16:54,299
+well intended and everything, 
+but how did see their point of 
+
+298
+00:16:54,299 --> 00:16:57,799
+view. 
+So I with both of those, you 
+
+299
+00:16:57,799 --> 00:17:02,100
+know, there has to be some kind 
+of a set of rails to transact on
+
+300
+00:17:02,100 --> 00:17:08,098
+and at the heart of it is there 
+has to be a Very clear, get in 
+
+301
+00:17:08,098 --> 00:17:12,098
+exchange for the expenditure to 
+really make it feasible for most
+
+302
+00:17:12,098 --> 00:17:13,900
+organizations to successfully 
+engage in. 
+
+303
+00:17:13,900 --> 00:17:17,400
+That's know. 
+We've really been exploring that
+
+304
+00:17:17,700 --> 00:17:20,098
+Frontier over the last couple of
+years at tide lifts. 
+
+305
+00:17:20,098 --> 00:17:23,700
+And we think we know now, 
+because we see the market whole 
+
+306
+00:17:23,700 --> 00:17:28,400
+and our customer base is growing
+that we have a solution in that 
+
+307
+00:17:28,700 --> 00:17:31,200
+to that to that space. 
+And, you know, the wait. 
+
+308
+00:17:31,200 --> 00:17:34,000
+What we have found to work? 
+Is we have a combination? 
+
+309
+00:17:36,099 --> 00:17:39,200
+That has two pieces to it. 
+Part of it is a software piece 
+
+310
+00:17:39,299 --> 00:17:41,200
+and part of it is a people 
+piece, right? 
+
+311
+00:17:41,200 --> 00:17:44,900
+So, the software piece is we 
+built a multi-tenant fast 
+
+312
+00:17:45,599 --> 00:17:50,299
+application that plugs into your
+Dempsey cops or application 
+
+313
+00:17:50,299 --> 00:17:53,400
+development tool chain. 
+Usually people start by plugging
+
+314
+00:17:53,400 --> 00:17:56,500
+it in next to their CI tool that
+runs the test on their code. 
+
+315
+00:17:56,700 --> 00:17:59,700
+And what we basically do is we 
+make sure that the third party 
+
+316
+00:17:59,700 --> 00:18:02,299
+open source packages. 
+They're flowing into your app. 
+
+317
+00:18:03,000 --> 00:18:05,599
+Have been vetted to meet certain
+security licensing. 
+
+318
+00:18:05,700 --> 00:18:07,200
+And maintenance Standard 
+Security standards. 
+
+319
+00:18:07,200 --> 00:18:10,099
+Like it doesn't have a known 
+security vulnerability in it but
+
+320
+00:18:10,099 --> 00:18:12,200
+also proactive security 
+standards. 
+
+321
+00:18:12,200 --> 00:18:15,799
+Like, there is a defined 
+security response policy in 
+
+322
+00:18:15,799 --> 00:18:19,200
+place for this project so that 
+when inevitably things happen in
+
+323
+00:18:19,200 --> 00:18:23,599
+the future, you know, it will be
+handled in a deterministic way, 
+
+324
+00:18:23,599 --> 00:18:26,000
+right? 
+And like, you know, just Clarity
+
+325
+00:18:26,000 --> 00:18:28,900
+around, open source, licenses, 
+from things like that. 
+
+326
+00:18:29,500 --> 00:18:31,900
+So, that's sort of the software 
+part of it and people, you know,
+
+327
+00:18:32,299 --> 00:18:35,000
+organizations are happy to pay 
+for that Assurance. 
+
+328
+00:18:35,000 --> 00:18:38,200
+Now, How do we get the fan of 
+like a base open source 
+
+329
+00:18:38,200 --> 00:18:42,200
+compliance like and a large 
+organization? 
+
+330
+00:18:42,200 --> 00:18:45,200
+Increasingly calling it. 
+An open source Supply Chain 
+
+331
+00:18:45,200 --> 00:18:46,700
+management. 
+Yeah. 
+
+332
+00:18:46,700 --> 00:18:50,599
+Well, we're solution, right? 
+And then place where n ft's 
+
+333
+00:18:50,599 --> 00:18:52,900
+could come in handy, if they 
+need a thing 
+
+334
+00:19:03,000 --> 00:19:05,599
+and open-source nft, get it. 
+Yeah. 
+
+335
+00:19:05,700 --> 00:19:06,400
+Yeah. 
+Okay. 
+
+336
+00:19:06,900 --> 00:19:08,200
+You know what makes sense? 
+Right? 
+
+337
+00:19:08,400 --> 00:19:11,500
+Actually I think that, you know,
+to the extent and if p is a real
+
+338
+00:19:11,500 --> 00:19:13,500
+thing, which it may be. 
+Yes. 
+
+339
+00:19:13,500 --> 00:19:15,000
+Somebody should go explore that 
+Sam. 
+
+340
+00:19:15,000 --> 00:19:16,900
+Not really in this now. 
+They're like, like they're 
+
+341
+00:19:16,900 --> 00:19:19,500
+doing. 
+Nft is based on the the git 
+
+342
+00:19:19,500 --> 00:19:24,200
+commit Shah of open to open 
+source and I do be assumed to 
+
+343
+00:19:24,208 --> 00:19:26,700
+see how the process. 
+So I think that that is likely 
+
+344
+00:19:26,700 --> 00:19:29,900
+to break our typical Enterprise 
+customers. 
+
+345
+00:19:30,799 --> 00:19:35,599
+Brain even you've been more but 
+so and then just to complete 
+
+346
+00:19:35,799 --> 00:19:39,099
+Sort of our our take on the 
+thing is like okay, you see, you
+
+347
+00:19:39,099 --> 00:19:41,599
+have that tool. 
+But the problem with these tools
+
+348
+00:19:41,599 --> 00:19:48,000
+historically like the sca tools,
+sort of like you know, open 
+
+349
+00:19:48,000 --> 00:19:51,700
+source compliance tools. 
+The big problem has been the 
+
+350
+00:19:51,700 --> 00:19:53,500
+garbage in garbage out problem, 
+right? 
+
+351
+00:19:53,500 --> 00:19:56,700
+Which is like they're trying to 
+enforce these policies and 
+
+352
+00:19:56,700 --> 00:20:00,200
+they're doing that by like 
+running a red X against 
+
+353
+00:20:00,299 --> 00:20:03,000
+licenses, dot txt file and 
+trying to assign. 
+
+354
+00:20:03,000 --> 00:20:05,099
+Like, this is like a patching is
+Shore. 
+
+355
+00:20:05,700 --> 00:20:09,799
+Is all this really like messy 
+stuff, around mapping cve 
+
+356
+00:20:09,799 --> 00:20:12,400
+vulnerabilities from National 
+vulnerability, database, to 
+
+357
+00:20:12,400 --> 00:20:15,700
+actual releases. 
+All of actual packages in Maven 
+
+358
+00:20:15,700 --> 00:20:17,900
+Central or the python package 
+index or so on. 
+
+359
+00:20:18,299 --> 00:20:23,799
+So, our, you know, Innovation on
+that front is who is able to, 
+
+360
+00:20:24,200 --> 00:20:27,200
+you know, address and vet these 
+packages and better than the 
+
+361
+00:20:27,200 --> 00:20:29,099
+actual open source maintainers 
+of them. 
+
+362
+00:20:29,099 --> 00:20:31,500
+In many cases, the original 
+creators are including the 
+
+363
+00:20:31,500 --> 00:20:33,299
+original creators of those 
+packages. 
+
+364
+00:20:33,299 --> 00:20:37,000
+So that's the people part of our
+solution is we We asked them, 
+
+365
+00:20:37,000 --> 00:20:40,299
+you know, help us vet that these
+packages, meet these specific 
+
+366
+00:20:40,299 --> 00:20:43,000
+standards, like all the seavey's
+have been mapped to the versions
+
+367
+00:20:43,000 --> 00:20:45,400
+that are impacted. 
+And, you know, there are 
+
+368
+00:20:45,400 --> 00:20:48,299
+proactive policies in place for 
+how we're going to deal with new
+
+369
+00:20:48,299 --> 00:20:51,200
+security vulnerabilities. 
+Tell us what the is the is this 
+
+370
+00:20:51,200 --> 00:20:53,500
+license information actually 
+complete? 
+
+371
+00:20:53,599 --> 00:20:56,700
+How do you know, you know, 
+because you were part of the 
+
+372
+00:20:56,700 --> 00:20:59,299
+team that you either wrote the 
+code or you were, you know, 
+
+373
+00:20:59,299 --> 00:21:04,099
+present you know where that came
+from and completely accurate and
+
+374
+00:21:04,099 --> 00:21:06,700
+comprehensive on the licensing. 
+And then one of the things that 
+
+375
+00:21:06,700 --> 00:21:10,400
+we ask we ask you know, the 
+maintainers help us determine is
+
+376
+00:21:10,400 --> 00:21:14,400
+like is this actually going to 
+be proactively maintained into 
+
+377
+00:21:14,400 --> 00:21:17,000
+the future, right? 
+Is this a deprecated release 
+
+378
+00:21:17,000 --> 00:21:22,299
+stream is the whole package 
+deprecated or you know abandoned
+
+379
+00:21:22,900 --> 00:21:25,099
+if so maybe there's an 
+opportunity we can we can help 
+
+380
+00:21:25,099 --> 00:21:28,200
+bring some new maintainers to It
+Again by creating an incentive 
+
+381
+00:21:28,599 --> 00:21:32,099
+for somebody, both a, you know, 
+help incentive as well as a 
+
+382
+00:21:32,099 --> 00:21:34,299
+monetary incentive to go pick 
+that up. 
+
+383
+00:21:34,299 --> 00:21:38,400
+So that's that's been the really
+An exciting part of Tide lifts 
+
+384
+00:21:38,400 --> 00:21:41,400
+is bringing that human element 
+in to complement the software. 
+
+385
+00:21:41,700 --> 00:21:45,799
+In combination, we found that's 
+a really compelling thing for 
+
+386
+00:21:45,799 --> 00:21:50,099
+organizations to go by pay money
+for because the thing that they 
+
+387
+00:21:50,099 --> 00:21:54,400
+get in return is visibility and 
+confidence in the third party 
+
+388
+00:21:54,400 --> 00:21:57,200
+open source that's flowing into 
+their applications that has 
+
+389
+00:21:57,200 --> 00:22:00,299
+immediate business value and now
+you know increasingly in light 
+
+390
+00:22:00,299 --> 00:22:03,000
+of recent events. 
+It's becoming mandatory to 
+
+391
+00:22:03,008 --> 00:22:04,799
+becoming legally required 
+action. 
+
+392
+00:22:04,799 --> 00:22:06,200
+I'm happy to talk. 
+Available. 
+
+393
+00:22:06,200 --> 00:22:08,099
+Some of the recent little ass on
+that front. 
+
+394
+00:22:09,200 --> 00:22:11,500
+Yeah. 
+Yeah we made it 22 minutes 
+
+395
+00:22:11,500 --> 00:22:15,400
+without getting into log for 
+Shell so I think it's time to 
+
+396
+00:22:15,400 --> 00:22:18,000
+trap people up for Showdown. 
+Door is locked? 
+
+397
+00:22:18,200 --> 00:22:22,500
+Yeah, I think this is a good 
+segue. 
+
+398
+00:22:22,500 --> 00:22:25,099
+So so tell us, tell us about log
+for shells. 
+
+399
+00:22:25,599 --> 00:22:28,700
+I know a little bit but tried to
+ignore it because I'm like, that
+
+400
+00:22:28,700 --> 00:22:34,200
+just sounds horrible and scary. 
+So yeah. 
+
+401
+00:22:35,900 --> 00:22:39,500
+You know, it is, it's gross in 
+some respects, but it also kind 
+
+402
+00:22:39,500 --> 00:22:42,599
+of calls a question that's been 
+lingering for a while, which is 
+
+403
+00:22:42,599 --> 00:22:45,299
+kind of, you know, how did it, 
+how did this actually work in 
+
+404
+00:22:45,299 --> 00:22:47,400
+the first place? 
+It's like, how did we expect 
+
+405
+00:22:47,400 --> 00:22:49,599
+this to all go smoothly in the 
+first place? 
+
+406
+00:22:49,599 --> 00:22:54,500
+So, you know, my synopsis would 
+be, you know, the whole 
+
+407
+00:22:54,500 --> 00:22:56,200
+kerfuffle around what's been 
+dubbed? 
+
+408
+00:22:56,200 --> 00:23:00,799
+Log for Shell relates to a 
+actually a series of 
+
+409
+00:23:00,900 --> 00:23:05,599
+vulnerabilities in a awesome 
+widely deployed. 
+
+410
+00:23:05,799 --> 00:23:10,200
+Incredible people durable, piece
+of software and Apache project 
+
+411
+00:23:10,200 --> 00:23:13,200
+called log4j, where the 
+maintainers have been putting in
+
+412
+00:23:13,200 --> 00:23:18,500
+the effort for, I think decades 
+now, on on log for log4j. 
+
+413
+00:23:19,500 --> 00:23:24,700
+And, you know, there was this 
+particular exploit that was 
+
+414
+00:23:24,700 --> 00:23:26,799
+identified gleam of the 
+timeline. 
+
+415
+00:23:26,799 --> 00:23:31,099
+It was in November and then it 
+sort of broke publicly in 
+
+416
+00:23:32,000 --> 00:23:37,599
+mid-December of 2021. 
+And unfortunately, Because log4j
+
+417
+00:23:37,599 --> 00:23:40,500
+is such a great package and has 
+such great capabilities. 
+
+418
+00:23:40,500 --> 00:23:45,299
+It's in almost every Enterprise 
+Java application or probably jvm
+
+419
+00:23:45,299 --> 00:23:47,599
+platform application out there, 
+right? 
+
+420
+00:23:47,599 --> 00:23:49,599
+Yeah. 
+And this particular exploit, it 
+
+421
+00:23:49,599 --> 00:23:53,299
+was, you know, a huge vast 
+deployment, like surface. 
+
+422
+00:23:53,299 --> 00:23:56,200
+Like because it's everywhere. 
+Yeah. 
+
+423
+00:23:56,200 --> 00:24:00,299
+And it's and well and it's been 
+around for, for a long time. 
+
+424
+00:24:00,900 --> 00:24:04,200
+Yeah, he said and my name is 
+Anning was that. 
+
+425
+00:24:05,799 --> 00:24:09,099
+The problem was that they had 
+put an interpreter, they had an 
+
+426
+00:24:09,099 --> 00:24:12,700
+embedded, an interpreter in 
+log4j and so you could just 
+
+427
+00:24:12,700 --> 00:24:16,200
+throw any code at it and run it.
+Yeah. 
+
+428
+00:24:16,200 --> 00:24:21,500
+There was this, you know, the 
+so-called remote code execution 
+
+429
+00:24:21,599 --> 00:24:24,700
+attack possible because I think 
+it's like used like a jndi 
+
+430
+00:24:24,700 --> 00:24:28,400
+interface to dynamically load, 
+some some code and so you could 
+
+431
+00:24:28,400 --> 00:24:31,299
+put some stuff anyways, but 
+that's the real, you know, 
+
+432
+00:24:31,299 --> 00:24:35,099
+that's why I think it became a 
+front page of the Washington 
+
+433
+00:24:35,099 --> 00:24:39,200
+Post. 
+Class event because is deployed 
+
+434
+00:24:39,200 --> 00:24:42,900
+everywhere. 
+And it was, you know, so 
+
+435
+00:24:44,400 --> 00:24:50,299
+straightforward to attack. 
+And what it resulted in is being
+
+436
+00:24:50,299 --> 00:24:54,400
+able to load and execute 
+arbitrary code from the internet
+
+437
+00:24:54,400 --> 00:24:57,700
+with the Privileges of the post 
+process. 
+
+438
+00:24:58,200 --> 00:25:00,500
+Actually, one of the subplots of
+the whole thing is my 
+
+439
+00:25:00,500 --> 00:25:04,400
+understanding is a lot of the 
+early exploits were came out of 
+
+440
+00:25:04,400 --> 00:25:10,900
+the world of Minecraft, which is
+a jvm, you know, platform gaming
+
+441
+00:25:10,900 --> 00:25:13,900
+world and that was the initial 
+exploits were actually for like,
+
+442
+00:25:13,900 --> 00:25:15,299
+you know, doing stuff in 
+Minecraft. 
+
+443
+00:25:15,299 --> 00:25:19,000
+But then he got weaponized 
+pretty quickly and started 
+
+444
+00:25:19,000 --> 00:25:24,200
+seeing exploits all over games. 
+That's like, that's like people 
+
+445
+00:25:24,200 --> 00:25:28,200
+cheating and games because like 
+driving some percentage of 
+
+446
+00:25:28,200 --> 00:25:32,700
+security research. 
+Yeah, yeah. 
+
+447
+00:25:32,700 --> 00:25:36,400
+So I think the, the mechanics of
+the vulnerability were Interest 
+
+448
+00:25:36,400 --> 00:25:40,200
+in like, like, being able to 
+essentially, just do anything 
+
+449
+00:25:40,200 --> 00:25:45,500
+you want by. 
+If, if some user input was being
+
+450
+00:25:45,500 --> 00:25:49,700
+logged through log4j, then you 
+could do anything on the system 
+
+451
+00:25:49,700 --> 00:25:54,700
+and that it's pretty darn scary 
+for the end and it being in so 
+
+452
+00:25:54,700 --> 00:25:58,000
+many Legacy systems. 
+I think one of the interesting 
+
+453
+00:25:58,000 --> 00:26:01,599
+things about this is that we 
+think about solving some of 
+
+454
+00:26:01,599 --> 00:26:04,299
+these issues. 
+We think about solving it with 
+
+455
+00:26:04,299 --> 00:26:08,599
+today's technology. 
+So we're you know, house or how 
+
+456
+00:26:08,599 --> 00:26:14,400
+source code gets to production 
+and you can you can then go in 
+
+457
+00:26:14,400 --> 00:26:16,500
+and patch that pipeline, you 
+know. 
+
+458
+00:26:16,500 --> 00:26:18,599
+Patches first. 
+No. 
+
+459
+00:26:18,799 --> 00:26:20,799
+All right. 
+This production system has this 
+
+460
+00:26:20,799 --> 00:26:24,799
+vulnerability. 
+And so now we know how to ship a
+
+461
+00:26:24,807 --> 00:26:27,900
+new release with the fixed 
+version of it. 
+
+462
+00:26:27,900 --> 00:26:30,099
+But I think one of the things 
+that scariest, with lock for 
+
+463
+00:26:30,099 --> 00:26:34,500
+Shell, is that so much of the 
+usage of log for Shell is not 
+
+464
+00:26:34,500 --> 00:26:38,599
+doesn't exist in that During 
+World where we know how we know 
+
+465
+00:26:38,599 --> 00:26:42,200
+what's running in production and
+we know how to update it because
+
+466
+00:26:42,200 --> 00:26:44,200
+there's just so much enterprise 
+software out there. 
+
+467
+00:26:44,200 --> 00:26:48,200
+It's like some developer on 
+their machine creates a new war 
+
+468
+00:26:48,200 --> 00:26:53,700
+file and FTP is it to someplace 
+and you know like there's just 
+
+469
+00:26:53,700 --> 00:26:59,000
+so much and we don't have the 
+bill of materials the bomb s 
+
+470
+00:26:59,000 --> 00:27:02,200
+bomb whatever that that tells us
+what's actually running in 
+
+471
+00:27:02,200 --> 00:27:04,500
+production. 
+And so there's just all these 
+
+472
+00:27:04,500 --> 00:27:07,099
+instances with life force. 
+Well, it's like we have no idea 
+
+473
+00:27:07,099 --> 00:27:10,500
+what systems are actually 
+vulnerable to this because very,
+
+474
+00:27:10,500 --> 00:27:16,200
+because they existed pre build 
+pipeline, pre bomb, pre all the 
+
+475
+00:27:16,200 --> 00:27:17,599
+stuff? 
+Yeah. 
+
+476
+00:27:17,599 --> 00:27:18,799
+I think you're completely, 
+right. 
+
+477
+00:27:18,799 --> 00:27:22,299
+And that's been the, the 
+immediate scramble in most 
+
+478
+00:27:22,299 --> 00:27:27,400
+organizations that I've talked 
+to was just find all the places 
+
+479
+00:27:27,400 --> 00:27:29,599
+where we're using log4j and many
+times. 
+
+480
+00:27:29,599 --> 00:27:33,000
+It's like a Russian nesting 
+doll, right, where it's like 
+
+481
+00:27:33,099 --> 00:27:38,299
+inside a dwarf, I'll inside Our 
+payload inside a container image
+
+482
+00:27:38,299 --> 00:27:41,500
+inside repository somewhere. 
+And so, you know, that was the 
+
+483
+00:27:41,500 --> 00:27:43,700
+initial scramble that we that we
+saw. 
+
+484
+00:27:44,900 --> 00:27:46,700
+And, you know, honestly, a lot 
+of organizations are still 
+
+485
+00:27:46,700 --> 00:27:51,799
+scrambling on this front, you 
+know, solid month month later. 
+
+486
+00:27:51,799 --> 00:27:54,900
+A lot of great folks Lost first,
+a weekend. 
+
+487
+00:27:54,900 --> 00:27:57,099
+And then a lot of folks, I've 
+heard Lots their holidays, the 
+
+488
+00:27:57,099 --> 00:27:59,500
+majority of their holidays, just
+going and trying to do this 
+
+489
+00:28:00,200 --> 00:28:03,700
+archaeological dig to find all 
+the places where the vulnerable 
+
+490
+00:28:04,099 --> 00:28:08,400
+log4j. 
+Versions are so, you know, that 
+
+491
+00:28:08,400 --> 00:28:10,700
+sort of gets to one of the 
+opportunities. 
+
+492
+00:28:10,700 --> 00:28:15,099
+Going forward is like trying to 
+track all of those components 
+
+493
+00:28:15,400 --> 00:28:19,299
+the first place where it's, you 
+know, I think most feasible to 
+
+494
+00:28:19,299 --> 00:28:22,000
+do that is, you know, in the 
+software that your own 
+
+495
+00:28:22,000 --> 00:28:24,500
+organization creates, where, at 
+least you have you see the 
+
+496
+00:28:25,299 --> 00:28:28,299
+security or the application 
+development Pipeline and you can
+
+497
+00:28:28,299 --> 00:28:31,299
+instrument that, that's actually
+part of what, you know, the type
+
+498
+00:28:31,299 --> 00:28:34,000
+of solution does is, you know, 
+we have a tool there that keeps 
+
+499
+00:28:34,000 --> 00:28:37,200
+track of what went into. 
+Rebuild that gets goes through 
+
+500
+00:28:37,200 --> 00:28:40,099
+your pipeline and so, you know, 
+for our customers that had 
+
+501
+00:28:40,099 --> 00:28:43,099
+already rolled out our solution 
+and, you know, we're not the 
+
+502
+00:28:43,099 --> 00:28:46,799
+only solution but, you know, our
+solution when the, when the 
+
+503
+00:28:46,900 --> 00:28:50,099
+vulnerable log4j issue broke, 
+they were able to just type 
+
+504
+00:28:50,099 --> 00:28:53,799
+log4j into their, the tide lifts
+app and they can see all the 
+
+505
+00:28:53,799 --> 00:28:56,500
+builds historically, where that 
+person had gone and they have a 
+
+506
+00:28:56,500 --> 00:29:00,200
+roadmap. 
+Now, that's most organizations, 
+
+507
+00:29:00,200 --> 00:29:02,400
+don't even have that for the 
+applications that they're 
+
+508
+00:29:02,400 --> 00:29:04,700
+building themselves, right? 
+There's an opportunity to do 
+
+509
+00:29:04,700 --> 00:29:07,000
+that then. 
+The really hard question is what
+
+510
+00:29:07,000 --> 00:29:10,700
+about all of the third party? 
+You know, packaged software that
+
+511
+00:29:10,700 --> 00:29:15,500
+you're you're acquiring that is 
+you know also majority 
+
+512
+00:29:15,500 --> 00:29:18,400
+third-party open-source 
+components under the hood and 
+
+513
+00:29:18,400 --> 00:29:20,400
+that's where this whole 
+conversation around software, 
+
+514
+00:29:20,400 --> 00:29:24,900
+builds a material comes in and 
+the sort of always providing the
+
+515
+00:29:24,900 --> 00:29:29,500
+requirement or mandate to always
+provide an ingredient list with 
+
+516
+00:29:30,200 --> 00:29:34,099
+your your software application. 
+Even if you're, you know, 
+
+517
+00:29:34,700 --> 00:29:38,200
+selling it as a Whole solution 
+to another to another party. 
+
+518
+00:29:39,200 --> 00:29:45,799
+So, I have a question about do, 
+you know, half, I guess. 
+
+519
+00:29:45,799 --> 00:29:49,000
+I want to know how this thing 
+happened because it seems like 
+
+520
+00:29:49,500 --> 00:29:53,900
+the idea of putting call it an 
+interpreter in there that can 
+
+521
+00:29:53,900 --> 00:30:02,299
+run any code, would jump out at 
+you as, oh, maybe for debugging 
+
+522
+00:30:02,299 --> 00:30:07,099
+will have this in, but we don't 
+want this in Productions code. 
+
+523
+00:30:07,700 --> 00:30:10,799
+But you know, how does it feel 
+when you do the optical logical 
+
+524
+00:30:10,799 --> 00:30:14,599
+dig and you're like, why why was
+this ever there? 
+
+525
+00:30:15,000 --> 00:30:17,599
+What what's been discovered on 
+the front? 
+
+526
+00:30:17,799 --> 00:30:20,799
+Yeah, my understanding my 
+understanding, I don't know all 
+
+527
+00:30:20,799 --> 00:30:23,700
+of the details of this but my 
+general understanding is that 
+
+528
+00:30:23,700 --> 00:30:28,099
+the reason why this particular 
+interface still existed, was 
+
+529
+00:30:28,099 --> 00:30:32,400
+that actually that Enterprise, 
+there were Enterprise customers 
+
+530
+00:30:32,400 --> 00:30:36,500
+that relied on this some and 
+somewhere was using Is someone 
+
+531
+00:30:36,500 --> 00:30:39,400
+was using it and it would have 
+broken their workflow to turn 
+
+532
+00:30:39,400 --> 00:30:41,099
+this thing off. 
+And I believe, in the historical
+
+533
+00:30:41,099 --> 00:30:43,400
+record. 
+There's, there's there was a 
+
+534
+00:30:44,099 --> 00:30:48,900
+attempt to at least disable this
+by default, if not remove this 
+
+535
+00:30:49,299 --> 00:30:54,200
+capability, from the, from, from
+the project and it was, you 
+
+536
+00:30:54,200 --> 00:30:57,700
+know, it was rebuffed because 
+somebody relied on on that on 
+
+537
+00:30:57,700 --> 00:31:00,900
+that behavior, I believe that's 
+the that's the story that the 
+
+538
+00:31:00,900 --> 00:31:03,400
+general shape stories that I've 
+understood, which is, you know, 
+
+539
+00:31:03,400 --> 00:31:05,500
+get to the point. 
+That's another example. 
+
+540
+00:31:05,599 --> 00:31:08,099
+How hard it is to be an 
+independent open-source 
+
+541
+00:31:08,099 --> 00:31:11,200
+maintainer, you're trying to 
+trade off, you know, somebody 
+
+542
+00:31:11,200 --> 00:31:14,900
+really depends on it but you 
+know, it kind of presents a risk
+
+543
+00:31:14,900 --> 00:31:17,900
+to everybody else who uses this 
+and doesn't depend on it. 
+
+544
+00:31:18,099 --> 00:31:20,900
+You know. 
+Those are really hard trade-offs
+
+545
+00:31:20,900 --> 00:31:25,599
+that we just default to relying 
+on Independent open source 
+
+546
+00:31:25,599 --> 00:31:29,299
+maintainers to make. 
+And by the way, you know, a 
+
+547
+00:31:29,299 --> 00:31:33,299
+priori, we tend not to have done
+anything to help them or support
+
+548
+00:31:33,299 --> 00:31:37,000
+them for that prefer doing 
+Carrying that heavy lift. 
+
+549
+00:31:37,099 --> 00:31:40,000
+I mean, it gets to like how 
+there's much more involved in 
+
+550
+00:31:40,099 --> 00:31:42,700
+being a maintainer of an open 
+source project than just ready 
+
+551
+00:31:42,700 --> 00:31:45,400
+code, right. 
+You're also a judge and a jury 
+
+552
+00:31:45,400 --> 00:31:47,799
+and I don't know a lot of 
+things. 
+
+553
+00:31:48,400 --> 00:31:51,400
+Yeah. 
+Yeah, and I think the other 
+
+554
+00:31:51,400 --> 00:31:54,799
+scary element this is that 
+there's there's no way that this
+
+555
+00:31:54,799 --> 00:31:59,099
+is the the last time that we see
+this kind of vulnerability 
+
+556
+00:31:59,200 --> 00:32:02,700
+happen. 
+It seems like this is just going
+
+557
+00:32:02,700 --> 00:32:08,500
+to become much more of the norm 
+because they're the surface area
+
+558
+00:32:09,400 --> 00:32:14,200
+is so massive now for for 
+open-source usage across the 
+
+559
+00:32:14,200 --> 00:32:17,099
+world. 
+And so, so we're going to see 
+
+560
+00:32:17,099 --> 00:32:20,700
+another log for jail. 
+She'll probably in the X 3 to 6 
+
+561
+00:32:20,700 --> 00:32:28,200
+months and and now the security 
+researchers and hackers or think
+
+562
+00:32:28,200 --> 00:32:31,799
+more invigorated to find these 
+kinds of things. 
+
+563
+00:32:31,799 --> 00:32:37,099
+And so so they'll find them and 
+and yeah. 
+
+564
+00:32:37,099 --> 00:32:41,200
+So how do we like foundationally
+address some of the the 
+
+565
+00:32:41,200 --> 00:32:48,700
+challenges around this like is 
+there a world where we're 
+
+566
+00:32:49,200 --> 00:32:51,000
+vendor? 
+People that are consuming 
+
+567
+00:32:51,000 --> 00:32:54,799
+open-source better fund, the 
+security research themselves, so
+
+568
+00:32:54,799 --> 00:32:57,799
+that so that they're finding 
+these things ahead of the 
+
+569
+00:32:57,807 --> 00:32:59,700
+hackers, finding them, and that 
+sort of thing. 
+
+570
+00:32:59,700 --> 00:33:02,200
+I don't know. 
+What's your pants are? 
+
+571
+00:33:02,200 --> 00:33:05,200
+Not like, I think that's, I 
+think that's where it goes, 
+
+572
+00:33:05,200 --> 00:33:09,200
+right is so what do you need? 
+Okay, once this log for 
+
+573
+00:33:09,200 --> 00:33:12,900
+something has happened and that 
+felt bad first. 
+
+574
+00:33:12,900 --> 00:33:15,299
+First order of business is like 
+okay, we got to deal with this 
+
+575
+00:33:15,400 --> 00:33:18,599
+fire that we have right now and 
+then like let's how can we? 
+
+576
+00:33:19,200 --> 00:33:22,200
+It's all I care. 
+Erica more sins that we've built
+
+577
+00:33:22,200 --> 00:33:24,500
+Outlets that have a fire 
+department or something like 
+
+578
+00:33:24,500 --> 00:33:28,000
+that, right? 
+Actually think you know our 
+
+579
+00:33:28,000 --> 00:33:29,799
+perspective tie looks 
+perspective in the work that 
+
+580
+00:33:29,799 --> 00:33:32,099
+we're doing kind of bears on 
+both halves of that. 
+
+581
+00:33:32,099 --> 00:33:35,799
+So on the incident response 
+issue, you know, for 
+
+582
+00:33:35,799 --> 00:33:38,099
+organizations that have, you 
+know, like used our tool or 
+
+583
+00:33:38,099 --> 00:33:40,500
+other tools to instrument and 
+have a software bill of 
+
+584
+00:33:40,500 --> 00:33:44,299
+materials, they can respond much
+more quickly because they can 
+
+585
+00:33:44,299 --> 00:33:46,900
+find the hot spots, right? 
+They can go and they see the 
+
+586
+00:33:46,900 --> 00:33:49,099
+fire in the walls and they can 
+go pour water on, right? 
+
+587
+00:33:49,099 --> 00:33:51,200
+So that's part of this. 
+Lucien but then part of the 
+
+588
+00:33:51,200 --> 00:33:55,099
+solution is like, you know, 
+let's use fireproof materials or
+
+589
+00:33:55,099 --> 00:33:58,099
+let's have a fire lab that's 
+like seeing at the couches or 
+
+590
+00:33:58,099 --> 00:33:59,799
+super flammable or something 
+ahead of time. 
+
+591
+00:34:00,099 --> 00:34:02,900
+That's the point of how can we 
+address these things upstream? 
+
+592
+00:34:02,900 --> 00:34:06,900
+And you know, again part of our 
+model is we in addition to 
+
+593
+00:34:06,900 --> 00:34:10,199
+providing these tools to 
+organizations that are consuming
+
+594
+00:34:10,199 --> 00:34:13,199
+open source, we also have this 
+paid relationship with 
+
+595
+00:34:13,199 --> 00:34:15,699
+open-source maintainer is where 
+we ask them to do this in the 
+
+596
+00:34:15,900 --> 00:34:17,900
+early things. 
+The first things that we've done
+
+597
+00:34:17,900 --> 00:34:21,900
+or the basic hygiene items Help 
+us map, the security 
+
+598
+00:34:21,900 --> 00:34:26,199
+vulnerabilities to the impacted 
+versions of the packages and 
+
+599
+00:34:26,400 --> 00:34:27,900
+help us with the license 
+information. 
+
+600
+00:34:28,199 --> 00:34:32,099
+But, you know, the more 
+incentive that we provide there 
+
+601
+00:34:32,099 --> 00:34:34,500
+including in the form of 
+monetary compensation. 
+
+602
+00:34:34,900 --> 00:34:37,699
+The more we can ask those open 
+source maintainers to do like 
+
+603
+00:34:37,699 --> 00:34:42,400
+hey run this static analysis 
+tool or you know a buzzer tool 
+
+604
+00:34:42,400 --> 00:34:47,800
+to you know try random inputs 
+into your apis and there's all 
+
+605
+00:34:47,800 --> 00:34:49,900
+kinds of security practices that
+could be done. 
+
+606
+00:34:50,000 --> 00:34:53,800
+Done for almost any open source 
+package but you know, some of 
+
+607
+00:34:53,808 --> 00:34:56,199
+them they are but it's not 
+systematically done across all 
+
+608
+00:34:56,199 --> 00:34:58,000
+of them. 
+So we think part of the solution
+
+609
+00:34:58,000 --> 00:35:00,800
+is you know, by including those 
+open source maintainers and 
+
+610
+00:35:01,000 --> 00:35:05,300
+giving them a, you know, a good 
+incentive to do that we can we 
+
+611
+00:35:05,300 --> 00:35:10,400
+can we can trigger specific 
+preventative activities to be 
+
+612
+00:35:10,400 --> 00:35:13,400
+taken and there's also the 
+spillover effect, which just 
+
+613
+00:35:13,400 --> 00:35:16,500
+like the more income that 
+independent open source 
+
+614
+00:35:16,699 --> 00:35:19,900
+maintainers can derive from 
+their open source work the more 
+
+615
+00:35:20,000 --> 00:35:22,099
+I'm making kind of spend on it 
+in general, right? 
+
+616
+00:35:22,099 --> 00:35:26,599
+And prioritize that versus maybe
+their day job or leisure time or
+
+617
+00:35:26,607 --> 00:35:30,099
+whatever else they have on their
+plate, you know, they can spend 
+
+618
+00:35:30,099 --> 00:35:31,900
+more time on it. 
+We think that that will on the 
+
+619
+00:35:31,900 --> 00:35:34,900
+margin, help, head off, more of 
+these issues in the future. 
+
+620
+00:35:35,199 --> 00:35:37,400
+Is it going to complete his? 
+Everything would be fireproof 
+
+621
+00:35:37,400 --> 00:35:42,000
+forever, going forward? 
+No, nobody wants to live in a 
+
+622
+00:35:42,300 --> 00:35:44,699
+bestest purely, asbestos world. 
+Right. 
+
+623
+00:35:44,800 --> 00:35:47,599
+But you know, there are things 
+that we can do in a sort of, in 
+
+624
+00:35:47,699 --> 00:35:49,300
+sort of a measured approach, I 
+believe. 
+
+625
+00:35:50,099 --> 00:35:57,500
+So do you also try and provide 
+the tools for you know, testing 
+
+626
+00:35:57,500 --> 00:36:00,300
+the security for people because 
+it seems like that would be 
+
+627
+00:36:00,599 --> 00:36:03,000
+helpful. 
+Yeah, I mean, that's where we're
+
+628
+00:36:03,000 --> 00:36:06,000
+going is we try to show up with 
+both you know, monetary 
+
+629
+00:36:07,099 --> 00:36:09,599
+incentives and then also, you 
+know, list of things to be done,
+
+630
+00:36:09,599 --> 00:36:13,300
+but then we try to help, right? 
+So like an example is, you know,
+
+631
+00:36:13,300 --> 00:36:17,300
+one of the really painful things
+about the log4j incident, where 
+
+632
+00:36:17,500 --> 00:36:21,400
+this log4j vulnerability, the 
+one that's called, For Shell, is
+
+633
+00:36:21,400 --> 00:36:27,500
+that there was a there was not 
+a, my understanding is that 
+
+634
+00:36:27,500 --> 00:36:31,199
+there was not a complete 
+responsible disclosure process 
+
+635
+00:36:31,199 --> 00:36:34,900
+followed in advance of it sort 
+of breaking open wide, open on 
+
+636
+00:36:34,900 --> 00:36:37,500
+the internet. 
+There's my understanding from 
+
+637
+00:36:37,500 --> 00:36:41,599
+reading some of the, you know, 
+press around. 
+
+638
+00:36:41,599 --> 00:36:47,099
+This is that, you know, there 
+was log4j team was notified and 
+
+639
+00:36:47,099 --> 00:36:50,400
+November, I think was a team of 
+Alibaba and it Kind of didn't 
+
+640
+00:36:50,400 --> 00:36:53,500
+get there was not a cve assigned
+for it you know before it sort 
+
+641
+00:36:53,500 --> 00:36:55,800
+of was became widely known on 
+the internet. 
+
+642
+00:36:55,800 --> 00:37:02,599
+So just having more pre-wired 
+predefined process in place for 
+
+643
+00:37:02,599 --> 00:37:04,900
+what is going to happen. 
+I mean it's it's a simple 
+
+644
+00:37:04,900 --> 00:37:07,000
+technology, right? 
+It's not like a fancy code 
+
+645
+00:37:07,000 --> 00:37:10,900
+analysis thing but just having 
+that is a is a useful thing. 
+
+646
+00:37:10,900 --> 00:37:14,400
+And you know when we onboard new
+projects to be part of the tide 
+
+647
+00:37:14,400 --> 00:37:16,900
+lifts maintainer Network, we 
+asked them, do you already have 
+
+648
+00:37:16,900 --> 00:37:19,800
+a security response, plan and 
+policy and mechanism? 
+
+649
+00:37:20,000 --> 00:37:21,800
+Place. 
+If they don't then we have a 
+
+650
+00:37:21,800 --> 00:37:24,000
+default one that they can sign 
+up for will. 
+
+651
+00:37:24,000 --> 00:37:27,500
+We will help with the CD 
+creation and the security 
+
+652
+00:37:27,500 --> 00:37:31,099
+response. 
+You know activities? 
+
+653
+00:37:31,800 --> 00:37:34,400
+I mean if you were you know my 
+history is as James no-nos 
+
+654
+00:37:35,300 --> 00:37:37,300
+myself and actually all three of
+my co-founders. 
+
+655
+00:37:37,300 --> 00:37:41,699
+We spent time at red hat in the,
+you know, early days of 
+
+656
+00:37:41,699 --> 00:37:44,699
+Enterprise Linux there. 
+This is one of the things that 
+
+657
+00:37:44,699 --> 00:37:47,699
+internal Red Hat maintainers 
+have support with. 
+
+658
+00:37:47,900 --> 00:37:49,500
+There's a security response 
+team. 
+
+659
+00:37:49,900 --> 00:37:53,900
+It helps you when a new cve, 
+breaks to coordinate responding 
+
+660
+00:37:53,900 --> 00:37:56,099
+to it, you know, also reading 
+and writing it up and going 
+
+661
+00:37:56,099 --> 00:37:58,199
+through the responsible 
+disclosure, that's not 
+
+662
+00:37:58,199 --> 00:38:00,000
+opportunity. 
+Where independent open-source 
+
+663
+00:38:00,000 --> 00:38:03,900
+maintainer is typically don't 
+have that Service Bureau to rely
+
+664
+00:38:03,900 --> 00:38:05,099
+on. 
+They don't have a partner to 
+
+665
+00:38:05,099 --> 00:38:07,500
+rely on. 
+That's one of the things that 
+
+666
+00:38:07,500 --> 00:38:11,300
+were, you know, were advancing 
+the state of the art on with, 
+
+667
+00:38:12,099 --> 00:38:18,199
+with, with Tide lifts. 
+So is there a minimum size for a
+
+668
+00:38:18,199 --> 00:38:23,099
+project that You will because I 
+mean, you know, some of the 
+
+669
+00:38:23,699 --> 00:38:28,699
+JavaScript utilities can be very
+small. 
+
+670
+00:38:29,199 --> 00:38:31,400
+Yeah. 
+Well, no, because it doesn't 
+
+671
+00:38:31,400 --> 00:38:34,000
+solve the problem if there is 
+right, like, you know, there's 
+
+672
+00:38:34,000 --> 00:38:37,800
+the notorious left pad incident,
+write JavaScript library, that 
+
+673
+00:38:37,800 --> 00:38:42,400
+just adds, you know, why? 
+Some things on the left side of 
+
+674
+00:38:42,400 --> 00:38:45,900
+a string. 
+And, you know, it's a, in a 
+
+675
+00:38:45,908 --> 00:38:50,099
+sense of trivial package, right?
+A, you know most kind of Like 
+
+676
+00:38:50,099 --> 00:38:53,599
+you know, people make a joke out
+of it but when you use 
+
+677
+00:38:53,599 --> 00:38:56,800
+transitively by like thousands 
+hundreds of thousands of 
+
+678
+00:38:56,800 --> 00:38:59,900
+projects, she's everywhere as a 
+transitive dependency and when 
+
+679
+00:38:59,900 --> 00:39:02,199
+it got pulled there was you 
+know, an incident where the 
+
+680
+00:39:02,199 --> 00:39:04,900
+maintainer was frustrated, 
+pulled it from the npm 
+
+681
+00:39:04,900 --> 00:39:08,699
+repository, the internet broke. 
+So the reality is that even the 
+
+682
+00:39:08,699 --> 00:39:13,400
+these little tiny things have 
+this asymmetric risk profile, 
+
+683
+00:39:13,400 --> 00:39:17,400
+right log4j as well. 
+Like a lot of people never they 
+
+684
+00:39:17,400 --> 00:39:19,800
+got to start taking log4j for 
+granted, right? 
+
+685
+00:39:20,300 --> 00:39:24,199
+Java developers jvm developers, 
+it's kind of everywhere. 
+
+686
+00:39:24,199 --> 00:39:25,300
+You know, it's pretty 
+battle-tested. 
+
+687
+00:39:25,300 --> 00:39:27,000
+You don't think about it that 
+much. 
+
+688
+00:39:27,099 --> 00:39:30,900
+But then, you know, when this 
+issue broke it ended up, you 
+
+689
+00:39:30,900 --> 00:39:35,000
+know, taking over people's 
+holidays and, you know, losing 
+
+690
+00:39:35,300 --> 00:39:38,000
+any excuse, he is just perfect 
+for. 
+
+691
+00:39:38,000 --> 00:39:40,599
+For this, the one with the 
+blocks and the one little block 
+
+692
+00:39:40,599 --> 00:39:44,199
+maintained by some person in 
+Cincinnati on their evenings and
+
+693
+00:39:44,199 --> 00:39:46,000
+weekends or whatever. 
+It's exactly. 
+
+694
+00:39:46,000 --> 00:39:46,500
+Right? 
+Yeah. 
+
+695
+00:39:46,500 --> 00:39:48,599
+I know the one you're, I know 
+the one you're talking about, 
+
+696
+00:39:49,099 --> 00:39:50,699
+but yeah. 
+Yeah, it gets it gets to the 
+
+697
+00:39:50,699 --> 00:39:54,599
+challenge and that's why it's so
+hard for organizations to, you 
+
+698
+00:39:54,599 --> 00:39:57,900
+know, address this problem. 
+It's actually not a problem of 
+
+699
+00:39:57,900 --> 00:40:02,599
+a, it would be wrong to say to 
+State the problem as we need 
+
+700
+00:40:03,000 --> 00:40:06,800
+support for left pad. 
+Like, that's not actually the 
+
+701
+00:40:06,800 --> 00:40:09,900
+problem and they can't, you 
+know, again, it's another thing 
+
+702
+00:40:09,900 --> 00:40:13,699
+that that organizations are not 
+equipped to go sign up, 10,000 
+
+703
+00:40:13,800 --> 00:40:18,599
+different support policy, you 
+know, subscriptions or contracts
+
+704
+00:40:18,599 --> 00:40:20,699
+for all of their 10,000. 
+These that are constantly 
+
+705
+00:40:20,699 --> 00:40:22,699
+evolving. 
+They need help covering the 
+
+706
+00:40:22,699 --> 00:40:24,300
+whole thing. 
+And that help is. 
+
+707
+00:40:24,400 --> 00:40:28,400
+We think it needs both like 
+Automation and software as well 
+
+708
+00:40:28,400 --> 00:40:30,300
+as humans. 
+Who actually know the ground 
+
+709
+00:40:30,300 --> 00:40:33,500
+truth about the history of these
+things and it can impact the 
+
+710
+00:40:33,500 --> 00:40:35,099
+future of these projects as 
+well. 
+
+711
+00:40:35,699 --> 00:40:40,199
+Yeah, I mean if you think you're
+a startup today and you are 
+
+712
+00:40:40,199 --> 00:40:44,699
+building something with 
+software, the number of lines of
+
+713
+00:40:44,699 --> 00:40:49,400
+code and number of people that 
+you depend on from open source, 
+
+714
+00:40:49,400 --> 00:40:53,300
+is Just astronomical like 
+everything from the operating 
+
+715
+00:40:53,300 --> 00:40:57,300
+system to the languages, to the 
+Frameworks, to the like all of 
+
+716
+00:40:57,300 --> 00:41:01,900
+the pieces that you are, 
+depending on, you can't, you 
+
+717
+00:41:01,900 --> 00:41:05,500
+probably can't ship anything 
+today without having had 
+
+718
+00:41:05,500 --> 00:41:11,199
+depended, on 1,000 developers 
+that you don't know, and 
+
+719
+00:41:11,199 --> 00:41:13,699
+hundreds of thousands of lines 
+of code, millions of lines of 
+
+720
+00:41:13,699 --> 00:41:15,199
+code. 
+Like, I mean, everyone's using 
+
+721
+00:41:15,199 --> 00:41:19,400
+Linux and containers and 
+programming, like, like we're 
+
+722
+00:41:19,400 --> 00:41:21,400
+talking about, Hundreds of 
+millions of lines of code that 
+
+723
+00:41:21,400 --> 00:41:24,599
+you are dependent on just to 
+ship any piece of software 
+
+724
+00:41:24,599 --> 00:41:27,300
+today. 
+It's pretty astronomical the 
+
+725
+00:41:27,300 --> 00:41:32,500
+scale that we're at them lately,
+different economy than we've 
+
+726
+00:41:32,500 --> 00:41:37,900
+ever encountered before. 
+Yeah, yeah. 
+
+727
+00:41:37,900 --> 00:41:39,800
+So what are the right? 
+I mean that's the like, around 
+
+728
+00:41:40,000 --> 00:41:42,400
+the thing that I always have to 
+come back to is, you know, 
+
+729
+00:41:42,699 --> 00:41:45,500
+especially from vendors in this 
+space, you know, you get a lot 
+
+730
+00:41:45,500 --> 00:41:49,500
+of Doom and Gloom and you know, 
+like in the, in the beginning of
+
+731
+00:41:49,900 --> 00:41:51,500
+You know, open source management
+tools. 
+
+732
+00:41:51,500 --> 00:41:54,800
+It was like d, have the, are you
+infected with the open source? 
+
+733
+00:41:54,800 --> 00:41:57,199
+You know, that was sort of like 
+the posture of it or the energy 
+
+734
+00:41:57,199 --> 00:42:00,000
+behind it and it's just 
+completely the wrong way to 
+
+735
+00:42:00,000 --> 00:42:03,500
+approach the reality of this, 
+right? 
+
+736
+00:42:03,500 --> 00:42:05,800
+The reality is open source is 
+amazing. 
+
+737
+00:42:05,800 --> 00:42:08,800
+We got to find ways to make it 
+even amazing GE right. 
+
+738
+00:42:09,199 --> 00:42:10,900
+That's that's the big 
+opportunity. 
+
+739
+00:42:10,900 --> 00:42:13,900
+I think for businesses and 
+organizations and individuals 
+
+740
+00:42:13,900 --> 00:42:18,000
+around open source like what 
+yeah year was what year was 
+
+741
+00:42:18,000 --> 00:42:24,199
+Cathedral bizarre written. 
+Oh gosh, it's 70s or 80s. 
+
+742
+00:42:24,699 --> 00:42:27,099
+Oh I thought it was later than 
+that. 
+
+743
+00:42:27,199 --> 00:42:34,000
+Maybe I thought I was dating. 
+No cuz I remember Eric Lee 99 is
+
+744
+00:42:34,000 --> 00:42:35,800
+what? 
+Yeah, that sounds right? 
+
+745
+00:42:35,800 --> 00:42:40,500
+Because Eric Raymond said, t he 
+was annoyed with me at one point
+
+746
+00:42:40,500 --> 00:42:44,400
+because I had started giving 
+away thinking a Java and he's 
+
+747
+00:42:44,400 --> 00:42:46,699
+going. 
+No, no, I was the first one to 
+
+748
+00:42:46,699 --> 00:42:51,500
+give away but free on the 
+internet he was I wasn't but I 
+
+749
+00:42:51,500 --> 00:42:55,599
+remember him saying that that 
+that was, you know, so 
+
+750
+00:42:55,599 --> 00:43:00,199
+apparently I was number two. 
+So it seems like ancient history
+
+751
+00:43:00,199 --> 00:43:03,699
+that we lived in a world where 
+that book could exist. 
+
+752
+00:43:04,199 --> 00:43:08,099
+But it really wasn't that long 
+ago, 23 years ago, you're saying
+
+753
+00:43:08,599 --> 00:43:11,500
+is that right? 
+Like hell, it seems like it was 
+
+754
+00:43:11,500 --> 00:43:14,199
+a hundred years ago. 
+That and the world is so 
+
+755
+00:43:14,199 --> 00:43:17,900
+different in 23 years, just how 
+dependent we are. 
+
+756
+00:43:18,300 --> 00:43:21,199
+So, I wanted to talk for a 
+second about Dear the incentives
+
+757
+00:43:21,199 --> 00:43:23,800
+for maintainers. 
+So one of the issues that I see 
+
+758
+00:43:23,800 --> 00:43:29,000
+with with that model is that 
+many people their employer will 
+
+759
+00:43:29,000 --> 00:43:32,599
+not really let them get paid to 
+work on open source and yet 
+
+760
+00:43:32,599 --> 00:43:35,199
+provide a lot of Open Source. 
+Like how do you how do we deal 
+
+761
+00:43:35,199 --> 00:43:37,500
+with that? 
+Yeah, there's a couple of 
+
+762
+00:43:37,500 --> 00:43:41,300
+different ways that we've just 
+by going out and trying it, you 
+
+763
+00:43:41,300 --> 00:43:46,099
+know, do just getting started. 
+I think has been a huge, you 
+
+764
+00:43:46,099 --> 00:43:47,500
+know, way that we figure this 
+out. 
+
+765
+00:43:47,500 --> 00:43:50,900
+So, you know, if there's there 
+are Are some employers, which I 
+
+766
+00:43:50,900 --> 00:43:53,699
+think is kind of a retrograde 
+motion actually for employers to
+
+767
+00:43:53,699 --> 00:43:57,000
+prohibit, you know, any kind of 
+creative activities or 
+
+768
+00:43:57,000 --> 00:44:00,000
+commercial side activities. 
+It's going to go and going, 
+
+769
+00:44:01,199 --> 00:44:05,199
+decreasing in popularity, I hope
+going forward but in those cases
+
+770
+00:44:05,199 --> 00:44:10,300
+we can do things like attract 
+net new maintainers to a project
+
+771
+00:44:10,300 --> 00:44:12,699
+right. 
+And our experience with 
+
+772
+00:44:12,699 --> 00:44:16,300
+tight-lipped has been every time
+that we've gone to a independent
+
+773
+00:44:16,300 --> 00:44:22,099
+open-source maintainer and said 
+hey would Like to get paid to do
+
+774
+00:44:22,099 --> 00:44:25,599
+these additional assure, these 
+additional standards for your 
+
+775
+00:44:25,599 --> 00:44:29,599
+project when they say sorry, my 
+employer won't allow me to do 
+
+776
+00:44:29,599 --> 00:44:31,400
+it. 
+If we then come back and say 
+
+777
+00:44:31,500 --> 00:44:35,699
+would you be okay with us paying
+somebody else to help verify 
+
+778
+00:44:35,699 --> 00:44:38,599
+these standards for the project 
+and sort of join as a CO 
+
+779
+00:44:38,599 --> 00:44:41,000
+maintainer? 
+That's we have 100% take rate on
+
+780
+00:44:41,000 --> 00:44:42,900
+that, right? 
+Yeah, I'm sure this is like, 
+
+781
+00:44:43,000 --> 00:44:45,599
+it's again, we're talking about 
+the boring stuff that nobody 
+
+782
+00:44:45,599 --> 00:44:47,900
+wants to do by default, right? 
+So if it's like, can I pay 
+
+783
+00:44:47,900 --> 00:44:51,199
+somebody to come and paint your 
+Fence for you. 
+
+784
+00:44:51,599 --> 00:44:55,300
+Yeah, I mean people can have a 
+job just just being these paid 
+
+785
+00:44:55,300 --> 00:44:58,300
+maintainers of projects that 
+they didn't create, or maybe, 
+
+786
+00:44:58,599 --> 00:45:02,300
+you know, weren't any part of 
+the original founding team for 
+
+787
+00:45:02,699 --> 00:45:04,699
+but they could get paid to be a 
+maintainer on it. 
+
+788
+00:45:05,099 --> 00:45:07,099
+Yep. 
+And you know, so that's sort of 
+
+789
+00:45:07,099 --> 00:45:10,300
+one one, one framing. 
+Another thing that we've been 
+
+790
+00:45:10,300 --> 00:45:13,699
+working on over the last couple 
+of quarters actually has been 
+
+791
+00:45:14,099 --> 00:45:17,900
+working with some of our partner
+and maintainers to look after 
+
+792
+00:45:17,900 --> 00:45:21,300
+not just their core projects but
+The adjacent projects like their
+
+793
+00:45:21,300 --> 00:45:24,300
+first level dependencies or 
+packages that depend on them 
+
+794
+00:45:24,599 --> 00:45:27,699
+where they have some both 
+technical awareness, but also 
+
+795
+00:45:27,699 --> 00:45:31,500
+sort of like social contact with
+those packages. 
+
+796
+00:45:31,500 --> 00:45:34,000
+Oftentimes, they're sort of 
+likes, you know, either like Co 
+
+797
+00:45:34,000 --> 00:45:37,199
+maintainers or sort of like semi
+maintainers a pseudo maintainers
+
+798
+00:45:37,199 --> 00:45:38,699
+of those. 
+And so that's sort of like a 
+
+799
+00:45:38,707 --> 00:45:42,500
+neighborhood watch approach and 
+that actually has been easier 
+
+800
+00:45:42,500 --> 00:45:47,099
+for us to to facilitate because 
+we've taken some of the tools 
+
+801
+00:45:47,099 --> 00:45:49,500
+that we built for the 
+organizational. 
+
+802
+00:45:49,599 --> 00:45:53,199
+Zoomers of Open Source and we 
+can use those two and, you know,
+
+803
+00:45:53,199 --> 00:45:56,099
+which is all the conversation. 
+All about, like, how do I manage
+
+804
+00:45:56,099 --> 00:45:59,699
+this pile of Open Source? 
+We can also provide that tooling
+
+805
+00:45:59,699 --> 00:46:02,800
+to open source maintainers who 
+also have a pile of Open Source.
+
+806
+00:46:02,800 --> 00:46:04,500
+They have their package and then
+all the ones that they're 
+
+807
+00:46:04,500 --> 00:46:06,500
+dependent on. 
+So there's some some really cool
+
+808
+00:46:06,500 --> 00:46:08,400
+stuff that we're doing there 
+would sort of like a neighbor 
+
+809
+00:46:08,500 --> 00:46:12,400
+neighborhood watch model where 
+especially when it comes to 
+
+810
+00:46:12,900 --> 00:46:16,000
+wedding, verifying kind of 
+metadata about packages, which 
+
+811
+00:46:16,000 --> 00:46:18,400
+is, you know again where a lot 
+of this comes down to having a 
+
+812
+00:46:18,400 --> 00:46:21,199
+Superior Solution. 
+Avoiding the garbage in garbage 
+
+813
+00:46:21,199 --> 00:46:24,000
+out problem. 
+That's another lever that we can
+
+814
+00:46:24,099 --> 00:46:27,000
+that we can apply there, that's 
+cool. 
+
+815
+00:46:28,199 --> 00:46:33,800
+So my friend, our friend Bill 
+vinners, one of the ways that he
+
+816
+00:46:33,800 --> 00:46:40,800
+maintains Scala test is well his
+wife is Malaysian. 
+
+817
+00:46:40,800 --> 00:46:44,900
+So he spent time there and he 
+met in one of his trips long 
+
+818
+00:46:44,900 --> 00:46:47,000
+ago. 
+He met this young man who was 
+
+819
+00:46:47,000 --> 00:46:52,199
+really sharp and of course 
+whenever you offshore it's like 
+
+820
+00:46:52,199 --> 00:46:54,900
+you never know what you're 
+getting unless you have like 
+
+821
+00:46:54,900 --> 00:47:00,199
+some personal experience with 
+them and he's Using this guy for
+
+822
+00:47:01,099 --> 00:47:03,500
+a long time and he's able to 
+pay. 
+
+823
+00:47:03,500 --> 00:47:06,199
+I mean it doesn't cost Bill a 
+huge amount but he's able to pay
+
+824
+00:47:06,199 --> 00:47:09,599
+him more than he get by being a 
+programmer in his country. 
+
+825
+00:47:09,599 --> 00:47:13,900
+So it's like a complete win-win 
+situation and it seems like for 
+
+826
+00:47:13,900 --> 00:47:16,400
+some of the projects that you're
+talking about. 
+
+827
+00:47:16,400 --> 00:47:21,000
+That might be a resource You 
+Know It Off Shoring. 
+
+828
+00:47:21,699 --> 00:47:23,099
+Yeah. 
+When some people are self to 
+
+829
+00:47:23,099 --> 00:47:25,500
+offshoring, right. 
+Like so a couple of our you know
+
+830
+00:47:25,500 --> 00:47:31,000
+maintainers have opted into to 
+living in low-cost geographies 
+
+831
+00:47:31,000 --> 00:47:35,199
+specifically because they want 
+to be able to be full-time. 
+
+832
+00:47:35,199 --> 00:47:39,400
+Open source, maintainers, which 
+is really cool, really cool 
+
+833
+00:47:39,400 --> 00:47:41,900
+model. 
+And, you know, but in the 
+
+834
+00:47:41,900 --> 00:47:45,000
+fullness of time it shouldn't be
+necessary, right? 
+
+835
+00:47:45,000 --> 00:47:48,599
+Like if you just think about how
+much value are these folks 
+
+836
+00:47:48,599 --> 00:47:52,199
+creating, and how valuable is 
+the going through doing these 
+
+837
+00:47:52,199 --> 00:47:55,400
+additional boring parts for so 
+many big organizations that rely
+
+838
+00:47:55,400 --> 00:47:57,599
+on this stuff? 
+I mean third-party open source, 
+
+839
+00:47:57,599 --> 00:48:02,099
+software is Equally we see about
+70% of the application code in 
+
+840
+00:48:02,099 --> 00:48:05,000
+almost every Enterprise. 
+There's a lot of value there. 
+
+841
+00:48:05,000 --> 00:48:09,500
+And so you know our end game is 
+that we don't want to just you 
+
+842
+00:48:09,500 --> 00:48:12,300
+know people talk about open 
+source sustainability like will 
+
+843
+00:48:12,300 --> 00:48:14,099
+they starve? 
+Well, the open-source maintainer
+
+844
+00:48:14,099 --> 00:48:16,900
+starve. 
+We think the end game should be 
+
+845
+00:48:17,400 --> 00:48:20,000
+open-source maintainer, 
+maintainer ship. 
+
+846
+00:48:20,000 --> 00:48:23,599
+Should be like a celebrity, you 
+know, they should be rich right?
+
+847
+00:48:23,599 --> 00:48:28,000
+They should you know it's but 
+you know, like movie stars. 
+
+848
+00:48:28,099 --> 00:48:31,900
+Sore in technology closer to 
+home Creator, economies like 
+
+849
+00:48:31,900 --> 00:48:35,699
+Tick-Tock Stars, YouTube 
+creators, you know, the the the 
+
+850
+00:48:35,699 --> 00:48:39,400
+real the Stars on those 
+platforms are making millions of
+
+851
+00:48:39,400 --> 00:48:42,199
+dollars a year for their 
+creative work. 
+
+852
+00:48:42,800 --> 00:48:46,900
+Absolutely to me it seems much 
+easier to justify why open 
+
+853
+00:48:46,900 --> 00:48:51,300
+source maintainers and creators 
+should be able to make get rich 
+
+854
+00:48:51,300 --> 00:48:56,599
+doing doing this kind of work 
+because it directly contributes 
+
+855
+00:48:56,599 --> 00:49:01,400
+to economic You for every 
+organization that builds 
+
+856
+00:49:01,400 --> 00:49:03,199
+software of any kind. 
+So, that's sort of our part of 
+
+857
+00:49:03,207 --> 00:49:06,500
+the my decision and like the 
+mindset that we need to go 
+
+858
+00:49:06,500 --> 00:49:10,300
+through is an industry. 
+Is that are maybe capitalistic 
+
+859
+00:49:11,000 --> 00:49:15,099
+way of thinking says that the 
+value of something is what they 
+
+860
+00:49:15,099 --> 00:49:17,500
+charge for it. 
+And that's our that's the way 
+
+861
+00:49:17,500 --> 00:49:21,199
+that we typically think about 
+what value is but as you're 
+
+862
+00:49:21,199 --> 00:49:24,099
+saying open source has a ton of 
+value. 
+
+863
+00:49:24,300 --> 00:49:27,300
+It's just that our we're not 
+used to quantifying it or 
+
+864
+00:49:27,300 --> 00:49:29,800
+thinking about it. 
+It in in a way because it 
+
+865
+00:49:29,800 --> 00:49:32,400
+doesn't have a price tag. 
+Yeah. 
+
+866
+00:49:32,500 --> 00:49:37,000
+And so if we can, if we can find
+the opportunity, my opinion, if 
+
+867
+00:49:37,000 --> 00:49:42,300
+we can find the opportunities 
+for additional, you know, 
+
+868
+00:49:42,300 --> 00:49:47,099
+attributes that the software 
+could have, that would have to 
+
+869
+00:49:47,099 --> 00:49:49,099
+be paid for. 
+That's a way to sort of unlock 
+
+870
+00:49:49,099 --> 00:49:51,400
+that opportunity, right? 
+And so the you know will be 
+
+871
+00:49:51,400 --> 00:49:54,900
+focused on is the combination of
+tools to ensure that you're 
+
+872
+00:49:54,900 --> 00:49:59,400
+consuming this you know, vetted 
+open-source components to 
+
+873
+00:49:59,800 --> 00:50:03,099
+objective standards and then the
+Your ship of those independent 
+
+874
+00:50:03,099 --> 00:50:07,099
+open source maintainers to do 
+again, boring tedious, a lot of 
+
+875
+00:50:07,099 --> 00:50:11,800
+it is sort of like data 
+accounting style work to provide
+
+876
+00:50:11,800 --> 00:50:15,500
+clean data as an input to that 
+process, the combination of the 
+
+877
+00:50:15,500 --> 00:50:18,400
+software in the human parts is 
+something that's really valuable
+
+878
+00:50:18,400 --> 00:50:21,900
+to these organizations. 
+And, you know, part of, I think,
+
+879
+00:50:21,900 --> 00:50:23,900
+you know, we got started early. 
+We've been working on this for a
+
+880
+00:50:23,900 --> 00:50:27,000
+number of years at side, lift 
+the open source software supply 
+
+881
+00:50:27,000 --> 00:50:29,199
+chain Challenge. 
+And you know, in the early 
+
+882
+00:50:29,199 --> 00:50:31,500
+years, a lot of folks, kind of 
+looked at me and they said, 
+
+883
+00:50:31,500 --> 00:50:34,099
+yeah, that's I get it. 
+Yeah I can see why that would be
+
+884
+00:50:34,099 --> 00:50:37,199
+an issue but it kind of hasn't 
+been a problem yet. 
+
+885
+00:50:37,199 --> 00:50:41,300
+You know, like I don't know, we 
+use this stuff and you know but 
+
+886
+00:50:41,400 --> 00:50:43,900
+now increasingly it has been a 
+problem, right? 
+
+887
+00:50:43,900 --> 00:50:46,199
+Like log. 
+Michelle was a problem for every
+
+888
+00:50:46,199 --> 00:50:50,000
+organization that uses Java in 
+their application development 
+
+889
+00:50:50,199 --> 00:50:53,500
+and then even more recently, you
+know, like a really I think 
+
+890
+00:50:54,500 --> 00:51:00,099
+important new development that 
+has happened just two weeks ago 
+
+891
+00:51:00,599 --> 00:51:05,300
+the US Federal Trade Commission.
+The FTC came out with a very 
+
+892
+00:51:05,300 --> 00:51:12,000
+very blunt statement. 
+Warning all commercial 
+
+893
+00:51:12,000 --> 00:51:15,000
+organizations that they need to 
+pay attention to specifically 
+
+894
+00:51:15,000 --> 00:51:18,500
+this I mean they put out a 
+statement they said the duty to 
+
+895
+00:51:18,500 --> 00:51:20,900
+take reasonable steps to 
+mitigate known software, 
+
+896
+00:51:20,900 --> 00:51:25,500
+vulnerabilities implicates laws 
+including the FTC Act and the 
+
+897
+00:51:25,500 --> 00:51:28,300
+gramm-leach-bliley ACT. 
+That's the data privacy consumer
+
+898
+00:51:28,300 --> 00:51:32,099
+data Privacy Act. 
+They talk about the Cific 
+
+899
+00:51:32,099 --> 00:51:34,800
+example of Equifax number, the 
+Equifax breach. 
+
+900
+00:51:34,800 --> 00:51:36,599
+Those are some things to not in 
+space. 
+
+901
+00:51:36,900 --> 00:51:38,800
+Yeah. 
+Patchy struts project in that 
+
+902
+00:51:38,800 --> 00:51:40,800
+case, it was a known 
+vulnerability that had been 
+
+903
+00:51:41,000 --> 00:51:44,300
+disclosed and you know, had not 
+had not been patched, it was 
+
+904
+00:51:44,400 --> 00:51:48,199
+able to be exploited and the FTC
+they point to the fact that ft 
+
+905
+00:51:48,199 --> 00:51:51,500
+Equifax ended up with a seven 
+hundred million dollar 
+
+906
+00:51:51,500 --> 00:51:58,099
+settlement and then they the FTC
+concludes this you know advice 
+
+907
+00:51:58,099 --> 00:52:00,300
+advisory that they put out two 
+weeks ago. 
+
+908
+00:52:00,300 --> 00:52:05,400
+They say the f See intends to 
+use its full legal authority to 
+
+909
+00:52:05,400 --> 00:52:09,300
+pursue companies that fail to 
+take reasonable steps to protect
+
+910
+00:52:09,300 --> 00:52:13,699
+consumer data from exposure as a
+result of log4j or similar known
+
+911
+00:52:13,699 --> 00:52:16,599
+vulnerabilities in the future, 
+so it's like it's not 
+
+912
+00:52:16,599 --> 00:52:19,400
+theoretical anymore, right? 
+I mean, this is legal literally,
+
+913
+00:52:19,400 --> 00:52:21,099
+the US federal government 
+saying. 
+
+914
+00:52:21,599 --> 00:52:25,199
+Businesses can conducting, you 
+know, selling services and 
+
+915
+00:52:25,199 --> 00:52:26,900
+products in the US. 
+We are going to hold you 
+
+916
+00:52:26,900 --> 00:52:31,099
+accountable for data. 
+Privacy issues that arise from 
+
+917
+00:52:31,099 --> 00:52:35,199
+not having Taking reasonable 
+precautions against this, this 
+
+918
+00:52:35,199 --> 00:52:37,400
+kind of this kind of 
+vulnerability in this kind of 
+
+919
+00:52:37,400 --> 00:52:40,599
+issue. 
+What are reasonable precautions.
+
+920
+00:52:40,800 --> 00:52:42,599
+I think that's what we've been 
+talking about for the last hour,
+
+921
+00:52:42,599 --> 00:52:43,400
+right? 
+Yeah. 
+
+922
+00:52:43,599 --> 00:52:45,900
+Yeah. 
+What does that mean? 
+
+923
+00:52:45,900 --> 00:52:47,199
+What does that look like in the 
+future? 
+
+924
+00:52:47,199 --> 00:52:51,400
+But, but, yeah, I think I think 
+open source traditionally has 
+
+925
+00:52:51,400 --> 00:52:54,400
+been viewed as this free hot 
+dog. 
+
+926
+00:52:54,500 --> 00:53:00,800
+And now we're transitioning to, 
+oh, it's not the, it's not the 
+
+927
+00:53:00,800 --> 00:53:02,900
+free hot dog that I It was 
+anymore. 
+
+928
+00:53:02,900 --> 00:53:09,699
+I need to actually have some 
+ownership over how I'm consuming
+
+929
+00:53:09,900 --> 00:53:14,699
+this stuff and how I'm making 
+sure that it is maintained and 
+
+930
+00:53:14,699 --> 00:53:17,900
+secure and all the. 
+And by the way, the u.s. 
+
+931
+00:53:17,900 --> 00:53:20,500
+calculate food inspector just 
+pulled up in front of the in 
+
+932
+00:53:20,500 --> 00:53:22,099
+front of the hot dog stand, 
+right? 
+
+933
+00:53:23,099 --> 00:53:26,699
+That's a good metaphor falls. 
+Apart a little bit because 
+
+934
+00:53:26,699 --> 00:53:29,500
+because you eat your hot dog and
+and and that's kind of it. 
+
+935
+00:53:29,500 --> 00:53:32,699
+But with with open source 
+software like Like that. 
+
+936
+00:53:32,699 --> 00:53:36,400
+Any hot dog that you eat is part
+of your life forever. 
+
+937
+00:53:37,199 --> 00:53:39,699
+You are what you eat? 
+Hey, Uncle circumstances. 
+
+938
+00:53:41,800 --> 00:53:46,699
+Yeah. 
+Yeah, it seems like it seems 
+
+939
+00:53:46,699 --> 00:53:49,800
+like we are headed in a better 
+Direction. 
+
+940
+00:53:49,800 --> 00:53:56,400
+In terms of how we how we manage
+this this problem and how we 
+
+941
+00:53:57,000 --> 00:54:03,099
+ultimately does it come down to 
+reducing risk for open-source 
+
+942
+00:54:03,099 --> 00:54:06,500
+consumers. 
+And and that's the driving 
+
+943
+00:54:06,900 --> 00:54:10,000
+function of this. 
+I think it's just about balance,
+
+944
+00:54:10,000 --> 00:54:12,199
+right? 
+So like again, the the first 
+
+945
+00:54:12,199 --> 00:54:13,800
+order of business with open 
+sores, why? 
+
+946
+00:54:13,800 --> 00:54:16,599
+It's been so successful It's 
+about creating opportunity for 
+
+947
+00:54:16,599 --> 00:54:20,099
+everybody, right? 
+And especially the consumers of 
+
+948
+00:54:20,099 --> 00:54:22,300
+Open Source, this amazing 
+opportunity to get all this 
+
+949
+00:54:22,300 --> 00:54:25,000
+technology. 
+So that's the that's the core of
+
+950
+00:54:25,000 --> 00:54:27,099
+it. 
+Now it just needs to be done 
+
+951
+00:54:27,199 --> 00:54:29,699
+responsibly right? 
+Like the FTC says, take 
+
+952
+00:54:29,699 --> 00:54:31,900
+reasonable steps. 
+What is reasonable? 
+
+953
+00:54:32,300 --> 00:54:35,000
+Well, just burying your head in 
+the sand and hoping that there's
+
+954
+00:54:35,000 --> 00:54:37,599
+never going to be a security 
+vulnerability in thousands of 
+
+955
+00:54:37,599 --> 00:54:39,800
+packages that you use a critical
+security. 
+
+956
+00:54:39,800 --> 00:54:41,800
+Vulnerability. 
+That's not responsible. 
+
+957
+00:54:41,800 --> 00:54:44,000
+It's ignorant, right? 
+Like software has 
+
+958
+00:54:44,000 --> 00:54:45,900
+vulnerabilities, they They get 
+discovered over time. 
+
+959
+00:54:45,900 --> 00:54:49,099
+It doesn't mean I guess there 
+are some you know, theorem 
+
+960
+00:54:49,099 --> 00:54:52,800
+provers systems and so on that. 
+But that's not that's not 
+
+961
+00:54:52,800 --> 00:54:55,400
+mainstream software that people 
+are building with building 
+
+962
+00:54:55,400 --> 00:54:57,699
+applications with today in most 
+domains. 
+
+963
+00:54:57,699 --> 00:55:01,199
+And so you know we just have we 
+need a balanced approach that 
+
+964
+00:55:01,199 --> 00:55:05,300
+provides for that opportunity 
+and upside but you know takes 
+
+965
+00:55:05,300 --> 00:55:09,199
+some reasonable measures to 
+mitigate obvious risk that comes
+
+966
+00:55:09,199 --> 00:55:11,900
+along with it. 
+We shouldn't get too over 
+
+967
+00:55:11,900 --> 00:55:14,800
+focused on the risk, element of 
+it because again it's 
+
+968
+00:55:15,000 --> 00:55:17,699
+Incredible, you know that this 
+all exist to begin with. 
+
+969
+00:55:17,699 --> 00:55:21,099
+So we should celebrate that but 
+we should also be realistic and 
+
+970
+00:55:21,099 --> 00:55:23,599
+say, you know, we have to be 
+responsible in the way that we 
+
+971
+00:55:23,900 --> 00:55:27,300
+apply it and also responsible in
+the way that we partner with 
+
+972
+00:55:27,300 --> 00:55:31,699
+those open source creators and 
+find ways to, you know, work 
+
+973
+00:55:31,699 --> 00:55:35,199
+with them to get to a better 
+outcome for everybody, not just 
+
+974
+00:55:35,199 --> 00:55:38,800
+for the downstream consumers, 
+one of the metaphors that I 
+
+975
+00:55:38,800 --> 00:55:42,099
+think about it. 
+This is the organic brand and I 
+
+976
+00:55:42,099 --> 00:55:44,800
+don't have a my understanding, 
+this may be a little off. 
+
+977
+00:55:44,900 --> 00:55:48,099
+But the way that I understand it
+is that for something to use the
+
+978
+00:55:48,099 --> 00:55:53,800
+organic label on their food. 
+They have to pay money to an 
+
+979
+00:55:53,800 --> 00:55:55,800
+organization that owns that 
+brand. 
+
+980
+00:55:55,900 --> 00:55:59,900
+And then that organization makes
+sure that they are complying 
+
+981
+00:55:59,900 --> 00:56:03,699
+with a variety of organic 
+standards in order to label 
+
+982
+00:56:03,699 --> 00:56:07,000
+something as organic. 
+But it but it was it was a 
+
+983
+00:56:07,008 --> 00:56:11,199
+little bit of a chicken and egg 
+because the consumer had to want
+
+984
+00:56:11,199 --> 00:56:14,800
+the organic brand in order for 
+that brand to have value. 
+
+985
+00:56:15,000 --> 00:56:18,800
+For then, for the organization 
+behind organic to be able to, 
+
+986
+00:56:19,300 --> 00:56:24,300
+you know, have the guarantees of
+What organic means and but I 
+
+987
+00:56:24,300 --> 00:56:29,199
+kind of see a future of Open 
+Source where we go looking for 
+
+988
+00:56:29,500 --> 00:56:33,000
+some assurances and maybe that's
+a brand like organic or whatever
+
+989
+00:56:33,000 --> 00:56:38,599
+it may be, but we want to be 
+conveyed, some, some things that
+
+990
+00:56:38,599 --> 00:56:41,000
+the main that it's going to be 
+maintained that it's going to 
+
+991
+00:56:41,099 --> 00:56:45,300
+have security security process. 
+Behind it. 
+
+992
+00:56:45,300 --> 00:56:48,699
+You know, all those things that 
+yeah similar to we're getting a 
+
+993
+00:56:48,699 --> 00:56:51,199
+grant, has the organic one is an
+interesting one and you can even
+
+994
+00:56:51,199 --> 00:56:54,699
+maybe even more on point. 
+Now example would be like the 
+
+995
+00:56:54,699 --> 00:56:58,099
+Underwriters Laboratory 
+certification that you see when 
+
+996
+00:56:58,099 --> 00:57:01,599
+you buy a like electrical 
+project a product, you know, 
+
+997
+00:57:01,599 --> 00:57:11,400
+like on the wire the the plug I 
+remember growing up seeing that 
+
+998
+00:57:11,400 --> 00:57:13,400
+tag, you know. 
+That's been around forever. 
+
+999
+00:57:14,099 --> 00:57:16,699
+And yeah, I know, Scholar on 
+Underwriters Laboratory with my 
+
+1000
+00:57:16,699 --> 00:57:20,599
+like consumer sense for that is 
+that that's basically, you know,
+
+1001
+00:57:20,599 --> 00:57:23,699
+it's like a Testing Lab. 
+I think where they like take 
+
+1002
+00:57:23,699 --> 00:57:27,199
+the, you know, the appliance and
+they do some stuff and they see 
+
+1003
+00:57:27,199 --> 00:57:29,599
+doesn't like burst into flame 
+when you plug it in, you know, 
+
+1004
+00:57:29,599 --> 00:57:34,699
+is the insulation humble and I 
+guess my understanding of how 
+
+1005
+00:57:34,699 --> 00:57:38,699
+that works is the federal 
+government doesn't say You must 
+
+1006
+00:57:38,800 --> 00:57:41,800
+pay Underwriters Laboratory. 
+I think probably it's you know 
+
+1007
+00:57:41,900 --> 00:57:45,099
+you have to take reasonable 
+steps to ensure that your Your 
+
+1008
+00:57:45,599 --> 00:57:48,800
+products and appliances that you
+make are not dangerous and a 
+
+1009
+00:57:48,808 --> 00:57:52,199
+very reasonable step that you 
+can take is to, you know, pay 
+
+1010
+00:57:52,199 --> 00:57:55,500
+Underwriters Laboratory to do a 
+sort of independent analysis of 
+
+1011
+00:57:55,500 --> 00:57:57,199
+it and bet it. 
+So I think maybe that's another 
+
+1012
+00:57:57,199 --> 00:57:59,900
+example. 
+We can look to for patterns and,
+
+1013
+00:58:00,099 --> 00:58:02,800
+you know, it's going again, it's
+going from, I like to eat 
+
+1014
+00:58:02,800 --> 00:58:04,300
+healthy. 
+I'm looking for the organic 
+
+1015
+00:58:04,300 --> 00:58:08,199
+label to like, you know, I need 
+the government says, I have to 
+
+1016
+00:58:08,199 --> 00:58:11,099
+be responsible and offering my 
+products and services, where is 
+
+1017
+00:58:11,099 --> 00:58:14,400
+it place that I can go to get 
+some objective? 
+
+1018
+00:58:15,099 --> 00:58:21,400
+You know opinions or evidence to
+demonstrate that I am being 
+
+1019
+00:58:21,400 --> 00:58:26,400
+responsible in my activities. 
+Yeah and and being pushed 
+
+1020
+00:58:26,400 --> 00:58:30,099
+through the commercial side of 
+things because it's not the 
+
+1021
+00:58:30,099 --> 00:58:34,300
+maintainers who you know the 
+open-source creators who 
+
+1022
+00:58:35,900 --> 00:58:39,199
+hopefully we don't ever have 
+legislation that says to release
+
+1023
+00:58:39,199 --> 00:58:41,400
+open source. 
+You must do these things like 
+
+1024
+00:58:41,400 --> 00:58:45,000
+that would be I think the wrong 
+way to do it but from We would 
+
+1025
+00:58:45,000 --> 00:58:47,000
+have ruined, we would have 
+ruined the opportunity. 
+
+1026
+00:58:47,000 --> 00:58:51,099
+But yeah, the the cool thing is 
+that there's we can pull it from
+
+1027
+00:58:51,099 --> 00:58:55,000
+the other end and say like, you 
+know, open source gets created 
+
+1028
+00:58:55,000 --> 00:58:57,500
+for all these great reasons. 
+And that's a, that's an amazing 
+
+1029
+00:58:57,500 --> 00:59:00,099
+thing to celebrate and there's 
+demand. 
+
+1030
+00:59:00,099 --> 00:59:04,099
+There's Market Commercial demand
+for even additional assurances 
+
+1031
+00:59:04,099 --> 00:59:06,900
+on top of that. 
+What are new ways that we can 
+
+1032
+00:59:06,900 --> 00:59:08,699
+unlock that? 
+Look, it's not like totally 
+
+1033
+00:59:08,699 --> 00:59:10,800
+novel, right? 
+Like red hat and did that, you 
+
+1034
+00:59:10,808 --> 00:59:14,199
+know, 20 years ago, lots of Open
+Source companies have built 
+
+1035
+00:59:14,199 --> 00:59:17,400
+really Scale, businesses around 
+providing additional kinds of 
+
+1036
+00:59:17,400 --> 00:59:19,300
+services and insurance is around
+open source. 
+
+1037
+00:59:19,800 --> 00:59:23,300
+This particular Universe of tens
+of thousands of, you know, open 
+
+1038
+00:59:23,300 --> 00:59:27,900
+source packages, including left 
+pads, and log4j days and show so
+
+1039
+00:59:27,900 --> 00:59:30,500
+on. 
+I think it demands new fresh 
+
+1040
+00:59:30,500 --> 00:59:35,500
+approaches and business models 
+to figure out how to add the 
+
+1041
+00:59:35,500 --> 00:59:37,900
+right kind of assurances around 
+those. 
+
+1042
+00:59:37,900 --> 00:59:40,500
+And that's the opportunity. 
+You know, tide lifts, I'm glad 
+
+1043
+00:59:40,500 --> 00:59:42,000
+to say is part of it. 
+We're innovating it. 
+
+1044
+00:59:42,000 --> 00:59:43,300
+We're not going to solve the 
+whole thing. 
+
+1045
+00:59:43,300 --> 00:59:47,300
+I think we need the EFT 
+approaches and you know what? 
+
+1046
+00:59:47,300 --> 00:59:50,699
+We're crypto approaches and you 
+know a bunch of different folks.
+
+1047
+00:59:50,699 --> 00:59:53,599
+But you know that's the 
+marketplace will help find you? 
+
+1048
+00:59:53,599 --> 00:59:57,400
+No good solutions. 
+That provide a positive outcome 
+
+1049
+00:59:57,500 --> 00:59:59,300
+for everybody in the system I 
+think. 
+
+1050
+01:00:00,500 --> 01:00:03,800
+Yeah in the foundation's I think
+of played probation parole for 
+
+1051
+01:00:03,800 --> 01:00:07,199
+sure. 
+Yeah. 
+
+1052
+01:00:07,199 --> 01:00:11,199
+Well it's an exciting future. 
+I like like I think we're said 
+
+1053
+01:00:11,900 --> 01:00:14,400
+the world that we live in is so 
+much better than the world we 
+
+1054
+01:00:14,400 --> 01:00:17,500
+had before and there's some 
+improvements we can make to it. 
+
+1055
+01:00:17,500 --> 01:00:22,099
+But I'm so thankful that I can 
+just like pull the work of tens 
+
+1056
+01:00:22,099 --> 01:00:27,800
+of thousands of people to my 
+machine and have such high 
+
+1057
+01:00:27,800 --> 01:00:31,099
+productivity. 
+Like it's an amazing thing that 
+
+1058
+01:00:31,099 --> 01:00:34,699
+we have. 
+This huge vast open source. 
+
+1059
+01:00:36,699 --> 01:00:41,699
+Universe that we get to, to 
+build on top of one, y'all are 
+
+1060
+01:00:41,699 --> 01:00:43,099
+open-source creators as well, 
+right? 
+
+1061
+01:00:43,099 --> 01:00:45,500
+So thank you for the work that 
+you that you do there. 
+
+1062
+01:00:45,500 --> 01:00:47,900
+I mean James I've seen your 
+projects and efforts. 
+
+1063
+01:00:47,900 --> 01:00:51,699
+And so, you know, that's also 
+like another beautiful part of 
+
+1064
+01:00:51,707 --> 01:00:54,400
+the system is when you can be 
+both a consumer and a Creator 
+
+1065
+01:00:54,699 --> 01:00:57,300
+and almost every open source, 
+Creator is a consumer of other 
+
+1066
+01:00:57,300 --> 01:01:01,699
+open source as well, right? 
+Probably 100% and we'll just 
+
+1067
+01:01:01,699 --> 01:01:04,599
+thank you for thanks for thanks 
+for what you do for open source.
+
+1068
+01:01:04,599 --> 01:01:08,099
+And I have done in Open Source 
+before. 
+
+1069
+01:01:09,000 --> 01:01:11,000
+Yeah, it's fun. 
+I think it's I think one of the 
+
+1070
+01:01:11,000 --> 01:01:15,199
+cool things about being an 
+open-source contributor is there
+
+1071
+01:01:15,199 --> 01:01:19,599
+is this like Creative Energy 
+that you get to, you get to 
+
+1072
+01:01:19,800 --> 01:01:24,000
+create something that people 
+maybe use and yeah, it's it's 
+
+1073
+01:01:24,000 --> 01:01:31,599
+it's a very fulfilling thing to 
+be able to do that and be Bruce,
+
+1074
+01:01:31,599 --> 01:01:34,099
+any final thoughts? 
+Nope. 
+
+1075
+01:01:37,300 --> 01:01:39,400
+Well, Donald, thank you so much,
+thanks. 
+
+1076
+01:01:39,800 --> 01:01:42,500
+Thanks for all you do with 
+making open source work better 
+
+1077
+01:01:42,500 --> 01:01:45,400
+and yeah, it's an exciting 
+future. 
+
+1078
+01:01:45,500 --> 01:01:47,800
+So, thanks for joining us on our
+podcast. 
+
+1079
+01:01:48,400 --> 01:01:50,699
+Super fun to do it. 
+Thanks again for the invitation 
+
+1080
+01:01:50,699 --> 01:01:52,800
+and yet. 
+Thanks for thanks for putting 
+
+1081
+01:01:52,800 --> 01:01:55,199
+your creative efforts into into 
+this Outlet as well. 
+
+1082
+01:01:55,199 --> 01:01:58,000
+It's all fun to listen to the 
+podcast.
+

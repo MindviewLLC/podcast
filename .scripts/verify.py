@@ -16,6 +16,8 @@ Covers the "Verify before finishing" list in AGENTS.md:
   - no URL uses www.happypathprogramming.com (it only redirects)
   - llms.txt links every episode, guest and topic page, and llms-full.txt has
     a section for every episode
+  - every saved transcript belongs to an episode page that shows it, and
+    feed.xml points at it
 
     python3 .scripts/verify.py
 """
@@ -98,6 +100,33 @@ def check_feed() -> None:
         problems.append(f"feed.xml: no item for {url}")
     for url in sorted(links - want):
         problems.append(f"feed.xml: item links to a missing page {url}")
+
+
+def check_transcripts() -> None:
+    """transcripts/<slug>.srt: an episode page shows it and feed.xml links it."""
+    if not os.path.isdir("transcripts"):
+        return
+    try:
+        root = ET.parse("feed.xml").getroot()
+    except (OSError, ET.ParseError):
+        return  # check_feed reports it
+    in_feed = {t.get("url") for t in root.iter(hpp.PODCAST + "transcript")}
+    slugs = set(hpp.episode_slugs().values())
+    for name in sorted(os.listdir("transcripts")):
+        slug, ext = os.path.splitext(name)
+        path = f"transcripts/{name}"
+        if ext != ".srt" or slug not in slugs:
+            problems.append(f"{path}: not an episode's .srt transcript")
+            continue
+        doc = open(f"episodes/{slug}.html", encoding="utf-8").read()
+        if f'href="../{path}" download' not in doc or 'id="transcript"' not in doc:
+            problems.append(f"episodes/{slug}.html: doesn't show {path} "
+                            "(run .scripts/transcripts.py)")
+        if f"{SITE}/{path}" not in in_feed:
+            problems.append(f"feed.xml: no <podcast:transcript> for {path}")
+    for url in sorted(in_feed):
+        if not (url or "").startswith(SITE + "/") or not os.path.exists(url[len(SITE) + 1:]):
+            problems.append(f"feed.xml: <podcast:transcript> for a missing file {url}")
 
 
 def check_llms() -> None:
@@ -201,6 +230,7 @@ def main() -> None:
 
     check_feed()
     check_llms()
+    check_transcripts()
     # www. only redirects to the bare domain (domains.pkl), so no URL may use it
     for path in [*paths, "feed.xml", "sitemap.xml", "robots.txt", "llms.txt", "llms-full.txt"]:
         if "www.happypathprogramming.com" in open(path, encoding="utf-8").read():

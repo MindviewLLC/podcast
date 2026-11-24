@@ -1,0 +1,6510 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:08,000 --> 00:00:09,400
+All right. 
+Well, welcome everyone. 
+
+4
+00:00:09,400 --> 00:00:13,300
+Today we have with us, Mark, 
+mcgrann ahem, who I used to work
+
+5
+00:00:13,300 --> 00:00:16,700
+with, at Heroku, long ago. 
+So good to have you marks, you 
+
+6
+00:00:16,700 --> 00:00:18,800
+can say, hi, hey, thanks for 
+having me. 
+
+7
+00:00:19,800 --> 00:00:21,400
+Awesome. 
+And I'm wearing my Heroku. 
+
+8
+00:00:21,400 --> 00:00:22,700
+Sure. 
+Yeah, you're wearing your Hiroki
+
+9
+00:00:22,700 --> 00:00:26,200
+shirt to celebrate the Day of 
+talking to Mark, but we're not 
+
+10
+00:00:26,200 --> 00:00:28,200
+going to talk about Heroku. 
+There's no, I don't need that. 
+
+11
+00:00:28,200 --> 00:00:31,300
+It's been in my Twitter feed, 
+plenty over the last five weeks.
+
+12
+00:00:32,400 --> 00:00:37,200
+Yeah, due to a security and I 
+have some news, which is that 
+
+13
+00:00:37,200 --> 00:00:43,300
+the Summer Tech forum is 
+officially August 15th, the week
+
+14
+00:00:43,300 --> 00:00:45,700
+of August 15th. 
+So the five days there and 
+
+15
+00:00:45,800 --> 00:00:49,600
+little before in little after, 
+and you can find out about it at
+
+16
+00:00:49,600 --> 00:00:53,500
+summer, Tech Forum.com or just 
+search STFU. 
+
+17
+00:00:55,300 --> 00:00:57,000
+I don't think that'll work. 
+That's not. 
+
+18
+00:00:57,000 --> 00:01:01,100
+No, I don't think that'll work 
+search for summer tech for them 
+
+19
+00:01:01,100 --> 00:01:03,300
+unconference. 
+And if you if there's not enough
+
+20
+00:01:03,300 --> 00:01:07,100
+description or the overview is 
+we try and have experiences that
+
+21
+00:01:07,100 --> 00:01:09,700
+are very much. 
+This podcast, you know it's just
+
+22
+00:01:09,700 --> 00:01:13,600
+conversations and there aren't 
+you know there are no speakers. 
+
+23
+00:01:13,600 --> 00:01:16,100
+There's no set for lightning 
+talks and do some lightning. 
+
+24
+00:01:16,200 --> 00:01:18,300
+That's true. 
+We have speakers for five 
+
+25
+00:01:18,300 --> 00:01:19,700
+minutes at a time. 
+Yeah. 
+
+26
+00:01:19,900 --> 00:01:23,200
+But those and the lightning 
+talks can be on anything that 
+
+27
+00:01:23,200 --> 00:01:26,400
+interests you not just technical
+stuff and we've had in fact, 
+
+28
+00:01:26,400 --> 00:01:30,400
+most of the non technical stuff 
+is probably the more memorable 
+
+29
+00:01:30,400 --> 00:01:33,900
+lightning talks. 
+So but well, yeah, we have all 
+
+30
+00:01:33,900 --> 00:01:35,400
+kinds of stuff. 
+It's all described on the 
+
+31
+00:01:35,400 --> 00:01:39,400
+website as much as I Pamphlet, 
+people can join down in Crested 
+
+32
+00:01:39,400 --> 00:01:42,300
+Butte and the longest. 
+And, yeah, well do more of this?
+
+33
+00:01:42,300 --> 00:01:43,300
+Yes. 
+Exactly. 
+
+34
+00:01:44,200 --> 00:01:45,600
+Okay. 
+On to Mark. 
+
+35
+00:01:45,900 --> 00:01:50,400
+So thanks for joining us, Mark 
+and you have your own podcast 
+
+36
+00:01:50,600 --> 00:01:53,900
+and I've listened to a number of
+episodes and really enjoyed it 
+
+37
+00:01:53,900 --> 00:01:57,700
+with Adam also back from the 
+Heroku days. 
+
+38
+00:01:57,700 --> 00:02:02,900
+And but now you're you're off 
+doing a start-up ish called 
+
+39
+00:02:02,900 --> 00:02:04,700
+Muse. 
+And so, I want to hear about 
+
+40
+00:02:04,700 --> 00:02:07,600
+your journey to Muse and what 
+Muse is and all that. 
+
+41
+00:02:07,700 --> 00:02:12,200
+Kind of stuff. 
+Yeah, so maybe work backwards 
+
+42
+00:02:12,200 --> 00:02:16,700
+from the present, Muse is a tool
+for deep work on iPad and Mac. 
+
+43
+00:02:17,100 --> 00:02:20,200
+So we have this notion that 
+there's a lot of good software 
+
+44
+00:02:20,200 --> 00:02:24,000
+tools for production work like 
+video editing or creating La 
+
+45
+00:02:24,000 --> 00:02:25,600
+Tech documents or things like 
+that. 
+
+46
+00:02:25,700 --> 00:02:28,800
+But we were really interested in
+is that the messy middle of 
+
+47
+00:02:29,000 --> 00:02:32,500
+thinking brainstorming ideating,
+sketching, and we wanted to 
+
+48
+00:02:32,500 --> 00:02:35,100
+create software that capture 
+that process and the same way 
+
+49
+00:02:35,100 --> 00:02:37,300
+that a messy whiteboard or a 
+messy desk might. 
+
+50
+00:02:37,300 --> 00:02:41,500
+So Muse, is this multimedia 
+canvas for Imitating that 
+
+51
+00:02:41,500 --> 00:02:49,000
+creative process and then is it 
+so like is it for like mostly 
+
+52
+00:02:49,000 --> 00:02:53,800
+remote work like collaborating 
+with people not in the same room
+
+53
+00:02:53,800 --> 00:02:56,000
+as you or could you use it well 
+right now? 
+
+54
+00:02:56,000 --> 00:02:59,900
+Muse is actually for individuals
+so it's not yet collaborator we 
+
+55
+00:02:59,900 --> 00:03:02,400
+can talk about that. 
+That's an important aspects but 
+
+56
+00:03:02,400 --> 00:03:06,600
+it's it's for your own private 
+creative process for the same 
+
+57
+00:03:06,600 --> 00:03:08,800
+thing that you might use like a 
+notebook for people. 
+
+58
+00:03:08,800 --> 00:03:10,800
+Often often use that for 
+brainstorming an idea. 
+
+59
+00:03:11,000 --> 00:03:14,200
+It's catching as for capturing 
+that thinking process. 
+
+60
+00:03:15,300 --> 00:03:18,200
+Okay. 
+So I'm going to ask the obvious 
+
+61
+00:03:18,200 --> 00:03:25,600
+annoying question because I use 
+Windows for many large portion 
+
+62
+00:03:25,600 --> 00:03:29,400
+of the reason that I use Windows
+is because it annoys people but 
+
+63
+00:03:29,400 --> 00:03:31,800
+a lot of that. 
+But a lot of it is because the 
+
+64
+00:03:31,800 --> 00:03:34,100
+vast majority of machines out 
+their windows. 
+
+65
+00:03:34,200 --> 00:03:39,600
+So it what's your is this always
+just going to be for iOS stuff 
+
+66
+00:03:39,600 --> 00:03:43,400
+or It's your also galleys focus 
+on the Apple ecosystem and let 
+
+67
+00:03:43,400 --> 00:03:45,000
+me give you a little background 
+on why that is. 
+
+68
+00:03:45,100 --> 00:03:47,200
+First of all we did a lot of 
+customer research in the 
+
+69
+00:03:47,300 --> 00:03:48,800
+research lab as we can talk 
+about. 
+
+70
+00:03:48,900 --> 00:03:52,600
+But we found that a very large 
+proportion of creative 
+
+71
+00:03:52,600 --> 00:03:54,200
+professionals. 
+As you might broadly defined, it
+
+72
+00:03:54,200 --> 00:03:58,800
+did use the Apple ecosystem, 
+especially Max, and iPads. 
+
+73
+00:03:59,100 --> 00:04:02,300
+And that brings us to the iPad 
+and Views, actually started as 
+
+74
+00:04:02,300 --> 00:04:05,300
+an app only for the iPad because
+we felt like people were really 
+
+75
+00:04:06,000 --> 00:04:08,600
+missing the capability and 
+potential of that platform 
+
+76
+00:04:08,700 --> 00:04:10,600
+people bought. 
+We heard the story constantly 
+
+77
+00:04:10,600 --> 00:04:11,900
+week. 
+At the nitrous or problem. 
+
+78
+00:04:12,000 --> 00:04:15,700
+People, bought iPads with the 
+aspiration of doing all this 
+
+79
+00:04:15,700 --> 00:04:17,500
+creative work, that sort of 
+thing that you see in the Apple 
+
+80
+00:04:17,500 --> 00:04:19,100
+ads. 
+Like, you know, taking advantage
+
+81
+00:04:19,100 --> 00:04:22,300
+of the pencil and sketching and 
+it's very tactile surface. 
+
+82
+00:04:22,600 --> 00:04:24,000
+And then what they found was, I 
+was doing. 
+
+83
+00:04:24,900 --> 00:04:25,700
+Yeah. 
+Right. 
+
+84
+00:04:26,300 --> 00:04:28,900
+Very common, but, but then let 
+me know if this, this reflects 
+
+85
+00:04:28,900 --> 00:04:30,900
+your experience, what people 
+found themselves doing was 
+
+86
+00:04:30,900 --> 00:04:32,800
+watching Netflix and then 
+putting in their nightstand 
+
+87
+00:04:32,800 --> 00:04:35,500
+drawer because they didn't. 
+And the reason for that was that
+
+88
+00:04:35,500 --> 00:04:39,000
+there wasn't really software 
+that really enabled that tactile
+
+89
+00:04:39,000 --> 00:04:41,200
+creative expressive. 
+Ants. 
+
+90
+00:04:42,200 --> 00:04:45,300
+But we thought there was 
+potential specifically on the 
+
+91
+00:04:45,300 --> 00:04:48,300
+iPad and there are other tablets
+available, but especially at the
+
+92
+00:04:48,300 --> 00:04:51,500
+time when we started this, a few
+years ago, I've had, was by far 
+
+93
+00:04:51,500 --> 00:04:54,800
+the best in our opinion, really,
+the only one that was suitable 
+
+94
+00:04:55,000 --> 00:04:58,200
+at 120 hertz. 
+Refresh rate, incredible 
+
+95
+00:04:58,200 --> 00:05:00,800
+display, very fast processor, 
+things like that, that just made
+
+96
+00:05:00,800 --> 00:05:04,200
+it most suitable. 
+So who knows real teacher in 
+
+97
+00:05:04,200 --> 00:05:08,200
+the, it's interesting that the 
+iPad was kind of pitched as 
+
+98
+00:05:08,200 --> 00:05:10,600
+being this, like, Creator device
+like that. 
+
+99
+00:05:10,700 --> 00:05:14,700
+That Would be this like way that
+you could just Express all your 
+
+100
+00:05:14,700 --> 00:05:16,800
+creativity replacement for 
+paper. 
+
+101
+00:05:17,300 --> 00:05:19,600
+Yeah. 
+Um, but yeah, you're totally 
+
+102
+00:05:19,600 --> 00:05:23,400
+right there, was this huge 
+software Gap where it wasn't 
+
+103
+00:05:23,400 --> 00:05:24,900
+written. 
+There are some tools on it. 
+
+104
+00:05:24,900 --> 00:05:28,600
+I mean like things where you're 
+manipulating images and stuff, 
+
+105
+00:05:29,000 --> 00:05:31,000
+those are really nice on the 
+iPad. 
+
+106
+00:05:31,000 --> 00:05:31,900
+Yeah. 
+Yeah. 
+
+107
+00:05:31,900 --> 00:05:34,900
+There were a few like procreate 
+as I think a great example is 
+
+108
+00:05:34,900 --> 00:05:37,800
+maybe the biggest success story 
+of an app that was specifically 
+
+109
+00:05:37,800 --> 00:05:40,400
+designed for the iPad but that's
+a very rare. 
+
+110
+00:05:40,900 --> 00:05:43,400
+In most software that we saw. 
+And indeed that we still see 
+
+111
+00:05:43,400 --> 00:05:45,700
+today is what I call. 
+Transliterated, they either took
+
+112
+00:05:45,700 --> 00:05:47,900
+a phone app and made it bigger. 
+It took a desktop app and made 
+
+113
+00:05:47,900 --> 00:05:52,300
+it smaller and you're really 
+missing the unique capabilities 
+
+114
+00:05:52,300 --> 00:05:54,300
+and limitations of the tablet 
+form factor. 
+
+115
+00:05:54,300 --> 00:05:57,600
+If you do that, huh? 
+That's cool. 
+
+116
+00:05:58,500 --> 00:06:01,500
+I'll have to try Muse. 
+I'm sure try to have you ever 
+
+117
+00:06:01,900 --> 00:06:04,200
+known? 
+Yeah. 
+
+118
+00:06:04,300 --> 00:06:05,500
+Want to give it a try. 
+Yes. 
+
+119
+00:06:06,800 --> 00:06:10,200
+And so what kind of things do 
+you capture? 
+
+120
+00:06:10,200 --> 00:06:13,300
+Does it do? 
+But what's its magic? 
+
+121
+00:06:13,800 --> 00:06:16,500
+Yeah, so Muse, it starts to 
+blank canvas and first thing you
+
+122
+00:06:16,508 --> 00:06:18,700
+can do is ink and race as you 
+might expect. 
+
+123
+00:06:18,700 --> 00:06:24,100
+But then, you can also bring in 
+text links, images video, and 
+
+124
+00:06:24,100 --> 00:06:26,700
+you can combine them all on a 
+canvas and move them around 
+
+125
+00:06:26,700 --> 00:06:28,800
+freeform and group them and 
+things like that. 
+
+126
+00:06:28,800 --> 00:06:31,700
+And then you can also Nest these
+boards within each other. 
+
+127
+00:06:31,900 --> 00:06:34,500
+So you create the sort of Memory
+Palace of your creative 
+
+128
+00:06:34,500 --> 00:06:36,200
+thoughts, where you have 
+different boards for your 
+
+129
+00:06:36,200 --> 00:06:40,200
+different projects and ideas. 
+That reminds me of there's a 
+
+130
+00:06:40,200 --> 00:06:43,600
+tool. 
+Uh Lin that's out of the Czech 
+
+131
+00:06:43,600 --> 00:06:46,900
+Republic that people would use 
+for presentations. 
+
+132
+00:06:47,100 --> 00:06:48,800
+Oh yeah. 
+The one that like you could use 
+
+133
+00:06:48,800 --> 00:06:51,200
+your loom around and then come 
+out and it would like spin 
+
+134
+00:06:51,200 --> 00:06:57,100
+around and I can't remember the 
+name of that one set Prezi Prezi
+
+135
+00:06:57,300 --> 00:07:02,000
+Prezi, which is that was Elm was
+was like, they were building 
+
+136
+00:07:02,000 --> 00:07:04,200
+that an Elmer or something. 
+Yeah, it's right. 
+
+137
+00:07:04,200 --> 00:07:07,800
+It's right. 
+Yeah. 
+
+138
+00:07:07,800 --> 00:07:10,000
+And it sounds it sounds a 
+little. 
+
+139
+00:07:10,200 --> 00:07:13,200
+I mean, that was Purely for 
+presentations and it sounds like
+
+140
+00:07:13,200 --> 00:07:16,200
+you're trying to solve a 
+different problem. 
+
+141
+00:07:16,200 --> 00:07:18,400
+Although it also sounds like 
+this, could be used for a 
+
+142
+00:07:18,408 --> 00:07:20,500
+presentation. 
+Yeah. 
+
+143
+00:07:20,500 --> 00:07:23,900
+And people do do that sometimes 
+especially with the tablet and 
+
+144
+00:07:23,900 --> 00:07:25,700
+we have this feature called a 
+presenter pain which is a 
+
+145
+00:07:25,900 --> 00:07:28,100
+disappearing ink that goes away.
+After a few seconds you can use 
+
+146
+00:07:28,100 --> 00:07:30,100
+it to sort of Mark where you are
+and what you're talking about 
+
+147
+00:07:30,100 --> 00:07:32,000
+and stuff. 
+That's cool. 
+
+148
+00:07:32,600 --> 00:07:37,600
+Oh interesting be fun. 
+Okay yeah, so okay, so so tell 
+
+149
+00:07:37,600 --> 00:07:42,500
+us first about the the journey 
+to get to the Any of muse and 
+
+150
+00:07:42,500 --> 00:07:47,600
+kind of your startup Journey. 
+Yeah, well, let's go back to the
+
+151
+00:07:47,600 --> 00:07:51,400
+research lab that we spun out. 
+And so the the original founders
+
+152
+00:07:51,400 --> 00:07:55,800
+of the lab were actually, the 
+original founders of Roku and 
+
+153
+00:07:55,800 --> 00:07:58,500
+that group, and and then several
+people who would later join. 
+
+154
+00:07:58,800 --> 00:08:01,400
+They all came from this world of
+like Enterprise SAS. 
+
+155
+00:08:01,400 --> 00:08:04,900
+Basically the typical Cloud 
+software that we all know and 
+
+156
+00:08:04,908 --> 00:08:08,600
+love and there's a lot that's 
+great in that world, but the 
+
+157
+00:08:08,600 --> 00:08:11,400
+founders of the lab they had 
+this hunch, that there was 
+
+158
+00:08:11,500 --> 00:08:13,800
+something that we were missing 
+and not exploring. 
+
+159
+00:08:14,000 --> 00:08:18,300
+And that was the original 
+Promise of computers as a way to
+
+160
+00:08:18,300 --> 00:08:22,500
+Aid creative thinking, right? 
+Like computers have become very 
+
+161
+00:08:22,500 --> 00:08:26,800
+good at well, a social stuff 
+like media and consumption. 
+
+162
+00:08:27,100 --> 00:08:30,400
+Incredible advances there. 
+And also Enterprise stuff like 
+
+163
+00:08:30,700 --> 00:08:32,799
+that, we talked about Salesforce
+earlier that there's all kinds 
+
+164
+00:08:32,799 --> 00:08:37,100
+of apps, but computers, as a 
+kind of creative tool bicycle 
+
+165
+00:08:37,100 --> 00:08:39,400
+for the mind, we kind of lost 
+the plot on that. 
+
+166
+00:08:39,400 --> 00:08:42,200
+We think a little bit and we had
+some hype up. 
+
+167
+00:08:42,500 --> 00:08:46,700
+The founders had some hypotheses
+as to, why that was And so the 
+
+168
+00:08:46,700 --> 00:08:50,700
+lab was had a goal. 
+It sounds like they said we want
+
+169
+00:08:50,700 --> 00:08:53,800
+to set up a lab to discover this
+original purpose. 
+
+170
+00:08:54,300 --> 00:08:58,600
+Yes, the idea with the lab was 
+to advance this field of call it
+
+171
+00:08:58,600 --> 00:09:03,000
+creative Computing and the 
+reason that they set it up as an
+
+172
+00:09:03,000 --> 00:09:06,300
+industrial research lab was the 
+following, there's two 
+
+173
+00:09:06,300 --> 00:09:09,900
+well-known paths for advancing 
+Computing, one is the startup 
+
+174
+00:09:10,300 --> 00:09:12,700
+and the startup is a very 
+well-trodden path. 
+
+175
+00:09:12,700 --> 00:09:15,800
+But the thing about a start-up 
+is you need to be within In call
+
+176
+00:09:15,800 --> 00:09:19,700
+it one, two, maybe three years 
+of a commercially viable product
+
+177
+00:09:20,100 --> 00:09:22,300
+for that to work. 
+It's really hard to get Venture 
+
+178
+00:09:22,300 --> 00:09:26,000
+funding for something. 
+That's say, 10 years away on the
+
+179
+00:09:26,000 --> 00:09:29,600
+flip side, there's Academia and 
+Academia is amazing for 
+
+180
+00:09:29,700 --> 00:09:31,900
+generating. 
+All these great new fundamental 
+
+181
+00:09:31,900 --> 00:09:35,800
+ideas that indeed may or may not
+have any application to the 
+
+182
+00:09:35,800 --> 00:09:38,200
+industrial world and that's kind
+of the beauty of it. 
+
+183
+00:09:38,400 --> 00:09:41,400
+And often those ideas do find 
+their way into production, but 
+
+184
+00:09:41,400 --> 00:09:43,200
+it might take say, 10 or 15 
+years. 
+
+185
+00:09:43,600 --> 00:09:46,500
+And so there's this. 
+In Middle, this Valley of Death.
+
+186
+00:09:46,500 --> 00:09:51,300
+Where if you're five years away,
+say from an idea, if you kind of
+
+187
+00:09:51,300 --> 00:09:53,200
+see it out there in a distance, 
+but it's not quite 
+
+188
+00:09:53,200 --> 00:09:55,400
+commercializable yet. 
+Your, you were kind of out of 
+
+189
+00:09:55,400 --> 00:09:58,200
+luck and the way that we used to
+solve this back in the day, was 
+
+190
+00:09:58,200 --> 00:10:01,900
+the Industrial research lab, and
+that's this organization that 
+
+191
+00:10:02,000 --> 00:10:06,400
+brings together insights from 
+Academia and Industry and 
+
+192
+00:10:06,400 --> 00:10:09,200
+targets that call it five year 
+time Horizon. 
+
+193
+00:10:09,400 --> 00:10:11,700
+And that's what the lab Founders
+felt like, was the right thing 
+
+194
+00:10:11,700 --> 00:10:14,100
+to go after for this creative 
+Computing space, because there 
+
+195
+00:10:14,100 --> 00:10:17,100
+were all these pieces Isis that 
+we saw around. 
+
+196
+00:10:17,100 --> 00:10:21,700
+And there was this potential on 
+this need that, they saw, but 
+
+197
+00:10:21,700 --> 00:10:24,400
+need a little bit more time. 
+So that was the idea with lab. 
+
+198
+00:10:24,900 --> 00:10:28,700
+So this is like the Xerox Parc 
+thing, which it's wild. 
+
+199
+00:10:28,700 --> 00:10:32,100
+How many of our current things 
+in Computing? 
+
+200
+00:10:32,100 --> 00:10:35,000
+Trace back to Xerox, Parc and 
+the research that was done 
+
+201
+00:10:35,000 --> 00:10:38,300
+there. 
+So trying to like do that same 
+
+202
+00:10:38,300 --> 00:10:42,700
+thing but specifically focused 
+on on creativity, the creative 
+
+203
+00:10:43,000 --> 00:10:46,700
+Computing connectivity. 
+And that's cool. 
+
+204
+00:10:47,500 --> 00:10:52,300
+So so the, the some of the 
+Heroku, folks, all the Heroku, 
+
+205
+00:10:52,300 --> 00:10:55,600
+folks created this, this 
+research lab and yeah, that fun 
+
+206
+00:10:55,800 --> 00:10:57,800
+Roku co-founders. 
+I started it. 
+
+207
+00:10:57,800 --> 00:11:00,900
+And then several other folks 
+ended up joining as principals, 
+
+208
+00:11:00,900 --> 00:11:03,300
+Peter Von hardenberg, relatively
+early. 
+
+209
+00:11:03,300 --> 00:11:08,400
+And then myself later, and then 
+let you down the band back 
+
+210
+00:11:08,400 --> 00:11:09,200
+together. 
+Yeah. 
+
+211
+00:11:09,200 --> 00:11:11,900
+A little bit of that, but that 
+but also it was one of the 
+
+212
+00:11:11,908 --> 00:11:14,300
+reasons the lab was wasn't is so
+amazing. 
+
+213
+00:11:14,300 --> 00:11:16,800
+Is that it had this This has a 
+particular Talent model where it
+
+214
+00:11:16,800 --> 00:11:20,900
+brings people from all over the 
+world you know, literally but 
+
+215
+00:11:20,900 --> 00:11:23,100
+also in terms of different 
+stages of their career and for 
+
+216
+00:11:23,100 --> 00:11:25,900
+different time periods and 
+different capacities and so it 
+
+217
+00:11:25,900 --> 00:11:31,500
+ended up being this really cool 
+fertile ground for ideas, around
+
+218
+00:11:31,500 --> 00:11:34,400
+creative Computing. 
+So when it was started there 
+
+219
+00:11:34,400 --> 00:11:37,700
+maybe wasn't ideas around. 
+What what was going to come out 
+
+220
+00:11:37,700 --> 00:11:39,200
+of? 
+It was just like, all right, 
+
+221
+00:11:39,200 --> 00:11:42,400
+let's let's start. 
+Let's get these people together 
+
+222
+00:11:42,400 --> 00:11:46,600
+and start brainstorming and 
+Yeah, I think I would have to go
+
+223
+00:11:46,600 --> 00:11:48,700
+back and look at the original, 
+like, pitch deck to see what 
+
+224
+00:11:48,700 --> 00:11:52,000
+exactly they knew at the time 
+versus they know now. 
+
+225
+00:11:52,000 --> 00:11:55,000
+But I think there was like, 
+these, these hunches of, we feel
+
+226
+00:11:55,000 --> 00:11:56,900
+like we could be doing better 
+for Creative Computing. 
+
+227
+00:11:56,900 --> 00:12:00,200
+I think there was a hunch around
+touch interfaces and tablets. 
+
+228
+00:12:00,600 --> 00:12:03,100
+Where, if you go back five years
+tablets where they were really 
+
+229
+00:12:03,100 --> 00:12:06,000
+breaking out and like you can 
+see if you if you mapped it 
+
+230
+00:12:06,000 --> 00:12:08,400
+Forward, three five, ten years, 
+how they could become this. 
+
+231
+00:12:08,400 --> 00:12:11,700
+Incredible Computing platform. 
+There was some hunches around 
+
+232
+00:12:11,700 --> 00:12:14,200
+the technology we know what 
+eventually became local first. 
+
+233
+00:12:15,400 --> 00:12:17,600
+But it again, I need a little 
+bit more time to fully play out.
+
+234
+00:12:17,600 --> 00:12:21,000
+They wanted to give it that time
+so that you weren't reaching 
+
+235
+00:12:21,000 --> 00:12:23,100
+only for things that were within
+say a year. 
+
+236
+00:12:23,700 --> 00:12:27,100
+And you wanted to have more of 
+an exploratory attitude as you 
+
+237
+00:12:27,100 --> 00:12:30,600
+might in Academia. 
+But sort of grounded in these 
+
+238
+00:12:30,600 --> 00:12:32,500
+inputs and factors that you're 
+drawing from the industrial 
+
+239
+00:12:32,500 --> 00:12:37,400
+world. 
+So did the is does the lab still
+
+240
+00:12:37,400 --> 00:12:39,100
+exist? 
+Or did they dissolve it? 
+
+241
+00:12:39,100 --> 00:12:43,000
+Once you started this, the labs 
+still exists as going as strong 
+
+242
+00:12:43,000 --> 00:12:44,700
+as ever. 
+There's actually a lot of Great 
+
+243
+00:12:44,700 --> 00:12:46,900
+publishing coming out of lab. 
+You can check out and can switch
+
+244
+00:12:47,400 --> 00:12:50,900
+on the search engine and it's 
+was that fun. 
+
+245
+00:12:52,100 --> 00:12:56,200
+It tends to work as a series of 
+projects often in different 
+
+246
+00:12:56,200 --> 00:12:59,900
+lines of research so the lab 
+would have typically a pi at the
+
+247
+00:12:59,900 --> 00:13:03,500
+lab would have some hunch of you
+know I read this paper on crtc's
+
+248
+00:13:03,500 --> 00:13:05,200
+for example it seems like 
+there's something cool there. 
+
+249
+00:13:05,300 --> 00:13:07,400
+Let's put together a three-month
+project around it. 
+
+250
+00:13:07,400 --> 00:13:11,400
+Maybe two, three, four people. 
+And try to build a prototype app
+
+251
+00:13:11,400 --> 00:13:15,200
+that uses CRT TVs or we think 
+that something Authentication, 
+
+252
+00:13:15,200 --> 00:13:17,400
+let's explore that for a few 
+months and do some prototypes 
+
+253
+00:13:17,400 --> 00:13:20,600
+around using no, no, no barcodes
+for authentication or something,
+
+254
+00:13:20,600 --> 00:13:21,900
+I don't know. 
+Yeah. 
+
+255
+00:13:22,700 --> 00:13:26,900
+And then but then over time you 
+tend to get these like patterns.
+
+256
+00:13:26,900 --> 00:13:29,300
+And you got these strings that 
+you are pulling on that seemed 
+
+257
+00:13:29,300 --> 00:13:32,000
+more and more viable and two of 
+those that ended up being 
+
+258
+00:13:32,000 --> 00:13:35,200
+relevant from use. 
+So one is what became local 
+
+259
+00:13:35,200 --> 00:13:36,600
+first. 
+And we can talk a lot about 
+
+260
+00:13:36,600 --> 00:13:39,500
+local first, but that was a very
+important one. 
+
+261
+00:13:39,900 --> 00:13:41,900
+This just new way of 
+architecting applications and 
+
+262
+00:13:41,900 --> 00:13:44,900
+the other was touch interfaces 
+and tablets and how To design 
+
+263
+00:13:44,900 --> 00:13:47,000
+those to be suitable for 
+especially this type of creative
+
+264
+00:13:47,000 --> 00:13:50,000
+work. 
+And what happened was those two 
+
+265
+00:13:50,100 --> 00:13:52,800
+lines of research got fairly far
+Advanced. 
+
+266
+00:13:52,800 --> 00:13:55,400
+We had done a series of projects
+and both of them. 
+
+267
+00:13:55,500 --> 00:13:58,300
+We felt like we had we were 
+really onto something but that 
+
+268
+00:13:58,300 --> 00:14:01,900
+to further explore and realize 
+them you would need to bring 
+
+269
+00:14:01,900 --> 00:14:04,100
+them into the commercial world. 
+You need to test them with more 
+
+270
+00:14:04,100 --> 00:14:06,000
+real users. 
+And you need to the 
+
+271
+00:14:06,000 --> 00:14:08,700
+corresponding Capital to effect 
+a real product. 
+
+272
+00:14:09,300 --> 00:14:12,200
+And so at that point, we spun 
+out, Muse. 
+
+273
+00:14:12,500 --> 00:14:19,200
+So, Adam, Yulia and myself were 
+three people working in the lab 
+
+274
+00:14:19,300 --> 00:14:23,100
+spun out as co-founders to start
+this new Venture in the labs 
+
+275
+00:14:23,500 --> 00:14:25,100
+still going. 
+Yeah. 
+
+276
+00:14:25,300 --> 00:14:29,300
+But this is now a commercial 
+entity ice and how long ago did 
+
+277
+00:14:29,300 --> 00:14:30,700
+Muse? 
+Spin out. 
+
+278
+00:14:31,500 --> 00:14:33,700
+I want to say about if years ago
+now. 
+
+279
+00:14:34,200 --> 00:14:36,700
+Okay. 
+And I saw that you just had 
+
+280
+00:14:36,700 --> 00:14:40,800
+mused 2.0 released this week is.
+All right, we did. 
+
+281
+00:14:40,800 --> 00:14:44,400
+And that the Keystone of this 
+was this local first idea. 
+
+282
+00:14:44,500 --> 00:14:48,800
+Yeah, which in turn enabled us 
+to bring Muse, to the mac and a 
+
+283
+00:14:48,800 --> 00:14:51,100
+synchronized across devices. 
+And until recently, Muse was 
+
+284
+00:14:51,100 --> 00:14:54,000
+like a single player single 
+device app, like kind of a 
+
+285
+00:14:54,008 --> 00:14:56,900
+classic app store app, that you 
+just install and ran locally and
+
+286
+00:14:56,908 --> 00:15:01,000
+all the data was local and it 
+actually works quite well. 
+
+287
+00:15:01,000 --> 00:15:02,800
+It works in this, it works the 
+same way that I can notebook 
+
+288
+00:15:02,800 --> 00:15:03,900
+work. 
+So, you know, it's always right 
+
+289
+00:15:03,900 --> 00:15:05,200
+there. 
+It's always fast. 
+
+290
+00:15:05,600 --> 00:15:07,300
+It's not going to go away at the
+end that's down or something. 
+
+291
+00:15:07,900 --> 00:15:11,100
+But we wanted to start to bring 
+in some of the capabilities that
+
+292
+00:15:11,100 --> 00:15:12,500
+you expect from like a normal 
+Cloud at them. 
+
+293
+00:15:12,500 --> 00:15:14,400
+So that's where local first 
+came. 
+
+294
+00:15:14,500 --> 00:15:18,800
+And a lot of us to have both 
+that Mac app and an iPad now. 
+
+295
+00:15:19,500 --> 00:15:23,800
+Okay, so initially there wasn't 
+there wasn't necessarily like a 
+
+296
+00:15:23,800 --> 00:15:28,400
+Cloud sync model for the data or
+is that is that right? 
+
+297
+00:15:28,400 --> 00:15:30,700
+We like there, right? 
+Yeah, the the can use one was 
+
+298
+00:15:30,700 --> 00:15:33,900
+all local and we've from the 
+very beginning. 
+
+299
+00:15:33,900 --> 00:15:38,100
+We've expected Muse to be multi 
+device, it should be on, at 
+
+300
+00:15:38,100 --> 00:15:42,000
+least the iPhone, the iPad, the 
+mac and the web and and to be 
+
+301
+00:15:42,000 --> 00:15:44,100
+probably probably be 
+collaborative but we had to 
+
+302
+00:15:44,108 --> 00:15:46,600
+start. 
+Somewhere and we chose the iPad 
+
+303
+00:15:46,600 --> 00:15:50,900
+because it's iPad is the device.
+Most suited to this creative 
+
+304
+00:15:50,900 --> 00:15:53,400
+brainstorming ideology. 
+Want to sit back in a comfy 
+
+305
+00:15:53,400 --> 00:15:56,300
+chair and you know just do some 
+thinking do some reading, do 
+
+306
+00:15:56,300 --> 00:16:00,700
+some annotating it's not the 
+phone and the desktop are not as
+
+307
+00:16:00,708 --> 00:16:02,700
+suitable but those are important
+compliments. 
+
+308
+00:16:02,700 --> 00:16:05,800
+The process, for example, the 
+phone is where you're, you know,
+
+309
+00:16:05,800 --> 00:16:07,400
+you're reading Twitter and you 
+see an interesting idea and you 
+
+310
+00:16:07,408 --> 00:16:10,300
+want to capture that for later 
+thinking and noodling and the 
+
+311
+00:16:10,300 --> 00:16:14,800
+desktop is where you do like 
+your power workflows your Using 
+
+312
+00:16:14,800 --> 00:16:17,000
+the hundred PDFs into different 
+different folders or you're 
+
+313
+00:16:17,300 --> 00:16:19,400
+doing an outline that 
+summarizes, everything that 
+
+314
+00:16:19,400 --> 00:16:22,400
+you've learned to date. 
+So you need each of these 
+
+315
+00:16:22,400 --> 00:16:25,500
+devices for different things and
+therefore you need your entire 
+
+316
+00:16:25,500 --> 00:16:27,900
+Corpus of data to be 
+synchronized across them. 
+
+317
+00:16:28,700 --> 00:16:32,400
+Yeah, cool. 
+So okay. 
+
+318
+00:16:32,400 --> 00:16:36,300
+Let's get into the local first 
+thing because that that when I 
+
+319
+00:16:36,300 --> 00:16:39,200
+heard y'all talking about it on 
+your podcast I was like this is 
+
+320
+00:16:39,200 --> 00:16:42,100
+going to be fun because we we've
+talked about CR DT is a little 
+
+321
+00:16:42,100 --> 00:16:46,700
+bit and and distributed systems.
+Um, so on the podcast. 
+
+322
+00:16:46,700 --> 00:16:50,100
+So yes and tell us about local 
+Precinct and and yeah, whole 
+
+323
+00:16:50,100 --> 00:16:52,000
+thing. 
+Yeah, I think it makes the most 
+
+324
+00:16:52,000 --> 00:16:54,900
+sense to talk about it in terms 
+of how we got here. 
+
+325
+00:16:54,900 --> 00:16:58,000
+So there, there were two, 
+worlds. 
+
+326
+00:16:58,000 --> 00:17:00,400
+Previously, there's a desktop 
+World, McLeod world, and the 
+
+327
+00:17:00,400 --> 00:17:02,100
+desktop World need to go back a 
+while now. 
+
+328
+00:17:02,100 --> 00:17:04,000
+But this is, when like you had 
+Microsoft Word, you would open 
+
+329
+00:17:04,000 --> 00:17:07,599
+up the app and you would save a 
+file to disk, with your edits. 
+
+330
+00:17:07,700 --> 00:17:10,099
+And there are actually a lot of 
+nice properties with that. 
+
+331
+00:17:10,099 --> 00:17:12,400
+For example, you can read and 
+write, you're not offline. 
+
+332
+00:17:12,400 --> 00:17:14,400
+It's always very fast. 
+It's at least as fast as your 
+
+333
+00:17:14,500 --> 00:17:17,500
+Ask especially with standard 
+file format, you have a lot of 
+
+334
+00:17:17,500 --> 00:17:19,900
+control. 
+You can see PR arcing the data 
+
+335
+00:17:19,900 --> 00:17:21,300
+around to get back UPS. 
+Like there's a lot of things 
+
+336
+00:17:21,300 --> 00:17:24,500
+that's nice about that and then 
+you can even extend that a 
+
+337
+00:17:24,500 --> 00:17:26,900
+little something like Dropbox 
+where you take that model and 
+
+338
+00:17:26,900 --> 00:17:30,100
+use, add a little bit of 
+multi-user collaboration on top.
+
+339
+00:17:31,300 --> 00:17:34,200
+That's world one. 
+The other world is the cloud 
+
+340
+00:17:34,200 --> 00:17:36,100
+world in the example. 
+I would give here is Google Docs
+
+341
+00:17:36,400 --> 00:17:40,000
+and Google Docs is the amazing 
+gold standard for real-time 
+
+342
+00:17:40,000 --> 00:17:41,300
+collaboration. 
+You can have 20 people in a 
+
+343
+00:17:41,308 --> 00:17:43,700
+document, everyone's typing in 
+different places and every 
+
+344
+00:17:43,700 --> 00:17:46,800
+character Keystroke comes in in 
+real time and that's great. 
+
+345
+00:17:46,800 --> 00:17:49,300
+But then that has all these 
+downsides of, you know, if you 
+
+346
+00:17:49,308 --> 00:17:51,200
+want to backup your own data, 
+you're kind of out of luck. 
+
+347
+00:17:51,200 --> 00:17:53,200
+And certainly, if you're 
+offline, you're out of luck. 
+
+348
+00:17:54,000 --> 00:17:58,300
+And we had this this hunch or 
+this desire to get the best of 
+
+349
+00:17:58,300 --> 00:18:00,500
+both worlds. 
+We want the character by 
+
+350
+00:18:00,500 --> 00:18:02,500
+character real-time 
+collaboration, or at least the 
+
+351
+00:18:02,508 --> 00:18:06,200
+ability to do that, we want the 
+your data is just available. 
+
+352
+00:18:06,200 --> 00:18:08,200
+Whenever we remember, you're 
+online, it's available on all 
+
+353
+00:18:08,208 --> 00:18:10,400
+your devices and with all your 
+collaborators, but we also 
+
+354
+00:18:10,400 --> 00:18:14,300
+wanted the performance, the 
+reliability and the user agency 
+
+355
+00:18:14,600 --> 00:18:19,500
+I've having a full copy of your 
+data on each device and it's 
+
+356
+00:18:19,500 --> 00:18:21,400
+very easy to list. 
+Is it Errata and say I want all 
+
+357
+00:18:21,400 --> 00:18:24,400
+these things. 
+The problem was that if you use 
+
+358
+00:18:24,400 --> 00:18:27,000
+either of the standard 
+Technologies like call it 
+
+359
+00:18:27,000 --> 00:18:30,000
+regular files and folders even 
+with Dropbox type stuff on top 
+
+360
+00:18:30,000 --> 00:18:34,200
+of that or the first generation 
+of Cloud sync Technologies. 
+
+361
+00:18:34,200 --> 00:18:36,500
+You just you couldn't do it. 
+You had to go back to the 
+
+362
+00:18:36,500 --> 00:18:40,400
+beginning and redo the 
+architecture from first 
+
+363
+00:18:40,400 --> 00:18:43,300
+principles so that you were able
+to get all of these qualities in
+
+364
+00:18:43,300 --> 00:18:47,300
+one thing and And that's where 
+this research on CR DTS comes in
+
+365
+00:18:48,000 --> 00:18:50,200
+tomorrow clapping we yeah, 
+bailout. 
+
+366
+00:18:50,200 --> 00:18:52,200
+Crd teac. 
+Good God. 
+
+367
+00:18:52,600 --> 00:18:55,400
+Yeah, so scared, he's our 
+conflict-free replicate data 
+
+368
+00:18:55,400 --> 00:19:01,300
+types. 
+Shawna easy, DF the rdta. 
+
+369
+00:19:01,300 --> 00:19:03,100
+They don't choose the right 
+letters. 
+
+370
+00:19:03,100 --> 00:19:05,800
+Okay, brtt sounds good. 
+Okay, that's not good works. 
+
+371
+00:19:05,800 --> 00:19:09,700
+Well yeah, yeah yeah. 
+So give us it. 
+
+372
+00:19:09,700 --> 00:19:14,000
+Maybe give us some of the 
+background on CR DTS and so 
+
+373
+00:19:14,000 --> 00:19:17,500
+first of all, say that when most
+of the time I hear about cdcr 
+
+374
+00:19:17,500 --> 00:19:21,100
+DTS, it's kind of like people 
+are like we discovered this 
+
+375
+00:19:21,100 --> 00:19:24,100
+thing. 
+And then later realized is CR 
+
+376
+00:19:24,100 --> 00:19:28,700
+DTS. 
+Wait for you or well. 
+
+377
+00:19:28,700 --> 00:19:30,800
+So for us, it's actually a 
+really good example of the 
+
+378
+00:19:30,808 --> 00:19:34,000
+industrial research lab work. 
+So we had gotten in touch with 
+
+379
+00:19:34,000 --> 00:19:36,500
+Martin Clubman, who's one of the
+world's leading academic 
+
+380
+00:19:36,500 --> 00:19:40,600
+researchers on CR DTS and he was
+doing this incredible work on 
+
+381
+00:19:41,100 --> 00:19:44,600
+practical CR DTS and we I can't 
+take any credit for. 
+
+382
+00:19:44,600 --> 00:19:47,800
+This is a people who earlier in 
+the lab than me but they 
+
+383
+00:19:47,900 --> 00:19:50,900
+basically saw this and made the 
+connection and plot it out 
+
+384
+00:19:50,900 --> 00:19:52,400
+several years and said we had 
+this problem. 
+
+385
+00:19:52,400 --> 00:19:55,100
+We want, what would eventually 
+become known as local for 
+
+386
+00:19:55,100 --> 00:19:56,600
+software want, all those 
+properties. 
+
+387
+00:19:56,800 --> 00:20:01,500
+We're missing a technology CRT 
+TVs, could be it now at the 
+
+388
+00:20:01,500 --> 00:20:03,300
+time. 
+And even to some extent today 
+
+389
+00:20:04,200 --> 00:20:06,200
+that was a very long ways from 
+reality. 
+
+390
+00:20:06,200 --> 00:20:08,200
+It's a very academic concept of 
+read these papers. 
+
+391
+00:20:08,200 --> 00:20:10,500
+There's like these incredible 
+proofs with all these weird 
+
+392
+00:20:10,500 --> 00:20:12,500
+symbols. 
+Like, it's not, it's not 
+
+393
+00:20:12,500 --> 00:20:16,000
+practical for most application 
+developers to deploy this in a 
+
+394
+00:20:16,000 --> 00:20:18,300
+production app. 
+That's the beauty of the 
+
+395
+00:20:18,300 --> 00:20:20,600
+research lab. 
+You can bridge that Gap and try 
+
+396
+00:20:20,600 --> 00:20:24,400
+to connect the dots between the 
+academic world, and the 
+
+397
+00:20:24,400 --> 00:20:27,300
+industrial World, which we 
+started to do through a Out of 
+
+398
+00:20:28,400 --> 00:20:31,300
+prototypes, and eventually with 
+the spin out, that's cool. 
+
+399
+00:20:31,600 --> 00:20:33,300
+Yeah. 
+That's the thing that I love 
+
+400
+00:20:33,300 --> 00:20:38,000
+about CR DT is that they are 
+based on math and I forget who 
+
+401
+00:20:38,000 --> 00:20:40,800
+said this quote, but there's a 
+quote from, I think a strange 
+
+402
+00:20:40,800 --> 00:20:43,800
+Loop presentation, which was 
+something along the lines of if 
+
+403
+00:20:43,800 --> 00:20:47,100
+you can use math to solve a 
+problem you should. 
+
+404
+00:20:47,900 --> 00:20:51,500
+And yeah, I loved it. 
+Like crd teas are based on math 
+
+405
+00:20:51,500 --> 00:20:53,700
+and I think what, what's been 
+interesting over the last few 
+
+406
+00:20:53,708 --> 00:20:57,600
+years is people like figuring 
+out how to Build something on 
+
+407
+00:20:57,600 --> 00:21:02,900
+top of the math but not make the
+like and user experience be the 
+
+408
+00:21:02,900 --> 00:21:05,200
+like math experience be like the
+business. 
+
+409
+00:21:05,600 --> 00:21:07,300
+The business exceptional 
+programming. 
+
+410
+00:21:07,300 --> 00:21:09,700
+I think has this problem. 
+Yeah, exactly. 
+
+411
+00:21:09,700 --> 00:21:13,100
+Precious math pushes them around
+to the on to the programmer. 
+
+412
+00:21:13,200 --> 00:21:14,800
+No, no. 
+You gotta understand the math 
+
+413
+00:21:14,800 --> 00:21:17,200
+though you know without it 
+because you won't know what a 
+
+414
+00:21:17,208 --> 00:21:19,200
+monad is. 
+I don't understand the math. 
+
+415
+00:21:19,200 --> 00:21:21,300
+That's okay. 
+Yeah I think functional 
+
+416
+00:21:21,300 --> 00:21:23,500
+functional program is actually 
+really good example because it 
+
+417
+00:21:23,800 --> 00:21:25,700
+it can. 
+And often is in the same way 
+
+418
+00:21:25,700 --> 00:21:28,600
+with CRT TVs. 
+This very mathy way I could get 
+
+419
+00:21:28,608 --> 00:21:31,000
+these incredible formula is 
+improves and complexities and 
+
+420
+00:21:31,000 --> 00:21:33,900
+you can even get as a developer 
+access to libraries that fully 
+
+421
+00:21:33,900 --> 00:21:36,700
+expose that to you go wild. 
+No. 
+
+422
+00:21:37,300 --> 00:21:40,100
+But at the same time but you're 
+just a specific problem. 
+
+423
+00:21:40,100 --> 00:21:43,100
+You're like you've got a 
+business need but just go, we 
+
+424
+00:21:43,100 --> 00:21:49,100
+believe there's in both cases 
+there's what was a very simple 
+
+425
+00:21:49,100 --> 00:21:51,100
+core. 
+So in functional programming is 
+
+426
+00:21:51,100 --> 00:21:53,400
+just like if your functions 
+don't have side effects, you get
+
+427
+00:21:53,400 --> 00:21:56,300
+all kinds of nice benefits and 
+you don't need to use Haskell or
+
+428
+00:21:56,300 --> 00:21:58,000
+whatever. 
+To get those things, right? 
+
+429
+00:21:58,000 --> 00:22:00,300
+You could just in your regular 
+Ruby program, any programming 
+
+430
+00:22:00,300 --> 00:22:02,400
+language? 
+Yeah, and same thing with CRTs 
+
+431
+00:22:02,400 --> 00:22:05,100
+there's there's incredibly 
+complex security research and 
+
+432
+00:22:05,100 --> 00:22:08,400
+even libraries that you can use.
+But you could also just take the
+
+433
+00:22:08,400 --> 00:22:13,500
+score, which is if you, if you 
+if your data type has certain 
+
+434
+00:22:13,500 --> 00:22:15,300
+properties. 
+You get benefits that are 
+
+435
+00:22:15,300 --> 00:22:18,200
+extremely useful in a local 
+first world. 
+
+436
+00:22:19,700 --> 00:22:21,900
+Yeah, okay. 
+Also sounds like monads. 
+
+437
+00:22:23,400 --> 00:22:25,800
+Yeah, we gotta do this time. 
+We got these other 
+
+438
+00:22:25,800 --> 00:22:27,100
+characteristics. 
+Yeah. 
+
+439
+00:22:27,400 --> 00:22:32,200
+So can you give us the big 
+picture overview of how crd T's 
+
+440
+00:22:32,200 --> 00:22:35,000
+work is that possible with the 
+math free? 
+
+441
+00:22:35,700 --> 00:22:39,800
+So it's interesting because 
+everyone says like CDs are kind 
+
+442
+00:22:39,800 --> 00:22:43,000
+of a buzzword now but the way 
+that we use CRT TVs is actually 
+
+443
+00:22:43,000 --> 00:22:46,700
+extremely simple. 
+We use these incredibly simple 
+
+444
+00:22:46,700 --> 00:22:50,400
+almost trivial CRT TVs. 
+Again it's the core principle so
+
+445
+00:22:51,300 --> 00:22:53,500
+it's just a very briefly 
+describe how our system works. 
+
+446
+00:22:55,400 --> 00:22:58,700
+We have objects sort of like you
+would have rows in a table of 
+
+447
+00:22:58,700 --> 00:23:05,700
+same, sort of concept and an 
+object have attributes and The 
+
+448
+00:23:05,700 --> 00:23:07,600
+the whole problem here is you 
+need to decide if multiple 
+
+449
+00:23:07,600 --> 00:23:12,900
+devices right to a given object 
+and attribute register, you know
+
+450
+00:23:12,900 --> 00:23:15,400
+who wins. 
+And so you can take the most 
+
+451
+00:23:16,100 --> 00:23:19,400
+perhaps the simplest ERD T 
+possible which is last last 
+
+452
+00:23:19,400 --> 00:23:22,400
+right. 
+Wins CR t-- t-- and use that to 
+
+453
+00:23:22,400 --> 00:23:27,400
+manage the merge. 
+So that so basically, each edit 
+
+454
+00:23:27,400 --> 00:23:29,600
+has a timestamp and we can talk 
+about the timestamps are more 
+
+455
+00:23:29,600 --> 00:23:32,600
+complicated potentially than a 
+simple time.now. 
+
+456
+00:23:33,600 --> 00:23:38,500
+But There's no magic here with 
+the CR DTS per se. 
+
+457
+00:23:38,500 --> 00:23:41,700
+It's like three lines of code in
+the client, which says, if 
+
+458
+00:23:41,700 --> 00:23:43,500
+timestamp, greater than other 
+timestamp, you know, take this 
+
+459
+00:23:43,500 --> 00:23:48,200
+value. 
+It's more the, in our case, it's
+
+460
+00:23:48,200 --> 00:23:52,700
+more the principle of having 
+this simple. 
+
+461
+00:23:52,700 --> 00:23:55,600
+But principled way of thinking 
+about how you manage data coming
+
+462
+00:23:55,600 --> 00:23:58,800
+from multiple clients. 
+I think the more the more like 
+
+463
+00:23:58,900 --> 00:24:01,900
+interesting and complete picture
+is the whole local first thing. 
+
+464
+00:24:02,200 --> 00:24:04,600
+And so this is just like a kind 
+of key enabling in sight. 
+
+465
+00:24:04,700 --> 00:24:07,500
+And there are, there are use 
+cases where you need more 
+
+466
+00:24:07,500 --> 00:24:09,600
+sophisticated strategies. 
+The most common one is text 
+
+467
+00:24:09,600 --> 00:24:11,200
+editing. 
+Like if you're doing real-time 
+
+468
+00:24:11,200 --> 00:24:13,700
+text editing and you have 
+multiple people in the same 
+
+469
+00:24:13,700 --> 00:24:16,900
+block of text, then you did, you
+do need more complicated. 
+
+470
+00:24:16,900 --> 00:24:21,900
+See ready to use to manage it 
+but most the entirety of our 
+
+471
+00:24:21,900 --> 00:24:25,300
+application and most of most 
+applications you don't need 
+
+472
+00:24:25,300 --> 00:24:27,300
+stuff, that's at complicated 
+with respect to the CRTs 
+
+473
+00:24:27,500 --> 00:24:28,900
+themselves. 
+It's more like everything that 
+
+474
+00:24:28,900 --> 00:24:30,900
+goes around it. 
+That's the real Secret Sauce. 
+
+475
+00:24:31,600 --> 00:24:35,500
+Well, and it sounds like it's 
+such a fundamental Architectural
+
+476
+00:24:35,500 --> 00:24:37,800
+decision. 
+You have to make this decision 
+
+477
+00:24:37,800 --> 00:24:40,600
+from day one, when doing this 
+thing around it. 
+
+478
+00:24:41,300 --> 00:24:44,400
+This is an extremely important 
+Insight from looking at trying 
+
+479
+00:24:44,400 --> 00:24:48,800
+to migrate other systems to 
+getting all the benefits of 
+
+480
+00:24:48,800 --> 00:24:51,100
+local first. 
+Like, we can take two examples 
+
+481
+00:24:51,100 --> 00:24:56,600
+of Dropbox because you have, the
+fundamental abstraction of like,
+
+482
+00:24:56,600 --> 00:25:00,800
+the whole file as a sequence of 
+bytes, if you want to manage 
+
+483
+00:25:00,800 --> 00:25:04,000
+edits any granularity, smart 
+mat, your kind of Hose. 
+
+484
+00:25:04,000 --> 00:25:05,200
+Like this is no. 
+Way to do it. 
+
+485
+00:25:05,200 --> 00:25:07,300
+And that's why you get if two 
+people out of the same word 
+
+486
+00:25:07,300 --> 00:25:09,900
+document and Dropbox, there's 
+going to be a conflict down even
+
+487
+00:25:09,900 --> 00:25:11,700
+with Dropbox does these days. 
+But it's going to be messy is 
+
+488
+00:25:11,700 --> 00:25:14,800
+really there's no way with all 
+of that to deal with because you
+
+489
+00:25:14,808 --> 00:25:16,900
+don't have enough. 
+You don't have enough granular 
+
+490
+00:25:17,000 --> 00:25:19,100
+information to resolve that 
+conflict. 
+
+491
+00:25:19,100 --> 00:25:23,800
+Your granularity is document. 
+Not not the text block or, you 
+
+492
+00:25:23,800 --> 00:25:26,700
+know, something smaller, the 
+event, crack the event and yeah,
+
+493
+00:25:26,700 --> 00:25:28,600
+there. 
+And likewise the click with the 
+
+494
+00:25:28,608 --> 00:25:30,200
+clout with a typical Cloud 
+world. 
+
+495
+00:25:30,200 --> 00:25:35,600
+If if the only canonical store 
+of a client's Data is on some 
+
+496
+00:25:35,600 --> 00:25:39,400
+centralized server, there's no 
+coherent way to get all the 
+
+497
+00:25:39,400 --> 00:25:42,100
+benefits of local first on 
+individual clients. 
+
+498
+00:25:42,400 --> 00:25:45,300
+You see people trying to get at 
+around the edges like offline 
+
+499
+00:25:45,300 --> 00:25:48,800
+mode and caching and it 
+basically never really fully 
+
+500
+00:25:48,800 --> 00:25:50,700
+works. 
+It certainly doesn't give you 
+
+501
+00:25:50,700 --> 00:25:53,000
+all the benefits that you would 
+hope from from a system like, 
+
+502
+00:25:53,300 --> 00:25:55,600
+you know, get where it's 
+everything is fully and properly
+
+503
+00:25:56,000 --> 00:25:58,300
+local. 
+So you have to do it from the 
+
+504
+00:25:58,300 --> 00:26:01,500
+very beginning and yes from the 
+very beginning, here's what I 
+
+505
+00:26:01,508 --> 00:26:04,400
+see or DTS are important is 
+because in like the Google Docs 
+
+506
+00:26:04,700 --> 00:26:09,000
+Model your you have a 
+centralized decision maker, that
+
+507
+00:26:09,000 --> 00:26:15,800
+is deciding what to do in the 
+presence of conflicts brand, and
+
+508
+00:26:15,800 --> 00:26:20,200
+that sent that's on the cloud. 
+The cloud is that decision maker
+
+509
+00:26:20,600 --> 00:26:25,500
+and in your case you, you wanted
+it to be a true distributed 
+
+510
+00:26:25,500 --> 00:26:28,300
+system where there isn't a 
+centralized decision maker and 
+
+511
+00:26:28,300 --> 00:26:30,200
+that's the whole value of c. 
+R DT is here, right? 
+
+512
+00:26:30,200 --> 00:26:33,100
+Is that that you don't have to 
+centralize the decision-maker to
+
+513
+00:26:33,100 --> 00:26:34,500
+resolve the conflict? 
+Okay. 
+
+514
+00:26:42,400 --> 00:26:46,100
+And take 10 minutes. 
+Yeah, exactly. 
+
+515
+00:26:46,100 --> 00:26:48,400
+That will make me very careful 
+when I'm writing. 
+
+516
+00:26:48,500 --> 00:26:50,400
+That's a good point. 
+That's so it's it. 
+
+517
+00:26:50,400 --> 00:26:52,600
+That's a plus etcetera, fit 
+better. 
+
+518
+00:26:53,500 --> 00:26:54,200
+Yeah. 
+Yeah. 
+
+519
+00:26:54,200 --> 00:27:00,100
+That in fact that you property 
+of CRT TV, that's that If you 
+
+520
+00:27:00,100 --> 00:27:05,900
+have a set of edits or changes 
+once any any clients that apply 
+
+521
+00:27:05,900 --> 00:27:09,300
+all those changes regardless of 
+the order or how their bashed or
+
+522
+00:27:09,300 --> 00:27:11,100
+when they come in or whatever 
+they're going to end up with the
+
+523
+00:27:11,100 --> 00:27:13,500
+same result. 
+And you don't need all the 
+
+524
+00:27:13,500 --> 00:27:15,800
+central, the same state without 
+the same. 
+
+525
+00:27:15,800 --> 00:27:20,300
+Like yeah, the same data object 
+or whatever without essential, I
+
+526
+00:27:20,308 --> 00:27:22,400
+think, we think of our cockpit 
+interview. 
+
+527
+00:27:23,000 --> 00:27:24,500
+Yeah. 
+And it will be talked about, 
+
+528
+00:27:24,500 --> 00:27:29,000
+cqrs and events are saying, uh, 
+which aren't CR DT is per se. 
+
+529
+00:27:29,200 --> 00:27:32,200
+But but have some similarities, 
+it's just the idea of looking at
+
+530
+00:27:32,200 --> 00:27:36,000
+everything in terms of events 
+and then figuring out. 
+
+531
+00:27:36,000 --> 00:27:39,000
+Well, in kafka's case they just 
+captured them and then your it's
+
+532
+00:27:39,000 --> 00:27:41,400
+up to you to figure out what to 
+do with them. 
+
+533
+00:27:41,400 --> 00:27:44,500
+But here you're talking about 
+how to decide. 
+
+534
+00:27:44,900 --> 00:27:47,400
+Okay. 
+Here's, here's what we can 
+
+535
+00:27:47,400 --> 00:27:50,500
+resolve that but I can 
+understand why you need 
+
+536
+00:27:50,500 --> 00:27:53,300
+mathematicians to figure this 
+out so that because there could 
+
+537
+00:27:53,300 --> 00:27:55,700
+be holes. 
+Yeah, why? 
+
+538
+00:27:55,700 --> 00:28:01,300
+Having having lawful X stuff 
+underneath the covers is 
+
+539
+00:28:01,300 --> 00:28:04,100
+important for. 
+Yeah, every finite being able to
+
+540
+00:28:04,100 --> 00:28:08,000
+get to the same resolved State. 
+Yeah, you have to think about it
+
+541
+00:28:08,008 --> 00:28:10,100
+in a very principled way, and 
+with respect to CRTs, especially
+
+542
+00:28:10,100 --> 00:28:11,900
+for the complex one, like I 
+mentioned, you need to be very 
+
+543
+00:28:11,900 --> 00:28:14,500
+rigorous because it's it's super
+easy to convince yourself 
+
+544
+00:28:14,500 --> 00:28:16,900
+incorrectly that the CR DT is is
+correct. 
+
+545
+00:28:16,900 --> 00:28:18,700
+But then you get into these edge
+cases, especially with text 
+
+546
+00:28:18,700 --> 00:28:22,800
+editing where things go wonky. 
+So always been an issue with 
+
+547
+00:28:22,800 --> 00:28:25,100
+concurrency to it's really easy 
+to go. 
+
+548
+00:28:25,100 --> 00:28:27,100
+Yeah my concurrent program is 
+fine. 
+
+549
+00:28:27,100 --> 00:28:29,100
+It doesn't have race conditions,
+it doesn't have. 
+
+550
+00:28:29,200 --> 00:28:32,800
+Of contention. 
+Yeah, a side note on that. 
+
+551
+00:28:33,300 --> 00:28:37,500
+I just learned that Google has a
+tool called thread tsan thread 
+
+552
+00:28:37,500 --> 00:28:39,900
+sanitizer. 
+I think that will like take 
+
+553
+00:28:39,900 --> 00:28:43,700
+concurrent code and and I think 
+it runs at through all sorts of 
+
+554
+00:28:43,700 --> 00:28:47,500
+different scenarios that you 
+usually aren't thinking about as
+
+555
+00:28:47,500 --> 00:28:50,000
+a developer. 
+And then it tells you like, oh, 
+
+556
+00:28:50,000 --> 00:28:53,200
+you have a race condition given 
+this, you know, particular 
+
+557
+00:28:53,300 --> 00:28:56,700
+scenario and wound. 
+Fascinating to won't tell ya 
+
+558
+00:28:57,000 --> 00:28:59,000
+impressive. 
+Yeah if it works. 
+
+559
+00:28:59,200 --> 00:29:02,600
+See ya. 
+We need like a, like a tsan for 
+
+560
+00:29:02,600 --> 00:29:06,400
+Sierra DTR from for replicated 
+State nature, beaded State. 
+
+561
+00:29:06,800 --> 00:29:09,100
+Hmm. 
+But or you could just use here 
+
+562
+00:29:09,100 --> 00:29:12,600
+DTS and yeah, trust that the 
+math is correct, hmm. 
+
+563
+00:29:14,100 --> 00:29:18,600
+So walk us through the 
+architecture of I'm on my, on my
+
+564
+00:29:18,600 --> 00:29:22,500
+iPad in the Muse app and I do 
+something, what would actually 
+
+565
+00:29:22,500 --> 00:29:28,300
+happens. 
+Yeah, so when you're on a device
+
+566
+00:29:28,300 --> 00:29:31,800
+locally whenever you make a 
+change that emits, call it an 
+
+567
+00:29:31,800 --> 00:29:36,500
+edit and that edit goes into 
+your your bag of edits. 
+
+568
+00:29:36,600 --> 00:29:39,500
+And to a first approximation, 
+you're just saying all the edits
+
+569
+00:29:39,500 --> 00:29:42,400
+you ever made in your bag of 
+edits and based on the bag of 
+
+570
+00:29:42,400 --> 00:29:45,600
+edits you can you can do the 
+security team urge to get up to 
+
+571
+00:29:45,600 --> 00:29:47,500
+the current state of your 
+application. 
+
+572
+00:29:47,700 --> 00:29:49,600
+And then sort of reacts like 
+you're going to take that 
+
+573
+00:29:49,600 --> 00:29:52,700
+current state feed it back into 
+the rendering engine and it will
+
+574
+00:29:52,700 --> 00:29:55,100
+produce the corresponding update
+on. 
+
+575
+00:29:55,800 --> 00:29:57,900
+The UI. 
+Now if you're offline, that's 
+
+576
+00:29:57,900 --> 00:30:00,600
+it. 
+And it's and when you are online
+
+577
+00:30:00,700 --> 00:30:04,600
+that edit has, you know, call it
+like a right bitter or something
+
+578
+00:30:04,600 --> 00:30:07,200
+that indicates, whether it's 
+been pushed up. 
+
+579
+00:30:07,900 --> 00:30:11,500
+And so, when you're online, that
+edit will get pushed up to our 
+
+580
+00:30:11,500 --> 00:30:16,400
+sync server and that will get a 
+persisted in your, your kind of 
+
+581
+00:30:16,800 --> 00:30:20,300
+cloud storage bag of edits. 
+And then be as other clients 
+
+582
+00:30:20,300 --> 00:30:24,600
+come online, they will receive 
+that edit. 
+
+583
+00:30:24,600 --> 00:30:26,600
+We can talk more about And as 
+much as if you're interested, 
+
+584
+00:30:26,700 --> 00:30:29,300
+but basically that that edit 
+will get conveyed out to all the
+
+585
+00:30:29,300 --> 00:30:33,600
+other devices corresponding to 
+your user account, and then 
+
+586
+00:30:33,600 --> 00:30:36,400
+they'll go through the exact 
+same flow of, there's this new 
+
+587
+00:30:36,400 --> 00:30:40,000
+edit, put in the bag of edits 
+merge up to a new state, put 
+
+588
+00:30:40,000 --> 00:30:44,600
+that into the UI to render and 
+then you get the update but the 
+
+589
+00:30:44,600 --> 00:30:47,300
+logic doesn't care. 
+I think this is a critical piece
+
+590
+00:30:47,300 --> 00:30:51,900
+where the the logic doesn't care
+if the edit event came from your
+
+591
+00:30:51,900 --> 00:30:56,500
+own on device, I made this here 
+or I'm from another device 
+
+592
+00:30:56,500 --> 00:31:01,600
+through the server, so you push 
+it first and then on your local 
+
+593
+00:31:01,600 --> 00:31:03,900
+machine, you do. 
+The edit. 
+
+594
+00:31:03,900 --> 00:31:06,500
+Is that correct? 
+You push it up to the cloud 
+
+595
+00:31:06,500 --> 00:31:10,600
+first, you know, it's more, 
+like, you write it, you write it
+
+596
+00:31:10,608 --> 00:31:12,700
+and you affect it on your own 
+system first. 
+
+597
+00:31:12,700 --> 00:31:14,500
+And then you can almost think of
+it as a background process. 
+
+598
+00:31:14,500 --> 00:31:16,400
+And in fact there is some 
+batching that happens here, 
+
+599
+00:31:16,600 --> 00:31:18,900
+okay? 
+That's doing the network, 
+
+600
+00:31:18,900 --> 00:31:21,700
+communication management and 
+that will say, okay in the last 
+
+601
+00:31:21,700 --> 00:31:24,100
+50 milliseconds, as he's few 
+other rights, go ahead and send 
+
+602
+00:31:24,100 --> 00:31:26,700
+a batch up to the server. 
+With these rights and those will
+
+603
+00:31:26,700 --> 00:31:28,800
+get conveyed out. 
+And so this is, this is one of 
+
+604
+00:31:28,800 --> 00:31:33,000
+the incredible benefits of local
+first that whole first Loop of 
+
+605
+00:31:33,300 --> 00:31:36,800
+you did a right and it gets 
+rendered that's as fast as your 
+
+606
+00:31:36,800 --> 00:31:38,600
+SSD right. 
+So that can be a essentially 
+
+607
+00:31:38,600 --> 00:31:41,400
+instant. 
+It's not doing a round trip to 
+
+608
+00:31:41,500 --> 00:31:43,800
+Virginia or whatever to get to 
+AWS and then come all the way 
+
+609
+00:31:43,800 --> 00:31:47,300
+back with a new render web page.
+And this was one of the huge 
+
+610
+00:31:47,300 --> 00:31:50,400
+motivations for local first. 
+It's not physically possible to 
+
+611
+00:31:50,400 --> 00:31:53,200
+have software, be fast enough. 
+If it has to jump over that long
+
+612
+00:31:53,200 --> 00:31:55,000
+of a network cop, it has to 
+happen locally. 
+
+613
+00:31:55,300 --> 00:31:58,500
+So, you do everything to update 
+your state locally, and then, in
+
+614
+00:31:58,500 --> 00:32:00,400
+the background on the order of, 
+maybe it's 10 or 50 
+
+615
+00:32:00,400 --> 00:32:03,100
+milliseconds, you can get the 
+state out to the other clients. 
+
+616
+00:32:04,400 --> 00:32:08,800
+But also, it's a good. 
+How do you make sure it gets to 
+
+617
+00:32:08,800 --> 00:32:12,400
+the other clients? 
+Yeah, well, that's where these, 
+
+618
+00:32:12,600 --> 00:32:14,500
+there's some accounting. 
+Basically, on the client where 
+
+619
+00:32:14,500 --> 00:32:15,900
+it says, okay. 
+When you write a transaction is 
+
+620
+00:32:15,900 --> 00:32:17,800
+going to say, who wrote the 
+transaction, you know, you in 
+
+621
+00:32:17,800 --> 00:32:20,300
+this case and it will say what's
+the state with respect to the 
+
+622
+00:32:20,308 --> 00:32:22,800
+network. 
+It's I've I've never tried to 
+
+623
+00:32:22,800 --> 00:32:25,100
+send it, I'm currently sending 
+it, I've confirmed it sent. 
+
+624
+00:32:25,200 --> 00:32:28,100
+So when you go to write to the 
+sync server that's going to be a
+
+625
+00:32:28,100 --> 00:32:31,600
+real request response, we're 
+going to say right this this 
+
+626
+00:32:32,000 --> 00:32:33,900
+path of edits. 
+And once the server 
+
+627
+00:32:34,100 --> 00:32:37,300
+Successfully, persisted them in 
+a database, it will write back 
+
+628
+00:32:37,300 --> 00:32:39,200
+to the clients. 
+Say okay, I've confirmed that 
+
+629
+00:32:39,200 --> 00:32:42,900
+I've got these, you can count 
+these as safely synced and then 
+
+630
+00:32:43,100 --> 00:32:46,300
+the client can at that point go 
+into its accounting and say, 
+
+631
+00:32:46,300 --> 00:32:49,100
+okay, this this pack is is 
+saying so I do, I know I don't 
+
+632
+00:32:49,100 --> 00:32:51,100
+need to resend it and if 
+something happens in there 
+
+633
+00:32:51,100 --> 00:32:53,400
+that's all idempotent so you can
+the client can like resend it 
+
+634
+00:32:53,400 --> 00:32:55,600
+and it's fine and the server can
+resend it back down to their 
+
+635
+00:32:55,600 --> 00:32:56,500
+clients. 
+It's all, it's all fine. 
+
+636
+00:32:56,500 --> 00:32:58,400
+So you need to happen at least 
+once this. 
+
+637
+00:32:58,400 --> 00:33:01,800
+By the way, is one of the 
+another benefit of CRT T's and 
+
+638
+00:33:02,000 --> 00:33:03,900
+generally a thinking in this 
+way. 
+
+639
+00:33:04,200 --> 00:33:07,200
+Of when everything is idempotent
+your, everything becomes a lot 
+
+640
+00:33:07,200 --> 00:33:10,800
+easier. 
+This is what Victor clang calls,
+
+641
+00:33:10,900 --> 00:33:15,000
+effectively, once delivery. 
+Because a lot of times people 
+
+642
+00:33:15,000 --> 00:33:17,500
+say they want exactly once 
+delivery. 
+
+643
+00:33:17,700 --> 00:33:22,500
+But it's I think provably 
+impossible to do exactly once 
+
+644
+00:33:22,500 --> 00:33:26,400
+delivery. 
+And so the to get to effectively
+
+645
+00:33:26,400 --> 00:33:30,500
+once delivery, you do at least 
+once delivery, so your system 
+
+646
+00:33:30,500 --> 00:33:33,400
+can pretty easily guarantee that
+it's going to be sent at least 
+
+647
+00:33:33,400 --> 00:33:38,000
+once to The destination, but 
+then if the operation on that 
+
+648
+00:33:38,000 --> 00:33:42,000
+event is idempotent, then you 
+get effectively once because it 
+
+649
+00:33:42,000 --> 00:33:45,200
+doesn't matter how many times 
+your event is sent, if it's item
+
+650
+00:33:45,200 --> 00:33:47,800
+potent, you could do the same 
+thing multiple times and not 
+
+651
+00:33:47,800 --> 00:33:50,700
+have to worry about it, you 
+know, doing something wrong. 
+
+652
+00:33:50,800 --> 00:33:53,700
+So maybe this is a minor detail,
+but the way I'm seeing this 
+
+653
+00:33:53,700 --> 00:34:01,300
+happen is I caused an event. 
+My local iPad does response to 
+
+654
+00:34:01,300 --> 00:34:03,800
+that. 
+And at the same time, it's put 
+
+655
+00:34:03,800 --> 00:34:10,600
+it on a queue to be sent to AWS.
+And then my local machine is 
+
+656
+00:34:10,600 --> 00:34:12,600
+eventually going to see that 
+event. 
+
+657
+00:34:12,600 --> 00:34:17,100
+Come back like everybody else in
+that Network, right? 
+
+658
+00:34:17,199 --> 00:34:19,900
+Awesome. 
+So, and it's so nor it is, it 
+
+659
+00:34:19,900 --> 00:34:21,900
+says, oh yeah, that's that was 
+mine. 
+
+660
+00:34:21,900 --> 00:34:26,199
+I sent that. 
+So there we can because we send 
+
+661
+00:34:26,199 --> 00:34:27,400
+up. 
+When we write these packs, we 
+
+662
+00:34:27,400 --> 00:34:30,400
+write the device that scenting 
+sending it the server, when it's
+
+663
+00:34:30,400 --> 00:34:33,000
+conveying out, these updates 
+knows that doesn't need to 
+
+664
+00:34:33,400 --> 00:34:35,600
+replay. 
+Those two, it could it would be 
+
+665
+00:34:35,600 --> 00:34:37,900
+fine, but there's no need to do 
+that because we have the data to
+
+666
+00:34:37,900 --> 00:34:41,500
+be able to do that accounting. 
+So I will just send you all the 
+
+667
+00:34:41,800 --> 00:34:43,699
+rights from devices other than 
+yourself. 
+
+668
+00:34:44,300 --> 00:34:45,699
+I see. 
+Okay, yeah. 
+
+669
+00:34:45,699 --> 00:34:49,600
+Just but then to make sure it's 
+gotten onto the server, you just
+
+670
+00:34:49,600 --> 00:34:52,800
+have a, some kind of handshake. 
+So he's like, yeah, like yeah, 
+
+671
+00:34:52,800 --> 00:34:54,500
+it's like it's a confirmed 
+request response. 
+
+672
+00:34:54,500 --> 00:34:58,600
+And then, on the other side when
+devices are pushed down updates 
+
+673
+00:34:58,600 --> 00:35:02,300
+in near real time, the server 
+doesn't consider those 
+
+674
+00:35:02,800 --> 00:35:06,200
+successfully written I conveyed 
+to those clients until those 
+
+675
+00:35:06,400 --> 00:35:08,600
+clients respond to the server 
+which they're only going to do 
+
+676
+00:35:08,600 --> 00:35:11,700
+after they've synced the right 
+to their own local database. 
+
+677
+00:35:13,000 --> 00:35:15,600
+Okay. 
+And then you mentioned that time
+
+678
+00:35:15,600 --> 00:35:18,900
+was tricky which I would think 
+it would be because how do you, 
+
+679
+00:35:19,600 --> 00:35:22,500
+how do you decide? 
+Well, I don't know. 
+
+680
+00:35:22,800 --> 00:35:24,600
+I mean where does the time come 
+from? 
+
+681
+00:35:24,700 --> 00:35:26,000
+Yeah. 
+Who decides time? 
+
+682
+00:35:26,100 --> 00:35:28,100
+Yeah. 
+Who decides what the time is so 
+
+683
+00:35:28,100 --> 00:35:29,800
+that you can say? 
+Oh yeah, this event happened 
+
+684
+00:35:29,800 --> 00:35:33,500
+before that event. 
+So this in general and 
+
+685
+00:35:33,500 --> 00:35:36,600
+distributed systems, this is a 
+really big problem, but for our 
+
+686
+00:35:36,600 --> 00:35:39,500
+case is actually not proven to 
+be a big issue. 
+
+687
+00:35:39,500 --> 00:35:41,900
+And neither by the way of 
+conflicts, whenever we talk 
+
+688
+00:35:41,900 --> 00:35:45,500
+about CRT TVs are these like 
+distributed synchronization 
+
+689
+00:35:45,500 --> 00:35:48,300
+systems, everyone always brings 
+up conflicts and time stamps, 
+
+690
+00:35:48,300 --> 00:35:51,600
+and Vector clocks and our 
+experience over many years of 
+
+691
+00:35:51,600 --> 00:35:53,500
+working in the labs that 
+basically is not an issue. 
+
+692
+00:35:53,500 --> 00:35:55,100
+At least for the use cases that 
+were looking at. 
+
+693
+00:35:55,100 --> 00:36:00,400
+So abstractly, our time stamp is
+64, bytes of data and you can 
+
+694
+00:36:00,408 --> 00:36:02,400
+put whatever you want in there. 
+Currently we are We just use a 
+
+695
+00:36:02,408 --> 00:36:06,700
+regular vanilla Unix timestamp. 
+We will have probably when we 
+
+696
+00:36:06,700 --> 00:36:09,400
+have multiple users, where you 
+have more issues, potentially 
+
+697
+00:36:09,400 --> 00:36:13,500
+with clock, skew and user 
+stepping on each other will move
+
+698
+00:36:13,500 --> 00:36:15,300
+towards a. 
+What's it called? 
+
+699
+00:36:16,200 --> 00:36:18,600
+We can put the link in the show 
+notes, but there's this specific
+
+700
+00:36:18,600 --> 00:36:22,100
+type of timestamp that James 
+Long at actual budget. 
+
+701
+00:36:23,700 --> 00:36:26,000
+First, first used to our 
+knowledge in this setting, but 
+
+702
+00:36:26,000 --> 00:36:30,300
+it's basically a timestamp that 
+still fits in 64, bytes but has 
+
+703
+00:36:30,300 --> 00:36:31,900
+some of the properties of a 
+vector clock. 
+
+704
+00:36:32,000 --> 00:36:35,200
+Okay, so you can get logical 
+ordering within certain 
+
+705
+00:36:35,200 --> 00:36:39,700
+constraints updates, but it 
+doesn't have the problem of most
+
+706
+00:36:39,700 --> 00:36:42,800
+of the call more academic CRT 
+TVs, which have Vector clocks 
+
+707
+00:36:42,800 --> 00:36:45,700
+that blow up in space, that this
+was a thing. 
+
+708
+00:36:45,700 --> 00:36:49,900
+We were not willing to 
+compromise on performance with 
+
+709
+00:36:49,900 --> 00:36:53,800
+the system, it had to be as fast
+as like a purely local SSD, 
+
+710
+00:36:53,800 --> 00:36:55,800
+based app would be. 
+And so if you have anything that
+
+711
+00:36:55,800 --> 00:36:59,900
+blows up in the number of 
+clients or edits or history, 
+
+712
+00:36:59,900 --> 00:37:01,600
+anything like that, it's already
+over. 
+
+713
+00:37:01,600 --> 00:37:05,100
+So, It's a good example of the 
+sort of the industrial 
+
+714
+00:37:05,100 --> 00:37:07,500
+compromise you have to make with
+systems like this. 
+
+715
+00:37:08,500 --> 00:37:11,000
+Well, yeah, and it seems like 
+you could just say that the 
+
+716
+00:37:11,000 --> 00:37:17,400
+clock is a way to resolve these 
+things, whether or not my time 
+
+717
+00:37:17,400 --> 00:37:22,000
+stamp is exactly the same as 
+yours, most of the time. 
+
+718
+00:37:23,000 --> 00:37:25,500
+Oh, sometimes maybe mines 
+lagging behind you are. 
+
+719
+00:37:25,500 --> 00:37:27,100
+Okay. 
+So yours will get in ahead of 
+
+720
+00:37:27,100 --> 00:37:32,000
+mine but how often is that going
+to be a, you know? 
+
+721
+00:37:32,200 --> 00:37:35,000
+When you're doing this kind of 
+interactive thing things that 
+
+722
+00:37:35,000 --> 00:37:38,400
+are that close, does it matter? 
+Or is it just like, oh well, we 
+
+723
+00:37:38,400 --> 00:37:40,200
+just use this to resolve these 
+things. 
+
+724
+00:37:40,700 --> 00:37:43,900
+Yeah, with our current setup of 
+this being only for one user, 
+
+725
+00:37:43,900 --> 00:37:48,100
+you just tend not to have that 
+sort of unexpected, like clock, 
+
+726
+00:37:48,100 --> 00:37:51,200
+skew and corresponding out of 
+order versus what you expect. 
+
+727
+00:37:51,200 --> 00:37:54,700
+I think I'll become a bigger 
+issue with multiple users and 
+
+728
+00:37:54,700 --> 00:37:59,000
+collaboration and then relatedly
+with conflicts, like we worked 
+
+729
+00:37:59,000 --> 00:38:01,500
+on these systems for four years 
+now and between the lab and 
+
+730
+00:38:01,500 --> 00:38:03,900
+Muse. 
+And I don't think we'd like ever
+
+731
+00:38:03,900 --> 00:38:06,800
+had a real issue with conflicts.
+You know it maybe there's an 
+
+732
+00:38:06,800 --> 00:38:09,500
+Asterix around like 
+collaborative text editing, that
+
+733
+00:38:09,500 --> 00:38:14,800
+becomes a bigger, a bigger 
+problem, But in practice humans 
+
+734
+00:38:14,800 --> 00:38:16,700
+know not to step on each other. 
+So if you're both at a 
+
+735
+00:38:16,708 --> 00:38:19,100
+whiteboard, you're not going to 
+have a conflict of you both 
+
+736
+00:38:19,200 --> 00:38:20,600
+right? 
+Try to write to the same space 
+
+737
+00:38:20,600 --> 00:38:22,000
+because you see what each other 
+are doing. 
+
+738
+00:38:22,000 --> 00:38:23,400
+Not going to like message out 
+there up. 
+
+739
+00:38:23,600 --> 00:38:26,300
+And generally people know what 
+they try to know other people 
+
+740
+00:38:26,300 --> 00:38:27,600
+are working on trying to step on
+each other. 
+
+741
+00:38:28,000 --> 00:38:32,100
+So for that reason because of 
+her hands and I could like use 
+
+742
+00:38:32,100 --> 00:38:36,200
+Muse on my iPad and my iPhone at
+the same exact time and like 
+
+743
+00:38:36,200 --> 00:38:38,900
+make a change and that would be 
+Stompin but I wouldn't really do
+
+744
+00:38:38,900 --> 00:38:40,100
+that in real life. 
+Yeah. 
+
+745
+00:38:40,100 --> 00:38:44,800
+Well unlike and you You couldn't
+do it at exactly the same moment
+
+746
+00:38:45,700 --> 00:38:49,600
+you maybe could, well, depends 
+on what exact means, but I could
+
+747
+00:38:49,600 --> 00:38:53,400
+have my fingers on, you know, 
+touching the both devices at the
+
+748
+00:38:53,400 --> 00:38:56,800
+same time. 
+But why would I do is I think, I
+
+749
+00:38:56,808 --> 00:38:59,400
+think my point is like, like, 
+you would any other. 
+
+750
+00:38:59,400 --> 00:39:01,300
+It was just like go. 
+Oh well, this one. 
+
+751
+00:39:01,800 --> 00:39:04,400
+I've decided to list one is 
+first and so I'm going to do 
+
+752
+00:39:04,400 --> 00:39:08,100
+this and you go. 
+Oh, okay, yeah, yeah, and it was
+
+753
+00:39:08,100 --> 00:39:11,700
+but I'm like picking up my iPad 
+doing something picking up my On
+
+754
+00:39:11,700 --> 00:39:15,400
+doing something like there is a 
+Time shift between those two 
+
+755
+00:39:15,400 --> 00:39:17,500
+interact. 
+Yeah, I just an empirical matter
+
+756
+00:39:17,500 --> 00:39:19,100
+is just it's not that high up on
+the list, it's probably not in 
+
+757
+00:39:19,108 --> 00:39:21,900
+the top. 100 things we've run 
+into are trying to build a 
+
+758
+00:39:21,908 --> 00:39:23,900
+system, but also all the data is
+there. 
+
+759
+00:39:24,100 --> 00:39:27,500
+So you know, if anyone ever had 
+an issue with with what they 
+
+760
+00:39:27,500 --> 00:39:29,508
+believe to be incorrect conflict
+resolution, we just go in a 
+
+761
+00:39:29,516 --> 00:39:32,500
+database and you know, wrote one
+of the transactions of the 
+
+762
+00:39:32,500 --> 00:39:34,600
+others but literally no one is 
+arrested about that. 
+
+763
+00:39:34,600 --> 00:39:37,100
+So it's just yeah. 
+But right, right. 
+
+764
+00:39:37,200 --> 00:39:38,300
+Okay. 
+Yeah. 
+
+765
+00:39:39,100 --> 00:39:42,900
+So you're you're doing the what 
+some kind of Of event sourcing 
+
+766
+00:39:42,900 --> 00:39:47,000
+type of thing where you you are,
+you're keeping all the edits and
+
+767
+00:39:47,000 --> 00:39:49,500
+then tell us more about that 
+architecture that study 
+
+768
+00:39:49,500 --> 00:39:50,700
+architecture. 
+Yeah. 
+
+769
+00:39:50,700 --> 00:39:53,200
+So The Logical architecture is 
+that each currently. 
+
+770
+00:39:53,200 --> 00:39:57,000
+It's that each user has a log 
+and the log is sequence and has 
+
+771
+00:39:57,000 --> 00:40:01,700
+sequence numbers and each device
+then has a read hat on that log.
+
+772
+00:40:01,700 --> 00:40:03,600
+It's kind of like Kafka where 
+each device has a readout on a 
+
+773
+00:40:03,600 --> 00:40:06,100
+log and it advances when they've
+confirmed that they've 
+
+774
+00:40:06,100 --> 00:40:09,300
+successfully processed those 
+updates to their satisfaction, 
+
+775
+00:40:10,900 --> 00:40:13,000
+And then it becomes quite a bit 
+more complicated with 
+
+776
+00:40:13,000 --> 00:40:15,700
+collaboration because then you 
+need something like because we 
+
+777
+00:40:15,700 --> 00:40:19,500
+want to support granular 
+collaboration where any 
+
+778
+00:40:19,500 --> 00:40:23,600
+individual document or bored or 
+group of documents could be 
+
+779
+00:40:23,900 --> 00:40:26,800
+collaborate on with any 
+arbitrary set people. 
+
+780
+00:40:27,800 --> 00:40:30,900
+So then you would need something
+more like there's a logical log 
+
+781
+00:40:30,900 --> 00:40:33,900
+per document and you have a 
+bunch of retards corresponding 
+
+782
+00:40:33,900 --> 00:40:35,600
+to all your different documents 
+that becomes more complicated. 
+
+783
+00:40:35,600 --> 00:40:38,100
+But the base, the basic idea is 
+that you have these logs and you
+
+784
+00:40:38,100 --> 00:40:41,700
+use that as a fraction too. 
+Get the data out to clients and 
+
+785
+00:40:41,700 --> 00:40:44,600
+for the actual storage, we use 
+postgres for the transactional 
+
+786
+00:40:44,600 --> 00:40:47,500
+storage and we can also talk 
+about the real-time aspect in 
+
+787
+00:40:47,500 --> 00:40:50,800
+the large binary blobs because 
+one of the important 
+
+788
+00:40:51,400 --> 00:40:54,200
+considerations that we found, 
+but that's the basic model. 
+
+789
+00:40:54,900 --> 00:40:56,800
+Yeah, I'd love to hear more 
+about that. 
+
+790
+00:40:56,900 --> 00:41:01,400
+Um, okay. 
+So, typical like sequential log 
+
+791
+00:41:01,600 --> 00:41:07,200
+of events and then, if I go open
+a document, and Muse does it 
+
+792
+00:41:07,500 --> 00:41:11,000
+always every time like, replay 
+all the Ants for that document 
+
+793
+00:41:11,000 --> 00:41:13,800
+from the from the start or is 
+there some like snapshotting or 
+
+794
+00:41:13,800 --> 00:41:15,000
+something? 
+Yeah, there's there's basically 
+
+795
+00:41:15,000 --> 00:41:19,400
+cashing the exact way that we 
+implement this is not my 
+
+796
+00:41:19,400 --> 00:41:21,100
+wheelhouse is more on the server
+side but then give you a high 
+
+797
+00:41:21,100 --> 00:41:24,000
+level which is that there's 
+basically a table or view of 
+
+798
+00:41:24,000 --> 00:41:26,800
+that corresponding to the 
+current state of all of those 
+
+799
+00:41:27,400 --> 00:41:30,000
+object attribute registers that 
+I mentioned. 
+
+800
+00:41:30,100 --> 00:41:33,900
+So it's sort of like a regular 
+SQL table where you can like 
+
+801
+00:41:33,900 --> 00:41:36,900
+select star where attribute name
+is this and value is that and it
+
+802
+00:41:36,900 --> 00:41:39,800
+doesn't need to query the entire
+history of the universe. 
+
+803
+00:41:39,900 --> 00:41:41,400
+Do not just look at the current 
+values. 
+
+804
+00:41:42,400 --> 00:41:45,100
+Yeah, that's like in that 
+respect, it's like, client-side,
+
+805
+00:41:45,100 --> 00:41:48,000
+cqrs for you here, like 
+materializing, a view based on 
+
+806
+00:41:48,008 --> 00:41:49,600
+the logs. 
+And then, and then, you know, 
+
+807
+00:41:49,600 --> 00:41:53,200
+based on your sequence number 
+like, like how far along you are
+
+808
+00:41:53,200 --> 00:41:56,500
+in the log with your, with your 
+materialized view, right? 
+
+809
+00:41:56,500 --> 00:41:58,700
+And it's also that's also up to 
+the clients that we've also the 
+
+810
+00:41:58,700 --> 00:42:00,700
+main client that we've 
+implemented is this, the Swift 
+
+811
+00:42:00,700 --> 00:42:04,100
+one for use in our iOS apps. 
+We also have a little JavaScript
+
+812
+00:42:04,100 --> 00:42:07,500
+client, which is more for for 
+testing, and experimentation and
+
+813
+00:42:07,600 --> 00:42:10,300
+earlier versions of that did 
+just slip up to History to 
+
+814
+00:42:10,300 --> 00:42:11,800
+memory and build up a big hash 
+table. 
+
+815
+00:42:11,900 --> 00:42:14,300
+So it's kind of up to the client
+to do whatever they think is 
+
+816
+00:42:14,300 --> 00:42:16,700
+best and you have the 
+flexibility to do that also. 
+
+817
+00:42:16,700 --> 00:42:20,000
+So I can reach use it. 
+Yeah, over time the log is the 
+
+818
+00:42:20,000 --> 00:42:23,000
+truth and so you can decide how 
+we how you want to deal with the
+
+819
+00:42:23,000 --> 00:42:25,300
+truth. 
+Yeah. 
+
+820
+00:42:25,800 --> 00:42:30,900
+One of the other gun. 
+I was going to have you going to
+
+821
+00:42:30,908 --> 00:42:38,000
+like serialization and 
+efficiency of events and I do 
+
+822
+00:42:38,000 --> 00:42:39,700
+have a lot to say that that, you
+know, like I said for me, 
+
+823
+00:42:39,900 --> 00:42:41,900
+Important to us. 
+I want to make one point about 
+
+824
+00:42:41,900 --> 00:42:44,400
+the architecture and to make 
+this point, I want to go back to
+
+825
+00:42:44,600 --> 00:42:47,700
+the original experience that 
+convinced me to join the 
+
+826
+00:42:47,700 --> 00:42:49,700
+research lab and to work on 
+local first. 
+
+827
+00:42:50,000 --> 00:42:53,300
+So I was meeting Peter Van, 
+hartenberg, who now runs the lab
+
+828
+00:42:53,600 --> 00:42:56,200
+in a coffee shop in San 
+Francisco and he was showing me 
+
+829
+00:42:56,300 --> 00:42:59,800
+that this new prototype of this.
+This little demo called pixel 
+
+830
+00:42:59,800 --> 00:43:03,700
+Pusher, and pixel Pusher was a 
+pixel art editor. 
+
+831
+00:43:03,700 --> 00:43:05,600
+We have these, you know, 
+highlight pixelated images that 
+
+832
+00:43:05,600 --> 00:43:08,800
+you can edit, you know, choose 
+the color and so on, but it was 
+
+833
+00:43:09,100 --> 00:43:11,500
+it was real Time, local first 
+collaborative. 
+
+834
+00:43:11,500 --> 00:43:14,400
+And so the demo, he showed me 
+was he had two instances of this
+
+835
+00:43:14,400 --> 00:43:18,100
+pixel pressure app and they were
+synchronizing and collaborating 
+
+836
+00:43:18,100 --> 00:43:20,800
+in real time. 
+But there was no server. 
+
+837
+00:43:20,900 --> 00:43:25,700
+The entire app was just the 
+react app that he had built and 
+
+838
+00:43:25,708 --> 00:43:27,900
+they were talking to each other.
+You know, I had spent my whole 
+
+839
+00:43:27,900 --> 00:43:30,100
+career building these, the 
+surveys that are incredibly 
+
+840
+00:43:30,100 --> 00:43:32,000
+complicated to huge pain, to 
+manage all of them. 
+
+841
+00:43:32,200 --> 00:43:34,100
+And then you have to like get to
+have your data model on the 
+
+842
+00:43:34,100 --> 00:43:37,100
+server and on the client and you
+got to keep those in sync. 
+
+843
+00:43:37,800 --> 00:43:39,700
+And it was it was incredible to 
+see. 
+
+844
+00:43:40,200 --> 00:43:42,900
+There's just one code base to 
+implement this app that is 
+
+845
+00:43:42,900 --> 00:43:44,900
+real-time collaborative, which 
+up until that point we had 
+
+846
+00:43:44,900 --> 00:43:47,000
+associated with complex Cloud 
+infrastructure. 
+
+847
+00:43:47,700 --> 00:43:51,500
+Now, how do you support 
+coordinator which, which has 
+
+848
+00:43:51,500 --> 00:43:53,500
+scalability issues 
+traditionally. 
+
+849
+00:43:54,000 --> 00:43:55,500
+Yeah. 
+And then, and so, here's here's 
+
+850
+00:43:55,500 --> 00:43:58,500
+some subtlety around that we 
+explored in a lab. 
+
+851
+00:43:58,600 --> 00:44:04,200
+A lot, the idea of doing totally
+peer to peer collaboration, 
+
+852
+00:44:04,200 --> 00:44:05,500
+collaboration and 
+synchronization. 
+
+853
+00:44:05,500 --> 00:44:09,700
+But there, there are two big 
+issues with that one is doing. 
+
+854
+00:44:09,800 --> 00:44:12,800
+Ying peer-to-peer connections on
+the public internet is, let's 
+
+855
+00:44:12,800 --> 00:44:14,800
+just call it Troublesome. 
+You know, there's all kinds of 
+
+856
+00:44:14,900 --> 00:44:16,800
+obstacles in your way. 
+For example, if you're at a cafe
+
+857
+00:44:16,800 --> 00:44:18,700
+off on the router will block 
+peer-to-peer connections for 
+
+858
+00:44:18,900 --> 00:44:20,700
+frankly, pretty good reasons. 
+Yeah. 
+
+859
+00:44:20,700 --> 00:44:23,000
+But they're all kinds of other 
+issues with now punching and so 
+
+860
+00:44:23,000 --> 00:44:25,600
+on but the other issue may be 
+even more fundamental. 
+
+861
+00:44:25,600 --> 00:44:28,500
+Is that people have this 
+reasonable expectation that if 
+
+862
+00:44:28,500 --> 00:44:33,000
+they you know, say bring out 
+their eyes, they lose their 
+
+863
+00:44:33,000 --> 00:44:33,900
+location. 
+Yes. 
+
+864
+00:44:33,900 --> 00:44:35,900
+Say they lose their device. 
+Now they want to be like, get 
+
+865
+00:44:35,900 --> 00:44:38,600
+all the data back or the simpler
+case is, we're collaborating on 
+
+866
+00:44:38,600 --> 00:44:41,200
+a document, you know, you Make 
+some edits in the document and 
+
+867
+00:44:41,200 --> 00:44:44,000
+then you go to sleep and then I 
+open up the document. 
+
+868
+00:44:44,000 --> 00:44:45,600
+I don't want to have to like 
+wait till you get up to like 
+
+869
+00:44:45,600 --> 00:44:47,300
+send me the edits, right? 
+I should just be able to get 
+
+870
+00:44:47,300 --> 00:44:49,200
+them. 
+That's the For Better or Worse. 
+
+871
+00:44:49,200 --> 00:44:50,900
+That's the expectation that you 
+have. 
+
+872
+00:44:51,200 --> 00:44:54,800
+So yeah, we ended up with this 
+model where you still get a lot 
+
+873
+00:44:54,800 --> 00:44:57,300
+of the benefits that I just 
+described but you also get the 
+
+874
+00:44:57,300 --> 00:45:01,300
+benefits of the cloud and that's
+to have this very simple content
+
+875
+00:45:01,300 --> 00:45:05,900
+agnostic synchronization server.
+So the synchronization server 
+
+876
+00:45:05,900 --> 00:45:09,900
+basically just stores, these 
+logs of opaque blobs and And 
+
+877
+00:45:09,900 --> 00:45:13,200
+shuffles them out to the devices
+as needed our sink servers. 
+
+878
+00:45:13,200 --> 00:45:16,200
+If you want two lines of code, 
+it knows nothing about boards or
+
+879
+00:45:16,200 --> 00:45:19,500
+cards or Muse or anchor. 
+Any that stuff doesn't need to 
+
+880
+00:45:19,500 --> 00:45:20,700
+write. 
+It's just shuffling these bits 
+
+881
+00:45:20,700 --> 00:45:24,200
+around and all the logic about 
+the data model is on the 
+
+882
+00:45:24,200 --> 00:45:26,800
+clients. 
+So it's much easier to scale and
+
+883
+00:45:26,800 --> 00:45:29,200
+maintain and eventually to do 
+encryption. 
+
+884
+00:45:29,200 --> 00:45:31,500
+And so on, we'll talk about that
+on a server like this. 
+
+885
+00:45:31,500 --> 00:45:33,200
+That's very simple. 
+And by the way it's totally 
+
+886
+00:45:33,200 --> 00:45:34,300
+generic. 
+Like the, like I said, there's 
+
+887
+00:45:34,300 --> 00:45:36,600
+nothing that having to do with 
+Muse in the server. 
+
+888
+00:45:36,800 --> 00:45:39,400
+So in the same way that the 
+thief Russell on the server, 
+
+889
+00:45:39,400 --> 00:45:43,300
+that's Like here's a board, 
+here's a whatever all it knows 
+
+890
+00:45:43,300 --> 00:45:46,700
+is like oh I got an event and 
+and here's what I do with that 
+
+891
+00:45:46,700 --> 00:45:48,400
+event. 
+So what's interesting? 
+
+892
+00:45:48,400 --> 00:45:51,300
+I mean I'm just thinking more 
+philosophically about this is 
+
+893
+00:45:51,300 --> 00:45:56,400
+like that is actually serving 
+you rather than trying to 
+
+894
+00:45:56,400 --> 00:45:59,600
+control you. 
+You know, I guess thinking of 
+
+895
+00:45:59,600 --> 00:46:04,700
+this in terms of hierarchies in 
+general it's like sometimes you 
+
+896
+00:46:04,700 --> 00:46:09,500
+do need a central thing but it 
+needs to be serving you and not 
+
+897
+00:46:09,800 --> 00:46:11,300
+Trolling you. 
+Yeah yes. 
+
+898
+00:46:11,400 --> 00:46:14,500
+And in fact one of the seven 
+desiderata that we enumerated in
+
+899
+00:46:14,500 --> 00:46:17,700
+our local first position, paper 
+was user control, that's number 
+
+900
+00:46:17,700 --> 00:46:21,000
+seven and you know, we want 
+users to have the sense of they 
+
+901
+00:46:21,000 --> 00:46:24,100
+Control Data in the sense of 
+they can, you know, obviously 
+
+902
+00:46:24,100 --> 00:46:25,900
+control the schema but they can 
+get like a full copy. 
+
+903
+00:46:25,900 --> 00:46:29,400
+They can take it somewhere else,
+you can convey it by a USB stick
+
+904
+00:46:29,400 --> 00:46:30,500
+on carrier, pigeon, whatever. 
+You know. 
+
+905
+00:46:30,500 --> 00:46:33,200
+It's your data. 
+That's that's a really important
+
+906
+00:46:33,200 --> 00:46:35,200
+benefit. 
+Yeah, so in that case, the 
+
+907
+00:46:35,200 --> 00:46:38,200
+server is there for the user or 
+serve in the user. 
+
+908
+00:46:38,200 --> 00:46:43,500
+Not not the That's making the 
+decisions around around who, 
+
+909
+00:46:43,500 --> 00:46:46,300
+which right wins. 
+And and how do we how do we 
+
+910
+00:46:46,300 --> 00:46:48,900
+translate that into an 
+organizational structure? 
+
+911
+00:46:48,900 --> 00:46:51,600
+That's my next question. 
+Yeah, C Rd T is for 
+
+912
+00:46:51,600 --> 00:46:56,000
+organizational structures? 
+Yeah, yeah. 
+
+913
+00:46:56,000 --> 00:46:58,200
+So anyway maybe yeah, maybe we 
+can. 
+
+914
+00:46:58,300 --> 00:47:02,100
+You had asked about 
+serialization deserialization 
+
+915
+00:47:02,100 --> 00:47:05,400
+protocol, let me be a little bit
+more color on the architecture 
+
+916
+00:47:05,400 --> 00:47:08,200
+because we had talked about this
+idea of ephemeral and 
+
+917
+00:47:08,200 --> 00:47:10,800
+transaction on blob data. 
+This this is, I think is really 
+
+918
+00:47:10,800 --> 00:47:12,600
+important. 
+This is a good example of where 
+
+919
+00:47:12,600 --> 00:47:14,600
+there's a bit of a mismatch 
+between Academia in the 
+
+920
+00:47:15,000 --> 00:47:17,500
+industrial world. 
+So, when you're building a 
+
+921
+00:47:17,500 --> 00:47:20,000
+real-time collaborative, 
+applique, you're building a 
+
+922
+00:47:20,000 --> 00:47:22,600
+real-time collaborative, video 
+editor, there are three types of
+
+923
+00:47:22,600 --> 00:47:23,800
+data. 
+There are very important. 
+
+924
+00:47:23,800 --> 00:47:26,300
+The first is transactional data 
+and that's what you usually see,
+
+925
+00:47:26,400 --> 00:47:28,500
+being conveyed in managed around
+with certainty. 
+
+926
+00:47:28,500 --> 00:47:30,600
+This is stuff that you would 
+write in a SQL database. 
+
+927
+00:47:30,600 --> 00:47:33,500
+Usually. 
+And see your duties as we know 
+
+928
+00:47:33,500 --> 00:47:35,500
+them are good for that. 
+You get like high acid 
+
+929
+00:47:35,500 --> 00:47:38,600
+compliance with us. 
+Like yeah, they need to be. 
+
+930
+00:47:38,600 --> 00:47:41,600
+They need to be durable. 
+Yeah, you're pretty good. 
+
+931
+00:47:41,600 --> 00:47:44,800
+Be very durable, very reliable. 
+They the amount of data is 
+
+932
+00:47:44,800 --> 00:47:49,000
+extremely small in the scheme of
+things and so on, then you have 
+
+933
+00:47:49,100 --> 00:47:50,600
+what I would call an ephemeral 
+data. 
+
+934
+00:47:50,800 --> 00:47:54,100
+So example of this is you're 
+moving your finger on a card and
+
+935
+00:47:54,100 --> 00:47:56,500
+using a tablet and you're moving
+it around and you on the other 
+
+936
+00:47:56,500 --> 00:47:58,000
+side are seeing that card move 
+around. 
+
+937
+00:47:58,200 --> 00:48:01,600
+You want to see that happen as 
+as fast as physically possible 
+
+938
+00:48:01,600 --> 00:48:05,400
+given Network distance between 
+us but you don't need to save 
+
+939
+00:48:05,400 --> 00:48:08,500
+like the whole history of 60 
+frames a second of where this 
+
+940
+00:48:08,500 --> 00:48:09,900
+card was for all the time, 
+right? 
+
+941
+00:48:09,900 --> 00:48:13,500
+It's ephemeral its best effort, 
+it can be, it can be dropped and
+
+942
+00:48:13,500 --> 00:48:15,300
+then binary data. 
+That's just like this huge. 
+
+943
+00:48:15,300 --> 00:48:18,100
+Blobs you like big video. 
+Files are big images and that's 
+
+944
+00:48:18,100 --> 00:48:20,200
+also a toy different shape. 
+It can't be conveyed in the same
+
+945
+00:48:20,200 --> 00:48:23,700
+channels. 
+And so one of the, the insights 
+
+946
+00:48:23,700 --> 00:48:26,600
+from our research is that you 
+need all three of these and they
+
+947
+00:48:26,600 --> 00:48:29,300
+have to be like, very coherent 
+with each other. 
+
+948
+00:48:29,300 --> 00:48:33,000
+So for example, the ephemeral 
+Data when you're moving a card 
+
+949
+00:48:33,000 --> 00:48:35,300
+around, whether it's a femoral a
+transactional. 
+
+950
+00:48:35,300 --> 00:48:38,800
+So just sit just appear to the 
+developer as a flag. 
+
+951
+00:48:38,900 --> 00:48:41,700
+You know, this is a femoral is 
+the femoral moving, okay. 
+
+952
+00:48:41,700 --> 00:48:44,700
+My fingers off the cards being 
+let go flip it to transactional.
+
+953
+00:48:44,900 --> 00:48:47,200
+Whereas under the hood, it's 
+going to take a completely 
+
+954
+00:48:47,200 --> 00:48:48,900
+different code path. 
+It's like going through 
+
+955
+00:48:48,900 --> 00:48:51,100
+different, you know, services 
+and everything, right? 
+
+956
+00:48:51,200 --> 00:48:53,300
+It's completed from but it needs
+to be presented to the user is 
+
+957
+00:48:53,300 --> 00:48:56,400
+being a coherent API, and 
+likewise with blobs. 
+
+958
+00:48:56,600 --> 00:48:59,100
+That's going to go on a toy 
+different storage path to RS3, 
+
+959
+00:48:59,200 --> 00:49:02,300
+but the way that transactional 
+data relates to blobs, To be 
+
+960
+00:49:02,300 --> 00:49:05,400
+very consistent. 
+Anyways, that's that's an 
+
+961
+00:49:05,400 --> 00:49:09,300
+important to really good Insight
+because I think that part of 
+
+962
+00:49:09,300 --> 00:49:13,600
+what you have discovered and I 
+think other people are beginning
+
+963
+00:49:13,600 --> 00:49:18,400
+to discover is that we've tried 
+to shove all data and All rights
+
+964
+00:49:18,400 --> 00:49:22,500
+into the transactional model or 
+you know maybe or maybe into I 
+
+965
+00:49:22,508 --> 00:49:25,000
+don't know I know sequel model 
+or whatever like we try to like 
+
+966
+00:49:25,000 --> 00:49:29,300
+say like everything can fit this
+one model for data storage and 
+
+967
+00:49:29,800 --> 00:49:34,200
+data durability and Data, you 
+know like like we try to 
+
+968
+00:49:34,200 --> 00:49:38,400
+one-size-fits-all data in a lot 
+of different ways and it's 
+
+969
+00:49:38,400 --> 00:49:42,500
+interesting that you were able 
+to like categorize three 
+
+970
+00:49:42,500 --> 00:49:47,900
+different buckets of needs that 
+you have around data and and I 
+
+971
+00:49:48,100 --> 00:49:51,000
+it totally makes sense when you 
+explain it like the the yeah 
+
+972
+00:49:51,000 --> 00:49:54,100
+they like not everything is the 
+same shape and not everything 
+
+973
+00:49:54,300 --> 00:49:57,700
+needs the same durability and 
+not everything needs the same. 
+
+974
+00:49:58,600 --> 00:50:00,400
+You know, guarantee is and all 
+that. 
+
+975
+00:50:00,400 --> 00:50:05,800
+Some makes total sense. 
+Yeah, and that brings us perhaps
+
+976
+00:50:05,800 --> 00:50:08,300
+to the kind of networking and 
+protocol side. 
+
+977
+00:50:08,600 --> 00:50:13,700
+So I mentioned before how the 
+sync server is just shuffling 
+
+978
+00:50:13,700 --> 00:50:16,000
+bikes around. 
+So that implies this interesting
+
+979
+00:50:16,000 --> 00:50:18,600
+separation of the two protocol 
+layers, there's what we call the
+
+980
+00:50:18,600 --> 00:50:22,000
+network layer which is, how do 
+you Shuffle the B around? 
+
+981
+00:50:22,200 --> 00:50:25,300
+And there's a totally separate 
+layer called the app layer, 
+
+982
+00:50:25,300 --> 00:50:29,200
+which is schema of muse, boards 
+and cards and ink, and things 
+
+983
+00:50:29,200 --> 00:50:32,100
+like that. 
+And in order for the server, 
+
+984
+00:50:32,200 --> 00:50:35,800
+Were to not have to know about 
+the inner layer, you need two 
+
+985
+00:50:35,800 --> 00:50:37,600
+layers, right? 
+Might sound obvious, but it 
+
+986
+00:50:37,600 --> 00:50:39,700
+feels a little weird when you're
+developing the system and you 
+
+987
+00:50:39,700 --> 00:50:42,000
+have like these, these schemas 
+stacked on top of each other. 
+
+988
+00:50:43,000 --> 00:50:45,400
+So the so then you go from 
+inside out. 
+
+989
+00:50:45,400 --> 00:50:50,300
+When you make an edit, you will 
+encode transaction and we use 
+
+990
+00:50:50,300 --> 00:50:52,400
+protocol buffers for encoding. 
+We could talk about how we 
+
+991
+00:50:52,408 --> 00:50:54,900
+arrived at that but might not be
+too surprising, dear listeners, 
+
+992
+00:50:55,900 --> 00:50:58,400
+you encode. 
+This as protocol buffers and 
+
+993
+00:50:58,400 --> 00:51:01,800
+then you basically batch all 
+those up and you can optionally 
+
+994
+00:51:01,800 --> 00:51:05,300
+compress So on into a network 
+level message, which is going up
+
+995
+00:51:05,300 --> 00:51:07,900
+to the server and saying, for 
+example, sync these packs 
+
+996
+00:51:07,900 --> 00:51:10,800
+durably or perhaps sink. 
+These are convey these packs. 
+
+997
+00:51:10,800 --> 00:51:14,800
+Ephemerally. 
+And so on, and the again because
+
+998
+00:51:14,800 --> 00:51:17,200
+performance Observer, when you, 
+when you send the message, you 
+
+999
+00:51:17,200 --> 00:51:22,400
+tell it what the which of those 
+three buckets of data type of 
+
+1000
+00:51:22,400 --> 00:51:25,100
+data, you're in. 
+Well, yes, that that the server 
+
+1001
+00:51:25,100 --> 00:51:27,400
+needs to know because it's going
+to send the data on completely 
+
+1002
+00:51:27,400 --> 00:51:30,500
+different paths. 
+So, for example, that the data 
+
+1003
+00:51:30,500 --> 00:51:33,400
+inside the app data looks 
+Basically the same, you know, 
+
+1004
+00:51:33,400 --> 00:51:36,700
+it's saying the card XY is this,
+but if it's going through the 
+
+1005
+00:51:36,700 --> 00:51:40,200
+ephemeral path, the server is 
+going to immediately Bounce It 
+
+1006
+00:51:40,200 --> 00:51:43,200
+On A best effort basis to the 
+other clients that are connected
+
+1007
+00:51:43,200 --> 00:51:47,100
+for that documented because 
+super quick broadcast Loop just 
+
+1008
+00:51:47,100 --> 00:51:52,600
+like, and it's all right, it's 
+like yeah, yeah, and its best 
+
+1009
+00:51:52,600 --> 00:51:54,100
+efforts. 
+So if the server is saturated or
+
+1010
+00:51:54,100 --> 00:51:56,000
+the client is behind all this, 
+drop it and say, you know, too 
+
+1011
+00:51:56,000 --> 00:52:00,300
+bad, you missed this, you know, 
+1/60 of a second of an update 
+
+1012
+00:52:00,800 --> 00:52:03,700
+whereas the transaction was From
+path that meat first need to get
+
+1013
+00:52:03,700 --> 00:52:06,200
+written into postgres and then 
+it needs to be act back from the
+
+1014
+00:52:06,200 --> 00:52:08,000
+client and so on, and then it 
+gets pushed out to other 
+
+1015
+00:52:08,000 --> 00:52:10,600
+devices, that's it. 
+And then obviously the S2 binary
+
+1016
+00:52:10,600 --> 00:52:14,000
+data and its really different. 
+Yeah, but the stuff inside is 
+
+1017
+00:52:14,000 --> 00:52:17,200
+the same. 
+So when the client receives 
+
+1018
+00:52:17,200 --> 00:52:19,100
+whether it's an ephemeral or 
+transactional update, it will 
+
+1019
+00:52:19,100 --> 00:52:21,000
+unwrap it. 
+And see, you know, this card is 
+
+1020
+00:52:21,000 --> 00:52:23,200
+now x. 
+Y and Plum that through and get 
+
+1021
+00:52:23,200 --> 00:52:27,000
+the update, huh? 
+Do you ever put data in more 
+
+1022
+00:52:27,000 --> 00:52:33,500
+than one bucket? 
+I always Isis always one or the 
+
+1023
+00:52:33,500 --> 00:52:38,400
+other always transactional are 
+ephemeral or blog a given, 
+
+1024
+00:52:38,400 --> 00:52:40,900
+right? 
+Mostly they always go in one 
+
+1025
+00:52:40,900 --> 00:52:44,400
+bucket another, you know, the 
+the the example of moving a card
+
+1026
+00:52:44,400 --> 00:52:47,600
+on the XY is interesting because
+you could I'm actually not sure 
+
+1027
+00:52:47,600 --> 00:52:50,200
+if we do this but you can 
+imagine a world where when 
+
+1028
+00:52:50,200 --> 00:52:53,000
+you're moving a card you send 
+every single update including 
+
+1029
+00:52:53,000 --> 00:52:55,600
+the very last one, we are 
+dropping it as a femoral because
+
+1030
+00:52:55,600 --> 00:52:57,600
+that update will arrive, you 
+know, call it 5 to 10 
+
+1031
+00:52:57,600 --> 00:53:00,700
+milliseconds sooner and Then so 
+they can get that update as soon
+
+1032
+00:53:00,700 --> 00:53:02,100
+as possible. 
+And then, the transactional 
+
+1033
+00:53:02,100 --> 00:53:04,900
+update will come, and it will 
+basically the item potent so 
+
+1034
+00:53:04,900 --> 00:53:06,900
+already have the X Y, but it 
+will also know at that point to 
+
+1035
+00:53:06,900 --> 00:53:08,200
+persist at, which is going to 
+take longer. 
+
+1036
+00:53:08,900 --> 00:53:11,700
+So you can, there's a little bit
+of overlap, but but they tend to
+
+1037
+00:53:11,700 --> 00:53:14,000
+be in separate and I could also 
+Imagine a world we haven't done 
+
+1038
+00:53:14,000 --> 00:53:18,300
+this yet but you can also 
+Imagine a world where you do big
+
+1039
+00:53:19,000 --> 00:53:22,200
+compression in the batches like 
+take the last year's of edits, 
+
+1040
+00:53:22,700 --> 00:53:26,000
+put them into a single file. 
+Jeez at the whole thing at that 
+
+1041
+00:53:26,000 --> 00:53:28,000
+point that would be too big for 
+putting in a postgres database 
+
+1042
+00:53:28,000 --> 00:53:30,800
+so you might put that And nicely
+but you would know it. 
+
+1043
+00:53:30,800 --> 00:53:33,600
+Have appropriate metadata to 
+indicate that that is when you 
+
+1044
+00:53:33,600 --> 00:53:35,500
+unwrap that the app level that 
+needs to be treated as out 
+
+1045
+00:53:35,500 --> 00:53:42,000
+Theta. 
+Yeah, that makes honks does does
+
+1046
+00:53:42,000 --> 00:53:47,200
+the batch from the client always
+contain the a homogeneous set of
+
+1047
+00:53:47,400 --> 00:53:50,000
+data types? 
+Like like is it like you batch 
+
+1048
+00:53:50,000 --> 00:53:54,300
+on on transactional data like 
+only transactions or and then 
+
+1049
+00:53:54,300 --> 00:53:58,300
+you batch on only ephemeral? 
+Yeah, so first of all batching 
+
+1050
+00:53:58,300 --> 00:54:00,100
+is is very Port. 
+This is one of the basic 
+
+1051
+00:54:00,100 --> 00:54:01,900
+insights of high performance of 
+services. 
+
+1052
+00:54:01,900 --> 00:54:03,600
+Some like basically there's 
+batching at every single level. 
+
+1053
+00:54:03,600 --> 00:54:05,300
+You have a batches of batches of
+batches, which a little bit 
+
+1054
+00:54:05,300 --> 00:54:07,900
+annoying, but it's the way that 
+you get the best performance. 
+
+1055
+00:54:08,200 --> 00:54:10,600
+And the way it's currently 
+architected is each there's a 
+
+1056
+00:54:10,600 --> 00:54:12,600
+message type for each type of 
+path, whether it's like you 
+
+1057
+00:54:12,600 --> 00:54:15,300
+know, transactional writer or 
+receiving transactional data. 
+
+1058
+00:54:15,500 --> 00:54:19,100
+So all the messages within that 
+are going to be of the same type
+
+1059
+00:54:19,100 --> 00:54:22,400
+know, these are all durable 
+rights that should be and that's
+
+1060
+00:54:22,400 --> 00:54:24,000
+helpful because you know like I 
+said these are going through 
+
+1061
+00:54:24,000 --> 00:54:25,700
+complete different code path. 
+So wouldn't be super helpful to 
+
+1062
+00:54:25,700 --> 00:54:27,900
+separate these but there's also 
+batching at the connection of. 
+
+1063
+00:54:27,900 --> 00:54:30,700
+So this is a single Persistent 
+connection. 
+
+1064
+00:54:30,900 --> 00:54:34,200
+It's a websocket connection 
+actually, and you can have 
+
+1065
+00:54:34,200 --> 00:54:37,900
+arbitrarily many open request 
+with the server. 
+
+1066
+00:54:38,100 --> 00:54:41,200
+So you can say, for example, one
+after the other send these 
+
+1067
+00:54:41,200 --> 00:54:44,500
+ephemeral updates, send these 
+durable updates, even before you
+
+1068
+00:54:44,500 --> 00:54:46,800
+get any response from the server
+and the server is going to say 
+
+1069
+00:54:46,800 --> 00:54:50,100
+back, basically immediately, 
+okay, ephemeral received. 
+
+1070
+00:54:50,100 --> 00:54:51,700
+And then sometime later, you 
+look back to the durable 
+
+1071
+00:54:51,700 --> 00:54:54,400
+receipts or you could open up, 
+you know, 32 different rights to
+
+1072
+00:54:54,400 --> 00:54:59,100
+server at a time and use that to
+saturate the network link. 
+
+1073
+00:54:59,200 --> 00:55:01,500
+Thank, you know, if you can get 
+all your updates up. 
+
+1074
+00:55:01,500 --> 00:55:03,700
+So that's another way where you 
+do batching. 
+
+1075
+00:55:04,400 --> 00:55:07,500
+Yeah. 
+So, batching batches of batches.
+
+1076
+00:55:09,300 --> 00:55:10,700
+Okay. 
+Now, did we get to 
+
+1077
+00:55:10,700 --> 00:55:13,000
+serialization? 
+Oh, he said protobuf. 
+
+1078
+00:55:13,000 --> 00:55:15,100
+See, I tell him we're about 
+about pretty eyes and ears. 
+
+1079
+00:55:15,100 --> 00:55:17,600
+The story here is there's, 
+there's a few desiderata that we
+
+1080
+00:55:17,600 --> 00:55:20,300
+had around protocol buffers. 
+There needs to be a schema, the 
+
+1081
+00:55:20,300 --> 00:55:23,200
+schema needs to be around zero 
+station, rather, they need to be
+
+1082
+00:55:23,200 --> 00:55:24,200
+a schema. 
+The schema needs to be 
+
+1083
+00:55:24,200 --> 00:55:26,300
+evolvable. 
+There are a couple critical data
+
+1084
+00:55:26,300 --> 00:55:30,100
+types that we needed to be in 
+the schema most notably like B 
+
+1085
+00:55:30,100 --> 00:55:34,200
+slices, which, for example, 
+robot Jason, tends to be very 
+
+1086
+00:55:34,200 --> 00:55:38,600
+fast and needs to be binary 
+format, can't protect us, not 
+
+1087
+00:55:38,600 --> 00:55:41,600
+fast enough and needs to be in 
+all of our key languages. 
+
+1088
+00:55:41,900 --> 00:55:46,700
+So at least Ruby go Swift and 
+JavaScript and I like scoured 
+
+1089
+00:55:46,700 --> 00:55:50,200
+the whole universe. 
+And I came to the, the 
+
+1090
+00:55:50,200 --> 00:55:52,100
+disappointing conclusion. 
+Like, it seems like the only 
+
+1091
+00:55:52,100 --> 00:55:54,500
+option was protocol buffers. 
+I did this very sad tweet was 
+
+1092
+00:55:54,500 --> 00:55:56,300
+like, which is basically 
+explained that like I've 
+
+1093
+00:55:56,300 --> 00:55:58,600
+searched everywhere. 
+Is there another option? 
+
+1094
+00:55:58,600 --> 00:56:00,800
+That's better. 
+Or is it you know, unfortunately
+
+1095
+00:56:01,000 --> 00:56:03,500
+as you already know protocol 
+buffers and that seems to be the
+
+1096
+00:56:03,500 --> 00:56:05,500
+case and you know, Pro colors 
+are basically fine. 
+
+1097
+00:56:05,500 --> 00:56:07,600
+No, it's conceptually almost 
+exactly right. 
+
+1098
+00:56:07,800 --> 00:56:10,800
+And the tooling is a little bit 
+goofy at times but I basically 
+
+1099
+00:56:10,800 --> 00:56:13,100
+works fine. 
+The one thing that I wish we 
+
+1100
+00:56:13,100 --> 00:56:16,800
+could have gotten is what's it 
+called as your copy reads. 
+
+1101
+00:56:17,600 --> 00:56:20,000
+And some of the newer, 
+serialization systems do this, 
+
+1102
+00:56:20,000 --> 00:56:24,700
+where you don't need to, like, 
+kind of read and process the 
+
+1103
+00:56:24,700 --> 00:56:27,200
+whole thing, you can just say, I
+want to read this attribute and 
+
+1104
+00:56:27,208 --> 00:56:30,900
+then it knows to go to this, 
+byte offset Read those bites of 
+
+1105
+00:56:31,800 --> 00:56:34,800
+lazy reads on the by its instead
+of having to parse the whole 
+
+1106
+00:56:34,800 --> 00:56:37,700
+thing. 
+So I think you described this in
+
+1107
+00:56:37,700 --> 00:56:39,800
+functional programming as 
+lenses. 
+
+1108
+00:56:39,800 --> 00:56:43,400
+Is that right? 
+Maybe could use lenses for it. 
+
+1109
+00:56:43,400 --> 00:56:49,500
+Lenses are mostly a way to have 
+a functional query of a object 
+
+1110
+00:56:49,500 --> 00:56:55,400
+graph and then provide mutations
+on pieces of that object graph 
+
+1111
+00:56:55,500 --> 00:57:00,000
+and and get your copy out when 
+you apply your Or your lens 
+
+1112
+00:57:00,000 --> 00:57:03,600
+Hood. 
+But yeah, the there was what 
+
+1113
+00:57:03,600 --> 00:57:06,500
+there's one other tricky piece 
+with serialization and schemas, 
+
+1114
+00:57:06,500 --> 00:57:08,300
+which is these two different 
+layers. 
+
+1115
+00:57:08,700 --> 00:57:13,100
+So they're simple cases, like, 
+your take like the Ping request 
+
+1116
+00:57:13,100 --> 00:57:15,300
+which is the most, the simple 
+request in our protocol, you 
+
+1117
+00:57:15,300 --> 00:57:18,200
+know, request and response. 
+There's a fixed set of 
+
+1118
+00:57:18,200 --> 00:57:19,200
+attributes on that. 
+Actually, I don't know if 
+
+1119
+00:57:19,208 --> 00:57:21,600
+there's any experts on that 
+request, but maybe authenticate 
+
+1120
+00:57:21,600 --> 00:57:22,100
+request. 
+Okay? 
+
+1121
+00:57:22,100 --> 00:57:23,900
+So the etiquette is always going
+to give you your credential to 
+
+1122
+00:57:23,900 --> 00:57:26,100
+the server and the server is 
+going to reply back with your 
+
+1123
+00:57:26,100 --> 00:57:28,500
+successor an error code. 
+So that's that's great protocol 
+
+1124
+00:57:28,500 --> 00:57:30,800
+buffers because it's Fix thats 
+basically be the same forever 
+
+1125
+00:57:31,200 --> 00:57:33,400
+but then there's a problem of. 
+What do you do about all the 
+
+1126
+00:57:33,400 --> 00:57:36,100
+application data? 
+And remember that this data 
+
+1127
+00:57:36,100 --> 00:57:40,200
+isn't this form of what we call 
+atoms just like object ID. 
+
+1128
+00:57:40,300 --> 00:57:44,100
+We have also the scope ID, the 
+attribute name and the value. 
+
+1129
+00:57:44,600 --> 00:57:48,600
+And if you think about how you 
+would typically use protocol 
+
+1130
+00:57:48,600 --> 00:57:51,700
+buffers, you'd have a schema 
+that has things like boards and 
+
+1131
+00:57:51,700 --> 00:57:53,000
+cards. 
+And those things have these 
+
+1132
+00:57:53,000 --> 00:57:55,500
+attributes, but we can't do that
+because our data model gets 
+
+1133
+00:57:55,500 --> 00:58:00,300
+pivoted into these atoms. 
+So instead you have the sort of 
+
+1134
+00:58:00,300 --> 00:58:03,500
+weird thing, we have a protocol 
+buffer definition for Adams, and
+
+1135
+00:58:03,500 --> 00:58:07,100
+you say, you know, that has this
+ID and this attribute name is 
+
+1136
+00:58:07,100 --> 00:58:09,000
+value. 
+But that that pivoting is 
+
+1137
+00:58:09,000 --> 00:58:11,200
+honestly a little bit weird. 
+I don't think we have a, the 
+
+1138
+00:58:11,200 --> 00:58:14,600
+perfect answer for it yet, but 
+it does become. 
+
+1139
+00:58:14,600 --> 00:58:17,300
+You can see, it's kind of one of
+those like agnostic to The 
+
+1140
+00:58:17,300 --> 00:58:20,300
+Domain, right? 
+So you actually end up having 
+
+1141
+00:58:20,300 --> 00:58:22,600
+your basically, to schemas you 
+have the way that you encode, 
+
+1142
+00:58:22,600 --> 00:58:25,100
+everything, which is in protocol
+buffers, and then you have the 
+
+1143
+00:58:25,100 --> 00:58:28,300
+application Level schema, which 
+says you should have, you should
+
+1144
+00:58:28,300 --> 00:58:32,800
+basically See atoms for a type 
+board that has, you know, title 
+
+1145
+00:58:32,800 --> 00:58:36,700
+and width and height and secret.
+This mapping from atoms to the 
+
+1146
+00:58:36,700 --> 00:58:39,600
+actual domain. 
+Yeah, it's like domain objects 
+
+1147
+00:58:39,600 --> 00:58:41,900
+and it's kind of weird because 
+you need two different schemas 
+
+1148
+00:58:41,900 --> 00:58:44,000
+and they can't be the same thing
+because, you know, there's 
+
+1149
+00:58:44,000 --> 00:58:45,900
+totally different. 
+It can't be broke protocol 
+
+1150
+00:58:45,900 --> 00:58:47,800
+buffers, for example and so 
+that's been a little bit 
+
+1151
+00:58:47,800 --> 00:58:52,000
+challenging but at the do it 
+works in your in your postgres 
+
+1152
+00:58:52,000 --> 00:58:54,500
+database on the server. 
+Do you store the actual Proto 
+
+1153
+00:58:55,000 --> 00:58:59,400
+like Proto message or do you do 
+deserialize it into into the 
+
+1154
+00:58:59,400 --> 00:59:03,200
+atom data and then store the 
+atom that we store the binary 
+
+1155
+00:59:03,200 --> 00:59:05,100
+data. 
+So typically when you receive 
+
+1156
+00:59:05,100 --> 00:59:08,100
+when you push up to the server, 
+call it transactional data. 
+
+1157
+00:59:08,100 --> 00:59:13,000
+It's it's basically going to be 
+a bunch of serialized Adams 
+
+1158
+00:59:13,000 --> 00:59:16,500
+appended to each other with some
+metadata around it, but the 
+
+1159
+00:59:16,500 --> 00:59:18,300
+server doesn't really need to 
+know that the server basically 
+
+1160
+00:59:18,300 --> 00:59:23,300
+to says, okay, I'm getting a 
+message that has three packs in 
+
+1161
+00:59:23,300 --> 00:59:24,500
+it. 
+Impacts, our just opaque 
+
+1162
+00:59:24,500 --> 00:59:28,300
+collections of B strip out that 
+metadata and, and just store the
+
+1163
+00:59:28,300 --> 00:59:31,300
+packs in a Base and put the 
+metadata as columns. 
+
+1164
+00:59:31,700 --> 00:59:36,000
+So the server it needs to do 
+very little processing which is,
+
+1165
+00:59:36,300 --> 00:59:38,400
+by the way, that was one of the 
+motivations for trying to get 
+
+1166
+00:59:38,400 --> 00:59:39,600
+zero copy read because it'd be 
+nice. 
+
+1167
+00:59:39,600 --> 00:59:41,600
+If you could just you have these
+big byte buffers in there. 
+
+1168
+00:59:41,600 --> 00:59:43,900
+That's most of the data, it'd be
+nice if you just read those out 
+
+1169
+00:59:43,900 --> 00:59:46,300
+with having to do a full copy 
+but it's basically find it. 
+
+1170
+00:59:46,300 --> 00:59:53,400
+Uh yeah and then your server 
+schemas is very very basic and 
+
+1171
+00:59:53,400 --> 00:59:56,800
+so you don't have to do with 
+like their schemes it's like 
+
+1172
+00:59:56,800 --> 00:59:59,600
+just like updates and it's and 
+it's huge and it tells As you 
+
+1173
+00:59:59,600 --> 01:00:02,700
+what the binary data was, what 
+the device was. 
+
+1174
+01:00:02,900 --> 01:00:06,400
+You know, that's basically it. 
+There's some other accounting 
+
+1175
+01:00:06,400 --> 01:00:08,400
+stuff like accounting for the 
+different read heads and there's
+
+1176
+01:00:08,800 --> 01:00:11,400
+if it's stored in S 3 where and 
+things like that, but that's 
+
+1177
+01:00:11,400 --> 01:00:14,000
+basically it super simple. 
+Huh? 
+
+1178
+01:00:14,800 --> 01:00:17,200
+So there's three of you working 
+in this company. 
+
+1179
+01:00:17,200 --> 01:00:20,800
+You said, ah, so there were 
+three co-founders, we've since 
+
+1180
+01:00:20,800 --> 01:00:25,100
+hired two other partners and 
+working on hiring potentially 
+
+1181
+01:00:25,100 --> 01:00:26,500
+one or two more in the near term
+here. 
+
+1182
+01:00:27,300 --> 01:00:32,800
+Okay, and so how much your time 
+are you able to spend like, 
+
+1183
+01:00:33,700 --> 01:00:37,700
+doing this technology stuff? 
+Which you clearly are, how much 
+
+1184
+01:00:37,700 --> 01:00:39,800
+time do you spend in the Muse 
+app? 
+
+1185
+01:00:39,800 --> 01:00:44,800
+Architecting the system versus. 
+I don't know what, what else 
+
+1186
+01:00:44,800 --> 01:00:47,700
+you're doing? 
+I don't know, we'll just call it
+
+1187
+01:00:47,700 --> 01:00:51,700
+managing grind on. 
+Yeah, well, this kind of gets to
+
+1188
+01:00:51,700 --> 01:00:55,100
+how we we have a very unique 
+setup at Musso to directly 
+
+1189
+01:00:55,100 --> 01:00:56,900
+answer a question. 
+I spent basically all my time 
+
+1190
+01:00:57,100 --> 01:01:00,200
+I'm creative work. 
+Now, for me, I'm like a half 
+
+1191
+01:01:00,200 --> 01:01:02,800
+engineer. 
+I also do product stuff and some
+
+1192
+01:01:02,800 --> 01:01:05,600
+other stuff at the company, 
+like, I do our taxes or 
+
+1193
+01:01:05,600 --> 01:01:10,100
+whatever, but but there's no, 
+there's no time managing 
+
+1194
+01:01:10,400 --> 01:01:12,300
+basically, no time managing 
+other people and that this gets 
+
+1195
+01:01:12,300 --> 01:01:15,600
+to this idea of a partner. 
+So out of my, for example, we 
+
+1196
+01:01:15,600 --> 01:01:19,100
+did a lot of management early in
+our careers and that's kind of 
+
+1197
+01:01:19,108 --> 01:01:21,800
+hard in training and like after 
+a while you get tired of like, 
+
+1198
+01:01:21,800 --> 01:01:24,900
+you know, trying to encourage 
+other people to do stuff and we 
+
+1199
+01:01:24,900 --> 01:01:29,000
+wanted this world. 
+That we call it a partnership 
+
+1200
+01:01:29,000 --> 01:01:33,300
+where every single person at the
+company is entrusted to be a 
+
+1201
+01:01:33,800 --> 01:01:37,400
+independent High performer and 
+that's why they're called 
+
+1202
+01:01:37,400 --> 01:01:39,100
+Partners. 
+It's a very high level of 
+
+1203
+01:01:39,500 --> 01:01:42,300
+responsibility and corresponding
+High ownership in the company 
+
+1204
+01:01:42,300 --> 01:01:44,400
+and so on. 
+And so, if they need to be 
+
+1205
+01:01:44,400 --> 01:01:46,500
+managed, maybe they're not a 
+good fit, right? 
+
+1206
+01:01:46,500 --> 01:01:46,700
+Right. 
+Yeah. 
+
+1207
+01:01:46,700 --> 01:01:48,500
+We don't really, we don't time 
+to do that. 
+
+1208
+01:01:48,500 --> 01:01:51,800
+And we want to work with people 
+who have incredible independent,
+
+1209
+01:01:51,900 --> 01:01:55,100
+you know, Creative Energy, 
+agency, and judgment. 
+
+1210
+01:01:55,200 --> 01:01:56,900
+I'm so impressed with, it's 
+probably thing. 
+
+1211
+01:01:57,000 --> 01:01:59,700
+I'm most impressed with, with 
+The Muse team is the level of 
+
+1212
+01:01:59,800 --> 01:02:02,000
+judgment that they show. 
+You can just say, like, I'm 
+
+1213
+01:02:02,200 --> 01:02:03,600
+asking you to decide what to do 
+here. 
+
+1214
+01:02:03,600 --> 01:02:05,700
+Please figure it out, make a 
+decision, and it almost always 
+
+1215
+01:02:05,700 --> 01:02:09,200
+comes back, great and such a 
+contrast to my old, you know, 
+
+1216
+01:02:09,200 --> 01:02:10,800
+management world where 
+everything would be like, you 
+
+1217
+01:02:10,800 --> 01:02:13,300
+know, cross-checked and 
+stakeholders and reviews and 
+
+1218
+01:02:13,800 --> 01:02:15,500
+reverts and vetoes and I don't 
+know high. 
+
+1219
+01:02:15,500 --> 01:02:19,200
+So I like the setup that we have
+of a small number of Highly 
+
+1220
+01:02:19,200 --> 01:02:22,600
+empowered individuals. 
+So it's you're trying, it sounds
+
+1221
+01:02:22,600 --> 01:02:26,400
+like you're trying to create a 
+flat organization Well. 
+
+1222
+01:02:29,400 --> 01:02:32,200
+We all know that's not that's 
+challenge, especially as you get
+
+1223
+01:02:32,200 --> 01:02:36,400
+bigger, it's more like the the 
+type of business that you're 
+
+1224
+01:02:36,400 --> 01:02:40,400
+going to have in terms of size 
+and growth is going to dictate 
+
+1225
+01:02:41,500 --> 01:02:46,900
+the the Personnel. 
+So if you have a traditional 
+
+1226
+01:02:47,000 --> 01:02:50,100
+venture-backed startup with the 
+classic Model, the startup needs
+
+1227
+01:02:50,100 --> 01:02:51,900
+to become very large a billion 
+dollars. 
+
+1228
+01:02:51,900 --> 01:02:54,700
+Plus the only way to do that is 
+to have a very large team and 
+
+1229
+01:02:54,700 --> 01:02:56,900
+the only way to scale and that 
+amount of talent is to have a 
+
+1230
+01:02:56,908 --> 01:03:00,100
+traditional the management 
+structure and and so on and so 
+
+1231
+01:03:00,100 --> 01:03:03,700
+forth, there's also the world 
+like you can't have a flat 
+
+1232
+01:03:03,700 --> 01:03:04,600
+organization with thousand 
+people. 
+
+1233
+01:03:04,600 --> 01:03:08,100
+That's not going to work. 
+There are there are fat 
+
+1234
+01:03:08,100 --> 01:03:10,500
+organizations that are a lot 
+bigger than a thousand people. 
+
+1235
+01:03:10,500 --> 01:03:12,400
+I think they would claim that 
+they would claim that. 
+
+1236
+01:03:13,600 --> 01:03:16,100
+Now, maybe we talk more about 
+that, but on the other side, 
+
+1237
+01:03:16,100 --> 01:03:22,000
+there's the there's like the 
+classic Indy model of you have 
+
+1238
+01:03:22,000 --> 01:03:23,800
+one or two people. 
+They're just doing their own 
+
+1239
+01:03:23,800 --> 01:03:26,600
+thing independently. 
+And that's great. 
+
+1240
+01:03:26,600 --> 01:03:30,500
+But you're there's a pretty 
+limited scope of product and 
+
+1241
+01:03:30,500 --> 01:03:32,700
+Market complexity can go after 
+it with Muse. 
+
+1242
+01:03:32,700 --> 01:03:36,000
+We knew that that we were two to
+three to four years away. 
+
+1243
+01:03:36,000 --> 01:03:38,600
+From realizing the full vision, 
+it would take at least several 
+
+1244
+01:03:38,600 --> 01:03:40,600
+Engineers, take some marketing 
+Works in Prague work design 
+
+1245
+01:03:40,600 --> 01:03:42,500
+work. 
+It's too big of a problem to do 
+
+1246
+01:03:42,500 --> 01:03:45,400
+on a fully Indie basis but we 
+didn't want to go and do like 
+
+1247
+01:03:45,400 --> 01:03:49,800
+the full-blown Venture Capital 
+startup, you know, raise tens or
+
+1248
+01:03:49,800 --> 01:03:52,400
+hundreds millions of dollars and
+get a thousand person team. 
+
+1249
+01:03:52,600 --> 01:03:54,700
+So we've tried to chart this 
+middle path. 
+
+1250
+01:03:56,000 --> 01:03:58,100
+That tries to draw from The Best
+of Both Worlds. 
+
+1251
+01:03:58,200 --> 01:04:00,300
+There's like the idea of quick 
+iteration and getting the 
+
+1252
+01:04:00,300 --> 01:04:03,000
+product Market fit and you know,
+lean that you have from the 
+
+1253
+01:04:03,000 --> 01:04:05,000
+startup world. 
+There's also the the idea of 
+
+1254
+01:04:05,000 --> 01:04:06,600
+high ownership and 
+responsibility that you have 
+
+1255
+01:04:06,600 --> 01:04:09,100
+from the Indie world and 
+Independence in general and 
+
+1256
+01:04:09,100 --> 01:04:11,400
+trying to combine them in this 
+middle path. 
+
+1257
+01:04:11,400 --> 01:04:13,100
+You know. 
+We'll see it's honestly quite 
+
+1258
+01:04:13,300 --> 01:04:15,600
+quite challenging because of how
+unusual it is but that's that 
+
+1259
+01:04:15,600 --> 01:04:17,900
+was the idea with creating this 
+partnership. 
+
+1260
+01:04:18,700 --> 01:04:20,000
+Yeah. 
+It sounds like something that 
+
+1261
+01:04:20,000 --> 01:04:23,700
+might scale further than the in 
+the startup model. 
+
+1262
+01:04:23,700 --> 01:04:25,600
+I mean it seems like with the 
+energy Our Top Model. 
+
+1263
+01:04:25,600 --> 01:04:27,500
+You always get to a point where 
+you go. 
+
+1264
+01:04:27,500 --> 01:04:30,300
+Okay. 
+Now we have to stick the normal 
+
+1265
+01:04:30,300 --> 01:04:32,200
+bring in the yeah this the 
+manager. 
+
+1266
+01:04:32,200 --> 01:04:33,900
+Yeah. 
+Stick the normal hierarchy in 
+
+1267
+01:04:33,900 --> 01:04:37,000
+place and they, you know, it's 
+just kind of a giving up process
+
+1268
+01:04:37,000 --> 01:04:40,200
+but here it seems like you'll 
+probably get further before you 
+
+1269
+01:04:40,200 --> 01:04:41,800
+decide. 
+You have to do that. 
+
+1270
+01:04:42,900 --> 01:04:46,200
+Yeah, and certainly five, six 
+seven people that can operate as
+
+1271
+01:04:46,200 --> 01:04:49,800
+a single self organizing team. 
+As you get Beyond about seven, 
+
+1272
+01:04:49,800 --> 01:04:51,300
+it becomes harder. 
+And you need to open a little 
+
+1273
+01:04:51,300 --> 01:04:53,500
+bit more structure. 
+But it's really, it's really a 
+
+1274
+01:04:53,508 --> 01:04:56,000
+Continuum where, how big are 
+you? 
+
+1275
+01:04:56,000 --> 01:04:59,000
+How fast are you growing? 
+How sharply, divided, other 
+
+1276
+01:04:59,000 --> 01:05:00,100
+responsibilities and 
+hierarchies. 
+
+1277
+01:05:00,100 --> 01:05:02,300
+And we're just trying to find a 
+good middle path there. 
+
+1278
+01:05:02,900 --> 01:05:06,100
+Well and it also sounds like the
+kind of people you're hiring for
+
+1279
+01:05:06,100 --> 01:05:12,500
+this may produce perhaps a 
+better corporate culture. 
+
+1280
+01:05:12,800 --> 01:05:16,500
+As the company expands. 
+Yeah. 
+
+1281
+01:05:16,500 --> 01:05:18,500
+So I feel very lucky to work 
+with the team that we have them 
+
+1282
+01:05:18,500 --> 01:05:24,700
+use awesome. 
+Well, that was, that was great 
+
+1283
+01:05:24,700 --> 01:05:29,000
+to kind of see how c r DT is can
+solve real-world problems. 
+
+1284
+01:05:30,000 --> 01:05:33,100
+So, thanks for sharing all that 
+information with us, Mark. 
+
+1285
+01:05:33,100 --> 01:05:34,300
+And yeah. 
+Really. 
+
+1286
+01:05:34,600 --> 01:05:38,800
+And we'll look forward to I, you
+know, playing with the app. 
+
+1287
+01:05:38,800 --> 01:05:39,700
+It's um, yeah. 
+A'ight. 
+
+1288
+01:05:39,700 --> 01:05:40,500
+We do. 
+Yeah. 
+
+1289
+01:05:40,600 --> 01:05:41,400
+Cuz that. 
+Yeah. 
+
+1290
+01:05:41,600 --> 01:05:44,500
+Sounds intriguing. 
+Yeah, maybe we could use it for 
+
+1291
+01:05:44,500 --> 01:05:47,100
+organizing Open Spaces. 
+Something we've talked about for
+
+1292
+01:05:47,200 --> 01:05:48,700
+a long time. 
+Yes, having the right, 
+
+1293
+01:05:48,700 --> 01:05:51,800
+electronic organization of Open 
+Spaces, but we have to have Of 
+
+1294
+01:05:51,800 --> 01:05:53,400
+the networked one for that to 
+work. 
+
+1295
+01:05:53,500 --> 01:05:54,400
+Yeah. 
+Yeah. 
+
+1296
+01:05:56,200 --> 01:05:57,400
+Alright. 
+Thank you so much Mark. 
+
+1297
+01:05:57,400 --> 01:05:59,900
+Really appreciate your time. 
+Thanks so much for having me was
+
+1298
+01:05:59,900 --> 01:05:53,100
+fun. 
+Of the networked one for that to
+
+1299
+01:05:53,100 --> 01:05:53,800
+work. 
+Yeah. 
+
+1300
+01:05:54,100 --> 01:05:56,500
+Yeah. 
+Alright. 
+
+1301
+01:05:56,500 --> 01:05:58,500
+Thank you so much Mark. 
+Really appreciate your time. 
+
+1302
+01:05:59,100 --> 01:06:00,200
+Thanks so much for having me was
+fun.
+

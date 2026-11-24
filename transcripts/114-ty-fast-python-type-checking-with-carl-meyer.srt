@@ -1,0 +1,5620 @@
+1
+00:00:01,080 --> 00:00:03,400
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,760 --> 00:00:05,560
+I'm Bruce Eckle. 
+I'm James Ward. 
+
+3
+00:00:07,800 --> 00:00:10,400
+Welcome to Happy Path 
+Programming. 
+
+4
+00:00:10,400 --> 00:00:18,200
+It is July 25th, 2025 and the 
+the only thing I want to talk 
+
+5
+00:00:18,200 --> 00:00:22,560
+about before you get started is 
+the summer tech forum on 
+
+6
+00:00:22,560 --> 00:00:26,520
+conference. 
+Yes, on conference and that is 
+
+7
+00:00:26,520 --> 00:00:29,520
+September 8th through 12th. 
+So that's coming up. 
+
+8
+00:00:30,080 --> 00:00:34,160
+And if you go to 
+summertechforum.com, you'll see 
+
+9
+00:00:34,440 --> 00:00:36,720
+we're all set up to register and
+everything. 
+
+10
+00:00:36,720 --> 00:00:41,240
+I just met with the with a 
+professor at the local 
+
+11
+00:00:41,240 --> 00:00:45,080
+university and they, they had 
+some people and a couple of 
+
+12
+00:00:45,080 --> 00:00:48,080
+professors who came to the 
+Winter Tech Forum and we're 
+
+13
+00:00:48,080 --> 00:00:52,640
+totally jazzed by it. 
+And so we're gonna have possibly
+
+14
+00:00:52,640 --> 00:00:56,920
+10 students will get, I think 
+they'll they'll get sponsored. 
+
+15
+00:00:57,080 --> 00:00:58,640
+Cool it. 
+Was really nice having the 
+
+16
+00:00:58,680 --> 00:01:00,960
+students. 
+And professors, it really, it 
+
+17
+00:01:00,960 --> 00:01:05,440
+really, you know, added to the 
+breadth of our discussions and 
+
+18
+00:01:05,960 --> 00:01:09,000
+apparently they got a huge 
+benefit out of it. 
+
+19
+00:01:09,920 --> 00:01:14,920
+It looks like Bill Venners of 
+Scalf fame will be coming and 
+
+20
+00:01:15,480 --> 00:01:18,360
+are long time friend Diane 
+Marsh. 
+
+21
+00:01:18,360 --> 00:01:22,560
+Diane gonna find Well, that's. 
+How I kind of organized the 
+
+22
+00:01:22,560 --> 00:01:25,960
+conference with the idea that 
+she would be coming because she 
+
+23
+00:01:25,960 --> 00:01:28,600
+said, oh, here's here are the 
+weeks that I could come. 
+
+24
+00:01:28,600 --> 00:01:30,760
+And so this is one of the. 
+Ones that the dates based on 
+
+25
+00:01:30,760 --> 00:01:32,680
+Diane. 
+'S gotta choose, you know, gotta
+
+26
+00:01:32,680 --> 00:01:36,560
+choose some reason to set the 
+dates and yeah, the idea is 
+
+27
+00:01:36,560 --> 00:01:39,480
+yeah, Diane will that that's 
+what she said. 
+
+28
+00:01:39,680 --> 00:01:43,960
+Both Bill and Diane will be here
+and oh, that'll be interesting 
+
+29
+00:01:43,960 --> 00:01:46,640
+and. 
+This is in Crested Butte, Co, it
+
+30
+00:01:46,640 --> 00:01:49,480
+is where we live and man, it's 
+been a beautiful summer. 
+
+31
+00:01:49,640 --> 00:01:52,200
+Yes. 
+And we the last time we had it 
+
+32
+00:01:52,240 --> 00:01:56,440
+at the, well for us, the new 
+Center for the Arts and that is 
+
+33
+00:01:56,440 --> 00:01:59,800
+just a total game changer. 
+Are we doing the summer tech fun
+
+34
+00:01:59,800 --> 00:02:00,960
+bath? 
+Oh yeah, I. 
+
+35
+00:02:01,080 --> 00:02:02,440
+Mean, that's such a good 
+concern. 
+
+36
+00:02:02,440 --> 00:02:04,960
+We're doing everything at the 
+Center for the Arts from now. 
+
+37
+00:02:04,960 --> 00:02:06,120
+Awesome. 
+It's a great space. 
+
+38
+00:02:06,240 --> 00:02:13,680
+Oh, it's yeah, the views and the
+the spaces and and if we get 
+
+39
+00:02:13,680 --> 00:02:15,800
+bigger, they've got we can 
+scale. 
+
+40
+00:02:16,000 --> 00:02:18,160
+Yeah, we can scale up if if that
+happens. 
+
+41
+00:02:18,240 --> 00:02:20,200
+Awesome. 
+So, yeah. 
+
+42
+00:02:20,600 --> 00:02:23,760
+And we had a developer retreat 
+over the 4th of July. 
+
+43
+00:02:23,760 --> 00:02:26,600
+I don't think I mentioned that. 
+And that was. 
+
+44
+00:02:26,800 --> 00:02:28,680
+It was fun. 
+I got to hang out for a little 
+
+45
+00:02:28,680 --> 00:02:30,240
+bit. 
+Yes, you did start building some
+
+46
+00:02:30,360 --> 00:02:32,120
+AI agents. 
+Yes, that's right. 
+
+47
+00:02:32,440 --> 00:02:34,160
+Yeah. 
+No, it was a it was a very good 
+
+48
+00:02:34,160 --> 00:02:34,760
+time. 
+Yeah. 
+
+49
+00:02:35,360 --> 00:02:36,280
+All right. 
+Cool. 
+
+50
+00:02:36,320 --> 00:02:39,000
+Well. 
+Today we have with us Carl 
+
+51
+00:02:39,000 --> 00:02:40,680
+Mayer, I said. 
+Meyer. 
+
+52
+00:02:41,040 --> 00:02:44,960
+Meyer, sorry and maybe you do 
+your background on? 
+
+53
+00:02:44,960 --> 00:02:47,840
+Yeah. 
+So yeah, Carl and I met at the 
+
+54
+00:02:48,600 --> 00:02:54,560
+Pycon Typing Summit and I gave a
+little presentation there and 
+
+55
+00:02:54,560 --> 00:02:56,360
+there was a number of others and
+then we had a lot of 
+
+56
+00:02:56,360 --> 00:02:59,520
+conversations. 
+And so yeah, that's how we 
+
+57
+00:02:59,880 --> 00:03:02,680
+decided. 
+And Carl is with Astral. 
+
+58
+00:03:02,680 --> 00:03:06,520
+And you're the lead on Ty is 
+that? 
+
+59
+00:03:06,520 --> 00:03:08,880
+Right, yeah, I work on the Ty or
+type checker. 
+
+60
+00:03:08,920 --> 00:03:10,840
+Yep, and and how big is the team
+for that? 
+
+61
+00:03:12,360 --> 00:03:16,920
+Well, if you include the full 
+project which includes type 
+
+62
+00:03:16,920 --> 00:03:24,000
+checker and LSPIDE features, let
+me think somewhere in the 
+
+63
+00:03:24,000 --> 00:03:26,480
+vicinity of eight. 
+OK, OK. 
+
+64
+00:03:27,040 --> 00:03:31,400
+And you called it Ty is is. 
+That how we we go for Ty Yeah, 
+
+65
+00:03:31,400 --> 00:03:35,080
+OK, yeah, I mean. 
+Oh, like UV? 
+
+66
+00:03:35,720 --> 00:03:39,720
+UVETY is it? 
+But yeah, yeah, OK, Well, it 
+
+67
+00:03:39,720 --> 00:03:43,680
+sounds like short for type, but 
+Ty, OK, that works. 
+
+68
+00:03:43,680 --> 00:03:51,640
+So you're working on Ty and so I
+think I tried it on my because 
+
+69
+00:03:51,640 --> 00:03:54,920
+I'm writing this Thinking in 
+Types book for Python. 
+
+70
+00:03:55,320 --> 00:04:02,520
+And I tried it right when it 
+became available and I know that
+
+71
+00:04:02,520 --> 00:04:04,600
+it came up with all it 
+instantly. 
+
+72
+00:04:04,600 --> 00:04:10,720
+It's very fast, instantly came 
+up with lots of issues with my 
+
+73
+00:04:10,720 --> 00:04:16,000
+code base which had previously 
+passed my π and pyrite, but it 
+
+74
+00:04:16,000 --> 00:04:18,720
+was so early so I don't. 
+I don't know what the OR it's. 
+
+75
+00:04:18,720 --> 00:04:21,399
+Just more strict and your code 
+needs to be fixed. 
+
+76
+00:04:21,720 --> 00:04:24,840
+Probably more likely, more 
+likely it was bugs in Ty if you 
+
+77
+00:04:24,840 --> 00:04:26,640
+tried it. 
+Yeah, well, it came out. 
+
+78
+00:04:27,280 --> 00:04:30,240
+Really early. 
+So what's the state of it now 
+
+79
+00:04:30,240 --> 00:04:32,080
+'cause it's a couple months 
+later? 
+
+80
+00:04:32,760 --> 00:04:34,600
+Yeah. 
+So I mean it's, it's much better
+
+81
+00:04:34,600 --> 00:04:36,080
+now than it was a couple months 
+ago. 
+
+82
+00:04:36,560 --> 00:04:39,440
+We're still, we're working 
+towards so, So what we released 
+
+83
+00:04:39,440 --> 00:04:44,480
+before Pycon we called a preview
+or an alpha, I don't know. 
+
+84
+00:04:44,480 --> 00:04:47,280
+The germinology doesn't matter 
+too much, but it was very, very 
+
+85
+00:04:47,280 --> 00:04:49,320
+early. 
+Just wanted to get something out
+
+86
+00:04:49,320 --> 00:04:51,320
+to show what we're working on 
+and let people play with it a 
+
+87
+00:04:51,320 --> 00:04:53,840
+little bit. 
+We're working now towards what 
+
+88
+00:04:53,840 --> 00:04:57,240
+we're thinking of as a beta 
+release, which still won't be 
+
+89
+00:04:58,480 --> 00:05:02,000
+quite where we'd like it to be 
+to really say like this is ready
+
+90
+00:05:02,000 --> 00:05:06,200
+to ready to be your primary 
+production type checker, but 
+
+91
+00:05:06,320 --> 00:05:09,560
+should be much closer than the 
+alpha was and another step along
+
+92
+00:05:09,560 --> 00:05:11,160
+the way. 
+So we're targeting that for 
+
+93
+00:05:11,840 --> 00:05:13,520
+sometime in the next couple 
+months hopefully. 
+
+94
+00:05:13,960 --> 00:05:16,640
+Oh, excellent. 
+And and maybe for me, just a 
+
+95
+00:05:16,640 --> 00:05:21,600
+little bit of background, so Ty.
+It's a Rust application that I 
+
+96
+00:05:21,600 --> 00:05:24,280
+can just run on a Python 
+codebase and it's going to 
+
+97
+00:05:24,280 --> 00:05:26,840
+validate all the types and all 
+that kind of stuff. 
+
+98
+00:05:26,840 --> 00:05:28,920
+Is that is. 
+That that's right. 
+
+99
+00:05:29,000 --> 00:05:32,400
+I mean, we're, we're aiming it 
+to be both a type checker. 
+
+100
+00:05:32,400 --> 00:05:35,240
+So that is something that you 
+could use the way people use 
+
+101
+00:05:35,240 --> 00:05:38,400
+Mypi today. 
+So you can run it on the command
+
+102
+00:05:38,400 --> 00:05:43,680
+line and then also an LSP. 
+So, so it will plug into your 
+
+103
+00:05:43,680 --> 00:05:48,520
+editor and give you things like 
+go to definition and all the the
+
+104
+00:05:48,520 --> 00:05:51,080
+things that we expect from from 
+an LSP server. 
+
+105
+00:05:51,080 --> 00:05:53,920
+So we wanted to do all of that, 
+kind of provide the Python. 
+
+106
+00:05:53,920 --> 00:05:56,960
+Makes sense that your type 
+checker and your LSP are should 
+
+107
+00:05:56,960 --> 00:05:59,840
+be based on the same system so 
+that the red squigglies in your 
+
+108
+00:05:59,840 --> 00:06:04,160
+ID are the same as. 
+As yeah, when you when you run 
+
+109
+00:06:04,160 --> 00:06:09,040
+it as a batch. 
+So the the typing summit is kind
+
+110
+00:06:09,040 --> 00:06:11,680
+of a little bit of a blur in my 
+mind now. 
+
+111
+00:06:13,640 --> 00:06:19,080
+Was it Ty that one of your goals
+was to be gradually, I mean, to 
+
+112
+00:06:19,080 --> 00:06:21,280
+allow people to gradually move 
+into it? 
+
+113
+00:06:22,160 --> 00:06:25,200
+Yeah, that is one of our design 
+goals was Ty. 
+
+114
+00:06:26,080 --> 00:06:32,640
+So some of the existing Python 
+type checkers the the experience
+
+115
+00:06:32,800 --> 00:06:36,280
+if you adopted on a new code 
+base that isn't currently typed.
+
+116
+00:06:36,440 --> 00:06:41,240
+Even if that code base is fully 
+working, in some cases type 
+
+117
+00:06:41,240 --> 00:06:47,920
+checkers will make assumptions. 
+An example is like if you have a
+
+118
+00:06:47,920 --> 00:06:51,640
+class and on that class you 
+define an an attribute and you 
+
+119
+00:06:51,640 --> 00:06:56,360
+just say like X equals none and 
+it's not. 
+
+120
+00:06:56,360 --> 00:06:57,680
+There's no type annotations or 
+anything. 
+
+121
+00:06:57,680 --> 00:07:01,000
+This is an untyped code base. 
+Some of the existing type 
+
+122
+00:07:01,000 --> 00:07:04,480
+checkers will look at that and 
+say, well you assign None to X, 
+
+123
+00:07:04,480 --> 00:07:07,920
+so I'm going to just go ahead 
+and assume that X is always 
+
+124
+00:07:07,920 --> 00:07:11,800
+supposed to be None. 
+It's type is None type or None 
+
+125
+00:07:12,200 --> 00:07:15,440
+and you can't infer. 
+That it's an option or Yeah, it 
+
+126
+00:07:15,520 --> 00:07:16,360
+doesn't. 
+It doesn't Python. 
+
+127
+00:07:16,360 --> 00:07:20,200
+What's the option type? 
+Yeah, there's optional, or you 
+
+128
+00:07:20,200 --> 00:07:23,280
+can just use a union with None, 
+but The thing is, it can't. 
+
+129
+00:07:23,480 --> 00:07:25,840
+If you just, if on the class, 
+the only thing it sees is X 
+
+130
+00:07:25,840 --> 00:07:27,880
+equals None, it's not going to 
+look through the rest of your 
+
+131
+00:07:27,880 --> 00:07:33,160
+code base and say, well, I see 
+this assigned here, this 
+
+132
+00:07:33,160 --> 00:07:34,880
+assigned over there. 
+That's not real. 
+
+133
+00:07:34,880 --> 00:07:38,280
+It's not really feasible from a 
+performance perspective or 
+
+134
+00:07:38,280 --> 00:07:41,960
+incrementality perspective to be
+able to say that the our 
+
+135
+00:07:41,960 --> 00:07:45,240
+understanding of this type is 
+going to depend on analyzing 
+
+136
+00:07:45,240 --> 00:07:47,280
+your entire code base and seeing
+every use of it. 
+
+137
+00:07:47,280 --> 00:07:50,120
+We kind of have to understand 
+the type just from looking at 
+
+138
+00:07:50,120 --> 00:07:52,440
+its definition. 
+And so existing type checkers 
+
+139
+00:07:52,440 --> 00:07:55,080
+will say, well, you assign none,
+therefore it's none. 
+
+140
+00:07:55,080 --> 00:07:57,520
+Therefore, if somewhere else you
+try to assign an integer to it, 
+
+141
+00:07:57,520 --> 00:07:59,600
+that's an error. 
+And then if you want to fix that
+
+142
+00:07:59,600 --> 00:08:02,560
+error, you have to add an 
+explicit annotation that says 
+
+143
+00:08:02,600 --> 00:08:05,160
+int or none, and then that fixes
+it. 
+
+144
+00:08:05,600 --> 00:08:09,320
+And we want to shift that a 
+little bit just to make it so. 
+
+145
+00:08:09,320 --> 00:08:12,440
+So the result of those, that 
+kind of decision is that if you 
+
+146
+00:08:12,440 --> 00:08:16,200
+have an untyped code base, even 
+one that's working and you run a
+
+147
+00:08:16,200 --> 00:08:18,840
+type checker over it, you tend 
+to get a whole bunch of type 
+
+148
+00:08:18,840 --> 00:08:21,200
+errors initially. 
+And then you have to sort of 
+
+149
+00:08:21,200 --> 00:08:25,040
+figure out which ones are real 
+errors and which ones are cases 
+
+150
+00:08:25,040 --> 00:08:28,240
+where the type checker is making
+an assumption about your 
+
+151
+00:08:28,240 --> 00:08:31,400
+intentions that maybe didn't 
+match your actual intentions or 
+
+152
+00:08:31,400 --> 00:08:34,000
+your actual usage. 
+And then you have to sort of add
+
+153
+00:08:34,000 --> 00:08:36,760
+annotations to correct these 
+mistaken assumptions of the type
+
+154
+00:08:36,760 --> 00:08:39,799
+checker. 
+And so one of our goals, as much
+
+155
+00:08:39,799 --> 00:08:45,120
+as feasible, is to avoid making 
+those kinds of assumptions when 
+
+156
+00:08:45,120 --> 00:08:47,880
+we don't have an explicit 
+annotation from the developer 
+
+157
+00:08:47,880 --> 00:08:49,400
+telling us what their intentions
+are. 
+
+158
+00:08:49,800 --> 00:08:53,720
+So if we see a class and we see 
+X equals None, we will actually 
+
+159
+00:08:53,720 --> 00:08:59,320
+infer the type unknown unioned 
+with None, which is effectively 
+
+160
+00:08:59,320 --> 00:09:04,080
+a type that says at minimum, we 
+know that this can be None, and 
+
+161
+00:09:04,080 --> 00:09:05,960
+therefore we can still issue an 
+error. 
+
+162
+00:09:05,960 --> 00:09:10,880
+If we see you doing something 
+with X that is invalid for None,
+
+163
+00:09:11,160 --> 00:09:14,040
+we can say, well, we at least 
+know that this X might be None, 
+
+164
+00:09:14,040 --> 00:09:15,200
+so we can issue an error on 
+that. 
+
+165
+00:09:15,440 --> 00:09:19,440
+But if we see you assigning 
+something to X that's outside of
+
+166
+00:09:19,440 --> 00:09:22,560
+None, that's an integer or 
+whatever, because we've unioned 
+
+167
+00:09:22,560 --> 00:09:25,640
+it with unknown, we can still 
+allow that and say, well, as far
+
+168
+00:09:25,640 --> 00:09:29,240
+as we know, this could be, you 
+could intend for this to be a 
+
+169
+00:09:29,240 --> 00:09:30,760
+union of none with something 
+else. 
+
+170
+00:09:30,760 --> 00:09:33,360
+And we don't know what that is. 
+And so that means when you run 
+
+171
+00:09:33,360 --> 00:09:35,880
+your type checker on the 
+unannotated code base, you 
+
+172
+00:09:35,880 --> 00:09:38,480
+should get fewer errors 
+initially. 
+
+173
+00:09:38,720 --> 00:09:42,120
+And then as you want to opt into
+more strictness, you can do that
+
+174
+00:09:42,120 --> 00:09:44,800
+very kind of naturally and 
+incrementally by adding 
+
+175
+00:09:44,800 --> 00:09:47,000
+annotations. 
+So as soon as you add an 
+
+176
+00:09:47,000 --> 00:09:48,360
+annotation then we'll enforce 
+that. 
+
+177
+00:09:49,120 --> 00:09:53,160
+Is unknown one of the? 
+I mean, is that a a standard 
+
+178
+00:09:53,160 --> 00:09:56,360
+type in Python? 
+I don't remember OK 'cause I 
+
+179
+00:09:56,400 --> 00:09:58,600
+encountered it in TypeScript 
+recently, but. 
+
+180
+00:09:58,720 --> 00:10:00,320
+Yeah, yeah, that's that's a very
+good point. 
+
+181
+00:10:00,320 --> 00:10:05,160
+So unknown is kind of a a non 
+standardized extension, 
+
+182
+00:10:05,840 --> 00:10:08,840
+something that Pyrite already 
+does and we do it too. 
+
+183
+00:10:09,280 --> 00:10:13,760
+And really it's just so Python 
+has the type any which 
+
+184
+00:10:13,760 --> 00:10:15,320
+represents essentially an 
+unknown type. 
+
+185
+00:10:15,320 --> 00:10:17,160
+It's the dynamic type. 
+So this is gradually like the 
+
+186
+00:10:17,160 --> 00:10:18,280
+bottom. 
+Type or whatever. 
+
+187
+00:10:18,320 --> 00:10:22,040
+And TypeScript has that as well.
+So it's not really the bottom 
+
+188
+00:10:22,040 --> 00:10:24,000
+type. 
+It's kind of a it's, it's 
+
+189
+00:10:24,000 --> 00:10:28,160
+something specific to gradual 
+type systems as opposed to fully
+
+190
+00:10:28,160 --> 00:10:31,360
+static type systems as as you'd 
+see in most sort of statically 
+
+191
+00:10:31,360 --> 00:10:34,960
+typed languages. 
+And so, so the bottom type in 
+
+192
+00:10:34,960 --> 00:10:38,640
+Python would be, we call it 
+never or no return. 
+
+193
+00:10:39,200 --> 00:10:41,480
+And essentially that's the type 
+that has no inhabitants. 
+
+194
+00:10:41,480 --> 00:10:46,920
+There's no no values that that 
+are that type includes no 
+
+195
+00:10:46,920 --> 00:10:49,240
+possible runtime values. 
+And the top type would be 
+
+196
+00:10:49,240 --> 00:10:54,080
+object, which is every Python 
+value is an instance of object. 
+
+197
+00:10:54,320 --> 00:10:58,520
+So object is the type that 
+covers all of the every possible
+
+198
+00:10:58,520 --> 00:11:00,080
+Python object. 
+So that's the top type. 
+
+199
+00:11:00,520 --> 00:11:02,320
+And then any is something a 
+little different. 
+
+200
+00:11:02,320 --> 00:11:08,080
+It's like it's an unknown static
+type or a dynamic type, which 
+
+201
+00:11:08,080 --> 00:11:10,040
+then the type checker 
+essentially sort of throws up 
+
+202
+00:11:10,040 --> 00:11:12,920
+its hands and says, well, you 
+can kind of do anything you want
+
+203
+00:11:12,920 --> 00:11:15,200
+with this and we're not going to
+complain about it because we 
+
+204
+00:11:15,200 --> 00:11:17,400
+don't know what you mean. 
+It's like outside of. 
+
+205
+00:11:17,400 --> 00:11:19,760
+The type hierarchy. 
+So you've got the type hierarchy
+
+206
+00:11:19,800 --> 00:11:23,600
+with never an object you know at
+the bottom and top, and then any
+
+207
+00:11:23,600 --> 00:11:26,160
+is like outside that it's the 
+escape. 
+
+208
+00:11:26,200 --> 00:11:29,000
+Right. 
+Or you can a way to conceive of 
+
+209
+00:11:29,000 --> 00:11:33,240
+it is it's like it's a. 
+It is, it is, it is something 
+
+210
+00:11:33,240 --> 00:11:35,760
+somewhere in the type hierarchy,
+but we don't know where it is. 
+
+211
+00:11:36,520 --> 00:11:38,080
+Is I think the clearest way to 
+conceive it. 
+
+212
+00:11:38,080 --> 00:11:43,320
+It's an unknown static type. 
+OK, so then we treat it as yeah.
+
+213
+00:11:43,760 --> 00:11:45,840
+There there is a type, but we 
+don't know what it is so. 
+
+214
+00:11:45,880 --> 00:11:49,320
+You're there is some type, yeah.
+When, when, So when you're 
+
+215
+00:11:49,320 --> 00:11:53,640
+analyzing a function, you're not
+and and you see something like 
+
+216
+00:11:53,640 --> 00:11:58,200
+the case you imagined you're not
+going through and looking for 
+
+217
+00:11:58,200 --> 00:12:03,040
+where it maybe get us gets 
+assigned to something else and 
+
+218
+00:12:03,040 --> 00:12:07,200
+going Oh, well, that must be an 
+enter, you know something. 
+
+219
+00:12:07,240 --> 00:12:10,160
+Like, yeah, OK, let me let me 
+finish my thought earlier on 
+
+220
+00:12:10,160 --> 00:12:11,680
+unknown and then I'll get to 
+that question. 
+
+221
+00:12:11,680 --> 00:12:16,360
+It's a good question. 
+So Python has this type any and 
+
+222
+00:12:16,720 --> 00:12:19,680
+what we do and what Pyrite also 
+does is we sort of give two 
+
+223
+00:12:19,680 --> 00:12:22,120
+different names to any. 
+It's really the same type. 
+
+224
+00:12:22,120 --> 00:12:24,360
+It's just this dynamic type and 
+unknown static type. 
+
+225
+00:12:24,720 --> 00:12:30,040
+But we use any where you've 
+explicitly annotated that way. 
+
+226
+00:12:30,040 --> 00:12:33,240
+So you can in Python, you can do
+from typing import any and then 
+
+227
+00:12:33,240 --> 00:12:35,880
+you can use any as a type 
+annotation to basically 
+
+228
+00:12:36,080 --> 00:12:39,920
+basically that says like, let me
+do whatever I want here and 
+
+229
+00:12:39,920 --> 00:12:41,920
+don't complain about it. 
+Just assume I know what I'm 
+
+230
+00:12:41,920 --> 00:12:44,120
+doing. 
+And so you can explicitly 
+
+231
+00:12:44,120 --> 00:12:46,480
+annotate that way. 
+And so we use any for that. 
+
+232
+00:12:46,480 --> 00:12:52,440
+And we use unknown for the same 
+type, but where it originates 
+
+233
+00:12:52,440 --> 00:12:55,320
+from a lack of annotation. 
+So if you just haven't put an 
+
+234
+00:12:55,320 --> 00:12:57,760
+annotation at all, then we'll 
+use unknown. 
+
+235
+00:12:57,760 --> 00:13:01,040
+And really semantically it's the
+same thing, but we find it 
+
+236
+00:13:01,040 --> 00:13:04,800
+useful for a developer to see 
+where, oh, I have the type any 
+
+237
+00:13:04,800 --> 00:13:06,480
+here. 
+That means that somewhere 
+
+238
+00:13:06,480 --> 00:13:08,520
+there's an actual annotation 
+that says any. 
+
+239
+00:13:08,800 --> 00:13:13,120
+And if I see unknown, that means
+I just I'm missing an annotation
+
+240
+00:13:13,120 --> 00:13:15,680
+somewhere, and that's a useful 
+distinction for developers so. 
+
+241
+00:13:15,800 --> 00:13:19,960
+I think that is helpful to have 
+like an explicit like this thing
+
+242
+00:13:19,960 --> 00:13:23,960
+is, any versus the compiler 
+doesn't actually know, so that's
+
+243
+00:13:23,960 --> 00:13:27,800
+an unknown. 
+But I can't explicitly type 
+
+244
+00:13:27,800 --> 00:13:29,960
+something as unknown, Is that 
+that right? 
+
+245
+00:13:30,720 --> 00:13:33,200
+No, it's not a standardized 
+type. 
+
+246
+00:13:33,800 --> 00:13:36,240
+I don't think my π has this as 
+far as I'm aware. 
+
+247
+00:13:36,240 --> 00:13:41,680
+And and you can't, I mean, so 
+technically in Ty you could we, 
+
+248
+00:13:42,000 --> 00:13:46,040
+we have this sort of Ty 
+extensions module, which is a 
+
+249
+00:13:46,040 --> 00:13:50,960
+bunch of non standard types that
+Ty uses, but that are kind of 
+
+250
+00:13:50,960 --> 00:13:53,160
+specific to Ty. 
+And I can talk about some other 
+
+251
+00:13:53,160 --> 00:13:54,440
+interesting types in there 
+later. 
+
+252
+00:13:54,760 --> 00:13:58,800
+But so technically you can do 
+from Ty Extensions import 
+
+253
+00:13:58,800 --> 00:14:01,880
+unknown and annotate something 
+as unknown that exists mostly 
+
+254
+00:14:01,880 --> 00:14:03,400
+just so we can use it in our 
+test suite. 
+
+255
+00:14:04,120 --> 00:14:06,080
+It's kind of a strange concept 
+because the whole point of 
+
+256
+00:14:06,080 --> 00:14:07,840
+unknown is that it's a missing 
+annotation. 
+
+257
+00:14:07,840 --> 00:14:09,960
+So to be able to. 
+So it's not something that we're
+
+258
+00:14:09,960 --> 00:14:11,560
+actually intending for people to
+use. 
+
+259
+00:14:11,560 --> 00:14:14,320
+It's more just an implementation
+detail that. 
+
+260
+00:14:14,560 --> 00:14:17,280
+You're gonna specify specify any
+but exactly? 
+
+261
+00:14:17,280 --> 00:14:19,840
+Yeah, I can see why for your 
+test you'd need to be able to. 
+
+262
+00:14:19,920 --> 00:14:21,600
+Reference. 
+We wanna be able to name the 
+
+263
+00:14:21,600 --> 00:14:24,240
+type, but anyway, sorry, go 
+ahead. 
+
+264
+00:14:24,480 --> 00:14:29,360
+And I think in TypeScript, 
+unknown means this hasn't been 
+
+265
+00:14:29,360 --> 00:14:31,720
+initialized yet, so it's a 
+little different. 
+
+266
+00:14:32,240 --> 00:14:34,880
+I, I I'm not a TypeScript 
+expert. 
+
+267
+00:14:34,880 --> 00:14:38,800
+My memory of unknown in 
+TypeScript is that it's more in 
+
+268
+00:14:38,800 --> 00:14:43,080
+a sense like object in Python in
+that it's it, it could be 
+
+269
+00:14:43,080 --> 00:14:47,720
+anything, but it's not forgiving
+in the way that any or what we 
+
+270
+00:14:47,720 --> 00:14:50,280
+call unknown in Python are where
+it's like we'll let you do 
+
+271
+00:14:50,280 --> 00:14:52,080
+anything with it. 
+In JavaScript, if something is 
+
+272
+00:14:52,080 --> 00:14:54,640
+typed as unknown, or in 
+TypeScript if it's typed as 
+
+273
+00:14:54,640 --> 00:14:58,320
+unknown, that means it could be 
+anything, and so we're basically
+
+274
+00:14:58,320 --> 00:15:01,080
+gonna error if you try to do 
+anything. 
+
+275
+00:15:01,080 --> 00:15:06,880
+Use it without initializing it 
+that OK with that OK yeah yeah 
+
+276
+00:15:06,920 --> 00:15:11,000
+I'm still I'm not a TypeScript 
+expert either but we're we're 
+
+277
+00:15:11,000 --> 00:15:13,920
+having to learn it yeah so 
+having. 
+
+278
+00:15:14,120 --> 00:15:15,920
+To learn, it started. 
+Yeah, well, we did. 
+
+279
+00:15:16,480 --> 00:15:19,320
+We are forced to learn it. 
+It happens when you write a 
+
+280
+00:15:19,400 --> 00:15:21,400
+choose to write a book, a 
+language. 
+
+281
+00:15:21,600 --> 00:15:24,360
+We thought we'd get cargo calls 
+our way through it, but we 
+
+282
+00:15:26,560 --> 00:15:27,120
+can't. 
+Yeah. 
+
+283
+00:15:27,400 --> 00:15:32,600
+So I can I'd like to back up and
+and ask like how what's your 
+
+284
+00:15:32,600 --> 00:15:36,160
+background in type checking? 
+How did you get to this place 
+
+285
+00:15:36,160 --> 00:15:37,400
+where you go? 
+Oh sure. 
+
+286
+00:15:37,400 --> 00:15:42,560
+I'll do this project that's. 
+Great question, so before I was 
+
+287
+00:15:42,560 --> 00:15:47,960
+at Astral I was at Meta working 
+at Instagram for about 8 years 
+
+288
+00:15:48,560 --> 00:15:55,120
+and trying to think. 
+When I first came to Meta, I 
+
+289
+00:15:55,120 --> 00:15:59,480
+hadn't really done much with 
+type checking or type systems or
+
+290
+00:15:59,480 --> 00:16:01,600
+typing in Python at all. 
+I mean, that was still pretty 
+
+291
+00:16:02,120 --> 00:16:04,280
+early days. 
+Type annotations were introduced
+
+292
+00:16:04,280 --> 00:16:09,440
+in Python 3 and they hadn't seen
+super wide use. 
+
+293
+00:16:09,440 --> 00:16:13,960
+I think it was 20/14/2015 was 
+when Python's type system was 
+
+294
+00:16:14,200 --> 00:16:17,080
+kind of being developed. 
+That's when I think PEP 484 and 
+
+295
+00:16:17,080 --> 00:16:20,720
+PEP 483, the the Peps that 
+introduced the type system, 
+
+296
+00:16:21,360 --> 00:16:23,200
+those come out, came out in 
+2014. 
+
+297
+00:16:23,200 --> 00:16:25,320
+So it was all pretty. 
+Pretty new. 
+
+298
+00:16:25,840 --> 00:16:27,520
+Oh yes, it's a lot of new things
+you've added. 
+
+299
+00:16:27,520 --> 00:16:31,000
+It's changed a lot, yes. 
+But I think when I first started
+
+300
+00:16:31,000 --> 00:16:33,360
+an Instagram, I worked on some 
+things. 
+
+301
+00:16:33,360 --> 00:16:35,560
+I worked on the the transition 
+to Python 3. 
+
+302
+00:16:35,560 --> 00:16:37,200
+So we moved the Instagram code 
+base. 
+
+303
+00:16:37,200 --> 00:16:40,440
+Instagram server is a big Python
+code base. 
+
+304
+00:16:40,440 --> 00:16:42,920
+We moved that from from Python 2
+to Python 3. 
+
+305
+00:16:43,720 --> 00:16:45,800
+And then we're kind of looking 
+at, OK, we've done that, like 
+
+306
+00:16:45,800 --> 00:16:49,160
+what all is unlocked by by being
+on Python 3. 
+
+307
+00:16:49,160 --> 00:16:51,840
+And one of the things was this 
+new typing stuff. 
+
+308
+00:16:51,840 --> 00:16:56,520
+And for a very large code base 
+with a lot of developers working
+
+309
+00:16:56,520 --> 00:16:59,400
+on it and a lot of kind of 
+people moving on and off the 
+
+310
+00:16:59,400 --> 00:17:04,400
+project, we felt like types 
+would be a a big benefit. 
+
+311
+00:17:04,400 --> 00:17:07,760
+And we had a lot of developers 
+coming onto the Instagram server
+
+312
+00:17:07,760 --> 00:17:11,960
+code base who had previously 
+worked on other typed code bases
+
+313
+00:17:11,960 --> 00:17:14,640
+since they'd come into the 
+Python And say, you know, where 
+
+314
+00:17:14,640 --> 00:17:17,480
+are my types? 
+My, my IDE can't tell me 
+
+315
+00:17:17,480 --> 00:17:21,400
+anything and I can't, I can't 
+figure out what this function 
+
+316
+00:17:21,400 --> 00:17:23,560
+takes and what it's supposed to 
+return because I have no type 
+
+317
+00:17:23,560 --> 00:17:25,560
+annotation. 
+So there was a lot of kind of 
+
+318
+00:17:25,560 --> 00:17:29,080
+developer sentiment internally. 
+There was like, I, I want some, 
+
+319
+00:17:29,120 --> 00:17:35,200
+some static types here. 
+So I think, I think we discussed
+
+320
+00:17:35,200 --> 00:17:38,640
+it with Mike Krieger. 
+He was the the CTO at Instagram 
+
+321
+00:17:38,640 --> 00:17:42,680
+at that time and he was really 
+on board and excited about it. 
+
+322
+00:17:43,400 --> 00:17:48,160
+And so we started experimenting 
+with My pie. 
+
+323
+00:17:48,400 --> 00:17:53,800
+Anyway, Long story short over I 
+think 2017 to 2019, that became 
+
+324
+00:17:53,800 --> 00:17:58,920
+my primary project at Instagram 
+was kind of introducing typing 
+
+325
+00:17:59,680 --> 00:18:01,240
+to the Instagram server code 
+base. 
+
+326
+00:18:01,840 --> 00:18:05,520
+We started with my Pie and then 
+later replaced that with Pyre, 
+
+327
+00:18:05,520 --> 00:18:08,760
+which was a type checker built 
+internally at Meta. 
+
+328
+00:18:11,000 --> 00:18:14,240
+And over the course of a couple 
+years, we went from zero type 
+
+329
+00:18:14,240 --> 00:18:20,920
+annotations in Instagram server 
+to fairly close to 100% coverage
+
+330
+00:18:20,920 --> 00:18:24,680
+in the in the sense of there's 
+still any's and of course things
+
+331
+00:18:24,680 --> 00:18:29,720
+like that, but almost everywhere
+where almost all functions had 
+
+332
+00:18:29,720 --> 00:18:33,200
+annotations. 
+So that kind of got me into the 
+
+333
+00:18:33,200 --> 00:18:34,680
+topic, got me interested in it 
+and. 
+
+334
+00:18:35,480 --> 00:18:38,360
+One question on that, and I 
+don't know if you can reveal 
+
+335
+00:18:38,360 --> 00:18:42,080
+details, but I'd be curious to 
+know if there was any research 
+
+336
+00:18:42,080 --> 00:18:46,080
+done after that transition or 
+before and after that transition
+
+337
+00:18:46,320 --> 00:18:52,320
+to give us some data on did this
+increase productivity or 
+
+338
+00:18:52,520 --> 00:18:56,520
+developer happiness or like were
+there measurable metrics that 
+
+339
+00:18:56,520 --> 00:19:00,120
+all this work like could be 
+shown to have an impact on? 
+
+340
+00:19:00,520 --> 00:19:01,960
+Yeah, Yeah. 
+No, that's a great question. 
+
+341
+00:19:02,560 --> 00:19:07,560
+As I'm sure you know, like 
+measuring productivity is a huge
+
+342
+00:19:07,560 --> 00:19:12,000
+can of work, Yes. 
+So I wouldn't, I don't think we 
+
+343
+00:19:12,000 --> 00:19:16,600
+had anything there that I would 
+put much, much faith in in terms
+
+344
+00:19:16,600 --> 00:19:19,360
+of measuring productivity. 
+We did at one point kind of try 
+
+345
+00:19:19,360 --> 00:19:24,480
+to do some studies on like 
+prevalence of certain kinds of 
+
+346
+00:19:24,480 --> 00:19:27,560
+exceptions showing up in 
+production and then requiring 
+
+347
+00:19:27,560 --> 00:19:32,960
+like a rollback or a hot fix. 
+And we did at one point I think 
+
+348
+00:19:32,960 --> 00:19:36,880
+see some, I don't know how 
+rigorous or statistical work 
+
+349
+00:19:36,880 --> 00:19:38,600
+was. 
+My memory is a little vague at 
+
+350
+00:19:38,600 --> 00:19:42,520
+this point, but we did at one 
+point see what looked like a 
+
+351
+00:19:42,520 --> 00:19:46,440
+significant decrease in type 
+errors and attribute errors 
+
+352
+00:19:46,440 --> 00:19:49,560
+specifically showing up in 
+production after the type 
+
+353
+00:19:49,560 --> 00:19:52,000
+transition. 
+So there was some evidence of 
+
+354
+00:19:52,040 --> 00:19:54,080
+some improvement there. 
+I think the strongest evidence 
+
+355
+00:19:54,080 --> 00:19:56,560
+we had was developer sentiment, 
+and that was very clear. 
+
+356
+00:19:57,720 --> 00:20:00,160
+I mean, of course, there are 
+people to this day who are not 
+
+357
+00:20:00,720 --> 00:20:03,920
+fond of of types in Python, and 
+I think there's certainly 
+
+358
+00:20:03,920 --> 00:20:05,400
+projects where it makes less 
+sense. 
+
+359
+00:20:05,400 --> 00:20:08,640
+But for a project at that scale,
+with that number of developers, 
+
+360
+00:20:08,640 --> 00:20:11,480
+and particularly with developers
+coming from other languages. 
+
+361
+00:20:12,320 --> 00:20:15,000
+It was very clear in the 
+developer surveys that we did 
+
+362
+00:20:15,000 --> 00:20:18,280
+that people were very happy to 
+have the type information 
+
+363
+00:20:18,280 --> 00:20:20,320
+available. 
+Yeah, but what? 
+
+364
+00:20:21,360 --> 00:20:25,160
+So I'm not sure. 
+I mean, I keep hearing from 
+
+365
+00:20:25,160 --> 00:20:28,760
+people, like as I'm writing this
+book, people go, oh, yeah, I 
+
+366
+00:20:28,760 --> 00:20:32,800
+really need to convince my team 
+to use types and they're 
+
+367
+00:20:32,800 --> 00:20:35,160
+resisting. 
+And so, you know, this is what 
+
+368
+00:20:35,160 --> 00:20:37,160
+I'm, this is what I'm looking 
+for. 
+
+369
+00:20:38,600 --> 00:20:43,040
+And I like all the people that I
+have direct contact with are 
+
+370
+00:20:43,040 --> 00:20:46,720
+like, oh, of course you want 
+types that makes things better. 
+
+371
+00:20:47,040 --> 00:20:51,560
+But apparently there's, do you 
+have any sense of like the, the 
+
+372
+00:20:51,560 --> 00:20:56,400
+portion of programmers who are 
+going, why are you type 
+
+373
+00:20:56,400 --> 00:20:58,320
+resistant? 
+Well, or, or they'll say things 
+
+374
+00:20:58,320 --> 00:21:01,040
+like, well, the language doesn't
+require it, so why would I do 
+
+375
+00:21:01,040 --> 00:21:02,640
+it? 
+Or, you know, all that kind of 
+
+376
+00:21:02,640 --> 00:21:04,920
+stuff. 
+I mean, it seems like those are 
+
+377
+00:21:04,920 --> 00:21:10,160
+the people that it'd be nice to 
+move a little bit, yeah. 
+
+378
+00:21:10,560 --> 00:21:13,480
+Yeah, no, I don't have any sense
+of numbers on that really. 
+
+379
+00:21:13,480 --> 00:21:15,840
+There might be some numbers and 
+there's a yearly Python 
+
+380
+00:21:15,840 --> 00:21:19,360
+developer survey that happens. 
+And I feel like when I looked at
+
+381
+00:21:19,360 --> 00:21:21,720
+the last one, there were some 
+questions about type checking in
+
+382
+00:21:21,720 --> 00:21:25,320
+there. 
+And it seemed like if I remember
+
+383
+00:21:25,320 --> 00:21:29,600
+right, most people were using it
+in some capacity, but I don't 
+
+384
+00:21:29,600 --> 00:21:31,360
+remember the details on those 
+numbers. 
+
+385
+00:21:32,960 --> 00:21:35,040
+And those are the. 
+People who voluntarily took the 
+
+386
+00:21:35,040 --> 00:21:36,880
+survey so. 
+Yeah, exactly. 
+
+387
+00:21:36,880 --> 00:21:40,200
+It's self selected as well. 
+Yeah, I think these days almost 
+
+388
+00:21:40,200 --> 00:21:43,280
+the strongest argument for type 
+annotations in Python. 
+
+389
+00:21:43,280 --> 00:21:45,920
+I mean, I, I think there's a 
+good argument to be made about, 
+
+390
+00:21:46,080 --> 00:21:50,280
+you know, catching bugs, but one
+of the strongest arguments is 
+
+391
+00:21:50,280 --> 00:21:53,360
+the LSP features, because a lot 
+of the more powerful LSP 
+
+392
+00:21:53,360 --> 00:21:57,000
+features you just can't 
+implement effectively without 
+
+393
+00:21:57,000 --> 00:22:02,200
+type information. 
+And those LSP features are 
+
+394
+00:22:02,200 --> 00:22:05,280
+pretty useful, I think. 
+And so just having your, your 
+
+395
+00:22:05,520 --> 00:22:09,320
+IDE be able to even just give 
+you useful hover information 
+
+396
+00:22:09,320 --> 00:22:11,360
+about what the things you're 
+dealing with and useful auto 
+
+397
+00:22:11,360 --> 00:22:14,200
+complete is really assisted by 
+type information. 
+
+398
+00:22:15,040 --> 00:22:17,360
+So I think that's a pretty, 
+pretty strong argument in favor.
+
+399
+00:22:17,920 --> 00:22:24,120
+And I, I think that as we do 
+more LLM based coding that as 
+
+400
+00:22:24,120 --> 00:22:28,240
+the LSPS and type checkers can 
+provide better information to 
+
+401
+00:22:28,240 --> 00:22:31,240
+our AI coding agents. 
+I think that's where we're gonna
+
+402
+00:22:31,240 --> 00:22:33,520
+see a ton of value from the type
+systems. 
+
+403
+00:22:33,520 --> 00:22:37,080
+Cuz of course I want my AI code 
+assistant to generate code that 
+
+404
+00:22:37,080 --> 00:22:40,120
+actually works. 
+And gosh, types are sure helpful
+
+405
+00:22:40,120 --> 00:22:44,960
+in getting there. 
+So I think that yeah, as I'm 
+
+406
+00:22:44,960 --> 00:22:47,280
+writing code in the IDE, that 
+experience can be much better 
+
+407
+00:22:47,280 --> 00:22:50,200
+with types, but then AI 
+generated is going to be a whole
+
+408
+00:22:50,200 --> 00:22:52,400
+another place where we 
+experience a lot of value from 
+
+409
+00:22:52,400 --> 00:22:55,440
+that. 
+Well, and I find when writing 
+
+410
+00:22:55,440 --> 00:23:00,000
+code, I guess there was a little
+bit of a hurdle at the far 
+
+411
+00:23:00,000 --> 00:23:03,880
+beginning, but I have found that
+even if I'm doing something 
+
+412
+00:23:03,880 --> 00:23:07,400
+small, it helps me think about 
+what I'm doing. 
+
+413
+00:23:08,160 --> 00:23:12,720
+But I also think that when we're
+dealing with larger things where
+
+414
+00:23:12,720 --> 00:23:17,040
+we're scaling stuff up, we're 
+bringing in libraries, the 
+
+415
+00:23:17,040 --> 00:23:22,440
+connection, the way that they 
+connect makes it much easier and
+
+416
+00:23:22,480 --> 00:23:25,400
+maybe even possible when you 
+have types. 
+
+417
+00:23:25,720 --> 00:23:30,880
+So I think it it really impacts 
+the ability to scale. 
+
+418
+00:23:32,800 --> 00:23:37,160
+I think one of the most common 
+objections I see is just people 
+
+419
+00:23:37,160 --> 00:23:42,040
+feeling like Python's a very 
+dynamic language and they want 
+
+420
+00:23:42,040 --> 00:23:44,120
+to be able to kind of use the 
+dynamic features. 
+
+421
+00:23:44,560 --> 00:23:47,800
+And then you try to type 
+annotate some of those things 
+
+422
+00:23:47,800 --> 00:23:50,120
+and the type annotations, 
+sometimes it's just not even 
+
+423
+00:23:50,120 --> 00:23:53,560
+possible with what we have or 
+are able to express in the 
+
+424
+00:23:53,560 --> 00:23:55,800
+static type system. 
+And in other cases it's 
+
+425
+00:23:55,800 --> 00:23:59,760
+possible, but the type 
+annotations can get large and 
+
+426
+00:23:59,760 --> 00:24:02,520
+complex if you try to accurately
+express some of those things. 
+
+427
+00:24:02,920 --> 00:24:07,000
+And I think the, the, the nice 
+thing there is that it is a 
+
+428
+00:24:07,000 --> 00:24:09,360
+gradual type system, so it's 
+never required. 
+
+429
+00:24:09,360 --> 00:24:13,680
+And if you want to use type 
+annotations in the, you know, 
+
+430
+00:24:13,720 --> 00:24:17,360
+80% of your code base where the 
+annotations are fairly simple 
+
+431
+00:24:17,360 --> 00:24:21,160
+and work well, you can do that. 
+And you can just leave the other
+
+432
+00:24:21,160 --> 00:24:24,840
+20% unannotated or use any, I 
+mean, you always have that, that
+
+433
+00:24:24,840 --> 00:24:26,440
+escape hatch. 
+So you can use it where it makes
+
+434
+00:24:26,440 --> 00:24:28,400
+sense and kind of bail out where
+it doesn't. 
+
+435
+00:24:29,960 --> 00:24:33,280
+Yeah, if you're doing something 
+like super weird and dynamic, 
+
+436
+00:24:33,280 --> 00:24:35,920
+then you can. 
+Feels like some of some of the 
+
+437
+00:24:35,920 --> 00:24:41,880
+rust stuff is actually like 
+given the anti type people some 
+
+438
+00:24:41,880 --> 00:24:44,400
+ammunition because you look at 
+some of the rust types and 
+
+439
+00:24:44,400 --> 00:24:48,320
+you're like, Oh my God, that's 
+that's a pretty significant 
+
+440
+00:24:48,320 --> 00:24:52,720
+block of type information. 
+Yep, yeah. 
+
+441
+00:24:53,040 --> 00:24:54,960
+I mean it goes back before Russ 
+too. 
+
+442
+00:24:54,960 --> 00:24:59,560
+You can look at the C STL. 
+So I mean sure theory types for 
+
+443
+00:24:59,560 --> 00:25:02,320
+a long time. 
+Yeah, it's true. 
+
+444
+00:25:03,400 --> 00:25:08,080
+That's yeah. 
+So my impression and of course I
+
+445
+00:25:08,280 --> 00:25:11,720
+have some background. 
+Well, Bill and James and I all 
+
+446
+00:25:11,720 --> 00:25:18,440
+have background in Scala and it 
+seems to me like what a lot of 
+
+447
+00:25:18,440 --> 00:25:23,880
+the things that I see in the 
+Python type system look like 
+
+448
+00:25:23,880 --> 00:25:26,520
+they just been lifted directly 
+from Scala. 
+
+449
+00:25:26,520 --> 00:25:30,200
+I don't know if that's just an 
+illusion or not, but it seems 
+
+450
+00:25:30,800 --> 00:25:33,600
+that that's my impression. 
+Do you have any, Were you on the
+
+451
+00:25:34,080 --> 00:25:39,240
+like, typing committee or 
+whatever for, you know, like the
+
+452
+00:25:39,880 --> 00:25:42,120
+the size? 
+Yeah, the Python. 
+
+453
+00:25:43,880 --> 00:25:45,760
+I'm, I'm on the typing council 
+currently. 
+
+454
+00:25:45,760 --> 00:25:49,200
+So there's five of us who are 
+kind of in charge of evaluating 
+
+455
+00:25:49,600 --> 00:25:52,840
+changes to the type system and 
+proposed Peps and offering 
+
+456
+00:25:52,840 --> 00:25:56,960
+recommendation from the 
+perspective it's mostly, largely
+
+457
+00:25:56,960 --> 00:26:00,320
+type checker authors represented
+on that, on that council. 
+
+458
+00:26:00,320 --> 00:26:02,760
+So I, I've been on there for 
+about a year. 
+
+459
+00:26:03,640 --> 00:26:10,160
+I was not involved in the 
+original design of the Python 
+
+460
+00:26:10,160 --> 00:26:17,480
+type system back in like 2014, 
+so yeah, I don't know if there 
+
+461
+00:26:17,480 --> 00:26:21,880
+was some. 
+Scala Scala influence in in the 
+
+462
+00:26:21,880 --> 00:26:26,160
+early days or or yeah. 
+Yeah, I don't actually know. 
+
+463
+00:26:26,160 --> 00:26:28,360
+I mean, I'm, I'm sure there was 
+some Scala influence. 
+
+464
+00:26:28,360 --> 00:26:30,760
+I think there's been some Rust 
+influence along the way. 
+
+465
+00:26:30,760 --> 00:26:34,800
+I think obviously there's been 
+TypeScript influence. 
+
+466
+00:26:34,800 --> 00:26:39,520
+In some ways, TypeScript is the 
+closest cousin that the Python 
+
+467
+00:26:39,520 --> 00:26:43,240
+type system has in terms of 
+optional gradual type systems. 
+
+468
+00:26:43,840 --> 00:26:48,520
+I guess, but the man TypeScript 
+is a whole different beast. 
+
+469
+00:26:49,400 --> 00:26:51,520
+Man, is that different. 
+Yeah. 
+
+470
+00:26:51,680 --> 00:26:54,360
+Well, it's a different language 
+that they're modeling, and 
+
+471
+00:26:54,680 --> 00:26:56,920
+they've made some different 
+design choices in the type 
+
+472
+00:26:56,920 --> 00:26:57,920
+system. 
+Yeah. 
+
+473
+00:26:58,400 --> 00:27:03,840
+And I think they're going more 
+for easier transition. 
+
+474
+00:27:04,080 --> 00:27:07,960
+Like Elm was like so far over. 
+It's like, OK, this is going to 
+
+475
+00:27:07,960 --> 00:27:12,000
+be a perfect functional system. 
+No type failures ever. 
+
+476
+00:27:12,120 --> 00:27:14,800
+At all whereas. 
+TypeScript is like, OK, we 
+
+477
+00:27:14,800 --> 00:27:17,960
+assume you know, we know that 
+your JavaScript programmers and 
+
+478
+00:27:18,360 --> 00:27:21,640
+you're used to just everything 
+being all over the place. 
+
+479
+00:27:21,640 --> 00:27:24,560
+And so we, we can't restrict you
+too much and expect. 
+
+480
+00:27:24,560 --> 00:27:27,880
+You to come over but and interop
+with JavaScript. 
+
+481
+00:27:27,880 --> 00:27:31,640
+Is and yeah, the interop well 
+and but, but it seems like 
+
+482
+00:27:32,600 --> 00:27:35,840
+Python's typing system is so 
+much more. 
+
+483
+00:27:37,480 --> 00:27:39,960
+There's a word that they use 
+about. 
+
+484
+00:27:40,080 --> 00:27:42,320
+It's not whole or complete. 
+Sound. 
+
+485
+00:27:42,800 --> 00:27:45,880
+Sound, yes. 
+I haven't, Yeah. 
+
+486
+00:27:45,920 --> 00:27:51,320
+It's like it's so much more 
+sound that yeah. 
+
+487
+00:27:51,880 --> 00:27:53,720
+I don't know. 
+Yeah, Python's type system 
+
+488
+00:27:53,720 --> 00:27:59,040
+definitely has plenty of known 
+sound as holes in it, but I 
+
+489
+00:27:59,040 --> 00:28:00,920
+think compared to TypeScript, 
+that's accurate. 
+
+490
+00:28:00,920 --> 00:28:04,680
+Like TypeScript really, whenever
+it seems like whenever a 
+
+491
+00:28:04,680 --> 00:28:08,840
+conflict comes up between sort 
+of usability and soundness, 
+
+492
+00:28:08,840 --> 00:28:12,440
+TypeScript has a real clear 
+philosophy that they always 
+
+493
+00:28:12,440 --> 00:28:15,040
+choose usability. 
+And there's, you know, good 
+
+494
+00:28:15,040 --> 00:28:18,360
+arguments in both directions. 
+Oh yeah, but it feels more like 
+
+495
+00:28:18,360 --> 00:28:22,040
+C++ to me in terms of, oh, we 
+always got to be backwards 
+
+496
+00:28:22,040 --> 00:28:27,520
+compatible with C and that opens
+up all kinds of hassles. 
+
+497
+00:28:28,920 --> 00:28:30,880
+That compatibility ball and 
+chain. 
+
+498
+00:28:31,120 --> 00:28:33,840
+Yes, absolutely. 
+Ball and chain, Yeah. 
+
+499
+00:28:34,040 --> 00:28:40,440
+So it's like, I respect the 
+pragmatism of it, but boy, I 
+
+500
+00:28:40,440 --> 00:28:45,320
+sure feel much more comfortable 
+with Python's type system. 
+
+501
+00:28:45,320 --> 00:28:47,960
+I feel like we're gonna be able 
+to go a lot further. 
+
+502
+00:28:50,400 --> 00:28:54,760
+Yeah. 
+So you've been working on Ty and
+
+503
+00:28:54,760 --> 00:28:56,560
+so you're writing mostly Rust 
+code. 
+
+504
+00:28:56,720 --> 00:28:59,240
+I'm probably not writing a lot 
+of Python code would be my 
+
+505
+00:28:59,240 --> 00:29:04,160
+guest, but that's curious. 
+And then one thing I was curious
+
+506
+00:29:04,160 --> 00:29:08,560
+about with that is, is we we had
+Richard Feldman on a long time 
+
+507
+00:29:08,560 --> 00:29:12,520
+ago who he was, he was doing Elm
+and then he created his new 
+
+508
+00:29:12,520 --> 00:29:15,440
+language called Rock. 
+And he'd originally written the 
+
+509
+00:29:15,440 --> 00:29:20,120
+compiler in for Rock in Rust and
+then had decided to switch it 
+
+510
+00:29:20,120 --> 00:29:22,800
+over to Zig. 
+And we need to have him back on 
+
+511
+00:29:22,800 --> 00:29:26,280
+to to have that discussion. 
+But but curious like like he 
+
+512
+00:29:26,280 --> 00:29:30,000
+found some challenges with 
+building a type checker and 
+
+513
+00:29:30,000 --> 00:29:31,840
+compiler. 
+Maybe it's more on the compiler 
+
+514
+00:29:31,840 --> 00:29:35,440
+side but in Rust and and it seen
+some benefits to Zig. 
+
+515
+00:29:35,440 --> 00:29:38,400
+But what's your experience? 
+Been building a type checker in 
+
+516
+00:29:38,400 --> 00:29:40,880
+Rust? 
+Yeah, there's definitely some 
+
+517
+00:29:40,880 --> 00:29:43,200
+challenges. 
+I would love to have a chance to
+
+518
+00:29:43,200 --> 00:29:45,680
+sit down with Richard and and 
+talk through in detail sort of 
+
+519
+00:29:45,680 --> 00:29:49,320
+what what are the the key 
+challenges worth adhering into 
+
+520
+00:29:49,360 --> 00:29:52,200
+that convinced to blog post. 
+On that which I'll post. 
+
+521
+00:29:52,200 --> 00:29:58,520
+It and I think I've heard him 
+talk about it on podcasts and I 
+
+522
+00:29:58,520 --> 00:30:01,160
+think his biggest issue was just
+compile time. 
+
+523
+00:30:02,160 --> 00:30:04,360
+Okay. 
+The rest compile. 
+
+524
+00:30:04,360 --> 00:30:08,520
+Every time I've looked at Zig, I
+haven't wanted to learn it. 
+
+525
+00:30:10,560 --> 00:30:13,760
+But the compiler's fast. 
+The compiler's fast and OK I. 
+
+526
+00:30:13,800 --> 00:30:14,520
+Guess so. 
+It's OK. 
+
+527
+00:30:15,320 --> 00:30:19,240
+I don't know, I'd rather get a 
+bigger machine or something than
+
+528
+00:30:19,640 --> 00:30:21,600
+because I feel like you're 
+giving stuff. 
+
+529
+00:30:22,360 --> 00:30:25,920
+I just skimmed over Zig, but I 
+just saw things and I go. 
+
+530
+00:30:26,400 --> 00:30:31,400
+I wouldn't want to give up 
+what's in Rust for speed. 
+
+531
+00:30:31,960 --> 00:30:33,760
+I would rather have the 
+certainty. 
+
+532
+00:30:34,680 --> 00:30:36,320
+Yeah, Zig has some cool ideas in
+it for sure. 
+
+533
+00:30:36,320 --> 00:30:38,560
+But I think we've been pretty 
+happy with Rust so far. 
+
+534
+00:30:38,560 --> 00:30:41,440
+I mean, it's Rust is the obvious
+choice for Astral. 
+
+535
+00:30:41,440 --> 00:30:45,960
+Like the company's kind of been 
+built around building Python 
+
+536
+00:30:45,960 --> 00:30:48,520
+tooling in Rust with Ruff and 
+with UV. 
+
+537
+00:30:48,520 --> 00:30:54,520
+And so just just, I mean, always
+team expertise is a relevant 
+
+538
+00:30:54,520 --> 00:30:57,160
+factor when choosing a tech 
+stack. 
+
+539
+00:30:57,160 --> 00:30:59,600
+And so we're just from that 
+perspective for Astral, it made 
+
+540
+00:30:59,600 --> 00:31:01,480
+sense to go. 
+With Rust and the wicked speed 
+
+541
+00:31:01,480 --> 00:31:04,480
+of the runtime. 
+And yes, of course, it allows us
+
+542
+00:31:04,840 --> 00:31:08,320
+to build something that's very 
+fast and we can have control 
+
+543
+00:31:08,320 --> 00:31:10,640
+over memory allocation and 
+efficiency. 
+
+544
+00:31:10,640 --> 00:31:13,800
+And so that's that's obviously 
+very important to us. 
+
+545
+00:31:13,800 --> 00:31:14,720
+Yep. 
+Right. 
+
+546
+00:31:14,880 --> 00:31:17,600
+And then what about concurrency?
+Do you does the? 
+
+547
+00:31:17,800 --> 00:31:20,480
+Do you use concurrency in the 
+type checker and? 
+
+548
+00:31:20,600 --> 00:31:24,160
+Yes, that's not a huge benefit 
+from from Rust is the sort of 
+
+549
+00:31:24,600 --> 00:31:29,480
+makes things concurrency safe by
+default unless you go go out of 
+
+550
+00:31:29,480 --> 00:31:32,640
+your way to make them unsafe. 
+And so we've definitely made use
+
+551
+00:31:32,640 --> 00:31:37,080
+of that. 
+So Ty by default will just spin 
+
+552
+00:31:37,080 --> 00:31:38,840
+up a bunch of threads. 
+Use all the cores. 
+
+553
+00:31:39,160 --> 00:31:42,160
+Use all the cores and distribute
+the work across them, and that 
+
+554
+00:31:42,160 --> 00:31:43,920
+makes a huge difference in the 
+performance. 
+
+555
+00:31:43,920 --> 00:31:48,640
+Nice, yeah. 
+And so, yeah, other other 
+
+556
+00:31:48,800 --> 00:31:51,920
+challenges or interesting bits 
+about writing the type checker 
+
+557
+00:31:51,920 --> 00:31:54,760
+in Rust with anything else on 
+that experience that's. 
+
+558
+00:31:55,120 --> 00:31:57,120
+Yeah. 
+I mean, I guess one interesting 
+
+559
+00:31:57,120 --> 00:32:02,480
+note there is that we made the 
+choice to use Salsa, which is a 
+
+560
+00:32:02,480 --> 00:32:05,000
+library. 
+It was developed I think 
+
+561
+00:32:05,000 --> 00:32:09,000
+initially for I think it 
+initially grew out of work on 
+
+562
+00:32:09,000 --> 00:32:11,640
+Rust C, the Rust compiler, 
+although I don't think it was 
+
+563
+00:32:11,640 --> 00:32:16,160
+ever actually used in Rust C, 
+There's some shared ideas and 
+
+564
+00:32:16,160 --> 00:32:19,400
+then it's it currently powers 
+Rust analyzer, which is one of 
+
+565
+00:32:19,400 --> 00:32:27,760
+the popular LS PS for for Rust. 
+And so Salsa is a kind of a 
+
+566
+00:32:27,760 --> 00:32:31,360
+general purpose incremental 
+computation engine. 
+
+567
+00:32:32,040 --> 00:32:34,040
+So essentially what it allows 
+you to do. 
+
+568
+00:32:34,040 --> 00:32:36,720
+I guess maybe I should take a 
+step back and talk about the 
+
+569
+00:32:36,720 --> 00:32:41,960
+problem, which is that if you 
+don't want to just build A1 shot
+
+570
+00:32:42,160 --> 00:32:45,160
+kind of command line type 
+checking tool, but you want to 
+
+571
+00:32:45,160 --> 00:32:50,600
+build a responsive LSP server 
+for an IDE, then it's pretty 
+
+572
+00:32:50,600 --> 00:32:54,400
+important that you can. 
+If you have a very large code 
+
+573
+00:32:54,400 --> 00:32:57,680
+base and somebody makes, you 
+know, one letter change in one 
+
+574
+00:32:57,680 --> 00:33:01,840
+file somewhere, you don't want 
+to spend however many seconds it
+
+575
+00:33:01,840 --> 00:33:05,640
+takes you, you know, with some 
+of the existing type checkers, 
+
+576
+00:33:05,640 --> 00:33:09,280
+it would be minutes. 
+With Ty, it's seconds. 
+
+577
+00:33:09,280 --> 00:33:12,960
+But you still don't want to send
+multiple, you know, seconds or 
+
+578
+00:33:12,960 --> 00:33:16,920
+10s of seconds re analyzing the 
+entire big code base from 
+
+579
+00:33:16,920 --> 00:33:19,160
+scratch. 
+You want to be able to take the 
+
+580
+00:33:19,960 --> 00:33:22,400
+type information for the whole 
+code base that you already had 
+
+581
+00:33:22,880 --> 00:33:26,280
+and make sort of the minimal 
+updates that you need to make 
+
+582
+00:33:26,320 --> 00:33:29,920
+based on this one little change 
+to get to a correct new 
+
+583
+00:33:29,920 --> 00:33:31,920
+understanding as quickly as you 
+can. 
+
+584
+00:33:32,400 --> 00:33:37,080
+And that's a very difficult to 
+do accurately if you just kind 
+
+585
+00:33:37,080 --> 00:33:40,240
+of try to do it ad hoc and sort 
+of track all of these 
+
+586
+00:33:40,640 --> 00:33:43,920
+dependencies of what needs to be
+invalidated when something else 
+
+587
+00:33:43,920 --> 00:33:45,680
+changes. 
+And I know for some of the 
+
+588
+00:33:45,680 --> 00:33:49,400
+existing Python type checkers, 
+that's been a, a big area of 
+
+589
+00:33:49,400 --> 00:33:54,440
+investment and recurring bugs 
+over time is, you know, not 
+
+590
+00:33:54,440 --> 00:33:57,000
+getting the right answer after 
+incremental change or missing 
+
+591
+00:33:57,000 --> 00:33:59,200
+updating something after 
+incremental change and having 
+
+592
+00:33:59,520 --> 00:34:03,240
+your incremental results not 
+matching the results you'd get 
+
+593
+00:34:03,440 --> 00:34:05,400
+from scratch. 
+So that was something that was 
+
+594
+00:34:05,400 --> 00:34:09,159
+important to us to try to avoid.
+And So what Salsa does is it 
+
+595
+00:34:09,159 --> 00:34:14,360
+provides a general purpose 
+framework or a library where you
+
+596
+00:34:14,360 --> 00:34:20,320
+write your, your logic as Salsa 
+queries. 
+
+597
+00:34:20,760 --> 00:34:25,600
+And Salsa will actually under 
+the hood kind of automatically 
+
+598
+00:34:25,600 --> 00:34:27,920
+track as you execute a Salsa 
+query. 
+
+599
+00:34:28,320 --> 00:34:32,520
+It'll track what other Salsa 
+queries called in the process of
+
+600
+00:34:32,520 --> 00:34:35,040
+executing it. 
+And Salsa behind the scenes will
+
+601
+00:34:35,040 --> 00:34:37,960
+kind of build up this entire 
+dependency graph. 
+
+602
+00:34:38,719 --> 00:34:41,080
+And it does that automatically 
+based on what your code is 
+
+603
+00:34:41,080 --> 00:34:43,280
+actually doing. 
+So you don't have to, you don't 
+
+604
+00:34:43,280 --> 00:34:47,080
+have to make sure and remember, 
+oh, I got to invalidate this or 
+
+605
+00:34:47,080 --> 00:34:49,000
+I got to mark this dependency. 
+It just all happens 
+
+606
+00:34:49,000 --> 00:34:52,719
+automatically. 
+And then if you tell Salsa, OK, 
+
+607
+00:34:53,120 --> 00:34:55,000
+you know, you tell Salsa, these 
+are your inputs, these are the 
+
+608
+00:34:55,000 --> 00:34:58,240
+files. 
+And if you tell Salsa this input
+
+609
+00:34:58,240 --> 00:35:01,800
+changed, then it can just kind 
+of run that through the 
+
+610
+00:35:01,800 --> 00:35:04,520
+dependency graph and just 
+automatically figure out 
+
+611
+00:35:04,520 --> 00:35:06,040
+everything that has to be 
+invalidated. 
+
+612
+00:35:06,480 --> 00:35:10,280
+And so you can essentially it 
+means that we can write our 
+
+613
+00:35:10,280 --> 00:35:14,880
+logic without even thinking 
+about incrementality or 
+
+614
+00:35:14,880 --> 00:35:17,280
+dependencies. 
+We just write it kind of 
+
+615
+00:35:17,280 --> 00:35:21,080
+straightforwardly. 
+And Salsa just handles that 
+
+616
+00:35:21,080 --> 00:35:25,920
+whole problem for us just kind 
+of magically, which it's kind of
+
+617
+00:35:25,920 --> 00:35:26,760
+amazing. 
+Yeah. 
+
+618
+00:35:26,800 --> 00:35:29,240
+I mean, that sounds huge. 
+That seems like one of the 
+
+619
+00:35:29,880 --> 00:35:33,240
+biggest challenges in writing a 
+compiler or type checker is 
+
+620
+00:35:33,480 --> 00:35:36,840
+managing that graph and the 
+invalidation, You know, the 
+
+621
+00:35:36,880 --> 00:35:40,400
+different points in that graph. 
+So the fact that Salsa gave you 
+
+622
+00:35:40,400 --> 00:35:44,160
+the foundation to build that 
+seems like a huge benefit for 
+
+623
+00:35:44,160 --> 00:35:50,080
+her for what you're doing. 
+So I don't know if this is an 
+
+624
+00:35:50,080 --> 00:35:53,680
+elephant in the room but I want 
+to ask about. 
+
+625
+00:35:54,120 --> 00:36:00,800
+OK, so now we have my pie, 
+pyrite, pyrfly and Ty. 
+
+626
+00:36:01,800 --> 00:36:03,880
+And then the Meadow one. 
+No, that's. 
+
+627
+00:36:03,880 --> 00:36:05,360
+Firefly. 
+Firefly is the Meadow one. 
+
+628
+00:36:05,600 --> 00:36:09,960
+There's also there's Pi type 
+that was developed at Google, 
+
+629
+00:36:10,240 --> 00:36:12,840
+but my understanding is that's 
+not really being maintained 
+
+630
+00:36:12,840 --> 00:36:15,720
+anymore so but that wasn't the 
+picture. 
+
+631
+00:36:16,280 --> 00:36:19,600
+And I think the latter. 
+I don't know what my π's written
+
+632
+00:36:19,600 --> 00:36:20,680
+in. 
+I know it's slow. 
+
+633
+00:36:20,680 --> 00:36:22,600
+Python. 
+It is Python. 
+
+634
+00:36:22,600 --> 00:36:25,520
+OK, Yeah. 
+Although they compile it with my
+
+635
+00:36:25,520 --> 00:36:29,960
+π C which is an interesting side
+note to make it a little faster.
+
+636
+00:36:29,960 --> 00:36:31,240
+But yeah, it is written in 
+Python. 
+
+637
+00:36:32,160 --> 00:36:35,080
+OK. 
+All right, so. 
+
+638
+00:36:37,000 --> 00:36:38,480
+Many type checkers. 
+Yeah, many. 
+
+639
+00:36:38,680 --> 00:36:42,440
+Type checkers, yeah, yeah, 
+that's basically my question. 
+
+640
+00:36:42,440 --> 00:36:46,160
+What's your perspective? 
+On that, I mean, the initial 
+
+641
+00:36:46,160 --> 00:36:51,720
+motivation for us to do a type 
+checker was really mostly speed.
+
+642
+00:36:52,120 --> 00:36:57,400
+I mean, that's sort of what 
+Astral has built on is this 
+
+643
+00:36:57,400 --> 00:37:00,080
+reputation for building very 
+fast Python tooling. 
+
+644
+00:37:00,760 --> 00:37:05,200
+UV is very fast compared to 
+other Python package management 
+
+645
+00:37:05,200 --> 00:37:07,960
+tools. 
+Rough was a very fast linter. 
+
+646
+00:37:09,120 --> 00:37:11,000
+Yeah, so. 
+What's the linter? 
+
+647
+00:37:11,960 --> 00:37:14,520
+The linter is called Rough, and 
+that was actually the first 
+
+648
+00:37:14,520 --> 00:37:16,480
+thing that was built. 
+That was probably good. 
+
+649
+00:37:18,160 --> 00:37:19,360
+Yeah. 
+That was built before Astral 
+
+650
+00:37:19,360 --> 00:37:22,240
+existed, yeah. 
+And everybody goes, oh, rough, 
+
+651
+00:37:22,280 --> 00:37:23,680
+you got to use rough. 
+And it was like, yeah. 
+
+652
+00:37:24,320 --> 00:37:26,200
+Yeah, this is rough. 
+Is also built in REST. 
+
+653
+00:37:26,440 --> 00:37:28,600
+It's also built in rest Yeah, it
+was kind of a it was kind of a 
+
+654
+00:37:28,600 --> 00:37:33,520
+hobby project for Charlie, our 
+founder, and then it turned out 
+
+655
+00:37:33,520 --> 00:37:36,080
+to be very popular. 
+And so that's kind of that's 
+
+656
+00:37:36,080 --> 00:37:37,920
+where asked for all the company 
+came from was like, oh, 
+
+657
+00:37:37,960 --> 00:37:41,400
+apparently there's a lot of 
+interest in in fast Python 
+
+658
+00:37:41,400 --> 00:37:44,040
+tooling. 
+So yeah, performance was 
+
+659
+00:37:44,040 --> 00:37:49,040
+definitely the the top complaint
+that we were hearing from the 
+
+660
+00:37:49,040 --> 00:37:52,400
+community and from companies 
+about the existing Python type 
+
+661
+00:37:52,400 --> 00:37:55,440
+checking options. 
+And so that was the motivation 
+
+662
+00:37:55,440 --> 00:37:59,280
+to do a new Python type checker 
+was to build something faster. 
+
+663
+00:38:01,560 --> 00:38:09,960
+The Pyrfly is also very fast, 
+roughly in a similar ballpark to
+
+664
+00:38:09,960 --> 00:38:13,520
+TUI. 
+Pyrfly came along after we had 
+
+665
+00:38:13,520 --> 00:38:18,600
+started working on TUI. 
+Meta was obviously also feeling 
+
+666
+00:38:18,600 --> 00:38:21,280
+the need for faster Python type 
+checking internally. 
+
+667
+00:38:21,520 --> 00:38:24,760
+Because they were using Pyr. 
+They were using Pyr, right? 
+
+668
+00:38:24,760 --> 00:38:27,400
+Which one of them was? 
+Previous, I mean, was Pyrfly 
+
+669
+00:38:27,400 --> 00:38:29,720
+just well, I don't know if you 
+know this and we're going to 
+
+670
+00:38:29,720 --> 00:38:32,800
+interview them so I can ask them
+then, but was that do you know 
+
+671
+00:38:32,800 --> 00:38:36,840
+if that was just a translation 
+across to Rust from whatever 
+
+672
+00:38:36,840 --> 00:38:40,840
+they. 
+My understanding is that Pyrfly 
+
+673
+00:38:40,840 --> 00:38:44,440
+was not just a translation of 
+Pyr to Rust, but it was more of 
+
+674
+00:38:44,440 --> 00:38:46,360
+a well from scratch project I 
+think. 
+
+675
+00:38:46,360 --> 00:38:47,200
+Yeah, it. 
+Makes sense? 
+
+676
+00:38:48,840 --> 00:38:50,600
+Yeah. 
+I think they wanted to sort of 
+
+677
+00:38:51,320 --> 00:38:53,880
+move on from some of the 
+architectural limitations of 
+
+678
+00:38:53,880 --> 00:38:58,480
+Pyre and do it better the second
+time we're in, OK. 
+
+679
+00:38:59,160 --> 00:39:04,640
+OK. 
+So Ty was kind of the ecosystem 
+
+680
+00:39:04,640 --> 00:39:08,160
+of type checkers and Python. 
+There wasn't at the time of 
+
+681
+00:39:08,160 --> 00:39:13,240
+starting Ty a great high 
+performance for both batch and 
+
+682
+00:39:13,240 --> 00:39:17,400
+incremental compile speeds. 
+And so it was like, great, we've
+
+683
+00:39:17,400 --> 00:39:22,520
+got these other Python tools 
+built in Rust and people love 
+
+684
+00:39:22,520 --> 00:39:24,360
+them. 
+Let's start building our own 
+
+685
+00:39:24,360 --> 00:39:25,640
+type checker. 
+That's gonna be super. 
+
+686
+00:39:25,720 --> 00:39:27,800
+Yeah. 
+But I also understood that it's,
+
+687
+00:39:28,120 --> 00:39:31,240
+I mean, maybe I heard you being 
+interviewed on a different 
+
+688
+00:39:31,240 --> 00:39:36,920
+podcast, but I thought there was
+a goal to integrate all these 
+
+689
+00:39:37,320 --> 00:39:42,600
+tools together. 
+From Astro like uvm rough and Ty
+
+690
+00:39:42,600 --> 00:39:44,920
+all together or something. 
+Yeah, for sure. 
+
+691
+00:39:44,920 --> 00:39:50,080
+I mean, I would say a big part 
+of the inspiration for kind of 
+
+692
+00:39:50,120 --> 00:39:55,160
+Astral in general is Cargo, 
+which you're familiar with your 
+
+693
+00:39:55,160 --> 00:39:58,840
+work in Rust. 
+And Cargo does provide a really 
+
+694
+00:39:58,840 --> 00:40:02,280
+nice kind of integrated 
+experience for everything that 
+
+695
+00:40:02,280 --> 00:40:05,920
+you need compilation and type 
+checking and. 
+
+696
+00:40:06,520 --> 00:40:11,160
+It's all kind of in one package 
+management, all of that is kind 
+
+697
+00:40:11,160 --> 00:40:14,440
+of in it's lovely, a nice 
+streamlined unified experience. 
+
+698
+00:40:14,680 --> 00:40:16,760
+And that's where we would like 
+to get to with Python. 
+
+699
+00:40:16,760 --> 00:40:19,040
+And we're certainly not there 
+yet, but we're sort of trying to
+
+700
+00:40:19,760 --> 00:40:22,480
+build all the pieces. 
+And we definitely have visions 
+
+701
+00:40:22,480 --> 00:40:29,400
+for how, how Ty and UV can 
+integrate well so that, you 
+
+702
+00:40:29,400 --> 00:40:32,560
+know, you don't have to 
+configure Ty because we can just
+
+703
+00:40:32,560 --> 00:40:35,240
+look at your UV configuration. 
+And then we know all about your 
+
+704
+00:40:35,240 --> 00:40:36,480
+project. 
+There's, there's a lot of 
+
+705
+00:40:36,480 --> 00:40:39,880
+potential. 
+And you know, things like just 
+
+706
+00:40:39,880 --> 00:40:42,960
+knowing what your dependencies 
+are in principle allows us to 
+
+707
+00:40:42,960 --> 00:40:47,480
+provide really good say like 
+import auto complete. 
+
+708
+00:40:47,480 --> 00:40:50,480
+It's like if we know you're, 
+you're trying to use this name 
+
+709
+00:40:50,480 --> 00:40:52,800
+and it's not imported, well, we 
+know what all your dependencies 
+
+710
+00:40:52,800 --> 00:40:54,880
+are, so we can. 
+So there's a lot of potential 
+
+711
+00:40:57,440 --> 00:40:58,880
+potential ways that that 
+integration can work. 
+
+712
+00:40:58,880 --> 00:41:01,520
+I would say at the moment, 
+that's more of like a vision and
+
+713
+00:41:01,880 --> 00:41:05,160
+our our priority right now is 
+building a really good type 
+
+714
+00:41:05,160 --> 00:41:08,480
+checker and LSP integration is 
+more of a future thing. 
+
+715
+00:41:08,480 --> 00:41:11,440
+And in the long term, we'd also 
+like to integrate Ty and rough. 
+
+716
+00:41:12,360 --> 00:41:15,600
+If you look at the rough issue 
+tracker, you'll see like good 
+
+717
+00:41:15,600 --> 00:41:17,920
+chunk of the issues that have 
+been hanging around for a long 
+
+718
+00:41:17,920 --> 00:41:22,280
+time are tagged with this type 
+inference, I think, or type type
+
+719
+00:41:22,280 --> 00:41:25,400
+something label. 
+And that basically means, yes, 
+
+720
+00:41:25,400 --> 00:41:28,520
+this is like something we would 
+like the Lynter to do, but we 
+
+721
+00:41:28,520 --> 00:41:31,000
+can't because we just don't know
+enough about your code base type
+
+722
+00:41:31,000 --> 00:41:32,000
+information. 
+Yeah, right. 
+
+723
+00:41:32,000 --> 00:41:34,240
+Exactly. 
+And so long term, we would like 
+
+724
+00:41:34,240 --> 00:41:37,760
+the Lynter and the type checker 
+to be just sort of one continuum
+
+725
+00:41:37,760 --> 00:41:39,600
+where it's like, well, you've 
+got your core type checking 
+
+726
+00:41:39,640 --> 00:41:43,040
+rules and you've got your more 
+opinionated lint rules, but 
+
+727
+00:41:43,040 --> 00:41:46,240
+they're all built on the same 
+kind of core type inference 
+
+728
+00:41:46,760 --> 00:41:49,280
+information. 
+So, but again, that's. 
+
+729
+00:41:49,720 --> 00:41:53,040
+It is weird how you could 
+imagine, okay I've got my 
+
+730
+00:41:53,040 --> 00:41:56,720
+lender, my code formatter, my 
+type checker, all these things. 
+
+731
+00:41:56,960 --> 00:41:59,840
+You could imagine them not 
+needing knowledge of each other,
+
+732
+00:42:00,120 --> 00:42:05,800
+but in reality they all actually
+need to know about all of all 
+
+733
+00:42:05,800 --> 00:42:08,080
+the things. 
+Like formatting is an 
+
+734
+00:42:08,080 --> 00:42:10,920
+interesting one too, where it's 
+like, yeah, you to be able to 
+
+735
+00:42:10,920 --> 00:42:13,480
+format your code well, you 
+actually need to know about the 
+
+736
+00:42:13,480 --> 00:42:18,120
+types and know what, what can 
+break where and all these sorts 
+
+737
+00:42:18,120 --> 00:42:20,520
+of things. 
+So yeah, it's it's an 
+
+738
+00:42:20,520 --> 00:42:24,000
+interesting thing where where I 
+think the naive approach is to 
+
+739
+00:42:24,000 --> 00:42:27,080
+build these as separate tools, 
+but in reality they work much 
+
+740
+00:42:27,080 --> 00:42:29,840
+better when they actually have 
+shared knowledge. 
+
+741
+00:42:33,480 --> 00:42:36,760
+Is that a thing? 
+I, I mean, I guess I'm, I'm 
+
+742
+00:42:36,760 --> 00:42:42,520
+imagining like your code 
+analysis and you were talking 
+
+743
+00:42:42,520 --> 00:42:44,760
+about Salsa keeping track of 
+everything. 
+
+744
+00:42:45,040 --> 00:42:49,880
+Is that a thing where we end up 
+like analyzing your code and 
+
+745
+00:42:51,000 --> 00:42:57,520
+saving that state somewhere to 
+increase speed the next time? 
+
+746
+00:42:57,520 --> 00:43:01,200
+Or maybe it comes along with the
+with the package that you bring 
+
+747
+00:43:01,200 --> 00:43:03,080
+in. 
+That's a great question. 
+
+748
+00:43:03,080 --> 00:43:06,240
+Salsa doesn't actually currently
+have support for persistent 
+
+749
+00:43:06,240 --> 00:43:08,960
+caching. 
+So I mean, Salsa does of course 
+
+750
+00:43:09,200 --> 00:43:13,200
+a bunch of caching in memory. 
+So as you have your LSB server 
+
+751
+00:43:13,200 --> 00:43:17,080
+running it, you know, has all 
+the things it's already 
+
+752
+00:43:17,080 --> 00:43:19,640
+calculated, then it can 
+invalidate just the ones that 
+
+753
+00:43:20,560 --> 00:43:22,480
+need to be invalidated and then 
+rerun those. 
+
+754
+00:43:22,880 --> 00:43:27,440
+But it doesn't currently involve
+include any ability to write any
+
+755
+00:43:27,440 --> 00:43:30,240
+of that state out to disk and 
+then load it up later on a 
+
+756
+00:43:30,240 --> 00:43:32,400
+totally separate run. 
+And that's something that we 
+
+757
+00:43:32,400 --> 00:43:37,840
+would like to add. 
+We've had some discussions about
+
+758
+00:43:38,720 --> 00:43:43,440
+how important is that really 
+like if it's fast enough, maybe 
+
+759
+00:43:43,440 --> 00:43:48,840
+you don't need that, maybe it 
+can save some memory. 
+
+760
+00:43:48,840 --> 00:43:51,280
+I mean we're we're still kind of
+debating how to prioritize that 
+
+761
+00:43:51,280 --> 00:43:56,000
+feature, but it's definitely 
+something that we have discussed
+
+762
+00:43:56,000 --> 00:43:58,440
+wanting to add to salsa and and 
+have that in Ty. 
+
+763
+00:43:59,040 --> 00:44:03,640
+Yeah, I guess you won't know 
+until people start using Ty on 
+
+764
+00:44:03,640 --> 00:44:07,080
+big systems and you discover 
+where the bottlenecks are. 
+
+765
+00:44:07,960 --> 00:44:09,720
+Yeah, for sure. 
+I mean, we, we've already 
+
+766
+00:44:09,880 --> 00:44:12,720
+obviously been testing Ty on 
+some, some big code bases that 
+
+767
+00:44:12,720 --> 00:44:16,320
+we have access to. 
+And so we have a rough idea of 
+
+768
+00:44:16,960 --> 00:44:20,840
+what the performance looks like.
+And, and certainly on very big 
+
+769
+00:44:20,840 --> 00:44:25,120
+code bases, even Ty, you know, 
+you can on a very big code base,
+
+770
+00:44:25,120 --> 00:44:29,480
+you might be talking about 2030 
+seconds to analyze the whole 
+
+771
+00:44:29,480 --> 00:44:31,680
+thing. 
+We've seen something like that. 
+
+772
+00:44:31,680 --> 00:44:35,200
+And so even at that level, 
+incrementality is very 
+
+773
+00:44:35,200 --> 00:44:37,640
+important. 
+Obviously how how important it 
+
+774
+00:44:37,640 --> 00:44:41,280
+is, it's still unclear to us how
+important it is to write it to 
+
+775
+00:44:41,280 --> 00:44:45,800
+disk because you can imagine 
+paying 20 to 30 seconds kind of 
+
+776
+00:44:45,800 --> 00:44:49,080
+like at the beginning of the day
+when you sort of first start up 
+
+777
+00:44:49,080 --> 00:44:50,720
+your editor. 
+That's reasonable. 
+
+778
+00:44:50,880 --> 00:44:53,120
+Obviously you don't want to pay 
+it every time you make a change 
+
+779
+00:44:53,120 --> 00:44:54,600
+to the code, so. 
+Yeah. 
+
+780
+00:44:55,320 --> 00:44:59,920
+Is there like daemon mode for 
+TYI think some compilers now can
+
+781
+00:44:59,920 --> 00:45:03,120
+like spin up a daemon so you can
+essentially get, you know, the 
+
+782
+00:45:03,200 --> 00:45:07,640
+the stateful piece without not 
+through the LSP. 
+
+783
+00:45:07,640 --> 00:45:11,400
+Like when you're in your IDE 
+having the LSP is is the useful 
+
+784
+00:45:11,400 --> 00:45:14,680
+waste way to have that daemon 
+for incremental support. 
+
+785
+00:45:14,680 --> 00:45:16,800
+But but outside of that, like a 
+yeah. 
+
+786
+00:45:16,800 --> 00:45:20,080
+We do. 
+We do have with with the TYCLI. 
+
+787
+00:45:20,080 --> 00:45:23,440
+Also, we have a dash dash watch 
+option where it'll just gotcha, 
+
+788
+00:45:23,440 --> 00:45:26,480
+sit, sit there and look for 
+changes and incrementally 
+
+789
+00:45:26,480 --> 00:45:27,080
+respond. 
+Yeah. 
+
+790
+00:45:27,360 --> 00:45:30,960
+So the watch is that that Damon 
+mode And then coming back to the
+
+791
+00:45:30,960 --> 00:45:37,080
+rough Ty piece, I'm curious your
+thoughts on what is the role of 
+
+792
+00:45:37,080 --> 00:45:41,120
+a linter if you have a good type
+checker, like what are the 
+
+793
+00:45:41,120 --> 00:45:44,160
+things that should be lint rolls
+versus types? 
+
+794
+00:45:44,960 --> 00:45:46,120
+Yeah. 
+No, that's a great question. 
+
+795
+00:45:46,680 --> 00:45:51,360
+We think a lot about and I mean 
+we've, I think because we have 
+
+796
+00:45:51,360 --> 00:45:55,600
+this vision that ultimately we 
+want to have type aware linting 
+
+797
+00:45:55,600 --> 00:46:01,600
+built on top of Ty in some ways 
+that allows us to narrow our 
+
+798
+00:46:01,600 --> 00:46:04,520
+scope of what we think belongs 
+in the core type checker 
+
+799
+00:46:04,520 --> 00:46:09,440
+compared to say my π which has 
+some more opinionated rules or 
+
+800
+00:46:09,440 --> 00:46:12,600
+options where it's like, well, 
+this is not something where your
+
+801
+00:46:12,600 --> 00:46:15,600
+code is going to fail. 
+But yeah, maybe it's 
+
+802
+00:46:15,880 --> 00:46:18,440
+stylistically better to do it 
+this way or clear. 
+
+803
+00:46:18,800 --> 00:46:21,320
+And we try to say for most of 
+those things, kind of draw the 
+
+804
+00:46:21,320 --> 00:46:24,400
+line and say, yeah, we think 
+that's that belongs in a lint 
+
+805
+00:46:24,400 --> 00:46:27,200
+rule that could be powered by 
+Ty. 
+
+806
+00:46:27,640 --> 00:46:31,600
+But and ultimately, I think in 
+the user experience that we 
+
+807
+00:46:31,600 --> 00:46:38,400
+envisioned, there may not be a 
+huge difference in these. 
+
+808
+00:46:38,400 --> 00:46:40,920
+They're just different kinds of 
+rules that emit different 
+
+809
+00:46:40,920 --> 00:46:42,800
+diagnostics. 
+But there may be differences in,
+
+810
+00:46:43,240 --> 00:46:45,440
+you know, what we enable by 
+default, for example. 
+
+811
+00:46:46,400 --> 00:46:50,920
+But I think it's, it's sort of a
+continuum of like if you use a 
+
+812
+00:46:50,920 --> 00:46:53,720
+name that you never defined, 
+well, clearly your program is 
+
+813
+00:46:53,720 --> 00:46:55,000
+going to crash with a name 
+error. 
+
+814
+00:46:55,000 --> 00:46:58,360
+And that's something we probably
+want to report. 
+
+815
+00:46:58,360 --> 00:47:02,880
+And if you, if you try to like 
+add an integer and a string 
+
+816
+00:47:02,880 --> 00:47:05,320
+together, like we know that's 
+going to fail at runtime, that's
+
+817
+00:47:05,320 --> 00:47:07,600
+definitely a type error that we 
+want to report in the type 
+
+818
+00:47:07,600 --> 00:47:09,720
+checker. 
+And then on the other end of the
+
+819
+00:47:09,720 --> 00:47:13,120
+continuum you have, I mean, if 
+you look at Ralph's rule set, it
+
+820
+00:47:13,120 --> 00:47:16,840
+has some extremely opinionated 
+rules that not everyone is going
+
+821
+00:47:16,840 --> 00:47:20,520
+to agree with. 
+And those definitely fall under 
+
+822
+00:47:20,520 --> 00:47:23,800
+the linter side of things. 
+Yeah, is. 
+
+823
+00:47:23,960 --> 00:47:29,520
+So in some ways the linter is 
+the ability to add stricter, 
+
+824
+00:47:30,280 --> 00:47:33,560
+stricter controls that people 
+can opt into. 
+
+825
+00:47:34,040 --> 00:47:36,920
+Yep. 
+But I guess I'm, I'm curious 
+
+826
+00:47:36,920 --> 00:47:42,160
+like could those be expressed in
+types if you had a sufficient, A
+
+827
+00:47:42,160 --> 00:47:46,000
+sufficiently capable type 
+system, ignoring the, the piece 
+
+828
+00:47:46,160 --> 00:47:49,400
+of opting into them, you know, 
+incrementally or something. 
+
+829
+00:47:49,400 --> 00:47:55,120
+But but generally, could even 
+those those stronger rules be in
+
+830
+00:47:55,120 --> 00:47:58,240
+the type system rather than, or 
+in the type checker rather than 
+
+831
+00:47:58,240 --> 00:48:02,080
+in a linter? 
+I mean, I think I'd probably 
+
+832
+00:48:02,080 --> 00:48:07,240
+have to look at some specific 
+cases. 
+
+833
+00:48:07,240 --> 00:48:09,120
+I mean, there's a lot of 
+different potential that rules 
+
+834
+00:48:09,120 --> 00:48:11,760
+and the answer might be 
+different for different ones. 
+
+835
+00:48:11,760 --> 00:48:17,440
+I mean, in principle you can 
+pack, you can express a lot in 
+
+836
+00:48:17,680 --> 00:48:19,720
+something that you still call a 
+type system. 
+
+837
+00:48:19,720 --> 00:48:24,720
+I mean you look at some some of 
+the more advanced type systems, 
+
+838
+00:48:24,720 --> 00:48:27,120
+things like effect systems and 
+there's all kinds of things that
+
+839
+00:48:27,120 --> 00:48:30,160
+you can in principle express in 
+a type system. 
+
+840
+00:48:31,040 --> 00:48:38,360
+A lot of that stuff would 
+require kind of more complexity 
+
+841
+00:48:38,360 --> 00:48:41,040
+in the community that we want 
+this in the type system, right? 
+
+842
+00:48:41,040 --> 00:48:43,400
+It's not maybe something that Ty
+is just gonna kinda go out and 
+
+843
+00:48:43,400 --> 00:48:45,320
+do. 
+Yeah, on our own, necessarily. 
+
+844
+00:48:46,760 --> 00:48:50,400
+So it's almost like the linter 
+is type checker plus plus that 
+
+845
+00:48:50,400 --> 00:48:53,680
+you can opt into specific 
+features of. 
+
+846
+00:48:56,120 --> 00:48:59,600
+I guess that makes sense to like
+have that ability for people to 
+
+847
+00:48:59,600 --> 00:49:03,200
+have that opt in to essentially 
+additional rules. 
+
+848
+00:49:03,880 --> 00:49:07,400
+Yeah, I think in general, I was,
+I was the way I would describe a
+
+849
+00:49:07,400 --> 00:49:10,840
+linter rule is that it's sort of
+is a rule that says, you know, 
+
+850
+00:49:10,840 --> 00:49:15,400
+this pattern or way of writing 
+some piece of code is bad. 
+
+851
+00:49:15,400 --> 00:49:17,000
+And we think this is a better 
+way to do it. 
+
+852
+00:49:17,360 --> 00:49:19,680
+And so the linter is going to 
+tell you that and hopefully 
+
+853
+00:49:19,680 --> 00:49:22,960
+ideally maybe even automatically
+fix your code to the new 
+
+854
+00:49:22,960 --> 00:49:25,800
+pattern. 
+And that's a little different 
+
+855
+00:49:25,800 --> 00:49:29,560
+from a type checker rule, which 
+is telling you, like, your code 
+
+856
+00:49:29,560 --> 00:49:32,640
+is going to fail. 
+Like, that's maybe a rough way 
+
+857
+00:49:32,720 --> 00:49:34,640
+of drawing the distinction, 
+yeah. 
+
+858
+00:49:35,120 --> 00:49:40,640
+You mentioned you just now you 
+mentioned effect systems and 
+
+859
+00:49:41,480 --> 00:49:44,320
+that's what we've been working 
+on for the last, I don't know, 
+
+860
+00:49:44,320 --> 00:49:46,160
+it's five years now I guess or 
+whatever. 
+
+861
+00:49:46,600 --> 00:49:51,080
+And one of the so we're working 
+on translating effect oriented 
+
+862
+00:49:51,080 --> 00:49:54,840
+programming into TypeScript 
+effect library. 
+
+863
+00:49:55,240 --> 00:50:01,320
+And so it's it's a little bit of
+a Wild West experience. 
+
+864
+00:50:01,640 --> 00:50:06,200
+And I've been looking at Python,
+you know, Python's type system 
+
+865
+00:50:06,200 --> 00:50:11,320
+so much closer to Scalas seems 
+like, do you know of effect 
+
+866
+00:50:11,320 --> 00:50:14,600
+systems in Python? 
+Because I think we've looked 
+
+867
+00:50:14,600 --> 00:50:18,040
+around, just seems like it would
+be so much easier of a fit. 
+
+868
+00:50:18,880 --> 00:50:22,560
+Because I don't, I don't know. 
+I don't know of anyone who is 
+
+869
+00:50:22,560 --> 00:50:25,120
+kind of tried to do that. 
+Doesn't mean it's not out there.
+
+870
+00:50:25,120 --> 00:50:26,720
+I'm just not familiar with it. 
+I mean, certainly. 
+
+871
+00:50:26,720 --> 00:50:29,600
+Someone tried or started or 
+something but. 
+
+872
+00:50:29,600 --> 00:50:32,480
+Port of Zeo to Python I. 
+Think it was, yeah. 
+
+873
+00:50:32,520 --> 00:50:35,680
+But then they they gave up. 
+And maybe it was just because it
+
+874
+00:50:35,680 --> 00:50:39,840
+was too early. 
+But now it seems like you could 
+
+875
+00:50:39,960 --> 00:50:42,680
+almost. 
+I guess we keep thinking we're 
+
+876
+00:50:42,680 --> 00:50:46,520
+gonna get to a point where we 
+could just set the AI onto the, 
+
+877
+00:50:47,040 --> 00:50:49,640
+you know, say, translate Zeo 
+into Python. 
+
+878
+00:50:50,680 --> 00:50:54,840
+I think the the better one would
+be KEO, which is a algebraic 
+
+879
+00:50:54,840 --> 00:50:57,840
+effects system. 
+I think that one may port more 
+
+880
+00:50:57,840 --> 00:51:01,520
+directly to Python. 
+That's the the Kotlin 1. 
+
+881
+00:51:01,720 --> 00:51:05,080
+No, no, it's, it's still Scala. 
+Yeah, yeah. 
+
+882
+00:51:05,280 --> 00:51:07,960
+It's certainly a topic that 
+comes up regularly, even if 
+
+883
+00:51:08,080 --> 00:51:10,920
+people don't always realize what
+it is they're asking for. 
+
+884
+00:51:10,920 --> 00:51:13,560
+I mean, I would say every month 
+or so there's a new thread on 
+
+885
+00:51:13,560 --> 00:51:18,480
+the Python discussion forum 
+about somebody wanting to know 
+
+886
+00:51:18,480 --> 00:51:21,320
+what effects exceptions aren't 
+modeled in the Python type 
+
+887
+00:51:21,320 --> 00:51:22,960
+system. 
+Or there was recently a thread 
+
+888
+00:51:22,960 --> 00:51:25,640
+about people wanting to model 
+pure functions. 
+
+889
+00:51:26,520 --> 00:51:28,560
+And like all of these things, 
+ultimately they're talking about
+
+890
+00:51:28,560 --> 00:51:32,840
+effect systems. 
+Yeah, yeah, it'll happen. 
+
+891
+00:51:33,280 --> 00:51:35,720
+And it'll probably happen with 
+algebraic effects, right? 
+
+892
+00:51:35,720 --> 00:51:40,800
+Not with a monadic effects. 
+OK, but cool. 
+
+893
+00:51:40,800 --> 00:51:47,320
+And then I had a question, Oh, 
+we're what's what's kind of on 
+
+894
+00:51:47,320 --> 00:51:51,640
+the horizon for Ty and and 
+Python types type system stuff? 
+
+895
+00:51:53,000 --> 00:51:55,440
+Yeah. 
+I mean, I think something that's
+
+896
+00:51:56,400 --> 00:52:01,800
+both in Ty and I think hopefully
+on the horizon for the Python 
+
+897
+00:52:01,800 --> 00:52:04,880
+type system, which I think would
+be interesting to talk about is 
+
+898
+00:52:05,600 --> 00:52:10,200
+intersection types. 
+So the the Python type system 
+
+899
+00:52:10,240 --> 00:52:12,840
+is. 
+It's what's called a set 
+
+900
+00:52:12,840 --> 00:52:18,640
+theoretic type system, which 
+basically means that a type 
+
+901
+00:52:18,640 --> 00:52:21,320
+represents a set of possible 
+runtime values. 
+
+902
+00:52:21,320 --> 00:52:26,680
+Like the type int represents all
+the possible runtime objects 
+
+903
+00:52:26,680 --> 00:52:28,960
+whose class is int or a subclass
+of Int. 
+
+904
+00:52:31,000 --> 00:52:36,080
+And then you can do some things 
+beyond just naming a type like 
+
+905
+00:52:36,080 --> 00:52:38,800
+that via class. 
+You can also have unions where 
+
+906
+00:52:38,800 --> 00:52:40,800
+you say, well, it's an int or a 
+string. 
+
+907
+00:52:41,040 --> 00:52:42,840
+So then it's essentially a set 
+union, right? 
+
+908
+00:52:42,840 --> 00:52:45,520
+It's like you have this set of 
+possible random objects in this 
+
+909
+00:52:45,520 --> 00:52:47,880
+other set and you union 
+together, and then that's a new 
+
+910
+00:52:47,880 --> 00:52:50,160
+type. 
+So you can sort of imagine 
+
+911
+00:52:50,160 --> 00:52:54,520
+expressing a wide variety of 
+possible types that way. 
+
+912
+00:52:54,800 --> 00:52:59,160
+But Python has only ever had the
+union connective. 
+
+913
+00:52:59,160 --> 00:53:02,840
+And if we know about sort of 
+sets, there's more that we can 
+
+914
+00:53:02,880 --> 00:53:05,000
+do with two sets than union, 
+then we can other. 
+
+915
+00:53:05,000 --> 00:53:05,600
+Exactly. 
+There's. 
+
+916
+00:53:06,920 --> 00:53:09,400
+The intersection of the sets or 
+there's the negation of the set.
+
+917
+00:53:10,360 --> 00:53:12,600
+And that's not been something 
+that's been, well, it's 
+
+918
+00:53:12,600 --> 00:53:14,920
+interesting. 
+It's not explicitly been part of
+
+919
+00:53:14,920 --> 00:53:19,680
+the Python type system. 
+But if you consider Python type 
+
+920
+00:53:19,680 --> 00:53:24,320
+checkers do do type narrowing or
+what's called flow typing, and 
+
+921
+00:53:24,320 --> 00:53:26,920
+there's different names for it 
+where you can sort of say, well,
+
+922
+00:53:26,920 --> 00:53:31,200
+at the beginning of this 
+function, X is int or None. 
+
+923
+00:53:31,440 --> 00:53:33,880
+But then I say, if X is not 
+None. 
+
+924
+00:53:34,200 --> 00:53:37,280
+And so then the type checker 
+knows that inside that block now
+
+925
+00:53:37,280 --> 00:53:39,560
+it's just int, right? 
+We've excluded the possibility 
+
+926
+00:53:39,560 --> 00:53:42,600
+of none. 
+And if you, if you really look 
+
+927
+00:53:42,600 --> 00:53:45,800
+at that, or if you look at more 
+complex cases like if is 
+
+928
+00:53:45,800 --> 00:53:49,560
+instance X, whatever, 
+essentially what you're doing is
+
+929
+00:53:49,560 --> 00:53:53,200
+an intersection, right? 
+Like you have a type and then 
+
+930
+00:53:53,280 --> 00:53:57,200
+you check for another type. 
+And essentially the new type in 
+
+931
+00:53:57,200 --> 00:54:00,480
+that narrow block is going to be
+the intersection of what you 
+
+932
+00:54:00,480 --> 00:54:02,840
+knew before and what you just 
+established. 
+
+933
+00:54:04,000 --> 00:54:10,520
+And so really all the current 
+Python type checkers do have, at
+
+934
+00:54:10,520 --> 00:54:14,840
+least in in principle, some form
+of intersection type in order to
+
+935
+00:54:14,840 --> 00:54:18,360
+enable that. 
+But it hasn't ever been, it's 
+
+936
+00:54:18,400 --> 00:54:22,480
+been typically kind of ad hoc 
+and not sort of an explicit 
+
+937
+00:54:22,480 --> 00:54:23,760
+first class concept. 
+Yeah. 
+
+938
+00:54:24,200 --> 00:54:26,800
+And so that's one of the things 
+that we set out from the start 
+
+939
+00:54:26,800 --> 00:54:32,000
+to do in Ty because we think 
+that it is something that the 
+
+940
+00:54:32,000 --> 00:54:35,880
+Python type system needs and 
+will probably have sooner or 
+
+941
+00:54:35,880 --> 00:54:40,000
+later is we built our type 
+narrowing from the beginning on 
+
+942
+00:54:40,000 --> 00:54:46,160
+a fully generalized kind of set 
+algebra with unions and 
+
+943
+00:54:46,160 --> 00:54:48,880
+intersections and negations all 
+built in. 
+
+944
+00:54:49,280 --> 00:54:52,640
+So when I was talking earlier 
+about that Ty extensions where 
+
+945
+00:54:52,640 --> 00:54:56,480
+we have all of our sort of non 
+standard extensions, you can 
+
+946
+00:54:56,480 --> 00:54:58,760
+actually. 
+So in addition to just doing our
+
+947
+00:54:58,760 --> 00:55:02,120
+sort of implicit flow typing or 
+type narrowing using 
+
+948
+00:55:02,120 --> 00:55:06,240
+intersection types under the 
+hood, we also do allow you to 
+
+949
+00:55:06,760 --> 00:55:09,800
+from Ty extensions, import 
+intersection and then you can 
+
+950
+00:55:09,800 --> 00:55:13,520
+write your own arbitrary 
+intersection and negation types 
+
+951
+00:55:13,520 --> 00:55:17,000
+and and play around with those. 
+So that is also something I 
+
+952
+00:55:17,000 --> 00:55:19,400
+think is coming for Python 
+typing. 
+
+953
+00:55:19,400 --> 00:55:24,240
+There's some people working on a
+PEP to officially add 
+
+954
+00:55:24,240 --> 00:55:27,200
+intersection types to the Python
+type system, so. 
+
+955
+00:55:27,560 --> 00:55:29,640
+That's part of the typing 
+committee or. 
+
+956
+00:55:31,280 --> 00:55:32,800
+Yeah. 
+So one of the people I know is 
+
+957
+00:55:32,800 --> 00:55:34,960
+working on that is somebody 
+who's on the typing council. 
+
+958
+00:55:35,640 --> 00:55:38,680
+So eventually whatever whoever 
+whoever ends up actually writing
+
+959
+00:55:38,680 --> 00:55:42,200
+a PEP, it will come to the 
+typing council for discussion 
+
+960
+00:55:42,200 --> 00:55:45,440
+and editing and presenting it 
+on. 
+
+961
+00:55:45,720 --> 00:55:48,720
+So I was curious what you 
+touched on, which is kind of the
+
+962
+00:55:48,720 --> 00:55:53,480
+process of evolution of all of 
+this, because you've got the the
+
+963
+00:55:53,480 --> 00:55:58,480
+Peps and, and kind of Python, 
+actual Python type system stuff.
+
+964
+00:55:58,480 --> 00:56:00,960
+And then you've got the type 
+checkers that are built on top 
+
+965
+00:56:00,960 --> 00:56:03,000
+of that. 
+But then you have a way to add 
+
+966
+00:56:03,000 --> 00:56:07,760
+extensions to the language 
+essentially through in, in Ty. 
+
+967
+00:56:07,760 --> 00:56:09,680
+You said it was like Ty 
+extensions or something. 
+
+968
+00:56:09,680 --> 00:56:12,840
+And so you can do some 
+experiments and, and do some 
+
+969
+00:56:12,840 --> 00:56:16,840
+things beyond what's actually 
+official in Python And then work
+
+970
+00:56:16,960 --> 00:56:20,560
+through the council and new Peps
+to like integrate some of those 
+
+971
+00:56:20,560 --> 00:56:23,720
+experiments then back into the 
+actual core language. 
+
+972
+00:56:23,720 --> 00:56:25,600
+Is that like get that kind of 
+summary right? 
+
+973
+00:56:25,840 --> 00:56:27,520
+You got that totally right. 
+I mean, there's all kinds of 
+
+974
+00:56:27,520 --> 00:56:28,960
+interesting things to touch on 
+there. 
+
+975
+00:56:28,960 --> 00:56:34,880
+It's there's, there's sort of 
+the category of there's the 
+
+976
+00:56:34,880 --> 00:56:40,720
+Python type system and the 
+typing council is mostly in 
+
+977
+00:56:40,720 --> 00:56:43,000
+charge of that. 
+So if if there's a PEP that 
+
+978
+00:56:43,000 --> 00:56:48,080
+really is just expressing some 
+new type semantics, but 
+
+979
+00:56:48,080 --> 00:56:51,680
+otherwise it doesn't change the 
+language like it doesn't need to
+
+980
+00:56:51,960 --> 00:56:54,720
+like nothing in the runtime, 
+Python runtime would have to 
+
+981
+00:56:54,720 --> 00:56:59,240
+change to accommodate it in In 
+those cases, the Python Steering
+
+982
+00:56:59,240 --> 00:57:02,560
+Council, which is the group in 
+charge of approving Peps for the
+
+983
+00:57:02,560 --> 00:57:05,560
+Python language, basically just 
+delegates to the typing council 
+
+984
+00:57:05,560 --> 00:57:07,560
+and says that's, that's your 
+domain. 
+
+985
+00:57:08,000 --> 00:57:11,040
+But there are cases where we 
+want to do something in the type
+
+986
+00:57:11,040 --> 00:57:16,200
+system that and typically the 
+place where it intersects is in 
+
+987
+00:57:16,440 --> 00:57:18,840
+not always, but often it's in 
+syntax. 
+
+988
+00:57:19,120 --> 00:57:23,680
+Sometimes it's in like runtime 
+behaviour of like how type 
+
+989
+00:57:23,680 --> 00:57:25,960
+annotation introspection works, 
+but there are various areas 
+
+990
+00:57:25,960 --> 00:57:29,880
+where type system changes will 
+intersect with the runtime and 
+
+991
+00:57:29,880 --> 00:57:32,480
+we actually need to change the 
+Python compiler to support some 
+
+992
+00:57:32,480 --> 00:57:34,760
+new syntax. 
+So change the runtime behaviour 
+
+993
+00:57:34,760 --> 00:57:36,400
+of small. 
+Things being a deferred or 
+
+994
+00:57:36,480 --> 00:57:38,720
+whatever it is. 
+This would be an example of 
+
+995
+00:57:38,720 --> 00:57:40,000
+that. 
+There is syntax and type 
+
+996
+00:57:40,240 --> 00:57:41,320
+information. 
+Right, exactly. 
+
+997
+00:57:41,320 --> 00:57:44,200
+That was a change that encompass
+both. 
+
+998
+00:57:44,200 --> 00:57:47,720
+We wanted to introduce better 
+syntax for expressing callable 
+
+999
+00:57:47,720 --> 00:57:51,040
+types or arrow types in, in the 
+Python type system. 
+
+1000
+00:57:51,040 --> 00:57:54,680
+And so that was one where we had
+to, we wrote up a PEP and we 
+
+1001
+00:57:54,680 --> 00:57:56,840
+went to the steering council and
+said, here's what we'd like to 
+
+1002
+00:57:56,840 --> 00:57:58,320
+do. 
+And, and actually in that case, 
+
+1003
+00:57:58,320 --> 00:58:01,280
+the steering council said no, 
+they were like, this is too 
+
+1004
+00:58:01,280 --> 00:58:05,720
+much, too much new complexity in
+the syntax just to support this 
+
+1005
+00:58:05,720 --> 00:58:07,920
+particular use case for typing. 
+And we don't want to do it. 
+
+1006
+00:58:07,920 --> 00:58:12,960
+So there is occasionally some 
+tension there, like the the 
+
+1007
+00:58:12,960 --> 00:58:15,760
+Steering Council is trying to 
+look out for the the language as
+
+1008
+00:58:15,760 --> 00:58:19,160
+a whole and you have to balance 
+those things. 
+
+1009
+00:58:19,560 --> 00:58:22,640
+It's an interesting setup that's
+very different, I think than 
+
+1010
+00:58:22,640 --> 00:58:25,880
+most other languages. 
+Where most other languages, it's
+
+1011
+00:58:25,880 --> 00:58:29,480
+like you've got 1 central team 
+that is developing the language,
+
+1012
+00:58:29,480 --> 00:58:33,960
+the syntax, the compiler, the 
+type system, like all that stuff
+
+1013
+00:58:33,960 --> 00:58:37,680
+under kind of 11 house. 
+And in, in the Python case, 
+
+1014
+00:58:37,680 --> 00:58:41,120
+you've got you've got different 
+type checkers, you've got the 
+
+1015
+00:58:41,600 --> 00:58:44,800
+like the core specification with
+its contributions and then the 
+
+1016
+00:58:44,800 --> 00:58:47,960
+pets like it's, it's an 
+interesting way, way for things 
+
+1017
+00:58:47,960 --> 00:58:50,400
+to evolve. 
+And so it seems like it's 
+
+1018
+00:58:50,400 --> 00:58:56,320
+working like things are evolving
+and yeah, but it is a very 
+
+1019
+00:58:56,320 --> 00:58:59,400
+different set up I think than. 
+Other languages in small teams 
+
+1020
+00:58:59,440 --> 00:59:03,240
+rather than a monolith. 
+Yeah, Which? 
+
+1021
+00:59:03,880 --> 00:59:06,760
+Yeah, the micro service approach
+to language design. 
+
+1022
+00:59:07,720 --> 00:59:11,080
+And you look at packaging too. 
+I mean, it was a big, it was a 
+
+1023
+00:59:11,080 --> 00:59:13,840
+big deal when pip actually got 
+adopted in the standard library.
+
+1024
+00:59:13,840 --> 00:59:16,480
+But and even now it's sort of 
+halfway adopted, right? 
+
+1025
+00:59:16,480 --> 00:59:20,880
+Like you have to run Python dash
+M insure pip to actually 
+
+1026
+00:59:21,040 --> 00:59:24,520
+download pip. 
+But but before that, you know, 
+
+1027
+00:59:24,520 --> 00:59:25,760
+it was the same way for 
+packaging. 
+
+1028
+00:59:25,760 --> 00:59:28,880
+Like there was no packaging 
+tooling provided by Python at 
+
+1029
+00:59:28,880 --> 00:59:32,360
+all and it was all just third 
+party projects. 
+
+1030
+00:59:32,400 --> 00:59:36,040
+Yeah, yeah. 
+Thanks. 
+
+1031
+00:59:36,080 --> 00:59:41,360
+And then yeah, back to future, 
+any any interesting kind of 
+
+1032
+00:59:41,360 --> 00:59:46,440
+language type things that you're
+beyond, You mentioned 
+
+1033
+00:59:46,440 --> 00:59:50,680
+intersections, beyond 
+intersections, anything that 
+
+1034
+00:59:50,840 --> 00:59:53,680
+that is exciting on the type 
+horizon? 
+
+1035
+00:59:55,200 --> 00:59:59,520
+I mean there's, there's various 
+Peps in flight that I think will
+
+1036
+00:59:59,520 --> 01:00:01,760
+be good additions to the type 
+system. 
+
+1037
+01:00:03,640 --> 01:00:07,120
+There is an interesting one that
+I think. 
+
+1038
+01:00:07,680 --> 01:00:11,200
+I think we, the typing council 
+recently recommended acceptance 
+
+1039
+01:00:11,200 --> 01:00:12,960
+of it. 
+I don't think the steering 
+
+1040
+01:00:12,960 --> 01:00:19,120
+council is officially acted on 
+it yet, but it it kind of OK. 
+
+1041
+01:00:19,160 --> 01:00:21,280
+Taking a step back, one of the 
+things that's interesting about 
+
+1042
+01:00:21,280 --> 01:00:26,240
+Python is that unlike 
+TypeScript, types aren't totally
+
+1043
+01:00:26,240 --> 01:00:29,880
+erased at runtime. 
+So type annotations are still 
+
+1044
+01:00:29,880 --> 01:00:32,640
+available for introspection at 
+runtime. 
+
+1045
+01:00:33,280 --> 01:00:38,200
+And this is actually kind of, I 
+think to the surprise of some of
+
+1046
+01:00:38,200 --> 01:00:40,200
+the folks who originally 
+developed the Python typing 
+
+1047
+01:00:40,200 --> 01:00:42,360
+system, I don't think we're 
+really expecting this. 
+
+1048
+01:00:42,360 --> 01:00:45,200
+They were really envisioning it 
+As for static type checkers. 
+
+1049
+01:00:45,680 --> 01:00:49,360
+But there's really been an 
+explosion of projects using 
+
+1050
+01:00:50,120 --> 01:00:52,960
+Python type annotations for 
+runtime purposes. 
+
+1051
+01:00:52,960 --> 01:00:56,240
+Like Pidantic is a really well 
+known example of that. 
+
+1052
+01:00:56,240 --> 01:00:58,760
+And like Fast API does some of 
+this. 
+
+1053
+01:00:58,920 --> 01:01:02,480
+So there's a lot of projects 
+that are very popular that make 
+
+1054
+01:01:02,480 --> 01:01:05,640
+runtime use of type annotations.
+And so that involves then 
+
+1055
+01:01:06,120 --> 01:01:12,160
+writing code that kind of 
+operates on type annotations and
+
+1056
+01:01:12,160 --> 01:01:17,160
+the runtime objects that are 
+created that sort of represent a
+
+1057
+01:01:17,160 --> 01:01:20,200
+given type annotation. 
+Like when you when you express 
+
+1058
+01:01:20,200 --> 01:01:24,200
+some type concept in annotation 
+like callable bracket, bracket 
+
+1059
+01:01:24,200 --> 01:01:27,040
+int, you know, whatever, that 
+actually turns into some kind of
+
+1060
+01:01:27,040 --> 01:01:30,120
+runtime object that allows you 
+to kind of introspect the 
+
+1061
+01:01:30,120 --> 01:01:31,760
+information you gave in the 
+annotation. 
+
+1062
+01:01:32,200 --> 01:01:35,200
+And so there's all these kind of
+objects and, and, but there was 
+
+1063
+01:01:35,200 --> 01:01:42,000
+never, there wasn't a good way 
+to code, right? 
+
+1064
+01:01:42,280 --> 01:01:45,560
+There wasn't a good way to 
+actually type code that did this
+
+1065
+01:01:45,560 --> 01:01:47,800
+reflection on type annotations. 
+It's all very meta. 
+
+1066
+01:01:48,000 --> 01:01:51,040
+So there's a PEP called type 
+form that adds like a 
+
+1067
+01:01:51,040 --> 01:01:54,560
+generalized way to sort of 
+express that this runtime object
+
+1068
+01:01:54,920 --> 01:01:59,280
+is a runtime representation of 
+some type expression. 
+
+1069
+01:02:00,120 --> 01:02:02,120
+So that's an interesting one, 
+probably for a more niche 
+
+1070
+01:02:02,120 --> 01:02:05,760
+audience, but. 
+Yeah, boy, yeah. 
+
+1071
+01:02:05,760 --> 01:02:12,440
+The, the, the way the ability to
+actually have nominative typing 
+
+1072
+01:02:12,800 --> 01:02:17,080
+in this dynamic language I've 
+come to really appreciate 
+
+1073
+01:02:17,080 --> 01:02:21,040
+because I've been studying how 
+people do it in TypeScript. 
+
+1074
+01:02:21,480 --> 01:02:25,880
+And there's a, you know, there's
+a way to watermark it, but it 
+
+1075
+01:02:25,880 --> 01:02:28,960
+only lives at compile time. 
+And then if you want to be it at
+
+1076
+01:02:28,960 --> 01:02:31,000
+runtime, you have to put in a 
+type tag. 
+
+1077
+01:02:31,440 --> 01:02:35,680
+And then sometimes people will 
+still attached to the prototype 
+
+1078
+01:02:36,080 --> 01:02:39,920
+information and I'm I'm I'm 
+still very confused by all this 
+
+1079
+01:02:40,960 --> 01:02:45,200
+and, and to be able to just have
+it there, you want to know the 
+
+1080
+01:02:45,200 --> 01:02:47,480
+type, you can find it out. 
+You don't have to jump through 
+
+1081
+01:02:47,480 --> 01:02:54,960
+all these hoops is just seems 
+very important to me after 
+
+1082
+01:02:54,960 --> 01:02:57,960
+seeing it in TypeScript. 
+So in this world, is there? 
+
+1083
+01:02:58,480 --> 01:03:02,480
+Is there already like a standard
+AST library that all the type 
+
+1084
+01:03:02,480 --> 01:03:03,720
+systems use? 
+Or? 
+
+1085
+01:03:03,720 --> 01:03:07,840
+Or if you do want to query a 
+runtime the type information, 
+
+1086
+01:03:08,360 --> 01:03:11,960
+how does that how's that 
+actually represented in types? 
+
+1087
+01:03:13,560 --> 01:03:15,080
+Yeah. 
+So I mean, I guess there's a 
+
+1088
+01:03:15,080 --> 01:03:22,240
+distinction here between you. 
+What you can query at runtime is
+
+1089
+01:03:22,240 --> 01:03:26,640
+type annotations. 
+So you can like if a class has 
+
+1090
+01:03:26,640 --> 01:03:29,680
+some attributes that are 
+annotated or if a function has 
+
+1091
+01:03:29,680 --> 01:03:31,360
+its arguments and return type 
+annotated. 
+
+1092
+01:03:31,680 --> 01:03:35,400
+Then at runtime, if you have a, 
+if you have that class or if you
+
+1093
+01:03:35,400 --> 01:03:38,200
+have the function object, you 
+can query and say, OK, how is it
+
+1094
+01:03:38,200 --> 01:03:40,280
+annotated? 
+What were the parameter in 
+
+1095
+01:03:40,280 --> 01:03:42,240
+return type annotations? 
+And that's a little different 
+
+1096
+01:03:42,240 --> 01:03:48,640
+from like querying at runtime, 
+you know, what is a static type 
+
+1097
+01:03:48,640 --> 01:03:51,760
+checkers understanding of the 
+type of this variable at this 
+
+1098
+01:03:51,760 --> 01:03:52,840
+point in control flow or 
+something. 
+
+1099
+01:03:52,840 --> 01:03:56,720
+That's something that doesn't 
+really exist today. 
+
+1100
+01:03:58,120 --> 01:04:00,640
+So it's really around the 
+annotations for this particular 
+
+1101
+01:04:00,680 --> 01:04:03,680
+annotation, not around the AST 
+of the types of runtime. 
+
+1102
+01:04:03,920 --> 01:04:04,720
+Right. 
+Gotcha. 
+
+1103
+01:04:05,000 --> 01:04:07,160
+That's right. 
+Yeah, I mean. 
+
+1104
+01:04:07,280 --> 01:04:11,200
+For the annotations, it's great.
+I've used fast API and fast MCP 
+
+1105
+01:04:11,200 --> 01:04:14,400
+and the way that you can 
+annotate things and it all just 
+
+1106
+01:04:14,400 --> 01:04:16,160
+magically works is pretty 
+awesome. 
+
+1107
+01:04:16,160 --> 01:04:18,880
+Yep, Yep. 
+Nice. 
+
+1108
+01:04:19,600 --> 01:04:21,800
+Well that's cool. 
+Great. 
+
+1109
+01:04:21,840 --> 01:04:25,480
+Well, anything else? 
+My brain is full. 
+
+1110
+01:04:25,760 --> 01:04:27,040
+Yeah. 
+Yeah. 
+
+1111
+01:04:27,880 --> 01:04:29,320
+Well, thank you, Carl and that. 
+Was an hour. 
+
+1112
+01:04:29,800 --> 01:04:32,280
+Yeah, yeah, I know my fast with 
+right on. 
+
+1113
+01:04:33,120 --> 01:04:39,440
+Yeah, thanks. 
+And I hope we intersect in the 
+
+1114
+01:04:39,440 --> 01:04:41,320
+future. 
+Good. 
+
+1115
+01:04:42,280 --> 01:04:44,040
+Yeah, Thanks very much to both 
+of you. 
+
+1116
+01:04:44,040 --> 01:04:45,520
+It's a pleasure to be on. 
+Appreciate you having. 
+
+1117
+01:04:45,520 --> 01:04:50,960
+Me on thanks for working on Ty 
+cuz we're all about having more 
+
+1118
+01:04:50,960 --> 01:04:56,440
+reliable better software that 
+that works in more expected ways
+
+1119
+01:04:56,440 --> 01:05:00,400
+and and Ty is helping helping 
+get us there so. 
+
+1120
+01:05:00,720 --> 01:05:03,920
+It's awesome. 
+Python so pretty dominant 
+
+1121
+01:05:03,920 --> 01:05:07,280
+language these days, so. 
+Very popular. 
+
+1122
+01:05:07,280 --> 01:05:09,120
+We'll give TYA try and file some
+bugs. 
+
+1123
+01:05:09,400 --> 01:05:12,200
+I will. 
+I will do that, yes. 
+
+1124
+01:05:12,400 --> 01:05:14,400
+Thank you very much. 
+Thank you.
+

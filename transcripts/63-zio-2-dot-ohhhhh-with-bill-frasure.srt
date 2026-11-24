@@ -1,0 +1,6320 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,799 --> 00:00:05,799
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:10,400
+All right. 
+Well, today we have with us 
+
+4
+00:00:10,400 --> 00:00:14,199
+Bill, Frazier. 
+Who I think I first met you is 
+
+5
+00:00:14,199 --> 00:00:18,699
+at a Java Posse Roundup or 
+something as a fire breathing, 
+
+6
+00:00:18,699 --> 00:00:22,000
+fire dancer, this is something 
+along those lines. 
+
+7
+00:00:22,500 --> 00:00:27,100
+Is that correct fire juggler 
+fire juggler? 
+
+8
+00:00:27,199 --> 00:00:30,699
+Yeah, true true. 
+I do remember you dancing with 
+
+9
+00:00:30,699 --> 00:00:31,600
+fire? 
+And breathing? 
+
+10
+00:00:31,600 --> 00:00:33,899
+It, is that all true? 
+I think that was later though. 
+
+11
+00:00:34,100 --> 00:00:37,200
+Okay, the first time he just 
+feels old around up. 
+
+12
+00:00:37,799 --> 00:00:44,100
+He wasn't and that was weird 
+because your administrative 
+
+13
+00:00:44,100 --> 00:00:48,299
+person whose name was Mary. 
+Jane sent me a message that 
+
+14
+00:00:48,299 --> 00:00:52,399
+arrived at 4:20 p.m. 
+I think it was on a Tuesday and 
+
+15
+00:00:52,399 --> 00:00:56,200
+that you, you and Garrett had 
+figured out that this was 
+
+16
+00:00:56,200 --> 00:01:00,000
+happening somehow and you let 
+this last-minute thing but I 
+
+17
+00:01:00,000 --> 00:01:01,799
+thought it must have been a 
+joke. 
+
+18
+00:01:02,799 --> 00:01:07,299
+Yeah, I was in town grabbing 
+coffee and the barista. 
+
+19
+00:01:07,599 --> 00:01:11,299
+Asked what I did. 
+I said software, she said, oh, 
+
+20
+00:01:11,299 --> 00:01:13,700
+you must be here for Bruce's 
+conference. 
+
+21
+00:01:14,299 --> 00:01:16,599
+I said, I am not. 
+I just live here. 
+
+22
+00:01:16,799 --> 00:01:18,000
+She's like, oh yeah. 
+Brew cycle. 
+
+23
+00:01:18,000 --> 00:01:23,799
+Does this conference every year?
+Really, I was reading his book 
+
+24
+00:01:23,799 --> 00:01:26,200
+last week. 
+I had no idea. 
+
+25
+00:01:26,200 --> 00:01:29,900
+We were all in the same little 
+town, but yeah, I'll go check it
+
+26
+00:01:29,900 --> 00:01:31,599
+out, right? 
+Yeah. 
+
+27
+00:01:31,599 --> 00:01:35,500
+And as I showed up at the Java, 
+Posse around up and both you and
+
+28
+00:01:35,500 --> 00:01:38,200
+Garrett had these really long 
+hillbilly beards. 
+
+29
+00:01:38,700 --> 00:01:41,000
+And I was like, I don't know who
+these guys are. 
+
+30
+00:01:42,599 --> 00:01:45,000
+Well, we thought we'd do all of 
+the Nerds in Crested Butte. 
+
+31
+00:01:45,000 --> 00:01:49,099
+Well, that was the other guy. 
+Yeah, there were more hidden 
+
+32
+00:01:49,099 --> 00:01:51,599
+nerds. 
+So that was a real Don't 
+
+33
+00:01:51,700 --> 00:01:53,000
+transplant. 
+At that point. 
+
+34
+00:01:53,000 --> 00:01:57,500
+I had right here less than a 
+year and didn't realize it was 
+
+35
+00:01:57,500 --> 00:01:59,599
+that soon and really integrated 
+with. 
+
+36
+00:01:59,599 --> 00:02:04,000
+And you had pretty much only 
+been doing Java that tono. 
+
+37
+00:02:04,000 --> 00:02:05,799
+You would also been working in 
+C++. 
+
+38
+00:02:06,200 --> 00:02:09,098
+Yeah. 
+So I guess stepping back a 
+
+39
+00:02:09,107 --> 00:02:15,000
+minute to my career background, 
+I did a standard computer 
+
+40
+00:02:15,000 --> 00:02:20,500
+science degree and that was 
+probably 90% C++. 
+
+41
+00:02:21,400 --> 00:02:26,000
+And with the occasional delving 
+into other languages assembly, 
+
+42
+00:02:26,300 --> 00:02:29,400
+lisp python all the youth, my 
+stuff. 
+
+43
+00:02:30,000 --> 00:02:36,400
+Yeah, it was a old school 
+curriculum and plenty of stuff 
+
+44
+00:02:36,400 --> 00:02:39,400
+that I've never used sense, but 
+not Java. 
+
+45
+00:02:40,099 --> 00:02:44,400
+I know, I have not touched Java,
+all through school, but your 
+
+46
+00:02:44,400 --> 00:02:47,800
+first job was in job. 
+My first job was in Java. 
+
+47
+00:02:48,000 --> 00:02:53,900
+I graduated from college, And 
+started looking for jobs out in 
+
+48
+00:02:53,900 --> 00:02:57,699
+Utah. 
+Just scanning postings everyone.
+
+49
+00:02:57,699 --> 00:02:59,400
+That's because you like the 
+environment there. 
+
+50
+00:02:59,900 --> 00:03:05,199
+Yeah, I had been snowboarding 
+out there the my senior year of 
+
+51
+00:03:05,199 --> 00:03:11,199
+college and so STD snowboarding 
+driven development. 
+
+52
+00:03:11,199 --> 00:03:16,599
+Yes, absolutely. 
+That was, I wrote it on, you 
+
+53
+00:03:16,599 --> 00:03:20,699
+know, one of my goal list, you 
+know, before graduation was just
+
+54
+00:03:20,800 --> 00:03:23,300
+fine. 
+Find a way to move to Utah and 
+
+55
+00:03:23,300 --> 00:03:30,400
+snowboard and also do software 
+and yeah that ended up being 
+
+56
+00:03:30,599 --> 00:03:34,599
+Java. 
+Was what I could get my hands on
+
+57
+00:03:34,800 --> 00:03:39,800
+and my mom had luckily bought 
+me, it was one of the early 
+
+58
+00:03:39,800 --> 00:03:48,400
+Amazon, tablets fire baby and 
+she got it to me, just gave it 
+
+59
+00:03:48,400 --> 00:03:51,000
+to me as an e-reader just to 
+you. 
+
+60
+00:03:51,199 --> 00:03:56,599
+Like a normal person but it was 
+the first Android device that I 
+
+61
+00:03:56,607 --> 00:04:04,699
+ever got my hands on and I was 
+able to use that to just kind of
+
+62
+00:04:04,699 --> 00:04:08,800
+get my feet wet with Java made 
+some your building Android apps 
+
+63
+00:04:08,800 --> 00:04:11,699
+for the Fire tablet. 
+You started by building Android 
+
+64
+00:04:11,699 --> 00:04:13,300
+apps. 
+Yes. 
+
+65
+00:04:13,300 --> 00:04:15,300
+Okay. 
+And that would end up being the 
+
+66
+00:04:15,300 --> 00:04:18,399
+only Android app I ever made, 
+right? 
+
+67
+00:04:18,399 --> 00:04:24,199
+It was very basic, but but it 
+was enough to get a feel for the
+
+68
+00:04:24,199 --> 00:04:27,500
+language. 
+And did you make the coast of 
+
+69
+00:04:27,500 --> 00:04:33,100
+you bus schedule in app? 
+Was that the now that would come
+
+70
+00:04:33,100 --> 00:04:36,500
+much later using wildly 
+different technology. 
+
+71
+00:04:36,699 --> 00:04:41,500
+And so, you worked for two 
+companies that use Java for 
+
+72
+00:04:41,699 --> 00:04:44,699
+healthcare database. 
+Kind of management stuff. 
+
+73
+00:04:44,899 --> 00:04:46,899
+Yeah, so it was all back-end. 
+Jabba. 
+
+74
+00:04:46,899 --> 00:04:52,100
+The yeah. 
+So my first job was Is at 
+
+75
+00:04:52,100 --> 00:04:56,100
+solution reach medical and 
+dental company. 
+
+76
+00:04:56,800 --> 00:05:01,399
+And yeah, that was using almost 
+exclusively Java. 
+
+77
+00:05:01,399 --> 00:05:06,100
+But there was one project where 
+they gave us a little more 
+
+78
+00:05:06,300 --> 00:05:09,800
+freedom to explore. 
+And we did ask Allah Play 
+
+79
+00:05:09,800 --> 00:05:15,500
+application, my friend 
+co-worker, Tyler open. 
+
+80
+00:05:15,699 --> 00:05:20,199
+At the time we kind of went off.
+Did the Scala project did it? 
+
+81
+00:05:21,000 --> 00:05:25,399
+In a way that would, you know, 
+make any full-time Scala 
+
+82
+00:05:25,399 --> 00:05:29,300
+developer cringe, because it was
+Java without semicolons. 
+
+83
+00:05:29,399 --> 00:05:31,399
+Yeah. 
+And we were probably even 
+
+84
+00:05:31,399 --> 00:05:34,300
+putting semicolons. 
+And that point, you know, it was
+
+85
+00:05:34,300 --> 00:05:38,800
+just, it's a new light bars and 
+yeah, I think the files just 
+
+86
+00:05:38,800 --> 00:05:40,899
+ended in dots call. 
+Oh, that was really the only 
+
+87
+00:05:41,699 --> 00:05:47,199
+difference and yeah, play 
+obviously is Java. 
+
+88
+00:05:47,500 --> 00:05:50,600
+Well, it's Java is shit. 
+Actually is a Java. 
+
+89
+00:05:50,800 --> 00:05:53,399
+Work. 
+If you choose, you know, it's 
+
+90
+00:05:53,399 --> 00:05:57,899
+Java or Stella. 
+So yeah, we built a project 
+
+91
+00:05:58,699 --> 00:06:02,899
+using Scala there and that just 
+put it on my radar. 
+
+92
+00:06:03,600 --> 00:06:11,000
+And at that point in time, I was
+still 90 95 %, Java little bit 
+
+93
+00:06:11,000 --> 00:06:15,500
+of Scala and then just generally
+tinkering with other languages, 
+
+94
+00:06:15,800 --> 00:06:18,600
+whatever came up. 
+But at that time, you were still
+
+95
+00:06:18,600 --> 00:06:20,600
+like, oh Java's. 
+Okay. 
+
+96
+00:06:20,600 --> 00:06:23,100
+It does the job you weren't 
+beginning to have the 
+
+97
+00:06:23,100 --> 00:06:27,199
+frustrations that you did later.
+Yeah, I didn't have anything to 
+
+98
+00:06:27,199 --> 00:06:32,800
+contrast it with really because,
+yeah, the way I was writing 
+
+99
+00:06:32,800 --> 00:06:35,899
+Scala wasn't fundamentally 
+different. 
+
+100
+00:06:35,899 --> 00:06:39,399
+So, yeah, there's a little 
+Little more streamlined. 
+
+101
+00:06:39,399 --> 00:06:43,600
+Because I remember when you had 
+another job, when you went and 
+
+102
+00:06:43,600 --> 00:06:48,199
+experimented with kotlin, you 
+came back saying the getting rid
+
+103
+00:06:48,199 --> 00:06:51,199
+of the null pointer exceptions 
+is worth the cost. 
+
+104
+00:06:51,500 --> 00:06:55,500
+Yeah, if that was all that 
+kotlin did I would have happily 
+
+105
+00:06:55,699 --> 00:07:01,000
+adopted switched over because I 
+was spending so much time in 
+
+106
+00:07:01,000 --> 00:07:04,500
+code reviews with newer 
+developers at that point. 
+
+107
+00:07:05,300 --> 00:07:09,100
+Just having to hammer in. 
+Oh wait, yeah. 
+
+108
+00:07:09,100 --> 00:07:13,500
+Youyou checked for an olap here 
+but you didn't check for it down
+
+109
+00:07:13,500 --> 00:07:17,800
+here after this hand. 
+You know, at this point in time,
+
+110
+00:07:17,800 --> 00:07:20,399
+we actually have no certainty 
+anymore. 
+
+111
+00:07:20,399 --> 00:07:25,399
+What the state is and it's such 
+a mental burden, the best place 
+
+112
+00:07:25,399 --> 00:07:28,199
+to check for nulls is in 
+production when you get the null
+
+113
+00:07:28,199 --> 00:07:32,300
+pointer exception, that's so 
+easy to troubleshoot, right? 
+
+114
+00:07:32,300 --> 00:07:34,399
+Because then of you're doing the
+actual thing. 
+
+115
+00:07:34,399 --> 00:07:41,300
+We're Joe But I was telling 
+James that I encountered as a 
+
+116
+00:07:41,300 --> 00:07:45,800
+tweet in response to something 
+and the person was asking all 
+
+117
+00:07:45,800 --> 00:07:48,699
+isn't a null pointer exception, 
+the easiest thing to track down 
+
+118
+00:07:48,699 --> 00:07:53,899
+and fine and nobody's responded 
+to him and because I think 
+
+119
+00:07:53,899 --> 00:07:57,800
+nobody can figure out. 
+Is he joking or does he actually
+
+120
+00:07:57,800 --> 00:08:00,000
+think that? 
+Because he hasn't had enough 
+
+121
+00:08:00,000 --> 00:08:02,100
+experience. 
+We'd nobody knows it's too 
+
+122
+00:08:02,100 --> 00:08:04,899
+subtle. 
+It is clear. 
+
+123
+00:08:05,000 --> 00:08:10,500
+And what the problem was, but 
+where it originated that is 
+
+124
+00:08:10,500 --> 00:08:13,699
+still a total mystery when that 
+null pointer. 
+
+125
+00:08:13,699 --> 00:08:15,899
+Why is this thing null? 
+I don't know. 
+
+126
+00:08:17,199 --> 00:08:22,100
+So, maybe some background bill 
+is our co-author in the effect 
+
+127
+00:08:22,100 --> 00:08:24,199
+oriented programming, book that 
+we've been writing. 
+
+128
+00:08:24,600 --> 00:08:26,899
+So we've been able, the three of
+us have been able to spend a lot
+
+129
+00:08:26,899 --> 00:08:30,100
+of time working on the book and,
+and then just generally hanging 
+
+130
+00:08:30,100 --> 00:08:32,500
+out and press the mute being 
+legs together. 
+
+131
+00:08:33,500 --> 00:08:35,399
+The super fun to have Bill on 
+Here. 
+
+132
+00:08:35,399 --> 00:08:41,500
+His journey to Z, 0, and Scala 
+and Scala three. 
+
+133
+00:08:41,500 --> 00:08:45,200
+Yeah, because you were, I 
+remember, you're starting to get
+
+134
+00:08:45,200 --> 00:08:47,899
+into Z 0 because you had 
+discovered it first. 
+
+135
+00:08:47,899 --> 00:08:51,000
+I don't remember who figured it 
+who came across it first. 
+
+136
+00:08:51,100 --> 00:08:56,600
+We were at a winner tech for him
+when we started exploring, even 
+
+137
+00:08:56,600 --> 00:09:00,100
+when I was not zero but what was
+it called before that? 
+
+138
+00:09:00,100 --> 00:09:02,299
+It's like Scala has said effects
+or so. 
+
+139
+00:09:02,399 --> 00:09:04,899
+Oh, you mean just the idea of an
+effect? 
+
+140
+00:09:05,000 --> 00:09:09,500
+Mmm, but it was, John diggers 
+working on it and I seek Allah's
+
+141
+00:09:09,500 --> 00:09:11,799
+that could be. 
+Yeah, eventually like, forked it
+
+142
+00:09:11,799 --> 00:09:15,600
+out of there, but right. 
+But it just seemed like, I mean,
+
+143
+00:09:15,600 --> 00:09:22,100
+I remember because you were 
+looking at working for diverge, 
+
+144
+00:09:22,100 --> 00:09:25,600
+but it was kind of like oh, you 
+know, that's a, that's an 
+
+145
+00:09:25,600 --> 00:09:27,899
+Impossible Dream. 
+Yeah. 
+
+146
+00:09:27,899 --> 00:09:33,299
+So we've jumped forward a little
+bit here, so your you are a 
+
+147
+00:09:33,299 --> 00:09:37,200
+happy job. 
+Developer and then started 
+
+148
+00:09:37,200 --> 00:09:42,100
+seeing some, I don't know 
+different ways to do things 
+
+149
+00:09:42,100 --> 00:09:45,100
+like. 
+Yeah, make life easier easier. 
+
+150
+00:09:45,600 --> 00:09:48,399
+There was just a certain point 
+where I looked at my GitHub and 
+
+151
+00:09:48,399 --> 00:09:52,600
+I realize all of my personal 
+projects where I got to choose 
+
+152
+00:09:52,600 --> 00:09:59,799
+the language had been Scala for 
+45 years at that point and it 
+
+153
+00:09:59,799 --> 00:10:05,200
+was just increasingly jarring 
+that I was getting getting 
+
+154
+00:10:05,399 --> 00:10:08,899
+stronger and stronger with this 
+one language and then doing 
+
+155
+00:10:08,899 --> 00:10:12,899
+every Colin away that took more 
+advantage of what's called a. 
+
+156
+00:10:12,899 --> 00:10:18,500
+Yeah it was a journey of years 
+to get into the more functional 
+
+157
+00:10:18,500 --> 00:10:24,500
+side of Scala and sure is but 
+the deeper you got into it like 
+
+158
+00:10:24,799 --> 00:10:28,299
+myself. 
+The more I kind of didn't want 
+
+159
+00:10:28,299 --> 00:10:30,299
+to write Java anymore. 
+Yeah. 
+
+160
+00:10:30,299 --> 00:10:34,899
+Because early on I'd figure out 
+one new twist that Scala 
+
+161
+00:10:35,000 --> 00:10:39,299
+Provided and I would be able to 
+replicate it in Java without too
+
+162
+00:10:39,299 --> 00:10:43,200
+much trouble is a little awkward
+but you could do it, but then, 
+
+163
+00:10:43,200 --> 00:10:46,100
+as you just go further down the 
+path you realize. 
+
+164
+00:10:46,399 --> 00:10:51,299
+Okay, I'm contorting Java and 
+trying to use it in a way that 
+
+165
+00:10:51,399 --> 00:10:54,700
+it was never designed to be used
+fans. 
+
+166
+00:10:54,700 --> 00:10:58,200
+It's just constant everywhere. 
+Yeah, I know. 
+
+167
+00:10:58,399 --> 00:11:01,700
+But but, you know, even when I 
+started seeing people doing that
+
+168
+00:11:01,700 --> 00:11:06,799
+with code before having enough, 
+guess depth of functional 
+
+169
+00:11:06,799 --> 00:11:10,299
+programming, I would look good. 
+Why is this jerk putting const 
+
+170
+00:11:10,299 --> 00:11:12,000
+everywhere? 
+It's just making my life. 
+
+171
+00:11:12,700 --> 00:11:17,200
+Well and I think that is true 
+like even with the advantages of
+
+172
+00:11:17,200 --> 00:11:21,500
+immutability and everything 
+trying to do it and enforce it 
+
+173
+00:11:21,500 --> 00:11:24,899
+in a language where that is not 
+the focus. 
+
+174
+00:11:25,100 --> 00:11:28,299
+It's not the idiom. 
+You just spend so much time 
+
+175
+00:11:28,500 --> 00:11:29,799
+fighting. 
+Yeah. 
+
+176
+00:11:29,799 --> 00:11:35,799
+And the joys of not having if 
+else being expression Example. 
+
+177
+00:11:35,899 --> 00:11:38,799
+Yeah, just yeah. 
+All those things. 
+
+178
+00:11:38,799 --> 00:11:45,299
+So, yeah, once I had that 
+realization of oh, I actually am
+
+179
+00:11:45,299 --> 00:11:47,399
+a scholar. 
+A developer even though I'm 
+
+180
+00:11:47,399 --> 00:11:50,700
+still writing Java at my day 
+job, that's I'm just drifting 
+
+181
+00:11:50,700 --> 00:11:55,399
+further and further away from 
+that, I started looking at jobs 
+
+182
+00:11:55,700 --> 00:11:58,600
+exclusively for Scala. 
+Just decided it's time to make 
+
+183
+00:11:58,600 --> 00:12:04,799
+the change and I made that jump,
+I joined a company called X. 
+
+184
+00:12:05,000 --> 00:12:10,200
+Shawnee finance company, based 
+out of New York City and worked 
+
+185
+00:12:10,200 --> 00:12:13,899
+there for a while and it is a 
+really great experience. 
+
+186
+00:12:13,899 --> 00:12:20,399
+You know, they were doing, you 
+know, maybe not the ideal style 
+
+187
+00:12:20,399 --> 00:12:23,299
+of Scala in my mind at least it 
+was called. 
+
+188
+00:12:23,600 --> 00:12:25,500
+Yeah. 
+And they were they were making 
+
+189
+00:12:25,500 --> 00:12:30,899
+steps towards you know the the 
+way that I want it to be writing
+
+190
+00:12:30,899 --> 00:12:33,100
+code some projects more than 
+others. 
+
+191
+00:12:33,600 --> 00:12:38,899
+But the most You can't. 
+You know, take away from that 
+
+192
+00:12:38,899 --> 00:12:43,100
+job was meeting kit because 
+langa get like Jim, we got on 
+
+193
+00:12:43,399 --> 00:12:45,200
+the show, we back. 
+Yeah, yeah. 
+
+194
+00:12:45,200 --> 00:12:48,799
+And encourage everyone to go, 
+listen to his episode because 
+
+195
+00:12:48,799 --> 00:12:54,799
+kit is just so enthusiastic and 
+always pumping out. 
+
+196
+00:12:54,799 --> 00:13:03,100
+New crazy fun artistic projects.
+Yeah, so you were working with 
+
+197
+00:13:03,100 --> 00:13:06,799
+him, but in the end, he was 
+working as a consultant from 
+
+198
+00:13:06,799 --> 00:13:11,399
+zebra, No, he was he was just a 
+regular employee was exactly. 
+
+199
+00:13:11,399 --> 00:13:14,700
+As I was just a full-time 
+employee at this company. 
+
+200
+00:13:14,799 --> 00:13:20,200
+And when I was doing some kind 
+of goal setting for the next 
+
+201
+00:13:20,200 --> 00:13:24,500
+year, You know, one of the 
+things I said because it was on 
+
+202
+00:13:24,500 --> 00:13:28,000
+a different team and we had just
+had some kind of side 
+
+203
+00:13:28,000 --> 00:13:32,399
+conversations and really clicked
+and realize like, okay, this 
+
+204
+00:13:32,600 --> 00:13:37,299
+this guy is doing the right 
+stuff and I told my manager at 
+
+205
+00:13:37,299 --> 00:13:40,899
+the time. 
+All right, my main goal is work 
+
+206
+00:13:40,899 --> 00:13:43,000
+on a project with kid and I 
+don't really care what the 
+
+207
+00:13:43,008 --> 00:13:46,000
+project is. 
+I just want was like, oh my God,
+
+208
+00:13:46,000 --> 00:13:47,799
+your co-workers with kit 
+amazing. 
+
+209
+00:13:48,200 --> 00:13:49,600
+Hopefully you two can work 
+together. 
+
+210
+00:13:50,100 --> 00:13:52,899
+Yeah. 
+And then so I And I tell my 
+
+211
+00:13:52,899 --> 00:13:58,899
+manager that and then I talk to 
+Kit later that day and I think I
+
+212
+00:13:58,899 --> 00:14:04,700
+brought it up and he was like, 
+oh man, I'm sorry to tell you 
+
+213
+00:14:04,799 --> 00:14:11,200
+but I actually just put in my 
+notice, I'm going to be leaving 
+
+214
+00:14:11,200 --> 00:14:15,000
+soon and asked where he was 
+going. 
+
+215
+00:14:15,500 --> 00:14:17,799
+Yeah. 
+Just reeling from this 
+
+216
+00:14:17,799 --> 00:14:23,200
+devastating news and he said the
+one Answer that just made the 
+
+217
+00:14:23,200 --> 00:14:27,600
+most sense that he was going to 
+zai Verge, which is India. 
+
+218
+00:14:27,799 --> 00:14:30,299
+Yes. 
+And I had seen all the open 
+
+219
+00:14:30,299 --> 00:14:36,100
+source work that kit was doing 
+just building on top of Z 0 and 
+
+220
+00:14:36,100 --> 00:14:39,500
+just giving it more 
+functionality. 
+
+221
+00:14:40,299 --> 00:14:46,100
+And it was much easier for me to
+accept it was like, okay, you're
+
+222
+00:14:46,100 --> 00:14:48,899
+leaving which sucks, but you're 
+going to the place where you 
+
+223
+00:14:48,899 --> 00:14:50,799
+belong. 
+That's great. 
+
+224
+00:14:50,799 --> 00:14:54,000
+So even if I stay here, You're 
+like I'm in a benefit from you 
+
+225
+00:14:54,000 --> 00:14:57,200
+being over there you're gonna 
+and you all were so we're 
+
+226
+00:14:57,200 --> 00:15:00,200
+bringing zo into the code base 
+there. 
+
+227
+00:15:00,200 --> 00:15:02,700
+And yeah is right. 
+So you were already, kind of 
+
+228
+00:15:02,700 --> 00:15:06,299
+doing production zo work, and 
+seeing some of the benefits of 
+
+229
+00:15:06,299 --> 00:15:09,200
+it and seeing some of the 
+benefits and seeing some of the 
+
+230
+00:15:09,200 --> 00:15:11,700
+pain points. 
+And I think that's what really 
+
+231
+00:15:11,799 --> 00:15:15,200
+drove kit to work on. 
+Zo Magic. 
+
+232
+00:15:17,100 --> 00:15:19,100
+Which the name doesn't tell you 
+much. 
+
+233
+00:15:19,100 --> 00:15:22,399
+But the main thing that it does 
+is, you know, there's this 
+
+234
+00:15:22,399 --> 00:15:27,600
+concept of layers and z0 which 
+we might get into later and his 
+
+235
+00:15:27,600 --> 00:15:31,299
+Library just radically 
+simplified working with those 
+
+236
+00:15:31,299 --> 00:15:37,600
+and reduced a lot of the pain. 
+So, yeah, he says that he's 
+
+237
+00:15:37,600 --> 00:15:43,899
+leaving going to diverge and I 
+continued on a taxonomy for a 
+
+238
+00:15:43,899 --> 00:15:50,100
+little while, but I was still 
+talking to kid and he was just 
+
+239
+00:15:50,100 --> 00:15:54,500
+saying how amazing it was 
+working with this new group and 
+
+240
+00:15:55,100 --> 00:16:00,500
+we had a conversation where I 
+said I would eventually, you 
+
+241
+00:16:00,500 --> 00:16:05,000
+know, submit an application 
+there and try to join No. 
+
+242
+00:16:05,299 --> 00:16:08,200
+This is some sort of 
+miscommunication happened and he
+
+243
+00:16:08,200 --> 00:16:12,299
+just told them hey this guy 
+wants to join now. 
+
+244
+00:16:12,299 --> 00:16:15,700
+Like let's start the process. 
+Yeah, yeah. 
+
+245
+00:16:16,500 --> 00:16:20,200
+Maybe he knew exactly what I had
+said and he just decided to. 
+
+246
+00:16:20,500 --> 00:16:23,399
+Yeah, well let's just see what 
+take the initiative we need 
+
+247
+00:16:23,399 --> 00:16:26,000
+somebody now. 
+So let's just see what hand and 
+
+248
+00:16:26,000 --> 00:16:28,899
+your your uh, he knew you well 
+enough to know that you were a 
+
+249
+00:16:28,899 --> 00:16:30,700
+good fit. 
+Yeah. 
+
+250
+00:16:30,799 --> 00:16:34,000
+So what is why we'd already 
+provoked started working on the 
+
+251
+00:16:34,000 --> 00:16:34,600
+book? 
+Look. 
+
+252
+00:16:34,700 --> 00:16:37,100
+Yeah, sure I'm programming and 
+yes. 
+
+253
+00:16:37,299 --> 00:16:44,200
+So you do have deeper into Z 0 
+and we're already getting to be 
+
+254
+00:16:44,299 --> 00:16:49,500
+a pretty expert level and 
+developer with a and I am 
+
+255
+00:16:49,500 --> 00:16:52,700
+teaching others about it, which 
+was at that point in time. 
+
+256
+00:16:52,700 --> 00:16:55,000
+I'm not sure if it was affect 
+oriented programming yet, I 
+
+257
+00:16:55,000 --> 00:16:59,299
+think it might have still been 
+Atomic cell A3, which oh, that's
+
+258
+00:16:59,299 --> 00:17:03,200
+right. 
+That was the original idea is 
+
+259
+00:17:03,299 --> 00:17:07,700
+just going to be A full 
+language, you know, exploration 
+
+260
+00:17:08,400 --> 00:17:12,098
+and I don't know how long we had
+been doing that. 
+
+261
+00:17:12,098 --> 00:17:15,700
+It was at least six months 
+before just looking at scholar. 
+
+262
+00:17:15,900 --> 00:17:21,000
+Yeah, and I know as we got more 
+into the weeds of various 
+
+263
+00:17:21,000 --> 00:17:25,200
+features and realized, okay, 
+this is something you can do 
+
+264
+00:17:25,200 --> 00:17:29,400
+with scalloped by. 
+Well you and James had been both
+
+265
+00:17:29,400 --> 00:17:32,599
+exploring zero for a while. 
+Yeah yeah. 
+
+266
+00:17:32,599 --> 00:17:38,000
+And Other than exploring every 
+nook and cranny of Scala that we
+
+267
+00:17:38,000 --> 00:17:41,400
+never actually used in our day 
+to day. 
+
+268
+00:17:41,599 --> 00:17:46,700
+We started reorienting on. 
+Okay. 
+
+269
+00:17:47,599 --> 00:17:52,299
+What can be the through line of 
+a book that, you know, 
+
+270
+00:17:52,299 --> 00:17:58,400
+addresses, the type of software 
+that we are writing and just 
+
+271
+00:17:58,400 --> 00:18:05,700
+looking at some Arcane operators
+that Scott, like, gives you I 
+
+272
+00:18:05,708 --> 00:18:08,700
+don't know who that. 
+I remember, there's this point 
+
+273
+00:18:08,700 --> 00:18:12,799
+where we were like, we don't 
+want to teach people things that
+
+274
+00:18:12,799 --> 00:18:15,000
+we would later tell them never 
+to use. 
+
+275
+00:18:15,000 --> 00:18:17,000
+Yeah. 
+And when we were doing this 
+
+276
+00:18:17,000 --> 00:18:22,099
+complete language overview, if 
+we were going to honestly do 
+
+277
+00:18:22,099 --> 00:18:25,900
+that the had number of things 
+these Concepts and they would be
+
+278
+00:18:25,900 --> 00:18:29,400
+like you can do this. 
+You can I do not overload really
+
+279
+00:18:29,400 --> 00:18:32,900
+long operators. 
+Yeah yeah, yeah. 
+
+280
+00:18:32,900 --> 00:18:37,700
+I describe Scala to People now 
+as an experimental language, 
+
+281
+00:18:38,200 --> 00:18:44,099
+which has features that have 
+not, you know, necessarily been 
+
+282
+00:18:44,099 --> 00:18:47,500
+good at, you know, been viable, 
+experiments in the long-term. 
+
+283
+00:18:47,500 --> 00:18:50,700
+And so I think that puts 
+perspective on it. 
+
+284
+00:18:50,700 --> 00:18:53,200
+Because if you look at scholar 
+and you go, oh, you have the 
+
+285
+00:18:53,200 --> 00:18:54,900
+ridiculous operator overloading 
+thing. 
+
+286
+00:18:55,000 --> 00:18:57,500
+We don't actually do that 
+anymore, you know? 
+
+287
+00:18:57,500 --> 00:18:59,500
+And it's like, you don't know 
+that from. 
+
+288
+00:19:00,200 --> 00:19:04,099
+Yeah, and from java just in my 
+time running the length. 
+
+289
+00:19:04,200 --> 00:19:07,099
+A wedge through like a sifter 
+and think, oh, there's some 
+
+290
+00:19:07,099 --> 00:19:10,000
+really good things the like 
+fault the, you know, that become
+
+291
+00:19:10,000 --> 00:19:13,700
+the good stuff. 
+Mmm-hmm, and Scala from 5-10 
+
+292
+00:19:13,700 --> 00:19:17,500
+years ago, it was just operators
+everywhere. 
+
+293
+00:19:17,599 --> 00:19:22,599
+And you know, we have these 
+crazy d s L's and implicit 
+
+294
+00:19:22,599 --> 00:19:26,599
+conversions event was one or is 
+like oh god let's not do that 
+
+295
+00:19:26,599 --> 00:19:29,000
+anymore. 
+And the classic example of 
+
+296
+00:19:29,000 --> 00:19:32,599
+Martin talking about the fold 
+operator where it's a colon and 
+
+297
+00:19:32,599 --> 00:19:37,700
+a slash and it Slyke dominating 
+in all writing, but which 
+
+298
+00:19:37,700 --> 00:19:40,099
+direction that's always been my 
+problem. 
+
+299
+00:19:40,099 --> 00:19:44,099
+Where were well, but that fold 
+left and fold right, have the 
+
+300
+00:19:44,799 --> 00:19:47,299
+forward slash and backslash C. 
+Exactly. 
+
+301
+00:19:47,299 --> 00:19:49,400
+I know there is gravity 
+Direction. 
+
+302
+00:19:50,000 --> 00:19:53,200
+Grab me some time with the end 
+that way. 
+
+303
+00:19:53,299 --> 00:19:54,799
+Yeah. 
+From the beginning that. 
+
+304
+00:19:54,799 --> 00:19:57,000
+Yeah. 
+So it's like, no, I've never 
+
+305
+00:19:57,000 --> 00:19:59,799
+really internalized it from the 
+direction of the /. 
+
+306
+00:20:00,500 --> 00:20:03,299
+You have to understand gravity 
+to know which way it's falling. 
+
+307
+00:20:05,900 --> 00:20:08,700
+And which direction it's falling
+from Mmm. 
+
+308
+00:20:10,200 --> 00:20:14,299
+Yeah. 
+So yeah. 
+
+309
+00:20:14,299 --> 00:20:18,200
+This is, so, we're, we're 
+beginning to work on this book, 
+
+310
+00:20:18,200 --> 00:20:23,400
+diving further into Z 0 and 
+you're interviewing it diverged.
+
+311
+00:20:23,400 --> 00:20:25,000
+All of a sudden. 
+Yeah. 
+
+312
+00:20:25,000 --> 00:20:31,299
+And at that point I guess maybe 
+we had just made the shift 
+
+313
+00:20:31,299 --> 00:20:35,500
+because I think it was more the 
+Oriented at that point. 
+
+314
+00:20:35,500 --> 00:20:38,700
+I think it helped possibly help 
+to the interview because you 
+
+315
+00:20:38,700 --> 00:20:41,799
+said you were able to tell them 
+you were working on a book on 
+
+316
+00:20:41,799 --> 00:20:45,000
+zo. 
+Yeah so yeah that's given to 
+
+317
+00:20:45,000 --> 00:20:47,900
+remember that the content so 
+they could see your kind of 
+
+318
+00:20:47,900 --> 00:20:51,599
+knowledge and the way you're 
+teaching Z oh yeah. 
+
+319
+00:20:52,000 --> 00:20:56,500
+And because we're doing 
+everything at least currently 
+
+320
+00:20:56,599 --> 00:20:59,700
+open source. 
+You know every scrap of work 
+
+321
+00:20:59,700 --> 00:21:03,299
+that we do on the book, it's up 
+on GitHub for everyone to see 
+
+322
+00:21:03,400 --> 00:21:04,400
+for better. 
+Or worse. 
+
+323
+00:21:06,099 --> 00:21:08,000
+And I know that might not always
+be the case. 
+
+324
+00:21:08,000 --> 00:21:14,700
+We might Button it up at some 
+point whenever we actually go to
+
+325
+00:21:14,700 --> 00:21:17,500
+sell it. 
+But for the moment it's out 
+
+326
+00:21:17,500 --> 00:21:22,500
+there for anyone to critique or 
+steel or Reason somebody 
+
+327
+00:21:22,500 --> 00:21:28,400
+commented on my commit where I 
+fixed Booker, pretty see how 
+
+328
+00:21:28,400 --> 00:21:31,599
+this person noticed that, you 
+know, I made some change in my 
+
+329
+00:21:31,599 --> 00:21:36,900
+GitHub action, changing the way 
+that we load, girl, VM in and 
+
+330
+00:21:36,900 --> 00:21:38,700
+saying that, oh, you don't need 
+this step. 
+
+331
+00:21:38,700 --> 00:21:42,000
+I'm like Well, someone's 
+watching what we're doing, out 
+
+332
+00:21:42,000 --> 00:21:45,099
+of all the things that I 
+thought, someone might look at 
+
+333
+00:21:45,099 --> 00:21:47,599
+and comment on that bit of 
+tooling. 
+
+334
+00:21:47,599 --> 00:21:51,900
+I was not expecting the curtain 
+but hey, if that's what they're 
+
+335
+00:21:51,900 --> 00:21:54,900
+interested in, they can pitch in
+given the Ogle's. 
+
+336
+00:21:54,900 --> 00:22:02,599
+Yeah so you got the job as I 
+Verge and yes been full-time CEO
+
+337
+00:22:02,599 --> 00:22:06,500
+and working for customer and 
+yeah. 
+
+338
+00:22:06,500 --> 00:22:08,900
+And then oh I do want to get 
+into the work you've been doing.
+
+339
+00:22:09,200 --> 00:22:13,400
+And contributions to 0-2 which 0
+0 2, just came out, and was 
+
+340
+00:22:13,400 --> 00:22:15,700
+announced like a week ago today,
+right? 
+
+341
+00:22:15,700 --> 00:22:18,700
+So yes, it is. 
+So usually out there that was 
+
+342
+00:22:18,700 --> 00:22:21,599
+part of the reason for having 
+you on today was to talk about 
+
+343
+00:22:21,599 --> 00:22:24,000
+the zo to release and what. 
+Right? 
+
+344
+00:22:24,000 --> 00:22:26,900
+And one of the interesting 
+things about that is that they 
+
+345
+00:22:26,900 --> 00:22:31,700
+had put it into whatever is 
+going to release candidate 
+
+346
+00:22:31,700 --> 00:22:38,599
+status and then started making 
+all of these amazing changes and
+
+347
+00:22:38,599 --> 00:22:43,900
+I I totally understand that 
+because when I get a book to 
+
+348
+00:22:43,900 --> 00:22:48,099
+what I think is the end, then I 
+see, you're like, I'm so close 
+
+349
+00:22:48,099 --> 00:22:50,799
+and then suddenly I'll start 
+seeing, you know, I'll see 
+
+350
+00:22:50,799 --> 00:22:54,599
+something new, and I'll go, oh 
+well, I can't and because I've 
+
+351
+00:22:54,599 --> 00:22:57,700
+tried that before, it's like, 
+you know, if you, if you don't 
+
+352
+00:22:57,700 --> 00:22:59,799
+fix it, you will be so 
+regretful. 
+
+353
+00:22:59,799 --> 00:23:03,799
+But anyway, the point I was 
+making was that they were able 
+
+354
+00:23:03,799 --> 00:23:09,000
+to do those things and that 
+seems to speak pretty highly. 
+
+355
+00:23:09,200 --> 00:23:12,799
+Of the whole zo framework that 
+they can do such dramatic 
+
+356
+00:23:12,799 --> 00:23:17,900
+changes and not worry about 
+busting the whole system. 
+
+357
+00:23:17,900 --> 00:23:19,099
+Yeah. 
+Absolutely. 
+
+358
+00:23:19,099 --> 00:23:22,500
+There's a pressure that an RC 
+puts on you and one approach you
+
+359
+00:23:22,500 --> 00:23:26,500
+could take is oh we're so close.
+Let's just get this thing do. 
+
+360
+00:23:26,500 --> 00:23:28,299
+RC means we're not going to make
+any change. 
+
+361
+00:23:28,299 --> 00:23:30,599
+Yeah, we're not going to make 
+any big changes. 
+
+362
+00:23:30,799 --> 00:23:35,299
+And the philosophy from zero was
+well, we really need to like fix
+
+363
+00:23:35,299 --> 00:23:38,500
+this one thing and then that 
+happened like with like a dozen 
+
+364
+00:23:38,500 --> 00:23:40,500
+different, Area. 
+Yeah, huge. 
+
+365
+00:23:40,500 --> 00:23:43,599
+But I don't think, oh my God. 
+Bless ya. 
+
+366
+00:23:45,900 --> 00:23:51,799
+They don't think it took the 
+pressure of an RC to probably 
+
+367
+00:23:51,799 --> 00:23:55,200
+reveal and push a focus. 
+Well, that's what that's what I 
+
+368
+00:23:55,208 --> 00:23:57,500
+was saying, you know, it's like,
+you get the whole book and you 
+
+369
+00:23:57,500 --> 00:24:01,299
+start seeing it in its entirety.
+And then, for some reason, those
+
+370
+00:24:01,299 --> 00:24:04,400
+things pop up at you because 
+you're not trying to create new 
+
+371
+00:24:04,400 --> 00:24:07,700
+material anymore, you're just 
+like saying, how does this look?
+
+372
+00:24:07,700 --> 00:24:10,799
+And they were able to Fact, they
+were able to do that is what 
+
+373
+00:24:10,799 --> 00:24:15,200
+impresses me more than anything.
+Because like, I mean like I 
+
+374
+00:24:15,200 --> 00:24:20,099
+build systems into into a book 
+so that I can do that. 
+
+375
+00:24:20,400 --> 00:24:25,299
+But most software it's like, oh 
+no, you know, we can't, we can't
+
+376
+00:24:25,299 --> 00:24:27,599
+start adding new features after 
+the release candidate. 
+
+377
+00:24:27,599 --> 00:24:30,299
+That would be ridiculous. 
+But they were able to 
+
+378
+00:24:30,900 --> 00:24:34,700
+re-architect it practically, I 
+think they were just grinding 
+
+379
+00:24:34,700 --> 00:24:39,400
+through a lot of the minutiae 
+and gory details and then, Then 
+
+380
+00:24:39,500 --> 00:24:42,299
+once they got through enough of 
+that, you kind of Reach This 
+
+381
+00:24:42,299 --> 00:24:45,500
+plateau, and you can take a 
+moment to look around and 
+
+382
+00:24:45,500 --> 00:24:49,000
+reassess, and realize has is 
+terrible. 
+
+383
+00:24:49,000 --> 00:24:51,799
+Let's get rid of that. 
+Yeah, this this thing that her 
+
+384
+00:24:51,799 --> 00:24:55,700
+pet really confuses new and 
+advanced users. 
+
+385
+00:24:55,700 --> 00:24:57,799
+Fortunately, I never had to 
+understand it. 
+
+386
+00:24:57,799 --> 00:25:02,700
+So it was like, yes. 
+And I'm still dealing with 01 
+
+387
+00:25:02,700 --> 00:25:06,299
+code bases at work and we 
+probably will be for several 
+
+388
+00:25:06,299 --> 00:25:10,400
+months as the migration happens.
+Across the ecosystem. 
+
+389
+00:25:10,799 --> 00:25:13,700
+But whenever I come across has 
+now. 
+
+390
+00:25:14,099 --> 00:25:19,599
+I just Grimace because I how 
+much better it can be and it's 
+
+391
+00:25:19,599 --> 00:25:24,900
+hard to spend, you know, 
+potentially days trying to teach
+
+392
+00:25:24,900 --> 00:25:29,200
+a developer this concept that 
+we've completely obliterated, it
+
+393
+00:25:29,200 --> 00:25:31,799
+turns out, it was just a useless
+abstraction. 
+
+394
+00:25:32,000 --> 00:25:38,900
+Yeah, and so yes. 
+As far as these huge changes 
+
+395
+00:25:39,000 --> 00:25:44,500
+Changes in the RCs. 
+II don't know the exact history.
+
+396
+00:25:44,500 --> 00:25:48,700
+I wasn't following it as closely
+401, I was watching it as they 
+
+397
+00:25:48,700 --> 00:25:52,700
+approach the 1.0 release, but I 
+think they might have got above 
+
+398
+00:25:52,700 --> 00:25:58,599
+20 or seas and II. 
+Don't know if they were changing
+
+399
+00:25:58,599 --> 00:26:02,000
+as radically as they were in 
+zo2. 
+
+400
+00:26:02,599 --> 00:26:10,700
+But I know Adam, John kit, 
+Daniel, like, they're all trying
+
+401
+00:26:10,700 --> 00:26:14,099
+to keep their eye. 
+Rise on the long-term goals of 
+
+402
+00:26:14,099 --> 00:26:17,599
+this project. 
+And yes, it does punish the 
+
+403
+00:26:17,599 --> 00:26:20,500
+early adopters who have been 
+following your release 
+
+404
+00:26:20,500 --> 00:26:24,000
+candidates and we got burned by 
+that in some of our book changes
+
+405
+00:26:24,799 --> 00:26:30,200
+where, you know, I think it is 
+between RCS, like two, three and
+
+406
+00:26:30,200 --> 00:26:37,000
+four, they removed all this 
+stuff and then re-add it it. 
+
+407
+00:26:37,599 --> 00:26:44,000
+And so there's a lot of churn 
+for Trying to keep up with them,
+
+408
+00:26:45,099 --> 00:26:50,200
+but I think on the whole maybe a
+couple dozen people felt the 
+
+409
+00:26:50,200 --> 00:26:57,599
+pain of that versus thousands 
+tens of thousands of people once
+
+410
+00:26:57,599 --> 00:27:00,900
+we actually release this thing. 
+Broadly, I remember Beyond when 
+
+411
+00:27:00,900 --> 00:27:03,099
+I was on the C++ standards 
+committee right at the 
+
+412
+00:27:03,099 --> 00:27:07,700
+beginning, when they were going 
+from C++ without templates to 
+
+413
+00:27:07,700 --> 00:27:10,500
+templates, and people were 
+saying, oh, this is going to 
+
+414
+00:27:10,508 --> 00:27:12,599
+break all this. 
+Existing code and everything and
+
+415
+00:27:12,599 --> 00:27:19,500
+B are NE said he said, yeah, we 
+we have only a tiny fraction of,
+
+416
+00:27:20,299 --> 00:27:22,000
+you know, the users that are 
+going to be. 
+
+417
+00:27:22,000 --> 00:27:24,200
+It was definitely long-term 
+thinking he's going. 
+
+418
+00:27:24,400 --> 00:27:28,700
+Yeah, and this will be painful 
+now but the benefit will vastly 
+
+419
+00:27:28,700 --> 00:27:33,799
+outweigh the cost and I think 
+that's the way you have to look.
+
+420
+00:27:33,799 --> 00:27:38,299
+I mean, that is my attitude. 
+I'm happy to break old things to
+
+421
+00:27:38,299 --> 00:27:43,099
+make the future better and you 
+You might lose some people in 
+
+422
+00:27:43,099 --> 00:27:47,200
+that transition, but I think by 
+and large those early adopters 
+
+423
+00:27:47,200 --> 00:27:52,099
+are the most passionate people 
+about your project and I think 
+
+424
+00:27:52,099 --> 00:27:57,200
+they're going to cut you more 
+slack of just recognizing, okay,
+
+425
+00:27:57,200 --> 00:28:00,500
+you're figuring things out, 
+you're improving it this hurts 
+
+426
+00:28:00,500 --> 00:28:05,400
+today, but it will be years of 
+improved experience moving 
+
+427
+00:28:05,400 --> 00:28:08,700
+forward. 
+And I know that is one of the 
+
+428
+00:28:08,700 --> 00:28:15,500
+big goals of zo2 is just Getting
+more widespread adoption which I
+
+429
+00:28:15,500 --> 00:28:19,000
+guess is the point of every 
+project to some degree. 
+
+430
+00:28:19,000 --> 00:28:24,900
+But I think 01 was a proof of 
+concept in a lot of ways and 
+
+431
+00:28:24,900 --> 00:28:29,500
+it's really great for that. 
+I know they have managed to just
+
+432
+00:28:29,500 --> 00:28:36,200
+make minor releases on it that 
+there's not a z 0, 1 Point 1 
+
+433
+00:28:36,200 --> 00:28:41,000
+Point anything. 
+It's all one point zero point. 
+
+434
+00:28:41,900 --> 00:28:47,400
+And I think we're up to 15 now 
+so we've had no breaking changes
+
+435
+00:28:47,900 --> 00:28:52,000
+over the last two years or so 
+that it's been out. 
+
+436
+00:28:52,500 --> 00:29:00,099
+So was the stimulus for zo2, the
+scholar 32 that, that that kind 
+
+437
+00:29:00,099 --> 00:29:05,299
+of, they from my understanding 
+zo2, is not really taken 
+
+438
+00:29:05,299 --> 00:29:08,400
+advantage of any Escala, three 
+stuff. 
+
+439
+00:29:09,099 --> 00:29:16,000
+Okay, zo 3 will be where 
+Actually, like make zo B Scala 
+
+440
+00:29:16,000 --> 00:29:22,400
+30k space and so then they can 
+take advantage of scholar three 
+
+441
+00:29:22,400 --> 00:29:25,400
+specific features. 
+But today, I think 02 still 
+
+442
+00:29:25,400 --> 00:29:27,799
+works with college. 
+So I realized we've been 
+
+443
+00:29:27,799 --> 00:29:31,500
+talking, we may have lost some 
+people by talking about the 
+
+444
+00:29:32,000 --> 00:29:34,500
+details. 
+And what I would like to do is 
+
+445
+00:29:34,500 --> 00:29:40,900
+back up a little and say, what 
+problem is zo solving, because I
+
+446
+00:29:40,900 --> 00:29:43,200
+think a lot of of people that, 
+you know, it's like we're going 
+
+447
+00:29:43,200 --> 00:29:45,200
+a this wonderful Library. 
+What does it do? 
+
+448
+00:29:45,200 --> 00:29:47,400
+Why would I use it when you've 
+used it in production? 
+
+449
+00:29:47,400 --> 00:29:50,799
+So you've solve real problems 
+that you have an interesting 
+
+450
+00:29:50,799 --> 00:29:52,900
+perspective on it. 
+Yeah. 
+
+451
+00:29:53,599 --> 00:30:00,400
+So I guess they're kind of 
+mission statement. 
+
+452
+00:30:02,099 --> 00:30:07,099
+You know, in one respect, it's 
+meant for, you know, 
+
+453
+00:30:07,099 --> 00:30:09,700
+asynchronous concurrent 
+operations. 
+
+454
+00:30:09,700 --> 00:30:12,900
+I think that's what the 
+homepage, still introduces it 
+
+455
+00:30:13,000 --> 00:30:21,200
+as, as a library for that. 
+But I think it It's always much 
+
+456
+00:30:21,200 --> 00:30:28,000
+more rudimentary day-to-day 
+problems of even if you aren't 
+
+457
+00:30:28,000 --> 00:30:32,500
+doing very complicated 
+asynchronous workflows, I still 
+
+458
+00:30:32,500 --> 00:30:36,599
+think your code base benefits 
+from using Z 0. 
+
+459
+00:30:36,700 --> 00:30:43,599
+And so Z 0 is, it's an 
+alternative to some of the more 
+
+460
+00:30:45,000 --> 00:30:49,900
+Can a category Theory oriented 
+Haskell oriented. 
+
+461
+00:30:50,099 --> 00:30:52,900
+Yeah. 
+Where you just are given this 
+
+462
+00:30:52,900 --> 00:30:58,700
+pile of concepts of here's Funk 
+doors and applicative 's and we 
+
+463
+00:30:58,700 --> 00:31:01,799
+have built all these things and 
+if you already understand 
+
+464
+00:31:01,799 --> 00:31:05,500
+functors in duplicative sin that
+you know that then it makes 
+
+465
+00:31:05,500 --> 00:31:07,500
+sense. 
+But if you're coming in from 
+
+466
+00:31:08,900 --> 00:31:12,799
+Some other standpoint than it, 
+maybe it's because I tried to 
+
+467
+00:31:12,799 --> 00:31:18,900
+understand one of those systems 
+and it just immediately became 
+
+468
+00:31:18,900 --> 00:31:24,299
+overwhelming and so as I was 
+getting deeper into the Scala 
+
+469
+00:31:24,299 --> 00:31:27,299
+world, I would sit down and 
+think. 
+
+470
+00:31:27,500 --> 00:31:33,400
+Okay, Clay's Lee's I'm gonna 
+really focus on these and spend 
+
+471
+00:31:33,400 --> 00:31:38,000
+days or weeks just trying to 
+understand this and I would get 
+
+472
+00:31:38,000 --> 00:31:41,500
+to a point We're a reasonably, 
+understood it. 
+
+473
+00:31:41,900 --> 00:31:47,299
+But then it was just this 
+floating concept that I couldn't
+
+474
+00:31:47,299 --> 00:31:50,299
+connect to the rest of my 
+application. 
+
+475
+00:31:50,599 --> 00:31:54,400
+I, I couldn't just bring in this
+one. 
+
+476
+00:31:54,400 --> 00:31:57,099
+Small piece. 
+It was okay. 
+
+477
+00:31:57,099 --> 00:32:00,400
+You have to understand all of 
+these components and rewrite 
+
+478
+00:32:00,400 --> 00:32:03,900
+your entire application for 
+these things to all interact 
+
+479
+00:32:03,900 --> 00:32:08,799
+with each other. 
+And Might just be my personal 
+
+480
+00:32:08,900 --> 00:32:14,099
+failing lack of drive or Focus 
+or something but I just I could 
+
+481
+00:32:14,099 --> 00:32:19,700
+never make the transition and 
+with zero that was the first 
+
+482
+00:32:19,700 --> 00:32:25,900
+time that I saw this tool and 
+the Zio data type itself. 
+
+483
+00:32:27,599 --> 00:32:31,299
+It explains what you need from 
+the environment to run your 
+
+484
+00:32:31,900 --> 00:32:36,099
+code, how it could fail. 
+And what the result type is, 
+
+485
+00:32:36,200 --> 00:32:41,799
+those are the three main things 
+that it covers and I actually 
+
+486
+00:32:41,799 --> 00:32:46,500
+saw useful examples of Zo and 
+you could take just a piece of 
+
+487
+00:32:46,500 --> 00:32:52,299
+your code start structuring it 
+in the style and then you could 
+
+488
+00:32:52,299 --> 00:32:57,200
+say all right I want to do an 
+unsafe run on this little piece 
+
+489
+00:32:57,200 --> 00:33:01,599
+of code here and I was able to 
+go from. 
+
+490
+00:33:02,200 --> 00:33:05,599
+Okay I've just got this one 
+network call that I'm using this
+
+491
+00:33:05,599 --> 00:33:11,200
+zo data type for and just have 
+it slowly percolate through. and
+
+492
+00:33:11,200 --> 00:33:16,200
+then, You know, over the course 
+of a couple weeks, I realized I 
+
+493
+00:33:16,208 --> 00:33:22,799
+had got my entire application 
+reformulated to use Z 0 and you 
+
+494
+00:33:22,799 --> 00:33:27,099
+can like an incremental adopt 
+the approach in pieces instead 
+
+495
+00:33:27,099 --> 00:33:31,299
+of having to go Whole Hog on it 
+from the beginning, which can be
+
+496
+00:33:31,299 --> 00:33:35,200
+hard in the existing code base. 
+So for example that Network call
+
+497
+00:33:35,200 --> 00:33:39,599
+it, you mentioned. 
+So there's a normal thing that 
+
+498
+00:33:39,599 --> 00:33:42,500
+programmers are used to having 
+to do too. 
+
+499
+00:33:42,700 --> 00:33:46,200
+Make the call and to guard 
+against all of the issues that 
+
+500
+00:33:46,200 --> 00:33:49,700
+might happen. 
+And my understanding is that 
+
+501
+00:33:50,200 --> 00:33:54,000
+most or all of that extra stuff 
+that you have to do. 
+
+502
+00:33:54,000 --> 00:33:57,500
+Has been folded into Z. 
+Oh yeah. 
+
+503
+00:33:57,599 --> 00:34:00,900
+And if you just wrap any sort of
+call that might throw an 
+
+504
+00:34:00,900 --> 00:34:07,000
+exception in a z 0 then it will 
+say all right you've got to 
+
+505
+00:34:07,000 --> 00:34:10,400
+throw a bowl as your possible 
+are type, and that's kind of the
+
+506
+00:34:10,400 --> 00:34:15,500
+first step is Is, you know, 
+before you fully Embrace zo and 
+
+507
+00:34:15,500 --> 00:34:19,599
+just maximize your type safety 
+and defining, all of your are 
+
+508
+00:34:19,599 --> 00:34:22,599
+possibilities. 
+You can just start with simply 
+
+509
+00:34:22,599 --> 00:34:26,500
+wrap it and zo and so it's not 
+going to throw an exception 
+
+510
+00:34:26,500 --> 00:34:27,900
+anymore. 
+It's always going to it'll be 
+
+511
+00:34:27,900 --> 00:34:33,900
+returned as your error value and
+you decide what to do so. 
+
+512
+00:34:34,000 --> 00:34:37,099
+So when I make a call instead of
+just getting back the 
+
+513
+00:34:37,099 --> 00:34:41,199
+quote-unquote result from the 
+call I'm getting back an object 
+
+514
+00:34:41,199 --> 00:34:44,199
+as e object that UPS, the 
+result. 
+
+515
+00:34:44,199 --> 00:34:46,800
+What might go wrong? 
+What - changed in the 
+
+516
+00:34:46,800 --> 00:34:51,000
+environment or whatever? 
+What effects have had. 
+
+517
+00:34:51,199 --> 00:34:54,300
+So, so now I'm getting a bigger 
+thing back. 
+
+518
+00:34:54,599 --> 00:34:59,699
+And I have to say deal with the 
+error. 
+
+519
+00:34:59,699 --> 00:35:01,500
+Yes, case. 
+It says you have to write the 
+
+520
+00:35:01,500 --> 00:35:03,199
+code to deal with this error. 
+Yeah. 
+
+521
+00:35:03,500 --> 00:35:06,199
+You don't have to have to but it
+feels really bad. 
+
+522
+00:35:06,199 --> 00:35:10,400
+If you don't, you have to if you
+choose to ignore it you have to 
+
+523
+00:35:10,400 --> 00:35:14,099
+use scary method names. 
+Like or die. 
+
+524
+00:35:14,699 --> 00:35:20,300
+We're now if which is people 
+it's much more obvious than just
+
+525
+00:35:20,300 --> 00:35:25,400
+having an exception that you're 
+ignoring, your app will fail if 
+
+526
+00:35:25,400 --> 00:35:28,900
+you don't deal with this. 
+Yeah same and that makes it 
+
+527
+00:35:28,900 --> 00:35:34,699
+really easy, you know that code 
+review setting of okay if you're
+
+528
+00:35:34,699 --> 00:35:38,000
+not familiar with are all the 
+moving pieces here. 
+
+529
+00:35:38,300 --> 00:35:41,000
+I'm just looking at this one 
+file that somebody else wrote 
+
+530
+00:35:41,300 --> 00:35:42,500
+and I can see that they're 
+calling. 
+
+531
+00:35:42,699 --> 00:35:45,800
+Or die. 
+Okay, that's that's a big red 
+
+532
+00:35:45,800 --> 00:35:47,500
+flag. 
+Okay. 
+
+533
+00:35:47,500 --> 00:35:47,900
+All right. 
+No. 
+
+534
+00:35:48,199 --> 00:35:50,300
+Okay. 
+She is going to die here. 
+
+535
+00:35:50,300 --> 00:35:56,500
+Is that what we really like to 
+happen, ergonomic typed Etc, 
+
+536
+00:35:57,199 --> 00:35:59,300
+checked exceptions. 
+We're gonna make checked 
+
+537
+00:35:59,300 --> 00:36:02,300
+exceptions, it's like giving you
+the benefits of checked 
+
+538
+00:36:02,300 --> 00:36:05,099
+exceptions, which there are 
+benefits of checked exceptions. 
+
+539
+00:36:05,099 --> 00:36:07,800
+It's like the compiler is going 
+to be like you need to deal with
+
+540
+00:36:07,800 --> 00:36:12,300
+this but making it or ignore it.
+We're explicitly ignore it. 
+
+541
+00:36:12,300 --> 00:36:16,400
+Which Is what often happens. 
+And I would say, it's, it's 
+
+542
+00:36:16,400 --> 00:36:20,900
+checked errors because you can 
+use exceptions for all of your 
+
+543
+00:36:20,900 --> 00:36:23,800
+are types, but you can use just 
+plain old values. 
+
+544
+00:36:23,800 --> 00:36:28,000
+It can use a string string and 
+there are a lot of times where 
+
+545
+00:36:28,000 --> 00:36:31,099
+that's really all you want is 
+just an error message because at
+
+546
+00:36:31,099 --> 00:36:34,599
+this point in time, you're just 
+you're logging at somewhere, 
+
+547
+00:36:34,599 --> 00:36:38,900
+reporting it to the user. 
+And at that point you don't 
+
+548
+00:36:38,900 --> 00:36:40,500
+actually care about a stack 
+Trace. 
+
+549
+00:36:40,500 --> 00:36:43,699
+You're just saying okay. 
+You have to tell the user that 
+
+550
+00:36:43,699 --> 00:36:47,300
+something went wrong. 
+And one thing we've discovered 
+
+551
+00:36:47,300 --> 00:36:51,400
+with Scala 3, is that it gets 
+even ergonomically better when 
+
+552
+00:36:51,400 --> 00:36:55,800
+you combine this approach with 
+Scala 3 because then Scala 
+
+553
+00:36:55,800 --> 00:37:00,800
+automatically some types. 
+Your your are Channel, your are 
+
+554
+00:37:00,800 --> 00:37:05,099
+types together. 
+And so you, if you have a zo 
+
+555
+00:37:05,099 --> 00:37:09,300
+that can produce a foo are and 
+izia that can produce a bar are 
+
+556
+00:37:09,500 --> 00:37:14,300
+and you combine those two zeros 
+together, you get a new z0 which
+
+557
+00:37:14,300 --> 00:37:19,000
+can be the are type is a foo or 
+bar or some type on yellows. 
+
+558
+00:37:19,300 --> 00:37:22,099
+Whereas, before the Scala, 
+compiler would bring that up to 
+
+559
+00:37:22,099 --> 00:37:25,599
+a product. 
+The highest common type of those
+
+560
+00:37:25,599 --> 00:37:27,500
+will product if it was a case 
+class, right? 
+
+561
+00:37:28,199 --> 00:37:31,900
+Whereas now it actually creates 
+a new Anonymous type that is the
+
+562
+00:37:32,000 --> 00:37:35,199
+sum of the two times, so it just
+does it automatically and it's 
+
+563
+00:37:35,199 --> 00:37:37,599
+so cool. 
+So one of the things that we've 
+
+564
+00:37:37,599 --> 00:37:45,099
+encountered while exploring zo2 
+and Scholar A is these kind of 
+
+565
+00:37:45,099 --> 00:37:50,800
+astounding, error messages and 
+I'm, and now, I mean, I remember
+
+566
+00:37:50,800 --> 00:37:54,500
+seeing them and going, oh, I 
+think this is the best error 
+
+567
+00:37:54,500 --> 00:37:58,800
+message that I've seen, but we 
+have, we weren't, or I wasn't 
+
+568
+00:37:58,800 --> 00:38:03,800
+clear on was that coming from 
+Scala 3, or was it coming from 
+
+569
+00:38:03,900 --> 00:38:07,800
+Zio's and we've seen it in both.
+The answer is yes. 
+
+570
+00:38:08,699 --> 00:38:11,900
+It's both Scala preacher and 
+nurture. 
+
+571
+00:38:12,500 --> 00:38:15,300
+Improves the error messages but 
+his done. 
+
+572
+00:38:15,300 --> 00:38:17,300
+A lot of work on the layer 
+assembly. 
+
+573
+00:38:17,300 --> 00:38:20,900
+The layers are how you define 
+the environment and z0 and 
+
+574
+00:38:20,900 --> 00:38:26,199
+assemble it into a graph of of 
+things that are needed. 
+
+575
+00:38:26,199 --> 00:38:30,800
+And the error messages now 
+around environments and 
+
+576
+00:38:30,800 --> 00:38:32,500
+providing them. 
+And when you're missing 
+
+577
+00:38:32,500 --> 00:38:35,400
+something or you've discovered 
+when, it's, when you have a 
+
+578
+00:38:35,400 --> 00:38:40,500
+cyclic dependency point, is says
+that's an error, which I was, 
+
+579
+00:38:40,500 --> 00:38:44,099
+yeah, yeah, it keeps coming. 
+Up with this information that 
+
+580
+00:38:44,099 --> 00:38:47,900
+I'm used to having to track down
+myself. 
+
+581
+00:38:48,000 --> 00:38:50,099
+Yes. 
+And it's the compiler. 
+
+582
+00:38:50,099 --> 00:38:52,099
+Doing it. 
+Where you almost defend write a 
+
+583
+00:38:52,099 --> 00:38:55,900
+compound works are like at 
+runtime it's like oh you didn't 
+
+584
+00:38:55,900 --> 00:38:57,900
+give me one of these. 
+It's like are you guys could do 
+
+585
+00:38:57,900 --> 00:39:00,300
+wi to compile time? 
+Yeah, yeah. 
+
+586
+00:39:00,300 --> 00:39:05,599
+So going back to the zo magic 
+the kit made for stitching 
+
+587
+00:39:05,599 --> 00:39:10,699
+together. 
+All your dependencies and that 
+
+588
+00:39:11,000 --> 00:39:12,599
+gave you a lot of extra power. 
+Power. 
+
+589
+00:39:12,599 --> 00:39:17,400
+But now that it's been absorbed 
+into zo core, he's just taken it
+
+590
+00:39:17,400 --> 00:39:21,400
+further and further of okay now 
+it's still stitches together all
+
+591
+00:39:21,400 --> 00:39:23,099
+your dependencies. 
+But when something goes wrong, 
+
+592
+00:39:23,099 --> 00:39:27,800
+it gives you a level of detail 
+that you just previously, 
+
+593
+00:39:27,800 --> 00:39:31,000
+wouldn't have thought was 
+possible of you want to run this
+
+594
+00:39:31,000 --> 00:39:34,300
+application. 
+You gave us these nine 
+
+595
+00:39:34,300 --> 00:39:39,199
+dependencies but we need these 
+other three and it will even 
+
+596
+00:39:39,199 --> 00:39:42,099
+tell you, we need these other 
+three to create. 
+
+597
+00:39:42,900 --> 00:39:45,500
+These other pieces of the 
+application and it gives you 
+
+598
+00:39:45,599 --> 00:39:48,699
+just the whole layout of your 
+application or actually gives 
+
+599
+00:39:48,699 --> 00:39:50,900
+you the subset that is relevant 
+to your problem. 
+
+600
+00:39:50,900 --> 00:39:55,199
+It doesn't dump out everything. 
+It just says, here's the problem
+
+601
+00:39:55,199 --> 00:40:00,099
+area in your graph and you just 
+start plugging in those missing 
+
+602
+00:40:00,099 --> 00:40:05,099
+pieces and a very incrementally 
+walks you towards a working 
+
+603
+00:40:05,099 --> 00:40:08,800
+application. 
+So, it seems like in Java with 
+
+604
+00:40:08,800 --> 00:40:13,099
+dependency injection, you could 
+spend a lot of time I'm tracking
+
+605
+00:40:13,099 --> 00:40:14,800
+that kind of issue down 
+probably. 
+
+606
+00:40:14,800 --> 00:40:17,199
+So you could imagine well it's 
+like what you've done in 
+
+607
+00:40:17,199 --> 00:40:22,000
+production systems and figure. 
+He's so, yeah, and so, but but 
+
+608
+00:40:22,000 --> 00:40:25,199
+you only know that after you've 
+made this change, you can look 
+
+609
+00:40:25,199 --> 00:40:30,300
+back and go, oh, I would have 
+wasted so much time and money of
+
+610
+00:40:30,300 --> 00:40:36,800
+my employers finances by doing 
+this but the people are actually
+
+611
+00:40:36,800 --> 00:40:40,400
+programming in Java, that's just
+the problem that, you know, it's
+
+612
+00:40:40,400 --> 00:40:42,300
+just another problem. 
+You have to solve is just how 
+
+613
+00:40:42,300 --> 00:40:48,000
+you Do it and in 01 there was 
+much more of a cost of 
+
+614
+00:40:48,000 --> 00:40:52,699
+restructuring your application 
+in this style and you would 
+
+615
+00:40:52,699 --> 00:40:57,099
+eventually get the benefits. 
+But it was you had to kind of 
+
+616
+00:40:57,099 --> 00:41:01,400
+wander through this Forest of, 
+you know, setting up this 
+
+617
+00:41:01,400 --> 00:41:06,099
+boilerplate that you might not 
+really grasp why you were doing 
+
+618
+00:41:06,099 --> 00:41:13,099
+it. 
+But now the simplest approach is
+
+619
+00:41:13,099 --> 00:41:17,300
+also the one that gives you the 
+best error messages where for 
+
+620
+00:41:17,300 --> 00:41:24,099
+most of your layers, you can do 
+a one-line snippet that will 
+
+621
+00:41:24,500 --> 00:41:29,800
+take your type and basically 
+transform it into a layer. 
+
+622
+00:41:30,199 --> 00:41:35,099
+And once it's in a layer kit, 
+describes them as these Lego 
+
+623
+00:41:35,099 --> 00:41:40,199
+pieces of, you know, all the 
+different dependencies for your 
+
+624
+00:41:40,199 --> 00:41:43,300
+application. 
+The these units You can snap 
+
+625
+00:41:43,300 --> 00:41:48,400
+them together and yeah I think 
+01 did that but now with CO2 
+
+626
+00:41:48,400 --> 00:41:54,400
+they're not just Legos they're 
+kind of magnetic Legos and self 
+
+627
+00:41:54,400 --> 00:41:58,800
+orienting of they're going to 
+find everywhere that they are 
+
+628
+00:41:58,800 --> 00:42:05,199
+needed and insert themselves and
+everything that needs them over 
+
+629
+00:42:05,199 --> 00:42:08,800
+that everything that that layer 
+needs it will go and find that 
+
+630
+00:42:08,800 --> 00:42:11,000
+as well. 
+So it seems like there are these
+
+631
+00:42:11,000 --> 00:42:14,099
+Pockets like We talked about 
+dependency injection. 
+
+632
+00:42:14,099 --> 00:42:17,699
+So if you've had a really awful 
+experience once with dependency 
+
+633
+00:42:17,699 --> 00:42:20,800
+injection that might make you 
+go, all right, I don't want to 
+
+634
+00:42:20,800 --> 00:42:22,400
+do that again. 
+I'll move to this thing, but 
+
+635
+00:42:22,400 --> 00:42:25,699
+then there are all of these 
+other well concurrency, as we've
+
+636
+00:42:25,699 --> 00:42:28,199
+been exploring and everything 
+where you could have had 
+
+637
+00:42:28,599 --> 00:42:33,699
+nightmarish experiences and go, 
+okay, I would rather not do that
+
+638
+00:42:33,699 --> 00:42:36,099
+again. 
+So yeah we'll make me congruent 
+
+639
+00:42:36,099 --> 00:42:40,199
+to be in a saying just the 
+programming model gets so much 
+
+640
+00:42:40,599 --> 00:42:44,400
+easier for doing it. 
+In a way that is correct. 
+
+641
+00:42:44,400 --> 00:42:48,699
+Yeah, and you don't have to 
+worry about mutexes and 
+
+642
+00:42:48,699 --> 00:42:53,800
+semaphores or you know, locks 
+obviously we've been dealing 
+
+643
+00:42:53,800 --> 00:42:59,900
+with locks recently in our book 
+code but as an end zo user, in 
+
+644
+00:42:59,900 --> 00:43:04,500
+most cases, you just type zo Dot
+and then check your tab 
+
+645
+00:43:04,500 --> 00:43:10,800
+completion options and you'll 
+see for each par and just all of
+
+646
+00:43:10,800 --> 00:43:16,699
+these methods. 
+AIDs that match what you want to
+
+647
+00:43:16,699 --> 00:43:23,000
+do, it's not telling you like, 
+oh, this is an arrow or 
+
+648
+00:43:23,000 --> 00:43:27,400
+something, which is hard to 
+connect and you have a visceral 
+
+649
+00:43:27,400 --> 00:43:32,599
+understanding of it you know 
+more often than not you just 
+
+650
+00:43:32,599 --> 00:43:38,099
+typed and then type a word that 
+seems relevant to what you want 
+
+651
+00:43:38,099 --> 00:43:43,000
+to do and you might have to try 
+a few synonyms but Just type in 
+
+652
+00:43:43,000 --> 00:43:49,199
+par and then see what sort of 
+parallel operations come up, and
+
+653
+00:43:49,199 --> 00:43:53,900
+then you can check their type 
+signature and they're going to 
+
+654
+00:43:53,900 --> 00:43:56,500
+guide you. 
+So just cargo cult your way 
+
+655
+00:43:56,500 --> 00:44:01,099
+until your solution. 
+Well, so they alter how do you 
+
+656
+00:44:01,099 --> 00:44:03,300
+know I'm a fan of that? 
+You know, if I can get it to 
+
+657
+00:44:03,300 --> 00:44:08,300
+her, you alternative is that you
+have to understand the algebraic
+
+658
+00:44:08,300 --> 00:44:12,300
+laws that your thing needs to 
+abide by and then figure out how
+
+659
+00:44:12,400 --> 00:44:17,699
+How to assemble the algebraic 
+laws in the way that is correct 
+
+660
+00:44:17,699 --> 00:44:19,699
+for your. 
+It would seem like usability 
+
+661
+00:44:19,699 --> 00:44:22,099
+that kind of programmer 
+usability. 
+
+662
+00:44:22,400 --> 00:44:25,900
+Oh here's a goal of ours. 
+We want to be able to say take 
+
+663
+00:44:25,900 --> 00:44:29,699
+yours the object do.and. 
+Be able to guess your way to a 
+
+664
+00:44:29,699 --> 00:44:30,699
+solution. 
+Yeah. 
+
+665
+00:44:30,699 --> 00:44:36,000
+Rather than having to understand
+a huge amount of things in order
+
+666
+00:44:36,000 --> 00:44:40,000
+to figure out what you're going 
+to do next and addressing the 
+
+667
+00:44:40,008 --> 00:44:43,699
+cargo cult thing, I would say, 
+you know, that's when Copy paste
+
+668
+00:44:44,099 --> 00:44:45,900
+blocks of code to do. 
+Go. 
+
+669
+00:44:46,099 --> 00:44:47,199
+What you want? 
+Yeah. 
+
+670
+00:44:47,199 --> 00:44:50,300
+You say I don't know what this 
+is. 
+
+671
+00:44:50,400 --> 00:44:52,500
+Sure. 
+But there's a comment at the top
+
+672
+00:44:52,500 --> 00:44:55,000
+that says it. 
+Planes will literature. 
+
+673
+00:44:55,000 --> 00:44:57,300
+And I kneeled this Tower, right?
+Right. 
+
+674
+00:44:57,599 --> 00:44:58,500
+Yeah. 
+You're right. 
+
+675
+00:44:58,500 --> 00:44:59,300
+You're right. 
+No. 
+
+676
+00:44:59,300 --> 00:45:00,800
+That's not the cargo cult 
+things. 
+
+677
+00:45:00,800 --> 00:45:04,099
+Not a good example but somehow 
+just kind of I don't know. 
+
+678
+00:45:04,099 --> 00:45:11,800
+Fainting your way into FB int. 
+It's very Explorer friendly like
+
+679
+00:45:12,199 --> 00:45:15,099
+that. 
+It's there are cases where I 
+
+680
+00:45:15,099 --> 00:45:19,400
+need to jump over to the Zio 
+documentation site and try to 
+
+681
+00:45:19,400 --> 00:45:25,500
+look up, something very 
+particular, but it's a very 
+
+682
+00:45:25,500 --> 00:45:28,099
+different experience than some 
+of the alternative libraries 
+
+683
+00:45:28,099 --> 00:45:30,099
+I've used. 
+Where it's okay, you have to 
+
+684
+00:45:30,099 --> 00:45:34,099
+spend a week with the 
+documentation and then maybe you
+
+685
+00:45:34,099 --> 00:45:38,300
+can start writing some code, 
+it's no just drop into an 
+
+686
+00:45:38,300 --> 00:45:41,300
+editor. 
+That's got, you know, good Scala
+
+687
+00:45:42,199 --> 00:45:46,199
+Not understanding, you know, 
+whether it's vs code or IntelliJ
+
+688
+00:45:46,599 --> 00:45:51,400
+and just start exploring and 
+it's discoverable. 
+
+689
+00:45:51,500 --> 00:45:55,199
+And as far as the mathematics 
+of, I think some of the 
+
+690
+00:45:55,199 --> 00:46:02,500
+alternative approaches, are they
+basically say this is math? 
+
+691
+00:46:03,099 --> 00:46:06,400
+Just transcribed directly into 
+code. 
+
+692
+00:46:07,500 --> 00:46:10,599
+Have at it. 
+We're zo is built on math 
+
+693
+00:46:10,599 --> 00:46:16,599
+there's very solid underpinning 
+system isn't John single PhD in 
+
+694
+00:46:16,599 --> 00:46:19,699
+math or something I believe. 
+So John to go man. 
+
+695
+00:46:20,300 --> 00:46:23,000
+But zeros approaches. 
+Yes. 
+
+696
+00:46:23,000 --> 00:46:25,500
+Math is what makes all of this 
+work. 
+
+697
+00:46:26,099 --> 00:46:28,199
+You don't need to know or care 
+about that. 
+
+698
+00:46:28,199 --> 00:46:33,000
+Just if you really want to dive,
+you know, under the covers and 
+
+699
+00:46:33,000 --> 00:46:35,900
+start fiddling with that and 
+trying to make changes. 
+
+700
+00:46:35,900 --> 00:46:38,300
+You can do that. 
+But if you just Use this tool. 
+
+701
+00:46:38,800 --> 00:46:41,800
+You don't have to know, you 
+don't have to be a physicist, to
+
+702
+00:46:41,800 --> 00:46:43,500
+build something, just an 
+engineer. 
+
+703
+00:46:43,900 --> 00:46:48,099
+Yeah, yeah, right. 
+So, speaking of exploration, you
+
+704
+00:46:48,099 --> 00:46:56,400
+have considered the possibility 
+of doing a, like a recorded 
+
+705
+00:46:56,400 --> 00:46:59,400
+exploration or, you know, but 
+something that you're going to 
+
+706
+00:46:59,400 --> 00:47:03,000
+do online, where you play with 
+zo, code has that? 
+
+707
+00:47:03,099 --> 00:47:04,900
+I just dream twitch. 
+Yeah, livestream. 
+
+708
+00:47:04,900 --> 00:47:07,000
+Yeah, I've done a few twitch 
+streams. 
+
+709
+00:47:07,199 --> 00:47:12,599
+It's certainly low-quality at 
+this point. 
+
+710
+00:47:12,599 --> 00:47:15,199
+Sure. 
+But if but, I mean, I like the 
+
+711
+00:47:15,199 --> 00:47:18,300
+idea of somebody going in and 
+saying well I don't know what 
+
+712
+00:47:18,300 --> 00:47:22,000
+I'm doing here and I can kind of
+like poke at it and eventually 
+
+713
+00:47:22,000 --> 00:47:24,699
+get something to work. 
+I think that could be super 
+
+714
+00:47:25,099 --> 00:47:28,300
+careful. 
+Yeah I think the IDE driven 
+
+715
+00:47:28,300 --> 00:47:33,000
+development where you can 
+explore by just hitting .m M on 
+
+716
+00:47:33,000 --> 00:47:36,199
+something and there's a lot of 
+power to that and I think xia is
+
+717
+00:47:36,199 --> 00:47:39,699
+really optimized. 
+For that experience, whereas 
+
+718
+00:47:39,699 --> 00:47:42,800
+like it's one of the reasons why
+I don't think type classes are 
+
+719
+00:47:42,800 --> 00:47:48,199
+used at all and zo because you 
+lose that explore ability that 
+
+720
+00:47:48,199 --> 00:47:50,000
+dot completion. 
+Yeah. 
+
+721
+00:47:50,099 --> 00:47:53,400
+The the list of options that 
+come up in the world of type 
+
+722
+00:47:53,400 --> 00:47:57,599
+classes, the type classes and 
+implicit seu, just really don't 
+
+723
+00:47:57,699 --> 00:48:02,400
+have to bother with that. 
+You're just using plain old data
+
+724
+00:48:02,400 --> 00:48:08,800
+types and it's it, It's really 
+liberating. 
+
+725
+00:48:08,800 --> 00:48:13,800
+And, you know, some people might
+say that that's discarding. 
+
+726
+00:48:13,800 --> 00:48:17,300
+What makes Scala Scala, you 
+know, the implicit mechanism 
+
+727
+00:48:17,400 --> 00:48:19,400
+that's one of its defining 
+features. 
+
+728
+00:48:20,900 --> 00:48:24,500
+Or it's an experiment that maybe
+isn't applicable everywhere. 
+
+729
+00:48:24,900 --> 00:48:28,699
+Yeah. 
+And you can do so much without 
+
+730
+00:48:28,699 --> 00:48:35,400
+it, but Circling back to zo2 in 
+regards to naming all these 
+
+731
+00:48:35,400 --> 00:48:39,300
+operators. 
+Yes there have been really 
+
+732
+00:48:39,599 --> 00:48:45,400
+astounding fundamental changes 
+that they've made but then I 
+
+733
+00:48:45,408 --> 00:48:49,199
+think equally important is just 
+going through and renaming 
+
+734
+00:48:49,500 --> 00:48:55,699
+almost every single method. 
+Even the basic ones with this 
+
+735
+00:48:55,699 --> 00:48:57,800
+idea of usability in life. 
+Yes. 
+
+736
+00:48:58,199 --> 00:49:04,900
+Of If something was just an 
+apply method before now, in most
+
+737
+00:49:04,900 --> 00:49:09,099
+cases it that apply method might
+still be there but we also have 
+
+738
+00:49:09,099 --> 00:49:16,300
+a named variant of it where 
+because that is one thing that 
+
+739
+00:49:16,300 --> 00:49:19,599
+some people get tripped up on in
+the Scala world. 
+
+740
+00:49:19,599 --> 00:49:21,800
+Is how do you look these things 
+up? 
+
+741
+00:49:22,099 --> 00:49:28,099
+Yeah and apply. 
+It's so generic so things like 
+
+742
+00:49:28,099 --> 00:49:30,400
+apply. 
+Or fold. 
+
+743
+00:49:31,199 --> 00:49:34,000
+I was talking to John recently 
+and he was saying that he really
+
+744
+00:49:34,000 --> 00:49:36,800
+doesn't like fold. 
+He doesn't want to send people 
+
+745
+00:49:36,800 --> 00:49:41,900
+in that direction. 
+He wants them to instead because
+
+746
+00:49:41,900 --> 00:49:45,199
+with zero, if you use a fold, 
+you have to provide the behavior
+
+747
+00:49:45,199 --> 00:49:48,400
+for the are case and the success
+case, and you pass those both in
+
+748
+00:49:48,400 --> 00:49:52,300
+to fold and that's familiar to 
+some people. 
+
+749
+00:49:52,300 --> 00:49:58,099
+It's very it's a broad concept 
+but in zo, you should prefer to 
+
+750
+00:49:58,099 --> 00:50:02,400
+just say, all right on one line,
+we're going to You are catch 
+
+751
+00:50:02,400 --> 00:50:05,500
+errors and Define our Behavior 
+there. 
+
+752
+00:50:06,099 --> 00:50:09,800
+And then after that, we'll just 
+do a normal map call and that's 
+
+753
+00:50:09,800 --> 00:50:12,199
+going to apply to the success 
+value. 
+
+754
+00:50:12,699 --> 00:50:14,699
+And that's easier to think 
+about. 
+
+755
+00:50:15,199 --> 00:50:20,900
+I think it is much more direct 
+and it just Blends more granular
+
+756
+00:50:20,900 --> 00:50:23,099
+to which is what we're always 
+trying to do with functional 
+
+757
+00:50:23,099 --> 00:50:25,599
+programming. 
+What's the smallest little piece
+
+758
+00:50:25,800 --> 00:50:30,900
+and fold, can make sense to some
+people of you're taking. 
+
+759
+00:50:30,900 --> 00:50:34,099
+This one data structure and 
+you're turning it into a 
+
+760
+00:50:34,099 --> 00:50:36,599
+different one. 
+So you could say that's this 
+
+761
+00:50:36,599 --> 00:50:41,400
+abstract fold concept, but no 
+reason you can't have the fold 
+
+762
+00:50:41,400 --> 00:50:47,900
+and then have the more problem 
+domain oriented combinator's on 
+
+763
+00:50:47,900 --> 00:50:49,699
+top of that. 
+Yeah. 
+
+764
+00:50:49,699 --> 00:50:54,800
+And I think that is one of the 
+goals of Zo again, and I try to 
+
+765
+00:50:54,800 --> 00:50:59,599
+keep revisiting that sure that, 
+that's that question here is 
+
+766
+00:50:59,800 --> 00:51:04,900
+they want to solve Ones. 
+They don't want to transcribe 
+
+767
+00:51:04,900 --> 00:51:09,199
+clever ideas into code. 
+They want to give you all of 
+
+768
+00:51:09,199 --> 00:51:16,500
+these tools that map very 
+smoothly into whatever business 
+
+769
+00:51:16,500 --> 00:51:23,800
+problem you're solving. 
+And I think zo2 embodies that 
+
+770
+00:51:24,400 --> 00:51:29,199
+way more than zero one ever did 
+of just all the names have this 
+
+771
+00:51:29,199 --> 00:51:35,199
+unified approach. 
+And previously, you had Z 
+
+772
+00:51:35,199 --> 00:51:41,300
+managed and z0 + z streams and 
+their method names were similar.
+
+773
+00:51:41,300 --> 00:51:44,699
+But there were so many ways that
+they slightly diverged from each
+
+774
+00:51:44,699 --> 00:51:46,000
+other. 
+They were written by different 
+
+775
+00:51:46,000 --> 00:51:51,199
+developers separated play years.
+But now with zo2, we have these 
+
+776
+00:51:51,599 --> 00:51:59,400
+codified naming styles of if you
+have two variations of a method 
+
+777
+00:51:59,400 --> 00:52:05,300
+like for each and for Each par. 
+Previously that might have been 
+
+778
+00:52:05,300 --> 00:52:10,099
+par for each but now 
+everything's consistent. 
+
+779
+00:52:10,099 --> 00:52:12,900
+So yeah, and the problem with 
+that is going back to the dock 
+
+780
+00:52:12,900 --> 00:52:14,199
+completion. 
+Mmm. 
+
+781
+00:52:14,300 --> 00:52:18,000
+Yeah, if you had for each and 
+then par for each, those aren't 
+
+782
+00:52:18,000 --> 00:52:21,400
+anywhere close to each other and
+the alphabetical listing, but 
+
+783
+00:52:21,400 --> 00:52:26,599
+now everything gets more 
+narrowly. 
+
+784
+00:52:26,599 --> 00:52:30,099
+Defined the further you go into 
+the name. 
+
+785
+00:52:30,099 --> 00:52:34,500
+So if you're in the neighborhood
+of the method that Want. 
+
+786
+00:52:34,800 --> 00:52:38,800
+Then you can just look at the 
+suffix of each of these names 
+
+787
+00:52:38,800 --> 00:52:42,900
+and then decide. 
+OK. 4th or 4th par or for each 
+
+788
+00:52:42,900 --> 00:52:45,300
+part. 
+Discard, for when you don't care
+
+789
+00:52:45,300 --> 00:52:49,400
+about the return value, that's 
+really well-thought-out. 
+
+790
+00:52:49,400 --> 00:52:52,900
+And this is one of the things I 
+had an epiphany the other day. 
+
+791
+00:52:52,900 --> 00:52:59,800
+Why I like python so much and 
+it's because the developers the 
+
+792
+00:52:59,900 --> 00:53:02,599
+community or whatever they don't
+just get the first. 
+
+793
+00:53:02,599 --> 00:53:06,800
+They don't just take the The 
+first solution that they come up
+
+794
+00:53:06,800 --> 00:53:09,400
+with and say okay that's cast in
+stone forever. 
+
+795
+00:53:09,400 --> 00:53:14,900
+Now they keep trying and trying 
+and redoing it and not stopping 
+
+796
+00:53:14,900 --> 00:53:17,599
+until they get something that's 
+truly elegant. 
+
+797
+00:53:17,699 --> 00:53:22,500
+And so I really appreciate when 
+somebody does that and and able 
+
+798
+00:53:22,500 --> 00:53:25,500
+to have that evolvability. 
+Yeah, there's another piece of 
+
+799
+00:53:25,500 --> 00:53:29,000
+it that you worked on for zo2. 
+It was some of the Scala fix 
+
+800
+00:53:29,000 --> 00:53:30,500
+rules. 
+So maybe talk about some of 
+
+801
+00:53:30,500 --> 00:53:33,699
+those because I think that's an 
+important thing is like we You 
+
+802
+00:53:33,699 --> 00:53:37,900
+to support the evolvability as 
+people as this is otherwise you 
+
+803
+00:53:37,900 --> 00:53:43,099
+get stuck and you have this old 
+thing that's really crafty, but 
+
+804
+00:53:43,099 --> 00:53:46,000
+everybody has to use it because 
+that's hard where we stopped. 
+
+805
+00:53:46,099 --> 00:53:49,099
+It's too hard to evolve. 
+Yeah, yeah. 
+
+806
+00:53:49,099 --> 00:53:52,300
+So the the Scala fix Rule and we
+still have it and it's still 
+
+807
+00:53:52,300 --> 00:53:57,800
+solves some of the migration 
+pains and I think up until 
+
+808
+00:53:58,000 --> 00:54:05,400
+probably RC 3 or 4, it was 
+Whirring almost everything. 
+
+809
+00:54:05,800 --> 00:54:09,199
+But then in those last few 
+release candidates, the changes 
+
+810
+00:54:09,199 --> 00:54:17,300
+got even more significant and 
+Scala fix as impressive as it 
+
+811
+00:54:17,300 --> 00:54:24,199
+is, it is very limited in what 
+you can do in a single migration
+
+812
+00:54:24,599 --> 00:54:28,900
+pass or. 
+Yeah, because if you're going 
+
+813
+00:54:29,500 --> 00:54:36,500
+from version one to one point 
+one, Can only apply one scholar 
+
+814
+00:54:36,500 --> 00:54:40,300
+fix rule to that. 
+So you can't say, I want to run 
+
+815
+00:54:40,300 --> 00:54:44,199
+this update and then this update
+and then this update can't 
+
+816
+00:54:44,199 --> 00:54:46,599
+change them, you can't change 
+them, you can't compose these 
+
+817
+00:54:46,599 --> 00:54:48,900
+things together which is very 
+jarring if area under 
+
+818
+00:54:48,900 --> 00:54:50,199
+functional. 
+Yes. 
+
+819
+00:54:50,300 --> 00:54:54,800
+Yes. 
+And so you end up doing this 
+
+820
+00:54:54,900 --> 00:55:02,300
+like mutating in place of your 
+source code and we made so many 
+
+821
+00:55:02,300 --> 00:55:08,500
+changes but CO2, that for any 
+given piece of code, there might
+
+822
+00:55:08,500 --> 00:55:14,199
+be two or three updates that 
+need to be applied to that same 
+
+823
+00:55:14,199 --> 00:55:20,800
+token in your source and we're 
+still looking at that and trying
+
+824
+00:55:20,800 --> 00:55:25,199
+to improve it. 
+But yeah, we we kind of Reach 
+
+825
+00:55:25,199 --> 00:55:28,400
+the, the upper limit of what 
+Scala fix could do. 
+
+826
+00:55:28,599 --> 00:55:32,099
+And the only way to really work 
+around, that would have been to 
+
+827
+00:55:32,099 --> 00:55:42,599
+say, Okay, we have Scala 2.0 dot
+pre or something, and try to 
+
+828
+00:55:42,599 --> 00:55:46,800
+have people migrated through 
+multiple intermediate steps, 
+
+829
+00:55:46,800 --> 00:55:52,000
+just for the sake of Scala fix, 
+which, you know, could have 
+
+830
+00:55:52,199 --> 00:55:55,300
+solved more problems but would 
+have been very unfamiliar to 
+
+831
+00:55:55,300 --> 00:56:01,000
+people of, you know. 
+So is this actually 2.0 or it's 
+
+832
+00:56:01,000 --> 00:56:04,500
+this kind of weird, nether 
+state, Eight in between. 
+
+833
+00:56:04,900 --> 00:56:08,599
+So thankfully, we can still 
+iterate on the Scala fix rule, 
+
+834
+00:56:08,900 --> 00:56:12,599
+even now that to out of is out, 
+and we can make improvements to 
+
+835
+00:56:12,599 --> 00:56:19,199
+it, that can change separate 
+from 2.0 itself because people 
+
+836
+00:56:19,199 --> 00:56:22,199
+just download that from the web 
+anytime they run it. 
+
+837
+00:56:24,099 --> 00:56:28,400
+So it's not a Panacea. 
+Yeah, fortunately yeah, but 
+
+838
+00:56:28,400 --> 00:56:32,000
+something you help make better 
+for ask Allah to release and yes
+
+839
+00:56:32,099 --> 00:56:34,500
+it's a tool that people can And 
+use that they're migrating from 
+
+840
+00:56:34,500 --> 00:56:38,500
+01 to 0-2 and ease some of the 
+pain, not 100%. 
+
+841
+00:56:38,500 --> 00:56:41,199
+But yeah. 
+So that was one of the things I 
+
+842
+00:56:41,207 --> 00:56:47,099
+worked on for zo2. 
+But I think the more significant
+
+843
+00:56:48,099 --> 00:56:55,300
+thing that I worked on was zo 
+test for this release and it 
+
+844
+00:56:55,300 --> 00:57:00,199
+originally started as just a 
+little hackathon project of, 
+
+845
+00:57:00,199 --> 00:57:02,800
+hey, I think we can knock this 
+out in a couple days. 
+
+846
+00:57:02,800 --> 00:57:08,300
+We want to, we want to share 
+layers between rzo tests. 
+
+847
+00:57:09,400 --> 00:57:15,900
+And one of the interesting thing
+about each zo test is an 
+
+848
+00:57:15,900 --> 00:57:24,599
+instance of Zo itself and its A 
+little strange when you first 
+
+849
+00:57:24,599 --> 00:57:31,000
+encounter that but zo 
+applications once they're fully 
+
+850
+00:57:31,000 --> 00:57:33,099
+built. 
+That's just an instance of The 
+
+851
+00:57:33,099 --> 00:57:36,300
+Zo type, but then inside of 
+that, it's all these composed 
+
+852
+00:57:36,300 --> 00:57:39,699
+Zio's. 
+So you have this enormous tree 
+
+853
+00:57:40,099 --> 00:57:43,699
+of Zo types, but they all 
+compose into this one thing. 
+
+854
+00:57:43,699 --> 00:57:48,199
+And that's what lets you take, a
+fully-formed application and 
+
+855
+00:57:48,199 --> 00:57:49,900
+compose it with another 
+application. 
+
+856
+00:57:50,900 --> 00:57:55,800
+And in the test is made, it was 
+all the way down, it really is. 
+
+857
+00:57:56,800 --> 00:58:03,900
+And for our test, you have a 
+top-level spec file, but then 
+
+858
+00:58:04,300 --> 00:58:08,199
+you have a sweet inside of 
+there, which is a zero and then 
+
+859
+00:58:08,199 --> 00:58:12,900
+you have possibly more sweets 
+nested inside or just individual
+
+860
+00:58:12,900 --> 00:58:15,599
+test cases. 
+And these are all just more 
+
+861
+00:58:15,599 --> 00:58:20,199
+zeros. 
+And that means that all of the 
+
+862
+00:58:20,300 --> 00:58:23,699
+The cool Machinery, that is 
+available to you for the zo 
+
+863
+00:58:23,699 --> 00:58:27,300
+type. 
+He is available for your test 
+
+864
+00:58:27,900 --> 00:58:34,699
+and one of the things we wanted 
+to facilitate was layer sharing 
+
+865
+00:58:35,099 --> 00:58:41,199
+between separate test files. 
+So if you have some large 
+
+866
+00:58:41,199 --> 00:58:47,599
+database that might take 10 30 
+seconds to start up. 
+
+867
+00:58:47,599 --> 00:58:50,599
+So that's the reason for sharing
+is because it takes a long time 
+
+868
+00:58:50,599 --> 00:58:52,000
+to set up the layers. 
+Yeah. 
+
+869
+00:58:52,000 --> 00:58:55,800
+And some resource like test 
+containers Like you've done some
+
+870
+00:58:55,800 --> 00:58:59,500
+work with test containers and 
+CEO test and that's a good place
+
+871
+00:58:59,500 --> 00:59:00,599
+where they're definitely a 
+place. 
+
+872
+00:59:00,699 --> 00:59:03,300
+There are cases where you want 
+to share your test container 
+
+873
+00:59:03,300 --> 00:59:06,699
+across multiple tests and that 
+could be for. 
+
+874
+00:59:06,800 --> 00:59:10,099
+Yeah, the startup reasons or 
+maybe sequential like you want 
+
+875
+00:59:10,099 --> 00:59:14,000
+to run one database command and 
+then another database command 
+
+876
+00:59:14,000 --> 00:59:16,900
+and make sure that, you know, 
+things work as expected. 
+
+877
+00:59:16,900 --> 00:59:20,699
+Yeah, I could be for sequence, 
+efficiency, or just to be sure 
+
+878
+00:59:20,699 --> 00:59:23,900
+that your code really doesn't 
+interfere with yeah, other 
+
+879
+00:59:23,900 --> 00:59:28,500
+things. 
+And having one shared entity is 
+
+880
+00:59:28,500 --> 00:59:34,000
+a good way of checking that. 
+So yeah, it ended up being 
+
+881
+00:59:34,000 --> 00:59:36,400
+instead of two days. 
+I think it was more like six 
+
+882
+00:59:36,400 --> 00:59:42,300
+months before all was said and 
+done and a lot of that was 
+
+883
+00:59:42,500 --> 00:59:47,300
+interfacing with SBT in the way 
+that it expects test Frameworks 
+
+884
+00:59:47,300 --> 00:59:54,500
+to behave, which it was never 
+written for this style. 
+
+885
+00:59:54,599 --> 00:59:59,800
+I love computation you know it's
+much more object-oriented or 
+
+886
+00:59:59,800 --> 01:00:04,300
+imperative style test but you 
+also did something to speed up 
+
+887
+01:00:04,300 --> 01:00:07,599
+getting information back from 
+test. 
+
+888
+01:00:07,599 --> 01:00:11,699
+So that you could start what you
+wouldn't have to run everything 
+
+889
+01:00:11,699 --> 01:00:14,000
+before you got enough 
+information to go, I need to go 
+
+890
+01:00:14,000 --> 01:00:17,800
+fix that. 
+Yeah, so previously you would 
+
+891
+01:00:17,800 --> 01:00:22,900
+have this zo test, which is just
+a tree of other zo instances and
+
+892
+01:00:22,900 --> 01:00:25,199
+we would have to execute the 
+entire Tree. 
+
+893
+01:00:26,300 --> 01:00:31,000
+And then we would get the output
+in one big dump and for a small 
+
+894
+01:00:31,000 --> 01:00:35,199
+test file that would be fine. 
+But as you got into larger and 
+
+895
+01:00:35,199 --> 01:00:40,300
+larger tests, you might be 
+sitting there for 20 seconds, 
+
+896
+01:00:40,300 --> 01:00:44,800
+not seeing any output at all and
+just wondering because anything 
+
+897
+01:00:44,800 --> 01:00:47,199
+is actually executing, like, do 
+it. 
+
+898
+01:00:47,300 --> 01:00:49,599
+Do I understand? 
+This is your stuff. 
+
+899
+01:00:51,699 --> 01:00:57,599
+But we had to do that previously
+because zo maximally 
+
+900
+01:00:57,599 --> 01:01:06,900
+parallelizes every piece of that
+tree and for very kind of 
+
+901
+01:01:07,199 --> 01:01:09,800
+complex reasons that I don't 
+fully understand. 
+
+902
+01:01:09,800 --> 01:01:14,900
+I just take it as a given that 
+Adam and John of figured that 
+
+903
+01:01:14,900 --> 01:01:19,500
+all out. 
+Each sub tree within the tree, 
+
+904
+01:01:20,599 --> 01:01:24,800
+it can be executed in parallel 
+and it won't interfere. 
+
+905
+01:01:25,900 --> 01:01:30,300
+It's fine to do. 
+But if you're running everything
+
+906
+01:01:30,300 --> 01:01:35,900
+in parallel, and you start just 
+dumping the output naively, it 
+
+907
+01:01:35,900 --> 01:01:40,599
+doesn't really interlace and so 
+you can, it's completely jumbled
+
+908
+01:01:40,599 --> 01:01:44,400
+up. 
+So, what I worked on for this 
+
+909
+01:01:44,400 --> 01:01:49,400
+streaming output is taking 
+advantage of that tree 
+
+910
+01:01:49,400 --> 01:01:56,000
+structure. 
+You would, we had talked about a
+
+911
+01:01:56,000 --> 01:02:00,500
+Talking Stick kind of concept 
+that starts at the top of the 
+
+912
+01:02:00,500 --> 01:02:04,500
+tree and gets passed down to the
+children. 
+
+913
+01:02:05,000 --> 01:02:09,300
+And basically, every test that's
+executing is trying to grab the 
+
+914
+01:02:09,300 --> 01:02:12,099
+Talking Stick. 
+And if it's available at their 
+
+915
+01:02:12,099 --> 01:02:16,300
+level of the tree, then you're 
+allowed to print out. 
+
+916
+01:02:16,500 --> 01:02:22,400
+But if it's some sibling tree, 
+that is printing out right now, 
+
+917
+01:02:22,800 --> 01:02:27,199
+you can't print anything out, 
+you have to wait for everything 
+
+918
+01:02:27,300 --> 01:02:30,900
+in that other area of the tree 
+to finish. 
+
+919
+01:02:31,800 --> 01:02:35,500
+So what you do is you just queue
+up your output and send it up 
+
+920
+01:02:35,500 --> 01:02:39,199
+the tree and you just have to 
+recognize, we don't have 
+
+921
+01:02:39,199 --> 01:02:41,900
+permission now, there's other 
+computation happening. 
+
+922
+01:02:42,199 --> 01:02:47,800
+We're just going to pass it up 
+the line but Because of the tree
+
+923
+01:02:47,800 --> 01:02:51,400
+structure, everything just 
+funnels up. 
+
+924
+01:02:51,400 --> 01:02:58,900
+And as the bottom areas of the 
+tree complete, we know. 
+
+925
+01:02:58,900 --> 01:03:02,300
+Okay now that we've returned to 
+this parent layer, we are free 
+
+926
+01:03:02,300 --> 01:03:04,500
+to dump out everything from the 
+children. 
+
+927
+01:03:04,900 --> 01:03:16,699
+It's almost like an actor um 
+because I am hesitant to say yes
+
+928
+01:03:16,699 --> 01:03:20,500
+to that or another example of 
+thread confinement. 
+
+929
+01:03:20,900 --> 01:03:24,800
+It's almost like the top thing 
+is we have one quote, unquote 
+
+930
+01:03:24,800 --> 01:03:29,199
+thread, to send output and these
+things will come in as little 
+
+931
+01:03:29,199 --> 01:03:31,699
+packets. 
+It is certainly you're dealing 
+
+932
+01:03:31,699 --> 01:03:40,199
+with one resource which is the 
+console output and If, if you're
+
+933
+01:03:40,199 --> 01:03:46,900
+just principled about that, well
+it's easy to make sure that you 
+
+934
+01:03:46,900 --> 01:03:49,199
+can either go one of two 
+directions. 
+
+935
+01:03:49,199 --> 01:03:54,199
+You can say dump everything out 
+as soon as possible and you can 
+
+936
+01:03:54,199 --> 01:03:58,099
+get away with that. 
+If you fully qualify every piece
+
+937
+01:03:58,099 --> 01:04:01,800
+of output if you say what class 
+you're in, what's sweet your and
+
+938
+01:04:01,800 --> 01:04:04,099
+what sub sweet you're in, what 
+your testes knows. 
+
+939
+01:04:04,099 --> 01:04:07,599
+He's so you'll have maybe 80 
+characters of description 
+
+940
+01:04:07,599 --> 01:04:09,900
+before. 
+Actually get to your test 
+
+941
+01:04:09,900 --> 01:04:15,199
+assertion so you can do that. 
+There are test Frameworks that 
+
+942
+01:04:15,199 --> 01:04:18,199
+take that approach to just fully
+qualify everything and we can 
+
+943
+01:04:18,199 --> 01:04:22,199
+dump it out whenever yeah but 
+that can still make it hard to 
+
+944
+01:04:22,199 --> 01:04:25,000
+parse because now nothing is 
+grouped together. 
+
+945
+01:04:25,099 --> 01:04:29,599
+We're usually you care about 
+some subset of the test. 
+
+946
+01:04:29,599 --> 01:04:33,000
+That's probably what you're 
+focused on and those can just be
+
+947
+01:04:33,000 --> 01:04:36,400
+scattered anywhere amongst 
+hundreds of lines about put. 
+
+948
+01:04:37,400 --> 01:04:41,599
+So You can do that. 
+Or you can say, we're gonna just
+
+949
+01:04:41,900 --> 01:04:45,500
+wait until everything completes,
+make sure it's sorted out and 
+
+950
+01:04:45,500 --> 01:04:48,099
+then dump it out. 
+But you took the intermediate 
+
+951
+01:04:48,099 --> 01:04:48,900
+approach. 
+Yeah. 
+
+952
+01:04:48,900 --> 01:04:51,800
+We kind of did a hybrid approach
+of. 
+
+953
+01:04:52,300 --> 01:04:55,599
+Okay, we are going to queue 
+things up when it's necessary 
+
+954
+01:04:55,599 --> 01:04:59,800
+but also we're going to eagerly 
+dump stuff out as soon as it's 
+
+955
+01:04:59,800 --> 01:05:04,099
+available to us. 
+And that was one of those things
+
+956
+01:05:04,099 --> 01:05:09,500
+that just having an effect 
+system made it Easier to reason 
+
+957
+01:05:09,500 --> 01:05:14,699
+about we're printing to the 
+console is an effect and we can 
+
+958
+01:05:14,699 --> 01:05:18,800
+be very diligent about where 
+that happens. 
+
+959
+01:05:21,199 --> 01:05:25,900
+So, Z 0 itself, I think uses 
+zero test for its test, right? 
+
+960
+01:05:25,900 --> 01:05:28,800
+Yes. 
+So you have a large code base of
+
+961
+01:05:28,800 --> 01:05:35,199
+tests that you get to evolve the
+test system on And see how it 
+
+962
+01:05:35,199 --> 01:05:37,300
+how it impacts things. 
+Yes. 
+
+963
+01:05:37,300 --> 01:05:41,500
+Your changes might break 
+something, it was good and bad. 
+
+964
+01:05:41,500 --> 01:05:45,400
+You know, for one we have 
+thousands of tests they get run.
+
+965
+01:05:46,199 --> 01:05:51,500
+And so it's usually pretty 
+obvious if you've broken 
+
+966
+01:05:51,500 --> 01:05:58,800
+something, but if your misstep 
+was that you weren't actually 
+
+967
+01:05:58,800 --> 01:06:04,199
+reporting an error to SBT, well,
+Now, you might have broken, a 
+
+968
+01:06:04,207 --> 01:06:10,400
+lot of things, but your test 
+command still seems to work says
+
+969
+01:06:10,400 --> 01:06:13,099
+that it passed. 
+But that was just because you 
+
+970
+01:06:13,099 --> 01:06:15,500
+weren't actually digesting and 
+failures. 
+
+971
+01:06:15,500 --> 01:06:20,400
+You were just dropping them 
+somewhere along the way, and 
+
+972
+01:06:21,199 --> 01:06:27,699
+yeah. 
+So it It's hard when you're just
+
+973
+01:06:27,699 --> 01:06:32,800
+changing the ground beneath you 
+and especially because yo cross 
+
+974
+01:06:32,800 --> 01:06:39,900
+compiles to - and Scala JS and 
+then it can also run within J 
+
+975
+01:06:39,900 --> 01:06:42,500
+unit. 
+So there's all these different 
+
+976
+01:06:42,500 --> 01:06:47,400
+context and we would work on 
+something, build it out, it be 
+
+977
+01:06:47,400 --> 01:06:51,800
+working, great, and the jvm all 
+the different jvm versions, and 
+
+978
+01:06:51,800 --> 01:06:54,900
+then we'd realize, oh, no, this 
+is completely. 
+
+979
+01:06:55,099 --> 01:06:58,900
+Incompatible with what scholar 
+Jess needs to do with its single
+
+980
+01:06:58,900 --> 01:07:03,500
+threaded approach. 
+Have you gotten have? 
+
+981
+01:07:03,500 --> 01:07:07,099
+You heard much feedback about 
+your, you know, the revamped 
+
+982
+01:07:07,099 --> 01:07:11,199
+Scala test. 
+It's being used, nobody's 
+
+983
+01:07:11,199 --> 01:07:13,199
+complaining, but that's a good 
+sign. 
+
+984
+01:07:13,199 --> 01:07:15,099
+An open sore. 
+No, that's a good start, but 
+
+985
+01:07:15,099 --> 01:07:17,500
+it's like, it seems like some 
+people might go. 
+
+986
+01:07:17,500 --> 01:07:20,099
+Oh, wow, this is more responsive
+or something. 
+
+987
+01:07:20,900 --> 01:07:26,300
+Well, I think The unfortunate 
+reality is a lot of times the 
+
+988
+01:07:27,300 --> 01:07:30,800
+the nice experience you have you
+just quietly say to yourself and
+
+989
+01:07:30,800 --> 01:07:33,599
+your office that way. 
+Oh cool. 
+
+990
+01:07:33,699 --> 01:07:36,699
+And you move on with your day 
+it's only when there's a problem
+
+991
+01:07:36,699 --> 01:07:40,800
+that you file a ticket or get on
+the Discord and make some noise 
+
+992
+01:07:40,800 --> 01:07:42,699
+about it, just fine. 
+I don't begrudge. 
+
+993
+01:07:42,699 --> 01:07:47,800
+People are ya doing so, what's 
+your favorite new scholar? 
+
+994
+01:07:47,800 --> 01:07:51,699
+Three feature features. 
+Anyway, okay, there's our turn. 
+
+995
+01:07:53,099 --> 01:07:57,599
+I think we all ready. 
+Talk just briefly referenced it 
+
+996
+01:07:57,599 --> 01:08:02,900
+with the the sum and product 
+types which to avoid using the 
+
+997
+01:08:02,900 --> 01:08:05,400
+jargon. 
+It's just it's ands and ORS 
+
+998
+01:08:05,400 --> 01:08:06,900
+right? 
+For your types. 
+
+999
+01:08:07,400 --> 01:08:14,699
+And I think it's such a good fit
+for Zo not, not to bring 
+
+1000
+01:08:14,699 --> 01:08:18,899
+everything back to Z 0. 
+But it lets you describe your 
+
+1001
+01:08:18,899 --> 01:08:23,198
+computations where instead of 
+having to put all of your 
+
+1002
+01:08:23,198 --> 01:08:30,000
+dependencies in some larger, 
+super object that contains all 
+
+1003
+01:08:30,000 --> 01:08:33,800
+of them or extends, all of those
+traits. 
+
+1004
+01:08:34,198 --> 01:08:39,300
+You just say, I need a user 
+service and a messaging service.
+
+1005
+01:08:40,000 --> 01:08:44,698
+And a database service. 
+And that is what you see in your
+
+1006
+01:08:44,698 --> 01:08:50,500
+type system is just this and 
+this and this and which is a 
+
+1007
+01:08:50,500 --> 01:08:53,399
+product type. 
+And yeah, nice features and 
+
+1008
+01:08:53,399 --> 01:08:54,100
+Scarlett. 
+Three. 
+
+1009
+01:08:54,300 --> 01:08:56,500
+Yeah. 
+So you don't have to try to come
+
+1010
+01:08:56,500 --> 01:09:02,300
+up with this contorted name that
+covers all of those, your name 
+
+1011
+01:09:02,300 --> 01:09:07,500
+would likely be user service and
+database service and, you know, 
+
+1012
+01:09:07,500 --> 01:09:11,198
+so yeah, to be clear Yeah, where
+is Scott? 
+
+1013
+01:09:11,198 --> 01:09:14,800
+There's just like I will create 
+a type without a name that is 
+
+1014
+01:09:14,800 --> 01:09:17,600
+those types of things. 
+Because how many times do you 
+
+1015
+01:09:17,600 --> 01:09:23,100
+have to create a new class just 
+to satisfy some need? 
+
+1016
+01:09:23,100 --> 01:09:25,198
+And you'll never use it again. 
+Hmm. 
+
+1017
+01:09:25,300 --> 01:09:26,899
+So I don't even care about its 
+name. 
+
+1018
+01:09:26,899 --> 01:09:29,899
+No yeah it's what you do but I 
+have to come up with a name now 
+
+1019
+01:09:29,899 --> 01:09:33,800
+you know and it's like it uses 
+up your cognitive abilities when
+
+1020
+01:09:33,800 --> 01:09:36,899
+the names just get so long. 
+And oh yeah and if you do Jam 
+
+1021
+01:09:36,899 --> 01:09:39,300
+them all into this you know, 200
+line. 
+
+1022
+01:09:39,899 --> 01:09:44,698
+Name you can't piecemeal provide
+some of them. 
+
+1023
+01:09:44,698 --> 01:09:47,899
+Yeah. 
+When you can do, when the types 
+
+1024
+01:09:47,899 --> 01:09:52,600
+are just anded together, you can
+say, all right, at this level of
+
+1025
+01:09:52,600 --> 01:09:56,699
+our application, I'm going to 
+plug in these two pieces and 
+
+1026
+01:09:56,699 --> 01:10:00,500
+that's going to leave for 
+remaining types that I will pass
+
+1027
+01:10:00,500 --> 01:10:03,800
+in at a higher point in the 
+application. 
+
+1028
+01:10:04,300 --> 01:10:09,300
+And it works in the the mirror 
+image of that. 
+
+1029
+01:10:09,399 --> 01:10:15,500
+That is the oars, and again, 
+that fits really well with zo 
+
+1030
+01:10:15,500 --> 01:10:21,500
+for your are Channel, that's 
+saying, you might fail with a 
+
+1031
+01:10:21,699 --> 01:10:29,000
+user, not found error or an 
+insufficient funds or an illegal
+
+1032
+01:10:29,000 --> 01:10:31,800
+argument. 
+Things that are really disjoint,
+
+1033
+01:10:32,000 --> 01:10:34,899
+yeah, to create a new class to 
+represent, them would just be 
+
+1034
+01:10:34,899 --> 01:10:38,699
+mad. 
+Yes, so instead you just say, 
+
+1035
+01:10:38,699 --> 01:10:41,600
+these are the Possibilities. 
+We know it's going to be one of 
+
+1036
+01:10:41,600 --> 01:10:45,000
+them. 
+And again, you can handle as 
+
+1037
+01:10:45,000 --> 01:10:49,600
+many as you care to, at any 
+level of the application, you 
+
+1038
+01:10:49,600 --> 01:10:54,000
+can say, all right, here we're 
+going to handle are insufficient
+
+1039
+01:10:54,000 --> 01:10:57,899
+funds are and we're gonna check 
+some other account try to, you 
+
+1040
+01:10:57,899 --> 01:11:01,199
+know, get resources from 
+elsewhere that Co still make 
+
+1041
+01:11:01,199 --> 01:11:05,199
+sure that you have them all. 
+Yes, because anything that you 
+
+1042
+01:11:05,199 --> 01:11:09,199
+don't handle that's going to be 
+sitting in your remaining. 
+
+1043
+01:11:09,399 --> 01:11:13,199
+Meaning are channel so that will
+be passed along. 
+
+1044
+01:11:13,300 --> 01:11:17,600
+And then maybe at the end of the
+world, you have to handle your 
+
+1045
+01:11:18,199 --> 01:11:21,300
+legal argument or a legal state 
+or something. 
+
+1046
+01:11:21,300 --> 01:11:24,399
+Where okay, we can't actually 
+recover from this, we just need 
+
+1047
+01:11:24,399 --> 01:11:27,600
+to dump it out. 
+Tell them this blew up. 
+
+1048
+01:11:27,600 --> 01:11:32,000
+There's nothing we could do and 
+yeah. 
+
+1049
+01:11:32,000 --> 01:11:37,000
+So if I'm giving my, my one 
+favorite scholar three feature, 
+
+1050
+01:11:37,000 --> 01:11:43,399
+it's ands and ORS for types. 
+there's there's plenty of other 
+
+1051
+01:11:44,300 --> 01:11:49,300
+interesting things and the 
+macros are all we reworked and 
+
+1052
+01:11:50,600 --> 01:11:58,800
+kitten Alexander, you know, off 
+he They are doing very awesome 
+
+1053
+01:11:58,800 --> 01:12:04,300
+work with that but that's not 
+really the space that I operate 
+
+1054
+01:12:04,300 --> 01:12:12,199
+in and just day-to-day any 
+single action that you're trying
+
+1055
+01:12:12,199 --> 01:12:19,500
+to perform the ands and ORS. 
+Can very quickly just come to 
+
+1056
+01:12:19,500 --> 01:12:22,899
+your assistance and then the 
+compile errors. 
+
+1057
+01:12:22,899 --> 01:12:27,399
+Also get really nice where as 
+we're talking about Those types 
+
+1058
+01:12:27,399 --> 01:12:30,600
+that would encapsulate a bunch 
+of and odorous types. 
+
+1059
+01:12:31,399 --> 01:12:33,500
+In that case, you don't get a 
+nice air mattresses. 
+
+1060
+01:12:33,500 --> 01:12:38,500
+It says, oh, I need a foo in a 
+bar and you only gave me a foo. 
+
+1061
+01:12:38,500 --> 01:12:41,100
+You also need to give me a bar. 
+The error message is that you 
+
+1062
+01:12:41,100 --> 01:12:46,000
+get are so nice with the norms. 
+And again, if you have your 
+
+1063
+01:12:46,000 --> 01:12:49,000
+different error possibilities 
+where previously they were all 
+
+1064
+01:12:49,000 --> 01:12:52,899
+just being boiled down to, okay,
+there's a throwable resident 
+
+1065
+01:12:52,899 --> 01:12:55,699
+fail with the throwable. 
+Yeah, you have no knowledge of 
+
+1066
+01:12:55,699 --> 01:12:59,600
+what but in what kind of durable
+it is that you need to deal 
+
+1067
+01:12:59,600 --> 01:13:02,100
+with. 
+So if you were handling, three 
+
+1068
+01:13:02,100 --> 01:13:08,300
+are situations previously that 
+we're all you took a throwable 
+
+1069
+01:13:08,300 --> 01:13:11,199
+you pattern matched on it. 
+You handle three cases. 
+
+1070
+01:13:12,000 --> 01:13:15,800
+But then you change your code 
+and add it in a fourth case that
+
+1071
+01:13:15,800 --> 01:13:18,100
+was also a throwable, you have 
+no idea. 
+
+1072
+01:13:18,100 --> 01:13:20,800
+That is not exhaustive that your
+code is not aghast and nothing 
+
+1073
+01:13:20,800 --> 01:13:23,399
+alerts. 
+You to that fact and maybe 
+
+1074
+01:13:23,399 --> 01:13:26,000
+something that you could have 
+handled at this layer. 
+
+1075
+01:13:26,899 --> 01:13:31,199
+Ends up going all the way up to 
+your application Level and 
+
+1076
+01:13:31,199 --> 01:13:35,100
+failing like a null pointer 
+exception, for example sure. 
+
+1077
+01:13:35,600 --> 01:13:37,699
+But aren't those the easiest 
+thing to solve. 
+
+1078
+01:13:39,100 --> 01:13:41,500
+Yeah. 
+You know, you see it in your 
+
+1079
+01:13:41,500 --> 01:13:46,500
+logs and production so I feel 
+like I'm now at the point where 
+
+1080
+01:13:46,500 --> 01:13:51,000
+you guys were when we were just 
+starting this book in terms of 
+
+1081
+01:13:51,300 --> 01:13:54,899
+oh I think I'm starting to get 
+the way zo was and I think you 
+
+1082
+01:13:54,899 --> 01:13:57,800
+guys were kind And of there at 
+that point. 
+
+1083
+01:13:57,800 --> 01:14:01,000
+And now I'm starting to see it, 
+but it feels like I still have a
+
+1084
+01:14:01,008 --> 01:14:05,399
+lot of catching up to do. 
+It's been a journey. 
+
+1085
+01:14:05,500 --> 01:14:07,800
+Oh yeah. 
+It's that house. 
+
+1086
+01:14:07,899 --> 01:14:12,399
+I very much changed how I think 
+about building programs and 
+
+1087
+01:14:12,600 --> 01:14:15,800
+testing programs. 
+Yeah, was the there. 
+
+1088
+01:14:15,800 --> 01:14:19,300
+So there's a lot of things that 
+are how I modeled data. 
+
+1089
+01:14:19,399 --> 01:14:23,399
+Yeah, yeah. 
+It's It's fascinating. 
+
+1090
+01:14:23,600 --> 01:14:28,399
+Yeah, being able to just 
+radically change that The 
+
+1091
+01:14:28,399 --> 01:14:32,399
+behavior of your application 
+because you can wrap Behavior 
+
+1092
+01:14:32,500 --> 01:14:37,300
+around an existing zo instance, 
+you can do stuff like add 
+
+1093
+01:14:37,300 --> 01:14:42,899
+logging or timing actions, 
+that's something. 
+
+1094
+01:14:43,199 --> 01:14:47,699
+Previously, you would have to 
+Cobble together a dozen lines of
+
+1095
+01:14:47,699 --> 01:14:51,699
+timing because just what you do 
+as a programmer and yeah every 
+
+1096
+01:14:51,699 --> 01:14:56,899
+single time it was a small wheel
+but you were Reinventing it you 
+
+1097
+01:14:56,899 --> 01:14:59,399
+have to stop what? 
+We were doing and think about 
+
+1098
+01:14:59,399 --> 01:15:04,399
+something else for a while. 
+Yeah and now with cou just tack 
+
+1099
+01:15:04,399 --> 01:15:09,000
+on a DOT timed or A.D bug or a 
+DOT debug, if you just want to 
+
+1100
+01:15:09,008 --> 01:15:14,399
+retreat for now the alpha. 
+Well and I do find this idea of 
+
+1101
+01:15:14,399 --> 01:15:16,800
+being able to say okay I have 
+everything set up now. 
+
+1102
+01:15:16,800 --> 01:15:20,300
+I'll do this and I'll look for 
+some parallel way to do it. 
+
+1103
+01:15:20,800 --> 01:15:25,800
+I mean without having to go oh 
+wait now we have to re-architect
+
+1104
+01:15:25,800 --> 01:15:30,699
+the entire program in. 
+Order to support concurrency 
+
+1105
+01:15:31,300 --> 01:15:34,199
+which is, yeah, the traditional 
+way of doing it. 
+
+1106
+01:15:34,300 --> 01:15:40,600
+And is there a I'm, you know, 
+the the what color is your 
+
+1107
+01:15:40,600 --> 01:15:45,199
+function problem where you like 
+you have to say oh this is an 
+
+1108
+01:15:45,199 --> 01:15:48,199
+async function and then when I 
+call it I have to say a way I 
+
+1109
+01:15:48,207 --> 01:15:51,500
+have to do special thing. 
+It seems like I mean, are there 
+
+1110
+01:15:51,500 --> 01:15:55,100
+things like that and zero or is 
+it just transparent everywhere 
+
+1111
+01:15:55,199 --> 01:16:00,800
+if it had the asynchronous is 
+Spirit, if that is just handled.
+
+1112
+01:16:01,399 --> 01:16:06,300
+And now, One of the other main 
+features of zo2, I should be 
+
+1113
+01:16:06,300 --> 01:16:09,300
+sure to mention is the automatic
+blocking. 
+
+1114
+01:16:10,500 --> 01:16:15,399
+So historically, if you have 
+blocking code, it's on you as 
+
+1115
+01:16:15,399 --> 01:16:20,899
+the developer to flag that and 
+handle it on the right thread 
+
+1116
+01:16:20,899 --> 01:16:24,500
+pool. 
+You have to indicate that now 
+
+1117
+01:16:24,500 --> 01:16:29,500
+with the new runtime system and 
+all this behind the six was 
+
+1118
+01:16:29,500 --> 01:16:31,399
+created during the release 
+candidate. 
+
+1119
+01:16:31,399 --> 01:16:34,899
+Yeah. 
+Now It is intelligent enough to 
+
+1120
+01:16:34,899 --> 01:16:38,000
+see, okay? 
+Is this long-running process 
+
+1121
+01:16:38,000 --> 01:16:41,800
+that you're executing? 
+Is it actually executing and 
+
+1122
+01:16:41,800 --> 01:16:45,000
+making any sort of progress or 
+is it just sitting still? 
+
+1123
+01:16:45,500 --> 01:16:49,399
+And once a certain amount of 
+time passes and this is 
+
+1124
+01:16:49,399 --> 01:16:54,199
+something you can configure is 
+how how long it waits. 
+
+1125
+01:16:54,199 --> 01:16:57,699
+Yeah. 
+But once it identifies that it 
+
+1126
+01:16:57,699 --> 01:17:00,500
+says oh you are actually a 
+blocking call. 
+
+1127
+01:17:00,500 --> 01:17:03,000
+We're gonna send you over to 
+this other thread. 
+
+1128
+01:17:03,300 --> 01:17:07,600
+Pool where you can block and 
+wait and not interfere with the 
+
+1129
+01:17:07,600 --> 01:17:13,000
+rest of the application. 
+So it turns it from a kohring 
+
+1130
+01:17:13,199 --> 01:17:15,100
+coroutine called to a thread 
+call. 
+
+1131
+01:17:18,500 --> 01:17:20,500
+The actual implementation, 
+right? 
+
+1132
+01:17:20,600 --> 01:17:22,699
+It does the right thing 
+magically. 
+
+1133
+01:17:24,800 --> 01:17:28,300
+I won't try to answer that. 
+He okay, I'm not going to give 
+
+1134
+01:17:28,300 --> 01:17:32,199
+the definitive statement or are.
+Yeah, I will just say it's a 
+
+1135
+01:17:32,207 --> 01:17:39,600
+huge part of your brain that you
+don't have to dedicate to that 
+
+1136
+01:17:39,600 --> 01:17:44,699
+problem. 
+Now, where you might be just a 
+
+1137
+01:17:44,699 --> 01:17:51,300
+really Advanced experienced 
+developer where, you know, every
+
+1138
+01:17:51,300 --> 01:17:58,699
+possible call that can block in 
+your domain and if you're at 
+
+1139
+01:17:58,699 --> 01:18:03,800
+your best, you can recognize 
+those and properly, categorize 
+
+1140
+01:18:03,800 --> 01:18:06,000
+them. 
+But on a bad day, maybe not on a
+
+1141
+01:18:06,000 --> 01:18:09,199
+bad day. 
+You're focused on other things. 
+
+1142
+01:18:09,199 --> 01:18:12,199
+You, yeah, you had a frustrating
+meeting. 
+
+1143
+01:18:12,600 --> 01:18:16,899
+The amount of focus you have to 
+have to look at every single 
+
+1144
+01:18:16,899 --> 01:18:21,600
+step and make sure that it works
+in a concurrent situations. 
+
+1145
+01:18:21,600 --> 01:18:24,100
+Don't want to have to think 
+about resources anymore. 
+
+1146
+01:18:24,500 --> 01:18:27,500
+Hmm I just want to imagine that 
+I have enough. 
+
+1147
+01:18:27,699 --> 01:18:30,800
+Yeah ways and we probably should
+have led with that feature 
+
+1148
+01:18:30,800 --> 01:18:32,800
+because that really is 
+impressive. 
+
+1149
+01:18:32,800 --> 01:18:35,699
+Yes, another related one which 
+is the automatic research 
+
+1150
+01:18:35,699 --> 01:18:39,899
+management which is in xia was a
+new addition zero-two somewhere 
+
+1151
+01:18:39,899 --> 01:18:45,300
+in the rcz having scope as Part 
+of your environment and I have 
+
+1152
+01:18:45,300 --> 01:18:49,500
+not fully explored that yet, I 
+just know it. 
+
+1153
+01:18:51,000 --> 01:18:54,699
+It's yet another thing that is 
+now, codified in our types and 
+
+1154
+01:18:54,699 --> 01:18:59,300
+it's in the environment, which 
+gives us much more control over 
+
+1155
+01:18:59,300 --> 01:19:01,399
+it. 
+And so you're saying the memory 
+
+1156
+01:19:01,399 --> 01:19:03,899
+management can be controlled 
+statically rather than 
+
+1157
+01:19:03,899 --> 01:19:07,000
+dynamically. 
+I don't know if I did a memory 
+
+1158
+01:19:07,000 --> 01:19:09,600
+management. 
+It's really about resources that
+
+1159
+01:19:09,600 --> 01:19:11,800
+you open and close. 
+Oh no resources. 
+
+1160
+01:19:11,800 --> 01:19:14,600
+Okay not just me. 
+This is z managed went away. 
+
+1161
+01:19:14,600 --> 01:19:20,600
+Okay, so yeah, so we 
+incorporated into the now. 
+
+1162
+01:19:20,899 --> 01:19:22,699
+Just being part of the 
+environment. 
+
+1163
+01:19:22,800 --> 01:19:26,500
+I see The Interpreter now has 
+knowledge of opening and closing
+
+1164
+01:19:26,500 --> 01:19:34,199
+resources and that's a good one 
+solves or at least attempts to 
+
+1165
+01:19:34,199 --> 01:19:38,899
+solve the issue of. 
+We want this tool to be usable 
+
+1166
+01:19:38,899 --> 01:19:43,500
+by people of nearly all skill 
+levels. 
+
+1167
+01:19:44,899 --> 01:19:48,800
+I don't know if it's your first 
+day ever, writing a line of 
+
+1168
+01:19:48,800 --> 01:19:53,399
+code. it's probably still going 
+to be a bit of an uphill climb 
+
+1169
+01:19:53,399 --> 01:19:58,000
+for you, but the idea is you'll 
+be able to onboard new team 
+
+1170
+01:19:58,000 --> 01:20:02,500
+members that are just out of 
+college or relatively early in 
+
+1171
+01:20:02,500 --> 01:20:07,199
+their software career and 
+They've been working in a 
+
+1172
+01:20:07,207 --> 01:20:12,100
+language where they don't care 
+about blocking or in the domain 
+
+1173
+01:20:12,100 --> 01:20:19,100
+where they don't care about that
+and they can basically just 
+
+1174
+01:20:19,100 --> 01:20:24,699
+start writing code and have the 
+blocking managed for them. 
+
+1175
+01:20:25,199 --> 01:20:30,100
+And maybe in the extreme cases, 
+where you need very fine-grained
+
+1176
+01:20:30,100 --> 01:20:37,899
+control, you might still have to
+take over. but, For most cases, 
+
+1177
+01:20:38,199 --> 01:20:40,600
+you just use the operators, you 
+want. 
+
+1178
+01:20:40,699 --> 01:20:45,399
+And if something's blocking let 
+the combined experience and all 
+
+1179
+01:20:45,399 --> 01:20:51,300
+the thousands of person hours 
+that have gone into Z 0 and its 
+
+1180
+01:20:51,300 --> 01:20:56,399
+runtime manage that for, you 
+know, because it's it's always 
+
+1181
+01:20:56,399 --> 01:20:58,500
+working at the best of its 
+ability. 
+
+1182
+01:20:58,800 --> 01:21:03,699
+It doesn't have an off day. 
+Remember way way back, early 
+
+1183
+01:21:03,699 --> 01:21:07,600
+Resource Management things Um, 
+writing and see. 
+
+1184
+01:21:07,800 --> 01:21:10,899
+And I was just like, well, I 
+want to read the file. 
+
+1185
+01:21:10,899 --> 01:21:13,699
+So I got open it. 
+Now you can read it and it's 
+
+1186
+01:21:13,699 --> 01:21:16,199
+like and then the program will 
+land. 
+
+1187
+01:21:16,199 --> 01:21:20,300
+So, and I still look, you know, 
+I'm going, I think the operating
+
+1188
+01:21:20,300 --> 01:21:23,300
+system eventually goes and 
+cleans up the open file handles,
+
+1189
+01:21:23,300 --> 01:21:25,500
+right? 
+Doesn't it, I don't remember. 
+
+1190
+01:21:25,500 --> 01:21:28,800
+Well, maybe he didn't back then,
+I have no idea that little piece
+
+1191
+01:21:28,800 --> 01:21:34,199
+of code, instead of being this 
+thing that you can now drop into
+
+1192
+01:21:34,199 --> 01:21:38,300
+a larger application. 
+It's this cursed piece. 
+
+1193
+01:21:38,399 --> 01:21:43,600
+If you do put that into a large 
+code base, eventually you're 
+
+1194
+01:21:43,600 --> 01:21:50,199
+starved of resources because you
+just file handles, you meant it 
+
+1195
+01:21:50,199 --> 01:21:54,899
+to be executed as a script and 
+then disappear and we'll even 
+
+1196
+01:21:54,899 --> 01:21:56,699
+was the script. 
+I don't know that it wasn't 
+
+1197
+01:21:56,699 --> 01:21:57,899
+screwing things up. 
+Yeah. 
+
+1198
+01:21:57,899 --> 01:21:59,699
+Right. 
+You had it was just like, and 
+
+1199
+01:21:59,699 --> 01:22:02,399
+memory allocation. 
+It was really just a very 
+
+1200
+01:22:02,399 --> 01:22:05,399
+narrow, I guess, you could 
+almost say selfish. 
+
+1201
+01:22:06,000 --> 01:22:11,000
+It look at and I now since seen 
+it in other young programmers, 
+
+1202
+01:22:11,000 --> 01:22:14,800
+it's like, well, it works. 
+Stop complaining, you old 
+
+1203
+01:22:15,100 --> 01:22:18,800
+so-and-so. 
+It's selfish isolated code 
+
+1204
+01:22:18,899 --> 01:22:23,199
+versus something that is Team 
+friendly and that you can just 
+
+1205
+01:22:23,199 --> 01:22:26,000
+say, all right, I spent a couple
+hours on this. 
+
+1206
+01:22:27,000 --> 01:22:32,800
+I can put that into practice or 
+just drop it in to this larger 
+
+1207
+01:22:32,800 --> 01:22:35,699
+project and actually take 
+advantage of that. 
+
+1208
+01:22:35,899 --> 01:22:39,100
+Rather than oh that was just 
+learned time it solved. 
+
+1209
+01:22:39,100 --> 01:22:42,600
+This one thing and is not 
+appropriate anywhere else. 
+
+1210
+01:22:42,600 --> 01:22:47,300
+Zo2 fewer foot guns. 
+Yeah. 
+
+1211
+01:22:47,399 --> 01:22:50,100
+Far fewer. 
+He keeps the foot guns. 
+
+1212
+01:22:50,100 --> 01:22:51,600
+Locked in a cabinet. 
+That's right. 
+
+1213
+01:22:52,500 --> 01:22:55,500
+Yeah, you have to, you have to 
+go put in the code. 
+
+1214
+01:22:55,500 --> 01:22:57,399
+Yeah, get them out. 
+Load them. 
+
+1215
+01:22:57,899 --> 01:23:02,199
+Yeah, you must be this tall to 
+you just begun. 
+
+1216
+01:23:02,199 --> 01:23:05,800
+Yeah, if you want to make an 
+unsafe call and zo2, it's 
+
+1217
+01:23:06,399 --> 01:23:08,899
+Outrageous. 
+How many times you have to write
+
+1218
+01:23:08,899 --> 01:23:12,600
+the word unsafe? 
+Now I think it's I think it's 
+
+1219
+01:23:12,600 --> 01:23:19,600
+four separate times. 
+It's like unsafe dot unsafe and 
+
+1220
+01:23:19,600 --> 01:23:24,600
+then run time unsafe, right? 
+Because I'm psyching, you know, 
+
+1221
+01:23:24,600 --> 01:23:28,199
+at the time I thought you know, 
+I did the thing that I saw in 
+
+1222
+01:23:28,199 --> 01:23:32,399
+the instructions, it worked 
+there wasn't any flag that was 
+
+1223
+01:23:32,399 --> 01:23:37,600
+saying, but if I had to write 
+unsafe at all, All it's like oh 
+
+1224
+01:23:37,699 --> 01:23:41,300
+I'm not sure, this feels unsafe,
+it's a yeah. 
+
+1225
+01:23:41,300 --> 01:23:44,100
+I know I'm not that comfortable 
+with this for some reason. 
+
+1226
+01:23:44,300 --> 01:23:46,899
+Maybe it's that word. 
+Yeah. 
+
+1227
+01:23:47,000 --> 01:23:53,699
+So to have that I really like 
+the self-documenting names of 
+
+1228
+01:23:53,699 --> 01:23:56,800
+these things. 
+That's to me that's that could 
+
+1229
+01:23:56,800 --> 01:24:00,800
+be a whole study for computer 
+programming in general. 
+
+1230
+01:24:00,800 --> 01:24:04,699
+So they just naming things so 
+that they're look up a bubble. 
+
+1231
+01:24:04,699 --> 01:24:08,800
+They show up with the It's there
+in the you know same regions. 
+
+1232
+01:24:08,800 --> 01:24:12,000
+You are actually comparing 
+things all that that's 
+
+1233
+01:24:12,000 --> 01:24:15,100
+brilliant. 
+Some people might think it's a 
+
+1234
+01:24:15,100 --> 01:24:20,600
+trivial detail and it's not 
+going to make a big difference 
+
+1235
+01:24:20,600 --> 01:24:26,000
+at the end of the day, but I 
+think it drastically changes. 
+
+1236
+01:24:26,000 --> 01:24:30,000
+How many people have a good 
+first experience? 
+
+1237
+01:24:30,100 --> 01:24:33,600
+And think oh, okay. 
+This is something I can use 
+
+1238
+01:24:33,600 --> 01:24:35,699
+rather than I'm not good enough 
+for. 
+
+1239
+01:24:35,800 --> 01:24:41,699
+Or this, I need to just go back 
+to the quote, unquote, dumb 
+
+1240
+01:24:41,699 --> 01:24:45,199
+style of programming because I'm
+not guarantee of mixing, get 
+
+1241
+01:24:45,199 --> 01:24:48,000
+something to work there. 
+But here, it looks like I have 
+
+1242
+01:24:48,000 --> 01:24:51,600
+to learn this Bast have to learn
+functional and I have to learn 
+
+1243
+01:24:51,600 --> 01:24:54,300
+this. 
+Vast array of classes are 
+
+1244
+01:24:54,300 --> 01:24:58,399
+category Theory or all this 
+stuff and it's just actually 
+
+1245
+01:24:58,399 --> 01:25:01,399
+have to write some code at some 
+point and I don't see where that
+
+1246
+01:25:01,399 --> 01:25:04,800
+happens in this situation. 
+I mean, I've had this feeling 
+
+1247
+01:25:04,800 --> 01:25:10,600
+when looking at this So yeah. 
+But on that note it seems like 
+
+1248
+01:25:10,600 --> 01:25:14,300
+we've probably super fun. 
+Yes. 
+
+1249
+01:25:14,300 --> 01:25:17,399
+Is really at the 10 to you. 
+Thanks for your contributions. 
+
+1250
+01:25:17,399 --> 01:25:20,500
+It is. 
+I would say one small piece of 
+
+1251
+01:25:20,500 --> 01:25:22,199
+the puzzle. 
+Yeah. 
+
+1252
+01:25:24,199 --> 01:25:28,100
+Yeah, I stand in awe of my 
+co-workers which I Verge is 
+
+1253
+01:25:28,100 --> 01:25:32,199
+another great thing to have in a
+job to be able to go all my 
+
+1254
+01:25:32,199 --> 01:25:35,899
+coworkers are so much better 
+than me, and I will learn so 
+
+1255
+01:25:35,899 --> 01:25:40,100
+much from them. 
+The people in charge should be 
+
+1256
+01:25:40,100 --> 01:25:42,399
+in charge. 
+They didn't just, they weren't 
+
+1257
+01:25:42,399 --> 01:25:45,199
+in the right place at the right 
+time and lucked into their 
+
+1258
+01:25:45,199 --> 01:25:47,300
+position or some of these 
+college roommate. 
+
+1259
+01:25:47,500 --> 01:25:51,399
+Yes, there is no, just luck of 
+the draw. 
+
+1260
+01:25:51,399 --> 01:25:57,399
+There, they are the ones. 
+Leading the charge doing the 
+
+1261
+01:25:57,399 --> 01:26:02,300
+difficult work, getting feedback
+and just continually refining 
+
+1262
+01:26:02,300 --> 01:26:06,800
+things and it's just so much fun
+to be in the room and watch that
+
+1263
+01:26:06,899 --> 01:26:10,600
+all take place. 
+Yeah, yeah, awesome. 
+
+1264
+01:26:10,699 --> 01:26:12,399
+Well thanks Bill. 
+Thank you all.
+

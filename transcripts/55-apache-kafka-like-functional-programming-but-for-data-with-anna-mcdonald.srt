@@ -1,0 +1,6468 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:09,600
+All right. 
+Well, welcome everyone. 
+
+4
+00:00:10,100 --> 00:00:12,500
+So today we have with us. 
+Anna McDonald. 
+
+5
+00:00:12,500 --> 00:00:15,100
+Who works for confluent rights, 
+correct? 
+
+6
+00:00:15,800 --> 00:00:17,700
+Okay. 
+And I don't think we were met in
+
+7
+00:00:17,700 --> 00:00:19,500
+person. 
+So this is fun to get to do this
+
+8
+00:00:19,500 --> 00:00:21,900
+virtually like the virtual 
+meeting, but at some point 
+
+9
+00:00:21,900 --> 00:00:26,400
+hopefully we do like actually 
+intersect on the physical plane 
+
+10
+00:00:26,400 --> 00:00:29,700
+of reality and get to like have 
+some Sherry together. 
+
+11
+00:00:29,700 --> 00:00:35,100
+So absolutely that's why I was 
+telling you about blast past. 
+
+12
+00:00:35,500 --> 00:00:41,900
+Oh he drink Sherry. 
+He secretly, she was in the bomb
+
+13
+00:00:41,900 --> 00:00:44,100
+shelter deck. 
+That's hiding the Sherry greatly
+
+14
+00:00:44,100 --> 00:00:47,300
+drinking, Sherry, because she 
+was going crazy in the followed 
+
+15
+00:00:47,300 --> 00:00:48,400
+by drinks, are. 
+Yeah. 
+
+16
+00:00:48,400 --> 00:00:49,700
+All right. 
+Yeah. 
+
+17
+00:00:49,800 --> 00:00:52,500
+I'm very sad about my scary 
+intake. 
+
+18
+00:00:52,500 --> 00:00:54,100
+Yes. 
+Okay. 
+
+19
+00:00:54,500 --> 00:00:58,000
+Yes. 
+The hard to hide drinking Sherry
+
+20
+00:00:58,000 --> 00:00:59,600
+from somebody. 
+If you're stuck in a bomb 
+
+21
+00:00:59,600 --> 00:01:01,300
+shelter with them now that 
+option. 
+
+22
+00:01:01,300 --> 00:01:07,000
+Yes. 
+So I'm going to, well, not play.
+
+23
+00:01:07,000 --> 00:01:10,500
+I'm going to actually Really be 
+the ignorant one and say, what's
+
+24
+00:01:10,500 --> 00:01:11,800
+kubernetes? 
+What is it? 
+
+25
+00:01:11,800 --> 00:01:14,300
+No knocking, Renee's. 
+Kafka Tosca said. 
+
+26
+00:01:16,100 --> 00:01:18,100
+Okay, what is Kafka do? 
+What is it? 
+
+27
+00:01:18,200 --> 00:01:19,900
+Don't do. 
+You also when you talk about 
+
+28
+00:01:19,900 --> 00:01:23,000
+Apache Kafka, like at its heart,
+it's a durable log. 
+
+29
+00:01:23,500 --> 00:01:27,600
+I'm not a fan of anything like 
+in Life or really you know, in 
+
+30
+00:01:27,600 --> 00:01:30,000
+technology that's transient as 
+much. 
+
+31
+00:01:30,000 --> 00:01:32,800
+And so I was never a fan of any 
+messaging systems. 
+
+32
+00:01:32,900 --> 00:01:35,400
+There are a waste of time and 
+I'll say that out loud until I 
+
+33
+00:01:35,408 --> 00:01:36,200
+might cough. 
+Huh? 
+
+34
+00:01:36,200 --> 00:01:40,300
+And I would you know, Kafka A 
+operates in a way that's unlike 
+
+35
+00:01:40,300 --> 00:01:42,700
+any of your more traditional Pub
+subs. 
+
+36
+00:01:43,700 --> 00:01:47,900
+And so in my heart, that's what 
+it is right for Apache, Kafka 
+
+37
+00:01:48,900 --> 00:01:52,700
+and and it is it allows you to 
+have them and maintain a system 
+
+38
+00:01:52,700 --> 00:01:55,200
+of record that doesn't lend 
+itself to duplication like a 
+
+39
+00:01:55,208 --> 00:01:57,300
+broadcast pattern. 
+If you have multiple consumers, 
+
+40
+00:01:57,300 --> 00:01:58,500
+right? 
+The data still there. 
+
+41
+00:01:59,200 --> 00:02:02,600
+And just just the protocol of it
+is elegant, the ecosystem around
+
+42
+00:02:02,600 --> 00:02:06,200
+it, to is amazing and Kafka 
+streams, which is kind of the 
+
+43
+00:02:06,200 --> 00:02:08,900
+the streaming Library. 
+As part of the Apache cop who 
+
+44
+00:02:08,900 --> 00:02:11,900
+you system is part of that, it's
+the love of my life is that now 
+
+45
+00:02:11,900 --> 00:02:14,400
+called Casey Goldie know, your 
+two different things. 
+
+46
+00:02:14,400 --> 00:02:15,800
+No, two separate. 
+Yes. 
+
+47
+00:02:15,800 --> 00:02:20,100
+Okay, so there's cop just dreams
+in case you can t be, does it do
+
+48
+00:02:20,100 --> 00:02:24,500
+something like, I don't know. 
+Say rabbitmq does? 
+
+49
+00:02:24,600 --> 00:02:26,800
+I mean, is it a for what would 
+you say? 
+
+50
+00:02:26,800 --> 00:02:30,800
+Messaging system. 
+It's like almost like the 
+
+51
+00:02:30,800 --> 00:02:33,900
+original object oriented 
+programming, sending messages 
+
+52
+00:02:33,900 --> 00:02:36,500
+and somebody handling the 
+messenger he could but I think 
+
+53
+00:02:36,500 --> 00:02:38,800
+that would be underwhelmed. 
+Being like, when you look at 
+
+54
+00:02:38,800 --> 00:02:43,100
+Kafka and the reason is, because
+when I see somebody, and what I 
+
+55
+00:02:43,200 --> 00:02:46,100
+did my job, right? 
+I work with our customers, it's 
+
+56
+00:02:46,100 --> 00:02:49,200
+a set, you know, best practices 
+a lot of times, you know, giving
+
+57
+00:02:49,200 --> 00:02:51,500
+them, you know, the best 
+practices preventing event 
+
+58
+00:02:51,500 --> 00:02:55,300
+patterns, you know, how do we 
+move to, you know, near 
+
+59
+00:02:55,300 --> 00:02:58,700
+real-time streaming and then, 
+and the like, and one of the 
+
+60
+00:02:58,700 --> 00:03:02,900
+things that you find very 
+quickly is that because kafka's 
+
+61
+00:03:02,900 --> 00:03:05,600
+a durable log, because it was 
+built to handle the volume of 
+
+62
+00:03:05,600 --> 00:03:09,200
+information, all of a sudden, 
+Know, if anyone comes approaches
+
+63
+00:03:09,200 --> 00:03:11,900
+Kafka and says I need to do 
+pubsub, they get very frustrated
+
+64
+00:03:11,900 --> 00:03:15,800
+very quickly and I'm like, well,
+you know, do you really need to 
+
+65
+00:03:15,800 --> 00:03:19,500
+do just pops up because if so 
+you know, you can use Kafka but 
+
+66
+00:03:19,500 --> 00:03:21,500
+you can do so much more with it.
+Right. 
+
+67
+00:03:22,200 --> 00:03:25,300
+You know, because it's a pub sub
+these days just an anti-pattern.
+
+68
+00:03:25,400 --> 00:03:29,300
+Like anybody really haven't 
+actually followed, use kids for 
+
+69
+00:03:29,300 --> 00:03:31,200
+club songs. 
+And when I think pub/sub, what I
+
+70
+00:03:31,208 --> 00:03:35,200
+think is there's a lot more 
+intelligence right on that 
+
+71
+00:03:35,200 --> 00:03:37,900
+broker side was knowing what the
+state of American Messages. 
+
+72
+00:03:37,900 --> 00:03:39,600
+It has to know has to know 
+whether you've got it yet. 
+
+73
+00:03:39,600 --> 00:03:41,600
+So it knows that it needs to 
+remove it, right? 
+
+74
+00:03:41,600 --> 00:03:44,200
+And so there are cases and I've 
+met with customers before and 
+
+75
+00:03:44,208 --> 00:03:46,000
+I'm the first person to say 
+don't use Kafka for this. 
+
+76
+00:03:46,000 --> 00:03:48,800
+So you know, if you need 
+something like nagpur message, 
+
+77
+00:03:49,500 --> 00:03:52,300
+right? 
+Know like God is not going to do
+
+78
+00:03:52,300 --> 00:03:54,000
+that for you because cock is 
+ignorant. 
+
+79
+00:03:54,000 --> 00:03:55,900
+You know, you're the one who has
+to tell it when you've received 
+
+80
+00:03:55,900 --> 00:03:58,000
+those messages and when it's 
+ready to move on, right? 
+
+81
+00:03:58,000 --> 00:04:01,300
+We do that via offsets so it's 
+basically a pole, right? 
+
+82
+00:04:01,300 --> 00:04:04,100
+I get a batch of messages and 
+then I decide whether or not, I 
+
+83
+00:04:04,100 --> 00:04:06,700
+want to acknowledge that batch 
+by updating my offset. 
+
+84
+00:04:07,600 --> 00:04:10,300
+As you might imagine trying to 
+like shoehorn, something like 
+
+85
+00:04:10,300 --> 00:04:12,000
+nagpur message in that 
+ecosystem. 
+
+86
+00:04:12,000 --> 00:04:15,800
+It's not a natural fit. 
+So I would say What's it is, 
+
+87
+00:04:16,000 --> 00:04:17,899
+what's like a good like 
+business? 
+
+88
+00:04:17,899 --> 00:04:21,399
+Use case for Knack that you 
+couldn't do with like offset 
+
+89
+00:04:21,399 --> 00:04:22,900
+track like opposite. 
+Like right? 
+
+90
+00:04:23,000 --> 00:04:26,200
+So so you got a bunch of extra 
+office or separation of 
+
+91
+00:04:26,200 --> 00:04:30,200
+regulatory of, you know, 
+regulatory operations. 
+
+92
+00:04:30,200 --> 00:04:34,200
+So for example, if I'm somebody 
+and I fronted whatever my you 
+
+93
+00:04:34,208 --> 00:04:37,500
+know messaging system is with an
+API and whatever. 
+
+94
+00:04:37,600 --> 00:04:40,900
+Devers feeding. 
+Those messages is not allowed to
+
+95
+00:04:40,900 --> 00:04:43,300
+write. 
+It cannot be. 
+
+96
+00:04:43,300 --> 00:04:45,500
+It cannot change anything. 
+You can just pass through the 
+
+97
+00:04:45,500 --> 00:04:48,700
+messages, right? 
+Whether or not what the state of
+
+98
+00:04:48,700 --> 00:04:51,200
+reception is has to be held with
+the broker in that case or 
+
+99
+00:04:51,200 --> 00:04:52,800
+somewhere else. 
+That's it, that's it. 
+
+100
+00:04:53,000 --> 00:04:55,400
+So, that's what I've run into, 
+right? 
+
+101
+00:04:56,700 --> 00:04:58,400
+Yeah, yeah. 
+It's in that case, you would 
+
+102
+00:04:58,400 --> 00:05:02,800
+say, like, kafka's not your jam,
+if that's what you need, it 
+
+103
+00:05:02,800 --> 00:05:05,300
+might be your jam with like, you
+know, a prettier face that we 
+
+104
+00:05:05,300 --> 00:05:07,200
+develop and sell. 
+Do you write for songs? 
+
+105
+00:05:07,900 --> 00:05:11,000
+You know, but when we just, you 
+know, talk about, you know, AKA 
+
+106
+00:05:11,000 --> 00:05:12,200
+right like, and that's the 
+thing. 
+
+107
+00:05:12,200 --> 00:05:15,500
+So when I always say this, 
+right, if our, if Confluence 
+
+108
+00:05:15,500 --> 00:05:18,300
+business prop, was to be the 
+best fully-managed, Kafka 
+
+109
+00:05:18,300 --> 00:05:22,700
+distribution, that would not 
+make me happy as they employee 
+
+110
+00:05:22,700 --> 00:05:25,700
+or, you know, stockholder. 
+So I always try to separate it 
+
+111
+00:05:25,708 --> 00:05:28,600
+because I do a lot of talks 
+about Apache Kafka and so what 
+
+112
+00:05:28,600 --> 00:05:33,100
+confluent offers is you know, 
+Kafka as its heart but then you 
+
+113
+00:05:33,100 --> 00:05:36,200
+know a crap ton of other 
+amazingly, you know, valuable 
+
+114
+00:05:36,200 --> 00:05:38,100
+features. 
+As well. 
+
+115
+00:05:38,400 --> 00:05:40,000
+So we might offer something 
+right. 
+
+116
+00:05:40,000 --> 00:05:41,700
+Like something, you know, that 
+that would do and would 
+
+117
+00:05:41,708 --> 00:05:44,300
+accommodate nagpur message on 
+top of Kafka, right? 
+
+118
+00:05:44,300 --> 00:05:46,000
+But if you're just somebody 
+who's listening to this and 
+
+119
+00:05:46,000 --> 00:05:48,800
+you're like, I want to use Pesci
+Kafka I have, you know, this 
+
+120
+00:05:48,800 --> 00:05:51,400
+this huge regulatory separation 
+of concerns and they need to do 
+
+121
+00:05:51,400 --> 00:05:54,700
+neck for message, Kafka is not 
+going to hold that for you. 
+
+122
+00:05:55,800 --> 00:05:59,700
+So let's talk about place where 
+of Kafka the name, the 
+
+123
+00:05:59,700 --> 00:06:01,900
+philosopher I assume is who they
+knew. 
+
+124
+00:06:01,900 --> 00:06:06,400
+Yeah, yeah, I think I think Jay 
+who's our CEO read a lot of 
+
+125
+00:06:06,400 --> 00:06:09,300
+Kafka and he was like, Easy to 
+spell which I appreciate because
+
+126
+00:06:09,300 --> 00:06:12,300
+I'm a horrible speller and like,
+went with it. 
+
+127
+00:06:14,200 --> 00:06:16,600
+Nothing nothing. 
+No exciting story there. 
+
+128
+00:06:16,900 --> 00:06:19,200
+I mean, I could be wrong. 
+Sure, people will tell me if I'm
+
+129
+00:06:19,200 --> 00:06:21,800
+wrong, but I think that that 
+from the long and short of it, I
+
+130
+00:06:21,808 --> 00:06:25,600
+think that's what went down. 
+Okay, and the history, I don't 
+
+131
+00:06:25,600 --> 00:06:28,400
+know if you know Bruce but it 
+was actually built at LinkedIn 
+
+132
+00:06:28,600 --> 00:06:31,500
+as. 
+So it started as a project 
+
+133
+00:06:31,500 --> 00:06:35,000
+within LinkedIn for dealing with
+the problems that LinkedIn had 
+
+134
+00:06:35,800 --> 00:06:39,200
+technically and then They open 
+sourced it with Apache. 
+
+135
+00:06:39,800 --> 00:06:44,700
+Yeah. 
+And then Jay took it and J and 
+
+136
+00:06:44,700 --> 00:06:49,200
+and they have and June, who is 
+just a beautiful person inside 
+
+137
+00:06:49,200 --> 00:06:50,700
+and out. 
+June's like one of the nicest 
+
+138
+00:06:50,700 --> 00:06:53,800
+people I've ever met my life and
+then they found accomplishment. 
+
+139
+00:06:53,800 --> 00:07:04,500
+Yeah. 
+Nice and juicy for the oh my 
+
+140
+00:07:04,500 --> 00:07:06,700
+gosh, every that's why I never 
+get bored. 
+
+141
+00:07:07,000 --> 00:07:11,000
+So like every all the data, all 
+data that isn't neck curse again
+
+142
+00:07:11,200 --> 00:07:14,100
+it's fantastic. 
+What snack messaging so that's 
+
+143
+00:07:14,100 --> 00:07:16,800
+like that's like I'm getting a 
+bunch of messages, right? 
+
+144
+00:07:16,800 --> 00:07:19,700
+And maybe I receive some of them
+but in a non-blocking fashion 
+
+145
+00:07:19,700 --> 00:07:23,100
+somebody has to keep track of 
+the ones I have an act yet and 
+
+146
+00:07:23,100 --> 00:07:27,900
+that person can't be me. 
+And that you know, yeah, in a 
+
+147
+00:07:27,900 --> 00:07:31,500
+typical like messaging 
+architecture, you may, you may 
+
+148
+00:07:31,500 --> 00:07:34,800
+need to track if a messages 
+being has been processed by the 
+
+149
+00:07:34,800 --> 00:07:37,600
+receiver. 
+And so one pattern to do that is
+
+150
+00:07:37,600 --> 00:07:42,800
+to say, all right, the receiver 
+needs to acknowledge back to the
+
+151
+00:07:42,800 --> 00:07:45,900
+Dennis sent, the message that it
+has been received. 
+
+152
+00:07:45,900 --> 00:07:50,100
+So we're kind of things, I'm 
+still having a hard time 
+
+153
+00:07:50,100 --> 00:07:54,200
+imagining like, how am I, what, 
+what do I need this thing for? 
+
+154
+00:07:54,200 --> 00:07:56,400
+And how am I Using it and, you 
+know, really basic. 
+
+155
+00:07:56,400 --> 00:08:00,700
+Yeah, so one of the things that 
+you know, like again I like 
+
+156
+00:08:00,700 --> 00:08:03,600
+about my job is I get to learn 
+so much about industry. 
+
+157
+00:08:03,600 --> 00:08:05,900
+So if you take something like 
+fintech, you know Financial 
+
+158
+00:08:05,900 --> 00:08:09,500
+Services, we have people who run
+an entire, you know, Retail Bank
+
+159
+00:08:09,500 --> 00:08:13,100
+on Kafka fraud, use cases are 
+kind of bread and butter for us,
+
+160
+00:08:13,500 --> 00:08:14,800
+right? 
+So you've got, you know, East 
+
+161
+00:08:14,800 --> 00:08:17,400
+Coast West Coast, somebody 
+swipes the card right? 
+
+162
+00:08:17,400 --> 00:08:19,900
+Is that fraud, you know, we have
+one customer in their goal is to
+
+163
+00:08:19,900 --> 00:08:22,000
+make sure they detected before 
+your credit cards back in your 
+
+164
+00:08:22,000 --> 00:08:25,700
+pocket right and Kafka because 
+it was me To handle such a 
+
+165
+00:08:25,708 --> 00:08:27,500
+volume being developed at 
+LinkedIn, right? 
+
+166
+00:08:27,500 --> 00:08:31,100
+It's all those interactions on a
+website is uniquely suited to do
+
+167
+00:08:31,100 --> 00:08:32,799
+that. 
+The other ones. 
+
+168
+00:08:32,799 --> 00:08:35,299
+I mean, there's some really. 
+So for example, and they're 
+
+169
+00:08:35,299 --> 00:08:38,400
+obviously customers, I can talk 
+about ones that I can, you know,
+
+170
+00:08:38,400 --> 00:08:41,400
+legally and and one of the 
+presentations and one of my 
+
+171
+00:08:41,400 --> 00:08:44,100
+customers is the CDC, the Center
+for Disease Control. 
+
+172
+00:08:44,700 --> 00:08:49,100
+So when covid hit, you know, 
+Kafka is used. 
+
+173
+00:08:49,100 --> 00:08:51,800
+And come from platform is used 
+for, you know, covid, testing 
+
+174
+00:08:51,800 --> 00:08:55,200
+data and vaccination data, which
+as you might imagine, and you 
+
+175
+00:08:55,208 --> 00:08:58,100
+made me feel a lot better 
+helping that initiative during 
+
+176
+00:08:58,100 --> 00:09:00,300
+the pandemic because I felt like
+I was actually doing something. 
+
+177
+00:09:00,300 --> 00:09:03,700
+So you've got, you know, all of 
+this information coming in from 
+
+178
+00:09:03,700 --> 00:09:06,900
+all over the country, right? 
+Do used to help identify hot 
+
+179
+00:09:06,900 --> 00:09:09,800
+spots and because you can stream
+it in so fast, because once it 
+
+180
+00:09:09,800 --> 00:09:11,900
+gets there, you can do those 
+Transformations with something, 
+
+181
+00:09:11,900 --> 00:09:15,500
+like, Kafka streams, very easily
+and then spoke it out to 
+
+182
+00:09:15,500 --> 00:09:19,200
+whatever sink you want. 
+It just is very elegant way to 
+
+183
+00:09:19,200 --> 00:09:21,300
+do, you know those types of use 
+cases? 
+
+184
+00:09:21,900 --> 00:09:24,900
+Okay, maybe. 
+All right, maybe I'm asking. 
+
+185
+00:09:25,000 --> 00:09:28,000
+Question wrong. 
+What problem does it solve? 
+
+186
+00:09:28,100 --> 00:09:30,400
+What? 
+Where do I get where I go? 
+
+187
+00:09:30,400 --> 00:09:34,100
+Oh I need a thing. 
+Like this and Kafka is a thing 
+
+188
+00:09:34,100 --> 00:09:36,500
+like this. 
+What's so let's say that, you 
+
+189
+00:09:36,500 --> 00:09:39,800
+know, you're a normal company 
+and you have like a crap ton of 
+
+190
+00:09:39,800 --> 00:09:43,000
+Legacy databases, right? 
+And you really want to do 
+
+191
+00:09:43,000 --> 00:09:46,300
+venting because that's a lot 
+better way to do. 
+
+192
+00:09:46,300 --> 00:09:48,700
+You've got a lot of people and 
+the easiest one to say let's say
+
+193
+00:09:48,700 --> 00:09:50,600
+that you're doing customer data 
+and somebody goes on your 
+
+194
+00:09:50,600 --> 00:09:51,900
+website and they change your 
+address. 
+
+195
+00:09:52,100 --> 00:09:53,900
+Wait, why do you want to do 
+Eventing? 
+
+196
+00:09:53,900 --> 00:09:57,800
+Well because You're if you wait 
+24 hours like your country or 
+
+197
+00:09:57,900 --> 00:09:59,500
+your competitors have already 
+beat you. 
+
+198
+00:09:59,900 --> 00:10:04,300
+So like so okay so what's one 
+way to look at this? 
+
+199
+00:10:04,300 --> 00:10:08,300
+Is that we have a traditional 
+way of looking at data as a 
+
+200
+00:10:08,300 --> 00:10:13,000
+table and it's just this like 
+thing that you update and can 
+
+201
+00:10:13,000 --> 00:10:16,500
+query. 
+But if you take a step back from
+
+202
+00:10:16,500 --> 00:10:22,200
+that perspective, all data is 
+just events that that can flow 
+
+203
+00:10:22,200 --> 00:10:27,000
+is a stream and The what Kafka 
+does is it shifts? 
+
+204
+00:10:27,000 --> 00:10:30,200
+The Paradigm from thinking, 
+about this table that is just a 
+
+205
+00:10:30,200 --> 00:10:34,000
+view of what of all the changes 
+that have happened. 
+
+206
+00:10:34,100 --> 00:10:38,000
+Instead, let's look at data as a
+stream and then we can do all 
+
+207
+00:10:38,000 --> 00:10:40,700
+sorts of interesting things. 
+When we look at it as a stream, 
+
+208
+00:10:41,200 --> 00:10:43,700
+we can more functional way of 
+thinking about it maybe. 
+
+209
+00:10:43,900 --> 00:10:46,000
+Yeah that's why I like it 
+because I have a functional 
+
+210
+00:10:46,000 --> 00:10:50,700
+brain. 
+So Kafka is just keeping this 
+
+211
+00:10:50,700 --> 00:10:55,200
+log of all the events and if you
+want something like a table well
+
+212
+00:10:55,200 --> 00:10:59,600
+you can you can keep track of 
+all the events and view it as a 
+
+213
+00:10:59,600 --> 00:11:03,600
+table or if you don't care about
+ever viewing it as a table. 
+
+214
+00:11:03,600 --> 00:11:05,900
+You just want to like send 
+events to a bunch of different 
+
+215
+00:11:05,900 --> 00:11:09,600
+consumers or bunch of consumers 
+are consuming events, then you 
+
+216
+00:11:09,600 --> 00:11:11,400
+can do that. 
+But here's one of the really 
+
+217
+00:11:11,400 --> 00:11:15,900
+cool things with Kafka is that 
+in a traditional like message 
+
+218
+00:11:16,100 --> 00:11:19,700
+streaming system Item. 
+You think about things as like a
+
+219
+00:11:19,700 --> 00:11:23,300
+given consumer and so a consumer
+is going to is going to connect 
+
+220
+00:11:23,300 --> 00:11:27,000
+begin consuming messages and so 
+you can do a stream oriented 
+
+221
+00:11:27,000 --> 00:11:28,700
+system. 
+But what happens when you want 
+
+222
+00:11:28,700 --> 00:11:31,400
+to add like a second system, so 
+back to your like CDC. 
+
+223
+00:11:31,400 --> 00:11:35,800
+Use case is like, I would guess 
+that when covid happened, all of
+
+224
+00:11:35,808 --> 00:11:39,400
+a sudden, they're like, oh, we 
+need to do something different 
+
+225
+00:11:39,400 --> 00:11:41,600
+with all this data with this 
+whole data stream. 
+
+226
+00:11:41,600 --> 00:11:43,300
+And so, then they connect 
+another consumer. 
+
+227
+00:11:43,300 --> 00:11:44,800
+And another consumer is another 
+concern. 
+
+228
+00:11:45,000 --> 00:11:46,600
+Well, those consumers get to 
+decide. 
+
+229
+00:11:47,100 --> 00:11:51,000
+Want to start at the beginning 
+of all the messages in time or 
+
+230
+00:11:51,000 --> 00:11:53,500
+do I want to start somewhere in 
+the middle or at the newest 
+
+231
+00:11:53,500 --> 00:11:55,600
+messaging and on my, okay with 
+that. 
+
+232
+00:11:55,600 --> 00:11:58,300
+But it's pretty cool that now, 
+in the Stream Orion system, the 
+
+233
+00:11:58,308 --> 00:12:02,800
+consumer gets to decide what it 
+where it wants to start from. 
+
+234
+00:12:03,000 --> 00:12:06,900
+So that makes me think kind of 
+like the actor model, you know, 
+
+235
+00:12:06,900 --> 00:12:11,200
+the actor model gets events and 
+it decides which ones and what 
+
+236
+00:12:11,200 --> 00:12:13,900
+order it's going to deal with 
+them. 
+
+237
+00:12:13,900 --> 00:12:16,000
+Yeah. 
+Or whether it deals with them at
+
+238
+00:12:16,000 --> 00:12:16,900
+all? 
+Yeah, absolutely. 
+
+239
+00:12:17,000 --> 00:12:21,500
+Alia Bhatt just instead of 
+instead of having the queue in 
+
+240
+00:12:21,500 --> 00:12:25,600
+each actor, this is some sort of
+a centralized, exactly. 
+
+241
+00:12:25,700 --> 00:12:28,000
+And that's the thing I hate 
+duplication of effort. 
+
+242
+00:12:28,100 --> 00:12:30,400
+It's annoying to me, right? 
+And that's kind of what I talked
+
+243
+00:12:30,400 --> 00:12:31,900
+about before. 
+With those normal messaging 
+
+244
+00:12:31,900 --> 00:12:33,700
+systems, where you have to do 
+like a broadcast, you have to 
+
+245
+00:12:33,700 --> 00:12:36,900
+set up something for each and 
+every single person, right? 
+
+246
+00:12:37,000 --> 00:12:39,600
+When you have across an 
+organization to go back to that,
+
+247
+00:12:39,600 --> 00:12:42,300
+there are tons of people who are
+interested, when a customer's 
+
+248
+00:12:42,300 --> 00:12:45,400
+address changes, right? 
+You create a stream of events, 
+
+249
+00:12:45,400 --> 00:12:48,100
+you can and that's what I love. 
+See, I'm biased because I think 
+
+250
+00:12:48,100 --> 00:12:50,700
+it's awesome and I think it 
+enables people to get going 
+
+251
+00:12:50,700 --> 00:12:54,100
+quick, but all you do is you 
+hook up change data capture from
+
+252
+00:12:54,100 --> 00:12:56,700
+your database and then every 
+time an address changes that is 
+
+253
+00:12:56,700 --> 00:12:58,500
+going to be published to Kafka, 
+right? 
+
+254
+00:12:58,500 --> 00:13:00,500
+And anyone who cares can consume
+it. 
+
+255
+00:13:02,200 --> 00:13:07,600
+And sir and you're also saying 
+that every event is held 
+
+256
+00:13:07,600 --> 00:13:09,300
+forever. 
+So it can be sure. 
+
+257
+00:13:09,300 --> 00:13:12,200
+Yeah. 
+If you want as configurable if 
+
+258
+00:13:12,200 --> 00:13:16,800
+that's important to you, okay? 
+So that way, if say, somebody's 
+
+259
+00:13:16,800 --> 00:13:22,800
+dealing with data flowing in, 
+they can choose to take this 
+
+260
+00:13:22,800 --> 00:13:26,200
+week's data or they can choose 
+data from the beginning of 
+
+261
+00:13:26,400 --> 00:13:28,900
+whenever you started a 
+collecting, okay? 
+
+262
+00:13:29,000 --> 00:13:32,200
+I could certainly see that as 
+being useful, For scientists, 
+
+263
+00:13:32,200 --> 00:13:33,000
+for example. 
+Yeah. 
+
+264
+00:13:35,100 --> 00:13:38,900
+Yeah, I think for me Kafka 
+opened up a whole new way to 
+
+265
+00:13:38,900 --> 00:13:43,000
+think about data and I think 
+I've ranted about this before. 
+
+266
+00:13:43,000 --> 00:13:47,500
+But small rant, I think it's 
+absolutely horrible. 
+
+267
+00:13:47,500 --> 00:13:52,500
+That the kind of default way 
+that we deal with data and web 
+
+268
+00:13:52,500 --> 00:13:53,900
+applications mobile 
+applications. 
+
+269
+00:13:53,900 --> 00:14:00,800
+Whatever is that you load a page
+and the page doesn't change 
+
+270
+00:14:01,300 --> 00:14:04,700
+Generally until you like hit 
+refresh. 
+
+271
+00:14:04,800 --> 00:14:08,200
+Even if the underlying data is 
+changing and this is one of 
+
+272
+00:14:08,200 --> 00:14:10,400
+those things where I'm like, 
+this is just not the way that 
+
+273
+00:14:10,400 --> 00:14:13,200
+the world should work and the 
+way that the reason why it works
+
+274
+00:14:13,200 --> 00:14:16,400
+that way is because we've got 
+database tables and we have a 
+
+275
+00:14:16,400 --> 00:14:19,000
+web page that does a query to 
+that database table. 
+
+276
+00:14:19,300 --> 00:14:23,000
+We don't we're not generally 
+looking at data as being a 
+
+277
+00:14:23,008 --> 00:14:28,000
+stream and so this leads to 
+just, I think generally horrible
+
+278
+00:14:28,000 --> 00:14:30,800
+experiences where it's like oh 
+geez, like that. 
+
+279
+00:14:30,900 --> 00:14:33,900
+Data actually did change and I 
+didn't see the change because I 
+
+280
+00:14:33,908 --> 00:14:37,000
+didn't hit reload. 
+Well, I think we were 
+
+281
+00:14:37,000 --> 00:14:40,600
+constrained by the old 
+client-server model which was 
+
+282
+00:14:40,600 --> 00:14:44,200
+because of resources at the time
+and that's true. 
+
+283
+00:14:44,200 --> 00:14:45,900
+And it's right. 
+So, I'll never forget what our 
+
+284
+00:14:45,900 --> 00:14:49,000
+DBA said to me. 
+When I first hooked this up, he 
+
+285
+00:14:49,000 --> 00:14:52,900
+was like, where is it going? 
+Where is Kafka keeping all this?
+
+286
+00:14:53,000 --> 00:14:56,100
+How is it not falling over? 
+And I was like, that's the 
+
+287
+00:14:56,100 --> 00:14:58,900
+magic, my friend because, you 
+know, the way that Kafka was 
+
+288
+00:14:58,900 --> 00:15:01,800
+designed was to handle immense 
+Volumes of data. 
+
+289
+00:15:02,000 --> 00:15:05,100
+So, one of the things we did 
+with CDC was I had to figure out
+
+290
+00:15:05,100 --> 00:15:08,100
+and this is kind of what led me 
+to Kafka like, in about 2017. 
+
+291
+00:15:08,100 --> 00:15:10,800
+Was I had to figure out. 
+Okay, we've got these tables, 
+
+292
+00:15:10,800 --> 00:15:13,500
+they got, you know, over 56 
+million records, multiple of 
+
+293
+00:15:13,500 --> 00:15:14,800
+them, we truncate them every 
+night. 
+
+294
+00:15:15,800 --> 00:15:20,300
+I got to find a system that can 
+take that truncation, right, and
+
+295
+00:15:20,300 --> 00:15:24,000
+CDC and not bad and I and Kafka 
+doesn't bad at me. 
+
+296
+00:15:24,000 --> 00:15:26,400
+You can pumps. 
+You can pump so much data into 
+
+297
+00:15:26,400 --> 00:15:28,600
+it that all of a sudden things 
+that you could like just what 
+
+298
+00:15:28,600 --> 00:15:31,400
+you said, things that you were 
+constrained on before. 
+
+299
+00:15:31,400 --> 00:15:33,800
+We're like you're never going to
+be able to drive that much data 
+
+300
+00:15:33,800 --> 00:15:35,700
+out of a database to a messaging
+system. 
+
+301
+00:15:36,000 --> 00:15:39,100
+It's going to fall over all of a
+sudden with Kafka doesn't bat an
+
+302
+00:15:39,100 --> 00:15:41,500
+eye and you have all of your 
+events of first talk I ever did 
+
+303
+00:15:41,500 --> 00:15:45,600
+was called finding the events 
+hidden in your database and And 
+
+304
+00:15:45,600 --> 00:15:49,100
+you have it, it just opens up a 
+whole new world of information 
+
+305
+00:15:49,100 --> 00:15:50,900
+that used to be locked in a 
+database. 
+
+306
+00:15:52,200 --> 00:15:54,200
+What was? 
+Yeah, but you lose I guess like 
+
+307
+00:15:54,200 --> 00:15:57,300
+a database table is 
+intentionally lawsuit, right? 
+
+308
+00:15:57,300 --> 00:15:59,600
+It's compression. 
+It is compressing. 
+
+309
+00:15:59,600 --> 00:16:02,800
+All these events down into a 
+view and probably to Bruce's 
+
+310
+00:16:02,800 --> 00:16:06,500
+Point doing that for efficiency,
+because back in the day, we 
+
+311
+00:16:06,500 --> 00:16:10,300
+didn't have the space to keep 
+around all the events that led 
+
+312
+00:16:10,300 --> 00:16:15,200
+us to that state. 
+And now, we generally do have 
+
+313
+00:16:15,200 --> 00:16:18,500
+the available data to keep all 
+the events. 
+
+314
+00:16:20,500 --> 00:16:23,700
+Well, and I was also thinking 
+of, I mean, the client-server 
+
+315
+00:16:23,700 --> 00:16:29,900
+thing was it's like okay well 
+where are the powerful resources
+
+316
+00:16:30,000 --> 00:16:32,500
+located? 
+And so you know it's mostly on 
+
+317
+00:16:32,500 --> 00:16:35,300
+the client and the in the I mean
+mostly on the server and the 
+
+318
+00:16:35,300 --> 00:16:38,600
+client was this dumb thing and 
+you know the bandwidth between 
+
+319
+00:16:38,600 --> 00:16:43,400
+them was limited and everything.
+So we but we designed around 
+
+320
+00:16:43,400 --> 00:16:45,500
+those constraints and now we're 
+still stuck with. 
+
+321
+00:16:46,000 --> 00:16:49,900
+Yeah so we had to add that what 
+is It the, you know, the 
+
+322
+00:16:49,900 --> 00:16:54,300
+built-in push to JavaScript only
+happened a few years ago. 
+
+323
+00:16:54,500 --> 00:16:56,500
+Yeah, server-sent events and 
+websockets. 
+
+324
+00:16:56,500 --> 00:16:58,900
+And yeah, and that's kind of 
+what I was going to say. 
+
+325
+00:16:58,900 --> 00:17:01,900
+So like when we talk about the 
+Kafka ecosystem, my favorite use
+
+326
+00:17:01,900 --> 00:17:04,900
+case for case equally be is 
+server-side filtering. 
+
+327
+00:17:05,700 --> 00:17:08,900
+So you can take a SQL, DB you 
+can make a query like we talked 
+
+328
+00:17:08,900 --> 00:17:11,700
+about like a table. 
+Let's say that's indexed on 
+
+329
+00:17:11,700 --> 00:17:13,900
+stock symbol. 
+We'll just for sakes and 
+
+330
+00:17:13,900 --> 00:17:16,200
+purposes, right? 
+And there will be a real-time 
+
+331
+00:17:16,200 --> 00:17:18,900
+stream, that's updating, you 
+know, that K table, I catch her.
+
+332
+00:17:19,099 --> 00:17:22,800
+Expense for a Roxy be under the 
+covers, in real-time with K SQL.
+
+333
+00:17:22,800 --> 00:17:24,700
+DB you can do pull and push 
+queries. 
+
+334
+00:17:25,099 --> 00:17:28,099
+And those push queries are it's 
+a long-lived connection. 
+
+335
+00:17:28,300 --> 00:17:31,500
+So that for a dashboard use 
+case, right? 
+
+336
+00:17:31,600 --> 00:17:33,600
+Is very powerful. 
+So then, you know, you can say, 
+
+337
+00:17:33,600 --> 00:17:36,000
+Hey, you know, I only want to 
+get this stock symbol and then 
+
+338
+00:17:36,000 --> 00:17:38,700
+it's a continually updating data
+stream that's connected. 
+
+339
+00:17:38,700 --> 00:17:40,600
+And we have, you know, native 
+Java clients, we have rest 
+
+340
+00:17:40,600 --> 00:17:41,800
+client. 
+We have all kinds of things that
+
+341
+00:17:41,800 --> 00:17:44,700
+you can hook into that. 
+So it's really flexible that 
+
+342
+00:17:44,700 --> 00:17:49,200
+way. 
+So use you talk about how 
+
+343
+00:17:49,200 --> 00:17:51,900
+rock-solid it is. 
+I'm so I'm curious how they 
+
+344
+00:17:51,900 --> 00:17:54,700
+achieve this, like, for example,
+what programming language that 
+
+345
+00:17:54,700 --> 00:17:58,500
+they used to build Kafka? 
+So, Kafka was written, caf-co. 
+
+346
+00:17:58,600 --> 00:18:03,400
+Kafka was written in what I like
+to call Java Scala Java Scala, 
+
+347
+00:18:03,400 --> 00:18:04,500
+that's a good way to put it, 
+right? 
+
+348
+00:18:04,500 --> 00:18:07,100
+And then as they built out the 
+ecosystem, it's in Java. 
+
+349
+00:18:09,000 --> 00:18:15,000
+Okay, yes, the initially built 
+it as in Scala, but, but 
+
+350
+00:18:15,000 --> 00:18:18,900
+written, by like traditionally 
+Java developers so scholar, 
+
+351
+00:18:18,900 --> 00:18:23,200
+written, like it with a what we 
+call like Java without 
+
+352
+00:18:23,200 --> 00:18:28,900
+semicolons, mmm-hmm, but when 
+yeah, but I will say I laugh, 
+
+353
+00:18:28,900 --> 00:18:31,400
+but I will say that when you go 
+and you look at the source code,
+
+354
+00:18:31,400 --> 00:18:34,300
+my fight my favorite class, and 
+all of Kafka is partitioned, 
+
+355
+00:18:34,300 --> 00:18:37,400
+that Scala is the one that 
+controls, like, who owns what? 
+
+356
+00:18:37,500 --> 00:18:38,900
+Right. 
+Who's in sync? 
+
+357
+00:18:38,900 --> 00:18:41,500
+And for a distributed system, as
+you might imagine that kind of 
+
+358
+00:18:41,500 --> 00:18:43,600
+critical like semi really 
+important. 
+
+359
+00:18:44,100 --> 00:18:48,200
+It's incredibly elegant, just 
+the way that they've made those.
+
+360
+00:18:48,200 --> 00:18:51,800
+Those hard choices to be elegant
+and to build something that's is
+
+361
+00:18:51,800 --> 00:18:54,600
+part of the reason why I fell in
+love with Kafka, you know, 
+
+362
+00:18:54,600 --> 00:18:56,900
+before I before I went all-in, 
+I, when I looked at, you know, 
+
+363
+00:18:56,900 --> 00:18:59,700
+obviously I always look at the 
+coat and I went and I looked and
+
+364
+00:18:59,700 --> 00:19:02,100
+I and I could well that's the 
+way I would have done it. 
+
+365
+00:19:02,100 --> 00:19:03,800
+That's smart. 
+That's why I would end and it 
+
+366
+00:19:03,800 --> 00:19:05,600
+just kind of made me fall in 
+love with it. 
+
+367
+00:19:06,500 --> 00:19:10,300
+Nice. 
+Well, they got the got the 
+
+368
+00:19:10,300 --> 00:19:15,100
+foundational pieces done. 
+Well, one thing I want to point 
+
+369
+00:19:15,100 --> 00:19:17,400
+out back to you real quick, the 
+compression. 
+
+370
+00:19:17,400 --> 00:19:19,100
+I'm just going to harp on this a
+little bit longer. 
+
+371
+00:19:19,600 --> 00:19:23,300
+When you, when you have a 
+database, a traditional database
+
+372
+00:19:23,600 --> 00:19:27,000
+that is essentially that like 
+compression of all the events, 
+
+373
+00:19:27,700 --> 00:19:30,700
+you've lost all the events. 
+And I think that this is really 
+
+374
+00:19:30,700 --> 00:19:34,500
+important is that, when you 
+start with a stream, a durable 
+
+375
+00:19:34,500 --> 00:19:39,100
+stream oriented construct, you 
+can build Everything you need on
+
+376
+00:19:39,100 --> 00:19:42,800
+top of that, whereas when all 
+you have is a database table, 
+
+377
+00:19:43,000 --> 00:19:46,000
+you have lost your events. 
+And you, there's all sorts of 
+
+378
+00:19:46,000 --> 00:19:48,400
+things you cannot build on top 
+of that. 
+
+379
+00:19:48,800 --> 00:19:51,700
+Anything, you've lost a stream 
+of events, right? 
+
+380
+00:19:51,900 --> 00:19:57,300
+And so that's where I just love 
+Kafka because unlike it gives 
+
+381
+00:19:57,300 --> 00:20:00,900
+you the flexibility to do what 
+you whatever you would need with
+
+382
+00:20:00,900 --> 00:20:02,500
+that day. 
+It gives you the full picture, 
+
+383
+00:20:02,600 --> 00:20:03,500
+right? 
+That's what I love. 
+
+384
+00:20:03,500 --> 00:20:05,600
+I hate for, I don't want to have
+the story, right? 
+
+385
+00:20:05,600 --> 00:20:08,000
+I want the whole story and I 
+love the love. 
+
+386
+00:20:08,000 --> 00:20:11,000
+The Kafka does that, you know, 
+and CDC data and I'm going to 
+
+387
+00:20:11,008 --> 00:20:14,900
+say it again, I just love it. 
+You can destruct is normally for
+
+388
+00:20:14,900 --> 00:20:17,000
+all of our CDC connectors. 
+Be it, you know, to be Z. 
+
+389
+00:20:17,000 --> 00:20:19,200
+Mm, I think, you know, confluent
+has an oracle one Oracle has 
+
+390
+00:20:19,200 --> 00:20:21,300
+Golden Gate. 
+You can have the option of 
+
+391
+00:20:21,308 --> 00:20:24,900
+getting the before, and after, 
+right, and that is a money 
+
+392
+00:20:24,900 --> 00:20:27,300
+pattern. 
+So, until you can get, you know,
+
+393
+00:20:27,300 --> 00:20:30,700
+if that's all you've got, you 
+can really use that to derive 
+
+394
+00:20:30,700 --> 00:20:33,000
+events, which is also like a 
+derivative of that pattern. 
+
+395
+00:20:34,400 --> 00:20:38,100
+It gets just so powerful to be 
+able to see the change and see 
+
+396
+00:20:38,200 --> 00:20:40,200
+See what happened? 
+And then again, like you said, 
+
+397
+00:20:40,200 --> 00:20:45,800
+you can take that anywhere. 
+So when you say you lose the 
+
+398
+00:20:45,800 --> 00:20:49,500
+events, I mean, you could store 
+all the information about the 
+
+399
+00:20:49,500 --> 00:20:52,100
+events in your database, right? 
+DBA would kill you. 
+
+400
+00:20:52,100 --> 00:20:55,100
+But yes. 
+Okay. 
+
+401
+00:20:55,700 --> 00:20:57,200
+But yeah. 
+Then you're saying some your 
+
+402
+00:20:57,200 --> 00:21:01,100
+Kafka can do this in an 
+efficient enough, very efficient
+
+403
+00:21:01,100 --> 00:21:02,700
+way. 
+Yeah database. 
+
+404
+00:21:02,700 --> 00:21:07,000
+Or or do you feel that the 
+actual logs are written? 
+
+405
+00:21:07,000 --> 00:21:10,100
+You actually use You tell us a 
+lot because I don't, I just 
+
+406
+00:21:10,100 --> 00:21:13,000
+yeah, read something once when I
+was a girl Borlaug. 
+
+407
+00:21:13,000 --> 00:21:14,800
+And when I say that, I mean it's
+a log. 
+
+408
+00:21:14,800 --> 00:21:19,100
+So that DOT log file, right? 
+And that data is stored, you 
+
+409
+00:21:19,100 --> 00:21:21,700
+know and obviously you know, 
+we've made improvements. 
+
+410
+00:21:21,700 --> 00:21:24,500
+So the batch those records 
+batches are stored, compressed 
+
+411
+00:21:24,500 --> 00:21:26,700
+whatever, whatever compression 
+type you want to select, you 
+
+412
+00:21:26,708 --> 00:21:28,700
+know as a producer. 
+You can also set it at a broker 
+
+413
+00:21:28,700 --> 00:21:30,700
+side. 
+I hardly ever recommend that 
+
+414
+00:21:30,700 --> 00:21:33,400
+unless you have, you know, 
+serious issues because then you 
+
+415
+00:21:33,408 --> 00:21:35,500
+know, the broker is responsible 
+for compression, shoots up your 
+
+416
+00:21:35,500 --> 00:21:39,800
+CPU, yada yada, but it stores it
+as a Rest log file and segments.
+
+417
+00:21:40,100 --> 00:21:42,600
+And so if you were to go look at
+a file system on Kafka you would
+
+418
+00:21:42,600 --> 00:21:45,200
+see log files for that 
+partition. 
+
+419
+00:21:45,600 --> 00:21:48,200
+So then you know the question 
+that we've had in this is 
+
+420
+00:21:48,200 --> 00:21:50,200
+another reason why there's 
+there's two things. 
+
+421
+00:21:50,200 --> 00:21:54,600
+So an AK Uber worked on this. 
+Did a fantastic job to with this
+
+422
+00:21:54,600 --> 00:21:58,700
+Kip to introduce tiered storage 
+you know into AK, at least the 
+
+423
+00:21:58,700 --> 00:22:00,700
+hooks in Apache. 
+Kafka confluent has a 
+
+424
+00:22:00,700 --> 00:22:03,800
+proprietary offering four tiered
+storage that allows you to 
+
+425
+00:22:03,800 --> 00:22:06,300
+offload, you know, some of those
+log files to achieve her storage
+
+426
+00:22:06,300 --> 00:22:09,900
+type like S3, which has been You
+know, again in genders, you to 
+
+427
+00:22:09,900 --> 00:22:12,100
+be able to keep that kind of 
+stuff longer, but there are 
+
+428
+00:22:12,100 --> 00:22:14,400
+companies like New York Times 
+has done a number of talks on 
+
+429
+00:22:14,400 --> 00:22:16,800
+that they store every single 
+article that ever has been 
+
+430
+00:22:16,800 --> 00:22:19,800
+published in Kafka for all time,
+right? 
+
+431
+00:22:19,800 --> 00:22:22,100
+And so that's kind of the 
+storage mechanism, you know, 
+
+432
+00:22:22,100 --> 00:22:25,600
+under the covers. 
+And there's some, there's some 
+
+433
+00:22:25,600 --> 00:22:27,300
+cool. 
+Like, I owe things are able to 
+
+434
+00:22:27,300 --> 00:22:31,000
+take advantage of that. 
+Allow that like sequential, like
+
+435
+00:22:31,000 --> 00:22:34,800
+push to the actual disc to be 
+super efficient but then, even 
+
+436
+00:22:34,800 --> 00:22:37,600
+on the read side, they do some 
+nice. 
+
+437
+00:22:37,600 --> 00:22:41,900
+You Is it. 
+What's the I/O Channel thing 
+
+438
+00:22:41,900 --> 00:22:45,300
+that in Linux? 
+That enables you to like, write 
+
+439
+00:22:45,500 --> 00:22:48,200
+instead of having a buffer from 
+disk to network? 
+
+440
+00:22:48,200 --> 00:22:52,700
+Yes, you you, you just like, do 
+a direct correct copy from? 
+
+441
+00:22:52,900 --> 00:22:56,000
+Yeah, direct. 
+I are so they get some cool 
+
+442
+00:22:56,000 --> 00:22:58,100
+efficient either. 
+Like I would love for us to 
+
+443
+00:22:58,100 --> 00:23:00,800
+switch out our socket server to 
+use Nettie, so we can use IO 
+
+444
+00:23:00,800 --> 00:23:03,700
+earring. 
+Jen's is a few and a lovely 
+
+445
+00:23:03,700 --> 00:23:05,700
+human and I loved him. 
+And I love IO urine. 
+
+446
+00:23:05,800 --> 00:23:09,200
+So I dare further improvements 
+we can make Yes, you take 
+
+447
+00:23:09,200 --> 00:23:11,200
+advantage of everything in Linux
+Mega fast. 
+
+448
+00:23:12,100 --> 00:23:15,900
+So does this work? 
+Only with Java? 
+
+449
+00:23:15,900 --> 00:23:17,300
+Or? 
+Yeah. 
+
+450
+00:23:18,100 --> 00:23:22,200
+So it's so it's job only know. 
+It will the the client side. 
+
+451
+00:23:22,200 --> 00:23:26,000
+So as a, as a message 
+producer-consumer, they have 
+
+452
+00:23:26,000 --> 00:23:28,500
+also it's just a, it's a 
+protocol. 
+
+453
+00:23:28,600 --> 00:23:32,000
+So there are protocol 
+implementations for everything, 
+
+454
+00:23:32,600 --> 00:23:38,000
+but the initial One Missed was 
+just kind of like, that's my 
+
+455
+00:23:38,100 --> 00:23:40,000
+Other push because I think would
+be money. 
+
+456
+00:23:40,600 --> 00:23:43,100
+We don't have a native Koval 
+client yet but you're right. 
+
+457
+00:23:43,200 --> 00:23:45,200
+Everything else. 
+Pretty much besides Cole. 
+
+458
+00:23:46,600 --> 00:23:49,400
+Okay. 
+So the actual Kafka server runs 
+
+459
+00:23:49,400 --> 00:24:00,100
+as a jvm process. 
+But yeah, all the way up and 
+
+460
+00:24:00,100 --> 00:24:02,900
+then there's liberty Kafka which
+is like the sea in her face and 
+
+461
+00:24:02,900 --> 00:24:05,200
+there's a lot of clients we have
+that are built on that. 
+
+462
+00:24:05,300 --> 00:24:07,800
+There's also other popular, you 
+know, ecosystem open-source 
+
+463
+00:24:07,800 --> 00:24:10,000
+clients for stuff like go and 
+that kind of thing. 
+
+464
+00:24:11,400 --> 00:24:15,500
+So this sounds I mean maybe this
+is a weird thing to ask but this
+
+465
+00:24:15,500 --> 00:24:18,800
+sounds like an emergency. 
+Important enough thing that you 
+
+466
+00:24:19,200 --> 00:24:27,500
+I could imagine creating a 
+custom version of Linux just to 
+
+467
+00:24:27,900 --> 00:24:32,700
+be a Kafka box or whatever notes
+that crazy. 
+
+468
+00:24:32,700 --> 00:24:34,400
+No I mean I don't think that's 
+crazy. 
+
+469
+00:24:34,400 --> 00:24:37,600
+What I would say is that people 
+tend to underestimate the power 
+
+470
+00:24:37,600 --> 00:24:41,000
+of Kafka running like it does 
+today so I'll have customers and
+
+471
+00:24:41,000 --> 00:24:45,400
+it's really adorable and they'll
+go you don't understand how what
+
+472
+00:24:45,400 --> 00:24:47,200
+our throughput is. 
+Is you know? 
+
+473
+00:24:47,200 --> 00:24:49,800
+And then they'll be like, we 
+might need to push a million 
+
+474
+00:24:49,800 --> 00:24:56,600
+messages a day. 
+And I'm like, yeah and and when 
+
+475
+00:24:56,600 --> 00:24:59,200
+you get into those really like 
+where your where that would be 
+
+476
+00:24:59,200 --> 00:25:01,300
+money and what you're talking 
+about is when you would get into
+
+477
+00:25:01,300 --> 00:25:04,200
+a really, really low SLA, use 
+case. 
+
+478
+00:25:05,100 --> 00:25:07,400
+So, you know, when you're 
+talking about something that 
+
+479
+00:25:07,400 --> 00:25:09,000
+doesn't need to go in 
+milliseconds or talking 
+
+480
+00:25:09,000 --> 00:25:11,300
+nanoseconds, right? 
+That's when that type of 
+
+481
+00:25:11,300 --> 00:25:14,600
+optimization, you know, would 
+become incredibly powerful for 
+
+482
+00:25:14,600 --> 00:25:19,400
+those specific use cases for the
+98% of other use cases, Kafka 
+
+483
+00:25:19,400 --> 00:25:21,400
+running as is on a Linux 
+distribution. 
+
+484
+00:25:21,600 --> 00:25:24,600
+Is faster than what most people 
+have ever seen. 
+
+485
+00:25:25,500 --> 00:25:29,100
+Okay, no, it's good to know. 
+Well, plus the overhead of doing
+
+486
+00:25:29,100 --> 00:25:31,700
+what I'm talking about, would be
+huge. 
+
+487
+00:25:31,800 --> 00:25:35,800
+And so, if it's, if, if the 
+benefit isn't, yeah, we do 
+
+488
+00:25:35,800 --> 00:25:37,800
+custom things. 
+So we complement has a fully 
+
+489
+00:25:37,800 --> 00:25:39,700
+managed offering to in our 
+Cloud, right? 
+
+490
+00:25:39,900 --> 00:25:42,300
+And we do custom things in that 
+right? 
+
+491
+00:25:42,300 --> 00:25:44,700
+Like yeah, we're all over that, 
+right? 
+
+492
+00:25:44,700 --> 00:25:47,900
+So so that that's yeah and and 
+there's other stuff and I 
+
+493
+00:25:47,900 --> 00:25:50,700
+actually was talking to Cory 
+Quinn, I went to his podcast a 
+
+494
+00:25:50,700 --> 00:25:52,300
+while back and Yeah, and we 
+were. 
+
+495
+00:25:52,300 --> 00:25:54,100
+I love pierogies larious. 
+Yeah. 
+
+496
+00:25:54,400 --> 00:25:57,100
+And we were chatting, and one of
+the things I think that that 
+
+497
+00:25:57,100 --> 00:25:59,300
+people sometimes understand is, 
+yes kafka's. 
+
+498
+00:25:59,300 --> 00:26:01,900
+This amazing you know 
+distributed system right? 
+
+499
+00:26:02,200 --> 00:26:06,500
+But my passion is really in an 
+inventing space and when that 
+
+500
+00:26:06,500 --> 00:26:10,300
+happens, what I've seen and in a
+lot of organizations is there's 
+
+501
+00:26:10,300 --> 00:26:13,800
+a huge pain point where this 
+stuff is great it's like crack 
+
+502
+00:26:13,800 --> 00:26:15,700
+and all of a sudden now we have 
+it everywhere and we don't know 
+
+503
+00:26:15,700 --> 00:26:20,600
+what we're doing and so the idea
+of also using Kafka like when we
+
+504
+00:26:20,600 --> 00:26:23,800
+talk about it was Laura term, 
+but central nervous system is 
+
+505
+00:26:23,800 --> 00:26:26,000
+that you're all of a sudden now 
+have observability. 
+
+506
+00:26:26,000 --> 00:26:28,700
+You're able to build 
+observability on top of that in 
+
+507
+00:26:28,700 --> 00:26:32,000
+a centralized fashion and that 
+to me when we talk about why 
+
+508
+00:26:32,000 --> 00:26:34,000
+should I use this with the 
+business value? 
+
+509
+00:26:35,000 --> 00:26:36,800
+That's huge. 
+And it's only going to get 
+
+510
+00:26:36,800 --> 00:26:38,700
+bigger as more and more, and 
+more. 
+
+511
+00:26:38,700 --> 00:26:41,400
+I mean, I see people now asking 
+about Eventing, you know? 
+
+512
+00:26:41,400 --> 00:26:45,600
+And this to my my whole thing is
+I want to get tires is like swag
+
+513
+00:26:45,600 --> 00:26:48,200
+some time. 
+So like and and factory tours, 
+
+514
+00:26:48,400 --> 00:26:51,200
+so like I want to be able to 
+like tour Tire Factory. 
+
+515
+00:26:51,400 --> 00:26:54,100
+And we're seeing more and more 
+companies that are like you 
+
+516
+00:26:54,108 --> 00:26:57,200
+know, Legacy manufacturing 
+everybody coming and realizing 
+
+517
+00:26:57,200 --> 00:26:59,300
+that to compete in today's 
+world, right? 
+
+518
+00:26:59,500 --> 00:27:03,400
+You've got to be more reactive 
+than 24 hours and that's really 
+
+519
+00:27:03,400 --> 00:27:06,300
+driving this push, you know, to 
+come to Kafka. 
+
+520
+00:27:07,700 --> 00:27:09,600
+Would you? 
+And that's a reference to like 
+
+521
+00:27:09,600 --> 00:27:14,000
+the typical change data, capture
+batch nightly batch job kind of 
+
+522
+00:27:14,000 --> 00:27:17,100
+thing is like, like, that's the 
+way that we because we didn't 
+
+523
+00:27:17,100 --> 00:27:21,600
+have a streaming oriented 
+Foundation we instead would run 
+
+524
+00:27:21,600 --> 00:27:24,400
+nightly batch jobs. 
+That would take all the events 
+
+525
+00:27:24,400 --> 00:27:27,200
+from that day and pump them out 
+to all the systems that needed 
+
+526
+00:27:27,200 --> 00:27:31,800
+to know about the changes and 
+that is just a horrible 
+
+527
+00:27:31,800 --> 00:27:33,500
+architect. 
+I really did have to pay 
+
+528
+00:27:33,700 --> 00:27:36,300
+grandparent. 
+I have two old pagers in here 
+
+529
+00:27:36,400 --> 00:27:38,700
+from like on. 
+All rotations and I always 
+
+530
+00:27:38,700 --> 00:27:41,000
+sometimes I bring them out. 
+And I'm like, do you like still 
+
+531
+00:27:41,000 --> 00:27:43,800
+carrying these right? 
+Yes. 
+
+532
+00:27:43,800 --> 00:27:44,800
+No. 
+Maybe like, no. 
+
+533
+00:27:44,800 --> 00:27:46,400
+That's not the way you can't. 
+Yeah. 
+
+534
+00:27:46,400 --> 00:27:48,300
+You can't do that anymore. 
+And be competitive. 
+
+535
+00:27:48,300 --> 00:27:49,600
+You really just can't? 
+Yeah. 
+
+536
+00:27:50,500 --> 00:27:53,100
+Yeah. 
+Did you did any need it now? 
+
+537
+00:27:54,000 --> 00:27:58,500
+Well, it also sounds a little 
+bit like what crypto was 
+
+538
+00:27:58,500 --> 00:28:01,500
+supposed to promise the 
+journaling and the being able 
+
+539
+00:28:01,500 --> 00:28:06,600
+to, you know, go back through 
+which, who knows if it works or 
+
+540
+00:28:06,600 --> 00:28:08,300
+not. 
+Not the lot of instant 
+
+541
+00:28:08,300 --> 00:28:10,900
+interesting parallels. 
+I think between blockchain and 
+
+542
+00:28:10,900 --> 00:28:13,800
+Kafka. 
+The biggest difference I think 
+
+543
+00:28:13,800 --> 00:28:19,100
+is that in the world of Kafka 
+you don't need, you don't have 
+
+544
+00:28:19,100 --> 00:28:23,300
+untrusted rights and the whole 
+point of blockchain is to deal 
+
+545
+00:28:23,300 --> 00:28:27,600
+with with somehow created, a 
+system of trust around untrusted
+
+546
+00:28:27,600 --> 00:28:31,900
+people that have write access 
+and the world of Kafka you 
+
+547
+00:28:31,900 --> 00:28:34,900
+likely, trust all of your 
+producers that the data that 
+
+548
+00:28:34,908 --> 00:28:39,300
+they're producing is Been 
+authorized to be written. 
+
+549
+00:28:39,600 --> 00:28:43,300
+Yeah. 
+And as much as centralization, 
+
+550
+00:28:44,100 --> 00:28:47,700
+you know, has that bad taste 
+and, you know, because people 
+
+551
+00:28:47,700 --> 00:28:52,200
+get to do bad things if they're 
+in a patriarchy at the top. 
+
+552
+00:28:53,100 --> 00:28:57,600
+It's like, okay, but maybe there
+are some things that like, well,
+
+553
+00:28:57,600 --> 00:29:01,400
+what you just said, how do you 
+trust untrusted people writing? 
+
+554
+00:29:01,400 --> 00:29:05,400
+It was like, well, that's a, 
+what is that attic? 
+
+555
+00:29:05,800 --> 00:29:08,300
+You know? 
+Unsolvable problem. 
+
+556
+00:29:08,400 --> 00:29:11,100
+Well, no, I mean I think it's 
+just a logical. 
+
+557
+00:29:11,700 --> 00:29:13,500
+I don't know. 
+Logical, inconsistency. 
+
+558
+00:29:13,500 --> 00:29:14,600
+It's like you just say. 
+Yeah. 
+
+559
+00:29:14,800 --> 00:29:16,500
+How do you trust somebody? 
+Who's untrust? 
+
+560
+00:29:16,500 --> 00:29:17,400
+Right? 
+Yeah. 
+
+561
+00:29:18,100 --> 00:29:20,400
+Don't you can't. 
+Yes. 
+
+562
+00:29:21,200 --> 00:29:26,100
+In the world of blockchain. 
+You make them pay to to actually
+
+563
+00:29:26,100 --> 00:29:29,300
+like, there's this there. 
+You have to give up something of
+
+564
+00:29:29,400 --> 00:29:34,800
+physical value, which in the 
+case of most crypto is 
+
+565
+00:29:34,800 --> 00:29:37,000
+electricity, is what you give 
+up. 
+
+566
+00:29:37,100 --> 00:29:41,800
+Up and so that's how you 
+introduce incentives for things 
+
+567
+00:29:41,800 --> 00:29:43,200
+to be trust. 
+You remember, when we used to 
+
+568
+00:29:43,200 --> 00:29:46,700
+have all those FTP servers for 
+like a breeze, back in the day 
+
+569
+00:29:46,700 --> 00:29:49,100
+and you had to have them upload 
+capacity before you could 
+
+570
+00:29:49,100 --> 00:29:51,500
+download anything. 
+Oh, that's right. 
+
+571
+00:29:51,500 --> 00:29:53,600
+Yeah, you had to give something 
+to the system actually. 
+
+572
+00:29:53,600 --> 00:29:56,500
+It's that that played out again.
+Yeah, absolutely. 
+
+573
+00:29:57,100 --> 00:30:00,400
+Yeah, that's a reason that I 
+ever downloaded with Survivor 
+
+574
+00:30:00,400 --> 00:30:04,400
+songs, is the best band ever. 
+Yeah, I love survive here. 
+
+575
+00:30:04,400 --> 00:30:09,400
+Remember survival. 
+Like old-school roster silly 
+
+576
+00:30:09,400 --> 00:30:12,600
+man, my on you? 
+Come on awesome. 
+
+577
+00:30:15,200 --> 00:30:18,600
+So okay so I want to transition 
+to I think we've covered a lot 
+
+578
+00:30:18,600 --> 00:30:22,300
+of the reasons why Kafka and 
+some of the basics and all that 
+
+579
+00:30:22,600 --> 00:30:24,500
+I want to talk about 
+architectural patterns. 
+
+580
+00:30:24,800 --> 00:30:31,000
+So one of the architectural 
+patterns that I think is world 
+
+581
+00:30:31,000 --> 00:30:34,800
+changing is cqrs. 
+So tell us about cqrs what it is
+
+582
+00:30:34,800 --> 00:30:37,400
+and why it's so yeah. 
+So I think You know, for me, 
+
+583
+00:30:37,400 --> 00:30:41,700
+when I look at cqrs, you know, 
+what I see is resolving, 
+
+584
+00:30:41,700 --> 00:30:45,700
+something that was never going 
+to work in the first place, you 
+
+585
+00:30:45,700 --> 00:30:49,500
+know, when, you know, and I 
+admittedly like my experience in
+
+586
+00:30:49,500 --> 00:30:53,000
+doing anything that was like, 
+you, I is not in any way shape 
+
+587
+00:30:53,000 --> 00:30:55,400
+form as deep as it is on backend
+stuff. 
+
+588
+00:30:55,700 --> 00:31:00,200
+But I have dabbled and I'm like,
+why can't you just give me what 
+
+589
+00:31:00,200 --> 00:31:03,000
+I need. 
+Like, I know how I need to 
+
+590
+00:31:03,000 --> 00:31:05,500
+display. 
+This just give me that like I, 
+
+591
+00:31:05,500 --> 00:31:08,600
+you know, and that too. 
+Me is the heart of of what 
+
+592
+00:31:08,600 --> 00:31:11,000
+problem, right? 
+CQ ourselves is basically it 
+
+593
+00:31:11,000 --> 00:31:14,300
+says hey look you know the way 
+that you want to store your 
+
+594
+00:31:14,300 --> 00:31:17,400
+data, the way you want to write 
+it that's you don't want to be 
+
+595
+00:31:17,400 --> 00:31:20,100
+bound to that and your display, 
+right? 
+
+596
+00:31:20,100 --> 00:31:23,200
+How you how people might want to
+interact with that data, and 
+
+597
+00:31:23,200 --> 00:31:26,900
+that natural decoupling gives 
+you so much more flexibility, 
+
+598
+00:31:26,900 --> 00:31:29,500
+you know, speed to it, makes it 
+easier to develop, makes it 
+
+599
+00:31:29,500 --> 00:31:30,700
+easier to develop both. 
+Right? 
+
+600
+00:31:30,700 --> 00:31:33,200
+So you're, it's basically two 
+coupling, the way my data is 
+
+601
+00:31:33,200 --> 00:31:36,400
+stored in written from the way I
+might want to see it presented. 
+
+602
+00:31:36,500 --> 00:31:39,000
+That's, that's to me the idea 
+behind ridiculous. 
+
+603
+00:31:39,800 --> 00:31:44,800
+Yeah, so it stands for command 
+queerest responsibilit. 
+
+604
+00:31:44,800 --> 00:31:47,700
+No command query responsibility 
+segregation. 
+
+605
+00:31:47,700 --> 00:31:49,100
+No, thank again. 
+All right. 
+
+606
+00:31:50,900 --> 00:31:54,100
+Yeah, yeah, either one word. 
+Yeah. 
+
+607
+00:31:54,200 --> 00:31:57,700
+So separating out the command, 
+which is the way that you write 
+
+608
+00:31:57,700 --> 00:32:00,300
+the data from the query, which 
+is the way you want to view the 
+
+609
+00:32:00,300 --> 00:32:01,800
+video. 
+Yes, exactly. 
+
+610
+00:32:01,800 --> 00:32:06,200
+So that's so, so that's, that's 
+the cqrs architectural pattern. 
+
+611
+00:32:06,600 --> 00:32:11,000
+And Kafka is a wonderful 
+foundation for cqrs because 
+
+612
+00:32:11,000 --> 00:32:14,000
+you've got a great way to store 
+the commands. 
+
+613
+00:32:14,500 --> 00:32:20,900
+What, what is not in base Kafka 
+is the way to then, create those
+
+614
+00:32:20,900 --> 00:32:24,200
+queries but then we get into 
+Kafka screwed streams and case 
+
+615
+00:32:24,200 --> 00:32:26,700
+you can see here, I brought up 
+what's my favorite thing about? 
+
+616
+00:32:26,700 --> 00:32:29,400
+Yeah, Casey, go leaving right, 
+server-side filtering, right? 
+
+617
+00:32:29,400 --> 00:32:32,200
+But Kafka streams and that is 
+what makes it so powerful. 
+
+618
+00:32:32,200 --> 00:32:35,400
+So I fought really hard to get 
+Kafka in our org and then I was 
+
+619
+00:32:35,400 --> 00:32:38,100
+like, I One. 
+And I was like, yes and I was in
+
+620
+00:32:38,100 --> 00:32:41,900
+my closet and I remember going 
+crap now, what do I do with it? 
+
+621
+00:32:42,400 --> 00:32:44,900
+Oh, what about, what have I 
+done, right? 
+
+622
+00:32:44,900 --> 00:32:48,700
+And so, then I did my research 
+and I found Kafka streams and 
+
+623
+00:32:48,700 --> 00:32:50,400
+Kafka streams. 
+The thing I love about it. 
+
+624
+00:32:50,400 --> 00:32:53,400
+Most is unlike other, you know, 
+when we look at other stream 
+
+625
+00:32:53,400 --> 00:32:55,600
+processing systems, right, like 
+flank, right? 
+
+626
+00:32:55,600 --> 00:32:58,500
+Or spark where you have to have 
+an entire infrastructure to 
+
+627
+00:32:58,500 --> 00:33:00,500
+support. 
+You know, if Lincoln spark Kafka
+
+628
+00:33:00,500 --> 00:33:05,800
+streams is just a jar file and 
+it has affluent DSL which is no,
+
+629
+00:33:05,900 --> 00:33:08,700
+I love It's like this was like 
+to me like the only way that 
+
+630
+00:33:08,700 --> 00:33:12,100
+makes Java fun. 
+I was like wow this is I can get
+
+631
+00:33:12,100 --> 00:33:15,600
+on board with this and cop is 
+streams is best when you use it 
+
+632
+00:33:15,600 --> 00:33:18,800
+to read from a Kafka topic, you 
+do something that's something 
+
+633
+00:33:18,800 --> 00:33:21,200
+can be amazing. 
+Or it can be something as easy 
+
+634
+00:33:21,200 --> 00:33:24,800
+as a filter, let's say and then 
+you produce it back to a Kafka 
+
+635
+00:33:24,800 --> 00:33:27,900
+topic, right? 
+So it's kind of an intermediary.
+
+636
+00:33:28,100 --> 00:33:30,900
+Now, we also have vanilla 
+consumers, where you can consume
+
+637
+00:33:30,900 --> 00:33:34,400
+directly from Kafka right? 
+Do something with it and then 
+
+638
+00:33:34,400 --> 00:33:36,200
+say I'm going to put it 
+somewhere else. 
+
+639
+00:33:36,600 --> 00:33:38,500
+There's also we haven't talked 
+about this yet, there's the 
+
+640
+00:33:38,500 --> 00:33:41,300
+connect, you know, 
+infrastructure and that connect 
+
+641
+00:33:41,300 --> 00:33:43,400
+is like, you know, a very low 
+code way you deploy a 
+
+642
+00:33:43,400 --> 00:33:44,700
+configuration. 
+There's like hundreds and 
+
+643
+00:33:44,700 --> 00:33:47,600
+hundreds of connectors for every
+system that you could think of, 
+
+644
+00:33:47,600 --> 00:33:49,500
+right? 
+If you need to ship data out. 
+
+645
+00:33:49,600 --> 00:33:53,000
+But we're cqrs comes in is 
+basically. 
+
+646
+00:33:53,000 --> 00:33:56,600
+Now let's say that I need this 
+data to look a certain way and 
+
+647
+00:33:56,600 --> 00:33:59,000
+maybe you needed to look another
+where you needed to look another
+
+648
+00:33:59,000 --> 00:34:01,500
+way, right? 
+I can spin up a Kafka streams 
+
+649
+00:34:01,500 --> 00:34:05,600
+application or you know and then
+modify that data, get it in the 
+
+650
+00:34:05,600 --> 00:34:08,500
+precise way. 
+I To look right and it's no 
+
+651
+00:34:08,500 --> 00:34:12,300
+extra work on the initial data 
+stream, right? 
+
+652
+00:34:12,300 --> 00:34:17,000
+No matter how many people grab 
+that data, it's only stored once
+
+653
+00:34:17,000 --> 00:34:20,100
+and it's the same for everyone 
+and that's the efficiency that 
+
+654
+00:34:20,100 --> 00:34:24,900
+makes me happy in Costco, right?
+And then Casey, will be B is 
+
+655
+00:34:24,900 --> 00:34:27,800
+even a step further towards what
+we would traditionally think 
+
+656
+00:34:27,800 --> 00:34:33,000
+about when we think about the 
+query part of cqrs because you 
+
+657
+00:34:33,000 --> 00:34:36,400
+can create a cake table review, 
+and then have an external clock.
+
+658
+00:34:36,400 --> 00:34:39,100
+Client come in and get hooks on 
+that. 
+
+659
+00:34:39,100 --> 00:34:40,800
+Right? 
+Have a long-lived connection 
+
+660
+00:34:41,000 --> 00:34:43,500
+that feeds. 
+It updates based on a customized
+
+661
+00:34:43,500 --> 00:34:45,900
+view. 
+So that's how Kafka plays in. 
+
+662
+00:34:46,900 --> 00:34:49,800
+So let me ask a more basic 
+question when you when you're 
+
+663
+00:34:49,800 --> 00:34:55,199
+talking about this, you're 
+saying, okay, what I say I'm a 
+
+664
+00:34:55,500 --> 00:34:58,600
+web client and I want to display
+some data. 
+
+665
+00:34:59,900 --> 00:35:04,500
+And I'm able to then go back and
+say Here's the data I want and 
+
+666
+00:35:04,500 --> 00:35:06,900
+it just gives me the data I 
+want. 
+
+667
+00:35:07,700 --> 00:35:11,500
+Can will add realize that view 
+idiotically obvious, right? 
+
+668
+00:35:12,200 --> 00:35:16,100
+Yeah, so I think actual use case
+back to your like address 
+
+669
+00:35:16,100 --> 00:35:17,900
+change. 
+One would be an interesting 
+
+670
+00:35:17,900 --> 00:35:22,300
+simple in the start with. 
+So if we imagine a system where 
+
+671
+00:35:23,100 --> 00:35:27,600
+people are changing their 
+addresses, we are going to store
+
+672
+00:35:27,600 --> 00:35:30,400
+in Kafka every change. 
+You that address. 
+
+673
+00:35:30,400 --> 00:35:32,500
+And yeah, we could do some 
+compaction, whatever if we 
+
+674
+00:35:32,500 --> 00:35:34,500
+wanted to. 
+But let's just imagine that 
+
+675
+00:35:34,500 --> 00:35:38,800
+Kafka is storing user, a change 
+their address user, a change 
+
+676
+00:35:38,800 --> 00:35:43,500
+their address again. 
+So that is the stream of events 
+
+677
+00:35:43,500 --> 00:35:45,100
+that we have. 
+But there's a lot of systems 
+
+678
+00:35:45,100 --> 00:35:47,900
+that they don't care about the 
+actual stream, they just want to
+
+679
+00:35:47,900 --> 00:35:50,500
+know what is user. 
+A is address right now? 
+
+680
+00:35:50,800 --> 00:35:53,200
+And so that's where we get to 
+the ability to. 
+
+681
+00:35:53,200 --> 00:35:58,500
+Then query the materialized view
+of what is how have all these 
+
+682
+00:35:58,500 --> 00:36:01,800
+stream events? 
+Gotten this to specific state 
+
+683
+00:36:01,800 --> 00:36:06,200
+that we're in now. 
+And then there's then there's a 
+
+684
+00:36:06,200 --> 00:36:08,900
+whole other part of it which you
+mentioned with like, Kafka 
+
+685
+00:36:08,900 --> 00:36:12,800
+streams which is what if we want
+to take the stream of address 
+
+686
+00:36:12,800 --> 00:36:17,100
+change events and do some 
+transformation on them before we
+
+687
+00:36:17,100 --> 00:36:19,100
+then get to that materialized 
+view. 
+
+688
+00:36:19,300 --> 00:36:22,500
+Like I don't know, we want to 
+validate that the addresses a 
+
+689
+00:36:22,500 --> 00:36:26,100
+valid address or something like 
+that and if it's not do 
+
+690
+00:36:26,100 --> 00:36:28,900
+something may be interested with
+a customer name maybe we need 
+
+691
+00:36:28,900 --> 00:36:30,700
+the name. 
+Only an ID, right? 
+
+692
+00:36:30,700 --> 00:36:33,400
+Like all those all those things 
+that we need to, you know, build
+
+693
+00:36:33,400 --> 00:36:36,700
+you know that that 
+non-normalized, you know kind of
+
+694
+00:36:36,700 --> 00:36:38,600
+like you know, view of a 
+customer. 
+
+695
+00:36:38,700 --> 00:36:44,300
+Absolutely Yes. 
+Yeah, so I think one of the 
+
+696
+00:36:44,300 --> 00:36:49,900
+challenges with cqrs is that the
+programming model is harder than
+
+697
+00:36:50,000 --> 00:36:55,200
+just a static database table, 
+like it's like there's more that
+
+698
+00:36:55,200 --> 00:36:59,100
+you have to think about when you
+move to that architectural 
+
+699
+00:36:59,100 --> 00:37:03,800
+pattern, whereas the the 
+Simplicity of the database table
+
+700
+00:37:03,800 --> 00:37:05,800
+is nice because there's all 
+sorts of things, you don't have 
+
+701
+00:37:05,800 --> 00:37:08,800
+to think about, you don't have 
+to think about producer, right 
+
+702
+00:37:08,800 --> 00:37:14,600
+guarantees. 
+And consumer partitioning. 
+
+703
+00:37:14,600 --> 00:37:17,700
+And, you know, there's just all 
+these pieces that the database 
+
+704
+00:37:17,700 --> 00:37:22,300
+table is this nice simple design
+because it you've lost all sorts
+
+705
+00:37:22,300 --> 00:37:24,600
+of great Islands. 
+But that's the way my brain 
+
+706
+00:37:24,600 --> 00:37:26,700
+works, and I think you're right,
+there's a large sector of the 
+
+707
+00:37:26,700 --> 00:37:30,000
+population where it's a totally 
+new way of thinking, right? 
+
+708
+00:37:30,000 --> 00:37:31,300
+And that's kind of where we come
+in. 
+
+709
+00:37:31,300 --> 00:37:34,400
+So part of my job is to help 
+people with that transition, and
+
+710
+00:37:34,400 --> 00:37:36,000
+to make sure they're set up for 
+Success. 
+
+711
+00:37:36,000 --> 00:37:39,000
+So they don't hit all those hard
+edge cases, they don't to figure
+
+712
+00:37:39,000 --> 00:37:41,200
+it out for themselves. 
+Because we already know the best
+
+713
+00:37:41,200 --> 00:37:42,600
+practices. 
+We already know how to do this 
+
+714
+00:37:42,600 --> 00:37:44,900
+successfully, but if you're 
+going it alone, I mean, I 
+
+715
+00:37:44,900 --> 00:37:47,800
+remember when I did this, I had 
+literally, I ruined my stomach. 
+
+716
+00:37:47,800 --> 00:37:51,300
+I like 18 Coke cans and not the 
+small ones like the Pounders, 
+
+717
+00:37:51,500 --> 00:37:53,900
+you know what I mean? 
+Yeah, I'm not kidding you. 
+
+718
+00:37:53,900 --> 00:37:56,800
+And I was like, you know, like I
+haven't like pajamas like my 
+
+719
+00:37:56,800 --> 00:38:00,800
+glasses and I was like, all 
+right, okay like you know like 
+
+720
+00:38:00,800 --> 00:38:03,600
+up here for hours and I don't 
+want anyone else to have to go 
+
+721
+00:38:03,600 --> 00:38:05,500
+through that because sugar will 
+ruin your stomach. 
+
+722
+00:38:05,500 --> 00:38:07,400
+Like it will. 
+You cannot ingest that much 
+
+723
+00:38:07,400 --> 00:38:09,300
+sugar and have it, not impact 
+you. 
+
+724
+00:38:09,308 --> 00:38:11,500
+So don't Do that, don't do what 
+I did. 
+
+725
+00:38:13,200 --> 00:38:18,600
+So the way you're talking about,
+it reminds me of immutable data 
+
+726
+00:38:18,600 --> 00:38:25,400
+structures in functional 
+programming does it, you know? 
+
+727
+00:38:25,400 --> 00:38:28,500
+I mean, but my brain has been 
+immersed in all that stuff. 
+
+728
+00:38:28,500 --> 00:38:33,100
+So I'm not sure if I'm thinking 
+about it correctly, I mean, I 
+
+729
+00:38:33,100 --> 00:38:36,400
+would say you what I mean, Kafka
+by its very nature, if you and 
+
+730
+00:38:36,400 --> 00:38:38,500
+that's why I say it. 
+The other way is boring for me, 
+
+731
+00:38:38,500 --> 00:38:40,700
+right? 
+Because I have a functional So 
+
+732
+00:38:40,700 --> 00:38:43,600
+people who are funk, you are 
+just driven those functional 
+
+733
+00:38:43,600 --> 00:38:48,200
+brains, they see this and they 
+go like hello and it's really, 
+
+734
+00:38:48,200 --> 00:38:51,000
+you know, kind of bringing other
+people along, who have spent a 
+
+735
+00:38:51,008 --> 00:38:53,900
+lot of time and non-functional. 
+That's their comfort zone, 
+
+736
+00:38:53,900 --> 00:38:56,000
+that's where they are. 
+And to kind of say, look not 
+
+737
+00:38:56,000 --> 00:38:58,700
+only am I gonna, you know, try 
+to help you with this and we do 
+
+738
+00:38:58,700 --> 00:39:00,300
+this in a community fashion to, 
+right? 
+
+739
+00:39:00,300 --> 00:39:03,000
+So you know, confluent runs a 
+ton of great meetups they're 
+
+740
+00:39:03,000 --> 00:39:06,200
+free, you know, come join, we do
+Eventing things, we do blog 
+
+741
+00:39:06,200 --> 00:39:09,300
+articles, we have an entire 
+pattern repo now for Eventing 
+
+742
+00:39:09,300 --> 00:39:13,100
+patterns And best practices. 
+It's free developer.com fluent, 
+
+743
+00:39:13,100 --> 00:39:16,900
+bio and list out some like 
+routing sleep patterns, you 
+
+744
+00:39:16,900 --> 00:39:20,100
+know, like claim check pattern, 
+all the ways you accommodate 
+
+745
+00:39:20,100 --> 00:39:23,000
+this way of thinking, for, for 
+how you're currently done. 
+
+746
+00:39:23,000 --> 00:39:25,200
+Because as you said, right, 
+that's what makes the database. 
+
+747
+00:39:25,200 --> 00:39:28,100
+So easy partially is because we 
+figured out how to do that. 
+
+748
+00:39:28,200 --> 00:39:31,200
+People know how to do that. 
+So helping people figure out how
+
+749
+00:39:31,200 --> 00:39:33,900
+to do this efficiently I think 
+is part of our goal. 
+
+750
+00:39:36,200 --> 00:39:38,600
+I think in what you're 
+identifying to Bruce's, that 
+
+751
+00:39:38,700 --> 00:39:42,700
+there is a similarity And 
+thinking about object, the way 
+
+752
+00:39:42,700 --> 00:39:45,200
+that we traditionally may not 
+traditionally some throat, ready
+
+753
+00:39:45,200 --> 00:39:49,600
+to mutable objects and object 
+oriented programming are very 
+
+754
+00:39:49,600 --> 00:39:53,300
+similar to mutating a database 
+table, exactly. 
+
+755
+00:39:53,400 --> 00:39:57,100
+And now in the functional world,
+we look at both of those things 
+
+756
+00:39:57,100 --> 00:40:02,700
+and we're like, you like, like, 
+like like yeah, exactly. 
+
+757
+00:40:02,700 --> 00:40:08,700
+And so, Kafka being this like 
+immutable stream of events that 
+
+758
+00:40:08,700 --> 00:40:11,900
+you can listen. 
+To and perform transformation 
+
+759
+00:40:11,900 --> 00:40:15,400
+functions on where the output of
+the transformation is just a new
+
+760
+00:40:15,400 --> 00:40:18,008
+stream. 
+You can't modify all of a 
+
+761
+00:40:18,016 --> 00:40:19,300
+sudden. 
+I'm like, oh God. 
+
+762
+00:40:19,300 --> 00:40:20,400
+This. 
+Yeah, exactly. 
+
+763
+00:40:20,400 --> 00:40:22,900
+And I said, like, this fits with
+how I think about the world and 
+
+764
+00:40:22,900 --> 00:40:26,200
+how the world should work. 
+Yeah, I'm going through that 
+
+765
+00:40:26,200 --> 00:40:28,400
+transformation now. 
+And one of the things that I'm 
+
+766
+00:40:28,400 --> 00:40:35,300
+really seeing is oh the ideas of
+behind encapsulation, sounded 
+
+767
+00:40:35,300 --> 00:40:39,300
+good. 
+But in practice it's like, oh 
+
+768
+00:40:39,300 --> 00:40:43,700
+so, Every so, so we got the data
+and then we surround it by these
+
+769
+00:40:43,700 --> 00:40:47,900
+methods and every method has to 
+make sure that it doesn't mess, 
+
+770
+00:40:47,900 --> 00:40:52,400
+put the data into a bad State, 
+and so just do that. 
+
+771
+00:40:52,600 --> 00:40:57,200
+And it's like, yeah, that hasn't
+really worked out so well, so 
+
+772
+00:40:57,200 --> 00:40:59,400
+maybe we should just go, all 
+right? 
+
+773
+00:40:59,400 --> 00:41:03,000
+How about if nobody can change 
+the data ever? 
+
+774
+00:41:03,300 --> 00:41:08,100
+Oh, then I don't need all of 
+those methods attached to the 
+
+775
+00:41:08,100 --> 00:41:10,100
+object. 
+I can just make Make them 
+
+776
+00:41:10,100 --> 00:41:14,600
+separate functions and then I 
+also don't need to worry about 
+
+777
+00:41:14,600 --> 00:41:19,300
+whether I put the object into a 
+bad State, alright? 
+
+778
+00:41:19,500 --> 00:41:20,800
+Okay. 
+And then you don't have to worry
+
+779
+00:41:20,800 --> 00:41:24,400
+about concurrency and how 
+concurrency is going to screw 
+
+780
+00:41:24,400 --> 00:41:28,900
+all this are all of that stuff 
+happens flows out of that but 
+
+781
+00:41:28,900 --> 00:41:33,200
+it's like I don't know why it 
+took me so long to see it. 
+
+782
+00:41:33,200 --> 00:41:38,900
+I think it's just because we 
+presented so encapsulation this 
+
+783
+00:41:38,900 --> 00:41:42,300
+is so much better than What 
+we've been doing before, you 
+
+784
+00:41:42,300 --> 00:41:43,800
+know, it's kind of like 
+capitalism. 
+
+785
+00:41:43,800 --> 00:41:48,200
+It's like, well, it's better 
+than having monarchy, so it must
+
+786
+00:41:48,200 --> 00:41:51,000
+be the best thing ever. 
+And we should never change it 
+
+787
+00:41:51,000 --> 00:41:52,400
+and it's like the same with 
+objects. 
+
+788
+00:41:52,400 --> 00:41:55,300
+It's like, oh, well, this is an 
+improvement over what we did 
+
+789
+00:41:55,300 --> 00:41:58,000
+before, but then we go. 
+How. 
+
+790
+00:41:58,000 --> 00:42:00,800
+Yeah, but we need we need to 
+move forward from that. 
+
+791
+00:42:00,800 --> 00:42:07,000
+Maybe it did help, but it also 
+looks like a rabbit holes that a
+
+792
+00:42:07,008 --> 00:42:10,600
+dead end, you know? 
+And and the thing is We'd never 
+
+793
+00:42:10,600 --> 00:42:14,200
+pulled it off, that's the thing,
+we never pulled encapsulation 
+
+794
+00:42:14,200 --> 00:42:19,500
+off, we just always, I think hit
+the places where it stopped 
+
+795
+00:42:19,500 --> 00:42:23,800
+working. 
+And, yeah, I guess my pitch is 
+
+796
+00:42:23,800 --> 00:42:29,300
+that Kafka gives us the 
+foundation where, yeah, there's 
+
+797
+00:42:29,300 --> 00:42:32,400
+some things that are harder 
+about it, but it gives us the 
+
+798
+00:42:32,400 --> 00:42:36,300
+foundation that allows us to 
+build almost anything on top of 
+
+799
+00:42:36,300 --> 00:42:39,700
+when it comes to data and we 
+don't know what it was like. 
+
+800
+00:42:39,900 --> 00:42:43,700
+Cases were also part, you know, 
+is it, is it harder? 
+
+801
+00:42:43,700 --> 00:42:48,100
+Or is it just were not? 
+You know, we've been trained to 
+
+802
+00:42:48,100 --> 00:42:52,700
+think one way and that and that 
+I think that counts as hard. 
+
+803
+00:42:52,800 --> 00:42:55,700
+So having to change your mindset
+is really hard. 
+
+804
+00:42:55,900 --> 00:42:58,000
+There's, they're technically 
+hard, right? 
+
+805
+00:42:58,000 --> 00:43:00,000
+Not really you can fit it up in 
+two seconds. 
+
+806
+00:43:00,000 --> 00:43:03,200
+Mindshift hard for a lot of 
+people, it is, but it's worth 
+
+807
+00:43:03,200 --> 00:43:04,800
+it. 
+It's absolutely worth it. 
+
+808
+00:43:05,200 --> 00:43:06,400
+Like, come on in the functional 
+training. 
+
+809
+00:43:06,400 --> 00:43:09,000
+They love it. 
+Here, we got doughnuts, Revere 
+
+810
+00:43:09,300 --> 00:43:11,700
+and share. 
+Uh yeah, although I and Sheree 
+
+811
+00:43:11,700 --> 00:43:15,900
+have been, I mean, it's like 
+I've been studying all sorts of 
+
+812
+00:43:15,900 --> 00:43:20,300
+functional writings of 
+documentation and virtually. 
+
+813
+00:43:20,300 --> 00:43:26,500
+Everybody is one of those who 
+wear its intuitive at some 
+
+814
+00:43:26,500 --> 00:43:29,400
+point, it becomes intuitive and 
+then they just start throwing 
+
+815
+00:43:29,400 --> 00:43:34,400
+stuff out at the reader as if, 
+well, of course, you understand 
+
+816
+00:43:34,400 --> 00:43:36,900
+this. 
+They totally miss the, what one 
+
+817
+00:43:36,900 --> 00:43:43,500
+of the best examples of this was
+the I wrote the JavaScript book 
+
+818
+00:43:43,700 --> 00:43:46,200
+JavaScript, oh, Doug Crawford, 
+Doug crockford. 
+
+819
+00:43:46,200 --> 00:43:49,000
+He has a presentation where he 
+talks about the curse of the 
+
+820
+00:43:49,000 --> 00:43:51,400
+monad and he goes. 
+So here's the problem. 
+
+821
+00:43:51,800 --> 00:43:54,700
+You know, you learn the monad 
+and then it becomes obvious to 
+
+822
+00:43:54,700 --> 00:43:58,500
+you and then you treat and then 
+this is I'm going to not do that
+
+823
+00:43:58,500 --> 00:44:03,400
+this time and then immediately 
+becomes in comprehensive, right?
+
+824
+00:44:04,000 --> 00:44:07,400
+You know it's like I don't know 
+if you were trying to 
+
+825
+00:44:07,400 --> 00:44:10,300
+demonstrate the curse of the 
+monad or if you Really thought 
+
+826
+00:44:10,300 --> 00:44:14,100
+you were explaining clearly. 
+And and I just keep seeing this 
+
+827
+00:44:14,100 --> 00:44:17,500
+over and over and over again 
+with with functional programming
+
+828
+00:44:17,500 --> 00:44:19,700
+to script, right? 
+So, I'm famous for my horrible 
+
+829
+00:44:19,700 --> 00:44:22,800
+analogies that's like, you know,
+because I never I always come 
+
+830
+00:44:23,300 --> 00:44:26,600
+give us an example. 
+So so well, I compared like 
+
+831
+00:44:26,600 --> 00:44:29,600
+linger, a mess to toilet paper 
+right again. 
+
+832
+00:44:29,600 --> 00:44:33,900
+Like I compare a venting to 
+Giardia I compared actually 
+
+833
+00:44:33,900 --> 00:44:36,100
+multi-zone. 
+Resiliency and Kafka to my 
+
+834
+00:44:36,100 --> 00:44:38,500
+husband being drunk. 
+Helping me hold up a curtain rod
+
+835
+00:44:38,700 --> 00:44:42,900
+because I think Is so apt. 
+You can't get people on board 
+
+836
+00:44:42,900 --> 00:44:44,800
+unless you explain it in terms, 
+they understand? 
+
+837
+00:44:44,800 --> 00:44:47,500
+And if your brain doesn't 
+naturally, take to the stuff, 
+
+838
+00:44:47,800 --> 00:44:50,400
+you got to find common ground, 
+right? 
+
+839
+00:44:50,900 --> 00:44:53,200
+And so I think that's very 
+important in what we do. 
+
+840
+00:44:53,200 --> 00:44:55,900
+So, for example, I did a Kafka 
+streams presentation called 
+
+841
+00:44:56,800 --> 00:44:58,000
+called the Kafka streams 
+Adventure. 
+
+842
+00:44:58,000 --> 00:45:00,600
+Choose your own topology, right 
+more like those to hear Own 
+
+843
+00:45:00,600 --> 00:45:03,300
+Adventure. 
+Books like turn to page 23 and 
+
+844
+00:45:03,300 --> 00:45:06,000
+so at the end, I built like this
+flow chart of your choices. 
+
+845
+00:45:06,100 --> 00:45:08,900
+But when we went through it, it 
+was an example where you're 
+
+846
+00:45:08,900 --> 00:45:11,200
+trying to catch some Buddy, 
+you've taken too long of a 
+
+847
+00:45:11,208 --> 00:45:14,100
+coffee break, right? 
+And screwing your production 
+
+848
+00:45:14,100 --> 00:45:16,000
+line, right? 
+So like a real-life example and 
+
+849
+00:45:16,000 --> 00:45:18,400
+then showed, you know how easy 
+this is to do in copy screams, 
+
+850
+00:45:18,400 --> 00:45:20,800
+what are considerations here, 
+right? 
+
+851
+00:45:20,800 --> 00:45:22,800
+And I think we need more of 
+that. 
+
+852
+00:45:22,800 --> 00:45:26,300
+We need more of people, things 
+that people can kind of resonate
+
+853
+00:45:26,300 --> 00:45:29,300
+with because we want everybody 
+to have these benefits, we don't
+
+854
+00:45:29,300 --> 00:45:33,000
+want people to continue to, you 
+know, and I sometimes I feel bad
+
+855
+00:45:33,000 --> 00:45:35,800
+because I know, you know, I 
+worked at SAS which you know 
+
+856
+00:45:36,300 --> 00:45:38,900
+I'll be I'll be diplomatic has 
+been around for a long time. 
+
+857
+00:45:41,800 --> 00:45:45,200
+And so, you know, you see where 
+people go through a transition 
+
+858
+00:45:45,200 --> 00:45:47,600
+with all this technical debt, 
+but club and they can't get out 
+
+859
+00:45:47,600 --> 00:45:50,100
+from underneath it and they 
+can't, you know, and peeled 
+
+860
+00:45:50,100 --> 00:45:52,200
+introduce them to something like
+this and make them, you know, 
+
+861
+00:45:52,300 --> 00:45:56,300
+basically like their jobs again 
+is a big part of why I like my 
+
+862
+00:45:56,300 --> 00:45:59,300
+job, but to do that, you have to
+speak the right language. 
+
+863
+00:45:59,300 --> 00:46:01,900
+You can't just expect people to 
+pick up on this. 
+
+864
+00:46:01,900 --> 00:46:08,100
+I agree 100%. 
+Yeah, this is I'm reminded of I 
+
+865
+00:46:08,100 --> 00:46:12,300
+don't know who brought this up, 
+but the the carpet bombing 
+
+866
+00:46:12,300 --> 00:46:17,200
+Consulting approach where 
+somebody comes in and they say, 
+
+867
+00:46:17,400 --> 00:46:20,500
+okay you're doing it wrong. 
+Here's the right way to do it. 
+
+868
+00:46:20,900 --> 00:46:22,100
+Okay? 
+See you later. 
+
+869
+00:46:22,500 --> 00:46:26,300
+And then, of course it has no 
+effect versus going in and 
+
+870
+00:46:26,300 --> 00:46:28,900
+saying, okay, where are you 
+right now? 
+
+871
+00:46:28,900 --> 00:46:33,700
+What can you acquire, what 
+changes can you make? 
+
+872
+00:46:33,800 --> 00:46:36,800
+Make and that's harder, of 
+course. 
+
+873
+00:46:37,300 --> 00:46:41,500
+But that's to me what the value 
+of a real consultant is. 
+
+874
+00:46:41,500 --> 00:46:44,000
+Yeah, and I think that's very, 
+very apt as well. 
+
+875
+00:46:44,000 --> 00:46:47,600
+So like, well, what I do is and 
+I again, my full title is 
+
+876
+00:46:47,600 --> 00:46:50,200
+incredibly long, I'm really 
+proud of because longest title, 
+
+877
+00:46:50,200 --> 00:46:52,000
+I think egg hunt, okay, what's 
+your name? 
+
+878
+00:46:52,000 --> 00:46:56,400
+A customer success. 
+Technical architect and if the 
+
+879
+00:46:56,400 --> 00:46:59,300
+but the abbreviation Siesta, so 
+that's why I like it because we 
+
+880
+00:46:59,300 --> 00:47:01,600
+like to say we help you take a 
+nap, right? 
+
+881
+00:47:01,700 --> 00:47:04,600
+You know I've been worried about
+production but that's We do so, 
+
+882
+00:47:04,600 --> 00:47:07,800
+like, I'm with the same 
+accounts, right? 
+
+883
+00:47:07,800 --> 00:47:09,600
+And I do lots of other things as
+well. 
+
+884
+00:47:09,600 --> 00:47:12,700
+My primary focus is to be with 
+these accounts, right? 
+
+885
+00:47:12,700 --> 00:47:14,900
+And the first thing I look at 
+is, what are we working with 
+
+886
+00:47:14,900 --> 00:47:17,600
+here, right? 
+What kind of shop are you? 
+
+887
+00:47:17,900 --> 00:47:19,500
+What kind of developers do you 
+have? 
+
+888
+00:47:19,700 --> 00:47:22,800
+And then we find a success plan 
+that works with what you got 
+
+889
+00:47:22,900 --> 00:47:25,000
+because no one wants to live 
+with a science experiment for 
+
+890
+00:47:25,000 --> 00:47:27,500
+two years. 
+Like that's not showing value. 
+
+891
+00:47:27,700 --> 00:47:29,800
+You know, we want to we want to 
+work with what you got. 
+
+892
+00:47:29,800 --> 00:47:32,700
+So I think you know that's a 
+good point too, is figuring out,
+
+893
+00:47:32,800 --> 00:47:35,900
+what can we do? 
+Do that is right best practices 
+
+894
+00:47:36,300 --> 00:47:38,800
+with what you know, the skills 
+that the people that work there 
+
+895
+00:47:38,800 --> 00:47:40,400
+have with the, you know, the 
+kind. 
+
+896
+00:47:40,400 --> 00:47:42,500
+They have the priorities and all
+that kind of stuff. 
+
+897
+00:47:43,300 --> 00:47:46,100
+Can I make a little side? 
+Observation here about the 
+
+898
+00:47:46,100 --> 00:47:51,200
+terminology there. 
+You know how human resources are
+
+899
+00:47:51,200 --> 00:47:54,400
+now just called resources. 
+I mean, first of all, they were 
+
+900
+00:47:54,400 --> 00:47:57,400
+called Human Resources, but now 
+they're just called resources, 
+
+901
+00:47:57,900 --> 00:48:02,100
+the preparedness for the robots 
+becoming resources in this in 
+
+902
+00:48:02,100 --> 00:48:05,500
+the assistant to refer to 
+Customers as a counts. 
+
+903
+00:48:05,500 --> 00:48:09,400
+Think about what that means. 
+Yeah, I guess I didn't really 
+
+904
+00:48:09,400 --> 00:48:13,900
+focus is on the money that we 
+have a commission, that don't 
+
+905
+00:48:13,900 --> 00:48:15,600
+care how much will. 
+I know you don't, but other 
+
+906
+00:48:15,600 --> 00:48:18,100
+people forced use. 
+That term is true. 
+
+907
+00:48:18,100 --> 00:48:20,200
+And should be like Disney where 
+everyone's a guest not a 
+
+908
+00:48:20,200 --> 00:48:25,900
+customer. 
+Right is full of irony but it's 
+
+909
+00:48:25,900 --> 00:48:29,100
+a good note. 
+Yeah. 
+
+910
+00:48:29,600 --> 00:48:32,500
+Anyway, go ahead. 
+I'm just the metaphors. 
+
+911
+00:48:32,500 --> 00:48:34,900
+Give us a frame that we see 
+things through. 
+
+912
+00:48:35,000 --> 00:48:37,200
+So yeah. 
+Sometimes they need to adjust 
+
+913
+00:48:37,200 --> 00:48:40,000
+those metaphors and then 
+sometimes the metaphor is, this 
+
+914
+00:48:40,000 --> 00:48:41,600
+is interesting. 
+Because as you were talking 
+
+915
+00:48:41,600 --> 00:48:44,400
+about the metaphors, you use to 
+explain Kafka. 
+
+916
+00:48:44,600 --> 00:48:48,500
+I was thinking about metaphors, 
+that that then lose their 
+
+917
+00:48:48,500 --> 00:48:53,400
+original meaning like the save 
+icon be in the like floppy disk 
+
+918
+00:48:53,500 --> 00:48:56,600
+and how kids obviously they've 
+never seen a real floppy disk in
+
+919
+00:48:56,600 --> 00:49:00,700
+their lives but but it still is 
+the icon that for most people 
+
+920
+00:49:00,700 --> 00:49:03,800
+now has no actual correlation to
+reality. 
+
+921
+00:49:05,800 --> 00:49:08,500
+We looking pretty solid. 
+I thought like I don't think 
+
+922
+00:49:08,500 --> 00:49:10,500
+that's the only way the for is 
+not going away. 
+
+923
+00:49:10,600 --> 00:49:13,600
+I mean what's everyone buys the 
+days like, that was a thing 
+
+924
+00:49:13,700 --> 00:49:16,400
+during the pandemic, right? 
+Right. 
+
+925
+00:49:16,400 --> 00:49:20,200
+Yeah, we could get toilet paper.
+So, I mean, I'd want to know 
+
+926
+00:49:20,200 --> 00:49:24,100
+whether that is using more or 
+less resources than toilet. 
+
+927
+00:49:24,100 --> 00:49:25,600
+That's true. 
+But be day. 
+
+928
+00:49:25,900 --> 00:49:29,600
+There's water issues and until 
+we yeah, solve that problem. 
+
+929
+00:49:29,600 --> 00:49:32,200
+Yeah, yeah, yeah. 
+It's not better. 
+
+930
+00:49:32,500 --> 00:49:36,100
+It's better experience but 
+Anyway. 
+
+931
+00:49:37,300 --> 00:49:39,700
+Okay, so back to architecture 
+real quick. 
+
+932
+00:49:40,900 --> 00:49:44,900
+What's the difference between 
+event sourcing and cqrs? 
+
+933
+00:49:44,900 --> 00:49:47,100
+Right? 
+So so everything like they're 
+
+934
+00:49:47,100 --> 00:49:48,900
+not the same thing at all, 
+right? 
+
+935
+00:49:48,900 --> 00:49:52,900
+I mean, you know like cqrs is a 
+way that you interact with data,
+
+936
+00:49:53,000 --> 00:49:56,600
+right? 
+And then event sourcing is a way
+
+937
+00:49:56,600 --> 00:49:59,600
+that you basically I love like 
+Martin Fowler had this. 
+
+938
+00:49:59,600 --> 00:50:01,800
+This definition is best 
+definition because it just cuts 
+
+939
+00:50:01,800 --> 00:50:04,000
+to the chase, right? 
+If you can blow away your 
+
+940
+00:50:04,000 --> 00:50:07,300
+current state, Rebuild it back 
+from whatever your event store, 
+
+941
+00:50:07,300 --> 00:50:09,800
+is your event sourcing. 
+If you can't, you're not cut and
+
+942
+00:50:09,808 --> 00:50:12,700
+dry, right? 
+But the thing about, you know, 
+
+943
+00:50:12,700 --> 00:50:15,200
+when you look at like, you know,
+cqrs that has nothing to do with
+
+944
+00:50:15,200 --> 00:50:16,400
+it. 
+Right? 
+
+945
+00:50:16,500 --> 00:50:18,900
+You know, you can you can see 
+QRS in the database, right? 
+
+946
+00:50:18,900 --> 00:50:21,400
+Which is clearly, you know, not 
+events or so. 
+
+947
+00:50:21,500 --> 00:50:23,500
+So there are two different 
+things and I would say you know 
+
+948
+00:50:23,500 --> 00:50:27,000
+and I always say there's there's
+some some people who get, you 
+
+949
+00:50:27,000 --> 00:50:28,100
+know, a little frustrated with 
+me. 
+
+950
+00:50:28,300 --> 00:50:30,600
+I mean maybe that's why I don't 
+get invited on certain calls 
+
+951
+00:50:30,600 --> 00:50:33,600
+anymore but they asked you know,
+like the number one you know 
+
+952
+00:50:33,600 --> 00:50:34,900
+thing. 
+You say if somebody asks, you 
+
+953
+00:50:34,908 --> 00:50:37,000
+about events You're saying, I 
+was like, I asked him, are you 
+
+954
+00:50:37,000 --> 00:50:39,200
+sure you want to eventsource? 
+Is it worth it? 
+
+955
+00:50:39,300 --> 00:50:43,100
+Because 99% of the time, it's 
+not like event sourcing, and 
+
+956
+00:50:43,100 --> 00:50:46,200
+Eventing are not synonymous at 
+all in any way, shape, or form? 
+
+957
+00:50:47,100 --> 00:50:49,700
+And I really, I might thing is, 
+Eventing is for everybody. 
+
+958
+00:50:50,000 --> 00:50:53,900
+So, you know, event sourcing is,
+there are some there are some 
+
+959
+00:50:53,900 --> 00:50:57,300
+use cases where event sourcing 
+gives you enough benefit to make
+
+960
+00:50:57,300 --> 00:50:59,000
+it worth it, to do what you need
+to do. 
+
+961
+00:50:59,400 --> 00:51:02,000
+But there are so many other ones
+where something as simple as 
+
+962
+00:51:02,000 --> 00:51:04,500
+event notification. 
+So I'm just going to tell you an
+
+963
+00:51:04,500 --> 00:51:06,000
+address change. 
+I'm not even going to tell you 
+
+964
+00:51:06,008 --> 00:51:08,700
+who's I'm not gonna tell you 
+anything but I used to have to 
+
+965
+00:51:08,708 --> 00:51:12,600
+wait 24 hours to know that now I
+know now and you guys go check, 
+
+966
+00:51:12,600 --> 00:51:14,700
+right? 
+There's so much value in simple 
+
+967
+00:51:14,700 --> 00:51:19,200
+Eventing. 
+Use cases event sourcing would 
+
+968
+00:51:19,200 --> 00:51:24,700
+be, I want to know when all of 
+these changes happened, the 
+
+969
+00:51:24,700 --> 00:51:27,800
+sequence that they're happening 
+that they happen. 
+
+970
+00:51:27,900 --> 00:51:31,700
+So event or and then all from 
+that all read, I'll build the 
+
+971
+00:51:31,700 --> 00:51:34,900
+data that I want and you're 
+saying, well, most of the time 
+
+972
+00:51:34,900 --> 00:51:37,000
+you don't need To do that. 
+You just want the data, you 
+
+973
+00:51:37,000 --> 00:51:41,600
+don't want whole well, you know,
+well, right and how it got 
+
+974
+00:51:41,600 --> 00:51:43,300
+absolutely. 
+And sometimes you don't need to 
+
+975
+00:51:43,300 --> 00:51:46,300
+store every single individual 
+change for all time, right? 
+
+976
+00:51:46,300 --> 00:51:49,000
+Maybe you only want to store the
+last seven days, right? 
+
+977
+00:51:49,100 --> 00:51:51,300
+And there's, there's other 
+things besides during those 
+
+978
+00:51:51,300 --> 00:51:52,900
+changes, you know, there's like 
+separately. 
+
+979
+00:51:52,900 --> 00:51:55,100
+So, I always call it the 
+argument of the arbitrator 
+
+980
+00:51:55,500 --> 00:51:56,800
+right? 
+In a database. 
+
+981
+00:51:56,800 --> 00:51:58,800
+You have a built-in arbitrator, 
+right? 
+
+982
+00:51:58,800 --> 00:52:01,500
+So, so they have, you know, 
+opportunistic, you know, locking
+
+983
+00:52:01,500 --> 00:52:04,200
+commits, right? 
+So if you were trying to do that
+
+984
+00:52:04,200 --> 00:52:05,700
+in Kafka, right? 
+Right? 
+
+985
+00:52:05,900 --> 00:52:07,300
+You would have to build the 
+arbitrator. 
+
+986
+00:52:08,000 --> 00:52:10,500
+So there's the big thing on 
+Twitter and it cracks me up all 
+
+987
+00:52:10,500 --> 00:52:12,700
+the time. 
+So like sometimes me and Gunnar 
+
+988
+00:52:12,700 --> 00:52:15,600
+who works on the museum, we 
+can't giggle about it, right? 
+
+989
+00:52:15,600 --> 00:52:18,300
+Like if you want to piss people 
+off, just like put hashtag DDD 
+
+990
+00:52:18,300 --> 00:52:22,100
+and hashtag event sourcing and 
+then mention Kafka, right? 
+
+991
+00:52:22,300 --> 00:52:25,200
+And but but I think what the 
+point is of the people who kind 
+
+992
+00:52:25,200 --> 00:52:28,200
+of come out against that is one,
+you know, they I don't mind 
+
+993
+00:52:28,200 --> 00:52:29,500
+this. 
+I think, anytime, anyone 
+
+994
+00:52:29,500 --> 00:52:32,700
+conflates, Eventing with event 
+sourcing, it's an opportunity to
+
+995
+00:52:32,700 --> 00:52:35,300
+engage and talk to that person 
+not an opportunity. 
+
+996
+00:52:35,500 --> 00:52:37,200
+You can look dumb because come 
+on now. 
+
+997
+00:52:37,300 --> 00:52:39,900
+Like nobody knows everything. 
+Get over yourself, right? 
+
+998
+00:52:40,500 --> 00:52:43,000
+And then the second thing I 
+think they're point is and just 
+
+999
+00:52:43,000 --> 00:52:45,500
+because someone, perhaps is 
+engaging in the non, what I 
+
+1000
+00:52:45,500 --> 00:52:48,400
+would call constructive fashion 
+doesn't mean they don't have a 
+
+1001
+00:52:48,408 --> 00:52:50,900
+point, they might have a point 
+and their point is, I think in 
+
+1002
+00:52:50,908 --> 00:52:55,000
+the cough but ecosystem, right? 
+It's not an out-of-the-box 
+
+1003
+00:52:55,000 --> 00:52:59,100
+events, there's no arbitrator 
+right in in vanilla basic Kafka.
+
+1004
+00:52:59,400 --> 00:53:01,900
+So if you're going to do event 
+sourcing, you have to build the 
+
+1005
+00:53:01,900 --> 00:53:03,800
+arbitrator. 
+Now that might be a Kafka 
+
+1006
+00:53:03,800 --> 00:53:06,200
+streams application, right? 
+That's To sit there and make 
+
+1007
+00:53:06,200 --> 00:53:09,400
+sure that anything, you know, 
+that those that opportunity to 
+
+1008
+00:53:09,400 --> 00:53:11,200
+commit is happening right 
+properly. 
+
+1009
+00:53:11,200 --> 00:53:12,800
+It's the one that's going to 
+reorder, right? 
+
+1010
+00:53:12,800 --> 00:53:14,300
+It's the one that's going to use
+epochs. 
+
+1011
+00:53:14,400 --> 00:53:17,200
+It's the one that's going to 
+know but you have to build that,
+
+1012
+00:53:17,200 --> 00:53:19,500
+right? 
+And I think that's kind of where
+
+1013
+00:53:19,500 --> 00:53:22,200
+that comes in and Kafka when we 
+talk about about sourcing. 
+
+1014
+00:53:23,600 --> 00:53:28,500
+So let me make sure I'm clear on
+this Eventing is how you capture
+
+1015
+00:53:28,900 --> 00:53:31,800
+all the information. 
+Yeah, I would say ours event 
+
+1016
+00:53:31,800 --> 00:53:35,000
+sourcing is how I'm pulling the 
+information. 
+
+1017
+00:53:35,500 --> 00:53:38,300
+Storing it, right? 
+It's so if I have a question 
+
+1018
+00:53:38,400 --> 00:53:42,600
+events or seeing as how you're 
+storing to me, absolutely, even 
+
+1019
+00:53:42,600 --> 00:53:45,000
+though it's sourcing doesn't, it
+doesn't sound like it but it is 
+
+1020
+00:53:45,000 --> 00:53:47,800
+right? 
+Yeah, terminology it is. 
+
+1021
+00:53:47,800 --> 00:53:50,100
+And that's why I don't get mad 
+when people confuse it either. 
+
+1022
+00:53:50,100 --> 00:53:52,200
+Because it's not like it, you 
+know, we could have an Ever 
+
+1023
+00:53:52,200 --> 00:53:54,300
+better name for it. 
+Because basically what it is, is
+
+1024
+00:53:54,700 --> 00:53:58,700
+my entire picture of a customer.
+It's stored as the events of 
+
+1025
+00:53:58,700 --> 00:54:00,500
+that entire customers life 
+cycle. 
+
+1026
+00:54:00,800 --> 00:54:04,400
+Like, I could back from day one,
+that's how I would stored the 
+
+1027
+00:54:04,400 --> 00:54:06,700
+you, my build up. 
+Of the aggregate is based on 
+
+1028
+00:54:06,700 --> 00:54:08,400
+events. 
+It's the same idea with your 
+
+1029
+00:54:08,400 --> 00:54:11,400
+bank, that's the classic example
+is your bank account, right? 
+
+1030
+00:54:11,500 --> 00:54:14,900
+Your bank account balance is 
+stored as a series of credits 
+
+1031
+00:54:14,900 --> 00:54:16,600
+and debits, right, or yeah. 
+Right. 
+
+1032
+00:54:16,600 --> 00:54:19,100
+I mean, that's all it is is a 
+running series of that, that, 
+
+1033
+00:54:19,100 --> 00:54:22,300
+that, that's then, you know, 
+mapreduce down to whatever your,
+
+1034
+00:54:22,400 --> 00:54:24,900
+you know, current bank. 
+Balances balances. 
+
+1035
+00:54:24,900 --> 00:54:27,100
+Yeah. 
+Yeah. 
+
+1036
+00:54:27,700 --> 00:54:30,700
+Okay. 
+So, so is that example, events 
+
+1037
+00:54:30,700 --> 00:54:32,500
+are same then, yeah, Bank 
+balances. 
+
+1038
+00:54:32,500 --> 00:54:38,900
+Yes, yeah. 
+So I'm still not clear of 
+
+1039
+00:54:38,900 --> 00:54:45,800
+venting is the general idea of 
+looking at a system in terms of 
+
+1040
+00:54:45,800 --> 00:54:49,400
+the events that happen and 
+events sourcing is how you store
+
+1041
+00:54:49,700 --> 00:54:53,300
+those events in your system. 
+So here's how I like to describe
+
+1042
+00:54:53,300 --> 00:54:55,800
+it, right? 
+Well, let's look at Annie and I 
+
+1043
+00:54:55,808 --> 00:54:58,000
+always use customers because 
+they're an easy example, right? 
+
+1044
+00:54:58,000 --> 00:55:01,100
+So I have a domain that domain 
+is customer, right? 
+
+1045
+00:55:02,100 --> 00:55:05,600
+There's there's a command based,
+which would be update this 
+
+1046
+00:55:05,600 --> 00:55:07,400
+customer, that's like a command 
+base. 
+
+1047
+00:55:07,400 --> 00:55:10,000
+I go update it. 
+If you're doing a venting, then 
+
+1048
+00:55:10,000 --> 00:55:12,500
+Eventing, is this customer was 
+updated. 
+
+1049
+00:55:12,500 --> 00:55:14,000
+I'm going to anything that 
+happens in. 
+
+1050
+00:55:14,000 --> 00:55:16,300
+It always should be past tense, 
+right? 
+
+1051
+00:55:16,500 --> 00:55:19,100
+So, I'm going to tell you about 
+what happened, right? 
+
+1052
+00:55:19,100 --> 00:55:22,100
+As a stream of events to 
+describe, you know, anyone who's
+
+1053
+00:55:22,100 --> 00:55:24,200
+interested in the life cycle of 
+this customer. 
+
+1054
+00:55:24,700 --> 00:55:27,900
+I'm going to tell you about it 
+in a stream of events, right? 
+
+1055
+00:55:27,900 --> 00:55:29,800
+That's kind of the and that's 
+how you're going to get 
+
+1056
+00:55:29,800 --> 00:55:33,000
+information about this. 
+I get it's a kind of a 
+
+1057
+00:55:33,008 --> 00:55:36,200
+descriptor how I store that 
+customer. 
+
+1058
+00:55:36,800 --> 00:55:39,600
+Who cares, right? 
+That's separate from me. 
+
+1059
+00:55:39,600 --> 00:55:44,000
+Being able to describe what 
+happens to that aggregate it 
+
+1060
+00:55:44,000 --> 00:55:49,600
+with events. 
+The one thing that comes up 
+
+1061
+00:55:49,600 --> 00:55:57,900
+there is, how do you decide what
+a a total event is that mean if 
+
+1062
+00:55:57,900 --> 00:55:59,800
+you're saying oh this thing 
+happened. 
+
+1063
+00:56:01,800 --> 00:56:07,000
+Yes. 
+But how do you know that comes 
+
+1064
+00:56:07,000 --> 00:56:09,700
+into event storming, right? 
+An event storming at you guys 
+
+1065
+00:56:09,700 --> 00:56:12,000
+heard it may be for anyone 
+listening, this who has an event
+
+1066
+00:56:12,000 --> 00:56:15,900
+storming is a process where you 
+sit down with you know, LOB, 
+
+1067
+00:56:16,100 --> 00:56:19,300
+With businesses, it's very, you 
+know, very homey to the dee dee 
+
+1068
+00:56:19,300 --> 00:56:23,800
+dee, you know, people and you 
+described you kind of build 
+
+1069
+00:56:23,800 --> 00:56:24,900
+these Aggregates. 
+Right. 
+
+1070
+00:56:24,900 --> 00:56:26,700
+What do we care about, right? 
+We care about you know, 
+
+1071
+00:56:26,700 --> 00:56:27,400
+customers. 
+Okay. 
+
+1072
+00:56:27,400 --> 00:56:29,500
+Well what do we care about? 
+Who cares about this? 
+
+1073
+00:56:29,800 --> 00:56:33,700
+And this is my thing right in 
+order and because I'm wondering 
+
+1074
+00:56:33,700 --> 00:56:36,100
+if what you're going to is a 
+problem, I see frequently which 
+
+1075
+00:56:36,100 --> 00:56:39,500
+is bloated Aggregates bloated 
+events where people shove 
+
+1076
+00:56:39,600 --> 00:56:44,400
+everything possible, right into 
+events and my rule of thumb for 
+
+1077
+00:56:44,400 --> 00:56:49,200
+this is you need to go look at 
+the value including that 
+
+1078
+00:56:49,200 --> 00:56:52,100
+information provides. 
+So let's talk about a use case, 
+
+1079
+00:56:52,100 --> 00:56:54,600
+where I'm on a mobile phone and 
+I'm waiting for an update right 
+
+1080
+00:56:54,600 --> 00:56:57,800
+from my flight or something, the
+human attention span mine is 
+
+1081
+00:56:57,800 --> 00:56:59,100
+much less. 
+I don't know what the average 
+
+1082
+00:56:59,100 --> 00:57:01,300
+is, but mine's even less, right?
+I'm going to get mad if I have 
+
+1083
+00:57:01,300 --> 00:57:03,100
+to wait. 
+If there's a piece of 
+
+1084
+00:57:03,100 --> 00:57:06,800
+information, I can include in 
+the actual you know, Rob event 
+
+1085
+00:57:06,800 --> 00:57:09,300
+the bait main event. 
+That lets me make that. 
+
+1086
+00:57:09,300 --> 00:57:11,800
+Do that faster? 
+That's worth it. 
+
+1087
+00:57:12,000 --> 00:57:14,900
+Now if I got somebody else, who 
+runs reports let's say every six
+
+1088
+00:57:14,900 --> 00:57:18,500
+hours And they need to go look 
+up a piece of information. 
+
+1089
+00:57:18,500 --> 00:57:20,600
+They can go look it up 
+themselves right that consumer 
+
+1090
+00:57:20,600 --> 00:57:23,500
+can consume an event and go. 
+Oh this happened I need to go 
+
+1091
+00:57:23,500 --> 00:57:25,400
+get more information so I can do
+my job. 
+
+1092
+00:57:25,600 --> 00:57:28,100
+That's not something to me that 
+would need to be included in an 
+
+1093
+00:57:28,100 --> 00:57:31,200
+event aggregate, right? 
+So that's how I break it down 
+
+1094
+00:57:31,200 --> 00:57:33,200
+for people. 
+When we talk about building, you
+
+1095
+00:57:33,200 --> 00:57:36,800
+know, what does that total event
+look like it's about finding out
+
+1096
+00:57:36,800 --> 00:57:40,300
+what people care about, what 
+information they need to act and
+
+1097
+00:57:40,300 --> 00:57:45,100
+then weighing the value of 
+adding that in Right. 
+
+1098
+00:57:45,100 --> 00:57:47,700
+It seems like because you have 
+to decide, okay? 
+
+1099
+00:57:47,700 --> 00:57:52,200
+Are we going to look at this in 
+terms of, okay, the sun rose and
+
+1100
+00:57:52,200 --> 00:57:56,000
+the sunset. 
+So an event is a day-long 
+
+1101
+00:57:56,100 --> 00:58:01,000
+versus, you know, something is 
+happening now and we got a whole
+
+1102
+00:58:01,000 --> 00:58:06,000
+stream of events that, you know,
+the last ball is falling. 
+
+1103
+00:58:06,000 --> 00:58:09,600
+And so we have you know, an 
+event every generation see up in
+
+1104
+00:58:09,600 --> 00:58:11,700
+the Kafka streams that was 
+beautifully done. 
+
+1105
+00:58:11,900 --> 00:58:13,600
+Okay. 
+Because there are many Aces, 
+
+1106
+00:58:13,600 --> 00:58:17,500
+where, what I care about is a 
+window or a slice of time over a
+
+1107
+00:58:17,500 --> 00:58:18,700
+whole day. 
+And I want to know. 
+
+1108
+00:58:18,700 --> 00:58:21,200
+I want to event based off that, 
+like customer interaction on a 
+
+1109
+00:58:21,200 --> 00:58:22,400
+website, right? 
+I want it. 
+
+1110
+00:58:22,400 --> 00:58:24,700
+I don't want to know every 
+single time they click a button,
+
+1111
+00:58:25,000 --> 00:58:27,400
+I want to have a view of their 
+session and have an event of a 
+
+1112
+00:58:27,600 --> 00:58:30,300
+the event is you know, customer 
+session ended or customer. 
+
+1113
+00:58:30,300 --> 00:58:31,600
+Right? 
+And then I want to know all 
+
+1114
+00:58:31,600 --> 00:58:34,000
+about that. 
+So what you would do is you 
+
+1115
+00:58:34,000 --> 00:58:36,800
+would have a rock topic that had
+every single customer 
+
+1116
+00:58:36,800 --> 00:58:38,700
+interaction time they did 
+anything right? 
+
+1117
+00:58:39,000 --> 00:58:41,700
+Spin up, Kafka streams, we have 
+built-in, you know, tumbling 
+
+1118
+00:58:41,700 --> 00:58:46,400
+sliding hopping with Windows 
+right in just those events and 
+
+1119
+00:58:46,400 --> 00:58:49,700
+then you can build that specific
+you can build Events off of 
+
+1120
+00:58:49,700 --> 00:58:52,500
+those events, right? 
+That tell you exactly what you 
+
+1121
+00:58:52,500 --> 00:58:56,400
+need to know. 
+Okay. 
+
+1122
+00:58:56,400 --> 00:59:01,400
+But how so, but I mean, are you 
+still capturing like the, but 
+
+1123
+00:59:01,400 --> 00:59:05,900
+the customer pushed this button,
+I mean, all of those things that
+
+1124
+00:59:05,900 --> 00:59:08,800
+would be like the Rob and but 
+then you want to. 
+
+1125
+00:59:09,500 --> 00:59:12,400
+Yeah. 
+So you take you can you still 
+
+1126
+00:59:12,400 --> 00:59:17,600
+keep track of all that stuff. 
+But then stream says well what 
+
+1127
+00:59:17,700 --> 00:59:20,300
+granularity would you like these
+things in? 
+
+1128
+00:59:21,100 --> 00:59:23,800
+Yeah, time based stream 
+transform. 
+
+1129
+00:59:24,000 --> 00:59:26,800
+That's what window in is. 
+All about is giving you the 
+
+1130
+00:59:26,800 --> 00:59:31,700
+those ability to apply time to a
+stream and then your output of 
+
+1131
+00:59:31,700 --> 00:59:36,100
+that is a new stream. 
+This just has been transformed 
+
+1132
+00:59:36,100 --> 00:59:41,700
+with the windowing process, 
+okay? 
+
+1133
+00:59:41,800 --> 00:59:45,200
+So you just so you keep all your
+raw information and then you 
+
+1134
+00:59:45,200 --> 00:59:48,100
+turn it into the events that 
+you're interested. 
+
+1135
+00:59:48,100 --> 00:59:50,700
+Absolutely. 
+But you could also turn it into 
+
+1136
+00:59:50,900 --> 00:59:52,900
+other events. 
+Absolutely. 
+
+1137
+00:59:52,900 --> 00:59:54,500
+Right. 
+Like let's say what, yeah, let's
+
+1138
+00:59:54,500 --> 00:59:57,400
+say that any time, let's say 
+that you have and Regulatory 
+
+1139
+00:59:57,400 --> 01:00:00,200
+uses for this like and also Sim 
+like is a great use case for 
+
+1140
+01:00:00,200 --> 01:00:01,600
+this two. 
+So we have a lot of people who 
+
+1141
+01:00:01,600 --> 01:00:04,800
+do fraud detection and also you 
+know track Vices and they want 
+
+1142
+01:00:04,800 --> 01:00:06,400
+to alert when something bad 
+happens. 
+
+1143
+01:00:06,600 --> 01:00:09,900
+So they in just a raw stream of 
+events and then they basically 
+
+1144
+01:00:09,900 --> 01:00:13,100
+spawn off alerts when that 
+criteria is met, right? 
+
+1145
+01:00:13,100 --> 01:00:15,400
+So those would be a new alert 
+event, right? 
+
+1146
+01:00:15,400 --> 01:00:18,500
+So you can, you can kind of read
+these raw in just of data and 
+
+1147
+01:00:18,500 --> 01:00:21,000
+then do what you need to do to 
+spawn out new events. 
+
+1148
+01:00:22,600 --> 01:00:25,400
+Again, this is sounding like 
+very much like functional 
+
+1149
+01:00:25,400 --> 01:00:26,900
+programming, isn't it? 
+Bells me. 
+
+1150
+01:00:29,200 --> 01:00:32,000
+Yep, function. 
+The functional world that we are
+
+1151
+01:00:32,200 --> 01:00:39,900
+moving towards this way. 
+So yeah, it is a mind shift. 
+
+1152
+01:00:39,900 --> 01:00:44,200
+But, and I think that it's 
+interesting, the parallels here,
+
+1153
+01:00:44,200 --> 01:00:47,800
+to with a lot of times the 
+argument against functional, 
+
+1154
+01:00:47,800 --> 01:00:52,900
+programming is like, oh, it's 
+too slow or Uses too much memory
+
+1155
+01:00:52,900 --> 01:00:56,700
+or too much pressure on the GC 
+or whatever, kind of similar to 
+
+1156
+01:00:56,700 --> 01:01:02,100
+the arguments against like 
+durable streams like Kafka is 
+
+1157
+01:01:02,100 --> 01:01:05,500
+like oh that uses too much too 
+much disk or whatever. 
+
+1158
+01:01:05,800 --> 01:01:09,200
+And at this point for both of 
+those we can respond generally 
+
+1159
+01:01:09,200 --> 01:01:12,900
+and say like the resources. 
+We have our philosophy ficient 
+
+1160
+01:01:12,900 --> 01:01:16,800
+for your use case in 98% of the 
+and again rights. 
+
+1161
+01:01:16,800 --> 01:01:18,900
+You don't want to do that. 
+Just running our Cloud. 
+
+1162
+01:01:19,000 --> 01:01:20,100
+Then you'll have to worry about 
+it. 
+
+1163
+01:01:21,100 --> 01:01:22,400
+There you go. 
+Can throw. 
+
+1164
+01:01:22,400 --> 01:01:25,700
+If it's real problem, you can 
+throw hardware and other 
+
+1165
+01:01:25,700 --> 01:01:27,800
+resources at the president likes
+and the. 
+
+1166
+01:01:27,800 --> 01:01:31,800
+And if it's only the 2% then 
+presumably, they have. 
+
+1167
+01:01:32,500 --> 01:01:34,800
+If it's important to them, they 
+have the money to. 
+
+1168
+01:01:34,900 --> 01:01:37,000
+Absolutely. 
+And that's the thing about, you 
+
+1169
+01:01:37,008 --> 01:01:39,900
+know, you look at like the, you 
+know, the use cases that we work
+
+1170
+01:01:39,900 --> 01:01:44,500
+with and those are core critical
+money costing use cases. 
+
+1171
+01:01:44,800 --> 01:01:48,100
+And you know that, you know, and
+the return on investment is huge
+
+1172
+01:01:48,300 --> 01:01:50,200
+right? 
+For what you're getting versus 
+
+1173
+01:01:50,200 --> 01:01:53,200
+waiting 24 hours like that. 
+Customer interaction, especially
+
+1174
+01:01:53,200 --> 01:01:55,600
+nowadays, like people don't like
+to wait. 
+
+1175
+01:01:55,600 --> 01:01:56,500
+They feel they shouldn't have 
+to. 
+
+1176
+01:01:56,500 --> 01:01:59,500
+I remember when I first could 
+order pizza online and I have to
+
+1177
+01:01:59,500 --> 01:02:01,700
+talk to a human and I was a 
+happiest person alive. 
+
+1178
+01:02:01,900 --> 01:02:04,500
+I was like, this is a whole new 
+world, right? 
+
+1179
+01:02:04,800 --> 01:02:06,500
+And now it is a world in 
+anytime. 
+
+1180
+01:02:06,500 --> 01:02:08,900
+You have to pick up the phone. 
+People are like, why do I have 
+
+1181
+01:02:08,900 --> 01:02:10,500
+to call somebody? 
+Right? 
+
+1182
+01:02:10,700 --> 01:02:13,300
+Well, something that a drive, 
+all of that real-time 
+
+1183
+01:02:13,300 --> 01:02:17,000
+interaction, you know, and Kafka
+in the whole coffee, ecosystem 
+
+1184
+01:02:17,000 --> 01:02:19,000
+is just, it's just a natural to 
+me. 
+
+1185
+01:02:19,000 --> 01:02:25,600
+Elegant fit for it. 
+So does it come in a way that I 
+
+1186
+01:02:25,600 --> 01:02:28,600
+don't have to know a lot in 
+order to install it? 
+
+1187
+01:02:28,900 --> 01:02:30,800
+I mean there's there you don't 
+have to know anything just to 
+
+1188
+01:02:30,808 --> 01:02:33,300
+use our Cloud. 
+Which is why, right? 
+
+1189
+01:02:33,500 --> 01:02:35,600
+Yeah. 
+They also one of the things I 
+
+1190
+01:02:35,608 --> 01:02:39,100
+love about Kafka is they also 
+have test containers for it. 
+
+1191
+01:02:39,200 --> 01:02:43,300
+So, actually, Bruce in our book 
+repo that were working on, we 
+
+1192
+01:02:43,300 --> 01:02:46,100
+actually use the Kafka test 
+container to spin up, Kafka. 
+
+1193
+01:02:46,100 --> 01:02:51,700
+So you when you run spt test, 
+you don't even Actually have to 
+
+1194
+01:02:51,700 --> 01:02:54,800
+care where the Kafka comes from 
+because the test container, 
+
+1195
+01:02:54,800 --> 01:02:58,000
+spends it up for you and 
+something like half is what you 
+
+1196
+01:02:58,000 --> 01:02:59,600
+can do and this is one of the 
+things that I love. 
+
+1197
+01:02:59,600 --> 01:03:01,600
+So there's a company called a, I
+don't know if you're familiar 
+
+1198
+01:03:01,600 --> 01:03:04,900
+with back data but they are 
+fantastic. 
+
+1199
+01:03:04,900 --> 01:03:06,400
+Has some of my favorite people 
+in the world. 
+
+1200
+01:03:06,400 --> 01:03:09,200
+They are incredibly elegant and 
+they write these, you know, 
+
+1201
+01:03:09,200 --> 01:03:11,400
+beautiful utility, just utility 
+things. 
+
+1202
+01:03:11,400 --> 01:03:13,300
+You know, you want to do in an 
+elegant fashion. 
+
+1203
+01:03:13,300 --> 01:03:15,400
+One of them is they have 
+affluent Kafka streams test 
+
+1204
+01:03:15,400 --> 01:03:18,100
+library. 
+And so I always introduce people
+
+1205
+01:03:18,100 --> 01:03:20,200
+to that and that way you don't 
+even have to, you don't have to 
+
+1206
+01:03:20,200 --> 01:03:22,600
+have a A broker, you don't have 
+any of that stuff in order to 
+
+1207
+01:03:22,600 --> 01:03:25,500
+just play around with Kafka 
+streams, but literally running 
+
+1208
+01:03:25,500 --> 01:03:27,900
+Kafka you downloaded tar and you
+just go Boop. 
+
+1209
+01:03:28,100 --> 01:03:30,400
+If you want to run it locally it
+was never that hard even you 
+
+1210
+01:03:30,400 --> 01:03:33,300
+know without tough containers 
+really like it was you know so 
+
+1211
+01:03:33,500 --> 01:03:37,000
+is it hard to get started? 
+No is it hard to run it in 
+
+1212
+01:03:37,008 --> 01:03:40,000
+production successfully? 
+Yes, it's a distributed system, 
+
+1213
+01:03:40,000 --> 01:03:41,600
+right? 
+I mean you're getting in your 
+
+1214
+01:03:41,600 --> 01:03:42,500
+getting it? 
+Yeah. 
+
+1215
+01:03:43,300 --> 01:03:48,500
+Yeah it's not your lamp stack. 
+It's so there's more to it than 
+
+1216
+01:03:49,600 --> 01:03:53,300
+the client end is very I mean, 
+you know, and we the you know, 
+
+1217
+01:03:53,300 --> 01:03:55,600
+the clients are whatever 
+language you're comfortable 
+
+1218
+01:03:55,600 --> 01:03:56,800
+with, right? 
+There's a client for it. 
+
+1219
+01:03:56,800 --> 01:04:00,400
+So it's your home, but but the 
+actual Kafka broker overhead and
+
+1220
+01:04:00,400 --> 01:04:02,500
+managing those especially large 
+Kafka distributions. 
+
+1221
+01:04:02,500 --> 01:04:05,200
+When you've got like money on 
+the line, you're going to need 
+
+1222
+01:04:05,200 --> 01:04:08,900
+to either, you know, pay for 
+that expertise in-house or use a
+
+1223
+01:04:08,900 --> 01:04:10,500
+fully managed service like 
+console Club. 
+
+1224
+01:04:11,400 --> 01:04:17,500
+So one of the things my college 
+roommates son is graduating with
+
+1225
+01:04:17,500 --> 01:04:23,100
+a PhD from MIT and he reached 
+out and joined the winter Tech 
+
+1226
+01:04:23,100 --> 01:04:26,500
+Forum group and one of the 
+things he's working. 
+
+1227
+01:04:26,500 --> 01:04:30,100
+Well, the thing he and his 
+compete riots are working on is 
+
+1228
+01:04:30,100 --> 01:04:35,800
+reproducible, scientific data. 
+I mean, you know, capturing data
+
+1229
+01:04:35,800 --> 01:04:41,700
+and so that other people can use
+the data to reproduce Schultz 
+
+1230
+01:04:41,700 --> 01:04:46,800
+and check test results and you 
+know this is so once that got 
+
+1231
+01:04:46,800 --> 01:04:49,800
+stuck in the back of my head 
+I've been just kind of noticing 
+
+1232
+01:04:49,800 --> 01:04:52,300
+things in this sure. 
+Sounds like a good. 
+
+1233
+01:04:52,400 --> 01:04:56,200
+I mean absolutely like try doing
+this without a durable log, try 
+
+1234
+01:04:56,200 --> 01:04:57,400
+doing that without a durable 
+log. 
+
+1235
+01:04:57,400 --> 01:05:00,500
+No way and that's what I say 
+about Kafka streams to is that 
+
+1236
+01:05:00,500 --> 01:05:03,100
+with Kafka streams we use stream
+time you know, just like you 
+
+1237
+01:05:03,100 --> 01:05:05,300
+know flank as watermarks and 
+they have their own thing too. 
+
+1238
+01:05:05,600 --> 01:05:09,000
+But the deterministic processing
+of records for something, like 
+
+1239
+01:05:09,000 --> 01:05:12,700
+what you're talking about is 
+Paramount And so one of the 
+
+1240
+01:05:12,700 --> 01:05:17,200
+issues that they have though is 
+vast amounts of data, I mean 
+
+1241
+01:05:17,200 --> 01:05:21,600
+like and you're smiling, so I'm 
+guessing you're going, no 
+
+1242
+01:05:21,600 --> 01:05:23,400
+problem, we're good for the 
+we're gonna. 
+
+1243
+01:05:23,800 --> 01:05:29,000
+Okay, so I'll write it in there.
+One, caveat to that. 
+
+1244
+01:05:29,000 --> 01:05:35,300
+Maybe that to deal with vast 
+amounts of data in Kafka, you 
+
+1245
+01:05:35,300 --> 01:05:37,600
+probably are going to have to 
+partition it. 
+
+1246
+01:05:37,900 --> 01:05:40,700
+So you have to have something to
+partition on. 
+
+1247
+01:05:41,100 --> 01:05:45,200
+And if I don't know if there's a
+use case, where you wouldn't 
+
+1248
+01:05:45,200 --> 01:05:49,200
+have something to purchase a 
+non, but definitely, we need to 
+
+1249
+01:05:49,200 --> 01:05:53,200
+be in order, right? 
+So Universal order. 
+
+1250
+01:05:53,200 --> 01:05:55,300
+Yeah, they don't care about 
+Universal order, right? 
+
+1251
+01:05:56,600 --> 01:05:58,900
+But in coffee, like, you take 
+something like Kafka streams, 
+
+1252
+01:05:58,900 --> 01:06:00,100
+right? 
+Kafka streams naturally 
+
+1253
+01:06:00,100 --> 01:06:03,300
+inherently builds in order. 
+So what it will do is when it 
+
+1254
+01:06:03,300 --> 01:06:05,900
+pulls from a group of 
+partitions, it'll go and it'll 
+
+1255
+01:06:05,900 --> 01:06:08,300
+pull from the oldest one first, 
+you know, whatever record was 
+
+1256
+01:06:08,300 --> 01:06:11,100
+produced, before it'll pull from
+that and naturally try and 
+
+1257
+01:06:11,100 --> 01:06:14,600
+reorder things correctly, right?
+And the way that Kafka streams 
+
+1258
+01:06:14,600 --> 01:06:17,100
+work makes an attempt at 
+reordering Universal. 
+
+1259
+01:06:17,100 --> 01:06:19,100
+Absolutely. 
+And the only thing that can end 
+
+1260
+01:06:19,100 --> 01:06:21,300
+and the nice thing about that is
+the only the only thing that can
+
+1261
+01:06:21,300 --> 01:06:23,700
+increase time and Kafka streams 
+is a record. 
+
+1262
+01:06:24,200 --> 01:06:27,300
+So it's all run on stream time 
+so what that Means is because 
+
+1263
+01:06:27,300 --> 01:06:30,000
+everything in time is driven by 
+record order, and because 
+
+1264
+01:06:30,000 --> 01:06:33,700
+kafka's a durable log, right? 
+Your record orders to save every
+
+1265
+01:06:33,700 --> 01:06:34,700
+time. 
+Yay. 
+
+1266
+01:06:34,700 --> 01:06:37,300
+And so, that's how that 
+deterministic processing Works, 
+
+1267
+01:06:37,700 --> 01:06:44,900
+which can be incredibly 
+valuable. - whoa. 
+
+1268
+01:06:45,200 --> 01:06:50,000
+Well, that was fun. 
+Yeah, very mentally stimulating.
+
+1269
+01:06:50,700 --> 01:06:53,100
+Yeah. 
+I am. 
+
+1270
+01:06:53,100 --> 01:06:58,700
+So convinced on this new stream 
+oriented world and thank you for
+
+1271
+01:06:58,800 --> 01:07:02,200
+walking us through it Anna. 
+It's really fun to have you on 
+
+1272
+01:07:02,200 --> 01:07:05,100
+and chat with you and definitely
+look forward to having Sherry 
+
+1273
+01:07:05,100 --> 01:07:06,900
+with you in person. 
+Absolutely day. 
+
+1274
+01:07:10,000 --> 01:07:15,300
+Yeah, anything else for a pup? 
+What's your Twitter? 
+
+1275
+01:07:15,300 --> 01:07:18,500
+Oh, it's your it's JB Fletch 
+underscore. 
+
+1276
+01:07:18,900 --> 01:07:20,600
+I am committed to the 
+underscore. 
+
+1277
+01:07:22,200 --> 01:07:24,800
+Mine starts with an understood. 
+I should have done. 
+
+1278
+01:07:24,900 --> 01:07:26,200
+What's the reason for the 
+underscore? 
+
+1279
+01:07:26,200 --> 01:07:28,200
+At the end? 
+There was already a G, A B flat.
+
+1280
+01:07:28,200 --> 01:07:30,100
+Which? 
+Yeah. 
+
+1281
+01:07:30,600 --> 01:07:34,100
+So in actionscript back when I 
+like got in a Twitter, I was 
+
+1282
+01:07:34,100 --> 01:07:39,000
+doing actionscript and there was
+a coating convention where like 
+
+1283
+01:07:39,000 --> 01:07:43,300
+class private variables, you 
+prefix and Score. 
+
+1284
+01:07:43,600 --> 01:07:45,100
+And it was clearly just a 
+convention. 
+
+1285
+01:07:45,100 --> 01:07:48,300
+Yeah. 
+Oh, really, I didn't know that 
+
+1286
+01:07:48,800 --> 01:07:52,000
+just python still do people in 
+Python, is that convention? 
+
+1287
+01:07:53,000 --> 01:07:55,500
+So when people see my Twitter 
+handle, they think I'm a python 
+
+1288
+01:07:55,500 --> 01:07:58,300
+person not necessarily. 
+I'm going to move my underscore 
+
+1289
+01:07:58,300 --> 01:08:03,200
+to the end like like Anna has. 
+Then I don't lose it. 
+
+1290
+01:08:03,200 --> 01:08:11,300
+Yes, languages would support 
+leading underscores for 
+
+1291
+01:08:11,300 --> 01:08:13,400
+identifiers. 
+True. 
+
+1292
+01:08:14,900 --> 01:08:16,700
+Well, thank you so much Anna. 
+I was super fun. 
+
+1293
+01:08:17,399 --> 01:08:18,899
+Alright, thank you guys for 
+having me. 
+
+1294
+01:08:19,800 --> 01:08:20,500
+Sure.

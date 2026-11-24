@@ -1,0 +1,3970 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:10,400
+Hey, this is James. 
+Just a quick note on this 
+
+4
+00:00:10,400 --> 00:00:12,600
+episode. 
+We had a little audio issue and 
+
+5
+00:00:12,600 --> 00:00:14,800
+apologize. 
+I think it's a really good 
+
+6
+00:00:14,800 --> 00:00:20,200
+episode and so we didn't want to
+lose it, but apologize for Bruce
+
+7
+00:00:20,200 --> 00:00:24,100
+and my bad audio, will do better
+next time, thanks. 
+
+8
+00:00:25,100 --> 00:00:26,800
+All right. 
+Well, today we have with us. 
+
+9
+00:00:49,000 --> 00:00:50,600
+Thank you, James. 
+Thank you. 
+
+10
+00:00:50,600 --> 00:00:52,500
+Bruce. 
+Thanks very much so much for 
+
+11
+00:00:52,500 --> 00:01:01,100
+having me here. so, I want to 
+maybe we cross paths in the 
+
+12
+00:01:01,100 --> 00:01:05,900
+Scala times two, because he did,
+you start in Scala before for 
+
+13
+00:01:05,900 --> 00:01:07,600
+college, you ever do any 
+scholar. 
+
+14
+00:01:08,500 --> 00:01:13,300
+Just actually not. 
+So my background is Android and 
+
+15
+00:01:13,300 --> 00:01:18,700
+Java, but I started with Cullen 
+late 2015. 
+
+16
+00:01:18,700 --> 00:01:24,200
+So about seven years ago and at 
+the time there were no resources
+
+17
+00:01:24,200 --> 00:01:28,000
+whatsoever in Gatlin. 
+So a couple of my colleagues The
+
+18
+00:01:28,000 --> 00:01:32,800
+time recommended me to get into 
+Scala and resume Scala books, to
+
+19
+00:01:32,800 --> 00:01:34,800
+learn and grow my accounting 
+skills. 
+
+20
+00:01:35,800 --> 00:01:38,500
+So, that is actually how I got 
+into Scylla. 
+
+21
+00:01:38,500 --> 00:01:42,000
+So probably the other way around
+for most people. 
+
+22
+00:01:50,200 --> 00:01:59,100
+What about function? 
+So reactive Vixen rxjava was 
+
+23
+00:01:59,100 --> 00:02:01,600
+very popular at the time on 
+Android. 
+
+24
+00:02:02,200 --> 00:02:06,600
+So I think that was my first 
+getting in touch with functional
+
+25
+00:02:06,600 --> 00:02:09,699
+programming patrons. 
+And then, you know, then I 
+
+26
+00:02:09,800 --> 00:02:14,400
+Learned was learning Scala, very
+quickly got into type level, 
+
+27
+00:02:14,500 --> 00:02:16,300
+which was very popular at the 
+time. 
+
+28
+00:02:17,100 --> 00:02:21,000
+And that's how I got in touch 
+with functional programming and 
+
+29
+00:02:21,000 --> 00:02:22,800
+then. 
+Yeah, I very quickly wanted to 
+
+30
+00:02:22,800 --> 00:02:25,300
+apply Obviously the same 
+patterns in Garland. 
+
+31
+00:02:25,300 --> 00:02:41,200
+Let's hurry. 
+That's 22 are like okay let's 
+
+32
+00:02:41,300 --> 00:02:45,700
+let's go all the way into the 
+hardest hardcore stuff you can 
+
+33
+00:02:45,700 --> 00:02:49,800
+possibly do in Scotland. 
+I mean I tried but it was all 
+
+34
+00:02:49,900 --> 00:02:54,000
+kind of off-putting. 
+It was used deaths and to 
+
+35
+00:02:55,600 --> 00:03:00,500
+describe it it felt. 
+It also felt kind of exclusive. 
+
+36
+00:03:01,500 --> 00:03:05,000
+So like I mean, especially some 
+of the early stuff. 
+
+37
+00:03:05,100 --> 00:03:08,300
+Stuff. 
+We're doing it with an attic 
+
+38
+00:03:08,300 --> 00:03:10,400
+libraries and stuff, it felt 
+like you. 
+
+39
+00:03:10,800 --> 00:03:16,900
+It's like, no, this is a club. 
+You can't join the finest one. 
+
+40
+00:03:16,900 --> 00:03:21,300
+Right. 
+You must have a math background.
+
+41
+00:03:22,900 --> 00:03:27,300
+No, actually, my background is 
+in electronics, so I'm actually 
+
+42
+00:03:27,300 --> 00:03:31,400
+an electronic engineer. 
+So completely unrelated to 
+
+43
+00:03:31,400 --> 00:03:35,000
+software, but I really enjoyed 
+stuff. 
+
+44
+00:03:35,200 --> 00:03:40,700
+Are, you know, well, I did a lot
+of assembly back in school and 
+
+45
+00:03:40,700 --> 00:03:45,800
+see and I really, I really loved
+software because it felt that I 
+
+46
+00:03:45,808 --> 00:03:49,100
+could build anything just on my 
+computer compared to electronics
+
+47
+00:03:49,100 --> 00:03:53,300
+where I have to order a bunch of
+components and to draw diagrams,
+
+48
+00:03:54,300 --> 00:03:58,300
+get peace of Peace printed in 
+China, which take a couple weeks
+
+49
+00:03:58,300 --> 00:04:02,000
+to have them at home and suffer.
+You just have everything at your
+
+50
+00:04:02,000 --> 00:04:23,300
+fingertips and your computer. 
+As long as the computer takes 
+
+51
+00:04:23,300 --> 00:04:26,900
+care of the zeros and ones, I 
+want to be able, I want to be 
+
+52
+00:04:26,900 --> 00:04:31,000
+able to build higher and higher 
+higher level abstractions that I
+
+53
+00:04:31,500 --> 00:04:34,200
+could make things. 
+Exactly. 
+
+54
+00:04:35,300 --> 00:04:39,500
+You are, we're diving in doing 
+some hardcore, functional 
+
+55
+00:04:39,500 --> 00:04:44,200
+programming in Scala, what was 
+it like for you to learn 
+
+56
+00:04:44,300 --> 00:04:47,300
+functional programming? 
+Especially that kind of tough. 
+
+57
+00:04:49,200 --> 00:04:53,500
+So at first, it felt like an 
+endless pit of stuff. 
+
+58
+00:04:53,500 --> 00:04:56,100
+You know, whenever I learn 
+something new, it felt like 
+
+59
+00:04:56,100 --> 00:04:58,400
+there were 10 other things that 
+I didn't know. 
+
+60
+00:05:00,100 --> 00:05:04,100
+So it was a long journey, at 
+least it felt like that but 
+
+61
+00:05:04,100 --> 00:05:07,300
+after a while, You start getting
+used to everything else kind of 
+
+62
+00:05:07,800 --> 00:05:10,700
+learn to let some things go like
+okay this is an area I don't 
+
+63
+00:05:10,700 --> 00:05:16,000
+understand yet you know maybe 
+I'll get to it later but you 
+
+64
+00:05:16,000 --> 00:05:20,100
+have being born working mostly 
+in Colin there was also some 
+
+65
+00:05:20,100 --> 00:05:22,500
+things that I wanted to bring to
+Colin and other things that I 
+
+66
+00:05:22,500 --> 00:05:26,200
+didn't. 
+So I guess that was kind of my 
+
+67
+00:05:26,200 --> 00:05:29,500
+my journey and narrow and we 
+made a very long journey. 
+
+68
+00:05:29,500 --> 00:05:31,000
+You know seeing what makes 
+sense. 
+
+69
+00:05:31,000 --> 00:05:33,400
+What was important? 
+What we felt that was not 
+
+70
+00:05:33,400 --> 00:05:37,000
+important. 
+Yeah. so, you're learning Ross 
+
+71
+00:05:37,600 --> 00:05:44,500
+as a way to goal. 
+Just wanting to bring those two 
+
+72
+00:05:44,508 --> 00:05:45,900
+columns. 
+Yes. 
+
+73
+00:05:45,900 --> 00:05:48,200
+Alright. 
+Yeah, because you know, I was, 
+
+74
+00:05:48,500 --> 00:05:51,400
+when I get started on a journey,
+I was still doing Android. 
+
+75
+00:05:51,400 --> 00:05:55,500
+And so, you know, Scala really 
+didn't feel comfortable and 
+
+76
+00:05:55,500 --> 00:05:58,500
+Android. 
+So in column film much better 
+
+77
+00:05:58,500 --> 00:06:01,500
+than Java. 
+My end goal was to bring the 
+
+78
+00:06:01,500 --> 00:06:05,300
+practices that I was learning to
+my workplace and apply them on 
+
+79
+00:06:05,300 --> 00:06:08,800
+the prejudices. 
+I was working on that for me was
+
+80
+00:06:08,800 --> 00:06:13,800
+the end goal. 
+So you started in Scala to kind 
+
+81
+00:06:13,800 --> 00:06:19,200
+of understand all these Concepts
+and then, but you had, you 
+
+82
+00:06:19,200 --> 00:06:23,200
+already been learning content, 
+or did you learn Scala first at 
+
+83
+00:06:25,000 --> 00:06:27,300
+Nasa? 
+I started with Cullen, like I 
+
+84
+00:06:27,300 --> 00:06:31,400
+said, late 2015, and I had never
+touched Carla at that point. 
+
+85
+00:06:33,100 --> 00:06:36,400
+But, you know, there was so 
+little resources in there was 
+
+86
+00:06:36,400 --> 00:06:39,300
+this foreign Concepts in Colin 
+or at least foreign coming from 
+
+87
+00:06:39,300 --> 00:06:42,600
+java like sealed. 
+Glasses this data classes. 
+
+88
+00:06:42,600 --> 00:06:46,200
+And, you know, using them 
+efficiently, you know, those who
+
+89
+00:06:46,200 --> 00:06:49,000
+are new things and me and the 
+only resources that I could find
+
+90
+00:06:49,000 --> 00:06:53,300
+were in Scala, but that is not 
+going to touch this challenge. 
+
+91
+00:06:54,100 --> 00:06:57,300
+Serve as a way to learn the 
+concepts of functional. 
+
+92
+00:06:57,300 --> 00:07:03,500
+Programming has existed. 
+Exactly. 
+
+93
+00:07:04,400 --> 00:07:10,900
+But goal is to bring that stuff.
+Some, how was your experience 
+
+94
+00:07:11,800 --> 00:07:14,200
+in? 
+Like when learning both of those
+
+95
+00:07:14,200 --> 00:07:19,000
+languages, you know, what was 
+your perception of skull and 
+
+96
+00:07:19,000 --> 00:07:25,600
+kotlin? 
+Originally originally they 
+
+97
+00:07:25,600 --> 00:07:28,600
+seemed very similar and I think 
+when you get started with the 
+
+98
+00:07:28,600 --> 00:07:33,100
+basics in Scala, a lot of the 
+stuff overlaps but the deeper 
+
+99
+00:07:33,100 --> 00:07:36,600
+you go into Sky lie, the more 
+you learn, it's a very complex 
+
+100
+00:07:36,600 --> 00:07:38,700
+language. 
+It can do a lot of things that 
+
+101
+00:07:38,700 --> 00:07:44,500
+color in cans and that comes 
+with its pros and cons, for 
+
+102
+00:07:44,500 --> 00:07:48,300
+example, I think at the time in 
+2015, the cake pattern was still
+
+103
+00:07:48,300 --> 00:07:53,300
+quite popular in Scala. 
+Which I thought was kind of nuts
+
+104
+00:07:55,200 --> 00:07:57,800
+and don't have too much, so I'm 
+not sure if I really understand 
+
+105
+00:07:57,800 --> 00:08:17,600
+it. 
+That's right. 
+
+106
+00:08:19,400 --> 00:08:23,300
+Yeah, I never really connected. 
+I didn't understand what problem
+
+107
+00:08:23,300 --> 00:08:26,300
+you're trying to solve, which is
+often the case when I don't 
+
+108
+00:08:26,300 --> 00:08:30,700
+understand something and cakes 
+and cakes. 
+
+109
+00:08:33,200 --> 00:08:36,299
+So I'm curious as you are 
+exploring, functional 
+
+110
+00:08:36,299 --> 00:08:40,400
+programming in Scala and 
+thinking about what to bring to 
+
+111
+00:08:40,400 --> 00:08:41,700
+Colin, what are some of the 
+things? 
+
+112
+00:08:41,700 --> 00:08:44,200
+We like, oh we gotta bring this 
+to God and what are some things 
+
+113
+00:08:44,200 --> 00:08:46,300
+that you're going to go? 
+It's definitely not bring this 
+
+114
+00:08:46,300 --> 00:08:54,600
+to come. 
+That's a tricky question. 
+
+115
+00:08:54,600 --> 00:08:57,100
+So I don't remember very at the 
+beginning of Arrow. 
+
+116
+00:08:57,100 --> 00:09:02,800
+One of the things that we played
+with we're implicit and they are
+
+117
+00:09:02,800 --> 00:09:07,400
+very powerful in Scala, 
+sometimes I feel too powerful 
+
+118
+00:09:08,800 --> 00:09:11,700
+you know, because things like 
+the cake batter and involved 
+
+119
+00:09:11,700 --> 00:09:15,000
+from it and as feel at the Scala
+Community also has come back on 
+
+120
+00:09:15,000 --> 00:09:19,200
+a couple of those patterns. 
+For example, The Proposal that 
+
+121
+00:09:19,200 --> 00:09:25,900
+we once made with For Colin was 
+coherent type classes, which is 
+
+122
+00:09:25,900 --> 00:09:28,700
+like coherent implicit, which 
+means you can only be a single 
+
+123
+00:09:29,100 --> 00:09:34,300
+instance, that would be made a 
+lot of sense, but the import 
+
+124
+00:09:34,300 --> 00:09:38,000
+based implicit, it's from Scala 
+seem a bit tricky. 
+
+125
+00:09:40,100 --> 00:09:51,500
+Yeah, so plus, it's turned out 
+to be I mean, I don't think it's
+
+126
+00:09:51,500 --> 00:09:54,100
+a good feeling Colin So 
+currently with the context 
+
+127
+00:09:54,100 --> 00:09:56,800
+receivers, their own least also 
+going in a different direction, 
+
+128
+00:09:57,200 --> 00:09:58,700
+which I think is a very 
+interesting one. 
+
+129
+00:09:58,900 --> 00:10:03,700
+So call them prefers being 
+explicit where Scala oftentimes 
+
+130
+00:10:03,700 --> 00:10:08,300
+prefers to be implicit. 
+So like implicit conversions and
+
+131
+00:10:08,300 --> 00:10:11,200
+things like that, I don't think 
+that would be a good idea for 
+
+132
+00:10:11,200 --> 00:10:15,900
+the column space and personally,
+Having some experience with 
+
+133
+00:10:15,900 --> 00:10:17,800
+both. 
+I prefer to be more explicit 
+
+134
+00:10:17,800 --> 00:10:21,900
+even if it requires a little bit
+more code is typically easier to
+
+135
+00:10:21,900 --> 00:10:25,500
+understand and easier to follow 
+for beginners. 
+
+136
+00:10:27,100 --> 00:10:33,600
+Yeah, that's one of the Explicit
+is better than implicit. 
+
+137
+00:10:34,300 --> 00:10:42,000
+And I've really started coming 
+to understand that when you're 
+
+138
+00:10:42,000 --> 00:10:45,400
+reading code, that's the thing. 
+If it's doing something magical,
+
+139
+00:10:45,600 --> 00:10:50,200
+you can't, you don't, it's not 
+obvious there, then. 
+
+140
+00:10:50,200 --> 00:10:53,400
+It's like, oh, I have to go 
+chase this thing down, it is 
+
+141
+00:10:56,000 --> 00:11:06,000
+just be so much easier. 
+Scala there's pre-death others 
+
+142
+00:11:08,500 --> 00:11:14,800
+but it's kind of your default 
+the words and its really nice to
+
+143
+00:11:15,000 --> 00:11:19,800
+have default ports but it is 
+implicit thing. 
+
+144
+00:11:20,600 --> 00:11:23,600
+What's fun? 
+As to is Calcutta is turn off 
+
+145
+00:11:23,600 --> 00:11:27,900
+pre-death and then you realize 
+just how much is being brought 
+
+146
+00:11:27,900 --> 00:11:31,900
+in lucidly For you as well as 
+things like. 
+
+147
+00:11:31,900 --> 00:11:34,600
+I don't really have one. 
+I have to import straight 
+
+148
+00:11:36,800 --> 00:11:37,400
+straight. 
+Whatever. 
+
+149
+00:11:38,900 --> 00:11:40,600
+Yeah. 
+All those things together, 
+
+150
+00:11:40,600 --> 00:11:42,400
+things that everybody is all the
+time. 
+
+151
+00:11:42,700 --> 00:11:45,200
+Yeah. 
+So you're saying that there is 
+
+152
+00:11:45,200 --> 00:11:47,900
+no hard and fast rule. 
+Yeah, utter shit. 
+
+153
+00:11:57,100 --> 00:11:59,100
+I think only takes an 
+interesting approach there 
+
+154
+00:11:59,100 --> 00:12:01,800
+because, you know, a bunch of 
+the imports from the standard 
+
+155
+00:12:01,800 --> 00:12:04,400
+Library actually don't require 
+Imports. 
+
+156
+00:12:04,500 --> 00:12:07,900
+So for example if you're working
+with strings with integers for 
+
+157
+00:12:07,900 --> 00:12:11,300
+the bunch of the most common 
+things, it doesn't require and 
+
+158
+00:12:11,300 --> 00:12:15,000
+you make an explicit import 
+because the language you know, 
+
+159
+00:12:15,000 --> 00:12:17,900
+says okay this is a default, 
+it's so common you cannot 
+
+160
+00:12:17,900 --> 00:12:20,200
+override it so you don't require
+to import 
+
+161
+00:12:38,900 --> 00:12:58,800
+so, what kinds so, Originally I 
+thought they were really missing
+
+162
+00:12:58,800 --> 00:13:02,700
+and View at some point also 
+emulated them in error, which 
+
+163
+00:13:02,700 --> 00:13:06,900
+turned around turned out to be a
+big mistake because, you know, 
+
+164
+00:13:06,900 --> 00:13:09,500
+emulating them is horrible. 
+If you have them, they should 
+
+165
+00:13:09,500 --> 00:13:15,000
+really be a language feature, 
+but seeing how the things have 
+
+166
+00:13:15,000 --> 00:13:17,700
+evolved in Arrow. 
+I don't really miss them anymore
+
+167
+00:13:18,300 --> 00:13:20,200
+at all. 
+So I feel that we can do all the
+
+168
+00:13:20,200 --> 00:13:23,700
+same stuff without the higher 
+kinda types. 
+
+169
+00:13:25,400 --> 00:13:29,500
+So, So I feel that, you know, we
+found a good solution for Colin 
+
+170
+00:13:29,900 --> 00:13:32,400
+but I still think it's an 
+interesting language feature, 
+
+171
+00:13:33,400 --> 00:13:38,500
+but at this point I'm happy that
+they're not in Colin you would 
+
+172
+00:13:38,500 --> 00:13:44,400
+actually prefer that, you know, 
+there's some downsides to it, 
+
+173
+00:13:44,400 --> 00:13:47,500
+for example, in the collection 
+apis and Colin. 
+
+174
+00:13:48,000 --> 00:13:50,500
+Oftentimes, for example, if 
+you're mapping elements of a 
+
+175
+00:13:50,500 --> 00:13:56,300
+set, you will get back a list. 
+And, you know, in some of these 
+
+176
+00:13:56,300 --> 00:14:00,500
+cases, it can be strange. 
+This was actually not a great 
+
+177
+00:14:00,500 --> 00:14:03,900
+example because if I'm not 
+mistaken set doesn't have a 
+
+178
+00:14:03,900 --> 00:14:12,400
+functor because it's an ordered.
+Recently, with the set, I was 
+
+179
+00:14:12,400 --> 00:14:16,600
+calling flat map on the set and 
+the flat on the side. 
+
+180
+00:14:17,000 --> 00:14:23,500
+The function, the pass, it has 
+to return a list that what comes
+
+181
+00:14:23,500 --> 00:14:27,100
+out of the flatness a list as I 
+just a flat map and it was so 
+
+182
+00:14:27,100 --> 00:14:32,100
+annoying. 
+But so yeah, I think that you 
+
+183
+00:14:32,100 --> 00:14:38,400
+could make it work, just fine 
+but It's somebody who had an 
+
+184
+00:14:38,400 --> 00:14:42,500
+expectation of how a flat map 
+should work on the side. 
+
+185
+00:14:42,600 --> 00:14:47,600
+That didn't work that way. 
+So I think in the collection, if
+
+186
+00:14:47,600 --> 00:14:51,300
+you guys probably the only place
+that I've ever invested in but 
+
+187
+00:14:51,300 --> 00:14:52,900
+besides that I don't miss it at 
+all. 
+
+188
+00:15:09,100 --> 00:15:11,600
+His experience. 
+It was necessary and it was like
+
+189
+00:15:11,600 --> 00:15:15,200
+one of those things where you 
+go, oh, I didn't know that was, 
+
+190
+00:15:15,600 --> 00:15:18,800
+you could do that and still call
+it a functional language. 
+
+191
+00:15:18,800 --> 00:15:24,000
+But then, I can see, I can see 
+his argument, you know, it's 
+
+192
+00:15:24,000 --> 00:15:30,900
+like I do. 
+It's having created common 
+
+193
+00:15:31,900 --> 00:15:41,300
+features. 
+You would like to have a curing 
+
+194
+00:15:41,300 --> 00:15:45,800
+is something that I also don't 
+miss in particular, but yeah, 
+
+195
+00:15:45,800 --> 00:15:49,700
+it's sometimes it's also taken 
+to the extremes and you know, if
+
+196
+00:15:49,800 --> 00:15:53,100
+you take things to extremes then
+it goes, it turns back, you 
+
+197
+00:15:53,108 --> 00:15:54,900
+know. 
+So I've seen people that use 
+
+198
+00:15:54,900 --> 00:15:57,700
+curing because they want to pass
+everything as a value to a 
+
+199
+00:15:57,700 --> 00:16:01,500
+Lambda. 
+Or say, you know, using explicit
+
+200
+00:16:01,500 --> 00:16:04,100
+lambdas everywhere in Cullen 
+also has benefits. 
+
+201
+00:16:04,700 --> 00:16:08,300
+For example, you know, it's 
+inline support where you can use
+
+202
+00:16:08,300 --> 00:16:12,000
+suspend inside of an inline 
+Lambda is really powerful, but 
+
+203
+00:16:12,000 --> 00:16:15,200
+that kind of stuff doesn't work 
+if you pass the Lambda as a 
+
+204
+00:16:15,200 --> 00:16:26,300
+value, yeah, they're very 
+pragmatic. 
+
+205
+00:16:29,800 --> 00:16:32,400
+That's that's that's very 
+satisfying. 
+
+206
+00:16:32,400 --> 00:16:35,500
+But I've also been starting to 
+see some of the things that are 
+
+207
+00:16:36,400 --> 00:16:45,300
+Scala that the colonists have 
+these things like you have to 
+
+208
+00:16:45,300 --> 00:16:52,600
+create the equivalent for 
+comprehension recently. 
+
+209
+00:16:52,600 --> 00:16:55,100
+We did. 
+But we actually found a solution
+
+210
+00:16:55,100 --> 00:16:58,200
+for that as well. 
+So we don't need it anymore. 
+
+211
+00:16:59,300 --> 00:17:02,400
+And current solution that we 
+have actually works really well.
+
+212
+00:17:02,400 --> 00:17:05,400
+And just uses suspend and I'm 
+lining. 
+
+213
+00:17:07,099 --> 00:17:09,500
+And you don't need 
+comprehensions anymore. 
+
+214
+00:17:09,500 --> 00:17:11,800
+You actually don't need map and 
+flatmap anymore. 
+
+215
+00:17:12,000 --> 00:17:17,099
+It's just function application 
+all the way through no magic at 
+
+216
+00:17:17,099 --> 00:17:27,599
+all. 
+Yeah, Arrow to and you can 
+
+217
+00:17:27,599 --> 00:17:30,000
+actually do it today. 
+But with context receiver, 
+
+218
+00:17:30,000 --> 00:17:32,300
+especially you don't even need 
+bind anymore. 
+
+219
+00:17:34,400 --> 00:17:39,100
+If you put the effect in the 
+context receiver or you can do 
+
+220
+00:17:39,100 --> 00:17:41,300
+it today. 
+Also as the receiver of an 
+
+221
+00:17:41,300 --> 00:17:45,700
+extension function, you get a 
+syntax available inside of the 
+
+222
+00:17:45,700 --> 00:17:48,800
+method body. 
+Them. 
+
+223
+00:17:48,800 --> 00:17:52,000
+For example, if you have 
+suspend, you can call let's say 
+
+224
+00:17:52,000 --> 00:17:55,500
+raise or shift to raise a 
+logical error instead of 
+
+225
+00:17:55,500 --> 00:17:58,500
+creating a neither left and 
+binding it and since it's a 
+
+226
+00:17:58,508 --> 00:18:01,600
+spend you can call it in the map
+of a list because the map of a 
+
+227
+00:18:01,608 --> 00:18:05,100
+list is in line. 
+So all of these things naturally
+
+228
+00:18:05,100 --> 00:18:08,900
+compose without having for 
+comprehensions without having 
+
+229
+00:18:08,900 --> 00:18:12,600
+Mana Transformers without 
+requiring any of that stuff 
+
+230
+00:18:13,300 --> 00:18:17,000
+should really decreases the 
+learning curve for all of these 
+
+231
+00:18:17,000 --> 00:18:27,400
+patterns. so, your As a short 
+circuiting mechanism to say, 
+
+232
+00:18:27,400 --> 00:18:30,000
+okay we're not going to do 
+anything on this anymore which 
+
+233
+00:18:30,000 --> 00:18:31,900
+is suspended and you never 
+resume. 
+
+234
+00:18:34,400 --> 00:18:40,000
+That was one of the original 
+implementations but it's 
+
+235
+00:18:40,000 --> 00:18:46,200
+actually gone a bit simpler for 
+basically just using a control 
+
+236
+00:18:46,200 --> 00:18:51,400
+trouble, which is backed by the 
+cancellation exception because 
+
+237
+00:18:51,400 --> 00:18:54,600
+so it can cooperate with the 
+current teams and it doesn't The
+
+238
+00:18:54,600 --> 00:18:56,700
+stack Trace. 
+So it doesn't imply any 
+
+239
+00:18:56,700 --> 00:19:01,300
+performance penalties. 
+You're using. 
+
+240
+00:19:02,500 --> 00:19:05,700
+Collagen structure and the 
+termination. 
+
+241
+00:19:06,500 --> 00:19:07,400
+Yeah. 
+That's in there. 
+
+242
+00:19:08,700 --> 00:19:10,800
+Okay? 
+So so that way you can just say 
+
+243
+00:19:10,800 --> 00:19:15,100
+okay this is all set up its 
+using structured concurrency so 
+
+244
+00:19:15,100 --> 00:19:18,200
+I'm safe in terms of resource 
+clean up and everything. 
+
+245
+00:19:18,500 --> 00:19:25,500
+Yes exactly. 
+I realize we've Dove into Arrow 
+
+246
+00:19:25,500 --> 00:19:29,400
+without without talking about 
+talking about what it is that 
+
+247
+00:19:29,400 --> 00:19:31,300
+all? 
+Can you give us yummy? 
+
+248
+00:19:31,300 --> 00:19:34,500
+You're probably used to giving 
+the high level overview to what 
+
+249
+00:19:34,500 --> 00:19:39,400
+Carol is so can use that. 
+So very, very high level. 
+
+250
+00:19:39,400 --> 00:19:44,400
+Arrow is actually open source 
+organization that aims to build 
+
+251
+00:19:44,500 --> 00:19:48,000
+idiomatic and types of programs 
+in carbon. 
+
+252
+00:19:48,000 --> 00:19:52,800
+So it has a bunch of different 
+libraries, the aims to offer, 
+
+253
+00:19:52,900 --> 00:19:55,200
+you know. 
+Elegant Solutions with a low 
+
+254
+00:19:55,200 --> 00:20:00,000
+learning curve for writing 
+functional patterns in Colin and
+
+255
+00:20:00,000 --> 00:20:04,300
+then I would say the most 
+popular library right now is 
+
+256
+00:20:04,300 --> 00:20:07,500
+probably Arrow core which offers
+these things that we were just 
+
+257
+00:20:07,500 --> 00:20:11,000
+discussion. 
+Disgusting like either and is DS
+
+258
+00:20:11,000 --> 00:20:14,100
+cells that give you typed errors
+in Colin. 
+
+259
+00:20:16,900 --> 00:20:22,800
+But then there's a number of 
+other libraries that presumably 
+
+260
+00:20:22,800 --> 00:20:26,900
+use or built on top of Arrow 
+cover. 
+
+261
+00:20:27,900 --> 00:20:31,000
+Yes, we're open for is what 
+really compliments the standard 
+
+262
+00:20:31,000 --> 00:20:33,500
+library, right? 
+So it has a couple of things. 
+
+263
+00:20:33,500 --> 00:20:36,600
+It's if quite small library that
+adds a couple of things that we 
+
+264
+00:20:36,600 --> 00:20:39,500
+feel is functional, programmers,
+is missing from the standard 
+
+265
+00:20:39,500 --> 00:20:42,400
+library. 
+Then we have error fixed 
+
+266
+00:20:42,400 --> 00:20:46,400
+co-routines, which Similarly 
+complements, the colonies 
+
+267
+00:20:46,400 --> 00:20:51,100
+cortines library with a couple 
+of higher-level operators like 
+
+268
+00:20:51,100 --> 00:20:56,400
+racing Resource Management, 
+parallel operations, a bunch of 
+
+269
+00:20:56,400 --> 00:20:59,200
+extensions and colonies flow 
+that we are familiar with from 
+
+270
+00:20:59,200 --> 00:21:03,500
+FS to in Scala. 
+For example, there's error 
+
+271
+00:21:03,500 --> 00:21:06,700
+Optics that offers a DSL for 
+working with immutable data so 
+
+272
+00:21:06,700 --> 00:21:08,700
+it's like the copy method on 
+steroids. 
+
+273
+00:21:10,200 --> 00:21:14,300
+So those are the three, most 
+popular module. 
+
+274
+00:21:14,500 --> 00:21:16,100
+Us or libraries, I would say 
+right now. 
+
+275
+00:21:17,200 --> 00:21:23,200
+So, I don't know how much you 
+have looked at zero, but how if 
+
+276
+00:21:23,200 --> 00:21:25,900
+you have, how would you compare 
+the two? 
+
+277
+00:21:29,600 --> 00:21:33,600
+See, I compared to Scala is 
+tricky, I would say that cr0 
+
+278
+00:21:34,600 --> 00:21:39,300
+offers similar functionality, 
+but I would say, the biggest 
+
+279
+00:21:39,300 --> 00:21:43,500
+difference is was CEO of offers 
+everything in an Uber Monet. 
+
+280
+00:21:43,500 --> 00:21:47,600
+So everything is single type 
+error games offered things 
+
+281
+00:21:47,800 --> 00:21:50,300
+separately. 
+But composable, so like I 
+
+282
+00:21:50,300 --> 00:21:54,400
+mentioned before, everything 
+composes naturally in Colin. 
+
+283
+00:21:54,400 --> 00:21:57,500
+So the goal of Arrow is to 
+basically We offer you things 
+
+284
+00:21:57,500 --> 00:21:59,900
+that you can pick and choose 
+what you need when you need it. 
+
+285
+00:22:00,200 --> 00:22:03,100
+And similarly, when a beginner 
+comes to the language becomes 
+
+286
+00:22:03,100 --> 00:22:06,300
+the arrow, he can only learn the
+small part, get started with 
+
+287
+00:22:06,300 --> 00:22:10,000
+that and then build upon or 
+expand this knowledge over time 
+
+288
+00:22:10,000 --> 00:22:17,100
+and start using more features 
+whenever he needs them. and, 
+
+289
+00:22:29,800 --> 00:22:33,100
+Program at a higher level 
+without having to think about a 
+
+290
+00:22:33,100 --> 00:22:36,800
+lot of the details that we have 
+historically had to work with 
+
+291
+00:22:36,800 --> 00:22:41,000
+especially when dealing with 
+concurrency, like you could just
+
+292
+00:22:41,000 --> 00:22:45,200
+say what you want and not worry 
+about tuning or resource 
+
+293
+00:22:45,200 --> 00:22:49,700
+management or any of those 
+farewell safety. 
+
+294
+00:22:50,000 --> 00:22:54,200
+And is that's, is that the kind 
+of experience that you're able 
+
+295
+00:22:54,200 --> 00:22:56,100
+to achieve with their own as 
+well? 
+
+296
+00:22:57,000 --> 00:23:00,300
+Yeah, so I put sell some big 
+difference with colonists 
+
+297
+00:23:00,300 --> 00:23:02,400
+Calise. 
+That Colin doesn't have any of 
+
+298
+00:23:02,400 --> 00:23:05,500
+the concurrency, strong 
+construction standard Library. 
+
+299
+00:23:05,500 --> 00:23:09,700
+It only has future, which maybe 
+it's a legacy thing in Scala. 
+
+300
+00:23:10,200 --> 00:23:12,700
+Colin has a very nice approach 
+with that, they have colonies 
+
+301
+00:23:12,700 --> 00:23:16,200
+Koreans outside of the standard 
+library, and what we are 
+
+302
+00:23:16,200 --> 00:23:20,100
+actually, what we actually did 
+in error, fix Court in, since we
+
+303
+00:23:20,100 --> 00:23:24,400
+built this resource type, which 
+again you can use as a rapper or
+
+304
+00:23:24,400 --> 00:23:28,300
+in the context receivers and it 
+Offers you the same powers on 
+
+305
+00:23:28,300 --> 00:23:30,700
+top of structured. 
+Concurrency is with the same 
+
+306
+00:23:30,700 --> 00:23:32,900
+principles as structure, 
+concurrency. 
+
+307
+00:23:33,300 --> 00:23:35,900
+So it offers you a solution for 
+resource management, for 
+
+308
+00:23:35,900 --> 00:23:40,400
+example, that works. 
+Same escorting scope for 
+
+309
+00:23:40,400 --> 00:23:46,400
+resources in a very elegant way 
+using suspend And like I said, 
+
+310
+00:23:46,400 --> 00:23:49,900
+it composes with type 2 error. 
+So for example, if you have a 
+
+311
+00:23:49,900 --> 00:23:53,400
+type two error, that happens 
+while you're using a resource, 
+
+312
+00:23:53,400 --> 00:23:55,500
+it will also clean up the 
+resource. 
+
+313
+00:23:55,500 --> 00:23:57,600
+But you can pick and choose what
+you want. 
+
+314
+00:23:57,600 --> 00:24:01,800
+What you need? 
+Yeah. 
+
+315
+00:24:41,900 --> 00:24:44,600
+That's a good question. 
+That brings up. 
+
+316
+00:24:44,600 --> 00:24:47,900
+The question that comes from 
+that experiment that you're 
+
+317
+00:24:47,908 --> 00:24:52,400
+doing because you did the 
+experiment with Z 0 and you said
+
+318
+00:24:52,400 --> 00:24:57,800
+okay, we'll race these two 
+things and the one that didn't 
+
+319
+00:24:57,800 --> 00:25:02,700
+win was automatically 
+immediately terminate. 
+
+320
+00:25:03,000 --> 00:25:10,200
+And then you got an example with
+loom project Loom Java and you 
+
+321
+00:25:10,200 --> 00:25:12,600
+discovered that, that wasn't the
+case. 
+
+322
+00:25:12,600 --> 00:25:15,900
+So maybe they'll fix it. 
+But it's hard to know what Java.
+
+323
+00:25:17,200 --> 00:25:21,100
+So in that case, like does does 
+Arrow. 
+
+324
+00:25:22,600 --> 00:25:26,400
+Let's say do it the right way 
+immediately Toronto, I would say
+
+325
+00:25:26,700 --> 00:25:30,100
+Arrow, does it the right way? 
+And so same as what we what you 
+
+326
+00:25:30,100 --> 00:25:35,400
+would be used to from type 
+level, or say oh we actually 
+
+327
+00:25:35,400 --> 00:25:40,100
+have also looked into this with 
+loom and And what if I died 
+
+328
+00:25:40,200 --> 00:25:44,400
+remember from it is that Loom 
+has a problem that you can not 
+
+329
+00:25:44,400 --> 00:25:46,900
+make something on cancellable, 
+right? 
+
+330
+00:25:46,900 --> 00:25:49,300
+So and that is a problem with 
+the final answers for the 
+
+331
+00:25:49,300 --> 00:25:51,600
+resource management. 
+You cannot say, okay, this 
+
+332
+00:25:51,600 --> 00:25:56,400
+thread has to run, no matter 
+what to run the finalizer. 
+
+333
+00:25:58,400 --> 00:26:03,700
+Does that seem like or is that 
+something that they could fix? 
+
+334
+00:26:05,700 --> 00:26:08,700
+You know, seeing the loom 
+happens mostly between a bunch 
+
+335
+00:26:08,700 --> 00:26:11,000
+of magic in the hot spot. 
+It seems like something that I 
+
+336
+00:26:11,008 --> 00:26:15,200
+can fix but I'm not familiar 
+enough with the low level 
+
+337
+00:26:15,600 --> 00:26:23,500
+implementation of loom to really
+make a comment on that. one of 
+
+338
+00:26:23,500 --> 00:26:31,100
+the things I think about, John 
+to goes while ago by the CEO 
+
+339
+00:26:31,600 --> 00:26:35,700
+said he initially, we started 
+working on zo. 
+
+340
+00:26:36,200 --> 00:26:42,000
+He was trying to do things in a 
+very high school or when in 
+
+341
+00:26:42,000 --> 00:26:48,600
+Scala and he kept seeing 
+barriers like the language 
+
+342
+00:26:48,600 --> 00:26:52,100
+doesn't allow me to do this this
+way, this way. 
+
+343
+00:26:52,700 --> 00:26:58,100
+And so I think one of the big 
+breakthroughs was CEO is that he
+
+344
+00:26:58,100 --> 00:27:00,200
+said we're just going to embrace
+Scala. 
+
+345
+00:27:00,200 --> 00:27:06,100
+As it is not try to make Scala 
+who to ask and That I think led 
+
+346
+00:27:06,100 --> 00:27:13,300
+to a really nice experience Co, 
+and I think that arrow is has 
+
+347
+00:27:13,300 --> 00:27:17,300
+had that same Journey as he 
+initially arose trying to do 
+
+348
+00:27:17,300 --> 00:27:20,800
+things in-house, coach scholar 
+of way. 
+
+349
+00:27:20,800 --> 00:27:24,700
+But the the initial experiments 
+around love. 
+
+350
+00:27:26,000 --> 00:27:30,700
+Do Temptation for comprehension,
+whatever Euro was I think trying
+
+351
+00:27:30,700 --> 00:27:34,700
+to adopt where the high school 
+is call over to we're doing 
+
+352
+00:27:34,700 --> 00:27:40,900
+well. 
+Operations and instead you just 
+
+353
+00:27:40,900 --> 00:27:43,900
+said, well, it doesn't feel 
+quite right. 
+
+354
+00:27:44,200 --> 00:27:48,000
+And so let's figure out a way to
+get those constructs of the 
+
+355
+00:27:48,000 --> 00:27:50,900
+language as is. 
+And you got to the suspend 
+
+356
+00:27:50,900 --> 00:27:56,500
+functions is very ergonomic. 
+Feels feels right, contact 
+
+357
+00:27:56,500 --> 00:28:01,800
+receivers will be better. 
+So how does that does that is 
+
+358
+00:28:01,800 --> 00:28:05,300
+accurate to describe kind of the
+journey with arrow? 
+
+359
+00:28:05,900 --> 00:28:08,100
+Yeah, that's that's very 
+accurate, actually. 
+
+360
+00:28:08,100 --> 00:28:11,600
+A lot of a lot of things happen.
+So maybe to provide some more 
+
+361
+00:28:11,600 --> 00:28:16,500
+background next year, Arrow will
+actually be 10 years old. 
+
+362
+00:28:16,500 --> 00:28:21,900
+So the first commit in the 
+libraries for 2013, and 
+
+363
+00:28:21,900 --> 00:28:24,700
+originally there were actually 
+two project was a project called
+
+364
+00:28:24,700 --> 00:28:29,500
+functionality, which was by 
+Mario, which was an ex Scala 
+
+365
+00:28:29,500 --> 00:28:33,200
+developer. 
+He was one of the elderly people
+
+366
+00:28:33,200 --> 00:28:35,200
+in Scala. 
+We're doing spring in Scala but 
+
+367
+00:28:35,200 --> 00:28:38,000
+that Didn't really work. 
+Well, so we switched Gatlin 
+
+368
+00:28:38,800 --> 00:28:42,300
+spring cutland go really well 
+together, but then again, he was
+
+369
+00:28:42,300 --> 00:28:44,300
+also missing a bunch of things 
+from the common standard 
+
+370
+00:28:44,300 --> 00:28:48,300
+Library, like either try and the
+behavior of a library around 
+
+371
+00:28:48,300 --> 00:28:58,000
+that and then in 2016 or early 
+2017, the error Library back, 
+
+372
+00:28:58,000 --> 00:29:01,900
+then called category was founded
+in the Spanish community. 
+
+373
+00:29:03,300 --> 00:29:06,400
+And these are people basically 
+trying to To learn functional 
+
+374
+00:29:06,400 --> 00:29:10,700
+programming from Scylla type 
+level setting Colin. 
+
+375
+00:29:10,700 --> 00:29:16,300
+So similar Journey that I took 
+and I was on a similar bad. 
+
+376
+00:29:27,100 --> 00:29:30,300
+And that was at the time on a 
+similar stance. 
+
+377
+00:29:30,500 --> 00:29:35,100
+So I was trying to figure out 
+what Optics were and I was 
+
+378
+00:29:35,100 --> 00:29:39,200
+interested in a library in Scala
+code monocle and I decided to, 
+
+379
+00:29:39,200 --> 00:29:42,200
+you know, I'm just going to 
+build monocle in common to 
+
+380
+00:29:42,200 --> 00:29:46,000
+understand but the problem and 
+the solution of this you know, 
+
+381
+00:29:46,200 --> 00:29:51,100
+Paradigm or pattern is and then 
+Rao reach out to me and say, hey
+
+382
+00:29:51,100 --> 00:29:54,100
+do you want to join in or 
+organization with your library? 
+
+383
+00:29:54,400 --> 00:29:57,600
+I think we'll be good. 
+It and I joined him and a little
+
+384
+00:29:57,600 --> 00:30:00,500
+bit later, we reached out to the
+maintainers of functional and 
+
+385
+00:30:00,500 --> 00:30:03,100
+say hey do you want to come 
+together and let's make this and
+
+386
+00:30:03,100 --> 00:30:06,300
+do open source, code 
+organization called Arrow. 
+
+387
+00:30:06,500 --> 00:30:09,600
+Let's just all work together. 
+Instead of making this divided 
+
+388
+00:30:09,800 --> 00:30:11,600
+community of functional 
+programmers. 
+
+389
+00:30:12,200 --> 00:30:16,400
+So Arrow got started and in. 
+So we had a lot of the things 
+
+390
+00:30:16,400 --> 00:30:20,500
+you mentioned, the type class is
+the higher kinda types. 
+
+391
+00:30:21,500 --> 00:30:25,100
+You know, we were emulating 
+implicit in the beginning. 
+
+392
+00:30:25,600 --> 00:30:28,900
+Yeah, it's all kinda weird in 
+college. 
+
+393
+00:30:42,200 --> 00:30:44,900
+At the time, there was also no 
+colonies cortines. 
+
+394
+00:30:45,100 --> 00:30:50,900
+So we build an IR data type and 
+by the time Jo did it, I became 
+
+395
+00:30:50,900 --> 00:30:54,400
+public bus around the same time,
+that Colin escorting. 
+
+396
+00:30:54,400 --> 00:30:58,700
+So it's released. 
+So after one year, figuring out 
+
+397
+00:30:58,700 --> 00:31:01,800
+what we're going to do in that 
+space, we decided okay let's 
+
+398
+00:31:01,800 --> 00:31:07,100
+ditch whatever we have, let's 
+embrace the language but there 
+
+399
+00:31:07,100 --> 00:31:11,600
+is a very long Learning Journey 
+behind but are Today. 
+
+400
+00:31:15,400 --> 00:31:17,300
+Yeah, it seems like we're not 
+today. 
+
+401
+00:31:17,300 --> 00:31:21,200
+You're not, you're not fighting 
+the language, its constraints 
+
+402
+00:31:21,200 --> 00:31:30,600
+your work. 
+I can't remember any situation 
+
+403
+00:31:30,600 --> 00:31:34,100
+where somebody was going in and 
+saying, oh let's make this 
+
+404
+00:31:34,100 --> 00:31:38,200
+language, something else. 
+That has been successful. 
+
+405
+00:31:38,700 --> 00:31:41,800
+And I think part of it has got 
+to be just the mental model for 
+
+406
+00:31:41,800 --> 00:31:45,700
+the the programmer as you go. 
+Okay. 
+
+407
+00:31:45,700 --> 00:31:48,100
+I know this language and they go
+well no. 
+
+408
+00:31:48,500 --> 00:31:52,600
+Do this instead it's too big 
+shift. 
+
+409
+00:31:52,900 --> 00:31:57,100
+It's confusing. 
+I think people typically come to
+
+410
+00:31:57,100 --> 00:32:00,400
+a language because they see 
+things in the language and they 
+
+411
+00:32:00,400 --> 00:32:02,200
+lie. 
+So if you fight the language 
+
+412
+00:32:02,200 --> 00:32:05,300
+then you know it's going to 
+confuse most of the developers 
+
+413
+00:32:05,300 --> 00:32:09,000
+in that language. 
+So, what? 
+
+414
+00:32:14,200 --> 00:32:18,700
+People in especially people who 
+maybe don't understand, 
+
+415
+00:32:18,700 --> 00:32:22,600
+functional programming, they 
+could bring it into Arrow. 
+
+416
+00:32:23,900 --> 00:32:31,400
+So there's a couple of books 
+Marketing convertible. 
+
+417
+00:32:31,400 --> 00:32:35,100
+My mind, my colleague Alejandro 
+Serrano, recently wrote a new 
+
+418
+00:32:35,100 --> 00:32:41,000
+book on functional programming 
+and Colin, but I would say the 
+
+419
+00:32:41,100 --> 00:32:43,100
+arrow documentation is also 
+quite nice. 
+
+420
+00:32:43,100 --> 00:32:46,300
+You put a lot of effort in it 
+and especially for the 2.0 
+
+421
+00:32:46,300 --> 00:32:48,800
+series. 
+It's gonna again, receive a lot 
+
+422
+00:32:48,800 --> 00:32:52,800
+of love. 
+So from the people behind are we
+
+423
+00:32:52,800 --> 00:32:57,200
+really want the arrow website 
+and documentation, just be 
+
+424
+00:32:57,300 --> 00:33:03,000
+everything that a beginner need.
+Needs to get started with arrow.
+
+425
+00:33:03,000 --> 00:33:07,200
+A functional programming in 
+Gatlin, so we don't want to hide
+
+426
+00:33:07,200 --> 00:33:10,700
+it behind a pay wall in a book. 
+They should find it right there 
+
+427
+00:33:10,700 --> 00:33:22,300
+on the page. 
+So from 47 we also have a place 
+
+428
+00:33:22,300 --> 00:33:27,400
+course that you can follow and 
+you know I've also been on the 
+
+429
+00:33:27,400 --> 00:33:30,700
+jet prints, you two-bit Anton 
+talking about are on the back 
+
+430
+00:33:30,700 --> 00:33:36,300
+end so there's a lot of 
+resources all over next week. 
+
+431
+00:33:36,300 --> 00:33:39,900
+I'm also giving a talk on Colin 
+deathday about Resource 
+
+432
+00:33:39,900 --> 00:33:45,800
+Management in graceful shutdown.
+So that will be a public video 
+
+433
+00:33:45,800 --> 00:33:51,200
+soon. 
+So we're have really pushing a 
+
+434
+00:33:51,208 --> 00:33:59,900
+lot of content in all 
+directions. just, Functional 
+
+435
+00:34:00,200 --> 00:34:04,800
+General. 
+And some of these libraries is 
+
+436
+00:34:06,500 --> 00:34:11,699
+an obstacle. 
+So well, I would say that was 
+
+437
+00:34:11,699 --> 00:34:16,400
+one of my biggest goals for the 
+2.0 series is to really lower 
+
+438
+00:34:16,400 --> 00:34:19,500
+the learning curve. 
+I mentioned it very briefly 
+
+439
+00:34:19,500 --> 00:34:22,800
+before, but there's no more need
+for map and flatmap. 
+
+440
+00:34:24,800 --> 00:34:28,600
+So everything just works on 
+based on these cells and it 
+
+441
+00:34:28,600 --> 00:34:32,100
+gives Tziu, depending on what 
+you want, gives you maybe two or
+
+442
+00:34:32,100 --> 00:34:35,300
+three functions. 
+For example, if you're working 
+
+443
+00:34:35,300 --> 00:34:38,500
+with type errors, there's only a
+single function, which is raised
+
+444
+00:34:40,500 --> 00:34:41,699
+that you can use to raise an 
+error. 
+
+445
+00:34:41,699 --> 00:34:45,300
+And then there is like, there's 
+two error handlers recovering, 
+
+446
+00:34:45,300 --> 00:34:48,400
+catch depending if you're 
+working on over a type 2 error, 
+
+447
+00:34:48,400 --> 00:34:51,900
+or a trouble. 
+So you know, that basically 
+
+448
+00:34:51,900 --> 00:34:55,600
+replaces the entirety of and 
+then one at here, are key in the
+
+449
+00:34:55,600 --> 00:34:57,400
+monitor here, I give it three 
+functions. 
+
+450
+00:34:58,900 --> 00:35:03,200
+So I would say the drastically, 
+decreases, the learning curve in
+
+451
+00:35:03,300 --> 00:35:08,500
+in the either type I merged a PR
+this week I think it decreases 
+
+452
+00:35:08,500 --> 00:35:13,700
+the API surface from something 
+like 50 or 70 functions 215 
+
+453
+00:35:13,900 --> 00:35:18,500
+functions. 
+So decreasing that learning 
+
+454
+00:35:18,500 --> 00:35:21,500
+curve is a big priority for us. 
+All right. 
+
+455
+00:35:31,600 --> 00:35:35,800
+Having to go through all the 
+different things that we have. 
+
+456
+00:35:37,300 --> 00:36:00,100
+Yeah, I hope so. 
+Whereas what you're depressed 
+
+457
+00:36:00,100 --> 00:36:02,000
+that you're moving towards, a 
+saint. 
+
+458
+00:36:02,000 --> 00:36:10,700
+Like if you could do a lot of 
+useful function programs, Yes, 
+
+459
+00:36:13,700 --> 00:36:17,000
+but if you can hide it well 
+enough, then you don't have to 
+
+460
+00:36:17,000 --> 00:36:34,000
+explain the idea behind it. 
+So, So you mentioned that was so
+
+461
+00:36:34,300 --> 00:36:40,400
+I'm sure you use the 11. 
+Which 113 is a current latest 
+
+462
+00:36:40,400 --> 00:36:45,100
+version Arrow to isn't heavy. 
+Well, not have a development, 
+
+463
+00:36:45,100 --> 00:36:47,300
+it's in development. 
+Most of the stuff that we 
+
+464
+00:36:47,300 --> 00:36:51,900
+currently still want to work on 
+is documentation because we want
+
+465
+00:36:51,900 --> 00:36:53,900
+to orient the documentation 
+about. 
+
+466
+00:36:54,000 --> 00:36:56,200
+And what I just said, we want to
+get rid of everything that 
+
+467
+00:36:56,200 --> 00:37:01,100
+mentions monad, this difficult 
+concept to want to simplify the 
+
+468
+00:37:01,100 --> 00:37:04,500
+website to be an easy entry 
+point for people to learn what's
+
+469
+00:37:04,500 --> 00:37:08,200
+functional programming Collins. 
+So they we don't even want to 
+
+470
+00:37:08,208 --> 00:37:10,400
+talk about, you know, 1s or 
+either. 
+
+471
+00:37:10,400 --> 00:37:12,400
+We just want to have a page. 
+I cannot you. 
+
+472
+00:37:12,400 --> 00:37:15,100
+Do you want to work with type 2 
+errors, right? 
+
+473
+00:37:15,100 --> 00:37:17,400
+Then this is how you can do it, 
+it's probably going to be a 
+
+474
+00:37:17,408 --> 00:37:21,100
+single page. 
+Do you need to recover from 
+
+475
+00:37:21,700 --> 00:37:23,600
+errors? 
+Do you need resilience? 
+
+476
+00:37:24,000 --> 00:37:27,300
+Over. 
+So, we are going to try oriented
+
+477
+00:37:27,300 --> 00:37:30,300
+about use cases. 
+There's going to be the API 
+
+478
+00:37:30,300 --> 00:37:45,400
+docs, of course, but so back. 
+There 02 is Entice. 
+
+479
+00:37:47,900 --> 00:37:50,200
+Just interested in that part of 
+our own kind of started as a 
+
+480
+00:37:50,200 --> 00:37:58,000
+category Theory forensics. 
+People have to learn category 
+
+481
+00:37:58,000 --> 00:38:02,500
+Theory. 
+I don't think everybody needs to
+
+482
+00:38:02,500 --> 00:38:05,900
+understand category Theory to be
+a functional programmer. 
+
+483
+00:38:06,100 --> 00:38:09,900
+Might it might be appealing and 
+interesting to some some of them
+
+484
+00:38:09,900 --> 00:38:11,900
+but it's definitely not a 
+necessity. 
+
+485
+00:38:19,600 --> 00:38:22,900
+Yeah, it's not a it's not a nice
+thing to face. 
+
+486
+00:38:23,100 --> 00:38:27,000
+We are an absolute beginner, so 
+we really try to orient it 
+
+487
+00:38:27,100 --> 00:38:31,500
+around that to come back to your
+original question. 
+
+488
+00:38:31,500 --> 00:38:34,800
+I think the timeline for Arrow 
+to is kind of aligned someone 
+
+489
+00:38:34,800 --> 00:38:38,000
+with Colin come. 
+So, I think the first quarter of
+
+490
+00:38:38,000 --> 00:38:43,100
+next year is when the two series
+will be public. 
+
+491
+00:38:46,000 --> 00:38:48,000
+Prettiest of the spine. 
+Yeah. 
+
+492
+00:38:48,000 --> 00:38:53,300
+So everything is happening in 
+the open, so there's an arrow to
+
+493
+00:38:53,400 --> 00:38:56,400
+Ranch. 
+There's a 2.00 Les Paul Anka 
+
+494
+00:38:56,400 --> 00:38:58,500
+top, you can find all the 
+clothes be ours. 
+
+495
+00:38:59,000 --> 00:39:07,400
+In a big priority was also to 
+have all the design decisions 
+
+496
+00:39:07,400 --> 00:39:10,800
+documented in other PR. 
+So, if you look up one of the 
+
+497
+00:39:10,800 --> 00:39:12,800
+pr, she will see a large 
+document. 
+
+498
+00:39:13,400 --> 00:39:18,300
+Finding, why did we do what? 
+So that is visible and it's in 
+
+499
+00:39:18,308 --> 00:39:20,400
+the kit history and everybody 
+can find it. 
+
+500
+00:39:44,100 --> 00:39:52,000
+Yes, exactly. 
+Exactly. 
+
+501
+00:39:56,500 --> 00:40:02,600
+Because I know a little bit 
+about function for him and I'm 
+
+502
+00:40:02,600 --> 00:40:10,900
+like, calling all excited. 
+I like that piece, but I also 
+
+503
+00:40:10,900 --> 00:40:13,800
+realized that most people they 
+don't want to hear the word 
+
+504
+00:40:13,800 --> 00:40:16,700
+implicit ever, think about - 
+yeah. 
+
+505
+00:40:16,700 --> 00:40:19,100
+My brain just runs up when you 
+said exactly. 
+
+506
+00:40:21,500 --> 00:40:25,900
+And so, so I think that's been 
+the biggest challenge for A 
+
+507
+00:40:25,900 --> 00:40:31,000
+function for m is figure out how
+to take these very powerful 
+
+508
+00:40:31,000 --> 00:40:36,700
+constructs to make them on 
+relatable well. 
+
+509
+00:40:36,700 --> 00:40:41,700
+And I think our big shift in the
+last couple of weeks was CEO and
+
+510
+00:40:41,700 --> 00:40:46,000
+saying, oh well, here are its 
+capabilities, do you want those 
+
+511
+00:40:46,000 --> 00:40:49,400
+kids rooms? 
+And that is, like, oh well, yes 
+
+512
+00:40:49,500 --> 00:40:56,700
+I do and here's you can do like 
+if you want to our race two 
+
+513
+00:40:56,700 --> 00:41:01,200
+things together, you just say 
+that and it works and you don't 
+
+514
+00:41:01,200 --> 00:41:05,200
+have to worry about all the 
+things because one of the things
+
+515
+00:41:05,200 --> 00:41:10,200
+I'm a little stuck on is 
+functional, programming isn't 
+
+516
+00:41:10,200 --> 00:41:17,100
+about concurrency, and yet it's 
+so useful, it solves so many 
+
+517
+00:41:17,100 --> 00:41:21,700
+problems and concurrency that 
+the two are often, conflated and
+
+518
+00:41:21,700 --> 00:41:28,200
+so that makes it, you know, that
+that makes it harder to I guess 
+
+519
+00:41:28,600 --> 00:41:32,700
+explain. 
+And yet it does, it's a strong 
+
+520
+00:41:32,700 --> 00:41:37,300
+motivation because you could go,
+okay, you're all the problems 
+
+521
+00:41:37,300 --> 00:41:42,200
+that concurrency has. 
+Well, if you take this approach,
+
+522
+00:41:42,200 --> 00:41:46,900
+you don't have to think about 
+most are all of them that people
+
+523
+00:41:46,900 --> 00:41:48,500
+can go. 
+Oh, oh, okay. 
+
+524
+00:41:49,000 --> 00:41:51,500
+But there's a whole bunch of 
+other stuff in there, you know? 
+
+525
+00:41:51,500 --> 00:41:54,400
+It's like, okay, everything's 
+gonna be safer etcetera, 
+
+526
+00:41:54,400 --> 00:41:57,800
+etcetera. 
+Which we need for Creating 
+
+527
+00:41:57,800 --> 00:42:01,400
+reliable concurrent programs. 
+But it's not essentially what 
+
+528
+00:42:01,400 --> 00:42:07,300
+it's about. 
+It's like, I think what 
+
+529
+00:42:07,300 --> 00:42:10,600
+functional programming, you 
+know, this very well as always 
+
+530
+00:42:10,600 --> 00:42:14,300
+tries to hide a lot of 
+complexity and what it does very
+
+531
+00:42:14,300 --> 00:42:17,600
+well in currencies that is that 
+takes a very principled 
+
+532
+00:42:18,300 --> 00:42:21,200
+approach, so you can always be 
+sure that, you know, things 
+
+533
+00:42:21,200 --> 00:42:23,100
+compose. 
+And when they do, they do it 
+
+534
+00:42:23,100 --> 00:42:27,300
+correctly, the height of most of
+the things are hidden away. 
+
+535
+00:42:27,800 --> 00:42:30,200
+That you don't have to think 
+about all the low level 
+
+536
+00:42:30,800 --> 00:42:32,600
+concurrency stuff that we 
+typically deal with. 
+
+537
+00:42:32,600 --> 00:42:35,100
+So it brings concurrent 
+programming to a much higher 
+
+538
+00:42:35,100 --> 00:42:37,400
+level than that were used to 
+from Java. 
+
+539
+00:42:37,400 --> 00:42:41,400
+For example, that is also 
+exactly what we're trying to do 
+
+540
+00:42:41,400 --> 00:42:44,400
+it error fixed code. 
+Instead princesses higher level 
+
+541
+00:42:44,800 --> 00:42:47,000
+operations that we know from 
+functional. 
+
+542
+00:42:47,000 --> 00:42:51,100
+Programming type levels today or
+Haskell who brings them on top 
+
+543
+00:42:51,100 --> 00:42:55,700
+of colonies, cortines, like, for
+example, colonies curtains, 
+
+544
+00:42:55,700 --> 00:42:57,300
+doesn't have a simple race 
+operator. 
+
+545
+00:42:57,400 --> 00:43:00,700
+Where you can just put to 
+suspend sanctions and you know, 
+
+546
+00:43:00,700 --> 00:43:04,500
+if one wins cancel the other it 
+back pressures on finalizar and 
+
+547
+00:43:04,500 --> 00:43:08,000
+whatnot, Colin is different to 
+that of a box. 
+
+548
+00:43:08,800 --> 00:43:13,500
+But error, fix offers a simple 
+race function that cooperates 
+
+549
+00:43:13,500 --> 00:43:15,900
+with whatever colonies codes you
+already have. 
+
+550
+00:43:17,800 --> 00:43:21,300
+And, you know, if everyone, and 
+that's also one of the things we
+
+551
+00:43:21,300 --> 00:43:23,100
+narrow. 
+If kala nags, at one point, the 
+
+552
+00:43:23,100 --> 00:43:25,100
+sides, okay? 
+We are interested in having this
+
+553
+00:43:25,100 --> 00:43:27,100
+operator. 
+We were happy to move it or 
+
+554
+00:43:27,100 --> 00:43:28,900
+happy. 
+Contributed and remove it from 
+
+555
+00:43:28,900 --> 00:43:31,800
+our library. 
+Like I said the libraries on the
+
+556
+00:43:31,800 --> 00:43:34,600
+compliment, got enough fight 
+against it. 
+
+557
+00:43:36,800 --> 00:43:39,100
+So I think that is one of the 
+things that functional 
+
+558
+00:43:39,100 --> 00:43:43,800
+programming this really. 
+Well, there's a serious side 
+
+559
+00:43:43,800 --> 00:43:46,100
+effect to it. 
+Is that, for example, if you're 
+
+560
+00:43:46,100 --> 00:43:50,100
+working with IO and that is the 
+problem that Co solves if you're
+
+561
+00:43:50,100 --> 00:43:53,700
+working with IO and you also 
+want to work with either you 
+
+562
+00:43:53,700 --> 00:43:56,900
+very quickly fall into the pit 
+of Mana Transformers which is a 
+
+563
+00:43:56,900 --> 00:44:02,300
+very difficult topic especially 
+for beginners and there are 
+
+564
+00:44:03,100 --> 00:44:06,100
+problems that CEO and arrow try 
+to solve. 
+
+565
+00:44:09,500 --> 00:44:20,900
+What is this? 
+Libraries that I've looked over 
+
+566
+00:44:20,900 --> 00:44:24,000
+the years you very quickly 
+dropped into. 
+
+567
+00:44:24,300 --> 00:44:29,900
+Well, you want to make sure that
+you allocate the right number of
+
+568
+00:44:29,900 --> 00:44:34,700
+processors for your product 
+problem. 
+
+569
+00:44:34,700 --> 00:44:36,700
+And you need you. 
+I'm done almost immediately get 
+
+570
+00:44:36,700 --> 00:44:41,600
+into the tweaking of the 
+implementation, and it's like, 
+
+571
+00:44:42,800 --> 00:44:46,300
+that's I mean, that's just, it 
+just gets so messy. 
+
+572
+00:44:46,500 --> 00:44:50,100
+So fast. 
+And then when you hit the right 
+
+573
+00:44:50,100 --> 00:44:53,500
+level of abstraction, it's like,
+don't worry about that, we're 
+
+574
+00:44:53,500 --> 00:44:56,900
+taking care of all that for you.
+You probably still go in and 
+
+575
+00:44:56,900 --> 00:45:01,400
+tweak it, if you want to almost 
+virtually never would have to. 
+
+576
+00:45:01,500 --> 00:45:07,400
+And it's just like, okay, that's
+what I write and fucks up her at
+
+577
+00:45:07,400 --> 00:45:08,600
+me. 
+This is the first time that I've
+
+578
+00:45:08,600 --> 00:45:15,300
+seen Working with concurrency, 
+have high level, high level 
+
+579
+00:45:15,300 --> 00:45:18,800
+useful, things like races, that 
+sort of stuff. 
+
+580
+00:45:19,700 --> 00:45:24,400
+But then also make do the right 
+thing. 
+
+581
+00:45:25,100 --> 00:45:31,600
+Most of the time by default. 
+Like fiber, scheduling is what 
+
+582
+00:45:31,600 --> 00:45:36,000
+it is example for fibers 
+MacGyver, scheduled an example 
+
+583
+00:45:36,000 --> 00:45:40,200
+of it can do things the right 
+way by default. 
+
+584
+00:45:40,300 --> 00:45:44,200
+Generally sure, there's some 
+cases, where the default fiber 
+
+585
+00:45:44,200 --> 00:45:49,000
+scheduler is not optimized for a
+particular problem, but for most
+
+586
+00:45:49,000 --> 00:45:53,500
+use cases. 
+Well, and, and one of the things
+
+587
+00:45:53,500 --> 00:46:00,100
+that CO2 added with as a better 
+Scheduler, we were just reading 
+
+588
+00:46:00,100 --> 00:46:04,000
+about this, and one of the 
+things that can do is, instead 
+
+589
+00:46:04,000 --> 00:46:09,100
+of being fixed, it can 
+dynamically adapt is scheduling 
+
+590
+00:46:09,200 --> 00:46:12,800
+mechanism to optimize your 
+program without you having to 
+
+591
+00:46:12,800 --> 00:46:15,100
+think about it. 
+Did, I mean, I don't know if 
+
+592
+00:46:15,100 --> 00:46:16,900
+you're familiar with that, but 
+are you? 
+
+593
+00:46:18,000 --> 00:46:21,600
+Looking at that for what you are
+doing, or you just saying, okay,
+
+594
+00:46:21,600 --> 00:46:29,600
+the, the kotlin kotlin X 
+cartoons scheduler is for just 
+
+595
+00:46:29,600 --> 00:46:33,100
+going to work with that. 
+Well, we have not looked at 
+
+596
+00:46:33,100 --> 00:46:36,000
+implementing our own schedulers,
+but I know. 
+
+597
+00:46:36,100 --> 00:46:39,600
+Colin Nix has a quite Advanced 
+dispatcher did. 
+
+598
+00:46:39,600 --> 00:46:42,600
+It does a lot of these things 
+already out of the box as well, 
+
+599
+00:46:43,300 --> 00:46:46,900
+so they already support a lot of
+these things and that's great 
+
+600
+00:46:46,900 --> 00:46:50,700
+for aerobic is Is that way we 
+don't have to but I also know 
+
+601
+00:46:50,700 --> 00:46:54,100
+it's quite easy to implement 
+your own schedulers. 
+
+602
+00:46:54,900 --> 00:46:59,200
+True colonics, if you want to, 
+but so far we've never had the 
+
+603
+00:46:59,200 --> 00:47:03,700
+need to do so because you know, 
+cortines and Colin are so 
+
+604
+00:47:03,700 --> 00:47:08,000
+efficient. 
+You know, they work through. 
+
+605
+00:47:08,000 --> 00:47:12,200
+Thanks to the compiler, they 
+have such optimized Java code 
+
+606
+00:47:12,900 --> 00:47:16,000
+that, you know, but ever 
+schedulers and dispatchers they 
+
+607
+00:47:16,000 --> 00:47:19,300
+already have or there. 
+Work perfectly out of the box. 
+
+608
+00:47:27,500 --> 00:47:34,700
+Special. 
+So is Barrow to when they'll 
+
+609
+00:47:34,700 --> 00:47:37,200
+start taking advantage of 
+context receivers. 
+
+610
+00:47:39,000 --> 00:47:43,500
+So sadly calendars contacts 
+receivers will probably not be 
+
+611
+00:47:43,500 --> 00:47:48,100
+stable for quite some time. 
+I wish they would become stable 
+
+612
+00:47:48,100 --> 00:47:52,900
+sooner. 
+What directionally barely say 
+
+613
+00:47:52,900 --> 00:47:57,200
+optimizing for dsls. 
+So we've really invested a lot 
+
+614
+00:47:57,200 --> 00:48:00,900
+more thought and how can we do? 
+Sign or dies cells that we 
+
+615
+00:48:00,900 --> 00:48:03,000
+currently have like the either 
+block with a bind. 
+
+616
+00:48:03,000 --> 00:48:05,100
+How can we design them in a 
+better way? 
+
+617
+00:48:05,900 --> 00:48:09,600
+For example, currently we have a
+graph, eager effect scope which 
+
+618
+00:48:09,600 --> 00:48:12,400
+works with on suspending code 
+and effect Scopes which would 
+
+619
+00:48:12,400 --> 00:48:14,600
+assist spending code. 
+We were able to merge those two 
+
+620
+00:48:14,600 --> 00:48:17,900
+types together in a single 
+Stars, which is now called 
+
+621
+00:48:17,900 --> 00:48:22,700
+Grace. 
+And we've really invested a lot 
+
+622
+00:48:22,700 --> 00:48:25,800
+of thought into optimizing these
+DSL. 
+
+623
+00:48:25,800 --> 00:48:29,100
+So we actually don't really have
+the need to optimize for context
+
+624
+00:48:29,100 --> 00:48:33,000
+receive In the library whenever 
+they become available, you will 
+
+625
+00:48:33,000 --> 00:48:37,300
+be able to take full advantage 
+of them, with, whatever we've 
+
+626
+00:48:37,500 --> 00:48:50,200
+done already in a 2.0 series. 
+Okay, so context receivers will 
+
+627
+00:48:50,200 --> 00:48:55,100
+give you the ability to put 
+multiple extension Types on the 
+
+628
+00:48:55,100 --> 00:48:58,000
+function basically. 
+So currently, we can define an 
+
+629
+00:48:58,000 --> 00:49:02,200
+extension function on a type, 
+and then you can add a met at 
+
+630
+00:49:02,200 --> 00:49:05,700
+like, it looks like an instant 
+method on that type and then 
+
+631
+00:49:05,700 --> 00:49:10,400
+inside of the function body, we 
+have access to everything from 
+
+632
+00:49:10,400 --> 00:49:15,100
+that, type from the Alec API, 
+but since it is in the receiver 
+
+633
+00:49:15,100 --> 00:49:17,700
+and extension function is only 
+limited to a single type. 
+
+634
+00:49:17,700 --> 00:49:22,500
+When you put it in the context, 
+you can have any amount of types
+
+635
+00:49:22,500 --> 00:49:26,600
+they want their. 
+And that is very interesting 
+
+636
+00:49:26,600 --> 00:49:29,300
+because you can use it to 
+replace dependency injection. 
+
+637
+00:49:29,600 --> 00:49:32,800
+You can say, okay, I have this 
+function and it depends on, 
+
+638
+00:49:33,200 --> 00:49:38,400
+let's see, my database this 
+network interface, and then when
+
+639
+00:49:38,400 --> 00:49:41,500
+you call One, Call that function
+you need to make sure that those
+
+640
+00:49:41,700 --> 00:49:46,100
+Things are available and then 
+only then you can call the 
+
+641
+00:49:46,100 --> 00:49:50,800
+function in a type save way. 
+Then, for example, with the race
+
+642
+00:49:51,700 --> 00:49:55,400
+type that we've been discussing 
+about the city of two different 
+
+643
+00:49:55,500 --> 00:49:57,700
+error types that you want to be 
+working with. 
+
+644
+00:49:58,500 --> 00:50:01,700
+You can put both of them in the 
+context receiver, and then you 
+
+645
+00:50:01,700 --> 00:50:04,800
+can handle one or the other 
+whenever you want to. 
+
+646
+00:50:06,000 --> 00:50:11,100
+So it's, it's similar in this 
+concept is known as capabilities
+
+647
+00:50:11,100 --> 00:50:14,000
+and functions. 
+No programming Scala has it 
+
+648
+00:50:14,000 --> 00:50:18,300
+evolved context functions? 
+We basically restriction of 
+
+649
+00:50:18,308 --> 00:50:22,100
+function to say, okay, you have 
+this types in the context, 
+
+650
+00:50:22,100 --> 00:50:26,000
+receiver, so if you want to call
+this function then these things 
+
+651
+00:50:26,000 --> 00:50:41,000
+have to be available. 
+Push. 
+
+652
+00:50:49,400 --> 00:50:54,900
+But still like it does feel like
+it's solving a similar problem 
+
+653
+00:50:54,900 --> 00:51:00,500
+is 10 classes but it's similar 
+to constraint based programming.
+
+654
+00:51:00,500 --> 00:51:03,600
+Like, for example, Has gone a 
+lot of type classes. 
+
+655
+00:51:03,600 --> 00:51:07,300
+You will actually use the 
+constraint on the function to 
+
+656
+00:51:07,300 --> 00:51:11,400
+say, okay, I have this, I have 
+this type A and it needs to have
+
+657
+00:51:11,400 --> 00:51:15,600
+an instance of numerics, for 
+example, or I have this type A 
+
+658
+00:51:15,600 --> 00:51:19,000
+and it's implemented servers 
+tights. 
+
+659
+00:51:19,600 --> 00:51:23,800
+So it solves the problem of 
+constraint, type programming. 
+
+660
+00:51:24,100 --> 00:51:28,900
+What it doesn't do is the dang 
+it straight. 
+
+661
+00:51:36,200 --> 00:51:39,600
+It solves the problem of ad hoc 
+polymorphism, but it does not 
+
+662
+00:51:39,600 --> 00:51:43,500
+solve is the injection piece or 
+the implicit from Scala. 
+
+663
+00:51:44,400 --> 00:51:47,400
+It requires you to make it 
+concrete at some point 
+
+664
+00:51:47,600 --> 00:51:53,200
+explicitly. 
+Yeah, I guess that's the 
+
+665
+00:51:53,200 --> 00:52:07,100
+difference without context. 
+It sounds. 
+
+666
+00:52:07,200 --> 00:52:11,400
+So in scale, a can say, okay if 
+you want an instance for this 
+
+667
+00:52:11,400 --> 00:52:14,700
+type class, you need to have an 
+implicit for this next type 
+
+668
+00:52:14,700 --> 00:52:18,200
+class and that solves the 
+problem of generic derivation. 
+
+669
+00:52:18,200 --> 00:52:21,000
+A lot of cases, like, for 
+example, a problem you're trying
+
+670
+00:52:21,000 --> 00:52:25,500
+to solve it Jason encoders, but 
+that's the piece that does not 
+
+671
+00:52:25,500 --> 00:52:30,200
+exist in column because she's 
+still have to explicitly wire 
+
+672
+00:52:30,300 --> 00:52:38,800
+all the pieces together. 
+So, Did you just jump? 
+
+673
+00:52:38,900 --> 00:52:45,000
+Did you just go directly to 
+start out in? 
+
+674
+00:52:50,000 --> 00:52:52,400
+So, like I said, I was 
+originally a Java Android 
+
+675
+00:52:52,400 --> 00:52:56,300
+developer and also heavily 
+invested on opiate, the time, I 
+
+676
+00:52:56,300 --> 00:52:59,100
+was super into all the old P 
+design patterns. 
+
+677
+00:53:00,300 --> 00:53:03,200
+I was applying them everywhere 
+was, you know, very into T DT. 
+
+678
+00:53:03,200 --> 00:53:06,600
+Everything other common patterns
+you would expect from them. if 
+
+679
+00:53:06,600 --> 00:53:15,100
+you have need of alpha, And then
+reactive X became very popular 
+
+680
+00:53:15,100 --> 00:53:18,600
+on Android and it was completely
+new to me. 
+
+681
+00:53:19,500 --> 00:53:23,100
+So, like most of the things I 
+do, I took a deep dive. 
+
+682
+00:53:23,600 --> 00:53:26,300
+I went all in because I wanted 
+to figure out, you know what, 
+
+683
+00:53:26,300 --> 00:53:30,100
+this exciting people. 
+What's this? 
+
+684
+00:53:30,100 --> 00:53:32,000
+What are people, so excited 
+about? 
+
+685
+00:53:32,800 --> 00:53:35,100
+And then I really fell in love 
+because he gave me this first 
+
+686
+00:53:35,100 --> 00:53:39,800
+days in effect system. 
+It's Java comes very close to A 
+
+687
+00:53:39,800 --> 00:53:44,000
+functional effect system, and I 
+really loved it. 
+
+688
+00:53:44,000 --> 00:53:47,900
+And I first, I started applying 
+it in opee in Java. 
+
+689
+00:53:48,800 --> 00:53:52,300
+And then step by step, I started
+learning new Concepts and 
+
+690
+00:53:52,308 --> 00:53:55,600
+applying them. 
+I went to Colin and I had, you 
+
+691
+00:53:55,600 --> 00:53:57,700
+know, data classes with silk 
+classes. 
+
+692
+00:53:57,700 --> 00:54:02,900
+So I started with att's started 
+using a DTS in my rxjava 
+
+693
+00:54:02,900 --> 00:54:08,000
+observables and step-by-step 
+that evolved into what I'm doing
+
+694
+00:54:08,000 --> 00:54:16,300
+today. 
+Yes, at the same time on the 
+
+695
+00:54:16,308 --> 00:54:23,300
+same Journey. 
+It's hard for me to go back. 
+
+696
+00:54:24,400 --> 00:54:31,100
+Oh well yeah, once you start 
+seeing the I guess I'm seeing it
+
+697
+00:54:31,200 --> 00:54:36,600
+because I mean my Beginnings 
+were in objects and both whoever
+
+698
+00:54:36,600 --> 00:54:43,000
+created this really understand 
+now I can go back and look at it
+
+699
+00:54:43,000 --> 00:54:49,100
+and go oh, I see the, the flawed
+thinking in the steps. 
+
+700
+00:54:49,300 --> 00:54:52,200
+And at the time it was 
+Experimental it was like, okay, 
+
+701
+00:54:52,200 --> 00:54:56,100
+we've been having this problem. 
+This encapsulation seems like 
+
+702
+00:54:56,300 --> 00:54:59,800
+that should solve that problem. 
+It's like, yeah, it does seem 
+
+703
+00:54:59,800 --> 00:55:02,600
+like it should. 
+But then over time, we started 
+
+704
+00:55:02,600 --> 00:55:06,300
+seeing this risk. 
+This was a flawed step and 
+
+705
+00:55:06,600 --> 00:55:12,500
+making Java like small talk was 
+because, you know, Small Talk 
+
+706
+00:55:12,500 --> 00:55:17,300
+was a very different language in
+this numerically Dynamic. 
+
+707
+00:55:17,700 --> 00:55:22,300
+And just saying, okay, we will 
+After small talk about the 
+
+708
+00:55:22,308 --> 00:55:28,000
+biggest static know that, you 
+know, that was a flawed thought 
+
+709
+00:55:28,000 --> 00:55:32,600
+process to its. 
+But why is just I mean, I guess 
+
+710
+00:55:32,600 --> 00:55:38,300
+in the end I now see the whole 
+field as an evolutionary process
+
+711
+00:55:38,300 --> 00:55:42,200
+and now we're trying to figure 
+out what what's the best way to 
+
+712
+00:55:42,200 --> 00:55:45,000
+express functional? 
+The kind of stuff that you're 
+
+713
+00:55:45,000 --> 00:55:49,100
+doing, especially working on 
+making, it simpler that just I 
+
+714
+00:55:49,100 --> 00:55:56,800
+find that very inspiring So 
+you've decided you've done a lot
+
+715
+00:55:56,800 --> 00:55:59,700
+of you. 
+I programming mostly true. 
+
+716
+00:55:59,700 --> 00:56:04,200
+That sounds like Yeah, one of 
+the places where I think 
+
+717
+00:56:04,200 --> 00:56:10,000
+functional is, not kind of had a
+big impact yet, it's on you, I 
+
+718
+00:56:10,000 --> 00:56:13,300
+approach. 
+And if you've worked with all of
+
+719
+00:56:13,300 --> 00:56:18,300
+your plan is FF looked at it, 
+that's not really works with it 
+
+720
+00:56:20,200 --> 00:56:21,300
+for me. 
+I was one of those. 
+
+721
+00:56:23,200 --> 00:56:38,900
+I would so much rather build. 
+you all stay callbacks The Wild 
+
+722
+00:56:38,900 --> 00:56:46,800
+West Java Script this helmet, 
+you know. 
+
+723
+00:56:46,800 --> 00:56:49,800
+I must say I think, you know, 
+I've not worked on Android for 
+
+724
+00:56:49,800 --> 00:56:53,200
+quite some time but I can see 
+that in the UI space or the 
+
+725
+00:56:53,200 --> 00:56:56,500
+front end space, a lot of things
+are evolving, also towards you 
+
+726
+00:56:56,508 --> 00:57:01,400
+more, functional Trend jetpack, 
+composes in my opinion, be the 
+
+727
+00:57:01,400 --> 00:57:05,400
+functional programming in the 
+skies as well, you know, so 
+
+728
+00:57:05,600 --> 00:57:09,900
+stream-based you eyes is some is
+a pattern that works very well 
+
+729
+00:57:09,900 --> 00:57:15,100
+with compose from what I've 
+seen, you know, finger with 
+
+730
+00:57:15,100 --> 00:57:17,300
+three egg. 
+Yeah. 
+
+731
+00:57:21,700 --> 00:57:24,000
+So what I used to do back in the
+day, there was Java. 
+
+732
+00:57:24,000 --> 00:57:28,100
+So I treated to user inputs as a
+stream and then basically, you 
+
+733
+00:57:28,100 --> 00:57:31,600
+know, I compose those streams 
+and then that triggered some 
+
+734
+00:57:31,600 --> 00:57:35,500
+actions and then that resulted 
+in a stream that basically, at 
+
+735
+00:57:35,500 --> 00:57:39,500
+the end, the stream was just 
+rendering the screen that was 
+
+736
+00:57:39,500 --> 00:57:42,100
+almost away. 
+So I was collecting the inputs 
+
+737
+00:57:42,100 --> 00:57:46,100
+as separate streams and 
+converting that into my business
+
+738
+00:57:46,100 --> 00:57:50,400
+logic and that resulted in a 
+single stream, which was my Y 
+
+739
+00:57:50,500 --> 00:57:52,900
+data model. 
+And then, every time I got a new
+
+740
+00:57:52,900 --> 00:57:56,000
+event of the UI data mom, I was 
+just, you know, rendering it on 
+
+741
+00:57:56,000 --> 00:57:59,400
+the screen and we jetpack 
+composer pattern became. 
+
+742
+00:57:59,500 --> 00:58:07,800
+I think a lot simpler even and 
+even more powerful Yeah. 
+
+743
+00:58:37,000 --> 00:58:43,800
+Capture all the events that 
+well, is that? 
+
+744
+00:58:43,800 --> 00:58:47,900
+So that's really impressive. 
+Again, you have this, do you 
+
+745
+00:58:47,900 --> 00:58:51,100
+want this capability? 
+Well, yes. 
+
+746
+00:58:52,000 --> 00:58:55,900
+Here's the foundation that you 
+need to allow that. 
+
+747
+00:58:57,800 --> 00:59:00,500
+As he was doing here are mostly 
+with back ends, but I would 
+
+748
+00:59:00,500 --> 00:59:02,700
+imagine that there's going to be
+police in here. 
+
+749
+00:59:03,200 --> 00:59:06,500
+Future. 
+Yeah, I know when I get started 
+
+750
+00:59:06,500 --> 00:59:10,200
+with with a row, I was also 
+using a dumb on Android but I 
+
+751
+00:59:10,200 --> 00:59:13,300
+think most of the current Arrow 
+users are actually using it on 
+
+752
+00:59:13,300 --> 00:59:17,800
+Android. 
+So a lot of our user base, our 
+
+753
+00:59:17,900 --> 00:59:21,400
+run Android. 
+But what's also kind of funny is
+
+754
+00:59:21,400 --> 00:59:25,200
+I think the server side things 
+are calling is a very quiet 
+
+755
+00:59:25,200 --> 00:59:27,100
+space. 
+A lot of companies don't want to
+
+756
+00:59:27,100 --> 00:59:30,700
+publicly share that they're 
+doing Cullen on the server side 
+
+757
+00:59:30,700 --> 00:59:34,300
+yet and know there's a bunch of 
+them Using are on the back end 
+
+758
+00:59:34,300 --> 00:59:37,700
+but they're not you know, 
+shouting it from the rooftops so
+
+759
+00:59:37,800 --> 00:59:41,400
+we don't really know. 
+We can see the downloads are 
+
+760
+00:59:41,500 --> 00:59:46,200
+increasingly a lot every year. 
+So we know that there's a lot of
+
+761
+00:59:46,200 --> 00:59:49,300
+new users but we don't really 
+know where they're coming from. 
+
+762
+01:00:10,100 --> 01:00:12,700
+I hope Santa sister. 
+Okay, great. 
+
+763
+01:00:14,600 --> 01:00:16,600
+Sorry. 
+I really hope so because it's a 
+
+764
+01:00:16,608 --> 01:00:20,000
+great language on the back and I
+really enjoy using it on the 
+
+765
+01:00:20,000 --> 01:00:23,700
+server. 
+So a lot of companies still 
+
+766
+01:00:23,700 --> 01:00:34,500
+advertise for Java developers. 
+I mean it's hard to find an 
+
+767
+01:00:34,500 --> 01:00:36,700
+experienced called and 
+server-side developer. 
+
+768
+01:00:36,700 --> 01:00:40,700
+It's almost easier to look for a
+Java developer Des interested in
+
+769
+01:00:40,900 --> 01:00:45,300
+learning Colin and arguably, 
+it's not hard to train 
+
+770
+01:00:45,800 --> 01:00:49,200
+experience Java developer to 
+write calling code. 
+
+771
+01:00:50,500 --> 01:00:54,800
+It's a small Investment to make 
+that I think base of pretty 
+
+772
+01:00:54,800 --> 01:01:11,700
+quickly. 
+So, you know, I think it's 
+
+773
+01:01:11,700 --> 01:01:18,300
+spring still dominates, a big 
+chunk of the space, have a 
+
+774
+01:01:18,300 --> 01:01:22,500
+finger. 
+If nobody I know a lot of people
+
+775
+01:01:22,500 --> 01:01:26,600
+are use spring with their. 
+Oh yeah, I'm personally. 
+
+776
+01:01:26,600 --> 01:01:31,500
+Really like it or just fits in 
+really well with the language. 
+
+777
+01:01:32,400 --> 01:01:36,800
+I've recently also been playing 
+with kids are targeting Colin 
+
+778
+01:01:36,800 --> 01:01:40,600
+native, which, which works 
+really well. 
+
+779
+01:01:41,700 --> 01:01:45,200
+You know, there's Cutlass for 
+Kate's are on the service side 
+
+780
+01:01:45,200 --> 01:01:48,600
+of things. 
+So, you know, the ecosystem is 
+
+781
+01:01:48,600 --> 01:01:51,300
+pretty cool. 
+And it's a All thing pretty 
+
+782
+01:01:51,300 --> 01:01:52,400
+rapidly. 
+I say. 
+
+783
+01:01:58,900 --> 01:02:01,100
+So I actually project to my 
+GitHub. 
+
+784
+01:02:01,100 --> 01:02:06,700
+It's using gates are Arrow code 
+tests for testing. 
+
+785
+01:02:07,100 --> 01:02:10,700
+It's using actually it's got the
+lights with experimental 
+
+786
+01:02:11,300 --> 01:02:15,600
+postgres driver for Colin 
+native, which is really cool. 
+
+787
+01:02:16,600 --> 01:02:20,100
+So, you know, I get most of the 
+tools that I would use for 
+
+788
+01:02:20,200 --> 01:02:23,900
+building a gvm back in, but I 
+get them right there on Native 
+
+789
+01:02:23,900 --> 01:02:26,400
+the binaries. 
+Say in see, it's really small 
+
+790
+01:02:27,000 --> 01:02:29,300
+the best times are Our 
+Superfast. 
+
+791
+01:02:29,300 --> 01:02:32,800
+The startup is almost instant, 
+so it's pretty cool. 
+
+792
+01:02:36,700 --> 01:02:37,900
+Nice. 
+Alright. 
+
+793
+01:02:37,900 --> 01:03:08,800
+Well 
+That's awesome. 
+
+794
+01:03:09,300 --> 01:03:11,100
+Thanks so much for having me. 
+It was great being here.
+

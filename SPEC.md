@@ -31,6 +31,7 @@ James Ward: https://www.jamesward.com
   - resources
   - links to where to get the podcast (all sources)
   - highlight image
+  - transcript, when Spotify publishes one in the feed
 - All episodes should be listed and linkable to their unique pages
 
 ### Guest list

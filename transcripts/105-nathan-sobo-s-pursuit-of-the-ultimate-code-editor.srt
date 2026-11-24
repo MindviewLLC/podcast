@@ -1,0 +1,7378 @@
+1
+00:00:01,080 --> 00:00:03,400
+Welcome to. 
+Happy path programming. 
+
+2
+00:00:03,760 --> 00:00:05,560
+I'm Bruce Eckel. 
+I'm James Ward. 
+
+3
+00:00:07,880 --> 00:00:09,440
+All right. 
+Welcome to Happy Path 
+
+4
+00:00:09,440 --> 00:00:11,880
+Programming. 
+We have a fun one today. 
+
+5
+00:00:11,880 --> 00:00:14,480
+So we have with us Nathan Sobo. 
+Did I say that right? 
+
+6
+00:00:14,600 --> 00:00:15,280
+Yeah. 
+Yeah. 
+
+7
+00:00:15,440 --> 00:00:18,960
+And you live in Boulder, but you
+are here in Crested Butte, 
+
+8
+00:00:18,960 --> 00:00:21,520
+Colorado. 
+So we get to have you in person,
+
+9
+00:00:21,760 --> 00:00:24,400
+which is super fun. 
+We don't get many of those, so 
+
+10
+00:00:24,400 --> 00:00:27,240
+great to have you. 
+Quick story to kick us off. 
+
+11
+00:00:27,320 --> 00:00:31,080
+So I back in May, I, I was going
+to lambicomf. 
+
+12
+00:00:31,080 --> 00:00:33,920
+I think it was in May down in 
+Estes Park. 
+
+13
+00:00:34,120 --> 00:00:36,920
+And on the way there, I was 
+listening to Richard Feldman's 
+
+14
+00:00:36,920 --> 00:00:38,560
+podcast. 
+And so I was listening to the 
+
+15
+00:00:38,560 --> 00:00:42,040
+episode with you. 
+And then I get to Lambicomf and 
+
+16
+00:00:42,040 --> 00:00:45,240
+you're there and I get to meet 
+you And then I just like like, 
+
+17
+00:00:45,320 --> 00:00:47,280
+you know, I'm like the little 
+puppy following you around all 
+
+18
+00:00:47,280 --> 00:00:48,520
+weekend because you're so 
+awesome. 
+
+19
+00:00:48,520 --> 00:00:51,280
+So great to have you here on our
+podcast. 
+
+20
+00:00:51,280 --> 00:00:55,320
+So, so, yeah, so let's kick it 
+off with who are you, what you 
+
+21
+00:00:55,320 --> 00:00:57,440
+do and and tell us about Zed and
+all that. 
+
+22
+00:00:57,520 --> 00:00:59,040
+Give us the pitch on on that 
+part. 
+
+23
+00:00:59,360 --> 00:01:02,160
+So yeah, I've been. 
+I'm yeah, I'm Nathan Sobo. 
+
+24
+00:01:02,200 --> 00:01:07,600
+I what what I do for most of my 
+career has been I've been on 
+
+25
+00:01:07,600 --> 00:01:10,640
+this pursuit of building the 
+ultimate code editor. 
+
+26
+00:01:11,080 --> 00:01:15,480
+I remember the year after I 
+graduated from college, I was 
+
+27
+00:01:15,480 --> 00:01:20,880
+working for a professor and he 
+had me build this first order 
+
+28
+00:01:20,880 --> 00:01:25,800
+logic model of English grammar 
+and as part of that I was 
+
+29
+00:01:25,800 --> 00:01:27,840
+reading this site. 
+I don't know if it's still 
+
+30
+00:01:27,840 --> 00:01:29,760
+around, I haven't. 
+It was called Lambda, the 
+
+31
+00:01:29,800 --> 00:01:31,120
+ultimate. 
+It was like a programming. 
+
+32
+00:01:31,160 --> 00:01:34,800
+Language. 
+Blog and I learned about pack 
+
+33
+00:01:34,800 --> 00:01:39,560
+rat parsing on that site and 
+there was this pack rat parsing 
+
+34
+00:01:39,560 --> 00:01:43,440
+framework for Java, I think it 
+was called Rats with like iconic
+
+35
+00:01:43,800 --> 00:01:48,320
+exclamation point. 
+Anyway, I built a pack wrap 
+
+36
+00:01:48,320 --> 00:01:53,960
+parser to parse his like first 
+order logic language and then 
+
+37
+00:01:53,960 --> 00:01:56,400
+proceeded to try to make it 
+work. 
+
+38
+00:01:56,400 --> 00:01:59,320
+And it didn't go that well. 
+But the one part of that project
+
+39
+00:01:59,320 --> 00:02:01,280
+that did go well was the parsing
+part. 
+
+40
+00:02:01,360 --> 00:02:06,280
+And I got into my head, I was 
+using Emacs at the time, and 
+
+41
+00:02:06,280 --> 00:02:08,919
+then I was also playing with 
+Eclipse. 
+
+42
+00:02:09,280 --> 00:02:13,160
+And then I think Rails had come 
+out right around then and I saw 
+
+43
+00:02:13,160 --> 00:02:16,760
+DHH using Text Mate. 
+So I played with all these 
+
+44
+00:02:16,760 --> 00:02:20,440
+different editors and I'm like, 
+oh, I really want something kind
+
+45
+00:02:20,440 --> 00:02:23,960
+of that has the vibe of like 
+Text Mate, this friendly, 
+
+46
+00:02:23,960 --> 00:02:31,840
+lightweight, fun tool, the power
+of Eclipse without the slowness 
+
+47
+00:02:31,840 --> 00:02:35,880
+that I experienced at the time. 
+And that's like the the tinker 
+
+48
+00:02:35,880 --> 00:02:38,960
+ability of Emacs. 
+And I was like, wouldn't it be 
+
+49
+00:02:38,960 --> 00:02:42,440
+cool if it were like all based 
+on a pack RAT parser and there 
+
+50
+00:02:42,440 --> 00:02:46,440
+would be syntax trees always 
+available in the editor for any 
+
+51
+00:02:46,440 --> 00:02:49,600
+scripts that you wrote. 
+So I got it in my head, I think 
+
+52
+00:02:49,600 --> 00:02:53,840
+that was 2006 that I wanted to 
+build this editor. 
+
+53
+00:02:54,080 --> 00:02:59,360
+And then, you know, I hadn't, I,
+I worked on it for a while. 
+
+54
+00:02:59,360 --> 00:03:02,480
+I worked on, I learned Coco. 
+I was, it was going to be a Mac 
+
+55
+00:03:02,480 --> 00:03:05,640
+App. 
+So I learned Coco back before 
+
+56
+00:03:05,640 --> 00:03:10,000
+like iOS had even come out. 
+So it's pretty fringe subject at
+
+57
+00:03:10,000 --> 00:03:15,560
+the time and didn't get too far.
+Moved up to San Francisco, 
+
+58
+00:03:16,600 --> 00:03:20,040
+worked as a consultant at 
+Pivotal Labs for a while and did
+
+59
+00:03:20,040 --> 00:03:23,800
+a bunch of pair programming, 
+which added a new idea into my 
+
+60
+00:03:24,680 --> 00:03:26,480
+budding dream of building this 
+editor. 
+
+61
+00:03:26,480 --> 00:03:29,520
+Which was it For it to be 
+collaborative and enable this 
+
+62
+00:03:29,520 --> 00:03:32,760
+style of programming that at 
+that point in time required, 
+
+63
+00:03:32,760 --> 00:03:37,160
+like you to come into an office 
+to plug in to keyboards, to 
+
+64
+00:03:37,160 --> 00:03:39,720
+mice. 
+And it was a very particular 
+
+65
+00:03:39,760 --> 00:03:42,440
+setup. 
+But I loved that way of working.
+
+66
+00:03:42,600 --> 00:03:46,120
+It was really like feeding my 
+social soul. 
+
+67
+00:03:46,320 --> 00:03:48,600
+Sure, You know. 
+And so. 
+
+68
+00:03:48,680 --> 00:03:52,800
+Yeah, in the background, I was 
+starting to work on the editor 
+
+69
+00:03:52,800 --> 00:03:55,480
+like nights and weekends. 
+I would like come into the 
+
+70
+00:03:55,480 --> 00:03:59,080
+pivotal offices on the weekend 
+to use their computers and like 
+
+71
+00:03:59,080 --> 00:04:03,720
+work on the editor, which at the
+time was like I decided to start
+
+72
+00:04:03,720 --> 00:04:10,440
+with the parsing engine and 
+didn't really ever flower into 
+
+73
+00:04:10,440 --> 00:04:13,160
+an editor. 
+But what I did do is present 
+
+74
+00:04:13,240 --> 00:04:17,440
+that parsing framework was 
+called Treetop, which was like 
+
+75
+00:04:17,560 --> 00:04:21,120
+popular in the Ruby community 
+for a hot second. 
+
+76
+00:04:21,160 --> 00:04:23,720
+You know, that was like. 
+An AST parser. 
+
+77
+00:04:23,720 --> 00:04:25,640
+Yeah, exactly. 
+There was like a testing 
+
+78
+00:04:25,640 --> 00:04:29,840
+framework called Cucumber that 
+was written on top of my parsing
+
+79
+00:04:29,880 --> 00:04:33,720
+framework. 
+I never used it actually, but 
+
+80
+00:04:33,720 --> 00:04:40,520
+anyway, I presented it on it at 
+Ruby Conf in 2007 and the GitHub
+
+81
+00:04:40,520 --> 00:04:43,680
+guys were there. 
+And so a few years later I had 
+
+82
+00:04:43,680 --> 00:04:49,920
+like I tried this other project.
+I won't get in into that, but I 
+
+83
+00:04:50,480 --> 00:04:54,440
+had worked on it for like about 
+a year and realized I still 
+
+84
+00:04:54,640 --> 00:04:56,680
+couldn't let go of the editor 
+dream. 
+
+85
+00:04:57,040 --> 00:04:59,400
+And a friend of mine was like, 
+you should talk to the oh, go 
+
+86
+00:04:59,400 --> 00:05:01,000
+ahead. 
+It was just eating in a way you 
+
+87
+00:05:01,040 --> 00:05:02,880
+like. 
+You really want to solve this 
+
+88
+00:05:02,880 --> 00:05:03,440
+problem. 
+Yeah. 
+
+89
+00:05:03,440 --> 00:05:07,680
+Well, I think the problem with 
+the other project is it was sort
+
+90
+00:05:07,680 --> 00:05:11,680
+of, I made it more technically 
+complex than it needed to be 
+
+91
+00:05:11,680 --> 00:05:15,080
+because that's just how I am. 
+And I think none of us have ever
+
+92
+00:05:15,080 --> 00:05:17,400
+done that. 
+Yeah, exactly. 
+
+93
+00:05:17,840 --> 00:05:21,320
+Dirt snipe minus self to death 
+building like my own Aura 
+
+94
+00:05:21,480 --> 00:05:24,720
+framework and all those other 
+things that were not relevant to
+
+95
+00:05:24,720 --> 00:05:27,720
+the problem. 
+And at the end of that, I, I 
+
+96
+00:05:27,720 --> 00:05:30,760
+think I decided I need to 
+actually work on the editor 
+
+97
+00:05:30,760 --> 00:05:34,120
+because the editor actually is 
+an incredibly technically hard 
+
+98
+00:05:34,120 --> 00:05:37,200
+problem. 
+Like that's sort of a big part 
+
+99
+00:05:37,200 --> 00:05:40,440
+of what makes building an editor
+hard is it's just the technical 
+
+100
+00:05:40,440 --> 00:05:43,880
+difficulty of that and that that
+would be perfect for me. 
+
+101
+00:05:44,480 --> 00:05:46,880
+And so this. 
+Is about the experience of 
+
+102
+00:05:47,120 --> 00:05:51,120
+clicking somewhere, writing code
+and tab completion. 
+
+103
+00:05:51,120 --> 00:05:54,000
+Like it's like the interaction 
+model is what you were like. 
+
+104
+00:05:54,240 --> 00:05:55,480
+OK. 
+At some point I got to get to 
+
+105
+00:05:55,480 --> 00:05:57,680
+that part because that's kind of
+how the developers. 
+
+106
+00:05:57,720 --> 00:06:00,960
+Are going to and also building 
+all of your own stuff even 
+
+107
+00:06:00,960 --> 00:06:03,800
+though you didn't need it. 
+Then eventually when you're 
+
+108
+00:06:03,800 --> 00:06:07,520
+working on this and you started 
+using Rust, you realized, oh, 
+
+109
+00:06:07,560 --> 00:06:11,440
+I'm going to have to build the 
+transportable UI framework. 
+
+110
+00:06:11,520 --> 00:06:13,560
+Oh yeah, I mean, I can Fast 
+forward to that. 
+
+111
+00:06:13,680 --> 00:06:16,920
+Maybe I'm going don't skip too 
+far because the atom electronic 
+
+112
+00:06:16,920 --> 00:06:18,400
+pieces also, yeah. 
+Yeah, yeah. 
+
+113
+00:06:18,400 --> 00:06:22,200
+So my plan and how I got in, you
+know, I drove here from Boulder,
+
+114
+00:06:23,000 --> 00:06:24,600
+right? 
+So not too far, but like how I 
+
+115
+00:06:24,600 --> 00:06:28,960
+got to Colorado was pivotal. 
+Had an office in Boulder. 
+
+116
+00:06:29,200 --> 00:06:33,240
+My plan was to just live 
+somewhere remote and less 
+
+117
+00:06:33,240 --> 00:06:36,360
+expensive than San Francisco and
+kind of do six months a year of 
+
+118
+00:06:36,360 --> 00:06:40,240
+consulting and then six months a
+year grinding on an open source 
+
+119
+00:06:40,240 --> 00:06:42,720
+code editor. 
+And I had everything set up to 
+
+120
+00:06:42,720 --> 00:06:45,760
+leave town. 
+And a friend of mine was like, 
+
+121
+00:06:45,760 --> 00:06:48,480
+you should talk to GitHub and 
+see if they want to build the 
+
+122
+00:06:48,480 --> 00:06:51,320
+editor. 
+And so I tracked them down at 
+
+123
+00:06:51,320 --> 00:06:55,120
+the million user party, like the
+party celebrating their 
+
+124
+00:06:55,120 --> 00:06:58,920
+millionth user public works. 
+I tracked Chris down and was 
+
+125
+00:06:58,920 --> 00:07:02,800
+like, we should build an editor,
+a social code editor that you 
+
+126
+00:07:02,800 --> 00:07:06,520
+guys like social coding like, 
+but we're only doing kind of the
+
+127
+00:07:06,520 --> 00:07:08,280
+async piece. 
+What if we could also do the 
+
+128
+00:07:08,280 --> 00:07:12,480
+sync piece? 
+And it was a couple days later 
+
+129
+00:07:12,480 --> 00:07:15,440
+we got coffee and they told me, 
+oh, we've been working on an 
+
+130
+00:07:15,440 --> 00:07:19,920
+editor called Atomicity at the 
+time, which was later shortened 
+
+131
+00:07:19,920 --> 00:07:22,960
+to Atom. 
+And they've been working on it 
+
+132
+00:07:22,960 --> 00:07:26,840
+for like a few weeks, I think. 
+And we sort of, yeah, I got in 
+
+133
+00:07:26,840 --> 00:07:29,920
+there with all of my strong 
+opinions and we started over 
+
+134
+00:07:29,920 --> 00:07:33,560
+from where they had it. 
+And that was what was that being
+
+135
+00:07:33,560 --> 00:07:36,680
+written in? 
+That was being written in coffee
+
+136
+00:07:36,680 --> 00:07:39,680
+script at the time, which like 
+doesn't even exist anymore, I 
+
+137
+00:07:39,680 --> 00:07:42,360
+don't think. 
+But you can kind of picture that
+
+138
+00:07:42,360 --> 00:07:49,040
+was what the end of 2011. 
+And so they were Ruby shop and 
+
+139
+00:07:49,320 --> 00:07:52,560
+coffee script was kind of big 
+with the Ruby community and 
+
+140
+00:07:52,560 --> 00:07:56,160
+JavaScript was pretty hard to 
+use at that point honestly. 
+
+141
+00:07:56,160 --> 00:08:01,600
+Like the ECMA script 5 changes 
+hadn't come out yet so it was 
+
+142
+00:08:01,600 --> 00:08:04,360
+not a crazy choice to choose 
+Coffeescript even though. 
+
+143
+00:08:04,520 --> 00:08:07,680
+Because it was a yeah, it was a 
+standardized way of doing 
+
+144
+00:08:07,680 --> 00:08:10,560
+things, and you didn't have to 
+worry about all the weird 
+
+145
+00:08:10,640 --> 00:08:11,600
+underlines. 
+Yeah. 
+
+146
+00:08:11,720 --> 00:08:15,760
+Well, how did Electron fit into 
+that that piece of the story? 
+
+147
+00:08:15,880 --> 00:08:20,440
+So Corey Johnson, who was 
+working on it with Chris at the 
+
+148
+00:08:20,440 --> 00:08:27,800
+time, excuse me, he, he had 
+basically wired like at that 
+
+149
+00:08:27,800 --> 00:08:34,320
+point Webkit was available to 
+like Objective C programs as a 
+
+150
+00:08:34,320 --> 00:08:37,559
+standalone, like as a library. 
+And you could write like 
+
+151
+00:08:37,559 --> 00:08:42,280
+Objective C functions that would
+bridge into the JavaScript code 
+
+152
+00:08:42,280 --> 00:08:46,080
+and the JavaScript could call 
+out and invoke Objective C And 
+
+153
+00:08:46,080 --> 00:08:49,920
+so he'd hacked in like some 
+basic IO primitives and stuff, 
+
+154
+00:08:49,920 --> 00:08:52,760
+but they're all synchronous. 
+So it's like you'd, you'd load a
+
+155
+00:08:52,760 --> 00:08:57,600
+file and it would block, but it 
+worked and it enabled. 
+
+156
+00:08:57,600 --> 00:09:02,800
+I think it was ACE, which was 
+like a Yep, yeah, a web-based 
+
+157
+00:09:02,800 --> 00:09:07,480
+editor and yes, it was ACE. 
+And these like hacks to get out 
+
+158
+00:09:07,480 --> 00:09:13,000
+to Objective C And so the first 
+thing I was worried about is 
+
+159
+00:09:13,000 --> 00:09:14,960
+like we can't do all this 
+synchronously. 
+
+160
+00:09:15,240 --> 00:09:17,840
+And then I was thinking, I 
+really want access to like the 
+
+161
+00:09:17,840 --> 00:09:21,920
+NPM ecosystem. 
+And so we sort of worked on the 
+
+162
+00:09:21,920 --> 00:09:25,240
+editor that first year and a 
+half ish. 
+
+163
+00:09:25,520 --> 00:09:27,840
+But then a lot of the time I was
+also spending like trying to 
+
+164
+00:09:27,840 --> 00:09:35,640
+figure out how can we get like 
+access to NPM and V8 and or 
+
+165
+00:09:35,640 --> 00:09:38,600
+yeah, well, I knew we should 
+probably use V8 if we wanted 
+
+166
+00:09:38,600 --> 00:09:41,880
+access to the Node ecosystem 
+because Node was based on V8. 
+
+167
+00:09:42,960 --> 00:09:45,560
+So I was playing with this thing
+called the Chromium Embedded 
+
+168
+00:09:45,560 --> 00:09:48,120
+Framework. 
+And then later on I was like 
+
+169
+00:09:48,120 --> 00:09:51,600
+poking around in forums, like 
+asking questions, trying to 
+
+170
+00:09:51,600 --> 00:09:56,320
+figure out like I was in way 
+over my head honestly, with the 
+
+171
+00:09:56,840 --> 00:10:00,600
+the C++ Chromium code base, just
+trying to figure out how can I 
+
+172
+00:10:00,600 --> 00:10:03,560
+do this. 
+And I think this guy named Cheng
+
+173
+00:10:03,560 --> 00:10:06,920
+Zhao, ZC Benz is his GitHub 
+handle. 
+
+174
+00:10:07,560 --> 00:10:10,680
+Saw me asking questions and 
+realized that was from GitHub 
+
+175
+00:10:11,320 --> 00:10:13,680
+and reached out from somewhere 
+in China. 
+
+176
+00:10:13,680 --> 00:10:18,440
+I don't even remember and said, 
+I can help you build this. 
+
+177
+00:10:18,640 --> 00:10:20,720
+I love GitHub, I can help you 
+build this. 
+
+178
+00:10:21,120 --> 00:10:24,760
+So I remember getting on AI, 
+think it was a Skype call with 
+
+179
+00:10:24,760 --> 00:10:27,800
+him. 
+We barely understood each other.
+
+180
+00:10:28,200 --> 00:10:33,080
+It was like, you know, but I 
+just sort of stumbled through 
+
+181
+00:10:33,320 --> 00:10:37,200
+describing this framework and 
+then I eventually wrote it down.
+
+182
+00:10:37,200 --> 00:10:39,080
+I'm just like, you know, needs 
+to have Node. 
+
+183
+00:10:39,680 --> 00:10:43,680
+I basically just described 
+Electron and we hired him as a 
+
+184
+00:10:43,680 --> 00:10:44,960
+contractor. 
+I don't even know how they 
+
+185
+00:10:44,960 --> 00:10:50,640
+managed to get him paid. 
+And eventually that after like 
+
+186
+00:10:50,680 --> 00:10:55,240
+months of it crashing and us 
+sending him stack traces or 
+
+187
+00:10:55,240 --> 00:10:58,880
+cordoms or whatever, we finally 
+got to a point where like we 
+
+188
+00:10:58,880 --> 00:11:00,760
+could, yeah, it was called Adam 
+Shell. 
+
+189
+00:11:01,120 --> 00:11:04,360
+So Adam Shell we eventually when
+we decided to open source that, 
+
+190
+00:11:05,120 --> 00:11:07,960
+I think it was Chris came up 
+with the idea of oh, Adam Shell.
+
+191
+00:11:07,960 --> 00:11:12,440
+It's like the electron, yeah. 
+Like that's the orbital shell or
+
+192
+00:11:12,440 --> 00:11:16,520
+whatever. 
+And so that turned into electron
+
+193
+00:11:16,520 --> 00:11:20,120
+so. 
+So that became the way to build 
+
+194
+00:11:20,120 --> 00:11:24,680
+the whole UI Atom editor on top 
+of Electron so that you can 
+
+195
+00:11:24,680 --> 00:11:27,560
+distribute it out to all the 
+platforms and not actually think
+
+196
+00:11:27,560 --> 00:11:30,080
+about that underpinnings. 
+It's just let the Chrome team, 
+
+197
+00:11:30,240 --> 00:11:32,320
+you know, figure out a lot of 
+the the the. 
+
+198
+00:11:32,480 --> 00:11:36,040
+The UI primitive, that's right, 
+which came with a serious cost, 
+
+199
+00:11:36,440 --> 00:11:40,480
+which was just like, I don't 
+know, I mean it. 
+
+200
+00:11:40,480 --> 00:11:43,800
+What's amazing is like the VS 
+Code guys came around, we've 
+
+201
+00:11:43,800 --> 00:11:47,240
+launched Adam, and it like just 
+took off like a rocket. 
+
+202
+00:11:47,920 --> 00:11:50,800
+And I think Microsoft build plug
+insurance for Adam. 
+
+203
+00:11:51,240 --> 00:11:52,520
+Thank you. 
+Nice. 
+
+204
+00:11:52,520 --> 00:11:53,760
+Yeah. 
+And we've, of course. 
+
+205
+00:11:53,760 --> 00:11:56,680
+Have learned that a crazy coffee
+script UI framework. 
+
+206
+00:11:56,800 --> 00:11:58,840
+God, I know. 
+Yeah. 
+
+207
+00:11:58,840 --> 00:12:02,000
+And we had, there were some 
+questionable choices that we 
+
+208
+00:12:02,000 --> 00:12:03,840
+made all across the board, 
+right. 
+
+209
+00:12:03,920 --> 00:12:06,720
+I think we were really young and
+just didn't know what you. 
+
+210
+00:12:06,720 --> 00:12:08,920
+Didn't know. 
+Yeah, yeah. 
+
+211
+00:12:10,520 --> 00:12:16,040
+But yeah, then Microsoft at some
+point kind of had a meeting with
+
+212
+00:12:16,040 --> 00:12:17,680
+us. 
+So they showed us like the early
+
+213
+00:12:17,680 --> 00:12:22,360
+versions of VS Code, which was 
+like they had taken, I think, 
+
+214
+00:12:22,360 --> 00:12:25,520
+Visual Studio Online, which they
+had a whole team working on in 
+
+215
+00:12:25,520 --> 00:12:31,400
+Switzerland, Eric Gamma, and 
+they'd written they'd built 
+
+216
+00:12:31,400 --> 00:12:34,360
+Eclipse. 
+And Yep, Microsoft had hired 
+
+217
+00:12:34,360 --> 00:12:35,520
+them. 
+I don't know all the details. 
+
+218
+00:12:35,520 --> 00:12:38,320
+So, yeah, this is my just take 
+it with a grain of salt. 
+
+219
+00:12:38,320 --> 00:12:40,800
+My understanding, yeah. 
+But they were doing something 
+
+220
+00:12:40,800 --> 00:12:43,360
+similar basically in parallel, 
+right? 
+
+221
+00:12:43,360 --> 00:12:47,120
+And also built on electron. 
+Well, they saw it was all 
+
+222
+00:12:47,120 --> 00:12:50,240
+web-based initially. 
+OK, yeah, I think they saw Adam 
+
+223
+00:12:50,240 --> 00:12:54,120
+like taking off and they saw 
+Electron and they're like, oh 
+
+224
+00:12:54,120 --> 00:12:57,120
+cool, let's let's do Adam. 
+Good idea. 
+
+225
+00:12:57,320 --> 00:13:01,640
+But I think they they approached
+it with sort of a more mature, I
+
+226
+00:13:01,640 --> 00:13:04,520
+think a more a more mature team,
+a more mature mindset. 
+
+227
+00:13:04,520 --> 00:13:07,200
+Like our idea with Adam was to 
+build the modern Emacs. 
+
+228
+00:13:07,200 --> 00:13:11,720
+So it was like, Oh yeah, we'll 
+we'll initialize your extension 
+
+229
+00:13:11,720 --> 00:13:15,080
+on the main thread at startup. 
+Well, oops. 
+
+230
+00:13:15,960 --> 00:13:18,920
+You know, like add four or five 
+extensions to people that don't 
+
+231
+00:13:18,920 --> 00:13:23,000
+care that much about performance
+and like, say goodbye to start 
+
+232
+00:13:23,000 --> 00:13:26,200
+up time and then like running 
+people's running on event 
+
+233
+00:13:26,200 --> 00:13:29,840
+handler, like on the main path 
+of typing characters. 
+
+234
+00:13:30,080 --> 00:13:32,600
+Yeah, on the main thread. 
+Yeah, you know where's. 
+
+235
+00:13:32,600 --> 00:13:33,800
+This get slow. 
+Yeah. 
+
+236
+00:13:33,800 --> 00:13:37,480
+So their approach I think was, 
+you know, they, they forced all 
+
+237
+00:13:37,480 --> 00:13:40,920
+the extensions to run out of 
+process, which was a much better
+
+238
+00:13:41,120 --> 00:13:43,760
+choice. 
+But then you have to RPC to like
+
+239
+00:13:43,800 --> 00:13:46,840
+talk to the the syntax tree or 
+whatever, right? 
+
+240
+00:13:46,880 --> 00:13:48,720
+Right, right. 
+I mean, it's not without its 
+
+241
+00:13:48,840 --> 00:13:52,320
+trade-offs as well, and I don't 
+think it's the best long term, 
+
+242
+00:13:52,320 --> 00:13:55,320
+and I don't think it's how we're
+going to approach it in Z, But 
+
+243
+00:13:56,160 --> 00:13:58,960
+it was much more sane than, 
+like, running arbitrary, 
+
+244
+00:13:58,960 --> 00:14:00,640
+untrusted code on the main 
+thread. 
+
+245
+00:14:02,040 --> 00:14:04,360
+So that, I don't know, we. 
+Yeah. 
+
+246
+00:14:04,360 --> 00:14:07,480
+So we they eventually sort of 
+obviously, as history has shown,
+
+247
+00:14:07,480 --> 00:14:11,960
+like relegated Adam to the 
+dustbin of history. 
+
+248
+00:14:11,960 --> 00:14:15,880
+And yet it was still like just a
+fabulous environment for me to 
+
+249
+00:14:15,880 --> 00:14:20,480
+learn and do it wrong repeatedly
+in order to learn how to do it 
+
+250
+00:14:20,480 --> 00:14:25,440
+right. 
+And so, yeah, it was, yeah. 
+
+251
+00:14:25,440 --> 00:14:26,920
+How are we doing on time? 
+This is OK. 
+
+252
+00:14:27,800 --> 00:14:32,840
+I'm sure you're still recording.
+So anyway, like it took us a 
+
+253
+00:14:32,840 --> 00:14:35,520
+long time. 
+I mean, extensibility was like 
+
+254
+00:14:36,040 --> 00:14:39,200
+an early priority. 
+Meta or Facebook at the time 
+
+255
+00:14:39,200 --> 00:14:43,000
+ended up having a team that was 
+probably like five times the 
+
+256
+00:14:43,000 --> 00:14:46,880
+size of the Adam team building 
+all Facebook's internal 
+
+257
+00:14:46,880 --> 00:14:49,640
+developer tooling. 
+It was called new client on top 
+
+258
+00:14:49,640 --> 00:14:50,720
+of Adam. 
+Wow. 
+
+259
+00:14:52,200 --> 00:14:56,840
+And I don't know there was. 
+So by the time I think it was 
+
+260
+00:14:57,080 --> 00:15:02,640
+not until 2017, I think that we 
+finally got around to being 
+
+261
+00:15:02,640 --> 00:15:05,160
+like, OK, let's do this 
+collaboration piece because that
+
+262
+00:15:05,160 --> 00:15:09,240
+was what I, you know, years and 
+years earlier, I pitched Chris 
+
+263
+00:15:09,680 --> 00:15:11,440
+on the so doing. 
+Yeah. 
+
+264
+00:15:11,440 --> 00:15:13,760
+And we had stories. 
+I hadn't got to it right. 
+
+265
+00:15:14,440 --> 00:15:18,720
+And so it was at that point that
+it was in I think spring of 
+
+266
+00:15:18,720 --> 00:15:22,680
+2017, I had no idea how we were 
+going to do it. 
+
+267
+00:15:22,680 --> 00:15:25,240
+And we were looking at 
+operational transformation. 
+
+268
+00:15:25,640 --> 00:15:30,600
+And then years earlier I'd 
+played with CRDTS. 
+
+269
+00:15:30,960 --> 00:15:35,520
+But at that point, it was just 
+really memory and efficient, the
+
+270
+00:15:35,520 --> 00:15:38,720
+approach that I had taken of 
+giving every single character in
+
+271
+00:15:38,720 --> 00:15:42,520
+the buffer like a unique 
+globally ordered ID. 
+
+272
+00:15:43,040 --> 00:15:45,720
+And especially in JavaScript, I 
+mean, maybe in a systems 
+
+273
+00:15:45,720 --> 00:15:47,960
+programming language where you 
+could really optimize things, 
+
+274
+00:15:47,960 --> 00:15:49,400
+that would have been somewhat 
+sane. 
+
+275
+00:15:49,400 --> 00:15:52,440
+But like, it was just not going 
+to work. 
+
+276
+00:15:52,440 --> 00:15:55,880
+And then I ended up abandoning 
+it any way to do other more 
+
+277
+00:15:55,880 --> 00:15:59,520
+important things at the time. 
+But this time around we sort of 
+
+278
+00:15:59,520 --> 00:16:05,400
+dove in the literature and you 
+know, after playing with OT for 
+
+279
+00:16:05,400 --> 00:16:07,600
+a while, kind of end up ended up
+being like. 
+
+280
+00:16:08,040 --> 00:16:10,560
+OT. 
+Operational transformation, OK, 
+
+281
+00:16:10,600 --> 00:16:13,000
+which is sort of the approach 
+that Google Wave took. 
+
+282
+00:16:13,480 --> 00:16:16,560
+Operational transformation. 
+The mental model there is like, 
+
+283
+00:16:17,360 --> 00:16:20,320
+you know, the the central 
+problem of like implementing 
+
+284
+00:16:20,320 --> 00:16:24,240
+collaborative editing is sort of
+I insert a character at offset 
+
+285
+00:16:24,240 --> 00:16:29,280
+10 and then I relay the fact 
+that I did that, but meanwhile 
+
+286
+00:16:29,280 --> 00:16:32,640
+you insert a character at offset
+5 and so now. 
+
+287
+00:16:32,680 --> 00:16:34,760
+Ten and five don't align 
+anymore. 
+
+288
+00:16:34,760 --> 00:16:36,800
+Exactly. 
+Now offset 10 no longer 
+
+289
+00:16:36,800 --> 00:16:41,120
+represents the same logical 
+location in the buffer, and so 
+
+290
+00:16:41,480 --> 00:16:45,480
+the solution of operational 
+transformation as it is 
+
+291
+00:16:45,480 --> 00:16:48,760
+described in the name is. 
+Well, I take that operation 
+
+292
+00:16:49,000 --> 00:16:52,840
+insert character on offset 10 
+and transform it so that it 
+
+293
+00:16:52,840 --> 00:16:57,680
+makes sense in the new world. 
+But as we got into like 
+
+294
+00:16:57,680 --> 00:17:01,080
+implementing undo stacks 
+properly or I don't even 
+
+295
+00:17:01,080 --> 00:17:05,800
+remember it, there were a lot of
+papers, none of them seemed. 
+
+296
+00:17:06,200 --> 00:17:09,640
+It just seemed like that whole 
+field had not converged on like 
+
+297
+00:17:10,440 --> 00:17:15,240
+a single best way of doing it. 
+And how does CRDT solve 
+
+298
+00:17:15,240 --> 00:17:19,200
+something solve that problem? 
+So CRDTS frame things a little 
+
+299
+00:17:19,200 --> 00:17:23,760
+bit different where you sort of,
+rather than thinking about the 
+
+300
+00:17:23,760 --> 00:17:27,920
+operations as things that need 
+to be kind of mutated in, in and
+
+301
+00:17:27,920 --> 00:17:32,240
+of themselves, so they make 
+sense to apply on a remote copy,
+
+302
+00:17:32,600 --> 00:17:36,480
+sort of reframes the problem and
+says how do we structure this 
+
+303
+00:17:36,480 --> 00:17:40,480
+data and in a fundamental way 
+such that the operations are 
+
+304
+00:17:41,040 --> 00:17:45,280
+inherently commutative. 
+And So what that tends to 
+
+305
+00:17:45,280 --> 00:17:49,760
+involve is just adding a lot 
+more metadata to the underlying 
+
+306
+00:17:50,400 --> 00:17:52,480
+data structure that you're 
+you're editing. 
+
+307
+00:17:52,880 --> 00:17:56,240
+So that what you're sort of 
+showing one version of that of 
+
+308
+00:17:56,240 --> 00:18:01,280
+the data to the user. 
+But underneath what the user is 
+
+309
+00:18:01,280 --> 00:18:04,840
+seeing as just plain text, 
+there's actually like a lot of 
+
+310
+00:18:04,840 --> 00:18:11,160
+metadata writing along. 
+And so that ends up. 
+
+311
+00:18:11,520 --> 00:18:13,840
+And yeah, so I can get into the 
+details of. 
+
+312
+00:18:14,680 --> 00:18:16,480
+I mean, maybe we could just talk
+about the. 
+
+313
+00:18:16,600 --> 00:18:17,320
+Balance. 
+We're there. 
+
+314
+00:18:17,320 --> 00:18:18,080
+Let's do it. 
+So. 
+
+315
+00:18:18,240 --> 00:18:23,920
+So let me yeah, check one thing.
+So on CRDTS there's there's many
+
+316
+00:18:23,920 --> 00:18:26,320
+different kind of 
+implementation, like different 
+
+317
+00:18:26,320 --> 00:18:32,160
+ways you can do CRDTSI think 
+generally they they use algebras
+
+318
+00:18:32,160 --> 00:18:38,000
+to to give you guarantees. 
+And so commutativity is one, it 
+
+319
+00:18:38,000 --> 00:18:40,800
+can be implemented maybe in 
+multiple CRDTS, but that's kind 
+
+320
+00:18:40,800 --> 00:18:44,480
+of one algebraic property that 
+you're trying to achieve through
+
+321
+00:18:44,480 --> 00:18:47,440
+this data structure of a CRDT, 
+right at all, right? 
+
+322
+00:18:47,880 --> 00:18:49,320
+I think so. 
+I mean, I'm not. 
+
+323
+00:18:49,560 --> 00:18:52,680
+I never create your own CRDTS. 
+We did, yeah, OK. 
+
+324
+00:18:53,000 --> 00:18:59,040
+And we did it by like reading 
+these papers, trying to 
+
+325
+00:18:59,040 --> 00:19:00,640
+understand what the hell they 
+were talking about. 
+
+326
+00:19:00,640 --> 00:19:03,000
+I don't know, My problem with 
+academic papers, a lot of time 
+
+327
+00:19:03,000 --> 00:19:09,000
+is there's a lot of formalism. 
+There's a lot of like what feels
+
+328
+00:19:09,000 --> 00:19:13,360
+like kind of things left to the 
+imagination or not technically 
+
+329
+00:19:13,360 --> 00:19:16,560
+specified or whatever. 
+But we managed to sort of form 
+
+330
+00:19:16,560 --> 00:19:20,400
+our own picture of what would 
+make sense and implement it. 
+
+331
+00:19:20,400 --> 00:19:25,200
+And what we ended up arriving at
+is sort of for every block of 
+
+332
+00:19:25,200 --> 00:19:28,760
+texts. 
+So imagine the, we start with a 
+
+333
+00:19:28,760 --> 00:19:33,160
+shared buffer and that would 
+will give the initial text of 
+
+334
+00:19:33,160 --> 00:19:37,280
+the buffer like a unique ID that
+we can both reference. 
+
+335
+00:19:38,680 --> 00:19:43,400
+And then every participant in 
+the in the collaboration will be
+
+336
+00:19:43,400 --> 00:19:45,920
+handed out an initial like 
+replica ID. 
+
+337
+00:19:46,400 --> 00:19:49,800
+And so that means that each 
+participant by virtue of their 
+
+338
+00:19:49,800 --> 00:19:54,760
+replica ID being unique can also
+have a local increment encounter
+
+339
+00:19:55,040 --> 00:19:57,920
+and they can just mint unique I 
+DS because they're all, they all
+
+340
+00:19:57,920 --> 00:20:00,680
+have this unique prefix and they
+can just mint these unique I DS.
+
+341
+00:20:00,680 --> 00:20:01,680
+You don't. 
+Have to use a global 
+
+342
+00:20:01,680 --> 00:20:03,720
+coordinator. 
+Right, exactly. 
+
+343
+00:20:03,720 --> 00:20:07,280
+And I think like going forward, 
+I almost want to just start 
+
+344
+00:20:07,520 --> 00:20:12,520
+experimenting with using UUI DS.
+I mean it's 128 bits, but it's 
+
+345
+00:20:12,560 --> 00:20:16,440
+just like, you know, it's like a
+vector or whatever, right? 
+
+346
+00:20:16,440 --> 00:20:20,200
+It's not that much memory in on 
+a modern machine, but it's not 
+
+347
+00:20:20,200 --> 00:20:21,320
+how things are implemented. 
+Now. 
+
+348
+00:20:21,320 --> 00:20:24,680
+We actually do global 
+coordination to like hand out 
+
+349
+00:20:24,680 --> 00:20:30,760
+that initial set of IDs. 
+But then imagine like you give 
+
+350
+00:20:31,080 --> 00:20:33,760
+every chunk of text. 
+So that could be it. 
+
+351
+00:20:34,080 --> 00:20:36,600
+If I'm typing individual 
+characters, then each character 
+
+352
+00:20:36,600 --> 00:20:39,920
+is going to get a unique ID. 
+Or maybe I paste a big chunk of 
+
+353
+00:20:39,920 --> 00:20:42,280
+text. 
+That big chunk of text going to 
+
+354
+00:20:42,280 --> 00:20:46,360
+get is going to get a unique ID.
+So both the individual 
+
+355
+00:20:46,360 --> 00:20:49,080
+characters and the chunk of text
+get in. 
+
+356
+00:20:49,440 --> 00:20:52,960
+Any change your ID. 
+Yeah, like if I insert, let's 
+
+357
+00:20:52,960 --> 00:20:57,520
+say I paste, you know, 1000 
+characters, that entire 1000 
+
+358
+00:20:57,520 --> 00:21:01,560
+character chunk will be tracked 
+as a single insertion and it 
+
+359
+00:21:01,560 --> 00:21:06,000
+will have one unique insertion 
+ID, but which is not all the not
+
+360
+00:21:06,000 --> 00:21:08,640
+all the individual characters. 
+OK, that makes sense because. 
+
+361
+00:21:09,080 --> 00:21:12,520
+So you're, you're doing gap 
+where you started saying, oh, I 
+
+362
+00:21:12,520 --> 00:21:14,040
+guess we have to look at each 
+character. 
+
+363
+00:21:14,280 --> 00:21:17,600
+But then at some point you go, 
+now we need to look at it on a 
+
+364
+00:21:17,600 --> 00:21:20,720
+chunk size, right. 
+That's just, and that was a 
+
+365
+00:21:20,720 --> 00:21:24,920
+practicality thing, or was that 
+just something that, I don't 
+
+366
+00:21:24,920 --> 00:21:27,040
+know, somehow it made sense. 
+Yeah. 
+
+367
+00:21:27,040 --> 00:21:29,760
+I mean, I think I don't, I think
+we probably pulled it out of the
+
+368
+00:21:29,760 --> 00:21:33,680
+paper. 
+I don't even remember at the 
+
+369
+00:21:33,680 --> 00:21:35,960
+time. 
+But what felt really clear is 
+
+370
+00:21:35,960 --> 00:21:40,240
+like giving each individual 
+character a unique ID was pretty
+
+371
+00:21:40,240 --> 00:21:44,600
+expensive because you start with
+this initial buffer state and 
+
+372
+00:21:45,040 --> 00:21:47,720
+and what we, what we realized 
+probably with the help of some 
+
+373
+00:21:47,720 --> 00:21:51,920
+of these papers is as long as 
+you never, as long as each 
+
+374
+00:21:51,920 --> 00:21:57,400
+inserted piece of text is 
+treated immutably, you can use 
+
+375
+00:21:57,400 --> 00:22:01,160
+the unique ID plus an offset 
+starting at 0 into the buffer. 
+
+376
+00:22:01,280 --> 00:22:03,880
+Yeah. 
+And you can always find a 
+
+377
+00:22:03,880 --> 00:22:07,560
+location that you know is 
+unique, like. 
+
+378
+00:22:08,000 --> 00:22:10,560
+And so as long as you never 
+delete anything. 
+
+379
+00:22:10,560 --> 00:22:12,040
+But then the question is, well, 
+how do you do that? 
+
+380
+00:22:12,040 --> 00:22:13,440
+How do you never delete 
+anything? 
+
+381
+00:22:13,440 --> 00:22:17,080
+And the answer is kind of dumb, 
+which is just when you, when you
+
+382
+00:22:17,080 --> 00:22:19,440
+want to delete something, what 
+you actually want to do is hide 
+
+383
+00:22:19,440 --> 00:22:22,400
+it. 
+And So what the buffer looks 
+
+384
+00:22:22,400 --> 00:22:26,600
+like under the hood is actually 
+that it's ever growing 
+
+385
+00:22:26,600 --> 00:22:29,920
+monotonically increasing. 
+That's one theoretical word that
+
+386
+00:22:30,720 --> 00:22:33,880
+I use a lot when we're talking 
+about CRDTS is just this idea of
+
+387
+00:22:33,880 --> 00:22:36,280
+monotonicity that it always 
+needs to be growing. 
+
+388
+00:22:36,720 --> 00:22:39,280
+And as long as it's always 
+growing and you never throw 
+
+389
+00:22:39,280 --> 00:22:42,640
+anything away, you should always
+be able to kind of craft things 
+
+390
+00:22:42,640 --> 00:22:47,080
+such that you can identify even 
+if it's inside of some deleted 
+
+391
+00:22:47,080 --> 00:22:51,120
+text, you could still identify 
+that text and then identify kind
+
+392
+00:22:51,120 --> 00:22:53,360
+of where it is in this global 
+document. 
+
+393
+00:22:53,360 --> 00:22:57,320
+So you kind of build up the 
+document as this like accreting 
+
+394
+00:22:57,920 --> 00:23:03,320
+causal directed acyclic graph of
+like or it's just kind of a tree
+
+395
+00:23:03,320 --> 00:23:06,320
+that's fanning out right where 
+you start with the base text. 
+
+396
+00:23:06,320 --> 00:23:10,400
+Then I say, I want to insert 
+this new maybe start with this 
+
+397
+00:23:10,400 --> 00:23:15,200
+base text and then say I want to
+paste in 100 characters at, you 
+
+398
+00:23:15,200 --> 00:23:20,000
+know, 0 like ID 0.0, right? 
+That's the base text. 
+
+399
+00:23:20,160 --> 00:23:23,800
+It's a global ID and then an 
+offset into that, right? 
+
+400
+00:23:24,080 --> 00:23:28,080
+And so I can find an offset into
+this piece of text. 
+
+401
+00:23:28,480 --> 00:23:32,240
+Now I have a new piece of text 
+that, you know, is part of the 
+
+402
+00:23:32,240 --> 00:23:33,920
+document. 
+And you can imagine sort of 
+
+403
+00:23:34,440 --> 00:23:39,640
+subdividing, incrementally 
+subdividing the document by, you
+
+404
+00:23:39,640 --> 00:23:41,400
+know, inserting all these new 
+pieces of text. 
+
+405
+00:23:41,400 --> 00:23:45,200
+But they're all just like, yeah,
+I'm gesturing in a way that will
+
+406
+00:23:45,200 --> 00:23:49,880
+not come through on the podcast.
+But this sort of tree of text 
+
+407
+00:23:49,880 --> 00:23:54,120
+inserted in some place with a 
+stable location, and then that 
+
+408
+00:23:54,120 --> 00:23:55,920
+new text now has a stable 
+location. 
+
+409
+00:23:55,920 --> 00:23:59,080
+And so you can always kind of 
+accrete more and more. 
+
+410
+00:23:59,520 --> 00:24:02,760
+What this enables is the 
+collaboration piece. 
+
+411
+00:24:02,760 --> 00:24:07,680
+But then also do you use it for 
+for being able to like undo or 
+
+412
+00:24:07,680 --> 00:24:09,880
+something like the history for 
+undo is? 
+
+413
+00:24:09,880 --> 00:24:12,560
+Yeah, right. 
+Because so this maintains or 
+
+414
+00:24:12,560 --> 00:24:18,200
+allows immutability throughout. 
+Is there any, is there ever any 
+
+415
+00:24:18,200 --> 00:24:20,480
+kind of, I don't know, for lack 
+of a better word, sort of 
+
+416
+00:24:20,480 --> 00:24:22,600
+garbage collection? 
+Do you ever get to a point where
+
+417
+00:24:22,600 --> 00:24:26,760
+you go, OK, let's. 
+We haven't needed it yet. 
+
+418
+00:24:26,760 --> 00:24:30,320
+We haven't implemented it yet, 
+but I think in theory you 
+
+419
+00:24:30,320 --> 00:24:32,200
+definitely could garbage 
+collect. 
+
+420
+00:24:32,400 --> 00:24:36,760
+That would obviously take a 
+moment of global coordination to
+
+421
+00:24:36,760 --> 00:24:42,120
+sort of agree, OK, right back to
+this point in time, we're all 
+
+422
+00:24:42,120 --> 00:24:46,080
+going to pretend that it's maybe
+one coherent block of text or 
+
+423
+00:24:46,080 --> 00:24:50,480
+whatever and you know, frees the
+world at that point we have a 
+
+424
+00:24:50,480 --> 00:24:52,440
+pretty. 
+Efficient data structure. 
+
+425
+00:24:52,440 --> 00:24:56,160
+Because there's no replication 
+of data. 
+
+426
+00:24:56,400 --> 00:24:58,600
+That's not a change, right? 
+Correct. 
+
+427
+00:24:59,000 --> 00:25:02,080
+But I mean, obviously over time,
+like it is gonna build up. 
+
+428
+00:25:02,400 --> 00:25:05,640
+It's just like again, has not 
+been. 
+
+429
+00:25:06,320 --> 00:25:07,960
+Yeah. 
+I mean, kind of I. 
+
+430
+00:25:08,240 --> 00:25:09,880
+Mean. 
+Premature I'm you know, I'm 
+
+431
+00:25:09,920 --> 00:25:12,640
+jumping in premature 
+optimization would. 
+
+432
+00:25:12,760 --> 00:25:14,120
+Right. 
+Well. 
+
+433
+00:25:14,480 --> 00:25:17,560
+If it has, you don't need to 
+see, but I never have to GC my 
+
+434
+00:25:17,560 --> 00:25:19,680
+git repos because they're never 
+too big. 
+
+435
+00:25:19,760 --> 00:25:22,480
+Well, except, don't you? 
+Didn't we do that once where you
+
+436
+00:25:22,480 --> 00:25:25,080
+like rebased it or something 
+like that? 
+
+437
+00:25:26,240 --> 00:25:27,960
+What the phrase is, I had to 
+purge. 
+
+438
+00:25:27,960 --> 00:25:31,200
+Our history for our book, right?
+Because I didn't want the 
+
+439
+00:25:31,200 --> 00:25:33,480
+history to be publicly. 
+We weren't, no. 
+
+440
+00:25:35,040 --> 00:25:37,400
+We just we didn't want to give 
+away the book for free on that. 
+
+441
+00:25:37,560 --> 00:25:39,280
+Oh, right. 
+Initially when we started 
+
+442
+00:25:39,280 --> 00:25:41,040
+working on the book, it was 
+open. 
+
+443
+00:25:41,040 --> 00:25:43,960
+It was open and nice. 
+And then once we got to near 
+
+444
+00:25:43,960 --> 00:25:47,240
+published, we pulled it out and 
+it makes that I didn't want to 
+
+445
+00:25:47,240 --> 00:25:49,520
+get history there. 
+So OK, so it wasn't it wasn't a 
+
+446
+00:25:49,520 --> 00:25:51,560
+GCF just to rewrite the history 
+down there. 
+
+447
+00:25:51,560 --> 00:25:53,280
+OK. 
+Yeah, like the way we handle 
+
+448
+00:25:53,280 --> 00:25:57,760
+undos, for example, is just like
+every is associated with a 
+
+449
+00:25:57,760 --> 00:26:01,680
+counter. 
+And if the counter is 0 or even,
+
+450
+00:26:02,040 --> 00:26:06,920
+that insertion is visible. 
+And if the counter is odd, it's 
+
+451
+00:26:06,920 --> 00:26:10,440
+been undone. 
+And so when you decide if a 
+
+452
+00:26:10,440 --> 00:26:13,920
+piece of text is deleted, you 
+first have to check, you can 
+
+453
+00:26:13,920 --> 00:26:17,480
+have one or more like deletion 
+markers associated with it. 
+
+454
+00:26:17,800 --> 00:26:20,960
+And then you check the undone or
+redone counter for those 
+
+455
+00:26:20,960 --> 00:26:23,120
+deletions where the deletion's 
+undone. 
+
+456
+00:26:23,800 --> 00:26:27,240
+And then also was the insertion 
+itself undone. 
+
+457
+00:26:27,240 --> 00:26:31,400
+So there's this weird sort of 
+like Boolean calculation of 
+
+458
+00:26:31,400 --> 00:26:34,000
+like, is this text actually 
+visible in the current version 
+
+459
+00:26:34,000 --> 00:26:37,280
+of the document or not? 
+But it's always like there under
+
+460
+00:26:37,280 --> 00:26:39,520
+the surface. 
+And we have not yet garbage 
+
+461
+00:26:39,520 --> 00:26:43,360
+collected it, which we will, I 
+think, need to deal with when we
+
+462
+00:26:43,360 --> 00:26:46,360
+get into building the future, 
+but I feel like I should. 
+
+463
+00:26:46,840 --> 00:26:50,040
+So we built that CRDT, the 
+initial CRDT that built this 
+
+464
+00:26:50,040 --> 00:26:53,600
+thing for Adam called Teletype. 
+So this was done still in the 
+
+465
+00:26:53,600 --> 00:26:56,080
+atom news. 
+This is all yeah, all pre zeds, 
+
+466
+00:26:56,280 --> 00:27:00,960
+yeah and. 
+We, I think it was from maybe 
+
+467
+00:27:01,440 --> 00:27:05,520
+April, I think we started 
+digging into the research, 
+
+468
+00:27:05,520 --> 00:27:07,080
+having no idea how we would 
+implement it. 
+
+469
+00:27:07,080 --> 00:27:10,920
+And we shipped a working 
+extension for Atom that let you 
+
+470
+00:27:10,920 --> 00:27:13,200
+do collaborative editing I think
+in October. 
+
+471
+00:27:13,200 --> 00:27:16,640
+That's pretty good. 
+We busted our asses to get that 
+
+472
+00:27:16,640 --> 00:27:19,400
+out the door that fast. 
+And at the end of that entire 
+
+473
+00:27:19,400 --> 00:27:23,040
+process, I was like, wow, we are
+now actually pretty good 
+
+474
+00:27:23,040 --> 00:27:28,880
+engineers in a way that 
+obviously you never know at all.
+
+475
+00:27:28,880 --> 00:27:33,000
+But I felt like I'd crossed some
+sort of milestone I'd like or, 
+
+476
+00:27:33,000 --> 00:27:39,920
+you know, and it was at that 
+moment where I'm like, shit, we 
+
+477
+00:27:40,560 --> 00:27:44,600
+need to start over. 
+I just had was frustrated. 
+
+478
+00:27:44,600 --> 00:27:49,080
+Learned all the things that you 
+knew you would want to fix if 
+
+479
+00:27:49,080 --> 00:27:52,040
+you could do it again. 
+Yeah, I just felt like Adam 
+
+480
+00:27:52,040 --> 00:27:54,640
+didn't represent the engineers 
+we were in that moment. 
+
+481
+00:27:54,640 --> 00:27:58,120
+It represent it represented the 
+journey exactly. 
+
+482
+00:27:58,120 --> 00:28:02,360
+All the mistakes that we needed 
+to make to be like, you know, 
+
+483
+00:28:03,000 --> 00:28:05,520
+hoisted naked in front of Hacker
+News so they could throw a 
+
+484
+00:28:05,520 --> 00:28:09,400
+rotten vegetables at us, so we 
+could feel the pain of having 
+
+485
+00:28:09,400 --> 00:28:11,720
+done it wrong. 
+And yeah, work harder. 
+
+486
+00:28:11,840 --> 00:28:14,400
+And yeah. 
+You only really get good at 
+
+487
+00:28:14,400 --> 00:28:17,440
+something when you do it over 
+and over. 
+
+488
+00:28:17,800 --> 00:28:19,040
+Yeah. 
+And each time you go, yeah, 
+
+489
+00:28:19,040 --> 00:28:21,080
+that's not right. 
+Let's start from the beginning. 
+
+490
+00:28:21,360 --> 00:28:24,920
+I've had that experience and 
+it's like, I don't know, it's 
+
+491
+00:28:24,920 --> 00:28:28,320
+very gratifying cuz the 
+understanding is deep. 
+
+492
+00:28:28,800 --> 00:28:33,240
+So once you've started using. 
+OK, so you built the CRDTS? 
+
+493
+00:28:33,760 --> 00:28:38,200
+In Rust, well, we did it. 
+And this was before we got to 
+
+494
+00:28:38,200 --> 00:28:39,920
+Rust. 
+Yeah, but you now know how to 
+
+495
+00:28:39,960 --> 00:28:42,720
+build a CRDT. 
+I now know how to build a CRDT 
+
+496
+00:28:42,720 --> 00:28:45,800
+and I now know how to build a 
+proper performance algorithm 
+
+497
+00:28:45,800 --> 00:28:48,280
+like. 
+The concept I told you could be 
+
+498
+00:28:48,280 --> 00:28:50,760
+very slow if you're going to 
+walk through the tree 
+
+499
+00:28:50,760 --> 00:28:52,640
+incrementally. 
+I think we used like. 
+
+500
+00:28:52,640 --> 00:28:55,720
+We had some experience building 
+efficient tree handling. 
+
+501
+00:28:56,080 --> 00:28:58,120
+Exactly how to index things 
+properly. 
+
+502
+00:28:58,120 --> 00:28:59,760
+We actually had like or 
+something. 
+
+503
+00:29:00,200 --> 00:29:03,320
+Every chunk was actually a 
+member of two different splay 
+
+504
+00:29:03,320 --> 00:29:07,480
+trees these simultaneously. 
+There was some crazy stuff going
+
+505
+00:29:07,480 --> 00:29:09,800
+on where I'm like, I'm really 
+proud of this. 
+
+506
+00:29:09,880 --> 00:29:12,680
+Now we wouldn't do it that way 
+at Rust for because they had 
+
+507
+00:29:12,680 --> 00:29:16,560
+parent pointers, etc. 
+But like at the time, I don't 
+
+508
+00:29:16,560 --> 00:29:18,680
+know. 
+I just felt like I'd yeah. 
+
+509
+00:29:18,680 --> 00:29:22,960
+The data structure and 
+architecture that could be the 
+
+510
+00:29:22,960 --> 00:29:26,640
+right thing for collaborative. 
+Yeah, I'd finally done something
+
+511
+00:29:26,640 --> 00:29:28,880
+right. 
+And did you use? 
+
+512
+00:29:29,000 --> 00:29:32,280
+Did you used the CRDTS for a 
+while? 
+
+513
+00:29:32,320 --> 00:29:35,600
+Yeah, we did. 
+So this was an Adam teletype 
+
+514
+00:29:35,640 --> 00:29:36,600
+data type. 
+OK. 
+
+515
+00:29:36,720 --> 00:29:39,280
+So it added collaboration into 
+Adam? 
+
+516
+00:29:39,440 --> 00:29:42,280
+Right, although it was not as 
+good as it needed to be. 
+
+517
+00:29:43,360 --> 00:29:46,400
+We handled the collaborative 
+editing part great, but there 
+
+518
+00:29:46,400 --> 00:29:49,960
+were a lot of other pieces of 
+that problem that Word solved 
+
+519
+00:29:51,360 --> 00:29:54,360
+and. 
+So at what point did you say 
+
+520
+00:29:55,240 --> 00:29:57,040
+this is we can't do this 
+anymore. 
+
+521
+00:29:57,040 --> 00:30:00,440
+We gotta we gotta go back and 
+and like you know about Rust or 
+
+522
+00:30:00,480 --> 00:30:01,560
+you. 
+Yeah, OK. 
+
+523
+00:30:01,760 --> 00:30:05,680
+I've been following Rust. 
+I don't even think it was 1.0 
+
+524
+00:30:05,680 --> 00:30:08,680
+yet, or maybe it had just gone 
+1.0, I don't remember the exact.
+
+525
+00:30:08,680 --> 00:30:11,840
+While ago. 
+Yeah, I've been following it 
+
+526
+00:30:11,840 --> 00:30:16,080
+because we we've been using a 
+little bit of C++ out of 
+
+527
+00:30:16,080 --> 00:30:21,880
+frustration with web tech and 
+you can write the V8 extensions 
+
+528
+00:30:21,880 --> 00:30:24,240
+in C++. 
+So we had dropped Adam's buffer 
+
+529
+00:30:24,240 --> 00:30:28,120
+out to C So there's some 
+optimizations that you. 
+
+530
+00:30:28,120 --> 00:30:30,280
+Yeah, which? 
+Should make we're sort of like 
+
+531
+00:30:30,280 --> 00:30:33,840
+you're using C for those and 
+yeah, whether that was a good 
+
+532
+00:30:33,840 --> 00:30:37,680
+choice or not was hard to say. 
+And what would? 
+
+533
+00:30:37,680 --> 00:30:41,640
+Your other choice just might be 
+just what else could. 
+
+534
+00:30:41,760 --> 00:30:44,920
+Stay in JavaScript and then use 
+better. 
+
+535
+00:30:44,960 --> 00:30:49,160
+I mean cuz I think I don't know 
+Visual Studio code. 
+
+536
+00:30:49,160 --> 00:30:50,840
+Did they have anything written 
+in C? 
+
+537
+00:30:50,920 --> 00:30:54,440
+Maybe a few things like 
+Oniguruma or something that like
+
+538
+00:30:54,440 --> 00:30:56,960
+it's a regex engine that they 
+call into. 
+
+539
+00:30:56,960 --> 00:31:00,880
+Yeah, that's what like, you 
+know, was not being, was the 
+
+540
+00:31:00,880 --> 00:31:05,200
+buffer not being implemented in 
+C like really the problem or 
+
+541
+00:31:05,200 --> 00:31:08,320
+were there. 
+But I don't know, like I've used
+
+542
+00:31:08,320 --> 00:31:11,600
+it enough to have just the sense
+of being like frustrated by 
+
+543
+00:31:11,600 --> 00:31:14,080
+being in this single threaded 
+scripting language that was 
+
+544
+00:31:14,080 --> 00:31:17,440
+constantly pausing at times. 
+I didn't control to collect 
+
+545
+00:31:17,440 --> 00:31:20,880
+garbage and I couldn't control 
+how memory was allocated. 
+
+546
+00:31:20,880 --> 00:31:25,440
+And and finally by playing with 
+the C enough, come to 
+
+547
+00:31:25,440 --> 00:31:29,000
+understand, you know, what an 
+affine memory model might get 
+
+548
+00:31:29,000 --> 00:31:33,000
+you in terms of performance. 
+And just I wanted more control 
+
+549
+00:31:33,000 --> 00:31:39,000
+and I felt trapped by and also 
+just the browser like it's slow.
+
+550
+00:31:39,000 --> 00:31:42,040
+And you look at the timeline and
+you just see this like box 
+
+551
+00:31:42,040 --> 00:31:44,440
+that's totally inscrutable of 
+just like something that the 
+
+552
+00:31:44,440 --> 00:31:47,200
+browser's doing right. 
+And I have no idea what that is.
+
+553
+00:31:47,200 --> 00:31:51,080
+Is yeah, you're why is this 
+layout so slow or trying to 
+
+554
+00:31:51,080 --> 00:31:55,800
+implement like IME, like 
+Japanese and CJK character input
+
+555
+00:31:55,800 --> 00:31:59,520
+and stuff and having to do these
+like unholy hacks to sort of 
+
+556
+00:31:59,880 --> 00:32:03,080
+position an input box next to 
+where the cursor was. 
+
+557
+00:32:03,320 --> 00:32:07,640
+I just always felt like I was 
+fighting the underlying platform
+
+558
+00:32:07,640 --> 00:32:13,160
+to like get the control that I 
+needed to do the thing and and 
+
+559
+00:32:13,160 --> 00:32:15,680
+then just running up against a 
+performance wall. 
+
+560
+00:32:15,680 --> 00:32:18,680
+So when, yeah, so it was after 
+Teletype. 
+
+561
+00:32:18,680 --> 00:32:23,600
+It was like 2017, fall of 2017 
+or like November, I think. 
+
+562
+00:32:24,160 --> 00:32:27,800
+And I was, I remember writing in
+my journal and just coming to 
+
+563
+00:32:27,800 --> 00:32:31,280
+the realization, like, I don't 
+want to do this anymore. 
+
+564
+00:32:31,600 --> 00:32:36,120
+Like, and it was hard because I 
+was sort of the spiritual leader
+
+565
+00:32:36,120 --> 00:32:39,680
+of Adam at that point. 
+And, like, it was really 
+
+566
+00:32:39,680 --> 00:32:45,520
+difficult to just let go of the 
+inertia and the expectations of 
+
+567
+00:32:45,520 --> 00:32:48,520
+all these people around me that 
+I was just gonna keep 
+
+568
+00:32:48,720 --> 00:32:51,640
+championing, championing this 
+direction. 
+
+569
+00:32:51,680 --> 00:32:53,160
+Yeah. 
+And I didn't believe it. 
+
+570
+00:32:53,280 --> 00:32:56,640
+Forever in my life that I've 
+created, right? 
+
+571
+00:32:56,800 --> 00:33:00,040
+Can I make a choice to put it 
+down and go somewhere else? 
+
+572
+00:33:00,080 --> 00:33:01,760
+Right. 
+Where in this time frame is the 
+
+573
+00:33:01,760 --> 00:33:04,920
+Microsoft acquisition? 
+Because then you've got GitHub 
+
+574
+00:33:04,920 --> 00:33:08,400
+without them and and Microsoft 
+with VS Code and you know. 
+
+575
+00:33:08,520 --> 00:33:10,320
+Yeah. 
+They, I think we're probably 
+
+576
+00:33:10,320 --> 00:33:15,760
+contemplating it at that point. 
+Yeah, I so it hadn't happened 
+
+577
+00:33:15,760 --> 00:33:17,080
+yet. 
+It hadn't happened yet. 
+
+578
+00:33:17,360 --> 00:33:22,400
+I think there was a bit of a 
+leadership vacuum at GitHub at 
+
+579
+00:33:22,400 --> 00:33:25,000
+the time. 
+Like, yeah, it was just a 
+
+580
+00:33:25,000 --> 00:33:30,640
+little, it was a weird time. 
+Like it's and yeah, so 2018 
+
+581
+00:33:31,160 --> 00:33:34,720
+rolled around and I remember the
+team had a summit in Boulder, 
+
+582
+00:33:34,720 --> 00:33:36,640
+the Adam team. 
+And I remember the slide 
+
+583
+00:33:36,640 --> 00:33:40,560
+presentation I put together and 
+I said we have to do Adam 2 
+
+584
+00:33:40,560 --> 00:33:44,720
+point O, we have to start over. 
+And everyone's just like, what 
+
+585
+00:33:44,720 --> 00:33:47,520
+are you talking about? 
+Like, OK, man. 
+
+586
+00:33:47,960 --> 00:33:52,280
+Whatever but then that you 
+identified here's all the 
+
+587
+00:33:52,280 --> 00:33:55,840
+foundational things that are 
+holding us back from the 
+
+588
+00:33:55,840 --> 00:33:57,560
+experience that you really want 
+to. 
+
+589
+00:33:57,680 --> 00:34:00,160
+Learn and do better. 
+What is the point? 
+
+590
+00:34:00,480 --> 00:34:05,560
+Kind of, yeah, yeah, yeah. 
+I mean, and so we, they 
+
+591
+00:34:05,560 --> 00:34:09,719
+basically, I think I've been 
+around GitHub for long enough at
+
+592
+00:34:09,719 --> 00:34:13,360
+that point and there was a 
+little bit of a lack of like 
+
+593
+00:34:13,360 --> 00:34:17,280
+Adam was an afterthought anyway,
+and the big GitHub story that 
+
+594
+00:34:17,280 --> 00:34:22,679
+there was a little leeway for me
+to like indulge this obsession. 
+
+595
+00:34:23,239 --> 00:34:25,719
+And so we started this project 
+called X-ray. 
+
+596
+00:34:26,159 --> 00:34:29,040
+I didn't want to call Adam 2.0 
+because that just felt like a 
+
+597
+00:34:29,040 --> 00:34:32,840
+terrible PR move in case this 
+didn't work out or whatever. 
+
+598
+00:34:33,400 --> 00:34:35,840
+So I thought, oh, it's X-ray. 
+It's like what happens when you 
+
+599
+00:34:35,840 --> 00:34:39,280
+split the atom? 
+Like it's this, right, Right. 
+
+600
+00:34:39,400 --> 00:34:41,600
+Right. 
+And it was experimental. 
+
+601
+00:34:41,600 --> 00:34:42,719
+I don't know. 
+Yeah. 
+
+602
+00:34:42,719 --> 00:34:48,440
+So we started it and I started 
+writing these posts each week 
+
+603
+00:34:48,440 --> 00:34:52,480
+just to make sure that like any 
+product, anybody in product that
+
+604
+00:34:52,480 --> 00:34:55,920
+wanted to know what we were 
+doing and up to would like see 
+
+605
+00:34:55,920 --> 00:34:57,280
+it. 
+But they were all public in this
+
+606
+00:34:57,280 --> 00:35:00,680
+public repo. 
+And this what it started as like
+
+607
+00:35:00,680 --> 00:35:05,840
+an internal report, picked up 
+like a pretty big readership, 
+
+608
+00:35:05,840 --> 00:35:08,800
+actually, and people were really
+excited about it. 
+
+609
+00:35:09,360 --> 00:35:13,200
+Just within get home or no 
+within the broader community. 
+
+610
+00:35:13,240 --> 00:35:15,160
+OK, so it's like public. 
+Yeah. 
+
+611
+00:35:15,160 --> 00:35:17,920
+I think some of these posts 
+maybe ended up on Hacker News or
+
+612
+00:35:17,920 --> 00:35:20,440
+I don't remember how people 
+found them, but it was like a 
+
+613
+00:35:20,440 --> 00:35:23,960
+pretty started to like, take on 
+a life of its own. 
+
+614
+00:35:24,280 --> 00:35:25,240
+That makes sense. 
+Just what? 
+
+615
+00:35:25,240 --> 00:35:25,520
+Yeah. 
+All. 
+
+616
+00:35:25,520 --> 00:35:27,360
+Around X-ray and the progress on
+X-ray. 
+
+617
+00:35:27,360 --> 00:35:32,400
+Yeah, exactly. 
+But then I think I had my second
+
+618
+00:35:32,520 --> 00:35:37,600
+daughter and then right before 
+that, the Microsoft acquisition 
+
+619
+00:35:37,600 --> 00:35:41,640
+was announced. 
+And by the time I got back from 
+
+620
+00:35:41,640 --> 00:35:45,280
+leave, I don't know, it was sort
+of the writing was on the wall, 
+
+621
+00:35:45,280 --> 00:35:48,960
+like you're like, we're not. 
+Doing X-ray. 
+
+622
+00:35:49,080 --> 00:35:52,400
+We're not doing X-ray and 
+furthermore, like we're not 
+
+623
+00:35:52,400 --> 00:35:55,040
+doing Adam either, you know, 
+like not our thing. 
+
+624
+00:35:55,120 --> 00:35:58,040
+They didn't announce it for a 
+long time, like, but yeah, it 
+
+625
+00:35:58,040 --> 00:36:00,160
+was just. 
+Yeah, they kind of tell that 
+
+626
+00:36:00,400 --> 00:36:03,960
+they were putting together a 
+plan to to, you know, not have 
+
+627
+00:36:03,960 --> 00:36:07,680
+to have two competing. 
+Yeah, and they sat me down and, 
+
+628
+00:36:07,680 --> 00:36:11,680
+you know, had a nice 
+conversation about the future. 
+
+629
+00:36:13,160 --> 00:36:15,600
+And so we don't. 
+See you. 
+
+630
+00:36:17,280 --> 00:36:21,040
+Yeah, it was really hard. 
+It was like, you know, I never 
+
+631
+00:36:21,480 --> 00:36:25,160
+in my life had more money 
+because the acquisition and I 
+
+632
+00:36:25,160 --> 00:36:27,200
+was, you know, fairly early. 
+OK. 
+
+633
+00:36:28,720 --> 00:36:32,000
+And yet I had no idea where I 
+would go next. 
+
+634
+00:36:32,240 --> 00:36:36,080
+Like I just had felt like, cool,
+you sort of filled my bank 
+
+635
+00:36:36,080 --> 00:36:40,280
+account and completely rug 
+pulled my your life. 
+
+636
+00:36:40,320 --> 00:36:46,960
+Yeah, life purpose. 
+And yeah, I hung around for a 
+
+637
+00:36:46,960 --> 00:36:50,400
+while working on web hooks, 
+which was like a whole other 
+
+638
+00:36:51,040 --> 00:36:54,520
+song, actually. 
+Yeah, my manager, yeah, he's 
+
+639
+00:36:54,520 --> 00:36:56,960
+find. 
+Something find some way to be 
+
+640
+00:36:56,960 --> 00:36:58,280
+useful and you're like web 
+hooks. 
+
+641
+00:36:58,600 --> 00:37:00,760
+Yeah, well, somebody sort of 
+saved me. 
+
+642
+00:37:00,840 --> 00:37:02,560
+Yeah. 
+I mean, we don't even get given 
+
+643
+00:37:02,600 --> 00:37:06,280
+too many other details, but the 
+manager of the Adam team was not
+
+644
+00:37:06,280 --> 00:37:08,640
+a huge fan of me. 
+That's fun. 
+
+645
+00:37:09,680 --> 00:37:12,120
+Yeah. 
+I anyway, it's like cut the 
+
+646
+00:37:12,160 --> 00:37:15,520
+stuff, but yeah but. 
+The S code was written mostly in
+
+647
+00:37:15,520 --> 00:37:18,040
+TypeScript, Is that correct? 
+Yeah. 
+
+648
+00:37:18,120 --> 00:37:20,560
+It moved from, at least my 
+understanding, yeah, they 
+
+649
+00:37:20,600 --> 00:37:23,240
+started with JavaScript and then
+and they got to the point where 
+
+650
+00:37:23,240 --> 00:37:25,840
+they couldn't move forward 
+anymore because the code base 
+
+651
+00:37:25,840 --> 00:37:28,760
+was, I believe, yeah, totally 
+created TypeScript. 
+
+652
+00:37:28,760 --> 00:37:30,440
+As well. 
+No, I think Anders had been 
+
+653
+00:37:30,440 --> 00:37:33,200
+creating TypeScript for a while.
+I think he was just trying to 
+
+654
+00:37:33,200 --> 00:37:34,600
+solve that problem. 
+I mean. 
+
+655
+00:37:34,800 --> 00:37:40,440
+Brilliant move, cuz like trying 
+to build a code editor in an 
+
+656
+00:37:40,440 --> 00:37:44,040
+untyped scripting language is 
+like trying to build a cathedral
+
+657
+00:37:44,040 --> 00:37:47,280
+out of popsicle sticks. 
+Yeah, you know, it's just like, 
+
+658
+00:37:48,400 --> 00:37:52,000
+I'm amazed we got as far as we 
+did with it, but it was not fun.
+
+659
+00:37:52,640 --> 00:37:55,600
+Yeah, it was just not good. 
+So then Zedd so. 
+
+660
+00:37:56,320 --> 00:37:59,080
+Or was there something between, 
+well, leaving GitHub and? 
+
+661
+00:37:59,160 --> 00:38:02,120
+For a while I like tried to let 
+it go. 
+
+662
+00:38:03,360 --> 00:38:06,200
+Like you mean the editors? 
+Who cares about those dreams? 
+
+663
+00:38:06,200 --> 00:38:09,240
+I'll just work on web hooks. 
+Well, I was working on web hooks
+
+664
+00:38:09,280 --> 00:38:13,360
+and then like I was, you know, I
+tried to learn like I was like, 
+
+665
+00:38:13,360 --> 00:38:16,320
+maybe I want to work on Bitcoin 
+because I like was excited about
+
+666
+00:38:16,320 --> 00:38:18,680
+the vision of like sound money. 
+Oh, you don't like that? 
+
+667
+00:38:18,680 --> 00:38:23,200
+But. 
+But Oh yeah, the vision, sure. 
+
+668
+00:38:24,560 --> 00:38:26,920
+The world that it created is 
+like that. 
+
+669
+00:38:29,160 --> 00:38:32,640
+So, but I just didn't see 
+anywhere that I really added 
+
+670
+00:38:32,640 --> 00:38:34,960
+value or plugged in on that 
+project. 
+
+671
+00:38:34,960 --> 00:38:37,800
+Anyway, I'm like, it's pretty 
+much done. 
+
+672
+00:38:37,960 --> 00:38:39,520
+Yeah. 
+It's just not, you know, So 
+
+673
+00:38:39,520 --> 00:38:46,480
+then, I don't know, I just for a
+little while tried to think of 
+
+674
+00:38:46,480 --> 00:38:48,320
+something else that I cared 
+about doing. 
+
+675
+00:38:48,320 --> 00:38:51,480
+But everything I cared about 
+doing always circle back to 
+
+676
+00:38:52,120 --> 00:38:57,400
+writing software in an editor 
+that I didn't love, knowing 
+
+677
+00:38:57,400 --> 00:39:00,120
+that, like, I felt like I could 
+do something better. 
+
+678
+00:39:00,720 --> 00:39:05,320
+And so at some point I was just 
+like, fuck I, that's fine, OK, I
+
+679
+00:39:05,320 --> 00:39:08,760
+have to do this and. 
+So when you've decided that, 
+
+680
+00:39:09,080 --> 00:39:14,520
+like how long before you said, 
+oh, we need funding, whatever. 
+
+681
+00:39:14,960 --> 00:39:21,960
+Well, I, I mean, I didn't even 
+know that it was 2019 when we 
+
+682
+00:39:21,960 --> 00:39:25,000
+sort of scrapped what we've been
+doing in X-ray and started over 
+
+683
+00:39:26,480 --> 00:39:30,280
+and again this time completely 
+on our time. 2.0. 
+
+684
+00:39:30,440 --> 00:39:33,640
+Yeah, I think we might have 
+called it Zed. 
+
+685
+00:39:33,640 --> 00:39:35,760
+I mean, it didn't take me that 
+long to come up with the name 
+
+686
+00:39:35,760 --> 00:39:38,120
+Zed. 
+Sometime in 2019. 
+
+687
+00:39:38,120 --> 00:39:41,760
+It was me and Antonio just in 
+our free time. 
+
+688
+00:39:42,720 --> 00:39:44,520
+Working on it. 
+And what were you building that 
+
+689
+00:39:44,520 --> 00:39:47,000
+with? 
+What language were you building?
+
+690
+00:39:47,040 --> 00:39:50,200
+That rust that was so you had 
+movement X-ray was also rust 
+
+691
+00:39:50,760 --> 00:39:53,920
+really bad, bad rust. 
+And then. 
+
+692
+00:39:53,920 --> 00:39:56,160
+Cuz just cuz you didn't. 
+Understand we were learning 
+
+693
+00:39:56,200 --> 00:40:01,560
+yeah, and it was just a brutal 
+learning curve but we finally 
+
+694
+00:40:02,040 --> 00:40:05,200
+this is getting really long on 
+the historical thing, but OK OK 
+
+695
+00:40:06,160 --> 00:40:11,200
+yeah, we finally I felt like 
+Antonio was. 
+
+696
+00:40:12,000 --> 00:40:15,120
+Really key in coming up with 
+some of the key ideas behind 
+
+697
+00:40:15,120 --> 00:40:20,400
+Antonio who Antonio Scandura, 
+he's my Co founder OK he was 
+
+698
+00:40:21,080 --> 00:40:23,120
+work. 
+I think he had left or he had 
+
+699
+00:40:23,120 --> 00:40:25,840
+been forced out of GitHub 
+because they didn't want to 
+
+700
+00:40:25,840 --> 00:40:28,480
+employ him in Italy or something
+after the acquisition. 
+
+701
+00:40:29,000 --> 00:40:33,360
+There were corporate reasons 
+why, Yeah, it was hard, but he 
+
+702
+00:40:33,360 --> 00:40:37,200
+was, yeah, working for another 
+company at the time and. 
+
+703
+00:40:37,600 --> 00:40:39,800
+And just on the side. 
+But you had zoned him for a 
+
+704
+00:40:39,800 --> 00:40:41,640
+while. 
+In GitHub, yeah. 
+
+705
+00:40:41,640 --> 00:40:45,560
+And we were friends, so we just 
+kept pushing it forward. 
+
+706
+00:40:46,280 --> 00:40:51,680
+And then 2020 rolled around and 
+we all know what happened in 
+
+707
+00:40:51,680 --> 00:40:53,320
+2020. 
+I've forgotten. 
+
+708
+00:40:54,040 --> 00:40:58,760
+Yeah, but yeah, so I don't know,
+like Zed, I was still working 
+
+709
+00:40:58,760 --> 00:41:00,600
+for GitHub. 
+I'm doing a good job for them. 
+
+710
+00:41:00,600 --> 00:41:05,960
+Like they gave me great reviews 
+but like Zed was like my place 
+
+711
+00:41:05,960 --> 00:41:09,160
+to go where I had total control 
+right? 
+
+712
+00:41:09,160 --> 00:41:13,040
+You can imagine rewriting web 
+hooks from a bunch of single 
+
+713
+00:41:13,040 --> 00:41:16,480
+threaded Ruby processes, each 
+eating 700 megs of RAM. 
+
+714
+00:41:16,480 --> 00:41:19,200
+Blocked outbound IO. 
+Imagine that. 
+
+715
+00:41:20,280 --> 00:41:24,560
+Rewriting, I didn't go, which is
+like, yeah. 
+
+716
+00:41:25,680 --> 00:41:30,640
+I mean to that but but. 
+It was a slow, very painstaking 
+
+717
+00:41:30,640 --> 00:41:32,720
+process because we had 
+customers. 
+
+718
+00:41:32,720 --> 00:41:34,480
+You can't break things. 
+Exactly. 
+
+719
+00:41:34,480 --> 00:41:38,920
+It was just the opposite of what
+I love about software 
+
+720
+00:41:38,920 --> 00:41:41,640
+development, if that makes 
+sense, Of just like very 
+
+721
+00:41:41,640 --> 00:41:45,040
+uninteresting problem that's 
+somehow still very hard to get 
+
+722
+00:41:45,040 --> 00:41:46,520
+right. 
+Yeah, because of all these 
+
+723
+00:41:46,560 --> 00:41:49,240
+historical edge cases, etcetera.
+And it's like clearing a 
+
+724
+00:41:49,240 --> 00:41:51,200
+minefield. 
+Yeah, it's what that felt like. 
+
+725
+00:41:51,200 --> 00:41:56,440
+And so Zed was a place to go for
+me at night where I was in 
+
+726
+00:41:56,440 --> 00:41:58,920
+charge. 
+It was 100% interesting and 
+
+727
+00:41:58,920 --> 00:42:03,480
+fascinating, you know? 
+Learning Rust and yeah, still 
+
+728
+00:42:03,480 --> 00:42:07,160
+seeing this dream of, of all the
+things that you'd learned and 
+
+729
+00:42:07,160 --> 00:42:09,560
+being able to right to do it all
+better. 
+
+730
+00:42:09,720 --> 00:42:11,160
+Right. 
+It was the place I went for 
+
+731
+00:42:11,160 --> 00:42:14,640
+sanity and I'm. 
+So yeah, I grinded on that all 
+
+732
+00:42:14,640 --> 00:42:20,840
+through 2020 and then in the 
+fall of 2020 I got a cold e-mail
+
+733
+00:42:20,840 --> 00:42:24,240
+from the founder of Warp the 
+Terminal. 
+
+734
+00:42:24,240 --> 00:42:27,680
+You know, Warp, it's like a 
+fancy terminal emulator that. 
+
+735
+00:42:28,800 --> 00:42:32,680
+Anyway, so he's like, do you 
+want to work on a developer 
+
+736
+00:42:32,680 --> 00:42:37,960
+tool? 
+My now ex-wife was terrified of 
+
+737
+00:42:37,960 --> 00:42:41,920
+the idea of me starting my own 
+company, but I'm like, OK, cool,
+
+738
+00:42:41,920 --> 00:42:44,880
+here's the company I can join. 
+I could almost work on an 
+
+739
+00:42:44,880 --> 00:42:46,240
+editor. 
+It's a terminal. 
+
+740
+00:42:46,600 --> 00:42:48,680
+I don't know. 
+I somehow talked myself into it 
+
+741
+00:42:48,680 --> 00:42:51,600
+and then I don't know. 
+Yeah. 
+
+742
+00:42:51,600 --> 00:42:56,120
+So I joined then and all right, 
+I agreed to join them and then 
+
+743
+00:42:56,480 --> 00:42:59,960
+shortly after that my ex-wife 
+asked me for a divorce. 
+
+744
+00:42:59,960 --> 00:43:04,720
+We were a 2020 divorce, you 
+know, casualty, casualty or 
+
+745
+00:43:04,720 --> 00:43:06,240
+whatever. 
+And it's OK. 
+
+746
+00:43:06,240 --> 00:43:09,840
+But like, but then I went ahead 
+and still joined them, which I 
+
+747
+00:43:09,880 --> 00:43:14,080
+think it was a mistake and I 
+licensed them the the bones of 
+
+748
+00:43:14,080 --> 00:43:16,080
+Zed that I've been working on 
+because I'm like, if we're going
+
+749
+00:43:16,080 --> 00:43:20,040
+to build a dev tool, I'm not 
+effing doing another electron 
+
+750
+00:43:20,120 --> 00:43:22,280
+tool. 
+Let's do it in Rust. 
+
+751
+00:43:22,280 --> 00:43:26,160
+This is the right way to do it. 
+And so I worked there for like 3
+
+752
+00:43:26,160 --> 00:43:31,440
+months and then just. 
+Give them ownership of yeah, 
+
+753
+00:43:31,440 --> 00:43:33,960
+what we'd worked on. 
+Yeah, I know. 
+
+754
+00:43:34,080 --> 00:43:37,520
+It's like a parable or some sort
+of yeah, I've learned a lot 
+
+755
+00:43:37,880 --> 00:43:40,560
+since then about like. 
+We've all made listings. 
+
+756
+00:43:40,560 --> 00:43:44,720
+Yeah, and it's open source now 
+anyway, although it's GPL but 
+
+757
+00:43:44,720 --> 00:43:45,520
+whatever. 
+Like. 
+
+758
+00:43:45,680 --> 00:43:47,280
+Yeah. 
+It's fine. 
+
+759
+00:43:47,280 --> 00:43:49,640
+It was, I think maybe a step I 
+needed to take. 
+
+760
+00:43:50,120 --> 00:43:54,160
+But it was like, yeah, I was 
+sort of three months into that 
+
+761
+00:43:54,160 --> 00:43:57,760
+job, two months into, like, 
+being on my own after being 
+
+762
+00:43:57,760 --> 00:44:02,000
+married for a long time. 
+And just like sort of looking at
+
+763
+00:44:02,000 --> 00:44:03,920
+my life and just being like, you
+know what? 
+
+764
+00:44:04,880 --> 00:44:08,040
+If I don't like, do this thing I
+actually want to freaking do, 
+
+765
+00:44:08,040 --> 00:44:10,080
+then what am I doing with my 
+life right now? 
+
+766
+00:44:10,240 --> 00:44:14,760
+And I had some savings. 
+And so my plan was I'm just 
+
+767
+00:44:14,760 --> 00:44:20,000
+gonna start working on this. 
+And I have no idea where this is
+
+768
+00:44:20,000 --> 00:44:23,800
+gonna go. 
+And for at least, you know, I'm 
+
+769
+00:44:23,800 --> 00:44:28,680
+like, maybe I'll, yeah, I mean, 
+we split them up, etcetera, the 
+
+770
+00:44:28,680 --> 00:44:32,080
+proceeds of the divorce. 
+But like, I'm like, OK, if in 
+
+771
+00:44:32,080 --> 00:44:36,240
+two years I hit zero, I can go 
+get a job or whatever I need to 
+
+772
+00:44:36,240 --> 00:44:40,080
+do. 
+And she had some runway and. 
+
+773
+00:44:40,600 --> 00:44:43,640
+Antonio, he couldn't. 
+I was gonna be just me. 
+
+774
+00:44:43,640 --> 00:44:48,240
+Yeah, just me sort of working. 
+But then I quit my job and it 
+
+775
+00:44:48,240 --> 00:44:56,640
+was, I think a couple days 
+later, my friend who, you know, 
+
+776
+00:44:56,720 --> 00:45:01,360
+helps to have good friends. 
+But my friend I had was part of 
+
+777
+00:45:01,360 --> 00:45:03,600
+this world that I knew very 
+little about, right? 
+
+778
+00:45:03,600 --> 00:45:05,760
+He had a venture fund in 
+Boulder. 
+
+779
+00:45:05,760 --> 00:45:08,640
+Brett, OK has venture fund V1. 
+Brett. 
+
+780
+00:45:09,080 --> 00:45:11,520
+Brett Jackson. 
+Oh OK, no, that's not the one 
+
+781
+00:45:11,600 --> 00:45:14,280
+I'm thinking of. 
+And he's like, hey, I want to 
+
+782
+00:45:14,280 --> 00:45:17,920
+invest. 
+Here's a check like I'm in for 
+
+783
+00:45:17,920 --> 00:45:22,320
+250K and that, so that was like 
+an Angel investment. 
+
+784
+00:45:22,480 --> 00:45:24,400
+Yeah. 
+Or he, he had a fund, but you 
+
+785
+00:45:24,400 --> 00:45:26,400
+know, that would have been like 
+a seed investment, right? 
+
+786
+00:45:26,880 --> 00:45:29,880
+OK. 
+And I don't know, I was like, 
+
+787
+00:45:29,880 --> 00:45:32,400
+oh, I'd never really thought 
+that I would be able to get 
+
+788
+00:45:32,600 --> 00:45:35,640
+investment for this idea at this
+moment, huh? 
+
+789
+00:45:36,760 --> 00:45:40,240
+I figured I'd toil in the 
+wilderness and like at some 
+
+790
+00:45:40,240 --> 00:45:43,000
+point figure some path forward 
+out. 
+
+791
+00:45:43,760 --> 00:45:47,960
+And so I was like, oh, well, 
+maybe I'll see who else wants to
+
+792
+00:45:47,960 --> 00:45:51,480
+invest. 
+And it was like 2 weeks 
+
+793
+00:45:51,560 --> 00:45:54,840
+whirlwind talking to all these 
+people. 
+
+794
+00:45:54,840 --> 00:45:57,080
+You know, I got some 
+introductions. 
+
+795
+00:45:57,280 --> 00:46:00,400
+Rob me who founded Pivotal, he's
+a mentor of mine. 
+
+796
+00:46:00,400 --> 00:46:04,080
+I emailed him. 
+He referred me to Lee Edwards at
+
+797
+00:46:04,080 --> 00:46:07,440
+Root Ventures. 
+They ended up doing the the seed
+
+798
+00:46:07,440 --> 00:46:12,960
+round and I, yeah, within like 
+from sort of no plan at all. 
+
+799
+00:46:13,440 --> 00:46:17,960
+Two weeks later I had two and a 
+half, $1,000,000 and I could 
+
+800
+00:46:18,520 --> 00:46:20,000
+bring in Max and Antonio. 
+Nice. 
+
+801
+00:46:20,280 --> 00:46:24,000
+And you're like, now the vision,
+Yeah, you see like a path to 
+
+802
+00:46:24,000 --> 00:46:25,640
+your vision. 
+Yeah. 
+
+803
+00:46:25,640 --> 00:46:28,720
+I mean, the Step 1 is like we 
+need to even be able to use that
+
+804
+00:46:29,120 --> 00:46:32,240
+to work. 
+So that was 2021 and that then 
+
+805
+00:46:32,240 --> 00:46:34,640
+it was just a year of the three 
+of us grinding. 
+
+806
+00:46:34,640 --> 00:46:37,920
+We brought in Nate, our 
+designer, over that summer to 
+
+807
+00:46:37,920 --> 00:46:40,280
+make sure that like, whatever we
+came up with looked good. 
+
+808
+00:46:41,600 --> 00:46:45,640
+And a year, just about a year 
+later exactly, we started 
+
+809
+00:46:45,640 --> 00:46:48,680
+writing code on Zed NZ for the 
+first time. 
+
+810
+00:46:48,800 --> 00:46:52,880
+That's cool. 
+And then but I don't know now. 
+
+811
+00:46:52,880 --> 00:46:54,160
+It's like for a lot of 
+compilers. 
+
+812
+00:46:54,160 --> 00:46:56,800
+It's like the moment you can, 
+you can compile with your own. 
+
+813
+00:46:57,160 --> 00:46:59,560
+Exactly. 
+Except for you is writing a code
+
+814
+00:46:59,560 --> 00:47:00,560
+editor. 
+It was the moment you could 
+
+815
+00:47:00,560 --> 00:47:03,880
+actually be working on Zed NZ. 
+Yeah, I mean, I remember the 
+
+816
+00:47:03,880 --> 00:47:06,200
+first time I like started 
+editing text in this and I'm 
+
+817
+00:47:06,200 --> 00:47:11,200
+like, holy shit, this is amazing
+because it's so fast and I did 
+
+818
+00:47:11,200 --> 00:47:15,600
+not know I I just, you know, I 
+was like, we are gonna make this
+
+819
+00:47:15,600 --> 00:47:19,280
+as fast as we possibly can. 
+But until I actually had it and 
+
+820
+00:47:19,280 --> 00:47:22,120
+felt it under my fingers, like I
+didn't even really know what I 
+
+821
+00:47:22,120 --> 00:47:24,520
+had. 
+Yeah, yeah. 
+
+822
+00:47:24,520 --> 00:47:27,680
+So we're. 
+Used to these massive things 
+
+823
+00:47:27,680 --> 00:47:30,640
+that have all these. 
+Layers of inter reapply CSS 
+
+824
+00:47:30,680 --> 00:47:33,800
+styles and reflow the Dom on 
+every keystroke or whatever 
+
+825
+00:47:33,800 --> 00:47:37,360
+you're doing inside of electron.
+Or you know, you could be inside
+
+826
+00:47:37,360 --> 00:47:40,840
+of a terminal emulator, which is
+a lot faster but comes with its 
+
+827
+00:47:40,840 --> 00:47:43,960
+own set of trade-offs. 
+So what? 
+
+828
+00:47:43,960 --> 00:47:48,280
+Are the So going into Zed, what 
+are the key things that you're 
+
+829
+00:47:48,280 --> 00:47:50,000
+like? 
+Here's what we need to do better
+
+830
+00:47:50,000 --> 00:47:51,040
+this time. 
+Right. 
+
+831
+00:47:51,320 --> 00:47:54,720
+Well, I knew that I wanted to 
+bake collaboration in at the 
+
+832
+00:47:54,720 --> 00:47:57,800
+core of the product. 
+Which seems like something you 
+
+833
+00:47:58,120 --> 00:48:01,360
+would have to do it right. 
+You'd have to do it from the. 
+
+834
+00:48:01,360 --> 00:48:02,800
+Beginning. 
+That's how I feel. 
+
+835
+00:48:02,840 --> 00:48:07,040
+Yeah, because otherwise you're 
+just everything you are trying 
+
+836
+00:48:07,040 --> 00:48:11,080
+to work on would have to. 
+Yeah, it seems like you'd have 
+
+837
+00:48:11,080 --> 00:48:13,640
+to do it. 
+And even then, I think, I don't 
+
+838
+00:48:13,640 --> 00:48:16,320
+know, I still have a sparkle in 
+my eye to reboot some of the 
+
+839
+00:48:16,360 --> 00:48:20,440
+what we've built yet again. 
+And kind of, yeah, like that 
+
+840
+00:48:20,440 --> 00:48:23,800
+house down the street, encrusted
+Butte, sort of lift some of the 
+
+841
+00:48:23,800 --> 00:48:27,320
+pieces of Zen off the ground and
+put them on an even new 
+
+842
+00:48:27,320 --> 00:48:29,880
+foundation. 
+I mean, a big part of our ethos 
+
+843
+00:48:29,920 --> 00:48:34,280
+is not being afraid to take 
+aggressive deep cuts. 
+
+844
+00:48:34,800 --> 00:48:36,680
+There was a word. 
+For this, you said on Twitter 
+
+845
+00:48:36,680 --> 00:48:38,640
+just in the last week. 
+Oh yeah, shreds. 
+
+846
+00:48:38,720 --> 00:48:40,560
+Shreds. 
+Yeah, I don't even remember 
+
+847
+00:48:40,560 --> 00:48:43,000
+where that word came from, but 
+now it's like, become part of 
+
+848
+00:48:43,000 --> 00:48:45,520
+our, like, company vocabulary or
+something. 
+
+849
+00:48:45,840 --> 00:48:47,560
+The idea of shredding something.
+Yeah. 
+
+850
+00:48:47,720 --> 00:48:48,760
+And I think it is through the 
+shred. 
+
+851
+00:48:48,760 --> 00:48:52,560
+But it really means like, you 
+know, being willing to take a 
+
+852
+00:48:52,560 --> 00:48:58,200
+big bite and kind of let the 
+compiler and, yeah, like, absorb
+
+853
+00:48:58,200 --> 00:49:00,320
+a lot of blood to get something 
+right. 
+
+854
+00:49:01,240 --> 00:49:05,040
+And, you know, you need to think
+carefully before doing something
+
+855
+00:49:05,040 --> 00:49:07,000
+like that. 
+But not being afraid to do it 
+
+856
+00:49:07,000 --> 00:49:11,080
+is, to me, really important. 
+Otherwise you just end up in all
+
+857
+00:49:11,080 --> 00:49:13,080
+these local maxima and you're 
+stuck. 
+
+858
+00:49:13,480 --> 00:49:15,280
+And you're kind of, I don't 
+know, there. 
+
+859
+00:49:15,400 --> 00:49:17,880
+You can take things really far 
+incrementally. 
+
+860
+00:49:18,680 --> 00:49:22,200
+You know, XP taught us all just 
+how far you can take things. 
+
+861
+00:49:22,200 --> 00:49:25,320
+But I still believe that 
+sometimes you get to a point 
+
+862
+00:49:25,320 --> 00:49:29,840
+with something where you 
+realize, like the DNA of that 
+
+863
+00:49:29,840 --> 00:49:32,000
+thing just can't take you where 
+you want to go. 
+
+864
+00:49:32,800 --> 00:49:35,200
+What you've learned in the 
+process of getting it to that 
+
+865
+00:49:35,200 --> 00:49:39,680
+point now needs to be kind of, 
+yeah, precipitated out into a. 
+
+866
+00:49:39,680 --> 00:49:43,840
+New otherwise you're gonna be 
+beholden to the some cost 
+
+867
+00:49:43,840 --> 00:49:48,240
+fallacy forever, right. 
+If you if you can't do that, 
+
+868
+00:49:48,680 --> 00:49:52,200
+yeah, right. 
+So, OK, so collaboration, you're
+
+869
+00:49:52,200 --> 00:49:54,960
+like this has to be right in 
+from the big foundation. 
+
+870
+00:49:54,960 --> 00:49:58,560
+And. 
+Then performance, so on 
+
+871
+00:49:58,560 --> 00:50:02,320
+collaboration. 
+So that was that was where CRDT 
+
+872
+00:50:02,320 --> 00:50:06,240
+in your experience there then 
+LED you to the the architecture 
+
+873
+00:50:06,240 --> 00:50:08,000
+that would enable that kind of 
+in the core. 
+
+874
+00:50:08,160 --> 00:50:10,280
+Right. 
+Yeah, like every buffer in Zed 
+
+875
+00:50:10,320 --> 00:50:13,880
+fundamentally is a CRDT. 
+And it was really important 
+
+876
+00:50:13,880 --> 00:50:17,360
+because in Teletype we sort of 
+built the CRDT, then it kind of 
+
+877
+00:50:17,360 --> 00:50:20,800
+bolted on and observed the 
+buffer and it was sort of this 
+
+878
+00:50:20,800 --> 00:50:24,320
+double bookkeeping. 
+It just never felt quite right. 
+
+879
+00:50:24,920 --> 00:50:28,240
+But the core of the editing 
+experience is the CRDT now. 
+
+880
+00:50:28,240 --> 00:50:31,640
+Exactly right. 
+And then also making sure that 
+
+881
+00:50:31,640 --> 00:50:35,920
+we architected it in such a way 
+that it could be multi threaded 
+
+882
+00:50:35,920 --> 00:50:38,040
+friendly, multi threading 
+friendly. 
+
+883
+00:50:38,400 --> 00:50:41,720
+So obviously the choice of Rust 
+being a big part of that, but 
+
+884
+00:50:41,720 --> 00:50:45,400
+just because you've chosen Rust 
+also using persistent data 
+
+885
+00:50:45,400 --> 00:50:47,160
+structures. 
+So not only is every buffer a 
+
+886
+00:50:47,160 --> 00:50:52,240
+CRDT, every buffer is a 
+persistent copy on right B tree.
+
+887
+00:50:52,600 --> 00:50:57,080
+That makes it really easy to 
+kind of O1 clone an ARC and take
+
+888
+00:50:57,080 --> 00:50:59,920
+it to a background thread, do 
+work in the background. 
+
+889
+00:51:00,320 --> 00:51:03,040
+And it being a CRDT is really 
+great because I talked about 
+
+890
+00:51:03,040 --> 00:51:06,080
+those like immutable stable 
+anchor reference points. 
+
+891
+00:51:06,240 --> 00:51:09,120
+Yeah, well, now you can kind of 
+go to the background, do work, 
+
+892
+00:51:09,160 --> 00:51:11,960
+take it back to the foreground 
+and make sense of what the hell 
+
+893
+00:51:11,960 --> 00:51:15,080
+you've done because it's 
+anchored to locations. 
+
+894
+00:51:15,080 --> 00:51:18,240
+And even if there have been 
+edits in the meantime, you can. 
+
+895
+00:51:18,240 --> 00:51:20,960
+Realize this relationship 
+between the architecture of the 
+
+896
+00:51:20,960 --> 00:51:24,320
+CRDT and the concurrency that 
+you also want so that you can 
+
+897
+00:51:24,320 --> 00:51:27,440
+drive the performant. 
+You know, never lock in your, 
+
+898
+00:51:27,480 --> 00:51:29,240
+your, you know you're always 
+going to be able to move your 
+
+899
+00:51:29,240 --> 00:51:30,920
+cursor around or. 
+Exactly. 
+
+900
+00:51:31,080 --> 00:51:33,440
+Yeah, like we're parsing on a 
+background thread. 
+
+901
+00:51:34,560 --> 00:51:36,560
+We're soft wrapping on a 
+background thread. 
+
+902
+00:51:36,680 --> 00:51:39,680
+Yeah, you can imagine like 
+you're saying if you hadn't had 
+
+903
+00:51:40,240 --> 00:51:43,600
+had thought, OK, we need good 
+concurrency for good 
+
+904
+00:51:43,600 --> 00:51:46,680
+performance. 
+We need a CRDT for the data 
+
+905
+00:51:46,680 --> 00:51:49,240
+structure and the collaboration.
+If you tried to put those two 
+
+906
+00:51:49,240 --> 00:51:53,040
+things together after the fact, 
+like it's not gonna go well, 
+
+907
+00:51:53,160 --> 00:51:54,760
+right? 
+Yeah, yeah. 
+
+908
+00:51:54,760 --> 00:51:57,760
+And performance has just been at
+the core of everything we do. 
+
+909
+00:51:57,760 --> 00:52:00,040
+You've mentioned premature 
+optimization. 
+
+910
+00:52:00,440 --> 00:52:02,760
+I guess there's a difference 
+between premature optimization 
+
+911
+00:52:02,760 --> 00:52:04,880
+and sort of worrying about 
+performance later. 
+
+912
+00:52:05,800 --> 00:52:09,400
+Like performance is something 
+that I think you need to decide 
+
+913
+00:52:09,400 --> 00:52:12,960
+if you care about performance, 
+to care about it from day one 
+
+914
+00:52:14,360 --> 00:52:17,200
+and just make sure that things 
+are protected and keep checking 
+
+915
+00:52:17,200 --> 00:52:20,960
+back on your assumptions. 
+So just be, yeah, that doesn't 
+
+916
+00:52:20,960 --> 00:52:24,280
+mean optimizing stuff that 
+doesn't matter, but it does 
+
+917
+00:52:24,280 --> 00:52:27,080
+mean, I think, paying attention 
+and prioritizing it. 
+
+918
+00:52:27,600 --> 00:52:30,400
+From the beginning. 
+An example of that is if you, if
+
+919
+00:52:30,400 --> 00:52:34,360
+you don't have performance as a 
+stated goal, then you may not 
+
+920
+00:52:34,640 --> 00:52:37,680
+have built something that could 
+be run concurrently, right? 
+
+921
+00:52:37,800 --> 00:52:40,400
+And then you're not going to be 
+able to actually optimize for 
+
+922
+00:52:40,400 --> 00:52:42,760
+that performance later, right? 
+Exactly. 
+
+923
+00:52:42,760 --> 00:52:47,400
+So it needs to be to the best of
+your ability, like baked in to 
+
+924
+00:52:47,400 --> 00:52:50,200
+the core architecture. 
+So those were like, really the 
+
+925
+00:52:50,200 --> 00:52:53,800
+first two big foundations, 
+collaborative, really freaking 
+
+926
+00:52:53,800 --> 00:52:55,440
+fast. 
+And then with everything we do, 
+
+927
+00:52:55,440 --> 00:52:57,440
+I want it to be elegantly 
+designed. 
+
+928
+00:52:57,440 --> 00:53:02,120
+And that's about sort of being 
+user friendly, but not like 
+
+929
+00:53:02,120 --> 00:53:07,080
+assaulting the user with like, 
+affordances and icons and like 
+
+930
+00:53:07,360 --> 00:53:10,480
+trying to walk that balance 
+between sort of friendly but 
+
+931
+00:53:10,720 --> 00:53:14,480
+sleek. 
+That's a continual struggle. 
+
+932
+00:53:14,560 --> 00:53:17,560
+Yeah. 
+But then the next big piece that
+
+933
+00:53:17,560 --> 00:53:21,320
+is like an exciting new frontier
+for us and a place we're 
+
+934
+00:53:21,480 --> 00:53:25,560
+actively learning is just the 
+rise of language models and AI. 
+
+935
+00:53:25,560 --> 00:53:30,400
+And the fact that we now have a 
+technology doesn't always work 
+
+936
+00:53:30,640 --> 00:53:33,360
+perfectly. 
+But to me, it absolutely blows 
+
+937
+00:53:33,360 --> 00:53:37,720
+my mind that I can type a chunk 
+of natural language and have it 
+
+938
+00:53:37,720 --> 00:53:41,720
+spit out a program, oftentimes 
+the correct one or one that's 
+
+939
+00:53:41,720 --> 00:53:45,560
+closed, and I can tweak it. 
+And so, yeah, we're digging in 
+
+940
+00:53:45,560 --> 00:53:47,520
+there. 
+I mean, one place the CRDTS are 
+
+941
+00:53:47,520 --> 00:53:49,880
+amazing, there is, we're 
+building this feature right now 
+
+942
+00:53:49,880 --> 00:53:55,360
+called live diffs, where when 
+the LLM proposes like a set of, 
+
+943
+00:53:55,680 --> 00:53:57,800
+we have this feature called 
+multi buffers, first of all, 
+
+944
+00:53:57,800 --> 00:54:02,320
+which is basically like excerpts
+from files all over the code 
+
+945
+00:54:02,320 --> 00:54:05,840
+base that are all brought 
+together in one editor. 
+
+946
+00:54:06,240 --> 00:54:09,760
+And you can kind of move your 
+cursor from the top of one file 
+
+947
+00:54:09,760 --> 00:54:13,360
+to the bottom of another all 
+inside of one editor with these 
+
+948
+00:54:13,360 --> 00:54:16,000
+little windows into different 
+parts of files from all over the
+
+949
+00:54:16,000 --> 00:54:18,200
+place. 
+You can do like a multi cursor 
+
+950
+00:54:18,200 --> 00:54:21,120
+edit that would span multiple 
+files potentially. 
+
+951
+00:54:21,120 --> 00:54:23,560
+That's cool. 
+But it's amazing for this live 
+
+952
+00:54:23,560 --> 00:54:26,680
+diff feature we're building, 
+which is like the LLM will 
+
+953
+00:54:26,680 --> 00:54:30,560
+propose this set of changes and 
+it's sort of pulled up in a 
+
+954
+00:54:30,560 --> 00:54:34,080
+multi buffer where you see all 
+the proposed changes with ink 
+
+955
+00:54:34,080 --> 00:54:36,560
+with excerpts across all 
+different spots in your code 
+
+956
+00:54:36,560 --> 00:54:39,440
+base. 
+But because what you're looking 
+
+957
+00:54:39,440 --> 00:54:43,120
+at is actually, it's like a live
+branch. 
+
+958
+00:54:43,120 --> 00:54:46,160
+It's sort of a each buffer that 
+has been changed. 
+
+959
+00:54:46,560 --> 00:54:50,720
+What's actually been changed is 
+like a branch of that buffer. 
+
+960
+00:54:51,200 --> 00:54:54,680
+Via the CRDT. 
+Via the CRDT, and if you're if 
+
+961
+00:54:54,680 --> 00:54:58,720
+the upstream buffer gets edited 
+in the meantime, we can merge 
+
+962
+00:54:58,720 --> 00:55:03,240
+that into the branch in real 
+time like with no conflicts 
+
+963
+00:55:03,240 --> 00:55:04,480
+with. 
+No conflicts. 
+
+964
+00:55:04,560 --> 00:55:07,360
+Yeah, but but also you can show 
+the diffs. 
+
+965
+00:55:07,960 --> 00:55:12,040
+Like the diff will adapt itself 
+OK, even as the base buffer on 
+
+966
+00:55:12,040 --> 00:55:14,680
+which the diff is applied. 
+I mean, obviously you could edit
+
+967
+00:55:14,680 --> 00:55:17,560
+right in the spot where 
+something is, but for edits that
+
+968
+00:55:17,560 --> 00:55:20,760
+are kind of not directly 
+conflicting, there's just this 
+
+969
+00:55:20,760 --> 00:55:22,800
+really. 
+And there are probably ways you 
+
+970
+00:55:22,800 --> 00:55:25,160
+could hack this experience 
+together, you know, again, 
+
+971
+00:55:25,160 --> 00:55:27,760
+bolting it on top. 
+But like for us, it's just like 
+
+972
+00:55:27,760 --> 00:55:31,800
+really straightforward to create
+this little branch buffer and 
+
+973
+00:55:31,800 --> 00:55:35,000
+just automatically send 
+operations from the origin to 
+
+974
+00:55:35,000 --> 00:55:36,240
+it. 
+And then we want to merge the 
+
+975
+00:55:36,240 --> 00:55:38,200
+changes back in. 
+That becomes really easy. 
+
+976
+00:55:38,520 --> 00:55:41,320
+It doesn't matter if the change 
+is coming from some remote 
+
+977
+00:55:41,320 --> 00:55:44,160
+developer working on a file 
+you're viewing, or if it comes 
+
+978
+00:55:44,160 --> 00:55:46,800
+from the LLM or right. 
+Who cares, right? 
+
+979
+00:55:46,800 --> 00:55:48,280
+Right. 
+It's all coming through the the 
+
+980
+00:55:48,280 --> 00:55:49,960
+same mechanism. 
+To see some sort of 
+
+981
+00:55:49,960 --> 00:55:51,160
+contribution. 
+Yeah. 
+
+982
+00:55:51,480 --> 00:55:57,440
+So do you see, I mean, you're 
+building this foundation really,
+
+983
+00:55:58,200 --> 00:56:03,880
+I don't know foundationally and 
+but I, I'm starting to say, huh,
+
+984
+00:56:04,040 --> 00:56:07,440
+it seems like you could build 
+things on top of this that 
+
+985
+00:56:07,440 --> 00:56:11,440
+you're not even imagine. 
+What other domains could you go?
+
+986
+00:56:11,440 --> 00:56:15,280
+Right, because you're putting 
+these really solid foundational 
+
+987
+00:56:15,280 --> 00:56:19,600
+pieces in, it seems like maybe 
+there's a, you know, are you 
+
+988
+00:56:19,920 --> 00:56:22,400
+thinking in these terms or are 
+you going in a? 
+
+989
+00:56:22,400 --> 00:56:24,680
+Lot, I mean, often I'm just 
+thinking about like the next 
+
+990
+00:56:24,960 --> 00:56:29,680
+three months sure, I just like. 
+So this is kind of where where 
+
+991
+00:56:29,680 --> 00:56:34,600
+Eclipse went is Eclipse was was 
+originally just an IDE, but then
+
+992
+00:56:34,600 --> 00:56:38,880
+they're like, no, this is the 
+foundation of so many, so many 
+
+993
+00:56:39,440 --> 00:56:41,760
+pieces of software. 
+And so they, I don't know, there
+
+994
+00:56:41,760 --> 00:56:46,040
+was some branding of Eclipse 
+where IBM or whoever was was 
+
+995
+00:56:46,040 --> 00:56:47,840
+being like, OK, you know, we 
+could build business 
+
+996
+00:56:47,840 --> 00:56:50,440
+applications on it. 
+So it's a similar concept too. 
+
+997
+00:56:50,440 --> 00:56:52,400
+Yeah, to that is what you're. 
+Saying well, the UI. 
+
+998
+00:56:52,640 --> 00:56:57,400
+So the UI framework is called 
+GPUI because it's UI framework 
+
+999
+00:56:57,400 --> 00:56:59,240
+optimized for the GPU. 
+About. 
+
+1000
+00:56:59,520 --> 00:57:02,680
+That and it's Apache 2 license 
+right now, although we haven't 
+
+1001
+00:57:02,680 --> 00:57:05,280
+really been over backwards to 
+make it. 
+
+1002
+00:57:05,440 --> 00:57:07,160
+It's not like Rails right now, 
+right? 
+
+1003
+00:57:07,160 --> 00:57:09,200
+We're not promoting as it's own 
+thing. 
+
+1004
+00:57:09,200 --> 00:57:12,680
+It's like in our repo. 
+But eventually, I do think it'd 
+
+1005
+00:57:12,680 --> 00:57:15,960
+be great when we have more 
+little more bandwidth to spin it
+
+1006
+00:57:15,960 --> 00:57:20,840
+out and let other people build 
+fast desktop apps that are 
+
+1007
+00:57:20,840 --> 00:57:23,480
+cross-platform with the same 
+tech. 
+
+1008
+00:57:23,800 --> 00:57:26,360
+Maybe there's more Rust UI 
+frameworks that are out there 
+
+1009
+00:57:26,360 --> 00:57:29,120
+now than there were when we 
+started on this thing, but this 
+
+1010
+00:57:29,120 --> 00:57:32,840
+one's gotten a lot of love and 
+has a major application being 
+
+1011
+00:57:32,840 --> 00:57:35,840
+built on top of it and a lot of 
+resources dumped into it. 
+
+1012
+00:57:35,880 --> 00:57:37,640
+And will essentially have a 
+windows. 
+
+1013
+00:57:38,560 --> 00:57:43,120
+Yes, there's actually, Yeah. 
+At the time of recording in 
+
+1014
+00:57:43,840 --> 00:57:49,000
+yeah, October 2024, we have a. 
+You can clone the repo. 
+
+1015
+00:57:49,040 --> 00:57:52,760
+It's Zed is open source. 
+The bulk of the code is GPL 
+
+1016
+00:57:52,760 --> 00:57:56,840
+licensed, but the UI framework 
+is Apache, and you can build the
+
+1017
+00:57:56,840 --> 00:58:00,040
+repo on Windows. 
+Wait for a long time, we had the
+
+1018
+00:58:00,040 --> 00:58:04,160
+same situation with Linux, and 
+then we had a kind of team push 
+
+1019
+00:58:04,160 --> 00:58:09,280
+to get it from it builds and 
+your mileage may vary, which is 
+
+1020
+00:58:09,280 --> 00:58:12,920
+kind of the status of Windows 
+now to like this is official. 
+
+1021
+00:58:12,920 --> 00:58:15,520
+And even then it's really hard 
+on Linux because it's just so 
+
+1022
+00:58:16,520 --> 00:58:17,520
+diverse. 
+Yeah. 
+
+1023
+00:58:18,640 --> 00:58:22,160
+But so before we sort of 
+officially endorse it on 
+
+1024
+00:58:22,160 --> 00:58:26,440
+Windows, I think we need a 
+similarly like focused team push
+
+1025
+00:58:26,440 --> 00:58:29,480
+around just like tying the loose
+ends up. 
+
+1026
+00:58:29,600 --> 00:58:33,640
+But you could experiment now. 
+And but at that point, like once
+
+1027
+00:58:33,640 --> 00:58:38,440
+you've got it, I could use that 
+library and I could have a 
+
+1028
+00:58:38,440 --> 00:58:41,760
+single source that would work 
+across all these platforms. 
+
+1029
+00:58:41,920 --> 00:58:45,600
+Yeah, yeah. 
+So yeah, why did you build GPUI?
+
+1030
+00:58:45,680 --> 00:58:47,360
+Yeah, I get that right, GPUI. 
+Yeah, I mean. 
+
+1031
+00:58:47,400 --> 00:58:51,560
+So this is Rust and it's GPU. 
+What was the need for? 
+
+1032
+00:58:52,000 --> 00:58:56,120
+Yeah, I mean we, I called it 
+GPUI just cuz like, I don't 
+
+1033
+00:58:56,120 --> 00:59:00,360
+know, I have a penchant for like
+simple names, I guess, or like 
+
+1034
+00:59:00,360 --> 00:59:02,880
+short kind of to the point. 
+Yeah. 
+
+1035
+00:59:02,880 --> 00:59:10,600
+And it was atomic names, Yeah. 
+But the, well, when we first 
+
+1036
+00:59:10,600 --> 00:59:15,040
+started on Z, we originally 
+thought maybe we can write all 
+
+1037
+00:59:15,040 --> 00:59:19,440
+the core hard parts in Rust and 
+still have the UI be an 
+
+1038
+00:59:19,440 --> 00:59:22,440
+electron. 
+That didn't last very long 
+
+1039
+00:59:22,440 --> 00:59:25,000
+because we did all this work to 
+make the core fast so that we'd 
+
+1040
+00:59:25,000 --> 00:59:29,200
+immediately, like fog hissed it 
+away, parsing the Jason and 
+
+1041
+00:59:29,200 --> 00:59:31,240
+dipping the React trees and 
+everything. 
+
+1042
+00:59:31,640 --> 00:59:34,040
+So finally I was just like, we 
+can't do that. 
+
+1043
+00:59:34,720 --> 00:59:38,240
+And so the idea was like, you 
+know what, in React, what you're
+
+1044
+00:59:38,240 --> 00:59:40,000
+doing right is you build the 
+virtual Dom. 
+
+1045
+00:59:40,000 --> 00:59:42,520
+Why do you build a virtual Dom? 
+Well, cuz you, you need to be 
+
+1046
+00:59:42,560 --> 00:59:45,880
+able to diff 1 version of the 
+Dom against the version you 
+
+1047
+00:59:45,880 --> 00:59:47,640
+want. 
+And then once you've changed the
+
+1048
+00:59:47,880 --> 00:59:50,840
+right, once you've diffed it, 
+now you can go grab the retained
+
+1049
+00:59:50,840 --> 00:59:53,880
+mode structures, the object 
+oriented representation of the 
+
+1050
+00:59:53,880 --> 00:59:56,760
+Dom and change that. 
+And then the browser can 
+
+1051
+00:59:56,760 --> 01:00:00,080
+recognize that you've changed 
+that and reapply the styles and 
+
+1052
+01:00:00,080 --> 01:00:02,680
+relay out and all that. 
+And I was just like, what if we 
+
+1053
+01:00:02,680 --> 01:00:07,400
+just build? 
+One tree and just feed that 
+
+1054
+01:00:07,400 --> 01:00:09,960
+thing the GPU as fast as we 
+possibly can. 
+
+1055
+01:00:09,960 --> 01:00:11,720
+Like that's what a video game 
+does right? 
+
+1056
+01:00:11,720 --> 01:00:15,040
+Like, you know, I was looking at
+like, you know, whatever, 
+
+1057
+01:00:15,160 --> 01:00:20,440
+whatever the latest, like, 
+Electronic Computer Expo demos 
+
+1058
+01:00:20,440 --> 01:00:24,560
+were at the time and just seeing
+these like, crazy 3D worlds that
+
+1059
+01:00:24,560 --> 01:00:27,400
+were being rendered at ungodly 
+frame rates. 
+
+1060
+01:00:27,400 --> 01:00:29,960
+Yeah, just be like, OK, surely. 
+Why is my? 
+
+1061
+01:00:30,520 --> 01:00:32,920
+Why is my code editor so? 
+Slow, yeah. 
+
+1062
+01:00:32,960 --> 01:00:36,640
+So could the UI framework be 
+used to create games? 
+
+1063
+01:00:37,440 --> 01:00:40,760
+Yeah, although they it's mostly 
+for I think like productivity 
+
+1064
+01:00:40,760 --> 01:00:43,040
+apps I think cuz it's really 
+more. 
+
+1065
+01:00:43,120 --> 01:00:46,400
+Use and exactly like at the 
+core. 
+
+1066
+01:00:46,400 --> 01:00:50,360
+Of this UI framework is like 700
+lines of shader code roughly. 
+
+1067
+01:00:51,000 --> 01:00:52,600
+And like what does that shader 
+code do? 
+
+1068
+01:00:52,600 --> 01:00:55,680
+It draws boxes with rounded, 
+rounded corners. 
+
+1069
+01:00:55,680 --> 01:01:01,560
+It draws drop shadows. 
+It grabs textures out of a 
+
+1070
+01:01:01,560 --> 01:01:06,280
+Sprite Atlas of like the end 
+different variants, sub pixel 
+
+1071
+01:01:06,280 --> 01:01:09,280
+rendered variants of every 
+single glyph that's on needs to 
+
+1072
+01:01:09,280 --> 01:01:13,080
+be rendered on screen and sort 
+of like types up types that's on
+
+1073
+01:01:13,600 --> 01:01:17,280
+types that's them on screen as 
+like quads, right. 
+
+1074
+01:01:17,880 --> 01:01:19,800
+So it's not, I don't think it's 
+very. 
+
+1075
+01:01:19,800 --> 01:01:22,440
+It wouldn't the game you built 
+wouldn't be very fun. 
+
+1076
+01:01:23,160 --> 01:01:25,480
+It's very much. 
+Very much if I built it as a 
+
+1077
+01:01:25,560 --> 01:01:29,200
+productivity UI kit exactly like
+General, you know. 
+
+1078
+01:01:29,400 --> 01:01:30,840
+Could you build an e-mail client
+on it? 
+
+1079
+01:01:30,840 --> 01:01:32,200
+That was amazing. 
+Yes. 
+
+1080
+01:01:32,520 --> 01:01:35,760
+Or are you actually rendering 
+your own fonts? 
+
+1081
+01:01:36,320 --> 01:01:40,880
+We call out to Cortex to 
+rasterize the font and then we 
+
+1082
+01:01:41,400 --> 01:01:45,040
+depending on where the font is 
+positioned by the layout system.
+
+1083
+01:01:45,040 --> 01:01:47,800
+So I'm talking on Mac. 
+Obviously on Linux we have our 
+
+1084
+01:01:47,800 --> 01:01:52,600
+own story there, but like on 
+Mac, we use Cortex to perform 
+
+1085
+01:01:52,600 --> 01:01:56,880
+layout, which we cache, and then
+depending on where the layout, 
+
+1086
+01:01:57,360 --> 01:02:01,640
+once the character will choose a
+different subpixel variant of 
+
+1087
+01:02:01,640 --> 01:02:04,280
+that character. 
+If we haven't rasterized it yet,
+
+1088
+01:02:04,280 --> 01:02:08,280
+we'll call into Cortex to 
+rasterize it and then upload it 
+
+1089
+01:02:08,280 --> 01:02:12,160
+to a Sprite Atlas on the GPU, 
+which is just a big texture. 
+
+1090
+01:02:12,520 --> 01:02:17,560
+If you look at it, it just looks
+like a, a ransom note or 
+
+1091
+01:02:17,560 --> 01:02:19,840
+whatever, right? 
+Like all the different like 
+
+1092
+01:02:19,840 --> 01:02:23,560
+characters in there. 
+And then we just like composite 
+
+1093
+01:02:24,920 --> 01:02:29,200
+sort of little sprites onto the 
+screen, you know, for every 
+
+1094
+01:02:29,200 --> 01:02:30,920
+single character where it needs 
+to occur. 
+
+1095
+01:02:31,720 --> 01:02:35,320
+Antonio can describe the the 
+math behind it. 
+
+1096
+01:02:35,320 --> 01:02:37,720
+But we, you know, we've 
+rasterized Bezier curves on the 
+
+1097
+01:02:37,720 --> 01:02:42,200
+GPU. 
+We, yeah, do this cool Gaussian 
+
+1098
+01:02:42,200 --> 01:02:45,160
+blur thing that we cargo 
+occulted. 
+
+1099
+01:02:45,640 --> 01:02:48,040
+Well, we understood it 
+eventually, but we took it from 
+
+1100
+01:02:48,040 --> 01:02:53,040
+this Figma blog post that Evan 
+Williams did for how to do like 
+
+1101
+01:02:53,280 --> 01:02:58,360
+a Gaussian blurred box for drop 
+shadows. 
+
+1102
+01:02:59,120 --> 01:03:00,840
+Yeah. 
+Anyway, it's all just like 
+
+1103
+01:03:00,960 --> 01:03:03,800
+fairly simple. 
+We use sine distance fields for 
+
+1104
+01:03:03,800 --> 01:03:07,920
+everything, which is just 
+basically simple mathematical 
+
+1105
+01:03:07,920 --> 01:03:13,040
+formulas that describe how far a
+pixel is from the edge of some 
+
+1106
+01:03:13,040 --> 01:03:17,280
+piece of geometry. 
+So you can imagine some formula 
+
+1107
+01:03:17,280 --> 01:03:21,200
+like imagining a rounded corner 
+rectangle with the center here. 
+
+1108
+01:03:22,080 --> 01:03:25,440
+You know, for every pixel inside
+of a certain area, like is it 
+
+1109
+01:03:25,480 --> 01:03:27,880
+inside the rectangle, Is it 
+outside the rectangle? 
+
+1110
+01:03:28,080 --> 01:03:30,000
+Is it right on the edge of the 
+rectangle? 
+
+1111
+01:03:30,280 --> 01:03:32,880
+If it's right on the edge and 
+the rectangle has a border 
+
+1112
+01:03:32,880 --> 01:03:36,320
+color, then we're gonna sample 
+from the border color and blend 
+
+1113
+01:03:36,320 --> 01:03:39,240
+it in to the background color if
+it's sort of in between the 
+
+1114
+01:03:39,240 --> 01:03:41,840
+border and the edge. 
+Yeah, but there's quite a bit of
+
+1115
+01:03:41,880 --> 01:03:45,440
+engineering just in the GPUI. 
+Yeah, yeah. 
+
+1116
+01:03:45,680 --> 01:03:49,960
+But what it ultimately got us is
+like my favorite demo to give is
+
+1117
+01:03:49,960 --> 01:03:54,760
+like get high frame rate. 
+Like I have one of the new 
+
+1118
+01:03:54,760 --> 01:03:58,200
+MacBook Pros that had the 
+promotion displays that kind of 
+
+1119
+01:03:58,400 --> 01:04:03,120
+burst up to 120 frames. 
+And I have always, and this is 
+
+1120
+01:04:03,120 --> 01:04:04,800
+probably why I needed a faster 
+code editor. 
+
+1121
+01:04:04,800 --> 01:04:07,640
+I've always overclocked my key 
+repeat rate so the cursor moves.
+
+1122
+01:04:07,640 --> 01:04:10,840
+Faster. 
+So I have my key repeat rate 
+
+1123
+01:04:10,840 --> 01:04:14,000
+overclocked and I just hold down
+the binding to switch tabs in 
+
+1124
+01:04:14,000 --> 01:04:17,600
+the editor and you can read the 
+contents of every buffer that's 
+
+1125
+01:04:17,600 --> 01:04:20,960
+open in the workspace at the 
+same time cuz they all just blur
+
+1126
+01:04:21,360 --> 01:04:27,320
+over each other cuz yeah so just
+like so fast yeah and that's 
+
+1127
+01:04:27,320 --> 01:04:30,320
+like, I don't know, it feels 
+really good being on this 
+
+1128
+01:04:30,320 --> 01:04:32,600
+foundation and having. 
+A ton of. 
+
+1129
+01:04:32,600 --> 01:04:34,480
+Coding. 
+It makes coding feel like you're
+
+1130
+01:04:34,480 --> 01:04:36,080
+playing a game. 
+Exactly. 
+
+1131
+01:04:36,600 --> 01:04:39,040
+Yeah, exactly. 
+It feels really satisfying just 
+
+1132
+01:04:39,040 --> 01:04:41,200
+always never dropping A-frame. 
+Yeah. 
+
+1133
+01:04:41,200 --> 01:04:43,720
+And I think, I don't know, I, 
+it's hard for me to imagine 
+
+1134
+01:04:43,720 --> 01:04:46,600
+going back ever, even if I 
+hadn't written it myself. 
+
+1135
+01:04:46,600 --> 01:04:48,480
+It's my baby. 
+So I wouldn't go back. 
+
+1136
+01:04:48,480 --> 01:04:52,760
+But like, just going back to an,
+an environment where frames are 
+
+1137
+01:04:52,760 --> 01:04:56,800
+getting dropped, even if it's 
+only every, you know, every so 
+
+1138
+01:04:56,800 --> 01:04:59,360
+often that a frame gets dropped.
+It's annoying. 
+
+1139
+01:04:59,360 --> 01:05:02,080
+It's like a microaggression 
+against your coding flow. 
+
+1140
+01:05:02,800 --> 01:05:06,680
+To have lagging code editors, so
+just constant microaggressions. 
+
+1141
+01:05:07,480 --> 01:05:10,760
+This is how I feel though and 
+when my editor is being lagging 
+
+1142
+01:05:10,760 --> 01:05:12,920
+I I start cussing at it for 
+sure. 
+
+1143
+01:05:13,200 --> 01:05:14,560
+Yeah. 
+So maybe it's more 
+
+1144
+01:05:14,560 --> 01:05:17,600
+microaggression me towards the 
+it's like. 
+
+1145
+01:05:18,280 --> 01:05:21,240
+Hey. 
+I'm doing work for you and I'm 
+
+1146
+01:05:21,240 --> 01:05:23,360
+like, can you do it fucking 
+faster? 
+
+1147
+01:05:24,520 --> 01:05:29,800
+So you're able to assume that 
+every computer has a GPU on it. 
+
+1148
+01:05:30,120 --> 01:05:32,440
+Yeah, OK. 
+Yeah, which is true. 
+
+1149
+01:05:32,440 --> 01:05:35,760
+I mean, we don't do anything so 
+crazy that we even need to like,
+
+1150
+01:05:36,560 --> 01:05:38,560
+you know, for a long time, like 
+there were sort of the 
+
+1151
+01:05:38,560 --> 01:05:42,000
+integrated GPU versus the 
+discrete GPU. 
+
+1152
+01:05:42,680 --> 01:05:45,600
+Nothing we're doing goes beyond 
+what you can just do on an 
+
+1153
+01:05:45,600 --> 01:05:48,200
+integrated GPU. 
+But yeah, on every frame, we 
+
+1154
+01:05:48,200 --> 01:05:50,920
+redraw the entire window just 
+like a video game. 
+
+1155
+01:05:51,840 --> 01:05:54,240
+It's pretty fast. 
+It's very power efficient. 
+
+1156
+01:05:54,280 --> 01:05:58,200
+Like maybe we could do better 
+and sort of preserve pieces of 
+
+1157
+01:05:58,200 --> 01:06:00,120
+it. 
+And you know, someday I think we
+
+1158
+01:06:00,120 --> 01:06:03,720
+will. 
+But even today we just keep it 
+
+1159
+01:06:03,720 --> 01:06:06,320
+simple. 
+How fast can we redraw the 
+
+1160
+01:06:06,320 --> 01:06:08,000
+window? 
+And the cool thing there is like
+
+1161
+01:06:08,000 --> 01:06:11,200
+when you're resizing it, not 
+that that matters that much, but
+
+1162
+01:06:11,200 --> 01:06:13,560
+things like the switching tabs 
+where it's just like boom. 
+
+1163
+01:06:14,440 --> 01:06:16,680
+And then of course, taking, it's
+not just that. 
+
+1164
+01:06:16,680 --> 01:06:20,160
+It's like taking care to do 
+things off the main thread. 
+
+1165
+01:06:20,160 --> 01:06:23,480
+So that like when we soft wrap, 
+for example, if we go over a 
+
+1166
+01:06:23,480 --> 01:06:27,040
+certain deadline, you will 
+actually render the buffer that 
+
+1167
+01:06:27,040 --> 01:06:30,560
+you open with the line 
+overflowing off the edge. 
+
+1168
+01:06:30,960 --> 01:06:33,480
+And then like 2 frames later 
+you'll see it pop in. 
+
+1169
+01:06:35,160 --> 01:06:37,560
+And for me it was like, I'd 
+rather get instant 
+
+1170
+01:06:37,560 --> 01:06:40,240
+responsiveness even if it's not 
+perfect and then. 
+
+1171
+01:06:40,600 --> 01:06:42,120
+Then correct it. 
+Pop in, yeah. 
+
+1172
+01:06:43,480 --> 01:06:46,440
+So performance, seems like you 
+guys have put a lot of work in 
+
+1173
+01:06:46,440 --> 01:06:50,040
+and really nailed that one and 
+right, CRDTS and concurrency and
+
+1174
+01:06:50,040 --> 01:06:53,680
+Rust have kind of made that all 
+possible. 
+
+1175
+01:06:53,760 --> 01:06:55,560
+Right. 
+And now they're opening and I 
+
+1176
+01:06:55,560 --> 01:07:00,160
+think the next frontier is 
+really figuring out what is an 
+
+1177
+01:07:00,320 --> 01:07:02,960
+AI enabled, exactly what I want 
+to look like. 
+
+1178
+01:07:03,200 --> 01:07:05,840
+Yeah, yeah. 
+So where are you at with AI? 
+
+1179
+01:07:06,040 --> 01:07:09,000
+And then what are some thoughts 
+if you want to share on where 
+
+1180
+01:07:09,000 --> 01:07:11,800
+you're going? 
+So yeah, we're very much still 
+
+1181
+01:07:11,800 --> 01:07:14,360
+learning. 
+I think like everybody, the 
+
+1182
+01:07:14,360 --> 01:07:17,320
+first thing that we built, which
+I'm really proud of, is just the
+
+1183
+01:07:17,360 --> 01:07:21,080
+inline transformation experience
+where, you know, in any piece of
+
+1184
+01:07:21,080 --> 01:07:24,360
+text you can select or put your 
+cursor, you hit CTRL enter, type
+
+1185
+01:07:24,360 --> 01:07:27,240
+a natural language prompt, and 
+we'll generate some code where 
+
+1186
+01:07:27,240 --> 01:07:29,720
+your cursor is or rewrite the 
+selected code. 
+
+1187
+01:07:30,160 --> 01:07:34,840
+And I think we have a really 
+clean UX around that that will 
+
+1188
+01:07:34,840 --> 01:07:38,200
+always pull in the context in 
+the assistant panel. 
+
+1189
+01:07:38,200 --> 01:07:41,520
+So the next big piece we built 
+was the assistant panel, which 
+
+1190
+01:07:41,520 --> 01:07:44,080
+is pops up, but he falls on the 
+right. 
+
+1191
+01:07:44,520 --> 01:07:47,520
+Yeah, it's a chat interface. 
+I think what we've done with it 
+
+1192
+01:07:47,520 --> 01:07:50,240
+that's interesting and a little 
+different than the typical thing
+
+1193
+01:07:50,240 --> 01:07:53,800
+is we've modeled it as very much
+a text editor. 
+
+1194
+01:07:54,040 --> 01:07:57,240
+So the idea is that the the 
+entire context that you're 
+
+1195
+01:07:57,240 --> 01:08:01,240
+sending the LLM, even though 
+it's like structured like the 
+
+1196
+01:08:01,240 --> 01:08:04,280
+conversations, because that's a 
+useful way to interact with it. 
+
+1197
+01:08:04,280 --> 01:08:05,600
+That's how these things are 
+trained. 
+
+1198
+01:08:05,960 --> 01:08:10,240
+So you see sort of the text 
+broken into user system 
+
+1199
+01:08:10,560 --> 01:08:14,880
+Assistant, but it's not like an 
+append only UI. 
+
+1200
+01:08:15,480 --> 01:08:20,720
+It's editable in its entirety. 
+And when you insert new pieces 
+
+1201
+01:08:20,720 --> 01:08:23,240
+into the context like we have 
+these slash commands, you type 
+
+1202
+01:08:23,240 --> 01:08:26,800
+like slash file, you can put 
+like the name of a file or a 
+
+1203
+01:08:26,800 --> 01:08:30,479
+directory. 
+We just insert like folded text.
+
+1204
+01:08:30,720 --> 01:08:35,840
+So you can actually inspect sort
+of everything going to the model
+
+1205
+01:08:37,080 --> 01:08:41,000
+and you can take the models 
+output and use, you know, fully 
+
+1206
+01:08:41,000 --> 01:08:44,560
+keyboard driven workflow and 
+select it and mess with it and 
+
+1207
+01:08:44,560 --> 01:08:47,200
+tweak it. 
+So that was all very inspired by
+
+1208
+01:08:47,200 --> 01:08:52,240
+like being raw and on the metal.
+I think the next chapter is 
+
+1209
+01:08:52,240 --> 01:08:56,160
+going to be how do we go beyond 
+that and start automating away 
+
+1210
+01:08:56,160 --> 01:08:57,640
+more of that? 
+So what we're working on right 
+
+1211
+01:08:57,640 --> 01:09:02,520
+now is improving. 
+It's working in house, but I we 
+
+1212
+01:09:02,520 --> 01:09:07,560
+have a little work to do to get 
+it out to all users where you 
+
+1213
+01:09:07,560 --> 01:09:11,080
+can, you know, just do a search 
+which is sort of a combination 
+
+1214
+01:09:11,080 --> 01:09:15,800
+of vector based retrieval with 
+keyword based retrieval. 
+
+1215
+01:09:16,080 --> 01:09:17,640
+It's like querying your code 
+base. 
+
+1216
+01:09:17,720 --> 01:09:18,720
+Exactly. 
+Yeah. 
+
+1217
+01:09:18,720 --> 01:09:21,120
+So that's a going to start as a 
+slash command where you just 
+
+1218
+01:09:21,120 --> 01:09:23,720
+type slash. 
+I think it's slash project. 
+
+1219
+01:09:24,240 --> 01:09:27,960
+And based on all of the context 
+around it, the LLM will be 
+
+1220
+01:09:27,960 --> 01:09:31,760
+instructed to like construct the
+queries to do the retrieval, 
+
+1221
+01:09:32,040 --> 01:09:34,040
+pull the text back and you can 
+see the text. 
+
+1222
+01:09:34,040 --> 01:09:36,920
+It's right there. 
+It's just folded text. 
+
+1223
+01:09:36,920 --> 01:09:40,760
+So that's one big piece. 
+And then these live diffs that 
+
+1224
+01:09:40,760 --> 01:09:44,120
+we're building, which is sort of
+you can instruct the model or 
+
+1225
+01:09:44,479 --> 01:09:47,800
+allowing the model to suggest 
+edits. 
+
+1226
+01:09:47,960 --> 01:09:50,840
+So any of the code you've 
+brought in will always have a 
+
+1227
+01:09:50,840 --> 01:09:53,600
+path and looks a little excerpt 
+from the code. 
+
+1228
+01:09:54,360 --> 01:09:57,800
+Now when that leads the model to
+suggest an edit that'll pull up 
+
+1229
+01:09:57,800 --> 01:10:02,560
+this live diff view that lets 
+you sort of review and apply on 
+
+1230
+01:10:02,560 --> 01:10:06,800
+a hunk by hunk basis this little
+micro pull request that the 
+
+1231
+01:10:06,800 --> 01:10:08,560
+assistance opened up for you. 
+Yeah. 
+
+1232
+01:10:10,440 --> 01:10:15,480
+And then one more thing that 
+we're working on is we built 
+
+1233
+01:10:15,480 --> 01:10:17,040
+these. 
+I was describing those multi 
+
+1234
+01:10:17,040 --> 01:10:18,760
+buffers to you go. 
+Ahead, are you moving on from 
+
+1235
+01:10:18,760 --> 01:10:19,640
+AI? 
+Because I have questions. 
+
+1236
+01:10:19,640 --> 01:10:23,040
+No, no, no. 
+OK, it's AI still in the AI 
+
+1237
+01:10:23,520 --> 01:10:25,680
+realm right now. 
+When we originally built the 
+
+1238
+01:10:25,680 --> 01:10:30,720
+multi buffers, we built them to 
+reflect the output of the Rust 
+
+1239
+01:10:30,720 --> 01:10:33,000
+compiler. 
+And so the idea is for every 
+
+1240
+01:10:33,000 --> 01:10:35,120
+error, there's like an excerpt 
+of the code. 
+
+1241
+01:10:35,720 --> 01:10:38,960
+And that led us to make a 
+decision that I consider 
+
+1242
+01:10:38,960 --> 01:10:41,760
+suboptimal, which is to 
+sometimes represent the same 
+
+1243
+01:10:41,760 --> 01:10:45,720
+text more than once in a multi 
+buffer, which is kind of 
+
+1244
+01:10:45,720 --> 01:10:49,360
+confusing. 
+And it really falls down with 
+
+1245
+01:10:49,360 --> 01:10:52,640
+this UX that we're hopefully by 
+the end of the year going to 
+
+1246
+01:10:52,640 --> 01:10:56,480
+have in place where we show a 
+multi buffer for every error you
+
+1247
+01:10:56,480 --> 01:10:58,800
+have in the code base. 
+I always thought that was cool. 
+
+1248
+01:10:58,800 --> 01:11:01,120
+And it's amazing for certain 
+kinds of refactorings, right? 
+
+1249
+01:11:01,120 --> 01:11:05,120
+Because you can a lot of times 
+do like a multi cursor edit that
+
+1250
+01:11:05,120 --> 01:11:10,560
+will like add some default 
+parameters, you know, one edit 
+
+1251
+01:11:10,560 --> 01:11:12,120
+across your entire code base. 
+Yeah. 
+
+1252
+01:11:12,720 --> 01:11:16,000
+But what I'm really excited to 
+do is highlight that entire 
+
+1253
+01:11:16,000 --> 01:11:19,240
+thing, hit CTRL enter and 
+already in a multi buffer. 
+
+1254
+01:11:19,240 --> 01:11:21,760
+It's just the problem is that 
+see the same text twice. 
+
+1255
+01:11:21,760 --> 01:11:23,480
+So it kind of breaks when this 
+happens. 
+
+1256
+01:11:23,480 --> 01:11:28,640
+But when you have a selection 
+that crosses exert boundaries 
+
+1257
+01:11:28,640 --> 01:11:33,720
+and you hit CTRL Enter, it will 
+pop up a parallel transformation
+
+1258
+01:11:33,720 --> 01:11:37,160
+for each little excerpt. 
+And so the idea is like, you 
+
+1259
+01:11:37,160 --> 01:11:40,080
+want to add a parameter, Maybe 
+there's some context that's 
+
+1260
+01:11:40,080 --> 01:11:42,920
+relevant in each of the spots 
+where this function's getting 
+
+1261
+01:11:42,920 --> 01:11:45,480
+called that would be useful in 
+this LLM. 
+
+1262
+01:11:45,480 --> 01:11:48,480
+Just making a fairly brain dead 
+decision about what to pass 
+
+1263
+01:11:48,480 --> 01:11:50,840
+right there. 
+Highlight it all, control enter 
+
+1264
+01:11:50,840 --> 01:11:54,000
+and in parallel, just have the 
+LLM fix every single error. 
+
+1265
+01:11:54,120 --> 01:11:57,520
+Yeah, in one coherent UI. 
+That's awesome. 
+
+1266
+01:11:57,680 --> 01:12:01,360
+So there's that. 
+And then everybody wants the 
+
+1267
+01:12:01,360 --> 01:12:05,040
+Copilot style auto complete, 
+which we support Copilot and 
+
+1268
+01:12:05,040 --> 01:12:07,760
+Super Maze, but they want. 
+I mean the copilot plug in but 
+
+1269
+01:12:07,760 --> 01:12:09,640
+they want the like multi line 
+completion. 
+
+1270
+01:12:09,680 --> 01:12:13,840
+They want like the cursor style,
+like tab to go to the next thing
+
+1271
+01:12:13,920 --> 01:12:18,440
+multi line and they want it to 
+be bundled as part of like the 
+
+1272
+01:12:18,440 --> 01:12:21,240
+first class AI features. 
+So that's another thing. 
+
+1273
+01:12:21,560 --> 01:12:24,920
+This is all like in flight and 
+hopefully, yeah, depending on 
+
+1274
+01:12:25,280 --> 01:12:27,640
+when, yeah, some of it will be 
+out in November. 
+
+1275
+01:12:27,720 --> 01:12:29,200
+Nice. 
+Some of it won't be out until 
+
+1276
+01:12:29,200 --> 01:12:31,720
+the end of the year. 
+Yeah, so now when I. 
+
+1277
+01:12:31,840 --> 01:12:36,640
+When I met you at Lambda Comp, I
+was just getting into the world 
+
+1278
+01:12:36,640 --> 01:12:40,120
+of AI code assistant stuff. 
+And I was, I wasn't really 
+
+1279
+01:12:40,120 --> 01:12:44,320
+convinced yet. 
+And you were like, dude, like, 
+
+1280
+01:12:44,600 --> 01:12:48,720
+look at all of the things that 
+I'm asking the AI all day long 
+
+1281
+01:12:48,920 --> 01:12:52,240
+and how useful this thing is 
+for, for learning and exploring 
+
+1282
+01:12:52,240 --> 01:12:55,600
+and helping. 
+And you're definitely like, help
+
+1283
+01:12:55,600 --> 01:12:59,880
+me kind of see like, oh, I need 
+to really put some energy in and
+
+1284
+01:12:59,880 --> 01:13:03,960
+change it to muscle my muscle 
+memory around how I learn and 
+
+1285
+01:13:03,960 --> 01:13:08,360
+how I use these tools. 
+And so I think based on that 
+
+1286
+01:13:08,360 --> 01:13:12,080
+experience with you, that you're
+using these tools all the time, 
+
+1287
+01:13:12,400 --> 01:13:16,720
+the AI code assistants. 
+And so I think what a great way 
+
+1288
+01:13:16,720 --> 01:13:20,440
+to drive what you do in your 
+product because you are really a
+
+1289
+01:13:20,680 --> 01:13:24,320
+power user on the like end of 
+the spectrum for how you're 
+
+1290
+01:13:24,320 --> 01:13:26,880
+using the tools where most 
+people are still kind of working
+
+1291
+01:13:26,880 --> 01:13:29,320
+their way like like me kind of 
+working their way into it. 
+
+1292
+01:13:29,320 --> 01:13:30,920
+But it's been a challenge for us
+too. 
+
+1293
+01:13:30,960 --> 01:13:33,280
+I mean, it, it creates kind of a
+weird trap, right? 
+
+1294
+01:13:33,280 --> 01:13:37,280
+Because like we all have habits 
+and none of our habits, as these
+
+1295
+01:13:37,280 --> 01:13:41,320
+very experienced developers 
+involve generating code with AI 
+
+1296
+01:13:41,320 --> 01:13:44,560
+because it's very new, right? 
+That's a very new thing to 
+
+1297
+01:13:44,560 --> 01:13:47,760
+exist, younger kids that are 
+coming up right now and just 
+
+1298
+01:13:47,760 --> 01:13:50,160
+learning to code. 
+I mean they're swimming in this 
+
+1299
+01:13:50,160 --> 01:13:53,720
+constantly because like for them
+I can't even imagine. 
+
+1300
+01:13:53,920 --> 01:13:56,640
+Even when I was learning Rust, 
+having an LLM that would even 
+
+1301
+01:13:56,640 --> 01:13:59,120
+bullshit me through a solution 
+to some of these. 
+
+1302
+01:13:59,120 --> 01:14:02,480
+Points I did, I spent a couple 
+of months learning Rust and the 
+
+1303
+01:14:02,480 --> 01:14:06,200
+first was mostly like watching 
+videos and and then the second 
+
+1304
+01:14:06,200 --> 01:14:10,880
+month was the AI became 
+available to do that and it 
+
+1305
+01:14:10,880 --> 01:14:13,200
+dramatically improved my 
+learning. 
+
+1306
+01:14:13,200 --> 01:14:16,560
+You know, by the time by the end
+of the second month I go, I 
+
+1307
+01:14:16,560 --> 01:14:20,760
+think I have a grasp of all the 
+keywords now, right and it was 
+
+1308
+01:14:21,080 --> 01:14:25,240
+it because I could say here's 
+what I'm interested in. 
+
+1309
+01:14:25,320 --> 01:14:28,320
+Write me an example. 
+I could study that, right? 
+
+1310
+01:14:28,320 --> 01:14:31,840
+And that's, you know, rather 
+than, oh, the next thing in the 
+
+1311
+01:14:31,840 --> 01:14:35,400
+book is what we decided was the 
+next thing for you to learn. 
+
+1312
+01:14:35,440 --> 01:14:38,440
+And maybe that's not right for 
+me at that moment, right? 
+
+1313
+01:14:38,480 --> 01:14:40,680
+It was and it was. 
+And even if it's not. 
+
+1314
+01:14:40,680 --> 01:14:42,280
+Perfect. 
+It doesn't matter if you're 
+
+1315
+01:14:42,280 --> 01:14:45,480
+well, it's still. 
+It's even better because I have 
+
+1316
+01:14:45,480 --> 01:14:48,000
+to compile the code and I have 
+to understand. 
+
+1317
+01:14:48,200 --> 01:14:52,480
+It was almost like having the 
+little flaws were was helpful. 
+
+1318
+01:14:52,480 --> 01:14:54,720
+Because it was like. 
+Here's your exercise. 
+
+1319
+01:14:54,960 --> 01:14:57,720
+Make sure this is right, make 
+sure you understand it and fool 
+
+1320
+01:14:57,720 --> 01:14:59,640
+around with it. 
+But it would give me the 
+
+1321
+01:14:59,640 --> 01:15:02,600
+starting point when I would ask 
+about something and that was 
+
+1322
+01:15:02,600 --> 01:15:05,600
+just. 
+I don't like to feel dumb asking
+
+1323
+01:15:05,600 --> 01:15:09,040
+questions, you know? 
+And so the LLM doesn't judge 
+
+1324
+01:15:09,120 --> 01:15:10,200
+you. 
+Yeah, It doesn't judge no judge,
+
+1325
+01:15:10,960 --> 01:15:11,480
+right? 
+Yeah. 
+
+1326
+01:15:11,480 --> 01:15:13,000
+And. 
+I think one of the hardest 
+
+1327
+01:15:13,000 --> 01:15:18,080
+things is to teach myself to not
+try and figure it out all in my 
+
+1328
+01:15:18,080 --> 01:15:20,960
+head to go, oh, that's right, I 
+should ask the AI. 
+
+1329
+01:15:21,280 --> 01:15:27,000
+And then it it, you know, helps 
+me leapfrog forward and I don't 
+
+1330
+01:15:27,000 --> 01:15:30,000
+run out of energy. 
+I don't run out of mental energy
+
+1331
+01:15:30,000 --> 01:15:32,680
+trying to trying to struggle 
+through it myself. 
+
+1332
+01:15:32,720 --> 01:15:35,600
+And so I feel like I really move
+forward a lot faster. 
+
+1333
+01:15:35,800 --> 01:15:40,280
+But I think I share all that 
+experience at the same time, I 
+
+1334
+01:15:40,280 --> 01:15:44,960
+think, and there are people on 
+my team that don't use it as 
+
+1335
+01:15:44,960 --> 01:15:48,240
+much. 
+And the reality is, is that like
+
+1336
+01:15:48,280 --> 01:15:49,640
+a lot of it's our own fault, 
+right? 
+
+1337
+01:15:49,640 --> 01:15:52,480
+It's in our editor. 
+Our search needs to be improved.
+
+1338
+01:15:52,960 --> 01:15:55,120
+And so if you're solving a 
+problem where you need to be 
+
+1339
+01:15:55,120 --> 01:15:58,920
+gathering context from disparate
+areas of the code base, there 
+
+1340
+01:15:58,920 --> 01:16:02,240
+are times when that's annoying 
+right now and NZ and we're 
+
+1341
+01:16:02,240 --> 01:16:06,120
+working on fixing it. 
+But like, and so, or it's just 
+
+1342
+01:16:06,120 --> 01:16:11,120
+like sometimes a lot of the 
+like, I feel like AI sweet spot 
+
+1343
+01:16:11,120 --> 01:16:14,480
+is like just cranking out a 
+slightly different version of 
+
+1344
+01:16:14,480 --> 01:16:17,120
+something that's been done 
+millions of times. 
+
+1345
+01:16:17,760 --> 01:16:21,280
+When you're solving like a 
+really novel problem, I find 
+
+1346
+01:16:21,280 --> 01:16:26,440
+that it isn't always as useful. 
+The ratio of kind of boilerplate
+
+1347
+01:16:26,560 --> 01:16:30,480
+boilerplate to novelty. 
+A lot of times in our code base 
+
+1348
+01:16:31,160 --> 01:16:33,720
+trends toward novelty. 
+It's just like there's not that 
+
+1349
+01:16:33,720 --> 01:16:37,080
+many code editors in the world 
+to crib these algorithms from 
+
+1350
+01:16:37,120 --> 01:16:40,280
+and stuff. 
+And so like I'm actively having 
+
+1351
+01:16:40,280 --> 01:16:44,000
+to make sure that we don't fall 
+victim to like the innovator's 
+
+1352
+01:16:44,000 --> 01:16:48,920
+dilemma or whatever, like the, 
+because we're using a lower 
+
+1353
+01:16:48,920 --> 01:16:51,760
+resource language trust, you 
+know, it's just not as much 
+
+1354
+01:16:51,760 --> 01:16:55,240
+training data out of there. 
+We're using our own tools which 
+
+1355
+01:16:55,360 --> 01:16:58,640
+aren't designed with the 
+assumption of all these habits 
+
+1356
+01:16:58,640 --> 01:17:01,320
+existing. 
+Cuz it's a brand new situation, 
+
+1357
+01:17:01,320 --> 01:17:04,160
+right? 
+Yeah, We're solving maybe more 
+
+1358
+01:17:04,160 --> 01:17:09,800
+novel problems than our typical,
+like making sure that we don't, 
+
+1359
+01:17:10,000 --> 01:17:14,880
+Yeah, fall into our own trap of 
+blindness, I guess, and underuse
+
+1360
+01:17:14,880 --> 01:17:18,000
+the potential of this tech. 
+Yeah, but I think. 
+
+1361
+01:17:18,080 --> 01:17:22,280
+And we just continue to discover
+new ways that we can use it. 
+
+1362
+01:17:22,320 --> 01:17:25,080
+And so it sounded like one of 
+the things you're talking about 
+
+1363
+01:17:25,080 --> 01:17:29,240
+is kind of fixing errors across 
+multiple files right at once. 
+
+1364
+01:17:29,240 --> 01:17:31,560
+And that's something we've never
+had before. 
+
+1365
+01:17:31,720 --> 01:17:34,280
+And it's something that the AI 
+can do pretty well. 
+
+1366
+01:17:34,280 --> 01:17:37,320
+And so I think we're still, it's
+still at the early days of 
+
+1367
+01:17:37,320 --> 01:17:41,960
+discovering how AI impacts us as
+developers and what the tools, 
+
+1368
+01:17:42,280 --> 01:17:44,600
+how the tools expose those 
+capabilities to us. 
+
+1369
+01:17:44,600 --> 01:17:46,520
+So. 
+Yeah, it's a real wonderful 
+
+1370
+01:17:46,520 --> 01:17:48,800
+opportunity, though. 
+I'm enjoying it a lot. 
+
+1371
+01:17:48,960 --> 01:17:51,920
+Yeah, I did not know that when. 
+Well, I've been obsessed with 
+
+1372
+01:17:51,920 --> 01:17:54,480
+code editors for a long time. 
+But even when we started ZED in 
+
+1373
+01:17:54,480 --> 01:17:59,720
+2021 and got that initial 
+investment and started off, I 
+
+1374
+01:17:59,720 --> 01:18:01,680
+had no idea what was coming for 
+us. 
+
+1375
+01:18:01,840 --> 01:18:02,800
+Yeah. 
+And now we sort of find 
+
+1376
+01:18:02,800 --> 01:18:08,160
+ourselves with this perfect 
+awesome code base, great team 
+
+1377
+01:18:08,680 --> 01:18:13,120
+and this whole new way of doing 
+things to play with the 
+
+1378
+01:18:13,120 --> 01:18:14,600
+challenges. 
+Of course, we still have a 
+
+1379
+01:18:14,600 --> 01:18:18,400
+little bit more to go to bring 
+up the table stakes. 
+
+1380
+01:18:18,400 --> 01:18:21,880
+Kind of one point O features 
+like we're working on SSH 
+
+1381
+01:18:21,880 --> 01:18:23,960
+remoting right now. 
+That's getting really close. 
+
+1382
+01:18:23,960 --> 01:18:25,360
+I think we'll have that out next
+month. 
+
+1383
+01:18:26,200 --> 01:18:30,440
+Committing from the editor like 
+get committing people really 
+
+1384
+01:18:30,440 --> 01:18:32,520
+want a debugger. 
+There's a community contributed 
+
+1385
+01:18:32,520 --> 01:18:36,640
+one that needs a little love. 
+So I think we'll be spending 
+
+1386
+01:18:37,040 --> 01:18:40,600
+sort of a decent chunk of 
+resources building out the rest 
+
+1387
+01:18:40,600 --> 01:18:43,920
+of that like, OK, this is what 
+you just need in the basic 
+
+1388
+01:18:43,920 --> 01:18:48,040
+editor and then a lot of our 
+resources like playing. 
+
+1389
+01:18:48,040 --> 01:18:52,080
+But the cool thing is as that 
+comes in, as that full picture 
+
+1390
+01:18:52,080 --> 01:18:56,240
+starts to come into view of the 
+one point O feature set and more
+
+1391
+01:18:56,240 --> 01:19:00,800
+of these AI features coming 
+along, we're in a really unique 
+
+1392
+01:19:00,800 --> 01:19:06,320
+position of basically having one
+pretty small team, one very new 
+
+1393
+01:19:06,400 --> 01:19:08,200
+very well taken care of code 
+base. 
+
+1394
+01:19:08,200 --> 01:19:10,080
+We understand the entire code 
+base. 
+
+1395
+01:19:10,600 --> 01:19:14,080
+We're in a really good position.
+I feel like to it's like a bar 
+
+1396
+01:19:14,080 --> 01:19:17,400
+fight has broken out and we know
+jiu jitsu yeah, in this 
+
+1397
+01:19:17,400 --> 01:19:21,160
+particular moment. 
+So I'm feeling lucky right now. 
+
+1398
+01:19:21,320 --> 01:19:22,000
+Are you? 
+Fortunate. 
+
+1399
+01:19:22,440 --> 01:19:25,240
+Are you in a situation where 
+you're starting to hire people? 
+
+1400
+01:19:25,640 --> 01:19:28,880
+We are, yeah. 
+Yeah, we are very interested in,
+
+1401
+01:19:29,280 --> 01:19:31,520
+I think we're ready to start 
+ramping our hiring more 
+
+1402
+01:19:31,520 --> 01:19:34,080
+aggressively. 
+We've got a core team in place. 
+
+1403
+01:19:34,080 --> 01:19:37,280
+We do a lot of pair programming,
+collaboration being one of our 
+
+1404
+01:19:37,280 --> 01:19:40,080
+core things. 
+It's not like you pair all day 
+
+1405
+01:19:40,080 --> 01:19:43,640
+every day, but like people that 
+are excited to kind of pair a 
+
+1406
+01:19:43,640 --> 01:19:47,120
+couple days a week. 
+It's a great way to just ramp 
+
+1407
+01:19:47,120 --> 01:19:50,360
+people into the culture. 
+We're distributed so we can 
+
+1408
+01:19:50,360 --> 01:19:53,840
+employ you anywhere nice. 
+I guess. 
+
+1409
+01:19:53,960 --> 01:19:56,160
+We're very particularly 
+interested in like North 
+
+1410
+01:19:56,160 --> 01:19:58,280
+American and European time 
+zones. 
+
+1411
+01:19:58,280 --> 01:20:02,240
+So it's not if you're in a new. 
+Pairing then being in similar 
+
+1412
+01:20:02,240 --> 01:20:04,360
+time zones is helpful. 
+Exactly. 
+
+1413
+01:20:04,400 --> 01:20:08,160
+Yeah, Danilo joined from Brazil.
+OK, you said you were about to 
+
+1414
+01:20:08,160 --> 01:20:10,320
+say South American as well. 
+Yeah, exactly. 
+
+1415
+01:20:10,520 --> 01:20:12,680
+Just like NS. 
+Yeah, exactly. 
+
+1416
+01:20:12,680 --> 01:20:14,640
+There's good. 
+Time zones, yeah. 
+
+1417
+01:20:14,760 --> 01:20:18,000
+Yeah, yeah. 
+So people that are and what I'm,
+
+1418
+01:20:18,520 --> 01:20:23,320
+I don't know, it's tough because
+Rust is sort of selects for a 
+
+1419
+01:20:23,320 --> 01:20:27,000
+certain style of programmer. 
+And yet we're very much a 
+
+1420
+01:20:27,000 --> 01:20:29,280
+product, right? 
+Like I think there's a lot of 
+
+1421
+01:20:29,280 --> 01:20:31,840
+Rust work that's much more back 
+end. 
+
+1422
+01:20:31,840 --> 01:20:37,520
+You never really see users or 
+like back end or embedded. 
+
+1423
+01:20:38,120 --> 01:20:40,840
+We're kind of like, I don't 
+know, we need sort of the same 
+
+1424
+01:20:40,840 --> 01:20:43,760
+personality of builder, the kind
+of builder that would love to 
+
+1425
+01:20:43,760 --> 01:20:47,680
+roll up their sleeves in like a 
+crank out Python or crank out 
+
+1426
+01:20:47,680 --> 01:20:51,400
+React product engineering, 
+building features, caring about 
+
+1427
+01:20:51,400 --> 01:20:55,800
+what users care about, but then 
+doing it at Rust. 
+
+1428
+01:20:55,800 --> 01:20:58,680
+Yeah, so. 
+Well, and also you said before 
+
+1429
+01:20:58,680 --> 01:21:01,440
+you were elegance was important 
+to you. 
+
+1430
+01:21:01,440 --> 01:21:06,040
+I, one of the I created AT shirt
+years ago for the Python 
+
+1431
+01:21:06,040 --> 01:21:09,400
+conference and it's elegance 
+begets simplicity. 
+
+1432
+01:21:09,840 --> 01:21:11,440
+So we're on the same page there.
+Yeah. 
+
+1433
+01:21:11,520 --> 01:21:14,120
+So you're. 
+Hard to find the overlap of 
+
+1434
+01:21:14,200 --> 01:21:19,000
+people who who can do elegance 
+to create elegant things and no 
+
+1435
+01:21:19,000 --> 01:21:20,760
+rust, so I think we're. 
+Right. 
+
+1436
+01:21:20,920 --> 01:21:24,920
+And also, but with anything it's
+like and then there's the kind 
+
+1437
+01:21:24,920 --> 01:21:28,400
+of Rust developer that they're 
+so obsessed with theory that 
+
+1438
+01:21:28,560 --> 01:21:31,720
+they never ship anything. 
+So we need, I don't know. 
+
+1439
+01:21:31,760 --> 01:21:33,240
+And I'm willing to. 
+I'm willing. 
+
+1440
+01:21:33,240 --> 01:21:35,360
+To sort of start up, you gotta 
+move quick and. 
+
+1441
+01:21:35,360 --> 01:21:38,080
+Yeah, we gotta ship. 
+We gotta write quality code. 
+
+1442
+01:21:38,080 --> 01:21:41,480
+I'd almost rather you ship and 
+then be good at taking feedback 
+
+1443
+01:21:41,480 --> 01:21:44,240
+to improve the code. 
+If it isn't up to our quality 
+
+1444
+01:21:44,240 --> 01:21:47,800
+standards, then the opposite of 
+like sort of be paralyzed with 
+
+1445
+01:21:47,800 --> 01:21:49,920
+fear about not making something 
+good. 
+
+1446
+01:21:50,640 --> 01:21:55,200
+So yeah, just like, yeah, people
+that wanna ship would be 
+
+1447
+01:21:55,200 --> 01:21:57,160
+fabulous to give. 
+Ship and shred. 
+
+1448
+01:21:57,720 --> 01:21:58,720
+Ship and shred. 
+Yeah. 
+
+1449
+01:21:59,440 --> 01:22:02,720
+In the in the writing world, 
+there's a maxim that says 
+
+1450
+01:22:03,120 --> 01:22:05,560
+writing is rewriting. 
+Exactly. 
+
+1451
+01:22:05,560 --> 01:22:06,800
+And that's what you're talking 
+about. 
+
+1452
+01:22:06,840 --> 01:22:09,560
+And you've got that right. 
+First, I've seen people who are 
+
+1453
+01:22:09,560 --> 01:22:12,760
+so paralyzed they can't get a 
+sentence out. 
+
+1454
+01:22:12,800 --> 01:22:15,160
+And it's like, well, you've got 
+to get to the point where you 
+
+1455
+01:22:15,160 --> 01:22:18,480
+go, we'll make the sentence, and
+then we can just keep making it 
+
+1456
+01:22:18,480 --> 01:22:20,120
+better and better and better. 
+Right. 
+
+1457
+01:22:20,800 --> 01:22:23,520
+But yeah, but anybody passionate
+about building good product, I 
+
+1458
+01:22:23,520 --> 01:22:27,440
+think at this point is 
+potentially good fit, even if 
+
+1459
+01:22:27,440 --> 01:22:29,040
+you're not. 
+I mean, I think I want you to 
+
+1460
+01:22:29,040 --> 01:22:32,400
+have like read a book on Rust 
+and have like started playing 
+
+1461
+01:22:32,400 --> 01:22:34,920
+with it. 
+Be able to ask me all good 
+
+1462
+01:22:34,920 --> 01:22:36,880
+questions about Rust. 
+Exactly. 
+
+1463
+01:22:36,920 --> 01:22:39,280
+But more than anything, it's 
+just someone that wants to roll 
+
+1464
+01:22:39,280 --> 01:22:42,560
+up their sleeves and work hard 
+and help us make best code 
+
+1465
+01:22:42,560 --> 01:22:44,520
+editor. 
+That's awesome. 
+
+1466
+01:22:45,680 --> 01:22:48,160
+Well, on that note, thank you so
+much Nathan. 
+
+1467
+01:22:48,200 --> 01:22:51,440
+Super fun to have you here in 
+Crested yeah I really 
+
+1468
+01:22:51,440 --> 01:22:54,000
+interesting yeah really 
+interesting stuff and hope it 
+
+1469
+01:22:54,000 --> 01:22:57,560
+all goes well cuz it's I'm all 
+for better tools for developers.
+
+1470
+01:22:57,600 --> 01:22:58,520
+I think it's. 
+Really the same. 
+
+1471
+01:22:59,160 --> 01:23:00,320
+Thank you. 
+Thank you for. 
+
+1472
+01:23:00,760 --> 01:23:02,920
+Yeah, inviting me in your space.
+Absolutely. 
+
+1473
+01:23:03,120 --> 01:23:04,760
+Yeah. 
+This is the first podcast I've 
+
+1474
+01:23:04,760 --> 01:23:07,240
+done in person for Zed. 
+So awesome. 
+
+1475
+01:23:07,480 --> 01:23:09,360
+Excellent. 
+All right. 
+
+1476
+01:23:09,440 --> 01:23:10,000
+Well, thanks.

@@ -1,0 +1,7123 @@
+1
+00:00:01,040 --> 00:00:03,480
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,680 --> 00:00:05,560
+I'm Bruce Eckel. 
+I'm James Ward. 
+
+3
+00:00:08,480 --> 00:00:10,160
+All right. 
+Welcome everyone. 
+
+4
+00:00:10,760 --> 00:00:13,320
+Today we have with us Diana 
+Montalion. 
+
+5
+00:00:13,600 --> 00:00:18,760
+And you were introduced to us 
+through Andrew Carmela, one of 
+
+6
+00:00:18,760 --> 00:00:21,400
+our friends who's been up here 
+many times and we had him on the
+
+7
+00:00:21,400 --> 00:00:25,360
+podcast at least once. 
+And he knows the smartest 
+
+8
+00:00:25,360 --> 00:00:27,640
+people. 
+It's I mean, he himself is also 
+
+9
+00:00:27,760 --> 00:00:31,800
+really smart, but but he just 
+knows the most interesting smart
+
+10
+00:00:31,800 --> 00:00:33,840
+people. 
+And so that's how we got 
+
+11
+00:00:33,840 --> 00:00:36,320
+introduced to Diana. 
+So welcome. 
+
+12
+00:00:36,320 --> 00:00:38,800
+Great to have you, Diana. 
+Thank you. 
+
+13
+00:00:38,800 --> 00:00:42,800
+I I'm now we have to hurry so I 
+can get into discord and tell 
+
+14
+00:00:42,800 --> 00:00:45,960
+Andrew that this is what you 
+what you said about him. 
+
+15
+00:00:46,040 --> 00:00:48,520
+It will just, it will just make 
+his. 
+
+16
+00:00:48,800 --> 00:00:53,720
+It'll make his day. 
+Well, he's also, he's also 
+
+17
+00:00:53,720 --> 00:00:59,360
+struggling with similar things 
+that that I mean, I've been and 
+
+18
+00:00:59,360 --> 00:01:02,440
+I think you've been in in our 
+different ways, just, you know, 
+
+19
+00:01:02,760 --> 00:01:06,560
+how do we make work not suck, 
+that sort of thing. 
+
+20
+00:01:07,080 --> 00:01:08,760
+Yeah, yeah. 
+It's interesting. 
+
+21
+00:01:08,760 --> 00:01:12,680
+We maybe in the first half of 
+life, we don't know that it. 
+
+22
+00:01:12,680 --> 00:01:14,960
+Downside the way it is. 
+Yeah, it's just the way it. 
+
+23
+00:01:14,960 --> 00:01:17,560
+Is how the world works. 
+And then you're in it long 
+
+24
+00:01:17,560 --> 00:01:20,800
+enough and then. 
+You, you go wait a minute. 
+
+25
+00:01:21,120 --> 00:01:23,000
+This is just right, yeah. 
+I don't. 
+
+26
+00:01:23,000 --> 00:01:26,520
+This doesn't feel right. 
+Feels like we're doing it wrong.
+
+27
+00:01:26,560 --> 00:01:29,840
+Yeah, yeah. 
+So Diana, tell us about yourself
+
+28
+00:01:29,880 --> 00:01:33,840
+and and tell us about the book 
+that you have written that is 
+
+29
+00:01:33,840 --> 00:01:37,720
+nearly published. 
+So it's funny because you're, 
+
+30
+00:01:37,760 --> 00:01:42,600
+you're talking about this and I 
+think yeah, I started in the a 
+
+31
+00:01:42,680 --> 00:01:48,920
+keynote that I did recently 
+really focusing on how when 
+
+32
+00:01:48,920 --> 00:01:53,560
+you've been around long enough, 
+you see that things don't really
+
+33
+00:01:53,560 --> 00:01:56,440
+change. 
+They were very trendy in tech. 
+
+34
+00:01:56,440 --> 00:01:59,480
+Like we're, we don't think of 
+ourselves as, you know, fashion 
+
+35
+00:01:59,480 --> 00:02:03,240
+conscious or anything, but man, 
+we love to love something, then 
+
+36
+00:02:03,240 --> 00:02:06,280
+we love to hate it, then we and 
+we love to fight about it. 
+
+37
+00:02:06,480 --> 00:02:11,880
+But in the end, the problems 
+tend to just resurface right as 
+
+38
+00:02:12,080 --> 00:02:15,640
+Piercing says that if a factory 
+is torn down but the rationality
+
+39
+00:02:15,640 --> 00:02:19,600
+that built the factory remains, 
+then you'll just build another 
+
+40
+00:02:19,600 --> 00:02:22,200
+factory. 
+You're quoting Zen in the Art of
+
+41
+00:02:22,200 --> 00:02:25,640
+Motorcycle Maintenance, Yeah. 
+Yeah, we were talking about 
+
+42
+00:02:25,720 --> 00:02:28,440
+literally earlier. 
+It's like we change our 
+
+43
+00:02:28,440 --> 00:02:32,280
+JavaScript frameworks monthly, 
+you know they come in and out of
+
+44
+00:02:32,280 --> 00:02:33,240
+fashion. 
+Pretty. 
+
+45
+00:02:33,400 --> 00:02:36,720
+Weekly. 
+Weekly, daily, so fast you're 
+
+46
+00:02:36,920 --> 00:02:40,440
+you're, it's really interesting 
+because the, the core kind of 
+
+47
+00:02:40,440 --> 00:02:45,160
+philosophies really have not 
+changed in 20 years around any 
+
+48
+00:02:45,160 --> 00:02:46,400
+of that stuff. 
+So. 
+
+49
+00:02:46,880 --> 00:02:51,920
+Or resurfaces, same thing, you 
+know, living in this country and
+
+50
+00:02:52,000 --> 00:02:54,840
+and the, you know, in the world 
+that, you know, this isn't 
+
+51
+00:02:54,840 --> 00:02:58,640
+unique to us. 
+I think when, yeah, when I was 
+
+52
+00:02:58,720 --> 00:03:02,520
+younger, it feels new. 
+And then as you get a bit older,
+
+53
+00:03:02,640 --> 00:03:05,320
+it feels like different 
+conversations. 
+
+54
+00:03:05,320 --> 00:03:10,000
+Same point, right? 
+Yeah, I think it's like what we 
+
+55
+00:03:10,000 --> 00:03:14,400
+were talking about last week 
+with the taking a complex 
+
+56
+00:03:14,400 --> 00:03:19,320
+problem and trying to solve it 
+using things that you would 
+
+57
+00:03:19,320 --> 00:03:21,040
+solve a complicated problem 
+with. 
+
+58
+00:03:21,120 --> 00:03:25,680
+So a com complex being stuff 
+that you can't quite, you know, 
+
+59
+00:03:25,680 --> 00:03:28,080
+you just get trends. 
+You can't really predict the 
+
+60
+00:03:28,080 --> 00:03:30,880
+weather or whatever. 
+But we go, OK, what are all the 
+
+61
+00:03:30,880 --> 00:03:34,480
+rules here that we use to, you 
+know, write a computer program 
+
+62
+00:03:34,480 --> 00:03:37,320
+or fix a watch or whatever. 
+And it's like, yeah, it's 
+
+63
+00:03:37,320 --> 00:03:41,600
+complicated, but you know how 
+to, you know, you you know that 
+
+64
+00:03:41,600 --> 00:03:44,040
+you can come up with a set of 
+rules and then you go, oh, I 
+
+65
+00:03:44,040 --> 00:03:47,480
+like this feeling of control, so
+let's apply it everywhere. 
+
+66
+00:03:47,880 --> 00:03:50,520
+And it doesn't like when you're 
+dealing with people. 
+
+67
+00:03:51,200 --> 00:03:53,440
+Right. 
+And, and increasingly with 
+
+68
+00:03:53,440 --> 00:03:57,800
+software systems that, you know,
+we used to just to the point of 
+
+69
+00:03:57,800 --> 00:04:01,880
+introduction, right as a back 
+end engineer and we put a lot of
+
+70
+00:04:01,880 --> 00:04:06,760
+custom code into a monolithic 
+piece of software to add 
+
+71
+00:04:06,760 --> 00:04:09,360
+features. 
+So I, I joke, it's not a joke 
+
+72
+00:04:09,360 --> 00:04:12,360
+that I helped build the 
+monoliths and now I'm helping to
+
+73
+00:04:12,360 --> 00:04:14,440
+unbuild the the monoliths, 
+deconstruct the monoliths. 
+
+74
+00:04:16,120 --> 00:04:19,560
+Yeah, but that's OK, right? 
+That's that's paradigms are 
+
+75
+00:04:19,560 --> 00:04:25,160
+shifting, but as relational 
+complexity was increasing as I 
+
+76
+00:04:25,160 --> 00:04:28,360
+work predominantly in 
+information and knowledge 
+
+77
+00:04:28,360 --> 00:04:34,720
+systems. 
+And that it used to be that, for
+
+78
+00:04:34,720 --> 00:04:37,520
+example, you would create a 
+print magazine. 
+
+79
+00:04:37,520 --> 00:04:40,880
+This is I use in my workshops 
+when I teach, I use a fictitious
+
+80
+00:04:40,880 --> 00:04:43,000
+company. 
+And this is part of their, their
+
+81
+00:04:43,000 --> 00:04:44,680
+challenge. 
+You had a print magazine, then 
+
+82
+00:04:44,680 --> 00:04:48,360
+you had a website and that was 
+like a house you built and 
+
+83
+00:04:48,360 --> 00:04:53,080
+invited everyone over. 
+And there's that little Python 
+
+84
+00:04:53,080 --> 00:04:54,840
+script. 
+Or maybe it's not even, maybe 
+
+85
+00:04:54,840 --> 00:04:59,400
+it's who it could be COBOL 
+little script that moves it from
+
+86
+00:04:59,400 --> 00:05:03,280
+the old big software to the new 
+digital presence. 
+
+87
+00:05:03,280 --> 00:05:05,960
+And no one knows who wrote it. 
+And if it broke, everything 
+
+88
+00:05:05,960 --> 00:05:11,400
+would break kind of thing. 
+But now where the everything is 
+
+89
+00:05:11,400 --> 00:05:17,040
+so interrelated that information
+completely depends on the 
+
+90
+00:05:17,040 --> 00:05:23,480
+context of the consumer is in 
+when they're relating to the 
+
+91
+00:05:23,720 --> 00:05:28,760
+information. 
+This completely shifts what we 
+
+92
+00:05:28,760 --> 00:05:32,080
+think of in terms of 
+choreography of systems. 
+
+93
+00:05:32,280 --> 00:05:36,160
+It means that Danella Meadows 
+said that, you know, we think 
+
+94
+00:05:36,160 --> 00:05:39,800
+that we understand two because 
+we know one and one and one make
+
+95
+00:05:39,800 --> 00:05:41,640
+2. 
+But we forget that we also have 
+
+96
+00:05:41,640 --> 00:05:48,480
+to understand and and that 
+recently I was part of big 
+
+97
+00:05:48,480 --> 00:05:53,120
+digital transformation and they 
+were like the Titanic, right? 
+
+98
+00:05:53,120 --> 00:05:56,360
+They hit an iceberg and sunk and
+all the sea levels are gone. 
+
+99
+00:05:56,360 --> 00:06:00,400
+And it's just not obviously what
+the intention was. 
+
+100
+00:06:00,400 --> 00:06:06,040
+And so I was doing more and more
+as my responsibilities were 
+
+101
+00:06:06,040 --> 00:06:08,080
+increasing. 
+I say, but it's kind of true 
+
+102
+00:06:08,080 --> 00:06:10,760
+that, you know, I became a 
+systems architect because I had 
+
+103
+00:06:10,760 --> 00:06:16,320
+to like for survival that, you 
+know, now relationships and 
+
+104
+00:06:16,320 --> 00:06:20,880
+patterns and structures, these 
+things were all just as much a 
+
+105
+00:06:20,880 --> 00:06:25,000
+part of the outcome as feature 
+driven engineering. 
+
+106
+00:06:25,160 --> 00:06:28,280
+Yeah, yeah, it used to be. 
+And I became. 
+
+107
+00:06:28,320 --> 00:06:32,720
+Had to look at things in this 
+more holistic way and discover 
+
+108
+00:06:32,720 --> 00:06:37,320
+the relationships between the 
+people and the processes and the
+
+109
+00:06:37,320 --> 00:06:42,240
+code and the all the different 
+parts of this this very complex 
+
+110
+00:06:42,240 --> 00:06:47,240
+system to be able to to success 
+have successful outcomes. 
+
+111
+00:06:47,240 --> 00:06:49,680
+Or is that how you define an 
+architect? 
+
+112
+00:06:50,080 --> 00:06:52,480
+We're going you, we're going 
+right there. 
+
+113
+00:06:54,440 --> 00:06:58,920
+Go right there. 
+So let me so first I want to say
+
+114
+00:06:59,400 --> 00:07:02,320
+I'm really tired and frustrated 
+with the argument about what 
+
+115
+00:07:02,320 --> 00:07:06,000
+architect means. 
+I feel like we get stuck on 
+
+116
+00:07:06,000 --> 00:07:09,520
+words. 
+Back in 2019, I gave a talk at 
+
+117
+00:07:09,520 --> 00:07:11,480
+the O'Reilly Architecture 
+conference. 
+
+118
+00:07:11,480 --> 00:07:14,600
+And there's like half of the 
+room is architecture is 
+
+119
+00:07:14,600 --> 00:07:17,840
+Kubernetes implementation and 
+the other half is no, it isn't. 
+
+120
+00:07:18,280 --> 00:07:23,800
+And the we get, it gets 
+derisive, it gets and descending
+
+121
+00:07:23,800 --> 00:07:27,560
+and it depends. 
+And I think any architect that 
+
+122
+00:07:27,560 --> 00:07:31,600
+doesn't give that answer, I'm a 
+little bit dubious about because
+
+123
+00:07:31,920 --> 00:07:36,560
+the different systems need 
+different types of support. 
+
+124
+00:07:36,560 --> 00:07:40,400
+They need different types of 
+ways to grow. 
+
+125
+00:07:40,720 --> 00:07:45,800
+And so I don't think that 
+there's a wrong answer to this 
+
+126
+00:07:45,800 --> 00:07:50,720
+question. 
+There's a lot of you don't an 
+
+127
+00:07:50,720 --> 00:07:53,440
+architect. 
+Architect is a bullshit role 
+
+128
+00:07:53,560 --> 00:07:55,960
+cause the engineers do that. 
+Well, sure. 
+
+129
+00:07:55,960 --> 00:08:00,600
+But when you have when you have 
+30 different pieces of software 
+
+130
+00:08:00,600 --> 00:08:04,960
+all interacting with each other,
+who's thinking about the and 
+
+131
+00:08:05,280 --> 00:08:08,800
+aspect of it? 
+And my experience is if you 
+
+132
+00:08:08,800 --> 00:08:14,560
+leave it, if it's a completely 
+non-technical process of 
+
+133
+00:08:14,560 --> 00:08:19,840
+thinking about it, then you end 
+up, as I've seen with the 
+
+134
+00:08:19,840 --> 00:08:22,920
+product owner who doesn't want 
+to have to deal with the 
+
+135
+00:08:22,920 --> 00:08:27,000
+internal team or the the, the 
+problems with the current 
+
+136
+00:08:27,000 --> 00:08:29,360
+software system. 
+So they go rogue and they hire 
+
+137
+00:08:29,360 --> 00:08:32,320
+somebody from another country 
+and they build another piece of 
+
+138
+00:08:32,320 --> 00:08:34,960
+software over here that no one 
+knows how it works, that's 
+
+139
+00:08:34,960 --> 00:08:37,679
+delivering, but that's still 
+part of the system. 
+
+140
+00:08:38,679 --> 00:08:42,960
+So we end up with this Rube 
+Goldberg machine of a system 
+
+141
+00:08:43,159 --> 00:08:46,120
+with no way of really, where are
+the leverage points? 
+
+142
+00:08:46,120 --> 00:08:50,920
+Where can we make a small change
+in a pattern or a structure that
+
+143
+00:08:50,920 --> 00:08:55,320
+will help unlock some of these 
+challenges the system as a whole
+
+144
+00:08:55,440 --> 00:08:59,680
+are experiencing? 
+So to answer the question. 
+
+145
+00:09:00,760 --> 00:09:05,480
+Their job is to avoid the Rube 
+Goldberg gravity. 
+
+146
+00:09:05,640 --> 00:09:09,080
+Well, and I think one of the 
+problems is that architects 
+
+147
+00:09:09,160 --> 00:09:14,840
+became a role and something in 
+the org chart and A and a pay 
+
+148
+00:09:14,840 --> 00:09:19,280
+grade. 
+And so that confused the issue a
+
+149
+00:09:19,280 --> 00:09:22,480
+lot. 
+Yeah, that it's so I, I have a 
+
+150
+00:09:22,480 --> 00:09:27,080
+picture in the book about 
+systems like what is, and also a
+
+151
+00:09:27,160 --> 00:09:29,520
+lot about what systems 
+leadership. 
+
+152
+00:09:29,920 --> 00:09:34,160
+What do we mean by this, which 
+is more about integration and 
+
+153
+00:09:34,160 --> 00:09:39,080
+synthesis and knowledge flow. 
+And it is it is about the 
+
+154
+00:09:39,080 --> 00:09:45,080
+technology, but it's in 
+partnership with well with 
+
+155
+00:09:45,080 --> 00:09:47,400
+everyone, with people, with 
+people in it. 
+
+156
+00:09:47,520 --> 00:09:55,360
+So the architect as a promotion 
+from senior engineer is one form
+
+157
+00:09:55,360 --> 00:09:58,720
+of it, but I would argue that 
+it's one form. 
+
+158
+00:09:58,920 --> 00:10:01,840
+And when I say systems 
+architect, that's not what I 
+
+159
+00:10:01,840 --> 00:10:04,760
+mean, right? 
+I don't mean Kubernetes 
+
+160
+00:10:04,760 --> 00:10:08,360
+certification. 
+And the reason that I, the 
+
+161
+00:10:08,360 --> 00:10:13,000
+reason I do it's, which I find 
+endlessly challenging even 
+
+162
+00:10:13,000 --> 00:10:19,160
+today, I, this came up is that 
+as we move from reductionism to 
+
+163
+00:10:19,160 --> 00:10:22,920
+the point that you were making 
+earlier about we take complexity
+
+164
+00:10:22,920 --> 00:10:27,800
+and we break it down into parts.
+That's what object oriented is 
+
+165
+00:10:27,800 --> 00:10:33,440
+that we try and linearize, 
+eventually get to a Gantt chart 
+
+166
+00:10:33,480 --> 00:10:38,360
+of, of processes. 
+But we know now that that 
+
+167
+00:10:38,360 --> 00:10:42,440
+doesn't scale, that as 
+complexity increases, it doesn't
+
+168
+00:10:42,440 --> 00:10:45,880
+scale. 
+So what do we do? 
+
+169
+00:10:45,920 --> 00:10:48,800
+Like, And that's what we're 
+figuring out. 
+
+170
+00:10:48,800 --> 00:10:52,760
+That's what I call systems 
+systems architecture. 
+
+171
+00:10:53,120 --> 00:10:58,840
+And it requires a skill set that
+we don't tend to value in tech 
+
+172
+00:10:58,920 --> 00:11:02,400
+culture. 
+And that's a real challenge 
+
+173
+00:11:02,400 --> 00:11:06,680
+where it's the, if what we're 
+really doing is just having a, 
+
+174
+00:11:07,360 --> 00:11:10,360
+my tech knowledge store is 
+bigger than your technology 
+
+175
+00:11:10,360 --> 00:11:15,000
+store argument, then we're 
+probably not actually doing 
+
+176
+00:11:15,000 --> 00:11:17,960
+something positive for the, for 
+the system. 
+
+177
+00:11:17,960 --> 00:11:20,800
+So I, I think one of the 
+challenge in the way I define 
+
+178
+00:11:20,800 --> 00:11:25,800
+architect is it integrates 
+skills that aren't necessarily 
+
+179
+00:11:25,800 --> 00:11:30,280
+whiteboard testable and that's 
+usually where the conversation 
+
+180
+00:11:30,280 --> 00:11:33,120
+can get a little stuck. 
+So can we back up? 
+
+181
+00:11:33,120 --> 00:11:37,760
+You said it requires a skill set
+that aren't skills aren't valued
+
+182
+00:11:37,880 --> 00:11:40,480
+in technology. 
+What can you just describe 
+
+183
+00:11:40,480 --> 00:11:42,880
+those? 
+Communication skills, 
+
+184
+00:11:42,880 --> 00:11:47,480
+interpersonal skills, critical 
+thinking skills, the ability to 
+
+185
+00:11:47,480 --> 00:11:50,720
+synthesize knowledge and 
+information and use sound 
+
+186
+00:11:50,720 --> 00:11:55,200
+judgment to partize, the ability
+to be comfortable in 
+
+187
+00:11:55,200 --> 00:11:59,360
+uncertainty, to be comfortable 
+with ambiguity, to not need 
+
+188
+00:11:59,360 --> 00:12:03,960
+everything to be concrete. 
+This is when people say it's too
+
+189
+00:12:03,960 --> 00:12:05,600
+abstract. 
+Diana, I need you to be 
+
+190
+00:12:05,600 --> 00:12:07,520
+concrete. 
+OK? 
+
+191
+00:12:07,680 --> 00:12:11,680
+I can come onto the property and
+pour a piece of concrete, but 
+
+192
+00:12:11,720 --> 00:12:15,000
+that's where the house is going 
+to go and that's the direction 
+
+193
+00:12:15,000 --> 00:12:17,920
+it's going to face. 
+So you probably want me to be 
+
+194
+00:12:17,920 --> 00:12:21,760
+careful about concrete And 
+concrete matters for sure. 
+
+195
+00:12:21,760 --> 00:12:24,520
+But my dogs aren't concrete, 
+right? 
+
+196
+00:12:24,520 --> 00:12:27,600
+The bathtub isn't concrete. 
+It's part, it's part of our 
+
+197
+00:12:27,600 --> 00:12:30,000
+skill set. 
+Reductionism, linear thinking 
+
+198
+00:12:30,160 --> 00:12:32,880
+are essential to delivering good
+software. 
+
+199
+00:12:32,880 --> 00:12:38,920
+No, it's not one or the other. 
+But also so are empathy. 
+
+200
+00:12:38,920 --> 00:12:43,120
+And by this I mean the ability 
+to shift perspective, to see a 
+
+201
+00:12:43,120 --> 00:12:48,320
+see and what the code is doing 
+from other people's experiential
+
+202
+00:12:48,320 --> 00:12:52,280
+perspective. 
+And it's also understanding 
+
+203
+00:12:52,280 --> 00:12:56,240
+everything that's in production 
+is what we thought about, that. 
+
+204
+00:12:56,240 --> 00:13:01,280
+We're knowledge workers and our 
+primary role is to be better at 
+
+205
+00:13:01,280 --> 00:13:06,800
+knowledge work, which often 
+requires thinking practices. 
+
+206
+00:13:07,360 --> 00:13:11,960
+It's funny how radical it was 
+originally to talk about 
+
+207
+00:13:11,960 --> 00:13:16,560
+thinking and awareness of one's 
+thinking, metacognition, the 
+
+208
+00:13:16,560 --> 00:13:20,720
+awareness of logical fallacies 
+and cognitive biases as tech 
+
+209
+00:13:20,720 --> 00:13:22,680
+skills. 
+There was a lot of pushback on 
+
+210
+00:13:22,680 --> 00:13:24,400
+that. 
+And it makes me kind of chuckle 
+
+211
+00:13:24,400 --> 00:13:32,120
+because I'm like, but we where 
+you, but we are, we're using 
+
+212
+00:13:32,120 --> 00:13:35,520
+these skills every time that 
+we're making these decisions. 
+
+213
+00:13:35,520 --> 00:13:38,520
+And so it's part of the package 
+I think. 
+
+214
+00:13:39,600 --> 00:13:44,960
+Well, I think it's because we 
+were initially so focused on, I 
+
+215
+00:13:44,960 --> 00:13:48,720
+mean, even inventing the 
+computer and, and getting the 
+
+216
+00:13:48,720 --> 00:13:53,040
+wires and the, you know, it was 
+all so very focused on that. 
+
+217
+00:13:53,040 --> 00:13:55,760
+And the programs themselves were
+not very sophisticated. 
+
+218
+00:13:55,760 --> 00:13:59,760
+But as we started developing 
+more sophisticated programs, 
+
+219
+00:13:59,760 --> 00:14:02,960
+it's almost like they started to
+hatch the sophistication of 
+
+220
+00:14:02,960 --> 00:14:06,880
+humans. 
+You know, I, I, I, I understand 
+
+221
+00:14:06,880 --> 00:14:09,520
+why that was. 
+But I also understand, well, 
+
+222
+00:14:09,520 --> 00:14:13,040
+This is why we need to move more
+and more towards I mean, it's 
+
+223
+00:14:13,040 --> 00:14:18,240
+becoming easier to generate 
+code, even good code using using
+
+224
+00:14:18,280 --> 00:14:21,640
+AI stuff. 
+But it's like, well, what is it 
+
+225
+00:14:21,720 --> 00:14:23,880
+that we want to do? 
+What problem are we trying to 
+
+226
+00:14:23,880 --> 00:14:26,760
+solve anyway? 
+I want to know what you because 
+
+227
+00:14:26,760 --> 00:14:28,280
+you the title of your book 
+again. 
+
+228
+00:14:28,880 --> 00:14:32,720
+Learning systems thinking. 
+OK, So what is systems thinking 
+
+229
+00:14:33,560 --> 00:14:37,320
+according to your? 
+Yeah, well, so one of the. 
+
+230
+00:14:39,240 --> 00:14:41,520
+I mean, I, I know I dabbled in 
+it. 
+
+231
+00:14:41,600 --> 00:14:46,160
+I, I was briefly in a PhD 
+program that was engineering 
+
+232
+00:14:46,160 --> 00:14:49,040
+systems and I thought it was 
+going to be something like that.
+
+233
+00:14:49,240 --> 00:14:54,640
+It's a long time ago anyway so 
+so I'm curious what your how you
+
+234
+00:14:54,640 --> 00:14:58,640
+define it. 
+Yeah, so the subtitle is 
+
+235
+00:14:58,680 --> 00:15:01,640
+something like a is so funny 
+that I don't remember because I 
+
+236
+00:15:01,640 --> 00:15:04,080
+don't, it's like my own phone 
+number, right? 
+
+237
+00:15:04,080 --> 00:15:07,440
+I don't call me, I don't know at
+the end of it, but it's non 
+
+238
+00:15:07,440 --> 00:15:11,800
+linear skills and practices. 
+So the challenge with using the 
+
+239
+00:15:11,800 --> 00:15:16,280
+phrase systems thinking is that 
+one, there is not a standard 
+
+240
+00:15:16,280 --> 00:15:19,920
+definition. 
+You know, academia, for example,
+
+241
+00:15:19,920 --> 00:15:24,320
+tends to approach it differently
+than let's say business side of 
+
+242
+00:15:24,360 --> 00:15:30,720
+of of in workshops. 
+Also, I don't I also mean 
+
+243
+00:15:30,720 --> 00:15:36,200
+pattern thinking, parallel 
+thinking, critical thinking, but
+
+244
+00:15:36,200 --> 00:15:40,760
+non linear thinking is also not 
+a great title and not a good 
+
+245
+00:15:40,760 --> 00:15:44,920
+book title and not really what 
+people are are looking for now. 
+
+246
+00:15:44,920 --> 00:15:47,800
+And so that's where we settled 
+on systems thinking. 
+
+247
+00:15:47,800 --> 00:15:55,080
+And also because it is about, it
+is for, for technology 
+
+248
+00:15:55,080 --> 00:15:57,360
+professional software system 
+professionals. 
+
+249
+00:15:57,680 --> 00:16:06,000
+But the, the, it's really a 
+group of practices, all forms of
+
+250
+00:16:06,000 --> 00:16:10,320
+thinking and systems thinking 
+included is more rightly 
+
+251
+00:16:10,320 --> 00:16:15,960
+described as a group of 
+practices that when done well, 
+
+252
+00:16:16,200 --> 00:16:20,000
+enable people to do hard things 
+together, right? 
+
+253
+00:16:20,000 --> 00:16:25,360
+That we we, we're not good at 
+that at the doing hard things 
+
+254
+00:16:25,360 --> 00:16:28,640
+together for all the reasons 
+you've already mentioned, right,
+
+255
+00:16:28,640 --> 00:16:32,840
+about the ways that we try to 
+linearize or silo or breakdown. 
+
+256
+00:16:33,240 --> 00:16:41,040
+And so when we enter that realm,
+accepting that things are always
+
+257
+00:16:41,040 --> 00:16:46,640
+changing, accepting that we 
+can't know the right thing to do
+
+258
+00:16:46,640 --> 00:16:51,800
+as complexity increase, I would 
+argue it was delusional that we 
+
+259
+00:16:52,080 --> 00:16:56,760
+did think that we knew exactly 
+what the right thing to do was. 
+
+260
+00:16:56,760 --> 00:16:59,760
+But you know, I, I, I, it's more
+so now. 
+
+261
+00:17:00,880 --> 00:17:05,839
+And so it includes things like 
+cultivating self-awareness, 
+
+262
+00:17:06,240 --> 00:17:10,119
+which again, is sort of a 
+surprise as a technology skill, 
+
+263
+00:17:10,119 --> 00:17:13,119
+right? 
+But that it includes learning to
+
+264
+00:17:13,119 --> 00:17:17,560
+respond rather than react. 
+Because what's often happening 
+
+265
+00:17:17,560 --> 00:17:20,720
+is we're in these discussions 
+and someone says something, we 
+
+266
+00:17:20,720 --> 00:17:24,880
+want to bite them, and then 
+we're like engaged in this 
+
+267
+00:17:24,880 --> 00:17:29,040
+reaction. 
+As opposed to being able to use 
+
+268
+00:17:29,040 --> 00:17:34,280
+systemic reasoning, which is the
+art and science of developing 
+
+269
+00:17:34,280 --> 00:17:38,000
+ideas and recommendations that 
+are supported by sound 
+
+270
+00:17:38,000 --> 00:17:41,040
+reasoning. 
+And it's as simple as I can give
+
+271
+00:17:41,040 --> 00:17:46,600
+you my opinion about which 
+JavaScript framework is best or 
+
+272
+00:17:46,680 --> 00:17:52,280
+right or whatever, but systemic 
+reasoning is I I show you how I 
+
+273
+00:17:52,280 --> 00:17:55,240
+arrived at this conclusion. 
+What were the reasons that 
+
+274
+00:17:55,240 --> 00:17:58,240
+supported it? 
+Why is it relevant in this 
+
+275
+00:17:58,240 --> 00:18:01,840
+particular context? 
+Because there's no one right 
+
+276
+00:18:01,840 --> 00:18:04,640
+thing that's right for every 
+circumstance. 
+
+277
+00:18:04,640 --> 00:18:06,680
+What about this circumstance 
+that. 
+
+278
+00:18:07,840 --> 00:18:10,480
+Sounds a lot harder than just 
+having an opinion. 
+
+279
+00:18:11,160 --> 00:18:14,480
+Yeah, yeah. 
+And we are, I call it like tech.
+
+280
+00:18:14,480 --> 00:18:18,760
+We are an opinion driven culture
+like that and I love it. 
+
+281
+00:18:18,760 --> 00:18:21,400
+I love we we could spend all 
+this time talking about 
+
+282
+00:18:21,400 --> 00:18:22,200
+opinions. 
+I'm fine. 
+
+283
+00:18:22,200 --> 00:18:26,560
+I like opinions. 
+Opinions are not helpful when 
+
+284
+00:18:26,560 --> 00:18:31,520
+you're trying to reach a 
+conclusion that is the best 
+
+285
+00:18:31,520 --> 00:18:35,120
+possible conclusion under your 
+circumstances, even though 
+
+286
+00:18:35,360 --> 00:18:41,720
+there's no one right answer. 
+So it's the practice of being 
+
+287
+00:18:41,720 --> 00:18:46,000
+able to create conceptual 
+integrity, which Fred Brooks 
+
+288
+00:18:46,000 --> 00:18:49,040
+says is the most important 
+consideration in systems design.
+
+289
+00:18:49,040 --> 00:18:51,720
+But basically it's kind of the 
+Conway thing. 
+
+290
+00:18:52,240 --> 00:18:55,800
+What we put in production will 
+reflect the way we think and 
+
+291
+00:18:55,800 --> 00:18:58,600
+communicate. 
+So if we're doing complex 
+
+292
+00:18:58,600 --> 00:19:03,800
+things, we need to be able to 
+think and communicate well in 
+
+293
+00:19:04,280 --> 00:19:09,320
+the complexity, not by siloing 
+or negating it, and develop that
+
+294
+00:19:09,320 --> 00:19:16,160
+ability so that we can basically
+be the system we want to to 
+
+295
+00:19:16,160 --> 00:19:19,880
+develop. 
+So you said systems thinking as 
+
+296
+00:19:19,880 --> 00:19:22,840
+a set of practices. 
+Can you enumerate those? 
+
+297
+00:19:23,480 --> 00:19:26,560
+Well, the cultivating 
+self-awareness, that would be 
+
+298
+00:19:26,560 --> 00:19:28,720
+one of them. 
+Like you know, I get up every 
+
+299
+00:19:28,720 --> 00:19:31,960
+morning and write for a while of
+just whatever. 
+
+300
+00:19:32,280 --> 00:19:37,400
+Give myself a chance to listen 
+to what I think and learning to 
+
+301
+00:19:37,400 --> 00:19:41,680
+notice my reactions. 
+Also how often my reactions 
+
+302
+00:19:41,680 --> 00:19:44,800
+don't have it, don't help 
+anything, and aren't really 
+
+303
+00:19:44,800 --> 00:19:48,920
+trustworthy or valuable. 
+But then also for me, from an 
+
+304
+00:19:48,920 --> 00:19:53,040
+architecture point of view, it's
+synthesizing knowledge and 
+
+305
+00:19:53,040 --> 00:19:55,840
+information. 
+And it's usually not my 
+
+306
+00:19:55,960 --> 00:19:59,520
+knowledge, right? 
+It's from across the system, 
+
+307
+00:19:59,680 --> 00:20:03,280
+looking at a challenge from 
+multiple points of view and 
+
+308
+00:20:03,280 --> 00:20:08,800
+being able to synthesize. 
+Something that will actually 
+
+309
+00:20:08,800 --> 00:20:11,560
+have a positive impact. 
+So in systems, we talk about 
+
+310
+00:20:11,560 --> 00:20:17,840
+leverage points, which is about 
+understanding how a system is 
+
+311
+00:20:17,840 --> 00:20:24,320
+reinforcing itself and where to 
+intervene in a way that will 
+
+312
+00:20:24,320 --> 00:20:29,040
+actually move it in the 
+desirable direction. 
+
+313
+00:20:29,080 --> 00:20:31,880
+So this sounds very 
+straightforward, but we know it.
+
+314
+00:20:31,880 --> 00:20:36,240
+That's actually really hard. 
+And the two things we know, one 
+
+315
+00:20:36,240 --> 00:20:40,200
+is that we are almost always 
+blaming. 
+
+316
+00:20:40,840 --> 00:20:44,280
+There's a lot of system science 
+that shows, you know, that you 
+
+317
+00:20:44,280 --> 00:20:48,960
+put people in a situation in 
+which better thinking and 
+
+318
+00:20:48,960 --> 00:20:51,840
+communication could actually 
+have helped, but they were 
+
+319
+00:20:51,840 --> 00:20:53,960
+reacting. 
+And then you ask them what 
+
+320
+00:20:53,960 --> 00:20:58,120
+happened and they blame and they
+blame the wrong things. 
+
+321
+00:20:58,720 --> 00:21:04,600
+And also counter intuitiveness 
+because the way that we perceive
+
+322
+00:21:04,600 --> 00:21:09,080
+the world arises from our own 
+beliefs and values and mental 
+
+323
+00:21:09,080 --> 00:21:13,000
+models, but also the structures 
+and patterns that have acted on 
+
+324
+00:21:13,000 --> 00:21:15,800
+us. 
+Like, for example, we all went 
+
+325
+00:21:15,800 --> 00:21:20,640
+to school and that taught us 
+things about thinking and what's
+
+326
+00:21:20,640 --> 00:21:24,480
+true that then we bring into 
+circumstances. 
+
+327
+00:21:24,640 --> 00:21:29,120
+Counter intuitiveness is so Jay 
+Forrester says he went into 
+
+328
+00:21:29,120 --> 00:21:33,480
+organization after organization 
+and discovered that for the most
+
+329
+00:21:33,480 --> 00:21:36,480
+part, people did know where a 
+leverage point was. 
+
+330
+00:21:36,480 --> 00:21:39,800
+Like they did know where things 
+were getting tangled, where 
+
+331
+00:21:39,800 --> 00:21:43,080
+where the blockage was, but 
+they're pushing it in the wrong 
+
+332
+00:21:43,080 --> 00:21:47,080
+direction. 
+And this is very, very common. 
+
+333
+00:21:47,080 --> 00:21:50,000
+We're almost always blaming the 
+wrong thing and we're almost 
+
+334
+00:21:50,000 --> 00:21:53,360
+always doing the wrong thing. 
+And that's not a bad thing or a 
+
+335
+00:21:53,360 --> 00:21:55,680
+judgment. 
+That's part of the process. 
+
+336
+00:21:55,680 --> 00:21:58,600
+The first time we moved from 
+monolithic software to 
+
+337
+00:21:58,600 --> 00:22:01,120
+microservices, we're like, wow, 
+these are really tightly 
+
+338
+00:22:01,120 --> 00:22:02,920
+coupled. 
+I wonder how that happened. 
+
+339
+00:22:03,440 --> 00:22:07,920
+But we didn't understand the 
+mind shift involved until we 
+
+340
+00:22:07,920 --> 00:22:10,680
+practiced for a while and then 
+we we got it. 
+
+341
+00:22:11,560 --> 00:22:15,680
+So would you, would you say that
+there's, we operate in a 
+
+342
+00:22:16,080 --> 00:22:20,400
+implicit system that we maybe 
+aren't aware of that's been 
+
+343
+00:22:20,400 --> 00:22:23,760
+shaped by culture and 
+environment and learning and all
+
+344
+00:22:23,760 --> 00:22:28,320
+those things you mentioned and 
+the that implicit system that 
+
+345
+00:22:28,320 --> 00:22:32,720
+we're operating in may not be 
+the best one. 
+
+346
+00:22:32,840 --> 00:22:38,560
+And so part of your goal with 
+the book was to help you think 
+
+347
+00:22:38,560 --> 00:22:43,760
+about systems and how they can 
+be better rather than just use 
+
+348
+00:22:43,760 --> 00:22:47,320
+the default system that. 
+Right. 
+
+349
+00:22:47,400 --> 00:22:51,720
+And also, I'm going to observe 
+that you're asking. 
+
+350
+00:22:52,800 --> 00:22:57,040
+I mean, a lot of people are 
+attracted to this field because 
+
+351
+00:22:57,120 --> 00:23:00,520
+it seems deterministic and 
+controllable. 
+
+352
+00:23:00,960 --> 00:23:03,760
+And they, and it feels like, oh,
+we don't have to deal with 
+
+353
+00:23:03,760 --> 00:23:08,800
+these, you know, weird human 
+uncertainty aspects. 
+
+354
+00:23:08,800 --> 00:23:12,560
+And you're saying, oh, we're 
+going to have to push you into 
+
+355
+00:23:13,560 --> 00:23:15,960
+experience. 
+You know, everybody needs to 
+
+356
+00:23:15,960 --> 00:23:19,360
+learn nonviolent communication 
+and, you know, all these 
+
+357
+00:23:19,360 --> 00:23:20,960
+different things. 
+And it's like, God, it sounds 
+
+358
+00:23:20,960 --> 00:23:26,480
+like quite an uphill battle. 
+So to the first one, which I 
+
+359
+00:23:26,480 --> 00:23:33,040
+liked better, to the first one, 
+if I could have written that on 
+
+360
+00:23:33,040 --> 00:23:36,560
+the back of my book, if I could 
+still make changes, that's 
+
+361
+00:23:36,560 --> 00:23:39,440
+actually what I would write. 
+And I would even expand it to 
+
+362
+00:23:39,440 --> 00:23:43,760
+say it doesn't work. 
+Like I've been doing this with 
+
+363
+00:23:43,760 --> 00:23:48,520
+organizations sincerely trying 
+to change as the paradigm has 
+
+364
+00:23:48,520 --> 00:23:51,520
+shifted around them. 
+They're trying to move their 
+
+365
+00:23:51,520 --> 00:23:56,200
+software systems to maintain 
+competitive advantage and use 
+
+366
+00:23:56,200 --> 00:24:00,040
+modern tools. 
+So they'll modernize with no 
+
+367
+00:24:00,040 --> 00:24:04,200
+modern without realizing 
+modernization is a mental 
+
+368
+00:24:04,200 --> 00:24:07,560
+paradigm shift and a 
+organizational paradigm shift 
+
+369
+00:24:07,560 --> 00:24:12,400
+and a structural shift. 
+And there's a very snarky 
+
+370
+00:24:12,600 --> 00:24:16,800
+organization that someone put up
+a website. 
+
+371
+00:24:16,800 --> 00:24:18,560
+I can't even remember what it 
+is. 
+
+372
+00:24:18,560 --> 00:24:23,080
+It's SADMF, like scaled agile, 
+DevOps, like it's, it's all 
+
+373
+00:24:23,080 --> 00:24:26,280
+made-up. 
+But the tagline is enterprise 
+
+374
+00:24:26,280 --> 00:24:29,280
+transformation without the risk 
+of culture change. 
+
+375
+00:24:30,160 --> 00:24:36,280
+And I love that, right. 
+So we're taking, we're taking 
+
+376
+00:24:36,280 --> 00:24:40,480
+non linear, the desire for non 
+linear change and we're trying 
+
+377
+00:24:40,480 --> 00:24:46,760
+to stick it into a hierarchical 
+dualistic concerned with control
+
+378
+00:24:46,760 --> 00:24:51,280
+procedural environment. 
+And it doesn't work. 
+
+379
+00:24:51,280 --> 00:24:55,400
+It just it doesn't work. 
+So maybe I think this is an 
+
+380
+00:24:55,400 --> 00:24:59,520
+important piece, like it did 
+kind of work for a little while.
+
+381
+00:24:59,760 --> 00:25:04,520
+And I think that what happened 
+and maybe at different points 
+
+382
+00:25:04,520 --> 00:25:07,880
+for different industries, but 
+the complexity of the systems 
+
+383
+00:25:07,880 --> 00:25:12,880
+that we were being required to 
+build reached the point where 
+
+384
+00:25:13,400 --> 00:25:18,640
+our ways of thinking no longer 
+worked to to be able to deliver 
+
+385
+00:25:18,960 --> 00:25:21,680
+on that complexity, the 
+complexity requirements. 
+
+386
+00:25:21,960 --> 00:25:25,680
+And so I think maybe what your 
+book is about is we need to have
+
+387
+00:25:25,680 --> 00:25:29,880
+new systems and new ways to 
+think about things so that we 
+
+388
+00:25:29,880 --> 00:25:34,920
+can tackle the the monumental 
+complexity that now exists in 
+
+389
+00:25:34,920 --> 00:25:37,960
+any modern system. 
+And ultimately, how are you 
+
+390
+00:25:37,960 --> 00:25:42,640
+going to deal with the issue 
+that hierarchy is about 
+
+391
+00:25:42,760 --> 00:25:46,280
+maintaining control and 
+producing the same thing over 
+
+392
+00:25:46,280 --> 00:25:48,520
+and over again? 
+We're moving, I mean, especially
+
+393
+00:25:48,520 --> 00:25:51,320
+in software, we're moving into 
+this world where it's all about 
+
+394
+00:25:51,320 --> 00:25:57,240
+creativity and those two just 
+don't mesh you, the hierarchy is
+
+395
+00:25:57,240 --> 00:25:59,120
+always going to fight the 
+creativity. 
+
+396
+00:25:59,480 --> 00:26:03,480
+The system always pushes back. 
+This is part of changing a 
+
+397
+00:26:03,480 --> 00:26:07,920
+system you 2 steps forward and 
+40 steps back and two like, you 
+
+398
+00:26:07,960 --> 00:26:11,880
+know, back to our original 
+conversation, do things change 
+
+399
+00:26:11,880 --> 00:26:14,360
+what we do? 
+So I use the iceberg model, 
+
+400
+00:26:14,360 --> 00:26:17,040
+which is a really common thing 
+in systems thinking. 
+
+401
+00:26:17,040 --> 00:26:20,520
+But what it really shows us is 
+that we're responding to visible
+
+402
+00:26:20,520 --> 00:26:24,480
+events on the surface, but 
+underneath our pad patterns and 
+
+403
+00:26:24,480 --> 00:26:30,600
+structures and core mental 
+models that are generating the 
+
+404
+00:26:30,600 --> 00:26:34,160
+system we work in. 
+And if we respond to visual 
+
+405
+00:26:34,160 --> 00:26:39,040
+events, but we don't change our 
+core mental models, we're going 
+
+406
+00:26:39,040 --> 00:26:44,680
+to end up having a modern system
+with modern tools that has many 
+
+407
+00:26:44,680 --> 00:26:47,160
+of the same challenges. 
+Well. 
+
+408
+00:26:47,160 --> 00:26:51,040
+And I think the the hierarchy is
+then gonna push back and try and
+
+409
+00:26:51,040 --> 00:26:52,840
+deke. 
+I mean, I think maybe that's 
+
+410
+00:26:52,840 --> 00:26:56,360
+what happened with Agile is it's
+like, Oh yeah, we move forward, 
+
+411
+00:26:56,360 --> 00:26:59,000
+we have better communication and
+then the hierarchy goes, yeah, 
+
+412
+00:26:59,000 --> 00:27:00,680
+but I really want to have 
+control. 
+
+413
+00:27:01,120 --> 00:27:06,280
+So it kind of eventually 
+happened that it failed to go. 
+
+414
+00:27:06,400 --> 00:27:09,400
+You can build a house for a 
+little while on top of the 
+
+415
+00:27:09,400 --> 00:27:12,960
+iceberg, but at some point, if 
+you haven't actually changed 
+
+416
+00:27:12,960 --> 00:27:16,200
+what's underneath, it's gonna 
+slip over or something, right? 
+
+417
+00:27:16,360 --> 00:27:18,240
+Right. 
+And to this you're, you're, 
+
+418
+00:27:18,320 --> 00:27:20,720
+you're, this is an excellent 
+point that you're raising and 
+
+419
+00:27:20,720 --> 00:27:22,880
+I'm definitely not not avoiding 
+it. 
+
+420
+00:27:22,880 --> 00:27:29,880
+It is that, that so many 
+organizations value knowledge 
+
+421
+00:27:29,880 --> 00:27:31,800
+stock. 
+How much do you know? 
+
+422
+00:27:31,800 --> 00:27:35,000
+So if I get a whiteboard test, 
+for example, you're testing me 
+
+423
+00:27:35,000 --> 00:27:36,720
+on how much knowledge stock I 
+have. 
+
+424
+00:27:37,000 --> 00:27:41,040
+But increasingly, organizations 
+succeed or fail based on 
+
+425
+00:27:41,040 --> 00:27:44,720
+knowledge flow. 
+How am I able to generate new 
+
+426
+00:27:44,720 --> 00:27:47,080
+knowledge? 
+How is am I able to shape 
+
+427
+00:27:47,080 --> 00:27:50,120
+information in the in emerging 
+context? 
+
+428
+00:27:50,120 --> 00:27:54,960
+How am I doing this? 
+And so periodically, as soon as 
+
+429
+00:27:54,960 --> 00:27:59,160
+the system pushes back and tries
+to regain control, it gets 
+
+430
+00:27:59,160 --> 00:28:01,520
+worse. 
+So what I've been seeing is 
+
+431
+00:28:01,720 --> 00:28:05,040
+that's what happens. 
+It hits the iceberg, then they 
+
+432
+00:28:05,040 --> 00:28:07,480
+suffer the repercussions of 
+that. 
+
+433
+00:28:07,840 --> 00:28:14,800
+And at some point then kind of 
+keep trying, they sort of keep 
+
+434
+00:28:14,800 --> 00:28:18,680
+trying again to solve this, this
+problem that you're talking 
+
+435
+00:28:18,680 --> 00:28:20,960
+about. 
+And I think it's an iterative 
+
+436
+00:28:20,960 --> 00:28:26,400
+process because hierarchical 
+control, what we mean by 
+
+437
+00:28:26,400 --> 00:28:30,160
+management, this came to us in 
+the US. 
+
+438
+00:28:30,160 --> 00:28:35,560
+This is hundreds of years old 
+and school mirrors this 
+
+439
+00:28:35,560 --> 00:28:39,640
+structure of right. 
+Peter Senji says that we'll 
+
+440
+00:28:39,640 --> 00:28:42,280
+never change our system of 
+management till we change our 
+
+441
+00:28:42,280 --> 00:28:45,600
+system of education because 
+they're the same system. 
+
+442
+00:28:45,800 --> 00:28:54,320
+So it we are to your point, that
+is the the heavy monolithic 
+
+443
+00:28:54,320 --> 00:28:57,000
+gravity. 
+And can we? 
+
+444
+00:28:57,280 --> 00:29:03,840
+And I got tired of outing at the
+tidal wave of this situation 
+
+445
+00:29:04,000 --> 00:29:09,160
+because it it's so difficult and
+it just comes back again and 
+
+446
+00:29:09,160 --> 00:29:15,600
+started focusing on what's the 
+experiences we can give people 
+
+447
+00:29:16,120 --> 00:29:22,520
+so they get a taste of how much 
+more influence you have if you 
+
+448
+00:29:23,000 --> 00:29:28,160
+give up over control, Like if 
+you give up procedural like you,
+
+449
+00:29:28,240 --> 00:29:32,840
+you need it where you need it. 
+But what about the end parts? 
+
+450
+00:29:33,000 --> 00:29:36,640
+Like where, where is it actually
+limiting you? 
+
+451
+00:29:37,600 --> 00:29:41,160
+What is leadership from a 
+systems point of view? 
+
+452
+00:29:41,800 --> 00:29:43,760
+How do you enable knowledge 
+flow? 
+
+453
+00:29:43,760 --> 00:29:49,680
+How do you lead in a way that 
+creates where the system, the 
+
+454
+00:29:49,800 --> 00:29:53,480
+the relationships between the 
+people and the technology are 
+
+455
+00:29:53,480 --> 00:29:57,080
+greater than the sum of their 
+parts and we're really 
+
+456
+00:29:57,560 --> 00:30:01,360
+relatively new? 
+Except we're not. 
+
+457
+00:30:01,960 --> 00:30:05,640
+What you just said about 
+creating experiences, I mean, 
+
+458
+00:30:05,640 --> 00:30:10,600
+this is, this is what I've, what
+we've seen when we hold open 
+
+459
+00:30:10,600 --> 00:30:14,600
+spaces conferences, because 
+there will always be, if you 
+
+460
+00:30:14,600 --> 00:30:17,760
+know, some new people who come 
+and they go, wow, this can't 
+
+461
+00:30:17,760 --> 00:30:21,120
+possibly work. 
+And then they have and, and 
+
+462
+00:30:21,120 --> 00:30:23,600
+they're totally convinced and 
+you couldn't talk them into it, 
+
+463
+00:30:23,600 --> 00:30:27,160
+but then they have the 
+experience and all of a sudden 
+
+464
+00:30:28,160 --> 00:30:31,440
+they're converts. 
+And So what? 
+
+465
+00:30:31,520 --> 00:30:35,160
+So what kind of experiences? 
+I mean, I just, I agree with 
+
+466
+00:30:35,160 --> 00:30:39,160
+you, that huge tidal wave and 
+you look at it and you go, OK, 
+
+467
+00:30:39,240 --> 00:30:46,440
+I, we somehow have to evolve 
+away from this hierarchical 
+
+468
+00:30:46,440 --> 00:30:50,440
+command and control system if 
+we're gonna move forward. 
+
+469
+00:30:51,320 --> 00:30:56,360
+I don't know how to do that. 
+I'm sort of like, maybe it's 
+
+470
+00:30:56,360 --> 00:30:58,000
+just. 
+Really hard to give everyone the
+
+471
+00:30:58,000 --> 00:30:59,800
+experience. 
+That, well, it's, yeah, it's 
+
+472
+00:30:59,800 --> 00:31:03,800
+hard to give and plus there's an
+intrinsic when you get up into 
+
+473
+00:31:03,800 --> 00:31:08,280
+the hierarchy, you get benefits 
+from that and you don't want to 
+
+474
+00:31:08,280 --> 00:31:11,320
+give those up. 
+You know, I like being able to 
+
+475
+00:31:11,320 --> 00:31:14,680
+tell everybody what to do and 
+and deciding that I should get 
+
+476
+00:31:14,680 --> 00:31:16,840
+most of the money in to all of 
+those things. 
+
+477
+00:31:16,840 --> 00:31:18,360
+You know, it's like, I don't 
+want to give that up. 
+
+478
+00:31:19,360 --> 00:31:21,480
+The system definitely reinforces
+it, yeah. 
+
+479
+00:31:22,720 --> 00:31:25,560
+It does. 
+And I, I had an advantage 
+
+480
+00:31:25,560 --> 00:31:31,880
+because I, I mean, when I, when 
+I was a girl, there were no 
+
+481
+00:31:31,880 --> 00:31:37,360
+personal computers or the, the, 
+the, the, the, the, unlike Jimmy
+
+482
+00:31:37,360 --> 00:31:39,640
+Buffett's, a pirate looks at 40,
+right? 
+
+483
+00:31:39,640 --> 00:31:42,440
+The occupational hazard being 
+the occupations, just not 
+
+484
+00:31:42,440 --> 00:31:45,160
+around. 
+Like I had to wait for the world
+
+485
+00:31:45,160 --> 00:31:49,000
+to invent my career for me. 
+So then I could go and have it. 
+
+486
+00:31:49,360 --> 00:31:53,080
+And one of those things is I, 
+that I had been parenting my son
+
+487
+00:31:53,080 --> 00:31:54,680
+is a micro services 
+architecture. 
+
+488
+00:31:54,680 --> 00:32:00,400
+So like I had lots of training 
+before I went into engineering 
+
+489
+00:32:00,400 --> 00:32:04,640
+and engineering leadership and 
+I'm not interested in parenting 
+
+490
+00:32:04,640 --> 00:32:08,640
+engineers, nor do I think they 
+really need me to do that. 
+
+491
+00:32:09,240 --> 00:32:11,960
+So there was a lot about 
+management that felt like a 
+
+492
+00:32:11,960 --> 00:32:16,000
+nanny culture. 
+And I'm just like, Nah, I mean, 
+
+493
+00:32:16,000 --> 00:32:19,320
+I know that I want to do hard 
+things with other people. 
+
+494
+00:32:19,760 --> 00:32:24,640
+And now I see that was a huge 
+advantage because sure, it's 
+
+495
+00:32:24,640 --> 00:32:26,880
+very glitter. 
+It's lovely to have a great 
+
+496
+00:32:26,880 --> 00:32:28,920
+title. 
+It's lovely to have some 
+
+497
+00:32:28,920 --> 00:32:30,520
+control. 
+Even in a meeting today, I 
+
+498
+00:32:30,520 --> 00:32:33,920
+really had to think through, I 
+really want to get some control 
+
+499
+00:32:33,920 --> 00:32:39,520
+over this situation. 
+But do I, is that like really 
+
+500
+00:32:39,520 --> 00:32:44,480
+pay attention to it? 
+But the if we, if we think 
+
+501
+00:32:44,480 --> 00:32:50,880
+about, if we think about how to 
+nourish and cultivate knowledge 
+
+502
+00:32:50,880 --> 00:32:53,960
+work, if we think of software as
+knowledge and how to cultivate 
+
+503
+00:32:53,960 --> 00:32:59,600
+knowledge work, then the command
+and control it is a limitation. 
+
+504
+00:33:00,040 --> 00:33:04,640
+And if you're OK with the 
+limitation, sure. 
+
+505
+00:33:04,640 --> 00:33:10,760
+But if you want innovation, if 
+you want emergence, and I wanted
+
+506
+00:33:10,760 --> 00:33:15,360
+to say too the two quick things.
+One is that I hear this a lot 
+
+507
+00:33:15,360 --> 00:33:18,200
+and it's very fair. 
+Someone in an interview asking 
+
+508
+00:33:18,240 --> 00:33:22,640
+what they're like, I have to 
+think about seven different 
+
+509
+00:33:22,640 --> 00:33:25,640
+languages and four different and
+never mind terraforming it. 
+
+510
+00:33:25,680 --> 00:33:27,880
+And now you want me to think 
+about everything. 
+
+511
+00:33:28,040 --> 00:33:30,080
+Is that what you're saying? 
+Now you want me to think about 
+
+512
+00:33:30,080 --> 00:33:34,600
+everything? 
+No, in the sense that This is 
+
+513
+00:33:34,600 --> 00:33:38,200
+why we form a system of people 
+thinking together. 
+
+514
+00:33:38,400 --> 00:33:43,960
+I do systems thinking full time,
+but you don't need a whole bunch
+
+515
+00:33:43,960 --> 00:33:50,880
+of people doing that like that. 
+The the partner together to 
+
+516
+00:33:50,880 --> 00:33:56,640
+share knowledge and information 
+so that we can create what we're
+
+517
+00:33:56,640 --> 00:34:00,800
+trying to create lying on these 
+interpersonal relationships. 
+
+518
+00:34:00,800 --> 00:34:04,240
+And so we're not making a hero 
+who knows everything. 
+
+519
+00:34:04,240 --> 00:34:07,400
+Now we're trying to. 
+Yeah, but don't you think that 
+
+520
+00:34:07,680 --> 00:34:12,520
+the team at least needs to 
+understand some things about 
+
+521
+00:34:12,719 --> 00:34:16,080
+system thinking in order to 
+consume what you're? 
+
+522
+00:34:16,320 --> 00:34:19,600
+Seems like there's this element 
+that is just bringing awareness 
+
+523
+00:34:19,600 --> 00:34:24,800
+to the implicit things. 
+We should be aware that if we're
+
+524
+00:34:24,800 --> 00:34:29,440
+in a hierarchy, that has an 
+impact in how we're how we're 
+
+525
+00:34:29,440 --> 00:34:33,280
+building software, delivering on
+the system or whatever, and at 
+
+526
+00:34:33,280 --> 00:34:36,960
+least be able to recognize that 
+that that is a piece of the 
+
+527
+00:34:36,960 --> 00:34:38,639
+system. 
+The hierarchy that we're in is a
+
+528
+00:34:38,639 --> 00:34:40,719
+piece of the system and it has 
+impacts. 
+
+529
+00:34:40,960 --> 00:34:43,159
+Likewise, communication 
+structures and process 
+
+530
+00:34:43,159 --> 00:34:46,280
+structures and decision making 
+float like, like at least begin 
+
+531
+00:34:46,280 --> 00:34:50,040
+to recognize all these things 
+that we just is that this is 
+
+532
+00:34:50,040 --> 00:34:52,639
+water. 
+Recognize how it actually is 
+
+533
+00:34:52,639 --> 00:34:55,440
+impacting how we're able to 
+build and deliver our software. 
+
+534
+00:34:55,960 --> 00:34:59,600
+Yeah. 
+And the, the, so I have a bias 
+
+535
+00:34:59,600 --> 00:35:02,040
+here. 
+So that I think is is important 
+
+536
+00:35:02,040 --> 00:35:08,000
+to call out and that I have 
+worked mostly on what we, what 
+
+537
+00:35:08,000 --> 00:35:12,360
+we, what we now call like what 
+we used to call agile to. 
+
+538
+00:35:12,360 --> 00:35:15,320
+We decided that agile is 
+responsible for climate change 
+
+539
+00:35:15,320 --> 00:35:16,920
+and now we are supposed to hate 
+on it. 
+
+540
+00:35:17,680 --> 00:35:19,960
+But I'm like, well, I mean, 
+agile was invented because 
+
+541
+00:35:19,960 --> 00:35:22,240
+reality refuses to bow down to 
+power. 
+
+542
+00:35:22,240 --> 00:35:24,320
+Has that been fixed? 
+Because I don't think that's 
+
+543
+00:35:24,320 --> 00:35:26,200
+fixed. 
+And I'm not saying we should 
+
+544
+00:35:26,200 --> 00:35:29,640
+stick with something that isn't 
+working for us, but also like I 
+
+545
+00:35:29,640 --> 00:35:35,440
+think power is the challenge. 
+Anyway, point is, I've always 
+
+546
+00:35:35,440 --> 00:35:40,720
+worked on self organizing teams 
+in doing stuff that people 
+
+547
+00:35:40,720 --> 00:35:42,480
+don't. 
+We don't know how to do. 
+
+548
+00:35:42,480 --> 00:35:47,520
+That's usually why they they 
+hired us and that I usually work
+
+549
+00:35:47,520 --> 00:35:51,080
+on some type of, of 
+transformation or Greenfield 
+
+550
+00:35:51,080 --> 00:35:54,200
+work and I've come to have it 
+it. 
+
+551
+00:35:54,200 --> 00:35:57,520
+This is a complete opinion, so 
+not systemic reasoning. 
+
+552
+00:35:57,920 --> 00:36:03,560
+Like anyone who wants to do 
+systems kind of work needs to 
+
+553
+00:36:03,560 --> 00:36:07,160
+work in professional services or
+something like that for at least
+
+554
+00:36:07,160 --> 00:36:12,920
+a little bit of time where you 
+have to communicate what it is 
+
+555
+00:36:12,920 --> 00:36:15,680
+you want, you're gonna build and
+why you're going to build it. 
+
+556
+00:36:15,840 --> 00:36:19,600
+And then you have to partner 
+with other people to be 
+
+557
+00:36:19,600 --> 00:36:21,880
+effective together to deliver 
+it. 
+
+558
+00:36:21,880 --> 00:36:27,120
+Like we had to think well 
+together, we had to operate with
+
+559
+00:36:27,120 --> 00:36:30,200
+interpersonal trust and these 
+kinds of things in order to do 
+
+560
+00:36:30,200 --> 00:36:33,880
+what we were doing. 
+And I didn't know that I was 
+
+561
+00:36:34,040 --> 00:36:37,800
+lucky to be having those 
+experiences because I didn't 
+
+562
+00:36:37,800 --> 00:36:41,560
+know that they weren't usual 
+until much later. 
+
+563
+00:36:42,000 --> 00:36:48,960
+So I would argue if an 
+organization or a team is, does 
+
+564
+00:36:48,960 --> 00:36:53,800
+not have any systems thinking, 
+systemic reasoning, ability to 
+
+565
+00:36:53,800 --> 00:36:57,360
+deal with uncertainty, if 
+they're in a hierarchy that is 
+
+566
+00:36:57,360 --> 00:37:02,200
+about delivering procedural 
+control, then systems thinking's
+
+567
+00:37:02,200 --> 00:37:05,240
+not going to help you. 
+Because as soon as you're in a 
+
+568
+00:37:05,240 --> 00:37:08,760
+discussion, when you're talking 
+about a system, if I'm where the
+
+569
+00:37:08,760 --> 00:37:11,240
+three of us are talking about it
+and one of you says, I don't 
+
+570
+00:37:11,240 --> 00:37:14,640
+care what you say, I'm the CTO, 
+this is what I want. 
+
+571
+00:37:14,960 --> 00:37:17,920
+We're not doing systems 
+thinking, we're doing politics. 
+
+572
+00:37:18,200 --> 00:37:21,160
+And that's OK. 
+That's part of the system. 
+
+573
+00:37:22,480 --> 00:37:26,920
+But systems thinking is includes
+consent. 
+
+574
+00:37:26,920 --> 00:37:32,480
+It includes the, the, the 
+agreement to think, help other 
+
+575
+00:37:32,480 --> 00:37:36,640
+people also strengthen their 
+reasons and, and think through 
+
+576
+00:37:36,640 --> 00:37:40,440
+things like at the core of the 
+practice is the practice. 
+
+577
+00:37:41,040 --> 00:37:45,000
+So you can, can't bring a horse 
+to water and you cannot make 
+
+578
+00:37:45,000 --> 00:37:47,320
+them drink. 
+At least I've not found out 
+
+579
+00:37:47,320 --> 00:37:50,440
+where. 
+So I tend to focus in places, 
+
+580
+00:37:50,440 --> 00:37:54,360
+even in organizations, lots of 
+organizations that have this 
+
+581
+00:37:54,360 --> 00:38:00,240
+structure will have places where
+they're really trying to shift a
+
+582
+00:38:00,240 --> 00:38:02,760
+leverage point. 
+And you actually can get pretty 
+
+583
+00:38:02,760 --> 00:38:07,920
+far in that particular bubble. 
+I call it a greenhouse in an 
+
+584
+00:38:07,920 --> 00:38:11,080
+organization, but it's been my 
+experience. 
+
+585
+00:38:11,080 --> 00:38:15,480
+What you're saying too is we're 
+so used to these power 
+
+586
+00:38:15,480 --> 00:38:20,400
+structures that they will try 
+and reinstate themselves. 
+
+587
+00:38:20,520 --> 00:38:27,040
+And then that re brings up the 
+question of can I help? 
+
+588
+00:38:27,280 --> 00:38:29,160
+How can? 
+I help if you can. 
+
+589
+00:38:29,280 --> 00:38:32,520
+Yeah. 
+I find myself thinking, yeah, 
+
+590
+00:38:32,520 --> 00:38:37,320
+it's really what I didn't do in 
+any of my experiences was like 
+
+591
+00:38:37,320 --> 00:38:40,480
+to go, I see this is what's 
+going on here. 
+
+592
+00:38:40,720 --> 00:38:44,480
+And once you recognize you can 
+go, I can either figure out how 
+
+593
+00:38:44,480 --> 00:38:48,920
+to work within it or say that's 
+not in my bailiwick. 
+
+594
+00:38:48,920 --> 00:38:52,520
+Whereas I would I I think I 
+would just struggle against it. 
+
+595
+00:38:52,520 --> 00:38:54,560
+Oh my God this is wrong. 
+It should be this way. 
+
+596
+00:38:55,440 --> 00:38:58,000
+Never worked. 
+But there must be a part of 
+
+597
+00:38:58,000 --> 00:39:02,320
+systems thinking that would 
+allow you, after the awareness 
+
+598
+00:39:02,320 --> 00:39:07,400
+of the the system that you're in
+and the different pieces to it 
+
+599
+00:39:07,400 --> 00:39:12,480
+and how it works, to then know 
+that maybe you can't change the 
+
+600
+00:39:12,520 --> 00:39:15,960
+the environment that you're in. 
+But there maybe are maybe 
+
+601
+00:39:15,960 --> 00:39:19,280
+there's like a micro service 
+model that you can have where 
+
+602
+00:39:19,280 --> 00:39:23,600
+within your small piece of the 
+system you can at least make 
+
+603
+00:39:23,600 --> 00:39:25,920
+some improvements. 
+Like knowing what? 
+
+604
+00:39:25,920 --> 00:39:30,280
+Yeah, that's to me, that's what 
+a consultant is able to do 
+
+605
+00:39:30,600 --> 00:39:34,000
+rather than the carpet bromming 
+approach of saying, OK, you're 
+
+606
+00:39:34,000 --> 00:39:36,520
+doing it wrong, here's the right
+way to do it and nobody changes 
+
+607
+00:39:36,960 --> 00:39:40,440
+to come in and say, OK, you 
+might want big changes, but 
+
+608
+00:39:40,440 --> 00:39:44,600
+here's what you're capable of. 
+And so we're we're going to 
+
+609
+00:39:44,600 --> 00:39:48,320
+focus on here's what's possible 
+given that be able to see the 
+
+610
+00:39:48,320 --> 00:39:50,720
+environment. 
+So you can say, Oh yeah, you, 
+
+611
+00:39:50,760 --> 00:39:53,760
+you can actually you're not 
+using, you know, automated 
+
+612
+00:39:53,760 --> 00:39:57,080
+builds or something. 
+All right, that's where we need 
+
+613
+00:39:57,080 --> 00:40:00,600
+to focus because you're not 
+ready to change all these other 
+
+614
+00:40:00,600 --> 00:40:02,800
+things. 
+Yeah, Yeah, it's been, I mean, 
+
+615
+00:40:03,280 --> 00:40:08,520
+in, in that's exactly even even 
+as staff, as a principal systems
+
+616
+00:40:08,520 --> 00:40:12,040
+architect, I've been able to do 
+that, like find the place where 
+
+617
+00:40:12,400 --> 00:40:16,240
+it's in production now maybe 
+it's on the side and everyone 
+
+618
+00:40:16,240 --> 00:40:20,440
+hates like nobody got on board. 
+They still don't think that she 
+
+619
+00:40:20,440 --> 00:40:22,320
+doesn't know what she's talking 
+about. 
+
+620
+00:40:23,240 --> 00:40:27,200
+But the experience speaks for 
+itself, right? 
+
+621
+00:40:27,320 --> 00:40:32,520
+And there's pretty much always 
+been a way to do that. 
+
+622
+00:40:33,120 --> 00:40:37,480
+Also, it's the, it's the 
+experience that people have 
+
+623
+00:40:37,480 --> 00:40:40,960
+that's so valuable. 
+There's so many people that 
+
+624
+00:40:40,960 --> 00:40:47,400
+haven't ever really had a, a 
+joyful experience doing what we 
+
+625
+00:40:47,400 --> 00:40:50,800
+do that they, they've gotten 
+caught up in the, the spider web
+
+626
+00:40:50,800 --> 00:40:55,480
+of, of this at one of the things
+that's been incredibly rewarding
+
+627
+00:40:55,480 --> 00:41:01,240
+in my career is the people who 
+have had that as part of what 
+
+628
+00:41:01,240 --> 00:41:04,280
+we're doing. 
+And so they go out and they know
+
+629
+00:41:04,280 --> 00:41:07,360
+the difference now, like they 
+know they don't think this is 
+
+630
+00:41:07,360 --> 00:41:09,920
+just the way it is. 
+They know it can be different. 
+
+631
+00:41:10,840 --> 00:41:16,080
+And so over time, we're all kind
+of trying to figure out how to 
+
+632
+00:41:16,080 --> 00:41:20,320
+plant seeds, what words to use. 
+We don't have a good vocabulary,
+
+633
+00:41:20,320 --> 00:41:26,600
+even agile when I ask people, 
+OK, will you tell me about the 
+
+634
+00:41:26,600 --> 00:41:30,440
+zombie apocalypse that clearly 
+you're you're describing? 
+
+635
+00:41:30,600 --> 00:41:33,320
+They describe horrible 
+situations. 
+
+636
+00:41:33,320 --> 00:41:35,280
+I totally agree. 
+I would hate being in that 
+
+637
+00:41:35,280 --> 00:41:38,040
+situation. 
+It also isn't anything that I 
+
+638
+00:41:38,040 --> 00:41:43,040
+would call agility. 
+So the we don't, we don't have a
+
+639
+00:41:43,040 --> 00:41:46,280
+vocabulary for talking about 
+these experiences because 
+
+640
+00:41:46,280 --> 00:41:50,080
+they're so unfamiliar. 
+And we have a word that everyone
+
+641
+00:41:50,080 --> 00:41:51,800
+kind of knows what that word 
+means. 
+
+642
+00:41:51,800 --> 00:41:57,280
+But in fact, essentially we have
+such a different experiences 
+
+643
+00:41:57,280 --> 00:42:00,320
+often that we don't mean the 
+same, we don't mean the same 
+
+644
+00:42:00,320 --> 00:42:02,520
+thing. 
+An architect is one of those 
+
+645
+00:42:02,520 --> 00:42:07,480
+words. 
+I think the I, I know the intent
+
+646
+00:42:08,200 --> 00:42:12,920
+of agile was through better 
+communication through, you know,
+
+647
+00:42:12,920 --> 00:42:17,640
+adjusting and creating these 
+practices was to create that 
+
+648
+00:42:17,640 --> 00:42:21,400
+great experience for everybody, 
+including the stakeholders. 
+
+649
+00:42:21,400 --> 00:42:26,600
+It just was a first iteration. 
+Well, it wasn't systems thinking
+
+650
+00:42:26,600 --> 00:42:29,800
+based where it didn't, it didn't
+and that was maybe. 
+
+651
+00:42:29,800 --> 00:42:34,280
+Part of the problem still trying
+to work within the domination 
+
+652
+00:42:34,280 --> 00:42:37,760
+hierarchy. 
+Or I think not even recognizing.
+
+653
+00:42:37,760 --> 00:42:39,640
+Not recognizing that it was 
+there. 
+
+654
+00:42:39,720 --> 00:42:41,920
+Yeah, yeah. 
+It was just saying, OK, what can
+
+655
+00:42:41,920 --> 00:42:45,960
+we do as programmers to, you 
+know, work better with the 
+
+656
+00:42:45,960 --> 00:42:50,320
+stakeholders and have nicer 
+processes, but not looking at 
+
+657
+00:42:50,320 --> 00:42:53,680
+the big picture. 
+It was like, but ultimately the 
+
+658
+00:42:53,840 --> 00:42:56,840
+domination hierarchy is going to
+dominate. 
+
+659
+00:42:57,240 --> 00:43:01,120
+That's what they do. 
+So not big enough thinking, you 
+
+660
+00:43:01,200 --> 00:43:02,280
+know. 
+Yeah. 
+
+661
+00:43:02,280 --> 00:43:06,000
+And you're do, if you're doing 
+feature driven development, then
+
+662
+00:43:06,000 --> 00:43:10,280
+it's a process that you can do 
+it cross functionally, you can 
+
+663
+00:43:10,280 --> 00:43:13,240
+be flexible. 
+And the other thing is it's not 
+
+664
+00:43:13,240 --> 00:43:17,640
+meant to be taken literally. 
+We have such a religious view of
+
+665
+00:43:17,640 --> 00:43:20,840
+so many of these things where 
+it's like this is the Bible and 
+
+666
+00:43:20,840 --> 00:43:25,240
+this is what we have to do as 
+opposed to we're knowledge 
+
+667
+00:43:25,240 --> 00:43:28,320
+workers. 
+We take these experiences and we
+
+668
+00:43:28,320 --> 00:43:34,880
+evolve them as we learn, as we 
+mature, as we grow and we can we
+
+669
+00:43:34,880 --> 00:43:37,440
+get to do that. 
+We made we made it up. 
+
+670
+00:43:37,440 --> 00:43:40,920
+We made-up agile, we made-up 
+Kafka, we made-up hierarchies. 
+
+671
+00:43:40,920 --> 00:43:45,680
+We made-up all of these things. 
+So we can make up other things 
+
+672
+00:43:45,680 --> 00:43:48,360
+as we go along. 
+But instead we have a very 
+
+673
+00:43:48,360 --> 00:43:52,040
+dualistic something's good or 
+it's bad, it's right or it's 
+
+674
+00:43:52,040 --> 00:43:56,240
+wrong, it's yes or it's no. 
+And there's very rarely an, a 
+
+675
+00:43:56,240 --> 00:43:59,360
+dualistic answer to most 
+questions. 
+
+676
+00:43:59,760 --> 00:44:02,920
+One thing I, I did want to 
+interject in case I wasn't clear
+
+677
+00:44:02,920 --> 00:44:06,440
+about it. 
+I do think that complexity 
+
+678
+00:44:06,440 --> 00:44:10,160
+generally speaking, is a huge 
+challenge. 20 years ago, the 
+
+679
+00:44:10,160 --> 00:44:12,720
+software we were building was 
+pretty complex. 
+
+680
+00:44:12,720 --> 00:44:17,200
+Like there's there was a fair 
+amount of of interrelated code. 
+
+681
+00:44:18,720 --> 00:44:23,240
+I think what's pushed us most in
+this direction is relational 
+
+682
+00:44:23,240 --> 00:44:26,840
+complexity, meaning that 
+software. 
+
+683
+00:44:26,960 --> 00:44:30,440
+Teams have gotten much larger. 
+Teams have got well that part, 
+
+684
+00:44:30,440 --> 00:44:34,720
+but more from the tech like, 
+well, the socio technical 
+
+685
+00:44:34,720 --> 00:44:39,000
+aspect, right that. 
+So when I was a girl, if I 
+
+686
+00:44:39,000 --> 00:44:43,000
+wanted to go to the movies, I 
+went out at 8:00 on Saturday 
+
+687
+00:44:43,000 --> 00:44:45,120
+night. 
+And if I wanted to send a 
+
+688
+00:44:45,120 --> 00:44:49,240
+letter, I mailed the letter. 
+And if I needed a book, I went 
+
+689
+00:44:49,240 --> 00:44:51,200
+to the bookstore or to the 
+library. 
+
+690
+00:44:51,520 --> 00:44:56,840
+And we have software systems 
+that have replaced all of that 
+
+691
+00:44:56,840 --> 00:45:00,280
+human capacity, all that human 
+capability. 
+
+692
+00:45:00,280 --> 00:45:06,520
+We walk around with software 
+running software in our pockets.
+
+693
+00:45:06,520 --> 00:45:11,160
+He asked Alexa in the kitchen 
+while cooking dinner about 
+
+694
+00:45:11,160 --> 00:45:18,000
+peanut allergies. 
+Software now isn't a thing you 
+
+695
+00:45:18,000 --> 00:45:23,120
+build and then you go over and 
+use as often anymore as it's 
+
+696
+00:45:23,120 --> 00:45:27,000
+just part of a giant ecosystem 
+sharing knowledge and 
+
+697
+00:45:27,000 --> 00:45:31,320
+information. 
+And that's the complexity that I
+
+698
+00:45:31,320 --> 00:45:37,040
+think systems thinking is, is 
+trying to address is that if we 
+
+699
+00:45:37,040 --> 00:45:41,280
+could go back to the world in 
+which I had one code base, I 
+
+700
+00:45:41,280 --> 00:45:44,480
+would make my branch and I would
+merge it to trunk and the tests 
+
+701
+00:45:44,480 --> 00:45:47,160
+would run. 
+And if I'm doing that, I need 
+
+702
+00:45:47,160 --> 00:45:52,840
+less of systems thinking 
+practices than I do now, where 
+
+703
+00:45:53,200 --> 00:45:56,720
+the systems that I work on have,
+you know, many different 
+
+704
+00:45:56,720 --> 00:46:00,760
+services and information flow 
+and context matters. 
+
+705
+00:46:00,840 --> 00:46:06,080
+And this information could be 
+consumed by nearly infinite 
+
+706
+00:46:06,280 --> 00:46:09,440
+products, platforms, people, 
+contexts overtime. 
+
+707
+00:46:09,640 --> 00:46:12,240
+That's the that's the soft for 
+me. 
+
+708
+00:46:12,240 --> 00:46:15,000
+That's the software 
+transformation more than the 
+
+709
+00:46:15,000 --> 00:46:19,360
+complexity inside an individual 
+piece of software, although I do
+
+710
+00:46:19,360 --> 00:46:23,520
+think that's increased as well. 
+And I think we maybe thought for
+
+711
+00:46:23,520 --> 00:46:28,440
+a while that the right process, 
+the right architecture, the 
+
+712
+00:46:28,440 --> 00:46:32,880
+right abstraction could like 
+solve those things like that. 
+
+713
+00:46:32,880 --> 00:46:38,080
+That was our like golden ticket 
+out of out of the inability to 
+
+714
+00:46:38,080 --> 00:46:41,480
+keep up with the the complexity 
+and the ecosystem. 
+
+715
+00:46:42,120 --> 00:46:46,720
+And I think part of what you're 
+proposing is saying those things
+
+716
+00:46:46,720 --> 00:46:49,920
+alone aren't enough. 
+Maybe they're part of it, but we
+
+717
+00:46:49,920 --> 00:46:54,960
+actually need to to step even 
+further back and be like, what 
+
+718
+00:46:54,960 --> 00:47:01,720
+is the system of thinking that 
+that is all the pieces to how 
+
+719
+00:47:01,720 --> 00:47:05,520
+this stuff happens and how do we
+have a better system of thinking
+
+720
+00:47:05,520 --> 00:47:09,520
+about all the things rather than
+just the abstractions, 
+
+721
+00:47:09,520 --> 00:47:14,520
+architecture and process is 
+that? 
+
+722
+00:47:15,400 --> 00:47:19,480
+Yeah, I mean, I, you know, the 
+complexity that we're facing, 
+
+723
+00:47:19,480 --> 00:47:23,320
+the changes, the paradigm shifts
+that we're facing, all the 
+
+724
+00:47:23,320 --> 00:47:26,800
+JavaScript in the world is not 
+going to fix it like that. 
+
+725
+00:47:27,120 --> 00:47:31,880
+And, and it matters like not, 
+not in any way to diminish 
+
+726
+00:47:31,880 --> 00:47:38,560
+technology skills and the, the, 
+the good implementation of, of 
+
+727
+00:47:38,560 --> 00:47:41,760
+software absolutely matters. 
+And the tools. 
+
+728
+00:47:44,320 --> 00:47:48,920
+There was a LinkedIn, I'll go 
+with kerfuffle. 
+
+729
+00:47:49,320 --> 00:47:51,360
+You used the word earlier that I
+really liked too. 
+
+730
+00:47:51,360 --> 00:47:53,760
+And now I can't remember what it
+was and I wanted to make it out 
+
+731
+00:47:53,920 --> 00:47:56,520
+of it, but I used kerfuffle. 
+Kerfuffle. 
+
+732
+00:47:56,680 --> 00:48:01,000
+And I made a snarky comment 
+about, you know, what 
+
+733
+00:48:02,400 --> 00:48:06,600
+conversation about 
+transformation and agility, not 
+
+734
+00:48:06,600 --> 00:48:11,280
+agile, but you know, as much 
+agility and changing the, the 
+
+735
+00:48:11,280 --> 00:48:13,720
+kinds of structures we're 
+talking about. 
+
+736
+00:48:14,080 --> 00:48:17,640
+And it had gotten into the the 
+realm of gender and and like, 
+
+737
+00:48:17,640 --> 00:48:21,680
+well, I mean, really, what 
+would, you know, I raised female
+
+738
+00:48:21,680 --> 00:48:23,520
+and people. 
+What, what would I know about 
+
+739
+00:48:23,760 --> 00:48:29,640
+communication and interpersonal 
+skills that I just want to go to
+
+740
+00:48:29,640 --> 00:48:33,400
+Kubernetes conferences and solve
+socio technical problems with 
+
+741
+00:48:33,400 --> 00:48:35,920
+JavaScript. 
+Like this is this is my life, 
+
+742
+00:48:35,920 --> 00:48:37,880
+right? 
+And you'll mean this in a snarky
+
+743
+00:48:37,880 --> 00:48:42,600
+way, like I kind of wish, I wish
+when there's a bug in 
+
+744
+00:48:42,600 --> 00:48:47,200
+production, if the bug is in the
+in the code, in a line of code, 
+
+745
+00:48:47,200 --> 00:48:50,160
+that's a good day. 
+Like, that's great, right? 
+
+746
+00:48:50,160 --> 00:48:54,120
+Because it's usually harder to 
+figure out why these 
+
+747
+00:48:54,120 --> 00:48:57,800
+relationships aren't relating 
+the way that we meant them to. 
+
+748
+00:48:58,160 --> 00:49:00,120
+And we are. 
+I think one of the real hard 
+
+749
+00:49:00,120 --> 00:49:06,360
+things too is that we've grown 
+up with information shaped for 
+
+750
+00:49:06,360 --> 00:49:11,880
+us in the shape of a book or a, 
+a, an album or CD or, you know, 
+
+751
+00:49:12,040 --> 00:49:18,400
+collection or an e-mail. 
+And then we have or blog a, a, a
+
+752
+00:49:18,400 --> 00:49:23,720
+web page and we have software 
+that makes these shapes. 
+
+753
+00:49:24,160 --> 00:49:27,920
+So the software makes a shape 
+and then you go in and you put 
+
+754
+00:49:27,920 --> 00:49:33,240
+information in the shape. 
+But what is the shape of 
+
+755
+00:49:33,240 --> 00:49:39,320
+information in a world in which 
+all all digital software 
+
+756
+00:49:39,320 --> 00:49:42,960
+potentially can interact with 
+all other digital software? 
+
+757
+00:49:42,960 --> 00:49:46,280
+Where you can be looking at a 
+piece of information that's come
+
+758
+00:49:46,280 --> 00:49:51,120
+from 17 different sources and 
+then blended together in three 
+
+759
+00:49:51,120 --> 00:49:54,760
+different front ends depending 
+on where you are or the context 
+
+760
+00:49:54,760 --> 00:49:58,840
+that you're in. 
+What do we even call those 
+
+761
+00:49:58,840 --> 00:50:01,720
+shapes? 
+And how do we design software 
+
+762
+00:50:01,720 --> 00:50:06,440
+for informational emergence 
+rather than building a space to 
+
+763
+00:50:06,640 --> 00:50:15,760
+to put the show images right? 
+Do you think that, I mean, a lot
+
+764
+00:50:15,760 --> 00:50:19,640
+of this, I feel like, OK, it's 
+kind of the cost of 
+
+765
+00:50:19,640 --> 00:50:23,200
+experimentation. 
+We, we, we look at building 
+
+766
+00:50:23,200 --> 00:50:26,720
+larger and more complex systems.
+They're much more expensive. 
+
+767
+00:50:27,160 --> 00:50:30,040
+If they fail, it's really 
+expensive. 
+
+768
+00:50:30,680 --> 00:50:35,200
+And it seems to me that we're 
+starting to see, at least in 
+
+769
+00:50:35,200 --> 00:50:39,840
+some areas of science, machine 
+learning systems are able to 
+
+770
+00:50:39,840 --> 00:50:44,800
+winnow through a lot of these 
+experiments and more rapidly 
+
+771
+00:50:44,960 --> 00:50:49,680
+narrow down to a set that or 
+maybe is more likely to work. 
+
+772
+00:50:50,160 --> 00:50:54,440
+Do you think that machine 
+learning systems might have some
+
+773
+00:50:55,160 --> 00:51:00,000
+benefits in this arena? 
+It depends is my cautious 
+
+774
+00:51:00,280 --> 00:51:02,280
+answer. 
+So one of the challenges is 
+
+775
+00:51:02,280 --> 00:51:05,400
+these systems represent our 
+mental models, structures and 
+
+776
+00:51:05,400 --> 00:51:07,400
+patterns. 
+So to some extent they're our 
+
+777
+00:51:07,400 --> 00:51:10,280
+factory. 
+We've encoded our factory and 
+
+778
+00:51:10,280 --> 00:51:14,560
+then we hope they're going to 
+give us something not a factory.
+
+779
+00:51:15,040 --> 00:51:22,800
+So that's my caution. 
+Simultaneously, we are 
+
+780
+00:51:22,800 --> 00:51:27,080
+cultivating relationships 
+between information, right? 
+
+781
+00:51:27,080 --> 00:51:30,360
+That's the other end, right, is 
+what? 
+
+782
+00:51:30,360 --> 00:51:36,480
+What are the patterns in this 
+ubiquitous information? 
+
+783
+00:51:36,840 --> 00:51:41,160
+That means something, right? 
+How do you create a collection 
+
+784
+00:51:41,440 --> 00:51:43,640
+of information that's very 
+useful? 
+
+785
+00:51:43,640 --> 00:51:46,640
+What from like these sources? 
+This is something that the 
+
+786
+00:51:46,640 --> 00:51:50,120
+software does way faster than we
+do. 
+
+787
+00:51:50,440 --> 00:51:54,200
+It's a challenge because they'll
+only look for patterns we know 
+
+788
+00:51:54,200 --> 00:51:57,560
+to ask them to. 
+So can machines do systems 
+
+789
+00:51:57,560 --> 00:52:00,160
+thinking? 
+No, I don't think machines can 
+
+790
+00:52:00,160 --> 00:52:03,360
+do writing either. 
+They can write words, but I I 
+
+791
+00:52:03,360 --> 00:52:08,320
+wouldn't replace the human 
+process of cultivating ideas and
+
+792
+00:52:08,320 --> 00:52:11,720
+language with a machine. 
+But if we keep right 
+
+793
+00:52:11,720 --> 00:52:16,600
+relationship with it and if we 
+understand its limitations, then
+
+794
+00:52:16,600 --> 00:52:18,120
+to me, it's like a vacuum 
+cleaner. 
+
+795
+00:52:18,120 --> 00:52:22,120
+Sure, I can get down on my hands
+and knees and sweep the floor 
+
+796
+00:52:22,120 --> 00:52:25,200
+with my toothbrush, but why 
+would I do that when I could use
+
+797
+00:52:25,200 --> 00:52:28,720
+a vacuum cleaner? 
+Like I, I think if we use tools 
+
+798
+00:52:28,720 --> 00:52:32,080
+to serve our missions and we're 
+careful about the impact of 
+
+799
+00:52:32,080 --> 00:52:35,160
+those tools. 
+And I don't think it's the 
+
+800
+00:52:35,160 --> 00:52:38,240
+software. 
+Like people talk about social 
+
+801
+00:52:38,240 --> 00:52:45,240
+media platforms as responsible 
+for these negative outcomes that
+
+802
+00:52:45,240 --> 00:52:48,640
+they can have. 
+But if we think about what 
+
+803
+00:52:48,640 --> 00:52:52,120
+Facebook was when it was 
+invented, you know, it was 
+
+804
+00:52:52,120 --> 00:52:55,960
+invented basically hazing women 
+on a college campus, right? 
+
+805
+00:52:56,120 --> 00:52:58,680
+So what do you think it's going 
+to scale to be? 
+
+806
+00:52:59,120 --> 00:53:01,080
+Do you know what I mean? 
+Like, like these, these, this, 
+
+807
+00:53:01,080 --> 00:53:07,720
+this, this, these core, our core
+way of viewing the world is 
+
+808
+00:53:07,720 --> 00:53:09,520
+going to be expressed through 
+our software. 
+
+809
+00:53:09,520 --> 00:53:13,840
+And then we get mad because it 
+expresses that view. 
+
+810
+00:53:14,040 --> 00:53:18,240
+We need to change that view. 
+And So what would be software 
+
+811
+00:53:18,240 --> 00:53:21,680
+that really does create 
+connection it? 
+
+812
+00:53:21,680 --> 00:53:23,720
+What would that look like? 
+That's hard. 
+
+813
+00:53:24,040 --> 00:53:26,600
+That's hard. 
+Question ultimately end up, I 
+
+814
+00:53:26,600 --> 00:53:29,200
+mean, I see this over and over 
+again since I started noticing. 
+
+815
+00:53:29,200 --> 00:53:33,600
+It's like, oh, we go scientists 
+hadn't invented this, then this 
+
+816
+00:53:33,600 --> 00:53:34,800
+bad thing wouldn't have 
+happened. 
+
+817
+00:53:34,800 --> 00:53:41,280
+And you go, no, it's the people 
+who wanted to make the, you 
+
+818
+00:53:41,280 --> 00:53:45,240
+know, weapon or whatever it is 
+and who wanted to use the 
+
+819
+00:53:45,240 --> 00:53:47,480
+weapon. 
+And we go, no, it's the science,
+
+820
+00:53:47,480 --> 00:53:52,240
+it's the technology. 
+And I think what we what to your
+
+821
+00:53:52,240 --> 00:53:56,280
+point about you, I mean, you 
+said, OK, machine learning 
+
+822
+00:53:56,280 --> 00:54:00,320
+systems are an image of all of 
+the data that it's, you know, 
+
+823
+00:54:00,400 --> 00:54:03,360
+collected off the Internet. 
+That's the way it is now. 
+
+824
+00:54:03,400 --> 00:54:08,160
+But I think it's going to move 
+to being a science machine where
+
+825
+00:54:08,160 --> 00:54:12,480
+it's able to say, here's 
+something I don't know and 
+
+826
+00:54:12,480 --> 00:54:16,920
+somehow say here's an experiment
+we can do or a set of 
+
+827
+00:54:16,920 --> 00:54:20,600
+experiments to increase the 
+knowledge rather than just go, 
+
+828
+00:54:20,920 --> 00:54:24,240
+well, what are the opinions of 
+every rando on the Internet? 
+
+829
+00:54:24,240 --> 00:54:26,160
+And I'll just make up something 
+from that. 
+
+830
+00:54:26,760 --> 00:54:30,320
+And then we'll have something 
+that will allow us to really 
+
+831
+00:54:30,320 --> 00:54:33,360
+move forward. 
+That's that's systems, that's 
+
+832
+00:54:33,360 --> 00:54:35,720
+what I would call systems 
+architecture, what you just 
+
+833
+00:54:35,720 --> 00:54:39,880
+described, which is framing the 
+questions to see in the blind 
+
+834
+00:54:39,880 --> 00:54:46,000
+spots and not to get a 
+necessarily expecting a quick 
+
+835
+00:54:46,000 --> 00:54:50,120
+concrete answer. 
+But if you shift perspective, 
+
+836
+00:54:50,440 --> 00:54:54,800
+can you see the blocker that you
+couldn't see before? 
+
+837
+00:54:54,800 --> 00:55:00,760
+So and so it would be lovely if 
+that's what happens. 
+
+838
+00:55:00,760 --> 00:55:05,880
+I don't have as much faith as as
+it seems that you might, but 
+
+839
+00:55:05,880 --> 00:55:09,960
+that I'm I'm kind of a, it's 
+interesting to be in this 
+
+840
+00:55:09,960 --> 00:55:12,920
+profession and I'm kind of a 
+Luddite simultaneously. 
+
+841
+00:55:14,360 --> 00:55:17,600
+I'll believe it when I see it. 
+Yeah, one, one of the best 
+
+842
+00:55:18,720 --> 00:55:23,680
+definitions that I've heard of 
+science is that it's what works.
+
+843
+00:55:23,680 --> 00:55:27,280
+And that's why I believe we'll, 
+we will move in that direction 
+
+844
+00:55:27,280 --> 00:55:31,360
+is because the people who create
+the, the science based machine 
+
+845
+00:55:31,360 --> 00:55:34,120
+learning systems are going to 
+have much better results. 
+
+846
+00:55:34,120 --> 00:55:38,040
+So that's, you know, that's why 
+it will move forward. 
+
+847
+00:55:38,440 --> 00:55:42,880
+But I get the, the backwards. 
+So we, I did this, the kind of 
+
+848
+00:55:43,200 --> 00:55:46,040
+it was interesting. 
+It's not controversial at all in
+
+849
+00:55:46,040 --> 00:55:50,000
+some areas and in others people 
+have said that it's a, it's 
+
+850
+00:55:50,000 --> 00:55:52,280
+political, which is kind of 
+strange to me. 
+
+851
+00:55:52,280 --> 00:55:55,640
+And this is what it is, 
+surfacing the Iceberg model in 
+
+852
+00:55:55,640 --> 00:55:59,720
+workshops to help people have an
+experience of thinking about 
+
+853
+00:55:59,720 --> 00:56:02,600
+what are some of the patterns 
+and structures that are 
+
+854
+00:56:02,880 --> 00:56:05,600
+reinforcing. 
+So there's a bug in production. 
+
+855
+00:56:06,320 --> 00:56:08,640
+Bug in production can mean a 
+whole bunch of things. 
+
+856
+00:56:08,640 --> 00:56:11,960
+Sometimes it means we tried 
+something and it didn't work. 
+
+857
+00:56:11,960 --> 00:56:15,200
+So there's no action required. 
+I don't need any command and 
+
+858
+00:56:15,200 --> 00:56:17,760
+control. 
+We tried it and it didn't work. 
+
+859
+00:56:18,040 --> 00:56:21,280
+But other times it's happening 
+because there's too much command
+
+860
+00:56:21,280 --> 00:56:24,840
+and control or because, you 
+know, because the processes are 
+
+861
+00:56:24,840 --> 00:56:28,880
+bad or because the system is 
+very frail, but the engineers 
+
+862
+00:56:28,880 --> 00:56:33,000
+are getting blamed for the bugs,
+when in fact it's a systemic 
+
+863
+00:56:33,000 --> 00:56:34,840
+issue. 
+The more the engineers get 
+
+864
+00:56:34,840 --> 00:56:38,240
+blamed and controlled, the less 
+time they have to reduce the 
+
+865
+00:56:38,240 --> 00:56:42,760
+frailty in the system so it it 
+causes its own. 
+
+866
+00:56:43,640 --> 00:56:45,040
+I like that. 
+Word frailty. 
+
+867
+00:56:45,920 --> 00:56:49,360
+Frailty, and it's a relational 
+frailty too, right? 
+
+868
+00:56:49,360 --> 00:56:55,320
+But so we, we, one of the 
+biggest things is that shifting 
+
+869
+00:56:55,320 --> 00:57:00,400
+paradigms, meaning the rules and
+structures and mental models out
+
+870
+00:57:00,400 --> 00:57:05,440
+of which a system arises is the 
+biggest transformational impact 
+
+871
+00:57:05,440 --> 00:57:07,840
+we could have on a system. 
+We don't, we don't doing that 
+
+872
+00:57:07,840 --> 00:57:09,920
+all the time, not even most of 
+the time. 
+
+873
+00:57:10,200 --> 00:57:13,840
+But when we can do it, that's 
+really where where our power 
+
+874
+00:57:13,840 --> 00:57:18,440
+lies. 
+And that it's very terrifying 
+
+875
+00:57:18,440 --> 00:57:23,000
+for people in organizations to 
+consider changing the, the rules
+
+876
+00:57:23,000 --> 00:57:26,240
+and the structures and the what 
+they're what they're used to. 
+
+877
+00:57:26,480 --> 00:57:29,280
+So part of the process is sort 
+of helping that. 
+
+878
+00:57:30,440 --> 00:57:36,160
+So I've used the example and 
+Matt Wynn who I totally adore. 
+
+879
+00:57:36,160 --> 00:57:39,240
+Highly recommend to have a 
+conversation with him if you 
+
+880
+00:57:39,240 --> 00:57:42,280
+haven't yet. 
+I think the original one of the 
+
+881
+00:57:42,280 --> 00:57:45,640
+original founders of Cucumber or
+this like been an open source. 
+
+882
+00:57:45,640 --> 00:57:47,720
+Lots of good thinking on pairing
+QA. 
+
+883
+00:57:48,680 --> 00:57:52,200
+We did a workshop at Domain 
+Driven Design Europe this year 
+
+884
+00:57:52,560 --> 00:57:55,600
+where I had 50 people using the 
+iceberg model and said OK. 
+
+885
+00:57:55,600 --> 00:58:02,080
+So on the surface, 91.88%, 
+according to a study in 2022 of 
+
+886
+00:58:02,080 --> 00:58:04,520
+software developers worldwide 
+are male. 
+
+887
+00:58:06,480 --> 00:58:11,720
+So what are if you were going to
+do that on purpose, if that was 
+
+888
+00:58:11,720 --> 00:58:17,280
+your goal, I would like a system
+that generates 92% male in this 
+
+889
+00:58:17,280 --> 00:58:19,680
+role. 
+What are the patterns and 
+
+890
+00:58:19,680 --> 00:58:21,920
+structures that you would put in
+place? 
+
+891
+00:58:22,120 --> 00:58:27,440
+And also why are you doing that?
+What is your core mental model? 
+
+892
+00:58:27,880 --> 00:58:33,160
+Because what we often do is when
+you have an outcome like 91.88%,
+
+893
+00:58:33,320 --> 00:58:39,240
+we say, well, that's because men
+are naturally able to do this or
+
+894
+00:58:39,240 --> 00:58:43,960
+naturally more inclined, but is 
+there science to back that up? 
+
+895
+00:58:43,960 --> 00:58:47,360
+And often science is saying 
+something else, right? 
+
+896
+00:58:47,360 --> 00:58:53,400
+Like, and but we want to justify
+an outcome with a belief that's 
+
+897
+00:58:53,400 --> 00:58:57,280
+just part of human nature. 
+So shifting people into a place 
+
+898
+00:58:57,280 --> 00:59:01,040
+and say, OK, So what if you 
+wanted to do that? 
+
+899
+00:59:01,040 --> 00:59:04,440
+How would you do it? 
+Then if you look at some of 
+
+900
+00:59:04,440 --> 00:59:08,840
+these patterns and structures, 
+what if your goal was diversity?
+
+901
+00:59:08,840 --> 00:59:11,000
+And you can define that any way 
+you want. 
+
+902
+00:59:11,000 --> 00:59:14,080
+Like, you know, it doesn't have 
+to even be gender or whatever. 
+
+903
+00:59:14,080 --> 00:59:17,120
+Just systems tend to thrive in 
+diversity. 
+
+904
+00:59:17,120 --> 00:59:20,240
+A mono crop is very rarely a 
+healthy system. 
+
+905
+00:59:20,600 --> 00:59:22,440
+A healthy system thrives in 
+diversity. 
+
+906
+00:59:22,440 --> 00:59:25,920
+So if you wanted to do it and 
+then look for the leverage 
+
+907
+00:59:25,920 --> 00:59:30,280
+points, the little things we 
+might do because remembering 
+
+908
+00:59:30,880 --> 00:59:34,560
+we're blaming the wrong thing, 
+we're doing the wrong thing. 
+
+909
+00:59:34,720 --> 00:59:38,600
+We're we invented this system 
+and we think it's happening to 
+
+910
+00:59:38,600 --> 00:59:41,560
+us, not that we are the 
+architects. 
+
+911
+00:59:41,560 --> 00:59:45,280
+And and then how do we engage? 
+And what's wonderful about it is
+
+912
+00:59:45,280 --> 00:59:47,760
+it's very hard. 
+Like it's, I don't, I've been in
+
+913
+00:59:47,760 --> 00:59:50,000
+tech 20 years. 
+I don't know the answer to this,
+
+914
+00:59:50,080 --> 00:59:54,280
+this, this question. 
+I mean, I have ideas, but, and 
+
+915
+00:59:54,280 --> 00:59:57,360
+all systems challenges are like 
+that. 
+
+916
+00:59:58,160 --> 01:00:02,680
+We see the outcome. 
+We think that our we think it's 
+
+917
+01:00:02,680 --> 01:00:07,840
+justified by a belief that comes
+out was either what generated it
+
+918
+01:00:07,840 --> 01:00:10,680
+in the 1st place or is keeping 
+it in place. 
+
+919
+01:00:10,840 --> 01:00:14,920
+And when you look at then 
+shifting, it's very, very, very 
+
+920
+01:00:14,920 --> 01:00:20,400
+hard to do so. 
+Let me tell you an experience 
+
+921
+01:00:20,400 --> 01:00:24,600
+that I had, this is way back in 
+the, I don't know, late 80s or 
+
+922
+01:00:24,600 --> 01:00:27,960
+early 90s. 
+We did this Borland OOP world 
+
+923
+01:00:27,960 --> 01:00:31,240
+tour all over the world speaking
+about object oriented 
+
+924
+01:00:31,240 --> 01:00:33,200
+programming. 
+I mean, I'm a little embarrassed
+
+925
+01:00:33,200 --> 01:00:35,120
+because I thought I knew what I 
+was talking about. 
+
+926
+01:00:35,120 --> 01:00:38,800
+Then, of course, anyway, all 
+these different countries, and 
+
+927
+01:00:38,800 --> 01:00:44,720
+of course, you're right, every 
+place was hardly any women, many
+
+928
+01:00:44,720 --> 01:00:48,160
+audiences, no women at all. 
+Then we get to Japan. 
+
+929
+01:00:49,320 --> 01:00:53,680
+Now think what you might about 
+Japan, but we go there and it's 
+
+930
+01:00:53,680 --> 01:00:57,720
+like the audience, one of our 
+bigger ones, 305 hundred 
+
+931
+01:00:57,720 --> 01:01:03,320
+something like that, 80% women. 
+I'm going whoa, what? 
+
+932
+01:01:03,320 --> 01:01:07,280
+I mean, these Japanese, they're 
+so forward thinking that they 
+
+933
+01:01:07,280 --> 01:01:12,240
+have all these women in 
+programming and then eventually 
+
+934
+01:01:12,440 --> 01:01:16,280
+understood that. 
+Well, what had happened was that
+
+935
+01:01:18,880 --> 01:01:22,360
+it was well, programming. 
+I mean, what do you do when you 
+
+936
+01:01:22,360 --> 01:01:26,440
+program? 
+You type typing is women's work 
+
+937
+01:01:27,320 --> 01:01:31,120
+was then so, so men weren't 
+going to do that. 
+
+938
+01:01:31,120 --> 01:01:33,840
+And so so we ended up with all 
+these women and it was just like
+
+939
+01:01:33,840 --> 01:01:38,040
+such a, an inverted view. 
+And then when I realized, I go, 
+
+940
+01:01:38,080 --> 01:01:40,840
+oh, it's worse than I thought. 
+You know, it was like, initially
+
+941
+01:01:40,840 --> 01:01:43,800
+it was like they launched all 
+these women into this field. 
+
+942
+01:01:43,800 --> 01:01:46,560
+Even deeper into the patriarchy.
+Oh, even deeper. 
+
+943
+01:01:46,560 --> 01:01:50,360
+And then eventually, of course, 
+men and Japan figured out that, 
+
+944
+01:01:50,360 --> 01:01:52,280
+Oh no, this is this is the 
+status job. 
+
+945
+01:01:52,280 --> 01:01:54,000
+So we, we don't want women in 
+it. 
+
+946
+01:01:54,000 --> 01:01:58,280
+We wanna take over. 
+So that was eye opener for me. 
+
+947
+01:01:59,560 --> 01:02:03,880
+Yeah, that's a fascinating 
+exercise, cuz I think what it 
+
+948
+01:02:04,040 --> 01:02:11,040
+helps me to to see is that we 
+all operate within systems. 
+
+949
+01:02:11,520 --> 01:02:15,640
+Some of us are aware of the 
+systems that we operate in and 
+
+950
+01:02:15,640 --> 01:02:19,640
+some of us do things to change 
+the systems. 
+
+951
+01:02:20,960 --> 01:02:26,560
+And I think that your book is if
+you want to become aware and 
+
+952
+01:02:26,560 --> 01:02:30,840
+change the system, you have to 
+start doing systems thinking. 
+
+953
+01:02:32,080 --> 01:02:36,120
+Yeah, yeah. 
+And that and, and to some extent
+
+954
+01:02:36,120 --> 01:02:39,600
+I'm saying it because what 
+choice do we have? 
+
+955
+01:02:40,040 --> 01:02:45,240
+I, I, I mean, if you can find a 
+way to not be part of a system 
+
+956
+01:02:45,240 --> 01:02:48,680
+or have to think about that at 
+work or whatever, that's not a 
+
+957
+01:02:48,680 --> 01:02:55,040
+bad thing necessarily. 
+But for me, if I want to be 
+
+958
+01:02:55,040 --> 01:02:58,400
+effective, if I want to have a 
+positive impact and I want to do
+
+959
+01:02:58,400 --> 01:03:03,320
+hard things together, then the 
+status quo just isn't, it's not 
+
+960
+01:03:03,320 --> 01:03:06,480
+gonna, I'm just getting on the 
+same bus that never takes me 
+
+961
+01:03:06,480 --> 01:03:09,720
+where I'm going. 
+And then I'm mad at the bus, you
+
+962
+01:03:09,720 --> 01:03:13,240
+know, like, and, and So what, 
+what's the, what's the 
+
+963
+01:03:13,240 --> 01:03:16,440
+alternative? 
+And it's, it's trying to like, I
+
+964
+01:03:16,440 --> 01:03:19,680
+love this, this, this 
+conversation one because, you 
+
+965
+01:03:19,680 --> 01:03:22,120
+know, other people have loved 
+talking to you. 
+
+966
+01:03:22,120 --> 01:03:23,400
+So I'm always like, I want to go
+talk. 
+
+967
+01:03:23,600 --> 01:03:28,240
+I want to talk to them. 
+But also the that there is no 
+
+968
+01:03:28,240 --> 01:03:31,800
+magic bullet and there is no 
+prophet or Messiah. 
+
+969
+01:03:31,800 --> 01:03:35,880
+There is no one right way. 
+The only way we're gonna figure 
+
+970
+01:03:35,880 --> 01:03:40,720
+this out is to think about it 
+together, to try experiments, to
+
+971
+01:03:41,280 --> 01:03:47,480
+have some trust in other 
+people's ability to engage with 
+
+972
+01:03:47,480 --> 01:03:50,480
+some of the stuffs. 
+I want it to be more. 
+
+973
+01:03:52,840 --> 01:03:57,480
+I always wanna be kinder and 
+more empathetic and, and 
+
+974
+01:03:57,480 --> 01:04:00,920
+sensitive or whatever that it, 
+it's that's a part of what 
+
+975
+01:04:00,920 --> 01:04:03,320
+motivates me. 
+But it what mostly motivates me 
+
+976
+01:04:03,320 --> 01:04:07,520
+is I really like doing. 
+I love doing complex things with
+
+977
+01:04:07,520 --> 01:04:10,440
+other people and I like to have 
+a positive impact and. 
+
+978
+01:04:10,600 --> 01:04:14,320
+I was going to ask why you wrote
+the book and and is that the 
+
+979
+01:04:14,320 --> 01:04:17,680
+same answer is that? 
+Yeah, I didn't want to scream at
+
+980
+01:04:17,680 --> 01:04:21,760
+the tidal wave anymore. 
+And I had had, I'd had enough 
+
+981
+01:04:21,760 --> 01:04:25,120
+experiences as a systems 
+architect to be like, I'm going 
+
+982
+01:04:25,120 --> 01:04:28,720
+down with the next damn ship. 
+I can't keep doing this. 
+
+983
+01:04:29,400 --> 01:04:32,600
+I cannot. 
+And and then, you know, I come 
+
+984
+01:04:32,600 --> 01:04:36,320
+out of open source originally. 
+So the, the answer comes to my 
+
+985
+01:04:36,320 --> 01:04:40,240
+mind is like, OK, well, what are
+you contributing towards, 
+
+986
+01:04:40,320 --> 01:04:44,920
+towards, towards a change? 
+And then I discovered that's way
+
+987
+01:04:44,920 --> 01:04:47,440
+harder. 
+That's so much harder. 
+
+988
+01:04:47,520 --> 01:04:51,520
+My God, that's hard. 
+But I was a writer before I went
+
+989
+01:04:51,520 --> 01:04:57,640
+into tech and I actually quit 
+writing to seriously focus on 
+
+990
+01:04:57,760 --> 01:05:00,400
+on, I moved to Austin. 
+I'd never been to Austin, TX, 
+
+991
+01:05:00,400 --> 01:05:02,480
+but that's where all the good 
+tech was happening. 
+
+992
+01:05:02,720 --> 01:05:07,840
+And I love my my career, but it 
+is ironic that it came full. 
+
+993
+01:05:07,840 --> 01:05:10,560
+Circle back around to being a 
+writer again. 
+
+994
+01:05:10,960 --> 01:05:13,320
+Because The thing is, did you 
+think? 
+
+995
+01:05:14,080 --> 01:05:16,520
+It's well, journalism major for 
+my first year in college and 
+
+996
+01:05:16,520 --> 01:05:19,560
+then I changed to physics and 
+then engineering and everything.
+
+997
+01:05:19,560 --> 01:05:23,160
+And then, but I never stopped 
+writing and started writing for 
+
+998
+01:05:23,160 --> 01:05:26,160
+magazines, etcetera. 
+But but it felt like, you know, 
+
+999
+01:05:26,160 --> 01:05:29,080
+it almost felt like destiny or 
+whatever. 
+
+1000
+01:05:29,080 --> 01:05:31,560
+It's like, Oh yeah, started here
+and then you ended up doing 
+
+1001
+01:05:31,560 --> 01:05:33,440
+this. 
+Because they aren't, I mean, 
+
+1002
+01:05:33,440 --> 01:05:37,040
+what's it's language? 
+It's all the construction of 
+
+1003
+01:05:37,040 --> 01:05:41,720
+logic using language. 
+There's no, the fact that I 
+
+1004
+01:05:41,720 --> 01:05:45,880
+bought into this soft skills, 
+hard skills, or these like the 
+
+1005
+01:05:45,880 --> 01:05:50,760
+fact that I really believed in 
+these silos is sad to me now. 
+
+1006
+01:05:51,040 --> 01:05:55,160
+Like the in the sense that 
+they're different and they're 
+
+1007
+01:05:55,160 --> 01:05:58,440
+differently applied. 
+I like coding because when 
+
+1008
+01:05:58,440 --> 01:06:01,320
+something doesn't work, it 
+doesn't work in a paragraph, you
+
+1009
+01:06:01,320 --> 01:06:04,040
+don't get that good. 
+You can't just run it and see if
+
+1010
+01:06:04,040 --> 01:06:07,000
+it works. 
+Can't write the unit test for 
+
+1011
+01:06:07,000 --> 01:06:10,720
+your pros? 
+No, but I did. 
+
+1012
+01:06:10,720 --> 01:06:14,880
+I will say though, at towards 
+the end of the book during the 
+
+1013
+01:06:14,880 --> 01:06:18,200
+what I had great a couple of 
+great reviewers that really 
+
+1014
+01:06:18,200 --> 01:06:21,200
+helped me to strengthen it. 
+And what I did was took each 
+
+1015
+01:06:21,200 --> 01:06:26,600
+section and put it through AI to
+have it summarize me. 
+
+1016
+01:06:26,800 --> 01:06:31,440
+And if the summary is what I 
+want meant to say, then it was 
+
+1017
+01:06:31,880 --> 01:06:34,040
+probably solid, and usually it 
+was. 
+
+1018
+01:06:34,160 --> 01:06:37,520
+But if the summary wandered off 
+and started talking about 
+
+1019
+01:06:37,520 --> 01:06:40,760
+something I wasn't, you know, 
+didn't make the point, then I 
+
+1020
+01:06:40,760 --> 01:06:43,920
+would go back in and look. 
+So I did have unit. 
+
+1021
+01:06:44,240 --> 01:06:46,760
+Oh yeah, that's. 
+Well, there's that, and then 
+
+1022
+01:06:46,760 --> 01:06:48,920
+there's also using it in a 
+seminar. 
+
+1023
+01:06:49,040 --> 01:06:51,400
+That's what I did with. 
+Both the integration. 
+
+1024
+01:06:51,480 --> 01:06:53,640
+Testing, yeah. 
+Oh yeah, I suppose that would be
+
+1025
+01:06:53,800 --> 01:06:57,360
+but but using, I mean, reading 
+it aloud to yourself but 
+
+1026
+01:06:57,360 --> 01:07:01,160
+actually aloud is super helpful.
+But I hadn't thought of taking 
+
+1027
+01:07:01,160 --> 01:07:03,960
+your paragraph, putting it 
+through the AI and saying, is 
+
+1028
+01:07:03,960 --> 01:07:05,680
+that what I meant to say? 
+Better rewrite it. 
+
+1029
+01:07:05,960 --> 01:07:07,400
+I like that that's. 
+That is a. 
+
+1030
+01:07:07,600 --> 01:07:10,160
+Unit test, yeah. 
+And I made it a knowledge graph.
+
+1031
+01:07:10,840 --> 01:07:14,120
+Yeah, I made it a knowledge 
+graph so that the first time I 
+
+1032
+01:07:14,120 --> 01:07:18,360
+use a concept, I think to that 
+and the definition so that I 
+
+1033
+01:07:18,360 --> 01:07:21,280
+could see when did I introduce a
+concept. 
+
+1034
+01:07:21,280 --> 01:07:27,160
+And what I discovered about 
+myself, it was it was a terrible
+
+1035
+01:07:27,160 --> 01:07:29,280
+week. 
+It was such a hard, hard week. 
+
+1036
+01:07:29,680 --> 01:07:37,160
+I, I, I'm struggling to clarify.
+I go into the kitchen and, and 
+
+1037
+01:07:37,200 --> 01:07:42,440
+my husband, I said I, I, 
+everyone says that sometimes I 
+
+1038
+01:07:42,440 --> 01:07:46,800
+use like a concept to describe a
+concept And so they're not 
+
+1039
+01:07:46,800 --> 01:07:49,520
+really understanding because if 
+you didn't understand the second
+
+1040
+01:07:49,520 --> 01:07:52,360
+concept, you want to 1st. 
+And he said, honey, did you use 
+
+1041
+01:07:52,360 --> 01:07:55,520
+a concept in a concept to 
+describe yet a third concept 
+
+1042
+01:07:55,800 --> 01:08:00,880
+like shut up 4 * 4 times? 
+I did this this one thing. 
+
+1043
+01:08:01,080 --> 01:08:08,000
+And so this having to part of 
+writing this book that I hate 
+
+1044
+01:08:08,280 --> 01:08:11,720
+when I can say it now 'cause I 
+didn't know I signed up for it. 
+
+1045
+01:08:12,440 --> 01:08:17,880
+This book changed me because I 
+was on to myself the whole time.
+
+1046
+01:08:18,359 --> 01:08:23,359
+Bugs in my thinking became even 
+more clear, my own cognitive 
+
+1047
+01:08:23,359 --> 01:08:28,920
+biases, my own ways of not like 
+so the this is when we're 
+
+1048
+01:08:28,920 --> 01:08:32,760
+thinking, we're really running 
+the software that's in our brain
+
+1049
+01:08:32,920 --> 01:08:37,399
+and testing that software. 
+And now it doesn't seem like a 
+
+1050
+01:08:37,399 --> 01:08:39,399
+thing. 
+I give workshops and and and 
+
+1051
+01:08:39,399 --> 01:08:43,040
+talks and things and it's fine. 
+But when I first started, people
+
+1052
+01:08:43,040 --> 01:08:45,040
+are like, why would you write a 
+book about thinking? 
+
+1053
+01:08:46,200 --> 01:08:51,439
+Because that's what we do like, 
+like, isn't that what we do like
+
+1054
+01:08:51,439 --> 01:08:54,720
+isn't don't we, Isn't that 
+what's in production? 
+
+1055
+01:08:54,840 --> 01:08:58,560
+Our thinking and then our use of
+of language and construct and 
+
+1056
+01:08:58,560 --> 01:09:03,720
+our relationships to each other 
+and and to perspectives and our 
+
+1057
+01:09:03,720 --> 01:09:08,000
+beliefs. 
+What's really hard about what 
+
+1058
+01:09:08,000 --> 01:09:13,520
+you tackled was that it's 
+probably very easy after reading
+
+1059
+01:09:13,520 --> 01:09:17,160
+the book to use the content of 
+the book to criticize the book. 
+
+1060
+01:09:18,279 --> 01:09:22,479
+And so you have, I'm sure had to
+make sure that your book 
+
+1061
+01:09:22,520 --> 01:09:26,680
+actually like lives the the 
+tenants and principles that the 
+
+1062
+01:09:26,680 --> 01:09:30,600
+book internal consistency. 
+Yeah, exactly. 
+
+1063
+01:09:30,600 --> 01:09:34,000
+The internal consistency of your
+book has to be high. 
+
+1064
+01:09:35,200 --> 01:09:38,399
+Yeah. 
+And that's why, yeah, that's 
+
+1065
+01:09:38,399 --> 01:09:40,080
+what part of the reason I wrote 
+it is. 
+
+1066
+01:09:40,080 --> 01:09:44,240
+I didn't know if I could, but I 
+also felt like I had the right 
+
+1067
+01:09:44,240 --> 01:09:47,399
+combination of experiences to 
+try. 
+
+1068
+01:09:47,399 --> 01:09:52,040
+And we need people to try, so 
+I'm gonna try. 
+
+1069
+01:09:52,120 --> 01:09:54,200
+Right. 
+Like, I think if I hadn't had 
+
+1070
+01:09:54,200 --> 01:09:57,160
+writing practice, it would. 
+It's too big an idea. 
+
+1071
+01:09:58,440 --> 01:10:07,400
+But also, I mean, I'm a female 
+in tech for 20 years, so there's
+
+1072
+01:10:07,400 --> 01:10:11,160
+never a time in which people 
+don't tell me I'm wrong about 
+
+1073
+01:10:11,160 --> 01:10:13,920
+what I'm saying. 
+That is a given that will 
+
+1074
+01:10:13,920 --> 01:10:16,080
+happen. 
+And my editor said, are you 
+
+1075
+01:10:16,080 --> 01:10:17,840
+gonna be OK? 
+I'm like, no, I'm not. 
+
+1076
+01:10:17,840 --> 01:10:20,160
+It hurts. 
+It's like death by 1000 paper 
+
+1077
+01:10:20,160 --> 01:10:22,800
+cuts. 
+I've had people splain to me why
+
+1078
+01:10:22,800 --> 01:10:26,560
+my talk was completely 
+erroneous, even though in the 
+
+1079
+01:10:26,560 --> 01:10:32,000
+talk I quoted people with, not 
+just me with the, you know, so 
+
+1080
+01:10:33,360 --> 01:10:34,480
+I. 
+Quoted men. 
+
+1081
+01:10:35,400 --> 01:10:38,880
+I, I quoted lots of men, men in 
+the room, right? 
+
+1082
+01:10:38,880 --> 01:10:43,400
+But they know. 
+So this like I've already had, I
+
+1083
+01:10:43,400 --> 01:10:45,360
+mean, I've already had. 
+This is why when you ask the 
+
+1084
+01:10:45,360 --> 01:10:47,720
+architect question, I'm like, I 
+get this like that. 
+
+1085
+01:10:48,840 --> 01:10:51,880
+I was with a group. 
+I, you know, principal systems 
+
+1086
+01:10:51,880 --> 01:10:55,040
+architect with a group of very 
+senior engineers. 
+
+1087
+01:10:55,800 --> 01:10:58,160
+What, how do we develop an 
+architecture practice? 
+
+1088
+01:10:58,160 --> 01:11:01,280
+I thought, let's start with just
+heuristics, like what are the 
+
+1089
+01:11:01,280 --> 01:11:03,160
+fundamental things we care 
+about? 
+
+1090
+01:11:03,160 --> 01:11:08,040
+So that that's that keeps us, 
+you know, we have a an agreed 
+
+1091
+01:11:08,040 --> 01:11:09,840
+upon. 
+These are the things that really
+
+1092
+01:11:09,840 --> 01:11:11,640
+matter to us. 
+We take the step. 
+
+1093
+01:11:11,880 --> 01:11:15,040
+So I, I did some drafts and then
+said, you know, here's some 
+
+1094
+01:11:15,040 --> 01:11:20,800
+ideas we can and any questions. 
+Yes, this is an architecture. 
+
+1095
+01:11:22,840 --> 01:11:24,920
+So let's begin with what a 
+question is. 
+
+1096
+01:11:25,200 --> 01:11:29,280
+A question has a question mark 
+at the end of the sentence, but 
+
+1097
+01:11:29,280 --> 01:11:37,400
+also this. 
+If I am not saying what, the 
+
+1098
+01:11:37,400 --> 01:11:41,400
+system pushes back on me, right?
+I'm not saying what everybody 
+
+1099
+01:11:41,400 --> 01:11:46,440
+knows is the right thing to say 
+in tech, and therefore we will 
+
+1100
+01:11:46,440 --> 01:11:51,960
+explain to her why, as opposed 
+to understand why I might come 
+
+1101
+01:11:51,960 --> 01:11:55,400
+from a different perspective. 
+Doesn't mean I'm right, but 
+
+1102
+01:11:55,400 --> 01:11:58,040
+maybe there's something valuable
+in what I'm saying. 
+
+1103
+01:11:58,480 --> 01:12:05,200
+I will say though, that the 
+amount of harishment and support
+
+1104
+01:12:05,280 --> 01:12:10,360
+and inspiration that I 
+experience now is truly 
+
+1105
+01:12:10,360 --> 01:12:14,880
+outstanding to me sometimes and 
+English I'm understanding things
+
+1106
+01:12:14,880 --> 01:12:17,320
+that were sexism is just being 
+an asshole. 
+
+1107
+01:12:17,560 --> 01:12:19,360
+Like the person's like that to 
+everybody. 
+
+1108
+01:12:19,720 --> 01:12:23,480
+Yeah, I get it worse because the
+person can, you know, sees me as
+
+1109
+01:12:23,480 --> 01:12:27,080
+lower rank, but that doesn't 
+mean that that's the only person
+
+1110
+01:12:27,080 --> 01:12:32,040
+that So not to suggest that 
+patriarchy isn't a patriarchy is
+
+1111
+01:12:32,120 --> 01:12:34,800
+the number one blocker to 
+systems thinking cause 
+
+1112
+01:12:34,800 --> 01:12:38,760
+patriarchy is a system that 
+wants to remain a system. 
+
+1113
+01:12:38,760 --> 01:12:40,200
+This is where command and 
+control. 
+
+1114
+01:12:40,520 --> 01:12:45,280
+This doesn't mean men, though 
+men are in the system, women are
+
+1115
+01:12:45,280 --> 01:12:48,880
+in the system and that my 
+colleagues, my male colleagues 
+
+1116
+01:12:49,000 --> 01:12:54,600
+suffer from the same type of 
+rigid thinking challenges and 
+
+1117
+01:12:54,600 --> 01:12:58,480
+being sidelined when they don't 
+say the right thing or if 
+
+1118
+01:12:58,480 --> 01:13:05,320
+they're being less concrete. 
+So I feel like there's we're 
+
+1119
+01:13:05,320 --> 01:13:10,000
+starting to move in a direction 
+where we don't have to be 
+
+1120
+01:13:10,000 --> 01:13:14,880
+trapped in a binary anymore. 
+We, we, we can actually have 
+
+1121
+01:13:14,880 --> 01:13:18,200
+some nuance in, in the 
+conversations. 
+
+1122
+01:13:18,800 --> 01:13:23,480
+The fact that O'Reilly asked me 
+about writing this book and then
+
+1123
+01:13:23,480 --> 01:13:26,960
+have been great doing it. 
+I, and I've said this to them 
+
+1124
+01:13:26,960 --> 01:13:29,400
+too. 
+Five years ago, I'm pretty sure 
+
+1125
+01:13:29,400 --> 01:13:35,120
+that would not have happened. 
+Like this is not, this is not, 
+
+1126
+01:13:35,160 --> 01:13:37,560
+this is not tech, one publisher 
+said. 
+
+1127
+01:13:37,560 --> 01:13:42,040
+This is like a self help book. 
+Yes. 
+
+1128
+01:13:42,040 --> 01:13:45,800
+And well, I mean, there are, you
+know, you are asking people to 
+
+1129
+01:13:45,800 --> 01:13:48,760
+look at things within 
+themselves. 
+
+1130
+01:13:49,160 --> 01:13:51,520
+Yeah. 
+It sounds like you're proposing 
+
+1131
+01:13:51,520 --> 01:13:55,520
+some firmware updates to our 
+brains, and there's. 
+
+1132
+01:13:55,720 --> 01:13:57,920
+Those are harder to do. 
+Those are harder to do. 
+
+1133
+01:13:58,880 --> 01:14:01,960
+And it requires some. 
+You have to want to. 
+
+1134
+01:14:02,760 --> 01:14:05,200
+You have to want to, you have to
+want to. 
+
+1135
+01:14:05,600 --> 01:14:10,240
+And, and also, honestly, I just 
+don't want us to feel so alone 
+
+1136
+01:14:10,240 --> 01:14:13,720
+all the time. 
+Like you do this and you really 
+
+1137
+01:14:13,720 --> 01:14:16,800
+can feel like you. 
+It's like a giant form of 
+
+1138
+01:14:16,800 --> 01:14:20,160
+gaslighting. 
+The emperor has no clothes and 
+
+1139
+01:14:20,160 --> 01:14:25,880
+you're like, hey, so as long as 
+we're isolated from each other 
+
+1140
+01:14:26,600 --> 01:14:30,000
+in that in that system, we're 
+not going to have an impact. 
+
+1141
+01:14:30,000 --> 01:14:35,000
+And I just want people to 
+understand they're not crazy. 
+
+1142
+01:14:35,000 --> 01:14:39,320
+The system is reinforcing things
+that aren't workable and aren't 
+
+1143
+01:14:39,320 --> 01:14:44,160
+sensical and that there are 
+things that we can do to have a 
+
+1144
+01:14:44,160 --> 01:14:46,600
+positive impact. 
+Not on every situation. 
+
+1145
+01:14:46,600 --> 01:14:50,080
+Sometimes you have to go like 
+getting you have to know when to
+
+1146
+01:14:50,080 --> 01:14:55,840
+go in an interview very early, 
+early on with the Twitter thing,
+
+1147
+01:14:55,840 --> 01:14:58,640
+I got asked this right at the 
+beginning, what do I think about
+
+1148
+01:14:58,640 --> 01:15:02,400
+what's going on at Twitter? 
+And I'm like, yeah, I'm not 
+
+1149
+01:15:02,400 --> 01:15:06,520
+gonna like there's that is so 
+divisive and it's even more 
+
+1150
+01:15:06,520 --> 01:15:09,560
+divisive now. 
+But what what I said, and I 
+
+1151
+01:15:09,560 --> 01:15:13,400
+still mean this is that what 
+it's a great example of for 
+
+1152
+01:15:13,400 --> 01:15:16,920
+those of us relatively new in 
+this industry, right, is that 
+
+1153
+01:15:17,080 --> 01:15:21,080
+we're seeing a lot of the 
+patterns that we've been through
+
+1154
+01:15:21,080 --> 01:15:25,040
+and we know this isn't a great 
+way to build complex software 
+
+1155
+01:15:25,040 --> 01:15:26,880
+systems. 
+We know these approaches. 
+
+1156
+01:15:27,040 --> 01:15:31,680
+I think of bad blood, the, the 
+book about Theranos that wasn't 
+
+1157
+01:15:31,720 --> 01:15:33,400
+about tech was about medical 
+equipment. 
+
+1158
+01:15:33,720 --> 01:15:36,360
+And so much of that book is 
+familiar to me. 
+
+1159
+01:15:36,560 --> 01:15:39,280
+And like this is the way we 
+think we should also build 
+
+1160
+01:15:39,280 --> 01:15:43,400
+software at an extreme. 
+And so I feel like these 
+
+1161
+01:15:43,400 --> 01:15:47,240
+experiences that we're having, 
+which unfortunately go with the 
+
+1162
+01:15:47,240 --> 01:15:53,640
+layoffs, which means it's really
+actually costing people way more
+
+1163
+01:15:53,640 --> 01:15:58,720
+than than it's rational or 
+reasonable to to, you know, have
+
+1164
+01:15:58,720 --> 01:16:00,720
+a silver lining. 
+Like there's no silver lining. 
+
+1165
+01:16:00,720 --> 01:16:07,160
+This just sucks. 
+And simultaneously we we are 
+
+1166
+01:16:07,160 --> 01:16:13,920
+navigating our own careers. 
+One of my big moments of like, 
+
+1167
+01:16:14,080 --> 01:16:16,960
+why am I not an accountant? 
+What am I doing here? 
+
+1168
+01:16:16,960 --> 01:16:20,200
+This is ridiculous. 
+Is the Sisyphus aspect. 
+
+1169
+01:16:20,640 --> 01:16:23,200
+How often? 
+If you play glue rolls, if 
+
+1170
+01:16:23,200 --> 01:16:26,240
+you're good at synthesizing, if 
+you do things that I would call 
+
+1171
+01:16:26,240 --> 01:16:29,480
+systems architecture, then 
+you're just rolling the same 
+
+1172
+01:16:29,480 --> 01:16:32,720
+rock up the hill and it falls 
+back down again and you roll it 
+
+1173
+01:16:32,720 --> 01:16:35,080
+up. 
+Because someone asked me about 
+
+1174
+01:16:35,080 --> 01:16:37,000
+cat herding and I said, you know
+what? 
+
+1175
+01:16:37,200 --> 01:16:40,560
+I realized this in the moment. 
+Nobody gets to be a cat. 
+
+1176
+01:16:41,320 --> 01:16:44,520
+To your point about teams need 
+these skills, right? 
+
+1177
+01:16:44,760 --> 01:16:48,760
+Nobody gets to be a cat. 
+I'm not here to cat herd. 
+
+1178
+01:16:48,760 --> 01:16:51,520
+If you want to be a cat, you 
+need a cat herder. 
+
+1179
+01:16:51,520 --> 01:16:53,680
+But if we want to do hard things
+together. 
+
+1180
+01:16:54,440 --> 01:16:57,960
+So when you were saying about if
+teams can't do this, they can't 
+
+1181
+01:16:57,960 --> 01:17:00,560
+do this, this is what I mean. 
+Like if you're gonna, if you 
+
+1182
+01:17:00,560 --> 01:17:03,560
+need a cat herder, that 
+wouldn't, that wouldn't be me, 
+
+1183
+01:17:03,560 --> 01:17:06,200
+'cause that had just burned me. 
+That burned me. 
+
+1184
+01:17:06,200 --> 01:17:08,000
+Oh yeah. 
+Well, it exhausts you. 
+
+1185
+01:17:08,200 --> 01:17:10,600
+Yeah, yeah, there's there's a 
+couple of things. 
+
+1186
+01:17:10,680 --> 01:17:14,000
+One, one was, I don't know where
+I heard this, but somebody 
+
+1187
+01:17:14,000 --> 01:17:18,560
+positive they go, what if 
+Sisyphus actually enjoyed 
+
+1188
+01:17:18,960 --> 01:17:21,040
+pushing the rock up the hill 
+every day? 
+
+1189
+01:17:21,360 --> 01:17:24,200
+You know, maybe. 
+But but the other thing was what
+
+1190
+01:17:24,200 --> 01:17:29,440
+Trond said last week, which kind
+of I'm still working on because 
+
+1191
+01:17:29,640 --> 01:17:32,920
+I said, well, OK, you, you, you 
+want to create self organizing 
+
+1192
+01:17:32,920 --> 01:17:34,440
+systems. 
+What's the formula? 
+
+1193
+01:17:34,800 --> 01:17:40,320
+And he goes, the formula is that
+you put the group that's going 
+
+1194
+01:17:40,320 --> 01:17:44,480
+to self organize be in the self 
+organizing system in a workshop,
+
+1195
+01:17:44,840 --> 01:17:48,480
+I mean with themselves and they 
+figure out the organization. 
+
+1196
+01:17:48,800 --> 01:17:52,720
+And I was like, that does sound 
+right, but it also sounds I 
+
+1197
+01:17:52,720 --> 01:17:56,920
+wanted a formula. 
+Yeah, you wanted to control I. 
+
+1198
+01:17:56,920 --> 01:17:59,240
+Want yeah, I wanted to say, 
+well, how do you control this so
+
+1199
+01:17:59,240 --> 01:18:01,640
+that you generate a self 
+organizing system and goes well 
+
+1200
+01:18:01,840 --> 01:18:04,080
+you don't I was like. 
+Right. 
+
+1201
+01:18:04,080 --> 01:18:06,480
+I do this. 
+I run into it all the time. 
+
+1202
+01:18:06,840 --> 01:18:08,880
+It's sad. 
+It's like I, I'm like, Oh my 
+
+1203
+01:18:08,880 --> 01:18:12,760
+God, I do it. 
+I do I do I, I mean, I, I have 
+
+1204
+01:18:12,760 --> 01:18:15,800
+this same, the same mental 
+models. 
+
+1205
+01:18:15,800 --> 01:18:21,320
+And though I do think that we do
+know that that doesn't always 
+
+1206
+01:18:21,320 --> 01:18:23,480
+work without some skill 
+development, right? 
+
+1207
+01:18:23,480 --> 01:18:27,760
+So what's the skill development 
+that those people need to do 
+
+1208
+01:18:27,760 --> 01:18:28,680
+that? 
+Well, right. 
+
+1209
+01:18:28,680 --> 01:18:32,680
+Like how can we support that 
+work as opposed to we'll let it 
+
+1210
+01:18:32,680 --> 01:18:35,600
+magically happen? 
+Is there anything we can do that
+
+1211
+01:18:35,600 --> 01:18:39,520
+actually nourishes that 
+ecosystem or helps people to do 
+
+1212
+01:18:39,720 --> 01:18:43,640
+this? 
+The process of, you know, of 
+
+1213
+01:18:44,280 --> 01:18:48,320
+servant, you know what we call 
+servant leadership, which is a 
+
+1214
+01:18:48,320 --> 01:18:52,520
+very tricky word, but this idea 
+that we're facilitating, I like 
+
+1215
+01:18:52,520 --> 01:18:58,320
+this a lot that we're 
+facilitating these processes and
+
+1216
+01:18:58,680 --> 01:19:03,400
+coaching them in a way to help 
+them to be stronger and more 
+
+1217
+01:19:03,400 --> 01:19:06,400
+impactful and, and what, you 
+know, what does that mean? 
+
+1218
+01:19:07,000 --> 01:19:11,840
+Do you find it's hard once you 
+become aware of systems 
+
+1219
+01:19:11,840 --> 01:19:14,280
+thinking? 
+You find it hard to not look at 
+
+1220
+01:19:14,280 --> 01:19:19,080
+so many systems and judge them 
+as being just utterly broken and
+
+1221
+01:19:19,080 --> 01:19:21,360
+that no one cares about fixing 
+them like it? 
+
+1222
+01:19:21,360 --> 01:19:24,400
+That would be hard for me. 
+Like I've just become really 
+
+1223
+01:19:24,400 --> 01:19:28,240
+critical of every system. 
+I think it's a phase you have to
+
+1224
+01:19:28,240 --> 01:19:32,960
+go through before you go, oh, 
+yeah, this is to be able to 
+
+1225
+01:19:32,960 --> 01:19:36,040
+accept it. 
+Initially you see it, then you 
+
+1226
+01:19:36,040 --> 01:19:38,400
+get really mad about it. 
+And then, you know, it's like, 
+
+1227
+01:19:38,400 --> 01:19:43,320
+what supposed phases of grief? 
+Yeah, right. 
+
+1228
+01:19:43,360 --> 01:19:46,280
+And it's like. 
+So I'm still at the early phases
+
+1229
+01:19:46,280 --> 01:19:48,800
+of grief with Twitter. 
+The Twitter thing is what made 
+
+1230
+01:19:48,800 --> 01:19:51,120
+me think about this, because 
+it's really easy for me to 
+
+1231
+01:19:51,720 --> 01:19:56,040
+externally just be really 
+critical of whatever system is 
+
+1232
+01:19:56,400 --> 01:19:58,920
+happening there. 
+It's that's exactly, I mean 
+
+1233
+01:19:58,920 --> 01:20:02,360
+that's that's that's the 
+straight on question is that. 
+
+1234
+01:20:03,040 --> 01:20:07,000
+I for a while didn't know as I'm
+seeing more and more of it, like
+
+1235
+01:20:07,000 --> 01:20:09,680
+we used the word patriarchy, 
+which is a tricky word because 
+
+1236
+01:20:09,680 --> 01:20:12,840
+like agile, people drive it 
+differently, but just meaning 
+
+1237
+01:20:12,840 --> 01:20:16,440
+the system that reinforces a 
+particular way of operating. 
+
+1238
+01:20:18,840 --> 01:20:24,360
+The the deeper I got into this, 
+the older I got, the more I'm 
+
+1239
+01:20:24,360 --> 01:20:28,920
+like, everything's broken. 
+Like I think the way we educate 
+
+1240
+01:20:28,920 --> 01:20:30,560
+is broken. 
+I think that. 
+
+1241
+01:20:30,800 --> 01:20:38,560
+And then for me, so when I was a
+young girl, I, I learned to hide
+
+1242
+01:20:38,560 --> 01:20:41,000
+that I was good in math and 
+science. 
+
+1243
+01:20:41,000 --> 01:20:48,040
+Like that was not good for me. 
+I was, you know, not worth 
+
+1244
+01:20:48,040 --> 01:20:50,440
+investing in from an educational
+point of view. 
+
+1245
+01:20:50,440 --> 01:20:53,520
+But my brother was because my 
+brother would have to support a 
+
+1246
+01:20:53,520 --> 01:20:58,680
+family or whatever like that. 
+What was still happening to not 
+
+1247
+01:20:58,720 --> 01:21:01,240
+non straight people in the 
+world? 
+
+1248
+01:21:01,360 --> 01:21:03,480
+What was still happening to 
+women? 
+
+1249
+01:21:03,640 --> 01:21:06,360
+What were reproductive rights 
+and control over them? 
+
+1250
+01:21:06,360 --> 01:21:11,040
+Like, you know, I was born into 
+a world where being female was a
+
+1251
+01:21:11,320 --> 01:21:16,680
+tremendous straitjacket in so 
+many ways for somebody like me. 
+
+1252
+01:21:16,960 --> 01:21:21,840
+And then, you know, decades of 
+work, both inner work for 
+
+1253
+01:21:21,840 --> 01:21:25,160
+myself, right, moving through 
+the trauma and the external work
+
+1254
+01:21:25,160 --> 01:21:27,120
+here in the US that we saw 
+happen. 
+
+1255
+01:21:27,440 --> 01:21:31,080
+And then time folded in on 
+itself. 
+
+1256
+01:21:31,440 --> 01:21:38,480
+And we're like right back in the
+1960s in terms of, you know, so 
+
+1257
+01:21:38,480 --> 01:21:43,160
+much that's happening around me 
+feels so familiar, like the re 
+
+1258
+01:21:43,160 --> 01:21:47,440
+rising of these, these I thought
+we'd matured. 
+
+1259
+01:21:47,840 --> 01:21:51,960
+And so I see this similarly in 
+tech, right where where we, we, 
+
+1260
+01:21:52,000 --> 01:21:57,680
+we, we make progress, but then 
+it we somebody can come in and 
+
+1261
+01:21:57,680 --> 01:22:01,840
+command and control. 
+And for me, it's never been I'm 
+
+1262
+01:22:01,840 --> 01:22:05,640
+never I'm not so worried about 
+the commander. 
+
+1263
+01:22:05,920 --> 01:22:09,120
+I kind of get why somebody would
+want that. 
+
+1264
+01:22:09,160 --> 01:22:12,600
+Like, and if we say narcissism 
+or whatever, that helps to 
+
+1265
+01:22:12,600 --> 01:22:14,680
+explain it. 
+But just like, you know, you get
+
+1266
+01:22:14,680 --> 01:22:16,760
+to be king of the world. 
+You want to be king of the 
+
+1267
+01:22:16,760 --> 01:22:18,800
+world. 
+It's not great. 
+
+1268
+01:22:18,800 --> 01:22:21,560
+But I, I mean, I don't agree 
+with it, but I sort of 
+
+1269
+01:22:21,560 --> 01:22:25,440
+understand it. 
+I struggle with all of the 
+
+1270
+01:22:25,440 --> 01:22:28,200
+people that enable it. 
+That's all. 
+
+1271
+01:22:28,200 --> 01:22:32,000
+Like, when I look at, you know, 
+World War Two, I look at, at 
+
+1272
+01:22:32,000 --> 01:22:33,960
+civil rights in the American 
+South. 
+
+1273
+01:22:34,760 --> 01:22:38,480
+It's the people in the street 
+screaming at the little kids 
+
+1274
+01:22:38,480 --> 01:22:43,280
+going to the school because what
+they we didn't want dark skinned
+
+1275
+01:22:43,440 --> 01:22:46,320
+kids in school. 
+We only wanted light skinned. 
+
+1276
+01:22:46,320 --> 01:22:48,880
+And how do you even measure? 
+I don't even that's not even a 
+
+1277
+01:22:48,880 --> 01:22:50,560
+binary like there's only 
+between. 
+
+1278
+01:22:50,960 --> 01:22:55,920
+That's always been the thing. 
+And so for me now that's still a
+
+1279
+01:22:55,920 --> 01:23:00,280
+challenge. 
+Like we have the the people that
+
+1280
+01:23:00,280 --> 01:23:05,480
+are aggressively trying to have 
+power and dominate and we have 
+
+1281
+01:23:05,480 --> 01:23:08,880
+people that are activate, but 
+more than that, we have people 
+
+1282
+01:23:08,880 --> 01:23:14,120
+that are K or enabling these 
+patterns that cause so much 
+
+1283
+01:23:14,120 --> 01:23:16,880
+harm. 
+And that's the thing I hope 
+
+1284
+01:23:16,880 --> 01:23:21,280
+before I die to figure out how 
+to positively impact. 
+
+1285
+01:23:21,680 --> 01:23:24,440
+Well, I think they don't want to
+lose what they have. 
+
+1286
+01:23:24,440 --> 01:23:27,560
+I mean, if you reverse the 
+situation and instead of going 
+
+1287
+01:23:27,560 --> 01:23:29,280
+out, what are all the problems 
+with the system? 
+
+1288
+01:23:29,640 --> 01:23:33,480
+Turn it around and go, well, 
+what are the benefits to the 
+
+1289
+01:23:33,480 --> 01:23:38,120
+people inside the system? 
+Why would they resist change? 
+
+1290
+01:23:38,120 --> 01:23:41,480
+Because they go, what we have 
+is, you know, I, I like where I 
+
+1291
+01:23:41,480 --> 01:23:45,560
+am right now, or it's tolerable.
+And then so if somebody comes 
+
+1292
+01:23:45,560 --> 01:23:47,440
+along and wants to change 
+something, they go. 
+
+1293
+01:23:47,440 --> 01:23:49,480
+Why? 
+I don't know, that might. 
+
+1294
+01:23:49,520 --> 01:23:52,720
+And then of course you can 
+always fear monger and and make 
+
+1295
+01:23:52,720 --> 01:23:56,760
+it make it a scary thing to 
+think about the change. 
+
+1296
+01:23:56,760 --> 01:23:59,000
+Oh, you might lose. 
+It's loss aversion. 
+
+1297
+01:23:59,840 --> 01:24:04,960
+So this is part of systems 
+thinking to identify the reasons
+
+1298
+01:24:04,960 --> 01:24:08,440
+why the system got to where it 
+was and who. 
+
+1299
+01:24:08,440 --> 01:24:11,400
+And how it's how it's what keeps
+it stable. 
+
+1300
+01:24:11,400 --> 01:24:15,200
+Yeah, like Gerald Weinberg said,
+which confused the heck out of 
+
+1301
+01:24:15,200 --> 01:24:19,120
+me at first, He goes, things are
+the way they are because they 
+
+1302
+01:24:19,120 --> 01:24:22,200
+got that way, one logical step 
+at a time. 
+
+1303
+01:24:22,680 --> 01:24:25,400
+And then it's like, yeah, you 
+can see, oh, yeah, every little 
+
+1304
+01:24:25,400 --> 01:24:27,640
+decision. 
+And then you're in a place we 
+
+1305
+01:24:27,640 --> 01:24:29,280
+don't really like where we are 
+right now. 
+
+1306
+01:24:29,600 --> 01:24:32,880
+But if you go back, you can go, 
+oh, I can see all the decisions 
+
+1307
+01:24:32,880 --> 01:24:35,720
+that got us here. 
+Yeah, yeah. 
+
+1308
+01:24:35,720 --> 01:24:41,760
+And that it is somewhat, 
+somewhat historical, but mostly 
+
+1309
+01:24:41,760 --> 01:24:47,840
+only to understand, are there 
+any outmoded values, beliefs, 
+
+1310
+01:24:47,840 --> 01:24:50,800
+mental models that are 
+generating the rules of this 
+
+1311
+01:24:50,800 --> 01:24:54,880
+system that we maybe already 
+know we're not really in 
+
+1312
+01:24:54,880 --> 01:24:59,840
+agreement with, But we, we, we 
+haven't dismantled the way that 
+
+1313
+01:24:59,840 --> 01:25:03,240
+they operate. 
+So they still continue to 
+
+1314
+01:25:03,240 --> 01:25:08,000
+operate, which is somewhat about
+history, but that's always 
+
+1315
+01:25:08,000 --> 01:25:10,720
+tricky that, you know, the US is
+a very young country. 
+
+1316
+01:25:10,720 --> 01:25:14,840
+So we, we talk about and I grew 
+up in Boston where we thought 
+
+1317
+01:25:14,840 --> 01:25:18,080
+all history, like straight from 
+ancient Greece to Boston. 
+
+1318
+01:25:18,080 --> 01:25:21,760
+That's all the history. 
+Like we learned that was that's 
+
+1319
+01:25:21,760 --> 01:25:26,280
+full on history. 
+And I moved out West to Montana,
+
+1320
+01:25:26,280 --> 01:25:28,080
+and I'm like, they have history 
+here. 
+
+1321
+01:25:28,600 --> 01:25:30,880
+That's weird. 
+I thought all the history was in
+
+1322
+01:25:30,880 --> 01:25:34,360
+the original 13 colonies. 
+Then the first time I went to 
+
+1323
+01:25:34,360 --> 01:25:36,320
+the team that I was working with
+in London. 
+
+1324
+01:25:36,600 --> 01:25:39,120
+I'll never live this down. 
+I'm like, you know, this is 
+
+1325
+01:25:39,120 --> 01:25:43,040
+amazing. 
+Is like, is, is London looks a 
+
+1326
+01:25:43,040 --> 01:25:44,680
+lot like Boston. 
+And they're like, yeah. 
+
+1327
+01:25:48,400 --> 01:25:49,840
+Yeah, because we we built a 
+Boston. 
+
+1328
+01:25:50,880 --> 01:25:51,800
+Boston, Yeah, yeah. 
+Right. 
+
+1329
+01:25:52,240 --> 01:25:54,880
+So how far back do we go? 
+Right? 
+
+1330
+01:25:54,880 --> 01:25:59,200
+Like this is the argument of, 
+you know, is, is a patriarchal 
+
+1331
+01:25:59,200 --> 01:26:02,200
+system the norm? 
+Because if we go back in 
+
+1332
+01:26:02,200 --> 01:26:06,160
+history, that's how it's been. 
+But how far, I mean, is it, how 
+
+1333
+01:26:06,160 --> 01:26:09,600
+and how far back do we go? 
+And also, even if it was 
+
+1334
+01:26:09,600 --> 01:26:12,480
+historically true, does that 
+mean it's inevitable for the 
+
+1335
+01:26:12,480 --> 01:26:17,080
+next 2000 years? 
+Do we, do we have, do we want to
+
+1336
+01:26:17,720 --> 01:26:21,920
+change our mental model? 
+So I think history can be really
+
+1337
+01:26:21,920 --> 01:26:28,080
+important, but it also can be 
+you can't know the information 
+
+1338
+01:26:28,080 --> 01:26:32,040
+that comes to us from history 
+will include the people will 
+
+1339
+01:26:32,080 --> 01:26:36,880
+disclude the people who didn't 
+have any impact but were in fact
+
+1340
+01:26:36,880 --> 01:26:40,480
+acting in the system. 
+And so it can be kind of even in
+
+1341
+01:26:40,480 --> 01:26:43,960
+a legacy code base. 
+I know for myself, I'm like, I 
+
+1342
+01:26:43,960 --> 01:26:47,600
+don't know why did I do this. 
+I know why I did this because it
+
+1343
+01:26:47,600 --> 01:26:51,600
+was the best thing at the time 
+in that circumstance. 
+
+1344
+01:26:52,200 --> 01:26:55,640
+So the system led to the next 
+iteration of the system, which 
+
+1345
+01:26:55,640 --> 01:26:57,880
+led to the next iteration of the
+system, right. 
+
+1346
+01:26:58,080 --> 01:27:05,760
+And you every, every molecule 
+that moves is a change in the 
+
+1347
+01:27:05,760 --> 01:27:08,320
+system in a way. 
+And so how would you, how would 
+
+1348
+01:27:08,320 --> 01:27:10,880
+you know the state of a system 
+at a given time? 
+
+1349
+01:27:11,440 --> 01:27:17,320
+You know, it's like a, like a, a
+Ledger, like a Kafka Ledger, 
+
+1350
+01:27:17,560 --> 01:27:20,320
+like everything is these 
+immutable events and you could 
+
+1351
+01:27:20,640 --> 01:27:23,680
+maybe go back in time, but 
+they're in large systems. 
+
+1352
+01:27:23,680 --> 01:27:27,000
+They're just so complex. 
+You could never really know what
+
+1353
+01:27:27,000 --> 01:27:28,840
+the system was at any given 
+time. 
+
+1354
+01:27:29,400 --> 01:27:32,480
+Plus, if you weren't there, like
+this is something that I hear. 
+
+1355
+01:27:32,760 --> 01:27:37,400
+I hear my son talk about life 
+when I was younger and I'm like,
+
+1356
+01:27:38,280 --> 01:27:41,040
+I was there. 
+That's not what it's like. 
+
+1357
+01:27:41,040 --> 01:27:42,720
+It feels like you're cherry 
+picking. 
+
+1358
+01:27:42,720 --> 01:27:45,280
+I don't know. 
+Data supports me like, but I was
+
+1359
+01:27:45,480 --> 01:27:50,960
+there like I kind of And so the 
+the which I get right that if 
+
+1360
+01:27:50,960 --> 01:27:56,480
+you're not in the context, it 
+can be very hard to know what 
+
+1361
+01:27:56,480 --> 01:28:01,920
+patterns and and feedback loops.
+You know, why would somebody why
+
+1362
+01:28:01,920 --> 01:28:04,560
+would someone stay in a 
+relationship, for example, that 
+
+1363
+01:28:04,560 --> 01:28:09,360
+was unhealthy for them because 
+at the time there was no other 
+
+1364
+01:28:09,680 --> 01:28:12,840
+option. 
+You're looking at that from a 
+
+1365
+01:28:12,840 --> 01:28:16,800
+person with many options at 
+somebody who did not have those 
+
+1366
+01:28:16,800 --> 01:28:21,040
+options. 
+And so that's that's that's AI 
+
+1367
+01:28:21,040 --> 01:28:24,480
+think retrospecting is really, 
+really, really important. 
+
+1368
+01:28:24,480 --> 01:28:29,640
+That's how we see patterns. 
+So I'm not for just go fast and 
+
+1369
+01:28:29,640 --> 01:28:32,000
+break things with like no 
+self-awareness. 
+
+1370
+01:28:32,000 --> 01:28:34,520
+I'm like, if we toddlers, we're 
+just going to run around the 
+
+1371
+01:28:34,520 --> 01:28:38,280
+house and break things. 
+Like, I do think we want to have
+
+1372
+01:28:38,280 --> 01:28:42,560
+some discipline in our patterns,
+but simultaneously too much of 
+
+1373
+01:28:42,560 --> 01:28:46,600
+that I I think. 
+There's some dangers to it. 
+
+1374
+01:28:47,200 --> 01:28:49,960
+Yeah, I get stuck in it. 
+I'm like, we used the way we 
+
+1375
+01:28:49,960 --> 01:28:52,280
+used to do it. 
+Get off my lawn, kids, you know,
+
+1376
+01:28:52,280 --> 01:28:54,520
+like that. 
+I've gotten stuck in some of the
+
+1377
+01:28:54,520 --> 01:29:00,400
+mental models that I trusted and
+I've brought them to teams later
+
+1378
+01:29:00,560 --> 01:29:03,000
+and they didn't work at all. 
+And of course they didn't, 
+
+1379
+01:29:03,000 --> 01:29:07,080
+because it was I solved problems
+with this approach, but we don't
+
+1380
+01:29:07,080 --> 01:29:11,960
+have those same problems. 
+So I find it both dismaying and 
+
+1381
+01:29:11,960 --> 01:29:15,840
+delightful. 
+When I discover something, I go,
+
+1382
+01:29:16,200 --> 01:29:20,440
+wait, this is part of my 
+foundation and it doesn't work. 
+
+1383
+01:29:20,520 --> 01:29:23,080
+And I've been living this way 
+with carrying this thing along. 
+
+1384
+01:29:23,440 --> 01:29:27,600
+So it's dismaying, but then 
+delightful because I discovered 
+
+1385
+01:29:27,600 --> 01:29:33,080
+a thing and now I have a choice.
+That exactly that we put this 
+
+1386
+01:29:33,200 --> 01:29:38,240
+systems thinking Now I have a 
+choice like that that like that 
+
+1387
+01:29:38,480 --> 01:29:43,840
+when once we get comfortable 
+with like I love a good code 
+
+1388
+01:29:43,840 --> 01:29:46,440
+review. 
+I like a good, good health like 
+
+1389
+01:29:46,880 --> 01:29:51,120
+I love when my thinking is 
+better because other people have
+
+1390
+01:29:51,120 --> 01:29:57,080
+helped me to to see right. 
+So these things of 
+
+1391
+01:29:57,080 --> 01:30:00,840
+organizationally looking for our
+blind spots, looking for those 
+
+1392
+01:30:00,840 --> 01:30:03,080
+aha moments, creating space for 
+them. 
+
+1393
+01:30:03,360 --> 01:30:05,280
+Those are the liberation 
+moments. 
+
+1394
+01:30:05,280 --> 01:30:08,560
+Even though we roll our eyes and
+be like, now we have to do 
+
+1395
+01:30:08,560 --> 01:30:12,720
+something different. 
+But if we could have that 
+
+1396
+01:30:12,720 --> 01:30:16,360
+experience of taking a deep 
+breath when that happens, even 
+
+1397
+01:30:16,360 --> 01:30:18,280
+though it's embarrassing and 
+uncomfortable. 
+
+1398
+01:30:18,600 --> 01:30:24,040
+But also like, you know, my 
+teammates, we can call me on 
+
+1399
+01:30:24,040 --> 01:30:27,680
+things very easily and vice 
+versa because they're not 
+
+1400
+01:30:27,920 --> 01:30:30,800
+calling me on things. 
+They care about me very much and
+
+1401
+01:30:30,800 --> 01:30:33,640
+value. 
+But if something isn't working 
+
+1402
+01:30:33,640 --> 01:30:36,720
+for us, it's not going to help 
+us deliver the system. 
+
+1403
+01:30:37,320 --> 01:30:42,160
+So if somebody's has a pain 
+point, resolving that pain point
+
+1404
+01:30:42,400 --> 01:30:44,920
+is going to open up some, some 
+flow. 
+
+1405
+01:30:44,920 --> 01:30:47,800
+Also, they're stuck for a reason
+usually. 
+
+1406
+01:30:47,800 --> 01:30:54,520
+So I, I wish, I wish we had a 
+more of a shared joyfulness of 
+
+1407
+01:30:54,520 --> 01:31:00,240
+that discovery of I've been 
+wrong about this all along. 
+
+1408
+01:31:00,240 --> 01:31:04,880
+Like completely wrong because 
+it's it's that's yeah. 
+
+1409
+01:31:05,200 --> 01:31:06,720
+Yeah, slippery. 
+Is that a good? 
+
+1410
+01:31:07,160 --> 01:31:09,800
+Yeah, yeah. 
+Wow. 
+
+1411
+01:31:09,880 --> 01:31:11,560
+We've taken so much of your 
+time. 
+
+1412
+01:31:12,080 --> 01:31:13,760
+It's been absolutely 
+fascinating. 
+
+1413
+01:31:13,760 --> 01:31:17,720
+I know you have a meeting to get
+to and that was amazing. 
+
+1414
+01:31:17,720 --> 01:31:19,880
+That was great. 
+Pretty mind blind. 
+
+1415
+01:31:19,880 --> 01:31:23,760
+So thank you for helping us 
+change our systems of thinking. 
+
+1416
+01:31:24,400 --> 01:31:27,640
+Well, thank you. 
+I mean, it's you asked me to 
+
+1417
+01:31:27,640 --> 01:31:31,600
+come and and spend time with 
+wonderful people talking about 
+
+1418
+01:31:31,600 --> 01:31:34,640
+my favorite subject. 
+It's really not like I'm, I'm 
+
+1419
+01:31:34,760 --> 01:31:37,680
+really not being generous here. 
+This is great for me. 
+
+1420
+01:31:37,680 --> 01:31:42,160
+And I'm I'm so glad that I got 
+to see you meet you in person 
+
+1421
+01:31:42,160 --> 01:31:44,760
+and and talk about this. 
+And I love the questions that 
+
+1422
+01:31:44,760 --> 01:31:48,120
+you asked because I know it's 
+what people are thinking. 
+
+1423
+01:31:48,400 --> 01:31:49,400
+Yeah, all. 
+Right. 
+
+1424
+01:31:50,040 --> 01:31:50,760
+Awesome. 
+Thank you. 
+
+1425
+01:31:51,560 --> 01:31:52,040
+Thank you.

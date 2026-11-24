@@ -1,0 +1,6170 @@
+1
+00:00:01,120 --> 00:00:03,520
+Welcome to. 
+Happy Path Programming. 
+
+2
+00:00:03,720 --> 00:00:05,600
+I'm Bruce Eckel. 
+I'm James Ward. 
+
+3
+00:00:07,840 --> 00:00:11,160
+All right, Welcome to Happy Path
+programming Beautiful spring 
+
+4
+00:00:11,160 --> 00:00:13,200
+weather up here in Crested 
+Butte, Colorado. 
+
+5
+00:00:14,360 --> 00:00:16,440
+Just loving it. 
+Except we're not like a foot. 
+
+6
+00:00:16,440 --> 00:00:18,200
+Of snow coming this weekend. 
+Is that right? 
+
+7
+00:00:18,280 --> 00:00:20,960
+Well, and we're not worried 
+about it getting too hot, like, 
+
+8
+00:00:20,960 --> 00:00:23,760
+apparently you are so. 
+Yeah, fair enough. 
+
+9
+00:00:23,920 --> 00:00:25,600
+Yeah. 
+A little overcast today for San 
+
+10
+00:00:25,600 --> 00:00:27,280
+Diego, but that's OK. 
+I think it's just kind of the 
+
+11
+00:00:27,280 --> 00:00:28,840
+morning thing. 
+I think it'll clear up as the 
+
+12
+00:00:28,840 --> 00:00:30,320
+day goes on. 
+Yeah. 
+
+13
+00:00:30,680 --> 00:00:33,200
+So today we have with us April 
+Wenzel. 
+
+14
+00:00:33,240 --> 00:00:35,200
+Did I get that right? 
+Yes, it rhymes with pencil. 
+
+15
+00:00:36,200 --> 00:00:40,000
+Awesome. 
+And I you know I I we've never 
+
+16
+00:00:40,000 --> 00:00:43,440
+met in person which hopefully we
+get to do that somewhere along 
+
+17
+00:00:43,440 --> 00:00:45,920
+the way. 
+But I've been following you on 
+
+18
+00:00:45,920 --> 00:00:50,480
+Twitter and seeing so much great
+stuff from you around the the 
+
+19
+00:00:50,480 --> 00:00:52,600
+way that I'm looking at it, I'm 
+we'll hear from you how you can 
+
+20
+00:00:52,600 --> 00:00:54,440
+see it. 
+But it's like how do we help 
+
+21
+00:00:54,440 --> 00:01:00,400
+programmers to to to treat each 
+other more kindly in their 
+
+22
+00:01:00,400 --> 00:01:04,440
+interactions. 
+And I love that because I think 
+
+23
+00:01:04,440 --> 00:01:07,760
+as programmers we sometimes 
+struggle with, with, you know, 
+
+24
+00:01:07,760 --> 00:01:11,440
+bringing, bringing kindness to 
+what we do in our interaction. 
+
+25
+00:01:11,600 --> 00:01:15,960
+Our field also tends to attract 
+neurodivergent folks. 
+
+26
+00:01:15,960 --> 00:01:20,880
+It's it's a better fit and then 
+they don't always get the kind 
+
+27
+00:01:20,880 --> 00:01:23,920
+of support and training that 
+they need to learn to 
+
+28
+00:01:24,200 --> 00:01:26,600
+communicate well. 
+So I guess that's what what's 
+
+29
+00:01:26,600 --> 00:01:29,120
+been cool, from what I've seen 
+from you, is you're trying to 
+
+30
+00:01:29,120 --> 00:01:33,560
+help give programmers some tools
+for how to communicate more 
+
+31
+00:01:33,560 --> 00:01:37,360
+kindly, more more 
+compassionately and effectively 
+
+32
+00:01:37,680 --> 00:01:39,080
+and effectively. 
+That's right. 
+
+33
+00:01:39,800 --> 00:01:42,040
+Yes, so. 
+So I want to hear all about it. 
+
+34
+00:01:42,040 --> 00:01:45,520
+But first, before we dive into 
+to that work, what's your 
+
+35
+00:01:45,520 --> 00:01:47,600
+background? 
+What's what's tell us about you?
+
+36
+00:01:48,320 --> 00:01:50,520
+Sure. 
+So I started programming in high
+
+37
+00:01:50,520 --> 00:01:52,160
+school. 
+So I was kind of like one of 
+
+38
+00:01:52,160 --> 00:01:54,040
+those typical stories. 
+Like even though I don't look 
+
+39
+00:01:54,040 --> 00:01:56,960
+like the typical story, I 
+actually kind of was in that I 
+
+40
+00:01:57,160 --> 00:01:59,160
+loved playing video games 
+growing up. 
+
+41
+00:01:59,160 --> 00:02:01,480
+And so I was like, hey, I can 
+actually make these. 
+
+42
+00:02:01,480 --> 00:02:06,600
+And so I started programming in 
+C++ in high school and really 
+
+43
+00:02:06,600 --> 00:02:08,360
+enjoyed it. 
+Like, it really felt like just 
+
+44
+00:02:08,360 --> 00:02:11,320
+being able to create these like 
+worlds, like these virtual 
+
+45
+00:02:11,320 --> 00:02:14,000
+worlds and everything, and just 
+felt very empowering and fun. 
+
+46
+00:02:14,240 --> 00:02:18,720
+So I went on to continue 
+studying it in college and then,
+
+47
+00:02:19,080 --> 00:02:22,000
+you know, I moved to the Bay 
+Area, which is, you know, a good
+
+48
+00:02:22,000 --> 00:02:25,120
+place to find some technology. 
+Yep. 
+
+49
+00:02:25,160 --> 00:02:28,400
+And I did. 
+And it was, you know, I did that
+
+50
+00:02:28,400 --> 00:02:31,880
+for about 10 years in the Bay 
+Area, worked at some startups 
+
+51
+00:02:31,880 --> 00:02:34,640
+and larger companies and moved 
+around a lot. 
+
+52
+00:02:34,920 --> 00:02:36,560
+Job hopped. 
+Before it was cool. 
+
+53
+00:02:36,560 --> 00:02:37,920
+Now it's kind of cool. 
+I did it before. 
+
+54
+00:02:37,920 --> 00:02:42,200
+It was cool. 
+And you know, diverse range of 
+
+55
+00:02:42,200 --> 00:02:45,560
+experiences at companies and you
+know this will tie into what we 
+
+56
+00:02:45,560 --> 00:02:48,400
+talked about. 
+But I noticed that at all these 
+
+57
+00:02:48,400 --> 00:02:50,600
+companies, like they were 
+different sizes, different 
+
+58
+00:02:50,600 --> 00:02:56,040
+technologies we were using like 
+Ruby on Rails, like Python, C#, 
+
+59
+00:02:56,040 --> 00:02:58,600
+C++, like all over the board 
+JavaScript. 
+
+60
+00:02:58,600 --> 00:03:01,160
+I kind of did all kinds of 
+stuff, iOS, Android. 
+
+61
+00:03:01,480 --> 00:03:04,280
+And I noticed though there were 
+some common themes in terms of 
+
+62
+00:03:04,280 --> 00:03:06,160
+the problems we'd run into on 
+teams. 
+
+63
+00:03:06,440 --> 00:03:09,080
+And it turned out to not really 
+be the quote UN quote technical 
+
+64
+00:03:09,080 --> 00:03:12,000
+stuff so much as the human 
+stuff. 
+
+65
+00:03:12,280 --> 00:03:14,640
+And you know, you kind of 
+alluded to it a bit in terms of 
+
+66
+00:03:15,920 --> 00:03:18,400
+the communication on teams and 
+making that more effective. 
+
+67
+00:03:18,640 --> 00:03:21,440
+But that's really only one piece
+of it because it's also about 
+
+68
+00:03:21,640 --> 00:03:24,040
+you know, how we're treating 
+ourselves like when we do make a
+
+69
+00:03:24,040 --> 00:03:27,840
+mistake or when we do, you know,
+when we're like at risk of 
+
+70
+00:03:27,840 --> 00:03:31,360
+burning out how we treat 
+ourselves and that our self 
+
+71
+00:03:31,360 --> 00:03:34,440
+talk, our internal self talk. 
+It also effects like how we 
+
+72
+00:03:34,440 --> 00:03:37,840
+think of the users. 
+I mean, you know, there's that 
+
+73
+00:03:38,320 --> 00:03:41,840
+I've heard like stupid user or 
+idiot user a few too many times 
+
+74
+00:03:41,840 --> 00:03:45,640
+in my work and and then also how
+we think about our larger 
+
+75
+00:03:45,640 --> 00:03:47,920
+societal impact. 
+So, you know, this is kind of 
+
+76
+00:03:47,920 --> 00:03:50,800
+more talked about these days. 
+But when I started my company 
+
+77
+00:03:50,800 --> 00:03:53,080
+like, you know, eight years ago 
+or so, it was kind of not so 
+
+78
+00:03:53,080 --> 00:03:55,840
+much talked about like how our 
+impact on the environment, our 
+
+79
+00:03:55,840 --> 00:03:59,400
+impact on you know, just jobs in
+general and job availability and
+
+80
+00:03:59,400 --> 00:04:02,120
+how we all of that. 
+And so just being more mindful 
+
+81
+00:04:02,120 --> 00:04:04,880
+of the impact we're having on 
+mental health etcetera. 
+
+82
+00:04:04,880 --> 00:04:07,840
+And so I think that really it's 
+a whole list approach to 
+
+83
+00:04:07,840 --> 00:04:12,400
+thinking about how, you know as 
+human beings, how we show up in 
+
+84
+00:04:12,400 --> 00:04:14,200
+our development work. 
+So that's why I started my 
+
+85
+00:04:14,200 --> 00:04:16,519
+company to kind of help 
+developers with this on a very 
+
+86
+00:04:16,519 --> 00:04:19,440
+practical level and also get 
+them to think you know, beyond 
+
+87
+00:04:19,440 --> 00:04:21,120
+the practical. 
+So it's kind of I kind of try to
+
+88
+00:04:21,120 --> 00:04:25,800
+go out over both angles. 
+So you work in in the Bay Area 
+
+89
+00:04:25,800 --> 00:04:30,480
+working in tech. 
+You began to see that oh, we 
+
+90
+00:04:30,480 --> 00:04:33,000
+maybe could be doing 
+communication with others 
+
+91
+00:04:33,000 --> 00:04:37,720
+better, treating our customers 
+more kindly, treating ourselves 
+
+92
+00:04:37,720 --> 00:04:42,440
+more kindly and all of that is 
+helping us to to and treat our 
+
+93
+00:04:42,440 --> 00:04:46,280
+world more kindly and how do we,
+how do we help give people the 
+
+94
+00:04:46,280 --> 00:04:50,840
+tools to to do that better. 
+Is that, is that a summary of of
+
+95
+00:04:50,840 --> 00:04:53,240
+kind of what your journey 
+through through that? 
+
+96
+00:04:53,240 --> 00:04:54,440
+Yeah. 
+Absolutely, Yeah. 
+
+97
+00:04:54,560 --> 00:04:57,880
+And so and of course, people may
+wonder, like, well, why did you 
+
+98
+00:04:57,880 --> 00:04:59,320
+think you could help with that 
+or whatever? 
+
+99
+00:04:59,320 --> 00:05:01,280
+Like, why did you think, you 
+know, this was your thing to do?
+
+100
+00:05:01,280 --> 00:05:04,200
+And it's because I kind of got 
+burned out, you know, on all 
+
+101
+00:05:04,200 --> 00:05:07,680
+these problems I would see on 
+teams, you know, and I would see
+
+102
+00:05:07,680 --> 00:05:11,200
+like a great example is like 
+Stack Overflow and like 
+
+103
+00:05:11,200 --> 00:05:12,920
+especially, I think it's gotten 
+a little better. 
+
+104
+00:05:13,120 --> 00:05:16,120
+But it's definitely this classic
+place where a lot of people 
+
+105
+00:05:16,120 --> 00:05:19,400
+would go looking for help, like 
+newcomers, but even like people 
+
+106
+00:05:19,920 --> 00:05:22,800
+advanced in the industry would 
+be learning a new technology and
+
+107
+00:05:22,800 --> 00:05:24,680
+would maybe ask for help on 
+Stack Overflow. 
+
+108
+00:05:24,960 --> 00:05:27,680
+And they were often made to feel
+like an idiot for asking a 
+
+109
+00:05:27,680 --> 00:05:30,320
+question, you know what I mean? 
+It was like, you know, when 
+
+110
+00:05:30,320 --> 00:05:32,960
+you're with a supportive 
+teacher, they'll say, oh, 
+
+111
+00:05:32,960 --> 00:05:34,560
+there's no such thing as a 
+stupid question. 
+
+112
+00:05:34,560 --> 00:05:36,720
+Ask whatever, right? 
+And it's like the opposite 
+
+113
+00:05:36,720 --> 00:05:39,880
+philosophy on Stack Overflow, 
+which is that almost guaranteed 
+
+114
+00:05:39,880 --> 00:05:41,760
+that you're asking a stupid 
+question and you should feel 
+
+115
+00:05:41,760 --> 00:05:43,800
+ashamed for not being able to 
+figure it out yourself. 
+
+116
+00:05:43,800 --> 00:05:45,960
+It's kind of like what happens, 
+yeah. 
+
+117
+00:05:46,160 --> 00:05:50,080
+We have an even better example 
+which is the Scala community. 
+
+118
+00:05:51,480 --> 00:05:53,160
+Oh, do tell. 
+I'm not very familiar with it. 
+
+119
+00:05:53,200 --> 00:05:54,840
+So yeah, tell me a bit more 
+about. 
+
+120
+00:05:54,840 --> 00:05:58,680
+It it is you think Stack Stack 
+Overflow is a friendly place 
+
+121
+00:05:58,680 --> 00:06:01,600
+compared to the Scala community,
+yes, it has gotten. 
+
+122
+00:06:01,600 --> 00:06:04,560
+Better there's been. 
+It's been a lot more kindness 
+
+123
+00:06:04,560 --> 00:06:07,960
+than there was, but yeah. 
+But it's still the the yeah. 
+
+124
+00:06:07,960 --> 00:06:11,680
+When I try and introduce 
+Nonviolent Communication to 
+
+125
+00:06:11,680 --> 00:06:17,040
+people, I say, OK, look, we've 
+all been acculturated to to 
+
+126
+00:06:17,040 --> 00:06:20,720
+believe that winning means 
+making the other person wrong 
+
+127
+00:06:20,720 --> 00:06:26,600
+and bad, and that just. 
+I mean, nobody responds well to 
+
+128
+00:06:26,600 --> 00:06:29,000
+that. 
+You know that isn't an 0. 
+
+129
+00:06:29,000 --> 00:06:32,320
+It feels good to be right and 
+for someone else to be wrong it.
+
+130
+00:06:32,320 --> 00:06:33,640
+Does it? 
+It does. 
+
+131
+00:06:33,640 --> 00:06:36,360
+Smarter than. 
+For a For a moment, it feels 
+
+132
+00:06:36,360 --> 00:06:42,400
+like, oh, I won based on that 
+standard that we've been brought
+
+133
+00:06:42,400 --> 00:06:45,080
+up with. 
+But then it doesn't feel good 
+
+134
+00:06:45,360 --> 00:06:46,600
+when you go. 
+I don't. 
+
+135
+00:06:46,760 --> 00:06:52,880
+I feel alone and disconnected. 
+And yeah, I I have to say, when 
+
+136
+00:06:52,880 --> 00:06:57,560
+I started learning it, after a 
+little while, I started going, 
+
+137
+00:06:57,560 --> 00:07:01,800
+wow, what would my life have 
+been like if I had known this 
+
+138
+00:07:01,800 --> 00:07:04,840
+when I was in high school or 
+college or whatever? 
+
+139
+00:07:04,920 --> 00:07:06,640
+And and nonviolent 
+Communication. 
+
+140
+00:07:06,640 --> 00:07:08,240
+And Nonviolent communication, it
+would. 
+
+141
+00:07:08,520 --> 00:07:12,600
+And I noticed that you use the 
+term compassionate, which other 
+
+142
+00:07:12,600 --> 00:07:15,200
+groups have said they don't 
+like, you know, having the word 
+
+143
+00:07:15,200 --> 00:07:17,960
+violent in there. 
+But I think Marshall Rosenberg 
+
+144
+00:07:17,960 --> 00:07:20,880
+did that for a reason, you know,
+because it does make you kind of
+
+145
+00:07:20,880 --> 00:07:23,920
+go, wait, I don't, I'm not 
+violent, am I? 
+
+146
+00:07:24,360 --> 00:07:26,000
+And it makes you think about it 
+so. 
+
+147
+00:07:26,760 --> 00:07:29,480
+Yeah, well, I'm glad you brought
+up Nonviolent Communication 
+
+148
+00:07:29,480 --> 00:07:32,840
+because that's been a huge 
+inspiration for my work too. 
+
+149
+00:07:32,840 --> 00:07:35,840
+And even in, like the original 
+book Nonviolent Communication, 
+
+150
+00:07:36,120 --> 00:07:38,160
+he says this could also be 
+called compassionate 
+
+151
+00:07:38,160 --> 00:07:39,240
+communication. 
+You know what I mean? 
+
+152
+00:07:39,240 --> 00:07:41,920
+Because it is like that. 
+Like, I remember reading that. 
+
+153
+00:07:41,920 --> 00:07:44,760
+And yeah. 
+And I I just, you know, I think 
+
+154
+00:07:44,760 --> 00:07:49,120
+it really appeals. 
+That sort of structured way of 
+
+155
+00:07:49,120 --> 00:07:51,760
+communicating, I think really 
+appeals to people in tech who 
+
+156
+00:07:51,760 --> 00:07:55,160
+are used to very structured kind
+of like approaches to things. 
+
+157
+00:07:55,160 --> 00:07:59,160
+And so I've noticed that of all 
+the types of communication tools
+
+158
+00:07:59,160 --> 00:08:01,360
+and whatnot, ones like that 
+where it's like, you know, 
+
+159
+00:08:01,360 --> 00:08:04,360
+here's sort of the algorithm for
+how you communicate, like I 
+
+160
+00:08:04,360 --> 00:08:07,160
+think seems to resonate well. 
+And so I think that's why it's 
+
+161
+00:08:07,160 --> 00:08:10,320
+like been a why I really liked 
+it and why I think other 
+
+162
+00:08:10,320 --> 00:08:12,360
+developers can kind of 
+understand it well. 
+
+163
+00:08:12,920 --> 00:08:16,200
+Yeah, it's like systematic. 
+It gives you a framework to to 
+
+164
+00:08:16,720 --> 00:08:20,400
+go back to when you're having 
+feelings and don't know how to. 
+
+165
+00:08:20,680 --> 00:08:24,800
+Yeah, 'cause you kind of lose 
+your ability to think when 
+
+166
+00:08:24,800 --> 00:08:28,800
+you're in the midst of it. 
+And I I came up with a way to 
+
+167
+00:08:28,800 --> 00:08:34,440
+use your hand as your Because, 
+you know, here's the first thing
+
+168
+00:08:34,440 --> 00:08:42,559
+is you want to look at some 
+objective thing and your finger 
+
+169
+00:08:42,559 --> 00:08:44,720
+is kind of like a gun. 
+And you never point that at 
+
+170
+00:08:44,720 --> 00:08:49,720
+another person. 
+So you never go, James, you get 
+
+171
+00:08:50,080 --> 00:08:53,520
+thing and you're wrong and bad. 
+You just go, Hey, a thing 
+
+172
+00:08:53,520 --> 00:08:55,200
+happened, there's dirt on the 
+floor. 
+
+173
+00:08:55,640 --> 00:08:57,880
+And then. 
+So the pointer finger reminds 
+
+174
+00:08:57,880 --> 00:09:01,120
+you don't point your gun at a 
+person at a pointed at the 
+
+175
+00:09:01,120 --> 00:09:03,320
+thing. 
+At an objective, something 
+
+176
+00:09:03,320 --> 00:09:07,720
+objective that happened and then
+the longest finger on your hand,
+
+177
+00:09:08,320 --> 00:09:10,880
+which is the you know. 
+So this is the the second thing,
+
+178
+00:09:10,880 --> 00:09:14,240
+the most important thing is how 
+did you feel about it? 
+
+179
+00:09:14,280 --> 00:09:16,560
+What? 
+Explain your feeling and if you 
+
+180
+00:09:16,560 --> 00:09:20,120
+can just get the first two, 
+that's great. 
+
+181
+00:09:20,520 --> 00:09:23,440
+And then if even better if you 
+can get to. 
+
+182
+00:09:23,600 --> 00:09:27,320
+I feel this way because I've a 
+need for something and then 
+
+183
+00:09:27,640 --> 00:09:31,680
+you've got requests which is 
+more advanced. 
+
+184
+00:09:31,960 --> 00:09:35,400
+So if you get the 1st. 
+The pinkiest request, yeah. 
+
+185
+00:09:35,760 --> 00:09:40,400
+And then this the thumb. 
+Which is like, if you can't do 
+
+186
+00:09:40,400 --> 00:09:45,040
+any of these things, you fall 
+down to curiosity, so 
+
+187
+00:09:45,040 --> 00:09:46,840
+everything. 
+So that's that's kind of your 
+
+188
+00:09:46,840 --> 00:09:50,840
+foundation is you're not, you're
+not saying this is the truth. 
+
+189
+00:09:50,840 --> 00:09:53,160
+You're going, I'm wondering 
+what's happening here. 
+
+190
+00:09:53,680 --> 00:09:57,280
+And then if all of that fails, 
+it goes all the way down to your
+
+191
+00:09:57,280 --> 00:10:00,800
+feet. 
+And that means I need to take a 
+
+192
+00:10:00,800 --> 00:10:02,360
+break. 
+I'm not. 
+
+193
+00:10:02,400 --> 00:10:05,480
+I'm not working well here and 
+I'm going to come back anyway. 
+
+194
+00:10:05,600 --> 00:10:08,440
+So it's a a good well. 
+And the nice thing is. 
+
+195
+00:10:08,440 --> 00:10:10,040
+The framework for. 
+MVC. 
+
+196
+00:10:10,040 --> 00:10:12,960
+It is a framework for MVC and 
+you you've always got it with 
+
+197
+00:10:12,960 --> 00:10:14,480
+you. 
+And so if you're just freaking 
+
+198
+00:10:14,480 --> 00:10:18,280
+out, you can always just look at
+your hand and start, you know, 
+
+199
+00:10:18,280 --> 00:10:20,160
+kind of using that as a 
+structure. 
+
+200
+00:10:20,600 --> 00:10:21,440
+I love that. 
+Yeah. 
+
+201
+00:10:21,440 --> 00:10:22,560
+I love that. 
+Because it's also like a 
+
+202
+00:10:22,560 --> 00:10:24,800
+mindfulness exercise as well. 
+Like, you know, just even just 
+
+203
+00:10:24,800 --> 00:10:26,760
+the first step of, like you 
+said, looking at your hand, 
+
+204
+00:10:26,760 --> 00:10:29,760
+sometimes that will be enough to
+kind of center you in the moment
+
+205
+00:10:29,760 --> 00:10:32,880
+and yeah. 
+Yeah, so tell us more about your
+
+206
+00:10:33,000 --> 00:10:37,000
+your journey and what you have, 
+what you've been creating or 
+
+207
+00:10:37,000 --> 00:10:39,200
+trying, trying to help people. 
+Yeah, and what brought you to 
+
+208
+00:10:39,200 --> 00:10:40,040
+this? 
+What? 
+
+209
+00:10:40,040 --> 00:10:44,560
+What was your sudden inspiration
+that you needed to learn? 
+
+210
+00:10:44,680 --> 00:10:48,200
+So I felt a bit burnt out. 
+Let's see. 
+
+211
+00:10:48,200 --> 00:10:53,720
+It must have been towards the 
+end of 2015, early 2016 and I 
+
+212
+00:10:53,720 --> 00:10:56,080
+was kind of burnt out on the 
+industry for the reasons that I 
+
+213
+00:10:56,080 --> 00:10:58,480
+kind of mentioned. 
+Also, I feel like I had been 
+
+214
+00:10:58,480 --> 00:11:02,440
+trying so hard to fit into this 
+culture that you were talking 
+
+215
+00:11:02,440 --> 00:11:05,080
+about where it's like I have to 
+make the other person wrong so 
+
+216
+00:11:05,080 --> 00:11:08,000
+that I feel right. 
+And I wrote a blog post about 
+
+217
+00:11:08,000 --> 00:11:11,200
+this called Confessions of a 
+Recovering Jerk Programmer where
+
+218
+00:11:11,200 --> 00:11:14,000
+I talked about my thoughts that 
+I needed to be a jerk 
+
+219
+00:11:14,000 --> 00:11:17,360
+programmer. 
+And like in my defence, I mean I
+
+220
+00:11:17,360 --> 00:11:20,480
+think that a lot of the famous 
+programmers that we would put on
+
+221
+00:11:20,480 --> 00:11:23,160
+pedestals from the past were a 
+little bit rough around the 
+
+222
+00:11:23,160 --> 00:11:25,480
+edges in terms of their 
+communication style. 
+
+223
+00:11:25,480 --> 00:11:28,360
+In terms of like, I'm thinking 
+of like the leanest Torvalds of 
+
+224
+00:11:28,360 --> 00:11:30,200
+the world. 
+And it's not a personal knock on
+
+225
+00:11:30,280 --> 00:11:33,600
+him, it's just that his code 
+review practices I think could 
+
+226
+00:11:33,600 --> 00:11:37,040
+be seen as a bit aggressive. 
+You know, the full of the 
+
+227
+00:11:37,040 --> 00:11:40,240
+expletives full of, well, this 
+is an idiot idiotic way of doing
+
+228
+00:11:40,240 --> 00:11:41,360
+this. 
+Like, what's this? 
+
+229
+00:11:41,360 --> 00:11:44,120
+Complete idiotic BS, whatever 
+kind of things. 
+
+230
+00:11:44,120 --> 00:11:48,080
+Like, so I think that when 
+you're in especially like coming
+
+231
+00:11:48,080 --> 00:11:50,640
+into it as like a woman and 
+again, I'm not like meaning to 
+
+232
+00:11:50,800 --> 00:11:53,720
+dwell on that, but like, I'm 
+kind of from this group that 
+
+233
+00:11:53,720 --> 00:11:56,400
+like, doesn't really fit in and 
+so I'm trying to fit in and so 
+
+234
+00:11:56,400 --> 00:11:59,160
+let me look around okay and it's
+not like it was a conscious 
+
+235
+00:11:59,160 --> 00:12:00,360
+thing. 
+I think it was subconscious 
+
+236
+00:12:00,360 --> 00:12:03,040
+like, oh, I see the cool people 
+around to your kind of insult 
+
+237
+00:12:03,520 --> 00:12:06,360
+the different technologies and 
+kind of act superior. 
+
+238
+00:12:06,360 --> 00:12:08,640
+And so I sort of took on some of
+those traits, even though it's 
+
+239
+00:12:08,640 --> 00:12:11,680
+not really who I am. 
+And anyway, and so I did that 
+
+240
+00:12:11,680 --> 00:12:15,320
+for a while and I like you like.
+You you identified at some point
+
+241
+00:12:15,320 --> 00:12:17,200
+that didn't feel good to you to 
+feel good. 
+
+242
+00:12:18,240 --> 00:12:20,440
+Exactly for the same reasons 
+that we were talking about 
+
+243
+00:12:20,440 --> 00:12:21,880
+earlier. 
+Like you feel disconnected. 
+
+244
+00:12:21,880 --> 00:12:24,760
+It it feels you feel isolated 
+and alone. 
+
+245
+00:12:24,760 --> 00:12:27,640
+And that's how I felt. 
+And so I was like, I need to do 
+
+246
+00:12:27,640 --> 00:12:29,400
+something. 
+So I saw the need to fix it in 
+
+247
+00:12:29,400 --> 00:12:32,680
+myself or to at least, you know 
+kind of help myself grow and to 
+
+248
+00:12:32,680 --> 00:12:35,800
+learn those things. 
+And so I learned about 
+
+249
+00:12:35,800 --> 00:12:37,680
+compassion in an interesting 
+way. 
+
+250
+00:12:38,000 --> 00:12:41,400
+I I was reading a bunch of books
+like sort of self help 
+
+251
+00:12:41,400 --> 00:12:44,560
+psychology books, etc. 
+One book that was helpful on 
+
+252
+00:12:44,560 --> 00:12:46,960
+this journey was Self Compassion
+by Kristen Neff. 
+
+253
+00:12:46,960 --> 00:12:49,640
+And it was about how we don't 
+have to beat ourselves up in 
+
+254
+00:12:49,640 --> 00:12:51,320
+order to, like, be good at 
+things. 
+
+255
+00:12:51,360 --> 00:12:54,600
+Like you can actually speak 
+kindly to yourself and still, 
+
+256
+00:12:55,520 --> 00:12:57,600
+you know, decide to improve and 
+learn things. 
+
+257
+00:12:57,600 --> 00:12:59,440
+That was, that was a big part of
+it. 
+
+258
+00:12:59,680 --> 00:13:01,520
+I also went vegan around this 
+time. 
+
+259
+00:13:01,680 --> 00:13:04,480
+I had been vegetarian for a 
+little while, but I went vegan. 
+
+260
+00:13:04,520 --> 00:13:08,360
+And in a lot of the vegan world,
+they talk about compassion, like
+
+261
+00:13:08,360 --> 00:13:11,120
+having compassion for animals. 
+And so I actually went to a 
+
+262
+00:13:11,120 --> 00:13:14,160
+retreat about compassion in the 
+Bay Area, and it was 
+
+263
+00:13:14,160 --> 00:13:16,480
+specifically for vegans. 
+But we talked about compassion 
+
+264
+00:13:16,480 --> 00:13:19,400
+more generally and like what it 
+means and like the science 
+
+265
+00:13:19,400 --> 00:13:21,400
+around it because they've, 
+there's been more research now 
+
+266
+00:13:21,400 --> 00:13:24,520
+about compassion and what it, 
+what it looks like in the brain,
+
+267
+00:13:24,560 --> 00:13:27,640
+you know, at least our current 
+understanding of it and how it's
+
+268
+00:13:27,640 --> 00:13:31,160
+practical in the workplace and 
+in, you know, relationships and 
+
+269
+00:13:31,160 --> 00:13:33,160
+all of that. 
+And I was just so drawn to this 
+
+270
+00:13:33,160 --> 00:13:35,600
+idea. 
+And so there was an exercise in 
+
+271
+00:13:35,600 --> 00:13:38,080
+that retreat of now that we've 
+learned all about compassion, 
+
+272
+00:13:38,080 --> 00:13:40,840
+how are we going to incorporate 
+it into our lives and how what 
+
+273
+00:13:40,840 --> 00:13:43,040
+are we going to do? 
+And that's when I was initially 
+
+274
+00:13:43,040 --> 00:13:45,120
+brainstorming about 
+compassionate coding because I 
+
+275
+00:13:45,120 --> 00:13:47,800
+was thinking, hey, the tech 
+world could really use some of 
+
+276
+00:13:47,800 --> 00:13:50,680
+this. 
+And I was like, I I know I can. 
+
+277
+00:13:50,680 --> 00:13:52,640
+And I'm sure that there are 
+other people based on my 
+
+278
+00:13:52,640 --> 00:13:54,920
+experiences. 
+And so that's where I thought, 
+
+279
+00:13:54,920 --> 00:13:56,600
+OK, like this is what I'm going 
+to do. 
+
+280
+00:13:57,480 --> 00:14:00,560
+And so that's why I started it. 
+And I sort of started the 
+
+281
+00:14:00,560 --> 00:14:05,240
+company in 2016 as I ran it in 
+kind of a lean startup style 
+
+282
+00:14:05,240 --> 00:14:08,120
+where I was, like, gonna do 
+little tests and see what it 
+
+283
+00:14:08,120 --> 00:14:10,040
+works and then, like, iterate 
+and move from there. 
+
+284
+00:14:10,240 --> 00:14:12,480
+So I thought, OK, well, why 
+don't I start teaching some of 
+
+285
+00:14:12,480 --> 00:14:14,840
+the things that I've learned 
+that work on teams and that work
+
+286
+00:14:14,840 --> 00:14:16,520
+well. 
+And so I started teaching these 
+
+287
+00:14:16,680 --> 00:14:19,600
+workshops on emotional 
+intelligence, and I started 
+
+288
+00:14:19,600 --> 00:14:21,640
+blogging about it and tweeting 
+about it. 
+
+289
+00:14:21,640 --> 00:14:24,840
+As we alluded to, that was back 
+when Twitter was a little more 
+
+290
+00:14:24,840 --> 00:14:27,080
+fun than it is now. 
+But that's that's a whole other 
+
+291
+00:14:27,080 --> 00:14:28,760
+story. 
+Twitter can use some more 
+
+292
+00:14:28,760 --> 00:14:30,880
+compassion, for sure. 
+For sure. 
+
+293
+00:14:30,920 --> 00:14:34,600
+And so actually my first client 
+came in through a Twitter DM. 
+
+294
+00:14:34,600 --> 00:14:36,200
+They were like, hey, you know, I
+like the stuff that you're 
+
+295
+00:14:36,200 --> 00:14:37,800
+putting out. 
+Like would you, you know, come 
+
+296
+00:14:37,800 --> 00:14:39,920
+talk at our company about this? 
+And I was like sure. 
+
+297
+00:14:40,720 --> 00:14:43,040
+And so that's how that's. 
+And I decided to make it a 
+
+298
+00:14:43,120 --> 00:14:45,440
+business rather than a non 
+profit because, you know, I 
+
+299
+00:14:45,440 --> 00:14:47,520
+could do this as a non profit 
+and it could just be something 
+
+300
+00:14:47,520 --> 00:14:50,600
+nice that I do. 
+But it really does help support 
+
+301
+00:14:50,600 --> 00:14:53,680
+the bottom line in the sense of,
+you know, not to always tie it 
+
+302
+00:14:53,680 --> 00:14:56,120
+to that, but it really does. 
+I mean if you're communicating 
+
+303
+00:14:56,120 --> 00:14:58,600
+more effectively on the team and
+you're thinking more about the 
+
+304
+00:14:58,600 --> 00:15:01,920
+users, like turns out you're 
+going to like work together 
+
+305
+00:15:01,920 --> 00:15:04,600
+better and create better 
+products and you're probably 
+
+306
+00:15:04,600 --> 00:15:07,040
+going to have better retention 
+on your employees and your 
+
+307
+00:15:07,040 --> 00:15:09,280
+customers etcetera. 
+And there's research to back 
+
+308
+00:15:09,280 --> 00:15:11,600
+this up. 
+And so and also just anecdotally
+
+309
+00:15:11,680 --> 00:15:13,720
+like I've observed that in, in 
+the work that I've done. 
+
+310
+00:15:13,720 --> 00:15:17,480
+So anyway, so that's why I made 
+it a business so that because it
+
+311
+00:15:17,480 --> 00:15:19,840
+is providing value and it is, 
+you know what I mean And that 
+
+312
+00:15:19,840 --> 00:15:23,320
+way I could dedicate the 
+resources to it in order to do 
+
+313
+00:15:23,320 --> 00:15:24,600
+that. 
+But I also do a lot of things 
+
+314
+00:15:24,600 --> 00:15:27,160
+like pro bono, Like I'll speak 
+at, I'll speak at a lot of 
+
+315
+00:15:27,160 --> 00:15:30,720
+schools and like I I just, you 
+know, I like to mentor a lot. 
+
+316
+00:15:30,720 --> 00:15:32,880
+And that's just something I do 
+for the community and whatnot. 
+
+317
+00:15:32,880 --> 00:15:35,400
+So I'm not like the best 
+capitalist, I'll be honest. 
+
+318
+00:15:35,400 --> 00:15:38,360
+But I at least a little bit of 
+trying to strike that balance. 
+
+319
+00:15:38,360 --> 00:15:40,680
+And that's why I think of it as 
+a conscious business because 
+
+320
+00:15:40,920 --> 00:15:43,160
+it's both like a business, but 
+it's also like I want to make 
+
+321
+00:15:43,160 --> 00:15:46,120
+sure that I'm giving back and 
+and and doing it from a place of
+
+322
+00:15:46,120 --> 00:15:47,880
+like integrity. 
+And that's been really important
+
+323
+00:15:47,880 --> 00:15:49,280
+to me as well. 
+So yeah, I've been doing that 
+
+324
+00:15:49,280 --> 00:15:51,400
+now for eight years. 
+I've done workshops at some of 
+
+325
+00:15:51,400 --> 00:15:54,640
+the big tech companies, some of 
+them that are like weird about 
+
+326
+00:15:54,640 --> 00:15:56,840
+you using their names. 
+So I won't share all of them but
+
+327
+00:15:56,840 --> 00:16:01,080
+like you know and and also some 
+you know a lot of small startups
+
+328
+00:16:01,080 --> 00:16:04,200
+and I've spoken at like you know
+conferences around the world 
+
+329
+00:16:04,200 --> 00:16:07,120
+about this stuff and it's been 
+it's been quite a journey. 
+
+330
+00:16:07,120 --> 00:16:10,600
+It's been it's been really fun 
+it's been challenging at times. 
+
+331
+00:16:10,600 --> 00:16:15,080
+I definitely got a lot of push 
+back early on people would say 
+
+332
+00:16:15,520 --> 00:16:18,280
+compassionate on Reddit. 
+Someone shared an article I'd 
+
+333
+00:16:18,280 --> 00:16:19,880
+written. 
+I knew better than to share it 
+
+334
+00:16:19,880 --> 00:16:23,320
+on Reddit, but someone shared it
+for me and people wrote, oh this
+
+335
+00:16:23,320 --> 00:16:28,080
+such a girly thing and whatever,
+which is an interesting sort of 
+
+336
+00:16:28,080 --> 00:16:30,040
+insult. 
+I mean, I guess it meant to be 
+
+337
+00:16:30,040 --> 00:16:31,640
+insult. 
+That's an insult. 
+
+338
+00:16:32,040 --> 00:16:33,520
+Yeah, yeah. 
+I mean, it shouldn't be, right? 
+
+339
+00:16:33,560 --> 00:16:35,040
+It shouldn't be. 
+No, of course not. 
+
+340
+00:16:35,120 --> 00:16:36,560
+No. 
+But in that context, yeah, 
+
+341
+00:16:36,600 --> 00:16:40,440
+that's a way to, I mean, but of 
+course you understand that 
+
+342
+00:16:40,440 --> 00:16:44,160
+they're, they're frightened. 
+They're disturbed. 
+
+343
+00:16:44,160 --> 00:16:46,600
+They're, yeah, uncomfortable by 
+this. 
+
+344
+00:16:46,840 --> 00:16:49,040
+They're having feelings about. 
+Yeah, they're having feelings 
+
+345
+00:16:49,040 --> 00:16:52,200
+about it and that's not what we 
+want. 
+
+346
+00:16:52,480 --> 00:16:54,720
+So. 
+That's the magic of compassion. 
+
+347
+00:16:54,720 --> 00:16:55,560
+Sorry. 
+I just wanna say that's the 
+
+348
+00:16:55,600 --> 00:16:58,560
+magic of compassion, right? 
+Is that you can view it from 
+
+349
+00:16:58,560 --> 00:17:01,160
+that angle and then you don't 
+feel as bad about it because 
+
+350
+00:17:01,320 --> 00:17:03,760
+even if it doesn't excuse the 
+behavior, it's like I don't have
+
+351
+00:17:03,760 --> 00:17:05,880
+to take it personally because 
+it's like, Oh yeah, they're just
+
+352
+00:17:05,880 --> 00:17:07,280
+hurting. 
+And that's why they're trying to
+
+353
+00:17:07,280 --> 00:17:09,240
+hurt me. 
+And I don't have to, like, you 
+
+354
+00:17:09,240 --> 00:17:10,560
+know, I don't have to get on 
+board with that. 
+
+355
+00:17:10,560 --> 00:17:11,839
+I can just feel compassion for 
+them. 
+
+356
+00:17:12,119 --> 00:17:16,599
+One of the things that I've 
+learned is that when you forgive
+
+357
+00:17:16,599 --> 00:17:21,480
+somebody, it's really it's you 
+putting the burden down. 
+
+358
+00:17:22,119 --> 00:17:24,839
+It's not about, it's not about 
+whether they. 
+
+359
+00:17:25,280 --> 00:17:29,760
+I mean, they might not even 
+understand it, but if you 
+
+360
+00:17:29,760 --> 00:17:32,080
+forgive them, then you can let 
+it go. 
+
+361
+00:17:32,640 --> 00:17:35,640
+And that's why it's such a 
+relief to do that. 
+
+362
+00:17:36,000 --> 00:17:39,640
+But I have a question which 
+maybe it's a little advanced. 
+
+363
+00:17:41,280 --> 00:17:44,800
+So we're talking about 
+compassion and then there's 
+
+364
+00:17:44,800 --> 00:17:48,280
+empathy. 
+Are you, have you, like, looked 
+
+365
+00:17:48,280 --> 00:17:53,600
+into those things? 
+Because, Oh yes, OK, so please 
+
+366
+00:17:53,600 --> 00:17:56,880
+talk about the difference 
+between compassion and empathy. 
+
+367
+00:17:57,200 --> 00:17:59,040
+OK, absolutely. 
+And this is where you know, when
+
+368
+00:17:59,040 --> 00:18:01,520
+people say like compassion, 
+that's non-technical. 
+
+369
+00:18:01,520 --> 00:18:03,920
+I'm like no, no, we can get very
+technical about compassion. 
+
+370
+00:18:03,920 --> 00:18:05,960
+Like we can, you know, there's 
+we can get down to like, you 
+
+371
+00:18:05,960 --> 00:18:08,000
+know, like I said, there's like 
+neuroscience around this and 
+
+372
+00:18:08,000 --> 00:18:09,680
+like what's going on in the 
+brain and whatnot. 
+
+373
+00:18:09,680 --> 00:18:13,040
+So what I will say is, like with
+empathy, there are also 
+
+374
+00:18:13,040 --> 00:18:15,520
+different shades of empathy and 
+different types of empathy. 
+
+375
+00:18:15,520 --> 00:18:18,000
+So there's like emotional 
+empathy. 
+
+376
+00:18:18,240 --> 00:18:20,280
+Like effective empathy is 
+another way that people say 
+
+377
+00:18:20,280 --> 00:18:21,440
+that. 
+And that's when you actually, 
+
+378
+00:18:21,440 --> 00:18:24,680
+like, feel the emotions that 
+somebody else is feeling. 
+
+379
+00:18:24,840 --> 00:18:27,720
+So you, like, see them get hurt 
+and like, almost like you feel 
+
+380
+00:18:27,720 --> 00:18:30,600
+the pain. 
+And so like, if you could, like,
+
+381
+00:18:30,880 --> 00:18:32,720
+you can, like if somebody burns 
+their hand on the stove, like, 
+
+382
+00:18:32,720 --> 00:18:34,720
+you might, like, kind of cringe 
+and feel like, oh, I can 
+
+383
+00:18:34,720 --> 00:18:36,440
+imagine, like, I feel like that 
+a lot. 
+
+384
+00:18:36,440 --> 00:18:38,480
+If, like, you hit an elbow, you 
+see someone hit their elbow. 
+
+385
+00:18:38,480 --> 00:18:41,400
+I often feel that I'm like, oh, 
+like I I my elbow hurts a little
+
+386
+00:18:41,400 --> 00:18:42,920
+bit. 
+That's that, you know, kind of 
+
+387
+00:18:42,920 --> 00:18:44,840
+thing where you can really kind 
+of feel their pain. 
+
+388
+00:18:45,400 --> 00:18:48,400
+And then there's cognitive 
+empathy, which is more about 
+
+389
+00:18:48,400 --> 00:18:51,640
+kind of on an intellectual 
+level, understanding what that 
+
+390
+00:18:51,640 --> 00:18:54,800
+person may be feeling based on 
+what you've observed and like 
+
+391
+00:18:54,800 --> 00:18:56,920
+based on what you know they're 
+going through. 
+
+392
+00:18:57,800 --> 00:18:59,880
+And so those are kind of two 
+types of empathy. 
+
+393
+00:19:00,120 --> 00:19:04,680
+And so given that, like 
+compassion, the way I see it, 
+
+394
+00:19:04,680 --> 00:19:06,920
+and again, researchers actually 
+disagree on this and have 
+
+395
+00:19:06,920 --> 00:19:11,240
+different viewpoints, but the 
+way I look at it is in line with
+
+396
+00:19:11,240 --> 00:19:14,680
+how they talk about it at the 
+Greater Good Science Center at 
+
+397
+00:19:14,680 --> 00:19:17,720
+UC Berkeley. 
+And they explain compassion as 
+
+398
+00:19:18,200 --> 00:19:22,600
+empathy combined with wanting to
+alleviate suffering. 
+
+399
+00:19:22,600 --> 00:19:25,480
+So meaning if you understand 
+what someone's going through and
+
+400
+00:19:25,480 --> 00:19:28,240
+you see that they're hurting, 
+you have this active desire to 
+
+401
+00:19:28,240 --> 00:19:31,440
+do something about it. 
+And that adding in that piece is
+
+402
+00:19:31,440 --> 00:19:35,520
+what turns it into compassion. 
+Of course, that is a little bit 
+
+403
+00:19:35,520 --> 00:19:37,960
+different from the original 
+meaning of the word compassion, 
+
+404
+00:19:38,200 --> 00:19:41,320
+which is to suffer with because 
+that sounds more like empathy, 
+
+405
+00:19:41,320 --> 00:19:42,680
+right? 
+Like you're feeling the same 
+
+406
+00:19:42,680 --> 00:19:44,320
+things they're feeling. 
+And so that's why, you know, 
+
+407
+00:19:44,320 --> 00:19:47,640
+these terms evolve over time. 
+And so I think that the modern 
+
+408
+00:19:47,640 --> 00:19:50,160
+kind of definition in the social
+science world and what not, 
+
+409
+00:19:50,160 --> 00:19:54,360
+leans more towards empathy 
+combined with a desire to to 
+
+410
+00:19:54,640 --> 00:19:58,400
+help. 
+Yeah, this is a problem that 
+
+411
+00:19:58,400 --> 00:19:59,960
+I've been struggling with for a 
+while. 
+
+412
+00:19:59,960 --> 00:20:05,120
+And I and somebody, I don't know
+where I saw this, they were 
+
+413
+00:20:05,120 --> 00:20:08,960
+talking about they're going OK, 
+if you feel what the other 
+
+414
+00:20:08,960 --> 00:20:11,960
+person is feeling, so, so 
+they're suffering and now you're
+
+415
+00:20:11,960 --> 00:20:15,520
+suffering. 
+Now there's there's part of you 
+
+416
+00:20:15,520 --> 00:20:20,200
+that wants them to relieve, you 
+know, to to to not be in pain. 
+
+417
+00:20:20,520 --> 00:20:21,760
+But then there's the part of 
+you. 
+
+418
+00:20:22,520 --> 00:20:25,280
+So you're going, I'm suffering 
+right now and I want that to 
+
+419
+00:20:25,280 --> 00:20:31,480
+stop, and then you go or I go. 
+But if I can fix that person, 
+
+420
+00:20:31,840 --> 00:20:34,720
+then their pain will stop. 
+And then I can, you know, and it
+
+421
+00:20:35,000 --> 00:20:40,920
+gets all convoluted and it ends 
+up being me wanting to fix that 
+
+422
+00:20:40,920 --> 00:20:45,400
+person and understanding, at 
+least intellectually now that 
+
+423
+00:20:45,400 --> 00:20:47,720
+there's no way to do that. 
+I mean, they're going to have 
+
+424
+00:20:47,720 --> 00:20:50,160
+their suffering. 
+Because you've had empathy and 
+
+425
+00:20:50,160 --> 00:20:53,640
+shared those feelings, you want 
+to fix them so that you can fix 
+
+426
+00:20:53,640 --> 00:20:55,560
+your own. 
+So that my pain, you're going to
+
+427
+00:20:55,560 --> 00:20:58,640
+stop. 
+And of course, that's all mixed 
+
+428
+00:20:58,640 --> 00:21:01,960
+around. 
+And the real challenge is to say
+
+429
+00:21:02,400 --> 00:21:06,720
+I can't fix somebody else. 
+They're going to suffer. 
+
+430
+00:21:07,480 --> 00:21:10,480
+I might be helpful, but I can't 
+help. 
+
+431
+00:21:11,000 --> 00:21:14,680
+I can't make their pain stop. 
+But it's real. 
+
+432
+00:21:14,720 --> 00:21:18,160
+I mean, we're engineers. 
+We want to fix things, you know,
+
+433
+00:21:18,480 --> 00:21:20,880
+And so we see that. 
+And that's just an impulse. 
+
+434
+00:21:21,440 --> 00:21:24,720
+And letting go of that for some 
+reason is really hard. 
+
+435
+00:21:25,520 --> 00:21:27,200
+Absolutely. 
+And I'm glad you mentioned that 
+
+436
+00:21:27,200 --> 00:21:29,880
+because it's true. 
+Like sometimes compassion just 
+
+437
+00:21:29,920 --> 00:21:33,040
+involves being present with 
+someones pain and not trying to 
+
+438
+00:21:33,040 --> 00:21:35,800
+make it go away. 
+Because again, if you are trying
+
+439
+00:21:35,800 --> 00:21:38,200
+to like fix their pain, it's 
+almost like you're saying to 
+
+440
+00:21:38,200 --> 00:21:40,880
+them like you shouldn't feel 
+this way and there's something 
+
+441
+00:21:40,880 --> 00:21:42,400
+wrong with you for feeling this 
+way. 
+
+442
+00:21:42,400 --> 00:21:45,440
+And then that's not very 
+compassionate, because then they
+
+443
+00:21:45,440 --> 00:21:48,520
+feel on top of feeling bad, they
+feel bad about feeling bad. 
+
+444
+00:21:48,520 --> 00:21:49,400
+They feel. 
+Shame or? 
+
+445
+00:21:49,480 --> 00:21:52,080
+Then they feel unseen. 
+Yeah, there's all those. 
+
+446
+00:21:52,160 --> 00:21:54,360
+There's all those things. 
+So this ties back to a question 
+
+447
+00:21:54,360 --> 00:21:57,240
+I want to ask you, which is it 
+sounds like for your journey 
+
+448
+00:21:57,240 --> 00:22:02,880
+into this, the self compassion 
+almost LED LED your journey and 
+
+449
+00:22:02,880 --> 00:22:06,240
+so you had to find the self 
+compassion to then be able to 
+
+450
+00:22:06,240 --> 00:22:08,320
+then have the external 
+compassion. 
+
+451
+00:22:08,320 --> 00:22:10,000
+Am I Was I picking that up 
+right? 
+
+452
+00:22:10,520 --> 00:22:12,360
+Yeah, that's that is kind of how
+I explained it. 
+
+453
+00:22:12,360 --> 00:22:15,600
+And I think, you know, of course
+in reality it was probably kind 
+
+454
+00:22:15,600 --> 00:22:18,720
+of this in parallel a bit, you 
+know, because I also think that 
+
+455
+00:22:18,720 --> 00:22:21,600
+I was always harder on myself 
+than I was on other people. 
+
+456
+00:22:21,600 --> 00:22:24,360
+So no matter how much of A jerk 
+program I may have been to 
+
+457
+00:22:24,360 --> 00:22:27,360
+others, I think I was always the
+ultimate jerk to myself. 
+
+458
+00:22:27,360 --> 00:22:30,720
+Like in sense of like I was. 
+I was very perfectionist and I 
+
+459
+00:22:30,720 --> 00:22:32,560
+still kind of AM. 
+That's something that's like one
+
+460
+00:22:32,560 --> 00:22:35,640
+of my like, struggles right is 
+like perfectionism And and that 
+
+461
+00:22:35,640 --> 00:22:37,920
+involves being really hard on 
+myself about like when I make a 
+
+462
+00:22:37,920 --> 00:22:39,880
+mistake or whatnot. 
+Like I it's hard. 
+
+463
+00:22:39,880 --> 00:22:43,040
+Like I was doing an art like a a
+sip and paint night last night 
+
+464
+00:22:43,040 --> 00:22:45,040
+where you know, you have a glass
+of wine and do some painting and
+
+465
+00:22:45,040 --> 00:22:48,120
+like, I'm not a painter and So 
+what I produced like wasn't 
+
+466
+00:22:48,120 --> 00:22:49,440
+good. 
+It was like fine. 
+
+467
+00:22:49,560 --> 00:22:51,880
+And I was just like, to be 
+honest, I was very uncomfortable
+
+468
+00:22:51,880 --> 00:22:53,560
+because I was just like, I'm. 
+Doing it wasn't perfect. 
+
+469
+00:22:53,560 --> 00:22:54,680
+It's not. 
+It's not perfect. 
+
+470
+00:22:54,680 --> 00:22:57,640
+It's like very bad and and it's 
+like, you know, obviously I 
+
+471
+00:22:57,640 --> 00:23:00,360
+should have just been having fun
+but anyway I wanted to have fun.
+
+472
+00:23:01,360 --> 00:23:03,640
+Should is one of those words 
+from Nonviolent Communication 
+
+473
+00:23:03,640 --> 00:23:05,920
+that you know to avoid. 
+So I I try to catch myself when 
+
+474
+00:23:05,920 --> 00:23:07,680
+I say. 
+Should, should have. 
+
+475
+00:23:07,960 --> 00:23:12,960
+Well, and This is why art is 
+therapy, is because it brings 
+
+476
+00:23:12,960 --> 00:23:15,800
+all of that stuff up and you 
+look at it in a different 
+
+477
+00:23:15,800 --> 00:23:20,280
+context and you go, oh, look, 
+I'm, I'm stuck on this because 
+
+478
+00:23:20,320 --> 00:23:24,800
+it has to be perfect in my head 
+and and then but but then 
+
+479
+00:23:24,800 --> 00:23:29,000
+there's the balance of that and 
+then going, all right, am I 
+
+480
+00:23:29,080 --> 00:23:33,640
+expressing myself, You know, am 
+I, am I, am I connecting with 
+
+481
+00:23:33,640 --> 00:23:35,560
+this? 
+And that's that's where you want
+
+482
+00:23:35,560 --> 00:23:40,160
+to go versus Oh no, I might mess
+it up or I have messed it up or 
+
+483
+00:23:40,160 --> 00:23:43,160
+it's not. 
+It's not perfect the way I 
+
+484
+00:23:43,160 --> 00:23:45,640
+imagine it to be. 
+It's it's a whole journey. 
+
+485
+00:23:46,760 --> 00:23:47,880
+Absolutely. 
+Yeah. 
+
+486
+00:23:47,880 --> 00:23:51,320
+And I think I think to the other
+point about, yeah, I think when 
+
+487
+00:23:51,320 --> 00:23:53,520
+you are compassionate with 
+yourself, I think it does kind 
+
+488
+00:23:53,520 --> 00:23:56,280
+of like give you a little bit of
+safety to feel like you have the
+
+489
+00:23:56,280 --> 00:23:58,720
+capacity to be more 
+compassionate towards others. 
+
+490
+00:23:58,720 --> 00:24:01,480
+And so because you know that 
+like you have this home base 
+
+491
+00:24:01,480 --> 00:24:03,960
+that's safe that you can come 
+back to, I think that does help 
+
+492
+00:24:03,960 --> 00:24:05,520
+people open their heart a bit 
+more. 
+
+493
+00:24:05,680 --> 00:24:08,000
+And so that's why I like to 
+start with self compassion too 
+
+494
+00:24:08,000 --> 00:24:12,240
+when I teach because I think 
+it's, I think especially in the 
+
+495
+00:24:12,320 --> 00:24:14,840
+the audience that I have in 
+tech, like they're also really 
+
+496
+00:24:14,840 --> 00:24:18,680
+hard on themselves, like how I 
+am and definitely was more so in
+
+497
+00:24:18,680 --> 00:24:20,760
+the past. 
+And so I think it's like you 
+
+498
+00:24:20,760 --> 00:24:22,760
+expect me to be nice to these 
+other people, but like, you 
+
+499
+00:24:22,760 --> 00:24:24,560
+know, it's like the lion with 
+the thorn in his paw. 
+
+500
+00:24:24,560 --> 00:24:26,760
+You know what I mean? 
+It's like it's they're they're 
+
+501
+00:24:26,760 --> 00:24:29,040
+hurting so much on their own 
+that they, of course they don't,
+
+502
+00:24:29,080 --> 00:24:30,960
+you know, they're going to be 
+lashing out at others and 
+
+503
+00:24:30,960 --> 00:24:32,720
+whatnot. 
+So you kind of have to help them
+
+504
+00:24:32,720 --> 00:24:35,040
+heal that wound a bit. 
+And that said, it's not. 
+
+505
+00:24:35,040 --> 00:24:36,000
+Of course. 
+Yeah, Sorry. 
+
+506
+00:24:36,000 --> 00:24:37,880
+Go ahead. 
+Your example of the Reddit 
+
+507
+00:24:37,880 --> 00:24:40,840
+comment, it's if you weren't 
+able to come back to a place of 
+
+508
+00:24:40,840 --> 00:24:44,800
+self compassion when you read 
+that comment, then then that 
+
+509
+00:24:44,800 --> 00:24:48,200
+could just derail you and and 
+and what you're trying to 
+
+510
+00:24:48,200 --> 00:24:51,000
+accomplish and and all that. 
+So being able to have that as 
+
+511
+00:24:51,000 --> 00:24:55,920
+the foundation seems helpful. 
+Oh, I think it's essential. 
+
+512
+00:24:56,200 --> 00:24:58,520
+I don't know if you have to 
+start there. 
+
+513
+00:24:58,520 --> 00:25:03,040
+I think you can start by trying 
+to be compassionate with other 
+
+514
+00:25:03,040 --> 00:25:06,440
+people and then eventually 
+realizing, oh, I need to treat 
+
+515
+00:25:06,440 --> 00:25:11,360
+myself this way too. 
+But I don't know if that's that 
+
+516
+00:25:11,360 --> 00:25:13,840
+might not be the the most direct
+path. 
+
+517
+00:25:13,840 --> 00:25:16,640
+I think starting, starting with 
+understanding. 
+
+518
+00:25:17,240 --> 00:25:21,560
+But I don't know you, you live 
+your whole life being that way 
+
+519
+00:25:21,560 --> 00:25:24,560
+and it's not something you can 
+just go. 
+
+520
+00:25:24,760 --> 00:25:27,080
+I'm being mean to myself. 
+Stop doing that. 
+
+521
+00:25:27,080 --> 00:25:29,800
+I should. 
+Absolutely. 
+
+522
+00:25:29,800 --> 00:25:32,000
+And and it's also true. 
+It's like and that's why I think
+
+523
+00:25:32,000 --> 00:25:33,520
+it kind of happens in parallel 
+too. 
+
+524
+00:25:33,520 --> 00:25:37,040
+And I think different people 
+will kind of gravitate towards 
+
+525
+00:25:37,040 --> 00:25:38,520
+one approach more over the 
+others. 
+
+526
+00:25:38,520 --> 00:25:41,440
+Like some people are just 
+naturally like more giving and 
+
+527
+00:25:41,440 --> 00:25:43,280
+they're, you know, sometimes 
+over giving and whatnot. 
+
+528
+00:25:43,280 --> 00:25:46,000
+And so to be honest, for them, 
+it might help to start with 
+
+529
+00:25:46,000 --> 00:25:48,200
+understanding what compassion 
+for others feels like, just 
+
+530
+00:25:48,200 --> 00:25:50,240
+because that is easier for them 
+to start with. 
+
+531
+00:25:50,240 --> 00:25:52,320
+So you're absolutely right. 
+I think that sometimes it's 
+
+532
+00:25:52,320 --> 00:25:54,920
+that's easier to start with and 
+then you realize hey I'm being 
+
+533
+00:25:54,920 --> 00:25:58,320
+so nice to everybody else and 
+like that you know that maybe I 
+
+534
+00:25:58,320 --> 00:26:00,800
+maybe I can throw some of that 
+kindness my way as well. 
+
+535
+00:26:00,880 --> 00:26:03,640
+Especially if you have a teacher
+who can guide you to like to see
+
+536
+00:26:03,640 --> 00:26:06,920
+that that like you know I think 
+Kristen F1 thing that she always
+
+537
+00:26:06,920 --> 00:26:09,600
+says is like speak to yourself 
+as you would a good friend. 
+
+538
+00:26:09,600 --> 00:26:12,360
+And so I think the implication 
+there is most of us actually do 
+
+539
+00:26:12,360 --> 00:26:14,600
+know how to be compassionate 
+with our friends to some degree 
+
+540
+00:26:14,600 --> 00:26:17,000
+at least we know how to try. 
+We might sometimes use some 
+
+541
+00:26:17,000 --> 00:26:19,160
+empathy blockers by accident 
+when we're trying to help we 
+
+542
+00:26:19,160 --> 00:26:21,480
+might try to fix them etcetera. 
+But we at least know what it 
+
+543
+00:26:21,880 --> 00:26:24,840
+what we're trying to do, which 
+is like to to, you know, support
+
+544
+00:26:24,840 --> 00:26:27,760
+our friends. 
+And yet sometimes we like, beat 
+
+545
+00:26:27,760 --> 00:26:29,120
+ourselves up. 
+Like, for example, to tie this 
+
+546
+00:26:29,120 --> 00:26:32,480
+back to programming, It's like 
+if you break the build, you 
+
+547
+00:26:32,480 --> 00:26:35,160
+might be like, Oh my gosh, like,
+I'm such a, like idiot for 
+
+548
+00:26:35,160 --> 00:26:36,720
+breaking the build. 
+Like, it's so bad that I broke 
+
+549
+00:26:36,720 --> 00:26:38,400
+the build and kind of be like, 
+how could I do that? 
+
+550
+00:26:38,400 --> 00:26:40,160
+Like, I guess I'm just not a 
+good programmer. 
+
+551
+00:26:40,160 --> 00:26:41,200
+And I guess, like, you know what
+I mean? 
+
+552
+00:26:41,200 --> 00:26:44,720
+Like, I, I, I let my team down. 
+I've thrown off everybody's day 
+
+553
+00:26:44,920 --> 00:26:47,200
+versus if your friend did it or 
+like somebody you're mentoring 
+
+554
+00:26:47,200 --> 00:26:49,440
+or whatever you probably like, 
+It's OK we're going to fix it. 
+
+555
+00:26:49,440 --> 00:26:51,720
+Like, you know what I mean And 
+say, like, I know that was a 
+
+556
+00:26:51,720 --> 00:26:54,800
+tough thing to go through, but 
+we, we're going to take these 
+
+557
+00:26:54,800 --> 00:26:56,560
+steps and then we're going to 
+see what we learned from it. 
+
+558
+00:26:56,560 --> 00:26:57,760
+And you kind of have this, you 
+know what I mean? 
+
+559
+00:26:57,760 --> 00:26:59,960
+So you can kind of apply that. 
+If you can apply that to 
+
+560
+00:26:59,960 --> 00:27:03,440
+yourself, then, you know, you 
+save some of your energy so that
+
+561
+00:27:03,440 --> 00:27:05,840
+you have more to give to others 
+and the world. 
+
+562
+00:27:05,840 --> 00:27:06,920
+That's. 
+Cool. 
+
+563
+00:27:07,840 --> 00:27:11,400
+So let's talk a little bit about
+your what you do in your 
+
+564
+00:27:11,400 --> 00:27:14,240
+compassionate coding stuff. 
+Tell us, tell us about what 
+
+565
+00:27:14,360 --> 00:27:16,720
+you've been on this journey for.
+I think you said eight years. 
+
+566
+00:27:16,720 --> 00:27:19,480
+Now what? 
+What is it that you're that 
+
+567
+00:27:19,480 --> 00:27:22,120
+you're doing? 
+So it usually starts off with 
+
+568
+00:27:22,520 --> 00:27:25,600
+somebody like in leadership at 
+like a tech company will reach 
+
+569
+00:27:25,600 --> 00:27:28,760
+out and say, hey, you know, 
+either we're struggling with XYZ
+
+570
+00:27:28,760 --> 00:27:30,720
+or we're I. 
+Have a bunch of jerks. 
+
+571
+00:27:31,320 --> 00:27:33,160
+Yeah, exactly pretty. 
+Much I wanna fix them. 
+
+572
+00:27:33,480 --> 00:27:36,520
+Exactly. 
+Yeah, but we're more often 
+
+573
+00:27:37,160 --> 00:27:40,360
+lately especially, it's like we 
+feel like everyone's actually 
+
+574
+00:27:40,360 --> 00:27:42,640
+really nice on the team, but 
+they're not really 
+
+575
+00:27:42,640 --> 00:27:44,340
+communicating. 
+And so they're like, quote, UN 
+
+576
+00:27:44,340 --> 00:27:47,480
+quote nice. 
+And so because there's the soft 
+
+577
+00:27:47,480 --> 00:27:49,800
+side of compassion and there's 
+also like the tougher, like 
+
+578
+00:27:49,880 --> 00:27:53,600
+fiercer side of compassion. 
+And so sometimes, like lately 
+
+579
+00:27:53,640 --> 00:27:57,320
+what I have been doing is 
+they'll say, yeah, everyone's so
+
+580
+00:27:57,320 --> 00:27:59,320
+afraid of, like offending each 
+other or like whatever, that 
+
+581
+00:27:59,320 --> 00:28:01,840
+they're not actually saying some
+when we need to address 
+
+582
+00:28:01,840 --> 00:28:02,960
+something, they're not speaking 
+up. 
+
+583
+00:28:02,960 --> 00:28:05,440
+And so sometimes it's about like
+assertiveness, because that also
+
+584
+00:28:05,440 --> 00:28:07,760
+goes ties in with compassion, 
+because if you're really, if 
+
+585
+00:28:07,760 --> 00:28:10,240
+compassion is really about 
+alleviating suffering, then 
+
+586
+00:28:10,240 --> 00:28:12,680
+sometimes that's going to mean 
+having a tough conversation 
+
+587
+00:28:12,680 --> 00:28:15,440
+about what's going on. 
+And so sometimes that's what the
+
+588
+00:28:15,440 --> 00:28:17,040
+issue is. 
+So anyway, they'll come and I'll
+
+589
+00:28:17,040 --> 00:28:20,520
+do an interview with the 
+leadership and then some people 
+
+590
+00:28:20,520 --> 00:28:23,200
+on the team, kind of like user 
+interviews, that kind of thing. 
+
+591
+00:28:23,200 --> 00:28:24,640
+It's, you know, it's kind of 
+research interviews to 
+
+592
+00:28:24,640 --> 00:28:27,160
+understand what's going on on 
+the team, some of the dynamics, 
+
+593
+00:28:27,160 --> 00:28:31,000
+some of the values on the team. 
+And then I'll create a workshop,
+
+594
+00:28:31,000 --> 00:28:35,400
+a training for them tailored to 
+some of the issues going on and 
+
+595
+00:28:35,400 --> 00:28:38,920
+using examples that are based on
+like what they've shared with me
+
+596
+00:28:38,920 --> 00:28:40,320
+of things that have happened on 
+the team. 
+
+597
+00:28:40,320 --> 00:28:43,160
+And so it's very customized. 
+So it's not like one of these 
+
+598
+00:28:43,160 --> 00:28:45,240
+like, oh, I just have a standard
+deck and I just kind of click 
+
+599
+00:28:45,240 --> 00:28:46,640
+through and read off of a 
+script. 
+
+600
+00:28:47,080 --> 00:28:49,800
+I like to 'cause that would be 
+boring for me to be honest. 
+
+601
+00:28:49,800 --> 00:28:52,480
+And I think as an engineer we 
+were always like, I was always 
+
+602
+00:28:52,480 --> 00:28:54,120
+bored by those kind of 
+presentations. 
+
+603
+00:28:54,120 --> 00:28:56,720
+And and so I don't I that was 
+part of in starting my own 
+
+604
+00:28:56,720 --> 00:28:58,520
+company, I was like, no, I'm not
+going to do it like that. 
+
+605
+00:28:58,640 --> 00:29:01,360
+Like I'm going to do it where 
+it's like tailored, it's 
+
+606
+00:29:01,400 --> 00:29:04,680
+relevant, and I even put coding 
+in the name, even though 
+
+607
+00:29:04,680 --> 00:29:07,400
+technically a lot of what I talk
+about can apply to anyone. 
+
+608
+00:29:07,960 --> 00:29:11,240
+And I've even had people like I 
+was telling my banker like what 
+
+609
+00:29:11,240 --> 00:29:12,520
+I do or whatever. 
+And they're like, can you give 
+
+610
+00:29:12,520 --> 00:29:13,920
+that for like the financial 
+industry? 
+
+611
+00:29:13,920 --> 00:29:15,320
+Because we need that too and 
+what not. 
+
+612
+00:29:15,320 --> 00:29:17,920
+But so it really does apply. 
+But the reason I threw coding in
+
+613
+00:29:17,920 --> 00:29:21,200
+there is because what I found is
+with engineers, a lot of times 
+
+614
+00:29:21,320 --> 00:29:23,160
+what they care about most is the
+code. 
+
+615
+00:29:23,160 --> 00:29:27,600
+And so if I can start from 
+here's how if you understand 
+
+616
+00:29:27,600 --> 00:29:29,960
+compassion and look at it, 
+here's how it might affect how 
+
+617
+00:29:29,960 --> 00:29:33,080
+you name variables or how you 
+design systems or you know what 
+
+618
+00:29:33,080 --> 00:29:35,720
+I mean, like how the 
+architecture that you choose the
+
+619
+00:29:35,720 --> 00:29:39,160
+API design choices. 
+If if you can see how compassion
+
+620
+00:29:39,160 --> 00:29:42,920
+might inform that, then I think 
+that that helps them pay 
+
+621
+00:29:42,920 --> 00:29:45,040
+attention more because they're 
+like oh she's speaking our 
+
+622
+00:29:45,040 --> 00:29:47,680
+language like she you know so 
+it's a way of to connect. 
+
+623
+00:29:48,000 --> 00:29:50,600
+And so that's why I kept coding 
+in the name because it's like 
+
+624
+00:29:51,320 --> 00:29:54,200
+even though we may not write 
+code specifically in the 
+
+625
+00:29:54,200 --> 00:29:57,280
+session, although I have given 
+like compassionate coding 
+
+626
+00:29:57,280 --> 00:30:00,080
+workshops on like test driven 
+JavaScript for example, and in 
+
+627
+00:30:00,080 --> 00:30:03,720
+which it is a coding workshop. 
+It's just these principles are 
+
+628
+00:30:03,720 --> 00:30:06,480
+underpinning it where it's like 
+from a place of compassion both 
+
+629
+00:30:06,480 --> 00:30:11,000
+in how I teach it and how you 
+know the types of code that 
+
+630
+00:30:11,000 --> 00:30:13,320
+we're writing and how we go 
+about it, the things we say to 
+
+631
+00:30:13,320 --> 00:30:15,720
+ourselves as we do it. 
+So it really can apply in every 
+
+632
+00:30:15,720 --> 00:30:17,080
+way. 
+But yeah, typically the 
+
+633
+00:30:17,080 --> 00:30:20,560
+workshops are divided into like,
+we talk about self compassion. 
+
+634
+00:30:20,560 --> 00:30:23,840
+We talk about, you know, 
+understanding our own emotions. 
+
+635
+00:30:24,960 --> 00:30:26,720
+I'll share like a list of 
+emotions. 
+
+636
+00:30:27,000 --> 00:30:29,520
+And sometimes that's the first 
+time a developer's ever really 
+
+637
+00:30:29,520 --> 00:30:31,240
+thought about it. 
+And they'll be like, oh, I 
+
+638
+00:30:31,240 --> 00:30:33,640
+didn't even like, you know, 
+they're like new words. 
+
+639
+00:30:33,640 --> 00:30:34,760
+They'll be like, oh, what does 
+this mean? 
+
+640
+00:30:34,760 --> 00:30:36,520
+Or, you know, I didn't even 
+realize there were different 
+
+641
+00:30:36,520 --> 00:30:38,720
+shades of this or or whatever if
+these words. 
+
+642
+00:30:38,720 --> 00:30:40,920
+And so that even that sometimes 
+has a light bulb go off. 
+
+643
+00:30:41,400 --> 00:30:45,720
+And so understanding we're like 
+our own kind of emotions and how
+
+644
+00:30:45,720 --> 00:30:49,240
+they affect how we communicate, 
+and then we'll talk about how we
+
+645
+00:30:49,240 --> 00:30:50,840
+do communicate and like the 
+words we use. 
+
+646
+00:30:50,840 --> 00:30:53,440
+And that's where I pull in stuff
+from Nonviolent Communication, 
+
+647
+00:30:53,640 --> 00:30:55,800
+but also things like difficult 
+conversations. 
+
+648
+00:30:55,800 --> 00:30:59,240
+That's also been like an 
+informative like book for me 
+
+649
+00:30:59,240 --> 00:31:00,600
+that I really enjoyed in that 
+approach. 
+
+650
+00:31:00,600 --> 00:31:02,600
+And so and then like my own 
+experience. 
+
+651
+00:31:02,600 --> 00:31:05,000
+And so it's this mish mash of 
+like, all of the things that 
+
+652
+00:31:05,000 --> 00:31:07,520
+have, like affected me and 
+things that like have inspired 
+
+653
+00:31:07,520 --> 00:31:09,040
+me. 
+And it's always changing and 
+
+654
+00:31:09,040 --> 00:31:12,680
+evolving because I want to keep 
+like showing the most relevant 
+
+655
+00:31:12,680 --> 00:31:15,720
+things and the most interesting 
+things to to the people I'm 
+
+656
+00:31:15,720 --> 00:31:17,760
+talking with. 
+And then we'll always include an
+
+657
+00:31:17,760 --> 00:31:20,560
+action plan, which is kind of 
+like, what next steps? 
+
+658
+00:31:20,560 --> 00:31:22,280
+Because the other thing that's 
+frustrating about a lot of 
+
+659
+00:31:22,280 --> 00:31:24,760
+trainings for developers is you 
+do them and then you kind of go 
+
+660
+00:31:24,760 --> 00:31:26,000
+back to doing whatever you were 
+doing. 
+
+661
+00:31:26,000 --> 00:31:28,080
+And it's almost like, why did I 
+even do this training? 
+
+662
+00:31:28,160 --> 00:31:30,080
+Because I didn't really. 
+And so I try to include an 
+
+663
+00:31:30,080 --> 00:31:33,120
+action plan that's very specific
+about like, OK, now that we've 
+
+664
+00:31:33,120 --> 00:31:35,480
+learned all this where what are 
+the areas where I want to grow 
+
+665
+00:31:35,480 --> 00:31:37,560
+and then what can I do 
+specifically to like grow in 
+
+666
+00:31:37,560 --> 00:31:40,200
+those areas. 
+And so although the workshops 
+
+667
+00:31:40,200 --> 00:31:44,600
+are different based on each team
+customized, I do like to those. 
+
+668
+00:31:44,600 --> 00:31:47,320
+That's like a rough structure 
+that that most of them follow. 
+
+669
+00:31:47,320 --> 00:31:49,720
+And we definitely always include
+some kind of action plan, even 
+
+670
+00:31:49,720 --> 00:31:51,720
+if it's if it's a shorter 
+workshop, if it's like an hour 
+
+671
+00:31:51,720 --> 00:31:54,120
+long and I'm just doing an 
+abbreviated version, we'll just 
+
+672
+00:31:54,120 --> 00:31:56,360
+do one action item. 
+But it's still something to be 
+
+673
+00:31:56,360 --> 00:31:59,680
+like, I wanted to carry this 
+forward and I want to keep going
+
+674
+00:31:59,680 --> 00:32:03,040
+with it. 
+Yeah, no, I think it helps, 
+
+675
+00:32:03,120 --> 00:32:07,040
+helps focus. 
+I mean, yeah, it all makes sense
+
+676
+00:32:07,040 --> 00:32:08,800
+to me. 
+And also because you have a 
+
+677
+00:32:08,800 --> 00:32:13,080
+background in coding, you're 
+more of a trustworthy source. 
+
+678
+00:32:13,680 --> 00:32:16,840
+So, you know, I think people be 
+more comfortable with you than 
+
+679
+00:32:16,840 --> 00:32:22,360
+some random business advisor who
+comes in and you know, doesn't 
+
+680
+00:32:22,360 --> 00:32:25,760
+know what field you're in. 
+One of the things that I have 
+
+681
+00:32:25,760 --> 00:32:33,320
+found kind of liberating about 
+nonviolent communication is I've
+
+682
+00:32:33,320 --> 00:32:40,520
+always been conflict avoidant. 
+And it gives you tools where you
+
+683
+00:32:40,520 --> 00:32:45,160
+go, OK, it might not just turn 
+off the conflict avoidance, but 
+
+684
+00:32:45,160 --> 00:32:50,560
+it also makes you go, oh, there 
+are ways to at least attempt to 
+
+685
+00:32:50,560 --> 00:32:54,480
+navigate this rather than just 
+going in and saying, oh, 
+
+686
+00:32:55,000 --> 00:32:57,080
+somebody's mad there's conflict 
+going on. 
+
+687
+00:32:57,080 --> 00:32:58,880
+I don't want to have anything to
+do with this. 
+
+688
+00:32:58,880 --> 00:33:01,880
+I'm just going to remove myself 
+from the situation entirely. 
+
+689
+00:33:02,160 --> 00:33:04,360
+And it's like, no, it's it's 
+possible. 
+
+690
+00:33:04,360 --> 00:33:07,040
+I'm not. 
+I can't say I'm good at it yet. 
+
+691
+00:33:07,600 --> 00:33:15,400
+But knowing that, oh, there are 
+things that you can do that will
+
+692
+00:33:15,600 --> 00:33:20,800
+maybe help navigate. 
+That sounds like you've got kind
+
+693
+00:33:20,800 --> 00:33:25,160
+of both sides coming to you 
+saying we've, we've got jerks or
+
+694
+00:33:25,160 --> 00:33:28,640
+we've got the conflict avoidant 
+people or, you know, mishmash of
+
+695
+00:33:28,640 --> 00:33:32,080
+everything. 
+And so how do we help both the 
+
+696
+00:33:32,360 --> 00:33:35,360
+kind of both sides of that 
+spectrum get better at 
+
+697
+00:33:35,360 --> 00:33:39,320
+communicating? 
+Yeah, communicating and caring 
+
+698
+00:33:39,320 --> 00:33:42,400
+for each other and themselves. 
+Yeah, and even just the point of
+
+699
+00:33:42,400 --> 00:33:46,120
+making yourself clear, knowing 
+that, Oh yeah, there is a way 
+
+700
+00:33:46,120 --> 00:33:51,040
+for me to speak so that I can 
+get my point across without, I 
+
+701
+00:33:52,680 --> 00:33:55,280
+don't know, for lack of a better
+word, raising the hackles of the
+
+702
+00:33:55,280 --> 00:33:59,960
+other person. 
+You know, for example, avoiding 
+
+703
+00:33:59,960 --> 00:34:03,600
+the word you when you're talking
+about these things. 
+
+704
+00:34:04,240 --> 00:34:08,560
+If, if and that takes that takes
+some mental work to do that. 
+
+705
+00:34:08,560 --> 00:34:09,920
+Yeah. 
+But then you're going in and 
+
+706
+00:34:09,920 --> 00:34:13,040
+you're knowing, OK, I'm not 
+accusing this person of anything
+
+707
+00:34:13,040 --> 00:34:17,040
+because I'm just, I avoid that 
+word altogether when I'm talking
+
+708
+00:34:17,040 --> 00:34:19,040
+about these things. 
+This thing happened? 
+
+709
+00:34:19,080 --> 00:34:19,840
+Yes. 
+A thing. 
+
+710
+00:34:19,840 --> 00:34:20,880
+Yeah. 
+Absolutely. 
+
+711
+00:34:20,880 --> 00:34:23,520
+And I think it's what you said 
+too about like the conflict 
+
+712
+00:34:23,520 --> 00:34:26,159
+avoidant and then the people who
+are like love conflict. 
+
+713
+00:34:26,400 --> 00:34:29,719
+I think that one exercise we do 
+that's kind of fun, especially 
+
+714
+00:34:29,719 --> 00:34:32,760
+if we're in person, it's like 
+even more fun is like people 
+
+715
+00:34:32,760 --> 00:34:35,719
+line up across the room in terms
+of like their spectrum, in terms
+
+716
+00:34:35,719 --> 00:34:38,800
+of how they feel about conflict 
+avoidance or like you know, a 
+
+717
+00:34:39,800 --> 00:34:43,600
+conflict approaching there and 
+you can kind of like see it kind
+
+718
+00:34:43,600 --> 00:34:45,560
+of helps people understand each 
+other too. 
+
+719
+00:34:45,679 --> 00:34:48,280
+So it's both understanding how 
+you fall on that spectrum and 
+
+720
+00:34:48,280 --> 00:34:51,760
+also seeing that some of your Co
+workers may fall, you know, on 
+
+721
+00:34:51,760 --> 00:34:53,560
+other parts of the spectrum. 
+And again, we do this when 
+
+722
+00:34:53,560 --> 00:34:55,000
+there's trust. 
+I don't do it like, you know 
+
+723
+00:34:55,000 --> 00:34:56,800
+what I mean? 
+If there's if it's if people are
+
+724
+00:34:56,800 --> 00:34:58,760
+not really comfortable with each
+other, I don't like make them do
+
+725
+00:34:58,760 --> 00:35:00,640
+this like weird thing. 
+But it's like if there's if it's
+
+726
+00:35:00,640 --> 00:35:03,280
+the right engage the room, read 
+the room, which again is hard to
+
+727
+00:35:03,280 --> 00:35:05,800
+do in the virtual world. 
+That's why I like it's one thing
+
+728
+00:35:05,800 --> 00:35:08,120
+that's been challenging during 
+the pandemic for me was like the
+
+729
+00:35:08,120 --> 00:35:11,520
+virtual world because I think 
+that it's so much harder to 
+
+730
+00:35:11,520 --> 00:35:14,720
+connect emotionally like the 
+mirror neurons don't fire as 
+
+731
+00:35:14,720 --> 00:35:17,680
+much in the virtual world. 
+Like, there's all these things 
+
+732
+00:35:17,680 --> 00:35:19,280
+that have been really 
+challenging. 
+
+733
+00:35:19,280 --> 00:35:23,000
+And so I still do the workshops 
+because again, people find value
+
+734
+00:35:23,000 --> 00:35:24,800
+in them. 
+And I've, I've adapted and I've 
+
+735
+00:35:24,800 --> 00:35:26,680
+learned a lot from that. 
+But there's something about 
+
+736
+00:35:26,680 --> 00:35:29,200
+being in the same room that that
+is magical and like, you know, 
+
+737
+00:35:29,200 --> 00:35:32,600
+you 2 have right now and I, you 
+know, enjoying the company of my
+
+738
+00:35:32,600 --> 00:35:35,200
+plants. 
+But but yeah. 
+
+739
+00:35:35,200 --> 00:35:38,520
+And so I think that that's, 
+that's something that, like, 
+
+740
+00:35:38,520 --> 00:35:40,280
+it's kind of a fun thing. 
+But anyway, point of that story 
+
+741
+00:35:40,280 --> 00:35:42,720
+was just that, like, I think 
+knowing how knowing, just 
+
+742
+00:35:42,720 --> 00:35:44,880
+knowing that some people have 
+different ways of relating to 
+
+743
+00:35:44,880 --> 00:35:48,280
+conflict, even just knowing that
+is helpful because then when you
+
+744
+00:35:48,280 --> 00:35:51,280
+you're like, why is that person 
+so, like, angry all the time? 
+
+745
+00:35:51,280 --> 00:35:53,800
+It's like, no, they just have a 
+different way maybe of relating 
+
+746
+00:35:53,800 --> 00:35:56,640
+to conflict or like, why is this
+person never speaking up, you 
+
+747
+00:35:56,640 --> 00:35:58,320
+know, and and it's like, OK, 
+well, 'cause they have a 
+
+748
+00:35:58,320 --> 00:35:59,640
+different way. 
+And so I think understanding 
+
+749
+00:35:59,640 --> 00:36:02,000
+different personality types is 
+definitely part of empathy, part
+
+750
+00:36:02,000 --> 00:36:06,600
+of compassion too. 
+Do you what one of the things 
+
+751
+00:36:06,600 --> 00:36:09,560
+that, Well, I guess it's maybe a
+little bit more advanced and I 
+
+752
+00:36:09,560 --> 00:36:11,960
+don't know if you teach it in 
+your workshop, the idea of the 
+
+753
+00:36:11,960 --> 00:36:15,760
+empathy guess. 
+The empathy guess oh, where 
+
+754
+00:36:15,760 --> 00:36:17,920
+you're trying to guess what 
+someone's going through kind of 
+
+755
+00:36:17,920 --> 00:36:20,760
+thing you're trying. 
+To guess you're going, oh, maybe
+
+756
+00:36:20,760 --> 00:36:24,360
+they're angry because I don't 
+know. 
+
+757
+00:36:24,360 --> 00:36:26,520
+They they didn't have breakfast.
+They didn't have breakfast or 
+
+758
+00:36:26,520 --> 00:36:29,000
+they had an argument with their 
+partner this morning or 
+
+759
+00:36:29,000 --> 00:36:31,160
+whatever. 
+And you're not, you're not 
+
+760
+00:36:31,160 --> 00:36:36,480
+saying that this is the truth. 
+You're so you're saying, oh did 
+
+761
+00:36:36,480 --> 00:36:39,720
+you did something happen this 
+morning that maybe that's. 
+
+762
+00:36:39,760 --> 00:36:43,000
+Yeah, you read Oprah's book on 
+what happened to you. 
+
+763
+00:36:43,080 --> 00:36:45,880
+That's more of a should. 
+This is. 
+
+764
+00:36:46,160 --> 00:36:50,160
+So the idea is that this you'd 
+you say it in the form of a 
+
+765
+00:36:50,160 --> 00:36:55,160
+question and it and it opens it 
+allows the person to go, no, 
+
+766
+00:36:55,360 --> 00:36:59,960
+what happened was you know I I 
+ran over a dog on the way to 
+
+767
+00:36:59,960 --> 00:37:02,880
+work or something like that and 
+I'm really torn up about it And 
+
+768
+00:37:02,880 --> 00:37:05,040
+so it gives them the opportunity
+to. 
+
+769
+00:37:05,480 --> 00:37:09,240
+So you're just you're just 
+making a guess so that they can 
+
+770
+00:37:09,240 --> 00:37:14,120
+come back and say, Oh well, 
+maybe it is what happened with 
+
+771
+00:37:14,120 --> 00:37:14,720
+your. 
+Guest Yeah. 
+
+772
+00:37:15,120 --> 00:37:17,440
+But if it isn't, it opens a 
+conversation. 
+
+773
+00:37:18,040 --> 00:37:18,520
+Absolutely. 
+Yeah. 
+
+774
+00:37:18,520 --> 00:37:20,320
+I haven't heard it with that 
+term before. 
+
+775
+00:37:20,320 --> 00:37:20,920
+Empathy. 
+Guess. 
+
+776
+00:37:20,920 --> 00:37:22,400
+But of course, that makes sense.
+Yeah. 
+
+777
+00:37:22,600 --> 00:37:24,000
+And that's a tricky one, too. 
+You're right. 
+
+778
+00:37:24,000 --> 00:37:27,160
+It is advanced because, like, 
+what immediately comes to mind, 
+
+779
+00:37:27,160 --> 00:37:28,520
+too, Probably just because I'm a
+woman. 
+
+780
+00:37:28,520 --> 00:37:30,040
+Right. 
+It's like sometimes, like if a 
+
+781
+00:37:30,040 --> 00:37:32,360
+woman's having a reaction to 
+something, it could be something
+
+782
+00:37:32,360 --> 00:37:33,600
+like, oh, is it that time of the
+month? 
+
+783
+00:37:33,600 --> 00:37:35,280
+And it's like, maybe don't ask 
+that. 
+
+784
+00:37:35,280 --> 00:37:37,000
+Like, you know what I mean? 
+So sometimes, you know, there 
+
+785
+00:37:37,000 --> 00:37:40,800
+has to be some. 
+It's You have a lot of care 
+
+786
+00:37:40,800 --> 00:37:45,120
+because you want to make sure 
+that I'm not saying this is 
+
+787
+00:37:45,120 --> 00:37:48,560
+what's happening. 
+I'm trying to open a 
+
+788
+00:37:49,160 --> 00:37:53,000
+conversation about it and I'll 
+I'm, I'm curious about what's 
+
+789
+00:37:53,000 --> 00:37:56,840
+going on with you. 
+I'm not attached to my answer. 
+
+790
+00:37:57,520 --> 00:37:58,320
+Yeah. 
+Absolutely. 
+
+791
+00:37:58,320 --> 00:37:59,680
+Because, you know, that makes 
+sense. 
+
+792
+00:37:59,800 --> 00:38:02,120
+I'm sure there's some nuance, 
+yeah, that that is required 
+
+793
+00:38:02,120 --> 00:38:05,800
+there because, yeah, I'm even 
+thinking about someone like, you
+
+794
+00:38:05,800 --> 00:38:07,640
+know, saying like, oh, did you 
+get enough sleep last night kind
+
+795
+00:38:07,640 --> 00:38:09,360
+of thing. 
+It can come off depending on how
+
+796
+00:38:09,360 --> 00:38:11,280
+you phrase it and how it's 
+whatever it can sound like 
+
+797
+00:38:11,960 --> 00:38:14,000
+you're like. 
+An accusation or? 
+
+798
+00:38:14,160 --> 00:38:15,440
+An accusation. 
+Judgement. 
+
+799
+00:38:15,440 --> 00:38:19,120
+So you have to be, yeah, Yeah. 
+Yeah, it's not very careful. 
+
+800
+00:38:19,120 --> 00:38:20,840
+Treading on did. 
+You are you. 
+
+801
+00:38:21,400 --> 00:38:22,920
+Yeah. 
+It's like almost. 
+
+802
+00:38:22,920 --> 00:38:28,520
+You want to start with, are you 
+are you feeling anxious or or 
+
+803
+00:38:28,640 --> 00:38:33,480
+upset because you know, are you 
+maybe feeling a bit tired or 
+
+804
+00:38:33,480 --> 00:38:36,800
+something like that? 
+But yeah, not going necessarily 
+
+805
+00:38:36,800 --> 00:38:41,360
+to the conclusion about what 
+happened, because that's not 
+
+806
+00:38:41,360 --> 00:38:43,920
+what the important thing is 
+about the empathy guess. 
+
+807
+00:38:44,200 --> 00:38:47,720
+The important thing is, I'm 
+curious about what's happening 
+
+808
+00:38:47,720 --> 00:38:50,120
+with you. 
+It's one potential approach to 
+
+809
+00:38:50,120 --> 00:38:53,520
+bringing curiosity and trying to
+do to get understand. 
+
+810
+00:38:53,520 --> 00:38:56,840
+Based on curiosity, it's like I 
+want to know what's happening 
+
+811
+00:38:56,840 --> 00:38:58,520
+with you. 
+I'm not. 
+
+812
+00:38:59,080 --> 00:39:01,360
+I don't want to tell you what's 
+happening with you. 
+
+813
+00:39:01,720 --> 00:39:04,160
+I want to and then and yes, 
+that's a. 
+
+814
+00:39:04,440 --> 00:39:07,640
+That's a subtle, fine line. 
+I like that. 
+
+815
+00:39:07,640 --> 00:39:10,600
+Yeah, that's that's a good one. 
+But it's important, yeah. 
+
+816
+00:39:10,840 --> 00:39:15,360
+I also noticed used the term 
+capacity, which I first 
+
+817
+00:39:15,880 --> 00:39:19,720
+connected with through this. 
+I mentioned Mickey Cashton, 
+
+818
+00:39:20,000 --> 00:39:24,160
+who's she's a great teacher, in 
+fact somebody you might be 
+
+819
+00:39:24,160 --> 00:39:28,760
+interested in looking up, but 
+she she Well, are you familiar 
+
+820
+00:39:28,760 --> 00:39:30,360
+with Gerald Weinberg? 
+Are you? 
+
+821
+00:39:30,400 --> 00:39:31,120
+Yes. 
+Oh yeah. 
+
+822
+00:39:31,160 --> 00:39:32,760
+I love love his work. 
+Yeah, yeah. 
+
+823
+00:39:32,880 --> 00:39:35,520
+The secret? 
+'S consulting and then you know 
+
+824
+00:39:35,520 --> 00:39:38,120
+his famous. 
+He's famous for saying no matter
+
+825
+00:39:38,120 --> 00:39:41,520
+what they tell you it's always a
+people problem that that goes, 
+
+826
+00:39:41,520 --> 00:39:44,960
+right. 
+Yeah, but, but he he once I 
+
+827
+00:39:44,960 --> 00:39:49,480
+studied under him and he once 
+talked about he goes, he goes, 
+
+828
+00:39:49,480 --> 00:39:52,880
+look, if you don't want to do 
+something or it's not working 
+
+829
+00:39:52,880 --> 00:39:57,480
+for you, you say that doesn't 
+work for me right now, and then 
+
+830
+00:39:57,480 --> 00:40:01,440
+nobody can argue with it. 
+But Mickey had an even better 
+
+831
+00:40:01,440 --> 00:40:06,480
+way of putting it and she says I
+don't have the capacity for 
+
+832
+00:40:06,480 --> 00:40:10,200
+that. 
+And that's even more clear that 
+
+833
+00:40:10,200 --> 00:40:13,400
+it's about you and it's not 
+something that somebody can 
+
+834
+00:40:13,400 --> 00:40:17,880
+argue with, which I think a lot 
+of people get, you know, oh, how
+
+835
+00:40:17,880 --> 00:40:21,480
+do I say no? 
+If they're gonna argue with me. 
+
+836
+00:40:21,480 --> 00:40:24,400
+But if you put it in such a way,
+it's like, no, this is all going
+
+837
+00:40:24,400 --> 00:40:27,320
+on with me, I can't help you 
+because of that. 
+
+838
+00:40:27,320 --> 00:40:30,240
+And then you can't come back and
+go, Oh yes you can. 
+
+839
+00:40:30,240 --> 00:40:33,480
+Or you can do this, or you know,
+try and solve the problem so 
+
+840
+00:40:33,480 --> 00:40:35,880
+that they get what they want. 
+Yep. 
+
+841
+00:40:36,840 --> 00:40:41,360
+So in your training that you do 
+because it's more oriented 
+
+842
+00:40:41,360 --> 00:40:44,960
+towards programmers, are you 
+able to give people guidance on 
+
+843
+00:40:45,200 --> 00:40:50,000
+more specific activities like 
+code reviews or stand ups or 
+
+844
+00:40:50,920 --> 00:40:53,480
+post mortems? 
+Or like like the things that 
+
+845
+00:40:53,480 --> 00:40:56,360
+programmers are involved in? 
+Do you do you integrate this 
+
+846
+00:40:56,360 --> 00:40:59,800
+into those kinds of activities 
+or help help train people on how
+
+847
+00:40:59,800 --> 00:41:02,120
+to do those things better? 
+Absolutely. 
+
+848
+00:41:02,120 --> 00:41:04,280
+Yeah. 
+So like, one of the talks that I
+
+849
+00:41:04,280 --> 00:41:06,920
+have up on YouTube is 
+compassionate yet candid code 
+
+850
+00:41:06,920 --> 00:41:08,880
+reviews. 
+And it's about like how you can 
+
+851
+00:41:08,880 --> 00:41:13,240
+give direct feedback and code 
+reviews and still be 
+
+852
+00:41:13,240 --> 00:41:15,400
+compassionate. 
+So yeah, so code reviews is a 
+
+853
+00:41:15,400 --> 00:41:17,680
+big one. 
+And that is often I shared how 
+
+854
+00:41:17,680 --> 00:41:19,960
+sometimes the leadership will 
+share things that have happened 
+
+855
+00:41:19,960 --> 00:41:21,840
+on the team. 
+Sometimes it will be like a code
+
+856
+00:41:21,840 --> 00:41:24,720
+review that's gone awry because 
+somebody you know it was a big 
+
+857
+00:41:24,720 --> 00:41:26,480
+pull request maybe. 
+And aggression. 
+
+858
+00:41:29,200 --> 00:41:31,800
+And so they'll show, still share
+some screenshots of that and be 
+
+859
+00:41:31,800 --> 00:41:33,400
+like, hey, you know, this is 
+something that happened and I 
+
+860
+00:41:33,400 --> 00:41:35,560
+was like, oh, interesting, OK. 
+And it gives me like a little 
+
+861
+00:41:36,360 --> 00:41:39,000
+example there to work from. 
+And so yeah, code reviews is 
+
+862
+00:41:39,160 --> 00:41:41,920
+code reviews is a big one. 
+I think they have performance 
+
+863
+00:41:41,920 --> 00:41:44,800
+reviews, design reviews, all of 
+that comes into play, 
+
+864
+00:41:45,040 --> 00:41:47,480
+definitely. 
+You know how we communicate. 
+
+865
+00:41:47,480 --> 00:41:49,600
+So yeah, that's when I say like 
+it's tailored to engineers. 
+
+866
+00:41:49,600 --> 00:41:51,440
+That's The thing is I can use 
+examples like that. 
+
+867
+00:41:51,440 --> 00:41:54,160
+Like one of the kind of 
+role-playing examples that we do
+
+868
+00:41:54,160 --> 00:41:58,040
+sometimes is about a product 
+manager and a developer kind of 
+
+869
+00:41:58,040 --> 00:42:02,360
+having a about timelines and 
+about new features versus 
+
+870
+00:42:02,440 --> 00:42:05,360
+refactoring all of that like 
+typical stuff that we deal with 
+
+871
+00:42:05,400 --> 00:42:07,720
+like. 
+And so I think using examples 
+
+872
+00:42:07,720 --> 00:42:10,320
+like that, sometimes people will
+say, so is this an example? 
+
+873
+00:42:10,320 --> 00:42:12,800
+I'll always say this is not an 
+example that happened here, but 
+
+874
+00:42:12,800 --> 00:42:14,200
+it's like something maybe 
+related. 
+
+875
+00:42:14,200 --> 00:42:15,920
+And they're like, Are you sure 
+this isn't from here? 
+
+876
+00:42:15,920 --> 00:42:18,200
+Because I'm pretty sure we've 
+had this exact conversation. 
+
+877
+00:42:18,600 --> 00:42:21,000
+And so it seems to resonate. 
+Like one of the things that 
+
+878
+00:42:21,240 --> 00:42:23,320
+someone said after the workshop 
+that like meant a lot. 
+
+879
+00:42:23,320 --> 00:42:25,800
+As they said, like you can tell 
+this was like written by an 
+
+880
+00:42:25,800 --> 00:42:28,840
+engineer for other engineers. 
+And I was like, OK, cool because
+
+881
+00:42:29,200 --> 00:42:31,320
+and that said, like sometimes 
+people that are not engineers 
+
+882
+00:42:31,320 --> 00:42:34,360
+will sit in like whether it's a 
+marketing person, the CEO, like 
+
+883
+00:42:34,360 --> 00:42:36,000
+whatever. 
+And they'll still get a lot out 
+
+884
+00:42:36,000 --> 00:42:38,480
+of it. 
+But it's like I mean you you to 
+
+885
+00:42:38,480 --> 00:42:40,800
+know how hard it is sometimes to
+connect with engineers 
+
+886
+00:42:40,800 --> 00:42:43,920
+especially on topics like this. 
+And so it means a lot when like 
+
+887
+00:42:43,920 --> 00:42:46,400
+it's also worth a skeptic comes 
+in and they they'll even write 
+
+888
+00:42:46,400 --> 00:42:48,760
+that in the feedback they'll say
+you know skeptical going into 
+
+889
+00:42:48,760 --> 00:42:51,320
+this but like I actually learned
+a lot and I can see how this is 
+
+890
+00:42:51,320 --> 00:42:53,440
+useful and that's kind of my 
+favorite thing and maybe that's 
+
+891
+00:42:53,440 --> 00:42:56,080
+just my personality type of like
+you know I kind of like a 
+
+892
+00:42:56,080 --> 00:42:59,160
+challenge And so I like 
+connecting with those jerk 
+
+893
+00:42:59,160 --> 00:43:02,320
+programmers like my my old self 
+and and you know opening them 
+
+894
+00:43:02,320 --> 00:43:03,760
+their hearts a bit to this sort 
+of stuff. 
+
+895
+00:43:03,760 --> 00:43:06,720
+I mean, you know, we're letting 
+guiding them as they open their 
+
+896
+00:43:06,720 --> 00:43:08,320
+own hearts to be to put it in a 
+better. 
+
+897
+00:43:09,360 --> 00:43:11,160
+Yeah, yeah. 
+One of the things that I have 
+
+898
+00:43:11,160 --> 00:43:17,120
+found, maybe this is another 
+advanced topic, but as an opener
+
+899
+00:43:17,760 --> 00:43:23,320
+is showing vulnerability, for 
+example, in the code review or 
+
+900
+00:43:23,320 --> 00:43:27,600
+in a situation where we and our 
+friend Bill have been working on
+
+901
+00:43:27,600 --> 00:43:31,120
+a book the last three years and 
+James and Bill know far more 
+
+902
+00:43:31,120 --> 00:43:36,720
+about this topic than I do. 
+And I have to say, I don't 
+
+903
+00:43:36,720 --> 00:43:41,600
+understand this and or or this, 
+this, I don't know. 
+
+904
+00:43:41,600 --> 00:43:45,760
+This isn't working for me and 
+opening myself up to the 
+
+905
+00:43:45,760 --> 00:43:49,560
+vulnerability that Oh well, I'm 
+not smart about everything. 
+
+906
+00:43:49,840 --> 00:43:51,760
+Oh, there's something that I 
+don't know. 
+
+907
+00:43:52,000 --> 00:43:55,880
+But I find that that allows 
+other people. 
+
+908
+00:43:55,880 --> 00:43:58,840
+If you set that example, it 
+allows other people to say I 
+
+909
+00:43:58,840 --> 00:44:03,360
+don't know, and you you'll never
+learn anything if you pretend to
+
+910
+00:44:03,360 --> 00:44:07,240
+know it already. 
+And so that and and just in 
+
+911
+00:44:07,240 --> 00:44:13,000
+general that challenge of 
+expressing vulnerability is I 
+
+912
+00:44:13,000 --> 00:44:15,520
+think an important part of 
+connecting. 
+
+913
+00:44:16,320 --> 00:44:18,600
+Absolutely. 
+And I think in like a team 
+
+914
+00:44:18,600 --> 00:44:22,600
+environment, it's often easier 
+for somebody with more power in 
+
+915
+00:44:22,600 --> 00:44:25,000
+the organization to kind of 
+start that process. 
+
+916
+00:44:25,000 --> 00:44:27,560
+Because if you're coming in as 
+the junior engineer, you 
+
+917
+00:44:27,560 --> 00:44:29,640
+probably don't know anything. 
+But if you're the only one 
+
+918
+00:44:29,640 --> 00:44:31,520
+willing to admit it, it's 
+probably not going to help you 
+
+919
+00:44:31,600 --> 00:44:34,800
+very much. 
+But if somebody who's a little 
+
+920
+00:44:34,800 --> 00:44:37,120
+more established, a little has a
+little more power, especially 
+
+921
+00:44:37,120 --> 00:44:39,920
+someone in leadership, if they 
+can model that and then they 
+
+922
+00:44:39,920 --> 00:44:44,720
+make it safe for other people to
+admit it, I think that that I 
+
+923
+00:44:44,720 --> 00:44:45,560
+think you're absolutely. 
+Right. 
+
+924
+00:44:45,560 --> 00:44:48,720
+Diane Marshawn, who is in 
+management at Netflix. 
+
+925
+00:44:48,760 --> 00:44:51,360
+But not anymore. 
+Oh, not anymore. 
+
+926
+00:44:51,480 --> 00:44:52,880
+Is she retired? 
+That's right. 
+
+927
+00:44:52,920 --> 00:44:55,800
+Yeah, she's just travelling 
+around enjoying or something. 
+
+928
+00:44:56,440 --> 00:44:59,680
+So she was in management at 
+Netflix and she had talked 
+
+929
+00:44:59,680 --> 00:45:03,360
+about, I think this was even on 
+our episode with her, how she 
+
+930
+00:45:03,360 --> 00:45:06,880
+had to lead her team into 
+vulnerability and it started 
+
+931
+00:45:06,880 --> 00:45:08,840
+with her vulnerability to the 
+team. 
+
+932
+00:45:08,840 --> 00:45:12,360
+Well, and she had reached out to
+me and I gave her the name of 
+
+933
+00:45:12,640 --> 00:45:15,840
+ANVC coach that I liked a lot 
+and they brought him back 
+
+934
+00:45:15,880 --> 00:45:18,680
+multiple times. 
+So yeah. 
+
+935
+00:45:18,960 --> 00:45:21,880
+So in in any of your training, 
+do you talk about vulnerability?
+
+936
+00:45:21,880 --> 00:45:25,640
+Is that a piece to it or or did 
+it happen kind of naturally 
+
+937
+00:45:25,800 --> 00:45:26,320
+from? 
+Yeah. 
+
+938
+00:45:26,320 --> 00:45:30,240
+It sort of it weaves in for sure
+like we talk about it because I 
+
+939
+00:45:30,240 --> 00:45:35,000
+actually include the the Prime 
+directive from Agile 
+
+940
+00:45:35,000 --> 00:45:37,120
+retrospectives. 
+Like we talk about that because 
+
+941
+00:45:37,120 --> 00:45:41,040
+you know for people not familiar
+like you say like regardless of 
+
+942
+00:45:41,040 --> 00:45:43,800
+what we uncovered today. 
+Like we understand and truly 
+
+943
+00:45:43,800 --> 00:45:46,320
+believe that everyone was doing 
+the best job they could given 
+
+944
+00:45:46,320 --> 00:45:49,160
+what they knew at the time their
+skills and abilities and the 
+
+945
+00:45:49,160 --> 00:45:51,320
+situation at hand. 
+Like I'm a paraphrasing a bit 
+
+946
+00:45:51,320 --> 00:45:52,840
+but like that's the the gist of 
+it. 
+
+947
+00:45:53,280 --> 00:45:56,440
+And we I when I introduce that, 
+I talk about how like we're 
+
+948
+00:45:56,440 --> 00:45:58,440
+going to be sharing vulnerable 
+things here today. 
+
+949
+00:45:58,440 --> 00:46:00,680
+Like we're we may because we 
+work through exercises where 
+
+950
+00:46:00,680 --> 00:46:04,000
+like maybe we lost our temper or
+like we were too afraid to speak
+
+951
+00:46:04,000 --> 00:46:06,160
+up or things that are very 
+vulnerable to share. 
+
+952
+00:46:06,360 --> 00:46:11,320
+And so I try to establish like 
+how important that is to to as 
+
+953
+00:46:11,320 --> 00:46:14,840
+we do that to like not mean like
+so that people know they're not 
+
+954
+00:46:14,840 --> 00:46:18,600
+being judged like in a harsh way
+for that at least that's the 
+
+955
+00:46:18,600 --> 00:46:20,760
+what we're trying to establish 
+is that this is not what the 
+
+956
+00:46:20,760 --> 00:46:24,280
+sessions about, it's about you 
+know, feeling like like safe 
+
+957
+00:46:24,280 --> 00:46:25,760
+quote UN quote. 
+I mean that's overused these 
+
+958
+00:46:25,760 --> 00:46:28,680
+days, but like feeling like 
+comfortable to some degree like 
+
+959
+00:46:28,680 --> 00:46:31,040
+sharing things like that. 
+And so do try to establish that 
+
+960
+00:46:31,040 --> 00:46:33,200
+And also I'm vulnerable in the 
+sessions, right. 
+
+961
+00:46:33,200 --> 00:46:36,440
+So, like, I think what's 
+interesting is like the reason I
+
+962
+00:46:36,440 --> 00:46:38,800
+wrote that blog post, 
+Confessions of a Recovering Jerk
+
+963
+00:46:38,800 --> 00:46:41,320
+Programmer, because it wasn't 
+like that was my first post that
+
+964
+00:46:41,320 --> 00:46:44,080
+I wrote to introduce this stuff.
+I actually wrote that because 
+
+965
+00:46:44,080 --> 00:46:47,200
+someone came up after a talk I 
+did at a coding school and he 
+
+966
+00:46:47,200 --> 00:46:49,560
+said, well, this is probably 
+like just easy and comes 
+
+967
+00:46:49,560 --> 00:46:51,560
+naturally to you. 
+But like, what about those of us
+
+968
+00:46:51,560 --> 00:46:53,600
+who, like, struggle with this? 
+And I was like, oh, I guess I 
+
+969
+00:46:53,600 --> 00:46:55,680
+need to talk about that part of 
+the journey so that people 
+
+970
+00:46:55,680 --> 00:46:58,080
+understand that. 
+And I and that's that was early 
+
+971
+00:46:58,080 --> 00:46:59,520
+on. 
+And so that helped me understand
+
+972
+00:46:59,520 --> 00:47:03,240
+like, OK, it's actually good to 
+share like what I've struggled 
+
+973
+00:47:03,240 --> 00:47:05,600
+with and my mistakes in the past
+and start from that because then
+
+974
+00:47:05,640 --> 00:47:08,160
+people think, oh, if she could 
+learn it, then like I can learn 
+
+975
+00:47:08,160 --> 00:47:10,000
+it, you know, kind of thing 
+that's simplifying it a bit. 
+
+976
+00:47:10,000 --> 00:47:12,960
+But so I actually share a lot of
+of vulnerability in the sessions
+
+977
+00:47:12,960 --> 00:47:15,640
+too, including you're. 
+Modeling the vulnerability for 
+
+978
+00:47:15,640 --> 00:47:18,600
+them. 
+Yeah, and how Like I still make 
+
+979
+00:47:18,600 --> 00:47:20,760
+mistakes. 
+I mean, Karen Armstrong is 
+
+980
+00:47:20,760 --> 00:47:22,200
+someone else who's inspires me a
+lot. 
+
+981
+00:47:22,200 --> 00:47:24,880
+And she has a book called 12 
+Steps to a Compassionate Life. 
+
+982
+00:47:25,320 --> 00:47:26,680
+And funny. 
+She's actually like a religious 
+
+983
+00:47:26,680 --> 00:47:28,640
+studies kind of person. 
+But she talks about how, like 
+
+984
+00:47:28,680 --> 00:47:31,760
+all major religions and all 
+philosophies at their heart are 
+
+985
+00:47:31,760 --> 00:47:33,880
+about compassion. 
+But this book, 12 Steps to a 
+
+986
+00:47:33,880 --> 00:47:35,920
+Compassionate Life, is actually 
+very practical, like how we 
+
+987
+00:47:35,920 --> 00:47:37,240
+might apply it in different 
+ways. 
+
+988
+00:47:37,640 --> 00:47:39,680
+And so she talks about how the 
+mission to become a 
+
+989
+00:47:39,680 --> 00:47:42,040
+compassionate human being is a 
+lifelong project. 
+
+990
+00:47:42,560 --> 00:47:45,400
+And I think that's true. 
+And so I definitely don't have, 
+
+991
+00:47:45,400 --> 00:47:48,000
+like the, the ego, the size of, 
+like, all right, I'm the 
+
+992
+00:47:48,000 --> 00:47:49,640
+compassionate one, and I need to
+make everyone else 
+
+993
+00:47:49,640 --> 00:47:51,440
+compassionate. 
+It's like, no, no, no. 
+
+994
+00:47:51,440 --> 00:47:53,480
+We're all still on this journey 
+together. 
+
+995
+00:47:53,480 --> 00:47:55,440
+And we're all still like, 
+everybody's learning and they're
+
+996
+00:47:55,440 --> 00:47:58,160
+different stages of this. 
+And I still have a lot to learn.
+
+997
+00:47:58,160 --> 00:48:02,120
+I still occasionally, you know, 
+definitely have some reactions 
+
+998
+00:48:02,120 --> 00:48:05,160
+to things that are not the, you 
+know, textbook compassionate 
+
+999
+00:48:05,160 --> 00:48:09,240
+response to things, right. 
+So I think that admitting that 
+
+1000
+00:48:09,240 --> 00:48:12,480
+too let's people have their 
+guard down a bit because then it
+
+1001
+00:48:12,480 --> 00:48:16,520
+doesn't feel like I'm like the 
+you know like some patrols that 
+
+1002
+00:48:16,520 --> 00:48:19,000
+like safety patrol officer 
+coming in and being like you 
+
+1003
+00:48:19,000 --> 00:48:21,040
+know all right let's let's 
+looking for the not 
+
+1004
+00:48:21,040 --> 00:48:22,840
+compassionate things it's like 
+no, no we're all we're all 
+
+1005
+00:48:22,840 --> 00:48:24,760
+imperfect humans and that's not 
+going to change. 
+
+1006
+00:48:25,560 --> 00:48:28,200
+Right. 
+And if you can tell stories 
+
+1007
+00:48:28,200 --> 00:48:32,680
+about yourself about here's 
+here's a place where I screwed 
+
+1008
+00:48:32,680 --> 00:48:37,680
+up royally, then it makes you 
+more accessible like. 
+
+1009
+00:48:38,760 --> 00:48:41,240
+So maybe we should have started 
+with the why. 
+
+1010
+00:48:41,640 --> 00:48:46,080
+But I'm thinking that we haven't
+covered why do we do this? 
+
+1011
+00:48:46,080 --> 00:48:49,560
+Why should we be more 
+compassionate in our work and 
+
+1012
+00:48:49,560 --> 00:48:51,880
+lives and towards ourselves? 
+Yeah. 
+
+1013
+00:48:51,880 --> 00:48:55,440
+And so of course, it depends on 
+what people care about, right? 
+
+1014
+00:48:55,440 --> 00:48:58,800
+So it's like the reason to do 
+something is if it's helping 
+
+1015
+00:48:58,800 --> 00:49:02,080
+something you care about and so 
+you know one of your core values
+
+1016
+00:49:02,080 --> 00:49:05,000
+like that's one of those core 
+needs that comes up in in VC. 
+
+1017
+00:49:05,000 --> 00:49:09,640
+But like, so for instance if you
+care about you know, doing a 
+
+1018
+00:49:09,640 --> 00:49:13,440
+good job, helping your customers
+like writing good code like 
+
+1019
+00:49:13,440 --> 00:49:14,760
+compassion can help with that, 
+right. 
+
+1020
+00:49:14,760 --> 00:49:17,680
+Because like I said, if you can 
+have empathy for your Co 
+
+1021
+00:49:17,680 --> 00:49:21,160
+workers, you can empathy for the
+users compassion and how it all 
+
+1022
+00:49:21,160 --> 00:49:23,840
+relates together, then you're 
+going to create better products.
+
+1023
+00:49:23,840 --> 00:49:25,840
+And so if that's your main 
+concern like it can help with 
+
+1024
+00:49:25,840 --> 00:49:27,920
+that. 
+It also though helps your own 
+
+1025
+00:49:27,920 --> 00:49:30,120
+like well-being. 
+So if you're you know something 
+
+1026
+00:49:30,120 --> 00:49:32,480
+you value as your own like 
+health and well-being, 
+
+1027
+00:49:32,760 --> 00:49:34,760
+compassion definitely helps 
+relieve stress. 
+
+1028
+00:49:34,760 --> 00:49:38,160
+Like kind of what we're talking 
+about earlier in terms of if 
+
+1029
+00:49:38,160 --> 00:49:41,120
+you're able to let's say some 
+things roll off your back 
+
+1030
+00:49:41,120 --> 00:49:43,040
+because you realize it's not 
+about you and this other 
+
+1031
+00:49:43,040 --> 00:49:44,320
+person's going through something
+else. 
+
+1032
+00:49:44,320 --> 00:49:47,080
+It's like it's unburdening 
+yourself and so it helps you 
+
+1033
+00:49:47,080 --> 00:49:50,880
+like not be so stressed all the 
+time about everybody else out 
+
+1034
+00:49:50,880 --> 00:49:52,920
+there and what they're doing and
+what they think of you because 
+
+1035
+00:49:52,920 --> 00:49:54,120
+you're able to kind of process 
+it. 
+
+1036
+00:49:54,120 --> 00:49:57,600
+So it helps in that way. 
+So and it like helps prevent 
+
+1037
+00:49:57,600 --> 00:50:00,120
+burnout in the sense of like 
+because you know, that taken to 
+
+1038
+00:50:00,120 --> 00:50:01,600
+the extreme often leads to 
+burnout. 
+
+1039
+00:50:01,600 --> 00:50:04,720
+And so I think being, you know, 
+gentle with yourself, gentle 
+
+1040
+00:50:04,720 --> 00:50:06,840
+with others definitely helps in 
+that in that regard. 
+
+1041
+00:50:07,800 --> 00:50:10,160
+So yeah, so you can look at it 
+from the practical, like how it 
+
+1042
+00:50:10,160 --> 00:50:11,720
+affects the bottom line. 
+Absolutely. 
+
+1043
+00:50:11,720 --> 00:50:14,480
+And team dynamics and all that, 
+which is often sometimes, you 
+
+1044
+00:50:14,480 --> 00:50:16,760
+know, why companies bring me in?
+Because they're very, it's very 
+
+1045
+00:50:16,760 --> 00:50:19,200
+much what's important to them. 
+But then it also helps like how 
+
+1046
+00:50:19,200 --> 00:50:22,840
+good you feel in the world and 
+how kind of healthy you feel and
+
+1047
+00:50:23,240 --> 00:50:25,640
+and that so there's like 
+multiple levels to look at it 
+
+1048
+00:50:25,640 --> 00:50:26,640
+from. 
+And that's not just me like 
+
+1049
+00:50:26,640 --> 00:50:28,600
+claiming it like there's 
+research to support this. 
+
+1050
+00:50:28,600 --> 00:50:31,480
+There's also, like, you know, 
+anecdotes and, you know, the 
+
+1051
+00:50:31,480 --> 00:50:33,200
+kind of things that have come 
+out of the work that I've been 
+
+1052
+00:50:33,200 --> 00:50:36,080
+doing and my own observations. 
+And so yeah. 
+
+1053
+00:50:36,760 --> 00:50:39,640
+Yeah and in in a lot of my work 
+the times that have been the 
+
+1054
+00:50:39,640 --> 00:50:42,760
+most fulfilling have been the 
+times that I felt connected to 
+
+1055
+00:50:42,760 --> 00:50:48,920
+my team and and it seems like 
+compassion is attached to to 
+
+1056
+00:50:48,920 --> 00:50:52,040
+connection like it's much harder
+to have connection when there's 
+
+1057
+00:50:52,040 --> 00:50:56,720
+jerk isms I. 
+I here's Here's the Here's a 
+
+1058
+00:50:56,720 --> 00:51:00,120
+possible tagline for your 
+business. 
+
+1059
+00:51:00,560 --> 00:51:02,800
+Happy programmers write better 
+code. 
+
+1060
+00:51:03,840 --> 00:51:05,240
+I love it. 
+That is a good one. 
+
+1061
+00:51:05,240 --> 00:51:09,120
+That is a good one. 
+Yeah, Yeah. 
+
+1062
+00:51:09,120 --> 00:51:13,600
+So there's, there's that element
+of connection and creating 
+
+1063
+00:51:13,600 --> 00:51:14,960
+better connection between 
+people. 
+
+1064
+00:51:15,120 --> 00:51:17,520
+And then probably related to 
+that, the more connected we are,
+
+1065
+00:51:17,520 --> 00:51:21,440
+probably the more efficient 
+we'll be the the better we'll be
+
+1066
+00:51:21,440 --> 00:51:23,320
+able to work well. 
+And there's going to be less 
+
+1067
+00:51:23,400 --> 00:51:26,960
+company turnover if you're if 
+you're really connected to your 
+
+1068
+00:51:26,960 --> 00:51:29,720
+team and others, there's all 
+kinds of benefits. 
+
+1069
+00:51:29,840 --> 00:51:33,840
+So for for businesses, there's 
+benefits for, for individuals, 
+
+1070
+00:51:33,840 --> 00:51:34,960
+there's benefits. 
+Oh yeah. 
+
+1071
+00:51:35,320 --> 00:51:37,800
+Yeah. 
+Is that sufficient on the why 
+
+1072
+00:51:37,800 --> 00:51:41,320
+question? 
+Yeah. 
+
+1073
+00:51:41,400 --> 00:51:46,040
+Yeah. 
+So maybe last question is you've
+
+1074
+00:51:46,040 --> 00:51:47,120
+you've been doing this for a 
+while now. 
+
+1075
+00:51:47,120 --> 00:51:49,040
+Where's it going? 
+Where's what's next? 
+
+1076
+00:51:49,040 --> 00:51:51,800
+What's What's on your horizon? 
+Yeah, That's a good question. 
+
+1077
+00:51:51,800 --> 00:51:55,840
+Well, as I mentioned like I to 
+to be vulnerable like I didn't 
+
+1078
+00:51:55,840 --> 00:51:58,040
+share like all at the time. 
+But like like I said during the 
+
+1079
+00:51:58,040 --> 00:52:00,600
+pandemic it was very challenging
+like and I felt sort of alone 
+
+1080
+00:52:00,600 --> 00:52:04,160
+because people in tech we're 
+still able to do their coding 
+
+1081
+00:52:04,160 --> 00:52:06,080
+remotely. 
+And so I think for a lot of 
+
+1082
+00:52:06,080 --> 00:52:07,880
+people it was kind of business 
+as usual. 
+
+1083
+00:52:07,880 --> 00:52:10,360
+I just what I mean yeah, maybe 
+doing it from home, but I'm 
+
+1084
+00:52:10,360 --> 00:52:13,200
+basically it was kind of like 
+their ideal setup, right. 
+
+1085
+00:52:13,200 --> 00:52:15,560
+And especially a lot of 
+introverts in tech, which again 
+
+1086
+00:52:15,560 --> 00:52:17,560
+is a good thing. 
+I mean not saying it's a bad 
+
+1087
+00:52:17,560 --> 00:52:18,640
+thing, it's just a different 
+thing. 
+
+1088
+00:52:18,640 --> 00:52:22,080
+And so I think I read this 
+article was about how the 
+
+1089
+00:52:22,080 --> 00:52:24,160
+pandemic shifted the balance 
+between introverts and 
+
+1090
+00:52:24,160 --> 00:52:26,160
+extroverts. 
+Like society before the pandemic
+
+1091
+00:52:26,160 --> 00:52:28,400
+was kind of geared towards 
+extroverts, and introverts kind 
+
+1092
+00:52:28,400 --> 00:52:30,800
+of suffered a lot, which is why 
+I, like Susan Cain, wrote that 
+
+1093
+00:52:30,800 --> 00:52:33,360
+quiet book and stuff. 
+Because it's like you're they 
+
+1094
+00:52:33,360 --> 00:52:35,920
+were kind of in the minority or 
+not even minority, but they were
+
+1095
+00:52:35,920 --> 00:52:38,920
+not in the, like, part of 
+society that society was 
+
+1096
+00:52:38,920 --> 00:52:42,200
+catering towards for them. 
+And so, but the pandemic shifted
+
+1097
+00:52:42,200 --> 00:52:44,920
+that balance so that extroverts 
+were the ones kind of like 
+
+1098
+00:52:44,920 --> 00:52:49,360
+forced to like have a society 
+that did not fill fulfill their 
+
+1099
+00:52:49,360 --> 00:52:50,960
+needs and like their way of 
+working. 
+
+1100
+00:52:51,320 --> 00:52:53,000
+And so I'm somewhere in the 
+middle to be honest. 
+
+1101
+00:52:53,000 --> 00:52:55,400
+Like I think I've never really 
+identified strongly in one camp 
+
+1102
+00:52:55,400 --> 00:52:58,200
+or the other, but I definitely 
+suffered during the pandemic and
+
+1103
+00:52:58,200 --> 00:53:01,320
+realized my extrovert side was 
+really hurting anyway. 
+
+1104
+00:53:01,320 --> 00:53:03,400
+And this related to your 
+question, I I promise because 
+
+1105
+00:53:03,640 --> 00:53:06,360
+like I had to do a lot of soul 
+searching because I got to the 
+
+1106
+00:53:06,360 --> 00:53:09,480
+point where as the years of the 
+pandemic were dragging on and 
+
+1107
+00:53:09,480 --> 00:53:11,560
+events were not coming back 
+because that's been a huge 
+
+1108
+00:53:11,560 --> 00:53:15,280
+source of like energy for me, 
+energy clients etcetera was like
+
+1109
+00:53:15,280 --> 00:53:17,000
+events. 
+And so those weren't coming 
+
+1110
+00:53:17,000 --> 00:53:18,760
+back. 
+And I was like, if it really is 
+
+1111
+00:53:18,760 --> 00:53:22,920
+just going to be me talking to 
+like, you know, a box of faces 
+
+1112
+00:53:22,920 --> 00:53:24,960
+for like the first year of the 
+future, like I'm done. 
+
+1113
+00:53:25,040 --> 00:53:28,680
+Like I can't do this anymore. 
+And so I almost was like, OK, 
+
+1114
+00:53:28,680 --> 00:53:30,640
+like, I guess maybe I'm going to
+be one of the numbers of 
+
+1115
+00:53:30,640 --> 00:53:32,960
+businesses that was killed by 
+the pandemic because like, I 
+
+1116
+00:53:32,960 --> 00:53:35,960
+don't want to, you know. 
+And so that said, things have 
+
+1117
+00:53:35,960 --> 00:53:38,520
+come back. 
+And so like coming up, like I 
+
+1118
+00:53:38,520 --> 00:53:42,320
+have events like in April, I'm 
+going to Chicago to speak at 
+
+1119
+00:53:42,320 --> 00:53:47,320
+APHP conference in May. 
+I'm going to Sweden to speak at 
+
+1120
+00:53:47,440 --> 00:53:52,920
+A a company conference for like 
+a consulting agency there and in
+
+1121
+00:53:53,360 --> 00:53:56,720
+July I'm going to Toronto to 
+speak at AC Plus Plus 
+
+1122
+00:53:56,720 --> 00:53:58,920
+conference. 
+And so you know there's these 
+
+1123
+00:53:58,920 --> 00:54:01,960
+events coming up like I do still
+do the virtual stuff and 
+
+1124
+00:54:01,960 --> 00:54:04,440
+whatnot. 
+I have been working on an online
+
+1125
+00:54:04,440 --> 00:54:07,840
+course, like a self-paced video 
+course so that people can, so 
+
+1126
+00:54:07,840 --> 00:54:10,240
+that I can reach more people 
+that can't necessarily bring in 
+
+1127
+00:54:10,240 --> 00:54:12,880
+the full training. 
+But like, an individual wants to
+
+1128
+00:54:12,880 --> 00:54:14,960
+learn these skills. 
+And I've had a lot of, like 
+
+1129
+00:54:14,960 --> 00:54:17,360
+requests for that. 
+So I'm like, OK, I got to give 
+
+1130
+00:54:17,360 --> 00:54:19,400
+the people what they want. 
+And so I've been trying to work 
+
+1131
+00:54:19,400 --> 00:54:22,160
+on that. 
+And so that's kind of the things
+
+1132
+00:54:22,160 --> 00:54:23,760
+I'm excited about. 
+I've always wanted to write a 
+
+1133
+00:54:23,760 --> 00:54:27,080
+book about compassionate coding 
+and like a number of like, you 
+
+1134
+00:54:27,080 --> 00:54:28,920
+know, like book agents and stuff
+have reached out and like 
+
+1135
+00:54:29,040 --> 00:54:32,080
+publishing agencies and stuff. 
+And I've been like that is 
+
+1136
+00:54:32,080 --> 00:54:35,000
+something that's on the horizon 
+probably it's just it's that's 
+
+1137
+00:54:35,000 --> 00:54:36,880
+quite an undertaking. 
+So like you know I've sketched 
+
+1138
+00:54:36,880 --> 00:54:39,240
+out things on like that but 
+that's kind of like long term 
+
+1139
+00:54:39,240 --> 00:54:43,720
+where I see things going and 
+yeah so and you know I I kind of
+
+1140
+00:54:44,200 --> 00:54:47,400
+take an agile approach to this 
+as well where I like to kind of 
+
+1141
+00:54:47,400 --> 00:54:48,880
+see where things. 
+I mean who would have guessed 
+
+1142
+00:54:48,880 --> 00:54:50,000
+about the pandemic. 
+I mean, yeah. 
+
+1143
+00:54:50,280 --> 00:54:53,080
+But I think I'm finally kind of 
+recovering from that. 
+
+1144
+00:54:53,080 --> 00:54:54,520
+That was definitely a grief 
+process. 
+
+1145
+00:54:54,520 --> 00:54:57,280
+And to be honest, like side note
+in terms of compassion, I don't 
+
+1146
+00:54:57,280 --> 00:54:59,920
+think everyone like has 
+processed that grief. 
+
+1147
+00:54:59,960 --> 00:55:02,240
+And so some of these suffering 
+we see showing up, I think is 
+
+1148
+00:55:02,240 --> 00:55:04,960
+people like unprocessed grief 
+from just all of that. 
+
+1149
+00:55:05,000 --> 00:55:09,800
+And so anyway, that said yeah. 
+I want to point something out 
+
+1150
+00:55:09,800 --> 00:55:13,680
+there that's part of the NVC 
+process. 
+
+1151
+00:55:13,680 --> 00:55:18,840
+It's like you were looking at, 
+oh, here's my experience, I'm 
+
+1152
+00:55:18,840 --> 00:55:21,520
+not feeling good about this. 
+And then you were able to 
+
+1153
+00:55:21,520 --> 00:55:25,400
+identify a need. 
+And this is This is why 
+
+1154
+00:55:25,400 --> 00:55:28,640
+discovering what your personal 
+needs are is so important. 
+
+1155
+00:55:28,880 --> 00:55:33,240
+You could identify the need and 
+you could say, oh, if this is 
+
+1156
+00:55:33,240 --> 00:55:36,840
+what life is going to be like, 
+then that's not meeting my needs
+
+1157
+00:55:36,840 --> 00:55:41,040
+and I need to change something. 
+And because otherwise I mean 
+
+1158
+00:55:41,040 --> 00:55:44,640
+like me, I mean I I bare into 
+something, I'm going, well, I'm 
+
+1159
+00:55:44,640 --> 00:55:47,440
+just going to keep doing this 
+and I don't look at it 
+
+1160
+00:55:47,440 --> 00:55:50,120
+necessarily. 
+And you were able to say, oh, I 
+
+1161
+00:55:50,120 --> 00:55:53,200
+have a need for in person 
+connection. 
+
+1162
+00:55:53,880 --> 00:55:57,240
+And so if my life is just going 
+to be zoomed the rest of it and 
+
+1163
+00:55:57,240 --> 00:55:59,520
+it's like I'm not going to do 
+that because that's not meeting 
+
+1164
+00:55:59,520 --> 00:56:02,520
+my need. 
+And it's it's so valuable to 
+
+1165
+00:56:02,520 --> 00:56:05,400
+figure out what your needs are 
+because you can make decisions 
+
+1166
+00:56:05,760 --> 00:56:08,200
+based on that that will help you
+be happier. 
+
+1167
+00:56:08,840 --> 00:56:10,520
+Well, thank you. 
+I appreciate that. 
+
+1168
+00:56:10,800 --> 00:56:13,600
+Really that makes me feel nice 
+just because you know I I 
+
+1169
+00:56:13,600 --> 00:56:16,800
+definitely it's I felt some 
+shame around some of all of that
+
+1170
+00:56:16,800 --> 00:56:18,560
+and so like your kind words mean
+a lot. 
+
+1171
+00:56:18,560 --> 00:56:21,080
+So thank you. 
+Well, it's probably hard to. 
+
+1172
+00:56:21,960 --> 00:56:26,200
+You've got this vision for how 
+to help people and then to feel 
+
+1173
+00:56:26,200 --> 00:56:28,080
+like you're giving up on that 
+vision. 
+
+1174
+00:56:28,320 --> 00:56:32,840
+Probably there is some feelings 
+associated with do you really 
+
+1175
+00:56:32,840 --> 00:56:34,240
+care? 
+Cuz if you really cared, you'd 
+
+1176
+00:56:34,240 --> 00:56:35,800
+do it anyways or something. 
+You. 
+
+1177
+00:56:35,800 --> 00:56:38,040
+Should you? 
+Should you should I should do 
+
+1178
+00:56:38,040 --> 00:56:38,840
+it? 
+Yeah exactly. 
+
+1179
+00:56:38,840 --> 00:56:39,120
+Yeah. 
+No. 
+
+1180
+00:56:39,560 --> 00:56:42,520
+Thank you. 
+But The thing is, if you don't 
+
+1181
+00:56:42,520 --> 00:56:46,560
+identify your need and make 
+decisions based on that, you 
+
+1182
+00:56:46,880 --> 00:56:49,520
+exhaust yourself and become 
+useless and all that kind of 
+
+1183
+00:56:49,520 --> 00:56:51,280
+stuff. 
+And so it's like really 
+
+1184
+00:56:51,280 --> 00:56:54,560
+important to know what your 
+needs are and everybody's are 
+
+1185
+00:56:54,560 --> 00:56:56,920
+different. 
+Well said, Well said. 
+
+1186
+00:56:57,800 --> 00:57:00,240
+I should link to the needs 
+inventory, yes? 
+
+1187
+00:57:00,520 --> 00:57:02,360
+Oh yes, that's a good one. 
+Yes. 
+
+1188
+00:57:03,360 --> 00:57:07,080
+Yeah, yeah. 
+Bruce LED a a group watching 
+
+1189
+00:57:07,080 --> 00:57:10,520
+session with the Orange ASO for 
+NBC training a couple of years 
+
+1190
+00:57:10,520 --> 00:57:13,400
+ago, which was kind of right on 
+the tail of the pandemic. 
+
+1191
+00:57:13,400 --> 00:57:14,920
+So that was a fun. 
+Was. 
+
+1192
+00:57:15,080 --> 00:57:18,600
+Yeah, yeah. 
+But highly recommend Orange J 
+
+1193
+00:57:18,600 --> 00:57:20,840
+Sofers. 
+Yeah, NBC stuff if. 
+
+1194
+00:57:20,840 --> 00:57:22,920
+People, yeah, yeah. 
+I've taken a lot of workshops 
+
+1195
+00:57:22,920 --> 00:57:27,240
+from a lot of different people 
+and I still miss the in person 
+
+1196
+00:57:27,240 --> 00:57:29,200
+workshops. 
+You know, there's something. 
+
+1197
+00:57:29,200 --> 00:57:30,360
+About sounds like you have a 
+need there. 
+
+1198
+00:57:30,640 --> 00:57:33,560
+I do, yeah. 
+I have discovered I'm much more,
+
+1199
+00:57:33,560 --> 00:57:36,120
+I don't know, extroverted than I
+thought it was. 
+
+1200
+00:57:36,680 --> 00:57:39,120
+Maybe. 
+Yeah, but part of you. 
+
+1201
+00:57:39,520 --> 00:57:42,280
+And it's This is why it's great 
+that you live in the same town 
+
+1202
+00:57:42,280 --> 00:57:45,760
+as me as we can get together 
+Kinect. 
+
+1203
+00:57:46,480 --> 00:57:47,960
+April, is there anything we 
+missed? 
+
+1204
+00:57:49,440 --> 00:57:51,160
+No, I mean I think we we covered
+a lot. 
+
+1205
+00:57:51,200 --> 00:57:53,240
+This is great and like I 
+appreciate like the background 
+
+1206
+00:57:53,240 --> 00:57:55,440
+in NVC there because like I 
+think we got to go a little 
+
+1207
+00:57:55,440 --> 00:57:57,240
+deeper on stuff that I've been 
+able to do in other 
+
+1208
+00:57:57,240 --> 00:57:58,920
+conversations. 
+So that was really fun for me 
+
+1209
+00:57:58,920 --> 00:58:00,400
+too. 
+Yeah, nice. 
+
+1210
+00:58:01,000 --> 00:58:04,720
+Well thank you for what you do. 
+I think it is really important 
+
+1211
+00:58:04,840 --> 00:58:09,120
+work and appreciate that you're 
+out there helping especially 
+
+1212
+00:58:09,120 --> 00:58:13,000
+programmers to to be more. 
+Compassionate with themselves, 
+
+1213
+00:58:13,160 --> 00:58:18,400
+becoming more discovered and 
+maybe accepted in in our field. 
+
+1214
+00:58:18,480 --> 00:58:22,600
+Yeah, maybe there's a future 
+where where there won't be jerks
+
+1215
+00:58:22,600 --> 00:58:26,920
+in our field. 
+Well, we are humans in the 
+
+1216
+00:58:26,920 --> 00:58:29,400
+world, so don't hold your breath
+on that one. 
+
+1217
+00:58:30,200 --> 00:58:32,040
+We can dream. 
+Yes, we can dream. 
+
+1218
+00:58:32,080 --> 00:58:32,920
+Yeah. 
+And maybe sometime. 
+
+1219
+00:58:32,920 --> 00:58:35,280
+I would love to see you at the 
+Winter Tech Forbes sometime. 
+
+1220
+00:58:35,280 --> 00:58:36,600
+It'd be great to. 
+I doubt that. 
+
+1221
+00:58:36,600 --> 00:58:38,040
+You know, I've heard so many 
+good things about it. 
+
+1222
+00:58:38,040 --> 00:58:40,200
+I'm like, oh, sounds cool. 
+I we would love to have. 
+
+1223
+00:58:40,200 --> 00:58:43,080
+We would love to have you. 
+We that would you would add a 
+
+1224
+00:58:43,080 --> 00:58:45,040
+lot. 
+Yeah, you're working on dates. 
+
+1225
+00:58:45,480 --> 00:58:47,000
+Yes. 
+I'm still trying to announce 
+
+1226
+00:58:47,000 --> 00:58:48,520
+those dates for next year. 
+It's. 
+
+1227
+00:58:48,600 --> 00:58:50,200
+Only Spring, it's only Spring 
+so. 
+
+1228
+00:58:50,880 --> 00:58:56,120
+Yeah, well, that I need to not 
+allow myself to slide into that 
+
+1229
+00:58:56,120 --> 00:58:56,800
+mode. 
+OK. 
+
+1230
+00:58:56,800 --> 00:58:58,120
+OK. 
+Sorry, I took it back in. 
+
+1231
+00:58:58,400 --> 00:59:01,920
+Trouble in the past. 
+Awesome. 
+
+1232
+00:59:01,920 --> 00:59:04,400
+Well, thank you so much April. 
+Really appreciate it. 
+
+1233
+00:59:04,720 --> 00:59:05,320
+Thank you. 
+Yeah. 
+
+1234
+00:59:06,320 --> 00:59:08,280
+Have a great weekend. 
+Thank you.
+

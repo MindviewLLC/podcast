@@ -29,7 +29,8 @@ episode's Apple Podcasts, YouTube video and Discord pills, draws share cards for
 OpenGraph/Twitter/JSON-LD and share row, regenerates `sitemap.xml` and `feed.xml`, verifies the
 result, and requests every outbound link to see that it still resolves.
 **You are responsible for the HTML pages; the tools own everything
-in "Social sharing" below, the `pill--apple`/`pill--youtube`/`pill--discord` episode pills, plus `sitemap.xml`, `feed.xml`,
+in "Social sharing" below, the `pill--apple`/`pill--youtube`/`pill--discord` episode pills, the
+episode pages' "Transcript" panel and `transcripts/`, plus `sitemap.xml`, `feed.xml`,
 `llms.txt` and `llms-full.txt`.** Don't hand-write those — write
 the pages, then run the pass. If the tools need to change, change them there
 (they are committed, and shared modules `brand.py`/`hpp.py` keep them in
@@ -51,6 +52,8 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
   for every episode, guest and topic page. `llms-full.txt` is the full text: each
   episode's facts, listen links, description and resources in Markdown. Both use
   absolute URLs, since they are read on their own.
+- `transcripts/<slug>.srt` — each episode's Spotify transcript (written by
+  `.scripts/transcripts.py`; see "Transcripts" below).
 - `feed.xml` — the site's own RSS feed (episodes only; written by `.scripts/make_feed.py`).
   Each item links to its page here (`<link>` and `guid`), carries the page's description and
   resources, the episode's share card and the audio enclosure. **Every RSS link on the site
@@ -175,6 +178,22 @@ they must not (`verify.py` fails if they are).
   `pill--apple`/`pill--youtube`/`pill--discord` pills; the tool replaces them on
   every run.
 
+## Transcripts (episode pages — written by `.scripts/transcripts.py`)
+Spotify auto-generates transcripts and, with Spotify for Creators' Settings →
+Transcripts → "Distribute transcripts across other platforms via RSS" on,
+publishes them in the feed as `<podcast:transcript type="application/x-subrip">`
+(not every episode has one; Spotify decides). The tool saves each as
+`transcripts/<slug>.srt` (rewritten only when Spotify's copy changes, never
+deleted if the feed drops it) and writes a "Transcript" panel at the end of the
+page's `.ep-main`, between `<!-- transcript -->` and `<!-- /transcript -->`:
+a note that it is machine-generated, a "Download (.srt)" link, and the cues
+merged into timestamped paragraphs (`<p id="t-<seconds>">` with an
+`<a class="ts">` that seeks the page's player) inside a closed `<details>`.
+The page text fixes "Bruce Eckle" → "Bruce Eckel" (`CORRECTIONS`); the `.srt`
+stays as Spotify published it. `make_feed.py` points each `feed.xml` item's
+`<podcast:transcript>` at the site's own copy, and `make_llms.py` lists it as
+`- Transcript:` in `llms-full.txt`. Don't hand-edit the panel.
+
 ## Social sharing (every page — written by `.scripts/social.py`)
 This whole section is what `social.py` emits. It is idempotent and derives
 everything from the pages plus the feed, so just run it rather than hand-writing
@@ -225,7 +244,8 @@ then `twitter:card` / `:site` / `:creator` (`@happypathprog`) / `:title` /
   links are intentional), 0 broken internal links, that referenced images exist,
   and that every page has a valid JSON-LD block, a share row, the full
   `og:`/`twitter:` set, and an `og:image` that is its own card at 1200×630.
-  It also checks that `feed.xml` parses and has exactly one item per episode page,
+  It also checks that every `transcripts/*.srt` is shown on its episode page and
+  linked from `feed.xml`, that `feed.xml` parses and has exactly one item per episode page,
   and that `llms.txt` links every episode, guest and topic page and `llms-full.txt`
   has a section for every episode.
 - `python3 .scripts/check_links.py` must pass — that is the *outbound* half, and

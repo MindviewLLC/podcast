@@ -1,0 +1,4703 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,799 --> 00:00:05,799
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,799 --> 00:00:10,199
+All right. 
+So people might notice that 
+
+4
+00:00:10,199 --> 00:00:15,599
+there is no 13th episode because
+13 is unlucky. 
+
+5
+00:00:15,599 --> 00:00:19,500
+Yeah that's why that's and we 
+did actually record an episode 
+
+6
+00:00:19,500 --> 00:00:24,399
+in it was awesome but invest one
+ever best one ever but it got 
+
+7
+00:00:24,399 --> 00:00:31,000
+lost because what happened Linux
+audacity crashed for some reason
+
+8
+00:00:31,000 --> 00:00:34,299
+and then I couldn't recover from
+the audio files, right? 
+
+9
+00:00:34,299 --> 00:00:37,500
+I got the original audio files 
+but there is like a thousand of 
+
+10
+00:00:37,600 --> 00:00:41,500
+Them in six second clips and 
+they there is no way to 
+
+11
+00:00:41,500 --> 00:00:43,200
+determine the order. 
+So right? 
+
+12
+00:00:43,899 --> 00:00:48,799
+Well we could really six seconds
+of it or just randomize the 
+
+13
+00:00:52,500 --> 00:00:56,700
+there's all kinds of things we 
+could do but now we have two 
+
+14
+00:00:56,799 --> 00:01:01,600
+recording systems. 
+We have a this Zoom Standalone 
+
+15
+00:01:01,700 --> 00:01:05,400
+recorder as a backup system but 
+it is good to have backup. 
+
+16
+00:01:05,500 --> 00:01:08,200
+So if you always yeah how many 
+He times do. 
+
+17
+00:01:08,200 --> 00:01:11,500
+We need to learn that lesson, 
+they'll always have backups. 
+
+18
+00:01:11,500 --> 00:01:16,099
+So and this one for conferences 
+could be really good for just 
+
+19
+00:01:16,099 --> 00:01:19,700
+putting in the middle and having
+it record be able to say some 
+
+20
+00:01:19,700 --> 00:01:22,599
+portable. 
+Yes, super portable and wasn't 
+
+21
+00:01:22,599 --> 00:01:26,299
+too expensive and and it'll be 
+our backup. 
+
+22
+00:01:26,299 --> 00:01:32,099
+So We wanted to talk about 
+polymorphism. 
+
+23
+00:01:32,099 --> 00:01:35,500
+Yeah because you had a different
+framing for it. 
+
+24
+00:01:35,799 --> 00:01:40,599
+Well yeah. 
+Because my first exposure to 
+
+25
+00:01:40,599 --> 00:01:47,000
+polymorphism was learning C++ 
+and I had to generate the C code
+
+26
+00:01:47,000 --> 00:01:49,500
+because that's the way C++ 
+compilers worked at the very 
+
+27
+00:01:49,500 --> 00:01:53,200
+beginning or the compiler. 
+There was only one of them and 
+
+28
+00:01:53,200 --> 00:01:55,599
+it would generate C code and you
+could look at the C code and 
+
+29
+00:01:55,599 --> 00:01:58,500
+figure out what was going on. 
+And so I from that I slowly Olli
+
+30
+00:01:58,500 --> 00:02:02,000
+figured out how it was doing 
+Dynamic, binding. 
+
+31
+00:02:02,400 --> 00:02:06,799
+And it was kind of like, well 
+why would it do this and slowly 
+
+32
+00:02:07,099 --> 00:02:12,300
+from that kind of piece 
+together, you know, overtime 
+
+33
+00:02:12,300 --> 00:02:16,400
+piece together, the motivation 
+for doing this but it was not 
+
+34
+00:02:16,400 --> 00:02:19,199
+what I would say. 
+What I found was that people who
+
+35
+00:02:19,199 --> 00:02:23,699
+had started with small talk had 
+this much deeper and better 
+
+36
+00:02:23,699 --> 00:02:27,099
+understanding of what 
+polymorphism is and why you 
+
+37
+00:02:27,099 --> 00:02:31,000
+would use it. 
+And I coming from this kind of 
+
+38
+00:02:31,000 --> 00:02:35,500
+Hardware background was like, 
+had to piece it together from 
+
+39
+00:02:35,500 --> 00:02:39,199
+the other end. 
+And now we've got these other 
+
+40
+00:02:39,199 --> 00:02:43,900
+ways of thinking and we talked 
+about ad hoc polymorphism which 
+
+41
+00:02:43,900 --> 00:02:48,599
+isn't Dynamic binding. 
+And then there's type classes, 
+
+42
+00:02:48,599 --> 00:02:51,000
+which is, is that ad hoc 
+polymorphism? 
+
+43
+00:02:51,000 --> 00:02:53,699
+It's related to ad hoc 
+polymorphism, okay? 
+
+44
+00:02:53,699 --> 00:02:58,000
+And then there, you know, then 
+we were discussing. 
+
+45
+00:02:58,300 --> 00:03:02,800
+Fussing extension methods and oh
+yeah rope Alim row polymorphism 
+
+46
+00:03:02,800 --> 00:03:06,599
+which is structural typing which
+is kind of what you like Duck 
+
+47
+00:03:06,599 --> 00:03:09,900
+typing. 
+Yeah, and it's what you got with
+
+48
+00:03:10,400 --> 00:03:14,300
+say, C++ templates. 
+And you get it with. 
+
+49
+00:03:15,000 --> 00:03:19,800
+I mean with python and Ruby. 
+They treat things as as long as 
+
+50
+00:03:19,800 --> 00:03:22,300
+I can call these functions, I 
+don't really care what type it 
+
+51
+00:03:22,300 --> 00:03:25,300
+is. 
+So as long as it has like the 
+
+52
+00:03:25,300 --> 00:03:27,699
+shape that they're interested 
+in, they don't care what the 
+
+53
+00:03:27,707 --> 00:03:31,599
+rest of the Shape of the object.
+Looks like it's like all these 
+
+54
+00:03:31,599 --> 00:03:40,000
+things and I guess my insight 
+was well we create these types 
+
+55
+00:03:40,800 --> 00:03:47,400
+and there's overlap between one 
+type of another and we're trying
+
+56
+00:03:47,400 --> 00:03:52,300
+to make use of that overlap so 
+that we don't write extra code 
+
+57
+00:03:52,500 --> 00:03:55,500
+so I would copy and paste 
+polymorphism. 
+
+58
+00:03:56,099 --> 00:03:58,099
+Is that is that a kind of 
+polymorphism? 
+
+59
+00:03:58,300 --> 00:03:59,599
+I mean, maybe it is. 
+That's the thing. 
+
+60
+00:03:59,599 --> 00:04:01,400
+I'm all confused. 
+Now, and what the term 
+
+61
+00:04:01,400 --> 00:04:07,300
+polymorphism means, it means 
+many faces, and we use it to 
+
+62
+00:04:07,300 --> 00:04:13,000
+mean, multiple implementations 
+with the same interface, or at 
+
+63
+00:04:13,000 --> 00:04:16,399
+least that's the way we've 
+talking, where the word 
+
+64
+00:04:16,399 --> 00:04:21,199
+polymorphism is, isn't that does
+not come from category theories,
+
+65
+00:04:21,199 --> 00:04:26,300
+morphism. 
+I don't really know anything 
+
+66
+00:04:26,300 --> 00:04:33,399
+about category Theory so VI 
+thinking of it as overlap is is 
+
+67
+00:04:33,399 --> 00:04:36,899
+the right kind of meta concept. 
+For what we're really trying to 
+
+68
+00:04:36,899 --> 00:04:43,100
+do is make it make it easier to 
+deal with the overlap that we 
+
+69
+00:04:43,100 --> 00:04:48,399
+have in functionality across 
+different pieces of our code or 
+
+70
+00:04:48,399 --> 00:04:51,899
+classes or types. 
+Yeah, because I mean, we could 
+
+71
+00:04:51,899 --> 00:04:56,300
+think of it in terms of Reusing 
+code, or we could also think of 
+
+72
+00:04:56,300 --> 00:04:58,899
+it in terms of writing less 
+code, right? 
+
+73
+00:04:58,899 --> 00:05:03,500
+So, if I can say, oh, these 
+things are in common, I can 
+
+74
+00:05:03,800 --> 00:05:07,399
+write this one piece of code 
+that works with more stuff. 
+
+75
+00:05:07,600 --> 00:05:11,800
+There's overlapping need 
+overlapping functionality. 
+
+76
+00:05:11,899 --> 00:05:14,800
+Mmm, and how do we not cut a? 
+We make use of that. 
+
+77
+00:05:14,800 --> 00:05:17,800
+How do we make use of that? 
+How do we avoid copy and paste 
+
+78
+00:05:17,800 --> 00:05:22,100
+in that across different classes
+or whatever it might be? 
+
+79
+00:05:23,000 --> 00:05:23,500
+Yeah. 
+Yeah. 
+
+80
+00:05:24,300 --> 00:05:25,899
+Yeah. 
+Into the the first place like 
+
+81
+00:05:25,899 --> 00:05:28,800
+you that I experienced 
+polymorphism was just through 
+
+82
+00:05:28,800 --> 00:05:32,199
+inheritance and I think that's 
+where probably most programmers 
+
+83
+00:05:32,199 --> 00:05:36,300
+have dealt with polymorphism. 
+But then the second type of 
+
+84
+00:05:36,300 --> 00:05:43,199
+polymorphism was was through 
+generics and Java and the the 
+
+85
+00:05:43,199 --> 00:05:48,000
+technical term for that, for how
+its polymorphic is called 
+
+86
+00:05:48,600 --> 00:05:55,500
+parametric polymorphism. 
+And that's saying that, You use 
+
+87
+00:05:55,500 --> 00:06:01,100
+the type parameters to to be the
+way that you deal with that 
+
+88
+00:06:01,100 --> 00:06:05,600
+overlap. 
+But then more recently the I've 
+
+89
+00:06:05,600 --> 00:06:10,100
+been doing a lot more ad hoc 
+polymorphism and so I think that
+
+90
+00:06:10,100 --> 00:06:16,199
+the I haven't until recently 
+started to kind of think more 
+
+91
+00:06:16,199 --> 00:06:20,699
+deeply about why why there are 
+different types of polymorphism 
+
+92
+00:06:21,100 --> 00:06:25,199
+and when you should use Is each 
+type of polymorphism. 
+
+93
+00:06:26,399 --> 00:06:33,800
+So a little bit on ad hoc 
+polymorphism the what we what we
+
+94
+00:06:33,800 --> 00:06:39,800
+ran into with, with subtyping 
+based polymorphism, was that you
+
+95
+00:06:39,800 --> 00:06:44,899
+had to extend the type, to be 
+able to deal with, to be able to
+
+96
+00:06:44,899 --> 00:06:49,000
+have the polymorphism, right? 
+You you you have to use the 
+
+97
+00:06:49,000 --> 00:06:53,899
+inheritance mechanism to add 
+functionality to Take advantage 
+
+98
+00:06:53,899 --> 00:06:57,600
+of the overlap the reasons reuse
+for override. 
+
+99
+00:06:57,600 --> 00:06:58,500
+Yeah. 
+You had to? 
+
+100
+00:06:58,800 --> 00:07:00,199
+Yeah. 
+And then we were talking this 
+
+101
+00:07:00,199 --> 00:07:04,600
+morning about oh there's this 
+difference between you have your
+
+102
+00:07:04,600 --> 00:07:07,899
+whole interface defined in your 
+base class and you never extend 
+
+103
+00:07:07,899 --> 00:07:13,100
+it and then in you know, C++ and
+Java and thinks. 
+
+104
+00:07:13,100 --> 00:07:16,300
+Well one of the things you could
+do is extend the interface and 
+
+105
+00:07:16,300 --> 00:07:19,199
+the drive class, you can't use 
+it in the base class but now you
+
+106
+00:07:19,199 --> 00:07:22,199
+have an object that does more 
+stuff based on what it already 
+
+107
+00:07:22,199 --> 00:07:25,699
+does. 
+And When we were observing that 
+
+108
+00:07:26,000 --> 00:07:31,199
+with extension functions, 
+there's probably no reason to 
+
+109
+00:07:31,199 --> 00:07:37,300
+ever do that. 
+So your base type just is never,
+
+110
+00:07:37,600 --> 00:07:40,600
+I mean, if you need to add more 
+functions, you use extension 
+
+111
+00:07:40,600 --> 00:07:44,300
+functions, you would never put 
+them on during inheritance. 
+
+112
+00:07:44,300 --> 00:07:48,199
+Yeah, well, so so I think one of
+the issues that we ran into with
+
+113
+00:07:48,199 --> 00:07:51,399
+the inheritance based 
+polymorphism was that there were
+
+114
+00:07:51,399 --> 00:07:55,199
+places where you couldn't change
+The base traits that you needed 
+
+115
+00:07:55,199 --> 00:08:01,000
+the functionality on and because
+of that you had to do all sorts 
+
+116
+00:08:01,000 --> 00:08:06,600
+of weird things to get around 
+the the type hierarchy and not 
+
+117
+00:08:06,600 --> 00:08:12,800
+being able to to like add 
+overlap into somewhere in that 
+
+118
+00:08:12,800 --> 00:08:15,000
+hierarchy. 
+Oh wait you don't settle? 
+
+119
+00:08:15,300 --> 00:08:17,699
+I mean isn't that like yeah I 
+think of cross-cutting as man. 
+
+120
+00:08:17,699 --> 00:08:21,600
+Yeah, that's him down. 
+Yeah I guess maybe aop did did 
+
+121
+00:08:21,600 --> 00:08:26,300
+allow some of this. 
+Adding functionality across the 
+
+122
+00:08:26,399 --> 00:08:31,800
+the type hierarchy and so ad hoc
+polymorphism, it allows us to 
+
+123
+00:08:31,800 --> 00:08:36,299
+add that functionality anywhere 
+in the higher anywhere at any 
+
+124
+00:08:36,299 --> 00:08:41,200
+type, we can add functionality 
+to something through an 
+
+125
+00:08:41,200 --> 00:08:44,100
+extension method. 
+And so that's, I think what's 
+
+126
+00:08:44,100 --> 00:08:47,799
+termed ad-hoc is that it's not 
+based on inheritance. 
+
+127
+00:08:47,799 --> 00:08:50,700
+It's so you're saying extension 
+methods are also ad hoc 
+
+128
+00:08:50,700 --> 00:08:52,799
+polymorphism. 
+I think they're part of ad hoc 
+
+129
+00:08:52,799 --> 00:08:53,799
+polymorphism. 
+ISM. 
+
+130
+00:08:53,799 --> 00:09:01,200
+I think that the that they give 
+us in large part in part, what 
+
+131
+00:09:01,200 --> 00:09:09,700
+we need from the limitations of 
+of subtype Base polymorphism. 
+
+132
+00:09:09,700 --> 00:09:14,000
+They allow us to work around 
+some of the limitations, but 
+
+133
+00:09:14,000 --> 00:09:19,399
+and, and I now with we're 
+talking earlier about how 
+
+134
+00:09:19,399 --> 00:09:23,000
+extension functions have made so
+many things. 
+
+135
+00:09:23,000 --> 00:09:28,299
+So many Much more ergonomically 
+better and made someone so many 
+
+136
+00:09:28,500 --> 00:09:31,200
+use cases easier. 
+So the use case that you brought
+
+137
+00:09:31,200 --> 00:09:37,200
+up was that in kotlin when you 
+add extension functions to let's
+
+138
+00:09:37,200 --> 00:09:42,799
+say the list class in Java. 
+You now have new functionality 
+
+139
+00:09:42,799 --> 00:09:47,100
+available to you on list, be 
+didn't have to extend, let the 
+
+140
+00:09:47,100 --> 00:09:51,000
+list type and what? 
+What don't have to break the 
+
+141
+00:09:51,000 --> 00:09:53,200
+compatibility. 
+That's what the list type. 
+
+142
+00:09:53,600 --> 00:09:56,600
+And you get the still just to 
+less just amazing. 
+
+143
+00:09:56,600 --> 00:09:58,899
+I mean there's all this 
+functional stuff and everything 
+
+144
+00:09:58,899 --> 00:10:01,500
+that you're able to do with it 
+but then when you're done you 
+
+145
+00:10:01,500 --> 00:10:03,700
+can just hand it back to Java if
+you want to. 
+
+146
+00:10:03,799 --> 00:10:06,100
+Yeah. 
+Yeah exact seamlessly because 
+
+147
+00:10:06,100 --> 00:10:09,500
+it's the list. 
+Yeah, it's still that and and 
+
+148
+00:10:09,500 --> 00:10:12,600
+all of the optimizations and 
+everything that we're done for 
+
+149
+00:10:12,600 --> 00:10:16,799
+the list in Java, you get those 
+and everything that extends list
+
+150
+00:10:17,100 --> 00:10:20,700
+because you still are taking 
+advantage of subtype based 
+
+151
+00:10:20,700 --> 00:10:23,500
+polymorphism. 
+We're now you, if you are Doing 
+
+152
+00:10:23,500 --> 00:10:26,600
+this on a type that has many 
+layers of extension. 
+
+153
+00:10:26,600 --> 00:10:29,100
+You still get that on all the 
+layers that are extending from 
+
+154
+00:10:29,100 --> 00:10:31,899
+that thing. 
+Yeah, the the extension 
+
+155
+00:10:31,899 --> 00:10:35,200
+function, it just when I first 
+saw it. 
+
+156
+00:10:35,200 --> 00:10:37,500
+I just saw it. 
+This is just a little bit of 
+
+157
+00:10:37,500 --> 00:10:39,500
+syntactic sugar. 
+It's yeah, it's nice. 
+
+158
+00:10:39,500 --> 00:10:44,899
+But is it that big of a deal and
+then, as time has passed, I 
+
+159
+00:10:44,899 --> 00:10:47,500
+realized. 
+Yes, it is and I can't figure 
+
+160
+00:10:47,500 --> 00:10:48,799
+out why. 
+Yeah. 
+
+161
+00:10:49,799 --> 00:10:53,899
+Yeah, it just feels good for a 
+lot of things does. 
+
+162
+00:10:54,000 --> 00:10:59,299
+Yeah and it's so I don't know. 
+Writing extension functions is 
+
+163
+00:10:59,600 --> 00:11:01,500
+seems very straightforward to 
+me. 
+
+164
+00:11:01,500 --> 00:11:05,399
+I'm not thinking about all of 
+the stuff I'm just going. 
+
+165
+00:11:05,399 --> 00:11:07,700
+I want to do this. 
+One thing I can add this 
+
+166
+00:11:07,700 --> 00:11:10,500
+extension. 
+Then I can use the extension 
+
+167
+00:11:10,500 --> 00:11:16,600
+wherever I want to, and I'm not 
+burdened mentally with the whole
+
+168
+00:11:16,600 --> 00:11:17,899
+type hierarchy. 
+Yeah. 
+
+169
+00:11:18,899 --> 00:11:24,299
+Yeah, so so when you do install,
+a 3 is now getting extension 
+
+170
+00:11:24,500 --> 00:11:27,399
+functions as well. 
+So it's this is becoming just 
+
+171
+00:11:27,399 --> 00:11:33,700
+kind of a new polymorphic norm 
+and do we know because my 
+
+172
+00:11:33,700 --> 00:11:37,700
+impression was that extension 
+functions were created for C 
+
+173
+00:11:37,700 --> 00:11:40,899
+sharp by, in like Anders 
+invented them or so into. 
+
+174
+00:11:40,899 --> 00:11:43,100
+That was my impression but I 
+could be wrong on Sir. 
+
+175
+00:11:43,100 --> 00:11:44,700
+The history of it. 
+Yeah, you know. 
+
+176
+00:11:44,700 --> 00:11:47,799
+Yeah but they're becoming more. 
+Yeah, spectate. 
+
+177
+00:11:48,100 --> 00:11:53,299
+So I think Think in the history 
+of polymorphism, we we did 
+
+178
+00:11:53,299 --> 00:11:57,899
+subtype base polymorphism and 
+then we added in parametric 
+
+179
+00:11:57,899 --> 00:12:02,299
+polymorphism and now we see most
+languages starting to add ad hoc
+
+180
+00:12:02,299 --> 00:12:06,100
+polymorphism as well. 
+So there's another piece to ad 
+
+181
+00:12:06,100 --> 00:12:12,700
+hoc polymorphism that I think is
+If you use extension functions 
+
+182
+00:12:12,700 --> 00:12:16,500
+long enough, you get to the 
+point where your extensions 
+
+183
+00:12:16,899 --> 00:12:22,899
+extension functions, sometimes 
+need some context when you when 
+
+184
+00:12:22,899 --> 00:12:25,899
+you use them. 
+They so, if you're building a 
+
+185
+00:12:25,907 --> 00:12:30,799
+Json parser and you have an 
+extension function to parse some
+
+186
+00:12:30,899 --> 00:12:37,500
+object into parcel object that 
+thing, needs to know how to 
+
+187
+00:12:37,500 --> 00:12:41,399
+parse like a string and a 
+Boolean and As well. 
+
+188
+00:12:41,799 --> 00:12:45,500
+And you don't want to have to 
+always be passing that context 
+
+189
+00:12:45,500 --> 00:12:50,200
+or the things that thing might 
+need to explicitly. 
+
+190
+00:12:50,700 --> 00:12:57,700
+And so the the in the world of 
+Scala and probably Haskell and 
+
+191
+00:12:57,899 --> 00:13:02,899
+some languages that have had ad 
+hoc polymorphism in various ways
+
+192
+00:13:03,299 --> 00:13:06,500
+is you get to what we call type 
+classes and then there's some 
+
+193
+00:13:06,500 --> 00:13:09,000
+other rest for it to rust has 
+Type classes. 
+
+194
+00:13:10,600 --> 00:13:15,299
+And what this does it is, it 
+allows you to say, all right, 
+
+195
+00:13:15,299 --> 00:13:20,399
+here is a function and here's 
+some context that it needs. 
+
+196
+00:13:21,000 --> 00:13:24,899
+And so you say, when you define 
+your function and this could be 
+
+197
+00:13:24,907 --> 00:13:29,899
+an extension function is, here's
+the context that I need and then
+
+198
+00:13:29,899 --> 00:13:34,100
+the compiler goes looking to try
+to find something that can fill 
+
+199
+00:13:34,100 --> 00:13:37,399
+in that context for you. 
+So, it's all the data clearly 
+
+200
+00:13:37,500 --> 00:13:38,899
+determined. 
+At compile time. 
+
+201
+00:13:38,899 --> 00:13:42,700
+Is that a is that a Definition 
+of type classes that is that 
+
+202
+00:13:42,700 --> 00:13:48,200
+it's always static, I guess. 
+I've only ever seen it done at 
+
+203
+00:13:48,200 --> 00:13:49,700
+compile time. 
+Hmm. 
+
+204
+00:13:51,100 --> 00:13:55,600
+But yeah, I don't know. 
+And that well, because the 
+
+205
+00:13:55,600 --> 00:13:59,000
+compiler is the one that goes 
+and finds this, right? 
+
+206
+00:13:59,000 --> 00:14:02,100
+I'm just trying to imagine, oh, 
+could I do this in Python? 
+
+207
+00:14:02,100 --> 00:14:05,799
+For example, because I could, I 
+simulate glasses type of 
+
+208
+00:14:05,807 --> 00:14:08,899
+classes, but then what's the 
+lookup mechanism? 
+
+209
+00:14:08,899 --> 00:14:12,100
+Yeah, it's got to be done. 
+Dynamic right? 
+
+210
+00:14:12,100 --> 00:14:15,500
+Yeah so then I would happen at 
+runtime so maybe you could do 
+
+211
+00:14:15,500 --> 00:14:20,200
+something like type classes in 
+Python but you it would be a 
+
+212
+00:14:20,200 --> 00:14:23,899
+runt I would have to be at 
+runtime say and how similar or 
+
+213
+00:14:23,899 --> 00:14:27,600
+different would that be from 
+dependency injection. 
+
+214
+00:14:28,700 --> 00:14:32,500
+So I think there is some overlap
+in functionality between Type 
+
+215
+00:14:32,500 --> 00:14:35,200
+classes and and dependency 
+injection because what you're 
+
+216
+00:14:35,208 --> 00:14:41,600
+saying is Is I need this thing 
+and I don't I don't usually want
+
+217
+00:14:41,600 --> 00:14:44,200
+to have to explicitly tell you 
+where to get that from. 
+
+218
+00:14:44,200 --> 00:14:48,399
+I want you to go find it and 
+dependency injection. 
+
+219
+00:14:48,399 --> 00:14:54,799
+Typically is that you you're 
+constructing objects and it's I 
+
+220
+00:14:54,799 --> 00:14:56,899
+guess maybe one of the 
+differences is that dependency 
+
+221
+00:14:56,899 --> 00:15:01,000
+injection is focused on object 
+usually on object construction 
+
+222
+00:15:01,700 --> 00:15:07,299
+and not on method on running a 
+function and The necessary 
+
+223
+00:15:07,299 --> 00:15:10,500
+requirements to run a function 
+or the necessary context, run a 
+
+224
+00:15:10,508 --> 00:15:13,100
+function. 
+But in dependency injection is 
+
+225
+00:15:13,100 --> 00:15:20,600
+like, okay, I want to create an 
+object, that is that is, let's 
+
+226
+00:15:20,600 --> 00:15:25,600
+say a user service, and my user 
+service needs a database 
+
+227
+00:15:25,600 --> 00:15:28,799
+service, and it needs a login 
+service, and it needs a, it has 
+
+228
+00:15:28,799 --> 00:15:31,299
+these dependencies. 
+So it has this context that it 
+
+229
+00:15:31,299 --> 00:15:34,700
+needs. 
+And when you when you typically,
+
+230
+00:15:34,700 --> 00:15:36,299
+when you use dependency 
+injection, what? 
+
+231
+00:15:36,399 --> 00:15:41,500
+You do is you go to the 
+dependency injection controller,
+
+232
+00:15:41,500 --> 00:15:45,200
+the the context is it's called 
+in spraying and you say, 
+
+233
+00:15:45,200 --> 00:15:49,899
+alright, assemble me a user 
+service, so you never call new 
+
+234
+00:15:49,899 --> 00:15:52,399
+user service. 
+Instead you go to the contacts 
+
+235
+00:15:52,399 --> 00:15:56,100
+and say, I need a user service 
+and then that the dependency 
+
+236
+00:15:56,100 --> 00:16:01,899
+injection context, it knows how 
+to figure out how to assemble 
+
+237
+00:16:02,000 --> 00:16:05,299
+the hierarchy of things that are
+needed, so that it can get you 
+
+238
+00:16:05,299 --> 00:16:08,100
+back a user service. 
+I got to say this sounds like a 
+
+239
+00:16:08,100 --> 00:16:13,100
+builder. 
+Yeah, I mean, yeah, I think the 
+
+240
+00:16:13,100 --> 00:16:17,399
+difference is that typically 
+dependency injection is using 
+
+241
+00:16:17,399 --> 00:16:24,200
+some, some, some configuration 
+that tells it, where to get 
+
+242
+00:16:24,200 --> 00:16:28,700
+those things from or so in 
+Spring most recently, it 
+
+243
+00:16:28,700 --> 00:16:33,600
+sanitation based is what's 
+telling it telling her about the
+
+244
+00:16:33,608 --> 00:16:37,500
+hierarchy of things and where to
+get them, but before that 
+
+245
+00:16:37,500 --> 00:16:39,899
+initially in Spring, it was 
+xml-based. 
+
+246
+00:16:40,000 --> 00:16:43,700
+So in An XML. 
+You would say here is here, is 
+
+247
+00:16:43,700 --> 00:16:49,899
+my here is the objects that that
+can be injected and the 
+
+248
+00:16:50,399 --> 00:16:53,700
+dependency injected and and the 
+things that they need and so. 
+
+249
+00:16:53,799 --> 00:16:57,500
+So at runtime with spring is 
+doing is its building this 
+
+250
+00:16:57,600 --> 00:17:01,600
+information graph about the 
+beans, the that can be 
+
+251
+00:17:01,600 --> 00:17:04,200
+dependency injection and then 
+when you say, give me a user 
+
+252
+00:17:04,200 --> 00:17:07,200
+service, it then knows, it needs
+to go create the database 
+
+253
+00:17:07,200 --> 00:17:10,400
+service and the database service
+needs some configuration. 
+
+254
+00:17:10,400 --> 00:17:12,000
+Know what database to connect 
+to. 
+
+255
+00:17:12,000 --> 00:17:16,598
+It sounds Dynamic. 
+It is it in most of the 
+
+256
+00:17:16,607 --> 00:17:23,000
+dependency injection that I've 
+dealt with it is dynamic, but 
+
+257
+00:17:24,200 --> 00:17:29,200
+it's, yeah, I think it's it is 
+dynamic. 
+
+258
+00:17:29,200 --> 00:17:33,200
+But oftentimes, it doesn't 
+really you're being, you're 
+
+259
+00:17:33,200 --> 00:17:36,500
+being kind of hierarchy, you're 
+being graph, doesn't actually 
+
+260
+00:17:36,500 --> 00:17:39,700
+change at runtime, but it does 
+get assembled at runtime. 
+
+261
+00:17:40,400 --> 00:17:44,400
+But isn't Micronaut. 
+Aren't they doing their stuff? 
+
+262
+00:17:44,400 --> 00:17:47,500
+More compile time? 
+Yeah so Micronaut and I think 
+
+263
+00:17:47,500 --> 00:17:52,299
+quercus maybe to is still doing 
+dependency injection but it's 
+
+264
+00:17:52,299 --> 00:17:55,299
+somehow is doing it at compile 
+time so it's like resolving the 
+
+265
+00:17:55,299 --> 00:18:01,099
+graph, the the dependency graph 
+at compile time and I don't know
+
+266
+00:18:01,099 --> 00:18:03,500
+how they do that. 
+They, I know they use the Colin 
+
+267
+00:18:03,500 --> 00:18:07,500
+annotation processor, but 
+they're, they're doing some 
+
+268
+00:18:07,500 --> 00:18:10,799
+magic to make all that work. 
+But so, so ultimately For me, 
+
+269
+00:18:10,799 --> 00:18:15,700
+dependency injection, is that 
+you've you've got this graph 
+
+270
+00:18:15,700 --> 00:18:21,599
+that defines the requirements at
+each node in the graph. 
+
+271
+00:18:22,000 --> 00:18:28,299
+And so somewhere that graph is 
+known at any point, you can say,
+
+272
+00:18:28,299 --> 00:18:32,200
+I need this thing and it knows 
+how to give you one of those 
+
+273
+00:18:32,200 --> 00:18:33,700
+thing. 
+Create one of those things for 
+
+274
+00:18:33,700 --> 00:18:37,500
+you and fill in all the required
+pieces underneath it. 
+
+275
+00:18:37,900 --> 00:18:44,299
+So the way this is coming Across
+to me is we've got some common 
+
+276
+00:18:44,299 --> 00:18:50,900
+code and then we have all of 
+these pieces that can vary and 
+
+277
+00:18:50,900 --> 00:18:55,200
+dependency injection. 
+At least is one way of saying, 
+
+278
+00:18:55,400 --> 00:18:57,599
+okay. 
+Well, we'll take the varying 
+
+279
+00:18:57,599 --> 00:19:02,099
+pieces and will assemble them so
+that you're not like duplicating
+
+280
+00:19:02,099 --> 00:19:05,700
+everything in this place of 
+common code. 
+
+281
+00:19:05,700 --> 00:19:08,200
+So we're separating things that 
+change from things that stay the
+
+282
+00:19:08,200 --> 00:19:14,200
+same and it seems like That's 
+very similar or maybe identical 
+
+283
+00:19:14,200 --> 00:19:17,799
+to what type classes are doing. 
+I mean, each of the type classes
+
+284
+00:19:17,799 --> 00:19:21,700
+are okay, this is very distinct 
+different way of doing things. 
+
+285
+00:19:22,099 --> 00:19:25,299
+And then you've got this common 
+code that chooses which type 
+
+286
+00:19:25,299 --> 00:19:29,200
+class to use. 
+Yeah, so how are they different?
+
+287
+00:19:30,099 --> 00:19:33,099
+I think the way the type classes
+are usually used is not for 
+
+288
+00:19:33,099 --> 00:19:39,400
+object creation, but as for 
+function parameters, And I think
+
+289
+00:19:39,400 --> 00:19:43,900
+that I think that there is an 
+underlying common commonality to
+
+290
+00:19:43,900 --> 00:19:46,400
+what dependency injection type 
+classes are doing. 
+
+291
+00:19:46,700 --> 00:19:49,200
+It's just that dependency. 
+Injection is usually used for 
+
+292
+00:19:49,200 --> 00:19:53,900
+construction and object 
+construction and type classes 
+
+293
+00:19:53,900 --> 00:19:55,799
+are usually used for function 
+parameters. 
+
+294
+00:19:56,000 --> 00:20:00,200
+But yeah, I think but I could 
+use dependency injection for 
+
+295
+00:20:00,200 --> 00:20:04,900
+object construction instead. 
+I mean, sorry I could use type 
+
+296
+00:20:04,900 --> 00:20:07,900
+classes for object construction 
+instead of dependency injection 
+
+297
+00:20:07,900 --> 00:20:13,700
+couldn't right. 
+I mean, just that construction 
+
+298
+00:20:13,700 --> 00:20:16,400
+function would just use yeah 
+type class. 
+
+299
+00:20:16,400 --> 00:20:19,599
+Yeah. 
+Yeah, I'm trying to think of if 
+
+300
+00:20:19,599 --> 00:20:22,599
+that's ever, so maybe dependency
+injection is just a special 
+
+301
+00:20:22,599 --> 00:20:26,900
+case. 
+Yeah, and I think that one of 
+
+302
+00:20:26,900 --> 00:20:33,400
+the kind of Hallmarks of 
+dependency injection is is that 
+
+303
+00:20:33,700 --> 00:20:39,400
+the graph is, is in some ways 
+determined at startup timer run 
+
+304
+00:20:39,400 --> 00:20:43,400
+time, whereas with type classes,
+one of the, I think, the core 
+
+305
+00:20:43,700 --> 00:20:47,799
+tenants of it is that the graph 
+is determined by the compiler 
+
+306
+00:20:48,400 --> 00:20:52,200
+and maybe you could do something
+that looks like type classes 
+
+307
+00:20:52,200 --> 00:20:55,299
+differently. 
+But, and It's a little bit 
+
+308
+00:20:55,299 --> 00:20:58,599
+blurry because I think Micronaut
+is kind of doing the graph 
+
+309
+00:20:59,200 --> 00:21:03,000
+generation at compile time now 
+and so some and that was for 
+
+310
+00:21:03,000 --> 00:21:05,000
+efficiency. 
+If I remember correctly, they 
+
+311
+00:21:05,000 --> 00:21:07,500
+were saying it's taking too long
+so startup time. 
+
+312
+00:21:07,500 --> 00:21:10,400
+Yeah it has a lot better when 
+you can do it at compile time 
+
+313
+00:21:11,200 --> 00:21:16,000
+and then also for growl VM 
+because member girl VM doesn't 
+
+314
+00:21:16,000 --> 00:21:21,900
+really like reflection and and 
+so so mi Corona knew they wanted
+
+315
+00:21:21,900 --> 00:21:25,700
+to support growl the m. 
+And so I think that was another 
+
+316
+00:21:25,700 --> 00:21:27,500
+reason they tried to do this at 
+compile time. 
+
+317
+00:21:27,500 --> 00:21:31,000
+Was that then you don't have to 
+use reflection because spring is
+
+318
+00:21:31,000 --> 00:21:33,799
+always been based on reflection,
+I think for growl VM they're 
+
+319
+00:21:33,799 --> 00:21:36,299
+also trying to make some changes
+to how they do that. 
+
+320
+00:21:36,299 --> 00:21:39,700
+I'm not sure how they're going 
+to but but it was always based 
+
+321
+00:21:39,700 --> 00:21:44,099
+on reflection it's like okay how
+do I how do I when I need to 
+
+322
+00:21:44,099 --> 00:21:45,900
+create this object? 
+How do I do it? 
+
+323
+00:21:45,900 --> 00:21:50,200
+Oh I use reflection to create 
+that object and and then they 
+
+324
+00:21:50,200 --> 00:21:53,200
+also use reflection for other 
+pieces as well but it was all 
+
+325
+00:21:53,200 --> 00:21:56,400
+reflection based So, with 
+dependency injection. 
+
+326
+00:21:57,400 --> 00:22:04,599
+It sounds like the use case is 
+we want to have this 
+
+327
+00:22:04,599 --> 00:22:08,799
+configuration file, where we 
+determine the characteristics of
+
+328
+00:22:08,799 --> 00:22:12,200
+our system and we want to be 
+able to change that easily and 
+
+329
+00:22:12,200 --> 00:22:16,599
+not have to recompile our code. 
+I'm not sure about the recompile
+
+330
+00:22:16,599 --> 00:22:18,900
+thing but we're I think. 
+Yes. 
+
+331
+00:22:18,900 --> 00:22:23,500
+Yes you could maybe do that. 
+Well actually with xml-based 
+
+332
+00:22:23,799 --> 00:22:26,599
+dependency injection 
+configuration absolutely you can
+
+333
+00:22:26,599 --> 00:22:28,500
+do it without We're compiling 
+your code because it's just a 
+
+334
+00:22:28,500 --> 00:22:33,299
+config file that gets read. 
+But where where this most often 
+
+335
+00:22:33,299 --> 00:22:38,200
+got used and was really useful 
+was that you would often want to
+
+336
+00:22:38,200 --> 00:22:42,400
+change your your dependency 
+graph based on whether you're 
+
+337
+00:22:42,400 --> 00:22:45,700
+running running the application 
+or running your tests. 
+
+338
+00:22:46,000 --> 00:22:48,900
+And so when you're running your 
+test, you want to say okay, I 
+
+339
+00:22:48,900 --> 00:22:52,099
+don't want to actually use my 
+database service because I don't
+
+340
+00:22:52,099 --> 00:22:55,599
+want to talk to a database, an 
+actual database in a unit test. 
+
+341
+00:22:55,599 --> 00:23:00,400
+Instead, I want to use a mop For
+for that service. 
+
+342
+00:23:00,700 --> 00:23:05,599
+And I'm going to use a mocking 
+framework or or manually makhmud
+
+343
+00:23:05,599 --> 00:23:08,799
+that database service class. 
+And so when I run my unit test, 
+
+344
+00:23:08,799 --> 00:23:11,400
+I'm instead going to tell it 
+that the graph that I wanted to 
+
+345
+00:23:11,400 --> 00:23:14,700
+use is not going to use the real
+live database service but 
+
+346
+00:23:14,700 --> 00:23:16,500
+instead use my mock database 
+service. 
+
+347
+00:23:16,799 --> 00:23:20,700
+And so that's where the you most
+often change the structure of 
+
+348
+00:23:20,700 --> 00:23:26,599
+your dependency graph was for 
+test versus run and it turned 
+
+349
+00:23:26,599 --> 00:23:30,400
+out that was is super helpful 
+and useful to be able to change 
+
+350
+00:23:30,400 --> 00:23:36,099
+change those things so easily. 
+So that is that worth the cost 
+
+351
+00:23:36,099 --> 00:23:38,200
+of all the dependency injection 
+stuff. 
+
+352
+00:23:38,200 --> 00:23:41,700
+Or if that's our, if that's our 
+predominant use case, maybe we 
+
+353
+00:23:41,700 --> 00:23:47,799
+should have a special design for
+that rather than generalizing it
+
+354
+00:23:47,799 --> 00:23:51,299
+to dependency injection. 
+The nice thing about it was that
+
+355
+00:23:51,599 --> 00:23:55,700
+it you can, you can change any 
+part of your graph. 
+
+356
+00:23:56,000 --> 00:24:01,000
+So these Graphs can be like 
+massively complicated. 
+
+357
+00:24:01,000 --> 00:24:04,799
+In terms of how interrelated 
+there are you they deal with 
+
+358
+00:24:04,799 --> 00:24:08,400
+circular dependencies which can 
+very easily happen in dependency
+
+359
+00:24:08,400 --> 00:24:12,400
+injection. 
+They deal with their, you know, 
+
+360
+00:24:12,799 --> 00:24:18,500
+you typical example that I have 
+to override my graph is for 
+
+361
+00:24:18,500 --> 00:24:24,400
+Jason configuration. 
+So somewhere deep in the HTTP 
+
+362
+00:24:24,400 --> 00:24:30,400
+processing layers of spring It 
+needs to read some configuration
+
+363
+00:24:30,400 --> 00:24:37,200
+for how to do like Json parsing 
+like, is it going to allow, is 
+
+364
+00:24:37,200 --> 00:24:41,700
+it going to allow dashes and 
+names for Jason Properties, or 
+
+365
+00:24:41,700 --> 00:24:44,799
+something like that. 
+But there's been many times 
+
+366
+00:24:44,799 --> 00:24:48,400
+where I've had to change, how my
+Json processing Works, which is 
+
+367
+00:24:48,400 --> 00:24:51,500
+deep deep. 
+Deep in the, you know, I've got 
+
+368
+00:24:51,500 --> 00:24:53,400
+spring framework. 
+I've got my controllers. 
+
+369
+00:24:53,400 --> 00:24:57,000
+I've got my HTTP. 
+Handler is, I've got my boy. 
+
+370
+00:24:57,200 --> 00:25:01,400
+He parsers like they're like if 
+you looked at the graph for HTTP
+
+371
+00:25:01,799 --> 00:25:05,900
+handling, like you're probably 
+talking about 200 different 
+
+372
+00:25:05,900 --> 00:25:10,200
+beans that are involved in in 
+just HTTP handling. 
+
+373
+00:25:10,900 --> 00:25:14,200
+And so, I want to change one of 
+those things. 
+
+374
+00:25:14,200 --> 00:25:19,400
+And all I do is, I say, all 
+right here is my override of the
+
+375
+00:25:19,400 --> 00:25:24,099
+Jason configuration being and I 
+can change that. 
+
+376
+00:25:24,799 --> 00:25:28,299
+I can change that globally. 
+I can change that. that for kind
+
+377
+00:25:28,299 --> 00:25:32,799
+of specific places, I can change
+that based on if I wanted to for
+
+378
+00:25:32,799 --> 00:25:36,700
+some reason, change it in my 
+test so I can Define 
+
+379
+00:25:38,299 --> 00:25:41,799
+Essentially, at run time that I 
+want to override that thing that
+
+380
+00:25:41,799 --> 00:25:46,000
+is deep down underneath the 
+covers of of HTTP handling. 
+
+381
+00:25:46,200 --> 00:25:48,500
+And so that's actually really 
+nice because you think about the
+
+382
+00:25:48,500 --> 00:25:53,400
+alternative like if we were 
+going to do this with with 
+
+383
+00:25:54,299 --> 00:25:58,599
+inheritance based polymorphism, 
+I would have to touch 100 
+
+384
+00:25:58,599 --> 00:26:01,099
+classes. 
+You know like override. 
+
+385
+00:26:01,099 --> 00:26:04,500
+I would have to start. 
+I have to recompile everything. 
+
+386
+00:26:04,599 --> 00:26:08,099
+I yeah, I mean I would there 
+there would be so many This is 
+
+387
+00:26:08,099 --> 00:26:11,400
+where I would have to create a 
+new instance and then I'm sure 
+
+388
+00:26:11,400 --> 00:26:13,200
+there's going to be some place 
+where something is final, and 
+
+389
+00:26:13,208 --> 00:26:16,700
+I'm not going to be able to 
+actually do what I need to do. 
+
+390
+00:26:16,900 --> 00:26:20,400
+So, so dependency injection is 
+really necessary for being able 
+
+391
+00:26:20,400 --> 00:26:30,200
+to, to mutate the graph of of 
+dependencies and how they're 
+
+392
+00:26:30,200 --> 00:26:34,099
+wired together. 
+So it almost sounds like more 
+
+393
+00:26:34,099 --> 00:26:39,900
+geared towards operations. 
+Because it's like oh you know we
+
+394
+00:26:39,900 --> 00:26:43,299
+need to I don't know Shard 
+across more systems or whatever 
+
+395
+00:26:43,299 --> 00:26:46,099
+so we go and we change this 
+configuration file and we don't 
+
+396
+00:26:46,099 --> 00:26:48,500
+have to change all the code and 
+it read. 
+
+397
+00:26:48,500 --> 00:26:51,500
+I think there was I think there 
+is an element to that. 
+
+398
+00:26:51,500 --> 00:26:55,099
+So so configuration is is 
+definitely a place where 
+
+399
+00:26:55,099 --> 00:27:00,900
+dependency injection allows you 
+to easily make make changes and 
+
+400
+00:27:00,900 --> 00:27:05,200
+and not have to recompile or 
+not, not modify the the 
+
+401
+00:27:05,200 --> 00:27:10,099
+structure of that graph. 
+So yeah, I think there is that 
+
+402
+00:27:10,099 --> 00:27:12,900
+element. 
+But even aside from operations, 
+
+403
+00:27:12,900 --> 00:27:16,000
+like I needed the Json parser in
+that use case to work 
+
+404
+00:27:16,000 --> 00:27:20,400
+differently for my application 
+to work as as I needed it to. 
+
+405
+00:27:20,700 --> 00:27:23,099
+And so it wasn't just about the 
+operations, it was actually a 
+
+406
+00:27:23,107 --> 00:27:27,500
+house modifying. 
+I was modifying behavior of 
+
+407
+00:27:27,799 --> 00:27:31,500
+something deep in HTTP 
+processing land. 
+
+408
+00:27:33,299 --> 00:27:36,700
+So, there is definitely a lot of
+similarity to type classes 
+
+409
+00:27:36,700 --> 00:27:39,700
+because I can do the same thing 
+with type classes. 
+
+410
+00:27:39,900 --> 00:27:46,099
+It's just that I resolved that 
+graph at compile time instead 
+
+411
+00:27:46,099 --> 00:27:50,500
+of, instead of, at runtime, 
+Right, right? 
+
+412
+00:27:50,599 --> 00:27:54,400
+Yeah. 
+So there's another form of 
+
+413
+00:27:54,400 --> 00:28:01,400
+dependency injection like stuff 
+that for me, help me understand 
+
+414
+00:28:02,299 --> 00:28:05,000
+a bit better about about some of
+the problems that we were trying
+
+415
+00:28:05,000 --> 00:28:06,700
+to solve with dependency 
+injection. 
+
+416
+00:28:07,099 --> 00:28:12,000
+And it was called this was I 
+encountered in the world of 
+
+417
+00:28:12,000 --> 00:28:15,700
+Scala is called the kick pattern
+and okay. 
+
+418
+00:28:15,700 --> 00:28:19,599
+Cake, I thought you said kick 
+and kick and the kick A pattern.
+
+419
+00:28:19,700 --> 00:28:24,700
+So the in the cake pattern, what
+you would do is you would, you 
+
+420
+00:28:24,700 --> 00:28:31,299
+would, you would have layers of 
+dependencies and, and at your 
+
+421
+00:28:31,299 --> 00:28:34,799
+end points, which I'll describe 
+in a second, but your endpoints 
+
+422
+00:28:34,900 --> 00:28:38,900
+is where you would assemble your
+cake of all the layers that were
+
+423
+00:28:38,900 --> 00:28:43,099
+needed of dependencies. 
+So back to like the user service
+
+424
+00:28:43,099 --> 00:28:46,200
+example is my user surgery, 
+service needs a database 
+
+425
+00:28:46,200 --> 00:28:48,799
+service, the database service 
+needs, a configuration service. 
+
+426
+00:28:49,099 --> 00:28:51,099
+Let's just keep it with that 
+with that for now. 
+
+427
+00:28:51,799 --> 00:28:57,799
+And so when I, when I have my 
+actual web service application 
+
+428
+00:28:57,900 --> 00:29:01,500
+that is going to use the user 
+service when I go to create a 
+
+429
+00:29:01,500 --> 00:29:07,099
+user service, I need to tell it.
+Here is your, here's your 
+
+430
+00:29:07,099 --> 00:29:09,400
+database service and here's your
+configuration service. 
+
+431
+00:29:09,400 --> 00:29:11,900
+So I have to give it all the 
+layers of the cake when I go to 
+
+432
+00:29:11,900 --> 00:29:17,500
+assemble that and so and then in
+my test in my unit test, I 
+
+433
+00:29:17,500 --> 00:29:21,099
+again, have to assemble my 
+Layers of dependencies when I go
+
+434
+00:29:21,099 --> 00:29:24,700
+to create my user service and 
+that's where I can then change 
+
+435
+00:29:24,700 --> 00:29:27,500
+out the database service for a 
+mock database service or 
+
+436
+00:29:27,500 --> 00:29:33,299
+something like that. 
+So so it it became an explicit 
+
+437
+00:29:33,299 --> 00:29:36,500
+compile-time way to do 
+dependent, essentially 
+
+438
+00:29:36,500 --> 00:29:39,500
+dependency injections. 
+Like here's here's all the 
+
+439
+00:29:39,500 --> 00:29:42,900
+things that are needed. 
+Here's all the things, the 
+
+440
+00:29:42,900 --> 00:29:47,099
+dependencies that are needed to 
+create a given thing, but 
+
+441
+00:29:47,099 --> 00:29:48,900
+instead, we're putting them 
+together. 
+
+442
+00:29:49,099 --> 00:29:53,099
+As layers of the cake rather 
+than using the dependency 
+
+443
+00:29:53,099 --> 00:29:55,000
+injection mechanism. 
+Yeah. 
+
+444
+00:29:55,400 --> 00:29:59,000
+Yeah. 
+So so so the cake pattern was 
+
+445
+00:29:59,599 --> 00:30:02,099
+was interesting. 
+But it had some, some 
+
+446
+00:30:02,099 --> 00:30:05,500
+significant flaws which were I 
+think that one of the biggest 
+
+447
+00:30:05,500 --> 00:30:09,200
+ones is just painful to always 
+have to because these graphs get
+
+448
+00:30:09,200 --> 00:30:14,799
+really complex. 
+And so, so it became unwieldy to
+
+449
+00:30:14,799 --> 00:30:18,799
+have to always be assembling 
+these cakes me annually. 
+
+450
+00:30:19,000 --> 00:30:22,200
+We putting together the, the 
+dependencies that are needed for
+
+451
+00:30:22,200 --> 00:30:28,200
+everything. 
+And so zo the Scala framework, 
+
+452
+00:30:28,200 --> 00:30:30,400
+that's kind of like dependency 
+injection. 
+
+453
+00:30:30,400 --> 00:30:35,599
+It it allows you to kind of do 
+something similar to the cake 
+
+454
+00:30:35,599 --> 00:30:39,700
+pattern, but it the ergonomics 
+of how you assemble the cake are
+
+455
+00:30:39,700 --> 00:30:43,200
+are vastly better than the, than
+the old cake pattern. 
+
+456
+00:30:43,200 --> 00:30:47,000
+So you still do have to assemble
+the dependencies that are 
+
+457
+00:30:47,000 --> 00:30:48,700
+needed. 
+But there's something called a 
+
+458
+00:30:49,000 --> 00:30:53,799
+Layer which which makes it much 
+easier to assemble the pieces 
+
+459
+00:30:53,799 --> 00:30:57,500
+and reuse those layers across 
+different pieces. 
+
+460
+00:30:57,500 --> 00:31:01,700
+So, but it still happens at 
+compile time and compile time 
+
+461
+00:31:01,700 --> 00:31:03,799
+verified. 
+But the interesting thing about 
+
+462
+00:31:03,799 --> 00:31:08,799
+zo is that you still when you're
+at the end point when you're at 
+
+463
+00:31:08,799 --> 00:31:13,400
+the thing where you actually 
+want to assemble a graph of 
+
+464
+00:31:13,900 --> 00:31:18,400
+stuff so that you can use it. 
+You do have to put together all 
+
+465
+00:31:18,400 --> 00:31:20,500
+of your Tendencies that are 
+needed there. 
+
+466
+00:31:20,700 --> 00:31:26,500
+And and tells you here are my 
+dependencies and so and then you
+
+467
+00:31:26,500 --> 00:31:28,900
+can do that differently based on
+when you run your application 
+
+468
+00:31:28,900 --> 00:31:31,700
+like in your web service versus 
+when you test your application. 
+
+469
+00:31:31,900 --> 00:31:34,599
+So you can assemble different Z 
+layers or if they call them 
+
+470
+00:31:34,599 --> 00:31:38,799
+environments. 
+So is that the object that gets 
+
+471
+00:31:38,799 --> 00:31:41,299
+passed from function to 
+function? 
+
+472
+00:31:41,299 --> 00:31:46,299
+The is that the thing that you 
+can say oh I want to add another
+
+473
+00:31:46,400 --> 00:31:49,099
+layer to this. 
+Yeah. 
+
+474
+00:31:49,099 --> 00:31:54,599
+So in zou can you can manipulate
+your environment at kind of each
+
+475
+00:31:55,599 --> 00:31:59,099
+each operation that you do 
+within within a 0 you can 
+
+476
+00:31:59,099 --> 00:32:02,200
+manipulate your environment and 
+add something to it. 
+
+477
+00:32:02,200 --> 00:32:06,700
+Pass it to the next thing so 
+that's mutability right? 
+
+478
+00:32:06,799 --> 00:32:09,400
+No it's all done. 
+An immutable e which is one of 
+
+479
+00:32:09,400 --> 00:32:14,099
+the wonderful wonderful things 
+about xia is is that you're 
+
+480
+00:32:14,099 --> 00:32:16,700
+doing a new same manipulative, 
+the environment, it sounds like 
+
+481
+00:32:16,700 --> 00:32:20,000
+changing the environment. 
+Is, but it's doing it in a copy 
+
+482
+00:32:20,500 --> 00:32:21,700
+of, right? 
+Okay. 
+
+483
+00:32:21,700 --> 00:32:23,900
+Yeah. 
+Of course, of course. 
+
+484
+00:32:23,900 --> 00:32:26,599
+That's how you do it. 
+So that that's interesting 
+
+485
+00:32:26,599 --> 00:32:30,599
+because I remember when the cake
+pattern was like all the ridge. 
+
+486
+00:32:30,599 --> 00:32:31,400
+Yeah. 
+All the rage. 
+
+487
+00:32:31,400 --> 00:32:33,599
+And everyone's go just use the 
+cake batter in here and there. 
+
+488
+00:32:34,000 --> 00:32:38,500
+And you know, the meta question 
+is is always is this a real 
+
+489
+00:32:38,500 --> 00:32:40,900
+thing or is this going to fade 
+away? 
+
+490
+00:32:40,900 --> 00:32:44,099
+Or we going to discover all this
+doesn't really work so many 
+
+491
+00:32:44,099 --> 00:32:46,299
+things that have happened that 
+way. 
+
+492
+00:32:46,400 --> 00:32:49,500
+Yeah. 
+Well Scala The Scala Community 
+
+493
+00:32:49,500 --> 00:32:58,900
+is very very smart and very does
+a lot of experiments and and 
+
+494
+00:32:59,000 --> 00:33:00,400
+they learn from those 
+experiments. 
+
+495
+00:33:00,400 --> 00:33:03,000
+And I would say that Z 0 
+actually learned a lot from the 
+
+496
+00:33:03,000 --> 00:33:08,799
+kick pattern and the and they've
+made the ergonomics so much 
+
+497
+00:33:08,799 --> 00:33:12,099
+better. 
+But there is there is some 
+
+498
+00:33:12,299 --> 00:33:15,799
+conceptual overlap between the 
+kick pattern and 10's doing. 
+
+499
+00:33:17,200 --> 00:33:21,500
+I mean I find that helps Full to
+say, oh look, we tried to solve 
+
+500
+00:33:21,500 --> 00:33:24,000
+the problem this way, and it 
+didn't work out for these 
+
+501
+00:33:24,000 --> 00:33:26,400
+reasons. 
+And so that's why we're one of 
+
+502
+00:33:26,408 --> 00:33:28,099
+the reasons why we're doing it 
+this way. 
+
+503
+00:33:28,200 --> 00:33:29,400
+Yeah. 
+Yeah. 
+
+504
+00:33:30,400 --> 00:33:33,599
+And it's so different. 
+I mean, the two approaches seem 
+
+505
+00:33:33,599 --> 00:33:36,200
+so different to me, you know, 
+the cake patterns were 
+
+506
+00:33:36,200 --> 00:33:40,900
+assembling these these layers of
+things and then zo. 
+
+507
+00:33:40,900 --> 00:33:43,900
+We're passing this object from 
+function to function. 
+
+508
+00:33:44,000 --> 00:33:47,200
+Yeah. 
+And it's how do you think of 
+
+509
+00:33:47,200 --> 00:33:48,299
+that stuff? 
+You know how? 
+
+510
+00:33:48,500 --> 00:33:51,400
+Do you math maybe? 
+I don't know. 
+
+511
+00:33:52,299 --> 00:33:56,299
+Yeah, John to goes and and a 
+number of other people. 
+
+512
+00:33:56,900 --> 00:33:59,900
+They they had some insights for 
+sure. 
+
+513
+00:33:59,900 --> 00:34:04,000
+And the does those insights were
+based on prior experience and 
+
+514
+00:34:04,000 --> 00:34:09,800
+prior challenges that they had 
+and then they a while back, a 
+
+515
+00:34:09,808 --> 00:34:13,400
+lot of the Scala stuff that was 
+that was happening, was was 
+
+516
+00:34:13,400 --> 00:34:15,199
+motivated. 
+A lot of the interesting scholar
+
+517
+00:34:15,199 --> 00:34:19,699
+stuff that was happening was 
+motivated by Haskell for And 
+
+518
+00:34:19,699 --> 00:34:23,300
+there was sometimes a mismatch 
+between trying to bring 
+
+519
+00:34:23,300 --> 00:34:26,099
+something from the Haskell world
+and Escala just didn't quite 
+
+520
+00:34:26,099 --> 00:34:30,900
+feel right? 
+Like there was problems with in 
+
+521
+00:34:30,900 --> 00:34:33,199
+preziose stuff. 
+There's problems with type 
+
+522
+00:34:33,199 --> 00:34:35,900
+inference and I don't know, all 
+the details, we need to get John
+
+523
+00:34:35,900 --> 00:34:39,699
+to goes on some time. 
+But there was there was problems
+
+524
+00:34:39,699 --> 00:34:42,300
+with type inference in how they 
+had brought some of these 
+
+525
+00:34:42,300 --> 00:34:45,699
+Haskell things over to Scala. 
+And one of the amazing things 
+
+526
+00:34:45,699 --> 00:34:48,300
+that zo did was it made the type
+inference? 
+
+527
+00:34:48,400 --> 00:34:54,199
+And so it worked and so said, so
+you didn't have to deal with 
+
+528
+00:34:55,300 --> 00:34:58,599
+typing type challenges and zo 
+like you did in some of the 
+
+529
+00:34:58,607 --> 00:35:03,900
+oppressor predecessors to Z 0. 
+And so, so, I did influenced the
+
+530
+00:35:03,900 --> 00:35:06,599
+scholar three design at all. 
+Do you think I think so? 
+
+531
+00:35:06,599 --> 00:35:10,199
+Yeah, I know that the, a lot of 
+The Zo folks have been working 
+
+532
+00:35:10,199 --> 00:35:13,900
+with the Scala engineers and 
+Scholar 3 and Z I think is going
+
+533
+00:35:13,900 --> 00:35:15,699
+to be a pretty amazing 
+combination. 
+
+534
+00:35:15,699 --> 00:35:21,199
+But, but so back to type 
+Glasses, I think, I think that 
+
+535
+00:35:21,199 --> 00:35:26,000
+in a lot of ways type classes, 
+they are a big part of ad hoc 
+
+536
+00:35:26,000 --> 00:35:29,800
+polymorphism because when you're
+doing ad hoc polymorphism with, 
+
+537
+00:35:29,800 --> 00:35:33,199
+just extension functions, you 
+get to the point where you need 
+
+538
+00:35:33,300 --> 00:35:37,599
+context. 
+You you at some point your 
+
+539
+00:35:37,599 --> 00:35:39,800
+function is going to need 
+something else. 
+
+540
+00:35:40,099 --> 00:35:45,900
+And ideally for me you a, you 
+find that thing at compiler to 
+
+541
+00:35:46,000 --> 00:35:49,900
+compile, time the compiler finds
+it, and fills it in for You and 
+
+542
+00:35:51,400 --> 00:35:54,699
+and I don't want to have to 
+always be a explicitly 
+
+543
+00:35:55,900 --> 00:35:58,699
+specifying all those parameters 
+to the function. 
+
+544
+00:35:59,000 --> 00:36:02,000
+So you could do like a 
+dependency injection thing and 
+
+545
+00:36:02,000 --> 00:36:07,500
+have a context and you know and 
+and I haven't seen anybody do 
+
+546
+00:36:07,500 --> 00:36:10,400
+that with type class that were 
+with like extension functions 
+
+547
+00:36:10,400 --> 00:36:14,400
+and kotlin to provide the 
+necessary context. 
+
+548
+00:36:15,699 --> 00:36:19,699
+But I think at some point you 
+when you Do enough with 
+
+549
+00:36:19,699 --> 00:36:21,300
+extension functions, you 
+realize. 
+
+550
+00:36:21,599 --> 00:36:25,400
+Okay, here's what I need type 
+classes to make ad hoc 
+
+551
+00:36:25,400 --> 00:36:30,699
+polymorphism useful. 
+So is is it typical that you 
+
+552
+00:36:30,699 --> 00:36:39,500
+have just a single type class as
+an argument for your function, 
+
+553
+00:36:39,900 --> 00:36:44,500
+or would it be reasonable to 
+have multiple type classes? 
+
+554
+00:36:46,000 --> 00:36:48,699
+I think most it seems like you 
+want to be able to vary in 
+
+555
+00:36:48,900 --> 00:36:52,800
+different directions. 
+So, I've, I think most of the 
+
+556
+00:36:52,800 --> 00:36:55,900
+places where I've seen type 
+classes used, there's only a 
+
+557
+00:36:55,900 --> 00:37:00,599
+single parameter like context 
+parameter. 
+
+558
+00:37:03,900 --> 00:37:06,599
+You know, in scholar, you could 
+have more than one implicit, 
+
+559
+00:37:06,599 --> 00:37:08,000
+right? 
+You can. 
+
+560
+00:37:09,599 --> 00:37:12,800
+Yeah, yeah. 
+So there's definitely places 
+
+561
+00:37:12,800 --> 00:37:14,900
+where we're in my scholar 
+classes. 
+
+562
+00:37:14,900 --> 00:37:23,099
+I'll have multiple implicit, but
+In those cases I think what so 
+
+563
+00:37:23,099 --> 00:37:27,199
+play framework has a dependency 
+away to do dependency injection 
+
+564
+00:37:28,000 --> 00:37:33,599
+and and it's based on juice 
+juice dependency injection. 
+
+565
+00:37:34,800 --> 00:37:37,699
+And I think that that's 
+primarily the place where I have
+
+566
+00:37:37,900 --> 00:37:42,400
+done multiple implicit 
+parameters is that I want to in 
+
+567
+00:37:42,400 --> 00:37:47,099
+my dependency injection make 
+some of the parameters implicit 
+
+568
+00:37:47,099 --> 00:37:52,500
+when they get pulled in. 
+And so would be interesting is 
+
+569
+00:37:52,599 --> 00:37:57,199
+like, alright I have used 
+dependency injection and play 
+
+570
+00:37:57,400 --> 00:38:02,099
+and used implicit how much of 
+that could be replaced by type 
+
+571
+00:38:02,099 --> 00:38:04,500
+classes. 
+And how would that feel? 
+
+572
+00:38:07,300 --> 00:38:11,900
+Because I could certainly 
+imagine saying, well, here's 
+
+573
+00:38:11,900 --> 00:38:15,400
+this context for. 
+I don't know, databases and 
+
+574
+00:38:15,400 --> 00:38:20,500
+here's a context for And 
+language, you know, and I would 
+
+575
+00:38:20,500 --> 00:38:23,599
+want those things to vary 
+independently, right? 
+
+576
+00:38:24,800 --> 00:38:27,599
+So, it seems like using, you 
+know, having a function that 
+
+577
+00:38:27,599 --> 00:38:30,400
+could use multiple type classes 
+would make sense. 
+
+578
+00:38:30,500 --> 00:38:35,099
+Unless what it is, is just oh, 
+well, the type class is kind of 
+
+579
+00:38:35,107 --> 00:38:37,500
+like a configuration file. 
+Yeah. 
+
+580
+00:38:37,599 --> 00:38:41,500
+And so you would only have one 
+but it seems that would seem 
+
+581
+00:38:41,500 --> 00:38:43,599
+limiting to me just the way I'm 
+thinking. 
+
+582
+00:38:43,599 --> 00:38:48,199
+Yeah. 
+Yeah, I think we will need to 
+
+583
+00:38:48,199 --> 00:38:52,699
+have some examples in the Ya-Ya 
+in our scholar, three scholar, 
+
+584
+00:38:52,699 --> 00:38:58,500
+think what? 
+So, one of the nice things about
+
+585
+00:38:58,500 --> 00:39:01,599
+the way that like spring does 
+dependency injection, is that 
+
+586
+00:39:01,599 --> 00:39:05,400
+you, when you get into these 
+really complex graphs, it's 
+
+587
+00:39:05,400 --> 00:39:10,300
+pretty easy to to override. 
+Just one little piece of that 
+
+588
+00:39:10,300 --> 00:39:14,900
+graph, whereas with type classes
+You. 
+
+589
+00:39:15,099 --> 00:39:18,599
+It is more because it is 
+explicit. 
+
+590
+00:39:18,800 --> 00:39:22,500
+You do? 
+I think you, you run into some 
+
+591
+00:39:22,500 --> 00:39:28,300
+complexity when like, okay, A 
+jsonparser type class, maybe it 
+
+592
+00:39:28,300 --> 00:39:35,500
+needs a Locale type class, but 
+then maybe your Locale type 
+
+593
+00:39:35,500 --> 00:39:39,300
+class needs some other type 
+class it like you can get into 
+
+594
+00:39:39,300 --> 00:39:43,000
+these complicated graphs where 
+it's like okay if I want to 
+
+595
+00:39:43,000 --> 00:39:47,699
+override just this This one 
+piece of it, like, how much, 
+
+596
+00:39:47,699 --> 00:39:49,599
+what's the ergonomics of doing 
+that? 
+
+597
+00:39:50,000 --> 00:39:55,500
+And I think that, that's maybe 
+where so zo doesn't use type 
+
+598
+00:39:55,500 --> 00:39:58,699
+classes. 
+They have like more like the 
+
+599
+00:39:58,699 --> 00:40:02,900
+kick pattern style and so maybe 
+that's, maybe that's where like 
+
+600
+00:40:03,000 --> 00:40:06,599
+type classes are great when you 
+don't have a very complex graph,
+
+601
+00:40:07,500 --> 00:40:10,900
+that's, that's needed, but then 
+you need something like 
+
+602
+00:40:10,900 --> 00:40:16,199
+dependency injection when your 
+graph gets large and Will be it 
+
+603
+00:40:16,199 --> 00:40:19,099
+just feels more. 
+It feels like dependency 
+
+604
+00:40:19,099 --> 00:40:24,099
+injection leans, more towards 
+Dynamic and type classes. 
+
+605
+00:40:24,300 --> 00:40:26,900
+Lean more towards static. 
+Yeah. 
+
+606
+00:40:27,000 --> 00:40:29,800
+Yeah. 
+And so maybe there's because 
+
+607
+00:40:29,800 --> 00:40:31,599
+yeah, now that you say it, I 
+could see. 
+
+608
+00:40:31,800 --> 00:40:36,199
+Oh, what if you use a type class
+that itself uses type classes? 
+
+609
+00:40:36,300 --> 00:40:40,699
+Oh, now that's getting and it's 
+kind of like generics where it 
+
+610
+00:40:40,699 --> 00:40:43,599
+has to work under all of those 
+situations, right? 
+
+611
+00:40:43,699 --> 00:40:48,199
+When you and type classes in 
+most situations that I've seen 
+
+612
+00:40:48,199 --> 00:40:50,199
+type classes, they do use 
+generics. 
+
+613
+00:40:50,500 --> 00:40:54,400
+So I think that was one of our 
+questions was are, are the two 
+
+614
+00:40:54,400 --> 00:41:00,099
+separable or are they inherently
+connected to? 
+
+615
+00:41:00,099 --> 00:41:03,599
+Yeah, like, you would never 
+really use type classes if you 
+
+616
+00:41:03,607 --> 00:41:06,000
+only ever have one of the 
+things. 
+
+617
+00:41:06,000 --> 00:41:09,199
+Sure. 
+And so you need more than you 
+
+618
+00:41:09,199 --> 00:41:12,800
+need more than one type. 
+And so, I think that you could 
+
+619
+00:41:12,800 --> 00:41:19,300
+do that through Through through 
+generics or you could also do it
+
+620
+00:41:19,300 --> 00:41:24,699
+through inheritance or a DTS, 
+the kind of, you know, new 
+
+621
+00:41:24,900 --> 00:41:27,199
+inheritance algebraic data 
+types. 
+
+622
+00:41:27,199 --> 00:41:28,199
+Yeah. 
+Yeah. 
+
+623
+00:41:28,300 --> 00:41:30,900
+But I, but I don't think, I 
+don't think you'd ever use type 
+
+624
+00:41:30,900 --> 00:41:33,099
+classes. 
+If there was no, if there was 
+
+625
+00:41:33,099 --> 00:41:36,099
+only if there was only ever one 
+concrete type for something, 
+
+626
+00:41:36,500 --> 00:41:37,599
+what would be the point? 
+Yeah. 
+
+627
+00:41:37,599 --> 00:41:41,699
+Then it's about variation. 
+It's about overlap, right? 
+
+628
+00:41:41,699 --> 00:41:42,699
+Yeah. 
+Yeah. 
+
+629
+00:41:42,699 --> 00:41:46,500
+It's like, well, we There's all 
+this common code and here are 
+
+630
+00:41:46,500 --> 00:41:49,900
+the different type classes. 
+We went want to plug into it. 
+
+631
+00:41:49,900 --> 00:41:52,000
+Yeah. 
+To produce different Behavior. 
+
+632
+00:41:52,300 --> 00:41:55,300
+Yeah. 
+And so in the the case of like a
+
+633
+00:41:55,300 --> 00:41:59,699
+jsonparser it's pretty cool 
+because you can within type 
+
+634
+00:41:59,699 --> 00:42:05,400
+classes use use type classes and
+you can even use a type class 
+
+635
+00:42:05,400 --> 00:42:08,500
+can even use itself so you can 
+have like these like recursive 
+
+636
+00:42:08,500 --> 00:42:10,800
+type classes. 
+So let's say you had that's all 
+
+637
+00:42:10,800 --> 00:42:12,500
+resolved. 
+It compiled to all resolved at 
+
+638
+00:42:12,500 --> 00:42:17,199
+compile time so So so let's say 
+that you let's say that you have
+
+639
+00:42:17,199 --> 00:42:24,000
+a type class that that what you 
+need is a list of something. 
+
+640
+00:42:24,599 --> 00:42:29,400
+And you write the type class to 
+to be able to handle a list of 
+
+641
+00:42:29,400 --> 00:42:34,400
+some generic thing. 
+And then so you're you're at 
+
+642
+00:42:34,400 --> 00:42:39,400
+combining ad hoc polymorphism 
+with parametric polymorphism. 
+
+643
+00:42:40,300 --> 00:42:44,400
+But then what's really cool 
+about this in type classes, Is 
+
+644
+00:42:44,400 --> 00:42:48,599
+that in that type that just by 
+writing that type class that 
+
+645
+00:42:48,900 --> 00:42:55,199
+takes a list of something you 
+can then handle a list of a list
+
+646
+00:42:55,400 --> 00:42:58,699
+of that thing as well because 
+you've written the type class 
+
+647
+00:42:58,800 --> 00:43:01,599
+for a list of something. 
+Well it turns out, a list of a 
+
+648
+00:43:01,599 --> 00:43:03,699
+list of something is a list of 
+something. 
+
+649
+00:43:03,900 --> 00:43:07,400
+So that's where you get into the
+recursive that the type class 
+
+650
+00:43:07,400 --> 00:43:14,699
+can use itself to resolve the 
+the need that it has, So, 
+
+651
+00:43:14,699 --> 00:43:18,199
+there's that part of type 
+classes is pretty close. 
+
+652
+00:43:18,199 --> 00:43:21,199
+Actually, gets used a lot in 
+like Json, parsers. 
+
+653
+00:43:21,599 --> 00:43:27,099
+I'm wondering if because C++ had
+developed this thing. 
+
+654
+00:43:28,800 --> 00:43:32,099
+It's a little rarefied, it's 
+called template metaprogramming,
+
+655
+00:43:32,099 --> 00:43:35,099
+huh? 
+And I'm I don't know why, but 
+
+656
+00:43:35,099 --> 00:43:37,199
+it's kind of tickling my mind 
+thinking. 
+
+657
+00:43:37,199 --> 00:43:40,300
+I wonder if template 
+metaprogramming wasn't trying to
+
+658
+00:43:40,300 --> 00:43:46,000
+do something similar to this 
+because Does it have that, you 
+
+659
+00:43:46,000 --> 00:43:49,500
+know, you could have recursive 
+template structures, things like
+
+660
+00:43:49,500 --> 00:43:52,099
+that? 
+And yeah, but it was the on my 
+
+661
+00:43:52,099 --> 00:44:00,800
+ability to understand at the 
+time, Yeah, off to look at zo 
+
+662
+00:44:00,800 --> 00:44:05,599
+Jason to see if Zo Jason uses 
+type classes. 
+
+663
+00:44:05,900 --> 00:44:09,400
+I don't think it does. 
+So I wonder what how they deal 
+
+664
+00:44:09,400 --> 00:44:11,000
+with some of this, on to look 
+into them. 
+
+665
+00:44:11,900 --> 00:44:19,199
+I find it's often very helpful 
+to compare approaches because it
+
+666
+00:44:19,199 --> 00:44:21,099
+gives you, it gives you 
+insights, on all. 
+
+667
+00:44:21,099 --> 00:44:24,000
+This is why we're doing it this 
+way, whereas, if you just see 
+
+668
+00:44:24,000 --> 00:44:28,000
+it, I mean, like, for example, 
+when I first Countered 
+
+669
+00:44:29,000 --> 00:44:33,900
+inheritance space polymorphism 
+in C++ through Dynamic binding. 
+
+670
+00:44:33,900 --> 00:44:36,599
+It was just like, why are we 
+doing this? 
+
+671
+00:44:36,599 --> 00:44:37,400
+Yeah, what. 
+Yeah. 
+
+672
+00:44:37,400 --> 00:44:41,900
+What is the design motivation 
+behind this Choice? 
+
+673
+00:44:42,000 --> 00:44:43,400
+Yeah. 
+Well, and we were, we were 
+
+674
+00:44:43,400 --> 00:44:50,199
+talking about eclipse and how 
+they had some design choices 
+
+675
+00:44:50,199 --> 00:44:55,500
+that they made, which made it at
+least unusable for me because I 
+
+676
+00:44:55,500 --> 00:44:59,699
+wanted to make I wanted to make 
+Make plug-ins for and they say, 
+
+677
+00:44:59,699 --> 00:45:02,400
+oh, it's it's easy. 
+And then it turned out that they
+
+678
+00:45:02,400 --> 00:45:07,300
+had used these design patterns 
+because they had a design 
+
+679
+00:45:07,300 --> 00:45:10,400
+patterns guy, from one of the 
+gang of four was working on the 
+
+680
+00:45:10,400 --> 00:45:12,699
+eclipse project and I guess they
+go. 
+
+681
+00:45:12,699 --> 00:45:16,800
+Well, we must have to use design
+patterns then and I just it was 
+
+682
+00:45:16,800 --> 00:45:21,500
+just one bridge too far for me 
+to to want to, you know, it's 
+
+683
+00:45:21,500 --> 00:45:22,599
+one of those things where I'm 
+going. 
+
+684
+00:45:22,599 --> 00:45:28,800
+I'm sure that it is possible to 
+do this but right now, I can't 
+
+685
+00:45:28,800 --> 00:45:31,500
+quite make it there. 
+I had the same problem with 
+
+686
+00:45:31,500 --> 00:45:35,599
+there was a programming language
+that was supposed to be. 
+
+687
+00:45:35,599 --> 00:45:41,099
+It was designed for to build 
+expert systems and it just I 
+
+688
+00:45:41,099 --> 00:45:46,000
+just couldn't get my my brain to
+turn the corner to understand 
+
+689
+00:45:46,000 --> 00:45:50,000
+why it was designed this way and
+so I never understood the 
+
+690
+00:45:50,000 --> 00:45:50,900
+language. 
+Yeah. 
+
+691
+00:45:50,900 --> 00:45:53,300
+Yeah. 
+Understanding the underlying 
+
+692
+00:45:53,300 --> 00:45:59,199
+motivations is helps to Well I 
+think it might be key because I 
+
+693
+00:45:59,207 --> 00:46:02,000
+mean I think this is our 
+argument about you know why 
+
+694
+00:46:02,000 --> 00:46:06,599
+people don't understand monads 
+is because or we're what I was 
+
+695
+00:46:06,599 --> 00:46:10,599
+just you know it's like it's not
+presented from what problem are 
+
+696
+00:46:10,599 --> 00:46:11,800
+you trying to solve? 
+Yeah. 
+
+697
+00:46:12,199 --> 00:46:15,699
+And there's this, you know, the 
+analogy that I was talking about
+
+698
+00:46:15,699 --> 00:46:21,000
+with with hashmaps like if you 
+started talking about hashmaps 
+
+699
+00:46:21,000 --> 00:46:23,699
+by saying, well, first, you have
+to understand how to write a 
+
+700
+00:46:23,699 --> 00:46:26,699
+hash function and all the ins 
+and outs for that. 
+
+701
+00:46:27,400 --> 00:46:30,500
+Nobody would use hashmaps 
+because it would just like, why 
+
+702
+00:46:30,500 --> 00:46:32,900
+am I doing this? 
+It's too, it's too complex, but 
+
+703
+00:46:32,900 --> 00:46:36,300
+if you just say, it looks up 
+values based on keys and don't 
+
+704
+00:46:36,300 --> 00:46:38,599
+worry about the other stuff 
+until you run into problems. 
+
+705
+00:46:39,099 --> 00:46:41,199
+Then it's like, oh okay. 
+I can use that. 
+
+706
+00:46:41,199 --> 00:46:44,400
+Yeah, yeah. 
+And and I think we need to maybe
+
+707
+00:46:44,500 --> 00:46:48,199
+look maybe. 
+Yeah, how do you present things 
+
+708
+00:46:48,199 --> 00:46:53,400
+in a way that people can grasp 
+it or are motivated to grasp it?
+
+709
+00:46:53,500 --> 00:46:56,699
+Or is this just another cake 
+pattern that you're giving me? 
+
+710
+00:46:57,400 --> 00:46:59,900
+That's like, yeah. 
+It seemed like a good idea but 
+
+711
+00:47:00,000 --> 00:47:04,699
+without understanding it. 
+Yeah, the motivation behind it. 
+
+712
+00:47:04,699 --> 00:47:06,699
+I can't really grasp. 
+Yeah. 
+
+713
+00:47:07,699 --> 00:47:10,900
+Yeah, it's interesting. 
+It it seems like a lot of times 
+
+714
+00:47:10,900 --> 00:47:18,599
+in in technology we were we're 
+like building a bridge and we 
+
+715
+00:47:18,599 --> 00:47:21,400
+think we see an island out in 
+the distance that were building 
+
+716
+00:47:21,400 --> 00:47:26,599
+a bridge to and sometimes we 
+keep building that bridge and 
+
+717
+00:47:26,599 --> 00:47:30,699
+it's it turns out that the 
+island was just a mirage and we 
+
+718
+00:47:30,699 --> 00:47:33,800
+or it's not big enough and it's 
+going to justify building a 
+
+719
+00:47:33,808 --> 00:47:36,699
+bridge to it. 
+Yeah and when you get way out 
+
+720
+00:47:36,699 --> 00:47:39,800
+there, you know, Built the 
+bridge for so long, you can't 
+
+721
+00:47:39,800 --> 00:47:42,800
+even see Shore anymore. 
+And you've forgotten like, like,
+
+722
+00:47:42,800 --> 00:47:47,599
+you were even aiming for, yeah? 
+Right, yeah. 
+
+723
+00:47:47,599 --> 00:47:52,800
+So, in the case of eclipse, my 
+understanding was that the whole
+
+724
+00:47:52,900 --> 00:47:57,500
+foundational model which is osgi
+was built on the idea that you 
+
+725
+00:47:57,500 --> 00:48:02,099
+could reload and install 
+plug-ins into eclipse without 
+
+726
+00:48:02,099 --> 00:48:06,599
+having to reload the IDE. 
+And what was fascinating, is 
+
+727
+00:48:06,599 --> 00:48:11,800
+that Fifteen years after Eclipse
+was created, I went to install a
+
+728
+00:48:11,808 --> 00:48:14,800
+plug-in and it's like, you must 
+reload your IDE and it's like, 
+
+729
+00:48:15,400 --> 00:48:20,199
+okay, like they clearly did not 
+actually achieve what their 
+
+730
+00:48:20,199 --> 00:48:22,900
+primary delivered with the 
+primary design goal. 
+
+731
+00:48:22,900 --> 00:48:25,800
+We built this whole thing around
+this. 
+
+732
+00:48:26,000 --> 00:48:30,000
+Yeah. 
+And and it turns out it was not 
+
+733
+00:48:30,300 --> 00:48:32,900
+a valuable choice because that's
+like, because, who cares, you 
+
+734
+00:48:32,908 --> 00:48:37,000
+know, it's like it's like when 
+you're installing plugins. 
+
+735
+00:48:37,000 --> 00:48:40,599
+Yeah. 
+Your grade, your IntelliJ IDEA. 
+
+736
+00:48:40,599 --> 00:48:43,599
+And yeah, you have to restart it
+and it's like, okay, fine. 
+
+737
+00:48:43,599 --> 00:48:48,800
+But yeah, if the benefits 
+outweigh the costs and yeah, 
+
+738
+00:48:49,400 --> 00:48:56,199
+choosing your, you know, making 
+sure that your design goal is 
+
+739
+00:48:56,199 --> 00:49:00,500
+really well, well, look at rust 
+people care about, they know, 
+
+740
+00:49:00,599 --> 00:49:04,900
+they know what their design goal
+is is no garbage collector, you 
+
+741
+00:49:06,000 --> 00:49:09,800
+in chapter 4, it says, Object 
+ownership is what rust is all 
+
+742
+00:49:09,800 --> 00:49:12,699
+about, and it's like, okay, you 
+know, that. 
+
+743
+00:49:12,699 --> 00:49:18,500
+And the payoff is significant, 
+especially when performance is 
+
+744
+00:49:18,500 --> 00:49:23,800
+your key goal, then not having a
+garbage collector is really 
+
+745
+00:49:23,800 --> 00:49:27,900
+useful, there's a cost but they 
+understood the cost and they 
+
+746
+00:49:27,900 --> 00:49:30,000
+said, yep, we're going to pay 
+that cost. 
+
+747
+00:49:30,000 --> 00:49:34,099
+We're going to give you as much 
+compiler support as possible but
+
+748
+00:49:34,099 --> 00:49:37,400
+this is our thing and they knew 
+it and designed around. 
+
+749
+00:49:37,599 --> 00:49:43,099
+It's nice to be clear with your 
+with the people that you hope 
+
+750
+00:49:43,099 --> 00:49:46,900
+will use your thing about what 
+it is, your design goals are 
+
+751
+00:49:47,000 --> 00:49:49,800
+right. 
+Because with Eclipse they you 
+
+752
+00:49:49,800 --> 00:49:52,800
+know, my impression was that the
+design goal was that this was 
+
+753
+00:49:52,800 --> 00:49:59,500
+going to be a, you know, a 
+plug-in Centric environment. 
+
+754
+00:49:59,500 --> 00:50:02,800
+And so everything is a plugin, 
+everything is a plug-in and it's
+
+755
+00:50:02,800 --> 00:50:07,099
+like if I had known that it was 
+going to be so hard to create a 
+
+756
+00:50:07,099 --> 00:50:09,199
+plug-in. 
+Ugh in mean all. 
+
+757
+00:50:09,199 --> 00:50:14,099
+Yeah I don't know if I've seen 
+like an editor or the plugins 
+
+758
+00:50:14,099 --> 00:50:20,900
+were that that easy? 
+I mean I've used Sublime Text 
+
+759
+00:50:20,900 --> 00:50:25,199
+for a long time in the plugins 
+are written in Python but you 
+
+760
+00:50:25,199 --> 00:50:28,000
+still have to, there's this 
+whole plug-in ecosystem that you
+
+761
+00:50:28,000 --> 00:50:33,500
+have to understand and I again 
+never gotten that far. 
+
+762
+00:50:33,500 --> 00:50:37,300
+It got funky or something, but I
+never got far enough to go. 
+
+763
+00:50:37,500 --> 00:50:39,199
+Okay, sure. 
+I'll just write a plug-in. 
+
+764
+00:50:39,199 --> 00:50:43,599
+I have written plug-ins for it 
+but it's like not not at the 
+
+765
+00:50:43,800 --> 00:50:45,699
+yeah. 
+You know, it's not effortless 
+
+766
+00:50:45,699 --> 00:50:48,300
+enough that I would just do it 
+all the time. 
+
+767
+00:50:48,300 --> 00:50:51,800
+And to me if I was developing 
+something like that and I go 
+
+768
+00:50:51,800 --> 00:50:55,400
+we're plugging Centric. 
+I would just go building making 
+
+769
+00:50:55,400 --> 00:50:58,900
+building plugins is going to be,
+you're not even going to have to
+
+770
+00:50:58,900 --> 00:51:02,300
+think about it. 
+At least for a large class of 
+
+771
+00:51:02,300 --> 00:51:04,199
+plugins. 
+Maybe there's some plugins where
+
+772
+00:51:04,199 --> 00:51:06,800
+you'd have this trapdoor thing 
+that you would drop through and 
+
+773
+00:51:06,800 --> 00:51:09,199
+you go, okay. 
+Now it's more complicated but 
+
+774
+00:51:09,599 --> 00:51:13,099
+but the Baseline would be this 
+is effortless. 
+
+775
+00:51:13,099 --> 00:51:16,699
+You can I think this code is 
+done that and I think Adam Adam 
+
+776
+00:51:16,699 --> 00:51:22,400
+before it was the plug-in model 
+and Adam was so easy. 
+
+777
+00:51:22,699 --> 00:51:26,199
+Okay, there were some issues 
+with with how they did plugins 
+
+778
+00:51:26,800 --> 00:51:30,000
+really around like their UI 
+model for plugins anyways 
+
+779
+00:51:30,500 --> 00:51:33,500
+because I just ended up being 
+bad but I think that vs code 
+
+780
+00:51:33,699 --> 00:51:37,300
+like took some inspiration from 
+how well it was done in. 
+
+781
+00:51:37,500 --> 00:51:43,099
+Adam and and how quickly the 
+plug-in ecosystem sprung up and 
+
+782
+00:51:43,099 --> 00:51:47,500
+how quickly it grew around Adam 
+and said oh we want that for a 
+
+783
+00:51:47,500 --> 00:51:50,199
+vs. 
+Yeah and I just started. 
+
+784
+00:51:50,500 --> 00:51:54,300
+I mean I've been dipping my toes
+into vs code and I didn't use it
+
+785
+00:51:54,900 --> 00:51:58,800
+because there were a couple of 
+things, one of them was I wanted
+
+786
+00:51:58,800 --> 00:52:01,400
+it for. 
+I mean using Sublime Text that 
+
+787
+00:52:01,400 --> 00:52:05,199
+was using for markdown and there
+was something oh it was 
+
+788
+00:52:05,199 --> 00:52:06,900
+reformatting. 
+It didn't have any way to 
+
+789
+00:52:06,900 --> 00:52:08,699
+reform. 
+Matt, the Esco didn't have any 
+
+790
+00:52:08,699 --> 00:52:12,500
+way to reformat markdown because
+I like it's easier for me to 
+
+791
+00:52:12,500 --> 00:52:13,900
+read it when it's formatted 
+nicely. 
+
+792
+00:52:14,300 --> 00:52:18,599
+And I recently found out that 
+somebody has made a markdown 
+
+793
+00:52:18,599 --> 00:52:21,800
+reformatting plug-in and it's so
+much better. 
+
+794
+00:52:21,800 --> 00:52:26,099
+I mean, it's so smart about how 
+it's doing it and so it's like, 
+
+795
+00:52:26,199 --> 00:52:28,500
+oh I'm not using Sublime Text 
+for that. 
+
+796
+00:52:28,500 --> 00:52:31,099
+I mean, I immediately have 
+switched to BS code. 
+
+797
+00:52:31,099 --> 00:52:33,800
+It's so much nicer for dealing 
+with markdown. 
+
+798
+00:52:34,000 --> 00:52:38,599
+And now and I started thinking 
+well I wonder if their In Eco 
+
+799
+00:52:38,599 --> 00:52:41,699
+see framework is or whatever is 
+going to be easy enough. 
+
+800
+00:52:41,699 --> 00:52:45,000
+That I could write my own 
+plugins and you're telling me 
+
+801
+00:52:45,000 --> 00:52:47,400
+that I could. 
+Yeah, yeah that's intriguing. 
+
+802
+00:52:47,699 --> 00:52:51,300
+Yeah, it's pretty good. 
+It made a pretty trivial and I 
+
+803
+00:52:51,300 --> 00:52:58,500
+think that that's for for some 
+some things like UI Frameworks 
+
+804
+00:52:58,900 --> 00:53:04,300
+ID IDE is what else would fall 
+into this class? 
+
+805
+00:53:05,199 --> 00:53:07,199
+Like kind of dependency 
+injections. 
+
+806
+00:53:07,400 --> 00:53:11,199
+Style like Frameworks, maybe 
+just Frameworks is the right 
+
+807
+00:53:11,199 --> 00:53:15,400
+classification, but one of the 
+core design principles should be
+
+808
+00:53:15,400 --> 00:53:20,699
+to enable the ecosystem. 
+And I think that that if you are
+
+809
+00:53:20,699 --> 00:53:25,400
+building one of these things, 
+we're having a healthy large 
+
+810
+00:53:25,500 --> 00:53:29,800
+ecosystem is important and 
+hopefully as one of your core 
+
+811
+00:53:29,800 --> 00:53:32,300
+design goals. 
+Then I think that what you can 
+
+812
+00:53:32,300 --> 00:53:36,300
+do is you can look at your 
+ecosystem and use it as a judge 
+
+813
+00:53:36,300 --> 00:53:38,699
+of. 
+The foundations that you've 
+
+814
+00:53:38,699 --> 00:53:42,800
+built and this is where like 
+back to the days of flex the 
+
+815
+00:53:42,800 --> 00:53:46,699
+component, ecosystem around, 
+Flex was huge, like it blew up, 
+
+816
+00:53:47,000 --> 00:53:49,800
+jQuery, same thing. 
+And I think that, that is kind 
+
+817
+00:53:49,800 --> 00:53:53,699
+of a way to judge your 
+foundations and say, like, did 
+
+818
+00:53:53,699 --> 00:53:57,599
+we get the foundation's, right? 
+And if, if you're not seeing 
+
+819
+00:53:57,599 --> 00:54:01,699
+this like rapid amazing growth 
+of an ecosystem, around your 
+
+820
+00:54:01,699 --> 00:54:03,400
+thing. 
+Maybe your foundations are 
+
+821
+00:54:03,400 --> 00:54:04,199
+wrong. 
+Yeah. 
+
+822
+00:54:04,199 --> 00:54:07,199
+If people can't come to it and 
+go, oh, I think I could. 
+
+823
+00:54:07,300 --> 00:54:09,900
+Make one of these and they do it
+and they put it out there. 
+
+824
+00:54:10,000 --> 00:54:13,000
+Well this is I mean the python 
+ecosystem is so cute yeah 
+
+825
+00:54:13,000 --> 00:54:16,300
+because there's enough pieces in
+place. 
+
+826
+00:54:16,300 --> 00:54:19,900
+I mean people still have issues 
+about yeah this could be better,
+
+827
+00:54:19,900 --> 00:54:23,599
+that could be better but 
+basically massive ego I go pip 
+
+828
+00:54:23,599 --> 00:54:29,800
+install thingy use thingy and 
+when somebody writes a new thing
+
+829
+00:54:29,800 --> 00:54:34,000
+they can just put it out there 
+and it's basically easily 
+
+830
+00:54:34,000 --> 00:54:37,300
+installable. 
+And yeah, that's an example of 
+
+831
+00:54:37,400 --> 00:54:38,699
+Who got it right? 
+Yep. 
+
+832
+00:54:39,000 --> 00:54:41,500
+Yep. 
+Yeah for sure one. 
+
+833
+00:54:41,500 --> 00:54:44,500
+I'm sure that it came from 
+really valuing, like you're 
+
+834
+00:54:44,500 --> 00:54:49,500
+saying absolutely have to really
+value that and make it a core 
+
+835
+00:54:49,599 --> 00:54:53,099
+principle when we do was 
+creating a first place, it was 
+
+836
+00:54:53,099 --> 00:54:58,099
+like I want to make this the 
+programming language for 
+
+837
+00:54:58,099 --> 00:55:00,500
+everyone every so everyone can 
+program. 
+
+838
+00:55:00,599 --> 00:55:05,199
+Yeah, that's that was his value 
+and I think he, you know, folks 
+
+839
+00:55:05,199 --> 00:55:08,800
+focused around and you built a 
+whole Community with that in 
+
+840
+00:55:08,800 --> 00:55:12,800
+mind. 
+And so yeah, now I've seen UI 
+
+841
+00:55:12,800 --> 00:55:16,900
+component component Frameworks 
+with like no third-party 
+
+842
+00:55:16,900 --> 00:55:22,000
+components and it's like, okay 
+like crickets, yeah, something 
+
+843
+00:55:22,000 --> 00:55:24,599
+is something foundational is 
+wrong. 
+
+844
+00:55:24,599 --> 00:55:31,400
+And yeah, I think it needs to be
+something that is like viral, 
+
+845
+00:55:31,400 --> 00:55:33,400
+basically. 
+It's like somebody looks at it 
+
+846
+00:55:33,400 --> 00:55:36,099
+and it's just immediately makes 
+sense to them. 
+
+847
+00:55:36,099 --> 00:55:37,599
+It's solving all the problems. 
+Rooms. 
+
+848
+00:55:37,900 --> 00:55:42,199
+And yet when you dig down a 
+little, it's still you're still 
+
+849
+00:55:42,199 --> 00:55:46,699
+able to stall solve the harder 
+problem and that is design 
+
+850
+00:55:46,699 --> 00:55:48,199
+challenge. 
+Some, you know, some of these 
+
+851
+00:55:48,199 --> 00:55:53,800
+get, when you see it you know it
+I mean an example is command 
+
+852
+00:55:53,800 --> 00:55:58,599
+line Tools in Python people kept
+making them kept making them. 
+
+853
+00:55:58,599 --> 00:56:01,699
+And then finally this guy I 
+think it's the same one who came
+
+854
+00:56:01,699 --> 00:56:06,000
+up with flask he he said, oh, 
+I'll make one and he calls it. 
+
+855
+00:56:06,000 --> 00:56:09,199
+Click. 
+And I started using that, I go. 
+
+856
+00:56:09,199 --> 00:56:12,000
+Oh, this is what I've been 
+looking for all this time. 
+
+857
+00:56:12,099 --> 00:56:15,699
+That's a lot of and when it, you
+know, when it works for you, you
+
+858
+00:56:15,699 --> 00:56:16,800
+go. 
+Wow. 
+
+859
+00:56:16,800 --> 00:56:20,400
+There's there's the design 
+thinking that went into. 
+
+860
+00:56:20,400 --> 00:56:25,800
+This is really elegant. 
+And also, I can't imagine how 
+
+861
+00:56:25,800 --> 00:56:28,699
+they did that. 
+How to their brains are much 
+
+862
+00:56:28,699 --> 00:56:32,699
+bigger than mine that they could
+achieve this Elegance of. 
+
+863
+00:56:32,699 --> 00:56:35,800
+Does it just clicked it did well
+CLI. 
+
+864
+00:56:35,800 --> 00:56:38,800
+Command line interface click You
+know, I mean, just the name you 
+
+865
+00:56:38,800 --> 00:56:42,900
+works really well? 
+Yeah, so yeah, yeah. 
+
+866
+00:56:42,900 --> 00:56:48,400
+I think for people who are 
+building Frameworks languages 
+
+867
+00:56:50,000 --> 00:56:56,099
+IDE is anything where where the 
+ecosystem is a huge part of the 
+
+868
+00:56:56,099 --> 00:56:59,699
+success of it. 
+If they look around and they 
+
+869
+00:56:59,699 --> 00:57:06,900
+don't see a very strong vibrant 
+growing ecosystem around their 
+
+870
+00:57:06,900 --> 00:57:11,699
+thing, I think the message is 
+like look at your foundations 
+
+871
+00:57:11,699 --> 00:57:15,300
+and look at your values because 
+you probably haven't gotten 
+
+872
+00:57:15,300 --> 00:57:24,199
+those correct. 
+Yes, 0 is 0 just his exploded. 
+
+873
+00:57:24,199 --> 00:57:29,000
+In terms of how the ecosystem 
+that has grown up around it so 
+
+874
+00:57:29,000 --> 00:57:32,599
+quickly and I think it's such a 
+testament to them getting the 
+
+875
+00:57:32,599 --> 00:57:35,500
+right foundational pieces. 
+Correct? 
+
+876
+00:57:38,099 --> 00:57:42,300
+Yeah, and there's so much that 
+goes into that it's more, you 
+
+877
+00:57:42,308 --> 00:57:49,199
+know, it's, it feels cultural 
+big because sometimes like I've 
+
+878
+00:57:49,199 --> 00:57:52,000
+encountered people who are 
+trying to design new programming
+
+879
+00:57:52,000 --> 00:57:56,599
+languages and I look at the 
+language and I go, oh, you're 
+
+880
+00:57:56,599 --> 00:58:00,599
+using semicolons, do you really 
+need to use semicolons and, you 
+
+881
+00:58:00,599 --> 00:58:03,000
+know, their answer might be 
+while man up and put the 
+
+882
+00:58:03,000 --> 00:58:07,500
+semicolons in there. 
+I'm going, I don't know this 
+
+883
+00:58:07,500 --> 00:58:10,500
+through. 
+Was shade on the rest of your, 
+
+884
+00:58:10,699 --> 00:58:12,599
+you know. 
+This one decision makes me 
+
+885
+00:58:12,800 --> 00:58:18,099
+question everything about what 
+you're trying to do and because,
+
+886
+00:58:18,300 --> 00:58:21,900
+you know, not having semi the 
+new version of Scala doesn't 
+
+887
+00:58:21,900 --> 00:58:24,500
+have semicolons. 
+Scotland doesn't have it. 
+
+888
+00:58:24,599 --> 00:58:28,300
+I thought of course is called oh
+is that? 
+
+889
+00:58:28,300 --> 00:58:31,000
+They're optional and Scholars 
+have they always been option? 
+
+890
+00:58:31,000 --> 00:58:32,800
+Oh okay. 
+Why did I think that was 
+
+891
+00:58:32,800 --> 00:58:33,599
+different? 
+I guess. 
+
+892
+00:58:34,000 --> 00:58:37,699
+I don't know but I mean, you 
+know and it's like the compiler.
+
+893
+00:58:37,800 --> 00:58:40,800
+In figure it out. 
+Why are you still making me? 
+
+894
+00:58:40,800 --> 00:58:43,199
+Put these dumb little things at 
+the end of every line. 
+
+895
+00:58:43,800 --> 00:58:51,599
+And yeah, yeah. 
+It's a Yeah, just what I think 
+
+896
+00:58:51,599 --> 00:58:56,199
+it is back to the core value of.
+If you want to build an 
+
+897
+00:58:56,199 --> 00:59:01,199
+ecosystem, then you need to 
+think very deeply about what 
+
+898
+00:59:01,199 --> 00:59:05,400
+your intended users want and 
+what their experience is going 
+
+899
+00:59:05,400 --> 00:59:06,199
+to be. 
+Yeah. 
+
+900
+00:59:06,199 --> 00:59:09,699
+And if you're building a 
+programming language, it's very 
+
+901
+00:59:09,699 --> 00:59:12,599
+likely that your target users 
+don't want to put some icons and
+
+902
+00:59:13,500 --> 00:59:15,300
+Mmm. 
+Yeah. 
+
+903
+00:59:15,500 --> 00:59:19,199
+Or I mean or, or to say new 
+Right. 
+
+904
+00:59:19,199 --> 00:59:22,300
+You know, I mean Java didn't 
+have to put new in because 
+
+905
+00:59:22,300 --> 00:59:24,000
+everything was being put on the 
+Heap anyway. 
+
+906
+00:59:24,000 --> 00:59:29,300
+So so but they yeah. 
+I all those things, all those 
+
+907
+00:59:29,300 --> 00:59:33,099
+things, all those things it's 
+in. 
+
+908
+00:59:33,099 --> 00:59:35,099
+And we think it's about 
+programming. 
+
+909
+00:59:35,099 --> 00:59:38,500
+We think it's about the 
+languages, and the pieces and 
+
+910
+00:59:38,500 --> 00:59:41,300
+everything, but it's actually 
+more than that. 
+
+911
+00:59:42,400 --> 00:59:48,099
+It's got the people, it's about 
+the people, it's the, the there 
+
+912
+00:59:48,099 --> 00:59:53,699
+was a term that you kept using, 
+you know, about the ergonomics. 
+
+913
+00:59:53,699 --> 00:59:55,699
+Yeah, it's about the ergonomics 
+of the thing. 
+
+914
+00:59:56,400 --> 00:59:58,599
+Well, it's interesting. 
+Is that the ergonomics is all 
+
+915
+00:59:58,599 --> 01:00:01,400
+about what the person needs, 
+right? 
+
+916
+01:00:01,400 --> 01:00:03,500
+I know how they feel and how 
+they feel, right? 
+
+917
+01:00:03,599 --> 01:00:05,000
+You know. 
+It's like when you talk about 
+
+918
+01:00:05,000 --> 01:00:08,699
+the ergonomics of the share its 
+out of that chair, feel and how 
+
+919
+01:00:08,699 --> 01:00:12,000
+does it affect your body and you
+know the long term. 
+
+920
+01:00:12,199 --> 01:00:17,699
+Effects long-term effects of 
+typing semicolons is this carpal
+
+921
+01:00:17,699 --> 01:00:19,400
+tunnel syndrome. 
+Still a thing. 
+
+922
+01:00:20,300 --> 01:00:22,300
+I don't know. 
+I I feel like a turd of a kind 
+
+923
+01:00:22,300 --> 01:00:24,099
+of yeah. 
+I think you'll like it kind of 
+
+924
+01:00:24,099 --> 01:00:27,699
+fit but but anyway, it's like 
+know that they extra effort and 
+
+925
+01:00:27,699 --> 01:00:35,500
+it's not just extra effort in 
+terms of, you know, typing it's 
+
+926
+01:00:35,500 --> 01:00:37,300
+like well you got to see all 
+that. 
+
+927
+01:00:37,300 --> 01:00:41,099
+It's it adds extra noise to 
+which you're looking at it's 
+
+928
+01:00:41,099 --> 01:00:45,000
+just and And you can say, oh, 
+it's just, it's subtle, ignore 
+
+929
+01:00:45,000 --> 01:00:48,800
+it. 
+But yeah, but when you say that 
+
+930
+01:00:48,800 --> 01:00:52,199
+to me, then I go. 
+What else are you doing that? 
+
+931
+01:00:52,199 --> 01:00:56,300
+I'm supposed to ignore. 
+Yeah, that that's actually 
+
+932
+01:00:56,500 --> 01:00:58,599
+making it harder for me to think
+about the problem. 
+
+933
+01:00:58,599 --> 01:01:01,699
+I'm trying to solve, right? 
+Yeah. 
+
+934
+01:01:01,699 --> 01:01:07,699
+And it may give you a compiler 
+tunnel syndrome movie thin films
+
+935
+01:01:07,699 --> 01:01:13,500
+of the new term. 
+All right, well polymorphism. 
+
+936
+01:01:14,099 --> 01:01:16,000
+It's all about. 
+What the heck is it. 
+
+937
+01:01:16,099 --> 01:01:18,599
+It's like magnets. 
+How do they work polymorphism? 
+
+938
+01:01:18,599 --> 01:01:21,099
+What is it better than copy and 
+paste? 
+
+939
+01:01:21,099 --> 01:01:24,000
+It is better than I guess. 
+Do. 
+
+940
+01:01:24,000 --> 01:01:28,699
+We know that for sure now. 
+Alright, so ends another episode
+
+941
+01:01:28,699 --> 01:01:30,800
+of Happy path program.

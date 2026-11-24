@@ -1,0 +1,4840 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:10,900
+Welcome everyone to happy path 
+programming. 
+
+4
+00:00:11,900 --> 00:00:14,400
+I'm James, I guess we said that 
+in the intro, we don't need to 
+
+5
+00:00:14,400 --> 00:00:17,400
+say it again. 
+Today, we have with us Julie, 
+
+6
+00:00:17,700 --> 00:00:21,200
+who we've known for many years. 
+Really, just totally. 
+
+7
+00:00:21,500 --> 00:00:24,500
+No last name. 
+Needed you confusing? 
+
+8
+00:00:26,900 --> 00:00:29,800
+So we what is your last name 
+now? 
+
+9
+00:00:30,100 --> 00:00:31,800
+Generally amundsen, that's my 
+name. 
+
+10
+00:00:31,800 --> 00:00:33,600
+Haven't silence. 
+Awesome. 
+
+11
+00:00:34,500 --> 00:00:37,200
+Yeah, it's funny. 
+You know, we see each other in 
+
+12
+00:00:37,200 --> 00:00:39,100
+person. 
+And I really don't know. 
+
+13
+00:00:39,100 --> 00:00:42,700
+Most people's last names. 
+It's just his first first name. 
+
+14
+00:00:42,700 --> 00:00:44,900
+So I guess what? 
+My world first name basis. 
+
+15
+00:00:45,400 --> 00:00:47,200
+Well, I guess I can tell you 
+worse than that. 
+
+16
+00:00:47,700 --> 00:00:51,700
+I've been virtual, you know, 
+working for a year and, you 
+
+17
+00:00:51,700 --> 00:00:55,400
+know, people are starting to 
+come back to the office and I 
+
+18
+00:00:55,400 --> 00:00:58,100
+saw some people that I had had 
+video calls with and I was used 
+
+19
+00:00:58,100 --> 00:01:02,600
+to reading the boxes and I'm 
+like, I don't remember which one
+
+20
+00:01:02,600 --> 00:01:06,900
+you are. 
+Yeah, it's gonna be an 
+
+21
+00:01:06,900 --> 00:01:10,600
+adjustment. 
+Going back to non non digital 
+
+22
+00:01:10,600 --> 00:01:13,900
+life where we, you know, it is 
+nice to have people's names at 
+
+23
+00:01:13,900 --> 00:01:16,800
+the bottom of the screen and 
+bottom of their see. 
+
+24
+00:01:16,800 --> 00:01:20,400
+Know, if your Google Glass did 
+that, I would totally have 
+
+25
+00:01:20,400 --> 00:01:22,300
+those. 
+I could come across as the 
+
+26
+00:01:22,300 --> 00:01:25,900
+friendliest person in the world.
+If I knew everybody's name, oh 
+
+27
+00:01:25,900 --> 00:01:31,500
+hi, Bob, great to see you. 
+How are the wife and two kids? 
+
+28
+00:01:31,600 --> 00:01:35,200
+One of them is that birthday 
+didn't need a screen on your, on
+
+29
+00:01:35,200 --> 00:01:36,900
+your glasses. 
+Read it off. 
+
+30
+00:01:37,700 --> 00:01:41,900
+Although they say that Google 
+Maps is making a stupider and 
+
+31
+00:01:42,300 --> 00:01:45,200
+now Julie just told us that Zoom
+made a stupider. 
+
+32
+00:01:46,300 --> 00:01:51,600
+Yeah, it's just coevolution. 
+Yeah, there you go. 
+
+33
+00:01:51,600 --> 00:01:53,500
+That way to put a positive spin 
+on it. 
+
+34
+00:01:55,800 --> 00:02:00,300
+So Julie it's great to have you 
+and so you were beginning to 
+
+35
+00:02:00,300 --> 00:02:04,200
+tell us about what you were 
+researching when Bruce and I saw
+
+36
+00:02:04,200 --> 00:02:07,500
+you in person many years ago in 
+the bed. 
+
+37
+00:02:07,700 --> 00:02:09,100
+Area. 
+So what was that again? 
+
+38
+00:02:10,400 --> 00:02:14,100
+It's called a framework called 
+active inference. 
+
+39
+00:02:15,100 --> 00:02:18,200
+And I think folks who are 
+familiar with reinforcement 
+
+40
+00:02:18,200 --> 00:02:22,100
+learning, you could probably 
+draw an analogy where you have 
+
+41
+00:02:22,100 --> 00:02:28,400
+this agent that has some sensors
+and it is kind of actively 
+
+42
+00:02:28,400 --> 00:02:32,400
+exploring its environment and 
+really trying to learn the 
+
+43
+00:02:32,400 --> 00:02:36,900
+structure of the world and the 
+Dynamics of the world, kind of 
+
+44
+00:02:36,900 --> 00:02:38,800
+like a baby. 
+And then it kind of sort of 
+
+45
+00:02:38,800 --> 00:02:45,400
+builds up its own network and 
+starts to seek reward like, hey,
+
+46
+00:02:45,400 --> 00:02:48,300
+I don't want to be cold right 
+now or I'm hungry. 
+
+47
+00:02:49,100 --> 00:02:51,600
+And so this there's a huge body 
+of research. 
+
+48
+00:02:52,100 --> 00:02:55,600
+I Carl first in and number of 
+others that we were following 
+
+49
+00:02:55,600 --> 00:03:02,500
+and really wanted to implement, 
+this is a practical real-world 
+
+50
+00:03:02,900 --> 00:03:06,900
+agent that we could put into 
+perhaps embodied cognition like 
+
+51
+00:03:06,900 --> 00:03:10,500
+a robot or something and good 
+progress made on a demo. 
+
+52
+00:03:10,500 --> 00:03:15,200
+But unfortunately the the second
+round of funding did not come 
+
+53
+00:03:15,200 --> 00:03:17,900
+in. 
+So it's temporarily shelved 
+
+54
+00:03:17,900 --> 00:03:20,400
+right now. 
+So are you telling me that those
+
+55
+00:03:20,400 --> 00:03:26,000
+guys who did the juice in a bag 
+with the weird blender? 
+
+56
+00:03:26,000 --> 00:03:29,000
+They could get a whole bunch of 
+money, but you're AI research, 
+
+57
+00:03:32,400 --> 00:03:34,800
+spend $400. 
+So you can squeeze the juice? 
+
+58
+00:03:35,000 --> 00:03:39,500
+Well, I mean, I'll say between 
+In 2017, there was kind of a 
+
+59
+00:03:39,800 --> 00:03:43,500
+shift in terms of the the bar 
+you had to meet to get funding. 
+
+60
+00:03:44,300 --> 00:03:48,000
+I think our problem was we 
+needed a couple years, few years
+
+61
+00:03:48,000 --> 00:03:52,900
+to really dig down into the 
+research and these want to see a
+
+62
+00:03:52,900 --> 00:03:56,700
+business model right away. 
+So maybe we could have, you 
+
+63
+00:03:56,700 --> 00:03:59,200
+know, tried to figure out how to
+collaborate more with 
+
+64
+00:03:59,200 --> 00:04:01,600
+universities or get some kind of
+grant, that would probably have 
+
+65
+00:04:01,600 --> 00:04:04,300
+been a good route to go. 
+Mhm. 
+
+66
+00:04:04,600 --> 00:04:09,400
+So you had started I mean, this 
+was a startup that you and a 
+
+67
+00:04:09,408 --> 00:04:10,400
+partner. 
+We're doing. 
+
+68
+00:04:10,500 --> 00:04:12,100
+Yes. 
+Right. 
+
+69
+00:04:12,200 --> 00:04:17,800
+And how long did you go before 
+you decided to start down until 
+
+70
+00:04:17,800 --> 00:04:21,100
+my own bootstrap? 
+Angel funding started to run 
+
+71
+00:04:21,100 --> 00:04:22,900
+out. 
+So it was started, we started 
+
+72
+00:04:22,900 --> 00:04:28,900
+in, let's see, 2014, and then, 
+by late 2017, I was like, I 
+
+73
+00:04:28,900 --> 00:04:30,700
+don't think I can fund this 
+anymore. 
+
+74
+00:04:30,700 --> 00:04:35,400
+Like so fun this anymore, so, 
+that's a bummer. 
+
+75
+00:04:35,800 --> 00:04:40,300
+It does seem like the On that 
+works or kind of been the The 
+
+76
+00:04:40,300 --> 00:04:43,300
+Craze for a while. 
+But but they don't they don't 
+
+77
+00:04:43,300 --> 00:04:49,000
+really like, they're not actual 
+cognizant things, like they 
+
+78
+00:04:49,000 --> 00:04:51,200
+don't actually learn. 
+They don't learn from their 
+
+79
+00:04:51,200 --> 00:04:57,100
+environment, they don't imagine.
+And so there's, they're missing 
+
+80
+00:04:57,100 --> 00:05:00,900
+a whole part of what human 
+cognition is all about, right? 
+
+81
+00:05:01,500 --> 00:05:03,800
+Yes. 
+And this is really the 
+
+82
+00:05:03,800 --> 00:05:07,500
+difference between what I was 
+working on in machine learning. 
+
+83
+00:05:07,600 --> 00:05:15,100
+Right machine learned models are
+really attempting to build a 
+
+84
+00:05:15,100 --> 00:05:18,200
+model of some like, 
+high-dimensional. 
+
+85
+00:05:18,400 --> 00:05:23,900
+You know, space where the real 
+or actual like shape of it is 
+
+86
+00:05:23,900 --> 00:05:27,200
+not known and it can only be 
+inferred by looking at a bunch 
+
+87
+00:05:27,200 --> 00:05:30,200
+of examples, you know, trying to
+pinpoint. 
+
+88
+00:05:30,800 --> 00:05:35,100
+The problem there is that the 
+shape of the world changes, 
+
+89
+00:05:35,100 --> 00:05:36,300
+right? 
+There's Dynamics. 
+
+90
+00:05:36,300 --> 00:05:41,000
+So like once you You know, from 
+a given data set, you know, next
+
+91
+00:05:41,000 --> 00:05:43,400
+week, the data set might 
+actually shift. 
+
+92
+00:05:43,600 --> 00:05:47,400
+So, you know, we kind of fake 
+that a little bit because it's 
+
+93
+00:05:47,400 --> 00:05:49,700
+just a model. 
+All it is, is a model, right? 
+
+94
+00:05:49,700 --> 00:05:53,400
+Like Audible and I guess maybe, 
+you know, from from a software 
+
+95
+00:05:53,400 --> 00:05:57,100
+engineering perspective like the
+analogy, I love is to give is 
+
+96
+00:05:57,100 --> 00:05:59,400
+that. 
+It's basically like you write 
+
+97
+00:05:59,400 --> 00:06:04,900
+code that writes other code, 
+given some data, right? 
+
+98
+00:06:04,900 --> 00:06:09,800
+And so, if you think about how 
+hard it is, it is to test the 
+
+99
+00:06:09,800 --> 00:06:12,400
+Software System where you 
+directly wrote the code. 
+
+100
+00:06:12,400 --> 00:06:16,000
+That's performing some action in
+production with leaving good at 
+
+101
+00:06:16,008 --> 00:06:18,300
+doing that. 
+So adding another level of 
+
+102
+00:06:18,308 --> 00:06:23,000
+indirection, as well as this 
+kind of, you know, this data set
+
+103
+00:06:23,300 --> 00:06:28,700
+that has to come from somewhere.
+So huh that's why it's so hard. 
+
+104
+00:06:29,100 --> 00:06:37,500
+Yeah I learned so much about 
+science by that that one WTF 
+
+105
+00:06:38,300 --> 00:06:41,200
+Where we had the hacked. 
+It was the theme was machine 
+
+106
+00:06:41,200 --> 00:06:45,100
+learning and James mostly did 
+the work. 
+
+107
+00:06:45,100 --> 00:06:48,100
+But anyway, are we were, we just
+did? 
+
+108
+00:06:48,300 --> 00:06:50,500
+Yeah, I think so. 
+We just did some kind of coin 
+
+109
+00:06:50,500 --> 00:06:55,000
+toss thing didn't very well, but
+my understanding over the next 
+
+110
+00:06:55,000 --> 00:06:59,900
+few years of what science was, 
+you know, because I had studied 
+
+111
+00:06:59,900 --> 00:07:03,900
+physics as an undergraduate and 
+I had gotten really stuck in 
+
+112
+00:07:03,900 --> 00:07:07,400
+particular when the professor 
+would write in. 
+
+113
+00:07:07,500 --> 00:07:09,900
+Equation. 
+And then he would start throwing
+
+114
+00:07:09,900 --> 00:07:14,500
+away higher order terms and I'm 
+going, you know, the equals sign
+
+115
+00:07:14,500 --> 00:07:17,900
+says it's an equation. 
+You can't be throwing away parts
+
+116
+00:07:17,900 --> 00:07:19,500
+of an equation. 
+I had no clue. 
+
+117
+00:07:19,600 --> 00:07:22,900
+You know. 
+No understanding that his first,
+
+118
+00:07:22,900 --> 00:07:26,400
+you know, is initial equation 
+was just guesses at how the 
+
+119
+00:07:26,400 --> 00:07:29,500
+world would work and then they 
+say, oh, you know, does it, does
+
+120
+00:07:29,500 --> 00:07:33,800
+it fit do these terms make, you 
+know, now I totally get that, 
+
+121
+00:07:34,000 --> 00:07:36,800
+but I have to have that 
+experience with the machine 
+
+122
+00:07:36,800 --> 00:07:39,700
+learning. 
+Sighs before it really started 
+
+123
+00:07:39,700 --> 00:07:43,300
+to make sense and they're both 
+just trying to create models, 
+
+124
+00:07:43,600 --> 00:07:46,200
+exactly that. 
+Look, that appear, right? 
+
+125
+00:07:46,800 --> 00:07:50,200
+That if you write and, and to 
+the in the, the limitations of 
+
+126
+00:07:50,200 --> 00:07:53,600
+the human are that, well, I got 
+to be able to, you know, fit 
+
+127
+00:07:53,600 --> 00:07:55,900
+these in my head. 
+I have to be able to make sense 
+
+128
+00:07:55,900 --> 00:07:59,000
+of these pieces in my head, the 
+machine learning things. 
+
+129
+00:07:59,000 --> 00:08:02,000
+Like, no, it doesn't care. 
+All it has to do is go, does it 
+
+130
+00:08:02,000 --> 00:08:06,300
+fit the data? 
+And ideally is it predictive, 
+
+131
+00:08:06,400 --> 00:08:08,500
+and that's true with both. 
+Both of those models. 
+
+132
+00:08:09,000 --> 00:08:11,800
+And of course, with the machine 
+learning data as Julie says, 
+
+133
+00:08:12,100 --> 00:08:16,700
+well, the data that you have 
+doesn't necessarily show 
+
+134
+00:08:16,700 --> 00:08:20,500
+changes. 
+So how do you is that what you 
+
+135
+00:08:20,500 --> 00:08:25,000
+were working on was, was how to 
+incorporate the changes in the 
+
+136
+00:08:25,000 --> 00:08:26,800
+environment? 
+Yeah. 
+
+137
+00:08:26,800 --> 00:08:31,200
+So I mean, I guess a typical 
+mainstream machine learning 
+
+138
+00:08:31,200 --> 00:08:35,900
+model, like a neural network or 
+even like a simple linear model 
+
+139
+00:08:36,600 --> 00:08:39,600
+really just has the Training 
+data set. 
+
+140
+00:08:39,600 --> 00:08:43,200
+It just has a whole bunch of 
+inputs and then a label and the 
+
+141
+00:08:43,207 --> 00:08:45,700
+label is what's the right 
+answer. 
+
+142
+00:08:46,200 --> 00:08:50,900
+And from that data set, the 
+model needs to kind of infer 
+
+143
+00:08:51,000 --> 00:08:54,500
+what correct answers would be 
+given some other, you know, 
+
+144
+00:08:54,500 --> 00:08:58,600
+inputs. 
+And so, you know, the problem is
+
+145
+00:08:58,600 --> 00:09:02,000
+like, I mean, we could take an 
+example around, let's say 
+
+146
+00:09:02,300 --> 00:09:05,800
+Netflix streaming, like, if 
+you're trying to predict, you 
+
+147
+00:09:05,800 --> 00:09:08,400
+know, hey, do we think that? 
+Buddy's going to enjoy a 
+
+148
+00:09:08,400 --> 00:09:11,700
+particular movie. 
+Well, you know, things can 
+
+149
+00:09:11,700 --> 00:09:14,600
+change over time. 
+The catalog of available titles 
+
+150
+00:09:14,600 --> 00:09:17,400
+can change over time, the 
+seasonality can change, like, we
+
+151
+00:09:17,400 --> 00:09:19,800
+know, you don't want to 
+recommend the Christmas movie in
+
+152
+00:09:19,800 --> 00:09:24,400
+July different patterns and 
+tastes around the world. 
+
+153
+00:09:24,400 --> 00:09:27,500
+So just sort of saying oh, we 
+did it once now, this is the 
+
+154
+00:09:27,500 --> 00:09:30,900
+correct answer. 
+For all time isn't actually 
+
+155
+00:09:30,900 --> 00:09:35,500
+going to work right in my mood 
+could change and you don't 
+
+156
+00:09:35,500 --> 00:09:38,300
+necessarily track that even 
+though I might Start watching 
+
+157
+00:09:38,600 --> 00:09:43,900
+particular, kinds of things. 
+Your algorithm might not catch 
+
+158
+00:09:43,900 --> 00:09:48,400
+that and say, oh, he's in, he's 
+looking for comedies now. 
+
+159
+00:09:48,400 --> 00:09:53,000
+So, let's mean it seems to, but 
+right now I don't think it'd 
+
+160
+00:09:53,000 --> 00:09:58,900
+take models are static and and 
+we create them. 
+
+161
+00:09:58,900 --> 00:10:02,600
+And then we have to then 
+recreate them and see like OK, 
+
+162
+00:10:02,600 --> 00:10:05,300
+do these FIB, but it sounds like
+what you were working on was 
+
+163
+00:10:05,600 --> 00:10:08,200
+more Dynamic learning. 
+Yes. 
+
+164
+00:10:08,300 --> 00:10:13,800
+And so what I was working on 
+before would actually 
+
+165
+00:10:13,900 --> 00:10:17,700
+continuously like actually on a 
+certain sort of cadence or time 
+
+166
+00:10:17,700 --> 00:10:20,500
+step let's say every 10 
+milliseconds take a sample, 
+
+167
+00:10:21,100 --> 00:10:22,900
+right? 
+Maybe it has, you know, like a 
+
+168
+00:10:22,900 --> 00:10:26,600
+heat sensor or a light sensor 
+and it's continually taking a 
+
+169
+00:10:26,600 --> 00:10:31,700
+sample and there are some 
+machine learning models that try
+
+170
+00:10:31,700 --> 00:10:37,300
+to model sort of sequences over 
+time but they don't always do. 
+
+171
+00:10:37,600 --> 00:10:40,600
+In a continuous fashion. 
+So there's these sort of things 
+
+172
+00:10:40,600 --> 00:10:43,200
+called el STM. 
+Long-term, short-term memory 
+
+173
+00:10:43,500 --> 00:10:44,900
+been a while since I studied 
+them. 
+
+174
+00:10:44,900 --> 00:10:49,400
+So don't ask me to explain them.
+But so there are certain machine
+
+175
+00:10:49,400 --> 00:10:51,600
+learning models that take 
+accounting systems sequences 
+
+176
+00:10:51,600 --> 00:10:53,000
+that. 
+What I was working on would 
+
+177
+00:10:53,000 --> 00:10:57,000
+continuously sample and update 
+its representation of the 
+
+178
+00:10:57,000 --> 00:11:00,300
+possible Transitions and the 
+possible sequences like, you 
+
+179
+00:11:00,308 --> 00:11:03,400
+know, I need to walk down the 
+hall to get to the fridge and 
+
+180
+00:11:03,400 --> 00:11:06,500
+then it would be able to respond
+to hey, the fridge actually 
+
+181
+00:11:06,500 --> 00:11:08,200
+moved. 
+You know, to a different 
+
+182
+00:11:08,200 --> 00:11:11,200
+location. 
+I need to update my policy to go
+
+183
+00:11:11,200 --> 00:11:14,800
+to this other location, right? 
+So, those are some examples and 
+
+184
+00:11:14,800 --> 00:11:17,100
+that doesn't even take into 
+account things. 
+
+185
+00:11:17,100 --> 00:11:21,900
+Like, well, your sample rate 
+might be limited by your machine
+
+186
+00:11:22,200 --> 00:11:29,600
+capacity, but if you don't 
+sample fast enough, you've can 
+
+187
+00:11:29,600 --> 00:11:33,200
+lose valuable data. 
+Like imagine you had a village 
+
+188
+00:11:33,900 --> 00:11:37,400
+and you get, you were getting 
+data from that Village. 
+
+189
+00:11:37,500 --> 00:11:41,800
+And you sampled once a day and 
+then you do you get it when the 
+
+190
+00:11:41,800 --> 00:11:43,800
+sun is Right? 
+Overhead or something right? 
+
+191
+00:11:44,000 --> 00:11:48,700
+And so so it would seem like 
+that's a constant Factor when so
+
+192
+00:11:48,700 --> 00:11:52,000
+it does matter and so you do 
+need that sample rate to kind of
+
+193
+00:11:52,000 --> 00:11:56,300
+match to be able to observe the 
+changes in the world. 
+
+194
+00:11:58,600 --> 00:12:00,900
+Yeah, that's cool. 
+So what you're saying is it's a 
+
+195
+00:12:00,900 --> 00:12:07,300
+really hard problem. 
+It is not not fully. 
+
+196
+00:12:07,400 --> 00:12:09,700
+Moved. 
+But I think that that progress 
+
+197
+00:12:09,700 --> 00:12:11,600
+is being made. 
+It's been a little while since I
+
+198
+00:12:11,600 --> 00:12:15,400
+paid attention to the updates in
+that space, But I'll sure I'll 
+
+199
+00:12:15,400 --> 00:12:18,500
+come back to it. 
+Someday seems like most energy 
+
+200
+00:12:18,500 --> 00:12:22,000
+is still kind of neural network.
+Yeah, development. 
+
+201
+00:12:22,300 --> 00:12:27,800
+Yes, a lot of neural network. 
+I mean, I think now it's kind of
+
+202
+00:12:27,808 --> 00:12:31,300
+this Renaissance of, oh, this 
+problem that we solved, you 
+
+203
+00:12:31,300 --> 00:12:33,800
+know, maybe with logistic 
+regression the past, could we 
+
+204
+00:12:33,800 --> 00:12:36,600
+improve on it with a neural 
+network? 
+
+205
+00:12:37,500 --> 00:12:42,300
+So like in terms of the 
+technology stack like we really 
+
+206
+00:12:42,300 --> 00:12:46,800
+are seeing this flourishing of 
+the Python ecosystem. 
+
+207
+00:12:46,800 --> 00:12:52,000
+So like the news of the day is 
+really tensor flow and Pie 
+
+208
+00:12:52,000 --> 00:12:56,600
+torches like dominating 
+Frameworks you know for doing 
+
+209
+00:12:56,600 --> 00:13:00,500
+neural networks. 
+Yeah one of the one of the 
+
+210
+00:13:00,500 --> 00:13:06,800
+tensions or the challenges at 
+Netflix is like Netflix has many
+
+211
+00:13:07,400 --> 00:13:14,200
+Years of practice, at operating 
+the service at scale on Java, 
+
+212
+00:13:14,500 --> 00:13:19,000
+the jvm. 
+And at the same time, the 
+
+213
+00:13:19,000 --> 00:13:22,700
+machine learning, libraries are 
+really, being built up in 
+
+214
+00:13:23,200 --> 00:13:24,500
+Python. 
+Yeah. 
+
+215
+00:13:24,500 --> 00:13:28,200
+So, we're doing a lot of 
+investment on like, how do we 
+
+216
+00:13:28,200 --> 00:13:31,900
+for example, to sort of the 
+Upstream data pipelines to get 
+
+217
+00:13:31,900 --> 00:13:36,600
+the data to the model in the jvm
+and actually skull is popular 
+
+218
+00:13:36,600 --> 00:13:39,600
+because it's Park. 
+And then Downstream of that 
+
+219
+00:13:39,700 --> 00:13:45,200
+apply python to tip so that we 
+can take advantage of tensorflow
+
+220
+00:13:45,300 --> 00:13:46,900
+and pay torch. 
+Yeah. 
+
+221
+00:13:47,900 --> 00:13:50,400
+It's at all the people who've 
+learned from machine learning 
+
+222
+00:13:50,700 --> 00:13:52,700
+and that's the language, they 
+know. 
+
+223
+00:13:53,500 --> 00:13:54,800
+Yeah, yes. 
+Yeah. 
+
+224
+00:13:55,000 --> 00:13:58,300
+And actually I'll say there's 
+two and and this kind of birth. 
+
+225
+00:13:58,300 --> 00:14:01,100
+I think this gets into one of 
+your topics that you're 
+
+226
+00:14:01,100 --> 00:14:02,900
+interested in which is 
+organizations. 
+
+227
+00:14:03,600 --> 00:14:08,200
+There's really kind of two main 
+types of Machine learning 
+
+228
+00:14:08,200 --> 00:14:13,200
+practitioners at Netflix, one is
+actually called algorithm 
+
+229
+00:14:13,200 --> 00:14:19,400
+engineers and these folks are 
+software Engineers who are also 
+
+230
+00:14:19,400 --> 00:14:22,200
+ml experts. 
+So they kind of span the 
+
+231
+00:14:22,200 --> 00:14:27,100
+spectrum of, you know, kind of 
+the research of new new ideas, 
+
+232
+00:14:27,100 --> 00:14:32,600
+perhaps even new, you know, sort
+of modeling techniques all the 
+
+233
+00:14:32,600 --> 00:14:35,500
+way to. 
+Hey, this model needs to run. 
+
+234
+00:14:35,500 --> 00:14:39,500
+And if it if it doesn't run And,
+you know, either the Netflix 
+
+235
+00:14:39,500 --> 00:14:43,900
+page won't get shown or maybe a 
+degraded experience, will be 
+
+236
+00:14:43,900 --> 00:14:45,800
+shown. 
+So they're kind of in the hot 
+
+237
+00:14:45,800 --> 00:14:50,200
+seat there and they're all about
+personalizing, the member 
+
+238
+00:14:50,200 --> 00:14:52,300
+experience. 
+So, usually all the things you 
+
+239
+00:14:52,300 --> 00:14:55,600
+see in the page like which 
+movies you get recommended and 
+
+240
+00:14:55,600 --> 00:14:58,800
+which rose kind of show up on 
+the page, that's really their 
+
+241
+00:14:58,800 --> 00:15:02,500
+realm. 
+And then we also have data 
+
+242
+00:15:02,500 --> 00:15:07,000
+scientists and data scientists 
+have like pretty diverse 
+
+243
+00:15:07,000 --> 00:15:09,600
+scientific Tiffany's backgrounds
+like if you look at their 
+
+244
+00:15:09,600 --> 00:15:13,500
+LinkedIn profile like some of 
+them have a PhD in physics. 
+
+245
+00:15:13,800 --> 00:15:17,300
+Some of them is like economics 
+or cognitive Neuroscience. 
+
+246
+00:15:17,300 --> 00:15:19,700
+So there's kind of a they're 
+both so good at math. 
+
+247
+00:15:20,000 --> 00:15:20,600
+Yeah. 
+That's right. 
+
+248
+00:15:20,600 --> 00:15:24,600
+And backgrounds and they're 
+expected to be like subject 
+
+249
+00:15:24,600 --> 00:15:28,500
+matter experts or main experts 
+and they come in with whatever 
+
+250
+00:15:28,500 --> 00:15:30,000
+tools are going to get the job 
+done. 
+
+251
+00:15:30,000 --> 00:15:34,700
+And usually, that's either on 
+python or an r. 
+
+252
+00:15:35,200 --> 00:15:37,300
+And so they work on a whole 
+bunch of problems. 
+
+253
+00:15:37,400 --> 00:15:40,300
+Ones that you don't end up 
+seeing in the Netflix product. 
+
+254
+00:15:40,400 --> 00:15:46,100
+So things like, you know, 
+helping there's kind of this 
+
+255
+00:15:46,500 --> 00:15:50,100
+long-standing tradition in the 
+entertainment industry of 
+
+256
+00:15:50,100 --> 00:15:56,000
+equipping like, creative 
+Executives with data around 
+
+257
+00:15:56,000 --> 00:15:59,900
+like, Hey, how well might this 
+given show or movie do on the 
+
+258
+00:15:59,900 --> 00:16:01,500
+service? 
+So, like, you know, one of the, 
+
+259
+00:16:01,500 --> 00:16:04,300
+one of the area's is how can we 
+improve on that with machine 
+
+260
+00:16:04,300 --> 00:16:08,100
+learning? 
+There's also a number of Mating 
+
+261
+00:16:08,100 --> 00:16:13,300
+problems in the studio space. 
+So things like you know, how do 
+
+262
+00:16:13,300 --> 00:16:17,400
+we scout out shooting locations 
+and kind of like compare a COS 
+
+263
+00:16:17,400 --> 00:16:23,800
+curve or how do we optimize like
+the shooting schedule with all 
+
+264
+00:16:23,800 --> 00:16:27,500
+the talent that has to come 
+together all the way to like, 
+
+265
+00:16:28,200 --> 00:16:31,700
+you know, hey once we've 
+actually made the content we're 
+
+266
+00:16:31,700 --> 00:16:34,900
+about to launch it? 
+Like is the localization quality
+
+267
+00:16:34,900 --> 00:16:37,600
+the quality of like the 
+subtitles and the dubbing That 
+
+268
+00:16:37,600 --> 00:16:41,100
+great, then once we get it 
+launched, there's things like, 
+
+269
+00:16:41,100 --> 00:16:44,700
+how do we make sure that you 
+have the best quality video on 
+
+270
+00:16:44,700 --> 00:16:48,600
+your network, which varies 
+across the globe with minimal 
+
+271
+00:16:48,600 --> 00:16:51,900
+interruptions? 
+So, all this to say, data, 
+
+272
+00:16:51,900 --> 00:16:54,600
+scientists and algorithm 
+Engineers kind of have different
+
+273
+00:16:54,600 --> 00:16:59,100
+types of problems, some of which
+are more visible than others, 
+
+274
+00:16:59,100 --> 00:17:01,100
+and they use different 
+Technologies. 
+
+275
+00:17:01,700 --> 00:17:05,200
+Yeah, some of those sound like 
+operations research kinds of 
+
+276
+00:17:05,200 --> 00:17:11,700
+things like like Like aligning, 
+you know, all of the talent and 
+
+277
+00:17:11,700 --> 00:17:13,500
+where you're going to do it and 
+when you're going to do, it 
+
+278
+00:17:13,500 --> 00:17:15,300
+sounds like an opera like 
+logistical. 
+
+279
+00:17:15,300 --> 00:17:18,300
+Yeah. 
+Like a the stuff that products 
+
+280
+00:17:18,300 --> 00:17:23,300
+is is I think time on. 
+Hopefully it's not like a 
+
+281
+00:17:23,300 --> 00:17:29,100
+optimization and he complete 
+that's fun. 
+
+282
+00:17:29,200 --> 00:17:31,700
+It seems like there's a lot of 
+fun fun problems to work on 
+
+283
+00:17:31,700 --> 00:17:34,900
+there. 
+So yeah and in my focus really 
+
+284
+00:17:34,900 --> 00:17:38,100
+has been on the platform that's 
+Cording. 
+
+285
+00:17:38,900 --> 00:17:41,300
+And for the last several years, 
+it's mostly focus on the data 
+
+286
+00:17:41,300 --> 00:17:45,700
+science side and now I'm kind of
+widening my perspective to also 
+
+287
+00:17:45,700 --> 00:17:49,700
+the algorithm engineering side 
+because we used to kind of think
+
+288
+00:17:49,700 --> 00:17:52,200
+of these two as like, oh there's
+two different worlds. 
+
+289
+00:17:52,200 --> 00:17:55,200
+We have the Java world in the 
+python world and really as 
+
+290
+00:17:55,900 --> 00:17:58,100
+actually as neural networks 
+become more popular. 
+
+291
+00:17:58,100 --> 00:18:02,700
+For example the like we need to 
+actually think more broadly 
+
+292
+00:18:02,700 --> 00:18:06,800
+about bringing these tech stocks
+together and less in terms of 
+
+293
+00:18:06,800 --> 00:18:12,000
+like Two different worlds, it's 
+funny. 
+
+294
+00:18:12,000 --> 00:18:14,700
+It doesn't seem like the 
+programming language should be 
+
+295
+00:18:14,700 --> 00:18:20,400
+that big of a. 
+It should make a world, you 
+
+296
+00:18:20,400 --> 00:18:26,200
+know, it says how much that 
+limits your thinking if we 
+
+297
+00:18:26,200 --> 00:18:29,300
+aren't World. 
+Well, maybe I should expand on 
+
+298
+00:18:29,300 --> 00:18:32,400
+those a bit because I think 
+it's, it goes beyond. 
+
+299
+00:18:32,400 --> 00:18:34,400
+It's not really about the 
+programming language. 
+
+300
+00:18:34,400 --> 00:18:36,600
+I think it's really around 
+ecosystem. 
+
+301
+00:18:38,800 --> 00:18:43,500
+Right? 
+So if let's sew in again enough 
+
+302
+00:18:43,500 --> 00:18:46,500
+this case the the actual 
+applications, let's say behind 
+
+303
+00:18:46,500 --> 00:18:49,700
+the play button or that serve 
+the page are all in Java. 
+
+304
+00:18:49,900 --> 00:18:52,200
+And you know, you think about, 
+well what do you need to do to 
+
+305
+00:18:52,200 --> 00:18:54,400
+scale a system? 
+Right? 
+
+306
+00:18:54,900 --> 00:18:59,300
+You know there's you know for 
+example you know even things 
+
+307
+00:18:59,300 --> 00:19:02,900
+like jvm performance right 
+garbage collections you can tune
+
+308
+00:19:02,900 --> 00:19:06,900
+into things all the way to like 
+oh how do we build all the 
+
+309
+00:19:06,900 --> 00:19:09,100
+right? 
+Like logging and monitoring and 
+
+310
+00:19:09,100 --> 00:19:13,800
+testing infrastructure. 
+And so once you get beyond the 
+
+311
+00:19:13,800 --> 00:19:17,000
+language, now there's like all 
+of these other pieces on top of 
+
+312
+00:19:17,000 --> 00:19:21,900
+that and so there's a lot of 
+Leverage and reusing that and 
+
+313
+00:19:21,900 --> 00:19:24,000
+then when it doesn't exist on 
+the other side you go. 
+
+314
+00:19:24,000 --> 00:19:27,200
+Oh well we're going to have to 
+spend years, you know, really 
+
+315
+00:19:27,200 --> 00:19:31,800
+making this work right and then 
+not to mention you think about 
+
+316
+00:19:31,800 --> 00:19:34,800
+an organization where hey we've 
+hired a lot of people who are 
+
+317
+00:19:34,800 --> 00:19:40,900
+good, you know, working on the 
+The jvm and you know, they have 
+
+318
+00:19:41,000 --> 00:19:44,900
+really deep expertise in like 
+high scale operations, right? 
+
+319
+00:19:44,900 --> 00:19:48,100
+And so how would that look you 
+know in Python. 
+
+320
+00:19:48,100 --> 00:19:51,800
+So I think it's more, it's more 
+a question of like when is it 
+
+321
+00:19:52,500 --> 00:19:58,500
+useful to use which technology? 
+So one of the ways that we do 
+
+322
+00:19:58,500 --> 00:20:02,800
+think about it is because much 
+of the data is coming from these
+
+323
+00:20:02,800 --> 00:20:05,900
+live applications like you know 
+what are you actually as a 
+
+324
+00:20:05,900 --> 00:20:08,800
+member doing on the Netflix? 
+Paige, what are you watching? 
+
+325
+00:20:10,500 --> 00:20:15,200
+The doing sort of all of the, 
+you know, sort of feature 
+
+326
+00:20:15,200 --> 00:20:18,600
+engineering pipelines, makes a 
+lot of sense on on the Java 
+
+327
+00:20:18,600 --> 00:20:23,200
+side, but then doing the 
+training of the model because 
+
+328
+00:20:23,200 --> 00:20:25,400
+that's where these modeling 
+Frameworks are makes a lot of 
+
+329
+00:20:25,400 --> 00:20:29,500
+sense on the python sign, it 
+sir, unlike with tensorflow, 
+
+330
+00:20:29,500 --> 00:20:32,200
+can't can't. 
+You create the models with say 
+
+331
+00:20:32,200 --> 00:20:36,300
+python but then serve the model 
+with Java or something. 
+
+332
+00:20:36,500 --> 00:20:38,500
+They're the models. 
+Somewhat portable with some of 
+
+333
+00:20:38,508 --> 00:20:43,400
+the Technologies. 
+I mean, a little bit more, duct 
+
+334
+00:20:43,400 --> 00:20:47,900
+tape e. 
+That's the technical term on the
+
+335
+00:20:47,900 --> 00:20:51,000
+back end because so Tech, what 
+you tend to do is you'll build a
+
+336
+00:20:51,000 --> 00:20:55,300
+Docker image that runs the 
+tensor flow model and then you 
+
+337
+00:20:55,300 --> 00:20:58,200
+end up calling that from your 
+Java service. 
+
+338
+00:20:58,300 --> 00:21:03,600
+Yeah so yeah that's Justin. 
+So the actual model goes into 
+
+339
+00:21:03,600 --> 00:21:06,400
+the docker container or is it 
+stored inside of the file 
+
+340
+00:21:06,400 --> 00:21:08,000
+system. 
+Yeah. 
+
+341
+00:21:08,000 --> 00:21:12,300
+I mean so you know well we have 
+we have a little bit more 
+
+342
+00:21:12,300 --> 00:21:14,800
+specificity of publishing 
+mechanisms where there's this 
+
+343
+00:21:14,800 --> 00:21:18,800
+whole notification system and 
+yes, it'll be of the model 
+
+344
+00:21:18,800 --> 00:21:22,000
+itself. 
+In some cases is actually 
+
+345
+00:21:22,000 --> 00:21:24,300
+published, let's say, 2 S 3 and 
+the docker container picks it 
+
+346
+00:21:24,300 --> 00:21:27,900
+up. 
+Actually, don't intimately know 
+
+347
+00:21:27,900 --> 00:21:29,800
+the details. 
+So I but I'm going to guess, 
+
+348
+00:21:29,800 --> 00:21:32,500
+they probably don't bake it into
+the docker image. 
+
+349
+00:21:34,700 --> 00:21:37,700
+So you're saying okay so you 
+write the model in Python all 
+
+350
+00:21:37,700 --> 00:21:41,300
+the supporting things and you 
+stick that in Docker and then 
+
+351
+00:21:41,300 --> 00:21:46,400
+how do you communicate with that
+Docker unit? 
+
+352
+00:21:47,600 --> 00:21:52,600
+Is that well in and I'll say 
+Okay. 
+
+353
+00:21:52,600 --> 00:21:55,200
+So it's like the micro service. 
+Yeah. 
+
+354
+00:21:55,200 --> 00:21:59,400
+So and I'll say there's a couple
+different modes because, you 
+
+355
+00:21:59,400 --> 00:22:03,100
+know, in some cases it's 
+actually pretty expensive to 
+
+356
+00:22:03,800 --> 00:22:06,700
+wait, what we call score in the 
+model live, which is you're 
+
+357
+00:22:06,700 --> 00:22:11,400
+actually not only sort of 
+generating the features but also
+
+358
+00:22:11,400 --> 00:22:15,700
+calling the model that can be 
+expensive or cause too much 
+
+359
+00:22:15,700 --> 00:22:22,200
+latency in some cases. 
+And instead of doing that, For 
+
+360
+00:22:22,200 --> 00:22:25,000
+some cases, we want to 
+pre-compute a whole bunch of 
+
+361
+00:22:25,000 --> 00:22:30,200
+scores like, oh, we have this 
+many members and we're going to 
+
+362
+00:22:30,200 --> 00:22:33,900
+generate your prediction all at 
+once and then it's ready for 
+
+363
+00:22:33,900 --> 00:22:36,000
+you, right? 
+When you come so that there's a 
+
+364
+00:22:36,000 --> 00:22:40,600
+sort of version of caching or 
+bulk scoring that happens. 
+
+365
+00:22:42,300 --> 00:22:46,600
+We seem to have lost James. 
+We seem to I just sent him a 
+
+366
+00:22:46,600 --> 00:22:52,900
+text in case he hasn't noticed 
+that he dropped off, but Yeah. 
+
+367
+00:22:53,000 --> 00:22:57,600
+Well you know technology I was 
+worried. 
+
+368
+00:22:57,600 --> 00:23:00,500
+My internet wasn't going to be 
+good sigh. 
+
+369
+00:23:00,500 --> 00:23:03,100
+I'll just do a quick sidebar 
+because maybe you have some good
+
+370
+00:23:03,100 --> 00:23:08,500
+stories around this I actually 
+gave a talk to ya o data and 
+
+371
+00:23:08,500 --> 00:23:14,400
+Australia Tuesday night. 
+I was worried that my internet 
+
+372
+00:23:14,400 --> 00:23:16,600
+wasn't going to work well 
+because I had been having 
+
+373
+00:23:16,600 --> 00:23:18,300
+problems. 
+I plan to go to the office. 
+
+374
+00:23:18,900 --> 00:23:22,600
+And then as I was leaving, I 
+filled up my Our bottles are 
+
+375
+00:23:22,600 --> 00:23:26,600
+refrigerator, and then I heard 
+this like whooshing sound water 
+
+376
+00:23:26,600 --> 00:23:31,100
+coming out of somewhere, and I 
+was like, well, that's weird. 
+
+377
+00:23:31,100 --> 00:23:33,200
+Maybe it's refilling, right? 
+Go away. 
+
+378
+00:23:33,800 --> 00:23:36,900
+Come back, a minute later and 
+there is an ominous puddle 
+
+379
+00:23:37,200 --> 00:23:39,400
+forming under my free 
+frigerator. 
+
+380
+00:23:39,600 --> 00:23:42,300
+And at this point it's about 10 
+minutes before I'm supposed to 
+
+381
+00:23:42,308 --> 00:23:46,800
+sign on to do my tech check 
+anyway. 
+
+382
+00:23:46,800 --> 00:23:50,200
+So long story short, I had to 
+pull out the refrigerator 
+
+383
+00:23:50,800 --> 00:23:54,200
+because I was Trying to go 
+outside to, to shut off the 
+
+384
+00:23:54,200 --> 00:23:57,600
+water. 
+And usually you open up the 
+
+385
+00:23:57,800 --> 00:24:02,200
+cement little things on the 
+sidewalk to get to the water 
+
+386
+00:24:02,200 --> 00:24:06,200
+valve on only found in there 
+were cockroaches, so I'm like, 
+
+387
+00:24:06,200 --> 00:24:07,600
+okay Waters rushing out my 
+fridge. 
+
+388
+00:24:07,600 --> 00:24:11,300
+I have a talk in a few minutes. 
+I can't turn the water off. 
+
+389
+00:24:11,300 --> 00:24:14,700
+So at the best I could do was 
+point the fridge out the garage 
+
+390
+00:24:14,800 --> 00:24:16,300
+and the water was streaming 
+down. 
+
+391
+00:24:16,300 --> 00:24:22,400
+The driveway, the neighbor. 
+Luckily was called in You 
+
+392
+00:24:22,400 --> 00:24:25,000
+figured out because I have a 
+landlady and she called the 
+
+393
+00:24:25,000 --> 00:24:27,400
+neighbor so we got the water 
+shut off. 
+
+394
+00:24:27,400 --> 00:24:30,800
+Just some time I got into my 
+talk and it was all good. 
+
+395
+00:24:31,700 --> 00:24:36,000
+Wow it was quite dramatic. 
+Yes a little bit hair-raising 
+
+396
+00:24:36,000 --> 00:24:39,900
+you're probably very energized 
+by the time you gave your talk 
+
+397
+00:24:40,200 --> 00:24:44,800
+right gentlemen. 
+Anyway I just for fun do you 
+
+398
+00:24:44,800 --> 00:24:48,400
+have any James or Bruce? 
+Any fun like last-minute talk 
+
+399
+00:24:48,400 --> 00:24:51,100
+drama stories. 
+Yeah. 
+
+400
+00:24:52,300 --> 00:24:55,200
+Probably the worst thing that 
+happened. 
+
+401
+00:24:56,100 --> 00:24:57,500
+I'm sure there were worse things
+than this. 
+
+402
+00:24:57,500 --> 00:25:01,100
+But most memorable was I, was 
+this was years ago. 
+
+403
+00:25:01,100 --> 00:25:05,200
+I was doing a panel, I was 
+moderating a panel and I think 
+
+404
+00:25:05,200 --> 00:25:10,500
+this was at the software 
+development conference, that 
+
+405
+00:25:10,500 --> 00:25:16,000
+used to be a big deal. 
+And and I knew personally, 
+
+406
+00:25:16,000 --> 00:25:22,300
+everybody on the panel including
+the last person who I had To 
+
+407
+00:25:22,300 --> 00:25:26,700
+book with. 
+But there's a thing that can 
+
+408
+00:25:26,700 --> 00:25:29,100
+happen. 
+Where some part of your brain 
+
+409
+00:25:29,100 --> 00:25:33,600
+goes not going to be helpful 
+right now, like, the part that 
+
+410
+00:25:33,700 --> 00:25:38,200
+remembers names. 
+And so, I'm going down and it's 
+
+411
+00:25:38,200 --> 00:25:40,900
+like, I'm totally aware. 
+That queue is empty. 
+
+412
+00:25:41,000 --> 00:25:45,700
+I do not know the name of my 
+co-author right now, it's just 
+
+413
+00:25:45,700 --> 00:25:52,400
+gone and your your other thread 
+took over all the resources, And
+
+414
+00:25:52,400 --> 00:25:56,400
+I I think it's more Insidious 
+than that. 
+
+415
+00:25:56,400 --> 00:25:59,900
+There's, you know, there's some 
+little kid in there, going no 
+
+416
+00:26:00,800 --> 00:26:03,400
+doing this anymore or something 
+like that. 
+
+417
+00:26:03,400 --> 00:26:06,600
+Anyway, so I get to the end and 
+I just have to explain my wow, 
+
+418
+00:26:06,900 --> 00:26:10,200
+my way out of it because I, you 
+know, the name was gone. 
+
+419
+00:26:11,100 --> 00:26:20,800
+And yeah that was I mean I had 
+had experiences on stage. 
+
+420
+00:26:21,700 --> 00:26:24,400
+Oh. 
+No, I see what you're saying. 
+
+421
+00:26:24,400 --> 00:26:27,800
+I think it's a sometimes the 
+squiggly lines don't work. 
+
+422
+00:26:28,300 --> 00:26:31,000
+Okay, okay. 
+Yeah, there it is. 
+
+423
+00:26:31,100 --> 00:26:34,600
+Okay, I had had other 
+experiences on stage, I think by
+
+424
+00:26:34,600 --> 00:26:38,600
+that time where you go, I might 
+not remember my lines. 
+
+425
+00:26:39,100 --> 00:26:42,600
+And, and you just have to let it
+pass, you know, because 
+
+426
+00:26:42,600 --> 00:26:46,000
+otherwise, if you start freaking
+out, if you attach to it, you're
+
+427
+00:26:46,500 --> 00:26:48,400
+you're done. 
+You just got to stay in the 
+
+428
+00:26:48,400 --> 00:26:52,000
+moment. 
+I'm sure James James. 
+
+429
+00:26:52,100 --> 00:26:57,800
+Has probably spoken more than I 
+have, because you just, it's 
+
+430
+00:26:57,800 --> 00:26:59,600
+kind of your job. 
+Yeah. 
+
+431
+00:27:01,900 --> 00:27:09,000
+So much stress and and involved 
+in many presentations and like 
+
+432
+00:27:09,200 --> 00:27:14,600
+moments before, like nothing's 
+working and oh, right? 
+
+433
+00:27:14,600 --> 00:27:16,600
+Because you're always trying to 
+do live demos. 
+
+434
+00:27:16,700 --> 00:27:20,300
+Yeah, that's like the worst. 
+Why do I do that? 
+
+435
+00:27:22,200 --> 00:27:24,600
+When you see it, it's very 
+effective. 
+
+436
+00:27:24,600 --> 00:27:27,400
+That's why you do it. 
+But it's more fun to. 
+
+437
+00:27:27,600 --> 00:27:32,400
+Yeah, because by things can go 
+wrong and it's improv, it is 
+
+438
+00:27:32,400 --> 00:27:35,800
+improv and sometimes it does go 
+wrong. 
+
+439
+00:27:36,400 --> 00:27:41,300
+Yeah, there's a lot of stress in
+that well and I think you've 
+
+440
+00:27:41,300 --> 00:27:46,200
+done enough and had it go wrong 
+enough that you go yeah, things 
+
+441
+00:27:46,200 --> 00:27:48,400
+go wrong and you know, you deal 
+with it. 
+
+442
+00:27:48,400 --> 00:27:51,400
+It's not like, oh no, what if 
+something goes wrong, everything
+
+443
+00:27:51,400 --> 00:27:55,000
+will crash. - and I'll be left 
+alone. 
+
+444
+00:27:55,900 --> 00:28:00,400
+Yeah, I've wanted to wear a 
+heart rate monitor when I ever 
+
+445
+00:28:00,408 --> 00:28:03,900
+win when I present, because I'm 
+sure there are definitely 
+
+446
+00:28:03,900 --> 00:28:06,400
+moments where something is going
+wrong or whatever, where my 
+
+447
+00:28:06,400 --> 00:28:09,500
+heart rate, just goes through 
+the roof and be funny to chart, 
+
+448
+00:28:09,500 --> 00:28:13,700
+that I should put it on screen 
+live while I present. 
+
+449
+00:28:13,800 --> 00:28:17,600
+And I have this be like like 
+yeah, then everyone could see 
+
+450
+00:28:17,600 --> 00:28:21,800
+like things are getting serious.
+So yeah. 
+
+451
+00:28:22,400 --> 00:28:26,100
+I think you might get into some 
+vicious feedback loops if you 
+
+452
+00:28:26,100 --> 00:28:27,500
+did. 
+Hey, yeah. 
+
+453
+00:28:28,400 --> 00:28:31,800
+That's true that they 
+visualizing of my current heart 
+
+454
+00:28:31,800 --> 00:28:34,300
+rate could increase my heart, 
+right, Shiva. 
+
+455
+00:28:34,500 --> 00:28:37,700
+I mean, you could just like, 
+we're a smartwatch or some. 
+
+456
+00:28:37,700 --> 00:28:39,000
+Yeah. 
+Yeah. 
+
+457
+00:28:39,000 --> 00:28:40,600
+I think you should totally do 
+that. 
+
+458
+00:28:40,600 --> 00:28:43,800
+I love this idea. 
+Yeah. 
+
+459
+00:28:44,500 --> 00:28:48,900
+Well, luckily I haven't had the 
+present on a stage for a while 
+
+460
+00:28:48,900 --> 00:28:51,900
+so I'll see them next time that 
+happens. 
+
+461
+00:28:52,000 --> 00:28:56,600
+And I like presenting on stages.
+I do too. 
+
+462
+00:28:56,700 --> 00:28:58,700
+I'm so tired of virtual 
+conferences. 
+
+463
+00:28:59,200 --> 00:29:04,200
+Yeah. 
+It's exhausting whole immersion 
+
+464
+00:29:04,200 --> 00:29:09,800
+experience. 
+So yeah, fun fun. 
+
+465
+00:29:11,400 --> 00:29:15,500
+Lots of fun stories and 
+experiences there, but it's, 
+
+466
+00:29:15,700 --> 00:29:19,600
+it's stressful. 
+I'm glad I have to have that 
+
+467
+00:29:19,600 --> 00:29:21,900
+stress for a while. 
+Now, I just have like a three 
+
+468
+00:29:22,100 --> 00:29:24,300
+World to give me Replacements. 
+Yes. 
+
+469
+00:29:27,100 --> 00:29:33,000
+The joys of parenting. 
+My son is 14 now and this 
+
+470
+00:29:33,000 --> 00:29:35,900
+afternoon I'm taking him to get 
+his first vaccine. 
+
+471
+00:29:36,600 --> 00:29:39,600
+That's exciting. 
+Except proved it down to 12. 
+
+472
+00:29:39,600 --> 00:29:43,300
+So yes. 
+So very happy about that. 
+
+473
+00:29:43,700 --> 00:29:49,500
+So that, um, Julie did you know 
+that Bruce and I are working on 
+
+474
+00:29:49,500 --> 00:29:51,700
+a book with Bill? 
+I don't, you've probably met 
+
+475
+00:29:51,700 --> 00:29:54,700
+Bill. 
+Oh yeah, yeah yeah, we're 
+
+476
+00:29:54,700 --> 00:29:57,800
+working on a scholar 3. 
+Zo book. 
+
+477
+00:29:58,100 --> 00:30:01,200
+And so that's been a lot of fun 
+working on that. 
+
+478
+00:30:01,200 --> 00:30:04,400
+But scholar 3 was just released 
+today. 
+
+479
+00:30:04,400 --> 00:30:08,300
+So you said that a couple of 
+weeks, well, it was weird like a
+
+480
+00:30:08,300 --> 00:30:10,000
+couple weeks ago. 
+They're like, let's have our 
+
+481
+00:30:10,000 --> 00:30:13,400
+release party. 
+Oh, so we kind of celebrated the
+
+482
+00:30:13,400 --> 00:30:15,100
+release of scholar three, a 
+couple weeks ago. 
+
+483
+00:30:15,100 --> 00:30:19,400
+But it turns out today is the 
+actual day when the bits are 
+
+484
+00:30:19,400 --> 00:30:24,500
+available and live. 
+So but zero has not yet been 
+
+485
+00:30:24,500 --> 00:30:31,300
+released for the scholar three. 
+So sure that I watch for 2026. 
+
+486
+00:30:31,300 --> 00:30:35,600
+When let's say Netflix folks get
+to use it because when you have 
+
+487
+00:30:35,600 --> 00:30:41,300
+infrastructure our can spark is 
+pretty laggy on update into. 
+
+488
+00:30:41,700 --> 00:30:46,800
+Yeah, I'm just gonna be sure 
+that there's still stuff in 211 
+
+489
+00:30:46,800 --> 00:30:50,400
+and maybe to 12 look what the 
+state has. 
+
+490
+00:30:50,900 --> 00:30:58,000
+Yeah, it's not interesting. 
+Maybe too, because I kind of 
+
+491
+00:30:58,000 --> 00:31:02,000
+just went straight into some of 
+the, some of the the deeper side
+
+492
+00:31:02,000 --> 00:31:04,000
+of the machine learning, but I 
+thought it'd be interesting to 
+
+493
+00:31:04,000 --> 00:31:07,400
+like, approach. 
+The question of infrastructure 
+
+494
+00:31:07,400 --> 00:31:09,900
+for data science from the 
+perspective of the data 
+
+495
+00:31:09,900 --> 00:31:15,900
+scientist because I think that 
+might motivate like why it's so 
+
+496
+00:31:15,900 --> 00:31:20,100
+difficult. 
+So let's let's give this a try. 
+
+497
+00:31:20,900 --> 00:31:25,600
+I think I described inside 
+having a pretty wide range of 
+
+498
+00:31:25,600 --> 00:31:26,700
+backgrounds. 
+Jin. 
+
+499
+00:31:26,700 --> 00:31:31,100
+You're in a Ph.D program, you 
+know, you're working on some 
+
+500
+00:31:31,100 --> 00:31:33,800
+various projects and I think the
+question is, will what tools you
+
+501
+00:31:33,800 --> 00:31:38,100
+have at your disposal. 
+You probably have a laptop. 
+
+502
+00:31:38,300 --> 00:31:41,700
+Maybe you have a machine under 
+your desk, like maybe if you 
+
+503
+00:31:41,700 --> 00:31:45,500
+need to use gpus and you're 
+probably going to be working 
+
+504
+00:31:45,500 --> 00:31:49,200
+pretty independently and so, you
+know, the first thing you might 
+
+505
+00:31:49,200 --> 00:31:53,700
+install is to put our notebooks.
+Yeah, you can like install 
+
+506
+00:31:53,700 --> 00:31:58,200
+Jupiter self-contained, you know
+on Your laptop on your desktop, 
+
+507
+00:31:58,200 --> 00:32:01,500
+maybe, you know, on a cloud 
+instance, but that might be 
+
+508
+00:32:01,500 --> 00:32:04,400
+pushing it. 
+And then, I guess the other 
+
+509
+00:32:04,400 --> 00:32:07,000
+question would be like, where 
+would the data come from? 
+
+510
+00:32:07,000 --> 00:32:08,900
+Like you might, where do you get
+the data? 
+
+511
+00:32:09,000 --> 00:32:11,800
+Do you have access to it? 
+Is it production data is an 
+
+512
+00:32:11,800 --> 00:32:15,200
+obfuscated, in some way, is it? 
+Yeah. 
+
+513
+00:32:15,500 --> 00:32:19,000
+Like the easiest thing to do is 
+look for existing, you know, 
+
+514
+00:32:19,000 --> 00:32:21,400
+data sources. 
+So, like a lot of papers are 
+
+515
+00:32:21,400 --> 00:32:27,700
+written. 
+On this, like very popular data 
+
+516
+00:32:27,700 --> 00:32:29,900
+sources. 
+Like the most popular one is 
+
+517
+00:32:29,900 --> 00:32:34,600
+like called mnist, which is a 
+collection of handwritten digits
+
+518
+00:32:34,600 --> 00:32:38,100
+that like, um, the cushion built
+this data set. 
+
+519
+00:32:38,100 --> 00:32:42,600
+I don't know, a long, long time 
+ago and so it's kind of like the
+
+520
+00:32:42,600 --> 00:32:48,200
+standard for a lot of computer 
+vision, type research, or you 
+
+521
+00:32:48,200 --> 00:32:51,800
+might look at like, kaggle to 
+find like a data. 
+
+522
+00:32:52,000 --> 00:32:55,700
+Set and then if you have 
+resources, you're probably going
+
+523
+00:32:55,700 --> 00:32:58,200
+to try to partner with an 
+organization made. 
+
+524
+00:32:58,200 --> 00:33:01,800
+It could be, you know, within 
+the university, it could be 
+
+525
+00:33:01,800 --> 00:33:05,300
+trying to run a study and you 
+have to do a lot of work to 
+
+526
+00:33:05,300 --> 00:33:09,900
+collect that data, and you're 
+probably going to end up putting
+
+527
+00:33:09,900 --> 00:33:13,700
+it in some sort of data format. 
+On your machine, like, maybe a 
+
+528
+00:33:13,700 --> 00:33:17,600
+CSV file or something, right? 
+I mean, it could be as basic as 
+
+529
+00:33:17,600 --> 00:33:21,200
+that, right? 
+You gotta have it some parsable 
+
+530
+00:33:21,200 --> 00:33:23,100
+form. 
+Right. 
+
+531
+00:33:24,000 --> 00:33:28,200
+And you what what your goal is 
+is I want to write the paper and
+
+532
+00:33:28,200 --> 00:33:29,700
+I want to publish the paper, 
+right? 
+
+533
+00:33:29,700 --> 00:33:34,900
+And so all I you need to do is 
+you know really get things going
+
+534
+00:33:34,900 --> 00:33:38,200
+in your jupyter notebook. 
+You know, assuming the data 
+
+535
+00:33:38,200 --> 00:33:42,700
+isn't huge and then you get your
+results and you write your 
+
+536
+00:33:42,700 --> 00:33:46,800
+paper, right? 
+Maybe you have to if you have 
+
+537
+00:33:46,800 --> 00:33:49,400
+large data, maybe you need to 
+like get a student account on 
+
+538
+00:33:49,400 --> 00:33:52,200
+AWS and like run a cluster. 
+Right. 
+
+539
+00:33:52,200 --> 00:33:56,500
+But but the, the short of it is,
+nobody else probably has to make
+
+540
+00:33:56,500 --> 00:33:59,400
+that machine learning model run,
+make that code run. 
+
+541
+00:34:00,200 --> 00:34:04,700
+And so then you graduate and you
+take a job at a company. 
+
+542
+00:34:05,600 --> 00:34:08,500
+And so the question is, okay, 
+how do I do all this stuff at 
+
+543
+00:34:08,500 --> 00:34:10,100
+this company? 
+Right? 
+
+544
+00:34:10,100 --> 00:34:13,900
+Well, the company probably has 
+some kind of data warehouse, you
+
+545
+00:34:13,900 --> 00:34:18,800
+know, maybe a hive store, for 
+example, you know again it's on 
+
+546
+00:34:18,800 --> 00:34:21,000
+the cloud. 
+I'm most familiar with AWS so 
+
+547
+00:34:21,000 --> 00:34:23,600
+maybe it's like sitting On S3 
+somewhere. 
+
+548
+00:34:23,600 --> 00:34:27,199
+And then you're not working on 
+your laptop anymore. 
+
+549
+00:34:27,199 --> 00:34:31,400
+You're trying to work on like a 
+cloud workstation and like, how 
+
+550
+00:34:31,400 --> 00:34:33,800
+do I get the data? 
+How do I get a cloud 
+
+551
+00:34:33,800 --> 00:34:36,600
+workstation? 
+How do I get it set up with all 
+
+552
+00:34:36,600 --> 00:34:40,199
+my dependencies? 
+How do I get the data onto that 
+
+553
+00:34:40,199 --> 00:34:42,400
+workstation? 
+And then when the data gets too 
+
+554
+00:34:42,400 --> 00:34:45,400
+big, like how would I sort of 
+send that off to a cluster 
+
+555
+00:34:45,400 --> 00:34:50,500
+right? 
+And then once that happens how, 
+
+556
+00:34:50,500 --> 00:34:53,900
+you know, my colleague needs to 
+Get the same results or we need 
+
+557
+00:34:53,900 --> 00:34:55,400
+to get this model into 
+production. 
+
+558
+00:34:55,400 --> 00:34:58,300
+Like it has to train, you know, 
+every day. 
+
+559
+00:34:58,300 --> 00:35:00,700
+And I have this whole pipeline 
+that I wrote, you know, I wrote 
+
+560
+00:35:00,700 --> 00:35:02,900
+a script but like, how do I get 
+it running? 
+
+561
+00:35:03,400 --> 00:35:07,800
+You know, every day, I guess, 
+what do you have to learn? 
+
+562
+00:35:07,800 --> 00:35:09,900
+Get right? 
+You're exactly. 
+
+563
+00:35:09,900 --> 00:35:12,200
+So when you look from the 
+perspective, Effective Adidas 
+
+564
+00:35:12,200 --> 00:35:16,100
+items. 
+It's just like you can start to 
+
+565
+00:35:16,100 --> 00:35:21,900
+see like so much infrastructure 
+is needed to get the job done 
+
+566
+00:35:21,900 --> 00:35:27,400
+like once you land in a company 
+and this is not something that 
+
+567
+00:35:27,400 --> 00:35:30,900
+necessarily you're supposed to, 
+you know, at the University. 
+
+568
+00:35:31,600 --> 00:35:35,500
+So, I've seen some companies the
+way that they deal with this is 
+
+569
+00:35:35,500 --> 00:35:40,000
+that they have the data 
+scientists and they use Python 
+
+570
+00:35:40,000 --> 00:35:41,500
+and jupyter notebook. 
+Books. 
+
+571
+00:35:41,900 --> 00:35:49,100
+But then the way to get that, 
+that, that code into a 
+
+572
+00:35:49,100 --> 00:35:52,100
+production Pipeline and, you 
+know, all that's the kind of 
+
+573
+00:35:52,108 --> 00:35:55,900
+stuff is that, then? 
+An engineer takes the python 
+
+574
+00:35:55,900 --> 00:36:01,200
+code, rewrite it into Scala and 
+then it works against the 
+
+575
+00:36:01,200 --> 00:36:04,200
+distributed, like spark system, 
+whatever. 
+
+576
+00:36:05,000 --> 00:36:08,700
+And then that engineer knows how
+to do get knows how to like, you
+
+577
+00:36:08,708 --> 00:36:12,300
+know, deal with cic deal with 
+like All the kind of engineering
+
+578
+00:36:12,300 --> 00:36:14,400
+problems. 
+So there, there, there are a 
+
+579
+00:36:14,500 --> 00:36:16,900
+number of companies that 
+actually will just take the data
+
+580
+00:36:16,900 --> 00:36:21,700
+scientist python code, and have 
+an engineer rewrite it into the 
+
+581
+00:36:22,100 --> 00:36:25,800
+engineering system, which is 
+certainly not ideal, but but 
+
+582
+00:36:25,800 --> 00:36:27,700
+there are different concerns on 
+each side. 
+
+583
+00:36:27,700 --> 00:36:30,500
+And, you know, there with 
+production, there's concerns 
+
+584
+00:36:30,500 --> 00:36:35,300
+about performance and you know, 
+different things that that data 
+
+585
+00:36:35,300 --> 00:36:39,200
+scientist doesn't necessarily 
+have to care about so yeah. 
+
+586
+00:36:39,200 --> 00:36:46,200
+But the potential Benefits are 
+so significant that having a 
+
+587
+00:36:46,200 --> 00:36:51,200
+whole person or people as a 
+buffer makes sense. 
+
+588
+00:36:51,200 --> 00:36:55,800
+Because if you can get those 
+answers, that could make a huge 
+
+589
+00:36:55,800 --> 00:36:58,900
+difference in your good. 
+Well, I mean, let's expand on 
+
+590
+00:36:58,900 --> 00:37:03,400
+that set up a little bit, right?
+I mean, if you're talking about,
+
+591
+00:37:03,400 --> 00:37:07,000
+let's say a feature engineering 
+pipeline, that the data 
+
+592
+00:37:07,000 --> 00:37:10,800
+scientist wrote, in Python, one 
+of the primary concerns is going
+
+593
+00:37:10,800 --> 00:37:16,100
+to be Is the data coming out the
+other end when you re Implement 
+
+594
+00:37:16,100 --> 00:37:19,200
+and skull are going to be the 
+same as the data that came out 
+
+595
+00:37:19,200 --> 00:37:22,900
+in Python. 
+And there's just all kinds of 
+
+596
+00:37:23,000 --> 00:37:27,300
+tricky issues that can come up. 
+When it comes to that 
+
+597
+00:37:27,300 --> 00:37:31,400
+re-implementation, you know, how
+do you gain confidence that the 
+
+598
+00:37:31,400 --> 00:37:36,400
+like resulting model is actually
+going to perform the same way 
+
+599
+00:37:36,400 --> 00:37:38,300
+that it did in a research 
+setting? 
+
+600
+00:37:38,800 --> 00:37:44,500
+That's one of the challenges and
+Then another challenges research
+
+601
+00:37:44,500 --> 00:37:49,200
+has an ongoing Endeavor and so 
+just because you had your 
+
+602
+00:37:49,200 --> 00:37:53,200
+version one that you had that 
+engineer productionize, will how
+
+603
+00:37:53,200 --> 00:37:57,300
+do you get the version 2 out? 
+And how do you actually compare 
+
+604
+00:37:57,500 --> 00:38:00,100
+whether the version two is 
+performing? 
+
+605
+00:38:00,500 --> 00:38:02,300
+A testing the new. 
+Yeah. 
+
+606
+00:38:03,900 --> 00:38:08,900
+So, so so actually, this is the 
+very problem that, you know, the
+
+607
+00:38:08,900 --> 00:38:11,900
+team that I've been on at 
+Netflix has Working on for the 
+
+608
+00:38:11,900 --> 00:38:16,200
+past several years. 
+So this all of these problems 
+
+609
+00:38:16,200 --> 00:38:19,500
+when it comes to sort of these 
+lower layers of the stack know, 
+
+610
+00:38:19,500 --> 00:38:22,700
+the data, the compute, the build
+the dependencies. 
+
+611
+00:38:23,400 --> 00:38:26,100
+We built a system called meta 
+flow. 
+
+612
+00:38:26,600 --> 00:38:30,400
+When I say we, I mean, the team,
+I hired them, they don't fit 
+
+613
+00:38:31,600 --> 00:38:36,300
+system called meta flow and meta
+flow, really tries to wrap all 
+
+614
+00:38:36,300 --> 00:38:41,300
+of these concerns, so that the 
+data scientist can Act, you 
+
+615
+00:38:41,308 --> 00:38:43,800
+know, through a really simple 
+python interface. 
+
+616
+00:38:44,400 --> 00:38:50,000
+Basically, what you can do with 
+meta flow is create a directed 
+
+617
+00:38:50,000 --> 00:38:54,500
+acyclic graph in code. 
+So you just write a python class
+
+618
+00:38:54,900 --> 00:38:59,900
+that has functions and each 
+function is like considered a 
+
+619
+00:38:59,908 --> 00:39:04,100
+step in that dagger a node in 
+that dag and then you use 
+
+620
+00:39:04,400 --> 00:39:09,300
+decorators to kind of Link those
+nodes together. 
+
+621
+00:39:09,800 --> 00:39:12,500
+And so what metaphor does is 
+Takes care of, oh, how do I 
+
+622
+00:39:12,500 --> 00:39:17,600
+actually execute this thing? 
+And then one of the main, you 
+
+623
+00:39:17,600 --> 00:39:21,700
+know, benefits here is that you 
+can metaphor has sort of this 
+
+624
+00:39:21,700 --> 00:39:24,700
+built-in sort of dad 
+orchestrator. 
+
+625
+00:39:24,700 --> 00:39:27,700
+That'll just run it on your 
+machine like any old python 
+
+626
+00:39:27,700 --> 00:39:33,000
+script but then the beauty is 
+you can also run a command line.
+
+627
+00:39:33,700 --> 00:39:39,900
+You know, a command that will 
+take that dag and really map it 
+
+628
+00:39:39,900 --> 00:39:46,200
+onto our Action grade scheduler.
+And so as a data scientist, if 
+
+629
+00:39:46,200 --> 00:39:49,200
+you're once you have your 
+prototype going, you can 
+
+630
+00:39:49,200 --> 00:39:50,700
+actually say no. 
+I'm actually going to get it 
+
+631
+00:39:50,700 --> 00:39:54,200
+into production myself and it's 
+going to train, you know, on 
+
+632
+00:39:54,200 --> 00:39:57,200
+this schedule and it's going to 
+produce either a newly trained 
+
+633
+00:39:57,200 --> 00:40:03,500
+model or new scores, you know, 
+on on that schedule and then for
+
+634
+00:40:03,500 --> 00:40:07,900
+things like, oh, we need to live
+score like the the pre-generated
+
+635
+00:40:07,900 --> 00:40:10,700
+scores are not good enough. 
+There's also a way that you 
+
+636
+00:40:11,000 --> 00:40:15,000
+Basically specify a scoring 
+function that just simply calls 
+
+637
+00:40:15,000 --> 00:40:19,200
+the model and then the, what's 
+called Model hosting service 
+
+638
+00:40:19,200 --> 00:40:23,600
+will just wrap like a rest 
+service around that for you. 
+
+639
+00:40:23,600 --> 00:40:25,700
+So as a data scientist, you 
+don't have to learn. 
+
+640
+00:40:25,700 --> 00:40:29,900
+I don't know. 
+How do I look with like nginx 
+
+641
+00:40:29,900 --> 00:40:36,600
+settings or like you know, set 
+up some serialization to map to 
+
+642
+00:40:36,600 --> 00:40:40,800
+Davina days, you? 
+So for quite a few problems. 
+
+643
+00:40:41,000 --> 00:40:43,100
+Eames. 
+Now, with metaphor data, 
+
+644
+00:40:43,100 --> 00:40:47,500
+scientists can really self-serve
+and like take the extra like 
+
+645
+00:40:47,500 --> 00:40:51,200
+re-implementation the engineer 
+out of the loop. 
+
+646
+00:40:53,400 --> 00:40:57,800
+That's interesting because you 
+really did have to lay all of 
+
+647
+00:40:57,800 --> 00:41:01,900
+that groundwork, in order for 
+meta flow, to make sense to me, 
+
+648
+00:41:03,400 --> 00:41:05,500
+to you had to say, oh, here's 
+the problem, we're trying to 
+
+649
+00:41:05,500 --> 00:41:11,400
+solve and it's like oh yeah, 
+that is a problem and it's So we
+
+650
+00:41:11,400 --> 00:41:16,400
+solved it, that's that's 
+impressive and but somehow you 
+
+651
+00:41:16,400 --> 00:41:23,200
+were able to, I don't know prove
+that this class representing a 
+
+652
+00:41:23,200 --> 00:41:29,000
+directed acyclic graph was 
+one-to-one and onto or something
+
+653
+00:41:29,000 --> 00:41:30,900
+like that. 
+You know, that it covered the 
+
+654
+00:41:31,700 --> 00:41:34,300
+solution space. 
+Yeah. 
+
+655
+00:41:34,300 --> 00:41:37,000
+And I mean, most of these are 
+pretty simple. 
+
+656
+00:41:37,000 --> 00:41:40,500
+So generally that's a very 
+linear graph. 
+
+657
+00:41:41,000 --> 00:41:43,600
+And then you might have like a 
+parallel fan out. 
+
+658
+00:41:43,600 --> 00:41:47,300
+So like a really basic example, 
+would be something called like, 
+
+659
+00:41:47,300 --> 00:41:53,000
+a hyper parameter grid search 
+where long story short that when
+
+660
+00:41:53,000 --> 00:41:56,000
+you're when you're doing machine
+learning models, there's these 
+
+661
+00:41:56,000 --> 00:41:59,900
+things called hyperparameters, 
+that kind of did that help 
+
+662
+00:41:59,900 --> 00:42:02,400
+control the architecture of the 
+eventual model. 
+
+663
+00:42:02,400 --> 00:42:05,600
+So when we say neural networks, 
+one of those hyperparameters is 
+
+664
+00:42:05,600 --> 00:42:09,800
+like, how many layers should we 
+put in that neural network and 
+
+665
+00:42:09,800 --> 00:42:15,300
+so, There's no science that says
+well these are the 
+
+666
+00:42:15,300 --> 00:42:17,200
+hyperparameters. 
+You should have you kind of have
+
+667
+00:42:17,200 --> 00:42:19,500
+to discover which ones are going
+to work best. 
+
+668
+00:42:19,600 --> 00:42:23,800
+And so being able to actually 
+train many very very similar 
+
+669
+00:42:23,800 --> 00:42:30,200
+models in parallel is important.
+So so you might do a fan out to 
+
+670
+00:42:30,500 --> 00:42:33,500
+just parallel train a bunch of 
+models and then sort of fan back
+
+671
+00:42:33,500 --> 00:42:35,400
+into go. 
+Hey which model perform the 
+
+672
+00:42:35,400 --> 00:42:38,300
+best. 
+So this isn't as an example you 
+
+673
+00:42:38,300 --> 00:42:42,800
+you could have in your 
+Deployment pipeline or whatever 
+
+674
+00:42:43,500 --> 00:42:46,000
+you could say. 
+All right, I'm going to train 
+
+675
+00:42:46,000 --> 00:42:50,500
+this model with ten layers. 
+I'm going to turn this model 
+
+676
+00:42:50,500 --> 00:42:54,200
+with a hundred layers, this 
+model with a thousand layers and
+
+677
+00:42:54,200 --> 00:42:57,600
+then you how many? 
+I don't know how many layers are
+
+678
+00:42:57,600 --> 00:42:59,900
+normal and normal neural 
+network. 
+
+679
+00:42:59,900 --> 00:43:03,300
+But so then you'll take, you'll 
+take those different different 
+
+680
+00:43:03,300 --> 00:43:06,800
+models that are created and then
+and then test them in some way 
+
+681
+00:43:07,000 --> 00:43:10,400
+and determine like, okay? 
+Like like the one, the one that 
+
+682
+00:43:10,400 --> 00:43:11,900
+we trained it, And was good 
+enough. 
+
+683
+00:43:11,900 --> 00:43:14,300
+And so let's just go with that 
+one, right whatever? 
+
+684
+00:43:14,300 --> 00:43:15,200
+Yeah. 
+Yeah. 
+
+685
+00:43:15,200 --> 00:43:19,100
+We're like learning rate is 
+another type of hyper parameter.
+
+686
+00:43:19,100 --> 00:43:22,400
+Like, how fast should we move 
+along the gradient? 
+
+687
+00:43:22,400 --> 00:43:25,700
+Because if he moved too fast you
+might actually miss an Optima. 
+
+688
+00:43:26,600 --> 00:43:29,000
+If you move too slowly it'll 
+take forever to converge. 
+
+689
+00:43:29,000 --> 00:43:31,400
+So there's all kinds of like, 
+vaguely. 
+
+690
+00:43:31,400 --> 00:43:37,700
+Remember at one point, there was
+people working on using machine 
+
+691
+00:43:37,700 --> 00:43:44,700
+learning to provide the the 
+Different hyperparameters. 
+
+692
+00:43:46,000 --> 00:43:49,300
+And so that it would be 
+machine-learning like deciding 
+
+693
+00:43:49,300 --> 00:43:52,700
+what the optimal machine 
+learning parameters were, that 
+
+694
+00:43:52,700 --> 00:43:57,600
+is a definitely, a thing. 
+There's all kinds of like meta 
+
+695
+00:43:57,600 --> 00:43:59,900
+hacks. 
+Um, to make machine learning 
+
+696
+00:43:59,900 --> 00:44:01,800
+better. 
+I'll just tell you the one that 
+
+697
+00:44:01,900 --> 00:44:06,000
+I just learned about this week 
+coming out at Uber, it's really 
+
+698
+00:44:06,000 --> 00:44:09,100
+fascinating. 
+So, one of the, you know, 
+
+699
+00:44:09,400 --> 00:44:13,900
+there's, you know, those means 
+of like what what what my family
+
+700
+00:44:13,900 --> 00:44:17,600
+thinks I do like, what do you 
+know, what Tina things? 
+
+701
+00:44:17,600 --> 00:44:21,200
+I do actually think I do. 
+It's like the what I you know 
+
+702
+00:44:21,200 --> 00:44:25,000
+what I what the everybody else 
+thinks I do is like this big wet
+
+703
+00:44:25,000 --> 00:44:27,300
+you know Blackboard with all 
+this math and it's very 
+
+704
+00:44:27,300 --> 00:44:30,900
+complicated and What I actually 
+do is like import scikit-learn 
+
+705
+00:44:30,900 --> 00:44:35,100
+or whatever. 
+Oh my God, you know one of the 
+
+706
+00:44:35,100 --> 00:44:39,700
+problems or those clinical 
+Solutions, you know when it 
+
+707
+00:44:39,700 --> 00:44:43,500
+comes to building models now 
+especially with neural networks 
+
+708
+00:44:43,500 --> 00:44:47,300
+is like let's just throw every 
+single feature at this model 
+
+709
+00:44:47,300 --> 00:44:50,700
+that we possibly can. 
+And like you can get sort of 
+
+710
+00:44:50,700 --> 00:44:53,400
+very, very small improvements at
+some point there's diminishing 
+
+711
+00:44:53,400 --> 00:44:58,200
+returns, right? 
+Problem is, that's expensive and
+
+712
+00:44:58,300 --> 00:45:03,600
+It's slow at a certain point. 
+And so Uber came up with this 
+
+713
+00:45:03,600 --> 00:45:08,700
+way to look use information 
+Theory to figure out which 
+
+714
+00:45:08,700 --> 00:45:12,900
+features are going to be the 
+most impactful on a model. 
+
+715
+00:45:12,900 --> 00:45:17,500
+So they look for not only a high
+degree of mutual information 
+
+716
+00:45:17,500 --> 00:45:20,600
+between the feature and or 
+sorry. 
+
+717
+00:45:20,600 --> 00:45:24,900
+Yeah, in the feature and then 
+the label or the truth, but they
+
+718
+00:45:24,900 --> 00:45:28,100
+also want a low amount of mutual
+information. 
+
+719
+00:45:28,300 --> 00:45:32,200
+In between features themselves. 
+Because if one feature predicts,
+
+720
+00:45:32,200 --> 00:45:35,700
+another feature, like the second
+one is not going to be useful, 
+
+721
+00:45:35,700 --> 00:45:38,700
+but if they don't predict each 
+other, then they're more likely 
+
+722
+00:45:38,700 --> 00:45:42,000
+to inform the model. 
+So there's all kinds of these 
+
+723
+00:45:42,000 --> 00:45:48,600
+like, you know, meta tricks, you
+know, built up around all these 
+
+724
+00:45:49,300 --> 00:45:53,800
+around sort of the limitations, 
+I would say of, you know, 
+
+725
+00:45:53,800 --> 00:45:55,200
+machine create models. 
+Yeah. 
+
+726
+00:45:55,400 --> 00:45:59,400
+Yeah. 
+And interested in that's wild. 
+
+727
+00:45:59,400 --> 00:46:02,800
+Just the whole Space is so 
+quickly. 
+
+728
+00:46:02,800 --> 00:46:09,400
+Evolved and is gaining so much 
+maturity so quickly and so I 
+
+729
+00:46:09,400 --> 00:46:15,300
+have two questions. 
+One is okay, so Netflix knows 
+
+730
+00:46:15,600 --> 00:46:18,700
+when I pause. 
+And when I binge and, you know, 
+
+731
+00:46:18,700 --> 00:46:22,500
+your machine learning models, 
+should be able to figure out the
+
+732
+00:46:22,500 --> 00:46:25,900
+parts of a movie or show or 
+something where I get 
+
+733
+00:46:25,900 --> 00:46:27,400
+uncomfortable. 
+Uncomfortable and I don't want 
+
+734
+00:46:27,400 --> 00:46:30,500
+to watch it for a while or maybe
+I never come back to it the 
+
+735
+00:46:30,500 --> 00:46:33,300
+board. 
+So it seems to me that at some 
+
+736
+00:46:33,300 --> 00:46:35,900
+point in the future, you should 
+be able to automatically 
+
+737
+00:46:35,900 --> 00:46:40,700
+generate the ideal script. 
+So that's my, that's my first 
+
+738
+00:46:40,700 --> 00:46:43,700
+question. 
+The second question is, will I 
+
+739
+00:46:43,700 --> 00:46:46,200
+ever be able to get a robotic 
+vacuum cleaner? 
+
+740
+00:46:46,200 --> 00:46:52,200
+That works? 
+I mean, on the first question, 
+
+741
+00:46:52,700 --> 00:46:55,700
+that's really not the goal at 
+all. 
+
+742
+00:46:56,300 --> 00:47:02,300
+Like be I would say you know 
+there's so much to the creative 
+
+743
+00:47:02,300 --> 00:47:08,100
+element when it comes to content
+that we're more focused on how 
+
+744
+00:47:08,100 --> 00:47:12,900
+do you sort of maximize the 
+effectiveness and the creative 
+
+745
+00:47:12,900 --> 00:47:16,300
+Excellence right of that 
+creative process versus like 
+
+746
+00:47:16,400 --> 00:47:19,600
+let's reduce it down to an 
+algorithm because first of all I
+
+747
+00:47:19,608 --> 00:47:24,100
+don't think we can do it and 
+second of all I just don't think
+
+748
+00:47:24,100 --> 00:47:26,900
+that it would lead to amazing. 
+Intent. 
+
+749
+00:47:26,900 --> 00:47:28,700
+So, that's definitely not a 
+goal. 
+
+750
+00:47:29,300 --> 00:47:32,200
+What's there? 
+There was some attempts at 
+
+751
+00:47:32,400 --> 00:47:38,800
+having a I write songs like 
+songs are a bit easier to, to 
+
+752
+00:47:39,300 --> 00:47:41,600
+create. 
+So. 
+
+753
+00:47:41,800 --> 00:47:44,400
+But I've never listen to what. 
+I don't know if it's any good. 
+
+754
+00:47:44,400 --> 00:47:47,400
+I was working from popular 
+songs. 
+
+755
+00:47:47,400 --> 00:47:52,500
+So it was actually generating 
+songs by taking pieces of 
+
+756
+00:47:52,500 --> 00:47:56,100
+popular songs and kind of re 
+mixing them sort of yeah. 
+
+757
+00:47:56,500 --> 00:47:59,500
+And yeah, it it actually came up
+with some good things and I'm 
+
+758
+00:47:59,500 --> 00:48:02,200
+sure that will get better 
+because you know, you write a 
+
+759
+00:48:02,600 --> 00:48:04,400
+catchy song and you can make a 
+lot of money. 
+
+760
+00:48:05,300 --> 00:48:08,600
+Yeah I mean I think with 
+especially with popular music 
+
+761
+00:48:08,900 --> 00:48:12,900
+it's funny my pandemic Hobbies 
+like picking the guitar back up 
+
+762
+00:48:12,900 --> 00:48:18,000
+again after 20 years just like 
+because I was much younger when 
+
+763
+00:48:18,000 --> 00:48:21,000
+I first learned I didn't make 
+all these connections but like 
+
+764
+00:48:21,000 --> 00:48:24,800
+there's only a few chord 
+progressions in popular music 
+
+765
+00:48:24,800 --> 00:48:27,800
+and so it's probably much more 
+Impossible to write you know 
+
+766
+00:48:27,800 --> 00:48:33,300
+songs that kind of sound good. 
+So we're or it could be a CO bot
+
+767
+00:48:33,300 --> 00:48:36,600
+kind of thing where where you 
+have a you create a system that 
+
+768
+00:48:36,600 --> 00:48:41,100
+helps you write songs because I 
+could see that. 
+
+769
+00:48:41,400 --> 00:48:44,200
+Yeah. 
+Now tell me, do you have a robot
+
+770
+00:48:44,200 --> 00:48:46,900
+vacuum cleaner? 
+I got a robot vacuum, several 
+
+771
+00:48:46,900 --> 00:48:53,100
+years ago and it's like it, it 
+didn't understand. 
+
+772
+00:48:53,100 --> 00:48:56,000
+Oh, I mean, power cords going 
+nobody told me about kapow. 
+
+773
+00:48:56,600 --> 00:48:58,100
+I don't know what to do with 
+this thing. 
+
+774
+00:48:58,300 --> 00:49:04,500
+Or if you had stairs that turned
+part way down, it would just it 
+
+775
+00:49:04,500 --> 00:49:07,600
+would just find them and fall 
+down them. 
+
+776
+00:49:07,800 --> 00:49:11,400
+Yeah, put up all these barriers 
+and it's easier just to vacuum, 
+
+777
+00:49:11,400 --> 00:49:15,900
+your floor, needs to screw 
+around with the robot back. 
+
+778
+00:49:16,600 --> 00:49:19,900
+Oh, I think this is bringing us 
+full circle Bruce because think 
+
+779
+00:49:19,900 --> 00:49:23,700
+about you know, well I actually 
+don't know what's the technology
+
+780
+00:49:23,700 --> 00:49:26,600
+inside of these if there's 
+machine learning or If it's like
+
+781
+00:49:26,600 --> 00:49:29,100
+a heuristic model but assuming 
+there's machine learning. 
+
+782
+00:49:29,100 --> 00:49:35,100
+Will they had to ship this Robot
+vacuum cleaner with something in
+
+783
+00:49:35,100 --> 00:49:37,500
+it, right? 
+Some kind of model and the 
+
+784
+00:49:37,500 --> 00:49:39,500
+question is, what were the 
+conditions under which that 
+
+785
+00:49:39,500 --> 00:49:43,200
+bottle was trained, did that 
+include stairs with a turn in it
+
+786
+00:49:43,200 --> 00:49:47,000
+and couldn't figure out a policy
+for navigating that. 
+
+787
+00:49:47,000 --> 00:49:52,500
+And then I guess, you know, are 
+they fancy company? 
+
+788
+00:49:52,500 --> 00:49:56,700
+That would like pull all the 
+data from your Man, what do you 
+
+789
+00:49:56,700 --> 00:49:59,600
+want that? 
+By the way, you know, all of the
+
+790
+00:49:59,600 --> 00:50:03,200
+different vacuum cleaning 
+excursions and then would you 
+
+791
+00:50:03,200 --> 00:50:07,800
+want it to train a new model and
+then upload that to your vacuum 
+
+792
+00:50:07,800 --> 00:50:12,000
+cleaner right in. 
+And maybe I just didn't let it 
+
+793
+00:50:12,000 --> 00:50:14,500
+fall down the stairs enough 
+times. 
+
+794
+00:50:14,500 --> 00:50:20,400
+That's all right, you know, that
+was my patients may not have 
+
+795
+00:50:21,600 --> 00:50:23,700
+been may not have protective 
+vacuum. 
+
+796
+00:50:23,700 --> 00:50:25,400
+Cleaner died. 
+Yeah. 
+
+797
+00:50:26,100 --> 00:50:30,300
+It's kind of like but then again
+you have this kind of oh if 
+
+798
+00:50:30,300 --> 00:50:34,100
+we're dealing with gravity here 
+we could damage the unit so we 
+
+799
+00:50:34,100 --> 00:50:37,400
+need something more severe to 
+keep that from happening. 
+
+800
+00:50:37,700 --> 00:50:42,800
+Yeah it's I think it's algorithm
+was just well drive around 
+
+801
+00:50:42,900 --> 00:50:50,700
+record where you are and if you 
+run into a problem, mark it on 
+
+802
+00:50:50,700 --> 00:50:53,800
+your map but see it would like 
+it would still try. 
+
+803
+00:50:53,900 --> 00:50:55,800
+It couldn't understand power 
+chords. 
+
+804
+00:50:56,200 --> 00:50:59,300
+So the I think the instructions 
+when I actually looked at them 
+
+805
+00:50:59,300 --> 00:51:02,700
+and they said, well, you'll, you
+know, you'll need to secure your
+
+806
+00:51:02,700 --> 00:51:05,900
+power chords, and if you have 
+freestanding rug, you have to do
+
+807
+00:51:05,900 --> 00:51:10,000
+all these things to adapt to the
+needs of the vacuum cleaner. 
+
+808
+00:51:10,000 --> 00:51:14,700
+And that's not why I bought it 
+to meet my needs. 
+
+809
+00:51:15,300 --> 00:51:17,800
+Yeah, yeah. 
+So, yeah. 
+
+810
+00:51:17,800 --> 00:51:21,700
+So it's in a drawer someplace. 
+And I, ya know what to do with 
+
+811
+00:51:21,700 --> 00:51:24,000
+it. 
+Keep trying to get out to it's 
+
+812
+00:51:24,000 --> 00:51:26,300
+weird. 
+This is a, is a it's Problem 
+
+813
+00:51:26,300 --> 00:51:29,600
+that I have I'm afraid to do 
+experiments because I don't know
+
+814
+00:51:29,600 --> 00:51:31,600
+what to do with the crap that's 
+left behind. 
+
+815
+00:51:31,600 --> 00:51:37,300
+When the experiment fails, I've 
+got an e-bike, a vacuum cleaner 
+
+816
+00:51:37,300 --> 00:51:41,100
+and then a bunch of other things
+that if I hadn't bought them 
+
+817
+00:51:41,100 --> 00:51:42,900
+already. 
+And I knew that they were going 
+
+818
+00:51:42,900 --> 00:51:45,900
+to fail, I would buy them now, 
+I've got these things. 
+
+819
+00:51:45,900 --> 00:51:48,300
+Well, in Crested Butte don't, 
+you just put them out on the 
+
+820
+00:51:48,300 --> 00:51:50,700
+curb and people take them you 
+do. 
+
+821
+00:51:50,700 --> 00:51:55,200
+But this I mean my parents grew 
+up in the depression and so it's
+
+822
+00:51:55,200 --> 00:51:57,900
+like there's This little voice 
+in the back of your head saying,
+
+823
+00:51:57,900 --> 00:52:01,000
+oh, you could get money for that
+or or something, you know? 
+
+824
+00:52:01,000 --> 00:52:04,200
+And so putting them out on the 
+curve is like, oh, it takes 
+
+825
+00:52:04,200 --> 00:52:08,800
+some, take some effort, what it 
+would actually be Unleashed your
+
+826
+00:52:08,800 --> 00:52:12,500
+vacuum just in town. 
+Just like let it just roam 
+
+827
+00:52:12,500 --> 00:52:16,700
+around and try to try to clean 
+all of town, dog. 
+
+828
+00:52:16,700 --> 00:52:22,200
+Poop smeared all over the place.
+Reminds me of that story about 
+
+829
+00:52:22,200 --> 00:52:23,600
+the person who woke up to their 
+house. 
+
+830
+00:52:23,600 --> 00:52:27,800
+Just covered in dog, poop of the
+Robot right? 
+
+831
+00:52:29,000 --> 00:52:30,800
+Yeah, see that? 
+Yeah, that's the kind of thing. 
+
+832
+00:52:30,800 --> 00:52:35,400
+They're so dumb and so 
+underpowered to, you know, so we
+
+833
+00:52:35,400 --> 00:52:40,900
+need we need batteries that 
+allow us to have bigger Brands 
+
+834
+00:52:40,900 --> 00:52:42,800
+zakum cleaners, more powerful 
+lens. 
+
+835
+00:52:42,800 --> 00:52:47,600
+And then it's look at that, it 
+wouldn't understand is like, 
+
+836
+00:52:47,600 --> 00:52:50,000
+like yeah, the vacuum cleaners 
+are pretty dumb. 
+
+837
+00:52:50,000 --> 00:52:54,200
+And who knows if they actually 
+have machine learning in the are
+
+838
+00:52:54,200 --> 00:52:59,400
+not, but I was thinking about 
+how much of the technology that 
+
+839
+00:52:59,400 --> 00:53:05,900
+we touch every day now is backed
+by AI versus five or ten years 
+
+840
+00:53:05,900 --> 00:53:08,600
+ago, and it's changed pretty 
+dramatically. 
+
+841
+00:53:10,600 --> 00:53:13,200
+Yes, but I think it's probably 
+changed more dramatically on 
+
+842
+00:53:13,900 --> 00:53:17,700
+where we touch tech companies 
+versus where we took like, 
+
+843
+00:53:18,200 --> 00:53:22,700
+because Netflix can afford 
+really high salary. 
+
+844
+00:53:23,700 --> 00:53:26,400
+Science data, scientist machine,
+learning experts. 
+
+845
+00:53:26,400 --> 00:53:31,000
+All that whereas Rumba maybe 
+they just, they're not, they're 
+
+846
+00:53:31,000 --> 00:53:35,100
+not willing to pay a hundred 
+Engineers, a million dollars a 
+
+847
+00:53:35,100 --> 00:53:38,600
+year or whatever it is to like 
+actually do the stuff, right? 
+
+848
+00:53:41,200 --> 00:53:46,300
+So they can say well it's sort 
+of like artificial intelligence 
+
+849
+00:53:46,300 --> 00:53:52,200
+so let's say that it is kind of 
+my experience, give you another 
+
+850
+00:53:52,200 --> 00:53:53,700
+new one. 
+You talked about proliferation 
+
+851
+00:53:53,700 --> 00:53:58,400
+other wild example. 
+So I went over to Santana Row in
+
+852
+00:53:58,400 --> 00:54:04,200
+San Jose a couple nights ago and
+they have installed these, you 
+
+853
+00:54:04,200 --> 00:54:09,000
+know, sort of signs that say how
+many parking spots are left. 
+
+854
+00:54:09,100 --> 00:54:13,100
+Left. 
+And now every row will have like
+
+855
+00:54:13,100 --> 00:54:16,100
+green or red lights depending on
+if there are parking spots 
+
+856
+00:54:16,100 --> 00:54:19,700
+available. 
+This is where our cameras and I 
+
+857
+00:54:19,708 --> 00:54:23,100
+guess my naively I thought about
+well, could you implement it by 
+
+858
+00:54:23,100 --> 00:54:27,000
+sort of having, I don't know a 
+classifier that just looks at. 
+
+859
+00:54:27,000 --> 00:54:29,300
+Is there a car in that space or 
+not? 
+
+860
+00:54:29,500 --> 00:54:34,100
+That was kind of my naive idea 
+about how it works. 
+
+861
+00:54:34,100 --> 00:54:36,500
+And then I get down to the first
+floor of the garage. 
+
+862
+00:54:36,500 --> 00:54:40,400
+And I noticed this little sign 
+and It explains what's 
+
+863
+00:54:40,400 --> 00:54:42,500
+happening? 
+They take the picture of your 
+
+864
+00:54:42,500 --> 00:54:48,000
+license plate and so they are 
+actually tracking license plates
+
+865
+00:54:48,100 --> 00:54:50,800
+in the garage and then they're 
+explaining well who has access 
+
+866
+00:54:50,800 --> 00:54:54,700
+to this data people at the 
+company and here's all the 
+
+867
+00:54:54,700 --> 00:54:58,400
+training that they have to 
+handle this data so they don't 
+
+868
+00:54:58,400 --> 00:55:01,800
+actually look at the car spots 
+but they do is they just track, 
+
+869
+00:55:01,900 --> 00:55:03,800
+okay? 
+This car came in this car came 
+
+870
+00:55:03,800 --> 00:55:08,200
+out and so that it's just as. 
+Yeah, identification of any, 
+
+871
+00:55:08,200 --> 00:55:09,900
+yeah. 
+Versus There's precious. 
+
+872
+00:55:09,900 --> 00:55:13,200
+The spot is actually occupied, 
+there's possible scary 
+
+873
+00:55:13,200 --> 00:55:19,200
+implications to that but 
+supposedly, it's only being used
+
+874
+00:55:19,200 --> 00:55:24,000
+for this purpose of parking only
+for good, but I mean there's no 
+
+875
+00:55:24,000 --> 00:55:26,600
+clear warning, you know, going 
+in your license plate is going 
+
+876
+00:55:26,600 --> 00:55:29,900
+to be red if you come into this 
+garage. 
+
+877
+00:55:31,600 --> 00:55:34,000
+Yeah. 
+So if you're in a high speed 
+
+878
+00:55:34,000 --> 00:55:38,900
+chase and you duck into a garage
+to try and escape the pursuers, 
+
+879
+00:55:39,900 --> 00:55:43,800
+They may feel they're going to 
+find you cover you well and 
+
+880
+00:55:43,800 --> 00:55:48,300
+based on all the traffic cameras
+that now watch record your 
+
+881
+00:55:48,300 --> 00:55:51,700
+license plate. 
+So this it from enter this me 
+
+882
+00:55:51,700 --> 00:55:54,600
+not to go down a dark hole but 
+I'm sure you could subpoena such
+
+883
+00:55:54,600 --> 00:55:58,500
+information. 
+Yeah. 
+
+884
+00:55:59,200 --> 00:56:02,600
+But if it was on the blockchain 
+then everything would be okay. 
+
+885
+00:56:03,100 --> 00:56:04,900
+Yeah I'll be better. 
+That's what I've heard. 
+
+886
+00:56:06,700 --> 00:56:08,900
+Everything that is my 
+understanding. 
+
+887
+00:56:09,100 --> 00:56:13,000
+Even like and caching problems 
+are solved by the book. 
+
+888
+00:56:14,100 --> 00:56:17,700
+Exactly. 
+Yeah, I don't know how it works,
+
+889
+00:56:17,700 --> 00:56:19,700
+but I do know it's the solution 
+to everything. 
+
+890
+00:56:21,900 --> 00:56:25,400
+I actually saw somebody say 
+basically that recently and of 
+
+891
+00:56:25,400 --> 00:56:27,300
+course they were a blockchain 
+company. 
+
+892
+00:56:29,700 --> 00:56:31,600
+Didn't know how it worked. 
+No, no, no. 
+
+893
+00:56:31,600 --> 00:56:34,700
+They said the prior thing, which
+is yes, block, put everything on
+
+894
+00:56:34,700 --> 00:56:38,100
+the blockchain, all of your data
+privacy issues will go away. 
+
+895
+00:56:40,700 --> 00:56:42,600
+Your money issues will also go 
+away. 
+
+896
+00:56:43,400 --> 00:56:48,300
+Likelihood point today. 
+Yep. 
+
+897
+00:56:48,900 --> 00:56:51,700
+Okay. 
+Capitalism, that's fun. 
+
+898
+00:56:53,900 --> 00:57:00,100
+Wow I've been educated as always
+with Julie many different 
+
+899
+00:57:00,100 --> 00:57:03,900
+things. 
+I think if there's any other 
+
+900
+00:57:03,900 --> 00:57:08,600
+questions I have since we have 
+Julian and she's such an expert 
+
+901
+00:57:08,600 --> 00:57:13,600
+in Kind of everything. 
+Can you talk more about your 
+
+902
+00:57:13,600 --> 00:57:16,100
+book and maybe you've talked 
+about on previous episodes. 
+
+903
+00:57:16,200 --> 00:57:17,600
+Yeah. 
+Just on the last one is where we
+
+904
+00:57:17,600 --> 00:57:23,200
+went into a lot of depth on it. 
+We're kind of calling it prep, 
+
+905
+00:57:25,300 --> 00:57:29,800
+which is still just a joke but 
+oh the people like that. 
+
+906
+00:57:29,800 --> 00:57:32,800
+We're up methodology. 
+I'm gonna say. 
+
+907
+00:57:32,800 --> 00:57:35,900
+That should be on the cover 
+somewhere, but I don't know 
+
+908
+00:57:35,900 --> 00:57:38,100
+that. 
+That would be the actual title, 
+
+909
+00:57:38,100 --> 00:57:39,000
+right? 
+Yes. 
+
+910
+00:57:39,100 --> 00:57:46,400
+Yes, which stands for perform 
+it, reliable expressive and 
+
+911
+00:57:46,400 --> 00:57:51,000
+productive. 
+James is very pleased with 
+
+912
+00:57:51,000 --> 00:57:53,200
+himself that he came up with 
+this acronym. 
+
+913
+00:57:53,900 --> 00:57:55,900
+Yeah. 
+Whether it actually applies to 
+
+914
+00:57:55,900 --> 00:57:59,300
+the book or not is it's going to
+be a loaded question, but that's
+
+915
+00:57:59,300 --> 00:58:04,300
+kind of what we're going for. 
+Yeah, we're going to solve all 
+
+916
+00:58:04,300 --> 00:58:07,000
+of the current software, 
+engineering problems with this 
+
+917
+00:58:07,000 --> 00:58:11,800
+book so that we can Move on to 
+the next level of software 
+
+918
+00:58:11,800 --> 00:58:14,000
+engineering problems. 
+Which sounds like it's going to 
+
+919
+00:58:14,000 --> 00:58:16,900
+be machine learning. 
+Yeah, yeah, fight, didn't 
+
+920
+00:58:16,900 --> 00:58:18,900
+reactive? 
+Maybe I'll just a closing 
+
+921
+00:58:18,900 --> 00:58:23,800
+thought is I don't think you can
+build awesome platforms if you 
+
+922
+00:58:23,800 --> 00:58:26,900
+don't think about people in 
+particular, the people that are 
+
+923
+00:58:26,900 --> 00:58:31,400
+using the platform and like, 
+what's their whole experience 
+
+924
+00:58:31,400 --> 00:58:36,000
+and what you described prep 
+sounds like implicitly you're 
+
+925
+00:58:36,000 --> 00:58:40,300
+thinking about what are the 
+entirety of the concerns that 
+
+926
+00:58:40,300 --> 00:58:43,800
+the software developer, you 
+know, needs to think about. 
+
+927
+00:58:44,800 --> 00:58:46,800
+Yeah. 
+And people are the hard part, 
+
+928
+00:58:47,000 --> 00:58:52,400
+kind of and and what are the 
+problems that We're really 
+
+929
+00:58:52,900 --> 00:58:57,100
+encountering mean. 
+The problem is that a lot of 
+
+930
+00:58:57,100 --> 00:59:02,000
+these issues people go. 
+Oh, well parallelism is hard. 
+
+931
+00:59:03,100 --> 00:59:05,600
+And that's the end of it. 
+It's like yeah it has all these 
+
+932
+00:59:05,600 --> 00:59:09,000
+problems and that's that's where
+we stop. 
+
+933
+00:59:09,000 --> 00:59:11,900
+Rather than saying oh how would 
+we solve that? 
+
+934
+00:59:11,900 --> 00:59:14,500
+And that's what I mean, we're 
+not solving the problems, we're 
+
+935
+00:59:14,500 --> 00:59:18,800
+just trying to explain how the 
+problems are solved using these 
+
+936
+00:59:18,900 --> 00:59:26,300
+improved Technologies. 
+So it's yeah, we're we're trying
+
+937
+00:59:26,300 --> 00:59:30,300
+to deal with the actual problems
+that people encounter rather 
+
+938
+00:59:30,300 --> 00:59:36,700
+than just the usual. 
+Approach to concurrency is just 
+
+939
+00:59:36,700 --> 00:59:39,900
+to say, oh well you know you 
+start these processes and then 
+
+940
+00:59:40,200 --> 00:59:44,300
+somehow you have to stop them 
+and that's part of the art is 
+
+941
+00:59:44,800 --> 00:59:48,000
+or, you know, any number of 
+different issues. 
+
+942
+00:59:48,000 --> 00:59:51,900
+Like, well, there are inherent 
+problems that can't be solved by
+
+943
+00:59:51,900 --> 00:59:56,700
+themselves and you know what 
+this other system does is it 
+
+944
+00:59:56,700 --> 01:00:00,100
+says, no, we should actually 
+change things, solve that 
+
+945
+01:00:00,100 --> 01:00:04,300
+problem because individual 
+programmers can Don't, you know?
+
+946
+01:00:04,500 --> 01:00:07,200
+It's just yeah. 
+With with the systems that you 
+
+947
+01:00:07,200 --> 01:00:10,900
+have. 
+Now they can't play saying, I'm 
+
+948
+01:00:10,900 --> 01:00:13,600
+driving down the hill and my 
+brakes are out. 
+
+949
+01:00:13,800 --> 01:00:16,300
+And that's a problem and we'll 
+stop talking about it right now,
+
+950
+01:00:16,800 --> 01:00:18,300
+kind of? 
+Yeah. 
+
+951
+01:00:18,300 --> 01:00:20,900
+Pretty much pretty much. 
+It's like, well, you just have 
+
+952
+01:00:20,900 --> 01:00:23,800
+to steer carefully so you don't 
+run into anything when your 
+
+953
+01:00:23,800 --> 01:00:26,800
+brakes are out. 
+That's yeah, I'd say that's a 
+
+954
+01:00:26,800 --> 01:00:33,900
+really so in analogy. 
+So maybe a the STFU conference. 
+
+955
+01:00:34,000 --> 01:00:37,600
+Sorry the STFU unconference or 
+the no that's repetitive. 
+
+956
+01:00:39,000 --> 01:00:43,800
+Anyways STFU. 
+We will have a prep Workshop or 
+
+957
+01:00:43,800 --> 01:00:46,900
+something. 
+Try out some of the content that
+
+958
+01:00:46,900 --> 01:00:48,800
+sounds like a really good idea. 
+That'd be fun. 
+
+959
+01:00:50,000 --> 01:00:52,100
+Yeah, so hopefully Julie can 
+come to that. 
+
+960
+01:00:52,900 --> 01:00:57,400
+That's in August, right? 
+It is it is arguably the asked 
+
+961
+01:00:57,400 --> 01:00:59,700
+about the day 18th, through the 
+21st. 
+
+962
+01:01:00,500 --> 01:01:03,900
+That includes your arrival and 
+departure days. 
+
+963
+01:01:05,600 --> 01:01:09,200
+Awesome. 
+Well, hopefully, we see you at 
+
+964
+01:01:09,200 --> 01:01:12,200
+that. 
+And yeah, it's been too long 
+
+965
+01:01:12,200 --> 01:01:17,400
+since we have seen you, but it's
+good to see you virtually and 
+
+966
+01:01:17,500 --> 01:01:20,500
+and learn from you as always. 
+Yes, what was this? 
+
+967
+01:01:20,500 --> 01:01:23,200
+Delightful. 
+Yes, it was very nice. 
+
+968
+01:01:24,300 --> 01:01:25,700
+All right. 
+Well thanks Julie.
+

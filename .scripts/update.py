@@ -19,6 +19,7 @@ import os
 STEPS = [
     ("feed.py", "fetch the feed once, guard against a stale copy, find episodes without pages"),
     ("episode_links.py", "add each episode's Apple Podcasts, YouTube video and Discord links"),
+    ("transcripts.py", "save Spotify's transcripts and show them on the episode pages"),
     ("make_cards.py", "draw share cards for new episodes and guests"),
     ("social.py", "rewrite OpenGraph/Twitter/JSON-LD and share rows"),
     ("make_sitemap.py", "regenerate sitemap.xml"),

@@ -1,0 +1,3835 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:09,200
+All right. 
+Well welcome everyone. 
+
+4
+00:00:09,200 --> 00:00:11,800
+Today we have with us Renae Shah
+and Ranae. 
+
+5
+00:00:11,800 --> 00:00:14,300
+And I had had this amazing 
+conversation, a couple weeks ago
+
+6
+00:00:14,300 --> 00:00:17,400
+about wasm and distributed 
+systems and I was like, oh my 
+
+7
+00:00:17,400 --> 00:00:20,300
+gosh, we got to have this 
+conversation again so that other
+
+8
+00:00:20,300 --> 00:00:23,900
+people can can enjoy it as well.
+So, so welcome, Renee. 
+
+9
+00:00:23,900 --> 00:00:25,800
+Great to have you. 
+Thank you. 
+
+10
+00:00:25,800 --> 00:00:30,400
+It's great to be here. 
+So, Renee just real quick for 
+
+11
+00:00:30,400 --> 00:00:33,800
+some background, Renee you work 
+at amplify Partners, can you 
+
+12
+00:00:33,800 --> 00:00:35,800
+tell us a little bit about what 
+you do there and what Amplified 
+
+13
+00:00:35,800 --> 00:00:38,400
+us? 
+Yeah, so I'm a partner at 
+
+14
+00:00:38,400 --> 00:00:40,900
+Amplified Partners. 
+We're in early stage Venture 
+
+15
+00:00:40,900 --> 00:00:45,000
+Capital firm and we only cover, 
+two core spaces, infrastructure,
+
+16
+00:00:45,000 --> 00:00:47,600
+and developer tools. 
+So we tend to know these faces 
+
+17
+00:00:47,600 --> 00:00:51,400
+really well about half of our 
+companies are open source. 
+
+18
+00:00:51,400 --> 00:00:54,600
+So that's a go to market motion.
+We understand really well and 
+
+19
+00:00:54,600 --> 00:00:58,200
+the best part of my job is that 
+I get to just look at all the 
+
+20
+00:00:58,200 --> 00:01:00,900
+new projects on GitHub and 
+Hacker News and think about 
+
+21
+00:01:00,900 --> 00:01:03,000
+distributed systems and 
+developer tools all day. 
+
+22
+00:01:03,900 --> 00:01:06,900
+Awesome, love it. 
+It's a place that Bruce Are 
+
+23
+00:01:06,900 --> 00:01:10,400
+passionate about is making 
+developers more productive and, 
+
+24
+00:01:10,500 --> 00:01:12,400
+and helping them build more 
+reliable. 
+
+25
+00:01:12,900 --> 00:01:16,500
+Well, animal system open source,
+the whole and opens herself. 
+
+26
+00:01:16,800 --> 00:01:18,900
+Yeah, what that? 
+What that does? 
+
+27
+00:01:19,300 --> 00:01:25,500
+So my, okay, so you're in a 
+venture capital firm and number 
+
+28
+00:01:25,500 --> 00:01:28,100
+of years ago, I decided. 
+Okay, I want to try and figure 
+
+29
+00:01:28,100 --> 00:01:31,200
+out this management thing and I 
+spent seven or eight years 
+
+30
+00:01:31,700 --> 00:01:36,100
+reading, and visiting companies 
+and, you know, writing about 
+
+31
+00:01:36,100 --> 00:01:41,800
+this Until I finally realized 
+that pretty much the whole thing
+
+32
+00:01:41,800 --> 00:01:45,200
+was a scam. 
+So I don't know if you've read, 
+
+33
+00:01:45,200 --> 00:01:47,600
+I don't know, if you've read 
+this book, this is have not read
+
+34
+00:01:47,600 --> 00:01:49,700
+it. 
+Yes, this book. 
+
+35
+00:01:49,700 --> 00:01:53,700
+Anyway, this guy was he had 
+gotten his PhD in philosophy and
+
+36
+00:01:53,700 --> 00:01:57,500
+then he joined a management 
+consulting firm and he saw it 
+
+37
+00:01:57,500 --> 00:02:00,800
+from the inside for and then he 
+wrote this. 
+
+38
+00:02:00,900 --> 00:02:03,900
+But the book is called the 
+management, the management myth 
+
+39
+00:02:03,900 --> 00:02:09,000
+and he wrote this using The 
+logic that he learned in 
+
+40
+00:02:09,100 --> 00:02:12,000
+philosophy to kind of dissect 
+everything. 
+
+41
+00:02:12,000 --> 00:02:20,800
+And anyway, so there are so many
+things that we do in accepted 
+
+42
+00:02:20,800 --> 00:02:25,800
+management that are such 
+terrible ideas and we know that 
+
+43
+00:02:25,800 --> 00:02:28,000
+they're bad. 
+I mean, like Freakonomics just 
+
+44
+00:02:28,000 --> 00:02:31,700
+did an episode on the Peter 
+Principle, which is the one 
+
+45
+00:02:31,700 --> 00:02:35,900
+where you rise to your level of 
+incompetence and management 
+
+46
+00:02:35,900 --> 00:02:38,400
+knows. 
+And And he in the Freakonomics 
+
+47
+00:02:38,400 --> 00:02:40,000
+guy thought, oh, this must be a 
+joke. 
+
+48
+00:02:40,000 --> 00:02:43,900
+But then he looked at the actual
+evidence and it's like, yeah, 
+
+49
+00:02:43,900 --> 00:02:48,100
+this is, the impact is like, 30%
+prophets, you know, and it's 
+
+50
+00:02:48,100 --> 00:02:50,900
+like, and management knows about
+the Peter Principle and they 
+
+51
+00:02:50,900 --> 00:02:54,300
+keep doing it. 
+So, my question is, I mean, they
+
+52
+00:02:54,300 --> 00:02:57,900
+keep doing it because they've 
+been Peter principled, and they 
+
+53
+00:02:57,900 --> 00:03:00,300
+just don't, you know, they're 
+now in their level of 
+
+54
+00:03:00,300 --> 00:03:03,400
+incompetence, which includes 
+being incompetent to change the 
+
+55
+00:03:03,400 --> 00:03:06,200
+Peter Principle? 
+Yes, it's a combinatorial 
+
+56
+00:03:06,200 --> 00:03:11,500
+things. 
+So, I don't think that companies
+
+57
+00:03:11,500 --> 00:03:16,600
+now because when you get into, 
+you know, the c-suite you don't 
+
+58
+00:03:16,600 --> 00:03:19,700
+look for a way to replace 
+yourself, even if you are doing 
+
+59
+00:03:19,700 --> 00:03:23,600
+a terrible job because you're 
+convinced that you, you know, 
+
+60
+00:03:23,600 --> 00:03:26,800
+you're getting all this money. 
+So you have magical powers of 
+
+61
+00:03:26,800 --> 00:03:31,200
+decision. 
+And so what I think the future 
+
+62
+00:03:31,200 --> 00:03:34,100
+is going to be and I think it's 
+got to start with VC. 
+
+63
+00:03:34,100 --> 00:03:42,200
+Firms is The VC firm is going to
+come up with an AI that does 
+
+64
+00:03:42,200 --> 00:03:47,500
+management and because you know 
+what's your, what's a good hit 
+
+65
+00:03:47,500 --> 00:03:54,600
+rate, one out of 10 if you can 
+say, hit 2 out of 10 or higher, 
+
+66
+00:03:54,700 --> 00:03:57,900
+you're going to be awesome. 
+So that's why the VCS are going 
+
+67
+00:03:57,900 --> 00:04:00,400
+to be driven to do it. 
+The right firms are going to be 
+
+68
+00:04:00,400 --> 00:04:03,800
+driven to do it and they're 
+going to say okay you're going 
+
+69
+00:04:03,800 --> 00:04:06,500
+to be managed by this which is 
+going to make scientific 
+
+70
+00:04:06,600 --> 00:04:11,500
+Decisions rather than decisions 
+based on management myth. 
+
+71
+00:04:11,500 --> 00:04:13,600
+So let's not replace the 
+developers with AI. 
+
+72
+00:04:13,600 --> 00:04:16,700
+Let's replace the managers. 
+Well, I think that's where I 
+
+73
+00:04:16,700 --> 00:04:19,399
+think that's where the huge 
+Advantage is going to be and 
+
+74
+00:04:19,399 --> 00:04:22,200
+then you're not paying you know,
+hundreds of millions of dollars 
+
+75
+00:04:22,200 --> 00:04:24,400
+to people because they have 
+magic powers. 
+
+76
+00:04:24,400 --> 00:04:29,800
+You're going to see what I do. 
+I do. 
+
+77
+00:04:29,800 --> 00:04:33,800
+I like, I like the idea. 
+I think the only tricky part is 
+
+78
+00:04:33,800 --> 00:04:38,600
+so much of investing. 
+Ting is the market and just 
+
+79
+00:04:38,600 --> 00:04:43,800
+riding a big wave that it's a 
+great team is always good and 
+
+80
+00:04:43,800 --> 00:04:47,300
+always helps. 
+But even with AI, if it's the 
+
+81
+00:04:47,300 --> 00:04:49,400
+wrong Market, we may still lose 
+money. 
+
+82
+00:04:50,300 --> 00:04:54,000
+Oh yeah, I'm not saying you're 
+going to hit 10 out of 10 but 
+
+83
+00:04:54,000 --> 00:04:58,800
+I'm saying I believe you're 
+going to do a lot better if you 
+
+84
+00:04:58,800 --> 00:05:03,500
+say here, is your management AI.
+So I think that you're in a what
+
+85
+00:05:03,500 --> 00:05:07,300
+you're saying is that finding 
+the market fit And making sure 
+
+86
+00:05:07,300 --> 00:05:11,400
+that your that your company is 
+aligned with Market fit that 
+
+87
+00:05:11,400 --> 00:05:14,600
+maybe is something that an AI 
+wouldn't be very good at, but 
+
+88
+00:05:14,600 --> 00:05:19,000
+maybe like the as an 
+organization, grows the actual 
+
+89
+00:05:19,500 --> 00:05:22,300
+like organizational management 
+side of things. 
+
+90
+00:05:22,600 --> 00:05:25,200
+Maybe that's a piece where a I 
+could help. 
+
+91
+00:05:25,200 --> 00:05:29,600
+But, but on the market fit side,
+it does seem like having people 
+
+92
+00:05:29,600 --> 00:05:33,300
+that really understand the 
+market, understand their 
+
+93
+00:05:33,300 --> 00:05:36,200
+customers. 
+Like that still is a unique 
+
+94
+00:05:36,200 --> 00:05:36,800
+human. 
+Amin. 
+
+95
+00:05:36,800 --> 00:05:38,600
+Yeah, I'm not talking about 
+that. 
+
+96
+00:05:39,200 --> 00:05:42,300
+I'm talking about. 
+For example, the Peter Principle
+
+97
+00:05:42,300 --> 00:05:44,300
+is like, okay, the AI is going 
+to go. 
+
+98
+00:05:44,300 --> 00:05:46,200
+Oh, now this is costing us a lot
+of money. 
+
+99
+00:05:47,100 --> 00:05:49,100
+When you hit your Peter 
+Principle, we're going to back 
+
+100
+00:05:49,100 --> 00:05:52,900
+you down to your level of 
+competence or something like 
+
+101
+00:05:52,900 --> 00:05:56,600
+that, right, or what? 
+Yeah, I'm with you. 
+
+102
+00:05:56,600 --> 00:05:58,800
+That the, Peter Principle is 
+very real. 
+
+103
+00:05:58,800 --> 00:06:02,300
+In fact, I used to work for a 
+management consulting firm 
+
+104
+00:06:02,300 --> 00:06:06,400
+called BCG and they had an up or
+out principle. 
+
+105
+00:06:06,600 --> 00:06:08,200
+Meeting. 
+If you didn't make the next 
+
+106
+00:06:08,200 --> 00:06:10,800
+promotion in the next two to 
+three years, you actually got 
+
+107
+00:06:10,800 --> 00:06:16,900
+fired and now is a way to keep 
+low performers from sitting in 
+
+108
+00:06:17,000 --> 00:06:20,500
+those roles for too long. 
+And so it was actually a really 
+
+109
+00:06:20,500 --> 00:06:23,000
+really talented organization as 
+a result. 
+
+110
+00:06:23,600 --> 00:06:27,600
+It definitely though added Peter
+dress figured people. 
+
+111
+00:06:28,200 --> 00:06:31,800
+Well I know but then you're 
+throwing away people that you 
+
+112
+00:06:31,800 --> 00:06:36,900
+have the may be good and whether
+he'll and good in the role Below
+
+113
+00:06:36,900 --> 00:06:40,700
+there, Peter Principle. 
+If you're hierarchical, maybe a 
+
+114
+00:06:40,700 --> 00:06:45,900
+i instead of replacing 
+management augments management, 
+
+115
+00:06:45,900 --> 00:06:49,200
+such that, the Peter Principle 
+doesn't have the power that it 
+
+116
+00:06:49,208 --> 00:06:52,100
+normally has or right? 
+Maybe it's something you don't 
+
+117
+00:06:52,100 --> 00:06:56,500
+get Peter Principle because you 
+use AI to help cover your gaps. 
+
+118
+00:06:56,500 --> 00:06:58,200
+We don't know. 
+It's machine learning. 
+
+119
+00:06:58,200 --> 00:07:02,700
+It would actually be looking at 
+evidence rather than fads to 
+
+120
+00:07:02,900 --> 00:07:05,800
+make, you know, to come up with,
+how it's doing its management. 
+
+121
+00:07:05,800 --> 00:07:08,100
+And so, it could All of those 
+things would be possible. 
+
+122
+00:07:08,200 --> 00:07:13,600
+Yeah, we don't know. 
+Okay, possible experiment for 
+
+123
+00:07:13,600 --> 00:07:17,100
+Renee, on to go to one of her 
+next company. 
+
+124
+00:07:17,100 --> 00:07:20,300
+She invested in says, how do you
+feel about AI managing the 
+
+125
+00:07:20,300 --> 00:07:22,500
+company? 
+Yeah yeah yeah. 
+
+126
+00:07:22,500 --> 00:07:25,500
+I'll let us know if you can come
+back on if you can do this 
+
+127
+00:07:25,500 --> 00:07:28,000
+experiment. 
+Well, I guess and my belief is 
+
+128
+00:07:28,000 --> 00:07:32,700
+that some smart VC. 
+Firm is going to say, we need to
+
+129
+00:07:32,700 --> 00:07:36,100
+develop the AI to do that 
+management. 
+
+130
+00:07:36,600 --> 00:07:40,200
+So anyway, let's talk about, 
+what's that? 
+
+131
+00:07:40,200 --> 00:07:41,600
+Go ahead. 
+It's a good idea. 
+
+132
+00:07:41,600 --> 00:07:44,500
+I'll suggest it to my partners 
+and to some of our portfolio and
+
+133
+00:07:44,800 --> 00:07:48,400
+report back. 
+Nice, awesome, mission 
+
+134
+00:07:48,400 --> 00:07:50,900
+accomplished person. 
+Okay, I just want to get the I 
+
+135
+00:07:50,900 --> 00:07:54,000
+yeah, Bruce has been on a 
+mission for many years to fix 
+
+136
+00:07:54,000 --> 00:07:58,400
+organizational structures 
+because there are broken. 
+
+137
+00:07:59,700 --> 00:08:03,300
+There's so many ways but also to
+the point where I'm kind of 
+
+138
+00:08:03,300 --> 00:08:08,000
+broken from trying to figure it 
+out So yeah, I'm back to 
+
+139
+00:08:08,000 --> 00:08:10,600
+technology and there you go. 
+I have been bickering. 
+
+140
+00:08:10,600 --> 00:08:12,000
+While Margie. 
+Yeah. 
+
+141
+00:08:12,900 --> 00:08:15,800
+Okay. 
+Fascinating, any other thoughts?
+
+142
+00:08:15,800 --> 00:08:17,600
+Closing thoughts on that subject
+your day? 
+
+143
+00:08:19,200 --> 00:08:21,400
+No closing thoughts, but I like 
+Bruce. 
+
+144
+00:08:21,400 --> 00:08:24,300
+I like the creativity. 
+Thanks. 
+
+145
+00:08:24,900 --> 00:08:31,200
+So, in your role you're looking 
+at what's happening in the 
+
+146
+00:08:31,200 --> 00:08:35,400
+developer tools and 
+infrastructure spaces and 
+
+147
+00:08:35,400 --> 00:08:37,700
+looking for possible places to 
+invest. 
+
+148
+00:08:37,700 --> 00:08:40,200
+Sounds like that's that's 
+generally your role and it 
+
+149
+00:08:40,200 --> 00:08:43,400
+sounds like your scouring GitHub
+to do this or something. 
+
+150
+00:08:44,400 --> 00:08:47,500
+That's a certainly a part of it.
+I think the projects that are 
+
+151
+00:08:47,500 --> 00:08:50,500
+trending. 
+On GitHub always provide really 
+
+152
+00:08:50,500 --> 00:08:53,800
+good investment signal, 
+especially when you see a couple
+
+153
+00:08:53,800 --> 00:08:58,600
+similar projects trending, but 
+the way we create feces is 
+
+154
+00:08:58,600 --> 00:09:00,600
+actually through platform 
+shifts. 
+
+155
+00:09:01,100 --> 00:09:04,700
+So you can take the biggest 
+platform shifts, like the shift 
+
+156
+00:09:04,700 --> 00:09:07,900
+to the cloud, the shift to 
+microservices the shift to 
+
+157
+00:09:07,900 --> 00:09:12,000
+serverless and Edge. 
+And with each shift, there have 
+
+158
+00:09:12,000 --> 00:09:16,000
+been billion dollar winners. 
+For example, VMware was a winner
+
+159
+00:09:16,000 --> 00:09:19,100
+with the shift to the cloud 
+Docker was a A dollar winner 
+
+160
+00:09:19,600 --> 00:09:24,500
+with the shift to biker services
+and now we're seeing this huge 
+
+161
+00:09:24,500 --> 00:09:28,000
+shift Edge Computing. 
+I certainly don't think it'll be
+
+162
+00:09:28,000 --> 00:09:31,900
+as big as the shift to the 
+cloud, but, you know, we have 
+
+163
+00:09:31,900 --> 00:09:35,000
+fastly and cloudflare providing 
+compute at the edge in addition 
+
+164
+00:09:35,000 --> 00:09:39,700
+to a number of others and it 
+kind of goes hand-in-hand with 
+
+165
+00:09:39,700 --> 00:09:43,600
+running serverless workloads. 
+And so we've thought a lot about
+
+166
+00:09:43,700 --> 00:09:45,900
+what class of companies that can
+enable. 
+
+167
+00:09:46,300 --> 00:09:48,100
+That's just one way we come up 
+with these things. 
+
+168
+00:09:48,200 --> 00:09:53,400
+Aziz son, you've you have seen 
+some of these shifts. 
+
+169
+00:09:53,400 --> 00:09:57,200
+Over the last few years, the 
+edge one, I want to talk about. 
+
+170
+00:09:57,300 --> 00:10:00,700
+Also things are met head-on is 
+functional programming 
+
+171
+00:10:00,700 --> 00:10:05,100
+distributed systems wasm some of
+these other chefs but but let's,
+
+172
+00:10:05,100 --> 00:10:07,600
+let's start with Edge. 
+So give us the rundown. 
+
+173
+00:10:07,600 --> 00:10:10,000
+What is, what is the whole Edge 
+shift? 
+
+174
+00:10:10,000 --> 00:10:13,600
+What's that Encompass? 
+Yeah, that's the million dollar 
+
+175
+00:10:13,600 --> 00:10:15,300
+question. 
+I think Edge is one of these 
+
+176
+00:10:15,300 --> 00:10:17,600
+really poorly. 
+Defined terms. 
+
+177
+00:10:19,100 --> 00:10:24,200
+It certainly can be iot 
+industrial iot Edge devices, 
+
+178
+00:10:24,200 --> 00:10:26,400
+like your cell phone or an 
+autonomous vehicle. 
+
+179
+00:10:26,800 --> 00:10:30,500
+It also just could be a server 
+that's closer to the user. 
+
+180
+00:10:31,000 --> 00:10:34,700
+So, traditionally clouds have 
+had all their servers in data 
+
+181
+00:10:34,700 --> 00:10:36,800
+centers and you were kind of 
+locked into those. 
+
+182
+00:10:37,300 --> 00:10:42,800
+We saw companies like fastly, 
+even 10 years ago, sort of build
+
+183
+00:10:42,800 --> 00:10:47,500
+cdns which were more for static 
+sites but the pops the point of 
+
+184
+00:10:47,500 --> 00:10:49,600
+presence. 
+We were closer to the user. 
+
+185
+00:10:50,000 --> 00:10:53,300
+Now, we're seeing, people 
+actually running compute closer 
+
+186
+00:10:53,300 --> 00:10:56,800
+to the edge, so they're using 
+those server product contact 
+
+187
+00:10:56,800 --> 00:10:59,100
+that not just static content. 
+Exactly. 
+
+188
+00:10:59,100 --> 00:11:01,600
+And that's the biggest shift 
+we're seeing of late. 
+
+189
+00:11:02,800 --> 00:11:06,700
+I think both could Encompass The
+Edge iot and Edge servers. 
+
+190
+00:11:07,000 --> 00:11:09,800
+I'm a little bit more interested
+in just the idea of ok. 
+
+191
+00:11:09,800 --> 00:11:14,200
+Now we have all these servers 
+really close to users that can 
+
+192
+00:11:14,200 --> 00:11:18,400
+create much, much much lower 
+latency, which is one of the big
+
+193
+00:11:18,400 --> 00:11:23,800
+benefits among others and what 
+class of companies want to use 
+
+194
+00:11:23,800 --> 00:11:29,200
+those and how do we make these 
+Edge servers smarter doing 
+
+195
+00:11:29,200 --> 00:11:31,900
+things like State Management, 
+which have historically been 
+
+196
+00:11:31,900 --> 00:11:36,200
+left for the clouds and really 
+build compute on the edge and 
+
+197
+00:11:36,200 --> 00:11:39,900
+kind of change the way that 
+developers can build Edge native
+
+198
+00:11:39,900 --> 00:11:43,600
+applications. 
+This sounds to me, I mean, I've 
+
+199
+00:11:43,600 --> 00:11:48,400
+been immersed in concurrency for
+the last I don't know a few 
+
+200
+00:11:48,400 --> 00:11:52,300
+years and this really mean if 
+you look at the basic definition
+
+201
+00:11:52,300 --> 00:11:59,400
+of concurrency is executing 
+pieces of code independently. 
+
+202
+00:12:00,500 --> 00:12:04,700
+This sounds like so that 
+variation of can go well that 
+
+203
+00:12:04,700 --> 00:12:07,000
+for the so that. 
+Well, yeah, the whole point is 
+
+204
+00:12:07,000 --> 00:12:10,700
+to make progress faster. 
+And that's what you're trying to
+
+205
+00:12:10,700 --> 00:12:14,700
+do, you're saying, oh, well, we 
+have all of our, you know, in 
+
+206
+00:12:14,700 --> 00:12:17,300
+the cloud, every all all of our 
+processors. 
+
+207
+00:12:17,500 --> 00:12:21,900
+Are, you know, in in the data 
+center and what we want to do is
+
+208
+00:12:21,900 --> 00:12:26,900
+move pieces of that task out to 
+these other processors that we 
+
+209
+00:12:26,900 --> 00:12:29,700
+have available so that we can 
+make progress. 
+
+210
+00:12:29,700 --> 00:12:32,900
+So that week, yes, obviously the
+other goal always guarantee, 
+
+211
+00:12:33,000 --> 00:12:37,900
+always, that's the thing. 
+And so, in that space, it's 
+
+212
+00:12:38,100 --> 00:12:40,900
+moving the compute. 
+Seems generally easy, I think 
+
+213
+00:12:40,900 --> 00:12:43,900
+maybe the platforms are not kind
+of universally there yet. 
+
+214
+00:12:43,900 --> 00:12:46,600
+I think you're you identified 
+fastly as being one of the ones 
+
+215
+00:12:46,600 --> 00:12:50,100
+whose whose Kind of brought that
+to the Forefront but isn't the 
+
+216
+00:12:50,100 --> 00:12:54,000
+data, the hard part, the then 
+you're building a distributed 
+
+217
+00:12:54,000 --> 00:12:59,200
+system with distributed data and
+now you have to you've just 
+
+218
+00:12:59,200 --> 00:13:02,900
+entered into a massively complex
+world. 
+
+219
+00:13:04,000 --> 00:13:06,600
+Totally and you nailed to the 
+hardest problem. 
+
+220
+00:13:06,600 --> 00:13:09,500
+Which is data is the hardest 
+part for the edge. 
+
+221
+00:13:10,100 --> 00:13:14,700
+I think that's slowly changing. 
+I mean cloudflare has put out to
+
+222
+00:13:14,700 --> 00:13:20,300
+Edge databases be 1 and R 2. 
+They're quite good, they're 
+
+223
+00:13:20,300 --> 00:13:23,100
+getting better. 
+And then we're seeing a number 
+
+224
+00:13:23,100 --> 00:13:26,300
+of companies think about data 
+for the edge. 
+
+225
+00:13:26,300 --> 00:13:30,400
+A new one is called tirso. 
+They are doing SQL Lite, 
+
+226
+00:13:30,400 --> 00:13:33,000
+replication. 
+So a lot of people think that 
+
+227
+00:13:33,000 --> 00:13:36,600
+SQL light It is the best Edge 
+database but replication has 
+
+228
+00:13:36,600 --> 00:13:40,000
+historically been a problem. 
+This company is going to solve 
+
+229
+00:13:40,000 --> 00:13:46,000
+that, so I feel like for most of
+distributed systems, it's always
+
+230
+00:13:46,000 --> 00:13:49,200
+the state that creates the 
+problem in the end for every 
+
+231
+00:13:49,200 --> 00:13:53,200
+good idea. 
+But I do think that even for the
+
+232
+00:13:53,200 --> 00:13:56,100
+edge State Management is 
+solvable, it's still in the 
+
+233
+00:13:56,100 --> 00:13:59,600
+early days but you're probably 
+as you can probably guess that's
+
+234
+00:13:59,900 --> 00:14:01,800
+a huge theme of investment for 
+us. 
+
+235
+00:14:02,200 --> 00:14:05,500
+And so I've met a bunch of He's 
+kind of edge data providers to 
+
+236
+00:14:05,500 --> 00:14:09,600
+see if any of them could win. 
+I think the tricky part is the 
+
+237
+00:14:09,600 --> 00:14:13,300
+fastest data store is going to 
+be the one co-located with the 
+
+238
+00:14:13,300 --> 00:14:15,900
+compute. 
+Yeah, and Cloud Flora has the 
+
+239
+00:14:15,900 --> 00:14:19,200
+best colocation story right now 
+because their databases can be 
+
+240
+00:14:19,200 --> 00:14:22,200
+co-located with the compute. 
+Well, it seems like there's a 
+
+241
+00:14:22,200 --> 00:14:26,700
+huge developer side to this 
+because developers are more 
+
+242
+00:14:26,700 --> 00:14:32,300
+familiar with a basic crud 
+application that has compute and
+
+243
+00:14:32,300 --> 00:14:35,100
+a database. 
+And And there's a very simple 
+
+244
+00:14:35,100 --> 00:14:38,400
+model for how you get data from 
+the database and how you update 
+
+245
+00:14:38,400 --> 00:14:39,700
+it. 
+And all of a sudden, when you're
+
+246
+00:14:39,700 --> 00:14:44,300
+in this Edge data world, then 
+you have to think about, okay, 
+
+247
+00:14:44,500 --> 00:14:48,900
+how do I reconcile the data 
+across the cluster, across the 
+
+248
+00:14:48,900 --> 00:14:51,900
+world and what are the 
+approaches to do that? 
+
+249
+00:14:51,900 --> 00:14:53,600
+How do I deal with deal with 
+conflicts? 
+
+250
+00:14:53,600 --> 00:14:56,500
+How do I? 
+And so, then you're in a much 
+
+251
+00:14:56,500 --> 00:15:01,500
+more complex space than the 
+typical crud or acid transaction
+
+252
+00:15:01,700 --> 00:15:03,500
+world, and the programming 
+model. 
+
+253
+00:15:04,100 --> 00:15:06,300
+Today for this are pretty 
+complex. 
+
+254
+00:15:06,300 --> 00:15:09,000
+We did an episode on CR DTS 
+around this. 
+
+255
+00:15:09,000 --> 00:15:12,000
+We've done a few other episodes 
+around distributed systems and 
+
+256
+00:15:12,000 --> 00:15:16,700
+it's like oh my God, like the 
+the where we're at and the 
+
+257
+00:15:16,700 --> 00:15:19,800
+programming model around this 
+there's no there just seems to 
+
+258
+00:15:19,800 --> 00:15:24,300
+be no way that millions of 
+developers are going to be able 
+
+259
+00:15:24,300 --> 00:15:27,800
+to grok CR DTS. 
+And so we need these like higher
+
+260
+00:15:27,800 --> 00:15:31,800
+level abstractions that make it 
+so that you get something as 
+
+261
+00:15:31,800 --> 00:15:35,200
+simple as crud. 
+It does the right thing in a 
+
+262
+00:15:35,208 --> 00:15:39,500
+distributed world like something
+like structure concurrency. 
+
+263
+00:15:39,800 --> 00:15:43,200
+And then the way rust does 
+things where it's like, okay 
+
+264
+00:15:43,200 --> 00:15:45,400
+we're going to narrow your 
+choices here. 
+
+265
+00:15:45,900 --> 00:15:49,300
+But in exchange, your thing will
+work, right? 
+
+266
+00:15:49,300 --> 00:15:51,600
+Yeah. 
+Yeah. 
+
+267
+00:15:51,700 --> 00:15:54,300
+So what have you seen in the 
+space of like developer 
+
+268
+00:15:54,300 --> 00:15:56,400
+programming models around around
+this? 
+
+269
+00:15:57,700 --> 00:16:00,900
+I mean you said it James which 
+is we've been looking for the 
+
+270
+00:16:00,900 --> 00:16:05,400
+abstractions in this space. 
+We're looking for companies that
+
+271
+00:16:05,400 --> 00:16:09,100
+take the most complicated ideas 
+and make them more simple. 
+
+272
+00:16:09,800 --> 00:16:13,100
+I think we spoke about our 
+investment in temporal but yeah.
+
+273
+00:16:13,100 --> 00:16:16,400
+You know, this was a way to make
+durable execution, a lot easier 
+
+274
+00:16:16,400 --> 00:16:19,900
+for developers. 
+And I've looked at the CR DT 
+
+275
+00:16:19,900 --> 00:16:23,300
+space as well and I agree that 
+developers don't want to deal 
+
+276
+00:16:23,300 --> 00:16:26,700
+with CR DTS. 
+And so as the next level I've 
+
+277
+00:16:26,700 --> 00:16:30,800
+now looked That developer tools 
+that have a higher abstraction 
+
+278
+00:16:31,400 --> 00:16:33,600
+where developers don't 
+necessarily see the see our 
+
+279
+00:16:33,600 --> 00:16:38,200
+duties under the hood, but they 
+still get some sort of framework
+
+280
+00:16:38,200 --> 00:16:42,200
+that allows that gives them just
+enough flexibility for their 
+
+281
+00:16:42,200 --> 00:16:45,300
+application and that programming
+Paradigm. 
+
+282
+00:16:46,000 --> 00:16:48,400
+But it's still, I mean, there's 
+some early projects in this 
+
+283
+00:16:48,400 --> 00:16:53,000
+face, you know, one I like is 
+called Vulcan VLC n. 
+
+284
+00:16:53,900 --> 00:16:57,100
+That one law has added see 
+already teased to sequel. 
+
+285
+00:16:57,200 --> 00:17:02,100
+Light and he is trying to slowly
+build this Vision out, but it's 
+
+286
+00:17:02,100 --> 00:17:06,700
+still very early days for this 
+multi writer problem and kind of
+
+287
+00:17:06,700 --> 00:17:11,200
+merging conflicts. 
+Remind me what's ERD T stands 
+
+288
+00:17:11,200 --> 00:17:19,400
+for conflict conflict, free 
+vegan, sorry, conflict-free 
+
+289
+00:17:19,400 --> 00:17:21,099
+replicated data types. 
+Yep. 
+
+290
+00:17:21,099 --> 00:17:26,400
+Shouldn't that be C CFC? 
+Maybe that's wrong conflict. 
+
+291
+00:17:26,400 --> 00:17:30,300
+Yeah. 
+Our, unless it's conflict with 
+
+292
+00:17:30,300 --> 00:17:33,100
+us, I don't replicated data 
+types. 
+
+293
+00:17:33,100 --> 00:17:36,700
+We replicated data types, 
+yesterday, FF is just ignored. 
+
+294
+00:17:36,700 --> 00:17:38,500
+It doesn't fit into a nice 
+acronym. 
+
+295
+00:17:38,500 --> 00:17:43,400
+So yeah. 
+So I think, I think your analogy
+
+296
+00:17:43,400 --> 00:17:47,900
+to concurrency is pretty similar
+and that most people can't get 
+
+297
+00:17:47,900 --> 00:17:49,900
+concurrency, right? 
+It's too hard. 
+
+298
+00:17:50,000 --> 00:17:54,800
+It's too complex to get, right? 
+And so structured, concurrency 
+
+299
+00:17:54,800 --> 00:17:58,600
+gives this abstraction that, 
+that Doesn't work for every 
+
+300
+00:17:58,600 --> 00:18:02,400
+single use case of concurrency, 
+but works for a lot. 
+
+301
+00:18:02,400 --> 00:18:05,700
+And so most developers instead 
+of using low level concurrency, 
+
+302
+00:18:05,700 --> 00:18:08,000
+Primitives should just use 
+structure concurrency. 
+
+303
+00:18:08,900 --> 00:18:12,200
+And the I think similar with 
+what's happening in distributed 
+
+304
+00:18:12,200 --> 00:18:16,000
+data is maybe CR DT is or that 
+thing that most people won't be 
+
+305
+00:18:16,008 --> 00:18:17,800
+able to get. 
+Right is too complex, but then 
+
+306
+00:18:17,800 --> 00:18:20,000
+we'll see that higher level 
+abstractions around it. 
+
+307
+00:18:20,000 --> 00:18:23,400
+The work for most use cases and 
+hopefully at some point make it 
+
+308
+00:18:23,400 --> 00:18:25,300
+as simple as crud. 
+Mmm. 
+
+309
+00:18:26,300 --> 00:18:29,200
+Yeah. 
+And we're definitely seeing that
+
+310
+00:18:29,200 --> 00:18:33,300
+in some of these front-end 
+Frameworks because a lot of 
+
+311
+00:18:33,300 --> 00:18:38,700
+people want Frameworks to build 
+multiplayer apps or local first 
+
+312
+00:18:38,700 --> 00:18:42,200
+apps and they need some data 
+syncing as well. 
+
+313
+00:18:42,600 --> 00:18:47,900
+And so this is almost the flip 
+side of the edge, but I've 
+
+314
+00:18:47,900 --> 00:18:51,700
+thought about what framework 
+would be needed to build figma 
+
+315
+00:18:51,700 --> 00:18:53,900
+today. 
+Like there isn't an easy 
+
+316
+00:18:53,900 --> 00:18:57,800
+developer abstraction For this 
+idea of multiplayer. 
+
+317
+00:18:57,800 --> 00:19:01,500
+Or if I wanted to build Google 
+Docs, how would I do that today 
+
+318
+00:19:01,500 --> 00:19:04,900
+without deeply? 
+Understanding CR, DT + OT 
+
+319
+00:19:04,900 --> 00:19:09,500
+technology. 
+So, reminisce a little bit 
+
+320
+00:19:09,500 --> 00:19:12,300
+deeper on this with the multi 
+rider problem because you'd 
+
+321
+00:19:12,300 --> 00:19:15,900
+mention that kind of be in the 
+the foundation of of the 
+
+322
+00:19:15,900 --> 00:19:17,800
+challenges around distributed 
+data. 
+
+323
+00:19:18,400 --> 00:19:20,500
+Give us a little more more on 
+what that is. 
+
+324
+00:19:21,200 --> 00:19:25,100
+Yeah I mean at the highest level
+it's the idea that if two people
+
+325
+00:19:25,100 --> 00:19:30,600
+are writing a at the exact same 
+time, how do you determine which
+
+326
+00:19:30,600 --> 00:19:34,400
+right is accepted in the 
+database as the source of Truth?
+
+327
+00:19:35,000 --> 00:19:40,100
+The reason and it's a very hard 
+problem to solve, especially 
+
+328
+00:19:40,100 --> 00:19:42,900
+when you don't want a system 
+that's just eventually 
+
+329
+00:19:42,900 --> 00:19:48,500
+consistent, but I think it is 
+overstated in the industry in 
+
+330
+00:19:48,500 --> 00:19:54,500
+some ways simply because there 
+are very few applications that 
+
+331
+00:19:54,800 --> 00:20:00,100
+absolutely Need that need those 
+guarantees and so we also think 
+
+332
+00:20:00,100 --> 00:20:03,800
+about what class of applications
+would really need. 
+
+333
+00:20:04,100 --> 00:20:09,300
+You know a really sophisticated 
+multi writer system for most 
+
+334
+00:20:09,300 --> 00:20:13,600
+applications, you can sort of 
+get away with the status quo. 
+
+335
+00:20:14,600 --> 00:20:16,600
+So I think it's really for real 
+time. 
+
+336
+00:20:16,600 --> 00:20:20,900
+Gaming type applications on the 
+edge where it might be very, 
+
+337
+00:20:20,900 --> 00:20:25,900
+very important. 
+Yeah, it again. 
+
+338
+00:20:26,000 --> 00:20:29,700
+Minds me of concurrency, where 
+you've got different strategies 
+
+339
+00:20:29,700 --> 00:20:32,600
+that you can use to, and they're
+each good at solving a 
+
+340
+00:20:32,608 --> 00:20:37,400
+particular problem, but there's 
+not the universal, 
+
+341
+00:20:38,400 --> 00:20:43,800
+one-size-fits-all solution, for 
+distributed data sink dealing 
+
+342
+00:20:43,800 --> 00:20:46,700
+with the multi writer problem. 
+Just like in concurrence, 
+
+343
+00:20:46,700 --> 00:20:50,700
+there's not a one-size-fits-all 
+solution and so that complexity 
+
+344
+00:20:51,200 --> 00:20:55,700
+at some point leaks through to 
+how you solve your problem and 
+
+345
+00:20:55,700 --> 00:20:58,700
+that It's obviously complexity 
+and challenges for the 
+
+346
+00:20:58,700 --> 00:21:03,500
+developers that are building 
+this stuff and I think that's 
+
+347
+00:21:03,500 --> 00:21:06,600
+where like like is there a 
+possibility to get some to 
+
+348
+00:21:06,600 --> 00:21:10,800
+something as simple as crud or 
+do we just have to admit that? 
+
+349
+00:21:11,100 --> 00:21:13,700
+Okay there's different 
+strategies and based on what 
+
+350
+00:21:13,700 --> 00:21:15,300
+you're doing you're going to 
+have to pick one of these 
+
+351
+00:21:15,300 --> 00:21:17,900
+strategies. 
+Well, it feels like we're maybe 
+
+352
+00:21:19,100 --> 00:21:22,900
+you know how there were the 
+abstractions that wanted 
+
+353
+00:21:23,700 --> 00:21:27,300
+networking to be. 
+Be like, oh, it's just like, 
+
+354
+00:21:27,300 --> 00:21:30,000
+what's ignore? 
+The, the you ignore the network,
+
+355
+00:21:30,100 --> 00:21:32,100
+and I feel like there's well and
+it's the same. 
+
+356
+00:21:32,100 --> 00:21:36,200
+When you look at the rust 
+lifetime system, when you start 
+
+357
+00:21:36,200 --> 00:21:37,700
+seeing it, you go. 
+Oh wait. 
+
+358
+00:21:38,300 --> 00:21:42,200
+We've been ignoring this all 
+along and they said, no, let's 
+
+359
+00:21:42,200 --> 00:21:46,500
+use math thinking to, you know, 
+make this deterministic and 
+
+360
+00:21:46,500 --> 00:21:51,700
+you're going, oh, I have to do 
+more when I'm writing the code. 
+
+361
+00:21:51,700 --> 00:21:57,600
+But the benefits are, you know, 
+vast And so I'm wondering if 
+
+362
+00:21:57,600 --> 00:22:00,600
+this isn't a situation where 
+it's like, oh yeah, there's this
+
+363
+00:22:00,600 --> 00:22:03,000
+piece that we've been 
+unconsciously ignoring. 
+
+364
+00:22:03,100 --> 00:22:08,000
+Yeah, some aspect of networking,
+probably embrace the things that
+
+365
+00:22:08,000 --> 00:22:11,400
+you cannot change. 
+Which, in this case, you cannot 
+
+366
+00:22:11,400 --> 00:22:14,600
+change the speed of light. 
+Unfortunately, if we could that 
+
+367
+00:22:14,600 --> 00:22:17,700
+would surely solve these 
+problems, we can't change the 
+
+368
+00:22:17,700 --> 00:22:21,700
+speed of light. 
+So we have to embrace that that 
+
+369
+00:22:21,700 --> 00:22:25,000
+the speed of light is what it 
+is, and we have to work with it.
+
+370
+00:22:25,900 --> 00:22:30,000
+Well, and the other thing is 
+that it's very uncertain, 
+
+371
+00:22:30,000 --> 00:22:31,800
+whether your message gets 
+through. 
+
+372
+00:22:32,100 --> 00:22:32,900
+Oh, yeah. 
+Yeah. 
+
+373
+00:22:32,900 --> 00:22:36,600
+How do you decide whether it 
+does whether to retry all of 
+
+374
+00:22:36,600 --> 00:22:39,600
+those things and I feel like 
+there's something essential in 
+
+375
+00:22:39,600 --> 00:22:42,600
+there. 
+Yeah, that we're kind of, we 
+
+376
+00:22:42,600 --> 00:22:44,500
+just haven't been able to see 
+yet. 
+
+377
+00:22:44,500 --> 00:22:48,100
+Yeah, that could shift this. 
+Yeah, anyway. 
+
+378
+00:22:48,800 --> 00:22:53,800
+So coming back to the compute 
+side, it does seem like wasm is 
+
+379
+00:22:54,000 --> 00:23:00,600
+emerging as, as the Way to run 
+workloads on the edge is, I 
+
+380
+00:23:00,600 --> 00:23:03,200
+guess that, I guess maybe early 
+efforts were JavaScript and 
+
+381
+00:23:03,200 --> 00:23:04,400
+node. 
+And it's like, yeah. 
+
+382
+00:23:04,600 --> 00:23:07,200
+Like like I don't want to, I 
+don't want to write JavaScript. 
+
+383
+00:23:07,200 --> 00:23:13,500
+And so, so why isn't gives us 
+that edge capability for Edge 
+
+384
+00:23:13,500 --> 00:23:16,800
+compute, but in a way that I 
+don't have to use JavaScript. 
+
+385
+00:23:16,800 --> 00:23:21,400
+Is that, how do you see that? 
+That's exactly right. 
+
+386
+00:23:21,400 --> 00:23:25,300
+So, our excitement around 
+webassembly directly ties to 
+
+387
+00:23:25,300 --> 00:23:29,300
+this Edge shift. 
+I think too many people use the 
+
+388
+00:23:29,300 --> 00:23:31,800
+words Edge and serverless 
+interchangeably. 
+
+389
+00:23:32,100 --> 00:23:35,500
+So I actually think it could 
+relate to a serverless shift and
+
+390
+00:23:35,500 --> 00:23:37,600
+serverless can run on the cloud 
+or a edge. 
+
+391
+00:23:37,600 --> 00:23:39,800
+I'm not saying that's Edge 
+necessarily right? 
+
+392
+00:23:40,400 --> 00:23:44,200
+I think, as you mentioned, James
+one of the huge benefits is the 
+
+393
+00:23:44,200 --> 00:23:47,700
+polyglot developer experience. 
+You can write and Ross, you can 
+
+394
+00:23:47,700 --> 00:23:50,200
+write in C plus plus it all 
+compiles to Azam. 
+
+395
+00:23:50,400 --> 00:23:53,600
+It doesn't lock you into JS. 
+The way kind of cloudflare 
+
+396
+00:23:53,600 --> 00:23:57,600
+initially did there. 
+Also other benefits, which is 
+
+397
+00:23:57,600 --> 00:24:01,200
+that they're very lightweight, 
+that's great for the edge and 
+
+398
+00:24:01,200 --> 00:24:05,400
+constrained devices, laws, and 
+modules have low startup times. 
+
+399
+00:24:05,700 --> 00:24:08,800
+Again, the cold start problem 
+has always been an issue, people
+
+400
+00:24:08,800 --> 00:24:13,300
+think walls, mm, can solve that 
+and then, you know, the security
+
+401
+00:24:13,300 --> 00:24:15,800
+properties are great. 
+A lot of these programs have 
+
+402
+00:24:15,800 --> 00:24:18,800
+great security properties. 
+So, yeah, there's some good 
+
+403
+00:24:18,800 --> 00:24:21,900
+built-in sandboxing around, 
+wasn't because it was created to
+
+404
+00:24:21,900 --> 00:24:25,000
+run in the browser, so you have 
+to have a good sandbox there. 
+
+405
+00:24:25,000 --> 00:24:27,100
+So That's exactly right. 
+Yeah. 
+
+406
+00:24:27,100 --> 00:24:32,400
+It's you know, has a very strong
+the sandbox and we do think that
+
+407
+00:24:32,400 --> 00:24:38,600
+webassembly could be this Edge 
+iot primitive. 
+
+408
+00:24:38,800 --> 00:24:40,700
+And I think the really 
+interesting part about 
+
+409
+00:24:40,700 --> 00:24:44,600
+webassembly again, if everything
+works and you know, there's a 
+
+410
+00:24:44,608 --> 00:24:47,700
+lot of work in the community 
+still being done but you could 
+
+411
+00:24:47,700 --> 00:24:51,400
+run the same wazza module on an 
+autonomous vehicle. 
+
+412
+00:24:51,400 --> 00:24:53,500
+You could run it on the cloud 
+you could run out on the edge 
+
+413
+00:24:53,500 --> 00:24:58,300
+you have on my phone. 
+A microphone closer browser. 
+
+414
+00:24:58,300 --> 00:25:03,000
+And so I know write once Run, 
+Anywhere has almost become a 
+
+415
+00:25:03,000 --> 00:25:06,200
+Trope. 
+Oh no, it's totally a joke. 
+
+416
+00:25:07,600 --> 00:25:12,200
+Yes, the Java version they yeah 
+they did they gave that out. 
+
+417
+00:25:12,300 --> 00:25:14,100
+Yeah, they don't see them 
+anymore. 
+
+418
+00:25:14,600 --> 00:25:19,000
+It's a meme at this point but 
+hope and I'm not saying we'll 
+
+419
+00:25:19,000 --> 00:25:22,100
+ever get to a full write once 
+Run Anywhere world, but I think 
+
+420
+00:25:22,300 --> 00:25:27,600
+Blossom has certain properties 
+that could Make writing 
+
+421
+00:25:27,600 --> 00:25:30,700
+applications and deploying them 
+to multiple platforms easier. 
+
+422
+00:25:32,200 --> 00:25:36,000
+What have you seen in terms of 
+Technologies in the space for 
+
+423
+00:25:36,000 --> 00:25:39,800
+specifically for wasm kind of 
+server as observers? 
+
+424
+00:25:39,800 --> 00:25:43,300
+Yeah. 
+Yeah I mean there are a bunch of
+
+425
+00:25:43,300 --> 00:25:46,400
+wasm clouds that have popped up 
+that I think are extremely 
+
+426
+00:25:46,400 --> 00:25:49,500
+compelling so just like, give it
+your way. 
+
+427
+00:25:49,500 --> 00:25:51,700
+As on instead of giving it your 
+Docker container, give it your 
+
+428
+00:25:51,700 --> 00:25:55,000
+wise and file and boom, you're 
+up and running on on the cloud. 
+
+429
+00:25:56,000 --> 00:25:58,600
+Yeah. 
+It's the a lot of them have done
+
+430
+00:25:58,600 --> 00:26:02,400
+developer tools for webassembly 
+so they have Frameworks to 
+
+431
+00:26:02,400 --> 00:26:04,700
+easily right away as mm 
+application. 
+
+432
+00:26:05,000 --> 00:26:08,200
+You know, they help with the 
+deployment and packaging and 
+
+433
+00:26:08,200 --> 00:26:12,400
+then the way these companies 
+monetize is they have their own 
+
+434
+00:26:12,600 --> 00:26:18,900
+clouds but you don't have to run
+that application on their Cloud.
+
+435
+00:26:19,000 --> 00:26:22,000
+It's sort of like what verse L 
+is doing with next JS. 
+
+436
+00:26:22,400 --> 00:26:25,300
+They're saying okay we were the 
+next JS people. 
+
+437
+00:26:25,800 --> 00:26:29,800
+Cell is the best place to run an
+xjs application but it doesn't 
+
+438
+00:26:29,800 --> 00:26:31,900
+mean you can't run it somewhere 
+else. 
+
+439
+00:26:32,400 --> 00:26:34,900
+And the new webassembly 
+companies we've seen are sort of
+
+440
+00:26:34,900 --> 00:26:40,100
+doing the same thing and they 
+are getting huge cost. 
+
+441
+00:26:40,100 --> 00:26:44,100
+Savings performance benefits. 
+Certainly, we need to see if 
+
+442
+00:26:44,100 --> 00:26:48,000
+Enterprises think that's enough.
+It's hard to get Enterprises to 
+
+443
+00:26:48,000 --> 00:26:50,100
+switch. 
+It's hard to get people to work 
+
+444
+00:26:50,100 --> 00:26:53,600
+in a new way and the cost 
+savings and performance 
+
+445
+00:26:53,600 --> 00:26:55,700
+benefits, and ease-of-use all 
+need to be 10. 
+
+446
+00:26:55,900 --> 00:26:58,300
+It's better. 
+Typically, if a technology is 
+
+447
+00:26:58,300 --> 00:27:01,800
+two or three x better, it's not 
+enough to Merit the switching 
+
+448
+00:27:01,800 --> 00:27:05,900
+costs, but we're certainly 
+hopeful that this is again, 
+
+449
+00:27:05,900 --> 00:27:08,500
+really a paradigm shift in the 
+way people work, and not just 
+
+450
+00:27:08,500 --> 00:27:11,600
+some incremental Improvement for
+developers. 
+
+451
+00:27:12,000 --> 00:27:14,200
+Oh yeah. 
+Yeah. 
+
+452
+00:27:14,200 --> 00:27:17,900
+And so I can imagine that these 
+Cloud providers would give you 
+
+453
+00:27:17,900 --> 00:27:22,300
+kind of just transparent Global 
+compute, right? 
+
+454
+00:27:22,300 --> 00:27:24,800
+You give it your wasm and 
+they're going to just run it on 
+
+455
+00:27:24,800 --> 00:27:27,400
+all these Edge nodes all around 
+the world and then you stop to 
+
+456
+00:27:27,400 --> 00:27:30,400
+figure out the data problem. 
+But at least on the compute 
+
+457
+00:27:30,400 --> 00:27:33,600
+side, you're you're 
+automatically distributed and 
+
+458
+00:27:33,800 --> 00:27:37,400
+and don't have to think about 
+how you set up a CDN and how you
+
+459
+00:27:37,400 --> 00:27:39,800
+then do glue Global, what's it 
+called? 
+
+460
+00:27:39,800 --> 00:27:42,800
+Global something routing like 
+we're youwere, you go through 
+
+461
+00:27:42,800 --> 00:27:45,800
+this. 
+CD the multi-point CDN and then 
+
+462
+00:27:45,900 --> 00:27:48,500
+it figures out which data center
+to route that too. 
+
+463
+00:27:48,500 --> 00:27:52,100
+And I'm going to maybe you still
+need to, there needs to be 
+
+464
+00:27:52,100 --> 00:27:55,200
+something there to do the 
+routing but but I would guess 
+
+465
+00:27:55,200 --> 00:27:57,900
+that they're going to building 
+that infrastructure all for you.
+
+466
+00:27:57,900 --> 00:27:59,200
+So you don't need to think about
+it. 
+
+467
+00:28:00,300 --> 00:28:03,500
+Yeah, and you're bringing up 
+some ideas that I think are 
+
+468
+00:28:03,500 --> 00:28:06,600
+really, really cool. 
+I haven't seen anybody working 
+
+469
+00:28:06,600 --> 00:28:09,900
+on them, because they're so, 
+next level, but where you can 
+
+470
+00:28:09,900 --> 00:28:13,900
+understand the server closest to
+the user, you don't have to be 
+
+471
+00:28:13,900 --> 00:28:15,800
+locked into one of the cloud 
+providers. 
+
+472
+00:28:16,100 --> 00:28:20,000
+Like you can get access to all 
+the cloud and Edge pops out 
+
+473
+00:28:20,000 --> 00:28:24,400
+there and somehow it hits the 
+closest server to the user. 
+
+474
+00:28:24,500 --> 00:28:26,400
+Like, I think I would be 
+incredibly cool. 
+
+475
+00:28:26,800 --> 00:28:29,700
+And second which one is from 
+BitTorrent need to yeah. 
+
+476
+00:28:30,100 --> 00:28:33,400
+Maybe that was exactly a 
+BitTorrent was gonna do is this 
+
+477
+00:28:33,400 --> 00:28:35,400
+Distributing massacred. 
+Yeah. 
+
+478
+00:28:35,800 --> 00:28:36,500
+Yeah. 
+Anyway. 
+
+479
+00:28:36,900 --> 00:28:40,300
+And you said you also look for 
+developer tools. 
+
+480
+00:28:40,300 --> 00:28:42,900
+Did I get that right? 
+Yeah. 
+
+481
+00:28:42,900 --> 00:28:45,200
+What kinds of tools? 
+That's right. 
+
+482
+00:28:45,200 --> 00:28:48,100
+We I mean we sort of use 
+developer tools and 
+
+483
+00:28:48,100 --> 00:28:53,900
+infrastructure interchangeably. 
+We mean anything where the 
+
+484
+00:28:53,900 --> 00:28:58,200
+developer would be either the 
+user, they're generally not the 
+
+485
+00:28:58,200 --> 00:29:00,800
+buyer developers don't want to 
+pay A but certainly there the 
+
+486
+00:29:00,800 --> 00:29:03,800
+user and we hope somebody in the
+organization would be the buyer 
+
+487
+00:29:04,100 --> 00:29:07,100
+but then traditional developer 
+tools when I think of them I'm 
+
+488
+00:29:07,100 --> 00:29:13,700
+more like you know in ide or 
+something to test code or even a
+
+489
+00:29:13,708 --> 00:29:17,400
+CI CD system. 
+We look at all of that 
+
+490
+00:29:17,400 --> 00:29:19,900
+traditional stuff. 
+Build systems of observability 
+
+491
+00:29:19,900 --> 00:29:22,300
+tools. 
+It's more fun to talk about the 
+
+492
+00:29:22,300 --> 00:29:24,800
+next level stuff versus talking 
+about. 
+
+493
+00:29:24,900 --> 00:29:29,700
+Oh, who's gonna disrupt data 
+dog, or Splunk or all these? 
+
+494
+00:29:30,100 --> 00:29:33,400
+Enterprise tools, but we 
+obviously, look at those in 
+
+495
+00:29:33,400 --> 00:29:39,600
+great detail as well. 
+Yeah, so I think that maybe some
+
+496
+00:29:39,600 --> 00:29:42,300
+of this comes to functional 
+programming. 
+
+497
+00:29:42,600 --> 00:29:45,800
+I know that you've you've done a
+bunch of, in the space of 
+
+498
+00:29:45,800 --> 00:29:50,800
+functional programming and my, 
+my belief is that functional 
+
+499
+00:29:50,800 --> 00:29:53,900
+programming not just helps with 
+developer productivity, but 
+
+500
+00:29:53,900 --> 00:29:59,100
+could also in a significant way 
+help with the, the shift to 
+
+501
+00:29:59,100 --> 00:30:03,900
+distributed. 
+Items with the shift to. 
+
+502
+00:30:04,700 --> 00:30:10,900
+Yeah, how we, how we think about
+refactoring from Acer something 
+
+503
+00:30:10,900 --> 00:30:13,400
+that is calling something else 
+in memory versus something that 
+
+504
+00:30:13,400 --> 00:30:16,700
+is then, calling another thing 
+over the network and that 
+
+505
+00:30:16,700 --> 00:30:21,000
+refactoring today can be very 
+hard because of the typical 
+
+506
+00:30:21,000 --> 00:30:24,700
+entertaining Tangled mess of our
+state in our application. 
+
+507
+00:30:25,000 --> 00:30:28,800
+But functional programming seems
+to be a way to kind of help us 
+
+508
+00:30:29,100 --> 00:30:32,300
+get closer. 
+That kind of refactor ability to
+
+509
+00:30:32,300 --> 00:30:35,600
+to a distributed. 
+The way I would put it is as 
+
+510
+00:30:35,600 --> 00:30:38,600
+your systems get more complex. 
+You need more. 
+
+511
+00:30:38,600 --> 00:30:41,000
+Reliability guarantees. 
+Hmm. 
+
+512
+00:30:41,200 --> 00:30:45,000
+And that's I think, ultimately 
+what functional programming 
+
+513
+00:30:45,000 --> 00:30:50,900
+gives you is that reliability? 
+Yeah, the ability to say this is
+
+514
+00:30:50,900 --> 00:30:55,700
+a pure function and I know that 
+it works when I compose it with 
+
+515
+00:30:55,700 --> 00:30:58,400
+this other pure function, I know
+that it's still going to work 
+
+516
+00:30:58,400 --> 00:31:04,000
+and give deterministic Behavior.
+And then, yeah, the effects and 
+
+517
+00:31:04,000 --> 00:31:07,400
+state kind of Muddy that a bit, 
+but maybe that maybe functional 
+
+518
+00:31:07,400 --> 00:31:09,900
+programming. 
+I guess in our work was zo, 
+
+519
+00:31:09,900 --> 00:31:12,900
+we've seen The Zo can definitely
+help with that as well, but oh, 
+
+520
+00:31:12,900 --> 00:31:15,600
+yeah. 
+And you see, I mean company, 
+
+521
+00:31:15,600 --> 00:31:20,900
+like Microsoft is started 
+incorporating rust into its code
+
+522
+00:31:20,900 --> 00:31:23,600
+base into its operating system, 
+code base. 
+
+523
+00:31:23,600 --> 00:31:29,500
+And so that's definitely 
+reliability oriented and 
+
+524
+00:31:29,500 --> 00:31:30,600
+function. 
+Oriented. 
+
+525
+00:31:30,600 --> 00:31:32,100
+So yeah. 
+Yeah. 
+
+526
+00:31:32,500 --> 00:31:34,100
+What do you see in the space for
+now? 
+
+527
+00:31:34,900 --> 00:31:37,800
+Yeah. 
+Functional programming is the 
+
+528
+00:31:37,800 --> 00:31:41,000
+dream in a lot of ways. 
+I think they're been two 
+
+529
+00:31:41,000 --> 00:31:44,400
+challenges. 
+Historically, one is just not 
+
+530
+00:31:44,400 --> 00:31:48,600
+enough developers. 
+No functional programming. 
+
+531
+00:31:48,600 --> 00:31:52,400
+And that has been challenging 
+for Mass adoption of some of 
+
+532
+00:31:52,400 --> 00:31:56,600
+these Frameworks, but to and I 
+think an area of investment for 
+
+533
+00:31:56,600 --> 00:31:58,900
+Austin in area that could 
+change. 
+
+534
+00:31:58,900 --> 00:32:02,600
+This is How do you use? 
+Functional programming 
+
+535
+00:32:02,600 --> 00:32:06,900
+principles, but mask that 
+complexity to the average 
+
+536
+00:32:06,900 --> 00:32:09,300
+developer. 
+So when a developer just goes to
+
+537
+00:32:09,300 --> 00:32:11,800
+a boot camp. 
+They're obviously, you know, 
+
+538
+00:32:11,800 --> 00:32:13,400
+going to learn JavaScript or 
+python. 
+
+539
+00:32:13,400 --> 00:32:17,700
+Almost certainly, how do you 
+enable those developers and 
+
+540
+00:32:17,700 --> 00:32:20,200
+analogies? 
+We've heard, is that and you 
+
+541
+00:32:20,200 --> 00:32:23,900
+guys can correct me on this if 
+I'm wrong, but when react came 
+
+542
+00:32:23,900 --> 00:32:27,600
+out, people thought that this 
+was some odd functional 
+
+543
+00:32:27,600 --> 00:32:29,800
+programming framework and it was
+so complicated. 
+
+544
+00:32:30,000 --> 00:32:34,400
+Did and then all of a sudden, 
+people realize the ease of use 
+
+545
+00:32:34,400 --> 00:32:37,600
+and a lot of the complexity was 
+actually appropriately, masked 
+
+546
+00:32:37,900 --> 00:32:42,000
+and so we've certainly looked 
+for Frameworks that use 
+
+547
+00:32:42,000 --> 00:32:46,400
+functional programming 
+principles under the hood but 
+
+548
+00:32:46,500 --> 00:32:48,600
+you know, can still Target the 
+masses. 
+
+549
+00:32:49,000 --> 00:32:52,800
+Yeah yeah I think there's 
+definitely there. 
+
+550
+00:32:52,800 --> 00:32:54,700
+I guess there's two forces that 
+I see around. 
+
+551
+00:32:54,700 --> 00:32:58,500
+This one is that more developers
+are being exposed to functional 
+
+552
+00:32:58,500 --> 00:33:02,300
+programming Concepts And that's 
+helpful and moving things 
+
+553
+00:33:02,300 --> 00:33:04,700
+forward. 
+And then the other one is that 
+
+554
+00:33:04,800 --> 00:33:08,600
+there is abstractions being 
+built on top of the functional 
+
+555
+00:33:08,600 --> 00:33:11,900
+Primitives that make functional 
+programming more approachable. 
+
+556
+00:33:11,900 --> 00:33:16,300
+So, in our work were writing a 
+book with a friend here, in 
+
+557
+00:33:16,300 --> 00:33:20,400
+Crested Butte called affect 
+oriented programming, and we 
+
+558
+00:33:20,400 --> 00:33:24,800
+were using a scholar three and a
+firmer called Z 0, which is a 
+
+559
+00:33:25,100 --> 00:33:29,000
+monad based functional, 
+programming library. 
+
+560
+00:33:29,300 --> 00:33:35,800
+And It's for concurrency, for 
+concurrency and it when we've 
+
+561
+00:33:35,800 --> 00:33:37,500
+been working on this for a 
+couple of years and it's been a 
+
+562
+00:33:37,508 --> 00:33:42,400
+fun project, but not a. 
+We we've always struggled with 
+
+563
+00:33:42,700 --> 00:33:46,600
+how do we expose developers, who
+aren't familiar with functional 
+
+564
+00:33:46,600 --> 00:33:51,900
+programming constructs to these 
+very kind of difficult, 
+
+565
+00:33:51,900 --> 00:33:55,500
+challenging ideas like monads 
+and zo. 
+
+566
+00:33:55,500 --> 00:34:00,200
+Just recently came out with this
+abstraction where you do, don't,
+
+567
+00:34:00,200 --> 00:34:04,400
+you don't have to use the monad 
+model to program and zero 
+
+568
+00:34:04,400 --> 00:34:06,200
+anymore. 
+It's called zo direct. 
+
+569
+00:34:06,200 --> 00:34:11,600
+You just write your code just 
+like you would normally without 
+
+570
+00:34:11,600 --> 00:34:14,100
+without monads and then 
+underneath the covers, it's 
+
+571
+00:34:14,300 --> 00:34:17,300
+still based on the monads 
+unraveling into that. 
+
+572
+00:34:17,300 --> 00:34:22,900
+But as we teach developers about
+Z 0, we no longer have to start 
+
+573
+00:34:22,900 --> 00:34:25,500
+with. 
+And here's what a monad is and, 
+
+574
+00:34:25,600 --> 00:34:28,300
+you know, take like two chapters
+huge blocker. 
+
+575
+00:34:28,400 --> 00:34:33,600
+Which is yeah I mean I still 
+feel like nobody explains it. 
+
+576
+00:34:33,600 --> 00:34:36,600
+Well yeah and it's Bri does 
+didn't work for you. 
+
+577
+00:34:38,300 --> 00:34:42,600
+None of the things work for me. 
+So for me zo direct was one of 
+
+578
+00:34:42,600 --> 00:34:45,300
+the first places where I saw, 
+okay, let's have the 
+
+579
+00:34:45,600 --> 00:34:52,699
+mathematical based the things 
+that we can prove work and are 
+
+580
+00:34:52,699 --> 00:34:57,200
+lawful and are reliable. 
+And then let's create the 
+
+581
+00:34:57,200 --> 00:34:59,200
+abstraction. 
+So that all of this is 
+
+582
+00:34:59,200 --> 00:35:03,200
+approachable to To and familiar 
+to most of us, I think the velox
+
+583
+00:35:03,200 --> 00:35:07,700
+language was trying to do that 
+and I think I think rust does 
+
+584
+00:35:07,700 --> 00:35:09,800
+that a lot. 
+They never mentioned monads but 
+
+585
+00:35:09,800 --> 00:35:12,000
+they're clearly. 
+I can see them being used. 
+
+586
+00:35:12,500 --> 00:35:16,000
+So but in a different and more 
+accessible way. 
+
+587
+00:35:16,100 --> 00:35:17,000
+Yeah. 
+Yeah. 
+
+588
+00:35:17,000 --> 00:35:20,200
+I think there are answers there 
+and those in those languages. 
+
+589
+00:35:20,200 --> 00:35:24,800
+Anyway, what are your thoughts? 
+I mean 00, direct sounds very, 
+
+590
+00:35:24,800 --> 00:35:28,500
+very interesting and I've 
+followed the zo project for a 
+
+591
+00:35:28,508 --> 00:35:32,300
+long time, you know, it's done. 
+In the scholarly community. 
+
+592
+00:35:32,300 --> 00:35:35,800
+And now we're seeing more 
+functional programming 
+
+593
+00:35:35,800 --> 00:35:38,700
+principles being brought to 
+typescript, which I think is 
+
+594
+00:35:38,700 --> 00:35:41,600
+very interesting as well. 
+There's a project called f pts. 
+
+595
+00:35:41,900 --> 00:35:45,300
+There's another one called 
+effect and I think the two 
+
+596
+00:35:45,300 --> 00:35:50,600
+actually recently merged. 
+But the idea there I think is 
+
+597
+00:35:50,600 --> 00:35:54,600
+very very interesting because at
+its core of these are typescript
+
+598
+00:35:54,600 --> 00:35:58,100
+Frameworks but they're bringing 
+functional principles to 
+
+599
+00:35:58,100 --> 00:36:01,300
+typescript. 
+And so you're kind of Combining 
+
+600
+00:36:01,300 --> 00:36:04,600
+two things typescripts, very 
+easily, understood, they're 
+
+601
+00:36:04,600 --> 00:36:07,800
+bringing functional properties, 
+but hopefully, making them a bit
+
+602
+00:36:07,800 --> 00:36:10,700
+easier to use. 
+And I think Frameworks like 
+
+603
+00:36:10,700 --> 00:36:12,400
+that. 
+Certainly have the potential to 
+
+604
+00:36:12,400 --> 00:36:18,300
+go mainstream, and I'm looking 
+for more of these high almost 
+
+605
+00:36:18,300 --> 00:36:20,000
+hybrid Frameworks. 
+Yeah. 
+
+606
+00:36:20,400 --> 00:36:22,300
+Yeah. 
+With the abstraction, like the 
+
+607
+00:36:22,300 --> 00:36:26,000
+right foundation with functional
+programming, but with the 
+
+608
+00:36:26,000 --> 00:36:30,500
+abstractions and the languages 
+that make things more More 
+
+609
+00:36:30,500 --> 00:36:33,400
+accessible to a broader 
+developer Community. 
+
+610
+00:36:33,500 --> 00:36:35,000
+It's a big shift. 
+Yeah. 
+
+611
+00:36:35,200 --> 00:36:37,900
+But make sure, I mean, there are
+things like Arrow to which we're
+
+612
+00:36:37,900 --> 00:36:40,200
+looking forward to in the kotlin
+world. 
+
+613
+00:36:40,200 --> 00:36:43,200
+Yep. 
+Yeah, that's sort of like 04 
+
+614
+00:36:43,200 --> 00:36:44,000
+kotlik. 
+Yeah. 
+
+615
+00:36:44,000 --> 00:36:47,900
+Similarily idea I see some 
+things like that, but, but I do 
+
+616
+00:36:47,900 --> 00:36:51,600
+find that the explaining the 
+ideas. 
+
+617
+00:36:52,200 --> 00:36:57,400
+There is so much of the curse of
+knowledge going on there. 
+
+618
+00:36:57,800 --> 00:37:00,800
+There's so many assumptions 
+people make when When they start
+
+619
+00:37:00,800 --> 00:37:03,200
+trying to explain these things. 
+Right. 
+
+620
+00:37:04,000 --> 00:37:06,600
+Right. 
+And keep their complex subjects,
+
+621
+00:37:06,600 --> 00:37:08,000
+right? 
+Like, yeah. 
+
+622
+00:37:08,000 --> 00:37:10,800
+But they could be explained a 
+lot more straightforward. 
+
+623
+00:37:10,800 --> 00:37:12,700
+That's what we need to do for 
+you. 
+
+624
+00:37:12,700 --> 00:37:16,400
+Explain two objects to me 20, 
+whatever years ago. 
+
+625
+00:37:16,400 --> 00:37:19,900
+So yeah, so now you can do is 
+concurrency. 
+
+626
+00:37:21,300 --> 00:37:25,200
+But first, I also hear your 
+point that maybe a more 
+
+627
+00:37:25,200 --> 00:37:28,700
+mainstream way is just the 
+absolute proliferation of Rost 
+
+628
+00:37:28,700 --> 00:37:30,100
+that we've seen in the 
+Enterprise. 
+
+629
+00:37:30,500 --> 00:37:35,200
+I mean we have seen so many 
+traditional applications getting
+
+630
+00:37:35,200 --> 00:37:37,500
+Rewritten in Rust, and I'm not 
+saying rust as a functional 
+
+631
+00:37:37,500 --> 00:37:42,400
+language, but I do think that 
+it's giving huge performance 
+
+632
+00:37:42,400 --> 00:37:48,900
+benefits, huge safety benefits. 
+And it yeah, it's just been 
+
+633
+00:37:48,900 --> 00:37:50,600
+uncanny. 
+Like, I'm trying to think of 
+
+634
+00:37:50,600 --> 00:37:52,000
+examples. 
+There was a framework called 
+
+635
+00:37:52,000 --> 00:37:54,700
+electron, which is a way to 
+build desk to have sure. 
+
+636
+00:37:54,900 --> 00:37:58,800
+And now there's one called 
+Towery, which is a sense of 
+
+637
+00:37:59,200 --> 00:38:02,600
+across that Did you? 
+Yeah, I haven't played with it, 
+
+638
+00:38:02,600 --> 00:38:05,100
+but looks really interesting. 
+It's really interesting and this
+
+639
+00:38:05,100 --> 00:38:08,500
+is an example of a project. 
+That's just been trending and 
+
+640
+00:38:08,500 --> 00:38:11,300
+trending on GitHub and I see it 
+every single week. 
+
+641
+00:38:11,500 --> 00:38:13,800
+Gaining adoption. 
+And from my understanding, I 
+
+642
+00:38:13,800 --> 00:38:17,200
+haven't played with it but it's 
+basically electron written in 
+
+643
+00:38:17,200 --> 00:38:21,100
+Rust and it's getting much 
+better performance and it's much
+
+644
+00:38:21,100 --> 00:38:22,800
+more palette. 
+You know, electron is not well, 
+
+645
+00:38:22,800 --> 00:38:25,400
+liked among the developers. 
+And people seem to really love 
+
+646
+00:38:25,400 --> 00:38:28,700
+Towery for desktop apps and 
+we've kind of seen this pattern 
+
+647
+00:38:28,700 --> 00:38:33,800
+of hated A g and then it gets 
+Rewritten in Rust and people 
+
+648
+00:38:33,800 --> 00:38:37,300
+seem to like it a lot better. 
+How and in the python Community 
+
+649
+00:38:37,300 --> 00:38:41,900
+there's a bunch of tools that 
+are either being Rewritten in 
+
+650
+00:38:41,900 --> 00:38:49,300
+rust or or being written from 
+scratch and rust and and it's 
+
+651
+00:38:49,300 --> 00:38:54,100
+funny I don't know. 
+It makes a difference and so 
+
+652
+00:38:54,100 --> 00:38:57,900
+many way that speed and the mm 
+you know the amount of time that
+
+653
+00:38:57,900 --> 00:38:59,800
+it takes for the brain to 
+wander. 
+
+654
+00:39:00,300 --> 00:39:03,900
+And when you can cut that down, 
+it makes a difference. 
+
+655
+00:39:03,900 --> 00:39:06,600
+And I don't, you know, I don't 
+know. 
+
+656
+00:39:06,600 --> 00:39:11,400
+I'm still sewing Mojo. 
+Which you explored a little bit 
+
+657
+00:39:11,400 --> 00:39:14,500
+was Python and roster. 
+Some well was it's the it's a 
+
+658
+00:39:14,500 --> 00:39:16,800
+very crude approximation. 
+They start with the python 
+
+659
+00:39:16,800 --> 00:39:21,600
+interpreter and they embed 
+something that takes a lot of 
+
+660
+00:39:21,600 --> 00:39:24,800
+the syntax from rust. 
+And it seems like it may, you 
+
+661
+00:39:24,800 --> 00:39:29,600
+know, even grab some of the, you
+know, implementations of rust 
+
+662
+00:39:29,600 --> 00:39:34,600
+and it's It inside of python. 
+And so, instead of, I mean, 
+
+663
+00:39:34,600 --> 00:39:37,300
+they're really good way to write
+python extension. 
+
+664
+00:39:37,300 --> 00:39:43,400
+Modules is using this rust 
+Library, piyo 3, but this guy 
+
+665
+00:39:43,400 --> 00:39:47,600
+who is the same one, who came up
+with llvm and Swift and 
+
+666
+00:39:47,600 --> 00:39:50,500
+something else he said, oh, you 
+know what? 
+
+667
+00:39:50,500 --> 00:39:54,200
+If we for the performance stuff,
+what if we just embedded all of 
+
+668
+00:39:54,200 --> 00:39:58,300
+the best stuff of rest inside of
+python, then everything's 
+
+669
+00:39:58,300 --> 00:40:00,000
+backwards compatible with 
+python. 
+
+670
+00:40:00,400 --> 00:40:03,200
+And when you need the 
+performance, you just write f n 
+
+671
+00:40:03,200 --> 00:40:07,700
+for a function, instead of deaf 
+and you use struct instead of, 
+
+672
+00:40:08,200 --> 00:40:11,900
+you know, pythons structures. 
+And you get I mean, that's a 
+
+673
+00:40:12,200 --> 00:40:15,900
+vast oversimplification. 
+It can also talk to the GPU. 
+
+674
+00:40:16,200 --> 00:40:20,300
+It can, you know, do all kinds 
+of things that rust enables you 
+
+675
+00:40:20,300 --> 00:40:23,400
+to do. 
+So, anyway, we've seen a huge 
+
+676
+00:40:23,400 --> 00:40:26,700
+overlap between the rust and 
+python community and the rust 
+
+677
+00:40:26,700 --> 00:40:30,800
+and JavaScript Community. 
+There's a python linter Called 
+
+678
+00:40:30,800 --> 00:40:32,600
+rough. 
+She's been eating a lot of 
+
+679
+00:40:32,600 --> 00:40:36,400
+traction. 
+It's just a linter, but it's 
+
+680
+00:40:36,400 --> 00:40:38,200
+written in Rust and the 
+performances. 
+
+681
+00:40:38,200 --> 00:40:43,300
+A lot better I believe pedantic 
+is doing a bit of a rustic. 
+
+682
+00:40:43,300 --> 00:40:45,100
+Tomb is being written in Rust. 
+Yeah. 
+
+683
+00:40:45,700 --> 00:40:46,900
+Great. 
+And it's so interesting. 
+
+684
+00:40:46,900 --> 00:40:49,400
+There is a data frame Library 
+called polar. 
+
+685
+00:40:49,400 --> 00:40:51,600
+Switch is a direct pandas 
+competitor. 
+
+686
+00:40:51,700 --> 00:40:53,600
+Yes, that's python Community 
+uses. 
+
+687
+00:40:53,600 --> 00:40:58,600
+And it's pandas written and 
+Rewritten and rust so and and of
+
+688
+00:40:58,600 --> 00:41:00,300
+course, in data science, that's 
+huge Judge. 
+
+689
+00:41:00,308 --> 00:41:04,600
+And so and and yeah. 
+And everybody switching to rough
+
+690
+00:41:04,600 --> 00:41:10,700
+and ruff ruff. 
+Is this linter? 
+
+691
+00:41:10,700 --> 00:41:12,900
+But it in court? 
+Well, the other thing it does, 
+
+692
+00:41:12,908 --> 00:41:15,500
+that's a place where having 
+performance and low memory usage
+
+693
+00:41:15,500 --> 00:41:19,300
+is because you want you you want
+to run it with a skirt if your 
+
+694
+00:41:19,300 --> 00:41:21,300
+lender can run in one 
+millisecond that would yes, 
+
+695
+00:41:21,300 --> 00:41:23,900
+perfect. 
+And and this one is effectively 
+
+696
+00:41:23,900 --> 00:41:28,000
+did it run. 
+That's it's that fast as and but
+
+697
+00:41:28,000 --> 00:41:32,800
+it also incorporates all the 
+These other disparate Limpet 
+
+698
+00:41:32,800 --> 00:41:35,800
+linting systems that you would 
+end up running, huh? 
+
+699
+00:41:35,800 --> 00:41:38,900
+You know, one at a time and now 
+everybody's just switching to 
+
+700
+00:41:38,900 --> 00:41:39,800
+rough. 
+Wow. 
+
+701
+00:41:40,300 --> 00:41:43,100
+Yeah yeah yeah. 
+So yeah. 
+
+702
+00:41:43,100 --> 00:41:47,600
+And I think what's interesting 
+is that the best of these are 
+
+703
+00:41:47,600 --> 00:41:52,100
+not telling python developers. 
+Hey you have to go learn rust. 
+
+704
+00:41:52,600 --> 00:41:56,300
+They are still creating thin 
+python layers polar's. 
+
+705
+00:41:56,300 --> 00:42:00,900
+For example, example, you can 
+still write in Python. 
+
+706
+00:42:01,300 --> 00:42:06,000
+It's just rust performance under
+the hood and I think getting 
+
+707
+00:42:06,000 --> 00:42:09,000
+that hybrid story is really, 
+really interesting. 
+
+708
+00:42:09,300 --> 00:42:13,000
+Oh, yeah. 
+And then I, it's the python Raw 
+
+709
+00:42:13,000 --> 00:42:16,100
+Story is well understood and 
+then we're starting to see that 
+
+710
+00:42:16,100 --> 00:42:20,700
+even in the JavaScript World a 
+bit there, some of the 
+
+711
+00:42:20,700 --> 00:42:23,400
+JavaScript tooling. 
+Now, I believe there's a project
+
+712
+00:42:23,400 --> 00:42:26,300
+called swc. 
+I always get the acronym wrong, 
+
+713
+00:42:27,300 --> 00:42:30,100
+you know, turbo repo, which is 
+versus lzi. 
+
+714
+00:42:30,300 --> 00:42:33,400
+Edie system. 
+They publicly wrote that they 
+
+715
+00:42:33,400 --> 00:42:37,200
+were rewriting in Rust has 
+historically javascript-based, 
+
+716
+00:42:38,800 --> 00:42:42,700
+you know some of these 
+JavaScript runtimes we're seeing
+
+717
+00:42:42,700 --> 00:42:47,400
+now being Rewritten in Rost. 
+So it's just rust is touching 
+
+718
+00:42:47,400 --> 00:42:50,600
+almost every language Community 
+whether the devs themselves 
+
+719
+00:42:50,600 --> 00:42:54,500
+realize it or not. 
+Yeah and for those that it's not
+
+720
+00:42:54,500 --> 00:42:59,300
+touching hopefully wasm and the 
+wasm component model will let us
+
+721
+00:42:59,500 --> 00:43:01,700
+take. 
+Other languages and integrate 
+
+722
+00:43:01,700 --> 00:43:05,600
+them with rust rossum's and and 
+that will be another kind of 
+
+723
+00:43:05,600 --> 00:43:08,900
+integration pass languages. 
+Well, because I mean, one of the
+
+724
+00:43:08,900 --> 00:43:13,100
+things that I'm interested in 
+Rust in the python Community is 
+
+725
+00:43:13,800 --> 00:43:17,900
+often your performance, is some 
+weird little bottleneck in your 
+
+726
+00:43:17,900 --> 00:43:22,700
+python code and you can just 
+rewrite that part in Rust and 
+
+727
+00:43:22,700 --> 00:43:26,400
+then maybe you're not going to 
+wander into the concurrency 
+
+728
+00:43:26,400 --> 00:43:29,200
+Minefield and all that, you 
+know, that to me that's like, 
+
+729
+00:43:29,200 --> 00:43:31,000
+Step 1. 
+Profile. 
+
+730
+00:43:31,300 --> 00:43:33,700
+See if you can rewrite it in 
+rest, see if that solves your 
+
+731
+00:43:33,700 --> 00:43:36,900
+problem. 
+Then stop, don't don't go to 
+
+732
+00:43:36,900 --> 00:43:40,300
+concurrency if you don't have to
+and use AI. 
+
+733
+00:43:40,300 --> 00:43:44,300
+So AI just says, hey I did a 
+performance analysis. 
+
+734
+00:43:44,500 --> 00:43:47,300
+Here's your hot spot and this 
+function, I'm going to rewrite 
+
+735
+00:43:47,300 --> 00:43:50,200
+it to rest for you. 
+Boom, sure, Don there's a 
+
+736
+00:43:50,200 --> 00:43:52,500
+start-up. 
+You might need a little coaching
+
+737
+00:43:52,500 --> 00:43:54,000
+to get the rest of the work 
+right? 
+
+738
+00:43:54,000 --> 00:44:00,100
+But yeah yeah yeah. 
+To your point the component. 
+
+739
+00:44:00,200 --> 00:44:04,800
+DeLand that polyglot story of we
+could have different laws and 
+
+740
+00:44:04,800 --> 00:44:06,600
+modules written in different 
+languages. 
+
+741
+00:44:06,600 --> 00:44:09,300
+They all compiled awaaz. 
+Mm then they all kind of Lincoln
+
+742
+00:44:09,300 --> 00:44:12,600
+integrate together. 
+I mean, that Vision I think is 
+
+743
+00:44:12,600 --> 00:44:14,800
+so so interesting. 
+Oh yeah. 
+
+744
+00:44:14,800 --> 00:44:19,000
+And then the ability to 
+transparently take one piece of 
+
+745
+00:44:19,000 --> 00:44:21,700
+wisdom compute, and instead of 
+running it in the same process, 
+
+746
+00:44:21,900 --> 00:44:25,500
+move it out across the network 
+to another process and boom. 
+
+747
+00:44:25,500 --> 00:44:28,400
+Now we've got a, a transparent 
+distributed system models 
+
+748
+00:44:28,400 --> 00:44:29,700
+Journeys. 
+Concurrency they are. 
+
+749
+00:44:30,600 --> 00:44:34,600
+I know we're reaching the end of
+our allotted time, but I'm also 
+
+750
+00:44:34,600 --> 00:44:36,400
+very curious, if you can 
+summarize. 
+
+751
+00:44:36,700 --> 00:44:41,300
+How did you end up in this job? 
+Did you, what did you study in 
+
+752
+00:44:41,300 --> 00:44:43,800
+school? 
+And how did you wander into 
+
+753
+00:44:43,800 --> 00:44:47,300
+becoming this? 
+Whatever it is that you do? 
+
+754
+00:44:48,200 --> 00:44:50,000
+Yeah, it's sad. 
+It's very Niche. 
+
+755
+00:44:50,000 --> 00:44:52,400
+Honestly, I was at Google before
+this. 
+
+756
+00:44:52,400 --> 00:44:56,100
+I was in a product strategy role
+on a computer vision product 
+
+757
+00:44:56,100 --> 00:45:00,100
+called shoppable images. 
+So it wasn't a neat finish. 
+
+758
+00:45:00,200 --> 00:45:04,800
+Fit to then going to be a 
+developer tool investor but I 
+
+759
+00:45:04,800 --> 00:45:09,200
+met one of my colleagues now. 
+Mike dauber who was investing in
+
+760
+00:45:09,208 --> 00:45:12,100
+the space and he believed in me 
+and we had a bunch of great 
+
+761
+00:45:12,100 --> 00:45:16,700
+conversations and now that I've 
+been doing this for this long, I
+
+762
+00:45:16,700 --> 00:45:20,200
+couldn't imagine doing anything 
+else but I would say there's no 
+
+763
+00:45:20,200 --> 00:45:23,400
+traditional background to become
+a developer tools investor. 
+
+764
+00:45:23,500 --> 00:45:26,400
+Well this was the moment when 
+Bruce's computer blue screen of 
+
+765
+00:45:26,400 --> 00:45:29,900
+death so sorry about that that 
+we didn't end. 
+
+766
+00:45:30,200 --> 00:45:32,200
+Curly. 
+But hope you enjoyed this one. 
+
+767
+00:45:30,200 --> 00:45:32,200
+Curly. 
+But hope you enjoyed this one.
+

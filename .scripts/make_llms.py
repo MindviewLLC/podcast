@@ -12,6 +12,7 @@ network), so re-running with nothing new rewrites identical files.
 """
 from __future__ import annotations
 
+import os
 import re
 import sys
 
@@ -140,6 +141,8 @@ def write_full(eps: list[dict]) -> None:
             out.append("- Topics: " + ", ".join(n for n, _ in ep["topics"]))
         if ep["listen"]:
             out.append("- Listen: " + ", ".join(f"[{t}]({h})" for t, h in ep["listen"]))
+        if os.path.exists(f"transcripts/{ep['slug']}.srt"):
+            out.append(f"- Transcript: {SITE}/transcripts/{ep['slug']}.srt")
         out.append("")
         for p in ep["paragraphs"]:
             out += [p, ""]

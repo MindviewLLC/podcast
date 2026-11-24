@@ -1,0 +1,5800 @@
+1
+00:00:01,080 --> 00:00:04,560
+Welcome to happy path 
+programming I'm Bruce Eckel. 
+
+2
+00:00:04,800 --> 00:00:11,520
+I'm James Ward. 
+This is from a presentation by 
+
+3
+00:00:11,520 --> 00:00:14,880
+David Foster Wallace, which you 
+can find on YouTube. 
+
+4
+00:00:14,880 --> 00:00:20,760
+And it's great this so these two
+young fish are swimming along 
+
+5
+00:00:21,000 --> 00:00:25,720
+and they meet this older fish 
+and he goes morning, how's the 
+
+6
+00:00:25,720 --> 00:00:30,920
+water? 
+And they, the two young fish 
+
+7
+00:00:30,920 --> 00:00:33,600
+continue swimming along. 
+And then finally one says to the
+
+8
+00:00:33,600 --> 00:00:40,400
+other, what the hell is water? 
+And what we want to do today is 
+
+9
+00:00:40,400 --> 00:00:43,760
+kind of give you an idea of the,
+the water that you'll be 
+
+10
+00:00:43,760 --> 00:00:48,000
+swimming in when you matriculate
+and go out into the world. 
+
+11
+00:00:48,360 --> 00:00:52,280
+If you're, if you have you, you 
+don't need these slides, but if 
+
+12
+00:00:52,280 --> 00:00:57,360
+you're interested in them, you 
+can find them at this URL on 
+
+13
+00:00:57,360 --> 00:01:06,160
+GitHub. 
+So we're talking about the all 
+
+14
+00:01:06,160 --> 00:01:08,240
+of these disruptive changes that
+happen. 
+
+15
+00:01:08,240 --> 00:01:11,840
+And I know that many of you are,
+you know, reading the news and 
+
+16
+00:01:11,840 --> 00:01:15,040
+worried about what's this going 
+to do to my career. 
+
+17
+00:01:15,040 --> 00:01:17,920
+There's, you know, layoffs 
+happening in these big companies
+
+18
+00:01:17,920 --> 00:01:21,960
+and everything. 
+And we have all experienced this
+
+19
+00:01:21,960 --> 00:01:29,440
+thing many times and it, it, 
+yes, it happens our, our thing 
+
+20
+00:01:29,440 --> 00:01:34,120
+goes up and down, but always it 
+seems to go up a lot more than 
+
+21
+00:01:34,120 --> 00:01:38,200
+it goes down beforehand. 
+It's it can be cyclic. 
+
+22
+00:01:38,240 --> 00:01:42,280
+And the problem is really the 
+way managers deal with these 
+
+23
+00:01:42,280 --> 00:01:46,040
+things, the way the management 
+in general. 
+
+24
+00:01:46,280 --> 00:01:53,800
+So what you as a scientist and 
+engineer needs to keep in mind, 
+
+25
+00:01:53,800 --> 00:01:57,720
+it's the idea of of curiosity, 
+that to move yourself more 
+
+26
+00:01:57,720 --> 00:02:04,760
+towards curiosity, more towards 
+I wonder and less I know. 
+
+27
+00:02:05,360 --> 00:02:09,800
+And you will discover that you 
+will run into it, especially if 
+
+28
+00:02:09,800 --> 00:02:14,080
+you're working for a company. 
+People in upper management want 
+
+29
+00:02:14,080 --> 00:02:16,920
+everything to be deterministic 
+because it makes them feel good.
+
+30
+00:02:17,400 --> 00:02:24,160
+In the real world, most things 
+are more complex than they are 
+
+31
+00:02:24,160 --> 00:02:27,960
+deterministic. 
+So your watch, well, your 
+
+32
+00:02:27,960 --> 00:02:31,600
+computer, all of these machines 
+that we make are deterministic. 
+
+33
+00:02:31,920 --> 00:02:35,480
+Complex is like the weather or a
+four year old. 
+
+34
+00:02:35,880 --> 00:02:39,440
+There are things you can do, but
+they're not, You can't just go 
+
+35
+00:02:39,440 --> 00:02:46,400
+to a manual or you can't just 
+publish what the company's value
+
+36
+00:02:46,400 --> 00:02:49,520
+system, what their culture, what
+the company culture is. 
+
+37
+00:02:49,520 --> 00:02:52,560
+We, this is a common thing. 
+They'll say we've decided what 
+
+38
+00:02:52,560 --> 00:02:54,840
+the company culture is and so we
+published it. 
+
+39
+00:02:54,840 --> 00:02:59,760
+And then they wonder why 
+nobody's adopting the company 
+
+40
+00:02:59,760 --> 00:03:02,320
+culture because that's not how 
+culture works. 
+
+41
+00:03:02,840 --> 00:03:11,000
+So my personal goal is to have 
+less opinions and what curiosity
+
+42
+00:03:11,000 --> 00:03:15,920
+brings you to and. 
+And it's taken me most of my 
+
+43
+00:03:15,920 --> 00:03:20,760
+life to realize that I was stuck
+in determinism and that 
+
+44
+00:03:21,560 --> 00:03:26,840
+curiosity is a much more fun way
+to live your life. 
+
+45
+00:03:27,120 --> 00:03:32,480
+And you learn more because 
+you're open to learning and, and
+
+46
+00:03:32,480 --> 00:03:34,520
+eventually you get to 
+experimentation. 
+
+47
+00:03:34,520 --> 00:03:37,880
+And I thought that I had, I was 
+I studying physics as an 
+
+48
+00:03:37,880 --> 00:03:41,240
+undergraduate. 
+I thought I knew lots about 
+
+49
+00:03:41,240 --> 00:03:44,760
+experiment to eat. 
+When we work with computer 
+
+50
+00:03:44,760 --> 00:03:46,440
+programs, we're always 
+experimenting. 
+
+51
+00:03:46,760 --> 00:03:50,120
+That's what I thought. 
+And then I've discovered that I 
+
+52
+00:03:50,120 --> 00:03:53,080
+don't like to fail. 
+I like every one of my 
+
+53
+00:03:53,080 --> 00:03:58,120
+experiments to work, and I'm not
+experimenting if every one of my
+
+54
+00:03:58,120 --> 00:04:01,040
+experiments work. 
+Most of your experiments should 
+
+55
+00:04:01,040 --> 00:04:05,440
+fail if you're truly 
+experimenting, and that's where 
+
+56
+00:04:05,440 --> 00:04:07,960
+you get your learning. 
+It's unpleasant. 
+
+57
+00:04:08,080 --> 00:04:11,520
+It's hard, especially if you're 
+attached to the idea of success.
+
+58
+00:04:11,800 --> 00:04:16,560
+It's really hard. 
+And yet the greatest benefit and
+
+59
+00:04:17,000 --> 00:04:22,160
+really good feelings that you 
+get is from experimenting and 
+
+60
+00:04:22,160 --> 00:04:25,560
+failing science. 
+You're, you're, you're all 
+
+61
+00:04:25,560 --> 00:04:29,800
+scientists of, of some form, or 
+at least that's probably what 
+
+62
+00:04:29,800 --> 00:04:33,640
+your degree is going to say. 
+The whole thing about science is
+
+63
+00:04:33,640 --> 00:04:38,520
+that it models causality. 
+So we we go, something happens 
+
+64
+00:04:38,520 --> 00:04:41,160
+and then this thing happens and 
+we think there's a connection to
+
+65
+00:04:41,160 --> 00:04:44,920
+it. 
+And that is all science does. 
+
+66
+00:04:44,920 --> 00:04:49,600
+It creates models that take that
+fit data that you have and that 
+
+67
+00:04:49,600 --> 00:04:52,000
+are predictive. 
+And if it can't do that, it's 
+
+68
+00:04:52,000 --> 00:04:54,720
+not very useful. 
+But it's not talking about 
+
+69
+00:04:54,720 --> 00:04:57,680
+truth. 
+We, I always thought science was
+
+70
+00:04:57,680 --> 00:05:00,520
+telling us the truth, but it's 
+just a model that gives us 
+
+71
+00:05:00,520 --> 00:05:04,880
+interesting data and the model 
+has to be falsifiable. 
+
+72
+00:05:05,520 --> 00:05:09,920
+I can assert that we live in a 
+simulated reality, but how do 
+
+73
+00:05:09,920 --> 00:05:13,920
+we, how do we falsify that? 
+How can we say that that's, how 
+
+74
+00:05:13,920 --> 00:05:17,520
+do we test that basically? 
+So that's a, that's an example 
+
+75
+00:05:17,520 --> 00:05:21,320
+of that. 
+So one of the things I did not 
+
+76
+00:05:21,920 --> 00:05:25,440
+give you a heads up here, what 
+we're trying to do, each of us 
+
+77
+00:05:25,760 --> 00:05:30,200
+are going to give a talk that's 
+about, we hope around 5 minutes 
+
+78
+00:05:30,200 --> 00:05:32,640
+long. 
+And the goal is to produce 
+
+79
+00:05:32,640 --> 00:05:36,040
+questions from you should have 
+said that at the beginning. 
+
+80
+00:05:36,480 --> 00:05:41,640
+That's what we're trying to do. 
+So one of the things that I 
+
+81
+00:05:41,640 --> 00:05:43,600
+mean, you're reading the news, 
+you're hearing about, you're 
+
+82
+00:05:43,600 --> 00:05:46,960
+playing with, with these large 
+language models and you're 
+
+83
+00:05:46,960 --> 00:05:51,760
+going, oh, is, you know, 
+companies are firing people all 
+
+84
+00:05:51,760 --> 00:05:53,880
+over the place. 
+Well, the managers, the 
+
+85
+00:05:53,880 --> 00:05:56,280
+companies are firing people all 
+over the place because they 
+
+86
+00:05:56,280 --> 00:06:01,800
+think they know what's that's, 
+that's another thing what I want
+
+87
+00:06:01,800 --> 00:06:06,920
+to talk about here is the fact 
+that humans are super bad at 
+
+88
+00:06:06,920 --> 00:06:10,560
+predicting the future. 
+And the ones who get up, you 
+
+89
+00:06:10,560 --> 00:06:13,440
+know, are on television and 
+things like that saying, oh, I 
+
+90
+00:06:13,440 --> 00:06:15,000
+know what the stock market's 
+going to do. 
+
+91
+00:06:15,320 --> 00:06:19,800
+Those are statistically shown to
+be worse than the average 
+
+92
+00:06:19,800 --> 00:06:21,600
+person. 
+And those are the ones that are 
+
+93
+00:06:21,600 --> 00:06:23,720
+up, you know, telling you how 
+things are going to be. 
+
+94
+00:06:24,080 --> 00:06:28,920
+And one, this is if, if you 
+don't know about cognitive 
+
+95
+00:06:28,920 --> 00:06:33,280
+biases, this is really useful 
+because it shows you all the 
+
+96
+00:06:33,280 --> 00:06:37,000
+different ways that your brain 
+could be tricked into making 
+
+97
+00:06:37,000 --> 00:06:39,960
+poor decisions and, and poor 
+predictions and things like 
+
+98
+00:06:39,960 --> 00:06:42,520
+this. 
+This is from Wikipedia. 
+
+99
+00:06:43,040 --> 00:06:46,720
+And so you can find it under if 
+you look up cognitive bias, if 
+
+100
+00:06:46,720 --> 00:06:48,720
+you can find it there. 
+And there are all these 
+
+101
+00:06:48,720 --> 00:06:52,600
+different cognitive biases. 
+The other, the book that is kind
+
+102
+00:06:52,600 --> 00:06:56,040
+of the foundation for this is 
+called Thinking Fast and Slow. 
+
+103
+00:06:56,040 --> 00:06:59,560
+And I know we're not talking 
+about computer science here, but
+
+104
+00:06:59,800 --> 00:07:05,960
+it's really when I started as an
+engineer, I just said the 
+
+105
+00:07:05,960 --> 00:07:07,760
+managers will take care of 
+things. 
+
+106
+00:07:07,760 --> 00:07:11,720
+That's their job. 
+I just heads down, I do my my 
+
+107
+00:07:11,720 --> 00:07:13,560
+thing. 
+And over the years I've 
+
+108
+00:07:13,560 --> 00:07:16,600
+discovered that you really have 
+to actually pay attention to 
+
+109
+00:07:16,600 --> 00:07:18,440
+everything. 
+You have to be curious about 
+
+110
+00:07:18,720 --> 00:07:21,760
+everything or else it'll get 
+you. 
+
+111
+00:07:23,120 --> 00:07:29,200
+So the thing that everybody's 
+really afraid of is what happens
+
+112
+00:07:29,200 --> 00:07:33,680
+when we, if we're able to 
+produce artificial general 
+
+113
+00:07:33,680 --> 00:07:37,200
+intelligence, AGI. 
+The thing is we don't know what 
+
+114
+00:07:37,200 --> 00:07:41,720
+intelligence is and we don't 
+know if we can create it. 
+
+115
+00:07:42,400 --> 00:07:45,520
+That's all. 
+Like a large language model is 
+
+116
+00:07:45,520 --> 00:07:49,000
+basically just a huge equation. 
+You put some stuff in and it 
+
+117
+00:07:49,000 --> 00:07:51,440
+gives you stuff out. 
+That's not intelligence. 
+
+118
+00:07:51,440 --> 00:07:55,200
+It can seem like intelligence. 
+We don't know what AGI is. 
+
+119
+00:07:55,360 --> 00:07:58,680
+Maybe it'll happen. 
+Maybe with LLMS we we can get 
+
+120
+00:07:58,680 --> 00:08:01,240
+closer to doing it, but we don't
+even know if it's possible. 
+
+121
+00:08:02,160 --> 00:08:09,760
+And you and your LLM buddy are 
+going to be able to create more 
+
+122
+00:08:09,760 --> 00:08:13,120
+solutions. 
+And there was an episode of 
+
+123
+00:08:14,040 --> 00:08:20,160
+Futurama where Doctor Farnsworth
+decides that all the problems of
+
+124
+00:08:20,160 --> 00:08:23,200
+the world have been solved and 
+he has nothing to do. 
+
+125
+00:08:23,200 --> 00:08:25,760
+And so he's in great despair. 
+And that's the kind of 
+
+126
+00:08:25,760 --> 00:08:30,880
+information that you, you get 
+from, remember that the news we,
+
+127
+00:08:30,880 --> 00:08:35,880
+at least in America, we, we know
+that the, the, the data shows 
+
+128
+00:08:35,880 --> 00:08:39,440
+that when you're scared, you buy
+more stuff. 
+
+129
+00:08:39,840 --> 00:08:43,600
+So keep that in mind when you 
+look at the news and it scares 
+
+130
+00:08:43,600 --> 00:08:46,840
+you, you just go, oh, they're 
+trying to get me to buy more 
+
+131
+00:08:46,840 --> 00:08:50,440
+stuff. 
+And, and they're not looking at 
+
+132
+00:08:50,440 --> 00:08:52,520
+the real stuff. 
+They're, they're just looking at
+
+133
+00:08:52,520 --> 00:08:56,280
+what will make me buy more. 
+So ultimately the problems, 
+
+134
+00:08:56,280 --> 00:09:00,680
+there's so many more problems 
+that have not been solved that 
+
+135
+00:09:00,680 --> 00:09:05,360
+we're not even paying attention 
+to because you look at it and it
+
+136
+00:09:05,360 --> 00:09:08,440
+seems too expensive. 
+It's, oh, it's going to take too
+
+137
+00:09:08,440 --> 00:09:10,360
+much trouble for the cost 
+benefit. 
+
+138
+00:09:10,680 --> 00:09:14,400
+Now we have these LLMS to help 
+us build things. 
+
+139
+00:09:14,640 --> 00:09:18,000
+So you and your LLM buddy can 
+solve all these different 
+
+140
+00:09:18,000 --> 00:09:20,480
+problems that nobody's even 
+talking about now. 
+
+141
+00:09:20,840 --> 00:09:24,280
+But if you solve them, you can 
+create customers. 
+
+142
+00:09:24,520 --> 00:09:26,440
+And that's ultimately what you 
+want to do. 
+
+143
+00:09:26,840 --> 00:09:32,320
+You want you, you, you can look 
+at this world in terms of, oh, I
+
+144
+00:09:32,320 --> 00:09:35,200
+want to work for a big company 
+and make lots of money from 
+
+145
+00:09:35,200 --> 00:09:37,480
+them. 
+Well, in that case, the big 
+
+146
+00:09:37,480 --> 00:09:40,680
+companies, your customer, you 
+still have to have the 
+
+147
+00:09:40,680 --> 00:09:42,840
+capability to solve some 
+problems. 
+
+148
+00:09:43,200 --> 00:09:48,040
+And for me, the solving the 
+problems is the more interesting
+
+149
+00:09:48,040 --> 00:09:51,080
+thing. 
+We just have better tools now. 
+
+150
+00:09:51,160 --> 00:09:55,960
+That's what this produces for us
+is these tools that allow us to 
+
+151
+00:09:56,160 --> 00:10:00,880
+solve problems that previously 
+were too expensive to even think
+
+152
+00:10:00,880 --> 00:10:04,240
+about solving. 
+The bookstore in Crested View is
+
+153
+00:10:04,240 --> 00:10:09,080
+using ancient software for 
+running their bookstore because 
+
+154
+00:10:09,800 --> 00:10:13,000
+previously it would take a team 
+of people to solve that problem.
+
+155
+00:10:13,280 --> 00:10:18,440
+Now it could probably be done 
+with one person and using an 
+
+156
+00:10:18,440 --> 00:10:21,240
+LLM. 
+And there's a new market for you
+
+157
+00:10:21,520 --> 00:10:23,160
+and then there's all these other
+markets. 
+
+158
+00:10:23,320 --> 00:10:25,880
+All you have to do is look 
+around and you can find problems
+
+159
+00:10:26,200 --> 00:10:30,840
+that you need to solve. 
+And so your skills that you're 
+
+160
+00:10:30,840 --> 00:10:35,880
+developing here are maybe the 
+exact skills like I learned 
+
+161
+00:10:35,880 --> 00:10:39,840
+assembly language when I was 
+going to school, I learned some 
+
+162
+00:10:39,840 --> 00:10:42,520
+higher, higher level languages, 
+but a lot of people were still 
+
+163
+00:10:42,520 --> 00:10:45,760
+using assembly language. 
+And then compilers, high level 
+
+164
+00:10:45,760 --> 00:10:48,760
+languages come along, don't 
+really use assembly language 
+
+165
+00:10:48,760 --> 00:10:50,760
+anymore. 
+I still find it helpful to 
+
+166
+00:10:50,760 --> 00:10:55,200
+understand what's going on 
+underneath, but I think the same
+
+167
+00:10:55,200 --> 00:10:56,400
+thing is going to happen with 
+you. 
+
+168
+00:10:57,040 --> 00:11:00,680
+All right, that's enough for me.
+We will now move to Bill. 
+
+169
+00:11:02,520 --> 00:11:05,200
+OK, that should work. 
+OK, that's my first slide. 
+
+170
+00:11:05,680 --> 00:11:07,560
+I have 5 slides, three of which 
+are blank. 
+
+171
+00:11:08,120 --> 00:11:11,040
+So so you know how much is 
+coming. 
+
+172
+00:11:11,160 --> 00:11:16,800
+My name is Bill Venners and I, 
+you know, the name of this talk 
+
+173
+00:11:16,800 --> 00:11:19,720
+was adapting to Disruptive 
+technologies. 
+
+174
+00:11:20,120 --> 00:11:24,000
+And Bruce said that I heard him 
+say it's humans are very bad at 
+
+175
+00:11:24,000 --> 00:11:26,080
+predicting the future. 
+So I'm going to predict the 
+
+176
+00:11:26,080 --> 00:11:28,480
+future because I didn't know he 
+was going to say that. 
+
+177
+00:11:28,480 --> 00:11:31,680
+So I what I have noticed in the 
+past is that when technology 
+
+178
+00:11:31,680 --> 00:11:34,920
+changes, people change without 
+really trying. 
+
+179
+00:11:35,240 --> 00:11:39,000
+Because if the technology offers
+you value, you just switch to it
+
+180
+00:11:39,560 --> 00:11:42,040
+and that that it and you gain 
+something from that. 
+
+181
+00:11:42,040 --> 00:11:45,280
+But at the same time, what I've 
+noticed is that we lose 
+
+182
+00:11:45,280 --> 00:11:48,040
+something too usually. 
+And I think that will happen 
+
+183
+00:11:48,040 --> 00:11:54,080
+with AI. 
+And So what I wanted to do was 
+
+184
+00:11:55,120 --> 00:12:00,240
+give you 2 examples from the 
+past of that kind of trade off. 
+
+185
+00:12:00,440 --> 00:12:02,560
+So the first slide, hang on a 
+second. 
+
+186
+00:12:04,520 --> 00:12:07,600
+There we go. 
+So this is written by Bill 
+
+187
+00:12:07,600 --> 00:12:11,680
+Venners, but not by me. 
+This is my great grandfather's 
+
+188
+00:12:11,920 --> 00:12:14,040
+brother. 
+My name is Howard William 
+
+189
+00:12:14,040 --> 00:12:15,520
+Venners. 
+His name was William Harold 
+
+190
+00:12:15,520 --> 00:12:18,320
+Venners. 
+He was born in 1888 and he wrote
+
+191
+00:12:18,320 --> 00:12:23,160
+this letter to my grandfather, 
+his nephew, in 1920 using a 
+
+192
+00:12:23,160 --> 00:12:25,920
+fountain pen. 
+And a fountain pen, if you push 
+
+193
+00:12:25,920 --> 00:12:27,760
+down it, it kind of makes a 
+thicker line. 
+
+194
+00:12:27,760 --> 00:12:29,880
+And like when you do a loop, 
+you'll lift up a little bit and 
+
+195
+00:12:29,880 --> 00:12:31,920
+makes a thinner line. 
+And you ended up with this kind 
+
+196
+00:12:31,920 --> 00:12:34,560
+of, it kind of facilitated or 
+encourage people to make this 
+
+197
+00:12:34,560 --> 00:12:37,520
+kind of beautiful handwriting. 
+You may have seen from the 
+
+198
+00:12:38,200 --> 00:12:40,840
+latter half of the 1800s, first 
+half of the 1900s. 
+
+199
+00:12:40,840 --> 00:12:44,720
+And then what happened in in the
+mid mid 20th century is 
+
+200
+00:12:44,720 --> 00:12:46,360
+ballpoint pens became 
+widespread. 
+
+201
+00:12:46,360 --> 00:12:48,400
+And that was a new technology 
+that everybody just started 
+
+202
+00:12:48,400 --> 00:12:49,800
+using because it was more 
+convenient. 
+
+203
+00:12:50,200 --> 00:12:54,000
+And we gained a lot from that, 
+but what we lost was that kind 
+
+204
+00:12:54,000 --> 00:12:56,520
+of beautiful, elegant this 
+stuff, right? 
+
+205
+00:12:56,640 --> 00:12:58,960
+So that's an example. 
+And I had nothing to do with 
+
+206
+00:12:58,960 --> 00:13:02,280
+that because I was born and it 
+was already ballpoint pen time 
+
+207
+00:13:02,280 --> 00:13:04,880
+when I was born. 
+But what I did kind of 
+
+208
+00:13:04,880 --> 00:13:08,000
+participate in is in the mid 
+90s, everybody stopped writing 
+
+209
+00:13:08,000 --> 00:13:12,560
+letters like this because e-mail
+came out and became widespread. 
+
+210
+00:13:12,600 --> 00:13:15,320
+I mean, Nemo was out before, 
+became widespread in the mid 
+
+211
+00:13:15,320 --> 00:13:18,880
+90s. 
+Text messaging and long distance
+
+212
+00:13:18,880 --> 00:13:21,400
+phone calls became very cheap 
+and then they became free and 
+
+213
+00:13:21,400 --> 00:13:23,760
+then they added video. 
+And so we use that instead. 
+
+214
+00:13:23,760 --> 00:13:26,560
+We use this electronic 
+communication that has a lot of 
+
+215
+00:13:26,560 --> 00:13:30,800
+value for our life. 
+But we lost to me something that
+
+216
+00:13:30,800 --> 00:13:34,160
+I valued, which is personal 
+letters, handwritten letters 
+
+217
+00:13:34,160 --> 00:13:37,040
+that I, I, I, I did what my 
+grandpa did. 
+
+218
+00:13:37,200 --> 00:13:40,640
+My grandfather, this guy Earl 
+saved all the letters he 
+
+219
+00:13:40,640 --> 00:13:41,840
+received. 
+I now have them. 
+
+220
+00:13:41,960 --> 00:13:44,800
+I also have all the letters I 
+received up to about the mid 90s
+
+221
+00:13:44,800 --> 00:13:46,640
+when I stopped sending them and 
+I stopped receiving. 
+
+222
+00:13:47,280 --> 00:13:50,240
+So we gained a lot with 
+electronic communication, but we
+
+223
+00:13:50,240 --> 00:13:54,600
+also lost something that was 
+valuable to me in my opinion, 
+
+224
+00:13:54,600 --> 00:13:56,600
+which was this kind of thing, 
+personal letters. 
+
+225
+00:13:57,240 --> 00:14:01,240
+So, so to apply that to AI, 
+those are two things in the 
+
+226
+00:14:01,240 --> 00:14:02,960
+past. 
+So to predict in the future the 
+
+227
+00:14:02,960 --> 00:14:05,400
+same thing will happen with AI 
+because that's what I think, you
+
+228
+00:14:05,400 --> 00:14:10,040
+know, happens. 
+And so for AI, I'll go to my, my
+
+229
+00:14:10,040 --> 00:14:13,040
+next blank slide. 
+I wanted to share with you an 
+
+230
+00:14:13,040 --> 00:14:14,680
+anecdote. 
+This is not scientific, but it 
+
+231
+00:14:14,680 --> 00:14:17,120
+was, I was in Switzerland a few 
+weeks ago at a conference. 
+
+232
+00:14:17,320 --> 00:14:20,280
+There was a professor there, 
+computer science, and he told me
+
+233
+00:14:20,600 --> 00:14:22,400
+an anecdote that another 
+professor told him. 
+
+234
+00:14:22,400 --> 00:14:25,240
+So this is third hand. 
+No, but what it was is that that
+
+235
+00:14:25,240 --> 00:14:27,960
+guy was teaching programming 
+programming course. 
+
+236
+00:14:28,440 --> 00:14:31,760
+And he said now that AI is 
+available to students, whether 
+
+237
+00:14:31,760 --> 00:14:34,360
+they're supposed to use it or 
+not, their homework assignments 
+
+238
+00:14:34,360 --> 00:14:36,320
+are now perfect. 
+So their their scores went up 
+
+239
+00:14:36,920 --> 00:14:40,120
+for the homework assignment, but
+their test scores have gone way 
+
+240
+00:14:40,120 --> 00:14:42,560
+down. 
+And that the sort of the 
+
+241
+00:14:42,920 --> 00:14:46,280
+conclusion was is that by 
+delegating or offloading the 
+
+242
+00:14:46,280 --> 00:14:49,880
+programming assignments to an 
+AI, you didn't go through the 
+
+243
+00:14:49,880 --> 00:14:53,800
+process to learn what you needed
+to learn to well through the 
+
+244
+00:14:53,800 --> 00:14:56,600
+course. 
+And that's how I learned 
+
+245
+00:14:56,600 --> 00:14:58,080
+programming. 
+I learned programming by doing 
+
+246
+00:14:58,080 --> 00:14:59,640
+it. 
+I didn't have the option of 
+
+247
+00:14:59,640 --> 00:15:02,240
+using an assistant and trying to
+decide when to use it and how to
+
+248
+00:15:02,240 --> 00:15:07,280
+use it. 
+So when I I do use AIA lot now 
+
+249
+00:15:07,320 --> 00:15:11,640
+and and what I use it for what 
+I've noticed is I have to judge 
+
+250
+00:15:11,640 --> 00:15:15,000
+the output and edit it. 
+And the way I judge it is 
+
+251
+00:15:15,000 --> 00:15:18,160
+because of my, my experience 
+and, and my knowledge and my 
+
+252
+00:15:18,160 --> 00:15:21,880
+taste, which I gained by doing 
+it myself because I'm hands on 
+
+253
+00:15:22,080 --> 00:15:26,000
+learner. 
+So I just want to give you a few
+
+254
+00:15:26,000 --> 00:15:27,440
+ideas. 
+The way I use it that I think 
+
+255
+00:15:27,480 --> 00:15:29,600
+are useful. 
+One is I use it as a virtual 
+
+256
+00:15:29,600 --> 00:15:31,960
+expert. 
+So it's like a free, a free 
+
+257
+00:15:31,960 --> 00:15:33,880
+professor. 
+But I don't want to, you know, 
+
+258
+00:15:34,200 --> 00:15:37,720
+it's like a, it's like I can ask
+you questions and, and learn 
+
+259
+00:15:37,720 --> 00:15:39,920
+about topics that I'm interested
+in. 
+
+260
+00:15:40,080 --> 00:15:42,200
+And that's been really, I love 
+that. 
+
+261
+00:15:42,240 --> 00:15:43,960
+I think that's been really 
+beneficial to me. 
+
+262
+00:15:44,520 --> 00:15:49,920
+And I do a lot of asking it to 
+write text and code, prose and 
+
+263
+00:15:49,920 --> 00:15:52,160
+code. 
+And then I judge the output and 
+
+264
+00:15:52,160 --> 00:15:57,120
+I edit it and I find that helps,
+but it is not always helpful and
+
+265
+00:15:57,120 --> 00:16:00,440
+maybe it isn't always faster. 
+And the what I've been trying to
+
+266
+00:16:00,440 --> 00:16:06,520
+do is train a model to write 
+code and text like me, so that 
+
+267
+00:16:06,520 --> 00:16:10,840
+it's really make it not just 
+like write good text, but write 
+
+268
+00:16:10,840 --> 00:16:14,160
+text like me. 
+So I've made some progress on 
+
+269
+00:16:14,160 --> 00:16:15,320
+that, but I'm still working on 
+that. 
+
+270
+00:16:16,040 --> 00:16:20,280
+So I guess I wanted to suggest 
+that it that forever, you know, 
+
+271
+00:16:21,560 --> 00:16:24,760
+that we don't delegate to AI 
+things we think we need to be 
+
+272
+00:16:24,760 --> 00:16:30,040
+good at because we will miss the
+the learning experience by doing
+
+273
+00:16:30,040 --> 00:16:31,920
+it ourselves. 
+You have to pick and choose. 
+
+274
+00:16:32,480 --> 00:16:38,280
+And so you need to be mindful of
+what what it is you want to 
+
+275
+00:16:38,280 --> 00:16:40,600
+learn for whatever purpose it 
+is. 
+
+276
+00:16:40,600 --> 00:16:43,800
+And then it's very tempting to 
+offload that, but you know, 
+
+277
+00:16:44,040 --> 00:16:47,120
+sometimes don't like just to 
+give yourself that. 
+
+278
+00:16:47,920 --> 00:16:50,600
+But on the other hand, I think 
+everybody today needs to be get 
+
+279
+00:16:50,600 --> 00:16:53,560
+good at using these. 
+That is a blank screen still. 
+
+280
+00:16:53,560 --> 00:16:56,360
+Oh, I forgot to look at it and 
+that's fine. 
+
+281
+00:16:56,680 --> 00:17:01,320
+But anyway, we need to get good 
+at using AI because it's it's 
+
+282
+00:17:01,320 --> 00:17:04,480
+going to be ubiquitous. 
+I might have to reselect my 
+
+283
+00:17:04,800 --> 00:17:09,440
+content here. 
+And it is still blank. 
+
+284
+00:17:09,599 --> 00:17:14,040
+OK, But you can see it. 
+I took a lot of time to design 
+
+285
+00:17:14,040 --> 00:17:19,839
+that I didn't use AI. 
+So so you need to use AI well, 
+
+286
+00:17:19,839 --> 00:17:21,560
+and that's got to be part of 
+your education. 
+
+287
+00:17:22,480 --> 00:17:24,280
+And there's two sides to it. 
+Because one of the things you 
+
+288
+00:17:24,280 --> 00:17:26,240
+need to how to prompt it, you 
+need to learn how to prompt 
+
+289
+00:17:26,240 --> 00:17:27,960
+this. 
+You need to practice prompting 
+
+290
+00:17:27,960 --> 00:17:31,280
+it and through by doing it, you 
+will learn how, but you also 
+
+291
+00:17:31,280 --> 00:17:33,360
+have to be able to judge and 
+edit the response. 
+
+292
+00:17:33,360 --> 00:17:36,360
+And to do that, you need to have
+the taste and the experience and
+
+293
+00:17:36,360 --> 00:17:40,760
+the knowledge that you would 
+maybe need to do it directly 
+
+294
+00:17:41,480 --> 00:17:43,440
+enough to learn that. 
+Like that's how I learned it. 
+
+295
+00:17:45,120 --> 00:17:46,920
+OK. 
+And then lastly, I just, I 
+
+296
+00:17:46,920 --> 00:17:49,960
+wanted to suggest that I do 
+think this will help us my 
+
+297
+00:17:49,960 --> 00:17:56,120
+future prediction that we may 
+lose something that we value as 
+
+298
+00:17:56,120 --> 00:17:59,520
+we transition to AI, in addition
+to gaining something that we 
+
+299
+00:17:59,520 --> 00:18:02,040
+value. 
+But that there are, you know, I,
+
+300
+00:18:02,080 --> 00:18:06,000
+I thought about this, that there
+are ways you can still keep 
+
+301
+00:18:06,000 --> 00:18:07,800
+those things in your life if 
+you're creative. 
+
+302
+00:18:07,800 --> 00:18:13,400
+So I realized that several years
+ago, I don't send handwritten 
+
+303
+00:18:13,400 --> 00:18:16,320
+letters anymore, but some 
+strangers started asking me to, 
+
+304
+00:18:16,480 --> 00:18:19,880
+to give them handwriting, not 
+with a, a pen, but with my 
+
+305
+00:18:19,880 --> 00:18:23,480
+finger. 
+So I just started doing this 
+
+306
+00:18:24,080 --> 00:18:25,880
+like whenever I have one of 
+these things like I'm checking 
+
+307
+00:18:25,880 --> 00:18:28,360
+out with a credit card or 
+whatever, I don't just go, I 
+
+308
+00:18:28,360 --> 00:18:31,240
+just tried it like like my, my 
+great, great grand uncle or 
+
+309
+00:18:31,240 --> 00:18:33,880
+whatever. 
+I sort of take the time to fish 
+
+310
+00:18:34,080 --> 00:18:36,000
+just so I have a little of that 
+in my life. 
+
+311
+00:18:36,760 --> 00:18:39,760
+So anyway, that is my talk. 
+All right. 
+
+312
+00:18:40,000 --> 00:18:43,080
+I'm Diane Marsh. 
+I am happy to be here. 
+
+313
+00:18:43,400 --> 00:18:48,760
+I am going to have some 
+repetition from both Bill and 
+
+314
+00:18:48,760 --> 00:18:52,680
+Bruce's talks, but what I really
+want to talk to you about is 
+
+315
+00:18:52,680 --> 00:18:54,280
+embracing change throughout your
+career. 
+
+316
+00:18:55,640 --> 00:18:59,120
+My experience is that things 
+change in this field very, very 
+
+317
+00:18:59,120 --> 00:19:01,520
+fast. 
+And that one, that's one of the 
+
+318
+00:19:01,520 --> 00:19:06,120
+things that makes it super fun 
+to be here, but also it to have 
+
+319
+00:19:06,200 --> 00:19:09,600
+a meaningful career. 
+I think embracing change is the 
+
+320
+00:19:09,600 --> 00:19:11,600
+key element. 
+So I'm going to go through a 
+
+321
+00:19:11,600 --> 00:19:15,800
+little of what I've experienced 
+through change. 
+
+322
+00:19:16,080 --> 00:19:19,080
+But before I do that, I want to 
+ask how many of you are worried 
+
+323
+00:19:19,280 --> 00:19:23,960
+today about your job prospects 
+in light of all you've read and 
+
+324
+00:19:23,960 --> 00:19:27,480
+heard about? 
+AII bet, right? 
+
+325
+00:19:27,480 --> 00:19:29,680
+It's, it's, it's a little scary 
+to watch the news. 
+
+326
+00:19:30,720 --> 00:19:33,080
+I, I hope what I, I think it's a
+reasonable concern. 
+
+327
+00:19:33,360 --> 00:19:37,560
+But what I hope that you all 
+will take from this talk is that
+
+328
+00:19:37,760 --> 00:19:39,720
+those of us who have been 
+through it, you heard a little 
+
+329
+00:19:39,720 --> 00:19:42,080
+bit of this from Bruce, is that 
+things change. 
+
+330
+00:19:42,320 --> 00:19:46,280
+And it's usually not quite as 
+dramatic as what we hear today. 
+
+331
+00:19:47,680 --> 00:19:50,520
+I've heard about the demise of 
+software development since the 
+
+332
+00:19:50,520 --> 00:19:53,560
+beginning of my career, and I 
+graduated in 1986. 
+
+333
+00:19:54,040 --> 00:19:58,080
+So I'm going to go through a 
+little bit of the changes that 
+
+334
+00:19:58,080 --> 00:20:02,760
+I've experienced and how they've
+made programming richer and how 
+
+335
+00:20:02,760 --> 00:20:08,240
+it's enriched my life. 
+But I also want to really. 
+
+336
+00:20:09,480 --> 00:20:13,200
+Drive home the point that these 
+changes have made it easier for 
+
+337
+00:20:13,200 --> 00:20:15,960
+us to solve bigger, more 
+complex, more interesting 
+
+338
+00:20:15,960 --> 00:20:22,200
+problems by removing a lot of 
+the, you know, tediousness and 
+
+339
+00:20:22,200 --> 00:20:27,640
+the repetitiveness that that we 
+had in early days to give us 
+
+340
+00:20:27,640 --> 00:20:29,400
+space to solve those bigger 
+problems. 
+
+341
+00:20:30,080 --> 00:20:37,480
+So my first job we didn't have 
+windows yet and I know Windows 
+
+342
+00:20:37,480 --> 00:20:41,720
+is like gone way beyond what it 
+is what it what it was then. 
+
+343
+00:20:42,040 --> 00:20:47,400
+But this meant that we didn't 
+have any way to do multiple 
+
+344
+00:20:47,400 --> 00:20:50,560
+things in a program. 
+So for example, I worked in a 
+
+345
+00:20:50,560 --> 00:20:52,760
+company that did analytical 
+instrumentation. 
+
+346
+00:20:53,080 --> 00:20:57,880
+So we put a sample in a furnace,
+we heated up that furnace. 
+
+347
+00:20:57,880 --> 00:21:01,800
+We measured the elements that 
+were in that sample. 
+
+348
+00:21:02,080 --> 00:21:05,680
+We analyzed that information and
+we displayed it in a very 
+
+349
+00:21:05,680 --> 00:21:08,400
+rudimentary, you know, user 
+interface. 
+
+350
+00:21:09,200 --> 00:21:12,760
+All this had to be done by hand.
+It meant that nothing handled 
+
+351
+00:21:12,760 --> 00:21:17,000
+the fact that we were going to 
+have to switch between measuring
+
+352
+00:21:17,000 --> 00:21:19,680
+and analyzing and displaying, 
+and so we had to manage it 
+
+353
+00:21:19,680 --> 00:21:21,160
+ourselves. 
+So what do we have? 
+
+354
+00:21:21,160 --> 00:21:26,000
+This huge for loop that just 
+incremented A variable and then 
+
+355
+00:21:26,000 --> 00:21:28,800
+went back to the very beginning.
+So a little bit of time doing 
+
+356
+00:21:28,800 --> 00:21:31,120
+some measurement, a little bit 
+of time doing some analysis, a 
+
+357
+00:21:31,120 --> 00:21:34,840
+little bit of time doing some 
+display back to the top and do 
+
+358
+00:21:34,840 --> 00:21:36,800
+it again. 
+Don't spend any time in any one 
+
+359
+00:21:36,800 --> 00:21:38,560
+of those sections because then 
+you're starving the other 
+
+360
+00:21:38,560 --> 00:21:40,120
+processes, right? 
+You learn about this in 
+
+361
+00:21:40,120 --> 00:21:42,920
+operating systems, but we had to
+do this about first job. 
+
+362
+00:21:42,920 --> 00:21:47,360
+Isn't that crazy? 
+So, you know, going to Windows 
+
+363
+00:21:47,360 --> 00:21:49,680
+and going to more modern 
+programming languages and 
+
+364
+00:21:49,680 --> 00:21:52,240
+systems. 
+The fear at the time was, oh 
+
+365
+00:21:52,240 --> 00:21:54,360
+gosh, everybody's going to be 
+able to do this. 
+
+366
+00:21:54,480 --> 00:21:56,920
+We are not going to need as many
+computer scientists. 
+
+367
+00:21:56,920 --> 00:21:58,680
+You know, it's just going to be 
+so easy. 
+
+368
+00:21:58,880 --> 00:22:02,440
+Don't even worry about it. 
+Of course, that did not actually
+
+369
+00:22:02,440 --> 00:22:05,080
+happen. 
+All we got to do is solve bigger
+
+370
+00:22:05,080 --> 00:22:10,040
+and better problems. 
+Ides is another example of where
+
+371
+00:22:10,040 --> 00:22:13,320
+people got got really worried 
+about, you know, oh, you're 
+
+372
+00:22:13,320 --> 00:22:15,280
+going to have code completion, 
+you're going to have all this 
+
+373
+00:22:15,280 --> 00:22:17,360
+code that gets built for you 
+automatically. 
+
+374
+00:22:17,840 --> 00:22:22,000
+You know, this is going to let 
+the masses generate good code. 
+
+375
+00:22:22,440 --> 00:22:26,160
+We're forgetting about the craft
+of understanding requirements 
+
+376
+00:22:26,160 --> 00:22:30,400
+and of bringing that to life in 
+code and how that really takes a
+
+377
+00:22:30,400 --> 00:22:31,200
+lot. 
+Of. 
+
+378
+00:22:31,480 --> 00:22:35,560
+Your energy and a lot of what 
+you've learned, your solid CS 
+
+379
+00:22:35,560 --> 00:22:38,120
+fundamentals that you are 
+learning here and that you will 
+
+380
+00:22:38,120 --> 00:22:39,960
+learn, continue to learn 
+throughout your life. 
+
+381
+00:22:40,280 --> 00:22:41,680
+That's what's going to take you 
+through. 
+
+382
+00:22:41,920 --> 00:22:44,240
+It's not having a tool like an 
+IDE. 
+
+383
+00:22:46,520 --> 00:22:50,960
+So I'm going to talk a little 
+bit about some advances in 
+
+384
+00:22:50,960 --> 00:22:53,720
+continuous delivering, 
+continuous deployment 1, because
+
+385
+00:22:53,720 --> 00:22:58,160
+I and my team we're in, we're 
+very involved with this, but 
+
+386
+00:22:58,160 --> 00:23:02,520
+also not because you should 
+learn any particular tool today,
+
+387
+00:23:02,680 --> 00:23:06,240
+but I think there are some 
+parallels with AI that might be 
+
+388
+00:23:06,240 --> 00:23:12,400
+helpful for you to understand. 
+So bringing, so continuous 
+
+389
+00:23:12,400 --> 00:23:16,400
+delivery produced deployment 
+allows the developer to actually
+
+390
+00:23:16,400 --> 00:23:20,080
+deploy the code that they wrote 
+in a complex system. 
+
+391
+00:23:20,080 --> 00:23:24,120
+This is complicated, right? 
+I might be committing code in a 
+
+392
+00:23:24,120 --> 00:23:27,400
+big system like Netflix, which 
+is where my experience in this 
+
+393
+00:23:27,400 --> 00:23:30,320
+came from. 
+And I might not understand all 
+
+394
+00:23:30,320 --> 00:23:32,760
+of the other things that are 
+happening in that environment. 
+
+395
+00:23:32,760 --> 00:23:35,840
+So I need to deploy that code 
+and make sure it's still working
+
+396
+00:23:36,040 --> 00:23:37,880
+and then figure out if I need to
+roll it back. 
+
+397
+00:23:39,200 --> 00:23:43,360
+The unintended side effects can 
+cause, you know, quite a bit of 
+
+398
+00:23:43,760 --> 00:23:47,120
+disruption. 
+And the tools that got that got 
+
+399
+00:23:47,120 --> 00:23:50,120
+built in part by one of my teams
+at Netflix, My first team 
+
+400
+00:23:50,120 --> 00:23:54,440
+engineering tools helped really 
+democratize that process. 
+
+401
+00:23:54,880 --> 00:23:57,320
+Now, who lost their jobs when we
+did this? 
+
+402
+00:23:57,560 --> 00:24:01,840
+There were a whole class of 
+people roles called DevOps, 
+
+403
+00:24:02,360 --> 00:24:05,360
+which was very little dev and 
+very much OPS that used to 
+
+404
+00:24:05,360 --> 00:24:07,680
+deploy code. 
+And this was their job. 
+
+405
+00:24:08,400 --> 00:24:14,000
+And so those people were going 
+to be displaced by such tooling.
+
+406
+00:24:14,760 --> 00:24:18,640
+But what actually ended up 
+happening was those folks found 
+
+407
+00:24:18,640 --> 00:24:21,000
+new jobs doing development, 
+right? 
+
+408
+00:24:21,000 --> 00:24:23,440
+Then they got to do more 
+meaningful work and also. 
+
+409
+00:24:23,440 --> 00:24:25,760
+They didn't they. 
+Weren't in the horrible position
+
+410
+00:24:26,200 --> 00:24:29,560
+of having somebody else's code 
+deployed that they didn't know 
+
+411
+00:24:29,560 --> 00:24:32,760
+they did it right, they didn't 
+understand and then have to 
+
+412
+00:24:32,760 --> 00:24:36,360
+decide what what side effects 
+did this cause? 
+
+413
+00:24:36,360 --> 00:24:38,080
+What happened? 
+Do I need to roll it back? 
+
+414
+00:24:38,520 --> 00:24:42,120
+Imagine that awful experience 
+of, you know, deploying 
+
+415
+00:24:42,120 --> 00:24:45,840
+something at Netflix scale and 
+then have not having any 
+
+416
+00:24:45,840 --> 00:24:47,760
+understanding of the code and 
+saying, oh gosh, I need to roll 
+
+417
+00:24:47,760 --> 00:24:51,280
+it back for I don't right. 
+So yes, there were jobs that 
+
+418
+00:24:51,280 --> 00:24:54,240
+were there were shifted. 
+And so I want you to think of a 
+
+419
+00:24:54,240 --> 00:24:57,240
+lot of the changes that are 
+happening can either be helpful 
+
+420
+00:24:57,480 --> 00:25:01,320
+in helping us grow new 
+experiences, new ways of doing 
+
+421
+00:25:01,320 --> 00:25:04,960
+our work, or a shift which will 
+shift some people from one 
+
+422
+00:25:05,720 --> 00:25:08,400
+aspect of the way that they 
+engage with their work to 
+
+423
+00:25:08,400 --> 00:25:10,880
+another. 
+And so that's what we saw with 
+
+424
+00:25:10,880 --> 00:25:13,120
+continuous delivery and 
+continuous deployment. 
+
+425
+00:25:14,720 --> 00:25:18,240
+So is AI different than all of 
+the things that I've discussed? 
+
+426
+00:25:18,600 --> 00:25:20,760
+Because I think that's maybe 
+what you're worried about. 
+
+427
+00:25:20,840 --> 00:25:24,200
+Like, so I've given you some 
+examples through my career that 
+
+428
+00:25:24,240 --> 00:25:28,240
+I've been able to navigate and 
+you're probably wondering, gosh,
+
+429
+00:25:28,240 --> 00:25:31,160
+but AI that is way more 
+different. 
+
+430
+00:25:31,160 --> 00:25:34,280
+That's going to, you know, take 
+us to a whole new place where 
+
+431
+00:25:34,280 --> 00:25:36,760
+we're, you know, life's going to
+be very much changed. 
+
+432
+00:25:38,040 --> 00:25:43,000
+Yes, it's going to change the 
+way that we do our works in some
+
+433
+00:25:43,000 --> 00:25:46,000
+ways, right? 
+But it's going to improve our 
+
+434
+00:25:46,000 --> 00:25:48,920
+ability to solve complex 
+problems that today and in the 
+
+435
+00:25:48,920 --> 00:25:50,840
+past we have not been able to 
+approach. 
+
+436
+00:25:52,360 --> 00:25:57,080
+It's going to, we need to be 
+implored to embrace and 
+
+437
+00:25:57,080 --> 00:26:01,480
+understand what AI can do. 
+And, and, and that is really 
+
+438
+00:26:01,480 --> 00:26:04,720
+going to be table stakes like 
+like Bill said, understand what 
+
+439
+00:26:04,720 --> 00:26:07,240
+it can do, understand the 
+limitations, understand how to 
+
+440
+00:26:07,240 --> 00:26:10,160
+engage with it, just as you 
+would understand work how to 
+
+441
+00:26:10,920 --> 00:26:13,600
+work out how to understand and 
+engage with these other tools. 
+
+442
+00:26:15,520 --> 00:26:19,000
+Like I said, AI is uniquely 
+positioned to help us solve 
+
+443
+00:26:19,000 --> 00:26:24,560
+bigger, bigger problems. 
+But the risk of AI is that if we
+
+444
+00:26:24,560 --> 00:26:29,720
+use it without discerning what 
+those actionable insights are 
+
+445
+00:26:30,000 --> 00:26:32,640
+that are coming out of it, we 
+can outdrive our headlights 
+
+446
+00:26:32,840 --> 00:26:34,600
+much. 
+When you're driving a car, your 
+
+447
+00:26:34,600 --> 00:26:37,320
+headlights only go so far. 
+Please don't drive faster than 
+
+448
+00:26:37,320 --> 00:26:38,600
+that. 
+You get yourself in a big 
+
+449
+00:26:38,600 --> 00:26:40,760
+trouble you can drive off a 
+Cliff for. 
+
+450
+00:26:41,040 --> 00:26:44,320
+And I could see the same thing 
+happening with AI. 
+
+451
+00:26:45,000 --> 00:26:48,600
+So what I, I think your, your 
+responsibility when you're 
+
+452
+00:26:48,600 --> 00:26:51,520
+working with AI is, is this 
+insight correct? 
+
+453
+00:26:51,960 --> 00:26:55,280
+How can I validate this insight 
+that came back to me? 
+
+454
+00:26:55,640 --> 00:27:00,400
+Is this, is this correct? 
+There, there's going to be a lot
+
+455
+00:27:00,400 --> 00:27:04,160
+of work from computer scientists
+to try to, to, are going to be 
+
+456
+00:27:04,160 --> 00:27:08,400
+needed to really validate those 
+concerns programmatically. 
+
+457
+00:27:09,040 --> 00:27:11,400
+You know, how, how can you look 
+into this? 
+
+458
+00:27:12,120 --> 00:27:14,800
+There's a lot of work there. 
+There's a lot of work to 
+
+459
+00:27:14,800 --> 00:27:17,920
+understand. 
+Is it free of bias? 
+
+460
+00:27:18,200 --> 00:27:21,600
+You know, if we have a model 
+that's introducing bias, we need
+
+461
+00:27:21,600 --> 00:27:25,640
+to understand that. 
+How can we build our systems to 
+
+462
+00:27:25,640 --> 00:27:29,440
+be able to dig into these 
+insights and understand the bias
+
+463
+00:27:29,800 --> 00:27:32,160
+that might be inherent in the 
+model that we're using? 
+
+464
+00:27:32,600 --> 00:27:34,880
+And then is the data reliable? 
+Is it too small? 
+
+465
+00:27:34,880 --> 00:27:38,360
+Is it, is it, you know, not 
+reflective of the general 
+
+466
+00:27:38,360 --> 00:27:41,120
+population? 
+Does it give us the information 
+
+467
+00:27:41,120 --> 00:27:43,320
+we're really truly expecting and
+looking for? 
+
+468
+00:27:44,800 --> 00:27:48,880
+OK, so I've talked a lot about 
+all of these things. 
+
+469
+00:27:49,880 --> 00:27:54,960
+The one key, I think, to having 
+a meaningful, satisfying career 
+
+470
+00:27:55,440 --> 00:27:59,040
+is lifelong learning. 
+If you're in this field, you're 
+
+471
+00:27:59,040 --> 00:28:04,120
+basically signing up for 
+continuing to understand changes
+
+472
+00:28:04,120 --> 00:28:08,480
+that are coming your way, 
+separating out the shiny objects
+
+473
+00:28:09,120 --> 00:28:12,000
+from the really important trends
+that are coming. 
+
+474
+00:28:12,880 --> 00:28:14,560
+This is something you build over
+experience. 
+
+475
+00:28:14,760 --> 00:28:16,280
+Please don't jump at every shiny
+object. 
+
+476
+00:28:16,280 --> 00:28:18,440
+You'll never get any work done. 
+You'll get fired, right? 
+
+477
+00:28:19,080 --> 00:28:22,680
+But also don't let big trends go
+by because then you'll miss out 
+
+478
+00:28:22,680 --> 00:28:24,400
+on a whole lot of really 
+interesting work. 
+
+479
+00:28:24,800 --> 00:28:27,320
+And you might end up doing the 
+same thing for 30 years. 
+
+480
+00:28:27,320 --> 00:28:28,880
+And I really hope that's not the
+case. 
+
+481
+00:28:29,280 --> 00:28:32,600
+I just retired and I will tell 
+you that the reason why I 
+
+482
+00:28:32,600 --> 00:28:38,920
+enjoyed this job so much is that
+it wasn't the same any anytime 
+
+483
+00:28:39,360 --> 00:28:42,240
+during my career. 
+I had so much change. 
+
+484
+00:28:42,240 --> 00:28:44,240
+I worked in many, many different
+domains. 
+
+485
+00:28:44,480 --> 00:28:48,960
+The ability to be able to apply 
+your domain expertise in 
+
+486
+00:28:48,960 --> 00:28:52,000
+software development, computer 
+science to a variety of 
+
+487
+00:28:52,000 --> 00:28:55,680
+different domains in the world 
+is incredibly meaningful. 
+
+488
+00:28:55,920 --> 00:28:59,440
+Brings makes your life so made 
+by life so rich, you can decide 
+
+489
+00:28:59,440 --> 00:29:01,240
+if it's worth the while for you 
+or not. 
+
+490
+00:29:02,280 --> 00:29:05,400
+And just navigating change 
+throughout that time and new 
+
+491
+00:29:05,400 --> 00:29:08,120
+technologies and new ways of 
+doing things, being able to 
+
+492
+00:29:08,120 --> 00:29:11,840
+solve bigger problems we didn't 
+even imagine, you know, back 
+
+493
+00:29:11,840 --> 00:29:17,720
+when I was working in my little 
+for loop that continued to 
+
+494
+00:29:17,720 --> 00:29:20,240
+increment variables to time 
+slice to an application. 
+
+495
+00:29:20,720 --> 00:29:25,040
+So I hope that you will continue
+to embrace change. 
+
+496
+00:29:25,040 --> 00:29:29,400
+As Bruce said, stay curious and 
+don't drive your career by 
+
+497
+00:29:29,400 --> 00:29:31,920
+headlines because those things 
+change. 
+
+498
+00:29:32,840 --> 00:29:35,920
+Anyways, thank you very much and
+now I hope you're all ready for 
+
+499
+00:29:35,920 --> 00:29:48,770
+panel discussion. 
+All right, so I will carry it 
+
+500
+00:29:48,770 --> 00:29:53,690
+around the mic and viewers few 
+audience questions for the our 
+
+501
+00:29:53,690 --> 00:29:55,650
+time. 
+So just explain your hand up and
+
+502
+00:29:55,650 --> 00:29:58,690
+out for him. 
+All right, praise soul in the 
+
+503
+00:29:58,690 --> 00:30:04,610
+back asking first question. 
+So everybody here. 
+
+504
+00:30:05,810 --> 00:30:10,320
+I'll be fine. 
+Or we we could have that no get 
+
+505
+00:30:10,320 --> 00:30:13,160
+the the that one. 
+Do you have the other one? 
+
+506
+00:30:13,560 --> 00:30:16,320
+Grab the other lab mic. 
+No, we can just pass that one 
+
+507
+00:30:16,320 --> 00:30:16,760
+around. 
+Oh. 
+
+508
+00:30:16,840 --> 00:30:19,120
+You pass that one OK. 
+But only one person. 
+
+509
+00:30:20,920 --> 00:30:27,320
+Yeah, Yeah, this could be tough.
+Yeah, you. 
+
+510
+00:30:27,320 --> 00:30:33,920
+Hold this for a second, I know, 
+OK? 
+
+511
+00:30:37,320 --> 00:30:38,920
+Yeah. 
+All right. 
+
+512
+00:30:38,920 --> 00:30:42,680
+So all three you kind of spoke 
+to embracing change and kind of 
+
+513
+00:30:42,680 --> 00:30:46,360
+moving on with change. 
+I was just curious if you any of
+
+514
+00:30:46,360 --> 00:30:50,880
+you have any information on of 
+the specific fields of computer 
+
+515
+00:30:50,880 --> 00:30:52,520
+science software. 
+Well, and information 
+
+516
+00:30:52,520 --> 00:30:55,200
+specifically that which fields 
+are being changed, the models 
+
+517
+00:30:55,200 --> 00:30:58,960
+versus the least like how those 
+fields are changing, like how 
+
+518
+00:30:58,960 --> 00:31:01,440
+we're changing or the ones that 
+are changing how it was done 
+
+519
+00:31:01,440 --> 00:31:15,760
+seen throughout AI. 
+Is there anything static? 
+
+520
+00:31:15,760 --> 00:31:19,800
+That's a really good question. 
+Having worked in a variety of 
+
+521
+00:31:19,800 --> 00:31:23,400
+different fields, I can see 
+change being introduced into all
+
+522
+00:31:23,400 --> 00:31:28,880
+of them. 
+I don't think that the AI is 
+
+523
+00:31:28,880 --> 00:31:32,680
+mature enough to be able to 
+figure out where, where it may 
+
+524
+00:31:32,680 --> 00:31:35,800
+or may not be applicable. 
+You know, there may be places 
+
+525
+00:31:35,800 --> 00:31:38,640
+where it's overkill. 
+Like it's a guys, all right, 
+
+526
+00:31:38,640 --> 00:31:43,760
+it's overkill to search to use 
+search with an AI rather than 
+
+527
+00:31:43,760 --> 00:31:46,280
+just to Google, you know, and 
+you know, if there's some 
+
+528
+00:31:46,280 --> 00:31:49,080
+extractions that are going to 
+happen where, you know, Google 
+
+529
+00:31:49,080 --> 00:31:51,800
+might decide, you know, when 
+you're doing a search to to use 
+
+530
+00:31:51,960 --> 00:31:54,120
+the AI or not. 
+Don't let that abstraction 
+
+531
+00:31:54,120 --> 00:31:55,440
+happen. 
+You don't force everything 
+
+532
+00:31:55,440 --> 00:31:57,960
+through chat TCPT. 
+It's just wasteful, right. 
+
+533
+00:31:58,280 --> 00:32:01,240
+So, you know, I think things 
+like that are going to work 
+
+534
+00:32:01,240 --> 00:32:06,000
+themselves out, but I don't 
+think that the fields mature 
+
+535
+00:32:06,000 --> 00:32:10,560
+enough yet to be able to say, 
+you know, what's changing faster
+
+536
+00:32:10,760 --> 00:32:19,240
+than anything else. 
+Our field is all about climbing 
+
+537
+00:32:19,240 --> 00:32:23,760
+up, like I mentioned, assembly 
+language and that's what people 
+
+538
+00:32:24,040 --> 00:32:31,240
+universally used to use and 
+there there are scaling limits 
+
+539
+00:32:31,520 --> 00:32:35,560
+to every one of the technologies
+that we use and we could build 
+
+540
+00:32:35,560 --> 00:32:38,120
+systems. 
+I mean, they set a man to the 
+
+541
+00:32:38,120 --> 00:32:42,640
+moon using assembly language. 
+So it's like, oh, it's possible 
+
+542
+00:32:42,640 --> 00:32:45,880
+to do that, but when you want a 
+really sophisticated system that
+
+543
+00:32:46,800 --> 00:32:48,560
+you run into those scaling 
+problems. 
+
+544
+00:32:48,560 --> 00:32:54,520
+And I think all of what we do is
+try to build on the shoulders of
+
+545
+00:32:54,520 --> 00:32:58,160
+what we've had before. 
+So and everything gets affected 
+
+546
+00:32:58,160 --> 00:33:00,520
+by that. 
+I mean like the dot Diane's 
+
+547
+00:33:00,520 --> 00:33:05,480
+example of the dev OPS being 
+replaced by CICD. 
+
+548
+00:33:06,600 --> 00:33:10,400
+It is you know, and that's 
+because it works better and 
+
+549
+00:33:10,400 --> 00:33:13,920
+ultimately because we can do 
+something faster and cheaper. 
+
+550
+00:33:14,840 --> 00:33:17,960
+Even though I didn't want to 
+think of it that way initially, 
+
+551
+00:33:17,960 --> 00:33:21,360
+I I started realizing yes, it is
+about economics. 
+
+552
+00:33:21,600 --> 00:33:24,920
+If a human can do something 
+better than the computer, we're 
+
+553
+00:33:24,920 --> 00:33:28,400
+going to have to human do it. 
+But once the and once the 
+
+554
+00:33:28,400 --> 00:33:31,840
+machine can do it better, then 
+we all move forward. 
+
+555
+00:33:32,040 --> 00:33:36,280
+Well, eventually I hope we all 
+move forward from that. 
+
+556
+00:33:36,280 --> 00:33:37,680
+Do you have anything? 
+Yeah. 
+
+557
+00:33:37,960 --> 00:33:40,520
+One short thing, I was just 
+going to say that when I talk to
+
+558
+00:33:40,520 --> 00:33:45,080
+people of different, you know, 
+patients, always ask them how 
+
+559
+00:33:45,080 --> 00:33:47,600
+they're using and they always 
+have some way of using it. 
+
+560
+00:33:47,600 --> 00:33:48,920
+So I think it's touching 
+everything. 
+
+561
+00:33:49,680 --> 00:33:52,000
+So it's going to be something 
+everybody used to know how to 
+
+562
+00:33:52,000 --> 00:33:57,360
+use well. 
+One more thing. 
+
+563
+00:33:57,760 --> 00:33:59,640
+Oh, OK. 
+I'll just add one more thing. 
+
+564
+00:33:59,640 --> 00:34:02,280
+Even outside of computer 
+science, you know, a lot of 
+
+565
+00:34:02,280 --> 00:34:05,000
+people are using it. 
+So, you know, my husband is a 
+
+566
+00:34:05,000 --> 00:34:09,400
+laser scientist and he, he uses 
+AI to, for a variety of 
+
+567
+00:34:09,400 --> 00:34:12,400
+different things, not not for 
+design, but he's using it for 
+
+568
+00:34:12,960 --> 00:34:15,800
+being able to consolidate 
+complex topics and be able to 
+
+569
+00:34:15,800 --> 00:34:18,360
+understand them in a, in a way 
+to share that out with other 
+
+570
+00:34:18,360 --> 00:34:21,920
+people, you know, So I think 
+that the opportunity is growing 
+
+571
+00:34:22,199 --> 00:34:25,719
+for people who hadn't previously
+found a way. 
+
+572
+00:34:26,080 --> 00:34:28,440
+To. 
+Directly engage themselves with 
+
+573
+00:34:29,440 --> 00:34:32,600
+with with programming to more 
+directly engage themselves now 
+
+574
+00:34:32,600 --> 00:34:34,960
+with the AII. 
+Need to add something awesome. 
+
+575
+00:34:35,520 --> 00:34:38,719
+Keep going. 
+As I lied to you and I, I want 
+
+576
+00:34:38,719 --> 00:34:40,480
+to correct myself. 
+I did talk to somebody who said 
+
+577
+00:34:40,480 --> 00:34:42,000
+they did use it and there was a 
+reason. 
+
+578
+00:34:42,000 --> 00:34:45,440
+It was they were worried about 
+GPL's code getting put into 
+
+579
+00:34:45,440 --> 00:34:48,280
+their main output. 
+So some people are choosing not 
+
+580
+00:34:48,280 --> 00:34:51,639
+to on purpose for a reason. 
+Well, OK, now I have to add. 
+
+581
+00:34:52,600 --> 00:34:57,240
+So our friend Paolo Bacigalupi, 
+who's a science fiction writer, 
+
+582
+00:34:57,680 --> 00:35:00,800
+we talked to him about it and I 
+thought he had the best because 
+
+583
+00:35:00,800 --> 00:35:03,960
+he and I have argued about this 
+for a while, and he had the best
+
+584
+00:35:03,960 --> 00:35:06,680
+answer. 
+He goes, I don't want to use it 
+
+585
+00:35:06,680 --> 00:35:11,480
+because I want the experience 
+that I have of writing the book,
+
+586
+00:35:11,480 --> 00:35:14,440
+of having it that's satisfying 
+to you. 
+
+587
+00:35:14,440 --> 00:35:16,200
+I just like can't argue with 
+that. 
+
+588
+00:35:17,040 --> 00:35:19,880
+You know. 
+For students who don't know what
+
+589
+00:35:19,880 --> 00:35:23,720
+TPL means, what was the concern?
+About that in public license is 
+
+590
+00:35:23,720 --> 00:35:26,760
+an open source license and this 
+was I'll give you specifics. 
+
+591
+00:35:27,160 --> 00:35:32,560
+It was the Scala JS, the guy who
+writes that and that Scala was 
+
+592
+00:35:32,720 --> 00:35:36,160
+the JVM. 
+So when they tried to download 
+
+593
+00:35:36,160 --> 00:35:40,000
+the compiled on JavaScript, that
+worked well, except people using
+
+594
+00:35:40,000 --> 00:35:42,360
+Scala like to use Java API 
+calls. 
+
+595
+00:35:42,360 --> 00:35:45,720
+So they have to re implement the
+Java API to graze. 
+
+596
+00:35:45,720 --> 00:35:47,720
+And if you ask an Alan to view 
+that, he's going to go look it 
+
+597
+00:35:47,720 --> 00:35:51,160
+up with JDK, which is GPL, which
+means now the skull chase would 
+
+598
+00:35:51,160 --> 00:35:52,880
+have to be GPL because of the 
+lessons. 
+
+599
+00:35:52,880 --> 00:35:58,600
+It's a viral license that people
+try to if they decide not to use
+
+600
+00:35:58,600 --> 00:36:00,200
+something like that, they have 
+to avoid them. 
+
+601
+00:36:00,600 --> 00:36:02,840
+So that's what that is. 
+And the last thing was to add to
+
+602
+00:36:02,840 --> 00:36:05,600
+what I think Paola, what I got 
+from him is he needed that. 
+
+603
+00:36:05,600 --> 00:36:09,240
+It's kind of like I was 
+mentioning where you you may 
+
+604
+00:36:09,240 --> 00:36:11,920
+need to do with this programming
+assignment to kind of go through
+
+605
+00:36:11,920 --> 00:36:14,640
+the difficulty and learn. 
+I think what he was learning was
+
+606
+00:36:14,640 --> 00:36:17,880
+with his where the magic was in 
+his story. 
+
+607
+00:36:18,280 --> 00:36:20,440
+He needs to go through the 
+difficult pain of writing it 
+
+608
+00:36:20,760 --> 00:36:23,040
+over and over to get to learn 
+that. 
+
+609
+00:36:23,680 --> 00:36:26,640
+Thank Jeff. 
+OK. 
+
+610
+00:36:29,760 --> 00:36:31,760
+Hi. 
+I have a couple questions. 
+
+611
+00:36:31,760 --> 00:36:36,160
+I hope that's OK. 
+My first question is how do you 
+
+612
+00:36:36,160 --> 00:36:42,040
+see people moving forward with 
+working alongside AI and like 
+
+613
+00:36:42,040 --> 00:36:45,840
+working with autonomous AI? 
+Because while maybe at this 
+
+614
+00:36:45,840 --> 00:36:51,240
+moment the AI is not terribly 
+advanced, I think at the rate 
+
+615
+00:36:51,440 --> 00:36:55,400
+that we're developing, AI will 
+be capable of being. 
+
+616
+00:36:55,400 --> 00:36:59,560
+Autonomous like pretty soon so. 
+How do you see that kind of like
+
+617
+00:36:59,560 --> 00:37:02,600
+playing out and how can we all 
+keep up with that? 
+
+618
+00:37:04,360 --> 00:37:06,120
+Does that question make sense? 
+Yes. 
+
+619
+00:37:06,120 --> 00:37:11,320
+It's just really hard to answer.
+Go ahead, Bruce. 
+
+620
+00:37:14,280 --> 00:37:20,840
+Well I guess my answer, the 
+short answer would be using AII 
+
+621
+00:37:22,400 --> 00:37:26,760
+was when AI came online I was 
+halfway through. 
+
+622
+00:37:27,040 --> 00:37:32,960
+I don't know, I was a month into
+learning the Rust language and I
+
+623
+00:37:32,960 --> 00:37:36,360
+had, you know, watched lots of 
+videos and experimented with it 
+
+624
+00:37:36,360 --> 00:37:40,040
+and everything AI comes along 
+and I'm able to start asking 
+
+625
+00:37:40,040 --> 00:37:42,760
+into every time I thought of 
+something and I said, write me a
+
+626
+00:37:42,760 --> 00:37:46,480
+little example that does this. 
+And my learning accelerated 
+
+627
+00:37:46,480 --> 00:37:51,000
+dramatically. 
+And so in another month or so, I
+
+628
+00:37:51,000 --> 00:37:54,840
+could read Rust code with, I 
+mean, all the, you know, bells 
+
+629
+00:37:54,840 --> 00:37:58,840
+and whistles, except maybe the, 
+the unsafe stuff. 
+
+630
+00:37:59,520 --> 00:38:06,800
+But yeah, it also, I've been 
+experimenting with using it to 
+
+631
+00:38:06,840 --> 00:38:13,480
+write books and I end up having 
+to it's, it's a great research 
+
+632
+00:38:13,480 --> 00:38:15,480
+assistant. 
+But of course, all the examples 
+
+633
+00:38:15,480 --> 00:38:19,240
+have to be tested. 
+It doesn't always cover things. 
+
+634
+00:38:19,240 --> 00:38:22,080
+I have to ask it to what, what's
+this mean? 
+
+635
+00:38:22,080 --> 00:38:25,160
+And have it add things that, 
+that sort of thing. 
+
+636
+00:38:25,960 --> 00:38:29,080
+I don't even know if it'll be 
+worth writing books anymore. 
+
+637
+00:38:29,400 --> 00:38:38,160
+But I guess ultimately is you 
+experiment with it, you use it 
+
+638
+00:38:38,160 --> 00:38:42,560
+to help you keep up and you know
+the other resources. 
+
+639
+00:38:42,560 --> 00:38:48,160
+I don't know if that's helpful. 
+I'm not sure that we're ready 
+
+640
+00:38:48,160 --> 00:38:51,320
+the autonomous and I'm not sure 
+it's as close to autonomous as 
+
+641
+00:38:51,360 --> 00:38:55,360
+people think it is. 
+I think that the key, as I kind 
+
+642
+00:38:55,600 --> 00:38:58,560
+of brought up the talk, is I 
+think that the key is explain 
+
+643
+00:38:58,560 --> 00:39:00,240
+ability. 
+So you need to be able to 
+
+644
+00:39:00,240 --> 00:39:04,320
+explain, you know, how you got 
+somewhere and we're not even 
+
+645
+00:39:04,320 --> 00:39:10,960
+close to having replenishing, 
+you know, the to be autonomous, 
+
+646
+00:39:11,720 --> 00:39:16,600
+much like I'll just go out there
+and say I have a Tesla is not 
+
+647
+00:39:16,600 --> 00:39:20,880
+felt self dragging, you know, 
+and so I think you know, as as 
+
+648
+00:39:20,880 --> 00:39:25,440
+we learn the limits of AII 
+suspect that we will stop short 
+
+649
+00:39:25,680 --> 00:39:31,680
+of autonomous in most use cases.
+Thank you. 
+
+650
+00:39:31,680 --> 00:39:36,240
+And then my follow up question 
+is, I guess since a lot of us 
+
+651
+00:39:36,240 --> 00:39:38,560
+are, you know, scientists and 
+engineers, we're probably going 
+
+652
+00:39:38,560 --> 00:39:41,560
+to be a large portion of the 
+people that use AI in the 
+
+653
+00:39:41,560 --> 00:39:45,600
+future. 
+How much of the like ethical and
+
+654
+00:39:45,600 --> 00:39:48,600
+sustainable impacts that they 
+are are going to be our 
+
+655
+00:39:48,600 --> 00:39:54,160
+responsibility, do you think? 
+You ask such amazing questions. 
+
+656
+00:39:54,400 --> 00:39:59,840
+Wow, such good questions. 
+Yes, that's our responsibility, 
+
+657
+00:39:59,880 --> 00:40:00,880
+right? 
+How much of it? 
+
+658
+00:40:01,400 --> 00:40:04,280
+A lot of it you can't. 
+You can't let the lawyers you 
+
+659
+00:40:04,280 --> 00:40:08,720
+know be responsible for ethical 
+and those limitations because 
+
+660
+00:40:09,000 --> 00:40:13,520
+they won't understand you know 
+the detail, much like you can't 
+
+661
+00:40:13,520 --> 00:40:15,800
+let the Patent Office decide 
+what's patentable. 
+
+662
+00:40:15,920 --> 00:40:19,600
+Because you get nonsensical. 
+Answers as we have in the past. 
+
+663
+00:40:19,840 --> 00:40:23,160
+So I think that yes, that's our 
+responsibility. 
+
+664
+00:40:23,160 --> 00:40:27,880
+You know, it's always been our 
+responsibility around to make 
+
+665
+00:40:27,880 --> 00:40:30,280
+sure that we were acting in 
+ethical ways. 
+
+666
+00:40:31,480 --> 00:40:35,360
+As far as sustainability, that's
+tricky. 
+
+667
+00:40:35,360 --> 00:40:38,800
+That's super tricky because I 
+think that we're going to have 
+
+668
+00:40:38,800 --> 00:40:41,280
+to, that's going to take a lot 
+of study. 
+
+669
+00:40:42,120 --> 00:40:43,800
+I don't know that I can answer 
+that question. 
+
+670
+00:40:43,800 --> 00:40:50,360
+Maybe somebody else has an idea.
+Well, at least in terms of our 
+
+671
+00:40:50,360 --> 00:40:55,520
+current LLMSI think the 
+direction is going towards 
+
+672
+00:40:55,520 --> 00:41:00,840
+having instead of an LLM that 
+knows everything having 
+
+673
+00:41:00,840 --> 00:41:05,200
+specialized LLMS. And then 
+what's it called? 
+
+674
+00:41:05,200 --> 00:41:07,680
+MCP? 
+Yeah, friend James, who couldn't
+
+675
+00:41:07,680 --> 00:41:11,440
+be here today, he works at 
+Amazon and he's kind of one of 
+
+676
+00:41:11,440 --> 00:41:17,200
+the leading researchers, I 
+guess, with an Amazon on MCP 
+
+677
+00:41:17,200 --> 00:41:24,360
+stuff model context, protocol. 
+So it's a way for one LLM to 
+
+678
+00:41:24,360 --> 00:41:27,440
+talk to another one. 
+And so the idea would be that 
+
+679
+00:41:27,440 --> 00:41:30,240
+you would have a front end that 
+would talk to some of these 
+
+680
+00:41:30,240 --> 00:41:33,880
+smaller ones. 
+And they're, because they're, 
+
+681
+00:41:34,840 --> 00:41:37,880
+they're only focused on one 
+topic, they're much more 
+
+682
+00:41:37,880 --> 00:41:45,520
+efficient now in terms of the, 
+you know, moral responsibility. 
+
+683
+00:41:45,520 --> 00:41:52,240
+I guess I, I actually have, I 
+think historically scientists 
+
+684
+00:41:52,600 --> 00:41:57,280
+and engineers have been so 
+focused on what they're doing 
+
+685
+00:41:57,680 --> 00:42:04,960
+and not paying attention to the,
+well, I'll just say it, 
+
+686
+00:42:05,680 --> 00:42:10,000
+sociopaths, psychopaths to get 
+into positions of power and use 
+
+687
+00:42:10,000 --> 00:42:14,080
+this and start causing all kinds
+of havoc. 
+
+688
+00:42:14,440 --> 00:42:19,960
+So I think it's, I don't know, I
+mean, yes, you're right that 
+
+689
+00:42:19,960 --> 00:42:26,400
+that is a super tricky issue 
+because it requires us to 
+
+690
+00:42:26,400 --> 00:42:30,360
+actually take more control over 
+these things. 
+
+691
+00:42:30,360 --> 00:42:34,800
+But ultimately I think it's a 
+bigger problem because we're 
+
+692
+00:42:34,800 --> 00:42:39,960
+talking about a systemic 
+structural system that provides 
+
+693
+00:42:39,960 --> 00:42:43,400
+people who get into positions of
+power and decide to invade other
+
+694
+00:42:43,400 --> 00:42:47,800
+countries, etcetera. 
+And that's, but that is a 
+
+695
+00:42:47,800 --> 00:42:51,280
+problem that is bigger than our 
+brains so far have been able to 
+
+696
+00:42:51,280 --> 00:42:53,400
+handle. 
+And that is a problem that I 
+
+697
+00:42:53,400 --> 00:42:59,000
+think the machines which can 
+hold lots and lots of things to 
+
+698
+00:42:59,000 --> 00:43:01,120
+go ahead. 
+We were just talking about your 
+
+699
+00:43:01,120 --> 00:43:03,760
+roof here. 
+When it rains, you can't hear 
+
+700
+00:43:03,760 --> 00:43:06,440
+anything. 
+That's because architects are 
+
+701
+00:43:06,440 --> 00:43:10,080
+very limited and they only want 
+to think about whatever they're 
+
+702
+00:43:10,080 --> 00:43:12,960
+used to thinking about. 
+And so they can't deal with 
+
+703
+00:43:12,960 --> 00:43:13,840
+that. 
+Where is it? 
+
+704
+00:43:14,040 --> 00:43:18,200
+Where is the machine can hold 
+tons and tons of factors. 
+
+705
+00:43:18,200 --> 00:43:20,880
+And I think things like 
+architecture is going to change.
+
+706
+00:43:21,240 --> 00:43:27,480
+And I fingers crossed, hope that
+organizational systems are going
+
+707
+00:43:27,480 --> 00:43:30,120
+to change. 
+And I didn't get to my last 
+
+708
+00:43:30,120 --> 00:43:31,800
+slide, but it was an 
+inspiration. 
+
+709
+00:43:31,800 --> 00:43:36,520
+Something that came to me this 
+morning is can we figure out how
+
+710
+00:43:36,520 --> 00:43:40,400
+to build because because we're, 
+we're still using an industrial 
+
+711
+00:43:40,400 --> 00:43:45,880
+age management, Can we come up 
+with a way that people can work 
+
+712
+00:43:45,880 --> 00:43:50,800
+together in a self organizing 
+fashion without putting a 
+
+713
+00:43:50,800 --> 00:43:54,520
+hierarchy? 
+So I I have hopes that these 
+
+714
+00:43:54,520 --> 00:43:56,400
+tools will allow us to get 
+there. 
+
+715
+00:43:58,840 --> 00:44:01,600
+Yeah. 
+I just wanted to say that I 
+
+716
+00:44:01,600 --> 00:44:05,880
+think it's a good, it's good to 
+care about that sustainability, 
+
+717
+00:44:05,880 --> 00:44:08,560
+social impact environment back 
+to this thing because it is 
+
+718
+00:44:08,560 --> 00:44:11,040
+expensive. 
+One good thing, I think is that 
+
+719
+00:44:11,040 --> 00:44:17,720
+the cost is kind of aligned with
+caring about that because so for
+
+720
+00:44:17,720 --> 00:44:20,840
+example, I, I, one of the things
+I've been trying to do is think 
+
+721
+00:44:20,840 --> 00:44:25,240
+about how I can make the context
+as small as possible because 
+
+722
+00:44:25,240 --> 00:44:27,280
+I've heard of it. 
+Well, like the smallest possible
+
+723
+00:44:27,280 --> 00:44:30,840
+that the defective, I've heard 
+it's actually more effective if 
+
+724
+00:44:30,840 --> 00:44:33,200
+it's smaller that I've after a 
+while, it's kind of like a 
+
+725
+00:44:33,200 --> 00:44:35,280
+person that you can't keep track
+of everything you put in the 
+
+726
+00:44:35,280 --> 00:44:38,040
+context. 
+And so I think there's a lot of,
+
+727
+00:44:38,080 --> 00:44:40,160
+you know, there's just a lot of 
+costs there with people trying 
+
+728
+00:44:40,160 --> 00:44:43,120
+to figure out how to make it, 
+you know, do more with less. 
+
+729
+00:44:43,520 --> 00:44:46,360
+So that's a Blondie. 
+The other thing I thought about 
+
+730
+00:44:46,360 --> 00:44:50,640
+is that I was when I was kid 
+they taught me to say please and
+
+731
+00:44:50,640 --> 00:44:56,840
+thank you and I always say 
+please to these ill ones but 
+
+732
+00:44:56,840 --> 00:44:58,800
+that actually has an 
+environmental cost. 
+
+733
+00:44:58,880 --> 00:45:01,640
+But I just feel wrong. 
+I haven't gotten a book to help 
+
+734
+00:45:01,640 --> 00:45:03,480
+yet that actually commanded to 
+do something. 
+
+735
+00:45:03,480 --> 00:45:07,080
+That felt like being polite, but
+I probably shouldn't so. 
+
+736
+00:45:08,600 --> 00:45:10,840
+OK. 
+Question. 
+
+737
+00:45:11,480 --> 00:45:15,200
+There's one over here I. 
+Think she had to go? 
+
+738
+00:45:21,280 --> 00:45:22,240
+Looks not turned on. 
+Oh, it's. 
+
+739
+00:45:24,840 --> 00:45:41,400
+Just yeah, welcome. 
+Please please. 
+
+740
+00:45:43,480 --> 00:45:45,720
+It didn't help. 
+You want to laugh? 
+
+741
+00:45:45,720 --> 00:45:46,920
+You. 
+Can yell it and we'll repeat it 
+
+742
+00:45:46,920 --> 00:45:48,680
+if you want. 
+But just. 
+
+743
+00:45:48,960 --> 00:45:52,720
+I guess we have a question of 
+what you guys think about 
+
+744
+00:45:52,720 --> 00:45:57,320
+synthetic data that's going 
+down, say AI data? 
+
+745
+00:45:57,760 --> 00:45:59,920
+That is generating so repeat the
+question. 
+
+746
+00:45:59,960 --> 00:46:05,000
+So yes, so the yeah, so the 
+question is about AI is 
+
+747
+00:46:05,000 --> 00:46:09,480
+generating synthetic data and. 
+Using and using. 
+
+748
+00:46:09,480 --> 00:46:13,880
+And using it to train itself on,
+Yeah, that's, that's an awesome 
+
+749
+00:46:13,880 --> 00:46:18,080
+question. 
+Because I, I feel like there's 
+
+750
+00:46:18,080 --> 00:46:23,560
+probably some math signal theory
+stuff in there that would tell 
+
+751
+00:46:23,560 --> 00:46:26,720
+you that. 
+Well, maybe, Yep, who knows, 
+
+752
+00:46:26,720 --> 00:46:28,680
+maybe you could get a little way
+doing that. 
+
+753
+00:46:28,680 --> 00:46:31,280
+But at some point it's going to 
+degrade. 
+
+754
+00:46:31,280 --> 00:46:33,160
+That information is going to 
+degrade. 
+
+755
+00:46:33,600 --> 00:46:40,720
+I think that I, I hope that the 
+next step in even just LLMS will
+
+756
+00:46:40,720 --> 00:46:46,160
+be the ability for it to 
+validate its own data rather 
+
+757
+00:46:46,160 --> 00:46:50,160
+than just generate new data. 
+It would be able to say, and you
+
+758
+00:46:50,160 --> 00:46:54,800
+know, I could imagine it saying 
+I need to do this experiment. 
+
+759
+00:46:54,800 --> 00:46:58,080
+I have all this information, but
+I have a piece of data that's 
+
+760
+00:46:58,080 --> 00:47:00,200
+missing and I need to do this 
+experiment. 
+
+761
+00:47:00,480 --> 00:47:03,160
+And then I'll be able to feel 
+and we might not even be able to
+
+762
+00:47:03,160 --> 00:47:06,800
+imagine what that experiment is 
+because, you know, we don't have
+
+763
+00:47:06,800 --> 00:47:08,560
+that big picture that it might 
+have. 
+
+764
+00:47:08,880 --> 00:47:11,920
+And if it's filling in and all 
+of a sudden, oh, now we've got 
+
+765
+00:47:11,920 --> 00:47:16,960
+fusion or something like that. 
+But I think, yes, being 
+
+766
+00:47:16,960 --> 00:47:20,800
+suspicious of synthetic data is 
+spot on. 
+
+767
+00:47:20,800 --> 00:47:24,000
+That's the kind of thinking you 
+need when you're working with 
+
+768
+00:47:24,080 --> 00:47:27,720
+with an LLN. 
+One of my early experiences was 
+
+769
+00:47:29,400 --> 00:47:34,640
+I, I wanted to create a Python 
+program that would do, I forget 
+
+770
+00:47:34,640 --> 00:47:38,600
+what it was, but anyway, asked 
+it to do this and it wrote me a 
+
+771
+00:47:38,600 --> 00:47:41,680
+program and it said, yeah, all 
+you have to do is bring in this 
+
+772
+00:47:41,840 --> 00:47:44,120
+this import this library and 
+then use it. 
+
+773
+00:47:44,120 --> 00:47:47,440
+And everything took me a while 
+to figure out that that library 
+
+774
+00:47:47,440 --> 00:47:51,440
+didn't exist, you know, And so 
+it's always it. 
+
+775
+00:47:51,440 --> 00:47:56,400
+And the interesting thing is, is
+this process has made me 
+
+776
+00:47:56,400 --> 00:47:59,960
+understand what science is. 
+I did not under, even though my 
+
+777
+00:47:59,960 --> 00:48:03,320
+undergraduate degree was in 
+physics, I did not understand 
+
+778
+00:48:03,320 --> 00:48:07,440
+what science was. 
+It is this model that has to be,
+
+779
+00:48:07,640 --> 00:48:11,480
+that has to fit the data, has to
+be predictive, has to be valid. 
+
+780
+00:48:11,480 --> 00:48:14,360
+You have to be able to validate 
+it and you have to be able to 
+
+781
+00:48:14,680 --> 00:48:16,840
+disprove it. 
+You never prove it, but you have
+
+782
+00:48:16,840 --> 00:48:19,080
+to disprove it. 
+So that's the kind of thinking 
+
+783
+00:48:19,080 --> 00:48:22,680
+that you need when you start 
+dealing with with any of these 
+
+784
+00:48:22,680 --> 00:48:26,000
+systems is 0 great, maybe this 
+will work. 
+
+785
+00:48:26,160 --> 00:48:31,880
+I don't doubt is what science 
+the essence of science. 
+
+786
+00:48:31,880 --> 00:48:35,960
+So I think this is looking at 
+data, looking at somebody might 
+
+787
+00:48:35,960 --> 00:48:38,040
+say, oh, there's a causal 
+relationship here. 
+
+788
+00:48:38,320 --> 00:48:42,240
+Your first thought needs to be I
+cut. 
+
+789
+00:48:42,440 --> 00:48:44,440
+I'm not. 
+I don't believe it just because 
+
+790
+00:48:44,440 --> 00:48:48,880
+it says it so right off. 
+Yes, Sir. 
+
+791
+00:48:50,280 --> 00:48:51,760
+I actually think it's a great 
+way to use a a. 
+
+792
+00:48:51,760 --> 00:48:55,160
+It's good application, but like 
+anything, you have to know how 
+
+793
+00:48:55,160 --> 00:48:58,880
+to prompt it and you have to 
+judge an output because it can 
+
+794
+00:48:58,880 --> 00:49:01,240
+have bias in it or it can have 
+problems in it. 
+
+795
+00:49:01,240 --> 00:49:05,600
+Or basically if your data is you
+can, you can train them on them 
+
+796
+00:49:05,600 --> 00:49:09,480
+all or fine tune it with 
+something you didn't intend. 
+
+797
+00:49:09,480 --> 00:49:13,320
+You have to really be good at 
+like putting the data together. 
+
+798
+00:49:13,600 --> 00:49:16,400
+So just like any other 
+technique, but I think it's a 
+
+799
+00:49:16,400 --> 00:49:19,000
+good use for it because it can 
+make you more conducted. 
+
+800
+00:49:23,640 --> 00:49:27,560
+I've I've never really 
+understood statistics even 
+
+801
+00:49:27,560 --> 00:49:30,680
+though I took statistical 
+mechanics as a physics student 
+
+802
+00:49:31,080 --> 00:49:34,840
+and now I'm starting to 
+understand oh all of this stuff 
+
+803
+00:49:34,880 --> 00:49:39,160
+is statistical. 
+Ask the AI to explain Bayes 
+
+804
+00:49:39,160 --> 00:49:42,520
+theorem to you and then you will
+begin understanding what science
+
+805
+00:49:42,520 --> 00:49:47,560
+is. 
+Did you have a? 
+
+806
+00:49:53,120 --> 00:49:57,920
+So I know this talk is primarily
+about AI, but are there other 
+
+807
+00:49:58,040 --> 00:50:02,400
+recent technologies outside of 
+AI to be aware of? 
+
+808
+00:50:02,640 --> 00:50:05,240
+Question. 
+Nope. 
+
+809
+00:50:09,320 --> 00:50:12,360
+Probably. 
+And, you know, I hope what you 
+
+810
+00:50:12,360 --> 00:50:16,040
+took from my talk is a little 
+tiny glimmer that I add in there
+
+811
+00:50:16,120 --> 00:50:21,440
+shiny objects is, you know, all 
+the time and your new 
+
+812
+00:50:21,440 --> 00:50:26,440
+technologies emerge. 
+And if you jumped on everyone of
+
+813
+00:50:26,440 --> 00:50:30,240
+those down that radical to try 
+to understand every one of 
+
+814
+00:50:30,240 --> 00:50:32,600
+those, you would never get 
+anything done. 
+
+815
+00:50:32,920 --> 00:50:36,400
+And, you know, I think that 
+figuring out how to wisely use 
+
+816
+00:50:36,400 --> 00:50:40,640
+your time with different 
+technologies would be 
+
+817
+00:50:40,640 --> 00:50:43,960
+instructive. 
+I can't think of anything right 
+
+818
+00:50:43,960 --> 00:50:51,600
+now that is this loud and and 
+prominent as AI, but there's 
+
+819
+00:50:51,600 --> 00:50:53,760
+also always a lot of little 
+things. 
+
+820
+00:50:54,040 --> 00:50:55,520
+So which might be helpful and so
+much. 
+
+821
+00:50:55,520 --> 00:50:59,200
+And I think as you gain 
+experience in your career, you 
+
+822
+00:50:59,200 --> 00:51:02,440
+helped you build an 
+understanding about which things
+
+823
+00:51:02,440 --> 00:51:04,800
+are worth exploring, which 
+things aren't. 
+
+824
+00:51:04,800 --> 00:51:06,440
+Yeah, you can go down some 
+backpacks. 
+
+825
+00:51:06,560 --> 00:51:11,400
+Just don't vote out too far. 
+Actually, I, I did think of 
+
+826
+00:51:11,400 --> 00:51:17,520
+something, which is what Bill 
+Frazier and James Ward, we live 
+
+827
+00:51:17,520 --> 00:51:21,480
+in Crested View and I have been 
+working on for the last at least
+
+828
+00:51:21,480 --> 00:51:25,240
+five years. 
+And it's called effect systems. 
+
+829
+00:51:25,760 --> 00:51:30,640
+And it took me, Oh my gosh, I, 
+they had to drag me behind the, 
+
+830
+00:51:31,200 --> 00:51:36,480
+the car for 5-4 years before I 
+had started to, I started to 
+
+831
+00:51:36,480 --> 00:51:43,120
+understand it. 
+And an effect is an operation 
+
+832
+00:51:43,520 --> 00:51:47,600
+that encapsulates its own side 
+effects. 
+
+833
+00:51:48,160 --> 00:51:52,080
+And that's not something that 
+you'll necessarily get right 
+
+834
+00:51:52,080 --> 00:51:55,120
+away. 
+But the goal of that or the the 
+
+835
+00:51:55,280 --> 00:51:59,920
+result of that is greater 
+composability of systems. 
+
+836
+00:51:59,920 --> 00:52:03,560
+So again, the goal, we're trying
+to build larger systems. 
+
+837
+00:52:03,560 --> 00:52:06,760
+And it took me a while to 
+realize, oh, we were running 
+
+838
+00:52:06,760 --> 00:52:11,160
+into another one of these walls 
+that we regularly run into in 
+
+839
+00:52:11,160 --> 00:52:15,320
+this field. 
+And the, and the wall was 
+
+840
+00:52:15,400 --> 00:52:20,720
+another complexity wall. 
+And in this case, it's how much 
+
+841
+00:52:20,720 --> 00:52:24,960
+trouble does it take to change a
+system that is composed of a 
+
+842
+00:52:24,960 --> 00:52:28,520
+bunch of things? 
+And it's, it's very difficult. 
+
+843
+00:52:28,800 --> 00:52:32,560
+A lot of programmers waste a lot
+of time saying, I don't know if 
+
+844
+00:52:32,560 --> 00:52:36,160
+you're talking to another system
+and there's but there's some 
+
+845
+00:52:36,160 --> 00:52:39,520
+kind of delay and connecting to 
+that system. 
+
+846
+00:52:39,960 --> 00:52:43,160
+Well, you need to put in some 
+sort of a fall back approach. 
+
+847
+00:52:43,520 --> 00:52:48,320
+Well, that usually requires a 
+great deal of effort and 
+
+848
+00:52:48,360 --> 00:52:50,800
+programmers, you know, that's 
+just part of their job, right? 
+
+849
+00:52:51,040 --> 00:52:53,080
+Well, it's a waste of time and 
+money. 
+
+850
+00:52:53,760 --> 00:52:58,160
+And if you can, when you use an 
+effect system, you can say, oh, 
+
+851
+00:52:58,360 --> 00:53:01,600
+just plug this thing in here. 
+And because the effects 
+
+852
+00:53:01,600 --> 00:53:05,680
+encapsulate their own side 
+effects, you can do it fairly 
+
+853
+00:53:05,680 --> 00:53:08,760
+effortlessly. 
+This is a, we, we put this book 
+
+854
+00:53:08,760 --> 00:53:12,480
+out, I don't know, a year or so 
+ago, but it's, it's called 
+
+855
+00:53:12,480 --> 00:53:17,520
+Effect Oriented Programmed. 
+But we're working on a different
+
+856
+00:53:17,520 --> 00:53:20,160
+version of it. 
+And I have since realized that I
+
+857
+00:53:20,160 --> 00:53:23,160
+need to have a better way to 
+explain it. 
+
+858
+00:53:23,520 --> 00:53:28,120
+Anyway, that is one thing that I
+think is it's, it's kind of like
+
+859
+00:53:28,120 --> 00:53:32,280
+when namespaces were introduced 
+or even compilers or functional 
+
+860
+00:53:32,280 --> 00:53:34,840
+programming. 
+Unfortunately object oriented 
+
+861
+00:53:34,840 --> 00:53:39,280
+programming, which I spent many 
+of my years promoting and 
+
+862
+00:53:39,280 --> 00:53:42,880
+teaching, I have decided that 
+that was at a dead end. 
+
+863
+00:53:43,200 --> 00:53:45,800
+But underneath it were were the 
+type systems. 
+
+864
+00:53:46,400 --> 00:53:49,400
+And that's why objects look so 
+good is because because they 
+
+865
+00:53:49,480 --> 00:53:52,320
+they had types underneath. 
+They just don't do inheritance. 
+
+866
+00:53:52,560 --> 00:53:54,840
+That's my opinion. 
+I you may be teaching 
+
+867
+00:53:54,840 --> 00:53:57,280
+inheritance here. 
+I apologize for that. 
+
+868
+00:53:57,840 --> 00:54:02,360
+Avoid it. 
+It's it's a mistake that's have 
+
+869
+00:54:02,360 --> 00:54:03,720
+you thought of anything since 
+then? 
+
+870
+00:54:04,840 --> 00:54:06,000
+Since inheritance? 
+No. 
+
+871
+00:54:06,040 --> 00:54:07,760
+Think of it no. 
+But I do have something to add. 
+
+872
+00:54:08,040 --> 00:54:11,200
+Oh you, that's what I meant. 
+Yes, OK, yeah, let's just 
+
+873
+00:54:11,400 --> 00:54:13,080
+already just finished work, 
+which is type Ferry. 
+
+874
+00:54:14,320 --> 00:54:15,640
+There you are. 
+Yeah, type theory. 
+
+875
+00:54:15,640 --> 00:54:19,360
+And the reason I Hank that is 
+because and like proofs like 
+
+876
+00:54:19,520 --> 00:54:22,920
+proving that comes correct 
+because AIS will be generating a
+
+877
+00:54:22,920 --> 00:54:27,040
+lot of code and I think it will 
+be like lamp pages might be 
+
+878
+00:54:27,040 --> 00:54:29,720
+different in the future. 
+And what might be useful is the 
+
+879
+00:54:29,720 --> 00:54:33,320
+stricter types because then it 
+gets quicker and better feedback
+
+880
+00:54:33,320 --> 00:54:37,560
+to the Asia AI Asia too, you 
+know, get a rate. 
+
+881
+00:54:37,840 --> 00:54:39,880
+So that's I think an area. 
+It's type 3. 
+
+882
+00:54:41,600 --> 00:54:44,640
+On my, the current book I'm 
+working on, who knows if I'll 
+
+883
+00:54:44,640 --> 00:54:47,720
+ever finish it, that you can 
+find it online if you go to 
+
+884
+00:54:47,720 --> 00:54:52,640
+thinkingandtypes.com and it's 
+typing for Python. 
+
+885
+00:54:53,040 --> 00:54:55,800
+So anyway, it's aware of the 
+progress. 
+
+886
+00:54:56,880 --> 00:55:01,200
+So do we have a yes? 
+Oh, there's my I think, yes. 
+
+887
+00:55:03,520 --> 00:55:05,640
+Mark boats going, I'm not sure 
+if the microphone. 
+
+888
+00:55:06,760 --> 00:55:09,760
+Is going to work OK. 
+I could probably have got that 
+
+889
+00:55:09,760 --> 00:55:17,320
+faster well. 
+OK, perfect. 
+
+890
+00:55:22,710 --> 00:55:26,430
+So the music industry has enough
+really to meet and you don't see
+
+891
+00:55:26,430 --> 00:55:30,270
+they combined the past with the 
+present and future. 
+
+892
+00:55:30,270 --> 00:55:34,360
+My dad has a record player 
+that's also future, and that got
+
+893
+00:55:34,360 --> 00:55:38,560
+me wondering how much as 
+scientists and engineers should 
+
+894
+00:55:38,560 --> 00:55:42,200
+be thinking about improving the 
+technologies of the past and 
+
+895
+00:55:42,200 --> 00:55:45,360
+present, and how much should be 
+thinking about making new 
+
+896
+00:55:45,360 --> 00:55:50,640
+technologies for the future. 
+The kind of seems like a you 
+
+897
+00:55:50,640 --> 00:55:52,560
+question, Bill, Yeah. 
+But any time. 
+
+898
+00:55:53,160 --> 00:55:56,640
+Yeah, Bill's AI doesn't work 
+it's best. 
+
+899
+00:55:56,840 --> 00:56:00,080
+Yeah, he'll get Bill's time to 
+compose his answer, but in the 
+
+900
+00:56:00,120 --> 00:56:04,200
+meantime, I just want to drag on
+that the solid CS fundamentals 
+
+901
+00:56:04,200 --> 00:56:07,160
+that you all are learning that's
+it's going to take you through. 
+
+902
+00:56:07,600 --> 00:56:11,920
+So while Bruce could be 
+dismissive of something aspects 
+
+903
+00:56:11,920 --> 00:56:15,600
+of how to join your programming,
+you know, the approach that you 
+
+904
+00:56:15,600 --> 00:56:20,040
+learned and the fundamentals 
+that you brought to all of the 
+
+905
+00:56:20,040 --> 00:56:24,880
+areas of your study are what are
+going to help you adapt to new 
+
+906
+00:56:24,880 --> 00:56:29,240
+technologies over time and be 
+able to see the opportunity in 
+
+907
+00:56:29,240 --> 00:56:33,960
+the old you know and may be re 
+improved in applying to the new.
+
+908
+00:56:33,960 --> 00:56:36,600
+I think it's a really insightful
+question because there are 
+
+909
+00:56:36,600 --> 00:56:40,400
+certainly things that we 
+probably walked away from 
+
+910
+00:56:40,400 --> 00:56:43,960
+because it just wasn't feasible.
+We just didn't have the compute 
+
+911
+00:56:43,960 --> 00:56:47,560
+power or the ability to reason 
+about something that now we 
+
+912
+00:56:47,560 --> 00:56:48,880
+could do. 
+So I think that's a really 
+
+913
+00:56:48,880 --> 00:56:52,200
+insightful question. 
+OK, I came up with something. 
+
+914
+00:56:52,320 --> 00:56:57,360
+And I should just add that the 
+process, I mean, it was a long 
+
+915
+00:56:57,360 --> 00:57:03,200
+process, but realizing that 
+while I was teaching it, I was, 
+
+916
+00:57:03,400 --> 00:57:06,880
+there was some part of my brain 
+that was going, ha, this doesn't
+
+917
+00:57:06,880 --> 00:57:09,480
+seem, this doesn't seem right, 
+quite right. 
+
+918
+00:57:09,960 --> 00:57:15,160
+And the process of, of 
+understanding why object 
+
+919
+00:57:15,160 --> 00:57:22,120
+oriented programming ultimately 
+is a failure was super useful. 
+
+920
+00:57:22,120 --> 00:57:28,240
+So it's not like it's oh. 
+He might not have gotten to that
+
+921
+00:57:28,240 --> 00:57:30,440
+realization had he not gone 
+through that process. 
+
+922
+00:57:30,440 --> 00:57:33,960
+It's absolutely impossible for 
+us to know from getting from A 
+
+923
+00:57:33,960 --> 00:57:36,800
+to B if we, you know, from A to 
+C if we didn't go through B. 
+
+924
+00:57:37,080 --> 00:57:42,080
+And so take what we're saying 
+with a grain of salt because I 
+
+925
+00:57:42,080 --> 00:57:44,720
+want to make sure that you don't
+throw the, I'm going to make one
+
+926
+00:57:44,720 --> 00:57:47,480
+more little idiom. 
+Don't throw the baby out with 
+
+927
+00:57:47,480 --> 00:57:50,760
+the bathwater. 
+You know, do the hard work and, 
+
+928
+00:57:50,800 --> 00:57:52,800
+and you'll come to your own 
+conclusions. 
+
+929
+00:57:52,800 --> 00:57:55,360
+And that's it. 
+That's why you're here. 
+
+930
+00:57:55,520 --> 00:57:57,920
+You're not in a trade school, 
+you're at a university and 
+
+931
+00:57:57,920 --> 00:58:00,960
+you're learning skills that will
+take you through your career. 
+
+932
+00:58:01,160 --> 00:58:04,920
+And so the foundational elements
+that you're learning are what 
+
+933
+00:58:05,120 --> 00:58:09,080
+you're going to be able to be 
+more skeptical of or less 
+
+934
+00:58:09,080 --> 00:58:13,080
+skeptical of the future. 
+Don't throw the type system out 
+
+935
+00:58:13,080 --> 00:58:16,840
+with the objects. 
+OK, what I came up with, that's 
+
+936
+00:58:16,840 --> 00:58:20,040
+a really good question. 
+Maybe think 1 is I, I, I, I was 
+
+937
+00:58:20,040 --> 00:58:22,520
+taught by my parents that's good
+to look for the good in people. 
+
+938
+00:58:22,840 --> 00:58:23,880
+And I don't know, thought about 
+it. 
+
+939
+00:58:23,880 --> 00:58:26,440
+So you asked that question that 
+it's, it's, I think it's good to
+
+940
+00:58:26,440 --> 00:58:28,800
+look in the past, look for the 
+good in the past. 
+
+941
+00:58:29,200 --> 00:58:32,880
+And and then when you find 
+something, it's probably helpful
+
+942
+00:58:32,880 --> 00:58:35,640
+to try to find ways to apply 
+that to the present. 
+
+943
+00:58:49,200 --> 00:58:56,840
+Oh, with AI presenting such a 
+fast difference in how people 
+
+944
+00:58:56,840 --> 00:59:00,840
+learn and oh, you should try it 
+out and experiment with that. 
+
+945
+00:59:01,280 --> 00:59:06,120
+How do you think this is 
+changing the paths from computer
+
+946
+00:59:06,120 --> 00:59:10,480
+sciences to go out of college? 
+Undergrad and decide whether or 
+
+947
+00:59:10,480 --> 00:59:13,760
+not they want to. 
+Continue with a pH. 
+
+948
+00:59:13,760 --> 00:59:16,440
+D or like a high. 
+Level education versus. 
+
+949
+00:59:16,840 --> 00:59:19,120
+Just going straight into the 
+industry and getting. 
+
+950
+00:59:19,160 --> 00:59:23,880
+Expected to that. 
+I have some experience in that 
+
+951
+00:59:23,880 --> 00:59:28,440
+because I did continue going to 
+school getting a master's 
+
+952
+00:59:28,440 --> 00:59:30,640
+degree. 
+I was briefly in a PhD program 
+
+953
+00:59:30,640 --> 00:59:35,200
+which thankfully they cancelled.
+The reason I was in a PhD 
+
+954
+00:59:35,200 --> 00:59:38,080
+program is because I thought it 
+would make me more desirable as 
+
+955
+00:59:38,080 --> 00:59:41,080
+a consultant. 
+And apologies to all the PhDs in
+
+956
+00:59:41,080 --> 00:59:45,560
+the room, but whenever we have, 
+whenever I haven't count. 
+
+957
+00:59:45,560 --> 00:59:50,400
+Almost no, this is not entirely 
+true, but pH DS who came into 
+
+958
+00:59:50,440 --> 00:59:56,320
+companies that I was with as 
+consultants were remarkably 
+
+959
+00:59:56,360 --> 00:59:59,760
+unhelpful. 
+So I'm really glad that I didn't
+
+960
+00:59:59,760 --> 01:00:04,600
+end up. 
+And anyway, it's I'd say if you 
+
+961
+01:00:04,600 --> 01:00:06,880
+want, if you're thinking about 
+getting a PhD, you should be 
+
+962
+01:00:06,880 --> 01:00:10,920
+thinking about teaching. 
+That's that's the reason to get 
+
+963
+01:00:10,920 --> 01:00:15,680
+it a master's degree. 
+It's hard to say whether that is
+
+964
+01:00:16,640 --> 01:00:20,320
+the reason I did it was because 
+I didn't want a job and I could 
+
+965
+01:00:20,320 --> 01:00:23,280
+continue going to school. 
+So I ended up being in school 
+
+966
+01:00:23,280 --> 01:00:26,120
+for eight years just because I 
+like the environment. 
+
+967
+01:00:26,120 --> 01:00:28,960
+I wanted to continue 
+experiencing that, which I think
+
+968
+01:00:28,960 --> 01:00:31,920
+is a completely good reason. 
+And then when I came out with a 
+
+969
+01:00:31,920 --> 01:00:35,840
+master's degree, it helped me 
+some, but I don't know if that 
+
+970
+01:00:35,840 --> 01:00:41,280
+extra to if you're, if you're 
+really focused on trying to, you
+
+971
+01:00:41,280 --> 01:00:43,840
+know, build something, get it, 
+you know, start working for a 
+
+972
+01:00:43,840 --> 01:00:46,400
+company or whatever. 
+I don't know. 
+
+973
+01:00:46,400 --> 01:00:49,160
+I mean, Diane probably have some
+more insights about that. 
+
+974
+01:00:49,800 --> 01:00:54,240
+I always have an opinion. 
+So I I got my master's degree 
+
+975
+01:00:54,240 --> 01:00:57,520
+and I worked for four years in 
+industry before I went back to 
+
+976
+01:00:57,520 --> 01:01:01,920
+get my master's degree. 
+So at the time that I went back 
+
+977
+01:01:01,920 --> 01:01:08,400
+to get my master's degree, I 
+correctly surmised that I would 
+
+978
+01:01:08,600 --> 01:01:11,840
+be able to get a different sort 
+of job than the ones that I had 
+
+979
+01:01:11,840 --> 01:01:14,880
+been working in. 
+And that turned out to be true. 
+
+980
+01:01:16,200 --> 01:01:20,000
+I remember my manager at the 
+time had a PhD in computer 
+
+981
+01:01:20,000 --> 01:01:23,160
+science. 
+And before I went back and he 
+
+982
+01:01:23,280 --> 01:01:25,680
+pulled me aside, he said, 
+listen, if you want to get a 
+
+983
+01:01:25,680 --> 01:01:29,240
+master's degree, more power to 
+you. 
+
+984
+01:01:29,440 --> 01:01:34,120
+But if you, if you're going to 
+get a PhD, then you know you're 
+
+985
+01:01:34,120 --> 01:01:37,720
+going to academia, you, you 
+won't find it easy to get a job 
+
+986
+01:01:37,800 --> 01:01:40,720
+in industry. 
+And I'll tell you that when I 
+
+987
+01:01:40,720 --> 01:01:44,840
+interviewed for my first job 
+after my master's degree, I had 
+
+988
+01:01:44,840 --> 01:01:49,160
+to get past skepticism that I 
+was potentially too theoretical.
+
+989
+01:01:49,760 --> 01:01:55,360
+And, and I was able to do that 
+in the interview, but because it
+
+990
+01:01:55,360 --> 01:01:58,120
+was kind of laughable and not 
+horribly theoretical. 
+
+991
+01:01:58,560 --> 01:02:01,680
+But you know, there are lots of 
+cases where people get master's 
+
+992
+01:02:01,680 --> 01:02:07,480
+PhDs and probably none of them 
+should be to get a job. 
+
+993
+01:02:07,480 --> 01:02:11,640
+You know, like I think it's make
+sure that you are satisfying 
+
+994
+01:02:12,920 --> 01:02:15,280
+that you want. 
+And you can always go back and 
+
+995
+01:02:15,280 --> 01:02:18,240
+do a later do a master's degree 
+if that's what you want. 
+
+996
+01:02:18,400 --> 01:02:21,880
+For me, I had no money when I 
+graduated with my bachelor's 
+
+997
+01:02:21,880 --> 01:02:23,520
+degree. 
+I literally finished my master's
+
+998
+01:02:23,520 --> 01:02:27,520
+degree $20. 
+And and I also didn't have the 
+
+999
+01:02:27,520 --> 01:02:31,560
+perspective that I ultimately 
+was able to add four years 
+
+1000
+01:02:31,560 --> 01:02:33,680
+later. 
+I had the perspective of working
+
+1001
+01:02:33,680 --> 01:02:35,840
+industry. 
+I was better able to assess what
+
+1002
+01:02:35,840 --> 01:02:39,320
+was important and what wasn't. 
+And for me, it was exactly the 
+
+1003
+01:02:39,320 --> 01:02:42,960
+right time to do it. 
+It's not easy to leave a fully 
+
+1004
+01:02:42,960 --> 01:02:45,760
+paying job and go back to 
+school. 
+
+1005
+01:02:46,040 --> 01:02:49,960
+And I had people tell me that I 
+was never going to make that 
+
+1006
+01:02:49,960 --> 01:02:53,000
+money back that I lost in those 
+two years. 
+
+1007
+01:02:53,200 --> 01:02:55,640
+That also did not turn out to be
+true. 
+
+1008
+01:02:55,880 --> 01:02:59,840
+So, you know, I, I your your 
+violence may vary and hope 
+
+1009
+01:02:59,840 --> 01:03:01,520
+you've gotten. 
+Some insight. 
+
+1010
+01:03:04,280 --> 01:03:05,880
+Yeah. 
+I just want to tell you a story.
+
+1011
+01:03:05,880 --> 01:03:10,920
+I went to Purdue, the University
+of Indiana, and I, my 
+
+1012
+01:03:10,920 --> 01:03:13,240
+brother-in-law did also my 
+sister's husband. 
+
+1013
+01:03:13,560 --> 01:03:16,760
+And he got some awards from his 
+own mother. 
+
+1014
+01:03:16,760 --> 01:03:20,520
+I have never have, but he did 
+because he did, you know, had 
+
+1015
+01:03:20,520 --> 01:03:24,080
+some success in his career, 
+which is water engineering and 
+
+1016
+01:03:24,760 --> 01:03:27,800
+he got, you know, we went to see
+him and he went went on stage 
+
+1017
+01:03:27,800 --> 01:03:31,480
+and he talked about he had a 
+somebody, some professor who 
+
+1018
+01:03:31,560 --> 01:03:34,200
+sort of took him under his wing.
+It was his mentor and said you 
+
+1019
+01:03:34,200 --> 01:03:36,800
+should go to the vets. 
+And that's I had never thought 
+
+1020
+01:03:36,800 --> 01:03:39,520
+of it. 
+So when he said that, I thought,
+
+1021
+01:03:39,520 --> 01:03:41,600
+well, that was really charming, 
+but or like warming, heart 
+
+1022
+01:03:41,600 --> 01:03:44,560
+warming, but I never had that 
+like and I didn't think it look 
+
+1023
+01:03:44,560 --> 01:03:46,040
+for. 
+So what I would suggest it's a 
+
+1024
+01:03:46,040 --> 01:03:48,280
+very individual decision. 
+You don't have to make it by 
+
+1025
+01:03:48,280 --> 01:03:50,520
+yourself. 
+You know, find somebody you clip
+
+1026
+01:03:50,520 --> 01:03:54,800
+with, like, you know, professor 
+or whatever and ask and sort of 
+
+1027
+01:03:54,800 --> 01:03:57,040
+talk about it and, and then 
+that's how you make a good 
+
+1028
+01:03:57,040 --> 01:03:59,400
+decision because who knows? 
+I mean, four years from now, how
+
+1029
+01:03:59,400 --> 01:04:01,360
+long the world may be great 
+difference. 
+
+1030
+01:04:01,360 --> 01:04:03,600
+So you kind of need to find a 
+mentor. 
+
+1031
+01:04:04,640 --> 01:04:08,520
+What's suggesting? 
+Yeah, I, I was a physics student
+
+1032
+01:04:08,560 --> 01:04:12,320
+and all of my friends, you, you 
+when you study physics, you'd go
+
+1033
+01:04:12,320 --> 01:04:14,560
+to grad school, you typically 
+get a PhD. 
+
+1034
+01:04:14,800 --> 01:04:16,040
+And all my friends were doing 
+that. 
+
+1035
+01:04:16,040 --> 01:04:17,640
+And that's the only reason it 
+occurred to me. 
+
+1036
+01:04:17,640 --> 01:04:21,560
+And it was like, oh, I can keep 
+from getting a job by going on 
+
+1037
+01:04:22,440 --> 01:04:24,640
+to grad school, so that's why I 
+did it. 
+
+1038
+01:04:26,480 --> 01:04:28,480
+Yeah, I think that's common 
+among. 
+
+1039
+01:04:28,840 --> 01:04:33,280
+State school forever so. 
+One of the reasons I went to 
+
+1040
+01:04:33,280 --> 01:04:35,080
+PhD. 
+Just yeah, it looks like a 
+
+1041
+01:04:35,080 --> 01:04:41,040
+hippie. 
+We're just about out of time 
+
+1042
+01:04:41,400 --> 01:04:44,360
+before the next class, but I 
+think Blake added question and 
+
+1043
+01:04:44,360 --> 01:04:49,280
+then maybe if you guys had any 
+closing remarks from the panel. 
+
+1044
+01:04:49,320 --> 01:04:58,920
+And yeah, enter up the blank. 
+So do you think AI will be 
+
+1045
+01:04:58,920 --> 01:05:03,480
+corrosive to critical thinking 
+for the future generations to 
+
+1046
+01:05:03,480 --> 01:05:06,200
+use it? 
+Because I think as Bill said 
+
+1047
+01:05:06,200 --> 01:05:11,320
+earlier, the students who use 
+they are, they're getting 
+
+1048
+01:05:11,320 --> 01:05:14,800
+perfect homework scores over the
+test scores are going down. 
+
+1049
+01:05:15,480 --> 01:05:18,320
+So I think maybe we need more 
+limits or. 
+
+1050
+01:05:20,080 --> 01:05:26,000
+I have lots of thoughts about 
+how not to stay, but also 
+
+1051
+01:05:26,080 --> 01:05:31,680
+YouTube videos, you know, change
+are are going to change 
+
+1052
+01:05:31,680 --> 01:05:40,160
+education and the like. 
+The conference that Andy came 
+
+1053
+01:05:40,160 --> 01:05:43,920
+to, Andy and Mallory came to and
+we had some students and we hope
+
+1054
+01:05:43,920 --> 01:05:47,640
+to have, you know, maybe 10 of 
+you at the next one. 
+
+1055
+01:05:48,520 --> 01:05:52,920
+I, my vision is that education 
+will be more like that 
+
+1056
+01:05:52,920 --> 01:05:58,680
+conference, which is very 
+interactive, very self motivated
+
+1057
+01:05:58,680 --> 01:06:06,920
+learning and, and removes the 
+really old way of doing things, 
+
+1058
+01:06:06,920 --> 01:06:12,200
+which is there's lectures, 
+there's tests, you, you either 
+
+1059
+01:06:12,200 --> 01:06:14,560
+pass the test or fail. 
+It doesn't really have anything 
+
+1060
+01:06:14,560 --> 01:06:17,800
+to do with developing your 
+curiosity. 
+
+1061
+01:06:18,120 --> 01:06:21,840
+So I, I think what you're seeing
+right now is the old system 
+
+1062
+01:06:22,360 --> 01:06:28,560
+being fit for the AI, being fit 
+into the framework of the old 
+
+1063
+01:06:28,560 --> 01:06:31,640
+system. 
+I think the new system will be 
+
+1064
+01:06:33,080 --> 01:06:40,400
+it released for me, my curiosity
+has become even greater once a 
+
+1065
+01:06:40,560 --> 01:06:46,720
+is have came along because now 
+the challenge is how do you 
+
+1066
+01:06:46,800 --> 01:06:50,720
+formulate a question? 
+It's not about answers, it's 
+
+1067
+01:06:50,720 --> 01:06:53,040
+about coming up with good 
+questions. 
+
+1068
+01:06:53,040 --> 01:06:56,800
+And I think after this maybe 
+rough batch people will get 
+
+1069
+01:06:56,800 --> 01:07:00,800
+better and better at going. 
+I wonder or how could this work 
+
+1070
+01:07:00,800 --> 01:07:04,800
+or could we do this? 
+And that's where I believe we're
+
+1071
+01:07:04,800 --> 01:07:09,240
+going to evolve. 
+Yes, whether you thought we 
+
+1072
+01:07:09,240 --> 01:07:13,320
+needed more lunates. 
+And I actually think that not 
+
+1073
+01:07:13,320 --> 01:07:15,960
+having the limits is doing 
+exactly what we want it to do. 
+
+1074
+01:07:16,080 --> 01:07:20,240
+It's self selecting out people 
+that are inappropriately using 
+
+1075
+01:07:20,280 --> 01:07:22,880
+AI to complete homework 
+assignments and they're screwing
+
+1076
+01:07:22,880 --> 01:07:26,240
+themselves in the end by not 
+understanding the material. 
+
+1077
+01:07:26,240 --> 01:07:28,040
+And isn't that what the college 
+is all about? 
+
+1078
+01:07:28,040 --> 01:07:33,880
+Is like you have that freedom to
+make a bad choice and not do 
+
+1079
+01:07:33,880 --> 01:07:37,400
+your homework. 
+Yeah, do your homework and 
+
+1080
+01:07:37,400 --> 01:07:40,400
+you're ultimately going to stale
+in your test. 
+
+1081
+01:07:41,320 --> 01:07:46,720
+So it's different. 
+I have college students and my 
+
+1082
+01:07:47,160 --> 01:07:52,920
+daughter was able to use she had
+to defend her her thesis at the 
+
+1083
+01:07:52,920 --> 01:07:55,960
+end of last year. 
+And so the way she used AI was 
+
+1084
+01:07:56,280 --> 01:07:58,480
+she asked AI like here's my 
+thesis. 
+
+1085
+01:07:58,480 --> 01:08:02,080
+What are some of the questions 
+that my panel might ask? 
+
+1086
+01:08:02,720 --> 01:08:05,240
+And so that's a preparation use 
+of AI, right? 
+
+1087
+01:08:05,240 --> 01:08:09,440
+Like that's not cheating 
+yourself out of the experience 
+
+1088
+01:08:09,440 --> 01:08:12,880
+of understanding the material. 
+And so no, I'm, I'm perfectly 
+
+1089
+01:08:12,880 --> 01:08:17,880
+fine with, with people using it 
+and ultimately hurting 
+
+1090
+01:08:17,880 --> 01:08:22,560
+themselves in, in the future. 
+And like that's, that's a 
+
+1091
+01:08:22,560 --> 01:08:23,920
+freedom that comes with being an
+adult. 
+
+1092
+01:08:24,200 --> 01:08:26,760
+Yeah, that's a they're learning 
+path. 
+
+1093
+01:08:26,920 --> 01:08:30,720
+Yeah, I. 
+Just yeah, it's I, I guess I'd, 
+
+1094
+01:08:30,840 --> 01:08:36,439
+I'm worried about it because I 
+mean already it's like kind of 
+
+1095
+01:08:36,439 --> 01:08:39,840
+hard to tell when a picture is 
+real kind of soon be when a 
+
+1096
+01:08:39,840 --> 01:08:44,800
+movie is videos real. 
+And that's, I mean, I think what
+
+1097
+01:08:44,800 --> 01:08:47,040
+AI does, it makes everybody more
+productive to whatever they want
+
+1098
+01:08:47,040 --> 01:08:48,319
+to do. 
+On some people trying to do good
+
+1099
+01:08:48,319 --> 01:08:50,479
+pins, I would just give them 
+others that try to do bad 
+
+1100
+01:08:50,479 --> 01:08:51,600
+things. 
+And I don't know how that's all 
+
+1101
+01:08:51,600 --> 01:08:54,479
+that I'm paying out. 
+So I don't know about limits or 
+
+1102
+01:08:54,479 --> 01:08:56,840
+whatever how to deal with that. 
+But like for example, you know, 
+
+1103
+01:08:56,840 --> 01:08:59,960
+that picture Diane had with that
+blue thing hovering, that wasn't
+
+1104
+01:08:59,960 --> 01:09:03,840
+real. 
+That was a generated case. 
+
+1105
+01:09:03,840 --> 01:09:04,840
+You didn't know. 
+Yeah. 
+
+1106
+01:09:07,880 --> 01:09:11,920
+All of the photos except the two
+bracketing in my first slide and
+
+1107
+01:09:11,920 --> 01:09:14,439
+my last slide, which were both 
+features taken at Cotwood Pass 
+
+1108
+01:09:15,040 --> 01:09:17,240
+this week. 
+All the other photos were AI 
+
+1109
+01:09:17,240 --> 01:09:20,479
+generated because that is not 
+how I choose to spend my. 
+
+1110
+01:09:25,200 --> 01:09:28,160
+Time all right, Any closing 
+reliance FEMA panel? 
+
+1111
+01:09:29,399 --> 01:09:35,840
+Yeah, I, I guess I felt that, 
+well, I'm just turning 60 a few 
+
+1112
+01:09:35,840 --> 01:09:38,319
+years ago and I thought, you 
+know, my 60s, I just sort of 
+
+1113
+01:09:38,319 --> 01:09:41,399
+felt like, because I've kind of 
+got enough money to tire, but I 
+
+1114
+01:09:41,560 --> 01:09:43,279
+haven't got my wrap my brain 
+early yet. 
+
+1115
+01:09:43,359 --> 01:09:45,640
+I'm all done. 
+I thought, you know, my 60s have
+
+1116
+01:09:45,640 --> 01:09:50,439
+been my most productive decade. 
+And then I hit, I said, wow, 
+
+1117
+01:09:50,439 --> 01:09:52,560
+it's like could really be my 
+most productive decade. 
+
+1118
+01:09:52,560 --> 01:09:56,080
+And I sort of feel like you 
+guys, I understand if I were in 
+
+1119
+01:09:56,080 --> 01:09:58,400
+your shoes, I'd be nervous about
+my job prospects. 
+
+1120
+01:09:58,600 --> 01:10:00,120
+Are those jobs going to be there
+in four years? 
+
+1121
+01:10:00,600 --> 01:10:03,680
+On the other hand, you guys can 
+like your whole careers are 
+
+1122
+01:10:03,680 --> 01:10:06,880
+like, you could just be turbo 
+charged so you can do all kinds 
+
+1123
+01:10:06,880 --> 01:10:08,360
+of things we never imagined 
+before. 
+
+1124
+01:10:08,520 --> 01:10:10,120
+I just wanted to end up the 
+positive. 
+
+1125
+01:10:11,320 --> 01:10:16,160
+Yeah, the the problems that the 
+the trick, I think is to look 
+
+1126
+01:10:16,160 --> 01:10:23,560
+for these unsolved problems 
+because nobody's you know, 
+
+1127
+01:10:23,560 --> 01:10:26,080
+people look at them and they go 
+it's typically it's too 
+
+1128
+01:10:26,080 --> 01:10:28,280
+expensive, we can't justify it 
+or whatever. 
+
+1129
+01:10:28,280 --> 01:10:31,960
+But you with these tools in your
+hands can solve those problems. 
+
+1130
+01:10:32,360 --> 01:10:35,920
+I well, all three of us have in 
+some way or another run our own 
+
+1131
+01:10:35,920 --> 01:10:38,000
+businesses. 
+So we're kind of proponents of 
+
+1132
+01:10:38,000 --> 01:10:43,960
+that. 
+Diane's done both and I so I 
+
+1133
+01:10:43,960 --> 01:10:47,680
+sort of promote that idea. 
+It's like, yeah, you could work 
+
+1134
+01:10:47,680 --> 01:10:51,920
+for a big business and they 
+currently will waste a lot of 
+
+1135
+01:10:51,920 --> 01:10:55,720
+your time in meetings. 
+Or you could make something 
+
+1136
+01:10:55,720 --> 01:11:00,920
+yourself and try finding a 
+customer for that. 
+
+1137
+01:11:03,880 --> 01:11:05,960
+It doesn't have to be 1 size 
+fits all. 
+
+1138
+01:11:05,960 --> 01:11:08,560
+You know, I've worked in a 
+variety of industries throughout
+
+1139
+01:11:08,560 --> 01:11:14,120
+my 40, almost 40 year career 
+from, you know, working with 
+
+1140
+01:11:14,120 --> 01:11:16,520
+really small departments at the 
+University of Michigan around 
+
+1141
+01:11:16,520 --> 01:11:20,040
+substance abuse research and 
+being able to build applications
+
+1142
+01:11:20,040 --> 01:11:24,440
+for them all the way here to big
+automotive companies to, you 
+
+1143
+01:11:24,440 --> 01:11:28,440
+know, to working at Netflix and 
+understanding culture in a 
+
+1144
+01:11:28,440 --> 01:11:32,360
+large. 
+I would not say to anyone of 
+
+1145
+01:11:32,360 --> 01:11:34,160
+those companies if I didn't 
+enjoy it. 
+
+1146
+01:11:34,480 --> 01:11:37,680
+The privilege that we have as 
+computer scientists is to be 
+
+1147
+01:11:37,680 --> 01:11:41,400
+able to learn a little bit about
+all the different areas that we 
+
+1148
+01:11:41,400 --> 01:11:45,160
+choose to work in. 
+And wow, is that invigorating 
+
+1149
+01:11:45,160 --> 01:11:48,680
+and exciting. 
+And you know, I can't imagine 
+
+1150
+01:11:48,680 --> 01:11:51,360
+doing the same thing for for 40 
+years. 
+
+1151
+01:11:51,360 --> 01:11:56,320
+And so I really feel grateful 
+that I've had the this very 
+
+1152
+01:11:56,440 --> 01:11:58,680
+experience and that I could 
+choose to work for small 
+
+1153
+01:11:58,680 --> 01:12:02,000
+companies, large companies, my 
+own company, you know, go 
+
+1154
+01:12:02,000 --> 01:12:05,360
+through the experience of not, 
+of building stuff and then not 
+
+1155
+01:12:05,360 --> 01:12:07,840
+building stuff and other people 
+building fun stuff and realizing
+
+1156
+01:12:07,840 --> 01:12:10,840
+how jealous I was that and that 
+wasn't going to be a good place 
+
+1157
+01:12:10,840 --> 01:12:13,680
+for me to stay. 
+So, you know, don't be afraid to
+
+1158
+01:12:13,680 --> 01:12:19,120
+change your, you know, your path
+because it's out there for you 
+
+1159
+01:12:19,120 --> 01:12:20,680
+to drop. 
+Nobody else is going to direct 
+
+1160
+01:12:20,680 --> 01:12:24,000
+that. 
+Thank you for coming.
+

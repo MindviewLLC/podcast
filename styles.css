@@ -209,6 +209,15 @@ a.stat:hover { text-decoration: none; transform: translateY(-2px); box-shadow: v
 .res-dead { font-weight: 600; }
 .res-note { color: var(--muted); font-weight: 400; font-size: .9em; }
 .guest-list li { padding: 6px 0; font-weight: 600; }
+.transcript-note { margin: 0 0 14px; color: var(--muted); font-size: .92rem; }
+.transcript-note a { font-weight: 600; }
+.transcript summary { cursor: pointer; font-weight: 700; color: var(--green-dark); }
+.transcript-body { margin-top: 16px; max-height: 70vh; overflow-y: auto; padding-right: 8px; }
+.transcript-body p { margin: 0 0 12px; color: var(--ink-2); scroll-margin-top: 90px; }
+.transcript-body p:target { background: var(--green-soft); border-radius: 8px; }
+.ts { font-family: var(--mono); font-size: .8rem; font-weight: 700; color: var(--green-dark);
+  text-decoration: none; margin-right: 6px; }
+.ts:hover { text-decoration: underline; }
 .ext { color: var(--muted); font-weight: 400; }
 
 /* Guests */

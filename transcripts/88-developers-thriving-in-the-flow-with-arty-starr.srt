@@ -1,0 +1,6215 @@
+1
+00:00:01,120 --> 00:00:03,520
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,720 --> 00:00:05,600
+I'm Bruce Eckel. 
+I'm James Ward. 
+
+3
+00:00:07,880 --> 00:00:11,120
+All right, welcome. 
+Today we have with us Artie 
+
+4
+00:00:11,120 --> 00:00:14,240
+Starr. 
+And Artie, I was introduced to 
+
+5
+00:00:14,240 --> 00:00:19,040
+you by Justin Riak from Gradle. 
+We had him on well back to talk 
+
+6
+00:00:19,040 --> 00:00:20,800
+about developer productivity 
+stuff. 
+
+7
+00:00:21,080 --> 00:00:23,240
+And Justin was like. 
+If you're talking about 
+
+8
+00:00:23,240 --> 00:00:24,640
+developer productivity, you 
+talk. 
+
+9
+00:00:24,640 --> 00:00:27,800
+You have to talk to Artie 
+because she's doing actual 
+
+10
+00:00:27,800 --> 00:00:31,800
+research and academic research 
+into this. 
+
+11
+00:00:32,119 --> 00:00:35,840
+And since then I've seen some of
+your talks around this one at 
+
+12
+00:00:35,840 --> 00:00:38,240
+Spring, one I think recently and
+so. 
+
+13
+00:00:38,440 --> 00:00:40,120
+Anyways, welcome Artie. 
+Great to have you on. 
+
+14
+00:00:40,520 --> 00:00:41,880
+Right, thanks. 
+Happy to be here. 
+
+15
+00:00:42,680 --> 00:00:48,560
+I had a so let's see. 
+I watched videos on YouTube that
+
+16
+00:00:48,560 --> 00:00:50,200
+you did and I think there was 
+one. 
+
+17
+00:00:51,030 --> 00:00:53,270
+I think it was in 2019, pretty 
+sure. 
+
+18
+00:00:53,670 --> 00:01:00,470
+And at that time you were 
+pitching a company and then 
+
+19
+00:01:00,470 --> 00:01:04,190
+since then you switched to doing
+a PhD, Is that right? 
+
+20
+00:01:04,870 --> 00:01:07,390
+Oh, I'm still doing companies. 
+Oh, it's still the it's still a 
+
+21
+00:01:07,390 --> 00:01:08,830
+company. 
+OK, I see. 
+
+22
+00:01:08,910 --> 00:01:12,350
+Yeah, I'm a I'm a entrepreneur 
+slash PhD student. 
+
+23
+00:01:12,940 --> 00:01:15,940
+OK, OK. 
+And you decided to get a PhD 
+
+24
+00:01:15,940 --> 00:01:18,460
+after I think you said you were 
+you were a professional 
+
+25
+00:01:18,460 --> 00:01:21,060
+developer for 20 years or 
+something and then you decided 
+
+26
+00:01:21,060 --> 00:01:24,660
+to to get a PhD. 
+That which is an interesting, I 
+
+27
+00:01:24,660 --> 00:01:27,780
+mean. 
+What drove that? 
+
+28
+00:01:27,820 --> 00:01:28,300
+Yeah. 
+What? 
+
+29
+00:01:28,300 --> 00:01:28,900
+What? 
+There? 
+
+30
+00:01:28,900 --> 00:01:31,980
+There must have been some sort 
+of aha moment where you go. 
+
+31
+00:01:31,980 --> 00:01:34,260
+Wait, I don't want to just do 
+this. 
+
+32
+00:01:34,260 --> 00:01:37,250
+I want to do that. 
+I don't. 
+
+33
+00:01:37,250 --> 00:01:40,130
+I don't think my ambitions have 
+really fundamentally changed. 
+
+34
+00:01:40,130 --> 00:01:42,930
+It's just sort of like turned 
+into a pathway to get there. 
+
+35
+00:01:43,250 --> 00:01:47,970
+So after I finished my book, 
+which was over 10 years ago now,
+
+36
+00:01:48,130 --> 00:01:52,450
+I went on speaking. 
+Oh, so my book is called Idea 
+
+37
+00:01:52,450 --> 00:01:55,450
+Flow, how to measure the 
+friction in software 
+
+38
+00:01:55,450 --> 00:01:58,410
+development. 
+So I I spent five years writing 
+
+39
+00:01:58,410 --> 00:02:02,690
+this book after a number of 
+painful experiences in software 
+
+40
+00:02:02,690 --> 00:02:04,410
+development. 
+And I. 
+
+41
+00:02:05,160 --> 00:02:08,280
+I was on this really great. 
+This is kind of a a total side 
+
+42
+00:02:08,280 --> 00:02:14,040
+venture question here, but I was
+on this really great team. 
+
+43
+00:02:14,040 --> 00:02:17,280
+We had you know CI, unit 
+testing, continuous delivery, 
+
+44
+00:02:17,280 --> 00:02:20,040
+design reviews, code reviews, I 
+mean like all the things. 
+
+45
+00:02:20,600 --> 00:02:25,000
+And despite all that, I watched 
+the project, you know, hit a 
+
+46
+00:02:25,000 --> 00:02:28,280
+wall and we, we brought down 
+production three times in a row,
+
+47
+00:02:28,280 --> 00:02:29,840
+didn't ship again for another 
+year. 
+
+48
+00:02:29,840 --> 00:02:33,200
+And I mean it it we we basically
+like. 
+
+49
+00:02:33,650 --> 00:02:36,970
+Despite us going through the 
+motions of all the best practice
+
+50
+00:02:36,970 --> 00:02:39,450
+things. 
+You're doing everything you're 
+
+51
+00:02:39,450 --> 00:02:42,410
+supposed to be doing, and yet 
+something was not working. 
+
+52
+00:02:43,530 --> 00:02:46,570
+And but the complexity of the 
+system eventually kind of 
+
+53
+00:02:46,570 --> 00:02:52,210
+outstripped us and and it was a 
+statistical process control 
+
+54
+00:02:52,210 --> 00:02:56,090
+system, so very like data-driven
+sort of thing. 
+
+55
+00:02:56,650 --> 00:03:00,010
+And so one of the things I 
+learned in that context is, is 
+
+56
+00:03:00,210 --> 00:03:03,490
+you know the importance of 
+having data-driven sort of 
+
+57
+00:03:03,490 --> 00:03:06,850
+testing stuff because you've got
+this, you know, combinatorial 
+
+58
+00:03:06,850 --> 00:03:09,610
+sort of explosion of 
+possibilities and just 
+
+59
+00:03:09,890 --> 00:03:14,250
+functional coverage. 
+It's just insufficient to test 
+
+60
+00:03:14,250 --> 00:03:17,610
+and make sure your application 
+is actually, you know, working. 
+
+61
+00:03:18,490 --> 00:03:20,130
+As a whole. 
+Yeah, as a whole. 
+
+62
+00:03:20,130 --> 00:03:23,160
+I mean it just. 
+So, so you know I I learned a 
+
+63
+00:03:23,160 --> 00:03:25,880
+lot in some of those contexts 
+and then I had another project, 
+
+64
+00:03:25,960 --> 00:03:28,920
+you know that I was on that was 
+that was you know really great, 
+
+65
+00:03:28,920 --> 00:03:32,200
+had like this amazing team I was
+working on and things were going
+
+66
+00:03:32,240 --> 00:03:33,880
+awesome. 
+You know, it was, it was just 
+
+67
+00:03:33,880 --> 00:03:38,160
+like Ferrari awesome project and
+then you know we got new 
+
+68
+00:03:38,160 --> 00:03:43,200
+management that came in and and 
+just sort of watched the whole 
+
+69
+00:03:43,200 --> 00:03:46,720
+thing get crushed by bad 
+decisions. 
+
+70
+00:03:47,840 --> 00:03:54,360
+And and in that frustration of 
+the communication problems in 
+
+71
+00:03:54,360 --> 00:03:57,560
+that, in that in that disconnect
+as well as like things I'd 
+
+72
+00:03:57,560 --> 00:04:02,240
+learned on the first project to 
+identify like where our problems
+
+73
+00:04:02,240 --> 00:04:07,240
+were and you know come up with 
+strategies to to pragmatically, 
+
+74
+00:04:07,240 --> 00:04:10,200
+empirically try and figure out 
+where our pain was so that we 
+
+75
+00:04:10,200 --> 00:04:13,520
+could solve those problems. 
+I I sort of. 
+
+76
+00:04:13,950 --> 00:04:19,470
+Rage wrote my book and and just 
+frustration of just cause, 
+
+77
+00:04:19,589 --> 00:04:22,910
+'cause The thing is with 
+software, it's like we pour our 
+
+78
+00:04:22,910 --> 00:04:24,310
+hearts into these projects, 
+right? 
+
+79
+00:04:24,310 --> 00:04:26,950
+That we're building on where we 
+have this connection to our work
+
+80
+00:04:26,950 --> 00:04:28,750
+and our creation as well as our 
+team. 
+
+81
+00:04:29,270 --> 00:04:35,750
+And it's it's really hard 
+watching bad decisions cause 
+
+82
+00:04:35,750 --> 00:04:39,950
+your project to crash and burn. 
+And it it it, it sucks. 
+
+83
+00:04:39,950 --> 00:04:41,750
+It's painful. 
+It's heartbreaking. 
+
+84
+00:04:42,140 --> 00:04:45,780
+And at some point you know you, 
+you let these things go and move
+
+85
+00:04:45,780 --> 00:04:47,580
+on to the next project and 
+stuff. 
+
+86
+00:04:47,580 --> 00:04:52,100
+But these patterns just seem to 
+be like these, you know, 
+
+87
+00:04:52,100 --> 00:04:56,340
+ongoing, you know, classic 
+stories and software development
+
+88
+00:04:56,340 --> 00:05:00,220
+that we experience over and over
+again because of just, you know 
+
+89
+00:05:00,220 --> 00:05:03,540
+these, you know, some of these 
+fundamental communication 
+
+90
+00:05:04,220 --> 00:05:06,860
+disconnects between like 
+management world and engineering
+
+91
+00:05:06,860 --> 00:05:12,240
+world and and and these. 
+Control dynamics and the lack of
+
+92
+00:05:12,240 --> 00:05:15,760
+visibility of what's going on. 
+I was just so frustrated with 
+
+93
+00:05:15,760 --> 00:05:18,560
+that. 
+Are you familiar with Gerald 
+
+94
+00:05:18,560 --> 00:05:21,800
+Weinberg's work? 
+On what specifically? 
+
+95
+00:05:21,800 --> 00:05:26,280
+Well, he he's written tons of 
+books, but he's most famous for 
+
+96
+00:05:26,280 --> 00:05:29,640
+saying no matter what they tell 
+you, it's always a people 
+
+97
+00:05:29,640 --> 00:05:33,480
+problem. 
+Which, yeah, Which ultimately, 
+
+98
+00:05:33,480 --> 00:05:37,940
+you know, and it's like, I think
+it sounds to me like you came to
+
+99
+00:05:37,940 --> 00:05:42,620
+that realization and you step 
+back and you said, OK, maybe 
+
+100
+00:05:42,620 --> 00:05:47,340
+Agile and Scrum and stuff. 
+They're not fixing the people 
+
+101
+00:05:47,340 --> 00:05:52,340
+problem well because they they 
+were only peripherally trying to
+
+102
+00:05:52,340 --> 00:05:54,860
+fix the people problem. 
+And so you said, well let's 
+
+103
+00:05:54,860 --> 00:05:59,420
+let's step further back and 
+really look at what you know 
+
+104
+00:05:59,420 --> 00:06:02,460
+what are the issues And and it 
+also sounded like you were 
+
+105
+00:06:02,780 --> 00:06:07,110
+wanting to look at different 
+inputs than just, I don't know, 
+
+106
+00:06:07,110 --> 00:06:09,230
+key strokes per minute or 
+whatever you were going. 
+
+107
+00:06:09,550 --> 00:06:13,350
+How do you feel while you're 
+writing your code and when you 
+
+108
+00:06:13,350 --> 00:06:17,350
+get frustrated and let's look at
+that and see those as friction 
+
+109
+00:06:17,350 --> 00:06:18,270
+points? 
+Is that? 
+
+110
+00:06:18,830 --> 00:06:23,550
+Yeah, so looking at what is the 
+developer's experience as they 
+
+111
+00:06:23,550 --> 00:06:26,750
+work with the code and then how 
+do we come up with an empirical 
+
+112
+00:06:26,750 --> 00:06:31,550
+way to measure and and even, you
+know, model and how to 
+
+113
+00:06:31,550 --> 00:06:35,720
+conceptually think about. 
+When we're getting into flow and
+
+114
+00:06:35,720 --> 00:06:40,560
+what is friction, You know how 
+how do we even how do we even 
+
+115
+00:06:40,560 --> 00:06:44,600
+like conceptualize what's going 
+on Like you get into this space 
+
+116
+00:06:44,640 --> 00:06:51,040
+of cognitive processes while 
+doing development and flow is 
+
+117
+00:06:51,040 --> 00:06:53,680
+something that is like on one 
+hand we like know this is 
+
+118
+00:06:53,680 --> 00:07:00,320
+important but you know I I was 
+listening to some talks at A at 
+
+119
+00:07:00,320 --> 00:07:03,900
+a recent. 
+Flow state conference that Stack
+
+120
+00:07:03,900 --> 00:07:07,860
+Overflow put on and one of the 
+things that became quickly 
+
+121
+00:07:07,860 --> 00:07:12,860
+apparent is that we lack this 
+vocabulary to even be able to 
+
+122
+00:07:12,860 --> 00:07:15,620
+conceptualize and talk about 
+what's going on in those 
+
+123
+00:07:15,620 --> 00:07:18,300
+cognitive processes. 
+So my research effort has 
+
+124
+00:07:18,300 --> 00:07:22,280
+largely focused on. 
+Being able to break down and 
+
+125
+00:07:22,280 --> 00:07:26,160
+coming up with a kind of 
+ontological model of of 
+
+126
+00:07:26,160 --> 00:07:28,680
+developer flow and these 
+different processes and things 
+
+127
+00:07:28,680 --> 00:07:32,160
+we go to and come up with an 
+empirical way that we can we can
+
+128
+00:07:32,160 --> 00:07:35,040
+measure friction and flow. 
+So that was sort of like what my
+
+129
+00:07:35,040 --> 00:07:39,320
+book was about is that beginning
+of that paradigm shift around 
+
+130
+00:07:39,320 --> 00:07:42,600
+focusing on our developer 
+experience and those cognitive 
+
+131
+00:07:42,600 --> 00:07:45,760
+processes we were going through.
+And then and then basically like
+
+132
+00:07:45,760 --> 00:07:48,880
+when we're experiencing 
+friction, what is the code we're
+
+133
+00:07:48,880 --> 00:07:50,400
+working on when those 
+experiences? 
+
+134
+00:07:50,520 --> 00:07:53,160
+Happen. 
+And then looking at those 
+
+135
+00:07:53,160 --> 00:07:57,160
+correlations as a way to 
+identify where our problems are 
+
+136
+00:07:57,160 --> 00:08:01,600
+as opposed to just sort of our 
+typical ways of, hey, this code 
+
+137
+00:08:01,600 --> 00:08:03,960
+right here looks complex, let's 
+fix that. 
+
+138
+00:08:04,000 --> 00:08:07,360
+I should, I should point out 
+you, I think you said your book 
+
+139
+00:08:07,360 --> 00:08:09,800
+is on Lean Pub, right? 
+Yeah, it's on Lean Pub. 
+
+140
+00:08:09,960 --> 00:08:11,240
+It's on Lean Pub, right? 
+Good. 
+
+141
+00:08:11,240 --> 00:08:12,880
+Good. 
+And it's called Ideaflow. 
+
+142
+00:08:13,280 --> 00:08:15,960
+Yeah, Ideaflow. 
+So one of the things that you 
+
+143
+00:08:16,520 --> 00:08:25,100
+observed, I think about Agile 
+and Scrum was that we were 
+
+144
+00:08:25,100 --> 00:08:28,940
+trying to make better 
+communication with the 
+
+145
+00:08:28,940 --> 00:08:35,100
+stakeholders, but we tend to 
+focus on technical debt. 
+
+146
+00:08:35,100 --> 00:08:41,539
+And you, you kind of analyzed 
+that and said, oh, from your 
+
+147
+00:08:41,539 --> 00:08:45,060
+studying and you you've done 
+some studying in business as 
+
+148
+00:08:45,060 --> 00:08:47,580
+well and you said, OK, the 
+business people, they understand
+
+149
+00:08:47,580 --> 00:08:51,450
+debt as a controllable thing. 
+You know, it's like it's 
+
+150
+00:08:51,450 --> 00:08:55,130
+actually not bad for them. 
+And we, we say, oh, technical 
+
+151
+00:08:55,130 --> 00:09:00,090
+debt, it's terrible. 
+And so we needed to change our 
+
+152
+00:09:00,090 --> 00:09:04,330
+perspective in how we 
+communicate because risk is 
+
+153
+00:09:04,330 --> 00:09:07,050
+something that does bother the 
+business people. 
+
+154
+00:09:07,410 --> 00:09:13,810
+And so how do we, how do we 
+express what's going on in terms
+
+155
+00:09:13,810 --> 00:09:15,650
+of risk rather than technical 
+debt? 
+
+156
+00:09:16,210 --> 00:09:19,190
+Did you come up with a a way to 
+do that? 
+
+157
+00:09:20,350 --> 00:09:25,030
+Yeah, so on that topic, so 
+before I quit my day job to be 
+
+158
+00:09:25,030 --> 00:09:31,110
+an entrepreneur and go down that
+road, I was a CTO at a technical
+
+159
+00:09:31,110 --> 00:09:34,870
+recruiting and consulting 
+company and so. 
+
+160
+00:09:35,270 --> 00:09:40,310
+During that kind of process of 
+going from more individual 
+
+161
+00:09:40,310 --> 00:09:43,430
+contributor team lead to like 
+getting more involved in 
+
+162
+00:09:43,430 --> 00:09:48,190
+management, I was fortunate to 
+get you know sent to a bunch of 
+
+163
+00:09:48,190 --> 00:09:50,990
+kind of MBA training related 
+things. 
+
+164
+00:09:50,990 --> 00:09:53,510
+But I'm hanging out with a bunch
+of business folks that don't 
+
+165
+00:09:53,510 --> 00:09:54,790
+really know anything about 
+software. 
+
+166
+00:09:55,230 --> 00:09:59,510
+And so I I was in one of these 
+MBA classes, and I'm talking to 
+
+167
+00:09:59,550 --> 00:10:02,710
+these folks and I'm, I'm 
+explaining this concept of 
+
+168
+00:10:02,710 --> 00:10:06,010
+technical debt, right? 
+And I and I explain, you know, 
+
+169
+00:10:06,050 --> 00:10:08,850
+the, you know, the interest rate
+thing and how technical debt 
+
+170
+00:10:08,850 --> 00:10:11,890
+works and stuff and they're 
+like, oh, that doesn't sound so 
+
+171
+00:10:11,890 --> 00:10:13,690
+bad. 
+I'm like, what? 
+
+172
+00:10:14,010 --> 00:10:15,570
+What? 
+Why does that not sound bad? 
+
+173
+00:10:15,570 --> 00:10:18,050
+You should be. 
+Like, you're not horrifying. 
+
+174
+00:10:18,050 --> 00:10:20,730
+Well, that is the worst thing 
+ever. 
+
+175
+00:10:20,730 --> 00:10:22,730
+And they're like, oh, we got we 
+have debt. 
+
+176
+00:10:22,730 --> 00:10:23,970
+It's fine. 
+That is OK. 
+
+177
+00:10:24,530 --> 00:10:25,970
+Yeah. 
+And you, And then you must have 
+
+178
+00:10:25,970 --> 00:10:30,330
+said, Oh my gosh, we have been 
+solving the wrong problem. 
+
+179
+00:10:31,250 --> 00:10:37,130
+Well what I realized is how how 
+business people think about like
+
+180
+00:10:37,690 --> 00:10:40,770
+money allocation and stuff is 
+from this kind of top down 
+
+181
+00:10:40,770 --> 00:10:45,290
+perspective of of like I I've, 
+I've, I've got this money and 
+
+182
+00:10:45,290 --> 00:10:49,170
+say I've got I've got $1,000,000
+and $10 million whatever it is 
+
+183
+00:10:49,170 --> 00:10:51,330
+that I I need to decide how I'm 
+going to invest. 
+
+184
+00:10:51,750 --> 00:10:54,350
+And you've got various buckets. 
+You can put the money and I can 
+
+185
+00:10:54,350 --> 00:10:58,390
+invest money in sales or 
+marketing or my engineering team
+
+186
+00:10:58,390 --> 00:10:59,630
+development stuff, whatever it 
+is. 
+
+187
+00:10:59,630 --> 00:11:02,550
+I'm basically like making 
+allocation decisions about how 
+
+188
+00:11:02,550 --> 00:11:06,270
+to divide up the money to put 
+into these buckets, right? 
+
+189
+00:11:06,830 --> 00:11:11,870
+And so if I know that my 
+engineering costs are going to 
+
+190
+00:11:11,870 --> 00:11:14,990
+have this predictable increase 
+in costs over time? 
+
+191
+00:11:16,290 --> 00:11:18,050
+That's. 
+Totally fine, yeah. 
+
+192
+00:11:18,050 --> 00:11:20,490
+That's totally fine. 
+I just account for that and go, 
+
+193
+00:11:20,490 --> 00:11:23,770
+OK, well, I should probably just
+you know put some more money 
+
+194
+00:11:23,770 --> 00:11:27,650
+into sales to compensate for 
+this, this increase in cost that
+
+195
+00:11:27,650 --> 00:11:33,770
+is very predictable, right. 
+So we're we're communicating the
+
+196
+00:11:33,770 --> 00:11:37,770
+problems that we're experiencing
+in terms of a loan which is 
+
+197
+00:11:37,770 --> 00:11:41,890
+looked at as a like leverage 
+tool, right. 
+
+198
+00:11:42,540 --> 00:11:45,980
+When really the reality is, as 
+we're talking about a complete 
+
+199
+00:11:45,980 --> 00:11:50,300
+loss of control, the wheels 
+falling off the bus, our our our
+
+200
+00:11:50,300 --> 00:11:54,420
+ability to make changes to the 
+software and to deliver to the 
+
+201
+00:11:54,420 --> 00:11:57,420
+software going away and just 
+going out the window and like we
+
+202
+00:11:57,420 --> 00:11:59,540
+can't work on it anymore. 
+We're going to have to like 
+
+203
+00:11:59,540 --> 00:12:01,540
+rewrite the whole thing from 
+scratch because nobody 
+
+204
+00:12:01,540 --> 00:12:02,940
+understands what's going on 
+anymore. 
+
+205
+00:12:02,940 --> 00:12:06,660
+We've lost control, right. 
+And so like we're communicating 
+
+206
+00:12:06,900 --> 00:12:10,380
+a very predictable, steady 
+increase in cost over time is 
+
+207
+00:12:10,380 --> 00:12:12,340
+what we're communicating and 
+telling management. 
+
+208
+00:12:12,540 --> 00:12:16,060
+We say this is a technical debt 
+thing and it works like interest
+
+209
+00:12:16,060 --> 00:12:17,660
+rates. 
+We're like communicating in 
+
+210
+00:12:17,660 --> 00:12:19,820
+terms of that. 
+Well, that's not really what's 
+
+211
+00:12:19,820 --> 00:12:22,980
+going on at all. 
+And so we're not properly 
+
+212
+00:12:22,980 --> 00:12:27,380
+scaring management. 
+Yeah, Yeah. 
+
+213
+00:12:27,420 --> 00:12:28,900
+No, I think that sums it up 
+well. 
+
+214
+00:12:29,340 --> 00:12:30,180
+Yeah. 
+So. 
+
+215
+00:12:30,580 --> 00:12:34,100
+Framing it in terms of risk or 
+something. 
+
+216
+00:12:34,670 --> 00:12:38,990
+Has a a different interpretation
+from the business side than debt
+
+217
+00:12:38,990 --> 00:12:40,510
+does. 
+Yeah, well, you're telling them 
+
+218
+00:12:40,510 --> 00:12:42,510
+something that they're totally 
+comfortable with and you're 
+
+219
+00:12:42,510 --> 00:12:45,310
+going, no, no, this is really 
+serious, but it's debt. 
+
+220
+00:12:45,430 --> 00:12:46,830
+I know what debt is. 
+That's fine. 
+
+221
+00:12:47,430 --> 00:12:51,350
+Whereas risk is something that 
+the organization and management 
+
+222
+00:12:51,350 --> 00:12:56,070
+is very into a verse two. 
+Well, the whole hierarchical 
+
+223
+00:12:56,070 --> 00:12:58,190
+structure is to keep things the 
+same. 
+
+224
+00:12:58,590 --> 00:13:01,030
+And if it's like you introduce 
+risk to, Oh no, we don't like 
+
+225
+00:13:01,030 --> 00:13:02,390
+that. 
+We want to keep everything the 
+
+226
+00:13:02,390 --> 00:13:05,510
+same. 
+Yeah, the the other part of that
+
+227
+00:13:05,510 --> 00:13:09,230
+is that, you know, like the 
+reason we try and use all these 
+
+228
+00:13:09,230 --> 00:13:12,350
+sort of metaphors and stuff is 
+is starts with this assumption 
+
+229
+00:13:12,350 --> 00:13:14,190
+of the people that we're talking
+to just aren't going to 
+
+230
+00:13:14,190 --> 00:13:18,030
+understand our world. 
+And so we're like, it's kind of 
+
+231
+00:13:18,030 --> 00:13:21,470
+like a credit card, right? 
+I mean, like we're doing that 
+
+232
+00:13:21,470 --> 00:13:23,950
+because we like, they're not 
+going to understand what we 
+
+233
+00:13:23,950 --> 00:13:25,550
+mean. 
+So we got to come up with some 
+
+234
+00:13:25,550 --> 00:13:28,670
+way to try and communicate using
+some metaphor or something, 
+
+235
+00:13:28,670 --> 00:13:31,830
+right? 
+But I I think there's ways that 
+
+236
+00:13:31,830 --> 00:13:36,350
+we can communicate what's going 
+on in much closer ways to things
+
+237
+00:13:36,350 --> 00:13:39,790
+that they can really get a 
+better idea without necessarily 
+
+238
+00:13:39,790 --> 00:13:43,030
+reaching for some like super 
+abstract metaphor that isn't 
+
+239
+00:13:43,030 --> 00:13:45,710
+necessarily all that 
+representative of what's what's 
+
+240
+00:13:45,710 --> 00:13:48,910
+going on. 
+So like for example, one of the 
+
+241
+00:13:48,910 --> 00:13:53,470
+things I talked about is this 
+experience of confusion. 
+
+242
+00:13:53,870 --> 00:13:57,190
+So even if you've never been a 
+software developer. 
+
+243
+00:13:58,590 --> 00:14:02,110
+You probably can experience or 
+relate to the experience of 
+
+244
+00:14:02,110 --> 00:14:06,430
+being confused and stuck and not
+knowing what's going on or being
+
+245
+00:14:06,430 --> 00:14:09,190
+able to figure something out and
+how frustrating that is. 
+
+246
+00:14:10,150 --> 00:14:12,550
+And you're stuck, right? 
+And that happens a lot in 
+
+247
+00:14:12,550 --> 00:14:14,830
+software development. 
+I mean, like we have to build up
+
+248
+00:14:14,830 --> 00:14:18,990
+skills to be comfortable in that
+place of uncertainty and 
+
+249
+00:14:18,990 --> 00:14:21,310
+stuffness and be confident 
+enough in our skills that 
+
+250
+00:14:21,310 --> 00:14:25,870
+eventually we'll figure it out. 
+But like for people that. 
+
+251
+00:14:26,540 --> 00:14:30,260
+Don't have any experience with 
+software if we relate it to 
+
+252
+00:14:30,260 --> 00:14:32,380
+things that they're actually 
+familiar with. 
+
+253
+00:14:32,860 --> 00:14:37,060
+And just like, imagine your 
+developers being confused and 
+
+254
+00:14:37,060 --> 00:14:40,300
+stuck and not knowing what's 
+going on, not knowing what to 
+
+255
+00:14:40,300 --> 00:14:43,220
+change, not understanding how 
+the system works to be able to 
+
+256
+00:14:43,220 --> 00:14:46,300
+change it because the software 
+has become so confusing and 
+
+257
+00:14:46,300 --> 00:14:49,020
+complex that they can't work 
+anymore. 
+
+258
+00:14:49,620 --> 00:14:52,660
+And what you need to do, the 
+risk you're managing, is being 
+
+259
+00:14:52,660 --> 00:14:57,180
+able to sustain. 
+The team's understanding of the 
+
+260
+00:14:57,180 --> 00:14:58,900
+software. 
+Because once you lose that 
+
+261
+00:14:58,900 --> 00:15:01,940
+active knowledge and your 
+ability to like, know what's 
+
+262
+00:15:01,940 --> 00:15:05,380
+going on with the system, and 
+especially if you have high 
+
+263
+00:15:05,380 --> 00:15:07,900
+turnover and people like walk 
+out the door and you lose that 
+
+264
+00:15:07,900 --> 00:15:11,340
+knowledge, it's really, really 
+difficult to come into an 
+
+265
+00:15:11,340 --> 00:15:14,180
+unfamiliar code base and be able
+to figure out enough what's 
+
+266
+00:15:14,180 --> 00:15:15,500
+going on to be able to manage 
+it. 
+
+267
+00:15:15,740 --> 00:15:20,220
+Not necessarily impossible, but 
+it's once you get to that point,
+
+268
+00:15:20,460 --> 00:15:23,100
+it's often faster and easier to 
+rewrite. 
+
+269
+00:15:23,720 --> 00:15:26,920
+Than it is to try and recover 
+that lost knowledge, Right. 
+
+270
+00:15:27,480 --> 00:15:29,000
+Right. 
+And I think there's another 
+
+271
+00:15:29,000 --> 00:15:35,240
+factor here, which is our 
+culture in the computer world is
+
+272
+00:15:35,560 --> 00:15:39,440
+admitting that you're confused 
+or you don't know something is 
+
+273
+00:15:39,600 --> 00:15:44,400
+not acceptable. 
+So we we have to work a lot to 
+
+274
+00:15:44,400 --> 00:15:45,760
+get to the point where we can 
+go. 
+
+275
+00:15:45,960 --> 00:15:48,280
+Yeah, I'm confused. 
+I don't understand that. 
+
+276
+00:15:50,000 --> 00:15:52,150
+Yeah. 
+It's an interesting connection 
+
+277
+00:15:52,150 --> 00:15:55,470
+to being a consultant. 
+It's like you're assumed to be 
+
+278
+00:15:55,470 --> 00:15:59,350
+the expert on all these things 
+and so we hire the the expert 
+
+279
+00:15:59,350 --> 00:16:03,030
+consultants to come in and and 
+they will know everything, they 
+
+280
+00:16:03,030 --> 00:16:06,110
+will understand it all. 
+They'll be able to to enter that
+
+281
+00:16:06,110 --> 00:16:10,270
+complexity and not be confused. 
+Yes, there was a Dilbert cartoon
+
+282
+00:16:10,270 --> 00:16:15,030
+that said consultant is is the 
+combination of confuse and 
+
+283
+00:16:15,030 --> 00:16:18,310
+insult. 
+That's what a consultant does. 
+
+284
+00:16:20,640 --> 00:16:27,800
+So what's what's been the the 
+like kind of output or the the 
+
+285
+00:16:28,160 --> 00:16:32,520
+like, how have you, what have 
+you done to help businesses or 
+
+286
+00:16:32,520 --> 00:16:36,880
+developers connect to the 
+business better around that? 
+
+287
+00:16:36,880 --> 00:16:39,440
+I think maybe there's some talks
+or or what's. 
+
+288
+00:16:40,940 --> 00:16:43,780
+Have you have you like come up 
+with a thesis of like? 
+
+289
+00:16:43,940 --> 00:16:45,580
+Here's how we can do this 
+better. 
+
+290
+00:16:45,580 --> 00:16:48,260
+You describe like a well, like 
+like so. 
+
+291
+00:16:48,260 --> 00:16:51,580
+So you're preparing to do an 
+iteration and you're talking 
+
+292
+00:16:51,580 --> 00:16:53,380
+about, OK, here's what we're 
+going to implement. 
+
+293
+00:16:53,700 --> 00:16:58,220
+How do you communicate the the 
+very, you know the, you got the 
+
+294
+00:16:58,220 --> 00:17:00,460
+stakeholder saying, Oh well 
+yeah, here's what's most 
+
+295
+00:17:00,460 --> 00:17:04,859
+important to us. 
+How do you communicate the the 
+
+296
+00:17:05,460 --> 00:17:07,700
+the risks? 
+And oh, and also have you read 
+
+297
+00:17:07,700 --> 00:17:10,910
+Waltzing with Bears? 
+That's about risk. 
+
+298
+00:17:11,790 --> 00:17:14,589
+Yeah, that's that's really good 
+perspective book, yeah. 
+
+299
+00:17:15,670 --> 00:17:19,030
+So yeah, so have you, have you 
+developed like the the system to
+
+300
+00:17:19,030 --> 00:17:20,390
+fix this or something? 
+Well. 
+
+301
+00:17:21,430 --> 00:17:25,710
+This gets back to the why I'm in
+grad school now, you know 
+
+302
+00:17:25,710 --> 00:17:30,310
+question too. 
+So, so I've been I've been 
+
+303
+00:17:30,310 --> 00:17:34,070
+working on this kind of paradigm
+shift of looking at how do we 
+
+304
+00:17:34,070 --> 00:17:37,350
+measure the friction and our 
+experiences. 
+
+305
+00:17:37,910 --> 00:17:43,670
+And I wrote my book. 
+I I I became a speaker like no 
+
+306
+00:17:43,670 --> 00:17:48,270
+flifter stuff tour and I 
+travelled the country giving 
+
+307
+00:17:48,270 --> 00:17:53,230
+tucks on all this stuff for a 
+few years and kind of burned out
+
+308
+00:17:53,230 --> 00:17:58,670
+a bit doing that. 
+But trying to communicate these 
+
+309
+00:17:58,670 --> 00:18:02,430
+ideas in that kind of way, in a 
+way that they can have any kind 
+
+310
+00:18:02,430 --> 00:18:05,390
+of real traction and impact and 
+stuff is. 
+
+311
+00:18:06,040 --> 00:18:11,560
+Hard to near impossible. 
+And part of that too is like 
+
+312
+00:18:13,720 --> 00:18:15,040
+well I'll come back to this 
+thread. 
+
+313
+00:18:16,240 --> 00:18:20,480
+There's there's this other 
+thread of being a woman speaker 
+
+314
+00:18:21,200 --> 00:18:23,880
+and the impact of that and the 
+difficulty of trying to get a 
+
+315
+00:18:23,880 --> 00:18:28,720
+message out is a is a whole 
+nother thread of of challenge of
+
+316
+00:18:29,160 --> 00:18:33,120
+and you know reasons why I've 
+been I've been frustrated too 
+
+317
+00:18:33,120 --> 00:18:36,440
+like. 
+You know, I was, I was one of, I
+
+318
+00:18:36,440 --> 00:18:40,840
+mean, I was the only woman 
+speaker on tour at the time and 
+
+319
+00:18:41,360 --> 00:18:47,520
+you know, I, I, I, I, I'd be, I,
+I, I had all this original 
+
+320
+00:18:47,680 --> 00:18:52,480
+material and contribution and 
+stuff and yet the response I'd 
+
+321
+00:18:52,480 --> 00:18:56,000
+get is, oh, I'm so glad we have 
+a woman on tour. 
+
+322
+00:18:56,160 --> 00:18:57,960
+It's so awesome that you're a 
+woman. 
+
+323
+00:18:58,560 --> 00:19:01,710
+And I'm like, I'm so glad. 
+Glad I could help with the 
+
+324
+00:19:01,710 --> 00:19:04,350
+demographics right. 
+But I it's it's frustrating 
+
+325
+00:19:04,350 --> 00:19:07,670
+because people just like assume 
+that you don't have anything 
+
+326
+00:19:07,670 --> 00:19:12,190
+interesting to contribute. 
+And so I I like those kinds of 
+
+327
+00:19:12,190 --> 00:19:14,950
+frustrations and things and the 
+difficulty of that. 
+
+328
+00:19:15,910 --> 00:19:19,670
+And there is the. 
+The token, not the not there to 
+
+329
+00:19:19,950 --> 00:19:24,030
+for the ideas that changing the 
+developer's world. 
+
+330
+00:19:24,030 --> 00:19:27,070
+And then they can go to that 
+extra effort to prove yourself 
+
+331
+00:19:27,430 --> 00:19:32,560
+despite. 
+So, so part of the reason why I 
+
+332
+00:19:32,560 --> 00:19:36,800
+ended up like 'cause 'cause I 
+believe in what I'm doing and 
+
+333
+00:19:36,800 --> 00:19:41,680
+this approach is something that 
+really has, is something that 
+
+334
+00:19:41,880 --> 00:19:46,400
+you know is is possible to just 
+fundamentally be game changing. 
+
+335
+00:19:46,840 --> 00:19:51,480
+And yet I was struggling so much
+with, with trying really hard to
+
+336
+00:19:51,480 --> 00:19:55,200
+get ideas out there and stuff 
+and struggling with it and and 
+
+337
+00:19:55,200 --> 00:19:57,360
+so at some point I'm like, well,
+what if? 
+
+338
+00:19:57,920 --> 00:20:01,360
+Because I I'm effectively, I was
+effectively gravitating toward 
+
+339
+00:20:01,360 --> 00:20:04,680
+researching things already, you 
+know, anyway, with the work I 
+
+340
+00:20:04,680 --> 00:20:07,440
+was doing, just like in the 
+field and pragmatically trying 
+
+341
+00:20:07,440 --> 00:20:12,240
+to gather data to solve, you 
+know, problems I was facing in 
+
+342
+00:20:12,240 --> 00:20:14,920
+the moment on a team, right? 
+But you know, essentially I was 
+
+343
+00:20:14,920 --> 00:20:17,720
+already kind of doing research 
+and developing theoretical 
+
+344
+00:20:17,720 --> 00:20:21,920
+models and stuff. 
+But but you know I I I didn't 
+
+345
+00:20:21,920 --> 00:20:26,520
+know how to do proper like 
+research right so and and I 
+
+346
+00:20:26,520 --> 00:20:31,520
+wanted my I I wanted to have the
+opportunity to to to basically 
+
+347
+00:20:31,520 --> 00:20:35,840
+be able to formalize the work 
+and things I was doing and and 
+
+348
+00:20:35,840 --> 00:20:40,360
+hopefully hopefully if I I I 
+have a you know formal thesis 
+
+349
+00:20:40,360 --> 00:20:45,960
+and and papers and and and 
+doctor level gravitas that that 
+
+350
+00:20:45,960 --> 00:20:49,520
+will help with respect to 
+getting ideas out there. 
+
+351
+00:20:49,520 --> 00:20:55,480
+But also I'm also having a lot 
+of fun having the opportunity to
+
+352
+00:20:55,480 --> 00:21:02,150
+go and I'm learning how to do 
+grounded theory research and and
+
+353
+00:21:02,150 --> 00:21:05,390
+really put together like 
+formalized theories around 
+
+354
+00:21:05,470 --> 00:21:09,390
+around coming up with, you know 
+models of developer flow and 
+
+355
+00:21:09,390 --> 00:21:13,230
+friction and being able to do 
+studies to, you know really 
+
+356
+00:21:13,230 --> 00:21:17,420
+prove out the ideas. 
+And my hope is that going down 
+
+357
+00:21:17,420 --> 00:21:20,300
+this road and and putting that 
+formality and stuff behind the 
+
+358
+00:21:20,300 --> 00:21:22,700
+research, I'll be able to get my
+ideas out there. 
+
+359
+00:21:22,700 --> 00:21:25,980
+But you know, it's it's driven 
+partially by that frustration, 
+
+360
+00:21:25,980 --> 00:21:29,020
+though at the same time. 
+Yeah, well, but your ideas are 
+
+361
+00:21:29,020 --> 00:21:31,500
+not mainstream. 
+I mean, talking about friction 
+
+362
+00:21:31,500 --> 00:21:34,660
+and flow is not. 
+And so you probably need that 
+
+363
+00:21:34,660 --> 00:21:36,980
+extra. 
+OK, here's the research. 
+
+364
+00:21:36,980 --> 00:21:41,620
+I have a PhD, etcetera, to get 
+people to go, oh, maybe we 
+
+365
+00:21:41,620 --> 00:21:44,940
+should think about this, because
+right now it's like, oh, those 
+
+366
+00:21:44,980 --> 00:21:45,900
+are. 
+Those are, yeah. 
+
+367
+00:21:45,900 --> 00:21:48,020
+That's not, well, how we're used
+to thinking about things. 
+
+368
+00:21:48,180 --> 00:21:51,460
+Yeah, I'm just a fringe weirdo 
+that nobody, nobody has to 
+
+369
+00:21:51,460 --> 00:21:52,460
+listen to, right? 
+You know. 
+
+370
+00:21:53,220 --> 00:21:55,860
+But once you get the PhD and you
+got the research, then they'll 
+
+371
+00:21:55,860 --> 00:21:58,700
+have to listen. 
+Yeah, it's been It's been 
+
+372
+00:21:58,700 --> 00:22:01,020
+interesting though, 'cause I 
+like, I show people like what 
+
+373
+00:22:01,020 --> 00:22:03,900
+I'm working on and they're like 
+you've got like 5 PhDs here, 
+
+374
+00:22:03,900 --> 00:22:06,700
+worth of stuff. 
+Like I have so much original 
+
+375
+00:22:06,700 --> 00:22:12,240
+contribution and stuff. 
+It's just, yeah, trying trying 
+
+376
+00:22:12,240 --> 00:22:14,400
+to evangelize ideas and stuff 
+out there. 
+
+377
+00:22:14,400 --> 00:22:17,560
+It's just it's a it's a hard Rd.
+But you know, as I said, I I 
+
+378
+00:22:17,560 --> 00:22:20,160
+believe in what I'm doing. 
+So I I keep on going. 
+
+379
+00:22:20,160 --> 00:22:22,600
+No matter how many times I fall 
+on my face, I keep on going. 
+
+380
+00:22:23,560 --> 00:22:25,400
+What would you say is your 
+mission? 
+
+381
+00:22:26,560 --> 00:22:29,160
+You've you've kind of talked 
+about like this like drive to 
+
+382
+00:22:29,160 --> 00:22:31,640
+like fix something. 
+What What are we trying to fix? 
+
+383
+00:22:33,800 --> 00:22:39,930
+Mission at multiple levels. 
+But like, and this is what I was
+
+384
+00:22:39,930 --> 00:22:44,170
+talking about more at at my 
+keynote I did at Spring one 
+
+385
+00:22:44,170 --> 00:22:47,890
+which was focused on flow and 
+joy is kind of taking a step 
+
+386
+00:22:47,890 --> 00:22:51,250
+back and thinking about what 
+matters and thinking about what 
+
+387
+00:22:51,250 --> 00:22:54,010
+we want and what we ought to aim
+for. 
+
+388
+00:22:54,650 --> 00:23:01,970
+And I think my goal really is to
+reignite just the vitality of 
+
+389
+00:23:01,970 --> 00:23:08,600
+imagination that we for us to 
+like be able to believe that 
+
+390
+00:23:08,680 --> 00:23:13,040
+things could be better. 
+To be able to believe that we 
+
+391
+00:23:13,040 --> 00:23:19,840
+have the capability to dream and
+build and create a a better 
+
+392
+00:23:19,840 --> 00:23:22,680
+world for ourselves. 
+Because we want to and we have 
+
+393
+00:23:22,680 --> 00:23:25,640
+the capability to do it. 
+We just don't because we're so 
+
+394
+00:23:25,640 --> 00:23:30,320
+constrained by the existing 
+rules of the machine and playing
+
+395
+00:23:30,320 --> 00:23:33,640
+the games that are fed to us. 
+But we don't necessarily have 
+
+396
+00:23:33,640 --> 00:23:35,240
+to. 
+So if you take a step back and 
+
+397
+00:23:35,240 --> 00:23:39,880
+go, OK, what is it we want? 
+What actually matters. 
+
+398
+00:23:40,440 --> 00:23:43,360
+And what I came to in the 
+conclusion was like, joy 
+
+399
+00:23:43,360 --> 00:23:49,600
+matters, thriving matters. 
+And if we think about how do we,
+
+400
+00:23:49,760 --> 00:23:53,240
+how do we Orient around a model 
+of thriving as sort of like a 
+
+401
+00:23:53,240 --> 00:23:57,440
+definition of as to whether 
+we're making things better, What
+
+402
+00:23:57,440 --> 00:24:00,040
+would that look like? 
+What would systems look like 
+
+403
+00:24:00,040 --> 00:24:03,080
+that were organized that way? 
+What would companies look like 
+
+404
+00:24:03,080 --> 00:24:06,280
+that were organized that way? 
+What type of entrepreneurial 
+
+405
+00:24:06,280 --> 00:24:08,880
+things might might need to what 
+you know, it's like, So if you 
+
+406
+00:24:08,880 --> 00:24:12,040
+reimagine, what kind of things 
+would exist in that context? 
+
+407
+00:24:12,040 --> 00:24:17,720
+I I think what I'm trying to do 
+mission wise is kind of unchain 
+
+408
+00:24:17,720 --> 00:24:21,680
+people from the existing 
+constraints to be able to 
+
+409
+00:24:22,360 --> 00:24:26,520
+imagine a better world such that
+we can build a better world. 
+
+410
+00:24:27,000 --> 00:24:30,280
+Yeah, have Are you familiar with
+teal organizations? 
+
+411
+00:24:31,080 --> 00:24:32,720
+Yes. 
+Yes, OK. 
+
+412
+00:24:32,720 --> 00:24:34,760
+I've I've that that makes sense,
+you know? 
+
+413
+00:24:36,370 --> 00:24:41,570
+So your mission is to help 
+developers thrive and that's 
+
+414
+00:24:41,770 --> 00:24:44,370
+that's cool because like, who's 
+thinking about that? 
+
+415
+00:24:44,370 --> 00:24:48,570
+Like, I think it's just you. 
+Because I I certainly would love
+
+416
+00:24:48,570 --> 00:24:52,930
+to thrive as a developer, but no
+one is out there doing research 
+
+417
+00:24:52,930 --> 00:24:56,930
+and trying to understand how to 
+actually make that happen. 
+
+418
+00:24:57,410 --> 00:24:59,980
+So well, that's not entirely 
+true. 
+
+419
+00:24:59,980 --> 00:25:04,060
+Like like for example, like Kat 
+Hicks and she's, you know, 
+
+420
+00:25:04,060 --> 00:25:07,420
+another person that's kind of a 
+doctorate level researcher 
+
+421
+00:25:07,420 --> 00:25:10,940
+person out there. 
+But she just recently did a a 
+
+422
+00:25:10,940 --> 00:25:14,060
+talk and a bunch of research 
+specifically around this 
+
+423
+00:25:14,060 --> 00:25:17,980
+paradigm shift from developer 
+productivity to developer 
+
+424
+00:25:17,980 --> 00:25:21,500
+thriving. 
+And and with this frame of 
+
+425
+00:25:21,500 --> 00:25:25,380
+productivity, she made lots of 
+really interesting and good 
+
+426
+00:25:25,380 --> 00:25:30,590
+points about like when we Orient
+toward this world of like 
+
+427
+00:25:30,750 --> 00:25:33,710
+judging ourselves in terms of 
+whether we're being productive 
+
+428
+00:25:33,710 --> 00:25:38,110
+or not and what we feel bad 
+about and what we feel good 
+
+429
+00:25:38,110 --> 00:25:40,550
+about. 
+Just, you know, around, you 
+
+430
+00:25:40,550 --> 00:25:43,590
+know, are we being as efficient 
+as we could be as the goal that 
+
+431
+00:25:43,590 --> 00:25:48,070
+we sort of aim for? 
+Like when we look at the world 
+
+432
+00:25:48,070 --> 00:25:50,910
+through that frame and we 
+measure ourselves and think 
+
+433
+00:25:50,910 --> 00:25:53,590
+about things through that frame,
+there's all these sort of like 
+
+434
+00:25:53,590 --> 00:25:58,830
+weird dysfunctional kind of 
+effects of of just thinking 
+
+435
+00:25:58,830 --> 00:26:00,470
+about things that way as our 
+goal. 
+
+436
+00:26:01,090 --> 00:26:07,810
+And often we can end up doing 
+things that end up undermining 
+
+437
+00:26:09,130 --> 00:26:12,450
+the thing we're aiming for at 
+the same time, right? 
+
+438
+00:26:12,810 --> 00:26:19,130
+Just cuz if efficiency is the 
+most important thing like for 
+
+439
+00:26:19,130 --> 00:26:23,230
+example what what what are we 
+aiming for like we can we can 
+
+440
+00:26:23,230 --> 00:26:25,550
+really efficiently create crap 
+right. 
+
+441
+00:26:27,270 --> 00:26:32,510
+And is that meaningful right and
+and and so I so, so she 
+
+442
+00:26:32,510 --> 00:26:36,910
+presented a initial kind of 
+model of how to sort of like 
+
+443
+00:26:36,910 --> 00:26:40,070
+breakdown and think about and 
+reframe things from a developer 
+
+444
+00:26:40,070 --> 00:26:42,990
+thriving perspective. 
+And I think that's something 
+
+445
+00:26:42,990 --> 00:26:46,910
+that we really should run with 
+and and think about and and 
+
+446
+00:26:46,950 --> 00:26:53,230
+imagine how we can Orient around
+thriving as a sort of 
+
+447
+00:26:53,230 --> 00:26:55,190
+productivity. 
+Really, what we want? 
+
+448
+00:26:55,190 --> 00:26:57,390
+Well, right. 
+When you think about it, the 
+
+449
+00:26:57,390 --> 00:26:59,990
+framing is really important 
+because when you say developer 
+
+450
+00:26:59,990 --> 00:27:03,830
+productivity, it turns the 
+person into a machine whose job 
+
+451
+00:27:03,830 --> 00:27:06,830
+is to crank things out. 
+And when you talk about 
+
+452
+00:27:06,830 --> 00:27:11,270
+developer thriving, it changes 
+the perspective to almost well 
+
+453
+00:27:12,230 --> 00:27:13,870
+again. 
+I'll mention Gerald Weinberg. 
+
+454
+00:27:13,870 --> 00:27:17,950
+His first book was called The 
+Psychology of Computer 
+
+455
+00:27:17,950 --> 00:27:20,240
+Programming. 
+Well, it's quite a while ago, 
+
+456
+00:27:20,240 --> 00:27:24,840
+but but I mean it's like, Oh 
+well, let's look at this in 
+
+457
+00:27:24,840 --> 00:27:29,880
+terms of the person as a person 
+and not as a machine whose goal 
+
+458
+00:27:29,880 --> 00:27:34,680
+is to crank out code and bring 
+profits to the company and. 
+
+459
+00:27:34,680 --> 00:27:38,320
+And also. 
+That if we do and and I think 
+
+460
+00:27:38,360 --> 00:27:43,600
+the big shift is to make it like
+to to make the argument that oh,
+
+461
+00:27:43,840 --> 00:27:46,400
+if we do that the company will 
+do better. 
+
+462
+00:27:47,250 --> 00:27:50,690
+If you have happy programmers, 
+your company will will. 
+
+463
+00:27:51,450 --> 00:27:53,210
+Do better. 
+I guess that's a big part of the
+
+464
+00:27:53,210 --> 00:27:57,570
+shift is the assumption, at 
+least in normal business, is 
+
+465
+00:27:57,570 --> 00:28:01,290
+that higher productivity is the 
+most important thing from 
+
+466
+00:28:01,290 --> 00:28:04,770
+developers? 
+And whatever that costs for the 
+
+467
+00:28:04,770 --> 00:28:07,370
+developer, that's fine, You 
+know, I mean, that's the basic 
+
+468
+00:28:07,370 --> 00:28:10,490
+capitalist idea. 
+So we, we got a resource, we got
+
+469
+00:28:10,490 --> 00:28:13,490
+to extract everything we can 
+from it to maximize profits. 
+
+470
+00:28:13,930 --> 00:28:16,810
+But then when you start looking 
+at, I mean no, this is a system.
+
+471
+00:28:17,190 --> 00:28:23,430
+That needs to be tended and if 
+we do that, then we'll then we 
+
+472
+00:28:23,430 --> 00:28:24,190
+will do. 
+Better. 
+
+473
+00:28:24,430 --> 00:28:27,070
+Well, there's probably an 
+element of creativity in here. 
+
+474
+00:28:27,070 --> 00:28:30,310
+So I've been wanting to hear 
+about your connection to art, 
+
+475
+00:28:30,310 --> 00:28:34,030
+'cause I think you're also an 
+artist, and it seems like if 
+
+476
+00:28:34,030 --> 00:28:37,390
+you're just focused on 
+productivity, maybe that's not 
+
+477
+00:28:37,390 --> 00:28:41,590
+the best environment to promote 
+creative thinking and creative 
+
+478
+00:28:41,590 --> 00:28:44,830
+solutions and and all that. 
+Is there some connection to 
+
+479
+00:28:44,830 --> 00:28:50,740
+creativity there? 
+Yeah, like I in if being able to
+
+480
+00:28:51,060 --> 00:28:57,100
+innovate and come up with new 
+ideas and come out of caring 
+
+481
+00:28:57,100 --> 00:29:02,180
+about our customers having 
+having the the space to be able 
+
+482
+00:29:02,180 --> 00:29:05,700
+to dream. 
+And The thing is I found about 
+
+483
+00:29:05,700 --> 00:29:09,180
+like being in that creative 
+space though too is like when 
+
+484
+00:29:09,220 --> 00:29:14,440
+we're in that survival mode, 
+that gear, all of our brain 
+
+485
+00:29:14,440 --> 00:29:18,040
+power is like focused on 
+detecting and mitigating 
+
+486
+00:29:18,040 --> 00:29:21,240
+threats. 
+And until we can get out of that
+
+487
+00:29:21,240 --> 00:29:25,360
+survival mode gear, you can't 
+really be in that creative 
+
+488
+00:29:25,360 --> 00:29:27,920
+innovative space. 
+It's like you have to get past 
+
+489
+00:29:27,920 --> 00:29:31,400
+that mode such that you could 
+reallocate all your brain power 
+
+490
+00:29:31,400 --> 00:29:34,880
+to to innovation and dreaming 
+and creation space. 
+
+491
+00:29:35,520 --> 00:29:39,440
+And so I I I think as long as 
+we're like sort of looking at 
+
+492
+00:29:39,440 --> 00:29:45,140
+developers as as machines and 
+stamping out widgets for the 
+
+493
+00:29:45,140 --> 00:29:50,540
+factory and and instead of 
+shifting to a mode of like hey 
+
+494
+00:29:50,740 --> 00:29:56,620
+we're a bunch of humans hanging 
+out together as a team and we 
+
+495
+00:29:56,620 --> 00:29:59,540
+have the capability to build 
+something amazing with all of 
+
+496
+00:29:59,540 --> 00:30:02,500
+our skills combined. 
+What should we build? 
+
+497
+00:30:03,500 --> 00:30:08,180
+And you know, like what? 
+What would be like worth our 
+
+498
+00:30:08,180 --> 00:30:11,420
+while that would be meaningful 
+to spend our time on? 
+
+499
+00:30:11,840 --> 00:30:15,280
+And then when you're doing 
+something, it's OK if it's hard,
+
+500
+00:30:15,400 --> 00:30:18,000
+right? 
+Like it being difficult and 
+
+501
+00:30:18,000 --> 00:30:21,520
+worthwhile makes it a really 
+cool, fun mountain to climb. 
+
+502
+00:30:21,800 --> 00:30:25,120
+And when you can climb that 
+mountain with other people that 
+
+503
+00:30:25,120 --> 00:30:27,840
+are like cool, that you like 
+hanging out with that become 
+
+504
+00:30:27,840 --> 00:30:30,160
+your friends on the team and 
+you're doing this journey 
+
+505
+00:30:30,160 --> 00:30:34,420
+together to build this thing. 
+Not only does it like pull you 
+
+506
+00:30:34,420 --> 00:30:38,420
+in and you get hyper productive 
+because you're super focused and
+
+507
+00:30:38,420 --> 00:30:41,260
+excited about it and and 
+connected to this thing that 
+
+508
+00:30:41,260 --> 00:30:43,900
+you're building. 
+So you get productivity as a 
+
+509
+00:30:43,900 --> 00:30:48,540
+side effect of doing something 
+that you genuinely care about. 
+
+510
+00:30:49,420 --> 00:30:53,020
+Ultimately, it seems like it's 
+about motivation, and the way 
+
+511
+00:30:53,020 --> 00:30:56,660
+management has been trained is 
+that, well, you motivate people 
+
+512
+00:30:56,660 --> 00:31:00,250
+by compelling them. 
+And what you're saying is you 
+
+513
+00:31:00,250 --> 00:31:03,650
+motivate people by enticing 
+them, yeah? 
+
+514
+00:31:05,290 --> 00:31:08,690
+Giving them I feel like. 
+But you know if I think about 
+
+515
+00:31:08,690 --> 00:31:14,010
+like a lot of software work, it 
+comes out of love. 
+
+516
+00:31:14,530 --> 00:31:19,650
+Like in that if I'm working on 
+some coding thing, me trying to 
+
+517
+00:31:19,650 --> 00:31:26,570
+make it beautiful, trying to do 
+a good job, comes out of caring 
+
+518
+00:31:26,570 --> 00:31:33,110
+about my team. 
+The customers like we do it out 
+
+519
+00:31:33,110 --> 00:31:35,470
+of a sense of connection with 
+something, and different 
+
+520
+00:31:35,470 --> 00:31:38,430
+developers operate differently. 
+Some developers will get just 
+
+521
+00:31:38,550 --> 00:31:42,030
+excited of the beautiful 
+craftsmanship of things, and 
+
+522
+00:31:42,030 --> 00:31:44,550
+that's fine. 
+Other developers, they do it for
+
+523
+00:31:44,550 --> 00:31:46,990
+their team. 
+Other developers, they get 
+
+524
+00:31:46,990 --> 00:31:50,150
+really excited about wanting to 
+build something for the for the 
+
+525
+00:31:50,150 --> 00:31:53,310
+customers and having their 
+software that they create be 
+
+526
+00:31:53,470 --> 00:31:57,030
+used and help someone in in in a
+useful way. 
+
+527
+00:31:57,270 --> 00:32:00,550
+So there's various different 
+things that people connect to 
+
+528
+00:32:00,550 --> 00:32:04,590
+and and are driven by, but 
+there's always some aspect of 
+
+529
+00:32:04,590 --> 00:32:07,830
+that that keeps us going even 
+when it's hard. 
+
+530
+00:32:08,110 --> 00:32:10,590
+And I think that's the thing 
+with software is that because 
+
+531
+00:32:10,590 --> 00:32:15,420
+it's so hard, it's like once you
+lose that spirit of connection 
+
+532
+00:32:15,420 --> 00:32:18,460
+of care, it becomes near 
+impossible to do the work. 
+
+533
+00:32:19,220 --> 00:32:21,620
+When you don't care anymore. 
+Like you see like in 
+
+534
+00:32:21,620 --> 00:32:24,860
+organizations and stuff, when 
+you see that disheartening 
+
+535
+00:32:24,860 --> 00:32:28,380
+effect happen, something happens
+and the developers like lose 
+
+536
+00:32:28,380 --> 00:32:30,420
+their, lose their heart in it, 
+right. 
+
+537
+00:32:31,260 --> 00:32:34,340
+I mean it's it's it's game over,
+you know, it's like. 
+
+538
+00:32:34,340 --> 00:32:37,220
+Yeah, that's when productivity 
+actually ends up plummeting. 
+
+539
+00:32:37,300 --> 00:32:41,540
+I don't want to do this anymore.
+This is not fun anymore. 
+
+540
+00:32:42,120 --> 00:32:48,920
+So productivity as as a as a 
+side effect to having an 
+
+541
+00:32:48,920 --> 00:32:51,640
+environment where developers 
+thrive and care and are 
+
+542
+00:32:51,640 --> 00:32:53,080
+connected. 
+Right. 
+
+543
+00:32:53,200 --> 00:32:56,840
+And so we hold a conference up 
+here every year in the winter 
+
+544
+00:32:56,840 --> 00:33:03,040
+time and it took me a while 
+because I mean people would, 
+
+545
+00:33:03,360 --> 00:33:08,960
+people would be very emotional 
+during the closing session. 
+
+546
+00:33:09,330 --> 00:33:12,050
+And I was going, wait, this is a
+technical conference. 
+
+547
+00:33:12,050 --> 00:33:15,050
+This isn't about that. 
+And then finally I realized, no,
+
+548
+00:33:15,290 --> 00:33:18,090
+it is about that because it's 
+about the connection. 
+
+549
+00:33:18,610 --> 00:33:20,890
+And that's that's really what 
+the conference does. 
+
+550
+00:33:20,890 --> 00:33:26,410
+And I didn't realize it until 
+basically people told me in 
+
+551
+00:33:26,450 --> 00:33:29,250
+various ways. 
+And it's like, Oh yeah, why get 
+
+552
+00:33:29,250 --> 00:33:32,450
+together if it isn't about 
+connection? 
+
+553
+00:33:33,250 --> 00:33:37,130
+Yeah, So, so back to your 
+framing on the management 
+
+554
+00:33:37,130 --> 00:33:39,980
+enticing, I don't think it's 
+really enticing, 'cause that's 
+
+555
+00:33:39,980 --> 00:33:42,260
+like having the right care to 
+dangle. 
+
+556
+00:33:42,300 --> 00:33:44,700
+It's 'cause it's a. 
+This is a function of like 
+
+557
+00:33:44,980 --> 00:33:46,500
+intrinsic. 
+Movie probably. 
+
+558
+00:33:47,260 --> 00:33:51,020
+Well, I I think invite would be 
+a good word like creating space,
+
+559
+00:33:51,820 --> 00:33:54,220
+inspire and then inviting people
+into it. 
+
+560
+00:33:56,660 --> 00:33:57,620
+Mm hmm. 
+Yeah. 
+
+561
+00:33:57,620 --> 00:34:02,540
+So what's interesting is that 
+we're talking about things kind 
+
+562
+00:34:02,540 --> 00:34:07,220
+of in the realm of of 
+motivations and inspiration and.
+
+563
+00:34:08,360 --> 00:34:12,639
+The art of programming and some 
+of that but you're doing like 
+
+564
+00:34:12,639 --> 00:34:17,360
+actual research that seems like 
+it would be hard to like pair 
+
+565
+00:34:17,360 --> 00:34:20,800
+those two of like how do we 
+measure these things and how do 
+
+566
+00:34:20,800 --> 00:34:25,040
+we quantify the like how do you 
+quantify an artist you know like
+
+567
+00:34:25,040 --> 00:34:27,960
+in their their words there's. 
+A statement in the business 
+
+568
+00:34:27,960 --> 00:34:30,360
+world that you can't. 
+I mean, I I don't believe it, 
+
+569
+00:34:30,360 --> 00:34:34,239
+but they say you can't manage 
+what you can't measure and there
+
+570
+00:34:34,239 --> 00:34:36,239
+are some things that you can't 
+measure. 
+
+571
+00:34:36,929 --> 00:34:38,090
+You know, And So what does that 
+mean? 
+
+572
+00:34:38,090 --> 00:34:40,090
+You just, oh, well, we can't do 
+anything about that. 
+
+573
+00:34:40,330 --> 00:34:43,330
+And I think what you're trying 
+to do is at least bring some of 
+
+574
+00:34:43,330 --> 00:34:47,409
+those things that we previously 
+decided couldn't be measured. 
+
+575
+00:34:47,730 --> 00:34:50,210
+And it's like maybe you can't 
+measure everything, but you can 
+
+576
+00:34:50,210 --> 00:34:53,409
+get indicators you can, you 
+know, you can say, all right, 
+
+577
+00:34:53,409 --> 00:34:55,969
+well, this is a good way to go. 
+Maybe that's not a good way to 
+
+578
+00:34:55,969 --> 00:34:57,690
+go. 
+Maybe so. 
+
+579
+00:34:57,890 --> 00:35:00,210
+And it seems like this is some 
+of the stuff you're struggling 
+
+580
+00:35:00,210 --> 00:35:04,070
+with. 
+Yeah so so by my thesis project 
+
+581
+00:35:04,110 --> 00:35:07,750
+is developing a theory of 
+momentum in software development
+
+582
+00:35:08,230 --> 00:35:16,550
+and and and with with that as as
+a measure so so I'm I'm kind of 
+
+583
+00:35:16,550 --> 00:35:20,030
+developing an explicit model of 
+how mint momentum is 
+
+584
+00:35:20,030 --> 00:35:25,520
+accomplished and as and then 
+shifting to thinking about that 
+
+585
+00:35:25,520 --> 00:35:27,640
+as something we try and optimize
+for. 
+
+586
+00:35:27,640 --> 00:35:32,600
+And that if you can't get into 
+flow, or I should say if you 
+
+587
+00:35:32,600 --> 00:35:36,200
+manage to get into flow, it 
+doesn't necessarily mean that 
+
+588
+00:35:36,200 --> 00:35:40,640
+you're gonna write good code 
+when you're in flow, but it's 
+
+589
+00:35:40,680 --> 00:35:45,050
+more like if you manage to get 
+into flow, you're much more 
+
+590
+00:35:45,050 --> 00:35:48,210
+likely to be focused and do good
+work and things like that. 
+
+591
+00:35:48,210 --> 00:35:52,570
+So it's it's, it's it's I, it's 
+I I think something that we can 
+
+592
+00:35:52,570 --> 00:35:57,970
+reasonably aim to get better at 
+with empirical information that 
+
+593
+00:35:58,250 --> 00:36:04,690
+is a good leading indicator of 
+of of of health in terms of 
+
+594
+00:36:04,690 --> 00:36:09,020
+developer experience and all of 
+the the the code and technology 
+
+595
+00:36:09,020 --> 00:36:10,780
+aspects and stuff that affect 
+that. 
+
+596
+00:36:10,780 --> 00:36:16,220
+So momentum, let me just give 
+you the kind of big picture 
+
+597
+00:36:16,220 --> 00:36:19,940
+version of this. 
+So if you think about this 
+
+598
+00:36:19,940 --> 00:36:22,940
+process of getting going with 
+coding and getting your momentum
+
+599
+00:36:22,940 --> 00:36:25,740
+going. 
+So first thing we do is we kind 
+
+600
+00:36:25,740 --> 00:36:32,170
+of like look around at the code 
+and and try and figure out what 
+
+601
+00:36:32,170 --> 00:36:36,170
+we're going to do, come up with 
+some kind of strategy to, you 
+
+602
+00:36:36,170 --> 00:36:38,290
+know, accomplish it. 
+So we're kind of like looking 
+
+603
+00:36:38,290 --> 00:36:41,570
+around not really typing 
+anything, but it's it's like a, 
+
+604
+00:36:41,850 --> 00:36:44,090
+it's like an inflow of 
+information, right. 
+
+605
+00:36:45,050 --> 00:36:50,370
+And then at some point then 
+there's a Eureka moment where we
+
+606
+00:36:50,370 --> 00:36:53,810
+have some kind of coding 
+strategy pop in our head and we 
+
+607
+00:36:53,810 --> 00:36:56,490
+have some idea of the the steps 
+we're going to take. 
+
+608
+00:36:56,490 --> 00:36:59,810
+And it's usually still we have 
+some kind of vision and idea of 
+
+609
+00:36:59,810 --> 00:37:03,490
+strategy, but it'll be fuzzy 
+sort of still but but enough 
+
+610
+00:37:03,490 --> 00:37:06,610
+that we can go, OK, I see the 
+first few stairs on the pathway,
+
+611
+00:37:06,610 --> 00:37:09,170
+maybe the rest of the stairs are
+kind of foggy still. 
+
+612
+00:37:09,370 --> 00:37:11,890
+But as you start walking up the 
+stairs you you know it becomes 
+
+613
+00:37:11,890 --> 00:37:15,610
+clearer as you go and you get 
+you you get enough clarity that 
+
+614
+00:37:15,610 --> 00:37:20,460
+you can start going and moving 
+and making the the changes that 
+
+615
+00:37:20,460 --> 00:37:23,100
+you're planning for it, right. 
+So we have, you know that inflow
+
+616
+00:37:23,100 --> 00:37:26,940
+process then the Eureka moment 
+and then at that point then you 
+
+617
+00:37:26,940 --> 00:37:31,780
+start getting the momentum going
+and and as you get into that 
+
+618
+00:37:31,980 --> 00:37:37,300
+deeper your level of absorption 
+with that task increases and you
+
+619
+00:37:37,300 --> 00:37:43,060
+get into this kind of feedback 
+loop flow state where the you 
+
+620
+00:37:43,100 --> 00:37:46,260
+and the code sort of become one 
+if you will. 
+
+621
+00:37:46,300 --> 00:37:51,350
+And and the especially if you're
+fluent in the language, you're 
+
+622
+00:37:51,350 --> 00:37:56,590
+not really thinking about coding
+syntax. 
+
+623
+00:37:56,670 --> 00:37:59,830
+You're just like communicating 
+to the computer what it is you 
+
+624
+00:37:59,830 --> 00:38:02,470
+want it to do, right. 
+And so we get into that flow 
+
+625
+00:38:02,470 --> 00:38:06,870
+state as our momentum builds up 
+until you get to like a kind of 
+
+626
+00:38:06,870 --> 00:38:10,630
+peak absorption level where 
+you're and and at that point 
+
+627
+00:38:10,630 --> 00:38:14,270
+you're kind of like at A at a 
+maximum level of efficiency. 
+
+628
+00:38:14,270 --> 00:38:17,030
+So if you think of your momentum
+building over time as this kind 
+
+629
+00:38:17,030 --> 00:38:20,950
+of exponential effect that 
+happens and as we get deeper 
+
+630
+00:38:20,950 --> 00:38:26,070
+into flow, you get this effect 
+of increasing efficiency in your
+
+631
+00:38:26,070 --> 00:38:29,230
+thought work that you can do 
+when you're when you're deep in 
+
+632
+00:38:29,230 --> 00:38:32,530
+that flow state. 
+And so, so if we think about 
+
+633
+00:38:32,530 --> 00:38:35,450
+momentum that way as sort of 
+having these exponential effects
+
+634
+00:38:35,450 --> 00:38:38,530
+over time, it gives us a 
+different perspective on things 
+
+635
+00:38:38,530 --> 00:38:40,570
+like the impact of 
+interruptions. 
+
+636
+00:38:40,730 --> 00:38:45,130
+So now if let's say during the 
+day, you know, I'm, I'm, I'm 
+
+637
+00:38:45,130 --> 00:38:48,010
+working on coding things and 
+then I've, I've got a couple 
+
+638
+00:38:48,010 --> 00:38:51,650
+meetings or something and like 
+there's a meeting at 10:00 say. 
+
+639
+00:38:52,070 --> 00:38:54,430
+And so I get up, I might do a 
+little bit of coding and stuff, 
+
+640
+00:38:54,430 --> 00:38:58,070
+but it becomes difficult to get 
+into it to get your momentum 
+
+641
+00:38:58,070 --> 00:39:00,630
+going because I got this meeting
+at 10:00 coming up right. 
+
+642
+00:39:00,870 --> 00:39:04,750
+And then so I go to the meeting,
+I come back, OK, now I got this 
+
+643
+00:39:04,750 --> 00:39:06,830
+meeting in my head. 
+I got to switch that context to 
+
+644
+00:39:06,830 --> 00:39:09,110
+here and try and get the 
+momentum going again. 
+
+645
+00:39:09,390 --> 00:39:15,320
+But often, like in order to get 
+over that hump with getting to 
+
+646
+00:39:15,320 --> 00:39:17,920
+that Eureka moment coding 
+strategy, we really got to be 
+
+647
+00:39:17,920 --> 00:39:20,880
+heads down, focused, to be able 
+to internalize enough of the 
+
+648
+00:39:20,880 --> 00:39:23,040
+context model to have those 
+insights. 
+
+649
+00:39:23,360 --> 00:39:26,280
+And if we don't have enough 
+consecutive time to be able to 
+
+650
+00:39:26,280 --> 00:39:29,000
+get there because of all these 
+interruptions and distractions, 
+
+651
+00:39:29,360 --> 00:39:32,880
+it's easy for like a couple 
+meetings to result in. 
+
+652
+00:39:32,880 --> 00:39:34,880
+You don't get anything done 
+during that day, you know, 
+
+653
+00:39:35,600 --> 00:39:37,120
+because you just can't get 
+going. 
+
+654
+00:39:37,120 --> 00:39:39,040
+So. 
+So if we can take these sorts of
+
+655
+00:39:39,040 --> 00:39:42,000
+things into account, so just as 
+a simple example of this 
+
+656
+00:39:42,040 --> 00:39:46,400
+exponential effect of momentum, 
+then we can realize, hey, two 
+
+657
+00:39:46,400 --> 00:39:48,680
+hours doesn't equal 2 hours, 
+right? 
+
+658
+00:39:49,320 --> 00:39:54,520
+That if we if we take these 
+things into account and and 
+
+659
+00:39:54,680 --> 00:39:58,880
+focus on trying to better get 
+into a flow state and optimizing
+
+660
+00:39:58,880 --> 00:40:02,560
+for flow on our teams, it's a 
+good leading indicator. 
+
+661
+00:40:03,040 --> 00:40:07,520
+For our ability to be productive
+without trying to measure 
+
+662
+00:40:08,760 --> 00:40:11,480
+keystrokes. 
+Yeah, keystrokes and things. 
+
+663
+00:40:11,960 --> 00:40:15,560
+Well, it's interesting because 
+people have looked at flow 
+
+664
+00:40:15,560 --> 00:40:18,040
+before, but it's always like, 
+oh, flow is good. 
+
+665
+00:40:18,040 --> 00:40:20,600
+Yeah, we should have that. 
+And what you're trying to do is 
+
+666
+00:40:20,600 --> 00:40:24,200
+say, no, flow is fundamental. 
+That's what we should build 
+
+667
+00:40:24,200 --> 00:40:28,160
+around, yeah. 
+I mean, I I think in in order. 
+
+668
+00:40:28,440 --> 00:40:33,310
+I think we need to look at our 
+coding experience as a flow 
+
+669
+00:40:33,310 --> 00:40:37,190
+experience and take that into 
+account with how we think about 
+
+670
+00:40:37,190 --> 00:40:40,270
+how to make things better and as
+well as like friction and how it
+
+671
+00:40:40,270 --> 00:40:43,790
+gets in the way of that is 
+thinking about friction relative
+
+672
+00:40:43,790 --> 00:40:48,230
+to flow. 
+And friction. 
+
+673
+00:40:48,830 --> 00:40:54,950
+So my experience has been I tend
+to focus on, oh, here's this big
+
+674
+00:40:54,950 --> 00:41:00,350
+hurdle that's really important, 
+but it's easy to to to narrow in
+
+675
+00:41:00,350 --> 00:41:03,060
+on that thing. 
+And then I have slowly 
+
+676
+00:41:03,060 --> 00:41:06,860
+discovered, oh, there's all 
+these little things, which in my
+
+677
+00:41:06,860 --> 00:41:08,660
+head I go, oh, that's not a big 
+deal. 
+
+678
+00:41:09,020 --> 00:41:12,260
+And it turns out that that's the
+thing that impedes me. 
+
+679
+00:41:12,260 --> 00:41:18,820
+Like when I started painting, I 
+I discovered that, oh, I I'm, I 
+
+680
+00:41:18,820 --> 00:41:21,740
+have this stretched canvas. 
+And it's like, oh, that's too 
+
+681
+00:41:21,740 --> 00:41:23,100
+precious. 
+I can't put. 
+
+682
+00:41:23,340 --> 00:41:26,980
+And so I had to and and it was 
+just that little thing that kept
+
+683
+00:41:26,980 --> 00:41:29,660
+me from doing stuff. 
+I had to go to canvas boards. 
+
+684
+00:41:30,060 --> 00:41:32,380
+Because they're cheap, you know,
+and it's not important. 
+
+685
+00:41:32,620 --> 00:41:36,860
+And it's like that that was in 
+my head a hurdle and I think, 
+
+686
+00:41:36,900 --> 00:41:39,900
+wow, what are all of these 
+hurdles that people. 
+
+687
+00:41:40,140 --> 00:41:43,420
+And I would say that's that's 
+summed up as as friction. 
+
+688
+00:41:43,420 --> 00:41:46,380
+It's not this big obvious thing 
+that you have to struggle with, 
+
+689
+00:41:47,100 --> 00:41:49,820
+but it's the little things that 
+that wear you down. 
+
+690
+00:41:50,580 --> 00:41:54,060
+Yeah, I there's. 
+So there's different types of 
+
+691
+00:41:54,060 --> 00:41:57,330
+friction. 
+So I I'm trying to you know part
+
+692
+00:41:57,330 --> 00:42:02,330
+of my research effort those two 
+is to put formal definitions and
+
+693
+00:42:02,330 --> 00:42:06,650
+like more structured ontology. 
+And like I, I, I did 27 
+
+694
+00:42:06,650 --> 00:42:10,370
+developer interviews over the 
+summer and I'm and I'm doing a 
+
+695
+00:42:10,490 --> 00:42:14,610
+grounded theory approach, which 
+basically like taking taking 
+
+696
+00:42:14,610 --> 00:42:18,610
+what people are saying from the 
+interviews and like coding and 
+
+697
+00:42:18,610 --> 00:42:23,870
+combining and and and and 
+putting together a abstract 
+
+698
+00:42:23,870 --> 00:42:26,510
+process of what the 
+troubleshooting process looks 
+
+699
+00:42:26,510 --> 00:42:28,470
+like, the ways that people ask 
+for help. 
+
+700
+00:42:28,470 --> 00:42:33,430
+And in all of these different 
+developer flows, I'm like using 
+
+701
+00:42:33,430 --> 00:42:38,510
+the data from the interviews to 
+construct a grounded theory 
+
+702
+00:42:38,510 --> 00:42:44,070
+about what all these various 
+processes are and then building 
+
+703
+00:42:44,070 --> 00:42:47,430
+a kind of conceptual model 
+ontology to help us kind of get 
+
+704
+00:42:47,430 --> 00:42:50,590
+our mind around what these 
+cognitive processes are that are
+
+705
+00:42:50,590 --> 00:42:55,680
+going on during development. 
+And then so if we think about 
+
+706
+00:42:56,040 --> 00:43:00,680
+programming flow, so flow is 
+like a a, a movement if you 
+
+707
+00:43:00,680 --> 00:43:07,860
+will, it's a, it's A and and so 
+friction then is, a is is a 
+
+708
+00:43:07,860 --> 00:43:11,380
+force that's you know 
+restricting that motion, right. 
+
+709
+00:43:11,380 --> 00:43:17,100
+So, so if we're describing these
+sort of active processes that we
+
+710
+00:43:17,100 --> 00:43:23,100
+engage in, then like friction 
+has to be like a force relative 
+
+711
+00:43:23,100 --> 00:43:25,420
+to some kind of movement. 
+So the way that I think about 
+
+712
+00:43:25,420 --> 00:43:28,620
+flow is flowing toward our 
+intention. 
+
+713
+00:43:29,040 --> 00:43:32,560
+So our intention being our, our 
+our target vision that we're 
+
+714
+00:43:32,560 --> 00:43:36,640
+aiming toward and then friction 
+gets in the way of you moving 
+
+715
+00:43:36,640 --> 00:43:40,000
+toward whatever your intention 
+is and there can be different 
+
+716
+00:43:40,000 --> 00:43:42,640
+types. 
+Of fluid dynamics model here 
+
+717
+00:43:42,760 --> 00:43:48,360
+exactly, yeah. 
+And it it kind of feels that way
+
+718
+00:43:48,360 --> 00:43:54,520
+of of more similar to like fluid
+dynamics and and so the specific
+
+719
+00:43:54,520 --> 00:43:59,050
+type of friction I've been 
+focused on is is confusion in 
+
+720
+00:43:59,050 --> 00:44:00,690
+particular and for a couple of 
+reasons. 
+
+721
+00:44:00,690 --> 00:44:04,850
+So, so, so just to define it a 
+little more explicitly, if if 
+
+722
+00:44:04,850 --> 00:44:08,850
+you write a little bit of code 
+and then let's say you run a 
+
+723
+00:44:08,850 --> 00:44:13,090
+test and you get some weird 
+error message on your screen and
+
+724
+00:44:13,210 --> 00:44:15,690
+maybe you think you know what it
+is already and you just fix it 
+
+725
+00:44:15,690 --> 00:44:17,610
+and go, oh that was it and keep 
+on going. 
+
+726
+00:44:17,610 --> 00:44:20,250
+But other times you try and fix 
+and go oh. 
+
+727
+00:44:21,970 --> 00:44:24,770
+I don't understand. 
+Yeah, that's not what I think. 
+
+728
+00:44:24,930 --> 00:44:26,250
+There's something I'm missing, 
+right? 
+
+729
+00:44:26,570 --> 00:44:30,170
+And so in that moment when 
+you've got some unexpected 
+
+730
+00:44:30,170 --> 00:44:34,530
+observation, you're in that 
+state of confusion and then 
+
+731
+00:44:34,530 --> 00:44:38,050
+you're sort of task switching, 
+if you will, sort of gear 
+
+732
+00:44:38,050 --> 00:44:41,210
+switching anyway, from the main 
+task that you're working on 
+
+733
+00:44:41,210 --> 00:44:44,370
+doing to trying to resolve your 
+confusion. 
+
+734
+00:44:44,370 --> 00:44:47,850
+So all your attention then is 
+focused then on this process of 
+
+735
+00:44:47,850 --> 00:44:50,090
+how do I resolve my confusion in
+this moment? 
+
+736
+00:44:50,760 --> 00:44:53,600
+And sometimes resolving your 
+confusion can be something that 
+
+737
+00:44:53,600 --> 00:44:57,920
+takes 10 minutes, 20 minutes, 
+sometimes it can take hours, 
+
+738
+00:44:58,320 --> 00:45:01,680
+days, Renee, I mean, can't just 
+go off the rails. 
+
+739
+00:45:01,680 --> 00:45:05,920
+And So what I've been developing
+tooling around is this process 
+
+740
+00:45:05,960 --> 00:45:09,160
+of helping developers 
+troubleshoot and resolve their 
+
+741
+00:45:09,160 --> 00:45:14,560
+confusion by by asking key 
+questions to help them think 
+
+742
+00:45:14,560 --> 00:45:18,890
+through through the through the 
+problem as well as externalizing
+
+743
+00:45:18,890 --> 00:45:21,970
+their thoughts and trying to 
+think more systematically about,
+
+744
+00:45:21,970 --> 00:45:23,410
+you know, so. 
+You're helping them rubber duck.
+
+745
+00:45:24,290 --> 00:45:26,450
+Yeah, I'm helping them rubber 
+duck, right. 
+
+746
+00:45:27,330 --> 00:45:31,090
+And then and then but also as as
+part of that process one of the 
+
+747
+00:45:31,090 --> 00:45:34,250
+things I I found in terms of 
+just a a gold mine of 
+
+748
+00:45:34,250 --> 00:45:38,290
+information is if we look at 
+like what are the the 
+
+749
+00:45:38,290 --> 00:45:41,530
+troubleshooting scenarios that 
+we ran into say over the last 
+
+750
+00:45:41,530 --> 00:45:45,820
+week that took us over 50 
+minutes to resolve. 50 minutes 
+
+751
+00:45:45,820 --> 00:45:48,580
+has generally been my threshold.
+If it's if it if it's getting up
+
+752
+00:45:48,580 --> 00:45:51,700
+there like over 50 minutes to 
+figure something out. 
+
+753
+00:45:52,020 --> 00:45:56,580
+Usually it's a good sign that 
+this is a conversation worthy 
+
+754
+00:45:56,580 --> 00:45:58,860
+thing that we should talk about 
+and understand what made 
+
+755
+00:45:58,860 --> 00:46:01,580
+troubleshooting take so long. 
+So I drive like a little 
+
+756
+00:46:01,580 --> 00:46:05,500
+retrospective process around all
+of the troubleshooting sessions 
+
+757
+00:46:05,500 --> 00:46:08,300
+that that that you know are over
+a threshold. 
+
+758
+00:46:08,920 --> 00:46:11,520
+And then just ask, well, what 
+made troubleshooting take so 
+
+759
+00:46:11,520 --> 00:46:14,640
+long and think through what was 
+going on in that specific 
+
+760
+00:46:14,640 --> 00:46:16,880
+scenario. 
+And one of the things you notice
+
+761
+00:46:16,880 --> 00:46:20,720
+by using the confusion sessions 
+as a way to identify 
+
+762
+00:46:20,760 --> 00:46:25,320
+opportunities for improvement is
+it highlights all of the types 
+
+763
+00:46:25,320 --> 00:46:28,960
+of difficulties that come up 
+that aren't like things inside 
+
+764
+00:46:28,960 --> 00:46:32,560
+the code, but they have to do 
+with the runtime characteristics
+
+765
+00:46:32,560 --> 00:46:35,000
+of the behavior, the the 
+difficulty of being able to 
+
+766
+00:46:35,000 --> 00:46:37,640
+observe what's going on. 
+It's all the things that have to
+
+767
+00:46:37,640 --> 00:46:40,640
+do with like electricity going 
+through the system and you're 
+
+768
+00:46:40,640 --> 00:46:44,000
+you're observing what's going on
+the screen and trying to build a
+
+769
+00:46:44,000 --> 00:46:47,840
+mental model between what you 
+observe and what you see and 
+
+770
+00:46:47,840 --> 00:46:51,870
+what's going on in the code and 
+and trying to connect those 
+
+771
+00:46:51,870 --> 00:46:54,270
+dots. 
+And the reason why that's hard 
+
+772
+00:46:54,550 --> 00:46:57,430
+and the kinds of strategies and 
+things you can do to make that 
+
+773
+00:46:57,430 --> 00:47:02,710
+easier are often things like 
+building observability tools or,
+
+774
+00:47:02,870 --> 00:47:05,710
+you know, like like they're 
+different kinds of things that 
+
+775
+00:47:05,710 --> 00:47:09,830
+you might do to improvement when
+you look at what's going on and 
+
+776
+00:47:10,070 --> 00:47:14,590
+the mechanisms we're using to 
+resolve that, that confusion and
+
+777
+00:47:14,590 --> 00:47:18,030
+troubleshooting time. 
+So as an example of this I feel 
+
+778
+00:47:18,030 --> 00:47:21,230
+like. 
+I certainly didn't do when I was
+
+779
+00:47:21,230 --> 00:47:25,350
+a more junior developer, but now
+used pretty often is I encounter
+
+780
+00:47:25,350 --> 00:47:28,390
+some piece of a system like 
+you're talking about where I'm 
+
+781
+00:47:28,390 --> 00:47:30,070
+just confused. 
+I have no idea. 
+
+782
+00:47:30,070 --> 00:47:35,030
+I don't understand it. 
+And there's so much confusion 
+
+783
+00:47:35,070 --> 00:47:38,670
+that I can't even get my piece 
+of code that I'm working on to 
+
+784
+00:47:38,790 --> 00:47:40,950
+to. 
+You know, I could turn and turn 
+
+785
+00:47:40,950 --> 00:47:43,750
+and turn and turn and get 
+nowhere and So what I then have 
+
+786
+00:47:43,750 --> 00:47:46,450
+to do is. 
+Develop essentially a a some 
+
+787
+00:47:46,450 --> 00:47:51,050
+other system just so that I can 
+understand and resolve the 
+
+788
+00:47:51,050 --> 00:47:55,330
+confusion and get to an 
+understanding of of that thing 
+
+789
+00:47:55,330 --> 00:47:59,010
+in a in a higher iteration way. 
+And then take what I've learned 
+
+790
+00:47:59,170 --> 00:48:01,530
+and then be able to go back to 
+my code that I'm actually 
+
+791
+00:48:01,530 --> 00:48:04,770
+working on and be like, OK, now 
+that I understand this thing now
+
+792
+00:48:04,770 --> 00:48:06,570
+I can actually make some forward
+progress. 
+
+793
+00:48:06,570 --> 00:48:09,570
+On that, push the stack and go 
+off and do this other thing and 
+
+794
+00:48:09,570 --> 00:48:12,690
+then you could come back. 
+Well, not not so much pushing 
+
+795
+00:48:12,690 --> 00:48:13,770
+the stack. 
+It's like I need to. 
+
+796
+00:48:14,740 --> 00:48:19,420
+Totally reorient around this 
+thing into a different angle and
+
+797
+00:48:19,420 --> 00:48:23,700
+try to get to an understanding 
+of the system before I can go 
+
+798
+00:48:23,700 --> 00:48:26,420
+back to SO. 
+I haven't totally pushed off the
+
+799
+00:48:26,420 --> 00:48:28,260
+task, I've just had to come at 
+it from a different. 
+
+800
+00:48:28,260 --> 00:48:30,060
+Angle to come up with the right 
+questions. 
+
+801
+00:48:30,220 --> 00:48:30,940
+Yes. 
+You don't. 
+
+802
+00:48:31,020 --> 00:48:33,300
+Yeah. 
+One of the things that I noticed
+
+803
+00:48:33,420 --> 00:48:35,420
+that you did. 
+I'm not sure if this was 
+
+804
+00:48:35,420 --> 00:48:40,180
+associated with your Furby 
+creature, but that I thought, 
+
+805
+00:48:40,180 --> 00:48:45,310
+was really. 
+Insightful was you said OK here 
+
+806
+00:48:45,310 --> 00:48:48,670
+you get stuck on something and 
+you struggle with it for a 
+
+807
+00:48:48,670 --> 00:48:54,670
+while, and then maybe the 
+creature suggests that you go 
+
+808
+00:48:54,670 --> 00:49:00,310
+talk to somebody else about it, 
+but it somehow knows who else is
+
+809
+00:49:00,310 --> 00:49:03,430
+in a flow state and it doesn't 
+interrupt them. 
+
+810
+00:49:03,910 --> 00:49:05,470
+Is that? 
+Did I get that right? 
+
+811
+00:49:06,170 --> 00:49:08,610
+Yeah, so. 
+That's so you're thinking of it 
+
+812
+00:49:08,610 --> 00:49:11,330
+in a team situation. 
+It's like, yeah, we want the 
+
+813
+00:49:11,330 --> 00:49:14,770
+whole team to be able to be in 
+flow, Yeah. 
+
+814
+00:49:14,770 --> 00:49:17,650
+So there's this other challenge 
+that comes up of when when you 
+
+815
+00:49:17,650 --> 00:49:19,730
+get stuck and you need to ask 
+for help. 
+
+816
+00:49:20,570 --> 00:49:24,610
+So, so one of the things that 
+often happens is there's some 
+
+817
+00:49:24,610 --> 00:49:29,900
+developers that will ask for 
+help immediately or relatively 
+
+818
+00:49:29,900 --> 00:49:31,740
+soon. 
+They may be time limit to like 
+
+819
+00:49:31,740 --> 00:49:33,780
+30 minutes. 
+And if I'm still spinning on 
+
+820
+00:49:33,780 --> 00:49:35,980
+this after 30 minutes, I'll ask 
+somebody on the team. 
+
+821
+00:49:36,700 --> 00:49:42,820
+Other other developers will will
+wait until they're about in 
+
+822
+00:49:42,820 --> 00:49:46,060
+tears and have no other options 
+before they say anything, right?
+
+823
+00:49:47,220 --> 00:49:50,220
+And so there's some spectrum 
+there and reasons why, like, 
+
+824
+00:49:50,220 --> 00:49:53,840
+people don't ask for help even 
+when they probably should. 
+
+825
+00:49:53,840 --> 00:49:56,360
+Cause a lot of times, like the 
+you get an error message on your
+
+826
+00:49:56,360 --> 00:49:58,960
+screen, it's some esoteric thing
+that has nothing to do with your
+
+827
+00:49:58,960 --> 00:50:00,800
+skill levels. 
+Just like, but someone else on 
+
+828
+00:50:00,800 --> 00:50:03,440
+your team is like, Oh yeah, you 
+have to do X, right, and we'll 
+
+829
+00:50:03,440 --> 00:50:06,560
+know it immediately and save you
+hours of spinning your wheels. 
+
+830
+00:50:06,560 --> 00:50:09,760
+But but often because we have 
+that reflex of like, I don't 
+
+831
+00:50:09,800 --> 00:50:11,560
+want people to think that I'm 
+dumb. 
+
+832
+00:50:11,560 --> 00:50:14,000
+I don't want people to think 
+that I didn't try. 
+
+833
+00:50:14,000 --> 00:50:17,000
+You know, whatever the reasons 
+are of why people I don't want. 
+
+834
+00:50:17,040 --> 00:50:21,830
+To interrupt somebody and that 
+too of I don't want to interrupt
+
+835
+00:50:21,830 --> 00:50:25,470
+somebody that might be in flow 
+themselves because then now I'm 
+
+836
+00:50:25,710 --> 00:50:27,630
+being a bother, right? 
+That's a problem. 
+
+837
+00:50:27,630 --> 00:50:30,270
+I don't want that either, right.
+So there's all these reasons 
+
+838
+00:50:30,270 --> 00:50:32,870
+that people don't ask for help 
+and now even further, now that 
+
+839
+00:50:32,870 --> 00:50:37,590
+we're in this remote environment
+where we can't just see the 
+
+840
+00:50:37,590 --> 00:50:40,510
+people around us and you can't 
+just like look over and go, Oh 
+
+841
+00:50:40,510 --> 00:50:43,310
+well, he's clearly busy. 
+I won't, you know, bother that 
+
+842
+00:50:43,310 --> 00:50:47,670
+guy or whatever it is, right. 
+So now we have to make these 
+
+843
+00:50:47,670 --> 00:50:49,990
+judgement decisions without 
+being able to see one another 
+
+844
+00:50:49,990 --> 00:50:53,870
+either. 
+And So what the tools do is, is 
+
+845
+00:50:53,870 --> 00:50:56,790
+they, you know, you've got 
+tracking in terms of like how 
+
+846
+00:50:56,990 --> 00:51:00,110
+how deep people are in Flow 
+themselves across the team. 
+
+847
+00:51:00,110 --> 00:51:03,650
+And so when you're in those 
+moments that you're stuck in 
+
+848
+00:51:03,650 --> 00:51:08,050
+troubleshooting and you've been 
+at it for more than 30 minutes 
+
+849
+00:51:08,050 --> 00:51:11,850
+or so and it's probably a good 
+time to maybe consider getting 
+
+850
+00:51:11,850 --> 00:51:17,530
+some help that that based on the
+recent files and things that you
+
+851
+00:51:17,530 --> 00:51:20,330
+are looking at, you can get kind
+of context information about 
+
+852
+00:51:20,330 --> 00:51:22,250
+where this troubleshooting area 
+is. 
+
+853
+00:51:22,570 --> 00:51:25,930
+Then we can figure out like 
+who's familiar or most familiar 
+
+854
+00:51:25,930 --> 00:51:29,090
+with those particular areas of 
+code and then who's also 
+
+855
+00:51:29,330 --> 00:51:31,770
+available right now and not in 
+flow themselves. 
+
+856
+00:51:32,170 --> 00:51:37,330
+And so it it creates a kind of 
+like flow state aware people 
+
+857
+00:51:37,330 --> 00:51:40,530
+orchestration system for being 
+able to coordinate help requests
+
+858
+00:51:40,530 --> 00:51:43,410
+where you can be able to ask for
+help. 
+
+859
+00:51:43,650 --> 00:51:46,210
+Have someone be able to take a 
+look at your troubleshooting 
+
+860
+00:51:46,210 --> 00:51:50,530
+notes for so far and see if they
+have any insights in a sort of 
+
+861
+00:51:50,850 --> 00:51:54,090
+async, more convenient way 
+without having to worry about 
+
+862
+00:51:54,090 --> 00:51:55,490
+interrupting other people on 
+your team. 
+
+863
+00:51:56,490 --> 00:51:58,850
+Yeah, which seems like it would 
+make people much more 
+
+864
+00:51:58,850 --> 00:52:01,490
+comfortable. 
+Doing that because one of the 
+
+865
+00:52:01,490 --> 00:52:06,730
+things that I I notice more and 
+more is how reluctant people are
+
+866
+00:52:07,050 --> 00:52:10,730
+for various reasons to. 
+I mean, it's a vulnerable thing 
+
+867
+00:52:10,730 --> 00:52:13,850
+to do, especially in our field, 
+to admit that you don't 
+
+868
+00:52:13,890 --> 00:52:17,010
+understand something and it 
+wastes so much time. 
+
+869
+00:52:17,450 --> 00:52:20,690
+You know, if you're in a 
+conversation and somebody brings
+
+870
+00:52:20,690 --> 00:52:23,290
+something up and you go, I don't
+know what that is, but I don't 
+
+871
+00:52:23,290 --> 00:52:25,570
+want to. 
+You know, stop, stop. 
+
+872
+00:52:25,850 --> 00:52:28,970
+And I've tried to discipline 
+myself to say, wait, I don't 
+
+873
+00:52:28,970 --> 00:52:30,930
+know what you're talking about. 
+Please explain that because 
+
+874
+00:52:30,930 --> 00:52:33,050
+otherwise the rest of the 
+conversation is pointless. 
+
+875
+00:52:33,810 --> 00:52:38,040
+Yeah, So it turns software into 
+a A-Team sport. 
+
+876
+00:52:38,040 --> 00:52:41,600
+And then some of these metrics 
+that we have around, like if 
+
+877
+00:52:41,600 --> 00:52:44,800
+managers are trying to measure 
+individual developer 
+
+878
+00:52:44,800 --> 00:52:47,120
+productivity and how many 
+tickets you're delivering or 
+
+879
+00:52:47,120 --> 00:52:50,760
+whatever, there's, there's all 
+these incentives that also keep 
+
+880
+00:52:50,760 --> 00:52:52,480
+developers from helping one 
+another. 
+
+881
+00:52:52,480 --> 00:52:54,600
+Because then they're like, oh, 
+well, if I help you, then that 
+
+882
+00:52:54,600 --> 00:52:58,680
+takes away from my my own 
+delivery and proving my worth 
+
+883
+00:52:58,680 --> 00:53:00,400
+and all those kinds of things, 
+right? 
+
+884
+00:53:00,720 --> 00:53:05,580
+And so if if So, what I'm 
+basically trying to do is create
+
+885
+00:53:05,620 --> 00:53:13,740
+a set of visible metrics that 
+counter some of these 
+
+886
+00:53:13,900 --> 00:53:18,580
+dysfunctional existing metrics 
+that are driving dysfunctional 
+
+887
+00:53:18,580 --> 00:53:21,340
+behavior patterns. 
+So one of them is rewarding 
+
+888
+00:53:21,340 --> 00:53:28,280
+people for helping out their 
+peers and and so if you and and 
+
+889
+00:53:28,280 --> 00:53:31,120
+so so Furby is this little 
+character in the tools that you 
+
+890
+00:53:31,280 --> 00:53:34,880
+you level up and you've got like
+a little character that's kind 
+
+891
+00:53:34,880 --> 00:53:39,710
+of like Clippy but you know 
+reincarnate cuter not everybody 
+
+892
+00:53:39,830 --> 00:53:41,870
+knows what Clippy is now that's.
+True. 
+
+893
+00:53:41,870 --> 00:53:46,950
+Yeah, getting old, yeah. 
+But then, but then so you get 
+
+894
+00:53:46,950 --> 00:53:50,110
+rewarded and you get you level 
+up your little Furby and get XP 
+
+895
+00:53:50,110 --> 00:53:52,190
+for helping out your teammates 
+and things. 
+
+896
+00:53:52,190 --> 00:53:57,300
+And so there's visibility that 
+comes with with helping out, a 
+
+897
+00:53:57,300 --> 00:53:59,700
+reward that comes with, you 
+know, helping out. 
+
+898
+00:53:59,700 --> 00:54:04,060
+And so you're you're focused and
+learning how to optimize flow as
+
+899
+00:54:04,180 --> 00:54:07,900
+a team sport as opposed to on an
+individual basis. 
+
+900
+00:54:08,980 --> 00:54:13,700
+So the thing that you've decided
+through research is the the 
+
+901
+00:54:13,700 --> 00:54:17,620
+metric that matters is like how 
+much time developers are in flow
+
+902
+00:54:17,620 --> 00:54:19,700
+state is. 
+Or you're at least saying that's
+
+903
+00:54:19,700 --> 00:54:25,080
+representative of of? 
+What we're trying to get to, the
+
+904
+00:54:25,080 --> 00:54:28,160
+important thing that we're 
+trying to get to, I'm curious 
+
+905
+00:54:28,160 --> 00:54:31,480
+about one piece of the switch is
+have you and your research 
+
+906
+00:54:31,480 --> 00:54:36,240
+connected that back to the idea 
+of of thriving? 
+
+907
+00:54:36,240 --> 00:54:39,080
+Like are is there a connection 
+there? 
+
+908
+00:54:39,080 --> 00:54:42,520
+Like if I'm in flow state 100% 
+of the time, am I? 
+
+909
+00:54:42,840 --> 00:54:46,160
+Is there a correlation to that, 
+meaning that I'm also a thriving
+
+910
+00:54:46,160 --> 00:54:51,420
+developer. 
+So in terms of what I'm 
+
+911
+00:54:51,420 --> 00:54:55,700
+specifically focusing on, on my 
+research for my thesis, I have 
+
+912
+00:54:55,700 --> 00:54:59,260
+to keep it scoped so that I I 
+can get the project done. 
+
+913
+00:54:59,860 --> 00:55:02,740
+And generally speaking, 
+especially me since I've got 
+
+914
+00:55:02,740 --> 00:55:06,580
+like a bazillion things that I 
+like, you know, directions that 
+
+915
+00:55:06,580 --> 00:55:09,340
+I'm going simultaneously. 
+One of the challenges with 
+
+916
+00:55:09,340 --> 00:55:12,100
+putting together a formal thesis
+is like, I'm like, OK, I got to 
+
+917
+00:55:12,100 --> 00:55:14,140
+narrow down and pick and focus 
+on something. 
+
+918
+00:55:14,140 --> 00:55:17,380
+And so the theory of momentum 
+stuff is what I'm focused on for
+
+919
+00:55:17,380 --> 00:55:21,540
+my, for my thesis got a few 
+different metrics around 
+
+920
+00:55:21,540 --> 00:55:25,900
+momentum in particular. 
+So I've got time to momentum, 
+
+921
+00:55:25,900 --> 00:55:29,700
+which is from the beginning of 
+your day, how long does it take 
+
+922
+00:55:29,700 --> 00:55:32,300
+you to get momentum going? 
+So that's kind of your time to 
+
+923
+00:55:32,300 --> 00:55:36,710
+momentum metric. 
+And then and then there's a few 
+
+924
+00:55:36,710 --> 00:55:40,110
+different metrics around around 
+momentum specifically. 
+
+925
+00:55:40,110 --> 00:55:43,710
+So flow hours is one of them of 
+like how many hours am I in flow
+
+926
+00:55:43,710 --> 00:55:47,310
+during the day? 
+Momentum depth is another one. 
+
+927
+00:55:47,310 --> 00:55:50,990
+So, so that takes into account 
+like the exponential effects of 
+
+928
+00:55:50,990 --> 00:55:56,320
+so. 
+So if I have a a steady period 
+
+929
+00:55:56,320 --> 00:56:00,440
+of time that I get to focus and 
+really get deep into it, then 
+
+930
+00:56:00,440 --> 00:56:04,360
+those then you see kind of the 
+that exponential effect in in in
+
+931
+00:56:04,360 --> 00:56:08,520
+your overall kind of throughput 
+ability to stay in flow versus 
+
+932
+00:56:08,680 --> 00:56:12,040
+if I had two hours here and two 
+hours are here, I might have the
+
+933
+00:56:12,040 --> 00:56:15,120
+same amount of flow hours, but 
+it won't necessarily be as deep.
+
+934
+00:56:17,080 --> 00:56:20,400
+And there's one more I have, but
+I can't remember it off the top 
+
+935
+00:56:20,400 --> 00:56:21,640
+of my head. 
+Now there was. 
+
+936
+00:56:21,840 --> 00:56:24,530
+An article. 
+Go ahead. 
+
+937
+00:56:24,770 --> 00:56:27,450
+Then an article that came out, I
+don't know, in the last few 
+
+938
+00:56:27,450 --> 00:56:29,170
+months. 
+The McKesson developer 
+
+939
+00:56:29,170 --> 00:56:32,730
+productivity, Yeah thing where? 
+All that where? 
+
+940
+00:56:32,930 --> 00:56:35,210
+Did you see it? 
+Of course, yeah. 
+
+941
+00:56:35,370 --> 00:56:39,930
+That left for commotion. 
+You had some reactions to it. 
+
+942
+00:56:39,930 --> 00:56:43,570
+Well, and Dan N did a really 
+nice job of taking it apart. 
+
+943
+00:56:43,570 --> 00:56:47,750
+He treated it as. 
+As a draft and he was giving 
+
+944
+00:56:47,750 --> 00:56:50,190
+comments on the draft. 
+I thought that was very well 
+
+945
+00:56:50,630 --> 00:56:52,670
+done. 
+Yeah, I I like that approach of 
+
+946
+00:56:52,670 --> 00:56:56,590
+like of like we're gonna try and
+be kind and be courteous and and
+
+947
+00:56:56,590 --> 00:57:00,710
+be respectful on how we we give 
+a little critique back on on 
+
+948
+00:57:00,710 --> 00:57:05,630
+this whole thing. 
+Like I I'm I'm not so against 
+
+949
+00:57:05,670 --> 00:57:11,590
+the existence of having some 
+kind of metrics, but I think we 
+
+950
+00:57:11,590 --> 00:57:15,970
+need to be very, very careful 
+about what kinds of things we 
+
+951
+00:57:15,970 --> 00:57:18,530
+make visible. 
+Cause 'cause even just by 
+
+952
+00:57:19,170 --> 00:57:24,370
+creating a number for something,
+there's there's an immediate 
+
+953
+00:57:24,370 --> 00:57:26,330
+effect. 
+Even if nobody else sees that 
+
+954
+00:57:26,330 --> 00:57:30,130
+than us, we automatically start 
+gaming and optimizing for 
+
+955
+00:57:30,130 --> 00:57:31,810
+whatever is visible in front of 
+us. 
+
+956
+00:57:32,010 --> 00:57:36,050
+So it's other part of the reason
+why I find it's important to do 
+
+957
+00:57:36,050 --> 00:57:40,090
+this work in a research context 
+so that we can also find out, 
+
+958
+00:57:40,600 --> 00:57:42,920
+like, how these different 
+numbers and stuff actually 
+
+959
+00:57:42,920 --> 00:57:45,080
+affect people. 
+And I, you know, I try out my 
+
+960
+00:57:45,080 --> 00:57:47,640
+tools myself to see how it 
+affects me. 
+
+961
+00:57:47,640 --> 00:57:50,120
+And then you know, there's a 
+certain amount of, like, you 
+
+962
+00:57:50,120 --> 00:57:53,360
+know, if I do something and I'm 
+like I don't have a good feeling
+
+963
+00:57:53,360 --> 00:57:55,320
+about this, You know, I don't 
+think this is necessarily gonna 
+
+964
+00:57:55,320 --> 00:57:59,120
+have the effect that I want. 
+Then you know, I I, I scrap 
+
+965
+00:57:59,120 --> 00:58:04,440
+things and change things too 
+'cause you know, my my goal is 
+
+966
+00:58:04,440 --> 00:58:09,800
+to help empower developers with 
+telling their story with. 
+
+967
+00:58:10,160 --> 00:58:15,840
+With being able to explain and 
+share like the pain and our 
+
+968
+00:58:15,840 --> 00:58:19,480
+invisible experiences and be 
+able to communicate these things
+
+969
+00:58:19,900 --> 00:58:24,940
+that that matter in a way with 
+with empirical data and support 
+
+970
+00:58:25,100 --> 00:58:27,860
+support developers in that so 
+and you're also. 
+
+971
+00:58:27,980 --> 00:58:32,260
+Trying this your tools out on, 
+you said freshman students, 
+
+972
+00:58:32,340 --> 00:58:35,060
+which I think is great because 
+they're the ones that are the 
+
+973
+00:58:35,060 --> 00:58:37,060
+most confused. 
+So you have lots of people. 
+
+974
+00:58:38,060 --> 00:58:40,460
+Well it's it's a it's a 
+different it's a different 
+
+975
+00:58:40,460 --> 00:58:44,540
+context of because I mean I 
+think it's like when you're 
+
+976
+00:58:44,540 --> 00:58:49,020
+learning to code to begin with 
+how do you where where is it you
+
+977
+00:58:49,020 --> 00:58:53,900
+learn how to troubleshoot 
+problems or how to like stay in 
+
+978
+00:58:53,900 --> 00:58:57,660
+control of the code and like 
+work in small micro iterations 
+
+979
+00:58:57,660 --> 00:59:01,620
+and you know all of these sort 
+of like nuances of of software 
+
+980
+00:59:01,620 --> 00:59:03,900
+engineering that we kind of take
+for granted of stuff we just 
+
+981
+00:59:03,900 --> 00:59:07,900
+kind of do now and and have that
+like art down. 
+
+982
+00:59:07,900 --> 00:59:12,740
+But like when when you start 
+trying to teach juniors and one 
+
+983
+00:59:12,740 --> 00:59:18,020
+of the things that always 
+highlights is how much tacit 
+
+984
+00:59:18,020 --> 00:59:21,140
+knowledge that you've got in 
+your head and intuition about 
+
+985
+00:59:21,140 --> 00:59:23,900
+these things that just isn't 
+necessarily in someone elses 
+
+986
+00:59:23,980 --> 00:59:26,780
+head. 
+And so I think it creates a way 
+
+987
+00:59:26,780 --> 00:59:31,620
+to make some of these sort of 
+art of software development 
+
+988
+00:59:31,620 --> 00:59:34,610
+things more visible and 
+explicit. 
+
+989
+00:59:34,610 --> 00:59:38,490
+So you can take someone who's 
+more junior and give them a set 
+
+990
+00:59:38,490 --> 00:59:41,810
+of practices and tools to be 
+able to reflect on these 
+
+991
+00:59:41,810 --> 00:59:45,130
+dynamics of just staying in 
+control of the code and not 
+
+992
+00:59:45,130 --> 00:59:47,570
+ending up confused for several 
+hours. 
+
+993
+00:59:47,570 --> 00:59:49,770
+So that you're only changing one
+little thing at a time. 
+
+994
+00:59:49,770 --> 00:59:54,050
+And like, you know, learning 
+those dynamics of of things is 
+
+995
+00:59:54,530 --> 00:59:58,810
+it it creates a feedback loop 
+for these sort of subtle 
+
+996
+00:59:58,810 --> 01:00:02,450
+invisible factors that aren't 
+normally taught in school. 
+
+997
+01:00:02,450 --> 01:00:07,130
+So one of the things I like to 
+figure out how to do is to use 
+
+998
+01:00:07,130 --> 01:00:12,370
+these sort of tools to augment 
+kind of early computer science 
+
+999
+01:00:12,370 --> 01:00:15,930
+programming education to help 
+teach these kind of things that 
+
+1000
+01:00:15,930 --> 01:00:18,170
+aren't usually taught. 
+Oh, nice. 
+
+1001
+01:00:19,770 --> 01:00:23,780
+Yeah, it seems like there's a 
+ton of value in teaching early 
+
+1002
+01:00:23,780 --> 01:00:27,940
+programmers how to get into flow
+state, how to stay in flow 
+
+1003
+01:00:27,940 --> 01:00:31,580
+state, how to go deeper into 
+flow state, and giving them 
+
+1004
+01:00:31,580 --> 01:00:34,780
+tools that reinforce those 
+things and direct them. 
+
+1005
+01:00:34,820 --> 01:00:37,380
+And understanding friction. 
+And understanding friction. 
+
+1006
+01:00:37,700 --> 01:00:39,740
+Yeah, yeah, that's cool. 
+Yeah. 
+
+1007
+01:00:39,780 --> 01:00:42,020
+Not taught any place I've ever 
+heard of. 
+
+1008
+01:00:42,020 --> 01:00:45,670
+It was mostly just we had to 
+learn it through decades of. 
+
+1009
+01:00:45,670 --> 01:00:48,070
+Yeah, of. 
+Struggle and even software 
+
+1010
+01:00:48,070 --> 01:00:51,990
+engineering was really not that.
+It was just oh you you're 
+
+1011
+01:00:51,990 --> 01:00:54,630
+actually not just gonna be 
+writing little example. 
+
+1012
+01:00:54,950 --> 01:00:56,350
+You have to actually build a 
+system. 
+
+1013
+01:00:56,350 --> 01:00:58,710
+But that was it wasn't it 
+wasn't. 
+
+1014
+01:00:58,790 --> 01:01:03,030
+There was no real mention of The
+People Factor, which oh, another
+
+1015
+01:01:03,030 --> 01:01:05,550
+book I would recommend is People
+Wear. 
+
+1016
+01:01:06,870 --> 01:01:07,950
+OK. 
+Yeah, that one. 
+
+1017
+01:01:08,270 --> 01:01:09,190
+Most of those. 
+Those. 
+
+1018
+01:01:09,270 --> 01:01:11,830
+That's an easy read, and it has 
+a lot of stuff that you're 
+
+1019
+01:01:11,830 --> 01:01:13,510
+talking about. 
+Awesome. 
+
+1020
+01:01:13,550 --> 01:01:16,470
+Thank you and and research based
+stuff. 
+
+1021
+01:01:16,590 --> 01:01:21,870
+Really quite a good book. 
+DeMarco and Lister, What's the 
+
+1022
+01:01:21,870 --> 01:01:25,310
+name of your your fun tool, 
+Furvy? 
+
+1023
+01:01:25,470 --> 01:01:27,630
+Fun tool. 
+Yeah, they're like what? 
+
+1024
+01:01:27,630 --> 01:01:29,870
+This tool you've been talking 
+about that helps. 
+
+1025
+01:01:30,070 --> 01:01:33,870
+The tool is Flow Insight, which 
+you can check out at 
+
+1026
+01:01:33,870 --> 01:01:40,070
+flowinsight.com Nice and then 
+furvy is is, is. 
+
+1027
+01:01:40,750 --> 01:01:45,350
+Your little rubber ducky friend 
+buddy. 
+
+1028
+01:01:46,190 --> 01:01:49,310
+It's Furby in Flow Insight. 
+So like like if you install. 
+
+1029
+01:01:49,350 --> 01:01:53,190
+The flow insight and then you 
+know I've also got I've I've 
+
+1030
+01:01:53,190 --> 01:01:58,190
+also got like a like a 3D. 
+So I've got both 2D animation 
+
+1031
+01:01:58,190 --> 01:02:01,510
+set stuff and 3D animations with
+with Furby. 
+
+1032
+01:02:01,510 --> 01:02:04,830
+So Furby has kind of taken on a 
+life of his own outside of the 
+
+1033
+01:02:04,870 --> 01:02:09,230
+tools as well. 
+So can we get Furby plushies for
+
+1034
+01:02:09,230 --> 01:02:11,360
+my kid? 
+Soon. 
+
+1035
+01:02:11,400 --> 01:02:13,320
+Soon. 
+Eventually. 
+
+1036
+01:02:13,320 --> 01:02:15,760
+It's actually something we've 
+talked about of just like at 
+
+1037
+01:02:15,760 --> 01:02:18,240
+conferences and stuff like we 
+should have some furry plushies 
+
+1038
+01:02:18,400 --> 01:02:21,440
+too. 
+Yeah, so you're writing quite a 
+
+1039
+01:02:21,480 --> 01:02:24,320
+you're doing all this research, 
+but you're also writing code and
+
+1040
+01:02:24,320 --> 01:02:28,800
+building things and then you're 
+like dog fooding your own stuff 
+
+1041
+01:02:28,800 --> 01:02:33,440
+as you're building this stuff 
+And then and I was wondering if 
+
+1042
+01:02:33,560 --> 01:02:36,600
+that's kind of the connection 
+back to thriving. 
+
+1043
+01:02:36,920 --> 01:02:41,500
+Is that you probably know what 
+thriving as a developer looks 
+
+1044
+01:02:41,500 --> 01:02:44,740
+like. 
+And so you're then taking the 
+
+1045
+01:02:44,900 --> 01:02:48,540
+the tools and the the ways to 
+measure flow that you're 
+
+1046
+01:02:48,540 --> 01:02:52,220
+developing and almost like 
+testing that against your 
+
+1047
+01:02:52,220 --> 01:02:56,620
+mission of thriving and seeing 
+like are are these things 
+
+1048
+01:02:56,620 --> 01:03:00,660
+helping me thrive or not, is it 
+is that, yeah I I'm kind of 
+
+1049
+01:03:00,660 --> 01:03:03,060
+assuming a connection there but.
+Maybe, yeah. 
+
+1050
+01:03:03,780 --> 01:03:06,820
+I I mean, there definitely is a 
+connection I like there's 
+
+1051
+01:03:06,940 --> 01:03:10,390
+there's some. 
+Hypotheses, assumptions you know
+
+1052
+01:03:10,390 --> 01:03:18,790
+just buried in that that that. 
+So like for example like when 
+
+1053
+01:03:18,790 --> 01:03:24,030
+you're deeper in flow, being in 
+flow state has been associated 
+
+1054
+01:03:24,030 --> 01:03:28,390
+with this experience of joy and 
+this feeling of enjoyment and 
+
+1055
+01:03:28,390 --> 01:03:33,070
+and fulfilment and stuff. 
+So if we during our experiences 
+
+1056
+01:03:33,070 --> 01:03:38,590
+experience more flow. 
+Is that going to more joy? 
+
+1057
+01:03:38,750 --> 01:03:40,670
+Yeah. 
+I mean, for me that's certainly 
+
+1058
+01:03:40,670 --> 01:03:43,630
+true. 
+When I get into flow state, 
+
+1059
+01:03:43,910 --> 01:03:48,030
+there's the endorphins or 
+something is flowing and yeah, 
+
+1060
+01:03:48,230 --> 01:03:51,070
+I'm feeling good. 
+This is why I'm doing this, to 
+
+1061
+01:03:51,070 --> 01:03:54,670
+be in this state and I want to 
+be in this state as much as I 
+
+1062
+01:03:54,670 --> 01:03:57,450
+can, yeah. 
+So like when you go home at the 
+
+1063
+01:03:57,450 --> 01:04:00,650
+end of the day and feel like I 
+had a really good day today, you
+
+1064
+01:04:00,650 --> 01:04:03,850
+know, like I really got some 
+good work done, I feel like. 
+
+1065
+01:04:03,890 --> 01:04:06,770
+And it it like when you have 
+that day that feels productive, 
+
+1066
+01:04:06,770 --> 01:04:09,330
+right? 
+It's usually because you were in
+
+1067
+01:04:09,330 --> 01:04:14,170
+flow, you know, you were like in
+the zone, cranking stuff out, 
+
+1068
+01:04:14,170 --> 01:04:17,410
+feeling like you made some good 
+progress on those low friction. 
+
+1069
+01:04:17,530 --> 01:04:20,810
+Yeah, yeah, here's. 
+Here's the thing that happens to
+
+1070
+01:04:20,810 --> 01:04:23,850
+me, which is that I do 
+something. 
+
+1071
+01:04:24,420 --> 01:04:26,420
+And it's like, oh, that felt 
+really good. 
+
+1072
+01:04:27,020 --> 01:04:29,660
+I want to try and do more. 
+I want to try and get more of 
+
+1073
+01:04:29,660 --> 01:04:32,900
+that feeling. 
+And I push it too far. 
+
+1074
+01:04:32,940 --> 01:04:37,220
+And then I end up coming away 
+going, oh, now I'm, you know, I 
+
+1075
+01:04:37,220 --> 01:04:39,460
+get, I don't know, stuck again. 
+I don't know. 
+
+1076
+01:04:39,980 --> 01:04:43,460
+It seems like there's a point 
+where you go, OK, I'm on a high,
+
+1077
+01:04:43,460 --> 01:04:48,220
+I should stop now, maybe put a 
+bookmark in. 
+
+1078
+01:04:48,220 --> 01:04:50,940
+That's what oh, it's like. 
+When I'm deep and flow state, 
+
+1079
+01:04:50,940 --> 01:04:55,610
+I'm like like I cannot just. 
+It's not only this little 
+
+1080
+01:04:55,610 --> 01:04:58,810
+problem I'm working on. 
+I'm gonna go rewrite a build 
+
+1081
+01:04:58,810 --> 01:05:00,770
+tool. 
+But to rewrite a build tool I 
+
+1082
+01:05:00,770 --> 01:05:03,650
+probably need to rewrite a 
+programming language and I need 
+
+1083
+01:05:03,650 --> 01:05:07,690
+to rewrite AVM from scratch and 
+I need to then probably rewrite 
+
+1084
+01:05:07,690 --> 01:05:11,010
+an operating system and rewrite 
+BIOS like I need to like do it 
+
+1085
+01:05:11,010 --> 01:05:12,690
+all. 
+You know, there's like, yeah, 
+
+1086
+01:05:12,730 --> 01:05:15,250
+like I can do this. 
+You know, like when you're, you 
+
+1087
+01:05:15,250 --> 01:05:18,290
+feel like a superhuman when 
+you're in that flow state. 
+
+1088
+01:05:18,490 --> 01:05:21,980
+And then it's probably good that
+I haven't tried to actually do 
+
+1089
+01:05:21,980 --> 01:05:25,220
+those things because then I 
+would like be like, yeah, I'm 
+
+1090
+01:05:25,220 --> 01:05:26,740
+not this. 
+I'm not the Super. 
+
+1091
+01:05:26,740 --> 01:05:29,540
+I'm not the superhuman I thought
+I was. 
+
+1092
+01:05:31,780 --> 01:05:35,460
+Yeah, I it's one of those things
+like with any sort of like 
+
+1093
+01:05:35,660 --> 01:05:39,100
+metric measure kind of thing, 
+you know you can put the if you 
+
+1094
+01:05:39,100 --> 01:05:42,420
+put the blinders on and that's 
+all you focus on and you just 
+
+1095
+01:05:42,420 --> 01:05:45,700
+ignore all other signals, you're
+probably not going to make very 
+
+1096
+01:05:45,700 --> 01:05:49,380
+good decisions. 
+But so, so I mean I I think 
+
+1097
+01:05:49,380 --> 01:05:53,020
+there's there's always going to 
+be this element of pragmatism to
+
+1098
+01:05:53,060 --> 01:05:58,100
+things of just like and as as 
+and so you know, we, like I was 
+
+1099
+01:05:58,100 --> 01:06:00,900
+saying before of just just 
+because you're in flow also 
+
+1100
+01:06:00,900 --> 01:06:03,660
+doesn't mean you're doing 
+quality work necessarily. 
+
+1101
+01:06:03,660 --> 01:06:08,660
+Like we still need to be able to
+you know take a look at you know
+
+1102
+01:06:08,660 --> 01:06:11,020
+the quality of what we're 
+producing and you know thinking 
+
+1103
+01:06:11,020 --> 01:06:12,860
+about those things too. 
+So it's it's. 
+
+1104
+01:06:13,370 --> 01:06:17,850
+It's I I think a necessary but 
+not sufficient, right? 
+
+1105
+01:06:17,850 --> 01:06:20,130
+Yeah, I. 
+Need to surface sometimes and 
+
+1106
+01:06:20,130 --> 01:06:25,170
+check the environment. 
+You said something a little 
+
+1107
+01:06:25,170 --> 01:06:28,330
+while back where you said, oh, 
+if I try something and then I 
+
+1108
+01:06:28,330 --> 01:06:30,010
+decide it doesn't feel good, I 
+drop it. 
+
+1109
+01:06:30,690 --> 01:06:34,330
+I have had experiences where I 
+go, I don't know. 
+
+1110
+01:06:34,410 --> 01:06:37,570
+I mean a lot of it is around 
+designing this conference. 
+
+1111
+01:06:37,990 --> 01:06:40,910
+And people will come and they 
+go, well, how about this? 
+
+1112
+01:06:41,230 --> 01:06:44,710
+I go, oh, that doesn't sound 
+right to me, but OK, let's try 
+
+1113
+01:06:44,710 --> 01:06:46,630
+it. 
+And it turns out that, oh, I'm 
+
+1114
+01:06:46,710 --> 01:06:50,070
+totally wrong. 
+And and what I really needed to 
+
+1115
+01:06:50,070 --> 01:06:54,630
+do was pay attention to, you 
+know, the environment and just 
+
+1116
+01:06:54,630 --> 01:06:56,430
+like, Oh no, this is what people
+want. 
+
+1117
+01:06:56,430 --> 01:07:00,590
+I should do that even if it even
+if I have some block in my head 
+
+1118
+01:07:00,590 --> 01:07:02,710
+about it. 
+Yeah. 
+
+1119
+01:07:03,980 --> 01:07:06,740
+Yeah. 
+Discovery and like these 
+
+1120
+01:07:06,740 --> 01:07:11,980
+unexpected things are are in 
+learning and being surprised and
+
+1121
+01:07:11,980 --> 01:07:18,500
+you know all of that is is part 
+of the experience too and so, so
+
+1122
+01:07:18,660 --> 01:07:23,180
+looking at momentum it just 
+gives us one additional kind of 
+
+1123
+01:07:23,180 --> 01:07:26,500
+scope of things that I think are
+worth thinking about that are 
+
+1124
+01:07:26,500 --> 01:07:29,500
+largely invisible that we're not
+really taking into account right
+
+1125
+01:07:29,500 --> 01:07:32,220
+now. 
+And and I I think the other 
+
+1126
+01:07:32,220 --> 01:07:35,220
+thing. 
+Is like momentum as like a a 
+
+1127
+01:07:35,220 --> 01:07:40,660
+concept and is is something that
+if we just even as a concept, if
+
+1128
+01:07:40,660 --> 01:07:44,220
+we think about like getting the 
+momentum going as something that
+
+1129
+01:07:44,220 --> 01:07:48,780
+we worked around optimizing for.
+Generally speaking, I think 
+
+1130
+01:07:48,780 --> 01:07:52,660
+that's probably a reasonably 
+healthy thing to aim for is is 
+
+1131
+01:07:52,660 --> 01:07:56,340
+getting our momentum going right
+and team momentum as being a a 
+
+1132
+01:07:56,660 --> 01:08:00,380
+key part I think of that. 
+In think of the organization, 
+
+1133
+01:08:00,380 --> 01:08:04,940
+not the. 
+What am I trying to get the 
+
+1134
+01:08:05,860 --> 01:08:09,700
+entity not as the individual, 
+but as the team together? 
+
+1135
+01:08:11,180 --> 01:08:12,580
+Well, that seems like a nice 
+summary. 
+
+1136
+01:08:12,740 --> 01:08:13,540
+Yeah. 
+Yeah. 
+
+1137
+01:08:14,860 --> 01:08:18,220
+Any final thoughts? 
+Anything we missed? 
+
+1138
+01:08:24,609 --> 01:08:28,450
+Well, do you have any have any 
+final last you know questions or
+
+1139
+01:08:28,450 --> 01:08:29,930
+anything. 
+We didn't really talk about any 
+
+1140
+01:08:29,930 --> 01:08:34,330
+of the AR stuff like I'm I'm but
+that's like a whole nother, 
+
+1141
+01:08:34,569 --> 01:08:37,649
+whole nother thread of of 
+conversations. 
+
+1142
+01:08:37,649 --> 01:08:42,850
+But I'm I'm really excited about
+exploring. 
+
+1143
+01:08:45,120 --> 01:08:50,200
+Sort of expanded tooling that we
+could use that that could help 
+
+1144
+01:08:50,200 --> 01:08:54,600
+us you know better understand 
+our environment and kind of the 
+
+1145
+01:08:54,600 --> 01:08:59,800
+context we work in. 
+We've had like the IDE for like 
+
+1146
+01:09:00,000 --> 01:09:02,359
+ever now. 
+I mean not not forever, but I 
+
+1147
+01:09:02,359 --> 01:09:04,560
+mean you know it's like things 
+haven't really fundamentally 
+
+1148
+01:09:04,560 --> 01:09:07,920
+changed in software world really
+in a long time like we've got ID
+
+1149
+01:09:07,920 --> 01:09:11,160
+ES and we're using text editors 
+and and like there's been 
+
+1150
+01:09:11,160 --> 01:09:14,770
+various. 
+You know attempts on trying to 
+
+1151
+01:09:14,770 --> 01:09:21,569
+do visual programming stuff, but
+but like I I it usually kind of 
+
+1152
+01:09:21,569 --> 01:09:24,370
+goes to like this extreme. 
+Like I would much rather in 
+
+1153
+01:09:24,370 --> 01:09:26,010
+general work with text and 
+things. 
+
+1154
+01:09:26,010 --> 01:09:29,330
+I find then when I'm like, you 
+know with things that try and 
+
+1155
+01:09:29,330 --> 01:09:32,569
+pipe little visual programming 
+things around, I just kind of 
+
+1156
+01:09:32,770 --> 01:09:35,970
+roll my eyes a little bit like 
+I'm just like I don't this is 
+
+1157
+01:09:35,970 --> 01:09:42,729
+not fun but but that said, I I 
+think there are like. 
+
+1158
+01:09:43,330 --> 01:09:47,050
+Visualization tools that could 
+like help us understand, like 
+
+1159
+01:09:47,050 --> 01:09:50,689
+the the context of the system 
+we're working in and to be able 
+
+1160
+01:09:50,689 --> 01:09:55,570
+to make these connections 
+between like what the code is 
+
+1161
+01:09:55,570 --> 01:09:58,610
+versus like what the behaviour 
+is we're seeing on the screen 
+
+1162
+01:09:58,610 --> 01:10:02,770
+and being able to make those 
+connections of like when I poke 
+
+1163
+01:10:02,770 --> 01:10:05,330
+this thing. 
+It makes this thing light up 
+
+1164
+01:10:05,330 --> 01:10:09,090
+over here, you know, and and 
+like being able to build that 
+
+1165
+01:10:09,090 --> 01:10:12,810
+mental model more effectively. 
+I think there's a lot of 
+
+1166
+01:10:12,810 --> 01:10:17,290
+potential for expanding our tool
+set to support some of these 
+
+1167
+01:10:17,930 --> 01:10:21,170
+cognitive processes that we go 
+through in software development 
+
+1168
+01:10:21,170 --> 01:10:23,690
+to get an understanding of 
+what's going on, especially as 
+
+1169
+01:10:23,690 --> 01:10:27,810
+we get into, you know, you know,
+increasingly complex 
+
+1170
+01:10:27,810 --> 01:10:30,950
+environments. 
+Throwing the AI wrench into 
+
+1171
+01:10:30,950 --> 01:10:33,830
+things and now we have all this 
+code in the system that nobody 
+
+1172
+01:10:33,830 --> 01:10:36,870
+on our team is familiar with 
+really because nobody wrote it, 
+
+1173
+01:10:36,870 --> 01:10:39,990
+right. 
+So I mean I I think we we're 
+
+1174
+01:10:39,990 --> 01:10:44,950
+going to have a whole new set of
+ways for projects to fail in the
+
+1175
+01:10:44,950 --> 01:10:51,870
+future and so being able to 
+improve our tooling that helps 
+
+1176
+01:10:51,870 --> 01:10:55,190
+us. 
+To develop an understanding of 
+
+1177
+01:10:55,190 --> 01:10:59,110
+our code bases and sustain our 
+understanding of our code bases 
+
+1178
+01:10:59,110 --> 01:11:04,150
+and sort of takes into account 
+as a first order thing that what
+
+1179
+01:11:04,150 --> 01:11:08,270
+we're trying to build a mental 
+model of is this relationship 
+
+1180
+01:11:08,270 --> 01:11:13,190
+between what our code looks like
+and these behaviors and stuff 
+
+1181
+01:11:13,190 --> 01:11:16,870
+that we see. 
+And I I I I've been reading like
+
+1182
+01:11:16,870 --> 01:11:22,210
+papers on on like a. 
+Around like developers 
+
+1183
+01:11:22,210 --> 01:11:25,410
+understanding code from a 
+research perspective and one of 
+
+1184
+01:11:25,410 --> 01:11:28,450
+the things I notice when I'm 
+reading this stuff is a lot of 
+
+1185
+01:11:28,450 --> 01:11:32,410
+these papers sort of like assume
+that what is the mental model in
+
+1186
+01:11:32,410 --> 01:11:34,530
+developer's head is a model of 
+the code. 
+
+1187
+01:11:34,530 --> 01:11:36,970
+Like we've got all these 
+functions and things in our head
+
+1188
+01:11:38,010 --> 01:11:40,730
+and I and and and when I was 
+reading that and I started 
+
+1189
+01:11:40,730 --> 01:11:45,890
+thinking I'm like I don't have a
+list of functions in my head and
+
+1190
+01:11:46,210 --> 01:11:48,290
+but and so you start thinking 
+about of like. 
+
+1191
+01:11:48,700 --> 01:11:50,620
+You know, because it's not 
+something that's necessarily 
+
+1192
+01:11:50,620 --> 01:11:53,940
+that clear, but it's like what 
+is in my brain right now when 
+
+1193
+01:11:53,940 --> 01:11:58,220
+I'm thinking about, you know 
+these things And and that was 
+
+1194
+01:11:58,220 --> 01:12:01,300
+sort of the conclusion that I 
+came to is it's these 
+
+1195
+01:12:01,300 --> 01:12:06,820
+relationships between behavior 
+and the code that you see that 
+
+1196
+01:12:06,820 --> 01:12:09,220
+is what we're kind of we have 
+this kind of connection model 
+
+1197
+01:12:09,220 --> 01:12:12,630
+between those things. 
+And in understanding that and 
+
+1198
+01:12:12,630 --> 01:12:15,390
+developing kind of these, you 
+know, these theories around 
+
+1199
+01:12:15,390 --> 01:12:18,030
+these cognitive processes and 
+getting better clarity of what's
+
+1200
+01:12:18,030 --> 01:12:22,310
+going on, I think it opens the 
+door to build a whole variety of
+
+1201
+01:12:22,310 --> 01:12:26,310
+new sorts of tools that that can
+help support the cognitive 
+
+1202
+01:12:26,310 --> 01:12:29,470
+support positive process of that
+model. 
+
+1203
+01:12:30,450 --> 01:12:34,050
+Because today it's, I read code,
+I click through a bunch of 
+
+1204
+01:12:34,050 --> 01:12:37,810
+classes, I look at tests, I 
+write, tests, I write like I'm 
+
+1205
+01:12:37,810 --> 01:12:41,650
+doing all these things to 
+essentially map from the text 
+
+1206
+01:12:41,650 --> 01:12:44,410
+and the functions to the 
+behavior. 
+
+1207
+01:12:44,730 --> 01:12:48,010
+And you're saying, hey, maybe 
+maybe we could actually have 
+
+1208
+01:12:48,010 --> 01:12:51,330
+something that would help you 
+get to that model more easily. 
+
+1209
+01:12:51,770 --> 01:12:54,690
+And there seems like there's a 
+lot of opportunity there. 
+
+1210
+01:12:55,050 --> 01:12:58,050
+Nice. 
+So that's that's a project. 
+
+1211
+01:12:58,050 --> 01:13:01,010
+You've also been working on one 
+of your many projects. 
+
+1212
+01:13:01,330 --> 01:13:03,010
+Is yeah, one of my many. 
+They are. 
+
+1213
+01:13:04,170 --> 01:13:08,970
+So is is this something that our
+listeners can can check out or 
+
+1214
+01:13:08,970 --> 01:13:11,770
+or what's the current? 
+Statement. 
+
+1215
+01:13:12,450 --> 01:13:14,210
+Not yet. 
+I have. 
+
+1216
+01:13:14,450 --> 01:13:18,290
+So the talk I shared with you, I
+I mean I did a recent talk 
+
+1217
+01:13:18,290 --> 01:13:24,980
+that's on YouTube of GDG. 
+South Lake on visualizing 
+
+1218
+01:13:24,980 --> 01:13:29,140
+friction and flow and I I demoed
+some of the early prototype 
+
+1219
+01:13:29,140 --> 01:13:33,100
+projects that I've got with with
+visualizing friction and flow 
+
+1220
+01:13:33,100 --> 01:13:39,020
+across your code base in in AR. 
+And the the the context for that
+
+1221
+01:13:39,020 --> 01:13:42,660
+tooling was to support teams in 
+doing a data-driven 
+
+1222
+01:13:42,660 --> 01:13:45,380
+retrospective. 
+So you can see like hotspots 
+
+1223
+01:13:45,380 --> 01:13:49,580
+based on developer friction and 
+how that correlates with. 
+
+1224
+01:13:50,160 --> 01:13:55,920
+Your code and then use that to 
+identify where should we start 
+
+1225
+01:13:55,920 --> 01:13:59,840
+our conversation about what's 
+going on and talking about what 
+
+1226
+01:13:59,840 --> 01:14:01,080
+made troubleshooting take so 
+long. 
+
+1227
+01:14:01,080 --> 01:14:05,160
+So those experiential 
+perspectives, but in context of 
+
+1228
+01:14:05,160 --> 01:14:08,400
+where we are in the code, when 
+those things are happening and 
+
+1229
+01:14:08,400 --> 01:14:11,890
+then aggregated across the team.
+And I created like a a code 
+
+1230
+01:14:11,890 --> 01:14:17,250
+planetarium in AR. 
+So kind of inspired by like a 
+
+1231
+01:14:17,450 --> 01:14:20,850
+Led Zeppelin laser light show I 
+you know planetarium growing up.
+
+1232
+01:14:21,570 --> 01:14:26,330
+Anyway, so I I I made a code 
+planetarium in an AR context and
+
+1233
+01:14:26,330 --> 01:14:32,010
+I I I demoed that a few few 
+months back but I'm I'm I'm 
+
+1234
+01:14:32,010 --> 01:14:36,490
+exploring like how how can we 
+apply AR in software 
+
+1235
+01:14:36,490 --> 01:14:37,730
+engineering? 
+So like. 
+
+1236
+01:14:38,390 --> 01:14:41,790
+I'm sure you'll see some papers 
+from me on this topic in the 
+
+1237
+01:14:41,790 --> 01:14:43,390
+future. 
+Very exciting. 
+
+1238
+01:14:45,230 --> 01:14:47,870
+Cool. 
+Well, Artie, thank you. 
+
+1239
+01:14:48,750 --> 01:14:53,390
+Thanks for for leading the 
+charge in a lot of ways to help 
+
+1240
+01:14:53,390 --> 01:14:57,990
+developers live more joyful and 
+fulfilling lives. 
+
+1241
+01:14:57,990 --> 01:15:00,270
+So that's a very cool mission, 
+so I like it. 
+
+1242
+01:15:01,270 --> 01:15:01,910
+Thanks. 
+Awesome. 
+
+1243
+01:15:01,990 --> 01:15:03,470
+Thank you. 
+Thanks for having me.
+

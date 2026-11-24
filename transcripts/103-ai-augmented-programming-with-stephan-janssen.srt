@@ -1,0 +1,6003 @@
+1
+00:00:01,080 --> 00:00:03,440
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,760 --> 00:00:05,560
+I'm Bruce Eckel. 
+I'm James Ward. 
+
+3
+00:00:09,000 --> 00:00:11,080
+All right. 
+Welcome to Happy Path 
+
+4
+00:00:11,080 --> 00:00:14,040
+Programming. 
+Oh, we have a fun one today. 
+
+5
+00:00:14,040 --> 00:00:17,600
+So we have Stefan Jensen. 
+Did I say Jensen right? 
+
+6
+00:00:18,560 --> 00:00:21,840
+You're from Belgium and so the 
+the Jays are a little different 
+
+7
+00:00:21,840 --> 00:00:22,840
+there. 
+Right. 
+
+8
+00:00:23,920 --> 00:00:27,640
+Well, it's great to have you. 
+You've been, let's start with 
+
+9
+00:00:27,640 --> 00:00:29,880
+this. 
+You've been a developer for a 
+
+10
+00:00:29,880 --> 00:00:33,200
+long time. 
+Like what, 20-30 years 40? 
+
+11
+00:00:33,400 --> 00:00:37,160
+Yeah, it's longer. 
+I was doing first BASIC on a 
+
+12
+00:00:37,160 --> 00:00:40,440
+Commodore 64, as many of us 
+probably started there. 
+
+13
+00:00:40,440 --> 00:00:43,440
+And then I switched to assembly 
+because I wanted to play and 
+
+14
+00:00:43,440 --> 00:00:46,040
+create games, but more hack 
+games. 
+
+15
+00:00:46,360 --> 00:00:48,840
+And they put our intro in front 
+of it and then distribute the 
+
+16
+00:00:48,840 --> 00:00:51,240
+games around the world. 
+So it was more like a hacking 
+
+17
+00:00:51,240 --> 00:00:56,720
+assembly type of thing. 
+But yeah, so from my 1516 years,
+
+18
+00:00:56,720 --> 00:01:00,840
+I started and then luckily, you 
+know, I, I did a switch when I 
+
+19
+00:01:00,840 --> 00:01:05,519
+was 28 to Java. 
+And thanks to Bruce thinking in 
+
+20
+00:01:05,519 --> 00:01:08,440
+Java seriously. 
+I mean, I used your book as the 
+
+21
+00:01:08,440 --> 00:01:11,720
+syllabus for teaching Java to 
+many, many people. 
+
+22
+00:01:13,280 --> 00:01:15,680
+You know we don't kind. 
+Of embarrassed about that by now
+
+23
+00:01:15,680 --> 00:01:20,160
+because there were things that 
+I've learned then I go, oh, 
+
+24
+00:01:20,160 --> 00:01:24,280
+maybe we shouldn't have leaned 
+so hard into the objects well. 
+
+25
+00:01:24,320 --> 00:01:26,800
+It was just a a path on part of 
+the journey. 
+
+26
+00:01:26,800 --> 00:01:27,720
+It's. 
+Still a great book. 
+
+27
+00:01:28,920 --> 00:01:33,040
+Yeah, I mean it helped so many 
+people level up in their careers
+
+28
+00:01:33,040 --> 00:01:36,080
+and and how they write code so. 
+Yeah. 
+
+29
+00:01:36,080 --> 00:01:38,520
+And then the other one was Java 
+in a Nutshell from Flanagan. 
+
+30
+00:01:38,520 --> 00:01:41,120
+I mean, I think those were two 
+books really sitting next to my 
+
+31
+00:01:41,120 --> 00:01:46,760
+bed around 9596 and then 
+basically started the Java user 
+
+32
+00:01:46,760 --> 00:01:52,400
+group in 98, which then gave 
+birth to to Java Polis, which 
+
+33
+00:01:52,400 --> 00:01:56,160
+then rebranded in 2008 to Devox 
+and then Devox. 
+
+34
+00:01:56,160 --> 00:02:00,880
+Well, yeah, now we have like 7 
+Devoxes, 15 Fox days and 20,000 
+
+35
+00:02:00,880 --> 00:02:04,480
+developers reaching or or 
+attending the events on an 
+
+36
+00:02:04,520 --> 00:02:06,120
+annual basis. 
+Yeah. 
+
+37
+00:02:06,280 --> 00:02:10,000
+And that's where many people May
+and Stefan from is from Devox. 
+
+38
+00:02:10,560 --> 00:02:13,760
+So we've got Devox coming up, 
+Devox Belgium coming up in a 
+
+39
+00:02:13,760 --> 00:02:16,880
+couple months. 
+So super excited I get to be 
+
+40
+00:02:16,880 --> 00:02:19,200
+there again. 
+But yeah, do you want to say 
+
+41
+00:02:19,200 --> 00:02:21,720
+anything about Devox coming up? 
+I mean, there's no tickets 
+
+42
+00:02:21,720 --> 00:02:24,680
+available because they sell out 
+in two seconds or whatever, but.
+
+43
+00:02:25,440 --> 00:02:28,200
+They get allocated in two 
+seconds, but then people start 
+
+44
+00:02:28,200 --> 00:02:31,360
+releasing them once they 
+internally verified if everybody
+
+45
+00:02:31,360 --> 00:02:33,520
+gots a ticket. 
+So we, we, we announced it this 
+
+46
+00:02:33,520 --> 00:02:37,640
+morning at 9:00. 
+There were like 4600 people 
+
+47
+00:02:37,640 --> 00:02:41,880
+online refreshing tickets were 
+all allocated in two seconds. 
+
+48
+00:02:41,880 --> 00:02:44,640
+But then luckily some started 
+like, OK, we've got enough, 
+
+49
+00:02:44,680 --> 00:02:47,480
+let's release them now. 
+Because it they get, they have 
+
+50
+00:02:47,480 --> 00:02:49,600
+25 minutes to actually reserve 
+the tickets. 
+
+51
+00:02:49,600 --> 00:02:51,760
+So, so there's still some 
+tickets out there. 
+
+52
+00:02:51,760 --> 00:02:55,320
+No conference tickets, but we 
+have still the five day tickets 
+
+53
+00:02:55,360 --> 00:02:57,680
+or the five days tickets, which 
+are the comic tickets. 
+
+54
+00:02:58,520 --> 00:03:01,400
+And it's from the 7th to the 
+11th of October. 
+
+55
+00:03:02,560 --> 00:03:05,640
+And we only have about 3500 
+people attending. 
+
+56
+00:03:06,560 --> 00:03:09,560
+Awesome. 
+I'm excited to go back crazy. 
+
+57
+00:03:09,760 --> 00:03:11,320
+I'm. 
+Actually, can I? 
+
+58
+00:03:11,600 --> 00:03:17,800
+Oh yeah, you got a plug. 
+Yeah, we are having a developer 
+
+59
+00:03:17,800 --> 00:03:23,480
+retreat slash hangout very low 
+or no structure at all. 
+
+60
+00:03:24,320 --> 00:03:29,840
+Formal developers get together 
+exactly August 28th through 
+
+61
+00:03:31,320 --> 00:03:35,600
+September 1st and this is in 
+here in Crested Butte. 
+
+62
+00:03:35,600 --> 00:03:40,800
+So it's anyway awesome if Yep. 
+If anybody wants to come out and
+
+63
+00:03:40,800 --> 00:03:42,880
+hang out with some nerds and 
+write some code. 
+
+64
+00:03:42,880 --> 00:03:46,600
+We, we, we just have a few 
+people showing up at this point,
+
+65
+00:03:46,600 --> 00:03:51,480
+but it's not, you know, there's,
+there's no structure to it and 
+
+66
+00:03:51,480 --> 00:03:54,400
+it doesn't cost anything. 
+You just have to come prepared 
+
+67
+00:03:54,400 --> 00:03:58,120
+to stay in a motel or camp or 
+something like that. 
+
+68
+00:03:58,760 --> 00:04:00,800
+And where do people get more 
+information about? 
+
+69
+00:04:01,960 --> 00:04:07,240
+Oh, you know, we, we just kind 
+of nailed it down. 
+
+70
+00:04:09,000 --> 00:04:12,720
+We have the Winter Tech Forum 
+Slack group. 
+
+71
+00:04:12,880 --> 00:04:15,680
+Yeah, that's probably the best 
+place. 
+
+72
+00:04:17,079 --> 00:04:17,680
+Sorry. 
+It's. 
+
+73
+00:04:17,720 --> 00:04:20,959
+People can get access. 
+To like, it's super casual to 
+
+74
+00:04:20,959 --> 00:04:23,880
+the point where it's, you know, 
+we don't really have much in the
+
+75
+00:04:23,880 --> 00:04:31,040
+way of officialness, OK. 
+All right, well, let's dive into
+
+76
+00:04:31,040 --> 00:04:36,520
+our subject for today. 
+So Stefan, you have in your 
+
+77
+00:04:36,520 --> 00:04:42,240
+journey as a developer, you've 
+discovered this future of being 
+
+78
+00:04:42,240 --> 00:04:48,080
+a developer, which is both using
+AI tools and like as a 
+
+79
+00:04:48,080 --> 00:04:52,120
+developer, but then also 
+building things with AI and Gen.
+
+80
+00:04:52,160 --> 00:04:53,920
+AI. 
+So I don't know, maybe just 
+
+81
+00:04:53,920 --> 00:04:58,600
+start with telling us about 
+like, where are you with all 
+
+82
+00:04:58,600 --> 00:05:01,080
+this stuff? 
+What's what's how are you using 
+
+83
+00:05:01,080 --> 00:05:02,000
+these things? 
+Right. 
+
+84
+00:05:02,000 --> 00:05:06,160
+And is your tool the one that 
+you mentioned before we started 
+
+85
+00:05:06,160 --> 00:05:08,160
+recording? 
+That's an AI tool? 
+
+86
+00:05:08,560 --> 00:05:09,880
+Yeah, yeah. 
+OK. 
+
+87
+00:05:09,880 --> 00:05:11,520
+Yeah. 
+So you can also tell us about. 
+
+88
+00:05:11,560 --> 00:05:15,920
+That let me do one step 
+backwards in the sense that I 
+
+89
+00:05:15,920 --> 00:05:19,520
+actually started using 
+convolutional neural networks in
+
+90
+00:05:19,520 --> 00:05:23,840
+2016, 2017. 
+And the reason why is that my 
+
+91
+00:05:23,840 --> 00:05:28,800
+son plays basketball and I was 
+always, or I'm still recording 
+
+92
+00:05:28,800 --> 00:05:31,520
+the games, but I wanted to 
+create automatically the 
+
+93
+00:05:31,520 --> 00:05:36,440
+highlights of the game. 
+So what I did is I took 4000 
+
+94
+00:05:36,440 --> 00:05:40,320
+pictures of a ball, converted 
+them a bit in different shapes 
+
+95
+00:05:40,320 --> 00:05:43,200
+and different directions. 
+So I had 12,000 versions of 
+
+96
+00:05:43,200 --> 00:05:47,360
+those pictures and then created 
+a model so I could identify in a
+
+97
+00:05:47,360 --> 00:05:51,120
+video stream where the ball was.
+And then I did the same for the 
+
+98
+00:05:51,120 --> 00:05:54,960
+hoop and I create a rectangle 
+above the hoop, a rectangle 
+
+99
+00:05:54,960 --> 00:05:57,280
+below the hoop. 
+And if the ball was in one of 
+
+100
+00:05:57,280 --> 00:06:00,800
+those rectangles, most likely a 
+point was made so I could 
+
+101
+00:06:00,800 --> 00:06:04,080
+actually identify the highlights
+in a, in a basketball game. 
+
+102
+00:06:04,680 --> 00:06:08,800
+So that was my first steps a bit
+in like, you know, I mean, I 
+
+103
+00:06:08,800 --> 00:06:12,960
+have lots of I try to automate 
+lots of hobbies of mine and 
+
+104
+00:06:12,960 --> 00:06:15,880
+that's definitely one of them. 
+And so that was a. 
+
+105
+00:06:15,920 --> 00:06:19,440
+Major hobby through AI. 
+Oh yeah, absolutely. 
+
+106
+00:06:19,760 --> 00:06:22,720
+I mean, once it gets boring 
+where you need to commercialize 
+
+107
+00:06:22,720 --> 00:06:25,880
+it, that's where I, I, I stop 
+because then you have the hassle
+
+108
+00:06:25,880 --> 00:06:29,080
+of customers and support and no 
+then, then. 
+
+109
+00:06:29,480 --> 00:06:33,520
+Customers, yes. 
+Your plate is full with 
+
+110
+00:06:33,520 --> 00:06:36,400
+customers when you're dealing 
+with conferences, so you don't 
+
+111
+00:06:36,440 --> 00:06:38,400
+need any more of that. 
+Yeah, exactly. 
+
+112
+00:06:39,560 --> 00:06:43,320
+So you were like into into this 
+AI stuff before it was cool, 
+
+113
+00:06:43,440 --> 00:06:46,800
+before it was cool? 
+Yeah, well, yeah, more or less. 
+
+114
+00:06:47,240 --> 00:06:51,160
+And again, on the level, right. 
+I mean, I, I needed the 
+
+115
+00:06:51,160 --> 00:06:53,160
+solution. 
+And what's the best way to get 
+
+116
+00:06:53,160 --> 00:06:55,600
+there and whatever it takes to 
+get there, you know, read the 
+
+117
+00:06:55,600 --> 00:06:58,040
+books, get the courses and 
+whatever. 
+
+118
+00:06:58,040 --> 00:07:01,800
+And that's the fun part. 
+And I think it was right after 
+
+119
+00:07:01,800 --> 00:07:08,960
+COVID that I started playing 
+with GPT 2 and then gradually, 
+
+120
+00:07:09,040 --> 00:07:12,840
+because I was doing, you know, 
+NLP, natural language processing
+
+121
+00:07:12,840 --> 00:07:16,360
+already quite a while because we
+have like thousands of 
+
+122
+00:07:16,360 --> 00:07:19,760
+proposals. 
+And I, I want to always automate
+
+123
+00:07:19,760 --> 00:07:21,040
+it. 
+Like one of the things I want to
+
+124
+00:07:21,040 --> 00:07:24,680
+do was like, people had to enter
+their tags when they submit a 
+
+125
+00:07:24,680 --> 00:07:28,960
+talk, but it's like the tags are
+in the description in the title.
+
+126
+00:07:28,960 --> 00:07:31,520
+So we need to just extract that 
+automatically, right? 
+
+127
+00:07:31,880 --> 00:07:35,080
+So that's something I, I, that, 
+that's very easy to do now, but 
+
+128
+00:07:35,080 --> 00:07:40,480
+it wasn't that obvious 3-4 years
+ago if you want wanted to use a 
+
+129
+00:07:40,480 --> 00:07:42,000
+large language model for that, 
+right? 
+
+130
+00:07:42,360 --> 00:07:45,960
+But also other things I did was 
+two years ago, I, I built like a
+
+131
+00:07:45,960 --> 00:07:50,520
+prototype called Devox Insights.
+And what it did is that I, I 
+
+132
+00:07:50,520 --> 00:07:52,720
+wrote some Python. 
+It was a lot of Python, not 
+
+133
+00:07:52,720 --> 00:07:56,120
+Java, unfortunately, where it 
+actually we published all the 
+
+134
+00:07:56,120 --> 00:08:00,040
+talks on YouTube. 
+I downloaded the the transcript 
+
+135
+00:08:00,040 --> 00:08:03,040
+from YouTube and then summarized
+the transcript. 
+
+136
+00:08:03,040 --> 00:08:07,240
+So you got a summarization of 
+the talk and, and so that was 
+
+137
+00:08:07,240 --> 00:08:08,920
+already nice. 
+So you didn't have to watch the 
+
+138
+00:08:08,920 --> 00:08:10,880
+full talk, You got a real 
+summarization. 
+
+139
+00:08:11,440 --> 00:08:13,440
+Then other things I did was like
+face recognition. 
+
+140
+00:08:13,440 --> 00:08:17,040
+We have a really amazing 
+photographer taking thousands of
+
+141
+00:08:17,040 --> 00:08:19,920
+pictures, doing Devox Devox 
+events. 
+
+142
+00:08:20,080 --> 00:08:23,920
+So what I'm doing now ready for 
+many years is taking your 
+
+143
+00:08:23,920 --> 00:08:28,040
+Twitter avatar and show you all 
+the pictures that we found in 
+
+144
+00:08:28,040 --> 00:08:31,120
+our big database. 
+We have like 25,000 pictures 
+
+145
+00:08:31,120 --> 00:08:34,280
+that we've indexed. 
+And so speakers will get the 
+
+146
+00:08:34,280 --> 00:08:38,080
+next day or the week after, they
+will get all their pictures from
+
+147
+00:08:38,080 --> 00:08:40,720
+the, the events. 
+And so they don't have to search
+
+148
+00:08:40,720 --> 00:08:43,039
+through 3500 pictures per 
+events. 
+
+149
+00:08:43,320 --> 00:08:46,120
+So these are all like very 
+pragmatic, but it brings added 
+
+150
+00:08:46,120 --> 00:08:49,920
+value to the DevOps experience. 
+And so that's, that's really 
+
+151
+00:08:49,920 --> 00:08:54,400
+where the fun started. 
+It's like leveraging models and 
+
+152
+00:08:54,400 --> 00:08:57,280
+then the, the, the next logical 
+thing was like, for example, 
+
+153
+00:08:57,840 --> 00:09:02,240
+creating a summarisation. 
+So if people submit a talk 
+
+154
+00:09:02,400 --> 00:09:05,640
+someday, submit like a full A4 
+abstract. 
+
+155
+00:09:06,080 --> 00:09:10,000
+And as a reviewer, if you have 
+to review 9900 talks, you just 
+
+156
+00:09:10,000 --> 00:09:11,520
+want to have an executive 
+summary. 
+
+157
+00:09:11,960 --> 00:09:15,680
+So that's also in the CFP is 
+that it creates a summary, which
+
+158
+00:09:15,680 --> 00:09:19,440
+again, now with large language 
+models, it's really, really that
+
+159
+00:09:19,440 --> 00:09:21,920
+easy, right? 
+So that's a very, very. 
+
+160
+00:09:21,920 --> 00:09:24,520
+Ask can can you give it an 
+abstract and be like is this 
+
+161
+00:09:24,520 --> 00:09:27,800
+going to be a good talk? 
+No, that's, that's, that's a bit
+
+162
+00:09:27,800 --> 00:09:32,400
+more difficult because you need 
+to compare it also with the, 
+
+163
+00:09:32,680 --> 00:09:35,680
+because a conference is like a 
+story you want to tell, right. 
+
+164
+00:09:35,920 --> 00:09:38,760
+You really want to start with 
+introductory talks and then 
+
+165
+00:09:38,760 --> 00:09:41,720
+follow up with more advanced and
+maybe a hands on lap and then a 
+
+166
+00:09:41,720 --> 00:09:46,280
+few more that go in more detail.
+And so that storyline needs to 
+
+167
+00:09:46,280 --> 00:09:49,360
+be identified. 
+So it's probably possible with a
+
+168
+00:09:49,360 --> 00:09:52,360
+bit of prompting, etcetera. 
+But you need to give it a lot of
+
+169
+00:09:52,360 --> 00:09:55,840
+contents. 
+And one year ago that wasn't 
+
+170
+00:09:55,840 --> 00:09:58,600
+possible. 
+I mean, one year ago we could 
+
+171
+00:09:58,600 --> 00:10:03,600
+give 4000 tokens. 1 token is on 
+average three to four 
+
+172
+00:10:03,600 --> 00:10:06,480
+characters, right? 
+So I don't know if you followed 
+
+173
+00:10:06,480 --> 00:10:11,400
+the Strawberry thing on, on 
+Twitter where you ask Chachi PT,
+
+174
+00:10:11,400 --> 00:10:13,160
+how many Rs does Strawberry 
+have? 
+
+175
+00:10:13,760 --> 00:10:16,160
+And it was always replying 
+incorrectly. 
+
+176
+00:10:16,440 --> 00:10:19,080
+And why? 
+Because Strawberry has like 
+
+177
+00:10:19,240 --> 00:10:23,120
+depending on the model, it could
+have two or three tokens where 
+
+178
+00:10:23,120 --> 00:10:27,040
+it doesn't know about the two Rs
+in the one token. 
+
+179
+00:10:27,040 --> 00:10:30,920
+It only knows about the token, 
+not the individual letters you 
+
+180
+00:10:30,920 --> 00:10:33,840
+see. 
+So anyway, one year ago we had 
+
+181
+00:10:33,840 --> 00:10:36,920
+like a window context. 
+So if you create a prompt and 
+
+182
+00:10:36,920 --> 00:10:39,800
+you send it to the model, you 
+have a window context. 
+
+183
+00:10:39,800 --> 00:10:43,000
+So that's the number of tokens 
+that you can send it and the 
+
+184
+00:10:43,000 --> 00:10:47,120
+maximum was 4000 tokens. 
+So that's like 12,000 characters
+
+185
+00:10:47,440 --> 00:10:49,960
+average, which is not a lot not.
+A lot. 
+
+186
+00:10:50,840 --> 00:10:54,640
+Now, do you know how much we 
+have in tokens in a Windows 
+
+187
+00:10:54,640 --> 00:10:55,880
+context? 
+How much? 
+
+188
+00:10:57,240 --> 00:11:01,280
+2 million. 2,000,000 OK. 2 
+million just. 
+
+189
+00:11:01,280 --> 00:11:05,160
+In the last like year or two, 
+we've gone from 4000 to two 
+
+190
+00:11:05,160 --> 00:11:07,200
+million well. 
+Pretty well, yeah. 
+
+191
+00:11:07,200 --> 00:11:11,600
+And Bill took our book and asked
+it to generate a back cover 
+
+192
+00:11:11,600 --> 00:11:16,920
+blurb for it and he fed it the 
+whole book and actually what it 
+
+193
+00:11:16,920 --> 00:11:18,680
+generated was like pretty 
+amazing. 
+
+194
+00:11:18,680 --> 00:11:20,160
+Don't really have any arguments 
+with. 
+
+195
+00:11:20,160 --> 00:11:22,480
+That paragraph summary of a 
+whole book? 
+
+196
+00:11:22,640 --> 00:11:23,960
+Yeah. 
+Yeah, absolutely. 
+
+197
+00:11:23,960 --> 00:11:27,200
+But I mean, I've got another 
+Antonio Gonzalez, he's writing 
+
+198
+00:11:27,200 --> 00:11:32,160
+also a book and he contacted me 
+on Monday and I said, yeah, just
+
+199
+00:11:32,400 --> 00:11:34,600
+give it to Gemini with Gemini 
+Google. 
+
+200
+00:11:34,600 --> 00:11:36,320
+Gemini is the one who has 2 
+million. 
+
+201
+00:11:37,240 --> 00:11:42,360
+His book was only 90,000 tokens.
+90,000 tokens these days is 
+
+202
+00:11:42,360 --> 00:11:42,800
+peanuts. 
+We're. 
+
+203
+00:11:42,880 --> 00:11:45,840
+Near the limit, yeah. 
+Even a local model already 
+
+204
+00:11:45,840 --> 00:11:51,040
+supports up to 130,000 tokens 
+just running on your machine. 
+
+205
+00:11:51,520 --> 00:11:53,720
+Yeah. 
+As in one year. 
+
+206
+00:11:54,000 --> 00:11:57,080
+The the pace is just insane. 
+Exponential. 
+
+207
+00:11:57,280 --> 00:12:02,360
+So I have a question I 
+understand I I did take linear 
+
+208
+00:12:02,360 --> 00:12:05,360
+algebra when I was in college, 
+but I don't remember much about 
+
+209
+00:12:05,360 --> 00:12:08,800
+it at this point. 
+I understand that you have to 
+
+210
+00:12:09,040 --> 00:12:13,760
+know linear algebra to be able 
+to understand LLMS or. 
+
+211
+00:12:14,200 --> 00:12:16,520
+No, you don't. 
+You don't. 
+
+212
+00:12:16,640 --> 00:12:18,800
+Break it down for us. 
+What What is a model? 
+
+213
+00:12:18,800 --> 00:12:22,120
+What is a token? 
+How do what's what is inference 
+
+214
+00:12:22,120 --> 00:12:23,200
+like? 
+What are what are all these 
+
+215
+00:12:23,200 --> 00:12:24,320
+pieces? 
+Yeah. 
+
+216
+00:12:24,840 --> 00:12:28,000
+So the the beauty is, is that 
+there's definitely a lot of 
+
+217
+00:12:28,000 --> 00:12:31,760
+mathematics underneath. 
+But as a developer, you just 
+
+218
+00:12:31,760 --> 00:12:35,360
+talk to a REST interface. 
+That's really what it boils down
+
+219
+00:12:35,360 --> 00:12:37,320
+to. 
+You have a REST interface, and 
+
+220
+00:12:37,320 --> 00:12:41,040
+this is called like these LLM 
+providers where you basically 
+
+221
+00:12:41,040 --> 00:12:44,280
+talk to a REST interface. 
+You give it a context, you give 
+
+222
+00:12:44,280 --> 00:12:46,480
+it a prompt, you give it a 
+temperature. 
+
+223
+00:12:46,480 --> 00:12:49,440
+That's really important, where 
+the temperature dictates if it's
+
+224
+00:12:49,440 --> 00:12:52,800
+going to be creative or if it's 
+going to be strict. 
+
+225
+00:12:53,160 --> 00:12:55,360
+If it's strict, it will always 
+give the same answer. 
+
+226
+00:12:55,360 --> 00:12:59,640
+But if you give it creativity 
+like 0.7, it will give 
+
+227
+00:12:59,760 --> 00:13:02,360
+constantly a different answer, 
+but in a different flavour, 
+
+228
+00:13:02,480 --> 00:13:04,360
+right? 
+So there's there's a few 
+
+229
+00:13:04,360 --> 00:13:08,600
+parameters which may be 5-6 
+maximum and that's it. 
+
+230
+00:13:08,640 --> 00:13:12,680
+You send it as a Jason to this 
+LLM provider and it will return 
+
+231
+00:13:12,680 --> 00:13:17,120
+adjacent back with the the 
+answer, the tokens it it took, 
+
+232
+00:13:17,360 --> 00:13:20,520
+maybe even the cost it took to 
+to produce it. 
+
+233
+00:13:20,840 --> 00:13:24,600
+And this is calculated on the 
+input tokens and the output 
+
+234
+00:13:24,600 --> 00:13:27,560
+tokens. 
+So the input tokens is often can
+
+235
+00:13:27,560 --> 00:13:32,320
+go to almost 2 million the 
+return or the the output tokens 
+
+236
+00:13:32,320 --> 00:13:35,720
+is often only 4000 tokens 
+because it's just a short 
+
+237
+00:13:35,720 --> 00:13:38,760
+answer, right. 
+But this is also growing 
+
+238
+00:13:39,040 --> 00:13:41,880
+eventually. 
+And and so there's multiple 
+
+239
+00:13:41,880 --> 00:13:44,880
+different implementations. 
+So the beauty and that's why I'm
+
+240
+00:13:44,880 --> 00:13:48,520
+so excited about it is that 
+there's this open. 
+
+241
+00:13:49,080 --> 00:13:52,960
+Well, yeah, don't get me sort of
+open AI because they're they're 
+
+242
+00:13:52,960 --> 00:13:55,840
+the least open of all the the 
+LLM providers. 
+
+243
+00:13:56,080 --> 00:13:57,720
+But there are multiple open 
+initiative. 
+
+244
+00:13:57,720 --> 00:14:03,280
+For example, Meta is really 
+pioneering and most likely from 
+
+245
+00:14:03,280 --> 00:14:06,440
+business strategy, strategy 
+point of view a very smart move.
+
+246
+00:14:06,760 --> 00:14:10,320
+They've basically released an 
+open source their models called 
+
+247
+00:14:10,520 --> 00:14:12,680
+LAMA 3.1, which is the latest 
+one. 
+
+248
+00:14:13,840 --> 00:14:15,560
+And you they come in different 
+flavours. 
+
+249
+00:14:15,560 --> 00:14:19,360
+So you have like the lowest one 
+is 7 billion parameters that it 
+
+250
+00:14:19,360 --> 00:14:22,120
+has been trained on the highest.
+Parameter. 
+
+251
+00:14:22,640 --> 00:14:24,520
+So what does a parameter mean in
+this case? 
+
+252
+00:14:24,520 --> 00:14:28,680
+So you, you believe it, you, you
+basically have a, a neural 
+
+253
+00:14:28,680 --> 00:14:32,600
+network and it's all the 
+parameters that it actually has 
+
+254
+00:14:32,600 --> 00:14:34,400
+been. 
+How do you call that has been 
+
+255
+00:14:35,200 --> 00:14:39,280
+trained upon? 
+And so it uses weights to 
+
+256
+00:14:39,360 --> 00:14:43,640
+identify what route it needs to 
+follow via the different 
+
+257
+00:14:43,640 --> 00:14:45,640
+neurons. 
+So the the weights with the 
+
+258
+00:14:45,640 --> 00:14:50,080
+highest number will actually be 
+the one that dictates the route 
+
+259
+00:14:50,120 --> 00:14:54,040
+of the response. 
+And in in in all simplicity, it 
+
+260
+00:14:54,040 --> 00:14:58,560
+is basically just a text 
+extended then a text completed 
+
+261
+00:14:58,560 --> 00:15:01,920
+because you give it some words 
+and based on the statistic 
+
+262
+00:15:01,920 --> 00:15:04,640
+meaning the semantic meaning of 
+those words. 
+
+263
+00:15:04,640 --> 00:15:07,920
+And that's the big difference 
+since large language models. 
+
+264
+00:15:08,200 --> 00:15:10,920
+Before large language models, we
+did not have the semantic 
+
+265
+00:15:10,920 --> 00:15:14,160
+meaning of a word. 
+With large language models, we 
+
+266
+00:15:14,160 --> 00:15:18,200
+now have a semantic meaning. 
+So it knows if you have a bank 
+
+267
+00:15:19,200 --> 00:15:22,040
+where you take money or a bank 
+where you sit. 
+
+268
+00:15:22,040 --> 00:15:25,960
+It knows based on the semantic 
+context, what the bank word 
+
+269
+00:15:25,960 --> 00:15:28,400
+means, and that's the big 
+differentiator. 
+
+270
+00:15:28,720 --> 00:15:31,960
+When you were doing just NLP, 
+there wasn't really the semantic
+
+271
+00:15:31,960 --> 00:15:34,920
+meaning. 
+Now we have so it now it really 
+
+272
+00:15:34,920 --> 00:15:38,200
+knows what a sentence means if 
+you're using the word bank. 
+
+273
+00:15:38,200 --> 00:15:42,400
+And that semantic meaning gets 
+encoded in the training phase. 
+
+274
+00:15:42,400 --> 00:15:47,280
+So when it's coming up with the 
+model, it has somehow encoded 
+
+275
+00:15:47,280 --> 00:15:49,200
+semantic meaning into that 
+model. 
+
+276
+00:15:49,360 --> 00:15:50,720
+Correct. 
+Yeah, correct. 
+
+277
+00:15:51,080 --> 00:15:54,240
+But the beauty of of us being 
+developers is that we just need 
+
+278
+00:15:54,240 --> 00:15:57,560
+to know the REST interface. 
+So that makes it the, the, the, 
+
+279
+00:15:57,720 --> 00:16:00,880
+the entry is so low for 
+developers because you just need
+
+280
+00:16:00,880 --> 00:16:04,640
+to do a REST call, That's it. 
+And so what's happening is that 
+
+281
+00:16:05,000 --> 00:16:08,440
+Open AI has dictated a bit how 
+the structure should be. 
+
+282
+00:16:08,440 --> 00:16:12,600
+And then many others like 
+Anthropic, Google, but even Meta
+
+283
+00:16:12,600 --> 00:16:14,560
+and so on, they are following 
+that structure. 
+
+284
+00:16:14,560 --> 00:16:17,760
+So there's like this, there's a 
+bit of standardisation 
+
+285
+00:16:17,840 --> 00:16:22,040
+happening, which is great. 
+But now, for example, just this 
+
+286
+00:16:22,040 --> 00:16:25,040
+week, there's already a new 
+feature being added, which is 
+
+287
+00:16:25,040 --> 00:16:27,640
+called cache control. 
+So what they want to do is that 
+
+288
+00:16:27,880 --> 00:16:31,600
+you give it like a big corpus, 
+like your book, you give it your
+
+289
+00:16:31,600 --> 00:16:34,600
+book. 
+And I will only give it the book
+
+290
+00:16:34,600 --> 00:16:39,320
+once because it's cached in the 
+server side and then I can start
+
+291
+00:16:39,320 --> 00:16:41,760
+asking questions. 
+So the input tokens and output 
+
+292
+00:16:41,760 --> 00:16:44,680
+tokens, but the book is cached 
+so I don't have to send it each 
+
+293
+00:16:44,680 --> 00:16:48,200
+time with every request. 
+Well, that full cache control 
+
+294
+00:16:48,280 --> 00:16:51,840
+for the moment is only being 
+implemented by Anthropic and by 
+
+295
+00:16:51,840 --> 00:16:54,240
+Google. 
+And of course they both are 
+
+296
+00:16:54,240 --> 00:16:58,120
+doing the different syntax in 
+the Jason format. 
+
+297
+00:16:58,680 --> 00:17:02,080
+So like if you then are looking 
+at AP is who work on a higher 
+
+298
+00:17:02,080 --> 00:17:05,680
+level, they need to try to find 
+a common denominator to actually
+
+299
+00:17:05,680 --> 00:17:08,319
+standardise that. 
+So there's a bit of, you know, 
+
+300
+00:17:08,319 --> 00:17:12,079
+once hopefully Open AI joins 
+with the cash control, there's 
+
+301
+00:17:12,079 --> 00:17:15,200
+going to be conversions where 
+standardization will happen on 
+
+302
+00:17:15,200 --> 00:17:18,079
+that level as well. 
+And then there's other pieces 
+
+303
+00:17:18,079 --> 00:17:22,319
+that are kind of related to this
+interface to the LLM like 
+
+304
+00:17:22,319 --> 00:17:25,560
+functions and rags. 
+And so there's there's other 
+
+305
+00:17:25,560 --> 00:17:27,400
+kind of ancillary things around 
+it as well. 
+
+306
+00:17:27,400 --> 00:17:29,200
+Maybe give us a rundown. 
+What's a rag you? 
+
+307
+00:17:29,560 --> 00:17:32,000
+Know let's let's have stuff on 
+and tell us all. 
+
+308
+00:17:32,040 --> 00:17:35,360
+About it, well, the RAG was 
+really retrieval augmented 
+
+309
+00:17:35,360 --> 00:17:37,080
+generation. 
+That's called, that's the 
+
+310
+00:17:37,080 --> 00:17:40,160
+acronym. 
+It was basically generated for 
+
+311
+00:17:40,160 --> 00:17:42,560
+multiple reasons. 
+One reason was because we can 
+
+312
+00:17:42,560 --> 00:17:45,320
+only give context of 4000 
+tokens. 
+
+313
+00:17:45,720 --> 00:17:49,840
+So if I wanted to like for 
+example, to AQ and A on your 
+
+314
+00:17:49,840 --> 00:17:52,520
+book, I could index your book 
+into vectors. 
+
+315
+00:17:53,000 --> 00:17:56,600
+So basically what it does is 
+that words are converted to 
+
+316
+00:17:56,600 --> 00:18:00,120
+vectors, which is a float. 
+And that float, that vector has 
+
+317
+00:18:00,120 --> 00:18:02,760
+that semantic meaning, right? 
+So you basically have an array 
+
+318
+00:18:02,760 --> 00:18:06,320
+of vectors which represents your
+words of your book. 
+
+319
+00:18:07,040 --> 00:18:09,880
+And then I could do a search on 
+that vector. 
+
+320
+00:18:10,240 --> 00:18:12,280
+So the search would be a 
+similarity search. 
+
+321
+00:18:12,280 --> 00:18:14,600
+So what I do is like, for 
+example, I would say, what is 
+
+322
+00:18:14,600 --> 00:18:19,120
+the book about, right? 
+So it would change my question 
+
+323
+00:18:19,120 --> 00:18:23,040
+into vectors. 
+And then I have like maybe six, 
+
+324
+00:18:23,600 --> 00:18:28,480
+maybe 12 vectors and I will do a
+similarity search on the vectors
+
+325
+00:18:28,760 --> 00:18:32,800
+array of your book with the 
+vectors, questions vectors 
+
+326
+00:18:32,880 --> 00:18:37,120
+string. 
+And it will do it has different 
+
+327
+00:18:37,520 --> 00:18:40,400
+it has different formulas, but 
+the one would be the nearest 
+
+328
+00:18:40,720 --> 00:18:45,840
+point similarity results where 
+basically you need to see these 
+
+329
+00:18:45,840 --> 00:18:49,920
+vectors as dots in a 
+spacelikea.cloud and it would 
+
+330
+00:18:49,920 --> 00:18:52,360
+put your question into that 
+cloud. 
+
+331
+00:18:52,520 --> 00:18:56,200
+And all the dots which are 
+nearest are most likely have a 
+
+332
+00:18:56,200 --> 00:18:59,400
+close semantic meaning. 
+So that would mean that most 
+
+333
+00:18:59,400 --> 00:19:01,480
+likely, if I say what's the book
+about? 
+
+334
+00:19:01,760 --> 00:19:04,800
+You might have had a chapter 
+which was about this book. 
+
+335
+00:19:05,480 --> 00:19:09,200
+So it would put my question next
+to your about this book and then
+
+336
+00:19:09,200 --> 00:19:14,800
+take that chunk of text from 
+your book as the prompt context 
+
+337
+00:19:15,320 --> 00:19:17,600
+to the question that is sent to 
+the LLM. 
+
+338
+00:19:17,840 --> 00:19:20,960
+So what it would do is that so 
+it would say what is the book 
+
+339
+00:19:20,960 --> 00:19:24,560
+about in the prompt? 
+And in addition to the prompt, 
+
+340
+00:19:24,560 --> 00:19:28,240
+which is your window context, it
+would put your page about this 
+
+341
+00:19:28,240 --> 00:19:31,760
+book in the prompt. 
+So then the LLM which is, has no
+
+342
+00:19:31,760 --> 00:19:34,440
+idea about your book because 
+it's not public, it's not been 
+
+343
+00:19:34,440 --> 00:19:37,120
+indexed. 
+It knows the question, it knows 
+
+344
+00:19:37,120 --> 00:19:40,040
+this context of 4000 tokens 
+maximum. 
+
+345
+00:19:40,360 --> 00:19:44,200
+So we could answer that question
+based on that small text. 
+
+346
+00:19:44,200 --> 00:19:46,080
+I I've given it right and that's
+that. 
+
+347
+00:19:46,080 --> 00:19:49,520
+So this. 
+Was like a, so zooming out for a
+
+348
+00:19:49,520 --> 00:19:52,080
+second, I remember Paul Snidely.
+I don't remember if it was on 
+
+349
+00:19:52,080 --> 00:19:54,400
+our podcast with him or just in 
+a conversation with him. 
+
+350
+00:19:54,640 --> 00:19:57,560
+He was like this. 
+A lot of this AI stuff, maybe 
+
+351
+00:19:57,560 --> 00:19:59,800
+all of it, is really just 
+compression. 
+
+352
+00:20:00,360 --> 00:20:03,280
+It's like we're taking a bunch 
+of data, we're compressing it 
+
+353
+00:20:03,280 --> 00:20:05,600
+down. 
+And that's I think why you're 
+
+354
+00:20:05,600 --> 00:20:09,600
+saying like the, the input 
+contexts are larger than the 
+
+355
+00:20:09,600 --> 00:20:12,680
+output context, because in a lot
+of ways, the things that we want
+
+356
+00:20:12,680 --> 00:20:15,840
+to use these for is just taking 
+a lot of information and 
+
+357
+00:20:15,840 --> 00:20:21,400
+reducing it down. 
+And so rag was is a way to like 
+
+358
+00:20:21,400 --> 00:20:27,120
+almost do like a pre compression
+of some some associated specific
+
+359
+00:20:27,120 --> 00:20:30,440
+data. 
+So that then the LLM kind of it 
+
+360
+00:20:30,440 --> 00:20:33,840
+has some additional information 
+so they can give you back newer 
+
+361
+00:20:33,840 --> 00:20:35,080
+or better information. 
+Correct. 
+
+362
+00:20:35,080 --> 00:20:37,320
+Well, it helps with 
+hallucination because what 
+
+363
+00:20:37,320 --> 00:20:40,640
+happens is that if they train a 
+model, it has a state of 
+
+364
+00:20:40,640 --> 00:20:42,800
+information when the model was 
+trained. 
+
+365
+00:20:43,160 --> 00:20:46,200
+So if it was trained two years 
+ago, it does not know about 
+
+366
+00:20:46,200 --> 00:20:49,320
+Kamala Harris and the 
+presidential things going on. 
+
+367
+00:20:49,640 --> 00:20:53,160
+So there's like this gap of 
+information, a cut off 
+
+368
+00:20:53,160 --> 00:20:56,000
+information. 
+So if you have questions about 
+
+369
+00:20:56,000 --> 00:20:58,960
+what happened after the model 
+was created, you need to 
+
+370
+00:20:58,960 --> 00:21:01,400
+supplement that with RAC 
+techniques. 
+
+371
+00:21:02,000 --> 00:21:04,960
+But also other companies are 
+doing this for private data. 
+
+372
+00:21:04,960 --> 00:21:08,560
+So you can just take a large 
+language model which knows about
+
+373
+00:21:08,600 --> 00:21:13,000
+the language, the English 
+language and a bit of Internet 
+
+374
+00:21:13,000 --> 00:21:14,680
+information that it has 
+compressed. 
+
+375
+00:21:14,960 --> 00:21:18,920
+But if you want to add then 
+confidential data, you need to 
+
+376
+00:21:18,920 --> 00:21:23,280
+use RAC to actually implement 
+and supplements the context. 
+
+377
+00:21:23,280 --> 00:21:26,200
+Basically that. 
+So it's like filling in some 
+
+378
+00:21:26,200 --> 00:21:31,720
+gaps in what the model knows and
+and it helps with hallucinations
+
+379
+00:21:31,720 --> 00:21:33,960
+to do that. 
+Yeah, it helps with 
+
+380
+00:21:33,960 --> 00:21:37,120
+hallucinations because you 
+basically are providing it with 
+
+381
+00:21:37,120 --> 00:21:41,440
+more accurate data in the prompt
+context, so. 
+
+382
+00:21:41,600 --> 00:21:46,520
+In now, given that our context 
+windows are getting larger, is 
+
+383
+00:21:46,520 --> 00:21:49,400
+this like? 
+Is this go away at some? 
+
+384
+00:21:49,400 --> 00:21:51,680
+Point because we can just. 
+Provide it all in the input 
+
+385
+00:21:51,680 --> 00:21:53,280
+context. 
+Yes, yeah. 
+
+386
+00:21:53,400 --> 00:21:56,000
+But I mean, that's at least my 
+view is that, yes, what I'm 
+
+387
+00:21:56,000 --> 00:21:59,520
+doing currently like I I'll 
+talk, I'll tell you a bit more 
+
+388
+00:21:59,520 --> 00:22:02,600
+about the plug in later on. 
+But basically what you can do is
+
+389
+00:22:02,600 --> 00:22:05,800
+you can give your full project 
+like a Java project. 
+
+390
+00:22:05,800 --> 00:22:11,120
+I, I so I had an ID to do photo 
+sharing for DevOps Belgium and I
+
+391
+00:22:11,120 --> 00:22:15,360
+built it in 16 hours just with 
+an LLM and the project was like 
+
+392
+00:22:15,360 --> 00:22:19,160
+70,000 tokens. 
+So I could give the full project
+
+393
+00:22:19,520 --> 00:22:23,520
+in the context and then say hey,
+build me this feature and it 
+
+394
+00:22:23,520 --> 00:22:26,960
+would build the feature because 
+it had knowledge of my full 
+
+395
+00:22:26,960 --> 00:22:29,120
+project. 
+And it's like. 
+
+396
+00:22:29,800 --> 00:22:35,040
+I understand Jetbrains is their 
+their AI system which I just 
+
+397
+00:22:35,040 --> 00:22:39,480
+paid for a subscription will do 
+things like it knows your whole 
+
+398
+00:22:39,480 --> 00:22:43,440
+project and so for example it 
+can generate test code for you 
+
+399
+00:22:43,440 --> 00:22:47,160
+and stuff like that. 
+So that's a great point you're 
+
+400
+00:22:47,160 --> 00:22:50,720
+bringing up, Bruce, because last
+year at Devox Belgium, during 
+
+401
+00:22:50,720 --> 00:22:54,360
+the opening keynote, I had Anton
+from Jetbrains do the opening 
+
+402
+00:22:54,360 --> 00:22:57,200
+keynote where he demonstrated 
+the AI assistant. 
+
+403
+00:22:57,320 --> 00:23:00,720
+It was basically shown during 
+the, you know, this was one year
+
+404
+00:23:00,720 --> 00:23:03,480
+ago. 
+And the question I asked him to 
+
+405
+00:23:03,520 --> 00:23:06,920
+Anton on stage, I've got a, it's
+on YouTube, you could find it. 
+
+406
+00:23:07,200 --> 00:23:10,640
+I said, like, are you guys going
+to support local models? 
+
+407
+00:23:11,840 --> 00:23:14,480
+And he said, well, I can't yet 
+answer that. 
+
+408
+00:23:15,600 --> 00:23:19,160
+And I said, and if you do, will 
+it be pluggable so I can work 
+
+409
+00:23:19,160 --> 00:23:23,560
+with any LLM provider? 
+And four months later, like in 
+
+410
+00:23:23,560 --> 00:23:25,960
+February, they still haven't 
+replied. 
+
+411
+00:23:26,000 --> 00:23:28,120
+And then I've been like, OK, 
+well, it's not gonna happen. 
+
+412
+00:23:28,120 --> 00:23:30,960
+I'll build my own plugin. 
+And that's basically what I've 
+
+413
+00:23:30,960 --> 00:23:33,400
+been doing for the last six 
+months now is that I build a 
+
+414
+00:23:33,400 --> 00:23:38,640
+plugin for Intellij in open 
+source, free, but it works with 
+
+415
+00:23:38,640 --> 00:23:42,760
+local models, any local model 
+and cloud models. 
+
+416
+00:23:43,520 --> 00:23:47,200
+And you just, they, if it's a 
+cloud model, you just need to 
+
+417
+00:23:47,200 --> 00:23:49,480
+get the API key and you pay for 
+the API key. 
+
+418
+00:23:49,680 --> 00:23:53,400
+But the beauty of the the plug 
+in is that it allows you based 
+
+419
+00:23:53,400 --> 00:23:56,640
+on the window context available 
+of the model that you've chosen 
+
+420
+00:23:56,640 --> 00:24:00,440
+or the provider you've chosen, 
+it allows you to completely copy
+
+421
+00:24:00,440 --> 00:24:03,880
+your project in the window 
+context and then start chatting 
+
+422
+00:24:03,880 --> 00:24:08,200
+away. 
+And that's where in my opinion, 
+
+423
+00:24:08,240 --> 00:24:10,120
+I've called it the error of the 
+ape. 
+
+424
+00:24:10,560 --> 00:24:14,720
+But the ape in the Dutch 
+spelling, it's AAP and AAP 
+
+425
+00:24:14,720 --> 00:24:19,240
+stands for AI augmented 
+programming because we are 
+
+426
+00:24:19,240 --> 00:24:21,680
+really entering and it's a 
+revolution. 
+
+427
+00:24:21,680 --> 00:24:24,080
+It really is. 
+I mean, I'm an average 
+
+428
+00:24:24,080 --> 00:24:29,240
+developer, but with these 
+assistants I'm becoming a senior
+
+429
+00:24:29,240 --> 00:24:34,920
+expert 10 times developer, full 
+web stack guys, It's I. 
+
+430
+00:24:34,920 --> 00:24:39,800
+Had an experience over a year 
+ago where I was, I had fallen 
+
+431
+00:24:39,800 --> 00:24:43,280
+into Rust and I was really 
+focused on it for a couple of 
+
+432
+00:24:43,280 --> 00:24:46,040
+months. 
+And part way through I started 
+
+433
+00:24:46,040 --> 00:24:51,960
+using the AI and the, you know, 
+instead of reading somebody 
+
+434
+00:24:51,960 --> 00:24:56,760
+else's book and their examples 
+that they thought were in order.
+
+435
+00:24:56,920 --> 00:25:00,480
+If you go, oh, I'm interested in
+this right now, create me an 
+
+436
+00:25:00,480 --> 00:25:02,440
+example and then you study that 
+example. 
+
+437
+00:25:02,440 --> 00:25:05,640
+I found that accelerated my 
+learning dramatically. 
+
+438
+00:25:05,720 --> 00:25:07,560
+Absolutely. 
+Yeah, absolutely. 
+
+439
+00:25:07,800 --> 00:25:12,440
+I mean it is like a, it's 
+basically an AI or a senior 
+
+440
+00:25:12,440 --> 00:25:16,920
+expert that you have on your 
+side 24/7 and it costs you 
+
+441
+00:25:16,920 --> 00:25:21,240
+$20.00 a month. 
+And I think a huge part of it is
+
+442
+00:25:21,240 --> 00:25:25,200
+the fact that you're, you know, 
+in our world, it's all about 
+
+443
+00:25:25,200 --> 00:25:27,320
+knowledge and that's our status 
+and everything. 
+
+444
+00:25:27,320 --> 00:25:30,600
+And if you admit that you don't 
+know something, even if you get 
+
+445
+00:25:30,600 --> 00:25:33,920
+used to doing that, it's still 
+hard sometimes. 
+
+446
+00:25:34,120 --> 00:25:36,800
+Whereas when you're talking to 
+the, there's no judgement. 
+
+447
+00:25:36,800 --> 00:25:38,840
+You can ask the dumbest question
+you want. 
+
+448
+00:25:38,840 --> 00:25:40,600
+It's always like, oh, that was a
+great question. 
+
+449
+00:25:40,600 --> 00:25:41,560
+You're like. 
+That. 
+
+450
+00:25:42,600 --> 00:25:45,840
+Was a great question. 
+And there are, you know, there's
+
+451
+00:25:45,840 --> 00:25:49,680
+things that I haven't asked 
+forever because, oh, everybody 
+
+452
+00:25:49,680 --> 00:25:51,160
+knows this. 
+And I'd look dumb. 
+
+453
+00:25:51,720 --> 00:25:55,160
+And then I'm happy to ask that 
+and it'll explain it to me. 
+
+454
+00:25:55,160 --> 00:25:56,920
+And it goes, oh, this is great. 
+Yeah. 
+
+455
+00:25:56,920 --> 00:25:58,960
+So. 
+So those two things I think are 
+
+456
+00:25:58,960 --> 00:26:00,720
+just. 
+Yeah, And it seems like there 
+
+457
+00:26:00,720 --> 00:26:03,920
+are tasks where this is really 
+well suited, like you mentioned 
+
+458
+00:26:03,920 --> 00:26:06,160
+learning. 
+So I'm new to Amazon. 
+
+459
+00:26:06,160 --> 00:26:09,240
+I've been having to learn a 
+whole bunch of new things and Oh
+
+460
+00:26:09,240 --> 00:26:12,680
+my God, haven't I used Q 
+Developers since that's Amazon's
+
+461
+00:26:12,680 --> 00:26:15,520
+thing and it's in Intellij and 
+I'm just asking questions to it 
+
+462
+00:26:15,560 --> 00:26:17,800
+all day long as I'm learning new
+things. 
+
+463
+00:26:18,320 --> 00:26:21,600
+And so learning seems like, of 
+course you're going to use these
+
+464
+00:26:21,600 --> 00:26:24,080
+tools when you're learning 
+something new, but what about 
+
+465
+00:26:24,080 --> 00:26:27,000
+when you're, I don't know, just 
+like writing a boring CRUD 
+
+466
+00:26:27,000 --> 00:26:29,080
+application or something? 
+Perfect. 
+
+467
+00:26:30,280 --> 00:26:34,200
+But Even so, like the photo app 
+I was talking about is a stupid 
+
+468
+00:26:34,200 --> 00:26:38,440
+photo app, but it was like I was
+able to really from scratch. 
+
+469
+00:26:38,640 --> 00:26:42,080
+I started on Sunday afternoon 
+and on Monday evening I have a 
+
+470
+00:26:42,080 --> 00:26:45,800
+fully working deployed 
+application doing sophisticated 
+
+471
+00:26:45,800 --> 00:26:48,960
+things which I would have, if I 
+would have done it from scratch 
+
+472
+00:26:48,960 --> 00:26:51,000
+without an assistant. 
+It would have taken me three 
+
+473
+00:26:51,000 --> 00:26:54,680
+weeks for sure, right? 
+And that was like in 16 hours. 
+
+474
+00:26:54,680 --> 00:26:58,280
+That's like. 
+The accelerated even kind of the
+
+475
+00:26:58,440 --> 00:27:02,800
+the boring stuff. 
+In particular the boring stuff, 
+
+476
+00:27:02,800 --> 00:27:07,440
+cuz it's like when you go in to 
+try and do something and you go,
+
+477
+00:27:07,440 --> 00:27:10,160
+I'm gonna have to go look up 
+this and figure that out. 
+
+478
+00:27:10,160 --> 00:27:13,800
+And it's like it sounds like and
+when it when it gives you that 
+
+479
+00:27:13,800 --> 00:27:17,960
+and then you can focus on I 
+wanna make it do this or that. 
+
+480
+00:27:19,080 --> 00:27:21,440
+I don't know. 
+I I have found it just to be 
+
+481
+00:27:21,600 --> 00:27:24,520
+dramatically helpful. 
+In dealing with the tool I've 
+
+482
+00:27:24,520 --> 00:27:28,280
+used guys is the one from 
+Anthropic called Cloud. 
+
+483
+00:27:28,720 --> 00:27:32,000
+So cloud has a has multiple 
+models. 
+
+484
+00:27:32,600 --> 00:27:35,920
+The lowest one is Haiku, then 
+you have sonnet and then you 
+
+485
+00:27:35,920 --> 00:27:39,200
+have Opus. 
+So the one in the middle sonnet 
+
+486
+00:27:39,800 --> 00:27:42,960
+is version 3.5. 
+It has a window context of 
+
+487
+00:27:42,960 --> 00:27:47,560
+200,000 tokens. 
+You pay $20.00 a month and what 
+
+488
+00:27:47,560 --> 00:27:50,400
+it has as a unique feature is 
+that it allows you to create a 
+
+489
+00:27:50,400 --> 00:27:53,800
+project. 
+So you create a project and it 
+
+490
+00:27:53,800 --> 00:27:57,720
+uses this cache thing. 
+So what you can do, you create a
+
+491
+00:27:57,720 --> 00:28:03,400
+project like My Photo app, and 
+then you give it the full source
+
+492
+00:28:03,400 --> 00:28:05,920
+code. 
+Now to give it the full source 
+
+493
+00:28:05,920 --> 00:28:07,960
+code, there's a few tools you 
+need to use. 
+
+494
+00:28:07,960 --> 00:28:11,560
+There was one tool that I used 
+to use called Code to Prompt. 
+
+495
+00:28:11,720 --> 00:28:15,360
+So it was like just a shell 
+script, Python script, Code to 
+
+496
+00:28:15,360 --> 00:28:17,960
+prompt. 
+And what it did is that it went 
+
+497
+00:28:17,960 --> 00:28:22,000
+recursively through your 
+directory, created a tree of 
+
+498
+00:28:22,000 --> 00:28:24,960
+your project, and then it copied
+all the files underneath each 
+
+499
+00:28:24,960 --> 00:28:27,160
+other. 
+And that was one big text file 
+
+500
+00:28:27,760 --> 00:28:30,360
+right now. 
+Well, you then copy it 
+
+501
+00:28:30,360 --> 00:28:31,920
+immediately puts it in the 
+clipboard. 
+
+502
+00:28:32,240 --> 00:28:35,360
+So you paste that output into 
+the project. 
+
+503
+00:28:36,080 --> 00:28:39,800
+But the cool thing is this 
+project was 70,000 tokens. 
+
+504
+00:28:39,800 --> 00:28:43,200
+I still had 130, 1000 tokens 
+still available. 
+
+505
+00:28:43,480 --> 00:28:47,600
+So you can actually add extra 
+PDF files or extra documents or 
+
+506
+00:28:47,600 --> 00:28:50,560
+other libraries that you're 
+interested in using as a 
+
+507
+00:28:50,560 --> 00:28:52,880
+context. 
+And then you start chatting. 
+
+508
+00:28:53,520 --> 00:28:57,840
+And that program was basically 
+created just with prompts. 
+
+509
+00:28:58,440 --> 00:29:00,400
+So it was like really producing 
+code. 
+
+510
+00:29:00,400 --> 00:29:01,640
+Like I was saying, like, Oh 
+yeah. 
+
+511
+00:29:01,800 --> 00:29:04,680
+So you have to create, but you 
+have to give it some good 
+
+512
+00:29:04,680 --> 00:29:07,000
+context. 
+So you need to be like the the 
+
+513
+00:29:07,000 --> 00:29:10,080
+technical project manager, which
+has to write the specs for the 
+
+514
+00:29:10,080 --> 00:29:12,080
+application. 
+That's really important. 
+
+515
+00:29:12,480 --> 00:29:15,560
+And so being a developer and 
+even a senior developer does 
+
+516
+00:29:15,560 --> 00:29:19,840
+help because you can say like, 
+OK, I want to use Angular 17, I 
+
+517
+00:29:19,840 --> 00:29:22,880
+want to use Spring Boot 3.2, I 
+want to use Firebase. 
+
+518
+00:29:23,040 --> 00:29:26,480
+So you give it all those details
+and then you start giving it the
+
+519
+00:29:26,520 --> 00:29:30,600
+use cases of what you want, and 
+it basically guides you through 
+
+520
+00:29:30,600 --> 00:29:33,520
+it. 
+And if you would see my arm, 
+
+521
+00:29:33,520 --> 00:29:36,680
+there's goosebumps all over here
+because it's like, bloody hell, 
+
+522
+00:29:36,960 --> 00:29:40,720
+I'm living science fiction. 
+This shouldn't be happening in 
+
+523
+00:29:40,720 --> 00:29:42,960
+my lifetime. 
+And it is. 
+
+524
+00:29:43,280 --> 00:29:45,400
+And it's only, I mean, this is 
+the worst. 
+
+525
+00:29:45,400 --> 00:29:48,840
+It's moving too. 
+Fast, like we've got all sorts 
+
+526
+00:29:48,880 --> 00:29:51,960
+of different tools that are 
+becoming available and then 
+
+527
+00:29:51,960 --> 00:29:54,760
+tools that are just making this 
+all essentially transparent 
+
+528
+00:29:54,760 --> 00:29:58,520
+where you don't even have to 
+like copy, do the prompt code to
+
+529
+00:29:58,520 --> 00:30:01,320
+prompt thing and copy it in. 
+Like so Q developer that I've 
+
+530
+00:30:01,320 --> 00:30:05,320
+been using has like now a way to
+create the local vector database
+
+531
+00:30:05,320 --> 00:30:07,960
+all transparently of your code 
+and then you can ask questions 
+
+532
+00:30:07,960 --> 00:30:09,800
+of your code. 
+So like the tools are just 
+
+533
+00:30:09,840 --> 00:30:11,720
+evolving so quickly in this 
+space. 
+
+534
+00:30:12,320 --> 00:30:14,240
+So let me get some 
+clarification. 
+
+535
+00:30:14,240 --> 00:30:20,320
+You said that your favorite AI 
+tool is anthropic. 
+
+536
+00:30:20,680 --> 00:30:24,920
+Yeah, so I'm using Anthropic 
+Cloud Sonnet 3.5 but the 
+
+537
+00:30:24,920 --> 00:30:26,640
+property drive is so. 
+Good. 
+
+538
+00:30:27,040 --> 00:30:30,840
+It's I've been using it for a 
+number of things and it's 
+
+539
+00:30:30,840 --> 00:30:33,800
+unbelievable. 
+It is on the next level and and 
+
+540
+00:30:33,800 --> 00:30:37,240
+Opus is a is going to be even 
+better and they're going to 
+
+541
+00:30:37,240 --> 00:30:40,280
+release it end of this year, 
+probably after the elections, 
+
+542
+00:30:41,360 --> 00:30:43,200
+but Opus is going to be even 
+better. 
+
+543
+00:30:43,200 --> 00:30:46,400
+So it's like bloody. 
+But the problem to your question
+
+544
+00:30:46,400 --> 00:30:50,200
+groups is that you can only for 
+$20, you can only ask that many 
+
+545
+00:30:50,200 --> 00:30:54,480
+questions per day. 
+So you run out out of basically 
+
+546
+00:30:54,480 --> 00:30:58,160
+credits per day rapidly because 
+you're including the full 
+
+547
+00:30:58,160 --> 00:31:00,760
+project in the cache and it 
+takes a bit of token. 
+
+548
+00:31:00,760 --> 00:31:04,960
+So what I do then is that I move
+back to Intellij and I use my 
+
+549
+00:31:04,960 --> 00:31:09,840
+own plugin Devoxgenie, where I 
+use the API key of Anthropic. 
+
+550
+00:31:10,120 --> 00:31:13,920
+And I basically just continue in
+the development environment of 
+
+551
+00:31:13,920 --> 00:31:19,000
+Intellij with my plugin. 
+And so there I, I've built, I've
+
+552
+00:31:19,000 --> 00:31:23,000
+basically, you know, I took the 
+PHP code of code to prompt, gave
+
+553
+00:31:23,000 --> 00:31:26,160
+it to Claude, said like rewrite 
+it in Java for an Intellij plug 
+
+554
+00:31:26,160 --> 00:31:28,120
+in and then basically add it to 
+my plug in. 
+
+555
+00:31:28,120 --> 00:31:32,000
+So now I can do a right click on
+my project in Intellij and say 
+
+556
+00:31:32,200 --> 00:31:35,880
+copy project to clipboard or 
+copy project to prompt. 
+
+557
+00:31:36,080 --> 00:31:38,560
+And it's in my prompt. 
+It shows how much it's going to 
+
+558
+00:31:38,560 --> 00:31:40,760
+cost you if you send that and so
+on. 
+
+559
+00:31:40,760 --> 00:31:44,120
+And you basically continue in 
+the development environment. 
+
+560
+00:31:44,880 --> 00:31:47,400
+So what's what's the plug in 
+that you created called Devox 
+
+561
+00:31:47,400 --> 00:31:49,360
+Genie or? 
+Something yeah, Devox Genie. 
+
+562
+00:31:49,360 --> 00:31:53,200
+So it was basically out of the 
+frustration of Intellij not 
+
+563
+00:31:53,200 --> 00:31:57,280
+supporting local models and not 
+being really open because I 
+
+564
+00:31:57,320 --> 00:31:59,480
+understand, I mean, they have to
+make a business out of it. 
+
+565
+00:31:59,480 --> 00:32:02,000
+And I mean, I'm, I'm not really 
+into that. 
+
+566
+00:32:02,440 --> 00:32:06,800
+I think that their new multi 
+line completion is local. 
+
+567
+00:32:06,800 --> 00:32:08,880
+Model. 
+But but it's not. 
+
+568
+00:32:09,280 --> 00:32:11,840
+As far as I know that local 
+model is not trained on your 
+
+569
+00:32:11,840 --> 00:32:14,080
+project and not very 
+customizable so. 
+
+570
+00:32:14,840 --> 00:32:18,200
+You can't use A1 line code 
+completion, especially if you 
+
+571
+00:32:18,200 --> 00:32:20,680
+can run Devoxini with a local 
+model. 
+
+572
+00:32:21,120 --> 00:32:24,760
+So there's multiple local models
+that you providers that you can 
+
+573
+00:32:24,760 --> 00:32:26,840
+start. 
+You have like LM Studio, you 
+
+574
+00:32:26,840 --> 00:32:30,240
+have Yum. 
+But the the most known one is 
+
+575
+00:32:30,240 --> 00:32:37,040
+Orlama, which is basically a 
+wrapper around LAMA CPP. 
+
+576
+00:32:37,400 --> 00:32:41,720
+And LAMA CPP is like you 
+remember the James FFM Peck. 
+
+577
+00:32:42,400 --> 00:32:44,920
+Yeah, yeah, yeah. 
+That was like the Swiss Army 
+
+578
+00:32:44,920 --> 00:32:47,320
+knife to do video cutting or 
+whatever. 
+
+579
+00:32:48,240 --> 00:32:53,880
+Well, Llama CPP is like the 
+Swiss Swiss Army knife for large
+
+580
+00:32:53,920 --> 00:32:57,320
+language models, for local and 
+especially for Apple Silicon as 
+
+581
+00:32:57,320 --> 00:33:00,320
+well. 
+So you can basically run it. 
+
+582
+00:33:00,320 --> 00:33:03,320
+It's in C++, but it has Apple 
+Windows versions. 
+
+583
+00:33:03,720 --> 00:33:06,680
+You can run it and you link it 
+to a model that you download 
+
+584
+00:33:06,680 --> 00:33:10,280
+from Hugging Face and it runs 
+natively on your Apple Silicon. 
+
+585
+00:33:10,920 --> 00:33:14,760
+And what it does is that it 
+creates a web server which you 
+
+586
+00:33:14,760 --> 00:33:19,040
+can then talk to, very similar 
+to the Open AI REST API. 
+
+587
+00:33:19,640 --> 00:33:23,000
+You can just talk to it locally 
+from your machine, from DevOps 
+
+588
+00:33:23,000 --> 00:33:25,760
+Genie or whatever. 
+And when you say Apple Silicon, 
+
+589
+00:33:25,760 --> 00:33:29,720
+you mean like the M1M2M3 chips? 
+Yeah, because it needs that 
+
+590
+00:33:29,720 --> 00:33:33,080
+speed. 
+Yes, well, I don't know the full
+
+591
+00:33:33,080 --> 00:33:34,640
+details. 
+I mean, you should really try to
+
+592
+00:33:34,640 --> 00:33:36,160
+get the, I think. 
+What's his name? 
+
+593
+00:33:36,160 --> 00:33:37,280
+George. 
+George. 
+
+594
+00:33:37,520 --> 00:33:42,360
+He's from Bulgaria. 
+Jerganov, Georgie. 
+
+595
+00:33:43,520 --> 00:33:47,280
+I mean, I tried to get him to 
+Devox, Belgium, but he's just 
+
+596
+00:33:47,280 --> 00:33:50,320
+too busy. 
+If you look at his GitHub stats,
+
+597
+00:33:50,320 --> 00:33:53,160
+he's just all over the place. 
+So I think, let's hop back for a
+
+598
+00:33:53,160 --> 00:33:55,640
+second. 
+I think a lot of people think 
+
+599
+00:33:55,640 --> 00:34:00,280
+about the AI assistant, coding 
+assistant as being primarily 
+
+600
+00:34:00,280 --> 00:34:03,960
+around code completion. 
+Like, oh, isn't it amazing that 
+
+601
+00:34:03,960 --> 00:34:09,159
+the AI can like like just write 
+a bunch of code for me, But I 
+
+602
+00:34:09,159 --> 00:34:12,440
+haven't found that to be the 
+most valuable part of these code
+
+603
+00:34:12,440 --> 00:34:14,679
+assistants. 
+But tell me your perspective on 
+
+604
+00:34:14,679 --> 00:34:16,360
+this. 
+Like we were just kind of like 
+
+605
+00:34:16,360 --> 00:34:19,920
+talking about how the the multi 
+line completion like like maybe 
+
+606
+00:34:19,920 --> 00:34:23,320
+that's not the the most valuable
+thing here. 
+
+607
+00:34:23,719 --> 00:34:26,440
+No, not yet. 
+Well, they've just recently I 
+
+608
+00:34:26,440 --> 00:34:29,840
+think this week announced the 
+code completion for your shell 
+
+609
+00:34:29,840 --> 00:34:31,760
+command. 
+So you can like enter like, hey,
+
+610
+00:34:31,800 --> 00:34:35,960
+I'm looking for a command to do 
+a list of the ports that I'm 
+
+611
+00:34:35,960 --> 00:34:38,960
+listening on and it will then 
+give you the the command that it
+
+612
+00:34:38,960 --> 00:34:40,639
+needs to run. 
+I mean, that's already 
+
+613
+00:34:40,639 --> 00:34:50,520
+interesting, but I mean, for me,
+it's really like the fact that 
+
+614
+00:34:50,520 --> 00:34:52,880
+you can give it the full context
+of your project. 
+
+615
+00:34:53,679 --> 00:34:56,280
+You have the expert who knows 
+the full project and if you want
+
+616
+00:34:56,280 --> 00:34:59,040
+to write unit test or 
+integration test, it will. 
+
+617
+00:34:59,040 --> 00:35:03,240
+And you even can say, Hey, write
+it with J unit 5 and use Mockito
+
+618
+00:35:03,240 --> 00:35:05,520
+for that. 
+It will do an amazing job 
+
+619
+00:35:05,880 --> 00:35:08,720
+because it has all that the full
+context of your project. 
+
+620
+00:35:09,000 --> 00:35:10,800
+And I think that's that's the 
+big eye opener. 
+
+621
+00:35:11,160 --> 00:35:14,400
+The other thing is that I'm 
+sometimes on a train or on a 
+
+622
+00:35:14,400 --> 00:35:18,080
+plane and I'm very productive on
+the train, but there's no 
+
+623
+00:35:18,080 --> 00:35:20,800
+Internet. 
+Well, then the I assistant can't
+
+624
+00:35:20,800 --> 00:35:23,240
+really help me or I need to use 
+my 4G. 
+
+625
+00:35:23,240 --> 00:35:28,120
+And so having local models, for 
+example, LAMA 3.1, it will help 
+
+626
+00:35:28,120 --> 00:35:33,080
+you in very good ways, which I 
+mean, they're getting so much 
+
+627
+00:35:33,880 --> 00:35:38,640
+better in, in every new releases
+that eventually we'll just have 
+
+628
+00:35:38,640 --> 00:35:41,480
+it locally running. 
+But the cool thing is, is that, 
+
+629
+00:35:42,000 --> 00:35:45,480
+that's what I'm now doing a bit 
+of research on is that we will 
+
+630
+00:35:45,480 --> 00:35:48,320
+move towards a large language 
+model sharding. 
+
+631
+00:35:49,120 --> 00:35:52,520
+So you know, database sharding. 
+So they're now doing this for 
+
+632
+00:35:52,520 --> 00:35:55,160
+large language models because 
+the problem is if you have a, a 
+
+633
+00:35:55,800 --> 00:36:01,920
+llama 3.1 to 405 billion 
+parameters, I think it's like, 
+
+634
+00:36:01,920 --> 00:36:05,040
+you know, it's, it's, it could 
+be like 50 or 100 gigs. 
+
+635
+00:36:05,040 --> 00:36:08,000
+I, I, I haven't downloaded it, 
+but it's, it's huge in size, 
+
+636
+00:36:08,000 --> 00:36:10,040
+right? 
+So you can't run it on one 
+
+637
+00:36:10,040 --> 00:36:16,080
+machine unless you have like a 
+really beefy $100,000 machine. 
+
+638
+00:36:16,440 --> 00:36:19,720
+So what you're doing is that 
+you're doing sharding where you 
+
+639
+00:36:19,720 --> 00:36:23,640
+only load a number of tensors 
+based on the vertical or 
+
+640
+00:36:23,640 --> 00:36:26,560
+horizontal sharding. 
+You can basically say only load 
+
+641
+00:36:26,560 --> 00:36:30,640
+a portion of that model into 
+that machine, the other portion 
+
+642
+00:36:30,640 --> 00:36:34,280
+in that machine, and the last 
+portion in another machine. 
+
+643
+00:36:34,560 --> 00:36:38,840
+And you create like a mesh of 
+these three machines which talk 
+
+644
+00:36:38,840 --> 00:36:40,560
+to each other. 
+And so if you give a prompt. 
+
+645
+00:36:40,560 --> 00:36:45,760
+Like model micro services. 
+Whatever, it will go through all
+
+646
+00:36:45,760 --> 00:36:48,320
+the different models on your 
+different machines and then 
+
+647
+00:36:48,320 --> 00:36:50,600
+basically concatenate the result
+and give it to you. 
+
+648
+00:36:50,920 --> 00:36:52,400
+It will still take a bit of time
+I've. 
+
+649
+00:36:52,400 --> 00:36:55,480
+Heard that one of the challenges
+with this approach is that 
+
+650
+00:36:55,760 --> 00:36:59,680
+somewhere you have to have a 
+router that knows like, oh, 
+
+651
+00:36:59,680 --> 00:37:02,240
+you're talking about banks. 
+How does it know that you're 
+
+652
+00:37:02,240 --> 00:37:05,120
+talking about like the bank that
+you get your money out of versus
+
+653
+00:37:05,120 --> 00:37:08,920
+the other kind of bank. 
+And so this the like first entry
+
+654
+00:37:08,920 --> 00:37:12,240
+point into understanding how to 
+then route to one of these other
+
+655
+00:37:12,240 --> 00:37:14,240
+micro models. 
+No, but it's. 
+
+656
+00:37:14,240 --> 00:37:15,640
+Different. 
+That thing has to be pretty 
+
+657
+00:37:15,640 --> 00:37:17,840
+knowledgeable about everything 
+to then determine. 
+
+658
+00:37:17,840 --> 00:37:19,080
+That's a different approach, 
+James. 
+
+659
+00:37:19,080 --> 00:37:21,120
+That's not a sharding approach, 
+OK? 
+
+660
+00:37:21,160 --> 00:37:24,280
+You see a routing where you go 
+like, OK, go to this specialized
+
+661
+00:37:24,280 --> 00:37:28,000
+narrow model which knows about 
+the financial institutions. 
+
+662
+00:37:28,040 --> 00:37:30,480
+Yeah, that's basically what 
+Apple is doing with their new 
+
+663
+00:37:30,480 --> 00:37:33,800
+iPhone is that they have like 
+these adapters and these are 
+
+664
+00:37:33,800 --> 00:37:36,800
+small large language models and 
+they're specialized in a certain
+
+665
+00:37:36,800 --> 00:37:39,320
+area. 
+For example, anything to do with
+
+666
+00:37:39,320 --> 00:37:43,240
+the help system of an iPhone, it
+will have like an adapter for 
+
+667
+00:37:43,240 --> 00:37:45,560
+that. 
+And so it yes it will do a 
+
+668
+00:37:45,560 --> 00:37:48,320
+routing based on your question 
+it will go go to this model or 
+
+669
+00:37:48,320 --> 00:37:50,600
+that model. 
+But the sharding is different. 
+
+670
+00:37:50,680 --> 00:37:54,200
+The sharding is different. 
+It's it's like, it's like 
+
+671
+00:37:54,240 --> 00:37:55,600
+database sharding I guess is 
+what? 
+
+672
+00:37:55,640 --> 00:37:58,400
+You're saying it's cutting a 
+large model which could never 
+
+673
+00:37:58,400 --> 00:38:02,760
+run on one machine into pieces 
+and creating a glue where it 
+
+674
+00:38:02,760 --> 00:38:06,360
+goes and uses X amount of 
+tensors on one machine and then 
+
+675
+00:38:06,360 --> 00:38:09,960
+goes with and takes the output 
+of those tensors, give it as 
+
+676
+00:38:09,960 --> 00:38:13,040
+input to the next layers of 
+tensors that that machine 
+
+677
+00:38:13,040 --> 00:38:16,640
+supports, and so on. 
+And basically allows you to have
+
+678
+00:38:16,640 --> 00:38:21,360
+a huge large language model like
+400 billion parameters. 
+
+679
+00:38:22,080 --> 00:38:25,640
+This is like the RAID arrays of 
+of models. 
+
+680
+00:38:25,880 --> 00:38:28,880
+So like how a RAID could give 
+you a virtual disk across, you 
+
+681
+00:38:28,880 --> 00:38:31,120
+know, many physical disks. 
+Yeah, like Beijing. 
+
+682
+00:38:31,600 --> 00:38:37,800
+So it's somehow dividing your 
+model so that you can have those
+
+683
+00:38:37,800 --> 00:38:40,320
+layers. 
+How does that get figured out? 
+
+684
+00:38:40,600 --> 00:38:43,160
+How do I visualize it? 
+For the moment is like you have 
+
+685
+00:38:43,160 --> 00:38:46,680
+like a starting note and an end 
+note and in between you have 
+
+686
+00:38:46,680 --> 00:38:49,840
+multiple notes which are 
+connected and so you can have a 
+
+687
+00:38:49,840 --> 00:38:53,800
+vertical slice of sharding or 
+you can do a horizontal slice of
+
+688
+00:38:53,800 --> 00:38:57,920
+sharding and they are basically 
+sharing the outputs Becomes the 
+
+689
+00:38:57,920 --> 00:39:02,840
+inputs for sorry, the output 
+becomes the input for the next 
+
+690
+00:39:02,840 --> 00:39:06,240
+chart. 
+Because it's the model, a graph,
+
+691
+00:39:06,440 --> 00:39:09,560
+and so you can determine at what
+point you want to chop the graph
+
+692
+00:39:09,560 --> 00:39:14,680
+and move it over and say, OK, 
+once you reach this node, you 
+
+693
+00:39:14,680 --> 00:39:17,040
+can't go to the next node. 
+You have to go to this other 
+
+694
+00:39:17,040 --> 00:39:18,760
+machine or something to get to 
+the next. 
+
+695
+00:39:18,760 --> 00:39:22,240
+Node, but, and the beauty is 
+Apple is starting to see the 
+
+696
+00:39:22,240 --> 00:39:27,000
+potential and they've released 
+the library cord called MLX and 
+
+697
+00:39:27,000 --> 00:39:32,480
+MLX is a Python And AC library 
+which actually supports this own
+
+698
+00:39:32,480 --> 00:39:35,160
+silicon. 
+So that's why I'm an Apple 
+
+699
+00:39:35,160 --> 00:39:36,800
+fanboy. 
+So I have all Apple machines 
+
+700
+00:39:36,800 --> 00:39:39,880
+here. 
+And so my, my, my plan is to, to
+
+701
+00:39:39,880 --> 00:39:44,400
+basically write that in Java, 
+but using the Python library or 
+
+702
+00:39:44,400 --> 00:39:49,000
+the C++ library using JNI or 
+the, the Pygral. 
+
+703
+00:39:49,000 --> 00:39:51,840
+I mean, Graal now has also a 
+Python version. 
+
+704
+00:39:51,840 --> 00:39:56,280
+So I'm in, I'm in talks with the
+Graal people to see, hey, how 
+
+705
+00:39:56,280 --> 00:39:58,280
+can we make this work? 
+Because it would make it a cool 
+
+706
+00:39:58,280 --> 00:40:02,240
+demo for for DevOps. 
+It's like create this sharding 
+
+707
+00:40:02,240 --> 00:40:06,560
+using Java, using GRPC to 
+coordinate and then using I 
+
+708
+00:40:06,600 --> 00:40:10,640
+think I'm using JMDNS to to 
+basically do discovery of the 
+
+709
+00:40:10,640 --> 00:40:14,640
+different clients and it's like 
+it's so much fun. 
+
+710
+00:40:14,640 --> 00:40:18,400
+It's so much fun. 
+But it will not only the fun, it
+
+711
+00:40:18,400 --> 00:40:22,440
+will allow me to run a model 
+which has like 400 billion 
+
+712
+00:40:22,720 --> 00:40:25,400
+parameters. 
+So I will have a much more 
+
+713
+00:40:25,400 --> 00:40:28,720
+knowledgeable expert next to me 
+helping me without Internet 
+
+714
+00:40:28,720 --> 00:40:32,240
+connection. 
+I mean, we are, it doesn't seem 
+
+715
+00:40:32,240 --> 00:40:35,800
+like we're that far from having 
+essentially infinitely sized 
+
+716
+00:40:35,800 --> 00:40:41,080
+models like so large that that 
+that's no longer a constraint. 
+
+717
+00:40:41,080 --> 00:40:43,920
+Because right now it seems like 
+there is a bit of a constraint 
+
+718
+00:40:43,920 --> 00:40:47,120
+on, on the size of our models. 
+How big they can be is how much 
+
+719
+00:40:47,120 --> 00:40:50,920
+they know and how good they are.
+And the more, the larger they 
+
+720
+00:40:50,920 --> 00:40:52,800
+get, the better they get 
+generally. 
+
+721
+00:40:52,800 --> 00:40:54,920
+I'm sure there's many other 
+things that make them better as 
+
+722
+00:40:54,920 --> 00:41:00,280
+well, but this the, the, the 
+curve of this is a hockey stick 
+
+723
+00:41:00,640 --> 00:41:04,520
+and we're going to reach the 
+point where the models are very 
+
+724
+00:41:04,520 --> 00:41:08,760
+sufficiently large enough. 
+So, so then, then what's the 
+
+725
+00:41:08,760 --> 00:41:12,600
+next challenge is like, like 
+figuring out the places where 
+
+726
+00:41:12,600 --> 00:41:14,840
+these things can make our lives 
+better? 
+
+727
+00:41:14,840 --> 00:41:17,640
+Like it's made you a more 
+productive developer. 
+
+728
+00:41:17,640 --> 00:41:21,840
+It's enabled you to, to solve 
+things like the basketball 
+
+729
+00:41:22,200 --> 00:41:25,080
+detection, highlight detection. 
+So it's helped you solve some 
+
+730
+00:41:25,080 --> 00:41:27,200
+use cases, but where? 
+Where's this going I guess? 
+
+731
+00:41:27,720 --> 00:41:29,960
+Well, that's where I'm I'm using
+a phrase. 
+
+732
+00:41:30,160 --> 00:41:34,240
+We, we're like at this quantum 
+superposition states, which is 
+
+733
+00:41:34,240 --> 00:41:37,520
+both both frightening and 
+exciting at the same time 
+
+734
+00:41:38,360 --> 00:41:42,480
+because it's, it's, it's 
+amazing, but it's also really 
+
+735
+00:41:42,480 --> 00:41:44,640
+frightening. 
+I mean, if we extrapolate this, 
+
+736
+00:41:44,960 --> 00:41:48,560
+it might be that we just need 
+people who write the specs and 
+
+737
+00:41:48,560 --> 00:41:51,600
+the code just comes out and the 
+codes might not, might not be 
+
+738
+00:41:51,600 --> 00:41:54,680
+Java, it might just be pure 
+assembly because it knows how to
+
+739
+00:41:54,680 --> 00:41:57,280
+create assembly for that 
+specific device. 
+
+740
+00:41:57,280 --> 00:41:59,680
+And we will not understand even 
+what it produces. 
+
+741
+00:41:59,960 --> 00:42:05,000
+And that's why I call it ape, 
+you know, the augmented or the 
+
+742
+00:42:05,080 --> 00:42:09,200
+AI augmented programming because
+it's the the next level of a 
+
+743
+00:42:09,200 --> 00:42:12,160
+stack overflow where you 
+basically are copying, copying 
+
+744
+00:42:12,160 --> 00:42:15,600
+codes without understanding what
+you're copying, but it's working
+
+745
+00:42:16,600 --> 00:42:19,480
+and but you don't know what it's
+what's what it's doing. 
+
+746
+00:42:19,520 --> 00:42:23,800
+Yeah, but how different is that 
+from every level that we've come
+
+747
+00:42:23,800 --> 00:42:26,840
+up before? 
+You know when we abstraction we 
+
+748
+00:42:26,840 --> 00:42:30,240
+had everybody was programming in
+assembly language and we had 
+
+749
+00:42:30,240 --> 00:42:33,280
+higher level languages and now 
+we don't know what's happening 
+
+750
+00:42:33,280 --> 00:42:37,360
+at the machine level so. 
+Yeah, I did a whole. 
+
+751
+00:42:37,360 --> 00:42:41,800
+Podcast on the on exactly that 
+topic with Simon Maple this 
+
+752
+00:42:42,160 --> 00:42:44,080
+week. 
+So we talked about this idea of 
+
+753
+00:42:44,080 --> 00:42:47,880
+like, like maybe a per the 
+future programmer just writes 
+
+754
+00:42:47,880 --> 00:42:52,320
+the specification and who cares 
+how the AI actually comes up 
+
+755
+00:42:52,320 --> 00:42:55,720
+with the implementation. 
+Well, and I could see programs 
+
+756
+00:42:55,720 --> 00:42:59,760
+of the future as being more 
+interactive in in, in terms of 
+
+757
+00:42:59,760 --> 00:43:02,880
+what the user needs. 
+Like, we have a bookstore here 
+
+758
+00:43:03,040 --> 00:43:07,160
+and they're using ancient 
+software, but it's not 
+
+759
+00:43:07,520 --> 00:43:11,800
+economically viable to put, you 
+know, a team together to build 
+
+760
+00:43:11,840 --> 00:43:16,440
+new bookstore software. 
+But if they could work with 
+
+761
+00:43:16,440 --> 00:43:22,920
+maybe 1 developer and, you know,
+an AI, and then once the program
+
+762
+00:43:22,920 --> 00:43:26,560
+was created, if they needed a 
+new feature, they'd go, oh, you 
+
+763
+00:43:26,560 --> 00:43:28,720
+know, what I really needed to do
+is this. 
+
+764
+00:43:29,200 --> 00:43:32,600
+And it could be just something 
+that would automatically be 
+
+765
+00:43:32,600 --> 00:43:35,520
+integrated like change. 
+Based on the economic incentives
+
+766
+00:43:35,520 --> 00:43:38,440
+around this or the economic 
+structure, because right now 
+
+767
+00:43:38,440 --> 00:43:42,840
+there's not an economic benefit 
+to anybody to create the app 
+
+768
+00:43:42,840 --> 00:43:44,320
+that the bookstore needs to 
+manage. 
+
+769
+00:43:44,320 --> 00:43:49,080
+And a lot of other things when 
+you think about, you go, no, 
+
+770
+00:43:49,520 --> 00:43:52,280
+it's the same thing we had 
+before where it's like, Oh no, 
+
+771
+00:43:52,640 --> 00:43:54,520
+programmers are going to be 
+obsolete. 
+
+772
+00:43:54,840 --> 00:43:58,360
+And it's like, well, actually 
+most of the programs that we 
+
+773
+00:43:58,360 --> 00:44:03,520
+need the the economics haven't 
+been there to justify writing 
+
+774
+00:44:03,520 --> 00:44:06,080
+them. 
+And now this changes that This 
+
+775
+00:44:06,080 --> 00:44:08,440
+makes it possible. 
+Instead of saying we don't need 
+
+776
+00:44:08,440 --> 00:44:10,800
+programmers anymore, it's like 
+think of all the things that 
+
+777
+00:44:10,800 --> 00:44:13,800
+programmers could do right and 
+the problems they could solve. 
+
+778
+00:44:13,800 --> 00:44:16,120
+With these tools, but what you 
+see on Reddit, for example, 
+
+779
+00:44:16,120 --> 00:44:19,000
+there's so many people who are 
+saying, look at what I've built 
+
+780
+00:44:19,200 --> 00:44:22,280
+and I'm, I'm not a programmer. 
+I did not do any coding one week
+
+781
+00:44:22,280 --> 00:44:25,080
+ago. 
+But now I have creative ideas 
+
+782
+00:44:25,320 --> 00:44:29,440
+and I have the way to actually 
+make them with this tool which 
+
+783
+00:44:29,440 --> 00:44:32,000
+guides me step by step. 
+Exactly. 
+
+784
+00:44:32,560 --> 00:44:39,800
+And well, the film industry is 
+all worried about this, but I 
+
+785
+00:44:39,800 --> 00:44:41,880
+think, well, look at what it's 
+doing now. 
+
+786
+00:44:41,880 --> 00:44:44,920
+It's it's turning out these 
+horrible movies and spending 
+
+787
+00:44:44,920 --> 00:44:48,760
+tons of money on them, and 
+they're awful because you have a
+
+788
+00:44:48,760 --> 00:44:53,240
+bunch of studio executives 
+screwing around with the 
+
+789
+00:44:53,240 --> 00:44:54,800
+creatives. 
+Now, if you can let the 
+
+790
+00:44:54,800 --> 00:44:59,320
+creatives go directly to film, 
+we'll see a lot of terrible 
+
+791
+00:44:59,320 --> 00:45:03,280
+things, but we will see things 
+that will not get made in 
+
+792
+00:45:03,280 --> 00:45:05,040
+Hollywood and they'll be way 
+better. 
+
+793
+00:45:05,600 --> 00:45:08,960
+Cruise, the next version of 
+Netflix will be called Netflix 
+
+794
+00:45:08,960 --> 00:45:13,760
+AI and you will say, I want to 
+see a horror movie with DiCaprio
+
+795
+00:45:13,960 --> 00:45:16,280
+where he marries this person. 
+What? 
+
+796
+00:45:16,280 --> 00:45:19,400
+And it will be created based on 
+the prompt that you gave it. 
+
+797
+00:45:19,400 --> 00:45:21,280
+And it will basically create a 
+movie for you. 
+
+798
+00:45:21,840 --> 00:45:25,360
+And this is maybe that's going 
+to be possible in two years 
+
+799
+00:45:25,360 --> 00:45:28,520
+time, not longer. 
+I mean, I can already now create
+
+800
+00:45:28,520 --> 00:45:31,920
+music. 
+Just, yeah, no, I, I have a 
+
+801
+00:45:31,920 --> 00:45:35,160
+friend who has been writing 
+musicals and he's using that 
+
+802
+00:45:35,160 --> 00:45:38,160
+for, for, for that. 
+Yeah, that's an interesting idea
+
+803
+00:45:38,160 --> 00:45:41,560
+because often I'll be watching a
+movie and it'll get to a point 
+
+804
+00:45:41,560 --> 00:45:44,040
+and I'll go, oh, this is stupid 
+or I don't like this or 
+
+805
+00:45:44,040 --> 00:45:45,600
+whatever. 
+And if I could just go in and 
+
+806
+00:45:45,600 --> 00:45:47,920
+go, yeah, don't do that, do 
+something else. 
+
+807
+00:45:47,920 --> 00:45:50,960
+Yes, this is. 
+This is redundant or 
+
+808
+00:45:51,280 --> 00:45:54,000
+uninteresting to me. 
+Absolutely have this ending 
+
+809
+00:45:54,000 --> 00:45:57,320
+instead of that one and have his
+character in there and that 
+
+810
+00:45:57,360 --> 00:46:00,040
+right, that's gonna happen for 
+sure. 
+
+811
+00:46:00,040 --> 00:46:03,200
+I mean, if you look at Runway, 
+you give it a picture, which 
+
+812
+00:46:03,240 --> 00:46:06,080
+basically the picture is already
+generated by a prompt as well. 
+
+813
+00:46:06,320 --> 00:46:09,320
+And then it creates A10 to 20 
+seconds video based on that 
+
+814
+00:46:09,320 --> 00:46:12,600
+picture that you gave it. 
+And it's super realistic. 
+
+815
+00:46:12,600 --> 00:46:15,360
+Or, depending on the style that 
+you want, it could be a drawing 
+
+816
+00:46:15,360 --> 00:46:17,600
+or whatever you call like bloody
+hell I mean. 
+
+817
+00:46:18,680 --> 00:46:22,280
+So we're, we're feeling somewhat
+good about the opportunity for 
+
+818
+00:46:22,360 --> 00:46:27,880
+AI to not squash human 
+creativity, but actually enhance
+
+819
+00:46:27,880 --> 00:46:32,600
+and, and grow and give us more 
+space to live more creatively 
+
+820
+00:46:32,600 --> 00:46:35,560
+and. 
+Well, the, the, the other thing 
+
+821
+00:46:35,560 --> 00:46:40,120
+I've thought of many times is 
+the idea that here these 
+
+822
+00:46:40,120 --> 00:46:43,080
+companies are constantly, oh, 
+buy our product, buy our 
+
+823
+00:46:43,080 --> 00:46:45,040
+product. 
+I don't trust any of them, of 
+
+824
+00:46:45,040 --> 00:46:48,800
+course, because they have what I
+want is my own personal AI guy 
+
+825
+00:46:48,800 --> 00:46:54,480
+that knows my particular tastes.
+And so when I say you know what 
+
+826
+00:46:54,520 --> 00:46:56,960
+I would I need a new office 
+chair and it goes. 
+
+827
+00:46:57,480 --> 00:46:59,360
+I know what you need, just get. 
+This. 
+
+828
+00:46:59,360 --> 00:47:02,400
+Shopper. 
+And The thing is, I don't buy a 
+
+829
+00:47:02,400 --> 00:47:06,200
+lot of stuff because I'm 
+overwhelmed with the research 
+
+830
+00:47:06,200 --> 00:47:08,960
+that's necessary. 
+But if I had the thing that I 
+
+831
+00:47:08,960 --> 00:47:12,960
+trusted that was acting in my 
+interest, then I would buy more 
+
+832
+00:47:12,960 --> 00:47:15,520
+stuff. 
+Yeah, well, it's happening, 
+
+833
+00:47:15,520 --> 00:47:17,000
+Bruce. 
+I mean, this week Google 
+
+834
+00:47:17,000 --> 00:47:21,480
+announced Pixel 9, so and the 
+same with AI from Apple, the 
+
+835
+00:47:21,560 --> 00:47:25,840
+Apple intelligence smartly 
+named, it's happening. 
+
+836
+00:47:25,840 --> 00:47:28,400
+What they're basically are doing
+is that on the device, they're 
+
+837
+00:47:28,400 --> 00:47:31,600
+vectorising all of your data 
+which is on the device and it 
+
+838
+00:47:31,600 --> 00:47:34,360
+stays on the device. 
+So it has all this information 
+
+839
+00:47:34,360 --> 00:47:38,840
+which it can then use as a way 
+to to do prompting or based on 
+
+840
+00:47:38,840 --> 00:47:42,920
+your question, it will inject 
+the contexts which already knows
+
+841
+00:47:42,920 --> 00:47:45,680
+about what's on your phone and 
+it will be able to give 
+
+842
+00:47:45,680 --> 00:47:48,720
+personalized, you know, 
+recommendations or whatever 
+
+843
+00:47:48,720 --> 00:47:50,400
+that's there. 
+You should put out the the 
+
+844
+00:47:50,440 --> 00:47:51,600
+Google Pixel demo. 
+Oh yeah. 
+
+845
+00:47:51,640 --> 00:47:54,840
+Windows had that new thing they 
+were talking about where it was 
+
+846
+00:47:54,840 --> 00:47:57,760
+like basically screenshotting 
+your whole system at. 30 frames 
+
+847
+00:47:57,840 --> 00:47:59,000
+a second. 
+Or something, which is 
+
+848
+00:47:59,000 --> 00:48:02,040
+terrifying, but at the same 
+time, there has been many times 
+
+849
+00:48:02,040 --> 00:48:05,320
+where I'm like, I want to be 
+able to ask a question to the 
+
+850
+00:48:05,320 --> 00:48:07,800
+history of my interactions on my
+computer. 
+
+851
+00:48:08,040 --> 00:48:11,360
+Like that's totally a valid use 
+case and I would love to be able
+
+852
+00:48:11,360 --> 00:48:13,680
+to do that. 
+But yeah, there's there's. 
+
+853
+00:48:13,840 --> 00:48:17,080
+It has to stay on device. 
+I mean, if for all of a sudden 
+
+854
+00:48:17,080 --> 00:48:20,360
+that gets hacked and it gets 
+spread, people will really know 
+
+855
+00:48:20,360 --> 00:48:23,280
+what you've done every second of
+the moment that it created a 
+
+856
+00:48:23,280 --> 00:48:26,120
+snapshot. 
+It has to act in in the 
+
+857
+00:48:26,120 --> 00:48:29,680
+individual's interest for sure. 
+That's that's what you. 
+
+858
+00:48:29,880 --> 00:48:32,320
+Well, the AI should know how to 
+do that, Yeah. 
+
+859
+00:48:33,240 --> 00:48:35,960
+It should be able to be like, 
+yeah, maybe we shouldn't. 
+
+860
+00:48:36,040 --> 00:48:40,000
+Maybe we should stop recording 
+at this point to be able to be 
+
+861
+00:48:40,000 --> 00:48:42,520
+able to make those. 
+Or, or maybe I could just say, 
+
+862
+00:48:42,640 --> 00:48:44,840
+hey, there's something wrong 
+with my Internet. 
+
+863
+00:48:44,840 --> 00:48:49,280
+Can you figure it out and then 
+talk to the provider for me? 
+
+864
+00:48:49,600 --> 00:48:52,320
+And yeah, it's it's your own 
+personal assistant. 
+
+865
+00:48:53,480 --> 00:48:56,520
+But but going back to your first
+question, James, when you said 
+
+866
+00:48:56,520 --> 00:48:59,360
+like, OK, you have large 
+language rules, you have RAC and
+
+867
+00:48:59,480 --> 00:49:01,360
+then you were talking about 
+tools and agents. 
+
+868
+00:49:01,680 --> 00:49:05,440
+There's also the tools are also 
+a very interesting aspect of the
+
+869
+00:49:05,440 --> 00:49:09,360
+whole large language models, 
+because now like there's a talk,
+
+870
+00:49:09,640 --> 00:49:12,680
+I remember well, we selected 
+talk for Devox Belgium about 
+
+871
+00:49:13,040 --> 00:49:15,080
+everybody hates date time, 
+right? 
+
+872
+00:49:15,440 --> 00:49:18,080
+Playing with daytime and and 
+time zones, etcetera. 
+
+873
+00:49:18,480 --> 00:49:21,640
+Well, with a large language 
+model, you can actually ask a 
+
+874
+00:49:21,640 --> 00:49:25,320
+question in Java. 
+So you well, first of all, I 
+
+875
+00:49:25,320 --> 00:49:30,280
+need to roll back a bit. 
+Last year I had contact with a 
+
+876
+00:49:30,280 --> 00:49:35,480
+guy who started Lang Chain 4J 
+and there's Langchain, which is 
+
+877
+00:49:35,480 --> 00:49:39,280
+a Python library and his 
+ambition was to create a Java 
+
+878
+00:49:39,280 --> 00:49:42,800
+version of that. 
+And he's he's, he's a, he's an 
+
+879
+00:49:42,800 --> 00:49:47,040
+amazing developer, but he's not 
+very good in public speaking. 
+
+880
+00:49:47,040 --> 00:49:50,560
+So we had a lady, Liz Ras, who's
+a Belgian but lives in 
+
+881
+00:49:50,560 --> 00:49:53,360
+Switzerland, who did the 
+presentation at Devox Belgium 
+
+882
+00:49:53,440 --> 00:49:56,520
+last year. 
+And since then, Langchain for 
+
+883
+00:49:56,520 --> 00:50:00,400
+Jay has just sky rocketed within
+the Java community. 
+
+884
+00:50:01,480 --> 00:50:04,920
+And so that's the Java API. 
+If you want to talk to large 
+
+885
+00:50:04,920 --> 00:50:08,240
+language models locally or in 
+the cloud, that's the API you 
+
+886
+00:50:08,240 --> 00:50:09,000
+need to use. 
+It's. 
+
+887
+00:50:09,320 --> 00:50:12,640
+Like a unified API for talking 
+to either local or cloud. 
+
+888
+00:50:12,640 --> 00:50:15,680
+Model, yes, yes, it's open 
+source. 
+
+889
+00:50:15,720 --> 00:50:21,080
+It's really lots of contributors
+and it also supports this aspect
+
+890
+00:50:21,080 --> 00:50:23,400
+of tooling. 
+So what you can do is that you 
+
+891
+00:50:23,400 --> 00:50:28,400
+can create like a prompt where 
+you say what is the date time on
+
+892
+00:50:28,400 --> 00:50:36,040
+February 999 at 11:45. 
+You give it a sentence, but you 
+
+893
+00:50:36,040 --> 00:50:40,440
+say I don't respect the string 
+back, I respect I expect the 
+
+894
+00:50:40,440 --> 00:50:44,280
+date time back. 
+And so you're giving it a text 
+
+895
+00:50:44,280 --> 00:50:48,520
+about a certain moment in time, 
+and it will return a date time 
+
+896
+00:50:48,520 --> 00:50:52,720
+based on the prompts that it 
+executed using either local or 
+
+897
+00:50:52,720 --> 00:50:55,400
+remote models. 
+Bloody hell. 
+
+898
+00:50:55,880 --> 00:51:02,000
+Yeah, just the way that it has 
+been able to take these very, 
+
+899
+00:51:02,280 --> 00:51:06,600
+very not fun things to do and 
+make it so you don't even have 
+
+900
+00:51:06,600 --> 00:51:11,120
+to think about it. 
+But so if we move forward even 
+
+901
+00:51:11,120 --> 00:51:17,800
+more, we're still in this 
+mindset of, oh, we have a 
+
+902
+00:51:17,800 --> 00:51:19,840
+problem to solve. 
+We need to write a program. 
+
+903
+00:51:21,080 --> 00:51:23,960
+It seems like we're going to get
+to the point where, you know, my
+
+904
+00:51:23,960 --> 00:51:26,560
+friends who are writing the 
+bookstore, running the 
+
+905
+00:51:26,560 --> 00:51:30,000
+bookstore, they would simply 
+say, oh, here's a new book, 
+
+906
+00:51:30,000 --> 00:51:33,040
+Here's a new book, you know, or 
+take a picture of the books that
+
+907
+00:51:33,040 --> 00:51:35,120
+have just came in. 
+OK, now they're in the system. 
+
+908
+00:51:35,560 --> 00:51:37,480
+It knows physically where they 
+are. 
+
+909
+00:51:37,800 --> 00:51:41,200
+And they don't actually have to 
+write a program. 
+
+910
+00:51:41,240 --> 00:51:43,920
+They just use the AI for 
+everything. 
+
+911
+00:51:44,520 --> 00:51:47,040
+The the language, the 
+programming language for the 
+
+912
+00:51:47,040 --> 00:51:52,920
+next couple of decades is the 
+English language because you, 
+
+913
+00:51:52,920 --> 00:51:58,160
+you, you just write in English 
+and it produces results based on
+
+914
+00:51:58,160 --> 00:52:01,000
+your prompts. 
+You don't write a code or a Java
+
+915
+00:52:01,000 --> 00:52:03,440
+method to convert the text into 
+a daytime. 
+
+916
+00:52:03,560 --> 00:52:06,160
+You give it a prompt with the 
+information and it returns you 
+
+917
+00:52:06,160 --> 00:52:08,640
+the object that you are that you
+want. 
+
+918
+00:52:09,240 --> 00:52:11,040
+So a lot of people are 
+predicting that. 
+
+919
+00:52:11,040 --> 00:52:14,840
+That's basically. 
+There's been a lot of attempts 
+
+920
+00:52:14,920 --> 00:52:17,840
+at these like natural language 
+programming languages. 
+
+921
+00:52:18,280 --> 00:52:23,680
+And I think I was seeing some 
+tweets by Grady Buch around this
+
+922
+00:52:23,920 --> 00:52:26,640
+and he's like, the reason why we
+have programming languages is 
+
+923
+00:52:26,640 --> 00:52:30,040
+because often the things that 
+you need to express aren't 
+
+924
+00:52:30,040 --> 00:52:35,800
+easily expressible in a natural 
+language, which is very open to 
+
+925
+00:52:35,800 --> 00:52:38,320
+interpretation. 
+The reason why we have a more 
+
+926
+00:52:38,320 --> 00:52:42,200
+constrained language. 
+And I, I kind of agree with with
+
+927
+00:52:42,200 --> 00:52:45,600
+part of that, that, yeah, there 
+are, there are things that can, 
+
+928
+00:52:45,640 --> 00:52:48,720
+that are really hard to express 
+in natural language that are 
+
+929
+00:52:48,720 --> 00:52:52,000
+much easier to express in in a 
+programming language. 
+
+930
+00:52:52,480 --> 00:52:56,720
+But I don't know, maybe, maybe 
+at some point the AI is smart 
+
+931
+00:52:56,720 --> 00:52:59,000
+enough that it can figure all 
+that out. 
+
+932
+00:52:59,800 --> 00:53:02,160
+Well, it would be, I mean, 
+you're talking about a way to 
+
+933
+00:53:02,160 --> 00:53:08,120
+specify something. 
+And yes, spoken language is very
+
+934
+00:53:08,400 --> 00:53:12,400
+flexible and so it doesn't have 
+like type constraints and things
+
+935
+00:53:12,400 --> 00:53:15,320
+like that. 
+But through an iterative 
+
+936
+00:53:15,320 --> 00:53:19,320
+process, it would be able to 
+say, you know, you, you would 
+
+937
+00:53:19,320 --> 00:53:21,200
+say, oh, no, that's not what I 
+meant to this. 
+
+938
+00:53:21,200 --> 00:53:24,440
+And then it would add to the 
+specification and do this, but 
+
+939
+00:53:24,440 --> 00:53:27,880
+it would be interactive with the
+actual customer who's who's 
+
+940
+00:53:27,880 --> 00:53:31,520
+using this, the actual end user.
+And you see the movement of like
+
+941
+00:53:32,280 --> 00:53:35,680
+Open AI last week also announced
+that they will support Jason 
+
+942
+00:53:35,680 --> 00:53:38,960
+even even more strongly. 
+So you can give it a prompt and 
+
+943
+00:53:38,960 --> 00:53:41,680
+it will return Jason. 
+So that way you can really map 
+
+944
+00:53:41,680 --> 00:53:45,080
+it even more easily. 
+And schema Jason, right, Like it
+
+945
+00:53:45,080 --> 00:53:47,840
+was, yeah. 
+So it wasn't just just like ad 
+
+946
+00:53:47,840 --> 00:53:51,080
+hoc Jason, which you know, Jason
+can certainly be ad hoc. 
+
+947
+00:53:51,080 --> 00:53:55,080
+It was actually like you provide
+the schema and then what open AI
+
+948
+00:53:55,080 --> 00:53:57,840
+gives you back is the Jason in 
+that schema. 
+
+949
+00:53:57,840 --> 00:54:00,600
+So I'm done here. 
+What the Jason schema is like 
+
+950
+00:54:00,600 --> 00:54:02,120
+the type information? 
+Yeah. 
+
+951
+00:54:02,640 --> 00:54:04,800
+It's like with XML we used to 
+have as well. 
+
+952
+00:54:04,800 --> 00:54:06,840
+It really reminds me a bit of 
+that the. 
+
+953
+00:54:07,000 --> 00:54:07,720
+XS. 
+DS. 
+
+954
+00:54:08,120 --> 00:54:10,720
+XML. 
+But the beauty. 
+
+955
+00:54:10,720 --> 00:54:13,080
+I remember when XML was going to
+be everything. 
+
+956
+00:54:13,840 --> 00:54:16,840
+Yeah, exactly. 
+But the beauty is like with line
+
+957
+00:54:16,840 --> 00:54:19,960
+change four J, you have now 
+these annotations where you, you
+
+958
+00:54:19,960 --> 00:54:23,400
+have an annotation which 
+describes what this method does.
+
+959
+00:54:24,040 --> 00:54:28,000
+And because it's annotated, if 
+you send it the prompt, it might
+
+960
+00:54:28,000 --> 00:54:31,120
+return and say like, well, I 
+don't know how to answer this, 
+
+961
+00:54:31,120 --> 00:54:34,920
+but I know that you need to call
+this method in this class to 
+
+962
+00:54:34,920 --> 00:54:38,120
+actually get the answer because 
+the annotation said that this 
+
+963
+00:54:38,120 --> 00:54:41,080
+method does, for example, 
+multiplication of matrixes, 
+
+964
+00:54:41,360 --> 00:54:43,440
+whatever. 
+I'm just inventing something and
+
+965
+00:54:43,440 --> 00:54:45,880
+that's. 
+The annotation describes the 
+
+966
+00:54:45,920 --> 00:54:48,200
+behaviour of the function. 
+Yes. 
+
+967
+00:54:48,840 --> 00:54:50,800
+And that is included in the 
+prompt. 
+
+968
+00:54:50,960 --> 00:54:54,920
+So if you give it a question, it
+will take that information with 
+
+969
+00:54:54,920 --> 00:54:57,600
+it and say, ah, you're asking a 
+multiplication. 
+
+970
+00:54:57,720 --> 00:55:00,600
+You're just giving me a methods 
+which does multiplication. 
+
+971
+00:55:00,720 --> 00:55:02,800
+So maybe you should call this 
+method. 
+
+972
+00:55:02,960 --> 00:55:04,440
+And that's the whole tooling 
+aspect. 
+
+973
+00:55:04,440 --> 00:55:07,240
+That's how it works. 
+So you basically give it all the
+
+974
+00:55:07,240 --> 00:55:10,360
+methods that you support. 
+And if the model can't answer 
+
+975
+00:55:10,360 --> 00:55:14,400
+it, but it finds the methods 
+that you've given it as a 
+
+976
+00:55:14,400 --> 00:55:17,160
+possible answer, it will say 
+call that method. 
+
+977
+00:55:18,600 --> 00:55:22,360
+And that's the tooling aspect. 
+And then you have like agents 
+
+978
+00:55:22,560 --> 00:55:25,320
+which will not only call the 
+method, it will create a program
+
+979
+00:55:25,320 --> 00:55:29,000
+like a Python program, compile 
+it and run the program for you, 
+
+980
+00:55:29,520 --> 00:55:33,000
+but the program that it creates 
+could be something which the 
+
+981
+00:55:33,000 --> 00:55:36,480
+model yeah generates based on 
+your request. 
+
+982
+00:55:37,320 --> 00:55:40,200
+So the the agents are kind of 
+like macros or something. 
+
+983
+00:55:40,200 --> 00:55:43,800
+They're they're generating 
+something that then gets used to
+
+984
+00:55:44,160 --> 00:55:46,360
+to. 
+And the tools are basically 
+
+985
+00:55:46,360 --> 00:55:49,840
+methods in a class that it might
+trigger based on the context. 
+
+986
+00:55:51,000 --> 00:55:55,800
+And you're using link chain 4 J 
+on like the DevOps application 
+
+987
+00:55:55,800 --> 00:55:59,920
+to like power the tag 
+summarization and and other 
+
+988
+00:56:00,200 --> 00:56:02,080
+other places as well. 
+Yes. 
+
+989
+00:56:02,120 --> 00:56:05,800
+And it's it's beautiful code. 
+It's like really one liners 
+
+990
+00:56:05,800 --> 00:56:07,560
+because it's it uses an 
+interface. 
+
+991
+00:56:07,560 --> 00:56:10,000
+The interface has an annotation 
+describing that. 
+
+992
+00:56:10,000 --> 00:56:11,960
+And it's it's it's beautiful 
+developed. 
+
+993
+00:56:11,960 --> 00:56:14,840
+I mean, my hat's off to to the 
+guy who did this, Dimitri. 
+
+994
+00:56:16,080 --> 00:56:18,920
+And since then, actually, Red 
+Hat was so impressed of his 
+
+995
+00:56:18,920 --> 00:56:23,400
+DevOps, of the DevOps talk about
+Lang chain for J that they just 
+
+996
+00:56:23,400 --> 00:56:26,200
+hired him as a full time 
+employee to work on this full 
+
+997
+00:56:26,200 --> 00:56:29,840
+time. 
+But yeah, it's, that's the way. 
+
+998
+00:56:29,840 --> 00:56:32,120
+If you're doing Java, there's 
+basically a few options. 
+
+999
+00:56:32,120 --> 00:56:36,680
+Spring AI has also a prompting 
+library. 
+
+1000
+00:56:37,080 --> 00:56:41,480
+But I think the enthusiasm and 
+the the yeah is really in the 
+
+1001
+00:56:41,480 --> 00:56:44,560
+Lang chain for J area for for 
+now at least. 
+
+1002
+00:56:45,080 --> 00:56:49,880
+Yeah, on the JVM stuff. 
+What else is interesting in this
+
+1003
+00:56:49,880 --> 00:56:51,480
+area that we haven't touched on 
+so far? 
+
+1004
+00:56:51,600 --> 00:56:54,040
+What about artificial general 
+intelligence? 
+
+1005
+00:56:54,040 --> 00:56:57,760
+What's the story with that? 
+I mean, let's be honest, I mean,
+
+1006
+00:56:59,000 --> 00:57:00,960
+we've already passed the Turing 
+test, right? 
+
+1007
+00:57:02,520 --> 00:57:04,760
+Right. 
+But, but we're still dealing 
+
+1008
+00:57:04,760 --> 00:57:07,200
+with static models. 
+I mean, we generate the model 
+
+1009
+00:57:07,200 --> 00:57:08,440
+and it says they're what we 
+need. 
+
+1010
+00:57:08,440 --> 00:57:10,120
+We're. 
+Just moving the flagpost 
+
+1011
+00:57:10,120 --> 00:57:12,760
+constantly. 
+Yeah, but we're not at AGI level
+
+1012
+00:57:12,760 --> 00:57:14,480
+yet because it can't do this or 
+that. 
+
+1013
+00:57:14,720 --> 00:57:18,080
+I mean, when, when Turing said, 
+like if you talk to somebody you
+
+1014
+00:57:18,080 --> 00:57:20,680
+don't know if it's computer or 
+not, we already passed that. 
+
+1015
+00:57:20,680 --> 00:57:22,440
+Oh yeah. 
+But years ago, what? 
+
+1016
+00:57:22,440 --> 00:57:25,280
+I want to know. 
+I mean, it seems like so we're 
+
+1017
+00:57:25,280 --> 00:57:29,640
+basing our models on a whole 
+bunch of stuff off the Internet,
+
+1018
+00:57:29,640 --> 00:57:33,800
+and there's a ton of BS on that.
+And what we need is a system 
+
+1019
+00:57:33,800 --> 00:57:37,200
+that is more of a science 
+machine where it can say, OK, I 
+
+1020
+00:57:37,200 --> 00:57:42,000
+need to verify this data and it 
+needs to tell us or it needs to 
+
+1021
+00:57:42,000 --> 00:57:46,040
+be able to do new experiments, 
+the experiments that we haven't 
+
+1022
+00:57:46,040 --> 00:57:47,320
+thought of and we can't think 
+of. 
+
+1023
+00:57:47,320 --> 00:57:51,880
+And it goes, boy, if I knew more
+about how grass grew, I would be
+
+1024
+00:57:51,880 --> 00:57:53,760
+able to answer a whole bunch of 
+questions. 
+
+1025
+00:57:53,760 --> 00:57:55,000
+So do that. 
+Experiment. 
+
+1026
+00:57:55,000 --> 00:57:58,200
+I want to see new mathematical 
+and physical, you know, 
+
+1027
+00:57:58,280 --> 00:58:01,880
+equations being popping out, 
+which we never thought about. 
+
+1028
+00:58:02,080 --> 00:58:03,920
+We're not there. 
+Of course not, right. 
+
+1029
+00:58:04,360 --> 00:58:07,840
+I mean, what open the eye says 
+is that we are at, So the, the 
+
+1030
+00:58:08,520 --> 00:58:14,840
+GPT 4.54 O is basically at the 
+masters level for the moment. 
+
+1031
+00:58:14,840 --> 00:58:15,960
+That's what they're referring 
+to. 
+
+1032
+00:58:16,360 --> 00:58:20,760
+What they're predicting is that 
+GPT 5 will be at the PhD level 
+
+1033
+00:58:21,840 --> 00:58:26,080
+intelligence. 
+Now, if it if it is able to know
+
+1034
+00:58:26,080 --> 00:58:30,960
+all the PhD thesis and index all
+of that, there's bound to be 
+
+1035
+00:58:30,960 --> 00:58:33,640
+possibility. 
+I mean, no human person in the 
+
+1036
+00:58:33,640 --> 00:58:37,520
+world can know all the thesises 
+that have ever been published. 
+
+1037
+00:58:37,760 --> 00:58:40,920
+If you have a model which knows 
+this and can grasp it, there's 
+
+1038
+00:58:40,920 --> 00:58:45,280
+bound to be new discoveries that
+it all of a sudden links few 
+
+1039
+00:58:45,560 --> 00:58:48,000
+papers together that we never 
+thought were possible. 
+
+1040
+00:58:48,560 --> 00:58:51,800
+Well, it's doing that kind of 
+stuff now, able to to say, 
+
+1041
+00:58:51,800 --> 00:58:56,200
+you're able to say, hey, I need 
+a new material that I don't 
+
+1042
+00:58:56,200 --> 00:58:58,200
+know, does heat transfer better 
+or whatever. 
+
+1043
+00:58:58,200 --> 00:59:01,440
+And it could, it can look 
+through all of its corpus and 
+
+1044
+00:59:01,440 --> 00:59:04,920
+narrow it down and say we'll try
+these three things rather than a
+
+1045
+00:59:04,920 --> 00:59:08,560
+chemist in the laboratory just 
+randomly trying things. 
+
+1046
+00:59:08,960 --> 00:59:12,200
+The biggest question is that 
+have we plateaued with the 
+
+1047
+00:59:12,200 --> 00:59:17,160
+models knowledge or are we still
+growing And the majority of the 
+
+1048
+00:59:17,200 --> 00:59:19,520
+engineers, they're saying it's 
+still growing, it's still going 
+
+1049
+00:59:19,880 --> 00:59:23,320
+better with every release. 
+So if you just extrapolate that,
+
+1050
+00:59:23,320 --> 00:59:27,200
+then AGI is around the corner. 
+I think we will experience that 
+
+1051
+00:59:27,200 --> 00:59:30,120
+in our lifetime. 
+I guess my question is, it seems
+
+1052
+00:59:30,160 --> 00:59:34,160
+like a really different thing 
+when you're saying, OK, well 
+
+1053
+00:59:34,160 --> 00:59:37,960
+we're we'll run all our machines
+for two weeks and cost $100 
+
+1054
+00:59:37,960 --> 00:59:40,400
+million and create this static 
+thing. 
+
+1055
+00:59:40,680 --> 00:59:43,000
+And if we need another one, 
+we'll do it again versus 
+
+1056
+00:59:43,000 --> 00:59:45,480
+something that can say, oh, 
+here's a new piece of 
+
+1057
+00:59:45,480 --> 00:59:48,280
+information. 
+I will somehow incorporate that 
+
+1058
+00:59:48,280 --> 00:59:51,560
+into my knowledge. 
+Well, the CTO from from 
+
+1059
+00:59:51,560 --> 00:59:56,120
+Facebook, Lacun is a French guy.
+He says that we will not reach 
+
+1060
+00:59:56,120 --> 00:59:58,800
+AGI with just large language 
+models on its own. 
+
+1061
+00:59:58,920 --> 01:00:03,680
+We need some extra innovation 
+and new Star could be that's 
+
+1062
+01:00:03,880 --> 01:00:07,120
+missing link. 
+Q Star is an internal project in
+
+1063
+01:00:07,120 --> 01:00:10,840
+Open AI where they found. 
+But again, this is hypothetical 
+
+1064
+01:00:10,840 --> 01:00:12,200
+because I haven't published 
+anything. 
+
+1065
+01:00:12,200 --> 01:00:14,080
+That's why they are called Open 
+AI. 
+
+1066
+01:00:16,480 --> 01:00:20,720
+For irony's sake. 
+Yeah, where it actually finds 
+
+1067
+01:00:20,720 --> 01:00:22,760
+the best routes, but much 
+faster. 
+
+1068
+01:00:23,120 --> 01:00:26,880
+And there's so many eyeballs on 
+this right now, so many bright 
+
+1069
+01:00:26,880 --> 01:00:30,360
+minds looking at this, that it's
+it's bound to happen. 
+
+1070
+01:00:30,720 --> 01:00:35,400
+And then we're just going to, 
+you know, just think about it. 
+
+1071
+01:00:35,400 --> 01:00:38,640
+I mean, it's science fiction 
+that we're living it already. 
+
+1072
+01:00:38,640 --> 01:00:40,640
+Not right now. 
+Even without the AGI, it's 
+
+1073
+01:00:40,640 --> 01:00:43,280
+already unbelievable. 
+What's it's able to do? 
+
+1074
+01:00:43,480 --> 01:00:45,880
+Solve the solid-state battery 
+problem? 
+
+1075
+01:00:45,920 --> 01:00:48,800
+Yes, go. 
+Yeah, exactly. 
+
+1076
+01:00:48,960 --> 01:00:50,200
+Yeah, tons. 
+Of things. 
+
+1077
+01:00:52,160 --> 01:00:55,360
+I'm really excited to be alive. 
+I mean, just imagine what we've 
+
+1078
+01:00:55,360 --> 01:00:59,200
+already experienced, you know, 
+the Internet, smartphones, you 
+
+1079
+01:00:59,200 --> 01:01:03,840
+know, now large language models,
+Java, you know, it's just an 
+
+1080
+01:01:03,840 --> 01:01:05,760
+exciting time. 
+It's just. 
+
+1081
+01:01:05,960 --> 01:01:09,320
+Exciting. 
+Maybe by the time I I die, I go,
+
+1082
+01:01:09,320 --> 01:01:12,600
+well, yeah, we used to use 
+programming languages to do 
+
+1083
+01:01:12,600 --> 01:01:14,920
+things, but nobody does that 
+anymore. 
+
+1084
+01:01:15,240 --> 01:01:18,440
+Possible. 
+It's totally possible. 
+
+1085
+01:01:20,800 --> 01:01:24,200
+But yeah, it's just, I mean, 
+there's definitely also some 
+
+1086
+01:01:24,200 --> 01:01:26,440
+downsides here. 
+I mean, if you just look at, 
+
+1087
+01:01:26,960 --> 01:01:28,520
+have you followed what Grok has 
+done? 
+
+1088
+01:01:28,520 --> 01:01:31,960
+I mean, they released Grok 2 
+yesterday and they've 
+
+1089
+01:01:32,120 --> 01:01:35,440
+partnership with Flux, which is 
+basically a mid journey 
+
+1090
+01:01:35,440 --> 01:01:38,280
+competitor to create images on 
+text. 
+
+1091
+01:01:38,840 --> 01:01:44,360
+And Ellen being Ellen, he just 
+said, well, there's no, there's 
+
+1092
+01:01:44,360 --> 01:01:46,200
+no filtering, there's no guard 
+rails. 
+
+1093
+01:01:46,200 --> 01:01:48,880
+So you can say whatever. 
+So you can say like, hey, create
+
+1094
+01:01:48,880 --> 01:01:51,960
+me a picture of this person with
+that person and it will create a
+
+1095
+01:01:51,960 --> 01:01:55,520
+realistic picture where you go 
+like what the hell. 
+
+1096
+01:01:56,000 --> 01:01:58,520
+Yeah, yeah. 
+So like the deep faking thing? 
+
+1097
+01:01:58,520 --> 01:01:59,840
+Yes. 
+Absolutely. 
+
+1098
+01:02:00,080 --> 01:02:01,680
+Going to get worse. 
+Oh yeah. 
+
+1099
+01:02:02,520 --> 01:02:04,720
+But not only pictures, they're 
+like videos as well. 
+
+1100
+01:02:04,760 --> 01:02:08,320
+There's examples of people who 
+are just speaking like I am now.
+
+1101
+01:02:08,640 --> 01:02:12,760
+But you would see Tom Cruise 
+instead, or your father or your 
+
+1102
+01:02:12,760 --> 01:02:16,520
+brother asking to send over 
+money and you with his voice and
+
+1103
+01:02:16,520 --> 01:02:19,400
+you don't know what's going on 
+and go like, bloody hell yeah. 
+
+1104
+01:02:20,360 --> 01:02:22,680
+Authenticity. 
+We'll definitely need personal 
+
+1105
+01:02:22,680 --> 01:02:25,200
+AIS to defend ourselves from. 
+Stuff like that. 
+
+1106
+01:02:26,120 --> 01:02:28,600
+You know, you know. 
+The arms race of AIS. 
+
+1107
+01:02:30,640 --> 01:02:35,280
+Yeah, well, I one of the things 
+that I see a great possibility 
+
+1108
+01:02:35,280 --> 01:02:38,160
+of I, I have a friend who was 
+the city attorney for Las Vegas 
+
+1109
+01:02:38,160 --> 01:02:41,080
+for 35 years. 
+And one of the things he was 
+
+1110
+01:02:41,080 --> 01:02:44,480
+trying to solve was the home 
+solve was the homeless problem. 
+
+1111
+01:02:44,960 --> 01:02:47,440
+And a number of cities have done
+this and the ones that have been
+
+1112
+01:02:47,440 --> 01:02:54,680
+successful effectively required 
+a therapist for each person on 
+
+1113
+01:02:54,680 --> 01:02:57,240
+like a daily basis, which would 
+just, you know, incredibly 
+
+1114
+01:02:57,240 --> 01:03:00,600
+expensive. 
+But there are AIS now that 
+
+1115
+01:03:00,600 --> 01:03:05,200
+people are using as therapists. 
+And as we develop that the, you 
+
+1116
+01:03:05,200 --> 01:03:09,280
+know, the, the mental health 
+issue that everybody struggles 
+
+1117
+01:03:09,280 --> 01:03:14,280
+with that, you know, having an 
+AI on your phone that you can 
+
+1118
+01:03:14,280 --> 01:03:18,080
+say, I'm struggling right now 
+and you're not making an 
+
+1119
+01:03:18,080 --> 01:03:21,760
+appointment or you're not having
+to pay for it or anything that I
+
+1120
+01:03:21,760 --> 01:03:23,320
+think is going to change the 
+world. 
+
+1121
+01:03:23,720 --> 01:03:26,720
+Yeah, but not only that, Bruce, 
+the fact that we now have a 
+
+1122
+01:03:26,720 --> 01:03:32,320
+universal tutor for $20.00 a 
+month, that's going to change. 
+
+1123
+01:03:32,320 --> 01:03:34,320
+Education. 
+Yeah, exactly. 
+
+1124
+01:03:34,560 --> 01:03:38,560
+Which has needed to been 
+disrupted for a long time 
+
+1125
+01:03:38,560 --> 01:03:43,360
+because it's built on ancient, 
+outdated ideas. 
+
+1126
+01:03:43,600 --> 01:03:45,920
+Yeah. 
+So anybody with Internet and 
+
+1127
+01:03:45,920 --> 01:03:50,400
+$20.00 a month to spare has an 
+expert tutor next to him or her 
+
+1128
+01:03:51,000 --> 01:03:53,040
+and it can learn you whatever 
+you want. 
+
+1129
+01:03:53,400 --> 01:03:55,920
+That's patient and non 
+judgmental. 
+
+1130
+01:03:56,760 --> 01:03:59,480
+Sorry. 
+That is patient and non 
+
+1131
+01:03:59,480 --> 01:04:01,720
+judgmental. 
+Correct. 
+
+1132
+01:04:02,000 --> 01:04:04,480
+Absolutely. 
+Yeah, Neil Stephenson wrote a 
+
+1133
+01:04:04,480 --> 01:04:09,240
+book called The Diamond Age and 
+one of my favorites of his and 
+
+1134
+01:04:09,360 --> 01:04:13,840
+and that's what he he 
+effectively had the idea of a 
+
+1135
+01:04:13,880 --> 01:04:19,960
+personalized AI for each student
+who who knew that person and 
+
+1136
+01:04:19,960 --> 01:04:22,800
+could help them develop in their
+own way. 
+
+1137
+01:04:24,960 --> 01:04:29,720
+Isn't one of the challenges in 
+this space that today the AIS 
+
+1138
+01:04:29,720 --> 01:04:33,360
+are mostly the models are mostly
+trained on human generated 
+
+1139
+01:04:33,360 --> 01:04:39,120
+information and that's important
+because then you know you have 
+
+1140
+01:04:39,240 --> 01:04:43,880
+some connection to reality with 
+the human being in the. 
+
+1141
+01:04:43,920 --> 01:04:48,400
+Middle of the Internet crap, not
+so much. 
+
+1142
+01:04:48,400 --> 01:04:52,360
+But isn't there some concern 
+that that as are, as more of the
+
+1143
+01:04:52,360 --> 01:04:56,160
+content that is out there that 
+the models are being trained on 
+
+1144
+01:04:56,160 --> 01:05:00,320
+is actually itself created by 
+AIS that you get like this 
+
+1145
+01:05:00,320 --> 01:05:05,960
+lossiness that that gets worse 
+as as there's more that that 
+
+1146
+01:05:05,960 --> 01:05:09,480
+loop becomes happening more? 
+So I don't know if I'm saying 
+
+1147
+01:05:09,480 --> 01:05:09,840
+that. 
+Right. 
+
+1148
+01:05:09,840 --> 01:05:11,600
+But they called it synthetic 
+data. 
+
+1149
+01:05:11,600 --> 01:05:14,640
+So it's basically generated data
+by AI. 
+
+1150
+01:05:14,640 --> 01:05:18,880
+But I think we, we, we needed 
+the Internet as a bootstrap, but
+
+1151
+01:05:18,920 --> 01:05:21,240
+now I think it's already beyond 
+that bootstrap. 
+
+1152
+01:05:21,240 --> 01:05:25,000
+It doesn't from I think it 
+doesn't matter anymore because 
+
+1153
+01:05:25,000 --> 01:05:28,560
+it has already enough knowledge 
+now that if it if they basically
+
+1154
+01:05:28,560 --> 01:05:31,600
+index all the books that are 
+available, all the thesises and 
+
+1155
+01:05:31,600 --> 01:05:35,760
+so on. 
+It it, I think it has passed 
+
+1156
+01:05:35,760 --> 01:05:38,160
+that threshold. 
+It has passed that you. 
+
+1157
+01:05:38,200 --> 01:05:42,000
+Know it needs a connection with 
+the real world so that it can 
+
+1158
+01:05:42,000 --> 01:05:43,080
+validate its. 
+Data. 
+
+1159
+01:05:43,080 --> 01:05:44,360
+Well, that's the next point, 
+right? 
+
+1160
+01:05:44,360 --> 01:05:47,320
+It's the robots. 
+Seriously, if you look at 
+
+1161
+01:05:47,320 --> 01:05:52,640
+figure, have you looked at 
+figure 02 robot Open AI has 
+
+1162
+01:05:52,640 --> 01:05:56,240
+invested in that company. 
+So they're merging Open AI 
+
+1163
+01:05:56,240 --> 01:06:00,760
+Chachi PT with a robot, but the 
+robot has fingers with sensitive
+
+1164
+01:06:00,800 --> 01:06:03,240
+touch. 
+And a friend of mine works there
+
+1165
+01:06:03,240 --> 01:06:06,320
+actually now and it's basically.
+For me. 
+
+1166
+01:06:07,400 --> 01:06:11,560
+You know him, you vortex you, 
+you know the parlay set he works
+
+1167
+01:06:11,560 --> 01:06:11,880
+there. 
+Awesome. 
+
+1168
+01:06:13,120 --> 01:06:14,880
+Bloody hell. 
+So they're basically merging a 
+
+1169
+01:06:14,880 --> 01:06:18,240
+robot with Chachi PT together, 
+figure 02. 
+
+1170
+01:06:18,240 --> 01:06:20,560
+Have a look at YouTube. 
+You're going to like go like 
+
+1171
+01:06:20,640 --> 01:06:22,400
+bloody hell. 
+So they're next. 
+
+1172
+01:06:22,400 --> 01:06:23,200
+Wow. 
+Yeah. 
+
+1173
+01:06:25,360 --> 01:06:27,520
+Well, and. 
+Maybe I'll get to ride my 
+
+1174
+01:06:27,520 --> 01:06:29,320
+mountain bike more in this 
+future. 
+
+1175
+01:06:29,840 --> 01:06:35,040
+Yeah, yeah, yes. 
+Wow. 
+
+1176
+01:06:35,040 --> 01:06:38,680
+Would be the best world, Yes. 
+The The thing is, we're living 
+
+1177
+01:06:38,680 --> 01:06:41,120
+science fiction. 
+I mean, that's I love science 
+
+1178
+01:06:41,120 --> 01:06:45,160
+fiction movies and like, you 
+know, Space Odyssey 2001, that's
+
+1179
+01:06:45,360 --> 01:06:47,920
+it's there at least to 
+communicate, communication with 
+
+1180
+01:06:47,920 --> 01:06:51,200
+the robot and you know, and it 
+opened the pods and what is it? 
+
+1181
+01:06:52,280 --> 01:06:56,560
+Open the pod Bay door, Hal. 
+No, can't do that. 
+
+1182
+01:06:57,200 --> 01:07:00,680
+Exactly. 
+We've reached that point to be 
+
+1183
+01:07:00,800 --> 01:07:03,480
+so, yeah. 
+Wow. 
+
+1184
+01:07:04,480 --> 01:07:05,040
+Yeah. 
+All right. 
+
+1185
+01:07:05,160 --> 01:07:09,360
+Well, Stefan, I look forward to 
+seeing you at Devox in a couple 
+
+1186
+01:07:09,360 --> 01:07:12,440
+months. 
+And yes, thanks for sharing all 
+
+1187
+01:07:12,440 --> 01:07:15,560
+your knowledge and experience 
+with us around LM. 
+
+1188
+01:07:15,560 --> 01:07:17,440
+So that was awesome. 
+My pleasure. 
+
+1189
+01:07:17,440 --> 01:07:19,680
+And it was really fun talking to
+you guys again. 
+
+1190
+01:07:19,680 --> 01:07:24,040
+And I remember I've been to 
+Crest Butte once with Java Posse
+
+1191
+01:07:24,040 --> 01:07:26,240
+Roundup, which was an amazing 
+experience. 
+
+1192
+01:07:26,720 --> 01:07:29,440
+Yeah, so. 
+We'll have to get you back here 
+
+1193
+01:07:29,440 --> 01:07:31,280
+sometime. 
+Would be nice. 
+
+1194
+01:07:31,280 --> 01:07:33,960
+I, I, I couldn't remember, I 
+couldn't imagine that you could 
+
+1195
+01:07:33,960 --> 01:07:36,040
+have so much snow on top of each
+other. 
+
+1196
+01:07:36,040 --> 01:07:39,000
+Like what was it, 3-4 meters? 
+I've never seen that before. 
+
+1197
+01:07:39,000 --> 01:07:40,640
+So that was a really nice 
+experience. 
+
+1198
+01:07:40,640 --> 01:07:42,160
+I get a lot of snow. 
+We do. 
+
+1199
+01:07:44,120 --> 01:07:45,880
+Come back sometime. 
+Yeah, right. 
+
+1200
+01:07:46,640 --> 01:07:47,880
+Thanks, Devin all. 
+Right, see ya. 
+
+1201
+01:07:48,040 --> 01:07:48,640
+You guys.

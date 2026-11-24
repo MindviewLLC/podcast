@@ -1,0 +1,7010 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:08,000 --> 00:00:12,100
+Well, hello. 
+This week, we have Luciano 
+
+4
+00:00:12,100 --> 00:00:16,400
+romelo the author of Flint 
+Python and the second edition 
+
+5
+00:00:16,400 --> 00:00:18,400
+came out just in the last few 
+months, right? 
+
+6
+00:00:18,400 --> 00:00:20,300
+Yes, in April in April. 
+Okay. 
+
+7
+00:00:20,300 --> 00:00:24,200
+So quite recent and you worked 
+like, you worked really hard in 
+
+8
+00:00:24,200 --> 00:00:28,200
+the first edition and then you 
+worked probably, did you put 
+
+9
+00:00:28,200 --> 00:00:30,900
+more time in on the second 
+edition than the first because I
+
+10
+00:00:30,900 --> 00:00:33,700
+actually did? 
+That's the experience that I 
+
+11
+00:00:33,708 --> 00:00:36,800
+had. 
+When I expected the time amount 
+
+12
+00:00:36,800 --> 00:00:38,800
+would go down. 
+I would paint it. 
+
+13
+00:00:38,800 --> 00:00:41,800
+I thought so yes. 
+No that's one of the common 
+
+14
+00:00:42,000 --> 00:00:44,900
+versions ya. 
+Cuz ya later editions of 
+
+15
+00:00:44,900 --> 00:00:46,600
+thinking and Jabba took Mara. 
+Yeah. 
+
+16
+00:00:46,600 --> 00:00:48,900
+Time than the first edition. 
+Yeah. 
+
+17
+00:00:48,900 --> 00:00:51,300
+Cause you're you know more and 
+you have to polish it. 
+
+18
+00:00:51,300 --> 00:00:53,000
+You have to change it. 
+Yeah. 
+
+19
+00:00:53,000 --> 00:00:57,200
+And there were brand-new things 
+that I thought needed to be 
+
+20
+00:00:57,200 --> 00:01:00,800
+covered but also they were 
+things that I needed to rethink 
+
+21
+00:01:01,000 --> 00:01:04,800
+because of new Futures, right? 
+Like for instance they wasn't 
+
+22
+00:01:04,800 --> 00:01:06,100
+it. 
+That was already in the first 
+
+23
+00:01:06,100 --> 00:01:10,200
+edition of chapter about Cases 
+that talk about duck typing and 
+
+24
+00:01:10,200 --> 00:01:14,500
+they use of ABC's, you know, 
+abstract base classes in and all
+
+25
+00:01:14,500 --> 00:01:18,400
+that and then between the 
+Traditions. 
+
+26
+00:01:18,400 --> 00:01:20,200
+Now, we have protocols in 
+Python. 
+
+27
+00:01:20,200 --> 00:01:23,300
+So that's a third way of 
+thinking about these same issues
+
+28
+00:01:23,700 --> 00:01:27,300
+and I really had to rethink that
+was one of the hardest chapters.
+
+29
+00:01:27,800 --> 00:01:31,900
+Yeah, and Luciano is here with 
+us in Crested View live in 
+
+30
+00:01:31,900 --> 00:01:33,900
+Christian. 
+Be received like a view up here 
+
+31
+00:01:33,900 --> 00:01:36,800
+and he likes to come here. 
+Thank you so much Bruce and 
+
+32
+00:01:36,800 --> 00:01:39,200
+James for this. 
+You like your fifth trip here, 
+
+33
+00:01:39,200 --> 00:01:40,800
+or something like that? 
+I think so. 
+
+34
+00:01:40,800 --> 00:01:41,800
+Yeah. 
+Yeah. 
+
+35
+00:01:41,800 --> 00:01:43,900
+Okay, yeah. 
+Well, it's good to have you and 
+
+36
+00:01:45,300 --> 00:01:48,300
+you, you've been doing python 
+for a long time? 
+
+37
+00:01:48,300 --> 00:01:49,700
+Yeah. 
+Since 98. 
+
+38
+00:01:50,100 --> 00:01:51,400
+Yeah. 
+Wow. 
+
+39
+00:01:51,500 --> 00:01:53,500
+That's it. 
+That's like a really long time. 
+
+40
+00:01:54,000 --> 00:01:56,000
+That's when you, that's when you
+discovered it. 
+
+41
+00:01:56,300 --> 00:01:58,200
+Yes. 
+I've actually been using it 
+
+42
+00:01:58,200 --> 00:02:00,200
+longer than you. 
+Oh yeah, yeah. 
+
+43
+00:02:00,200 --> 00:02:03,800
+But not as hidden, not as. 
+Oh, yeah, I discovered it like 
+
+44
+00:02:03,800 --> 00:02:07,300
+for me. 
+Well, it only been doing C++ and
+
+45
+00:02:07,300 --> 00:02:11,100
+then There was this Pearl thing 
+and it was like, oh my gosh, it 
+
+46
+00:02:11,100 --> 00:02:12,400
+just work. 
+It just runs. 
+
+47
+00:02:12,400 --> 00:02:14,400
+Just, you know, you had to do 
+all this extra stuff. 
+
+48
+00:02:14,400 --> 00:02:16,200
+This is awesome. 
+And then a couple couple weeks 
+
+49
+00:02:16,200 --> 00:02:19,300
+later, I Tried reading, my Perl 
+code was like, I don't 
+
+50
+00:02:19,300 --> 00:02:23,500
+understand what I wrote. 
+So then, and then sometime after
+
+51
+00:02:23,500 --> 00:02:26,100
+that, it was Python. 
+And I don't even remember, you 
+
+52
+00:02:26,100 --> 00:02:30,100
+know, the first version was 1.2 
+or 1.3 or something like that. 
+
+53
+00:02:30,100 --> 00:02:34,100
+So it was, it's probably mid 90s
+that I were playing with it, but
+
+54
+00:02:34,100 --> 00:02:41,600
+you like committed. 
+Yes, I created the company right
+
+55
+00:02:41,600 --> 00:02:47,500
+afterwards to leverage a 
+framework that was called soap, 
+
+56
+00:02:48,300 --> 00:02:49,700
+again, the foundation of 
+problem. 
+
+57
+00:02:49,800 --> 00:02:53,300
+Yeah, because I was doing 
+content management work, you 
+
+58
+00:02:53,300 --> 00:02:57,500
+know, custom content Management 
+systems, and that was really 
+
+59
+00:02:58,000 --> 00:03:01,300
+very Advanced and very quick to 
+do stuff. 
+
+60
+00:03:01,400 --> 00:03:07,200
+Yeah, so yeah, within six months
+of having first seen python, I 
+
+61
+00:03:07,200 --> 00:03:13,100
+had a Company where everybody 
+was doing python your and that's
+
+62
+00:03:13,100 --> 00:03:14,700
+cool. 
+So you started the company? 
+
+63
+00:03:15,000 --> 00:03:16,900
+Yes. 
+Oh well and how many employees 
+
+64
+00:03:16,900 --> 00:03:20,900
+did you have? 
+We lasted about five years and 
+
+65
+00:03:20,900 --> 00:03:23,800
+I'm the end. 
+We had 15 people in the payroll.
+
+66
+00:03:23,800 --> 00:03:25,200
+Wow. 
+Okay. 
+
+67
+00:03:25,300 --> 00:03:28,500
+Yeah. 
+Then the babe, when the the web 
+
+68
+00:03:28,500 --> 00:03:33,600
+that was in 99 that I started 
+the company and the web Bubble 
+
+69
+00:03:33,600 --> 00:03:38,900
+Burst and so things became much 
+more difficult for us and then 
+
+70
+00:03:38,900 --> 00:03:44,900
+eventually we should um, yeah, 
+okay, yeah but we didn't know 
+
+71
+00:03:44,900 --> 00:03:47,600
+anybody money so well, that's 
+nice. 
+
+72
+00:03:50,200 --> 00:03:55,700
+So Bruce, he always brings 
+python into our podcast 
+
+73
+00:03:55,700 --> 00:03:59,500
+episodes, but now we really get 
+to have an actual python 
+
+74
+00:03:59,500 --> 00:04:01,600
+episodes this. 
+Absolutely, yes. 
+
+75
+00:04:03,100 --> 00:04:05,000
+What I want to hear, maybe from 
+both of you. 
+
+76
+00:04:05,000 --> 00:04:07,400
+What do you like about python? 
+What, what Drew you to it 
+
+77
+00:04:07,400 --> 00:04:09,500
+initially? 
+And why are we stuck with it for
+
+78
+00:04:09,500 --> 00:04:11,600
+so long? 
+Yeah, so it's nice that we 
+
+79
+00:04:11,600 --> 00:04:15,900
+started this conversation by 
+reminiscing about 98 and 99 
+
+80
+00:04:16,200 --> 00:04:20,800
+because at that time I started 
+doing web development in 94. 
+
+81
+00:04:21,100 --> 00:04:24,900
+And at the time what you did was
+Peru, right? 
+
+82
+00:04:25,600 --> 00:04:28,700
+Or see? 
+Yeah, but I wasn't into that. 
+
+83
+00:04:28,700 --> 00:04:32,900
+So I assumed it was one of those
+efforts that I've done a few 
+
+84
+00:04:32,900 --> 00:04:35,600
+times in my life to know, I 
+really want to like this 
+
+85
+00:04:35,600 --> 00:04:38,500
+language. 
+So I did my best to, like, Peru 
+
+86
+00:04:39,000 --> 00:04:47,400
+and And then Java came along and
+I was a pascal person before. 
+
+87
+00:04:47,400 --> 00:04:52,700
+So I was, I liked very explicit 
+and well structured things and 
+
+88
+00:04:52,800 --> 00:04:56,600
+Java had that and also Java was 
+object oriented, which Pro was 
+
+89
+00:04:56,600 --> 00:05:01,100
+not at the time. 
+So I decided to try and really 
+
+90
+00:05:01,100 --> 00:05:06,500
+like Java very much also but 
+then when I found, so what 
+
+91
+00:05:06,500 --> 00:05:10,800
+happened was At some point 405 
+came out and it had some 
+
+92
+00:05:10,800 --> 00:05:15,200
+object-oriented features and 
+then in the pearl mailing list, 
+
+93
+00:05:15,700 --> 00:05:19,600
+it was a recurring theme that 
+people were talking about how to
+
+94
+00:05:19,600 --> 00:05:23,400
+solve such as a certain problem 
+in Peru in object-oriented 
+
+95
+00:05:23,400 --> 00:05:25,300
+program. 
+And people would say, oh, in 
+
+96
+00:05:25,300 --> 00:05:29,400
+Python, this is how they do it. 
+So after the about the third 
+
+97
+00:05:29,400 --> 00:05:33,400
+time that I heard python mention
+in that context, I went to look 
+
+98
+00:05:33,400 --> 00:05:36,800
+it up. 
+And for me it was just wonderful
+
+99
+00:05:36,800 --> 00:05:41,100
+because for me, I was like this 
+clean well-structured really 
+
+100
+00:05:41,100 --> 00:05:45,700
+object-oriented language like, 
+Java, but it was also concise 
+
+101
+00:05:45,700 --> 00:05:49,100
+and you could write a little 
+script that did things. 
+
+102
+00:05:49,100 --> 00:05:51,300
+Interesting things in a few 
+lines of code like Pearl. 
+
+103
+00:05:51,900 --> 00:05:55,000
+So it was like really for me 
+python was the marriage of the 
+
+104
+00:05:55,000 --> 00:05:59,700
+best features that I saw in Java
+and pearl without most of the 
+
+105
+00:05:59,700 --> 00:06:01,000
+worst features. 
+Yeah. 
+
+106
+00:06:01,500 --> 00:06:02,300
+Yeah. 
+Yeah. 
+
+107
+00:06:02,300 --> 00:06:06,600
+I have gone through a whole 
+thing because it because very 
+
+108
+00:06:06,700 --> 00:06:13,300
+early The python conference was 
+run by this management company. 
+
+109
+00:06:13,300 --> 00:06:15,100
+Yeah, did you ever go to one of 
+those? 
+
+110
+00:06:15,100 --> 00:06:17,500
+Yeah, I think they like xandria.
+Oh, cousin in 2000. 
+
+111
+00:06:17,900 --> 00:06:20,300
+Okay. 
+And it was still being run by 
+
+112
+00:06:20,300 --> 00:06:22,300
+the yes. 
+And every year, they would say 
+
+113
+00:06:22,300 --> 00:06:25,000
+off, this is terrible, we're 
+losing money on this, and then 
+
+114
+00:06:25,000 --> 00:06:26,900
+they would do it again next 
+year, and you're going home. 
+
+115
+00:06:26,900 --> 00:06:28,300
+I wonder what your business 
+model is. 
+
+116
+00:06:28,300 --> 00:06:33,300
+But, but at one of those, I gave
+the, I can't remember who was 
+
+117
+00:06:33,300 --> 00:06:37,900
+the opening or closing keynote, 
+and, and mine was Why? 
+
+118
+00:06:37,900 --> 00:06:39,400
+I love python. 
+Hmm. 
+
+119
+00:06:39,400 --> 00:06:45,100
+And it was obviously popular. 
+I was preaching to the choir, 
+
+120
+00:06:45,200 --> 00:06:47,900
+yes case. 
+But but I was trying to go 
+
+121
+00:06:47,900 --> 00:06:52,800
+through and look at all the 
+reasons that I love Python and 
+
+122
+00:06:53,200 --> 00:06:56,900
+just recently I kind of 
+rethought all that because those
+
+123
+00:06:56,900 --> 00:07:01,400
+were, you know, various 
+technical features and things 
+
+124
+00:07:01,400 --> 00:07:03,300
+like that. 
+But I realized, you know, I 
+
+125
+00:07:03,300 --> 00:07:08,200
+think what I like love about 
+python most is because Has of 
+
+126
+00:07:08,200 --> 00:07:14,600
+the way it treats the programmer
+in all ways, including and so 
+
+127
+00:07:14,600 --> 00:07:18,700
+python has the best community 
+I've ever seen. 
+
+128
+00:07:18,700 --> 00:07:23,800
+And that came from what F we do.
+Did the yes, you know, his focus
+
+129
+00:07:23,800 --> 00:07:28,600
+and everything but also because 
+his Focus was creating a 
+
+130
+00:07:28,608 --> 00:07:33,400
+language that was nice, 
+approachable approachable. 
+
+131
+00:07:33,600 --> 00:07:39,300
+But but I think really, you can 
+feel that At the care. 
+
+132
+00:07:39,400 --> 00:07:41,200
+Sure, for the programmer. 
+Yeah. 
+
+133
+00:07:41,500 --> 00:07:44,000
+And then it, percolates through 
+the entire communities. 
+
+134
+00:07:44,000 --> 00:07:45,900
+That and you can't. 
+Yeah. 
+
+135
+00:07:46,700 --> 00:07:52,200
+You can't, like discover that 
+your community has gone sour and
+
+136
+00:07:52,200 --> 00:07:54,900
+fix it later. 
+It has to be built in from the 
+
+137
+00:07:54,900 --> 00:07:57,500
+beginning and that has to be the
+vision. 
+
+138
+00:07:59,600 --> 00:08:03,000
+You know, the group that starts 
+it and that had a me major. 
+
+139
+00:08:04,100 --> 00:08:06,400
+Influence on the history of the 
+language. 
+
+140
+00:08:06,800 --> 00:08:09,500
+And I might even say that 
+history of programming languages
+
+141
+00:08:09,500 --> 00:08:13,000
+in general because of the 
+success of python that still 
+
+142
+00:08:13,000 --> 00:08:16,300
+persists, right. 
+If you look at the Ruby and 
+
+143
+00:08:16,300 --> 00:08:20,300
+python which technically in 
+terms of features and strengths 
+
+144
+00:08:20,300 --> 00:08:25,300
+and weaknesses are very similar,
+but Ruby is kind of in a decline
+
+145
+00:08:25,700 --> 00:08:29,800
+and python is still going up. 
+Why was that because of machine 
+
+146
+00:08:29,800 --> 00:08:33,100
+learning and why? 
+Because since the language was 
+
+147
+00:08:33,400 --> 00:08:38,799
+Coachable in the 90s people like
+Dave is the another started to, 
+
+148
+00:08:39,100 --> 00:08:43,700
+to think okay, vitamins a very 
+good language to orchestrate 
+
+149
+00:08:43,700 --> 00:08:47,000
+processing heavyweight 
+processing done. 
+
+150
+00:08:47,000 --> 00:08:48,900
+In fact in The Sciences. 
+Hmm. 
+
+151
+00:08:49,600 --> 00:08:54,100
+So we already have this. 
+These libraries in C++ and c and
+
+152
+00:08:54,100 --> 00:08:57,800
+Fortran that do, you know, 
+linear algebras that this is 
+
+153
+00:08:57,800 --> 00:09:00,200
+everything. 
+And now we just need the 
+
+154
+00:09:00,200 --> 00:09:03,200
+bindings so that people can 
+write short programs and use 
+
+155
+00:09:03,200 --> 00:09:06,200
+those Artificial things. 
+So that was important. 
+
+156
+00:09:06,200 --> 00:09:09,400
+But it was kind of a niche in 
+the physics in the hard 
+
+157
+00:09:09,400 --> 00:09:12,100
+Sciences. 
+But then when this new approach 
+
+158
+00:09:12,100 --> 00:09:15,700
+to a, I came about which we call
+machine that machine learning, 
+
+159
+00:09:15,700 --> 00:09:19,200
+which is based on math, more 
+than the previous approach, was 
+
+160
+00:09:19,200 --> 00:09:23,300
+more symbolic. 
+Yeah, then suddenly, which 
+
+161
+00:09:23,300 --> 00:09:28,200
+language had the best ecosystem 
+of libraries that already did 
+
+162
+00:09:28,200 --> 00:09:31,200
+all the math and that was also 
+high level and approachable. 
+
+163
+00:09:31,600 --> 00:09:34,300
+So that's why python. 
+Yeah, it's kind of in the right 
+
+164
+00:09:34,300 --> 00:09:37,000
+place at the right time is 
+actually, but it got there 
+
+165
+00:09:37,000 --> 00:09:41,300
+because there was a foundation 
+of people who ya scared about us
+
+166
+00:09:41,300 --> 00:09:45,400
+about taking the math and 
+wrapping it into something that 
+
+167
+00:09:45,408 --> 00:09:48,900
+was usable and copy and paste 
+able and people like he like 
+
+168
+00:09:48,900 --> 00:09:52,300
+physicists who are not they 
+don't want every programmer. 
+
+169
+00:09:52,300 --> 00:09:54,100
+Yeah. 
+Yeah. 
+
+170
+00:09:54,100 --> 00:09:59,800
+I'd seen this somebody to study 
+or animal me was more anecdotal 
+
+171
+00:09:59,800 --> 00:10:03,900
+than that but they figured out 
+that most people that are In 
+
+172
+00:10:03,900 --> 00:10:08,300
+Python code for machine learning
+and data science, that sort of 
+
+173
+00:10:08,300 --> 00:10:10,700
+stuff. 
+They actually could can't 
+
+174
+00:10:10,900 --> 00:10:16,100
+usually pass the engineering. 
+The software engineering, like, 
+
+175
+00:10:16,500 --> 00:10:18,900
+exams to get a job in software 
+engineering. 
+
+176
+00:10:18,900 --> 00:10:21,000
+Sure. 
+Because they haven't been taught
+
+177
+00:10:21,000 --> 00:10:24,400
+the little like, traditional 
+sure, computer science, 
+
+178
+00:10:24,400 --> 00:10:29,200
+algorithms data structures and 
+if they can hear the tolling, 
+
+179
+00:10:29,500 --> 00:10:32,300
+but they can do amazing thing. 
+Yeah, it's me that says so much 
+
+180
+00:10:32,300 --> 00:10:34,900
+about the language. 
+Yes thought of it and the 
+
+181
+00:10:34,900 --> 00:10:38,400
+community is yeah the 
+foundation's so I always laughed
+
+182
+00:10:38,400 --> 00:10:41,400
+and they're going to python 
+conferences because of the 
+
+183
+00:10:41,400 --> 00:10:46,800
+diversity in the biggest sense 
+of the talks because you had 
+
+184
+00:10:46,800 --> 00:10:49,800
+people like an oceanographer you
+know. 
+
+185
+00:10:49,900 --> 00:10:53,400
+Yeah. 
+And health professional things 
+
+186
+00:10:53,400 --> 00:10:59,200
+of people of different areas of 
+knowledge and of course that was
+
+187
+00:10:59,200 --> 00:11:04,500
+the main experience. 
+Experts who Variety of Demands, 
+
+188
+00:11:04,500 --> 00:11:07,500
+but they've been able to use 
+Python, is that to get there 
+
+189
+00:11:09,000 --> 00:11:14,100
+well and I think part of that is
+the the way that python can 
+
+190
+00:11:14,100 --> 00:11:19,300
+interface with these you know, 
+other libraries on the low 
+
+191
+00:11:19,300 --> 00:11:22,400
+level. 
+So that isn't you know it's it's
+
+192
+00:11:22,400 --> 00:11:26,200
+possible to take advantage of 
+all of the stuff that's written.
+
+193
+00:11:26,300 --> 00:11:30,900
+Yes. 
+And those yeah python is his 
+
+194
+00:11:30,900 --> 00:11:35,600
+changed a lot over the enormous 
+five years or whatever that you 
+
+195
+00:11:35,600 --> 00:11:38,900
+all have been using and yes 
+enormous changes. 
+
+196
+00:11:39,200 --> 00:11:42,900
+I don't know like it's hard for 
+languages to change and 
+
+197
+00:11:42,900 --> 00:11:45,900
+especially like the python 22 
+python through is kind of a big 
+
+198
+00:11:46,700 --> 00:11:50,900
+challenging time for python like
+what has it been like to stick 
+
+199
+00:11:50,900 --> 00:11:53,200
+with one language for that long 
+because I certainly haven't 
+
+200
+00:11:53,200 --> 00:11:58,100
+stuck with one? 
+Yeah, I well I haven't, I 
+
+201
+00:11:58,100 --> 00:12:02,900
+haven't, like all whenever I 
+need to do tooling for a book or
+
+202
+00:12:02,900 --> 00:12:06,000
+whatever. 
+I just that's what I use Python 
+
+203
+00:12:06,000 --> 00:12:10,600
+for that because it's like the 
+right stool for that job but in 
+
+204
+00:12:10,600 --> 00:12:14,100
+the meantime I've like you know 
+experimented with all kinds of 
+
+205
+00:12:14,100 --> 00:12:18,900
+different languages and I don't 
+know every time I go back to it 
+
+206
+00:12:18,900 --> 00:12:25,100
+it's just a delight it's taken 
+me this long to go oh yeah I 
+
+207
+00:12:25,100 --> 00:12:27,800
+should really I've tried to 
+write a book son python for the 
+
+208
+00:12:27,800 --> 00:12:30,500
+last. 
+I don't know, for quite a number
+
+209
+00:12:30,500 --> 00:12:34,400
+of years and then it's like the 
+loose Giannios book is what I 
+
+210
+00:12:34,400 --> 00:12:36,400
+would consider. 
+Oh, if I was to write, you know,
+
+211
+00:12:36,600 --> 00:12:41,000
+thinking in Java for python, 
+well, Luciano did that work for 
+
+212
+00:12:41,000 --> 00:12:44,800
+me, so I don't have to do that, 
+which is what huge relief, so I 
+
+213
+00:12:44,808 --> 00:12:46,800
+can focus on something more 
+specific. 
+
+214
+00:12:47,100 --> 00:12:52,100
+Yeah, so that's just a second 
+because you don't know how much 
+
+215
+00:12:52,100 --> 00:12:55,400
+that that feels good to me to 
+hear because I learned a lot 
+
+216
+00:12:55,400 --> 00:12:59,000
+about writing a book about 
+programming languages, reading 
+
+217
+00:12:59,700 --> 00:13:02,200
+taking Java, so that's yeah, 
+really awesome. 
+
+218
+00:13:02,600 --> 00:13:06,000
+That is awesome. 
+Nice to have a secondary effect.
+
+219
+00:13:06,000 --> 00:13:07,900
+Yeah. 
+What's the experience been like 
+
+220
+00:13:07,900 --> 00:13:12,100
+for you Luciano of like moving 
+through all the language changes
+
+221
+00:13:12,100 --> 00:13:17,500
+and how how is that gone? 
+And okay, so the one thing that 
+
+222
+00:13:17,500 --> 00:13:20,500
+I like to emphasize because of 
+this long term view that I have 
+
+223
+00:13:20,500 --> 00:13:27,400
+of the language is that the the 
+python 2 to 3 breakage was 
+
+224
+00:13:27,400 --> 00:13:30,500
+really a one-time event. 
+I was, in fact, I was using 
+
+225
+00:13:30,500 --> 00:13:36,300
+python I started I think in 
+Python 1.4 1.5 and then there 
+
+226
+00:13:36,300 --> 00:13:40,000
+was the migration to a Pinecone 
+python to and most everything 
+
+227
+00:13:40,000 --> 00:13:41,500
+just worked, you know. 
+Yeah. 
+
+228
+00:13:42,200 --> 00:13:47,500
+The thing about the migration to
+Python 3 but I think the main 
+
+229
+00:13:47,500 --> 00:13:53,700
+reason was the was making unique
+codes, a first class citizen in 
+
+230
+00:13:53,700 --> 00:13:55,900
+the language. 
+All right, it already had pretty
+
+231
+00:13:55,900 --> 00:13:58,600
+good Unicode support, but you 
+have to remember, you have to 
+
+232
+00:13:58,600 --> 00:14:02,100
+remember, for instance, to put 
+this under case you in Of your 
+
+233
+00:14:02,100 --> 00:14:03,800
+string. 
+So that they would be 
+
+234
+00:14:03,800 --> 00:14:05,200
+understood. 
+The string literals would be 
+
+235
+00:14:05,200 --> 00:14:09,700
+understood as Unico and then it 
+was a little weird error 
+
+236
+00:14:09,700 --> 00:14:12,300
+messages. 
+The we get to oh yeah, well 
+
+237
+00:14:12,300 --> 00:14:15,000
+that's what really annoying. 
+Yes, that's right. 
+
+238
+00:14:15,500 --> 00:14:19,600
+And so that's what I think that 
+was a positive change. 
+
+239
+00:14:20,100 --> 00:14:24,700
+I know it caused a lot of pain, 
+like at some point it had to 
+
+240
+00:14:24,700 --> 00:14:25,700
+happen. 
+Is it? 
+
+241
+00:14:25,700 --> 00:14:28,700
+I think so. 
+And it had to yeah, because it 
+
+242
+00:14:28,700 --> 00:14:32,100
+was really difficult to explain 
+to people beginning Programming.
+
+243
+00:14:32,400 --> 00:14:34,900
+Also, you have B and then you 
+got most of the time, people 
+
+244
+00:14:34,900 --> 00:14:37,300
+want, text, Texas Unicode, 
+right. 
+
+245
+00:14:38,700 --> 00:14:43,800
+It's rare that you need, let's 
+write often, you know, people do
+
+246
+00:14:43,800 --> 00:14:45,600
+web programming and they 
+Frameworks. 
+
+247
+00:14:45,600 --> 00:14:48,200
+Do they buy the real text to B 
+conversion for you? 
+
+248
+00:14:48,200 --> 00:14:52,200
+So you're just in this happy 
+world where everything is text, 
+
+249
+00:14:52,700 --> 00:14:57,400
+but and that's was. 
+So there was an assumption, that
+
+250
+00:14:57,600 --> 00:14:59,800
+a lot of the migration could be 
+automated. 
+
+251
+00:14:59,800 --> 00:15:03,400
+They created this tool called 
+223, okay? 
+
+252
+00:15:03,800 --> 00:15:08,300
+But that particular thing 
+couldn't because it requires 
+
+253
+00:15:08,300 --> 00:15:11,000
+understanding the semantics of 
+the program whether this string 
+
+254
+00:15:11,000 --> 00:15:14,200
+is being treated as text or B, 
+right? 
+
+255
+00:15:14,500 --> 00:15:15,200
+Yeah. 
+I know. 
+
+256
+00:15:15,400 --> 00:15:18,000
+Yeah. 
+And so that was the main thing 
+
+257
+00:15:18,000 --> 00:15:20,000
+that people really have to do 
+manually. 
+
+258
+00:15:20,100 --> 00:15:20,600
+Yeah. 
+Yeah. 
+
+259
+00:15:20,600 --> 00:15:24,300
+But weren't there, some other, 
+you know, core. 
+
+260
+00:15:24,900 --> 00:15:28,900
+Changes that the yeah which to 
+enable simple features that 
+
+261
+00:15:28,900 --> 00:15:31,300
+we've been able to sure, but 
+they were all. 
+
+262
+00:15:31,300 --> 00:15:33,900
+Oh yeah, I agree. 
+But there they were things to 
+
+263
+00:15:33,900 --> 00:15:40,400
+make the transition less painful
+but still to support gradual 
+
+264
+00:15:40,400 --> 00:15:45,300
+transition, then manually the 
+automation, I think there was a 
+
+265
+00:15:45,300 --> 00:15:51,100
+lot of expectation about that, 
+didn't pan out but another thing
+
+266
+00:15:51,100 --> 00:15:55,200
+so about the about other things,
+I would say, I think the Other 
+
+267
+00:15:55,700 --> 00:15:59,800
+three major things that we saw. 
+So today this is kind of a 
+
+268
+00:15:59,808 --> 00:16:01,300
+detail this thing about you 
+Nicole. 
+
+269
+00:16:01,600 --> 00:16:04,700
+I'm really glad we're past that,
+okay? 
+
+270
+00:16:05,500 --> 00:16:12,800
+That the second thing was the 
+implementation of a way of doing
+
+271
+00:16:12,800 --> 00:16:15,700
+a synchronous programming, a 
+modern way, copying. 
+
+272
+00:16:15,700 --> 00:16:18,700
+A lot of the idioms and 
+keywords, from C sharp, like a 
+
+273
+00:16:18,700 --> 00:16:22,500
+weight, a seen things like that.
+And, of course, that didn't 
+
+274
+00:16:22,500 --> 00:16:24,800
+happen till way later in. 
+Oh yeah, sure. 
+
+275
+00:16:24,900 --> 00:16:29,900
+But I'm yeah, I know. 
+But you're saying that I made 
+
+276
+00:16:29,900 --> 00:16:33,200
+more. 
+Yes, it had the biggest impact. 
+
+277
+00:16:35,900 --> 00:16:39,300
+And yes, and that was like, the 
+3.6 time. 
+
+278
+00:16:39,400 --> 00:16:47,300
+G 3 .5, actually 3.4 already. 
+Okay, but there wasn't the 
+
+279
+00:16:47,300 --> 00:16:50,000
+keywords weren't there. 
+But the the idea was there, but 
+
+280
+00:16:50,000 --> 00:16:52,700
+with a different keyword and 
+then in 3.5 the, introduce the 
+
+281
+00:16:52,700 --> 00:16:53,600
+keywords. 
+Okay. 
+
+282
+00:16:53,900 --> 00:16:58,300
+They had this in work, keyword 
+called huge from which did what 
+
+283
+00:16:58,300 --> 00:17:02,400
+await this sort of thing. 
+Yeah, but that lasted only one 
+
+284
+00:17:02,400 --> 00:17:05,800
+version. 
+So there's there's been some 
+
+285
+00:17:05,800 --> 00:17:10,900
+pretty disruptive changes, but 
+pretty minimal in terms of like 
+
+286
+00:17:11,300 --> 00:17:13,900
+oh now I gotta like rewrite this
+code. 
+
+287
+00:17:14,800 --> 00:17:17,000
+Most of the changes seem pretty 
+incremental. 
+
+288
+00:17:17,000 --> 00:17:20,500
+It's like oh a lot of the paps 
+right now is what they call them
+
+289
+00:17:20,700 --> 00:17:25,500
+have been just making us so that
+yeah that your code was so work 
+
+290
+00:17:25,500 --> 00:17:28,700
+but they've added a new feature 
+of this you know, Hannibal 
+
+291
+00:17:28,700 --> 00:17:32,200
+something new. 
+Or is that a better way to do 
+
+292
+00:17:32,200 --> 00:17:36,300
+things like they added? 
+Is that an optional static 
+
+293
+00:17:36,300 --> 00:17:37,400
+typing? 
+Exactly. 
+
+294
+00:17:37,400 --> 00:17:40,800
+Yeah, that's the third thing 
+matching pattern matching the 39
+
+295
+00:17:40,800 --> 00:17:44,000
+would say is now this supports 
+for static packing. 
+
+296
+00:17:44,600 --> 00:17:48,300
+But yeah, so I always like to 
+tell people because python 
+
+297
+00:17:48,500 --> 00:17:54,400
+became Platinum pythons, 
+popularity grew slowly, right? 
+
+298
+00:17:54,400 --> 00:17:57,900
+Because there was never a big 
+Corporation behind it, advocate 
+
+299
+00:17:58,100 --> 00:18:01,200
+on the general attitude. 
+I felt like was always hope you 
+
+300
+00:18:01,200 --> 00:18:02,500
+don't like python. 
+Don't use it. 
+
+301
+00:18:02,500 --> 00:18:03,800
+There was no. 
+Oh yeah. 
+
+302
+00:18:03,900 --> 00:18:06,200
+You got to use Python but maybe 
+because there was no 
+
+303
+00:18:06,200 --> 00:18:09,600
+Corporation, you know, right is 
+a correction behind pushing its 
+
+304
+00:18:09,600 --> 00:18:15,600
+job, somebody chopped. 
+So it grew organically and 
+
+305
+00:18:15,600 --> 00:18:19,800
+slowly over many years but it 
+was kind of famous when it when 
+
+306
+00:18:19,800 --> 00:18:25,000
+this migration 2.13 came about. 
+So people got it all. 
+
+307
+00:18:25,000 --> 00:18:28,600
+This is very flaky but no. 
+So what I want to convey is that
+
+308
+00:18:29,000 --> 00:18:33,400
+this wasn't one time event. 
+I never think that I observed in
+
+309
+00:18:33,400 --> 00:18:36,400
+practice Before. 
+And after that is very 
+
+310
+00:18:37,100 --> 00:18:40,600
+incremental and trying to do as 
+you know as little disruption as
+
+311
+00:18:40,600 --> 00:18:44,500
+possible. 
+With the previews with existing 
+
+312
+00:18:44,500 --> 00:18:47,100
+code bases. 
+You know, one of the big 
+
+313
+00:18:47,100 --> 00:18:50,400
+challenges I remember in that 23
+time frame was the library 
+
+314
+00:18:50,400 --> 00:18:53,100
+ecosystem. 
+There it's is a bit of a chicken
+
+315
+00:18:53,100 --> 00:18:57,300
+and egg in the took years to 
+kind of get through. 
+
+316
+00:18:57,700 --> 00:18:59,700
+Libraries, were a key part of it
+because libraries are, 
+
+317
+00:18:59,700 --> 00:19:03,400
+especially important part of the
+Python ecosystem which totally. 
+
+318
+00:19:03,500 --> 00:19:05,300
+Yeah. 
+Getting a library as all to 
+
+319
+00:19:05,300 --> 00:19:08,500
+migrate took other libraries 
+exactly which took others that 
+
+320
+00:19:08,700 --> 00:19:11,700
+there is yes. 
+This chain of events that yeah 
+
+321
+00:19:11,800 --> 00:19:14,500
+it took a long time to play out 
+and this is very interesting 
+
+322
+00:19:14,500 --> 00:19:18,300
+because it people anywhere in 
+any language community that 
+
+323
+00:19:18,300 --> 00:19:22,000
+needs to deal with this kind of 
+disruptive changes in the 
+
+324
+00:19:22,000 --> 00:19:25,000
+language is interesting because 
+they feel the thing. 
+
+325
+00:19:25,000 --> 00:19:28,200
+The idea that actually enable 
+that migration for big 
+
+326
+00:19:28,200 --> 00:19:33,200
+Frameworks like Django, let's 
+say was not the 223 conversion 
+
+327
+00:19:33,200 --> 00:19:37,100
+to Which would have them 
+maintained so-called business, 
+
+328
+00:19:37,100 --> 00:19:44,700
+but it was libraries like six, 
+which kind of creative audio: 
+
+329
+00:19:45,000 --> 00:19:48,700
+these are, were they using 
+JavaScript a lot for that shims?
+
+330
+00:19:48,700 --> 00:19:49,700
+I think. 
+All right. 
+
+331
+00:19:49,700 --> 00:19:53,900
+Yeah, so ways of expressing 
+things that would work in both 
+
+332
+00:19:53,900 --> 00:19:58,200
+languages, right, creating a 
+good shot right here is your 
+
+333
+00:19:58,200 --> 00:20:03,500
+Matic python to nor idiomatic 
+Python 3, but ways that you 
+
+334
+00:20:03,500 --> 00:20:07,200
+would do Do things ever worked 
+on both polyfills polyfills? 
+
+335
+00:20:07,200 --> 00:20:08,100
+Yeah. 
+Oh yeah, yeah. 
+
+336
+00:20:08,100 --> 00:20:10,400
+So they invented. 
+So that was worth six was about 
+
+337
+00:20:10,400 --> 00:20:12,600
+so they were able to do that 
+with. 
+
+338
+00:20:12,700 --> 00:20:14,900
+Okay. 
+So they had to get jangly the 
+
+339
+00:20:14,900 --> 00:20:17,000
+ability to do polyfills. 
+Yeah. 
+
+340
+00:20:17,000 --> 00:20:19,100
+Then they had to get the 
+polyfills in place. 
+
+341
+00:20:19,100 --> 00:20:21,200
+Exactly. 
+And then I'm sure at this point,
+
+342
+00:20:21,200 --> 00:20:24,200
+you don't really need the 
+polyfills anymore but maybe 
+
+343
+00:20:24,200 --> 00:20:26,900
+doing some cases but no knock 
+knock knock knock. 
+
+344
+00:20:27,500 --> 00:20:30,600
+As soon as you drop support for 
+part-time to then you start 
+
+345
+00:20:30,600 --> 00:20:32,600
+removing that stuff. 
+Yeah, yeah. 
+
+346
+00:20:32,600 --> 00:20:36,500
+But there's still hard. 
+Brace using python to yeah, yeah
+
+347
+00:20:36,500 --> 00:20:38,600
+there are. 
+But most of the big Frameworks 
+
+348
+00:20:38,600 --> 00:20:41,800
+are not supporting it anymore. 
+Going to be on there because the
+
+349
+00:20:42,100 --> 00:20:44,900
+the, the car developers are not 
+support anything anymore. 
+
+350
+00:20:44,900 --> 00:20:49,200
+So it's yeah, it's officially 
+deprecated. 
+
+351
+00:20:49,200 --> 00:20:55,700
+Yes, yeah, yeah, so, yeah. 
+So what, what other that's let's
+
+352
+00:20:55,700 --> 00:21:00,400
+segue into the topic of type yet
+static typing because one of the
+
+353
+00:21:00,400 --> 00:21:03,500
+things that I learned when I 
+studied this is that the big 
+
+354
+00:21:03,500 --> 00:21:06,400
+corporations Nations that have a
+lot, huge code bases. 
+
+355
+00:21:07,200 --> 00:21:09,900
+That's enough for them 
+converting from two to three, 
+
+356
+00:21:10,600 --> 00:21:13,600
+the static typing helped a lot 
+in that effort. 
+
+357
+00:21:13,600 --> 00:21:15,900
+So that's a tip to the 
+listeners. 
+
+358
+00:21:15,900 --> 00:21:20,900
+If you're still have a code base
+in Python to you have to invest 
+
+359
+00:21:20,900 --> 00:21:25,400
+in adding type annotations, 
+which are more cumbersome 
+
+360
+00:21:25,600 --> 00:21:28,200
+because this is your internet 
+addicts, consultations into 
+
+361
+00:21:28,200 --> 00:21:31,200
+using scripts using comments, 
+okay? 
+
+362
+00:21:31,700 --> 00:21:34,700
+And also other things, but yeah,
+mostly - okay. 
+
+363
+00:21:35,100 --> 00:21:40,100
+And also what they call the 
+first, add some some static type
+
+364
+00:21:40,100 --> 00:21:41,300
+information. 
+Yes. 
+
+365
+00:21:41,400 --> 00:21:44,900
+And then there is a then it'll 
+make your migration 23. 
+
+366
+00:21:44,900 --> 00:21:46,200
+Yes. 
+Because one of the things that 
+
+367
+00:21:46,200 --> 00:21:48,700
+you have to decide when you do 
+that is whether this is really 
+
+368
+00:21:48,700 --> 00:21:51,900
+bites or string for instance, 
+and make it explicit and have 
+
+369
+00:21:51,900 --> 00:21:55,700
+the type Checker, you know, 
+analyze the flow of your logic 
+
+370
+00:21:55,700 --> 00:21:59,700
+and say no here, using it as 
+text, but over there you're 
+
+371
+00:21:59,700 --> 00:22:02,400
+using it as B. 
+So you need to do a conversion 
+
+372
+00:22:02,400 --> 00:22:05,100
+somewhere. 
+To be a type error, right? 
+
+373
+00:22:05,100 --> 00:22:09,700
+So this is a good useful tip for
+people who are still working 
+
+374
+00:22:09,700 --> 00:22:13,000
+with potential to investigate 
+the so that the other way 
+
+375
+00:22:13,000 --> 00:22:18,600
+besides doing a comments is to 
+do if Scott and I forgot the 
+
+376
+00:22:18,600 --> 00:22:22,400
+name now it's like header files 
+but it's just files that have 
+
+377
+00:22:22,400 --> 00:22:26,500
+messed up files, they're called 
+in their files that only have 
+
+378
+00:22:26,500 --> 00:22:31,000
+Declarations of functions with 
+their signatures, okay? 
+
+379
+00:22:31,000 --> 00:22:33,700
+And the tie pins are like the 
+pound includes in. 
+
+380
+00:22:33,900 --> 00:22:37,000
+Plus in C and C++? 
+Yeah, because the python 
+
+381
+00:22:37,000 --> 00:22:39,400
+interpreter the pattern to 
+interpreter. 
+
+382
+00:22:39,400 --> 00:22:42,800
+Can't read that, same text, but 
+the type Checker scan, so many 
+
+383
+00:22:42,800 --> 00:22:46,300
+murders. 
+You have to say, I've just 
+
+384
+00:22:46,300 --> 00:22:50,800
+become more and more of a fan of
+the type annotations mean, just 
+
+385
+00:22:50,800 --> 00:22:52,700
+for when things just 
+readability. 
+
+386
+00:22:52,900 --> 00:22:54,900
+Yeah. 
+Because yeah, you can see. 
+
+387
+00:22:55,400 --> 00:22:57,900
+And it's, yeah, it's really 
+nice. 
+
+388
+00:22:58,300 --> 00:23:01,400
+I have, I agree. 
+I also became a fan, but 
+
+389
+00:23:01,400 --> 00:23:06,200
+although I am, Kind of maybe 
+more known as somebody who 
+
+390
+00:23:06,200 --> 00:23:09,800
+criticizes, what I think is 
+because I feel we need to find 
+
+391
+00:23:09,800 --> 00:23:12,300
+some balance in the messaging 
+about that. 
+
+392
+00:23:12,300 --> 00:23:16,200
+Because for instance, when we 
+talk about scientists, you know,
+
+393
+00:23:16,700 --> 00:23:23,900
+or of all kinds, they for them. 
+The cost benefits of having 
+
+394
+00:23:23,900 --> 00:23:27,700
+typings is difference. 
+Yeah, the cost is much higher 
+
+395
+00:23:27,700 --> 00:23:31,300
+because of the kind of 
+abstraction think abstract 
+
+396
+00:23:31,300 --> 00:23:33,000
+thinking that they have to do. 
+Yeah. 
+
+397
+00:23:33,500 --> 00:23:37,900
+No to think about types and yeah
+you know yeah a lot. 
+
+398
+00:23:38,500 --> 00:23:41,300
+Sure that they're not even the 
+not even sure what their type 
+
+399
+00:23:41,300 --> 00:23:45,200
+shapes should be. 
+Yes because they're iteration 
+
+400
+00:23:45,200 --> 00:23:46,800
+the groins. 
+Yeah exactly. 
+
+401
+00:23:48,100 --> 00:23:53,200
+And then and also they usually 
+work in very small teams and 
+
+402
+00:23:53,200 --> 00:23:59,100
+even alone one of the time Yeah,
+so that's different and that's 
+
+403
+00:23:59,100 --> 00:24:03,500
+why I think it's dangerous that 
+we shouldn't as a community. 
+
+404
+00:24:04,200 --> 00:24:07,900
+Be stressing too much debt as 
+day, right, way of doing python 
+
+405
+00:24:08,100 --> 00:24:11,600
+because it can have bad 
+consequences. 
+
+406
+00:24:11,600 --> 00:24:15,800
+You know, of having instructors 
+telling that to people when they
+
+407
+00:24:15,800 --> 00:24:17,900
+are teaching Python and 
+scientists. 
+
+408
+00:24:17,900 --> 00:24:20,400
+Yeah. 
+See this is another this thing 
+
+409
+00:24:20,400 --> 00:24:24,400
+that I thought of in the middle 
+of the night tools, not rules. 
+
+410
+00:24:25,100 --> 00:24:27,200
+Yeah. 
+This is another example of that,
+
+411
+00:24:27,300 --> 00:24:32,100
+you know, it's like yeah to Tool
+it might help but it might get 
+
+412
+00:24:32,100 --> 00:24:36,000
+in your way. 
+So yeah, she need and then maybe
+
+413
+00:24:36,000 --> 00:24:38,400
+later you'll discover, oh yeah, 
+this is actually true. 
+
+414
+00:24:38,600 --> 00:24:43,000
+Yeah, and I think the, The 
+evolutionary thinking that 
+
+415
+00:24:43,000 --> 00:24:46,700
+python allows, you know, you can
+start with the simplest program,
+
+416
+00:24:46,700 --> 00:24:52,400
+you get results and then as it 
+you learn more stuff and it's 
+
+417
+00:24:52,400 --> 00:24:54,900
+there, you know, it's like well,
+the thing that you showed me 
+
+418
+00:24:54,900 --> 00:24:59,100
+yesterday, the Single dispatch. 
+Yes, it's like I didn't even 
+
+419
+00:24:59,108 --> 00:25:01,000
+know that was there. 
+Yeah, yeah, yeah. 
+
+420
+00:25:01,008 --> 00:25:08,700
+The incremental learning is huge
+for for python because we were 
+
+421
+00:25:08,700 --> 00:25:12,200
+talking a couple days ago about 
+how many Concepts you need to 
+
+422
+00:25:12,200 --> 00:25:14,600
+understand to get to, let's say 
+hello world. 
+
+423
+00:25:15,000 --> 00:25:18,000
+Oh, yeah. 
+And for python, is it two 
+
+424
+00:25:18,000 --> 00:25:23,100
+concepts like and you know, most
+other language most languages 
+
+425
+00:25:23,100 --> 00:25:27,000
+that I work with it's probably 
+in the realm of 22:30. 
+
+426
+00:25:27,100 --> 00:25:30,000
+Yeah, maybe more Concepts to get
+to hello world. 
+
+427
+00:25:30,000 --> 00:25:33,900
+Which for a new programmer is 
+it's like, oh my God, we're add 
+
+428
+00:25:33,900 --> 00:25:36,400
+everything, doesn't it need all 
+the features? 
+
+429
+00:25:36,400 --> 00:25:37,400
+All right. 
+It's like, yeah. 
+
+430
+00:25:37,400 --> 00:25:40,000
+Like, do you really need to 
+understand? 
+
+431
+00:25:40,800 --> 00:25:44,000
+I don't know, inheritance to 
+like a step to do data science. 
+
+432
+00:25:44,000 --> 00:25:46,700
+Most, yes, I'm like, yes, not 
+exactly. 
+
+433
+00:25:46,700 --> 00:25:50,400
+Yeah, our variance. 
+Well, and and think what it 
+
+434
+00:25:50,400 --> 00:25:53,900
+looks like to a new programmer 
+if you have to learn all the 
+
+435
+00:25:53,900 --> 00:25:56,800
+concepts that you do in Java, To
+get to hello world. 
+
+436
+00:25:56,800 --> 00:25:59,900
+You're thinking everything is 
+going to be like this, it's 
+
+437
+00:25:59,900 --> 00:26:02,800
+something this simple. 
+Yeah, takes up this much. 
+
+438
+00:26:02,900 --> 00:26:05,600
+Everything else is going to be 
+the, oh my God, this isn't for 
+
+439
+00:26:05,600 --> 00:26:06,900
+me. 
+Yeah, you know, I think it 
+
+440
+00:26:06,900 --> 00:26:11,000
+drives a lot of people way you 
+were saying that Brazil has the 
+
+441
+00:26:11,000 --> 00:26:15,400
+most where you're from. 
+Yeah, it has the most, what is 
+
+442
+00:26:15,400 --> 00:26:17,300
+it by these? 
+Hi ladies group. 
+
+443
+00:26:17,300 --> 00:26:19,600
+Yeah, see so. 
+And that's interesting that. 
+
+444
+00:26:19,600 --> 00:26:24,400
+Yeah, the the fact that python 
+has there's Django girls, 
+
+445
+00:26:24,400 --> 00:26:26,300
+there's pie ladies there, All 
+these things. 
+
+446
+00:26:26,300 --> 00:26:30,000
+As you know we have started in 
+Brazil is growing it elsewhere 
+
+447
+00:26:30,100 --> 00:26:32,200
+after a python. 
+Yeah. 
+
+448
+00:26:32,200 --> 00:26:36,200
+So all these things that are for
+specific groups. 
+
+449
+00:26:36,200 --> 00:26:41,100
+Yes so that if you're thinking 
+of becoming a programmer and you
+
+450
+00:26:41,100 --> 00:26:46,200
+go oh there's something for 
+ladies or African-Americans or 
+
+451
+00:26:46,200 --> 00:26:49,300
+yes or whatever. 
+It's like oh I'm going to feel 
+
+452
+00:26:49,300 --> 00:26:50,700
+more comfortable there. 
+Sure. 
+
+453
+00:26:50,700 --> 00:26:54,800
+And it's like do we see this in 
+the other language communities? 
+
+454
+00:26:55,100 --> 00:26:57,300
+This is One of the things I 
+love, you know, it's like, how 
+
+455
+00:26:57,300 --> 00:27:00,500
+do we make it more even more 
+welcoming than it is? 
+
+456
+00:27:00,500 --> 00:27:02,600
+Yes. 
+And I love that, but I'm sure 
+
+457
+00:27:02,600 --> 00:27:09,200
+everyone for everyone and that's
+just one feels like, for 
+
+458
+00:27:09,200 --> 00:27:14,500
+instance, it's it comes from 
+griddle because I've watched a 
+
+459
+00:27:14,500 --> 00:27:20,600
+few key notes from we do live 
+and in most of them, if not, all
+
+460
+00:27:20,600 --> 00:27:25,200
+of them, he was always wearing 
+the same really old t-shirt that
+
+461
+00:27:25,200 --> 00:27:30,000
+had this Toddler working on a 
+computer with an old CRT and the
+
+462
+00:27:30,000 --> 00:27:34,700
+text said, fighting is for girls
+like in 15 years ago he was 
+
+463
+00:27:34,700 --> 00:27:38,900
+already using a look more 
+episode with that without a 
+
+464
+00:27:39,200 --> 00:27:41,700
+teacher. 
+You speculate created as a knock
+
+465
+00:27:41,700 --> 00:27:45,300
+against the language or 
+something which is no, no, you 
+
+466
+00:27:45,300 --> 00:27:48,300
+exactly. 
+Is just this was, it's, it's 
+
+467
+00:27:48,300 --> 00:27:51,600
+where, as you know, especially 
+when the shirt was made, it was 
+
+468
+00:27:51,600 --> 00:27:54,500
+like, well, computer programming
+is for boys. 
+
+469
+00:27:54,700 --> 00:27:57,000
+Yes, exactly. 
+Is that this was, this was a 
+
+470
+00:27:57,008 --> 00:27:58,500
+knock against that. 
+Yes. 
+
+471
+00:27:58,500 --> 00:28:01,400
+If that's like it's a marketing 
+message for python. 
+
+472
+00:28:01,500 --> 00:28:05,000
+Yeah but in why python was 
+awesome and inclusive and but 
+
+473
+00:28:05,000 --> 00:28:09,700
+without marketers involved. 
+Yeah, it was just yeah and and 
+
+474
+00:28:09,800 --> 00:28:12,200
+but but the point is like that's
+always. 
+
+475
+00:28:12,200 --> 00:28:16,500
+And I remember, at one point, he
+said I want half the presenters 
+
+476
+00:28:16,900 --> 00:28:20,800
+at the conference to be women 
+and it's the highest percentage 
+
+477
+00:28:20,800 --> 00:28:22,200
+of any conference that I've 
+seen. 
+
+478
+00:28:22,200 --> 00:28:24,900
+I don't have it. 
+Is this reach half one of the 
+
+479
+00:28:25,700 --> 00:28:29,000
+Bring one of the Keynotes. 
+He said, I'm here, when they 
+
+480
+00:28:29,000 --> 00:28:31,300
+opened for Q&A. 
+He said I'm only going to answer
+
+481
+00:28:31,300 --> 00:28:36,500
+questions for from women 
+Because, you know, you guys have
+
+482
+00:28:36,500 --> 00:28:38,400
+a lot of love. 
+A lot of opportunities. 
+
+483
+00:28:40,200 --> 00:28:45,000
+Nice. 
+Um, so what, what have been 
+
+484
+00:28:45,000 --> 00:28:50,400
+other kind of big change in 
+awesome features and python over
+
+485
+00:28:51,000 --> 00:28:53,900
+the 25 years or whatever that 
+you often using it. 
+
+486
+00:28:54,800 --> 00:28:58,000
+So I think so. 
+I think I made a major change 
+
+487
+00:28:58,000 --> 00:29:01,700
+was incorporating. 
+This idea of iterables more 
+
+488
+00:29:01,700 --> 00:29:04,100
+deeply into the language, that 
+was something that happened in 
+
+489
+00:29:04,200 --> 00:29:09,200
+Of two to three transition. 
+And I think this super elegant, 
+
+490
+00:29:09,200 --> 00:29:16,300
+you know the way that lots of 
+stuff are lazy iterables, I like
+
+491
+00:29:16,300 --> 00:29:18,400
+generators. 
+Yes, it does. 
+
+492
+00:29:18,400 --> 00:29:20,000
+Actually I've just been coming. 
+Yeah. 
+
+493
+00:29:20,900 --> 00:29:22,400
+Yeah. 
+Can you give a description? 
+
+494
+00:29:22,600 --> 00:29:26,600
+So a generator is that's the 
+thing. 
+
+495
+00:29:26,600 --> 00:29:30,600
+I'm still kind of mulling over 
+it but basically it's a function
+
+496
+00:29:30,900 --> 00:29:35,400
+that instead of returning it has
+theirs As a keyword called 
+
+497
+00:29:35,400 --> 00:29:40,500
+yield, and what it does is it 
+basically suspends the function,
+
+498
+00:29:41,000 --> 00:29:45,000
+it returns a value when you call
+it again, you can pass it a new 
+
+499
+00:29:45,000 --> 00:29:48,900
+value and this is why. 
+When they were starting to look 
+
+500
+00:29:48,900 --> 00:29:51,800
+at co-routines, they were going 
+o. 
+
+501
+00:29:52,000 --> 00:29:55,000
+A generator is a, you know, kind
+of like a coroutine. 
+
+502
+00:29:55,300 --> 00:29:58,800
+It's like a stateful 
+continuation. 
+
+503
+00:29:58,800 --> 00:30:01,700
+Well, well, a continuation is 
+stateful. 
+
+504
+00:30:02,000 --> 00:30:04,100
+So it's it is like a 
+continuation. 
+
+505
+00:30:04,200 --> 00:30:08,800
+Because it's like, oh, you start
+this function, it has it also 
+
+506
+00:30:08,800 --> 00:30:12,200
+captures the, it's a closure. 
+So it captures everything around
+
+507
+00:30:12,200 --> 00:30:14,900
+it. 
+So it's really this object that 
+
+508
+00:30:14,900 --> 00:30:19,200
+you can suspend, when it returns
+a value to you. 
+
+509
+00:30:19,300 --> 00:30:23,300
+When you ask it but then you can
+ask it for things and yeah. 
+
+510
+00:30:23,400 --> 00:30:25,900
+And then when you go back and 
+you go, I need another thinking 
+
+511
+00:30:25,900 --> 00:30:29,200
+that. 
+So it's automatically lazy 
+
+512
+00:30:29,200 --> 00:30:30,500
+evaluation. 
+No. 
+
+513
+00:30:30,500 --> 00:30:33,000
+Yeah. 
+And it's doing instead of just 
+
+514
+00:30:33,000 --> 00:30:35,600
+pulling things off of EQ. 
+It's actually doing some 
+
+515
+00:30:35,600 --> 00:30:37,500
+calculations to produce the new 
+value. 
+
+516
+00:30:37,500 --> 00:30:39,800
+It's what it can also be pulling
+something out over. 
+
+517
+00:30:39,800 --> 00:30:41,900
+Oh, sure, sure. 
+So it's yeah. 
+
+518
+00:30:42,300 --> 00:30:45,500
+Well that's it's not really it's
+more limited than a 
+
+519
+00:30:45,500 --> 00:30:48,600
+communication your cause it's 
+asymmetric. 
+
+520
+00:30:49,400 --> 00:30:53,000
+You know, it can only use back 
+to the same place where that 
+
+521
+00:30:53,000 --> 00:30:57,600
+started it you can jump to 
+another, it's more constrained. 
+
+522
+00:30:57,600 --> 00:31:01,400
+Yeah. 
+Then so so typical use cases for
+
+523
+00:31:01,400 --> 00:31:04,000
+this. 
+Are you have a son? 
+
+524
+00:31:04,200 --> 00:31:07,200
+There's some data stream. 
+Yeah, values. 
+
+525
+00:31:07,200 --> 00:31:10,700
+And here you need to then do 
+some lazy operation. 
+
+526
+00:31:10,700 --> 00:31:13,400
+Yeah. 
+Or think about a Macbook 
+
+527
+00:31:13,400 --> 00:31:16,100
+variation which is wife very 
+common. 
+
+528
+00:31:16,100 --> 00:31:21,900
+So mapping the in Python to 
+produce a list of the results, 
+
+529
+00:31:21,900 --> 00:31:22,700
+right? 
+Yeah. 
+
+530
+00:31:22,700 --> 00:31:25,000
+And in Python 3, it's a 
+generator. 
+
+531
+00:31:25,100 --> 00:31:28,800
+Yeah. 
+So you just feel like a stream, 
+
+532
+00:31:28,800 --> 00:31:30,300
+is it? 
+It's like like a strong. 
+
+533
+00:31:30,300 --> 00:31:34,000
+Yes. 
+And so generators. 
+
+534
+00:31:34,100 --> 00:31:38,300
+And then grew up in to cool 
+things by leveraging. 
+
+535
+00:31:38,300 --> 00:31:42,700
+These other mechanism that Bruce
+mentioned, which is the ability 
+
+536
+00:31:42,700 --> 00:31:48,200
+to collect not only yield data 
+while it's running, but also 
+
+537
+00:31:48,200 --> 00:31:51,300
+collects input from the client 
+code. 
+
+538
+00:31:51,400 --> 00:31:52,300
+Okay. 
+Yeah. 
+
+539
+00:31:52,600 --> 00:31:55,500
+And then in my hou routine, it 
+mostly works. 
+
+540
+00:31:55,500 --> 00:31:59,300
+Then they have other way because
+then you can use you do a 
+
+541
+00:31:59,300 --> 00:32:04,000
+synchronous programming without 
+callbacks because what you do is
+
+542
+00:32:04,200 --> 00:32:07,500
+You to the event Loop and the 
+event Loop will let you know 
+
+543
+00:32:07,900 --> 00:32:10,500
+when something is then that you 
+needed. 
+
+544
+00:32:10,500 --> 00:32:14,400
+I have something for you. 
+Yeah, yeah, yeah. 
+
+545
+00:32:14,400 --> 00:32:16,900
+So then probably the async io 
+stuff. 
+
+546
+00:32:16,900 --> 00:32:17,900
+Yes. 
+Rebuilt. 
+
+547
+00:32:17,900 --> 00:32:21,700
+On top of that because I thought
+it had some async IO before 
+
+548
+00:32:21,700 --> 00:32:24,900
+that, but it probably was not as
+elegant. 
+
+549
+00:32:24,900 --> 00:32:27,900
+And well, it's like they did 
+several experiments before they 
+
+550
+00:32:27,900 --> 00:32:31,800
+arrived at this one. 
+Well yeah, it's interesting 
+
+551
+00:32:31,800 --> 00:32:39,400
+because Twisted Matrix that most
+famous and the oldest not build.
+
+552
+00:32:39,400 --> 00:32:42,200
+I don't know. 
+It's one of the oldest biggest 
+
+553
+00:32:42,400 --> 00:32:45,300
+Frameworks in Python was a 
+synchronous program is about a 
+
+554
+00:32:45,308 --> 00:32:48,600
+synchronous programming and it 
+was already like 20 years old 
+
+555
+00:32:48,600 --> 00:32:50,400
+when I think I was developed 
+okay. 
+
+556
+00:32:50,400 --> 00:32:54,500
+And it was influential griddle 
+wrote about how he talked to 
+
+557
+00:32:56,000 --> 00:32:59,900
+Leaf lefkowitz. 
+The main altar of Jason about 
+
+558
+00:32:59,900 --> 00:33:03,200
+how things should be in, huh? 
+I think I owe ya. 
+
+559
+00:33:04,100 --> 00:33:09,200
+Yeah, although I tried to learn 
+is think I owe what I mean 
+
+560
+00:33:09,400 --> 00:33:14,000
+Twisted way back. 
+And I think I understand why it 
+
+561
+00:33:14,000 --> 00:33:18,000
+was so confusing now because 
+they had to create, I mean, you 
+
+562
+00:33:18,000 --> 00:33:20,800
+go into it and you go, all I 
+want to do is this thing and 
+
+563
+00:33:20,800 --> 00:33:23,600
+they go. 
+Well, now we have this whole set
+
+564
+00:33:23,600 --> 00:33:26,200
+of libraries and all these 
+different I'm going Y. 
+
+565
+00:33:26,500 --> 00:33:29,200
+And now I understand, why is 
+because they all have to be sure
+
+566
+00:33:29,200 --> 00:33:32,500
+where exactly, but at the time, 
+yeah, the book that I was 
+
+567
+00:33:32,500 --> 00:33:33,600
+reading did. 
+Yeah. 
+
+568
+00:33:33,900 --> 00:33:37,200
+Explain that. 
+So it's just it just seemed like
+
+569
+00:33:37,200 --> 00:33:43,900
+this huge mass and let's so and 
+it's interesting how for 
+
+570
+00:33:43,900 --> 00:33:46,900
+instance we were talking about 
+being accessible and 
+
+571
+00:33:46,900 --> 00:33:53,300
+approachable and you see this 
+happening again and again so now
+
+572
+00:33:53,300 --> 00:33:57,200
+we have a problem getting 
+bogarting, the Salgado who is 
+
+573
+00:33:57,200 --> 00:34:00,000
+one of the core developers and 
+currently they release the 
+
+574
+00:34:00,000 --> 00:34:02,200
+release managers for the main 
+versions. 
+
+575
+00:34:02,200 --> 00:34:08,000
+Now he's doing excellent job of 
+making the error messages, more 
+
+576
+00:34:08,000 --> 00:34:10,100
+understandable for people who 
+are beginning. 
+
+577
+00:34:10,199 --> 00:34:12,199
+Yeah, yeah, rust. 
+Really. 
+
+578
+00:34:12,199 --> 00:34:14,500
+I think, yeah. 
+It's all the see, the bar. 
+
+579
+00:34:14,600 --> 00:34:15,100
+Sure. 
+Yeah. 
+
+580
+00:34:15,100 --> 00:34:16,300
+Set the bar for yeah. 
+Yeah. 
+
+581
+00:34:17,600 --> 00:34:21,900
+I mean, I was just both Luciano 
+and I were been playing with 
+
+582
+00:34:21,900 --> 00:34:22,699
+rest. 
+Yeah. 
+
+583
+00:34:23,100 --> 00:34:26,600
+And that was, I mean, I had this
+experience where I'm going in 
+
+584
+00:34:26,600 --> 00:34:28,300
+trying to get this example to 
+work. 
+
+585
+00:34:28,400 --> 00:34:31,100
+And rest goes. 
+Oh yeah, this isn't right. 
+
+586
+00:34:31,100 --> 00:34:32,199
+Try this. 
+And I go. 
+
+587
+00:34:32,199 --> 00:34:36,500
+Okay, all right, that Try this. 
+And it's like, Oh, and it works 
+
+588
+00:34:36,500 --> 00:34:37,600
+now. 
+That's like. 
+
+589
+00:34:37,600 --> 00:34:41,100
+Whoa. 
+Yeah, that's brilliant. 
+
+590
+00:34:41,300 --> 00:34:43,900
+The other thing that I wasn't 
+going to mention about being 
+
+591
+00:34:43,900 --> 00:34:45,500
+more. 
+Approachable is how the 
+
+592
+00:34:47,300 --> 00:34:51,699
+documentation for a CIO changed 
+radically between the time that 
+
+593
+00:34:51,699 --> 00:34:55,900
+I wrote the first edition and 
+the second edition because you 
+
+594
+00:34:55,900 --> 00:34:58,900
+diesel even of with a great 
+contributor to this a 
+
+595
+00:34:58,900 --> 00:35:04,600
+synchronous aspect of python, he
+did the major Reworking of, you 
+
+596
+00:35:04,600 --> 00:35:09,000
+know, he just completely 
+re-edited and made it more 
+
+597
+00:35:09,000 --> 00:35:12,800
+approachable because the first 
+iteration was more like, okay, 
+
+598
+00:35:12,800 --> 00:35:16,300
+so this is for asynchronous 
+programming experts, who are 
+
+599
+00:35:16,300 --> 00:35:18,800
+going to develop the library's 
+on top of this stuff. 
+
+600
+00:35:20,300 --> 00:35:26,300
+So what are you talking about? 
+The python originally was like, 
+
+601
+00:35:26,300 --> 00:35:30,200
+that was for people like glyph. 
+Okay, so now I want twist it to 
+
+602
+00:35:30,200 --> 00:35:32,800
+support this and this is what I 
+read. 
+
+603
+00:35:33,200 --> 00:35:38,100
+So it was very yeah it is for 
+experts for experts. 
+
+604
+00:35:38,100 --> 00:35:40,300
+Yep. 
+And then now it's really much 
+
+605
+00:35:40,300 --> 00:35:43,500
+more approachable, has more 
+examples that you can copy and 
+
+606
+00:35:43,500 --> 00:35:46,000
+paste again started. 
+You know I run the library. 
+
+607
+00:35:46,000 --> 00:35:51,100
+Ecosystem is probably come along
+to where oh yeah. exactly, like,
+
+608
+00:35:51,100 --> 00:35:55,100
+for instance, now there's this 
+Library called so it's 
+
+609
+00:35:55,100 --> 00:35:59,700
+interesting because Almost every
+example in the first edition of 
+
+610
+00:35:59,700 --> 00:36:02,900
+my book is still works except 
+those that use the asynchronous 
+
+611
+00:36:02,900 --> 00:36:05,700
+program because their apis 
+changed so much. 
+
+612
+00:36:05,700 --> 00:36:09,200
+It was provisional when I wrote 
+the first edition and one of the
+
+613
+00:36:09,200 --> 00:36:11,900
+things also that change was for 
+instance. 
+
+614
+00:36:11,900 --> 00:36:15,200
+I have a sequence of example, 
+where I do this task of 
+
+615
+00:36:15,200 --> 00:36:21,400
+downloading, a bunch of images 
+sequentially, then with threads.
+
+616
+00:36:22,600 --> 00:36:26,400
+Then we process this, which is 
+not really the right way to do 
+
+617
+00:36:26,400 --> 00:36:31,300
+it, but just to show how the API
+is similar and then with 
+
+618
+00:36:31,300 --> 00:36:33,400
+asynchronous programming, that's
+completely different. 
+
+619
+00:36:33,400 --> 00:36:35,600
+Yeah. 
+And I have to do use two 
+
+620
+00:36:35,600 --> 00:36:38,800
+different libraries to do that 
+because when there was one, that
+
+621
+00:36:38,800 --> 00:36:41,500
+was the blocking one that I 
+could use with the trace, first 
+
+622
+00:36:41,500 --> 00:36:43,700
+three examples. 
+And for the synchronous 
+
+623
+00:36:43,700 --> 00:36:46,700
+programming, I needed another 
+completely different library 
+
+624
+00:36:47,000 --> 00:36:48,500
+that had a completely different 
+API. 
+
+625
+00:36:49,300 --> 00:36:52,100
+And now, in the second edition, 
+I was able to use this wonderful
+
+626
+00:36:52,100 --> 00:36:57,300
+new library called HTTP X. 
+Nice, which emulates the API of 
+
+627
+00:36:57,300 --> 00:37:02,300
+requests, which is the most 
+popular language libraries to do
+
+628
+00:37:02,300 --> 00:37:09,500
+that for HTTP client, but it 
+also works with it has the same 
+
+629
+00:37:09,500 --> 00:37:13,200
+API adapted for asynchronous 
+programming. 
+
+630
+00:37:13,400 --> 00:37:17,600
+So then the code is weeks. 
+Yeah. 
+
+631
+00:37:17,600 --> 00:37:22,100
+So whether easy more similar or 
+a sink underneath the covers? 
+
+632
+00:37:22,100 --> 00:37:24,100
+Yeah, you have a similar API. 
+Exactly. 
+
+633
+00:37:24,400 --> 00:37:26,300
+That was good. 
+So that's one example of what 
+
+634
+00:37:26,300 --> 00:37:27,700
+you just said. 
+Yeah. 
+
+635
+00:37:27,900 --> 00:37:30,500
+Yeah. 
+We're the library custom got up 
+
+636
+00:37:30,500 --> 00:37:32,400
+to, you know, embrace the async 
+I. 
+
+637
+00:37:32,900 --> 00:37:34,200
+Yeah. 
+Nice. 
+
+638
+00:37:36,900 --> 00:37:39,100
+What about att's and pattern 
+matching? 
+
+639
+00:37:39,200 --> 00:37:42,200
+Where's python out with? 
+Yeah, so pattern matching is a 
+
+640
+00:37:42,208 --> 00:37:48,200
+new feature that came out in 
+Python 3, then and I loved it in
+
+641
+00:37:48,200 --> 00:37:50,900
+other languages that I learned 
+before packed on, not before 
+
+642
+00:37:50,900 --> 00:37:52,300
+partner. 
+But before writing the 
+
+643
+00:37:53,200 --> 00:37:57,500
+circulation like Ali, Sir, which
+I've been playing around for a 
+
+644
+00:37:57,500 --> 00:38:00,200
+while. 
+I really love that feature. 
+
+645
+00:38:00,800 --> 00:38:03,400
+And in Python, I thought it was 
+kind of strange at first. 
+
+646
+00:38:03,400 --> 00:38:07,000
+There's a lot of corner cases 
+because in egg and mix here, it 
+
+647
+00:38:07,000 --> 00:38:09,900
+feels very natural because it's 
+built really built into the 
+
+648
+00:38:09,900 --> 00:38:11,900
+language, right? 
+It does pattern matching 
+
+649
+00:38:11,900 --> 00:38:14,700
+automatically on the function 
+arguments. 
+
+650
+00:38:14,700 --> 00:38:17,200
+There's no keyword to do match, 
+right? 
+
+651
+00:38:17,200 --> 00:38:21,500
+That's how it works. 
+It's just and then in Python 
+
+652
+00:38:23,700 --> 00:38:29,300
+it's It's a very nice feature, 
+but I think it's if it may, I 
+
+653
+00:38:29,300 --> 00:38:32,500
+have never taught it to 
+beginners and this is something 
+
+654
+00:38:32,500 --> 00:38:36,900
+I still need to do to appreciate
+the complexities. 
+
+655
+00:38:37,500 --> 00:38:39,400
+Or maybe it's just my 
+imagination, that it's 
+
+656
+00:38:39,400 --> 00:38:42,700
+complicated, but I find it a 
+little bit disturbing that. 
+
+657
+00:38:42,700 --> 00:38:45,100
+There's it reuses the same 
+facts. 
+
+658
+00:38:46,100 --> 00:38:48,700
+You know, way there for 
+instance, everywhere in Python 
+
+659
+00:38:48,700 --> 00:38:52,200
+code, before python matching 
+before pattern matching, where 
+
+660
+00:38:52,200 --> 00:38:56,400
+you saw, let's say, ain't open 
+paren X close paren. 
+
+661
+00:38:57,200 --> 00:39:00,900
+You were building an integer 
+object out of X. 
+
+662
+00:39:00,900 --> 00:39:04,800
+Yeah. 
+When that occurs in that pattern
+
+663
+00:39:05,200 --> 00:39:07,400
+doesn't mean that right? 
+It's a type of certian. 
+
+664
+00:39:07,400 --> 00:39:09,000
+Yeah. 
+That's the thing that night 
+
+665
+00:39:09,000 --> 00:39:12,300
+heron to all pattern matching at
+least that I've seen. 
+
+666
+00:39:12,400 --> 00:39:14,300
+Yeah. 
+And that's just a thing. 
+
+667
+00:39:14,600 --> 00:39:16,600
+You know. 
+That's just an extra thing to 
+
+668
+00:39:16,600 --> 00:39:17,800
+start. 
+Getting used to it. 
+
+669
+00:39:17,800 --> 00:39:19,400
+Anyway yeah. 
+You had to give that to you. 
+
+670
+00:39:20,100 --> 00:39:21,100
+Exactly. 
+Yeah. 
+
+671
+00:39:21,100 --> 00:39:23,700
+That's an extractor value. 
+Extractor. 
+
+672
+00:39:23,700 --> 00:39:25,800
+Whatever you can extract the 
+value out of that. 
+
+673
+00:39:25,800 --> 00:39:27,800
+Is that? 
+Yeah, yeah, it's matches on the 
+
+674
+00:39:27,800 --> 00:39:29,600
+type. 
+Yeah, she's on the type and then
+
+675
+00:39:29,600 --> 00:39:34,800
+pulls Extraction is wonderful. 
+Yeah, I think one of the best 
+
+676
+00:39:34,800 --> 00:39:40,600
+parts I like when when as I was 
+doing research, I found for to 
+
+677
+00:39:40,800 --> 00:39:42,400
+show examples of pattern 
+matching. 
+
+678
+00:39:42,400 --> 00:39:45,700
+I found an example by greed. 
+Ooh, that's a really interesting
+
+679
+00:39:45,700 --> 00:39:49,400
+because it's a match case 
+statement, with only one case, 
+
+680
+00:39:50,100 --> 00:39:52,700
+that's he's using, just one pack
+the thing, right? 
+
+681
+00:39:53,000 --> 00:39:56,900
+Because it, yeah, because if it 
+becomes, yes, it becomes like a,
+
+682
+00:39:57,000 --> 00:40:01,500
+like a declarative language to 
+extract. 
+
+683
+00:40:02,000 --> 00:40:04,500
+This information from nested 
+deep now. 
+
+684
+00:40:04,800 --> 00:40:06,900
+Yeah. 
+And so that's very, very 
+
+685
+00:40:06,900 --> 00:40:11,500
+readable and it's just one case 
+in maybe python has this as 
+
+686
+00:40:11,500 --> 00:40:14,100
+well. 
+But in Colin, you can say Val 
+
+687
+00:40:14,300 --> 00:40:18,400
+and then open paren, X comma, y 
+comma, whatever and then that 
+
+688
+00:40:18,400 --> 00:40:20,900
+will that will D structure the 
+shearling. 
+
+689
+00:40:21,000 --> 00:40:30,400
+Yeah, the GOP. 27 stab are 
+identifying as you want. 
+
+690
+00:40:31,800 --> 00:40:33,800
+Those are similar things, the 
+example you gave with the 
+
+691
+00:40:33,800 --> 00:40:38,500
+pattern, the case is, in the 
+extracting out the values out of
+
+692
+00:40:38,500 --> 00:40:39,100
+it. 
+Yeah. 
+
+693
+00:40:39,100 --> 00:40:40,200
+What's it? 
+Why would you want to use? 
+
+694
+00:40:40,200 --> 00:40:44,800
+Just a single one over the 
+restructuring into value? 
+
+695
+00:40:44,800 --> 00:40:48,000
+Because it doesn't python 
+doesn't have that D structuring 
+
+696
+00:40:48,600 --> 00:40:52,400
+normally only within pattern 
+matching know. 
+
+697
+00:40:52,400 --> 00:40:56,200
+It does destruction of iterables
+or sequence. 
+
+698
+00:40:56,200 --> 00:40:59,700
+Like, okay, that's not it. 
+Not know what it doesn't pull 
+
+699
+00:40:59,700 --> 00:41:01,500
+them apart, it doesn't do the 
+thing. 
+
+700
+00:41:01,700 --> 00:41:05,700
+The match will do. 
+Yeah, so I okay. 
+
+701
+00:41:07,400 --> 00:41:10,200
+So they're so there's the 
+powerful pattern matching. 
+
+702
+00:41:10,200 --> 00:41:15,700
+Yeah, which is great. 
+So you can match on, on the 
+
+703
+00:41:15,700 --> 00:41:18,200
+type. 
+Yes, which is example you gave 
+
+704
+00:41:18,200 --> 00:41:23,300
+with the end there, and then you
+can, you can also D structure 
+
+705
+00:41:23,300 --> 00:41:27,200
+and match. 
+And then, and then other parts 
+
+706
+00:41:27,200 --> 00:41:31,600
+of that Anna DSL as well. 
+It's mostly my money. 
+
+707
+00:41:31,700 --> 00:41:34,300
+Standing. 
+Is that it follows scholar 
+
+708
+00:41:34,300 --> 00:41:36,300
+pretty closely? 
+Yeah, I don't know if it would 
+
+709
+00:41:36,300 --> 00:41:38,600
+have been. 
+I mean, I think I was the model.
+
+710
+00:41:38,600 --> 00:41:40,500
+Yeah. 
+So I think that there are some 
+
+711
+00:41:40,500 --> 00:41:42,600
+types in Python. 
+Yes. 
+
+712
+00:41:42,600 --> 00:41:45,000
+So, can you then do an 
+exhaustive pattern match on? 
+
+713
+00:41:45,000 --> 00:41:49,300
+Yes, on the some type and yeah, 
+yeah. 
+
+714
+00:41:49,300 --> 00:41:52,800
+It's really nice. 
+I mean it and I'm feels like the
+
+715
+00:41:52,800 --> 00:41:54,900
+two sort of go hand in hand to 
+me. 
+
+716
+00:41:55,400 --> 00:41:57,300
+It's like, you're all the types.
+Yeah. 
+
+717
+00:41:57,400 --> 00:41:59,500
+Sometimes in pattern matching. 
+Yeah. 
+
+718
+00:41:59,800 --> 00:42:01,500
+Yeah. 
+Which I didn't see it first. 
+
+719
+00:42:01,700 --> 00:42:03,900
+You know, when you just look at 
+it by itself. 
+
+720
+00:42:04,000 --> 00:42:06,600
+But if you look at it together 
+with pattern matching is like oh
+
+721
+00:42:06,600 --> 00:42:08,900
+of course. 
+But it's it feels like a 
+
+722
+00:42:08,908 --> 00:42:11,000
+different kind of polymorphism 
+to me. 
+
+723
+00:42:11,900 --> 00:42:15,000
+Yeah, some type polymorphism. 
+I've just started calling since 
+
+724
+00:42:15,000 --> 00:42:17,500
+you've been working on your talk
+for strange loop. 
+
+725
+00:42:17,500 --> 00:42:20,700
+Everything is a form of 
+polymorphous as well, kind of 
+
+726
+00:42:20,700 --> 00:42:29,600
+that it is. 
+It is Any other like major 
+
+727
+00:42:29,600 --> 00:42:32,600
+interesting features or game 
+changing things that have 
+
+728
+00:42:32,600 --> 00:42:36,600
+happened and python that we 
+should highlight before we talk 
+
+729
+00:42:36,600 --> 00:42:40,300
+about what's next? 
+Or let me think. 
+
+730
+00:42:40,400 --> 00:42:42,400
+Mmm. 
+Yeah, obviously. 
+
+731
+00:42:42,700 --> 00:42:45,700
+I mean there's there's a lot of 
+off the cuff things well, and 
+
+732
+00:42:45,700 --> 00:42:48,400
+they just so many little things.
+I think is the thing that python
+
+733
+00:42:48,400 --> 00:42:50,200
+is also done. 
+Well, it's just like a lot of 
+
+734
+00:42:50,200 --> 00:42:51,300
+little thing. 
+Yes. 
+
+735
+00:42:51,300 --> 00:42:55,500
+And and you see those like in 
+conlon kotlin picked up a lot of
+
+736
+00:42:55,500 --> 00:42:59,000
+features from? 
+Yeah, but Andres to be. 
+
+737
+00:42:59,000 --> 00:43:01,100
+Yes, I was. 
+Yeah. 
+
+738
+00:43:01,900 --> 00:43:02,900
+Anything. 
+And yeah. 
+
+739
+00:43:02,900 --> 00:43:05,000
+It's just yeah, it's somewhere 
+else. 
+
+740
+00:43:06,100 --> 00:43:13,200
+Yeah, yeah. 
+Well, I've seen support for 
+
+741
+00:43:13,200 --> 00:43:15,700
+functional programming. 
+I mean not no. 
+
+742
+00:43:15,700 --> 00:43:17,800
+Yeah. 
+You still have to, you know, 
+
+743
+00:43:17,800 --> 00:43:23,200
+there's no well in in the data 
+classes because that's a few. 
+
+744
+00:43:23,200 --> 00:43:25,000
+Oh yeah. 
+That's that's a new one. 
+
+745
+00:43:25,100 --> 00:43:31,000
+All right, classes has an option
+to make Take the element is 
+
+746
+00:43:31,100 --> 00:43:35,200
+frozen immutable, or yeah, it's 
+not it's it's sort of like what 
+
+747
+00:43:35,200 --> 00:43:41,100
+Java does with the, you know, 
+immutable collections which is 
+
+748
+00:43:41,500 --> 00:43:44,400
+throws an exception if you were 
+going to try and change it. 
+
+749
+00:43:44,400 --> 00:43:49,700
+Yes but it's still you know yeah
+intent is there and that's nice.
+
+750
+00:43:50,000 --> 00:43:54,700
+And then there's a there's 
+libraries for the funk tools and
+
+751
+00:43:54,700 --> 00:43:57,400
+then people have gone on and 
+create additional Funk too. 
+
+752
+00:43:57,600 --> 00:44:01,300
+Tools libraries and there's some
+of that stuff is pretty clever. 
+
+753
+00:44:01,700 --> 00:44:03,800
+Well there's Lambda syntax in 
+tax. 
+
+754
+00:44:03,800 --> 00:44:07,000
+That was added at some point. 
+No lambdas were there right at 
+
+755
+00:44:07,000 --> 00:44:09,600
+the beginning. 
+It's pretty awful as it is too 
+
+756
+00:44:09,600 --> 00:44:10,900
+awful. 
+Yeah it is. 
+
+757
+00:44:11,100 --> 00:44:15,300
+I mean because when you think 
+about what a Lambda is 4, it's 
+
+758
+00:44:15,300 --> 00:44:18,800
+the smallest amount of code to 
+express a function. 
+
+759
+00:44:18,900 --> 00:44:24,100
+Yeah and with python you that 
+you say Lambda you will spell 
+
+760
+00:44:24,100 --> 00:44:29,200
+out the word Lambda: it's yeah. 
+And it's still the body has to 
+
+761
+00:44:29,200 --> 00:44:33,000
+be only one expression. 
+Yeah, yeah, yeah. 
+
+762
+00:44:33,000 --> 00:44:36,600
+But going back to data classes, 
+I think that's a feature that 
+
+763
+00:44:36,600 --> 00:44:41,400
+was this very popular and you 
+mentioned Frozen, very fast as 
+
+764
+00:44:41,400 --> 00:44:46,600
+there is also now. 
+Type it name it up 0, which uses
+
+765
+00:44:46,600 --> 00:44:49,900
+this same kind of, was that 
+predated data classes? 
+
+766
+00:44:51,100 --> 00:44:54,100
+Yeah, but now there's no, you 
+can use the same syntax of a 
+
+767
+00:44:54,100 --> 00:44:57,400
+class declaration, right? 
+So that you have this 
+
+768
+00:44:57,400 --> 00:45:01,100
+alternative when you went the 
+thing to be immutable, right? 
+
+769
+00:45:01,100 --> 00:45:04,200
+Right. 
+But then, you can't add data, 
+
+770
+00:45:04,200 --> 00:45:07,100
+call this K methods, you are 
+going to say. 
+
+771
+00:45:07,100 --> 00:45:08,700
+Yeah, I think so. 
+Yeah, you can because now 
+
+772
+00:45:08,700 --> 00:45:11,400
+there's the syntax right there. 
+What was missing was the same 
+
+773
+00:45:11,400 --> 00:45:13,800
+text. 
+So now that you can write class 
+
+774
+00:45:15,100 --> 00:45:20,400
+students and inherits from, I 
+know, I looked at this back as 
+
+775
+00:45:20,400 --> 00:45:25,400
+my Intuition at pycon was on 
+data class and then I looked at 
+
+776
+00:45:25,400 --> 00:45:29,200
+name tuples and it was like, oh 
+yeah, this is very similar, but 
+
+777
+00:45:29,200 --> 00:45:32,300
+it definitely had some things 
+that data classes. 
+
+778
+00:45:32,700 --> 00:45:35,600
+I mean it couldn't do things 
+that data classes do. 
+
+779
+00:45:35,800 --> 00:45:36,600
+Sure. 
+Yeah. 
+
+780
+00:45:36,600 --> 00:45:40,000
+So if I don't remember yeah yeah
+the things that's the data 
+
+781
+00:45:40,000 --> 00:45:46,400
+classes can do that. 
+Part are more really advanced in
+
+782
+00:45:46,400 --> 00:45:48,100
+terms of. 
+Yeah usage. 
+
+783
+00:45:48,300 --> 00:45:51,700
+What's what's in the standard 
+library in terms of Of like 
+
+784
+00:45:51,700 --> 00:45:56,800
+collection operations like map 
+flatmap, fold Traverse a lot of 
+
+785
+00:45:56,800 --> 00:45:59,400
+death in them, like Funk tools, 
+the module that he was talking 
+
+786
+00:45:59,400 --> 00:46:03,900
+about has a lot of functions 
+that are also generators that 
+
+787
+00:46:03,900 --> 00:46:05,800
+are really inspired in high 
+school. 
+
+788
+00:46:06,000 --> 00:46:07,900
+I don't know. 
+High school but I was, you know,
+
+789
+00:46:07,900 --> 00:46:10,600
+the guy who wrote most of the 
+library. 
+
+790
+00:46:11,600 --> 00:46:15,500
+Raymond, hechinger studied haskó
+and then basically brought the 
+
+791
+00:46:15,500 --> 00:46:17,200
+main constructs there. 
+Okay? 
+
+792
+00:46:17,300 --> 00:46:20,400
+Yeah, yeah, yeah. 
+So very nice. 
+
+793
+00:46:20,500 --> 00:46:23,300
+So Is some nice and it's highly 
+optimized. 
+
+794
+00:46:23,300 --> 00:46:28,400
+It started as a pure python 
+implementation this library, but
+
+795
+00:46:28,400 --> 00:46:31,500
+now over the years, almost all 
+of it, if not, all of it is now 
+
+796
+00:46:31,500 --> 00:46:33,200
+in see, okay? 
+Right. 
+
+797
+00:46:33,300 --> 00:46:34,800
+Yeah, right, right? 
+Yeah. 
+
+798
+00:46:34,800 --> 00:46:37,200
+I just came across this town 
+where you can discover. 
+
+799
+00:46:37,400 --> 00:46:42,100
+What's in the core when you load
+python is already there as C 
+
+800
+00:46:42,100 --> 00:46:43,300
+libraries. 
+Uh-huh. 
+
+801
+00:46:43,400 --> 00:46:45,800
+And then we'll all you're 
+importing is really the 
+
+802
+00:46:45,800 --> 00:46:49,500
+Declarations. 
+Yeah, and one of the other 
+
+803
+00:46:49,500 --> 00:46:52,900
+things that I I've struggled 
+with this over the years is 
+
+804
+00:46:52,900 --> 00:46:56,300
+writing python extensions 
+because you can write python 
+
+805
+00:46:56,300 --> 00:47:01,100
+extensions, that are originally 
+python was all see. 
+
+806
+00:47:01,100 --> 00:47:03,100
+And so, the extensions would be 
+in C. 
+
+807
+00:47:03,100 --> 00:47:07,600
+But to understand how to do it 
+was just and people have tried 
+
+808
+00:47:07,600 --> 00:47:10,100
+over the years to create better 
+and better ways to do that. 
+
+809
+00:47:10,100 --> 00:47:14,500
+Yeah, and Jeremy and I 
+experimented with rust to create
+
+810
+00:47:14,500 --> 00:47:17,800
+python extensions and I'm pretty
+sure if I ever need to do python
+
+811
+00:47:17,800 --> 00:47:20,700
+extension, I would use rest with
+the pie. 
+
+812
+00:47:21,000 --> 00:47:21,800
+Three. 
+Yeah. 
+
+813
+00:47:21,800 --> 00:47:25,800
+Library because for one thing, 
+if you're writing Ascension, one
+
+814
+00:47:25,800 --> 00:47:28,300
+reason is for performance. 
+Yes. 
+
+815
+00:47:28,300 --> 00:47:31,400
+And rust is going to be yeah. 
+Flatout the yeah, it's like 
+
+816
+00:47:31,400 --> 00:47:33,800
+you're not going to go to the 
+trouble of writing some 
+
+817
+00:47:33,800 --> 00:47:35,300
+language. 
+Oh, it's not fast enough. 
+
+818
+00:47:35,300 --> 00:47:38,800
+It's like if it's not. 
+Yeah, you know, if it's not as 
+
+819
+00:47:38,800 --> 00:47:40,900
+fast as you needed. 
+Yeah, your reason to take the 
+
+820
+00:47:40,900 --> 00:47:42,800
+else, Escape better. 
+Yeah. 
+
+821
+00:47:42,800 --> 00:47:45,300
+Be valid. 
+Yeah, it's funny to see. 
+
+822
+00:47:45,300 --> 00:47:49,700
+I've been using 50 since 98 but 
+still, I never wanted myself to 
+
+823
+00:47:49,700 --> 00:47:51,800
+spend the time to learn how How 
+to do an extension. 
+
+824
+00:47:52,100 --> 00:47:55,700
+But now I do because of rest. 
+Yeah, because I know that it's 
+
+825
+00:47:55,700 --> 00:47:59,700
+going to be safe because the 
+problem is your, you know, your,
+
+826
+00:47:59,800 --> 00:48:04,000
+you know, memory changing 
+garbage collection objects that 
+
+827
+00:48:04,000 --> 00:48:06,200
+are really managed by Clapton 
+itself. 
+
+828
+00:48:06,300 --> 00:48:10,200
+And so there you have a lot of 
+opportunities to break things 
+
+829
+00:48:10,200 --> 00:48:12,800
+and work. 
+Them, streets are hard things. 
+
+830
+00:48:12,800 --> 00:48:15,100
+Are something that are not part 
+of the experience of a Python 
+
+831
+00:48:15,100 --> 00:48:19,000
+program, right? 
+It's not impossible cologne to 
+
+832
+00:48:19,000 --> 00:48:21,300
+court to court them The 
+Interpreter, but If you do an 
+
+833
+00:48:21,300 --> 00:48:23,000
+extension, that's very easy. 
+Yeah. 
+
+834
+00:48:23,000 --> 00:48:29,100
+So, so right, this python you're
+on your own, good luck, right? 
+
+835
+00:48:29,100 --> 00:48:35,700
+Hope you remembered to Malik. 
+Yeah, well there's that and the 
+
+836
+00:48:35,700 --> 00:48:39,700
+fact that python is managing the
+lifetime, all these things with 
+
+837
+00:48:39,700 --> 00:48:43,600
+its garbage collector and then 
+you go out into an extension. 
+
+838
+00:48:43,700 --> 00:48:46,400
+Yeah and there's you got to 
+interact with that and this is 
+
+839
+00:48:46,400 --> 00:48:49,600
+why the yeah, look at Global 
+interpreter lock exist. 
+
+840
+00:48:50,000 --> 00:48:54,100
+So the The I wanted to ask about
+the the Gill Global interpreter 
+
+841
+00:48:54,100 --> 00:48:57,100
+lock this exams object. 
+Yeah, can you? 
+
+842
+00:48:57,200 --> 00:48:58,800
+Yeah. 
+Let's let's just let's stop 
+
+843
+00:48:58,800 --> 00:49:03,700
+there and clean it first for for
+the people who don't know, if I 
+
+844
+00:49:03,708 --> 00:49:06,200
+thought I explained what the 
+global interpreter lock is 
+
+845
+00:49:06,200 --> 00:49:11,200
+because great. 
+So then temperature is it's 
+
+846
+00:49:11,200 --> 00:49:15,100
+running is handling all of these
+objects that your code creates 
+
+847
+00:49:15,200 --> 00:49:20,500
+and this like Bruce just said 
+there's a garbage collector and 
+
+848
+00:49:20,500 --> 00:49:24,200
+it's Based on reference 
+counting. 
+
+849
+00:49:24,600 --> 00:49:28,300
+And so a lot of these inner data
+structures that are essential 
+
+850
+00:49:28,300 --> 00:49:32,600
+for the proper functional 
+function of The Interpreter are 
+
+851
+00:49:32,600 --> 00:49:37,900
+not thread, safe, So there is 
+this block called the global 
+
+852
+00:49:37,900 --> 00:49:43,200
+interpreter lock, which any code
+that wants to change those 
+
+853
+00:49:43,200 --> 00:49:45,500
+structures has to acquire, 
+right? 
+
+854
+00:49:45,600 --> 00:49:49,300
+And also first that applies to 
+the extensions themselves. 
+
+855
+00:49:49,900 --> 00:49:54,100
+So essentially what this means 
+is that and one of the codes 
+
+856
+00:49:54,100 --> 00:49:58,700
+that requires that lock, is part
+of the interpreted, the part 
+
+857
+00:49:58,800 --> 00:50:01,100
+that runs the pirate code, 
+right? 
+
+858
+00:50:01,900 --> 00:50:06,700
+Which means that because of 
+this, The python bytecode can 
+
+859
+00:50:06,700 --> 00:50:10,600
+only run on a single thread so 
+it will only use one of the 
+
+860
+00:50:10,600 --> 00:50:17,400
+course on your machine. 
+So that's the Gill. 
+
+861
+00:50:18,600 --> 00:50:23,100
+I think it's important for um 
+you know like as an advocate of 
+
+862
+00:50:23,100 --> 00:50:26,800
+python when I talk about that I 
+have to say that it's seems like
+
+863
+00:50:26,800 --> 00:50:32,200
+a very bad feature but it's also
+something that simplifies a lot 
+
+864
+00:50:32,200 --> 00:50:37,000
+of The Interpreter itself, which
+is why Ruby also has that. 
+
+865
+00:50:37,500 --> 00:50:41,300
+And yeah, it seems like actually
+interpreted like, I don't know 
+
+866
+00:50:41,300 --> 00:50:43,600
+how you could possibly have an 
+interpreted language. 
+
+867
+00:50:43,600 --> 00:50:46,300
+That wasn't single thread 
+essentially at least on the 
+
+868
+00:50:47,200 --> 00:50:50,700
+well, you can't You can but then
+you have a cost when your 
+
+869
+00:50:50,700 --> 00:50:56,200
+running programs that don't need
+more than one thread which when 
+
+870
+00:50:56,200 --> 00:50:58,100
+python was created was not an 
+issue, right? 
+
+871
+00:50:58,100 --> 00:51:03,600
+Because in the 90s, what 
+multi-core computers were called
+
+872
+00:51:03,600 --> 00:51:06,500
+super computers there not cell 
+phones. 
+
+873
+00:51:10,000 --> 00:51:14,100
+Yeah. 
+So their use case. 
+
+874
+00:51:14,100 --> 00:51:17,700
+So this is still an obstacle, 
+the community, you know, the 
+
+875
+00:51:17,700 --> 00:51:20,300
+leadership. 
+In the community says, okay, any
+
+876
+00:51:20,300 --> 00:51:24,000
+proposal to get rid of the 
+guilt? 
+
+877
+00:51:24,200 --> 00:51:26,900
+Must do it in a way that doesn't
+impact the performance of 
+
+878
+00:51:26,900 --> 00:51:31,400
+single-threaded programs and 
+probably maybe if this 
+
+879
+00:51:31,800 --> 00:51:33,900
+requirement was already there, 
+for instance, when the go 
+
+880
+00:51:33,900 --> 00:51:37,400
+language was created. 
+Yeah, they wouldn't be able to. 
+
+881
+00:51:37,400 --> 00:51:40,900
+So you have, if, if they've 
+started with something that was 
+
+882
+00:51:40,900 --> 00:51:44,500
+already fed say, from the start,
+it would have been slower. 
+
+883
+00:51:44,500 --> 00:51:47,000
+But people would have been 
+gotten used to it over the 
+
+884
+00:51:47,000 --> 00:51:50,500
+years. 
+And So this is the coordination.
+
+885
+00:51:50,500 --> 00:51:55,400
+Yes, and they'd give you also 
+makes it easy to implement not 
+
+886
+00:51:55,400 --> 00:51:57,500
+easy. 
+Relatively easy to implement 
+
+887
+00:51:57,500 --> 00:51:59,400
+extensions, right? 
+Yeah. 
+
+888
+00:52:01,300 --> 00:52:07,100
+Now the except as an extension 
+also, you can be smart about 
+
+889
+00:52:07,100 --> 00:52:10,200
+that and not just get grab the 
+Gill, do your thing and release 
+
+890
+00:52:10,200 --> 00:52:15,500
+the view because you can, but 
+you can then you can for 
+
+891
+00:52:15,500 --> 00:52:17,200
+instance, okay? 
+So this is computationally 
+
+892
+00:52:17,200 --> 00:52:21,200
+intensive. 
+I can actually run Treads from 
+
+893
+00:52:21,200 --> 00:52:26,000
+see and I will release the gue 
+while those threads are working.
+
+894
+00:52:26,200 --> 00:52:30,500
+And so a lot of the numeric 
+ecosystem in Python does use all
+
+895
+00:52:30,500 --> 00:52:32,000
+the cars that you have. 
+Yeah. 
+
+896
+00:52:32,100 --> 00:52:35,200
+Because the others are built 
+like that through extension. 
+
+897
+00:52:35,200 --> 00:52:38,400
+Yes. 
+And after explicit l gil 
+
+898
+00:52:38,400 --> 00:52:42,100
+condemnable, so the glue is 
+exists. 
+
+899
+00:52:42,100 --> 00:52:44,400
+And it's a, it's a, it's a 
+downer. 
+
+900
+00:52:45,400 --> 00:52:50,700
+Because for instance, that means
+that Large-scale asynchronous 
+
+901
+00:52:50,700 --> 00:52:52,700
+programmers. 
+I mean, I think in those 
+
+902
+00:52:52,700 --> 00:52:54,700
+programs. 
+So, here's the thing that I 
+
+903
+00:52:54,700 --> 00:52:59,700
+learned the people say, oh, this
+is a, an I/O bound system, so I 
+
+904
+00:52:59,700 --> 00:53:04,000
+can do it in nodes or python 
+asynchronous, right? 
+
+905
+00:53:04,000 --> 00:53:07,700
+And I think I owe ya because 
+it's an I/O bound system. 
+
+906
+00:53:07,700 --> 00:53:10,500
+Yeah. 
+But what I learned is that's an 
+
+907
+00:53:10,500 --> 00:53:14,600
+over simplification. 
+There are no I/O bound systems. 
+
+908
+00:53:15,000 --> 00:53:17,200
+What you have is, I Obama 
+functions. 
+
+909
+00:53:17,700 --> 00:53:20,600
+Mmm. 
+Systems, have a mixture of IO 
+
+910
+00:53:20,600 --> 00:53:26,100
+bombs and CPU bound functions. 
+And as they grow a lot of times 
+
+911
+00:53:26,100 --> 00:53:29,600
+it's just shifting from. 
+Yeah, this part is I/O bound as 
+
+912
+00:53:29,600 --> 00:53:31,100
+part. 
+Yeah, you know, then we have to 
+
+913
+00:53:31,100 --> 00:53:32,500
+this part is. 
+Yeah, you bound. 
+
+914
+00:53:32,700 --> 00:53:37,000
+So there's a, there's a fader 
+mode in the evolution of systems
+
+915
+00:53:37,300 --> 00:53:40,400
+that are built a synchronously 
+with a single thread, which is 
+
+916
+00:53:40,400 --> 00:53:45,800
+the model of nodes and python. 
+For example, the fader mode is 
+
+917
+00:53:46,300 --> 00:53:52,600
+as we add features, the thing 
+gets lower And why is that? 
+
+918
+00:53:52,700 --> 00:54:00,300
+Because the little tiny, CPU 
+intensive functions that you 
+
+919
+00:54:00,300 --> 00:54:05,600
+have, I having each of them is 
+pulling the hand brake off the 
+
+920
+00:54:05,600 --> 00:54:11,200
+main Loop event Loop a little 
+bit further and so for instance,
+
+921
+00:54:11,200 --> 00:54:14,900
+it's a very interesting example.
+So you receive your recently for
+
+922
+00:54:14,900 --> 00:54:18,200
+no, for already mentioned is a 
+major contributor to python a 
+
+923
+00:54:18,200 --> 00:54:21,400
+synchronous programming. 
+He, he created this. 
+
+924
+00:54:21,400 --> 00:54:25,700
+So the fact I think I owe is a 
+library that has a pluggable 
+
+925
+00:54:26,700 --> 00:54:28,200
+poop. 
+It's designed like that they 
+
+926
+00:54:28,200 --> 00:54:31,200
+defined this interface for the 
+event Loop so you can Implement 
+
+927
+00:54:31,200 --> 00:54:36,400
+others and he implemented one on
+top of the event Loop that is 
+
+928
+00:54:36,400 --> 00:54:40,800
+used by node which is highly 
+optimized in its written in C++.
+
+929
+00:54:40,800 --> 00:54:46,700
+So Heroes a site on Right rapper
+and also cycling is this thing 
+
+930
+00:54:46,700 --> 00:54:50,700
+that compiles a superset of 
+python to native code. 
+
+931
+00:54:50,800 --> 00:54:52,900
+Yeah. 
+So he wrote the site on wrapper 
+
+932
+00:54:52,900 --> 00:55:02,000
+around the the node js event 
+Loop and he called this thing UV
+
+933
+00:55:02,000 --> 00:55:03,900
+Loop and he wanted to show her 
+performance. 
+
+934
+00:55:03,900 --> 00:55:08,500
+It was and he has a benchmark 
+that shows show that the time 
+
+935
+00:55:08,500 --> 00:55:12,200
+about four years ago, that it 
+was nearly as performances go. 
+
+936
+00:55:13,800 --> 00:55:18,500
+But to achieve that result, he 
+had to do something of her Far, 
+
+937
+00:55:18,500 --> 00:55:19,700
+Far Away. 
+Simple Benchmark. 
+
+938
+00:55:19,700 --> 00:55:21,400
+That is not realistic. 
+He knows about that. 
+
+939
+00:55:21,600 --> 00:55:26,500
+He wrote about that, but when he
+was profiling, he noticed that 
+
+940
+00:55:26,800 --> 00:55:30,600
+the library that he was using 
+for doing a synchronous HTTP, 
+
+941
+00:55:31,100 --> 00:55:35,100
+headers low, HTTP, header, 
+parser array. 
+
+942
+00:55:35,400 --> 00:55:37,600
+So that was the city. 
+I don't think so here. 
+
+943
+00:55:37,600 --> 00:55:41,200
+This was a super stupid 
+Benchmark of just, you know, 
+
+944
+00:55:41,600 --> 00:55:43,400
+serving 1 k. 
+Bye. 
+
+945
+00:55:44,900 --> 00:55:46,000
+Mobs. 
+Yeah. 
+
+946
+00:55:46,100 --> 00:55:49,200
+It's that's only this reminds me
+of let the parsing will 
+
+947
+00:55:49,200 --> 00:55:52,800
+cpu-intensive. 
+It's alright to remember the 
+
+948
+00:55:52,800 --> 00:55:58,300
+Tekken power benchmarks, which 
+are not as interesting or as 
+
+949
+00:55:58,300 --> 00:56:00,700
+they used to be. 
+But the I remember there was a 
+
+950
+00:56:00,700 --> 00:56:04,300
+time when there was this big 
+arms race in seeing who could be
+
+951
+00:56:04,300 --> 00:56:08,700
+fastest on the tech Empower 
+benchmarks and all of a sudden 
+
+952
+00:56:08,700 --> 00:56:12,900
+some some Library framework, 
+whatever shot up, all the others
+
+953
+00:56:13,000 --> 00:56:15,200
+psycho. 
+My God, how did you get so fast?
+
+954
+00:56:15,400 --> 00:56:19,500
+Oh, we just don't parse the 
+headers of the HTTP request. 
+
+955
+00:56:23,400 --> 00:56:26,100
+Awesome. 
+Yeah, totally useless. 
+
+956
+00:56:27,100 --> 00:56:32,600
+So what you did was he then went
+to, to this, all this other 
+
+957
+00:56:32,600 --> 00:56:38,800
+trouble of wrapping up. 
+Also inside them the HTTP, 
+
+958
+00:56:38,800 --> 00:56:43,400
+parser in C++, used by nodes. 
+So he had to develop this audio.
+
+959
+00:56:43,600 --> 00:56:46,600
+Brie. 
+And that's how we achieve near 
+
+960
+00:56:46,600 --> 00:56:48,900
+parity with go. 
+Yeah. 
+
+961
+00:56:50,300 --> 00:56:54,100
+But yeah. 
+My anyway, so the point is that 
+
+962
+00:56:54,400 --> 00:57:00,100
+the glue is really hurtful 
+because of that, it's, it makes 
+
+963
+00:57:00,100 --> 00:57:03,900
+your life complicated when it 
+makes you want to do is little 
+
+964
+00:57:03,900 --> 00:57:07,300
+in python as you possibly can. 
+Which is kind of? 
+
+965
+00:57:07,300 --> 00:57:09,300
+Well, if you're worried about 
+performance. 
+
+966
+00:57:09,300 --> 00:57:11,400
+Yeah. 
+It turns of concurrency for I, 
+
+967
+00:57:11,400 --> 00:57:13,500
+oh yeah, it's a lot of things, 
+right? 
+
+968
+00:57:13,600 --> 00:57:15,600
+Yeah. 
+So you have to keep your. 
+
+969
+00:57:15,800 --> 00:57:19,400
+So one suggestion that I make to
+people who do a lot of a 
+
+970
+00:57:19,400 --> 00:57:23,800
+synchronous programming I mean, 
+languages that by the phone is 
+
+971
+00:57:23,800 --> 00:57:29,000
+support one car Maybe this 
+applies to projects in general. 
+
+972
+00:57:29,000 --> 00:57:32,400
+But for those particularly you 
+have to have in your CI 
+
+973
+00:57:32,400 --> 00:57:36,800
+pipeline, A way to detect 
+regressions in performance. 
+
+974
+00:57:37,300 --> 00:57:40,200
+Yeah. 
+Yeah you know because that has 
+
+975
+00:57:40,200 --> 00:57:43,500
+to be addressed immediately 
+because it could be because of 
+
+976
+00:57:43,500 --> 00:57:47,100
+developer added some code and 
+all of a sudden that his really 
+
+977
+00:57:47,100 --> 00:57:49,600
+pulled on that good handbrake 
+and it's actually affecting 
+
+978
+00:57:49,600 --> 00:57:52,600
+everything because if you wait 
+until all the developers are 
+
+979
+00:57:52,600 --> 00:57:56,300
+kind of bothered about it, then 
+the problem is already. 
+
+980
+00:57:56,400 --> 00:58:00,800
+Yeah maybe too. 
+Widespread I actually saw a 
+
+981
+00:58:00,800 --> 00:58:04,000
+project died because of 
+automating automating. 
+
+982
+00:58:04,000 --> 00:58:08,300
+Kind of Detection of guilt 
+issues and just overall 
+
+983
+00:58:08,300 --> 00:58:10,200
+performance review diode with 
+the, you know. 
+
+984
+00:58:10,200 --> 00:58:13,700
+Yeah, yes, or performance in 
+general. 
+
+985
+00:58:13,800 --> 00:58:17,600
+Yeah, I'm sure. 
+Yeah, I have had numerous 
+
+986
+00:58:17,900 --> 00:58:22,300
+situations where I thought, I 
+knew better than python when it 
+
+987
+00:58:22,300 --> 00:58:24,300
+came to perform. 
+I go I don't want to do it this 
+
+988
+00:58:24,300 --> 00:58:26,500
+way. 
+It'll be slow which was I mean 
+
+989
+00:58:26,500 --> 00:58:28,200
+yeah, dumb in the first place. 
+But yeah. 
+
+990
+00:58:28,200 --> 00:58:32,300
+But then I would discover that 
+oh no actually if I do it, what 
+
+991
+00:58:32,300 --> 00:58:34,200
+looks like the slow way? 
+Yeah. 
+
+992
+00:58:34,300 --> 00:58:35,500
+The fast way. 
+Yeah. 
+
+993
+00:58:35,900 --> 00:58:38,500
+And that has to do with that 
+approachability, attitude, that 
+
+994
+00:58:38,500 --> 00:58:40,400
+you mention. 
+Because for instance, people 
+
+995
+00:58:40,400 --> 00:58:44,500
+say, oh, you should never 
+concatenate strings because it's
+
+996
+00:58:45,000 --> 00:58:48,200
+square. 
+But the thing is, they know 
+
+997
+00:58:48,200 --> 00:58:51,100
+people do that. 
+Yeah, in reality. 
+
+998
+00:58:51,100 --> 00:58:54,000
+Yeah, and since strings are 
+immutable, they actually 
+
+999
+00:58:54,000 --> 00:58:55,500
+implemented this thing. 
+They okay, no. 
+
+1000
+00:58:55,500 --> 00:58:59,100
+We are over way over allocates. 
+Yeah. 
+
+1001
+00:58:59,100 --> 00:59:03,800
+And then when they do that, when
+we can just add the content 
+
+1002
+00:59:03,900 --> 00:59:07,900
+right there. 
+So it's not, you know old thank 
+
+1003
+00:59:07,900 --> 00:59:09,500
+you very much. 
+Power does the same thing? 
+
+1004
+00:59:09,500 --> 00:59:12,100
+Yeah. 
+Didn't used to use that have to 
+
+1005
+00:59:12,100 --> 00:59:15,500
+use string Builder because 
+string concatenation of strings 
+
+1006
+00:59:15,500 --> 00:59:17,200
+is yeah slow. 
+Yeah. 
+
+1007
+00:59:17,200 --> 00:59:19,300
+And so then everybody had to use
+string Builder but then at some 
+
+1008
+00:59:19,300 --> 00:59:22,100
+point they're just like let's 
+just make it so that underneath 
+
+1009
+00:59:22,100 --> 00:59:26,100
+the covers we do what L should 
+do the optimization. 
+
+1010
+00:59:26,100 --> 00:59:32,100
+Yeah. 
+It's similar to like automatic 
+
+1011
+00:59:32,100 --> 00:59:36,900
+transmission versus manual. 
+Yeah of course the menu is more 
+
+1012
+00:59:37,600 --> 00:59:42,500
+if you know how to use it that 
+point then it's more efficient. 
+
+1013
+00:59:43,700 --> 00:59:46,500
+I really like a story that I 
+think exemplifies this whole 
+
+1014
+00:59:46,500 --> 00:59:49,200
+attitudes that sometimes, 
+sometimes, because some 
+
+1015
+00:59:49,200 --> 00:59:52,400
+sometimes people say, no people 
+never had need to understand 
+
+1016
+00:59:52,400 --> 00:59:54,700
+this thing about the 
+concatenating strings and do it 
+
+1017
+00:59:54,700 --> 00:59:57,300
+right, okay? 
+They deserve to be punished by 
+
+1018
+00:59:57,300 --> 01:00:01,900
+his slowness, if they don't with
+right now. 
+
+1019
+01:00:01,900 --> 01:00:03,900
+So, I remember seeing compiler 
+philosophy? 
+
+1020
+01:00:03,900 --> 01:00:08,100
+Yes. 
+So, I remember the first time I 
+
+1021
+01:00:08,100 --> 01:00:15,300
+installed Debian in the 90s. 
+So I had this, you know, like 
+
+1022
+01:00:15,300 --> 01:00:17,900
+this. 
+How do you call them this? 
+
+1023
+01:00:18,000 --> 01:00:20,600
+This PC that I just assembled on
+of Parts. 
+
+1024
+01:00:20,600 --> 01:00:23,900
+You know how they call them. 
+There's a name for this here and
+
+1025
+01:00:23,900 --> 01:00:27,800
+when, you know, yeah, anyway, 
+and I didn't know the brand of 
+
+1026
+01:00:27,800 --> 01:00:32,000
+my CD-ROM, right? 
+Was just random X. 
+
+1027
+01:00:32,000 --> 01:00:37,800
+Bring Linux needs to know that. 
+That nothing is then the machine
+
+1028
+01:00:37,800 --> 01:00:41,900
+booted from the installation CD 
+and installation. 
+
+1029
+01:00:41,900 --> 01:00:44,600
+I went through several screens. 
+Everything was working fine. 
+
+1030
+01:00:45,000 --> 01:00:49,800
+And then it asked me what 
+exactly was my city room, right?
+
+1031
+01:00:50,500 --> 01:00:54,200
+In a little and gave me a 400 
+options and the version 8400 
+
+1032
+01:00:54,800 --> 01:00:59,200
+options and there was no option 
+that said, please use the 
+
+1033
+01:00:59,200 --> 01:01:01,100
+driver. 
+That's already working, right? 
+
+1034
+01:01:01,100 --> 01:01:03,200
+It is please. 
+No. 
+
+1035
+01:01:03,500 --> 01:01:06,600
+I just have to Up. 
+Because I didn't know I did that
+
+1036
+01:01:06,600 --> 01:01:08,900
+many times. 
+When I tried to install, this is
+
+1037
+01:01:08,900 --> 01:01:11,600
+just stupid. 
+And then when I talk to Damien 
+
+1038
+01:01:11,600 --> 01:01:15,500
+Advocate about that, he said, 
+no, but you would be using a 
+
+1039
+01:01:15,500 --> 01:01:20,000
+suboptimal driver, that's okay. 
+But at least it'll work man, you
+
+1040
+01:01:20,000 --> 01:01:22,600
+know, I would then be able to 
+connect to the internet and do 
+
+1041
+01:01:22,600 --> 01:01:24,800
+everything else and be able to 
+learn about that shit. 
+
+1042
+01:01:24,900 --> 01:01:28,100
+And maybe I would never need a 
+faster CD-ROM drive it because 
+
+1043
+01:01:28,100 --> 01:01:29,600
+it's not really so important, 
+right? 
+
+1044
+01:01:31,000 --> 01:01:33,100
+No, but it would be super 
+optimal. 
+
+1045
+01:01:33,500 --> 01:01:36,500
+So, Is exactly why we call this 
+happy path program. 
+
+1046
+01:01:36,500 --> 01:01:40,400
+It is that we want the Happy 
+path and the right path to 
+
+1047
+01:01:40,400 --> 01:01:42,000
+converge. 
+Well, that's awesome. 
+
+1048
+01:01:42,100 --> 01:01:47,100
+Yes, so I have two more things. 
+So I'll talk about one is the 
+
+1049
+01:01:47,200 --> 01:01:51,900
+probably still out there. 
+Python is for scripting and you 
+
+1050
+01:01:51,900 --> 01:01:54,400
+can't build big projects with 
+it. 
+
+1051
+01:01:54,400 --> 01:01:56,900
+And there I think there's a lot 
+of people who still have that 
+
+1052
+01:01:56,900 --> 01:02:00,400
+attitude with when's your No no 
+I think hitting I think that 
+
+1053
+01:02:00,400 --> 01:02:04,900
+attitude now is completely 
+forbidden because we have static
+
+1054
+01:02:04,900 --> 01:02:08,700
+typing and that's what's so 
+interesting that prove that 
+
+1055
+01:02:08,700 --> 01:02:12,900
+prevented by confer being using 
+used, was it okay? 
+
+1056
+01:02:12,900 --> 01:02:14,500
+Yeah. 
+I think static typing makes it 
+
+1057
+01:02:14,500 --> 01:02:15,500
+huge. 
+Oh yeah. 
+
+1058
+01:02:16,600 --> 01:02:22,000
+So that we can leave her large 
+to fit well and then there's the
+
+1059
+01:02:22,100 --> 01:02:24,300
+I mean there's also the 
+performance concern. 
+
+1060
+01:02:25,000 --> 01:02:28,100
+Yeah, the performance concern is
+a horizontal scaling. 
+
+1061
+01:02:28,500 --> 01:02:35,500
+But yeah, Jeremy's company. 
+It's the security company. 
+
+1062
+01:02:35,500 --> 01:02:39,800
+He says he says we've never 
+that's the performance has never
+
+1063
+01:02:39,800 --> 01:02:43,300
+been an issue for us and they 
+run big systems in Python. 
+
+1064
+01:02:43,500 --> 01:02:49,000
+Yes it's all python except for 
+one rust extension that he wrote
+
+1065
+01:02:49,400 --> 01:02:52,900
+- so they took the escape hatch 
+when they need it. 
+
+1066
+01:02:53,300 --> 01:02:55,700
+So things have dramatically. 
+So this is an interesting one 
+
+1067
+01:02:55,700 --> 01:02:58,200
+change that they made in the 
+second edition of the book was 
+
+1068
+01:02:58,200 --> 01:03:01,100
+because talking about the Gill 
+and these limitations is kind 
+
+1069
+01:03:01,100 --> 01:03:02,500
+of. 
+So I was kind of depressing, 
+
+1070
+01:03:02,600 --> 01:03:04,200
+write it down. 
+Yeah, it isn't. 
+
+1071
+01:03:04,200 --> 01:03:11,800
+It is a downer but then I wanted
+to explain to my readers what. 
+
+1072
+01:03:11,900 --> 01:03:15,700
+Okay. 
+So despite that YouTube was 
+
+1073
+01:03:15,700 --> 01:03:19,400
+built on that Instagram, the 
+back end and you know, a lot of 
+
+1074
+01:03:19,400 --> 01:03:22,100
+fun python on python, you know. 
+Yeah. 
+
+1075
+01:03:22,500 --> 01:03:28,600
+So how do you how do you 
+reconcile? 
+
+1076
+01:03:28,700 --> 01:03:30,300
+Yes. 
+How do you reconcile? 
+
+1077
+01:03:30,300 --> 01:03:31,900
+This is like Gil as bad as we 
+do. 
+
+1078
+01:03:33,500 --> 01:03:35,700
+Yeah. 
+Able to work around it. 
+
+1079
+01:03:36,700 --> 01:03:39,600
+Yeah. 
+Or it hasn't been an issue or 
+
+1080
+01:03:40,000 --> 01:03:42,700
+it's like a. 
+So that's what prompted me to 
+
+1081
+01:03:42,700 --> 01:03:46,600
+create this chapter. 
+That didn't exist in the first 
+
+1082
+01:03:46,600 --> 01:03:50,700
+edition before the chapters, 
+that talk about threads and 
+
+1083
+01:03:50,700 --> 01:03:53,500
+processes and asynchronous 
+programming. 
+
+1084
+01:03:54,100 --> 01:04:00,700
+This one is called concurrency 
+models in Python, and it starts 
+
+1085
+01:04:00,700 --> 01:04:03,600
+with the contribution from 
+Bruce, which was great, his 
+
+1086
+01:04:03,600 --> 01:04:07,100
+Insight that I cite. 
+That I mentioned there. 
+
+1087
+01:04:07,400 --> 01:04:10,700
+That one of the challenging 
+things of doing concurrent 
+
+1088
+01:04:10,700 --> 01:04:14,700
+programming is that when you 
+call a function of acquaintance 
+
+1089
+01:04:14,700 --> 01:04:19,600
+sequential code, You know, when 
+it's done, that's when you get 
+
+1090
+01:04:19,600 --> 01:04:23,700
+the result, back gesture with 
+your execution continues to this
+
+1091
+01:04:23,700 --> 01:04:26,100
+line. 
+And if it blows up, you also 
+
+1092
+01:04:26,100 --> 01:04:29,000
+know where to handle that 
+because that's the context where
+
+1093
+01:04:29,000 --> 01:04:32,600
+you are. 
+But any other thing that it does
+
+1094
+01:04:32,600 --> 01:04:35,100
+concurrent whether it's 
+asynchronous or threads or 
+
+1095
+01:04:35,100 --> 01:04:37,100
+processes, introduces the 
+problem. 
+
+1096
+01:04:37,100 --> 01:04:41,100
+That's you don't know when Stan.
+And how do you handle the errors
+
+1097
+01:04:41,100 --> 01:04:43,400
+that they happen? 
+I don't know. 
+
+1098
+01:04:43,400 --> 01:04:44,200
+Elsewhere. 
+Right. 
+
+1099
+01:04:44,200 --> 01:04:45,800
+Can you handle it? 
+Yeah. 
+
+1100
+01:04:46,000 --> 01:04:47,700
+It's invited. 
+How do you kill the thing? 
+
+1101
+01:04:47,700 --> 01:04:50,900
+Yeah. 
+And I would add on top of that. 
+
+1102
+01:04:50,900 --> 01:04:52,900
+What about effects? 
+Yeah. 
+
+1103
+01:04:54,300 --> 01:04:55,900
+Side effects. 
+Yeah, yeah, yeah. 
+
+1104
+01:04:55,900 --> 01:04:59,000
+Well, what's it doing to the 
+world is that? 
+
+1105
+01:04:59,200 --> 01:05:03,600
+Yeah, yeah. 
+So this chapter starts with that
+
+1106
+01:05:04,300 --> 01:05:09,000
+discussion. 
+That was a suggestion from Bruce
+
+1107
+01:05:09,300 --> 01:05:13,400
+and then I show a very simple 
+like small like, hell, most a 
+
+1108
+01:05:13,408 --> 01:05:21,000
+hello world example in A 
+sequential friends processes and
+
+1109
+01:05:23,100 --> 01:05:27,700
+asynchronous and then I talk 
+about the Gill and then I 
+
+1110
+01:05:27,700 --> 01:05:34,100
+Implement a little program that 
+checks large numbers for 
+
+1111
+01:05:34,100 --> 01:05:38,500
+primality and I show how threads
+will work for that impact on 
+
+1112
+01:05:38,508 --> 01:05:42,500
+because of the you. 
+So then I do it, I do it with 
+
+1113
+01:05:42,500 --> 01:05:50,700
+processes and I do it kind of in
+a Some sort of a handmade way 
+
+1114
+01:05:50,700 --> 01:05:56,100
+because I pick build a queue 
+manually. 
+
+1115
+01:05:56,100 --> 01:05:58,100
+And then I do this thing and 
+then explain. 
+
+1116
+01:05:58,100 --> 01:05:59,700
+Okay. 
+In the next chapter, we are 
+
+1117
+01:05:59,700 --> 01:06:03,500
+going to see concurring, but 
+Futures, which is heavily 
+
+1118
+01:06:03,500 --> 01:06:07,700
+inspired from the library in 
+five in Java and it does that 
+
+1119
+01:06:07,800 --> 01:06:12,900
+for you, you know, if it 
+launches the workers and creates
+
+1120
+01:06:12,900 --> 01:06:16,000
+the cues and manages that for 
+you, but here we are doing it 
+
+1121
+01:06:16,000 --> 01:06:17,800
+explicitly so that you can 
+understand. 
+
+1122
+01:06:18,000 --> 01:06:21,900
+Because for instance, the You is
+a mechanism that is super 
+
+1123
+01:06:21,900 --> 01:06:24,800
+important in any kind of 
+concurrent programming for 
+
+1124
+01:06:25,100 --> 01:06:28,300
+communication, right? 
+And to get the results back from
+
+1125
+01:06:28,300 --> 01:06:31,100
+the workers and so on. 
+So that was the such. 
+
+1126
+01:06:31,100 --> 01:06:33,300
+That's the first part of the 
+show after the second part is 
+
+1127
+01:06:33,300 --> 01:06:36,500
+where I talk, okay. 
+Also, what, how about at scale, 
+
+1128
+01:06:37,300 --> 01:06:39,800
+then I talked a little bit about
+architecture which is not a 
+
+1129
+01:06:39,800 --> 01:06:43,500
+topic in the book. 
+But it's I decided to do that 
+
+1130
+01:06:43,500 --> 01:06:46,100
+because I think I needed to go 
+over there. 
+
+1131
+01:06:46,100 --> 01:06:47,800
+Okay. 
+Yeah, because it's a matter of 
+
+1132
+01:06:47,800 --> 01:06:50,100
+architecture. 
+So for instance, when you do, 
+
+1133
+01:06:50,500 --> 01:06:56,900
+when you, when you use one of 
+those middleware software is 
+
+1134
+01:06:56,900 --> 01:07:02,400
+like G unicorn. 
+They what they do is they 
+
+1135
+01:07:02,400 --> 01:07:05,400
+launched several python process 
+for you, for processes for you. 
+
+1136
+01:07:05,400 --> 01:07:07,100
+And that's why people didn't 
+know. 
+
+1137
+01:07:08,000 --> 01:07:11,600
+Didn't need to know explicitly 
+anything about concurrency? 
+
+1138
+01:07:11,800 --> 01:07:16,700
+Grammy and studio for is 
+inhaling across your whores in 
+
+1139
+01:07:16,700 --> 01:07:18,800
+that. 
+And that case we've jungle, that
+
+1140
+01:07:18,800 --> 01:07:22,600
+didn't support, you know, any 
+kind of concrete mechanism. 
+
+1141
+01:07:22,600 --> 01:07:25,700
+But and that's needed to show 
+people. 
+
+1142
+01:07:25,800 --> 01:07:27,800
+Yeah, yes, this is single 
+threaded. 
+
+1143
+01:07:27,900 --> 01:07:31,800
+Yes. 
+But for a lot of use cases, you 
+
+1144
+01:07:31,800 --> 01:07:34,600
+can just run multiple instances.
+Exactly. 
+
+1145
+01:07:34,700 --> 01:07:37,000
+And yeah, you're going to then 
+be able to handle. 
+
+1146
+01:07:37,200 --> 01:07:39,400
+Yeah. 
+Yeah, three four, you know how 
+
+1147
+01:07:39,400 --> 01:07:49,800
+many ever? 
+Yeah, kind of domains. 
+
+1148
+01:07:49,800 --> 01:07:53,500
+So for instance, that's when the
+main the meaning of web apis, 
+
+1149
+01:07:53,500 --> 01:07:56,900
+the other domain is numerical 
+computation. 
+
+1150
+01:07:56,900 --> 01:08:00,900
+Then I talk about all the other 
+things that the libraries that 
+
+1151
+01:08:00,900 --> 01:08:02,700
+actually reduce League. 
+You and then there's also 
+
+1152
+01:08:02,700 --> 01:08:07,300
+distributed libraries that you 
+can send out far more jobs for 
+
+1153
+01:08:07,300 --> 01:08:10,000
+lots of machines. 
+Yeah and then there's the third 
+
+1154
+01:08:10,000 --> 01:08:18,800
+part of about usage in systems 
+Administration or devops, which 
+
+1155
+01:08:18,800 --> 01:08:23,000
+is Fine. 
+Because you you're telling 
+
+1156
+01:08:23,000 --> 01:08:25,000
+machines to do stuff for you. 
+Yeah. 
+
+1157
+01:08:25,200 --> 01:08:28,000
+So you can tell a thousand 
+machines to do this stuff. 
+
+1158
+01:08:28,000 --> 01:08:34,000
+Yeah, because right, yeah, so 
+yeah, yeah, nice. 
+
+1159
+01:08:34,200 --> 01:08:36,500
+Yeah. 
+Did you have another topic I 
+
+1160
+01:08:36,500 --> 01:08:44,100
+did? 
+Which was I can't remember the 
+
+1161
+01:08:44,100 --> 01:08:48,700
+name python in the browser. 
+Oh yeah, my secret spy script. 
+
+1162
+01:08:48,700 --> 01:08:51,700
+Yes, yes. 
+Well, I am super excited about 
+
+1163
+01:08:51,700 --> 01:08:58,200
+pie script because I think of, 
+for two reasons, as a teacher, 
+
+1164
+01:08:58,300 --> 01:09:03,899
+when I often Talk programming 
+from scratch and we haven't done
+
+1165
+01:09:03,899 --> 01:09:07,200
+it in a while, but I went to go 
+back to doing that, because it's
+
+1166
+01:09:07,200 --> 01:09:11,700
+something that I enjoy. 
+There's two things that I that I
+
+1167
+01:09:11,800 --> 01:09:15,700
+that are challenging to do that 
+with python these days and the 
+
+1168
+01:09:15,700 --> 01:09:21,100
+first thing is that setting up 
+the environment and is yeah. 
+
+1169
+01:09:21,800 --> 01:09:25,500
+So to be able to do that just in
+a single file as like, in 
+
+1170
+01:09:25,500 --> 01:09:28,100
+breakfast doing backwards today,
+we were talking, I was joking 
+
+1171
+01:09:28,100 --> 01:09:30,899
+about PHP. 
+Yeah, that was what was nice 
+
+1172
+01:09:30,899 --> 01:09:33,800
+about it to get started, right? 
+Because you have this file where
+
+1173
+01:09:33,800 --> 01:09:38,100
+everything the HTML the vacuum 
+the front end, everything, 15 
+
+1174
+01:09:38,300 --> 01:09:40,399
+very Start. 
+Yeah, yeah. 
+
+1175
+01:09:40,399 --> 01:09:45,100
+I mean, you know, it's all lamp 
+and start writing your PHP. 
+
+1176
+01:09:45,100 --> 01:09:45,800
+Right? 
+Exactly. 
+
+1177
+01:09:45,800 --> 01:09:50,000
+Because people of our age when 
+we, when we started learning to 
+
+1178
+01:09:50,000 --> 01:09:53,200
+program, we would turn on a 
+computer like an apple to and it
+
+1179
+01:09:53,200 --> 01:09:55,500
+would have this prompts to the 
+basic interpreter. 
+
+1180
+01:09:55,500 --> 01:09:58,800
+So that's it, right? 
+Very low barrier to entry. 
+
+1181
+01:09:59,400 --> 01:10:04,100
+So if I can write code in a 
+script and open into the browser
+
+1182
+01:10:04,100 --> 01:10:06,100
+and see it were running as 
+amazing. 
+
+1183
+01:10:06,300 --> 01:10:09,200
+Yeah. 
+And the second thing is creating
+
+1184
+01:10:09,200 --> 01:10:12,100
+that like super easy entry, 
+right into the language. 
+
+1185
+01:10:12,200 --> 01:10:16,000
+Yes. 
+And with with all the 
+
+1186
+01:10:16,000 --> 01:10:18,200
+capabilities that you would? 
+Yes. 
+
+1187
+01:10:18,300 --> 01:10:23,200
+So the this being a python 
+interpreters or python like 
+
+1188
+01:10:23,200 --> 01:10:26,000
+interpreters for the front for 
+the browser for a while. 
+
+1189
+01:10:26,100 --> 01:10:28,800
+They're probably just shipping 
+it off to a server to then no 
+
+1190
+01:10:28,800 --> 01:10:32,000
+nothing there people did. 
+Like Brighton is a whole You 
+
+1191
+01:10:32,000 --> 01:10:35,100
+interpreter but it's not C 
+python so it's not 100%. 
+
+1192
+01:10:35,500 --> 01:10:39,600
+So but I think the bigger Banks 
+now is that 5 Street was built 
+
+1193
+01:10:39,600 --> 01:10:46,700
+of other amazing work, like piyo
+dines which is built on top of 
+
+1194
+01:10:46,700 --> 01:10:51,600
+in scripting which is you know 
+this whole to chain to compile. 
+
+1195
+01:10:53,200 --> 01:10:55,800
+Known to interpret python 
+compiles. 
+
+1196
+01:10:55,800 --> 01:10:58,800
+The C code of the Python 
+interpreter into was. 
+
+1197
+01:10:58,800 --> 01:11:03,200
+Mm, wow and do that and they're 
+doing that because Anaconda is 
+
+1198
+01:11:03,200 --> 01:11:06,000
+leading and so that's really 
+interesting because they have 
+
+1199
+01:11:06,000 --> 01:11:11,600
+the power to do that for all 
+four, the entire ecosystem of 
+
+1200
+01:11:11,900 --> 01:11:13,500
+scientific computation. 
+Yeah. 
+
+1201
+01:11:14,900 --> 01:11:18,800
+All those libraries from part of
+Azam they're going to be able to
+
+1202
+01:11:19,000 --> 01:11:20,500
+make sure they work. 
+Yeah. 
+
+1203
+01:11:20,900 --> 01:11:27,700
+And so The, about the second 
+thing that there's also a beef 
+
+1204
+01:11:27,700 --> 01:11:30,300
+between. 
+I did also motivates me to 
+
+1205
+01:11:30,700 --> 01:11:35,500
+diving 2pi. 
+Script is between the first and 
+
+1206
+01:11:35,500 --> 01:11:38,700
+the second edition of the book. 
+I thought about writing a book 
+
+1207
+01:11:38,700 --> 01:11:45,700
+for beginners and Evil, totally 
+new to programming. 
+
+1208
+01:11:45,700 --> 01:11:47,500
+Yes. 
+And for instance, one book that 
+
+1209
+01:11:47,500 --> 01:11:54,900
+I like a lot is Alan. 
+Balinese think python, okay. 
+
+1210
+01:11:55,400 --> 01:12:01,400
+And here, I have his book has a 
+very permissive license. 
+
+1211
+01:12:01,400 --> 01:12:03,200
+There's lots of variations of 
+it. 
+
+1212
+01:12:04,000 --> 01:12:07,500
+Think job. 
+I think purple think how people 
+
+1213
+01:12:07,500 --> 01:12:10,800
+are doing lots of variations and
+I thought about I'm gonna do I 
+
+1214
+01:12:10,808 --> 01:12:12,600
+think go? 
+Yeah, I know. 
+
+1215
+01:12:14,100 --> 01:12:18,200
+But what I realized was that the
+kinds of examples that you can 
+
+1216
+01:12:18,200 --> 01:12:21,100
+do with simple python code or 
+simple. 
+
+1217
+01:12:21,100 --> 01:12:25,500
+Go code is things that print to 
+the terminal. 
+
+1218
+01:12:26,100 --> 01:12:28,500
+Yeah. 
+And if I thought about me, when 
+
+1219
+01:12:28,500 --> 01:12:32,400
+I was 15 years old, you know, 
+today, I think that's not a very
+
+1220
+01:12:32,400 --> 01:12:34,700
+exciting environment for a 15 
+year old to have. 
+
+1221
+01:12:34,700 --> 01:12:36,500
+No. 
+I mean, even when I was learning
+
+1222
+01:12:36,500 --> 01:12:42,700
+Pascal, what's a terminal is 
+that they're used to in browser.
+
+1223
+01:12:43,100 --> 01:12:45,900
+Yes, exactly. 
+When I started writing Pascal, 
+
+1224
+01:12:45,900 --> 01:12:48,800
+my first language, I did not 
+write terminal nops. 
+
+1225
+01:12:49,000 --> 01:12:51,800
+I wrote things that put pixels 
+on the screen. 
+
+1226
+01:12:51,800 --> 01:12:55,300
+Yeah, and that was exciting. 
+Sure is that way more exciting 
+
+1227
+01:12:55,300 --> 01:12:59,000
+than text and the fact that so 
+much of our learning now is just
+
+1228
+01:12:59,000 --> 01:13:00,900
+like texting a terminal. 
+It's so boring. 
+
+1229
+01:13:01,000 --> 01:13:03,200
+Exactly. 
+And for instance, the Apple Bay 
+
+1230
+01:13:03,200 --> 01:13:06,300
+Apple basic, right? 
+So you couldn't put pictures on 
+
+1231
+01:13:06,300 --> 01:13:10,600
+the screen and it actually 
+didn't know really Steve Wozniak
+
+1232
+01:13:10,600 --> 01:13:15,200
+is genius because he had this 
+Mold that no other computer the 
+
+1233
+01:13:15,200 --> 01:13:19,200
+time had, which was a hybrid 
+mode where the top of the screen
+
+1234
+01:13:19,500 --> 01:13:24,900
+like 80% was graphic and the top
+bottom four lines were text huh?
+
+1235
+01:13:25,100 --> 01:13:28,600
+Huh brother. 
+So then you could really 
+
+1236
+01:13:28,600 --> 01:13:33,900
+interactively boosting its so I 
+wanted to do thing I want to do 
+
+1237
+01:13:33,900 --> 01:13:37,900
+things that are graphical yeah 
+visual visual is that and to do 
+
+1238
+01:13:37,900 --> 01:13:43,000
+that in Python, you know this 
+you have to choose one of those.
+
+1239
+01:13:43,100 --> 01:13:47,200
+Those GUI which I prefer. 
+Yes, exactly. 
+
+1240
+01:13:47,700 --> 01:13:51,300
+And then and and do so to do web
+work. 
+
+1241
+01:13:51,400 --> 01:13:55,300
+Okay, so you have this anode is 
+whole other thing of the web. 
+
+1242
+01:13:55,700 --> 01:14:00,100
+You know, it's just a mess. 
+So that's why I think it's 
+
+1243
+01:14:00,100 --> 01:14:03,700
+exciting because as I'm sure a 
+reason why why jupyter notebooks
+
+1244
+01:14:03,700 --> 01:14:06,600
+and python? 
+Yeah, we have been so popular. 
+
+1245
+01:14:06,600 --> 01:14:09,700
+It is like a one line of code. 
+You take a data set and render 
+
+1246
+01:14:09,700 --> 01:14:11,900
+it. 
+Yeah, and exciting visual way a 
+
+1247
+01:14:11,900 --> 01:14:12,900
+graph. 
+Yeah. 
+
+1248
+01:14:13,100 --> 01:14:17,000
+Directive got the and 
+interactive graph that's pretty 
+
+1249
+01:14:17,000 --> 01:14:20,400
+darn compelling correctly. 
+New programmer to be able to 
+
+1250
+01:14:20,400 --> 01:14:23,200
+rights. 
+Yes, so much value is that 
+
+1251
+01:14:23,200 --> 01:14:27,500
+visual assessment emulation both
+of, you know, with with solo. 
+
+1252
+01:14:27,500 --> 01:14:32,700
+That's so I would recommend to 
+everybody to watch Peter ones 
+
+1253
+01:14:32,700 --> 01:14:36,100
+keynote at pycon this year, you 
+can I wasn't there unfortunately
+
+1254
+01:14:36,100 --> 01:14:40,200
+because of vision Visa issues 
+but you are. 
+
+1255
+01:14:41,100 --> 01:14:42,700
+Yeah, it was very exciting if 
+you do. 
+
+1256
+01:14:43,600 --> 01:14:46,900
+Yeah, the view is really just 
+recommend that people will watch
+
+1257
+01:14:46,900 --> 01:14:49,100
+it because it was amazing name 
+of. 
+
+1258
+01:14:49,400 --> 01:14:53,200
+Oh yeah, it was like, whoa. 
+Finally, this is happening, but 
+
+1259
+01:14:53,200 --> 01:14:56,400
+by people need to understand 
+that by strip right now is very 
+
+1260
+01:14:56,400 --> 01:14:59,400
+rough, right? 
+It's like pre-alpha. 
+
+1261
+01:14:59,500 --> 01:15:02,800
+They're figuring out a lot of 
+things, but I think I'm excited 
+
+1262
+01:15:02,800 --> 01:15:04,800
+about it. 
+Well, in the response, the 
+
+1263
+01:15:04,800 --> 01:15:08,600
+keynote was huge. 
+And I think that gave an account
+
+1264
+01:15:08,800 --> 01:15:10,700
+of whatever the company is 
+enough. 
+
+1265
+01:15:11,200 --> 01:15:12,900
+Yeah. 
+On account of, just a lot of 
+
+1266
+01:15:13,300 --> 01:15:13,800
+There. 
+Go all. 
+
+1267
+01:15:13,800 --> 01:15:15,300
+Yeah. 
+This is a good place to go. 
+
+1268
+01:15:15,500 --> 01:15:16,800
+Yes. 
+So oh yeah. 
+
+1269
+01:15:16,800 --> 01:15:18,200
+They're putting lots of em. 
+Yeah. 
+
+1270
+01:15:18,700 --> 01:15:21,300
+Yeah. 
+What I had talked to Peter 
+
+1271
+01:15:21,300 --> 01:15:25,500
+before I had a one-on-one with 
+him once because I was talking 
+
+1272
+01:15:25,500 --> 01:15:29,400
+to Dave. 
+Beasley these other python 
+
+1273
+01:15:29,400 --> 01:15:33,200
+author that about some things 
+about being more friendly to 
+
+1274
+01:15:33,200 --> 01:15:36,500
+beginners and and he said, oh, 
+you need to talk to Peter one. 
+
+1275
+01:15:36,500 --> 01:15:39,500
+So I didn't know about Peter 
+Wong and then I found out, he 
+
+1276
+01:15:39,500 --> 01:15:42,800
+was the CEO of anaconda. 
+So about couple years ago, I had
+
+1277
+01:15:42,800 --> 01:15:47,600
+a When our conversation with him
+about things that I loved about,
+
+1278
+01:15:47,600 --> 01:15:51,800
+for instance hypercard, how it 
+was a very approachable, like a 
+
+1279
+01:15:52,200 --> 01:15:57,400
+gradual where you could learn. 
+Gradually, do interesting things
+
+1280
+01:15:57,400 --> 01:16:02,300
+with the first concept that you 
+knew about and then grow into 
+
+1281
+01:16:02,300 --> 01:16:08,600
+it. 
+And so, and he was that, that 
+
+1282
+01:16:08,600 --> 01:16:10,400
+was also his concern, you know, 
+to. 
+
+1283
+01:16:11,400 --> 01:16:16,400
+So they know that This is going 
+to be huge for people to get 
+
+1284
+01:16:16,400 --> 01:16:23,800
+started well or develop in 
+middle of apps you know like for
+
+1285
+01:16:23,800 --> 01:16:28,300
+instance in many colleges in 
+Brazil for instance has been 
+
+1286
+01:16:28,300 --> 01:16:32,300
+since it's super complicated to 
+convince the IT department to 
+
+1287
+01:16:32,300 --> 01:16:36,200
+allow to install something new 
+on the lab machines. 
+
+1288
+01:16:36,200 --> 01:16:38,700
+Right? 
+Yeah and no yeah just about a 
+
+1289
+01:16:38,700 --> 01:16:42,300
+more constrained environment oh 
+yeah yeah yeah it's funny how 
+
+1290
+01:16:42,300 --> 01:16:46,600
+the Things that have nothing to 
+do with the technology or very 
+
+1291
+01:16:46,600 --> 01:16:50,600
+little to do our blockers if 
+politics and yeah the 
+
+1292
+01:16:50,600 --> 01:17:00,600
+bureaucracy ite, sold a bunch of
+the pie. 
+
+1293
+01:17:00,600 --> 01:17:02,300
+Script does some super 
+interesting. 
+
+1294
+01:17:02,300 --> 01:17:07,000
+Yeah, but I did want to come 
+back real quick to see python or
+
+1295
+01:17:07,000 --> 01:17:09,600
+you called a yes. 
+See if I think is the main 
+
+1296
+01:17:09,600 --> 01:17:14,300
+interpreted within C, okay, but 
+it is that the Today or is that 
+
+1297
+01:17:14,300 --> 01:17:16,200
+kind of, the more high 
+performance? 
+
+1298
+01:17:16,400 --> 01:17:17,900
+No, it's this standard. 
+Okay. 
+
+1299
+01:17:18,100 --> 01:17:21,000
+But then there's also a new 
+alternative to that, which is 
+
+1300
+01:17:21,000 --> 01:17:22,800
+like Python and on python. 
+Yes. 
+
+1301
+01:17:22,800 --> 01:17:25,000
+Pie pie, pie pie. 
+And then what's it? 
+
+1302
+01:17:25,000 --> 01:17:27,100
+Tell me what more about that and
+what's exciting about because 
+
+1303
+01:17:27,100 --> 01:17:29,400
+I've heard, okay, it's yeah, 
+it's really interesting. 
+
+1304
+01:17:29,400 --> 01:17:35,400
+But so Phi Phi is, is written in
+a subset of python that they 
+
+1305
+01:17:35,400 --> 01:17:40,400
+call our python. 
+And then there's this hugely 
+
+1306
+01:17:40,400 --> 01:17:45,700
+complicated to chain and that 
+you know, if you really want to 
+
+1307
+01:17:45,700 --> 01:17:49,000
+compile from scratch which they 
+don't recommend takes hours. 
+
+1308
+01:17:49,000 --> 01:17:52,800
+Okay? 
+But the thing is this is a 
+
+1309
+01:17:52,808 --> 01:17:57,200
+python interpreter that includes
+a just-in-time compiler, okay? 
+
+1310
+01:17:58,000 --> 01:18:00,800
+So it can be much faster than 
+fighting many cases. 
+
+1311
+01:18:00,800 --> 01:18:04,100
+Okay. 
+But the main drag to it's widely
+
+1312
+01:18:04,100 --> 01:18:08,400
+adopted a lot of important 
+projects you It's in production 
+
+1313
+01:18:08,400 --> 01:18:12,800
+and so on. 
+But the main problem is that a 
+
+1314
+01:18:12,808 --> 01:18:15,700
+lot of the external libraries 
+that we are talking about that 
+
+1315
+01:18:15,700 --> 01:18:18,500
+are super important are not 
+compatible with it, okay? 
+
+1316
+01:18:18,500 --> 01:18:22,200
+Because it uses a subset, it 
+requires a subset are no because
+
+1317
+01:18:22,200 --> 01:18:27,700
+there is the internal apis of 
+its are just just not say yes 
+
+1318
+01:18:28,400 --> 01:18:30,600
+and they could be there. 
+It's just it could. 
+
+1319
+01:18:30,600 --> 01:18:32,500
+But yeah. 
+And they have been very 
+
+1320
+01:18:32,500 --> 01:18:39,000
+influential in to advancing 
+those external f You know, apis 
+
+1321
+01:18:39,000 --> 01:18:46,200
+for, you know, CFI in order to 
+make it easier for the, for 
+
+1322
+01:18:46,700 --> 01:18:50,800
+extensions to work, both with 
+the python and pie pie, but it's
+
+1323
+01:18:50,800 --> 01:18:54,700
+still the long-term future pie. 
+Is that where I don't think so. 
+
+1324
+01:18:54,700 --> 01:18:57,000
+You know why? 
+Because over the years, we've 
+
+1325
+01:18:57,000 --> 01:19:01,400
+seen very small adoption from 
+the core developers of that and 
+
+1326
+01:19:01,800 --> 01:19:05,600
+the community around, the core 
+of that is, doesn't grow. 
+
+1327
+01:19:06,400 --> 01:19:08,800
+And I think they To change 
+everything around. 
+
+1328
+01:19:08,800 --> 01:19:11,000
+It is just too hard paketa. 
+Yes. 
+
+1329
+01:19:11,600 --> 01:19:15,200
+So but what's happening now 
+which is really interesting is 
+
+1330
+01:19:15,200 --> 01:19:17,600
+that weirdo went to work for 
+Microsoft, right? 
+
+1331
+01:19:17,600 --> 01:19:20,900
+Good to retire and then 
+Microsoft offer. 
+
+1332
+01:19:20,900 --> 01:19:22,800
+He made him an offer, he 
+couldn't refuse. 
+
+1333
+01:19:22,800 --> 01:19:27,100
+Well, he also he told me that he
+smiles he specified. 
+
+1334
+01:19:27,100 --> 01:19:31,000
+Yeah, I will work. 
+I don't know what he said. 22 
+
+1335
+01:19:31,000 --> 01:19:34,200
+hours of 24 hours a day, laughs 
+- sure. 
+
+1336
+01:19:34,300 --> 01:19:35,700
+Yeah I guess. 
+Okay yeah. 
+
+1337
+01:19:35,700 --> 01:19:39,300
+Because then then of a fit. 
+It's with his lifestyle but also
+
+1338
+01:19:39,300 --> 01:19:41,900
+I don't know if he negotiated 
+that, but also he created a 
+
+1339
+01:19:41,908 --> 01:19:44,100
+team, right? 
+There's a team around it. 
+
+1340
+01:19:44,200 --> 01:19:47,100
+Yeah. 
+And it's and he built it 
+
+1341
+01:19:47,100 --> 01:19:48,800
+himself. 
+Yeah. 
+
+1342
+01:19:50,900 --> 01:19:54,400
+Yeah. 
+And so, they are in one of the 
+
+1343
+01:19:54,400 --> 01:19:58,200
+people he brought in. 
+Is, what's his name? 
+
+1344
+01:19:59,800 --> 01:20:00,500
+I forgot. 
+No. 
+
+1345
+01:20:01,100 --> 01:20:06,300
+But he is a guy who had 
+previously, like, I don't know, 
+
+1346
+01:20:06,300 --> 01:20:09,800
+six months or a year, Before 
+reader joined Microsoft, he had 
+
+1347
+01:20:09,800 --> 01:20:12,500
+made a proposal that he would 
+have. 
+
+1348
+01:20:12,600 --> 01:20:15,800
+He wanted five hundred thousand 
+dollars to make python 50% 
+
+1349
+01:20:15,800 --> 01:20:17,000
+faster. 
+Okay. 
+
+1350
+01:20:17,300 --> 01:20:21,000
+And people didn't mostly say 
+you're new here, lumens it 
+
+1351
+01:20:21,000 --> 01:20:23,500
+because they knew his 
+contributions before. 
+
+1352
+01:20:23,600 --> 01:20:28,500
+And so most people said yeah, he
+probably can pull that off, you 
+
+1353
+01:20:28,500 --> 01:20:29,200
+know? 
+Yeah. 
+
+1354
+01:20:29,400 --> 01:20:31,600
+But now he's doing it for 
+Microsoft. 
+
+1355
+01:20:33,000 --> 01:20:35,200
+All right for everybody, which 
+is really great, right? 
+
+1356
+01:20:35,200 --> 01:20:38,800
+Because, yeah, it is the Version
+that's in beta. 
+
+1357
+01:20:38,800 --> 01:20:42,500
+Now is a lot of performance 
+improvements. 
+
+1358
+01:20:42,500 --> 01:20:43,900
+Yes. 
+This is happening. 
+
+1359
+01:20:43,900 --> 01:20:46,400
+Now is a lot of. 
+Yeah, sure. 
+
+1360
+01:20:47,500 --> 01:20:51,200
+So as we wrap up any other 
+things that are on the horizon 
+
+1361
+01:20:51,200 --> 01:20:59,900
+that are exciting and python 
+world There's a whole bunch of 
+
+1362
+01:20:59,900 --> 01:21:02,300
+peps. 
+There's always pad, always tops.
+
+1363
+01:21:02,400 --> 01:21:05,000
+Yeah. 
+When I was at the python 
+
+1364
+01:21:05,000 --> 01:21:09,500
+conference, we talked to Jim 
+Baker and he had a proposal. 
+
+1365
+01:21:10,100 --> 01:21:16,200
+That sounds really interesting 
+and it's about string 
+
+1366
+01:21:16,200 --> 01:21:22,100
+interpolation but you can build 
+your own interpolators and, and,
+
+1367
+01:21:22,100 --> 01:21:26,000
+and that, could mean so many 
+people use it for this kind of 
+
+1368
+01:21:26,008 --> 01:21:29,400
+processing. 
+That that And there's also type 
+
+1369
+01:21:29,400 --> 01:21:32,100
+checking involved in the, you 
+know, to the reliability of the 
+
+1370
+01:21:32,100 --> 01:21:34,800
+conservative Jiminy is up in 
+Crestview about this and told 
+
+1371
+01:21:34,800 --> 01:21:39,000
+them to check out what's called 
+a jaw that might have been there
+
+1372
+01:21:39,100 --> 01:21:41,500
+as idea. 
+Because, you know, I don't know 
+
+1373
+01:21:41,500 --> 01:21:45,400
+if it's a proposal yet but if we
+do was very excited as well. 
+
+1374
+01:21:45,400 --> 01:21:50,300
+So I think it's interesting and 
+a very different way that, you 
+
+1375
+01:21:50,300 --> 01:21:53,400
+know, it's like, oh, I never 
+even occurred to me to do that, 
+
+1376
+01:21:53,400 --> 01:21:56,000
+but I can see the value of it. 
+Yeah. 
+
+1377
+01:21:56,000 --> 01:21:57,600
+So we don't have a lot of time 
+to talk. 
+
+1378
+01:21:57,700 --> 01:21:59,400
+About that. 
+But I'm going to suggest that 
+
+1379
+01:21:59,400 --> 01:22:05,300
+people take a look at Pep 695 
+type parameters syntax because 
+
+1380
+01:22:05,300 --> 01:22:10,900
+that's going to do away with the
+need to have this weird type of 
+
+1381
+01:22:10,900 --> 01:22:14,400
+our class that you have 
+transport from the typing module
+
+1382
+01:22:14,400 --> 01:22:17,000
+to invent. 
+I advise you will be able to use
+
+1383
+01:22:17,000 --> 01:22:19,300
+them in a more natural way like 
+in Java. 
+
+1384
+01:22:19,300 --> 01:22:21,800
+Yeah. 
+And that's going to be huge. 
+
+1385
+01:22:21,800 --> 01:22:26,300
+I think for people who like 
+static typing and it's going to 
+
+1386
+01:22:26,300 --> 01:22:29,000
+be a great Improvement, Wins 
+because it's going to. 
+
+1387
+01:22:29,100 --> 01:22:33,400
+Yeah, look at this first 
+example, you have three lines of
+
+1388
+01:22:33,400 --> 01:22:36,900
+code kind of long, one's even 
+going to one going to were very 
+
+1389
+01:22:36,900 --> 01:22:40,100
+concerned because similar to 
+like, yeah. 
+
+1390
+01:22:40,800 --> 01:22:44,900
+And if you also, it will also 
+free lots of people from having 
+
+1391
+01:22:44,900 --> 01:22:47,500
+to understand what covariant and
+contravariant. 
+
+1392
+01:22:47,600 --> 01:22:48,500
+Mmm. 
+Yeah. 
+
+1393
+01:22:48,500 --> 01:22:52,000
+Because they discovered that 
+they can infer from the really, 
+
+1394
+01:22:52,000 --> 01:22:53,500
+then the methyls. 
+Yes. 
+
+1395
+01:22:54,000 --> 01:22:56,400
+You know, what do users? 
+Yeah. 
+
+1396
+01:22:56,800 --> 01:22:59,800
+Yeah. 
+Is that so that's that's a good 
+
+1397
+01:23:01,800 --> 01:23:06,600
+person in my travels with python
+and now I'm excited. 
+
+1398
+01:23:06,600 --> 01:23:10,600
+About learning rest, do is learn
+to do certain extensions. 
+
+1399
+01:23:10,600 --> 01:23:13,100
+Yes. 
+My first of all, make sure 
+
+1400
+01:23:13,700 --> 01:23:17,500
+hopefully. 
+Yeah, well, I see you're fun. 
+
+1401
+01:23:17,700 --> 01:23:21,700
+Yeah, it's amazing to be here 
+with you guys. 
+
+1402
+01:23:21,700 --> 01:23:23,300
+Thank you so much. 
+Okay.
+

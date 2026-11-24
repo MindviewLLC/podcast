@@ -1,0 +1,5443 @@
+1
+00:00:01,120 --> 00:00:04,000
+Welcome. 
+To Happy Path Programming, I'm 
+
+2
+00:00:04,000 --> 00:00:05,600
+Bruce Eckel. 
+I'm James Ward. 
+
+3
+00:00:07,840 --> 00:00:10,000
+All right, Well, happy New Year.
+Welcome to Happy Path 
+
+4
+00:00:10,000 --> 00:00:12,680
+Programming. 
+So you want to tell us about 
+
+5
+00:00:12,680 --> 00:00:14,400
+Winter Tech Forum the? 
+Yes. 
+
+6
+00:00:14,600 --> 00:00:19,600
+So the current state of it is 
+it's the last week in February, 
+
+7
+00:00:19,760 --> 00:00:26,520
+so that's coming up fast and you
+go to wintertechforum.com to 
+
+8
+00:00:26,520 --> 00:00:32,600
+find out about it. 
+We have officially 30 spots and 
+
+9
+00:00:32,600 --> 00:00:38,640
+that's because on Friday we have
+the cross country ski or 
+
+10
+00:00:38,640 --> 00:00:42,920
+snowshoe out to the yurt and 
+there's a yurt dinner and we 
+
+11
+00:00:42,920 --> 00:00:46,440
+have 30 spots for that. 
+And you want to sign up soon 
+
+12
+00:00:46,440 --> 00:00:52,400
+because I have to release any 
+unused spots two weeks ahead of 
+
+13
+00:00:52,480 --> 00:00:54,400
+the conference. 
+So it's just one of the fun 
+
+14
+00:00:54,400 --> 00:00:57,160
+activities we have. 
+Oh yeah, the conference is going
+
+15
+00:00:57,160 --> 00:01:00,760
+out to a year in the woods at 
+night and maybe looking at stars
+
+16
+00:01:00,760 --> 00:01:04,160
+if it's clear. 
+And yeah, have a really nice 
+
+17
+00:01:04,160 --> 00:01:06,400
+dinner. 
+Yeah, very nice dinner. 
+
+18
+00:01:06,400 --> 00:01:10,560
+And and that's all part of the 
+conference fee that's taken care
+
+19
+00:01:10,560 --> 00:01:13,440
+of. 
+But this year we only have 30 
+
+20
+00:01:13,440 --> 00:01:16,640
+spots for that. 
+So I mean if you really get 
+
+21
+00:01:16,640 --> 00:01:19,160
+desperate at the last minute and
+still want to come and we don't 
+
+22
+00:01:19,160 --> 00:01:22,880
+have any spots left, well, 
+you'll, you, you and whoever 
+
+23
+00:01:22,880 --> 00:01:27,560
+else in that in that situation, 
+wonderful rest. 
+
+24
+00:01:27,560 --> 00:01:30,320
+Yes, we have a you you can all 
+go out and group. 
+
+25
+00:01:30,320 --> 00:01:35,000
+But yeah, and yeah, we we have 
+all kinds of, it's a lot of 
+
+26
+00:01:35,000 --> 00:01:40,600
+activities and it looks, it 
+looks like it's just all fun, 
+
+27
+00:01:41,240 --> 00:01:45,400
+and it is. 
+But we end up talking about tech
+
+28
+00:01:45,440 --> 00:01:48,240
+almost continuously throughout 
+the whole thing. 
+
+29
+00:01:48,760 --> 00:01:52,640
+Except when we get together in 
+the rental houses and play games
+
+30
+00:01:52,640 --> 00:01:54,480
+then, well, some. 
+Good board games. 
+
+31
+00:01:54,800 --> 00:01:58,080
+Yeah, that usually distracts us 
+from the from the tech for a 
+
+32
+00:01:58,080 --> 00:02:01,800
+while, But you'd be surprised at
+it's like well and also the tech
+
+33
+00:02:01,800 --> 00:02:07,000
+conversations tend to be to to 
+be more relaxed because we're 
+
+34
+00:02:07,000 --> 00:02:09,919
+doing the unofficial things and 
+so people feel more comfortable 
+
+35
+00:02:09,919 --> 00:02:12,640
+talking about this or that. 
+So that they're horrible 
+
+36
+00:02:12,640 --> 00:02:14,400
+managers. 
+Or whatever it is. 
+
+37
+00:02:14,400 --> 00:02:19,720
+Yeah, Yeah, cuz And we will be 
+recording some of the sessions, 
+
+38
+00:02:19,720 --> 00:02:22,480
+at least so. 
+And putting them up as podcasts.
+
+39
+00:02:22,480 --> 00:02:25,080
+Yeah, give that a try. 
+Yeah, again. 
+
+40
+00:02:25,600 --> 00:02:28,440
+OK, so let's get going. 
+So today we have with us Adam 
+
+41
+00:02:28,440 --> 00:02:31,760
+Morski who has. 
+Adam, you have done so many 
+
+42
+00:02:31,760 --> 00:02:34,600
+amazing things. 
+I think mostly what I've seen is
+
+43
+00:02:34,600 --> 00:02:37,960
+in the world of Scala with with 
+libraries and and all sorts of 
+
+44
+00:02:37,960 --> 00:02:40,440
+great stuff. 
+So we're going to dive into some
+
+45
+00:02:40,440 --> 00:02:43,480
+of that today. 
+So welcome Adam. 
+
+46
+00:02:43,480 --> 00:02:45,760
+Great to have you. 
+Great to be here. 
+
+47
+00:02:45,760 --> 00:02:48,120
+Thanks a lot for the for the 
+invitation. 
+
+48
+00:02:48,520 --> 00:02:51,560
+Yeah, right. 
+And we're we're talking to Adam 
+
+49
+00:02:51,560 --> 00:02:54,400
+from Warsaw, Poland. 
+I mean he's from Warsaw, Poland.
+
+50
+00:02:54,680 --> 00:02:57,320
+So exactly I would I would like 
+to. 
+
+51
+00:02:57,360 --> 00:02:59,400
+Unless you're close by, it 
+doesn't seem so. 
+
+52
+00:03:00,360 --> 00:03:01,160
+Right. 
+Yeah. 
+
+53
+00:03:01,520 --> 00:03:03,520
+No, it's a very good Internet 
+connection. 
+
+54
+00:03:04,320 --> 00:03:09,720
+I would like to start by giving 
+you my hypothesis of how loom 
+
+55
+00:03:09,720 --> 00:03:13,640
+works and have you correct me 
+because it seems like you know 
+
+56
+00:03:14,000 --> 00:03:17,840
+an awful lot about that and 
+there's still a lot of mystery 
+
+57
+00:03:17,840 --> 00:03:20,320
+to it. 
+So here's the way I think it 
+
+58
+00:03:20,320 --> 00:03:24,360
+works. 
+It's a Co routine based system, 
+
+59
+00:03:24,880 --> 00:03:28,760
+so it's got Co routines and the 
+problem normally with Co 
+
+60
+00:03:28,760 --> 00:03:34,600
+routines is that a compiler has 
+to know where the suspension 
+
+61
+00:03:34,600 --> 00:03:39,760
+points are so that it can build 
+continuations at that point and 
+
+62
+00:03:39,760 --> 00:03:45,520
+you can have a safe suspension 
+and resumption and also 
+
+63
+00:03:45,760 --> 00:03:49,080
+cancellation and error reporting
+and all that kind of stuff. 
+
+64
+00:03:49,640 --> 00:03:55,520
+So the trick that I think Loom 
+is doing is because the Java 
+
+65
+00:03:55,520 --> 00:04:00,640
+Virtual Machine has you know, 
+it's executing these JVM 
+
+66
+00:04:00,640 --> 00:04:05,720
+instructions. 
+It knows where safe suspension 
+
+67
+00:04:05,720 --> 00:04:09,440
+points are between. 
+I don't you know, maybe special 
+
+68
+00:04:09,440 --> 00:04:12,320
+JVM instructions, maybe every 
+JVM instruction. 
+
+69
+00:04:12,320 --> 00:04:15,640
+I don't know about that. 
+And so it can it can insert 
+
+70
+00:04:15,640 --> 00:04:20,480
+those without you having to 
+explicitly put anything in the 
+
+71
+00:04:20,480 --> 00:04:24,720
+code and create. 
+I'm I'm sort of guessing it's 
+
+72
+00:04:25,160 --> 00:04:31,000
+creating the continuations 
+dynamically, but I could be 
+
+73
+00:04:31,000 --> 00:04:34,840
+wrong about that. 
+So am I anywhere near? 
+
+74
+00:04:36,640 --> 00:04:39,680
+No, I guess it's quite close to 
+how the how this works. 
+
+75
+00:04:40,560 --> 00:04:45,720
+So as far as the suspension 
+points go, as far as I know, 
+
+76
+00:04:47,080 --> 00:04:50,000
+things work very similarly as 
+with normal threats, right? 
+
+77
+00:04:50,000 --> 00:04:54,440
+So the whole idea behind Project
+Loom is that the virtual 
+
+78
+00:04:54,440 --> 00:04:59,040
+threads, which I introduced as 
+part as the first component of 
+
+79
+00:04:59,040 --> 00:05:03,320
+the project as a stable as a 
+stable feature of Java. 
+
+80
+00:05:04,560 --> 00:05:08,000
+So these virtual threads should 
+work exactly the same as normal 
+
+81
+00:05:08,000 --> 00:05:10,760
+threads, right? 
+So we had threads in Java for I 
+
+82
+00:05:10,760 --> 00:05:13,160
+guess forever. 
+You'll probably know of this way
+
+83
+00:05:13,160 --> 00:05:13,840
+better. 
+Than one. 
+
+84
+00:05:14,120 --> 00:05:17,240
+Or something, but broken 
+threads, I think it's safe to 
+
+85
+00:05:17,240 --> 00:05:17,760
+say. 
+Yeah. 
+
+86
+00:05:18,520 --> 00:05:21,920
+And they finally like in the 
+long term analogy, this would be
+
+87
+00:05:21,920 --> 00:05:23,840
+the platform threads or the 
+carrier reference, right. 
+
+88
+00:05:23,840 --> 00:05:27,400
+So they are still there but but 
+next to them we have the, the 
+
+89
+00:05:27,520 --> 00:05:31,680
+virtual threads and from an API 
+point of view they work exactly 
+
+90
+00:05:31,680 --> 00:05:36,240
+the same, meaning that the 
+suspension points or the points 
+
+91
+00:05:36,240 --> 00:05:39,280
+where there's a context switch 
+right between executing one 
+
+92
+00:05:39,280 --> 00:05:43,240
+thread and and another, they are
+the same in both cases and these
+
+93
+00:05:43,240 --> 00:05:44,960
+are the blocking operations, 
+right. 
+
+94
+00:05:44,960 --> 00:05:50,760
+So whenever you wait on a 
+semaphore, you acquire a lock, 
+
+95
+00:05:51,040 --> 00:05:53,840
+you issue an IO operation, you 
+read from a socket and so on, 
+
+96
+00:05:53,840 --> 00:05:55,640
+right? 
+So these are the suspension 
+
+97
+00:05:55,640 --> 00:05:58,040
+points. 
+So there are like no special JVM
+
+98
+00:05:58,040 --> 00:06:01,160
+instructions that are inserted 
+and it's. 
+
+99
+00:06:01,320 --> 00:06:03,600
+Not Did you say there are 
+special? 
+
+100
+00:06:03,600 --> 00:06:04,800
+Channels. 
+There are none. 
+
+101
+00:06:04,840 --> 00:06:07,120
+OK. 
+As far as I'm aware, I don't 
+
+102
+00:06:07,120 --> 00:06:08,040
+think so. 
+No, no, no. 
+
+103
+00:06:08,480 --> 00:06:12,600
+It's just. 
+The blocking, yes, it knows what
+
+104
+00:06:12,600 --> 00:06:14,840
+a blocking call is, essentially.
+Right. 
+
+105
+00:06:15,040 --> 00:06:19,640
+Well, there's a couple, like if 
+you go down the there's like 
+
+106
+00:06:19,640 --> 00:06:25,360
+wrappers of course like in in 
+terms of IO and new IO and and 
+
+107
+00:06:25,360 --> 00:06:27,680
+so on. 
+But I guess it's just a couple 
+
+108
+00:06:27,680 --> 00:06:33,680
+of constructs like every like 
+synchronization primitive like 
+
+109
+00:06:33,680 --> 00:06:37,560
+every lock and every semaphore 
+and so on boils down to calling 
+
+110
+00:06:37,560 --> 00:06:41,000
+lock supported park which is a 
+special method which actually 
+
+111
+00:06:41,480 --> 00:06:44,440
+parks the thread, right? 
+So that's the suspension point. 
+
+112
+00:06:45,240 --> 00:06:48,960
+And so what's different in in 
+Loom is like the suspension 
+
+113
+00:06:48,960 --> 00:06:51,680
+points are the same, so they are
+quite coarse grained, right? 
+
+114
+00:06:51,680 --> 00:06:59,160
+It's not like the JVM runtime 
+can just switch context. 
+
+115
+00:06:59,160 --> 00:07:00,760
+Yeah, switch context at any 
+point. 
+
+116
+00:07:00,880 --> 00:07:03,480
+It's only when there's a 
+blocking operation. 
+
+117
+00:07:03,800 --> 00:07:10,400
+Ah OK but it can so but the OK, 
+my understanding of of the 
+
+118
+00:07:11,320 --> 00:07:16,160
+normal threads or whatever 
+previous threads is that they 
+
+119
+00:07:16,200 --> 00:07:22,600
+were not they were just 
+suspending based on the the 
+
+120
+00:07:22,600 --> 00:07:25,840
+operating system. 
+It was saying oh you've had 
+
+121
+00:07:25,840 --> 00:07:29,200
+enough time this task we're 
+going to suspend you wherever. 
+
+122
+00:07:29,520 --> 00:07:33,880
+And and you're saying that Oh 
+well here the suspension points 
+
+123
+00:07:33,880 --> 00:07:39,160
+are actually detected when you 
+when you make an identifiable 
+
+124
+00:07:39,480 --> 00:07:43,840
+blocking call. 
+And the JVM actually knows where
+
+125
+00:07:43,840 --> 00:07:46,840
+that is and it says, OK, we can 
+suspend it at this point. 
+
+126
+00:07:47,040 --> 00:07:50,400
+So it's much more precise. 
+Yes. 
+
+127
+00:07:50,480 --> 00:07:55,960
+Well, I think it knows about 
+more or less the same as it's 
+
+128
+00:07:55,960 --> 00:07:58,200
+new before, it's just doing 
+different things, right. 
+
+129
+00:07:58,200 --> 00:08:03,000
+So before it was doing a full 
+context switch, meaning that it 
+
+130
+00:08:03,000 --> 00:08:06,360
+was like an operating system 
+level context switch, which is 
+
+131
+00:08:06,360 --> 00:08:11,960
+quite expensive. 
+It's slow to do its scale, the 
+
+132
+00:08:12,080 --> 00:08:13,720
+stack size that needs to be 
+switched. 
+
+133
+00:08:13,760 --> 00:08:15,240
+With the stack, yeah. 
+Right. 
+
+134
+00:08:15,400 --> 00:08:19,760
+And quite limited, right? 
+So with Loom, that is all 
+
+135
+00:08:19,760 --> 00:08:26,560
+optimized, so the time to switch
+between 2 virtual threads is 
+
+136
+00:08:26,560 --> 00:08:29,960
+much smaller. 
+The stack that needs to be put 
+
+137
+00:08:29,960 --> 00:08:34,640
+aside is much smaller as well. 
+It's optimized in various ways, 
+
+138
+00:08:34,640 --> 00:08:35,600
+so. 
+Right. 
+
+139
+00:08:35,760 --> 00:08:38,840
+Because it's just storing. 
+I mean it's. 
+
+140
+00:08:39,840 --> 00:08:43,600
+I mean, I'm saying it's creating
+a continuation, which is just 
+
+141
+00:08:43,799 --> 00:08:49,360
+storing the things that it knows
+need to be stored because it can
+
+142
+00:08:49,360 --> 00:08:52,880
+know those things. 
+Whereas with an operating system
+
+143
+00:08:52,880 --> 00:08:55,920
+context, which just goes I I 
+don't know what you're doing, I 
+
+144
+00:08:55,920 --> 00:08:59,160
+have to save and restore 
+everything, so that's why. 
+
+145
+00:08:59,160 --> 00:09:01,560
+It's actually doing some quite 
+clever tricks. 
+
+146
+00:09:01,560 --> 00:09:06,000
+So there's a talk from JVM 
+Language Summit from last year 
+
+147
+00:09:06,000 --> 00:09:08,560
+which which talks about it in 
+detail. 
+
+148
+00:09:09,240 --> 00:09:12,440
+One of the developers talks 
+about it, So he's I guess the 
+
+149
+00:09:12,440 --> 00:09:14,440
+best person to talk about such 
+things. 
+
+150
+00:09:14,440 --> 00:09:16,240
+The internals of how it's all 
+implemented. 
+
+151
+00:09:16,280 --> 00:09:20,600
+Yeah, but one of the tricks that
+I remember is that the first 
+
+152
+00:09:20,600 --> 00:09:25,360
+time you suspend a virtual 
+thread, so you you want to, you 
+
+153
+00:09:25,360 --> 00:09:29,360
+know, context switch the full, 
+the full stack is put aside and 
+
+154
+00:09:29,360 --> 00:09:32,040
+another virtual thread is run in
+its place. 
+
+155
+00:09:32,600 --> 00:09:37,080
+But the second time you do it, 
+it's only the difference in the 
+
+156
+00:09:37,080 --> 00:09:41,280
+stack between these two blocking
+calls that is actually needs to 
+
+157
+00:09:41,280 --> 00:09:45,120
+be put aside, right? 
+So that's over time. 
+
+158
+00:09:45,200 --> 00:09:50,440
+If you block a virtual thread 
+often enough, the amount of 
+
+159
+00:09:50,440 --> 00:09:53,760
+stack that you actually need to 
+update in your, you know, memory
+
+160
+00:09:54,280 --> 00:09:56,600
+in in your side memory is very 
+small. 
+
+161
+00:09:57,120 --> 00:10:01,080
+So this makes it much faster. 
+It is doing it dynamically then.
+
+162
+00:10:02,760 --> 00:10:06,880
+In what sense dynamic? 
+Dynamic analysis of the DIF of 
+
+163
+00:10:06,880 --> 00:10:07,800
+the stack. 
+Right. 
+
+164
+00:10:08,160 --> 00:10:11,120
+So it says, OK, the first time 
+we save everything, The second 
+
+165
+00:10:11,120 --> 00:10:15,360
+time we look at the DIF and we 
+go, Oh well, we only need to 
+
+166
+00:10:15,360 --> 00:10:18,600
+save the things that that would 
+change, Yes, OK. 
+
+167
+00:10:18,600 --> 00:10:22,120
+But it's doing that at runtime. 
+Yes, yes, of course. 
+
+168
+00:10:22,120 --> 00:10:23,480
+OK, OK. 
+Yeah. 
+
+169
+00:10:23,480 --> 00:10:26,480
+Whereas when your. 
+Country know what's going to end
+
+170
+00:10:26,480 --> 00:10:29,560
+up being blocking, right? 
+It's an undecidable problem. 
+
+171
+00:10:29,960 --> 00:10:34,360
+Sure. 
+Whereas with compiler level 
+
+172
+00:10:34,360 --> 00:10:39,800
+things, the compiler knows oh 
+you've you've within this scope,
+
+173
+00:10:39,800 --> 00:10:44,320
+you've only got these variables 
+that I need to save and so it 
+
+174
+00:10:44,320 --> 00:10:48,200
+does that analysis at compile 
+time whereas loom is doing at 
+
+175
+00:10:48,200 --> 00:10:49,640
+runtime. 
+Right. 
+
+176
+00:10:49,680 --> 00:10:53,000
+I think it is in hotline Co 
+routines how the compiler is 
+
+177
+00:10:53,000 --> 00:10:57,320
+kind of unraveling all that into
+the state machine at compile 
+
+178
+00:10:57,320 --> 00:10:59,840
+time, right? 
+Yeah, it can build that because.
+
+179
+00:10:59,960 --> 00:11:02,680
+Right, in Kotlin, the compiler 
+has to do a lot of things right.
+
+180
+00:11:02,680 --> 00:11:05,960
+It needs to transform the whole 
+program into continuation 
+
+181
+00:11:05,960 --> 00:11:07,880
+passing style into state 
+machine. 
+
+182
+00:11:08,320 --> 00:11:10,240
+So that's a whole big 
+transformation. 
+
+183
+00:11:10,440 --> 00:11:13,400
+And that's why you need to 
+annotate each function as 
+
+184
+00:11:13,400 --> 00:11:17,240
+suspendable, right? 
+So that it can properly do the 
+
+185
+00:11:17,240 --> 00:11:19,680
+transformation. 
+I don't think there's really 
+
+186
+00:11:19,680 --> 00:11:24,120
+anything that the Java compiler 
+does regarding to virtual 
+
+187
+00:11:24,120 --> 00:11:26,920
+stress, right? 
+It's all in the JVM, so in that 
+
+188
+00:11:26,920 --> 00:11:31,240
+sense it's all dynamic, yes. 
+So because it's in the JVM, that
+
+189
+00:11:31,240 --> 00:11:35,160
+means Kotlin can use it and 
+Scala can use it, right? 
+
+190
+00:11:35,640 --> 00:11:38,840
+Yes, yes, sure. 
+And a JVM language can use it, 
+
+191
+00:11:38,840 --> 00:11:42,880
+of course. 
+OK, and your Ox library for 
+
+192
+00:11:43,120 --> 00:11:46,160
+Scala uses it. 
+Yes. 
+
+193
+00:11:47,120 --> 00:11:49,160
+Maybe give us the rundown on OT 
+yes. 
+
+194
+00:11:50,560 --> 00:11:54,720
+Yeah, so how Ox came to be? 
+So it's still mostly a research 
+
+195
+00:11:54,720 --> 00:11:59,400
+project, and coming from the 
+fact that for a long time we've 
+
+196
+00:11:59,400 --> 00:12:03,240
+been using functional effect 
+systems in Scala, and I guess 
+
+197
+00:12:03,240 --> 00:12:06,840
+you've worked with them, you've 
+played with them quite a lot as 
+
+198
+00:12:06,880 --> 00:12:08,040
+well, right? 
+Well, Zio. 
+
+199
+00:12:08,240 --> 00:12:11,880
+Yeah, mostly in the world. 
+ZIO, Cats Effect, Scala Z 
+
+200
+00:12:11,960 --> 00:12:15,840
+futures to a certain degree fall
+into this as well, right? 
+
+201
+00:12:16,760 --> 00:12:21,040
+And they have some very 
+interesting properties and like 
+
+202
+00:12:21,040 --> 00:12:23,640
+they make certain things very 
+nice. 
+
+203
+00:12:23,840 --> 00:12:28,320
+You the code is very elegant, 
+it's very expressible, you can 
+
+204
+00:12:29,040 --> 00:12:32,680
+very elegantly define 
+concurrently running operations.
+
+205
+00:12:32,680 --> 00:12:35,280
+You can, you know, they have 
+fibers, and so on and so on. 
+
+206
+00:12:36,240 --> 00:12:39,240
+And that's all great, right? 
+And like, there's referential 
+
+207
+00:12:39,240 --> 00:12:41,080
+transparency. 
+You can do refactoring. 
+
+208
+00:12:41,080 --> 00:12:44,240
+There's a lot of nice features. 
+There's a couple of bad features
+
+209
+00:12:44,240 --> 00:12:46,840
+as well, right? 
+The syntax is completely 
+
+210
+00:12:46,840 --> 00:12:49,680
+different, which people have to 
+learn, and people complain about
+
+211
+00:12:49,680 --> 00:12:52,640
+it. 
+The stack traces are mostly 
+
+212
+00:12:52,640 --> 00:12:56,680
+useless. 
+And and so. 
+
+213
+00:12:56,720 --> 00:12:59,040
+So there are some problems with 
+the approach right? 
+
+214
+00:13:00,560 --> 00:13:03,000
+But still there's a lot of 
+benefits like in the in the 
+
+215
+00:13:03,000 --> 00:13:05,920
+prayer room. 
+In the pre Loom world. 
+
+216
+00:13:07,280 --> 00:13:11,280
+I guess the benefits really 
+outweighed the costs, especially
+
+217
+00:13:11,280 --> 00:13:15,040
+when you had to use concurrency.
+So now loom comes along right? 
+
+218
+00:13:15,320 --> 00:13:21,840
+It took some time but but it's 
+finally here and so now we end 
+
+219
+00:13:21,840 --> 00:13:25,440
+up having an asynchronous 
+runtime inside the JVM. 
+
+220
+00:13:25,760 --> 00:13:30,520
+So something that these 
+libraries before implemented at 
+
+221
+00:13:30,520 --> 00:13:34,080
+the library level now as part of
+the JVM, right? 
+
+222
+00:13:34,880 --> 00:13:37,320
+It's more or less the same 
+approach that they that they 
+
+223
+00:13:37,320 --> 00:13:40,120
+had, right? 
+We have a pool of platform 
+
+224
+00:13:40,120 --> 00:13:44,840
+threads on top of which we run 
+many like thousands or 10s of 
+
+225
+00:13:44,840 --> 00:13:50,320
+thousands if well it was fibers 
+in xio or in the cats effect and
+
+226
+00:13:50,320 --> 00:13:55,400
+in Java it's virtual threads. 
+So now the question is at least 
+
+227
+00:13:55,400 --> 00:14:01,600
+my question is, once you have 
+this asynchronous runtime in 
+
+228
+00:14:01,600 --> 00:14:07,360
+Java, is there still any merit 
+into using the functional 
+
+229
+00:14:07,360 --> 00:14:10,160
+approach, the wrapped approach, 
+right or the monadic one with 
+
+230
+00:14:10,160 --> 00:14:14,320
+that that would be most precise.
+So is it other like some 
+
+231
+00:14:14,360 --> 00:14:20,520
+features of this monadic 
+approach which justify paying 
+
+232
+00:14:20,520 --> 00:14:25,200
+the cost of of the syntax, 
+overhead of the stack traces of 
+
+233
+00:14:25,200 --> 00:14:30,840
+the virality and so on so? 
+Can you just punt to the JVMS 
+
+234
+00:14:30,840 --> 00:14:34,320
+capabilities around async and 
+virtual threads and just say 
+
+235
+00:14:34,320 --> 00:14:38,280
+hey, you don't need to build 
+your own fiber scheduler on on 
+
+236
+00:14:38,280 --> 00:14:41,160
+top of the JVM, just use the 
+JVMS lightweight. 
+
+237
+00:14:41,840 --> 00:14:45,280
+Exactly the asynchronous 
+features, I think, where the 
+
+238
+00:14:45,280 --> 00:14:50,880
+driving force behind actually 
+implementing cuts, effects, IO, 
+
+239
+00:14:51,280 --> 00:14:56,480
+futures and so on, right? 
+And as time progressed, people 
+
+240
+00:14:56,840 --> 00:15:01,640
+really polished these solutions 
+and they came to have a lot of 
+
+241
+00:15:01,640 --> 00:15:04,680
+other features that that are 
+very nice, like referential 
+
+242
+00:15:04,680 --> 00:15:07,920
+transparency, right? 
+First we had callbacks, then we 
+
+243
+00:15:07,920 --> 00:15:12,240
+had futures, and then we had IO.
+So that's like evolution of of 
+
+244
+00:15:12,720 --> 00:15:18,760
+of how this approaches worked. 
+But still the core problem was 
+
+245
+00:15:18,840 --> 00:15:21,920
+asynchronous, right? 
+We wanted to have wanted to have
+
+246
+00:15:21,960 --> 00:15:26,040
+scalable programs which can 
+handle, you know, 10s of 
+
+247
+00:15:26,040 --> 00:15:29,800
+thousands of concurrent 
+connections not being limited by
+
+248
+00:15:29,800 --> 00:15:33,800
+the amount of threads that you 
+you have. 
+
+249
+00:15:34,120 --> 00:15:38,240
+So just as a quick side note to 
+this, I think in most kind of 
+
+250
+00:15:38,240 --> 00:15:45,760
+traditional blocking based IO 
+servers, let's say you typically
+
+251
+00:15:45,960 --> 00:15:49,280
+wouldn't want more than let's 
+say 1000 threads. 
+
+252
+00:15:49,480 --> 00:15:54,120
+And that means that you you if 
+you've got an HTTP connection 
+
+253
+00:15:54,120 --> 00:15:57,600
+coming in and then you've got a 
+database connection, you're 
+
+254
+00:15:57,600 --> 00:16:01,120
+you're pretty limited on your 
+your kind of Max number of 
+
+255
+00:16:01,120 --> 00:16:04,760
+concurrent connections that you 
+can have through a given. 
+
+256
+00:16:04,760 --> 00:16:07,960
+Scaling walls and you have to 
+change your architecture to 
+
+257
+00:16:07,960 --> 00:16:12,040
+adapt to those. 
+And the the those, there was 
+
+258
+00:16:12,040 --> 00:16:17,480
+some trade-offs that that kind 
+of put that arbitrary limit on 
+
+259
+00:16:17,480 --> 00:16:20,240
+what you can do. 
+One of them was the context 
+
+260
+00:16:20,240 --> 00:16:22,600
+switching of these platform 
+threads. 
+
+261
+00:16:22,880 --> 00:16:25,360
+Another one was the memory 
+consumption of each thread 
+
+262
+00:16:25,360 --> 00:16:28,640
+because each thread needs a 
+stack size and and that gets 
+
+263
+00:16:28,640 --> 00:16:31,360
+allocated to every thread 
+individually. 
+
+264
+00:16:32,120 --> 00:16:36,520
+So those limitations were in 
+some ways kind of arbitrary to 
+
+265
+00:16:36,520 --> 00:16:40,920
+the way that that blocking IO 
+worked on the JVM kind of pre 
+
+266
+00:16:41,040 --> 00:16:46,960
+async connection, you know netti
+whether it's netti and IO or 
+
+267
+00:16:46,960 --> 00:16:51,600
+other ways to do async IO. 
+And then the complexity of 
+
+268
+00:16:51,600 --> 00:16:55,040
+programming for async IO led to 
+the the history that you were 
+
+269
+00:16:55,240 --> 00:16:58,880
+talking about with futures and 
+then IO monads and fiber 
+
+270
+00:16:58,880 --> 00:17:00,720
+schedulers and all that kind of 
+stuff that we've. 
+
+271
+00:17:00,880 --> 00:17:05,119
+Yes, exactly. 
+So I guess the when I started my
+
+272
+00:17:05,119 --> 00:17:09,880
+career in Java, that was like 
+you know, 1520 years ago we were
+
+273
+00:17:09,880 --> 00:17:12,760
+using the thread per request 
+model, so something that we are 
+
+274
+00:17:12,760 --> 00:17:16,640
+now again revisiting, right? 
+So each thread, each request got
+
+275
+00:17:16,640 --> 00:17:19,520
+its own thread and it was doing 
+everything on it right? 
+
+276
+00:17:19,880 --> 00:17:22,240
+And the way to scale 
+applications as you say was to 
+
+277
+00:17:22,240 --> 00:17:25,480
+increase the number of threads 
+like they were like the tomcat 
+
+278
+00:17:25,480 --> 00:17:28,079
+connector or something where you
+can put in the number of 
+
+279
+00:17:28,079 --> 00:17:31,160
+threads, right? 
+And this worked up to like 102 
+
+280
+00:17:31,160 --> 00:17:37,120
+hundred, maybe 1K threads. 
+But that was like stretching the
+
+281
+00:17:37,120 --> 00:17:38,800
+limits of the operating system, 
+right? 
+
+282
+00:17:39,120 --> 00:17:41,920
+Well, and oftentimes I think a 
+lot of these systems were just 
+
+283
+00:17:41,920 --> 00:17:44,680
+sitting in wait states. 
+These connections were just 
+
+284
+00:17:44,680 --> 00:17:48,200
+waiting for something to happen.
+And so you were kind of 
+
+285
+00:17:48,280 --> 00:17:50,720
+arbitrarily. 
+Gaining all that memory and. 
+
+286
+00:17:50,720 --> 00:17:53,880
+Yeah, yeah. 
+And so you were not really fully
+
+287
+00:17:53,880 --> 00:17:56,520
+utilizing your systems in the 
+way that? 
+
+288
+00:17:56,960 --> 00:18:00,840
+Well, plus you could write a 
+program that would work fine on 
+
+289
+00:18:00,840 --> 00:18:03,800
+one machine, but then put it on 
+another machine that didn't have
+
+290
+00:18:03,800 --> 00:18:05,960
+as much memory and it wouldn't 
+work. 
+
+291
+00:18:06,040 --> 00:18:12,600
+Yeah, and for like the optimal 
+solution is that you actually 
+
+292
+00:18:12,600 --> 00:18:18,360
+have near the same number of 
+threads as your OS threads, and 
+
+293
+00:18:18,360 --> 00:18:21,960
+that's primarily due to context 
+switching overhead is that is 
+
+294
+00:18:21,960 --> 00:18:22,600
+that. 
+Yeah. 
+
+295
+00:18:22,600 --> 00:18:26,120
+I guess as as you said, both 
+context switching overhead and 
+
+296
+00:18:26,120 --> 00:18:29,360
+the memory consumption. 
+And I guess back then we didn't 
+
+297
+00:18:29,360 --> 00:18:33,880
+have as much memory as now, but 
+the stock sizes were not much 
+
+298
+00:18:33,880 --> 00:18:35,320
+smaller, I guess. 
+Yeah. 
+
+299
+00:18:35,400 --> 00:18:40,440
+So yeah, so that was a. 
+Waste some like GC thrashing and
+
+300
+00:18:40,440 --> 00:18:43,040
+memory allocation overhead, and 
+some of those things come into 
+
+301
+00:18:43,040 --> 00:18:44,160
+play as well. 
+Yeah. 
+
+302
+00:18:44,160 --> 00:18:47,680
+So it was a waste on one hand 
+because it was a waste of 
+
+303
+00:18:47,680 --> 00:18:50,400
+resources because everybody was 
+just waiting for the DB to come 
+
+304
+00:18:50,400 --> 00:18:55,400
+back or something like that. 
+And on the other hand, you had a
+
+305
+00:18:55,400 --> 00:18:59,400
+very, you hit your scaling limit
+very soon, right? 
+
+306
+00:18:59,640 --> 00:19:02,200
+So people came up with the idea 
+that they can actually do better
+
+307
+00:19:02,200 --> 00:19:06,240
+and you know, we can when we can
+schedule some operations and 
+
+308
+00:19:06,280 --> 00:19:09,720
+asynchronous and just wait for 
+multiple results on one thread. 
+
+309
+00:19:10,240 --> 00:19:12,560
+And that's how async came to be,
+right? 
+
+310
+00:19:12,560 --> 00:19:17,080
+So yeah, and and as, as we said,
+we had like the callbacks first,
+
+311
+00:19:17,080 --> 00:19:19,480
+then the callback. 
+It was bad. 
+
+312
+00:19:19,840 --> 00:19:22,800
+So people came up with futures 
+in many languages like not only 
+
+313
+00:19:23,080 --> 00:19:24,240
+Java and Skype, right? 
+Yeah. 
+
+314
+00:19:25,200 --> 00:19:28,280
+Yeah, I guess lots of different 
+future implementations out 
+
+315
+00:19:28,360 --> 00:19:29,080
+there. 
+Yeah. 
+
+316
+00:19:29,640 --> 00:19:36,000
+Well, also that the constraints 
+that we had I would say because 
+
+317
+00:19:36,000 --> 00:19:40,640
+you couldn't just do a thread 
+per request model that it made 
+
+318
+00:19:40,640 --> 00:19:44,480
+your programming more 
+complicated and more difficult 
+
+319
+00:19:44,480 --> 00:19:46,400
+to maintain. 
+Exactly. 
+
+320
+00:19:46,680 --> 00:19:49,800
+OK, yes, but it allows. 
+Scaling, right? 
+
+321
+00:19:50,040 --> 00:19:51,720
+Yes. 
+And then scaling again, Yeah. 
+
+322
+00:19:52,120 --> 00:19:57,400
+Yeah, so that's that's exactly 
+the premise of the problem that 
+
+323
+00:19:57,640 --> 00:20:02,520
+that Loom tries to solve, right?
+They want to make this simple 
+
+324
+00:20:02,520 --> 00:20:04,120
+again. 
+So they want to get rid. 
+
+325
+00:20:04,360 --> 00:20:08,960
+I guess that's like 3 main 
+motivational factors that they 
+
+326
+00:20:08,960 --> 00:20:11,240
+want to get rid of. 
+And the Java, well, they of 
+
+327
+00:20:11,240 --> 00:20:12,760
+course they focus on the Java 
+ecosystem. 
+
+328
+00:20:13,360 --> 00:20:15,920
+But even in Java, if you work 
+with Futures or with Reactive 
+
+329
+00:20:15,920 --> 00:20:19,560
+Extensions, the syntax is just. 
+Well, maybe. 
+
+330
+00:20:19,560 --> 00:20:23,520
+Especially in Java, the syntax 
+is just ugly if you have to do 
+
+331
+00:20:23,840 --> 00:20:30,520
+flat maps or things like that. 
+So I have another question, what
+
+332
+00:20:32,640 --> 00:20:35,960
+do you get any parallelism 
+benefits? 
+
+333
+00:20:35,960 --> 00:20:40,200
+Like if you have, you know you 
+have multiple tasks running and 
+
+334
+00:20:40,200 --> 00:20:43,680
+you're just like is it going to 
+take all of your cores and 
+
+335
+00:20:44,040 --> 00:20:47,120
+distribute them across these 
+tasks and stuff like that? 
+
+336
+00:20:47,120 --> 00:20:50,200
+Is there any of that there or is
+this strictly IO? 
+
+337
+00:20:50,200 --> 00:20:53,480
+Bound issues. 
+So if you want to improve 
+
+338
+00:20:53,480 --> 00:20:56,600
+performance of your code, it's 
+with with loom. 
+
+339
+00:20:56,640 --> 00:21:01,160
+It will be mostly visible in 
+blocking operations. 
+
+340
+00:21:01,560 --> 00:21:03,680
+So if you have CPU intensive 
+code, no. 
+
+341
+00:21:03,680 --> 00:21:06,240
+That's one to improve. 
+Like you can of course create as
+
+342
+00:21:06,240 --> 00:21:11,440
+many virtual threads as there 
+are cores, but it's usually you 
+
+343
+00:21:11,440 --> 00:21:15,560
+know 8/16/24, you can as well as
+well create platform threats for
+
+344
+00:21:15,560 --> 00:21:17,160
+that. 
+So it's not such a big 
+
+345
+00:21:17,160 --> 00:21:19,680
+difference, right? 
+So virtual threats matter once 
+
+346
+00:21:19,680 --> 00:21:22,960
+you have 1000 of them or 10,000 
+right? 
+
+347
+00:21:23,760 --> 00:21:27,360
+So So no. 
+So so this focuses on like I 
+
+348
+00:21:27,360 --> 00:21:31,720
+guess a more web app type 
+scenario or like a business 
+
+349
+00:21:31,720 --> 00:21:33,040
+application. 
+How do you call it? 
+
+350
+00:21:33,680 --> 00:21:34,760
+Or just AO in? 
+General. 
+
+351
+00:21:35,280 --> 00:21:38,840
+IO in general, yes, yeah, right.
+You have some incoming 
+
+352
+00:21:38,840 --> 00:21:40,640
+connections use some database 
+work. 
+
+353
+00:21:40,640 --> 00:21:43,640
+You go to Kafka, you go to the 
+web service, web sockets and so 
+
+354
+00:21:43,640 --> 00:21:46,200
+on. 
+Yeah yeah web sockets are 
+
+355
+00:21:46,200 --> 00:21:48,400
+definitely an interesting 
+example where a lot of times web
+
+356
+00:21:48,400 --> 00:21:51,880
+sockets are just idle and you 
+don't wanna have thread per 
+
+357
+00:21:51,880 --> 00:21:57,720
+connection, thread per platform 
+thread per connection cuz then 
+
+358
+00:21:57,720 --> 00:21:59,120
+your web socket server doesn't 
+scale. 
+
+359
+00:22:00,000 --> 00:22:02,640
+Yes, it is. 
+By the way, for web sockets, I 
+
+360
+00:22:02,640 --> 00:22:04,800
+guess actors are very elegant 
+solution. 
+
+361
+00:22:05,320 --> 00:22:06,720
+That's like a completely 
+different topic. 
+
+362
+00:22:07,200 --> 00:22:15,600
+The actors also acquire. 
+I guess a similar answer maybe a
+
+363
+00:22:15,600 --> 00:22:19,160
+bit evolved answer comparing to 
+the future approach to to to 
+
+364
+00:22:19,200 --> 00:22:21,880
+exactly the same problem, right?
+We want to scale. 
+
+365
+00:22:22,640 --> 00:22:26,760
+Well, right. 
+Because an actor to the rest. 
+
+366
+00:22:28,440 --> 00:22:32,120
+When you're inside of an actor, 
+the rest of the world looks like
+
+367
+00:22:32,120 --> 00:22:37,200
+IO, even though you're staying 
+within the you know you're 
+
+368
+00:22:37,360 --> 00:22:39,840
+you're inside the program, 
+you're not going outside of the 
+
+369
+00:22:39,840 --> 00:22:44,280
+chip, but the other actor you 
+send a message to and then 
+
+370
+00:22:44,720 --> 00:22:47,200
+you're, you know, waiting on a 
+result or whatever. 
+
+371
+00:22:47,200 --> 00:22:51,360
+So is that a reasonable? 
+Yeah, this as well, but also the
+
+372
+00:22:51,360 --> 00:22:55,560
+fact that you are multiplexing 
+many actors to run on a single 
+
+373
+00:22:55,560 --> 00:22:58,800
+platform threat, right? 
+You're just exchanging which 
+
+374
+00:22:58,800 --> 00:23:03,280
+actor runs at a given time, so 
+that's very similar to how 
+
+375
+00:23:03,280 --> 00:23:06,040
+fibers work. 
+That's similar to how virtual 
+
+376
+00:23:06,040 --> 00:23:08,640
+threads work, or corotines and 
+cotton. 
+
+377
+00:23:08,640 --> 00:23:11,720
+It's the same thing. 
+It's like the mapping of many 
+
+378
+00:23:11,720 --> 00:23:15,120
+virtual things to a few physical
+things, right? 
+
+379
+00:23:15,600 --> 00:23:21,800
+So are there is Well, first of 
+all is is is actors any part of 
+
+380
+00:23:21,800 --> 00:23:24,200
+OX? 
+Or have you been seeing are 
+
+381
+00:23:24,200 --> 00:23:25,960
+there? 
+Actors, yeah, going back to OX 
+
+382
+00:23:26,000 --> 00:23:30,680
+because we started, yeah, yeah. 
+So, so the like the research 
+
+383
+00:23:30,680 --> 00:23:35,240
+question, let's say my research 
+question is once you take away, 
+
+384
+00:23:35,560 --> 00:23:40,960
+well once sorry, once you have 
+the asynchronous runtime inside 
+
+385
+00:23:40,960 --> 00:23:47,160
+the JVM and is it still 
+worthwhile using the functional 
+
+386
+00:23:47,160 --> 00:23:50,840
+effects approach right. 
+So I tried recreating some of 
+
+387
+00:23:50,840 --> 00:23:56,600
+the high level concurrency 
+operators that you get with the 
+
+388
+00:23:56,600 --> 00:23:59,760
+functional effects systems in a 
+direct style. 
+
+389
+00:23:59,760 --> 00:24:05,800
+So direct style I guess is the 
+name for the blocking style 
+
+390
+00:24:06,120 --> 00:24:08,720
+approach right where you just. 
+You write your code as. 
+
+391
+00:24:08,840 --> 00:24:12,640
+Direct synchronous, yes, yes, 
+but it's actually not. 
+
+392
+00:24:14,040 --> 00:24:17,400
+In terms of its execution. 
+It depends how what at what 
+
+393
+00:24:17,400 --> 00:24:21,520
+level you you look at it right? 
+It is blocking if you look like 
+
+394
+00:24:21,520 --> 00:24:26,240
+from a source code level. 
+But of course if you look at 
+
+395
+00:24:26,240 --> 00:24:29,280
+what's actually happening 
+underneath at the VM level, it 
+
+396
+00:24:29,280 --> 00:24:31,960
+stops to be blocking. 
+But that's hidden from you like 
+
+397
+00:24:32,240 --> 00:24:36,320
+your code looks as if if it 
+starts doing a series of 
+
+398
+00:24:36,320 --> 00:24:42,040
+blocking calls, and you don't 
+really have to worry about where
+
+399
+00:24:42,040 --> 00:24:44,520
+these operations are going to 
+get scheduled, right? 
+
+400
+00:24:44,520 --> 00:24:46,600
+So that's all handled by the 
+JVM. 
+
+401
+00:24:46,960 --> 00:24:52,680
+So instead of having to use a 
+monad with a flat map to 
+
+402
+00:24:53,000 --> 00:24:58,280
+sequence things together, you 
+instead just sequence indirect 
+
+403
+00:24:58,280 --> 00:25:01,520
+style in your code, but you 
+underneath the covers because of
+
+404
+00:25:01,520 --> 00:25:06,000
+the JVM's async capabilities. 
+With Loom it all gets kind of 
+
+405
+00:25:06,280 --> 00:25:10,960
+unraveled into the the more 
+efficient way to execute those 
+
+406
+00:25:10,960 --> 00:25:13,080
+those operations. 
+Right. 
+
+407
+00:25:13,720 --> 00:25:17,360
+Yes, exactly so. 
+So one component of Vox are 
+
+408
+00:25:17,360 --> 00:25:20,560
+these high level concurrency 
+operators like racing to 
+
+409
+00:25:20,560 --> 00:25:23,680
+computations or running to 
+computations in parallel or 
+
+410
+00:25:23,680 --> 00:25:27,280
+doing some collection operations
+in parallel. 
+
+411
+00:25:27,640 --> 00:25:33,000
+And that all turns out very nice
+because partly because of 
+
+412
+00:25:33,000 --> 00:25:37,320
+Scala's flexible syntax, partly 
+because of what Loom gives. 
+
+413
+00:25:37,920 --> 00:25:41,600
+So that's one part. 
+And another part is that, well, 
+
+414
+00:25:41,600 --> 00:25:45,000
+when we go back actually to the 
+blocking style, concurrency, 
+
+415
+00:25:47,000 --> 00:25:53,000
+it's like if you take a look at 
+the experiences of people doing 
+
+416
+00:25:53,040 --> 00:25:58,480
+concurrency in a blocking way in
+the old style is threads. 
+
+417
+00:25:58,880 --> 00:26:01,640
+It's not that safe, right? 
+It's very easy to get into a 
+
+418
+00:26:01,640 --> 00:26:04,120
+deadlock, It's very easy to get 
+into a race condition. 
+
+419
+00:26:04,680 --> 00:26:07,080
+And it's going to be the same if
+you are using virtual threads as
+
+420
+00:26:07,080 --> 00:26:09,120
+well, right? 
+So these problems don't go away.
+
+421
+00:26:09,240 --> 00:26:14,400
+So if you just try to program 
+using locks and semaphores and 
+
+422
+00:26:14,680 --> 00:26:19,600
+threads which can run arbitrary 
+arbitrarily, you will get into 
+
+423
+00:26:19,600 --> 00:26:23,160
+the same problems, right? 
+So we probably don't want to go 
+
+424
+00:26:23,160 --> 00:26:26,200
+back into that world. 
+So we probably want to look for 
+
+425
+00:26:26,200 --> 00:26:29,960
+something better, and that's the
+second component of Vox, which 
+
+426
+00:26:29,960 --> 00:26:34,080
+is also explored by Java but in 
+a slightly different syntax, and
+
+427
+00:26:34,080 --> 00:26:37,080
+that's structured concurrency. 
+So structured concurrency is 
+
+428
+00:26:37,520 --> 00:26:41,320
+something that I think 
+originated in Python And this 
+
+429
+00:26:41,320 --> 00:26:46,600
+was popularized by Python. 
+So I think the term actually was
+
+430
+00:26:46,600 --> 00:26:52,720
+first used by a guy who worked 
+on Zero MQ for the project. 
+
+431
+00:26:52,720 --> 00:26:56,720
+So I guess it's more like C, but
+then there was a Python library 
+
+432
+00:26:56,720 --> 00:27:01,800
+and that's a very popular blog 
+post Go considered harmful. 
+
+433
+00:27:01,960 --> 00:27:05,600
+Go statements considered 
+harmful, Yes, and he created a 
+
+434
+00:27:05,600 --> 00:27:09,320
+library and I was initially 
+saying, Oh well, that's the one 
+
+435
+00:27:09,320 --> 00:27:10,960
+to use. 
+But then it turns out that all 
+
+436
+00:27:10,960 --> 00:27:14,800
+of those features have been 
+incorporated into the Python 
+
+437
+00:27:14,800 --> 00:27:18,520
+standard libraries concurrency. 
+Which I guess simply shows that 
+
+438
+00:27:18,520 --> 00:27:22,760
+it was the right yes answer to 
+the to to these problems, right?
+
+439
+00:27:23,760 --> 00:27:24,560
+Yeah. 
+And so by. 
+
+440
+00:27:25,400 --> 00:27:29,280
+So the pitch on this is that by 
+using these higher level 
+
+441
+00:27:29,280 --> 00:27:33,200
+abstractions lumped into the 
+concept of structure 
+
+442
+00:27:33,200 --> 00:27:37,200
+concurrency, we canmore easily 
+avoid deadlocks and race 
+
+443
+00:27:37,200 --> 00:27:39,320
+conditions and that sort of 
+thing when we're writing 
+
+444
+00:27:39,320 --> 00:27:41,960
+concurrent code. 
+Yes, yes, exactly. 
+
+445
+00:27:41,960 --> 00:27:46,360
+So I think the idea is still to 
+avoid using locks, to avoid 
+
+446
+00:27:46,360 --> 00:27:49,480
+using some of ours and so on if 
+you can. 
+
+447
+00:27:50,080 --> 00:27:53,440
+Well maybe some of ours are good
+for like rate limiting, but logs
+
+448
+00:27:53,440 --> 00:27:57,360
+are especially bad when it comes
+to to programming, so I I guess 
+
+449
+00:27:57,360 --> 00:27:58,520
+you would still want to avoid 
+it. 
+
+450
+00:27:58,520 --> 00:28:03,120
+So we need to build some other 
+some other tools to still do 
+
+451
+00:28:03,120 --> 00:28:05,280
+concurrency. 
+Like there's certain things that
+
+452
+00:28:05,280 --> 00:28:09,120
+you can do on the high level, 
+like probably like maybe 95 of 
+
+453
+00:28:09,120 --> 00:28:13,400
+your needs will be satisfied 
+with race and power, so race 
+
+454
+00:28:13,400 --> 00:28:16,640
+into computation, so running 
+them in parallel. 
+
+455
+00:28:16,640 --> 00:28:19,280
+But the 5% still needs to be 
+catered for, right? 
+
+456
+00:28:19,960 --> 00:28:25,040
+So, So that's when you can 
+actually create scopes where you
+
+457
+00:28:25,040 --> 00:28:28,720
+can run threads on your own. 
+So that's one thing. 
+
+458
+00:28:28,720 --> 00:28:30,640
+And then you want to communicate
+between these threads. 
+
+459
+00:28:30,640 --> 00:28:34,240
+So for communicating between 
+these threads, OX proposes 
+
+460
+00:28:34,280 --> 00:28:37,040
+channels. 
+So that's that's. 
+
+461
+00:28:37,720 --> 00:28:41,840
+Sequential process model. 
+Yes, yes, kind of. 
+
+462
+00:28:41,880 --> 00:28:47,160
+So that's also inspired by Go. 
+I think Go might not be a 
+
+463
+00:28:47,160 --> 00:28:51,440
+language which brought a lot of 
+innovation in terms of features,
+
+464
+00:28:51,440 --> 00:28:56,240
+let's say. 
+But I think it did show that the
+
+465
+00:28:56,240 --> 00:28:59,600
+tunnels model is actually quite 
+useful and people like it and 
+
+466
+00:28:59,600 --> 00:29:02,200
+it's used successfully in many 
+applications. 
+
+467
+00:29:02,200 --> 00:29:05,520
+So maybe we can we can learn 
+from that and actually try using
+
+468
+00:29:05,520 --> 00:29:10,880
+it in both in Scala and in Java.
+So quick side note on this you 
+
+469
+00:29:11,280 --> 00:29:15,320
+thank you, you contributed the 
+aux version of the Easy Racer 
+
+470
+00:29:15,880 --> 00:29:19,360
+client which is the little. 
+Yeah, that's a very interesting 
+
+471
+00:29:19,400 --> 00:29:21,720
+project, yeah. 
+Yeah it's a little playground 
+
+472
+00:29:21,720 --> 00:29:26,680
+for structure concurrency and 
+the aux one is the most concise 
+
+473
+00:29:26,680 --> 00:29:31,360
+and expressive out of all of 
+them and and I'll at someday 
+
+474
+00:29:31,400 --> 00:29:33,560
+someday have a blog post that 
+goes into all the details of 
+
+475
+00:29:33,560 --> 00:29:37,720
+that but it really makes Ox's 
+programming model for for 
+
+476
+00:29:37,720 --> 00:29:40,160
+structure concurrency, those 
+high level things really shine. 
+
+477
+00:29:40,400 --> 00:29:44,400
+But one little interesting side 
+note is when I was building the 
+
+478
+00:29:44,400 --> 00:29:48,000
+Rust version with with Bruce and
+that was that was at the Rust 
+
+479
+00:29:48,000 --> 00:29:50,640
+summit or something like that 
+one. 
+
+480
+00:29:50,800 --> 00:29:54,480
+So back this is going to loop 
+back around to channels because 
+
+481
+00:29:55,600 --> 00:29:58,120
+I think what you're highlighting
+is that there's times where the 
+
+482
+00:29:58,120 --> 00:30:01,120
+the race and and collect all par
+or whatever it's called like the
+
+483
+00:30:01,120 --> 00:30:03,800
+ability to do multiple 
+operations in parallel through 
+
+484
+00:30:03,800 --> 00:30:05,400
+structure, structure, 
+concurrency. 
+
+485
+00:30:05,640 --> 00:30:10,240
+There are cases where that model
+the 5% where that model doesn't 
+
+486
+00:30:10,240 --> 00:30:13,760
+fit a particular need. 
+And when we were building the 
+
+487
+00:30:13,760 --> 00:30:18,920
+rest version of this, we 
+discovered that the Rust race is
+
+488
+00:30:18,920 --> 00:30:21,280
+a macro. 
+This is the the structure. 
+
+489
+00:30:21,280 --> 00:30:25,160
+Concurrency race is a macro and 
+it only takes 2. 
+
+490
+00:30:25,440 --> 00:30:29,040
+You can only race two things and
+as you you know from Easy Racer,
+
+491
+00:30:29,040 --> 00:30:29,800
+there's a. 
+Few. 
+
+492
+00:30:29,800 --> 00:30:33,720
+Use cases where you where you 
+have to do race more than two 
+
+493
+00:30:33,720 --> 00:30:37,760
+things and so we had to find a 
+different route to do the race 
+
+494
+00:30:37,920 --> 00:30:41,880
+and we ended up using the 
+channels in Rust to implement 
+
+495
+00:30:41,880 --> 00:30:45,520
+that our own race essentially 
+that could support more than one
+
+496
+00:30:45,520 --> 00:30:47,160
+and so. 
+So am I understanding this 
+
+497
+00:30:47,160 --> 00:30:51,320
+correctly that channels in some 
+ways the the existence for it in
+
+498
+00:30:51,320 --> 00:30:55,520
+in AUX is to give you the escape
+hatch when the higher level 
+
+499
+00:30:55,720 --> 00:30:58,880
+structure concurrency AP is 
+don't don't fit what you need? 
+
+500
+00:31:00,800 --> 00:31:06,800
+Yes and no. 
+So, and I guess for for example 
+
+501
+00:31:06,800 --> 00:31:11,600
+for implementing race you would 
+just create a scope and so a 
+
+502
+00:31:11,600 --> 00:31:17,040
+scope is a syntactical construct
+which the limits the lifetime of
+
+503
+00:31:17,040 --> 00:31:18,800
+stress. 
+So that's like the central idea 
+
+504
+00:31:18,800 --> 00:31:22,400
+behind structure structured 
+concurrency, right, so that the 
+
+505
+00:31:22,800 --> 00:31:26,720
+structure of the code determines
+how long your threads live. 
+
+506
+00:31:27,040 --> 00:31:31,000
+So this makes it easier to 
+understand your code and. 
+
+507
+00:31:31,000 --> 00:31:36,120
+That's the analog of in the 
+Ghost we Go statement considered
+
+508
+00:31:36,120 --> 00:31:38,160
+harmful. 
+That's the analogue of. 
+
+509
+00:31:39,320 --> 00:31:42,120
+Yeah, well, he called it a 
+nursery, but basically the 
+
+510
+00:31:42,120 --> 00:31:46,640
+analogue of us going from random
+code to code that's only using 
+
+511
+00:31:46,640 --> 00:31:49,120
+functions. 
+So the function scope and the 
+
+512
+00:31:49,640 --> 00:31:53,360
+concurrency scope, yeah. 
+Yeah, so. 
+
+513
+00:31:54,000 --> 00:31:57,960
+So in the if you would try to 
+implement racing multiple 
+
+514
+00:31:58,080 --> 00:32:02,280
+computations, like a list of 
+functions, let's say, you would 
+
+515
+00:32:02,280 --> 00:32:10,400
+simply create a scope. 
+You would fork N and the threads
+
+516
+00:32:10,400 --> 00:32:13,280
+and just wait for north of them 
+to complete, right? 
+
+517
+00:32:14,760 --> 00:32:16,720
+And I. 
+Think there is in our REST 
+
+518
+00:32:16,720 --> 00:32:21,160
+implementation there wasn't the 
+ability to do this arbitrarily 
+
+519
+00:32:21,160 --> 00:32:24,880
+and get the single result out 
+and cancel all the losers and 
+
+520
+00:32:24,880 --> 00:32:28,320
+maybe that's cancellation, maybe
+that's why we needed the channel
+
+521
+00:32:28,320 --> 00:32:32,280
+was for that kind of the 
+propagating that information 
+
+522
+00:32:32,280 --> 00:32:34,280
+back because I. 
+Think cancellation is a very 
+
+523
+00:32:34,280 --> 00:32:37,480
+interesting topic, which is 
+actually a bit of a pain point. 
+
+524
+00:32:38,120 --> 00:32:40,160
+But yeah, let's finish on 
+channels especially. 
+
+525
+00:32:40,160 --> 00:32:41,960
+Maybe I can get back to. 
+That you really know. 
+
+526
+00:32:42,720 --> 00:32:46,000
+So yeah, so channels, they can 
+definitely be used for that. 
+
+527
+00:32:46,400 --> 00:32:52,680
+Another area which I'm exploring
+with channels is there's quite a
+
+528
+00:32:52,680 --> 00:32:56,800
+lot of very elegant and very 
+expressive libraries for 
+
+529
+00:32:56,800 --> 00:33:01,320
+reactive streams in the in the 
+Scala and in Java like ECA 
+
+530
+00:33:01,320 --> 00:33:05,320
+streams, FS2, ZIO Streams. 
+And you can do really nice 
+
+531
+00:33:05,320 --> 00:33:08,680
+things with them, like if you 
+write the code it reads very 
+
+532
+00:33:08,680 --> 00:33:11,080
+nicely. 
+I think it's easy to understand,
+
+533
+00:33:11,080 --> 00:33:13,680
+easy to maintain and so on. 
+So all the projects that you are
+
+534
+00:33:13,680 --> 00:33:16,040
+interested in. 
+So now the. 
+
+535
+00:33:16,320 --> 00:33:21,440
+Question is, but they use they 
+rely on the functional effect 
+
+536
+00:33:21,440 --> 00:33:26,040
+systems like IO like cuts, 
+Effectors, IO or on Futures 
+
+537
+00:33:26,040 --> 00:33:29,000
+right? 
+So what would be? 
+
+538
+00:33:29,240 --> 00:33:31,680
+So now the question is what 
+would be the equivalent of such 
+
+539
+00:33:31,680 --> 00:33:35,280
+a reactive streaming library in 
+the world of Loom right? 
+
+540
+00:33:35,280 --> 00:33:39,320
+Since we have a blocking so 
+since we can now block freely so
+
+541
+00:33:39,720 --> 00:33:42,360
+channels are kind of an 
+exploration in that area as 
+
+542
+00:33:42,360 --> 00:33:47,640
+well. 
+So the the channels in OX apart 
+
+543
+00:33:47,640 --> 00:33:52,480
+from having like simple send and
+receive operations and you can 
+
+544
+00:33:52,480 --> 00:33:54,360
+also do selects. 
+You can select for multiple 
+
+545
+00:33:54,360 --> 00:33:57,400
+channels like in Go, but you 
+also get those high level 
+
+546
+00:33:57,400 --> 00:33:59,560
+operations like you'll get the 
+map. 
+
+547
+00:34:00,280 --> 00:34:03,400
+You'll get a concurrent map 
+where you can process several 
+
+548
+00:34:03,400 --> 00:34:06,640
+elements in parallel. 
+You'll get like filter, group 
+
+549
+00:34:06,640 --> 00:34:08,320
+by. 
+So all these streaming. 
+
+550
+00:34:10,000 --> 00:34:14,199
+To the streaming API exactly. 
+And the functional okay, you're 
+
+551
+00:34:14,199 --> 00:34:18,400
+saying that these are part of 
+channels that you have these 
+
+552
+00:34:18,440 --> 00:34:21,000
+operations, so? 
+The channel would be like this 
+
+553
+00:34:21,000 --> 00:34:22,280
+stream. 
+Like you can transform the 
+
+554
+00:34:22,280 --> 00:34:25,320
+channel. 
+A map is a very nice simple 
+
+555
+00:34:25,320 --> 00:34:27,280
+example. 
+If you want to map a function of
+
+556
+00:34:27,280 --> 00:34:30,480
+a channel, the function can be 
+potentially blocking, right? 
+
+557
+00:34:30,480 --> 00:34:35,199
+So what you do is you start a 
+virtual thread which receives 
+
+558
+00:34:35,360 --> 00:34:38,760
+from the channel, applies the 
+function to each element and 
+
+559
+00:34:38,760 --> 00:34:42,360
+sends the results to any channel
+which is returned to the user. 
+
+560
+00:34:42,760 --> 00:34:48,320
+And that way you can create a 
+pipeline of transforming 
+
+561
+00:34:48,320 --> 00:34:51,480
+elements. 
+Each transformation would start 
+
+562
+00:34:51,560 --> 00:34:57,560
+usually a virtual thread, so 
+that's of course imposes some 
+
+563
+00:34:57,560 --> 00:35:03,440
+cost, but but again, it's like 
+an exploration, it's not like 
+
+564
+00:35:03,440 --> 00:35:07,240
+anything that's done, more like 
+a proof of concept. 
+
+565
+00:35:07,800 --> 00:35:11,800
+So are you? 
+Did you also say that the 
+
+566
+00:35:11,800 --> 00:35:17,120
+channel incorporates the 
+reactive throttling into it, 
+
+567
+00:35:17,120 --> 00:35:18,920
+like back pressure? 
+Yeah, yes. 
+
+568
+00:35:18,960 --> 00:35:22,640
+Well, the back pressure is 
+natural because it depends. 
+
+569
+00:35:23,000 --> 00:35:25,360
+So the channel is gonna be 
+buffered or unbuffered, right? 
+
+570
+00:35:25,880 --> 00:35:32,880
+The idea in back pressuring 
+things is to put a bound of the 
+
+571
+00:35:32,880 --> 00:35:36,000
+amount of memory that your 
+pipeline can use, right? 
+
+572
+00:35:36,640 --> 00:35:40,480
+So here the bound is naturally 
+the sum of all the buffers of 
+
+573
+00:35:40,480 --> 00:35:44,240
+the channels, right? 
+If you want to send to a channel
+
+574
+00:35:44,240 --> 00:35:46,920
+that's full, you will simply 
+block, so the virtual thread 
+
+575
+00:35:46,920 --> 00:35:48,640
+will block. 
+If it will block, it won't 
+
+576
+00:35:48,640 --> 00:35:50,600
+receive further elements from 
+the upstream. 
+
+577
+00:35:51,200 --> 00:35:55,960
+So if the downstream isn't 
+consuming things, you know the 
+
+578
+00:35:55,960 --> 00:35:58,760
+buffers will fill up and 
+everything will block in the 
+
+579
+00:35:58,760 --> 00:36:02,120
+sense of blocking virtual 
+threads, Which is allowed, 
+
+580
+00:36:02,160 --> 00:36:03,640
+right? 
+Because we are on the loom. 
+
+581
+00:36:04,000 --> 00:36:08,120
+So yes, there is back pressure. 
+So it almost sounds like you're 
+
+582
+00:36:08,240 --> 00:36:12,520
+you're sort of being drawn to 
+saying OK, rather than the very 
+
+583
+00:36:12,520 --> 00:36:17,840
+simple channels that Go has, 
+let's put a whole bunch of 
+
+584
+00:36:17,840 --> 00:36:20,400
+capabilities. 
+All the higher level stream 
+
+585
+00:36:20,400 --> 00:36:22,920
+operations. 
+On top of the channels, yeah, 
+
+586
+00:36:22,920 --> 00:36:27,680
+and everything into your basic 
+channel in aux and then that 
+
+587
+00:36:27,680 --> 00:36:33,400
+might, I don't know, produce 
+just much easier code to. 
+
+588
+00:36:34,280 --> 00:36:37,200
+Well, it has two faces. 
+On one hand you have this high 
+
+589
+00:36:37,200 --> 00:36:40,400
+level operations which make 
+creating pipelines very nice. 
+
+590
+00:36:40,400 --> 00:36:43,240
+That's a good thing, right? 
+And another good thing is that 
+
+591
+00:36:43,240 --> 00:36:46,120
+if you want to have a custom 
+transformation stage, that's 
+
+592
+00:36:46,120 --> 00:36:49,320
+quite easy, you just you have 
+the receive operation on the 
+
+593
+00:36:49,320 --> 00:36:52,240
+channel and you can just do 
+anything with it, right? 
+
+594
+00:36:52,800 --> 00:36:56,640
+And so creating custom 
+transformation stages and things
+
+595
+00:36:56,640 --> 00:36:59,560
+like ACCA streams is quite 
+complex. 
+
+596
+00:37:00,240 --> 00:37:04,360
+It's doable, but it's not like, 
+yeah, easy or anything, right. 
+
+597
+00:37:06,600 --> 00:37:08,320
+Yeah, exactly. 
+Here. 
+
+598
+00:37:08,320 --> 00:37:10,480
+So here you can just receive 
+from the channel, do some 
+
+599
+00:37:10,480 --> 00:37:12,720
+transformations and send it 
+further, right. 
+
+600
+00:37:13,040 --> 00:37:17,040
+So that's men like in a mental 
+model. 
+
+601
+00:37:17,040 --> 00:37:19,760
+That's quite simple. 
+But there's a downside as well. 
+
+602
+00:37:20,200 --> 00:37:25,760
+So because we don't build the 
+description of the whole 
+
+603
+00:37:26,200 --> 00:37:30,120
+processing pipeline up front, we
+don't really have a lot of 
+
+604
+00:37:30,840 --> 00:37:33,360
+opportunities for all for 
+optimization, right. 
+
+605
+00:37:33,360 --> 00:37:40,080
+So it it might be slower, like I
+didn't really do any tests 
+
+606
+00:37:40,080 --> 00:37:42,760
+because I'm still at a much 
+earlier stage. 
+
+607
+00:37:44,880 --> 00:37:47,800
+But for example, like each 
+transformation stage gets its 
+
+608
+00:37:47,800 --> 00:37:52,440
+own virtual thread, right? 
+That might not always make 
+
+609
+00:37:52,440 --> 00:37:54,920
+sense. 
+It might make sense to fuse some
+
+610
+00:37:54,920 --> 00:37:58,600
+of those, So it might be slower 
+than. 
+
+611
+00:37:59,360 --> 00:38:03,640
+It might not be optimal. 
+So if you have a a channel and 
+
+612
+00:38:03,640 --> 00:38:05,800
+you're doing a map, and then 
+you're doing another map, 
+
+613
+00:38:06,040 --> 00:38:10,240
+there's some overhead to those 
+two consecutive maps. 
+
+614
+00:38:10,440 --> 00:38:13,800
+That would that would correspond
+to two async barriers in Eka 
+
+615
+00:38:13,800 --> 00:38:16,400
+streams. 
+Yeah, yeah, yeah. 
+
+616
+00:38:16,560 --> 00:38:19,640
+Right. 
+But if you, I mean any time you 
+
+617
+00:38:19,640 --> 00:38:24,080
+introduce a mechanism it might 
+slow it down, but the benefit of
+
+618
+00:38:24,080 --> 00:38:29,680
+that mechanism could be, you 
+know, huge in many other ways 
+
+619
+00:38:29,680 --> 00:38:32,480
+and it would be worth the the 
+cost. 
+
+620
+00:38:33,160 --> 00:38:34,920
+Yeah, it could be. 
+It could be like. 
+
+621
+00:38:35,520 --> 00:38:38,680
+Map is also not the perfect 
+example because it might. 
+
+622
+00:38:38,880 --> 00:38:42,320
+There's also a variant of map 
+which actually doesn't create a 
+
+623
+00:38:42,320 --> 00:38:47,480
+nothing barrier, but many other 
+operators don't, don't, don't, 
+
+624
+00:38:47,480 --> 00:38:52,640
+don't have these variants. 
+But yeah, I guess it it is quite
+
+625
+00:38:52,640 --> 00:38:56,840
+an interesting research path. 
+We are now working on actually 
+
+626
+00:38:56,840 --> 00:39:00,520
+improving the performance of 
+channels to like the raw 
+
+627
+00:39:00,640 --> 00:39:02,960
+channels. 
+We didn't get to the operators 
+
+628
+00:39:02,960 --> 00:39:07,440
+yet and that took a couple of 
+months of research. 
+
+629
+00:39:08,080 --> 00:39:13,200
+We, yeah, we yeah, so. 
+You and and other people, not 
+
+630
+00:39:13,480 --> 00:39:15,840
+just it's. 
+Mostly me, well, I'm saying we 
+
+631
+00:39:15,840 --> 00:39:20,080
+because we have like a small 
+open source research department 
+
+632
+00:39:20,080 --> 00:39:24,280
+at our company. 
+There's like two people full 
+
+633
+00:39:24,280 --> 00:39:28,280
+time and there's also other 
+people working on various of our
+
+634
+00:39:28,280 --> 00:39:32,800
+open source projects when they 
+are, when they are not on a 
+
+635
+00:39:32,800 --> 00:39:36,120
+project currently because I'm 
+working at a consulting company.
+
+636
+00:39:36,960 --> 00:39:39,520
+So. 
+So we have like a team that's 
+
+637
+00:39:39,840 --> 00:39:44,600
+supporting our open source 
+initiatives like OX, like Tapir 
+
+638
+00:39:44,600 --> 00:39:49,200
+and others. 
+So there's. 
+
+639
+00:39:49,640 --> 00:39:53,480
+So Ox has the. 
+Just to summarize, it's based on
+
+640
+00:39:53,600 --> 00:39:56,400
+my own. 
+It has structure concurrency 
+
+641
+00:39:56,400 --> 00:40:01,560
+that is built on top of the JP 
+whatever in Java. 
+
+642
+00:40:01,680 --> 00:40:03,960
+The Java JP for structure 
+concurrency. 
+
+643
+00:40:04,320 --> 00:40:08,240
+Yeah, the Java. 
+The Java JEP I guess GP right? 
+
+644
+00:40:08,400 --> 00:40:13,640
+Yeah, and Java has a jab for 
+structured concurrency and, but 
+
+645
+00:40:13,640 --> 00:40:18,760
+I think it's the we are using it
+behind the behind the scenes 
+
+646
+00:40:19,600 --> 00:40:24,520
+because it's quite low level, 
+like it's very easy to write 
+
+647
+00:40:24,520 --> 00:40:27,440
+incorrect code which will just 
+throw a structure violation 
+
+648
+00:40:27,440 --> 00:40:32,160
+exception at runtime. 
+So that's something that we fix 
+
+649
+00:40:32,160 --> 00:40:36,120
+in Ox. 
+Using a nice high level API to 
+
+650
+00:40:36,120 --> 00:40:38,840
+just say erase these things and 
+you don't have. 
+
+651
+00:40:38,840 --> 00:40:42,520
+To think about as flexible as 
+the Java version, of course, but
+
+652
+00:40:42,520 --> 00:40:44,760
+it's much safer to use, right? 
+So you don't. 
+
+653
+00:40:45,000 --> 00:40:48,680
+I think there's like 3 or 4 
+invocations that you have to do 
+
+654
+00:40:48,680 --> 00:40:53,480
+in the correct order in the Java
+version to get things like power
+
+655
+00:40:53,640 --> 00:40:58,560
+working correctly, and it takes 
+multiple lines in aux. 
+
+656
+00:40:58,560 --> 00:41:01,840
+Even if you don't use the high 
+level method, it's still much 
+
+657
+00:41:01,840 --> 00:41:05,120
+simpler and it's much harder to 
+make a mistake, yeah. 
+
+658
+00:41:06,880 --> 00:41:09,720
+And then you also use scoped 
+values. 
+
+659
+00:41:09,720 --> 00:41:12,960
+Another JEP and I'm curious, I 
+don't know much about scoped 
+
+660
+00:41:12,960 --> 00:41:14,320
+values. 
+Maybe you could give us a quick 
+
+661
+00:41:14,520 --> 00:41:17,600
+summary of what that is and how 
+AUX uses scoped values. 
+
+662
+00:41:18,840 --> 00:41:21,200
+Okay. 
+So we don't really use them 
+
+663
+00:41:21,200 --> 00:41:23,520
+much. 
+It's just that we provide a 
+
+664
+00:41:24,040 --> 00:41:29,440
+wrapper for the Java version so 
+that it's usable in the Scala 
+
+665
+00:41:29,440 --> 00:41:32,600
+code. 
+One of the pain points I think 
+
+666
+00:41:32,600 --> 00:41:37,600
+of functional effect systems 
+like Cuts Effect and like ZIO is
+
+667
+00:41:37,600 --> 00:41:40,320
+their support for like Fiber 
+locals, right? 
+
+668
+00:41:40,800 --> 00:41:44,600
+So economical example is you 
+have a correlation ID that you 
+
+669
+00:41:44,600 --> 00:41:48,600
+receive from an incoming web 
+request and he wants to thread 
+
+670
+00:41:48,600 --> 00:41:53,360
+it through all the way down to 
+your downstream web service call
+
+671
+00:41:53,360 --> 00:41:55,560
+or whatever, right? 
+And you don't want to add an 
+
+672
+00:41:55,560 --> 00:41:58,960
+additional parameter like call 
+ID or correlation ID to every 
+
+673
+00:41:58,960 --> 00:42:00,480
+method, it would be just 
+painful. 
+
+674
+00:42:00,920 --> 00:42:06,840
+So you want to put it in like a 
+request local that's now 
+
+675
+00:42:06,840 --> 00:42:10,080
+automatically attached to the 
+whole call tree coming out from 
+
+676
+00:42:10,080 --> 00:42:13,160
+this request, right? 
+And it's actually very hard to 
+
+677
+00:42:13,160 --> 00:42:17,320
+do. 
+In cuts effect, it's possible, 
+
+678
+00:42:17,320 --> 00:42:21,600
+but once you you know then you 
+go to a database and you change 
+
+679
+00:42:21,600 --> 00:42:28,480
+the monad and then it's broken. 
+Basically with ZIO it's it's a 
+
+680
+00:42:28,480 --> 00:42:30,680
+bit, it's better, but it's hard 
+as well. 
+
+681
+00:42:31,560 --> 00:42:42,120
+So that's why I looked at at 
+these local values, which I 
+
+682
+00:42:42,120 --> 00:42:45,000
+think is very important to have 
+them so that people actually can
+
+683
+00:42:45,000 --> 00:42:47,320
+use them. 
+But our wrapper in OX is very 
+
+684
+00:42:47,320 --> 00:42:49,040
+thin on top of what Java 
+provides. 
+
+685
+00:42:49,400 --> 00:42:52,400
+OK. 
+And really, this is just about a
+
+686
+00:42:52,400 --> 00:42:55,640
+fiber local or an alternative. 
+Yeah, that's about it, so. 
+
+687
+00:42:56,240 --> 00:42:58,760
+In the virtual thread world, 
+yeah, and. 
+
+688
+00:42:58,760 --> 00:43:04,800
+It's like a thread local, but 
+working better with virtual 
+
+689
+00:43:04,800 --> 00:43:06,920
+threads. 
+It's not as mutable, you might 
+
+690
+00:43:06,920 --> 00:43:10,480
+say, right? 
+Yeah, so there's only a certain 
+
+691
+00:43:10,480 --> 00:43:14,120
+scope in which you set the 
+value, which also works nicely 
+
+692
+00:43:14,120 --> 00:43:15,880
+with the concept of structured 
+concurrency. 
+
+693
+00:43:15,880 --> 00:43:20,360
+Then the structure of the code 
+determines like how how your 
+
+694
+00:43:20,360 --> 00:43:26,600
+stress behave. 
+So what one of my under current 
+
+695
+00:43:26,600 --> 00:43:30,720
+understandings of structure 
+concurrency is that it needs to 
+
+696
+00:43:30,720 --> 00:43:38,000
+be able to support never well, 
+reporting errors without ever 
+
+697
+00:43:38,000 --> 00:43:43,400
+losing any of them and 
+cancellation So, and you're 
+
+698
+00:43:43,400 --> 00:43:45,960
+supporting those in aux I 
+assume? 
+
+699
+00:43:46,240 --> 00:43:50,840
+Yeah, so a very good question. 
+And so again, coming back to the
+
+700
+00:43:50,840 --> 00:43:55,000
+original problem, right, once we
+have an async runtime in the 
+
+701
+00:43:55,000 --> 00:43:58,360
+JVM, should we still use 
+functional effect systems? 
+
+702
+00:43:58,960 --> 00:44:04,240
+And one of the There's a couple 
+of reasons why you might want to
+
+703
+00:44:04,240 --> 00:44:08,320
+still use them, and one of them 
+is error handling and 
+
+704
+00:44:08,320 --> 00:44:12,880
+cancellation. 
+So cancellation is. 
+
+705
+00:44:15,160 --> 00:44:18,640
+So in Java you have to rely on 
+interrupted exception right? 
+
+706
+00:44:18,640 --> 00:44:22,920
+On in on in on interruptions. 
+We know they are not perfect, 
+
+707
+00:44:24,080 --> 00:44:27,840
+people have researched why they 
+don't work in many ways, right? 
+
+708
+00:44:27,840 --> 00:44:31,480
+It's very easy to actually eat 
+an interrupted exception. 
+
+709
+00:44:31,480 --> 00:44:35,200
+Just catch an exception and log 
+it, and then your thread will 
+
+710
+00:44:35,200 --> 00:44:39,360
+continue happily happily even 
+though it should finish working 
+
+711
+00:44:39,600 --> 00:44:42,080
+because the supervisor decided 
+so or whatever. 
+
+712
+00:44:42,080 --> 00:44:45,920
+So it requires quite a lot of 
+discipline to actually implement
+
+713
+00:44:46,920 --> 00:44:50,680
+interruption correctly in in the
+Java. 
+
+714
+00:44:50,880 --> 00:44:54,640
+And the same carries over to Ox.
+The same carries over to Scala 
+
+715
+00:44:54,640 --> 00:44:56,960
+code using loom, right? 
+If you want to have 
+
+716
+00:44:56,960 --> 00:45:01,920
+interruptions, you just need to 
+keep this discipline of behaving
+
+717
+00:45:01,920 --> 00:45:05,360
+correctly when you get an 
+interrupt exception. 
+
+718
+00:45:05,920 --> 00:45:09,080
+And that's by the way the you 
+know the way racing works for 
+
+719
+00:45:09,080 --> 00:45:10,960
+example, right? 
+If you race to computations, you
+
+720
+00:45:10,960 --> 00:45:14,760
+want to interrupt the losing 1 
+and you interrupted by calling 
+
+721
+00:45:14,760 --> 00:45:20,840
+thread interrupt and and the 
+exception is injected over there
+
+722
+00:45:20,840 --> 00:45:24,040
+and it needs to be properly net 
+terminated, right? 
+
+723
+00:45:24,320 --> 00:45:26,280
+So. 
+Just as a quick example of this,
+
+724
+00:45:26,280 --> 00:45:32,120
+in the Easy racer, it's doing a 
+race and the races are against 
+
+725
+00:45:32,120 --> 00:45:37,680
+http://requests and so you're 
+using STTP for HTTP. 
+
+726
+00:45:38,880 --> 00:45:43,280
+The HTTP client, in this case, 
+and so is. 
+
+727
+00:45:43,280 --> 00:45:47,280
+What you're saying is that that 
+STTP library had to correctly 
+
+728
+00:45:47,280 --> 00:45:51,600
+implement checking for 
+interruption in STTP. 
+
+729
+00:45:51,680 --> 00:45:58,400
+OK, no, not going that far. 
+Like it's it can't obstruct, so 
+
+730
+00:45:59,080 --> 00:46:03,440
+it just needs to make sure that 
+there's not there's no catch 
+
+731
+00:46:03,440 --> 00:46:06,960
+exception and logs the 
+exception, which would simply 
+
+732
+00:46:07,000 --> 00:46:09,000
+not propagate the interrupted 
+exception, right? 
+
+733
+00:46:10,040 --> 00:46:16,560
+So if we are using an STTP on 
+another library you are you are 
+
+734
+00:46:16,560 --> 00:46:19,480
+doing a blocking call. 
+If it's interrupted, it will 
+
+735
+00:46:19,480 --> 00:46:23,000
+throw an interrupted exception. 
+So the library should mostly 
+
+736
+00:46:23,000 --> 00:46:25,920
+just propagate the exception up 
+to the caller. 
+
+737
+00:46:26,400 --> 00:46:29,200
+And if they do it, that's fine, 
+right? 
+
+738
+00:46:29,280 --> 00:46:33,360
+But you still need to know if 
+they don't do something, like 
+
+739
+00:46:33,680 --> 00:46:37,760
+maybe they catch all exceptions 
+and convert them to something 
+
+740
+00:46:37,760 --> 00:46:39,560
+and so on, which would break 
+things, right? 
+
+741
+00:46:40,960 --> 00:46:45,120
+So that's a downside, right? 
+In the functional FX systems 
+
+742
+00:46:45,200 --> 00:46:49,440
+that's implemented much more 
+nicely in the interruptions or 
+
+743
+00:46:49,440 --> 00:46:52,760
+the cancellation is out is like 
+an out. 
+
+744
+00:46:53,640 --> 00:46:58,040
+How do you say it? 
+Not out of bounds, but that's 
+
+745
+00:46:58,040 --> 00:46:59,760
+like a special. 
+Channel in the runtime, 
+
+746
+00:46:59,880 --> 00:47:02,840
+essentially. 
+Yeah, yes exactly. 
+
+747
+00:47:03,120 --> 00:47:08,000
+It doesn't rely on in injecting 
+exceptions, so it's you could 
+
+748
+00:47:08,000 --> 00:47:10,800
+say it's done in the proper way 
+over them, right? 
+
+749
+00:47:11,240 --> 00:47:13,280
+A more a safer, more reliable 
+way, Yeah. 
+
+750
+00:47:13,480 --> 00:47:17,040
+Yes, yes. 
+Which is very hard to implement 
+
+751
+00:47:17,040 --> 00:47:19,920
+in Java right now, giving all 
+the history of Java and so. 
+
+752
+00:47:19,920 --> 00:47:26,080
+On baggage, I think we can call.
+It exactly so that's something. 
+
+753
+00:47:26,080 --> 00:47:29,640
+If you decide to go to direct 
+style route, you just need to be
+
+754
+00:47:29,640 --> 00:47:31,960
+aware of it and you know 
+maintain discipline. 
+
+755
+00:47:31,960 --> 00:47:35,000
+If you catch an exception just 
+in Scala, this amounts to 
+
+756
+00:47:35,000 --> 00:47:40,440
+catching a non fatal exceptions 
+which would make interactive 
+
+757
+00:47:40,440 --> 00:47:44,200
+exception not being caught. 
+In Java it's a bit more tricky 
+
+758
+00:47:44,320 --> 00:47:47,000
+because they are not as flexible
+but possible as well. 
+
+759
+00:47:47,920 --> 00:47:51,320
+So cancellation was one thing 
+and the other was error 
+
+760
+00:47:51,320 --> 00:47:55,840
+handling, yes, and I guess 
+that's still an open question. 
+
+761
+00:47:56,040 --> 00:47:59,000
+I'm not sure how to best do 
+error handling. 
+
+762
+00:47:59,000 --> 00:48:02,360
+I'm not sure anybody knows how 
+to do error handling really. 
+
+763
+00:48:03,120 --> 00:48:05,320
+There's a lot of ideas, right? 
+We have checked exceptions in 
+
+764
+00:48:05,320 --> 00:48:09,840
+Java, but I think most people 
+agree that they are a failed 
+
+765
+00:48:09,840 --> 00:48:12,040
+experiment. 
+Yeah, right. 
+
+766
+00:48:12,560 --> 00:48:15,440
+Now the question is why are they
+a failed experiment? 
+
+767
+00:48:15,440 --> 00:48:17,560
+Yes, why? 
+So. 
+
+768
+00:48:17,560 --> 00:48:19,560
+Do you know the answer? 
+No, I don't. 
+
+769
+00:48:20,400 --> 00:48:23,360
+Because they don't compose. 
+Well, they don't compose. 
+
+770
+00:48:23,400 --> 00:48:26,520
+We, yeah, we were actually just 
+discussing this last night in 
+
+771
+00:48:26,520 --> 00:48:31,800
+our book development group and 
+we came up with mostly James 
+
+772
+00:48:31,800 --> 00:48:36,200
+came up with the idea that oh, 
+there's a contract like whenever
+
+773
+00:48:36,200 --> 00:48:40,480
+you're trying to compose things 
+to to compose them effectively, 
+
+774
+00:48:40,720 --> 00:48:43,280
+you need to have a complete 
+contract. 
+
+775
+00:48:44,120 --> 00:48:47,040
+You know, it's it's like putting
+Legos together and the contract 
+
+776
+00:48:47,040 --> 00:48:49,440
+is, you know, one has the little
+pegs and one has the little 
+
+777
+00:48:49,440 --> 00:48:52,320
+holes and if you don't meet that
+contract, you can't compose 
+
+778
+00:48:52,320 --> 00:48:57,840
+them. 
+And with exceptions, there's 
+
+779
+00:48:58,800 --> 00:49:02,680
+there's some things that are 
+implicit that are not, well, 
+
+780
+00:49:02,800 --> 00:49:04,840
+unchecked exceptions. 
+Yeah, well, right. 
+
+781
+00:49:04,840 --> 00:49:08,760
+And A and checked exceptions 
+were an attempt to. 
+
+782
+00:49:08,800 --> 00:49:11,680
+Establish a contract. 
+To create that contract but they
+
+783
+00:49:11,680 --> 00:49:14,400
+weren't. 
+I don't know. 
+
+784
+00:49:14,400 --> 00:49:18,400
+I guess maybe there's there's in
+a there's a way to escape them 
+
+785
+00:49:18,400 --> 00:49:21,600
+or whatever and so that 
+basically broke the whole system
+
+786
+00:49:21,600 --> 00:49:26,360
+if you if you can, if you can 
+opt out of it, then that's not 
+
+787
+00:49:26,480 --> 00:49:29,560
+really contract. 
+If you try to Google it, that's 
+
+788
+00:49:29,560 --> 00:49:33,160
+a very interesting answer or 
+collection of answers on Stack 
+
+789
+00:49:33,160 --> 00:49:35,440
+Overflow to the to exactly this 
+question. 
+
+790
+00:49:36,080 --> 00:49:40,600
+And one of the answers I think 
+is going in the direction that 
+
+791
+00:49:40,600 --> 00:49:43,280
+you mentioned that we have 
+unchecked exceptions, which are 
+
+792
+00:49:43,280 --> 00:49:46,480
+the real exceptions, and I guess
+they are quite popular in all 
+
+793
+00:49:46,480 --> 00:49:48,000
+languages, right? 
+Panics. 
+
+794
+00:49:48,000 --> 00:49:50,480
+Whatever something goes very 
+wrong, there's a bug. 
+
+795
+00:49:50,680 --> 00:49:52,200
+You're throwing an exception 
+and. 
+
+796
+00:49:52,560 --> 00:49:55,520
+There's no way to recover. 
+Yeah, exactly. 
+
+797
+00:49:55,520 --> 00:49:56,880
+And then there's checked 
+exceptions. 
+
+798
+00:49:56,880 --> 00:50:00,320
+So there's one answer that 
+suggests that there aren't 
+
+799
+00:50:00,320 --> 00:50:03,800
+really exceptions. 
+It's just syntax for either's 
+
+800
+00:50:05,240 --> 00:50:09,560
+essentially right. 
+In Scala you can write that you 
+
+801
+00:50:09,560 --> 00:50:12,600
+return either some kind of error
+or something, right? 
+
+802
+00:50:13,160 --> 00:50:16,600
+In Java you have this special 
+syntax with throws, but 
+
+803
+00:50:16,600 --> 00:50:18,480
+essentially it's the same thing,
+right? 
+
+804
+00:50:18,480 --> 00:50:25,640
+You need to handle the exact 
+form of whatever the the errors 
+
+805
+00:50:25,640 --> 00:50:28,080
+are returned by the method in 
+the color, right? 
+
+806
+00:50:28,280 --> 00:50:31,240
+So the color is fully aware of 
+the errors that the colleague. 
+
+807
+00:50:32,040 --> 00:50:34,840
+Well, plus you can always break 
+the contract by throwing a null 
+
+808
+00:50:34,840 --> 00:50:37,200
+pointer. 
+Yeah. 
+
+809
+00:50:37,200 --> 00:50:39,880
+I mean, seriously, if you think 
+of it in terms of contracts, 
+
+810
+00:50:39,880 --> 00:50:43,200
+it's like, oh, there's always a 
+way to get out of the contract. 
+
+811
+00:50:43,200 --> 00:50:44,920
+And it's like. 
+But that would be the exact 
+
+812
+00:50:44,920 --> 00:50:46,720
+exception, right? 
+That would be the bug in the 
+
+813
+00:50:46,720 --> 00:50:48,520
+code, right? 
+So. 
+
+814
+00:50:49,520 --> 00:50:52,240
+That's really interesting. 
+So there's other answers over 
+
+815
+00:50:52,240 --> 00:50:54,680
+there, right that they are not 
+polymorphic, right? 
+
+816
+00:50:54,800 --> 00:51:00,200
+The whole if you try to run in 
+Java, you know, submit something
+
+817
+00:51:00,200 --> 00:51:02,680
+to a thread pool or run a 
+thread, you sometimes you get 
+
+818
+00:51:02,680 --> 00:51:06,880
+runnable, sometimes you get the 
+callable, which one doesn't 
+
+819
+00:51:06,920 --> 00:51:09,840
+allow you to throw exceptions 
+and the other throws exception. 
+
+820
+00:51:10,640 --> 00:51:13,040
+Then lambdas can't throw 
+exceptions, right? 
+
+821
+00:51:13,040 --> 00:51:15,200
+So it's a mess, right? 
+So they're not. 
+
+822
+00:51:15,560 --> 00:51:19,920
+So the lack of polymorphism 
+might be a strong indicator of 
+
+823
+00:51:19,920 --> 00:51:22,840
+why checked exceptions actually 
+failed in Java. 
+
+824
+00:51:23,920 --> 00:51:26,800
+But there's also a lot of other 
+possibilities, right? 
+
+825
+00:51:26,800 --> 00:51:31,120
+So in Skyla, we have a couple of
+answers. 
+
+826
+00:51:31,160 --> 00:51:35,120
+We have unchecked exceptions. 
+Some people like using either's,
+
+827
+00:51:35,840 --> 00:51:39,080
+which are very specific. 
+Some people like using Tri, 
+
+828
+00:51:39,760 --> 00:51:42,520
+right? 
+There's also the attempt to do 
+
+829
+00:51:42,520 --> 00:51:47,120
+something similar, I guess as in
+Rust to introduce a result type.
+
+830
+00:51:48,200 --> 00:51:52,640
+Which is really a very. 
+Far from yes, yes, but with 
+
+831
+00:51:52,640 --> 00:51:58,280
+syntax to under wrap it. 
+So there's a couple of attempts 
+
+832
+00:51:58,280 --> 00:52:01,160
+to I guess do it. 
+There's also an attempt to do 
+
+833
+00:52:01,160 --> 00:52:04,120
+checked exceptions in Scala, but
+I think it's abandoned now. 
+
+834
+00:52:04,640 --> 00:52:09,240
+It was using capabilities, so 
+it's a bit better than the same 
+
+835
+00:52:09,680 --> 00:52:13,000
+because you don't have to write 
+like specialized higher order 
+
+836
+00:52:13,000 --> 00:52:21,920
+functions for for each variant 
+like which would support methods
+
+837
+00:52:21,920 --> 00:52:24,600
+which throw exceptions and not. 
+Are you referring to the Caprese
+
+838
+00:52:25,240 --> 00:52:26,640
+project or is this something 
+different? 
+
+839
+00:52:26,640 --> 00:52:32,120
+That's like I think something a 
+bit before Caprese it was the 
+
+840
+00:52:32,440 --> 00:52:34,360
+work leading to the project I 
+guess. 
+
+841
+00:52:34,360 --> 00:52:37,320
+Yeah, but as far as I know, I 
+think the the checked exceptions
+
+842
+00:52:37,320 --> 00:52:42,360
+in Scala are abandoned in favor 
+of some other work probably. 
+
+843
+00:52:44,000 --> 00:52:47,200
+So I'm developing that. 
+So in OX you need some way to 
+
+844
+00:52:47,200 --> 00:52:53,040
+know that a task failed. 
+So for example a race. 
+
+845
+00:52:53,760 --> 00:52:58,480
+You you are racing two things. 
+One thing is going to produce an
+
+846
+00:52:58,480 --> 00:53:01,360
+error. 
+You want that to be the loser 
+
+847
+00:53:01,640 --> 00:53:06,160
+and so the the way that like Zeo
+does it is it it has the air 
+
+848
+00:53:06,160 --> 00:53:10,400
+channel that you would you would
+put that in but in in OX you 
+
+849
+00:53:10,400 --> 00:53:13,280
+just went with with unchecked 
+exceptions. 
+
+850
+00:53:13,280 --> 00:53:17,640
+As the yes so far, yes. 
+I'm not 100% convinced yet it's 
+
+851
+00:53:17,640 --> 00:53:22,600
+the right way to go. 
+Actually we we we have two 
+
+852
+00:53:22,600 --> 00:53:27,320
+approaches, kind of mixed. 
+When we have the concurrence 
+
+853
+00:53:27,320 --> 00:53:30,680
+separators we we rely on 
+exceptions, but we also have. 
+
+854
+00:53:30,880 --> 00:53:36,160
+We also have a retry API for 
+resilience because that's also 
+
+855
+00:53:36,160 --> 00:53:39,600
+in the scope of the library. 
+And there we have variants for 
+
+856
+00:53:39,880 --> 00:53:43,000
+either for tries and for 
+exceptions. 
+
+857
+00:53:43,520 --> 00:53:45,800
+So we actually allow users to 
+choose. 
+
+858
+00:53:45,800 --> 00:53:51,120
+So I'm not if I'm not sure if 
+it's the best way to go, and I 
+
+859
+00:53:51,120 --> 00:53:54,120
+would love to, you know, settle 
+on one approach to error 
+
+860
+00:53:54,120 --> 00:53:57,760
+handling, but we simply didn't 
+come up with it yet. 
+
+861
+00:53:57,760 --> 00:54:00,520
+So that's something that we want
+to develop in the future. 
+
+862
+00:54:00,920 --> 00:54:03,080
+We we discovered something 
+interesting last night that I 
+
+863
+00:54:03,080 --> 00:54:07,760
+didn't know about ZIO, but it's 
+that if you in on a ZIO you can 
+
+864
+00:54:07,760 --> 00:54:10,000
+call a retry. 
+A number of different APIs for 
+
+865
+00:54:10,000 --> 00:54:16,320
+that, but it actually uses 
+implicit evidence to to verify 
+
+866
+00:54:16,320 --> 00:54:19,800
+that you actually have your ZIO 
+has an error in the air channel 
+
+867
+00:54:20,160 --> 00:54:22,720
+or the compiler won't let you 
+call retry. 
+
+868
+00:54:23,160 --> 00:54:25,760
+And I thought that was a cool 
+way as we were talking about 
+
+869
+00:54:25,760 --> 00:54:32,160
+like contracts and and the how 
+how when you have a contract it 
+
+870
+00:54:32,160 --> 00:54:36,760
+allows you to know things when 
+you're composing stuff together.
+
+871
+00:54:36,960 --> 00:54:40,760
+And that was a cool example of 
+Zio's ability to to have a 
+
+872
+00:54:40,760 --> 00:54:44,800
+contract around the air channel 
+and and have compilers if you 
+
+873
+00:54:44,800 --> 00:54:47,200
+and. 
+Enforce that contract at other 
+
+874
+00:54:47,240 --> 00:54:49,800
+places. 
+Yeah I do really like that what 
+
+875
+00:54:49,800 --> 00:54:54,360
+what you pointed out about 
+exceptions because you often see
+
+876
+00:54:54,360 --> 00:54:57,840
+people saying, OK, so there's 
+two kinds of exceptions. 
+
+877
+00:54:58,080 --> 00:55:00,200
+There's recoverable and 
+unrecoverable. 
+
+878
+00:55:00,480 --> 00:55:04,240
+And that has always, it's, yeah,
+it's always bothered me a little
+
+879
+00:55:04,240 --> 00:55:08,040
+bit but then when you know what 
+you read pointed out that, well,
+
+880
+00:55:08,040 --> 00:55:09,720
+these are really two different 
+things. 
+
+881
+00:55:10,280 --> 00:55:13,520
+You know, a quote UN quote real 
+exception is the unrecoverable 
+
+882
+00:55:13,520 --> 00:55:16,320
+kind. 
+And then the other thing is what
+
+883
+00:55:16,320 --> 00:55:19,880
+you're, you know, it's an error 
+that you're supposed to handle 
+
+884
+00:55:20,560 --> 00:55:24,680
+And and what? 
+I really like Rust way of just 
+
+885
+00:55:24,680 --> 00:55:28,080
+saying like anything potentially
+recoverable is a result and 
+
+886
+00:55:28,080 --> 00:55:30,040
+anything unrecoverable is a 
+panic. 
+
+887
+00:55:31,640 --> 00:55:34,280
+I guess that's not far away from
+the ZIO approach as well, right?
+
+888
+00:55:34,280 --> 00:55:37,160
+Oh yeah, yeah. 
+And I guess ZIO is really nice 
+
+889
+00:55:37,160 --> 00:55:40,280
+when it comes to error handling,
+and it gets a lot of things 
+
+890
+00:55:40,280 --> 00:55:42,760
+right? 
+So again, the question is like 
+
+891
+00:55:43,280 --> 00:55:47,880
+when you want, if you're if 
+you're using ZIO right, you get 
+
+892
+00:55:48,080 --> 00:55:49,880
+cancellation, which is 
+principled. 
+
+893
+00:55:50,160 --> 00:55:54,480
+You get error handling, which is
+very well done, but you get the 
+
+894
+00:55:54,480 --> 00:55:57,080
+syntax, you get the stack 
+traces, and you also get the 
+
+895
+00:55:57,080 --> 00:56:00,040
+variety. 
+So, you know, you have to 
+
+896
+00:56:00,040 --> 00:56:01,880
+balance it out, Yeah. 
+And. 
+
+897
+00:56:02,360 --> 00:56:04,160
+Then yeah. 
+It's interesting. 
+
+898
+00:56:04,160 --> 00:56:12,120
+Well in in Python structure 
+concurrency it allows 
+
+899
+00:56:12,120 --> 00:56:20,520
+cancellation because at the 
+determined suspension points it 
+
+900
+00:56:20,520 --> 00:56:24,200
+knows enough and it and it 
+actually performs it's. 
+
+901
+00:56:24,240 --> 00:56:29,400
+Those are safe points to perform
+cancellation and So what? 
+
+902
+00:56:29,560 --> 00:56:33,400
+So you can. 
+The cancellation is built in and
+
+903
+00:56:33,400 --> 00:56:38,840
+the error reporting is also 
+built in because it knows those 
+
+904
+00:56:38,840 --> 00:56:41,880
+safe suspension points and I 
+don't know if that could be 
+
+905
+00:56:42,120 --> 00:56:45,120
+something that would help. 
+Out safe suspension points would
+
+906
+00:56:45,120 --> 00:56:48,920
+be like whenever you block right
+which should be anywhere really 
+
+907
+00:56:49,720 --> 00:56:52,920
+because you don't know. 
+So I don't think we'll be able 
+
+908
+00:56:52,920 --> 00:56:56,320
+to to detect that. 
+So I think we will have to live 
+
+909
+00:56:56,320 --> 00:57:00,920
+with the cancellation as it 
+comes in Java, meaning interrupt
+
+910
+00:57:00,920 --> 00:57:03,800
+exception. 
+But I think we might be able to 
+
+911
+00:57:03,800 --> 00:57:07,080
+come up with something nicer for
+error handling. 
+
+912
+00:57:07,600 --> 00:57:09,560
+Not sure if it's going to be 
+unchecked exceptions. 
+
+913
+00:57:09,560 --> 00:57:12,240
+I I'm hoping it's going to be 
+something better, at least for 
+
+914
+00:57:12,240 --> 00:57:15,040
+people who really care about 
+what kind of errors. 
+
+915
+00:57:16,600 --> 00:57:19,560
+Maybe something result like, 
+well, I don't know, it's like 
+
+916
+00:57:19,680 --> 00:57:22,920
+probably another topic for 
+longer. 
+
+917
+00:57:23,080 --> 00:57:26,600
+Yeah, longer research, but it's 
+definitely something that we 
+
+918
+00:57:26,600 --> 00:57:29,760
+need to work on and we need to 
+do, you know, research and 
+
+919
+00:57:29,760 --> 00:57:32,480
+develop. 
+And so that's an open question 
+
+920
+00:57:32,480 --> 00:57:34,560
+still. 
+So if you have a few minutes, I 
+
+921
+00:57:34,560 --> 00:57:37,640
+wanna talk a little bit about 
+your benchmark that you did 
+
+922
+00:57:37,640 --> 00:57:40,160
+recently with with lum and and 
+Co routines. 
+
+923
+00:57:40,840 --> 00:57:43,600
+Can you give us just the rundown
+on on what your benchmark was 
+
+924
+00:57:43,600 --> 00:57:45,480
+was doing and what you 
+discovered? 
+
+925
+00:57:46,280 --> 00:57:49,680
+Sure, so so the the original 
+course for doing these 
+
+926
+00:57:49,680 --> 00:57:54,360
+benchmarks is that I wrote like 
+maybe not very simple, but a 
+
+927
+00:57:54,440 --> 00:57:58,520
+straightforward implementation 
+of channels in ox name with 
+
+928
+00:57:58,520 --> 00:58:03,040
+support of selects where you can
+select exactly 1 value to 
+
+929
+00:58:03,040 --> 00:58:05,480
+receive from from exactly 1 
+channel. 
+
+930
+00:58:06,040 --> 00:58:09,560
+And then I ran some Kafka code 
+with it and so on, just to see 
+
+931
+00:58:09,560 --> 00:58:11,480
+how you know it feels to program
+with it. 
+
+932
+00:58:12,200 --> 00:58:14,280
+And it worked, but it was really
+slow. 
+
+933
+00:58:14,720 --> 00:58:19,080
+So you know it was a proof of 
+concept and the concept was 
+
+934
+00:58:19,080 --> 00:58:23,120
+proved but it was slow. 
+So then I started. 
+
+935
+00:58:23,120 --> 00:58:27,280
+I got interested into looking at
+how this can this be made. 
+
+936
+00:58:27,360 --> 00:58:28,160
+How? 
+Is it slow? 
+
+937
+00:58:28,240 --> 00:58:29,800
+Yeah, yeah. 
+And how can you make it faster? 
+
+938
+00:58:30,240 --> 00:58:33,400
+Yes, yes. 
+So I I I arrived at Kotlin 
+
+939
+00:58:33,400 --> 00:58:37,080
+channels which they have the 
+same concept and they also 
+
+940
+00:58:37,080 --> 00:58:39,480
+arrived at the same conclusion 
+that channels might be a good 
+
+941
+00:58:39,480 --> 00:58:45,640
+idea to communicate between Co 
+routines and the case and that 
+
+942
+00:58:45,640 --> 00:58:49,000
+that run concurrently and they 
+also support selects and so on. 
+
+943
+00:58:49,040 --> 00:58:52,760
+So so that's like a paper into 
+how they implemented this in 
+
+944
+00:58:52,760 --> 00:59:00,400
+Kotlin and and it's transferable
+to to Java as well. 
+
+945
+00:59:01,680 --> 00:59:05,320
+But before doing that, before 
+doing the whole implementation, 
+
+946
+00:59:05,320 --> 00:59:09,320
+I would just wanted to see if 
+using virtual threads the 
+
+947
+00:59:09,320 --> 00:59:11,320
+approach makes sense at all, 
+right? 
+
+948
+00:59:12,320 --> 00:59:20,960
+So I started with a benchmark 
+where I had a number I wanted to
+
+949
+00:59:20,960 --> 00:59:24,520
+pass I guess 10 million values 
+from one thread to another 
+
+950
+00:59:24,840 --> 00:59:30,800
+through some medium, right? 
+And in one case it might be an 
+
+951
+00:59:30,800 --> 00:59:35,880
+OX channel, in other case I also
+looked at Kotlin how fast using 
+
+952
+00:59:35,880 --> 00:59:39,600
+their channels this happened. 
+I was looking at synchronous 
+
+953
+00:59:39,600 --> 00:59:45,800
+queue in in Java at array 
+blocking queue and some hand 
+
+954
+00:59:45,800 --> 00:59:49,760
+rolled implementations right. 
+So that was the idea of the 
+
+955
+00:59:49,760 --> 00:59:53,400
+benchmark. 
+And like how quickly you pass 10
+
+956
+00:59:53,400 --> 00:59:57,320
+million values from one thread 
+to another, Yes, and given 
+
+957
+00:59:57,320 --> 01:00:00,240
+different implementations. 
+Of yeah, and it was done in a 
+
+958
+01:00:00,400 --> 01:00:04,040
+rendezvous way, meaning that the
+two threads have to meet to 
+
+959
+01:00:04,040 --> 01:00:06,160
+exchange the values, right? 
+So there's no buffer or 
+
+960
+01:00:06,160 --> 01:00:10,840
+anything. 
+You send on one thread, and the 
+
+961
+01:00:10,840 --> 01:00:14,720
+other thread must call receive, 
+and the resend won't unblock 
+
+962
+01:00:14,720 --> 01:00:16,440
+until the receive is there, 
+right? 
+
+963
+01:00:16,520 --> 01:00:19,520
+So they they they have to meet 
+and exchange the value. 
+
+964
+01:00:20,960 --> 01:00:24,760
+So that was like the limitation.
+And it turns out like cotton is 
+
+965
+01:00:24,760 --> 01:00:29,440
+really fast and the Co routines 
+implementation there is 
+
+966
+01:00:29,440 --> 01:00:34,000
+reperformant and it turned out 
+to be the fastest among the 
+
+967
+01:00:34,000 --> 01:00:36,840
+contendants. 
+And but do you? 
+
+968
+01:00:36,840 --> 01:00:40,200
+Remember the the research paper 
+that that that was based on? 
+
+969
+01:00:40,200 --> 01:00:42,760
+I haven't read it, but I'll see 
+if I can find it and put it in 
+
+970
+01:00:42,760 --> 01:00:44,160
+the Yeah. 
+And that's because it's an 
+
+971
+01:00:44,160 --> 01:00:47,200
+interesting one. 
+You've got it printed out. 
+
+972
+01:00:47,280 --> 01:00:49,800
+That's awesome. 
+Yeah, yeah, I prefer reading 
+
+973
+01:00:49,800 --> 01:00:53,320
+printed stuff, Fast and scalable
+channels and kotlin Co routines.
+
+974
+01:00:53,920 --> 01:00:56,080
+Awesome. 
+Very nice paper by the way and a
+
+975
+01:00:56,080 --> 01:01:02,240
+very nice implementation. 
+So yeah, but there's a catch. 
+
+976
+01:01:02,240 --> 01:01:07,760
+So I did the micro benchmark and
+it turned out that Kotlin is the
+
+977
+01:01:07,760 --> 01:01:11,640
+fastest and then if you do some 
+performance optimizations in the
+
+978
+01:01:11,640 --> 01:01:15,080
+Java version like synchronous 
+queue was really slow. 
+
+979
+01:01:15,200 --> 01:01:19,000
+There's a thing called Exchanger
+in Java which was much faster. 
+
+980
+01:01:19,360 --> 01:01:22,080
+A bit different use case, but 
+worked for the benchmark. 
+
+981
+01:01:22,520 --> 01:01:28,440
+And then if you did some code, 
+some custom code which 
+
+982
+01:01:28,440 --> 01:01:30,960
+implemented this exact scenario,
+you can also get very good 
+
+983
+01:01:30,960 --> 01:01:33,200
+performance, very close to the 
+Kotlin 1. 
+
+984
+01:01:33,920 --> 01:01:36,840
+So this looked promising, right?
+The virtual threads can actually
+
+985
+01:01:36,840 --> 01:01:41,200
+do it. 
+But then yeah, and I implemented
+
+986
+01:01:41,200 --> 01:01:49,000
+this in, I implemented this 
+paper in the Java, so that's 
+
+987
+01:01:49,000 --> 01:01:51,680
+called jocks like Java ox. 
+But it's only the 
+
+988
+01:01:52,440 --> 01:01:57,120
+implementation, yeah, and in 
+these micro benchmarks like it's
+
+989
+01:01:57,120 --> 01:02:02,480
+very fast and everything. 
+But the catch is that then I 
+
+990
+01:02:02,480 --> 01:02:05,600
+posted it on the Reddit and Ron 
+Pressler came. 
+
+991
+01:02:06,000 --> 01:02:10,840
+He's the one of the members of 
+the Loom team who actually 
+
+992
+01:02:10,840 --> 01:02:13,520
+implemented this. 
+And he says that micro 
+
+993
+01:02:13,520 --> 01:02:16,480
+benchmarks should be ignored 
+unless you're a JVM tuning 
+
+994
+01:02:16,480 --> 01:02:21,880
+expert, which I love, and that 
+actually the Java version is 
+
+995
+01:02:21,880 --> 01:02:25,800
+faster than the Kotlin 1. 
+But still, like if you implement
+
+996
+01:02:25,800 --> 01:02:29,280
+the paper and you do the micro 
+benchmark, you get really good 
+
+997
+01:02:29,280 --> 01:02:32,560
+results in on the Java and 
+virtual threads. 
+
+998
+01:02:32,800 --> 01:02:34,840
+But still Cotton is a bit 
+faster, right? 
+
+999
+01:02:35,480 --> 01:02:39,080
+And once I implemented some 
+benchmarks which weren't micro 
+
+1000
+01:02:39,080 --> 01:02:41,280
+benchmarks, but we're running 
+things at scale. 
+
+1001
+01:02:41,280 --> 01:02:48,320
+So in the latest benchmark I've 
+done, I have 10K threads and now
+
+1002
+01:02:48,320 --> 01:02:51,760
+you have to pass a value from 
+the first thread to to to the 
+
+1003
+01:02:51,760 --> 01:02:54,040
+last one, right? 
+So they do it like in sequence. 
+
+1004
+01:02:54,040 --> 01:02:57,880
+So there's a lot of concurrent 
+work going on and if. 
+
+1005
+01:02:58,200 --> 01:03:01,640
+You're saying you pass the value
+through all 10,000 threads. 
+
+1006
+01:03:03,640 --> 01:03:06,480
+So that's, you know, in the 
+middle of the benchmark, that's 
+
+1007
+01:03:06,480 --> 01:03:09,680
+like a lot of things happening, 
+right, because they all work at 
+
+1008
+01:03:09,680 --> 01:03:13,720
+the same time. 
+And this indeed proved wrong to 
+
+1009
+01:03:13,720 --> 01:03:19,680
+be correct, maybe not entirely, 
+but mostly in virtual. 
+
+1010
+01:03:19,840 --> 01:03:21,480
+Threads were really efficient 
+at. 
+
+1011
+01:03:22,200 --> 01:03:25,680
+At well the Kotlin is still 
+faster, though Kotlin is still 
+
+1012
+01:03:25,680 --> 01:03:29,760
+faster. 
+But now the my implementation of
+
+1013
+01:03:29,760 --> 01:03:33,160
+channels is about the same 
+performance as Java synchronous 
+
+1014
+01:03:33,160 --> 01:03:35,400
+queue. 
+So the difference there was a 
+
+1015
+01:03:35,400 --> 01:03:38,160
+huge difference in the micro 
+benchmark comparing the 
+
+1016
+01:03:38,160 --> 01:03:41,440
+synchronous queue to like custom
+code. 
+
+1017
+01:03:42,360 --> 01:03:45,840
+But if you run at scale it's 
+this difference disappears. 
+
+1018
+01:03:46,120 --> 01:03:49,160
+Cotton is still a bit faster, 
+but they are both really really 
+
+1019
+01:03:49,160 --> 01:03:53,080
+fast. 
+So both the channels, the Java 
+
+1020
+01:03:53,400 --> 01:03:57,280
+concurrent data structures and 
+cotton. 
+
+1021
+01:03:58,280 --> 01:04:02,680
+So in ox, will you rebuild the 
+channel implementation on top of
+
+1022
+01:04:02,680 --> 01:04:04,560
+Jox? 
+Yeah, yeah. 
+
+1023
+01:04:04,560 --> 01:04:09,640
+That's the plan. 
+So you might wonder like what's 
+
+1024
+01:04:09,640 --> 01:04:12,560
+the benefit of actually having 
+channels, since they are 
+
+1025
+01:04:13,080 --> 01:04:15,280
+comparable in performance to a 
+synchronous queue. 
+
+1026
+01:04:15,960 --> 01:04:17,400
+But there's some very good 
+reasons. 
+
+1027
+01:04:17,400 --> 01:04:20,280
+First of all, a channel is 
+computable, meaning you can 
+
+1028
+01:04:20,600 --> 01:04:23,920
+actually say normal elements 
+will be sent to this channel, or
+
+1029
+01:04:23,920 --> 01:04:27,360
+then this channel is in an 
+error, so there was an error 
+
+1030
+01:04:27,360 --> 01:04:29,960
+processing, right? 
+So you close the channel, not 
+
+1031
+01:04:29,960 --> 01:04:32,000
+something can do with the queue.
+So that's one thing. 
+
+1032
+01:04:32,240 --> 01:04:36,000
+And the second thing is that it 
+supports selects, so you can 
+
+1033
+01:04:36,000 --> 01:04:39,560
+select exactly 1 value from a 
+number of channels to receive or
+
+1034
+01:04:39,560 --> 01:04:43,440
+to send it. 
+Yeah, so that's this enables the
+
+1035
+01:04:43,440 --> 01:04:47,840
+ghost style programming at 
+performance levels which are I 
+
+1036
+01:04:47,840 --> 01:04:52,320
+can now say the same as Javas. 
+All costly? 
+
+1037
+01:04:52,360 --> 01:04:56,200
+Smallest. 
+So would it ever make sense, 
+
+1038
+01:04:56,200 --> 01:05:02,200
+once you kind of flesh ox out, 
+to make a Kotlin version of it? 
+
+1039
+01:05:02,480 --> 01:05:04,280
+You could. 
+I guess you could call it Cox, 
+
+1040
+01:05:04,280 --> 01:05:05,360
+but I don't. 
+Know how that? 
+
+1041
+01:05:05,840 --> 01:05:07,960
+Would that would go over? 
+But the Kotlin version is out 
+
+1042
+01:05:07,960 --> 01:05:13,440
+there, so yeah yeah, it's all so
+the the paper that I'm basing on
+
+1043
+01:05:13,760 --> 01:05:16,520
+is describing an improved 
+implementation of tunnels in 
+
+1044
+01:05:16,520 --> 01:05:18,680
+Kotlin and they're using Co 
+routines. 
+
+1045
+01:05:18,680 --> 01:05:21,760
+Of course I'm using, I'm using 
+virtual threats. 
+
+1046
+01:05:21,960 --> 01:05:26,200
+So the code is a bit different 
+at the very low level where we 
+
+1047
+01:05:26,200 --> 01:05:29,960
+actually have to suspend right? 
+So they use Co routines. 
+
+1048
+01:05:30,520 --> 01:05:34,600
+It's all Co routine based. 
+I'm just using at a very low 
+
+1049
+01:05:34,600 --> 01:05:37,440
+level lock support Spark which 
+blocks the thread. 
+
+1050
+01:05:38,440 --> 01:05:43,760
+But those are channels, is it 
+not the whole OX architecture? 
+
+1051
+01:05:43,920 --> 01:05:45,640
+Yeah, yeah, yeah. 
+Those are channels. 
+
+1052
+01:05:45,840 --> 01:05:48,400
+Well they have their their own 
+approach to structured 
+
+1053
+01:05:48,400 --> 01:05:52,040
+concurrency. 
+So, so they could they they it's
+
+1054
+01:05:52,200 --> 01:05:56,360
+it's a bit different of course, 
+in terms of the API, but yeah, 
+
+1055
+01:05:56,360 --> 01:05:58,440
+it works there and it works 
+really nicely. 
+
+1056
+01:05:58,440 --> 01:06:03,960
+So, so yeah, Kotlin is 
+definitely a very good source of
+
+1057
+01:06:03,960 --> 01:06:07,920
+inspiration here. 
+Cool. 
+
+1058
+01:06:07,960 --> 01:06:11,600
+Well that was super educational.
+Do you have any anything else 
+
+1059
+01:06:11,600 --> 01:06:17,600
+you want to add or cover? 
+Well, I'm would love to join 
+
+1060
+01:06:17,960 --> 01:06:19,360
+your conference one day. 
+It's really. 
+
+1061
+01:06:19,560 --> 01:06:21,640
+Yeah, we'd love that. 
+Not this, unfortunately, but 
+
+1062
+01:06:21,640 --> 01:06:22,600
+maybe next? 
+One Okay. 
+
+1063
+01:06:22,840 --> 01:06:24,440
+All right, we'll get you here 
+next year. 
+
+1064
+01:06:24,480 --> 01:06:26,720
+That would be. 
+Yeah, I'm following it for a 
+
+1065
+01:06:26,720 --> 01:06:30,040
+number of years and I always 
+wanted to come there. 
+
+1066
+01:06:30,200 --> 01:06:32,480
+And it's a long trip. 
+It's a long trip. 
+
+1067
+01:06:32,680 --> 01:06:37,160
+It is a long trip, but I've done
+it a couple of times. 
+
+1068
+01:06:37,320 --> 01:06:40,720
+It's survivable. 
+Oh yeah, no, it's a good, it's a
+
+1069
+01:06:40,720 --> 01:06:42,280
+good place. 
+To but you've been in Europe as 
+
+1070
+01:06:42,280 --> 01:06:43,080
+well. 
+It's the same trip. 
+
+1071
+01:06:43,080 --> 01:06:44,760
+Oh, yeah. 
+Oh, of course in. 
+
+1072
+01:06:44,960 --> 01:06:47,440
+Reverse. 
+All trip in the jet lag and 
+
+1073
+01:06:47,440 --> 01:06:52,440
+everything, but this is AI find 
+that that that's mitigated a lot
+
+1074
+01:06:52,440 --> 01:06:56,320
+if you're going to a really 
+comfortable place and we like to
+
+1075
+01:06:56,320 --> 01:06:59,560
+think of Crested Butte as a very
+comfortable place to show up and
+
+1076
+01:06:59,560 --> 01:07:03,920
+the conference itself is very 
+very welcoming and friendly and 
+
+1077
+01:07:03,920 --> 01:07:06,720
+engaging so. 
+Awesome. 
+
+1078
+01:07:06,880 --> 01:07:09,520
+Well, Adam, thank you so much 
+for spending your Friday evening
+
+1079
+01:07:09,520 --> 01:07:11,960
+with us. 
+I really appreciate all of your 
+
+1080
+01:07:11,960 --> 01:07:13,920
+amazing open source work that 
+you do. 
+
+1081
+01:07:13,920 --> 01:07:15,720
+And thank you. 
+Yeah. 
+
+1082
+01:07:15,840 --> 01:07:17,680
+And thank you for the podcast. 
+It's really great. 
+
+1083
+01:07:18,040 --> 01:07:20,280
+Thank you. 
+I love listening to it. 
+
+1084
+01:07:20,280 --> 01:07:23,520
+So it's really good that you 
+guys are doing it. 
+
+1085
+01:07:23,920 --> 01:07:26,920
+Yeah, this has been a super 
+useful conversation for me. 
+
+1086
+01:07:27,600 --> 01:07:29,040
+Awesome. 
+Bringing a lot of things 
+
+1087
+01:07:29,040 --> 01:07:30,720
+together. 
+So thank you very much. 
+
+1088
+01:07:30,720 --> 01:07:31,680
+Thanks, Adam. 
+Bye. 
+
+1089
+01:07:31,880 --> 01:07:32,200
+Thank you.

@@ -1,0 +1,6370 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:09,400
+All right. 
+Well, welcome everyone. 
+
+4
+00:00:09,700 --> 00:00:12,200
+Today we have with us. 
+Justin, how do you say your last
+
+5
+00:00:12,200 --> 00:00:14,600
+name? 
+Just react, react react. 
+
+6
+00:00:15,100 --> 00:00:17,200
+That's the, you know, it's so 
+close to react. 
+
+7
+00:00:17,200 --> 00:00:20,400
+I should remember that real 
+awhile since I use react and 
+
+8
+00:00:20,400 --> 00:00:22,800
+should have its change. 
+It, go ahead and bipolar 
+
+9
+00:00:22,800 --> 00:00:25,800
+painted. 
+So I'm excited about this 
+
+10
+00:00:25,800 --> 00:00:29,200
+conversation because I feel like
+a lot of the episodes that we do
+
+11
+00:00:29,200 --> 00:00:31,000
+Bruce. 
+We hi Bruce. 
+
+12
+00:00:31,000 --> 00:00:33,000
+Your we're not in the same 
+location today. 
+
+13
+00:00:33,000 --> 00:00:36,700
+We are some, we are states away 
+from each other. 
+
+14
+00:00:36,700 --> 00:00:38,400
+Yeah. 
+Technology. 
+
+15
+00:00:38,400 --> 00:00:43,000
+Amazing but I'm excited because 
+a lot of our a lot of our 
+
+16
+00:00:43,000 --> 00:00:47,100
+conversations seem to have a 
+common theme around developer 
+
+17
+00:00:47,100 --> 00:00:52,400
+productivity and today we have 
+Justin who is going to talk to 
+
+18
+00:00:52,400 --> 00:00:55,900
+us about developer productivity 
+engineering. 
+
+19
+00:00:56,200 --> 00:01:02,300
+So I love this because it seems 
+like as an industry for the 
+
+20
+00:01:02,300 --> 00:01:04,800
+entire, I don't know. 
+However, long, you know, I've 
+
+21
+00:01:04,800 --> 00:01:08,200
+been in this industry for 25 
+years or whatever Bruce have 
+
+22
+00:01:08,200 --> 00:01:11,800
+been a much longer. 
+It seems like there's never 
+
+23
+00:01:11,800 --> 00:01:16,800
+really been a sufficient focus 
+on making engineer helping make 
+
+24
+00:01:16,800 --> 00:01:20,800
+engineer's more productive. 
+And I don't know why. 
+
+25
+00:01:20,800 --> 00:01:24,500
+Like this seems like the most 
+obvious thing that we could as 
+
+26
+00:01:24,500 --> 00:01:29,300
+an industry do and yet we just 
+accept that. 
+
+27
+00:01:29,300 --> 00:01:34,500
+Bad productivity is the way that
+things are and we're not going 
+
+28
+00:01:34,500 --> 00:01:36,900
+to argue a little bit. 
+I mean, it's what we do. 
+
+29
+00:01:36,900 --> 00:01:40,400
+You know when You go from 
+Assembly Language to compilers 
+
+30
+00:01:40,400 --> 00:01:42,600
+to better languages and 
+everything it's what? 
+
+31
+00:01:42,600 --> 00:01:46,100
+It's developer productivity 
+engineering I think it's just 
+
+32
+00:01:46,100 --> 00:01:51,000
+that we don't we just you know 
+we're not actually talking about
+
+33
+00:01:51,000 --> 00:01:52,500
+it. 
+We're just going well of course 
+
+34
+00:01:52,500 --> 00:01:57,700
+this new tool makes you more 
+productive and yeah that's why 
+
+35
+00:01:57,700 --> 00:02:01,700
+we're doing it. 
+But we've never really, I guess 
+
+36
+00:02:01,700 --> 00:02:04,400
+what's what I've seen beginning 
+to change. 
+
+37
+00:02:04,500 --> 00:02:10,000
+Is that now organizations? 
+That Have developers have a 
+
+38
+00:02:10,000 --> 00:02:14,600
+portion of those developers 
+allocated to making all the 
+
+39
+00:02:14,600 --> 00:02:17,000
+other developers more 
+productive. 
+
+40
+00:02:17,300 --> 00:02:19,800
+And I think that that's the 
+change that I'm starting to see,
+
+41
+00:02:20,100 --> 00:02:22,400
+that is bundled under this 
+developer productivity 
+
+42
+00:02:22,400 --> 00:02:24,500
+engineering. 
+Like, what I want to see is 
+
+43
+00:02:24,500 --> 00:02:28,100
+every organization that has 
+developers should have a team 
+
+44
+00:02:28,300 --> 00:02:31,200
+that does developer productivity
+engineering or at least one 
+
+45
+00:02:31,200 --> 00:02:33,800
+person. 
+Yeah, so let's have back. 
+
+46
+00:02:33,800 --> 00:02:35,700
+Justin, what? 
+Who are you? 
+
+47
+00:02:35,700 --> 00:02:37,300
+And what is developer 
+productivity? 
+
+48
+00:02:37,300 --> 00:02:39,100
+And Cheering thanks. 
+Yeah. 
+
+49
+00:02:39,100 --> 00:02:42,300
+So so I'm Justin react as those 
+mentioned, currently filled CTO 
+
+50
+00:02:42,500 --> 00:02:46,400
+and chief evangelist at Gradle. 
+My background is primarily in 
+
+51
+00:02:46,400 --> 00:02:49,000
+software development. 
+I spent a lot long portion of my
+
+52
+00:02:49,000 --> 00:02:52,200
+career writing code before 
+moving into more architecture, 
+
+53
+00:02:52,200 --> 00:02:53,900
+Enterprise architecture, kind of
+work. 
+
+54
+00:02:54,000 --> 00:02:56,700
+And then, at some point, I 
+started making more power points
+
+55
+00:02:56,900 --> 00:02:59,900
+than applications, and I change 
+in the kind of doing this sort 
+
+56
+00:02:59,900 --> 00:03:03,000
+of full-time advocacy work. 
+And I really liked it, I get a 
+
+57
+00:03:03,008 --> 00:03:07,000
+chance to have great 
+conversations like this one and 
+
+58
+00:03:07,000 --> 00:03:09,800
+talk about. 
+Productivity with a lot of 
+
+59
+00:03:09,800 --> 00:03:11,500
+people who are really interested
+in and you know you made a 
+
+60
+00:03:11,500 --> 00:03:14,300
+couple of really interesting 
+points that we haven't focused 
+
+61
+00:03:14,300 --> 00:03:17,000
+enough as an industry on 
+productivity. 
+
+62
+00:03:17,000 --> 00:03:20,300
+I think that's totally a fair 
+statement and I can say that 
+
+63
+00:03:20,400 --> 00:03:24,000
+kind of full-throated because 
+there's so many deficiencies 
+
+64
+00:03:24,000 --> 00:03:28,600
+still widespread in the tool 
+chain that I think our industry 
+
+65
+00:03:28,600 --> 00:03:32,000
+has become a little bit numb to 
+right I wouldn't say that it's 
+
+66
+00:03:32,000 --> 00:03:36,600
+as much as like an intentional 
+non Focus as it is almost a lack
+
+67
+00:03:36,600 --> 00:03:39,400
+of consciousness. 
+Around some of the toil and 
+
+68
+00:03:39,400 --> 00:03:42,700
+friction and frustration that 
+are kind of faced by developers 
+
+69
+00:03:42,700 --> 00:03:44,600
+on a daily basis. 
+And I think that a lot of us who
+
+70
+00:03:44,600 --> 00:03:48,100
+have worked in the industry for 
+so long, consider it almost like
+
+71
+00:03:48,100 --> 00:03:51,300
+an occupational hazard of the 
+job that you have to deal with 
+
+72
+00:03:51,300 --> 00:03:56,200
+long test cycle times or flaky 
+tests or, you know, avoidable 
+
+73
+00:03:56,200 --> 00:03:58,700
+non verification failures in the
+build or just general 
+
+74
+00:03:58,700 --> 00:04:02,100
+inconsistency or unreliability 
+but you know, it's funny. 
+
+75
+00:04:04,100 --> 00:04:07,000
+When we talk about some of the 
+metrics that are important and 
+
+76
+00:04:07,000 --> 00:04:09,900
+developer productivity 
+engineering simple, things like,
+
+77
+00:04:09,900 --> 00:04:13,900
+how long does a developer sit 
+and wait for a local Builder? 
+
+78
+00:04:13,900 --> 00:04:18,600
+Test cycle to complete, it is 
+staggering how few businesses or
+
+79
+00:04:18,600 --> 00:04:21,399
+even capturing that metric. 
+I mean, I'll go around and talk 
+
+80
+00:04:21,399 --> 00:04:23,700
+to audiences about DP and I love
+to ask that question. 
+
+81
+00:04:23,700 --> 00:04:26,300
+Hey, who in the audience is 
+actually keeping track of local 
+
+82
+00:04:26,300 --> 00:04:27,900
+build times putting on a 
+dashboard? 
+
+83
+00:04:27,900 --> 00:04:30,400
+It's crickets. 
+It's like nobody, right? 
+
+84
+00:04:30,500 --> 00:04:33,500
+And so it's like, I wouldn't say
+that we haven't been About 
+
+85
+00:04:33,500 --> 00:04:35,100
+productivity, I think, been 
+thinking about productivity in 
+
+86
+00:04:35,100 --> 00:04:38,600
+the wrong way, right? 
+And I think that that developer 
+
+87
+00:04:38,600 --> 00:04:43,400
+productivity engineering 
+provides a technology-based and 
+
+88
+00:04:43,400 --> 00:04:46,400
+pragmatic approach for improving
+developer productivity by 
+
+89
+00:04:46,400 --> 00:04:48,900
+reducing toil. 
+So it's not like one of these 
+
+90
+00:04:48,900 --> 00:04:51,800
+more management driven 
+activities where it's like, 
+
+91
+00:04:51,800 --> 00:04:53,800
+which I'm not saying that those 
+aren't important. 
+
+92
+00:04:53,800 --> 00:04:56,500
+They certainly are people 
+management process all of that 
+
+93
+00:04:56,500 --> 00:04:59,500
+falls into it but what developer
+productivity engineering really 
+
+94
+00:04:59,500 --> 00:05:02,900
+focuses on is removing the 
+technical barriers and friction.
+
+95
+00:05:03,100 --> 00:05:05,900
+To productivity for developers 
+guys. 
+
+96
+00:05:05,900 --> 00:05:09,700
+And there's so many questions, 
+so there's science behind some 
+
+97
+00:05:09,700 --> 00:05:13,300
+of these things. 
+Like, how long do you wait 
+
+98
+00:05:13,300 --> 00:05:17,000
+before your brain wanders off? 
+You know, where is, if you have 
+
+99
+00:05:17,000 --> 00:05:21,300
+a tool like IntelliJ where you, 
+you know, you do something and 
+
+100
+00:05:21,300 --> 00:05:24,000
+it immediately says, oh yeah 
+that's not going to work you go.
+
+101
+00:05:24,000 --> 00:05:24,900
+Oh yeah. 
+That's right. 
+
+102
+00:05:24,900 --> 00:05:28,000
+And you stay engaged with the 
+process. 
+
+103
+00:05:28,000 --> 00:05:30,400
+Whereas if you have to run 
+something through a compiler and
+
+104
+00:05:30,400 --> 00:05:34,200
+wait and look, it's just you 
+just Who's that focus? 
+
+105
+00:05:34,200 --> 00:05:39,000
+And the problem is so bad. 
+That there's an XKCD comic that 
+
+106
+00:05:39,000 --> 00:05:41,900
+summarizes this perfectly. 
+This is compiling a sword 
+
+107
+00:05:41,900 --> 00:05:43,300
+fighting. 
+Yeah, compiling. 
+
+108
+00:05:43,300 --> 00:05:49,300
+And I think the, like, the fact 
+that that comic exist shows how 
+
+109
+00:05:49,300 --> 00:05:53,500
+how stuck we are in thinking 
+that this can't be fixed or 
+
+110
+00:05:53,500 --> 00:05:55,900
+improved, right? 
+It's just like, we just accept 
+
+111
+00:05:55,900 --> 00:05:59,700
+this as normal life. 
+I use that comic and probably 
+
+112
+00:05:59,700 --> 00:06:01,900
+half of my presentations, 
+because it is so. 
+
+113
+00:06:01,900 --> 00:06:05,000
+And when I, when I put A time 
+like this is it's not funny. 
+
+114
+00:06:05,000 --> 00:06:09,300
+Actually, it's poignant, right? 
+Actually like so that's it. 
+
+115
+00:06:09,300 --> 00:06:11,800
+We can all relate to this, 
+right? 
+
+116
+00:06:12,000 --> 00:06:15,500
+And it's like, you know, Hans 
+Hans doc Universal experience, 
+
+117
+00:06:15,500 --> 00:06:19,300
+it is and it's, it's too bad. 
+You know, because this is a 
+
+118
+00:06:19,308 --> 00:06:22,300
+manufacturing job, this is a 
+production job. 
+
+119
+00:06:22,400 --> 00:06:26,000
+Now, I would argue that it's a 
+highly creative job as well. 
+
+120
+00:06:26,000 --> 00:06:28,800
+So Bruce you were talking about 
+staying engaged, right? 
+
+121
+00:06:28,800 --> 00:06:31,600
+We really refer to that as 
+creative flow, right? 
+
+122
+00:06:31,600 --> 00:06:33,800
+We see the act of writing. 
+Code. 
+
+123
+00:06:34,100 --> 00:06:35,700
+And this isn't just we see it, 
+right? 
+
+124
+00:06:35,700 --> 00:06:37,400
+It's actually been mapped. 
+I don't know if you've seen some
+
+125
+00:06:37,400 --> 00:06:39,700
+of these studies but they're 
+fascinating where the brain has 
+
+126
+00:06:39,700 --> 00:06:42,700
+been mapped while someone's 
+actually writing code and it's 
+
+127
+00:06:42,700 --> 00:06:46,100
+this amazing lit up soup of left
+brain and right brain activity 
+
+128
+00:06:46,300 --> 00:06:48,000
+you know on the one hand you're 
+there. 
+
+129
+00:06:48,000 --> 00:06:51,200
+You're visualizing a problem in 
+your head, you're creatively 
+
+130
+00:06:51,200 --> 00:06:53,200
+thinking through how you're 
+going to solve that problem. 
+
+131
+00:06:53,500 --> 00:06:56,700
+Then you do something very 
+scientific which is I write 
+
+132
+00:06:56,700 --> 00:06:59,000
+code. 
+I make a hypothesis, I go into a
+
+133
+00:06:59,000 --> 00:07:03,400
+dialogue, a code dialogue with 
+my tool chain, and I'm Ting 
+
+134
+00:07:03,600 --> 00:07:06,100
+feedback. 
+And if I don't get that feedback
+
+135
+00:07:06,100 --> 00:07:11,200
+fast enough then I'm breaking my
+my creative flow and and there's
+
+136
+00:07:11,200 --> 00:07:13,800
+a couple of it's beyond just 
+losing productivity at that 
+
+137
+00:07:13,800 --> 00:07:16,500
+point. 
+You know there's neurological 
+
+138
+00:07:16,500 --> 00:07:18,700
+evidence, you know, over the 
+last 10 years or so we figured 
+
+139
+00:07:18,700 --> 00:07:20,300
+out that humans can't really 
+multitask. 
+
+140
+00:07:20,300 --> 00:07:23,600
+We kind of put that one to bed 
+and and you know, we convince 
+
+141
+00:07:23,600 --> 00:07:26,800
+ourselves that we can multitask 
+but it's not really true but 
+
+142
+00:07:26,800 --> 00:07:30,000
+what we found over the last 
+couple of years is that context 
+
+143
+00:07:30,000 --> 00:07:34,700
+switching and multitasking 
+frequently At leads to a buildup
+
+144
+00:07:34,700 --> 00:07:38,400
+and over buildup of glutamate in
+the, prefrontal cortex of the 
+
+145
+00:07:38,400 --> 00:07:43,900
+brain and actually leads to a 
+chemical cognitive fatigue that 
+
+146
+00:07:43,900 --> 00:07:46,700
+over time can kill the 
+innovation of a business. 
+
+147
+00:07:46,900 --> 00:07:51,700
+You know, you can, you can do 
+your job if you're fatigued, 
+
+148
+00:07:51,800 --> 00:07:53,000
+right? 
+I mean, you can we all do it, 
+
+149
+00:07:53,000 --> 00:07:55,300
+right? 
+We gotta be, but but can you 
+
+150
+00:07:55,600 --> 00:07:57,700
+grab some coffee? 
+And then that kind of fixes the 
+
+151
+00:07:57,700 --> 00:07:58,700
+problem. 
+Exactly. 
+
+152
+00:07:58,700 --> 00:08:00,800
+Right. 
+But you can do a job. 
+
+153
+00:08:00,900 --> 00:08:03,900
+You cannot answer lie, your 
+optimal Good job. 
+
+154
+00:08:03,900 --> 00:08:06,500
+Can you elevate Beyond? 
+Can you innovate and think, 
+
+155
+00:08:06,500 --> 00:08:08,700
+outside the box? 
+You don't have the juice for it 
+
+156
+00:08:08,700 --> 00:08:11,000
+at that point. 
+So so Hans, you know, loves to 
+
+157
+00:08:11,000 --> 00:08:14,400
+look at this and say, like, why 
+Hans doctor inventor Gradle 
+
+158
+00:08:14,400 --> 00:08:17,300
+might my boss? 
+Why in this industry? 
+
+159
+00:08:18,100 --> 00:08:20,500
+Is it acceptable not to be 
+looking at this stuff? 
+
+160
+00:08:20,500 --> 00:08:23,200
+If he loves to talk about it but
+you know, he goes when he's 
+
+161
+00:08:23,200 --> 00:08:25,400
+pitching too. 
+Like car manufacturing. 
+
+162
+00:08:25,800 --> 00:08:28,400
+And he's like, he has similar 
+question who's tracking local 
+
+163
+00:08:28,400 --> 00:08:30,200
+build times. 
+It's like well, if I went to go 
+
+164
+00:08:30,200 --> 00:08:34,600
+talk to your factory, folks and 
+Them, how long it takes from 
+
+165
+00:08:34,600 --> 00:08:39,900
+part for part A to get to, you 
+know, station Dior move to like,
+
+166
+00:08:39,900 --> 00:08:42,000
+they'll know that they know 
+right off the bat, they know 
+
+167
+00:08:42,000 --> 00:08:44,100
+exactly what those metrics are. 
+So why don't ya? 
+
+168
+00:08:44,100 --> 00:08:47,300
+When you look at the traditional
+engineering and assembly line, 
+
+169
+00:08:47,300 --> 00:08:54,000
+because there's no weight on it?
+Yeah, so, but so no, that's, 
+
+170
+00:08:54,000 --> 00:08:58,100
+that's it. 
+Like this, this seems like the 
+
+171
+00:08:58,100 --> 00:09:01,700
+most obvious place where someone
+in management could show 
+
+172
+00:09:01,700 --> 00:09:04,800
+significant. 
+Savings significant impact on a 
+
+173
+00:09:04,808 --> 00:09:07,300
+business is by setting up a DP 
+team. 
+
+174
+00:09:07,500 --> 00:09:13,000
+And like, in within months, you 
+could show we saved this amount 
+
+175
+00:09:13,000 --> 00:09:16,200
+of money, like it just seems 
+like, the most obvious 
+
+176
+00:09:16,200 --> 00:09:19,600
+management thing that 
+organizations could be doing, 
+
+177
+00:09:19,800 --> 00:09:23,600
+that's not easily measurable. 
+Like all those things like like,
+
+178
+00:09:23,600 --> 00:09:25,500
+why why? 
+Why haven't we done it? 
+
+179
+00:09:26,100 --> 00:09:28,600
+I haven't organizations done. 
+It's a really good question. 
+
+180
+00:09:28,600 --> 00:09:30,700
+I think. 
+And this is again, this is this 
+
+181
+00:09:30,700 --> 00:09:32,900
+is my own speculation but I've 
+spent a lot of time thinking 
+
+182
+00:09:32,900 --> 00:09:38,400
+about Out this you know sense 
+the what I like to refer to as 
+
+183
+00:09:38,400 --> 00:09:42,300
+like the ancient business 
+wisdom, times of the 1970s and 
+
+184
+00:09:42,300 --> 00:09:45,400
+80s when there was a lot of 
+focus on manufacturing, when the
+
+185
+00:09:45,400 --> 00:09:48,100
+theory of constraints became 
+really popular and you like goal
+
+186
+00:09:48,100 --> 00:09:50,700
+drought published goldratt 
+equations and the goal and all 
+
+187
+00:09:50,700 --> 00:09:55,600
+these things we've been really 
+focused on value stream and 
+
+188
+00:09:55,600 --> 00:09:57,700
+we've been really focused on 
+parts of the value stream that 
+
+189
+00:09:57,700 --> 00:10:00,200
+can be understood across 
+multiple areas of the business. 
+
+190
+00:10:00,500 --> 00:10:03,100
+So I think you look at a 
+manufacturing company and 
+
+191
+00:10:03,100 --> 00:10:05,600
+they're like, okay throughput, 
+what does that mean for us? 
+
+192
+00:10:05,600 --> 00:10:07,800
+Well, it means how fast can we 
+assemble the raw materials. 
+
+193
+00:10:07,800 --> 00:10:09,400
+Get them out to Market and get 
+them Soul. 
+
+194
+00:10:09,800 --> 00:10:13,000
+Okay, we understand that it's 
+putting stuff together and we 
+
+195
+00:10:13,000 --> 00:10:15,900
+can easily look at this whole 
+value stream and say well in its
+
+196
+00:10:15,900 --> 00:10:18,600
+visual. 
+You know, people in management 
+
+197
+00:10:18,600 --> 00:10:22,400
+can look at it and see it 
+immediately, whereas the kind of
+
+198
+00:10:22,400 --> 00:10:26,200
+stuff that we're doing has these
+weird magical subtleties that 
+
+199
+00:10:26,200 --> 00:10:31,200
+they don't actually there's an 
+esoterism to what we do that is 
+
+200
+00:10:31,200 --> 00:10:33,600
+harder to understand and so it's
+Difficult. 
+
+201
+00:10:33,600 --> 00:10:35,300
+So I think that and then then, 
+what does that mean? 
+
+202
+00:10:35,300 --> 00:10:39,400
+That that means you need to rely
+then on engineer's complaining, 
+
+203
+00:10:39,600 --> 00:10:41,300
+right? 
+Engineer saying, oh, this build 
+
+204
+00:10:41,300 --> 00:10:45,400
+times terrible, but they don't 
+write as a whole. 
+
+205
+00:10:45,400 --> 00:10:48,400
+We're not great about advocating
+for ourselves sometimes and 
+
+206
+00:10:48,400 --> 00:10:51,000
+advocating for the best 
+developer experience that we can
+
+207
+00:10:51,200 --> 00:10:53,700
+that we can get or they can be 
+provided by our business. 
+
+208
+00:10:53,900 --> 00:10:55,900
+So I think it's like we spend so
+much time looking at 
+
+209
+00:10:55,900 --> 00:10:58,800
+productivity in terms of a value
+stream and parts of things that 
+
+210
+00:10:58,800 --> 00:11:01,100
+we could understand. 
+But as we started to fast 
+
+211
+00:11:01,100 --> 00:11:03,700
+forward into building more of a 
+digital, Structure, kind of the 
+
+212
+00:11:03,700 --> 00:11:06,400
+world that we live in? 
+Now, the work being done by a 
+
+213
+00:11:06,400 --> 00:11:08,700
+developer is very hard to 
+understand by the people who 
+
+214
+00:11:08,700 --> 00:11:11,000
+traditionally have been in 
+charge of productivity for the 
+
+215
+00:11:11,000 --> 00:11:13,500
+business. 
+Now that's changing to to James 
+
+216
+00:11:13,500 --> 00:11:15,600
+is point. 
+We are starting to see, you 
+
+217
+00:11:15,600 --> 00:11:17,900
+know, folks who have been in the
+development organization, split 
+
+218
+00:11:17,900 --> 00:11:21,700
+off, focused primarily on 
+productivity and and the 
+
+219
+00:11:21,700 --> 00:11:25,500
+ultimate as we see sort of 
+maturity step for a business 
+
+220
+00:11:25,500 --> 00:11:28,000
+that wants to be really good at 
+DPE, as to build the central 
+
+221
+00:11:28,000 --> 00:11:30,200
+team, which by the way, is 
+something that separates that I 
+
+222
+00:11:30,208 --> 00:11:32,900
+think a lot from devops right? 
+The platonic ideal. 
+
+223
+00:11:33,000 --> 00:11:36,200
+Love a devops team is no team at
+all right, pure Automation and 
+
+224
+00:11:36,200 --> 00:11:39,400
+Bots whereas I think to do DPE 
+correctly, you really have to 
+
+225
+00:11:39,400 --> 00:11:42,600
+have somebody who's empathetic 
+to the experience, to be driven 
+
+226
+00:11:42,600 --> 00:11:46,400
+enough to Cascade better 
+practices down, and then watch 
+
+227
+00:11:46,400 --> 00:11:49,300
+those metrics improve and 
+actually care about that. 
+
+228
+00:11:51,100 --> 00:11:53,300
+Yeah, it's interesting. 
+The contrast with devops because
+
+229
+00:11:53,600 --> 00:11:58,300
+in some ways, the ideal, endgame
+of devops is for devops to not 
+
+230
+00:11:58,300 --> 00:11:59,700
+need to exist. 
+Right? 
+
+231
+00:12:01,500 --> 00:12:05,600
+Whereas with with developer 
+productivity engineering, it's 
+
+232
+00:12:05,600 --> 00:12:08,800
+like you could always do more 
+right, like the like it's a it's
+
+233
+00:12:08,800 --> 00:12:12,600
+a it's a surface that is 
+infinite like you could always 
+
+234
+00:12:12,600 --> 00:12:15,900
+optimize the tool chains and the
+productivity further. 
+
+235
+00:12:16,300 --> 00:12:19,600
+I feel like this has been, I 
+mean, I'm fascinated with At 
+
+236
+00:12:19,600 --> 00:12:22,300
+this discussion because I look 
+at my own life and I'm going 
+
+237
+00:12:22,500 --> 00:12:26,600
+I've always been looking for the
+next better tool. 
+
+238
+00:12:26,800 --> 00:12:29,600
+You know, how do we do more with
+less? 
+
+239
+00:12:30,000 --> 00:12:34,000
+And this is it, I think so. 
+And it's it's a tool and a 
+
+240
+00:12:34,008 --> 00:12:36,800
+practice, right? 
+And I think that that's really 
+
+241
+00:12:36,800 --> 00:12:41,200
+important because you know, 
+obviously we're Gradle we have 
+
+242
+00:12:41,200 --> 00:12:44,500
+the Gradle Enterprise product 
+which is our solution for 
+
+243
+00:12:44,500 --> 00:12:47,400
+developer productivity, 
+engineering, and so we like 
+
+244
+00:12:47,400 --> 00:12:48,300
+that. 
+We think it's a good 
+
+245
+00:12:48,300 --> 00:12:51,000
+comprehensive solution. 
+But there are limitations, 
+
+246
+00:12:51,000 --> 00:12:51,900
+right? 
+I mean, first of all, it's 
+
+247
+00:12:51,900 --> 00:12:54,100
+great. 
+Also, you know, it's the product
+
+248
+00:12:54,100 --> 00:12:57,500
+does integrate with Gradle Maven
+and basil at this point. 
+
+249
+00:12:57,500 --> 00:12:59,900
+So we can extend a little 
+further outside of the jvm but 
+
+250
+00:12:59,900 --> 00:13:02,300
+not, not really right? 
+And we want to make sure that 
+
+251
+00:13:02,600 --> 00:13:06,200
+this practice is available to 
+everyone, right? 
+
+252
+00:13:06,600 --> 00:13:09,900
+So, looking at it through, I 
+would guess more of a, I would 
+
+253
+00:13:09,900 --> 00:13:12,600
+say more of a vendor agnostic, 
+more, practice oriented lens, 
+
+254
+00:13:13,100 --> 00:13:17,400
+the, the focus really comes down
+to looking into acceleration 
+
+255
+00:13:17,400 --> 00:13:21,900
+technology to improve feedback. 
+Each cycle times, look into 
+
+256
+00:13:22,500 --> 00:13:25,800
+better ways of gathering 
+troubleshooting data for 
+
+257
+00:13:25,800 --> 00:13:27,500
+developers. 
+So that when they run into 
+
+258
+00:13:27,500 --> 00:13:31,500
+issues, when the build breaks, 
+they don't necessarily lose 
+
+259
+00:13:31,500 --> 00:13:33,000
+their creative Flow State, 
+right? 
+
+260
+00:13:33,000 --> 00:13:36,200
+I mean, a new problem. 
+A bill going red does not Yang 
+
+261
+00:13:36,200 --> 00:13:37,500
+someone out of the creative 
+flow. 
+
+262
+00:13:37,800 --> 00:13:39,700
+Oh, new problem to solve great, 
+what can I do? 
+
+263
+00:13:40,000 --> 00:13:44,700
+But it's 45 minutes of drudgery 
+trying to get all the data that 
+
+264
+00:13:44,700 --> 00:13:47,600
+you need to troubleshoot that 
+build, that can take you way out
+
+265
+00:13:47,600 --> 00:13:49,400
+of that flow State and put you 
+in that awful. 
+
+266
+00:13:49,600 --> 00:13:52,000
+Straining state. 
+So be better about Gathering 
+
+267
+00:13:52,000 --> 00:13:54,500
+troubleshooting and forensic 
+data and the case of great. 
+
+268
+00:13:54,500 --> 00:13:56,100
+Oh, that's what we call a build 
+scan, right? 
+
+269
+00:13:56,100 --> 00:13:59,600
+But there's other ways to gather
+this data, then you know, you 
+
+270
+00:13:59,600 --> 00:14:02,100
+kind of keep moving towards, So 
+that's fast. 
+
+271
+00:14:02,300 --> 00:14:04,800
+Well, we also want consistent, 
+right? 
+
+272
+00:14:04,800 --> 00:14:07,800
+We don't want to build the most 
+of the time takes three minutes,
+
+273
+00:14:07,800 --> 00:14:10,400
+but every now and then takes an 
+hour because developers will 
+
+274
+00:14:10,400 --> 00:14:12,600
+just say, okay, well sometimes 
+is build can take an hour. 
+
+275
+00:14:12,600 --> 00:14:15,600
+So I'm just going to cram in all
+of this code knowing that I 
+
+276
+00:14:15,600 --> 00:14:18,300
+might be waiting an hour 
+creating all these additional 
+
+277
+00:14:18,600 --> 00:14:20,600
+additional, you know. 
+Potential break points. 
+
+278
+00:14:21,200 --> 00:14:23,700
+So we got speed, we got 
+consistency, and then there's 
+
+279
+00:14:23,700 --> 00:14:27,100
+reliability, right? 
+Sussing out, flaky tests, 
+
+280
+00:14:27,300 --> 00:14:30,600
+detecting them, putting them on 
+a dashboard, so they can be 
+
+281
+00:14:30,600 --> 00:14:34,200
+dealt with proactively, right? 
+These are the types of actions 
+
+282
+00:14:34,200 --> 00:14:36,700
+that we consider being part of a
+developer productivity, 
+
+283
+00:14:36,700 --> 00:14:39,000
+engineering practice. 
+They focus specifically on the 
+
+284
+00:14:39,000 --> 00:14:42,000
+technology and they put us in 
+this mindset. 
+
+285
+00:14:42,000 --> 00:14:44,800
+They get out of the mindset of 
+Lego is the build fast enough? 
+
+286
+00:14:44,800 --> 00:14:47,100
+I don't know. 
+Nobody's really complaining like
+
+287
+00:14:47,100 --> 00:14:51,100
+to is it as fast as it can 
+possibly Simply be given all 
+
+288
+00:14:51,100 --> 00:14:54,500
+acceleration observation 
+analytics technology because in 
+
+289
+00:14:54,500 --> 00:14:56,600
+our mind that's what we owe this
+work force. 
+
+290
+00:14:56,600 --> 00:14:58,800
+At this point. 
+We are you know, in this is this
+
+291
+00:14:58,800 --> 00:15:01,400
+is as of earlier in this year, I
+mean this is almost a year ago, 
+
+292
+00:15:01,400 --> 00:15:06,200
+old data now, but back in 
+October of 2020, IDC predicted, 
+
+293
+00:15:06,200 --> 00:15:09,000
+that 65 percent of the global 
+GDP would be digitally 
+
+294
+00:15:09,000 --> 00:15:12,700
+transformed by 2022. 
+I was accelerated in part as a 
+
+295
+00:15:12,708 --> 00:15:17,300
+result of covid, but it came 
+true and, you know, let that 
+
+296
+00:15:17,300 --> 00:15:22,000
+sink in as of as of a year ago. 
+Go 65 percent of the global GDP 
+
+297
+00:15:22,000 --> 00:15:26,000
+as software in the loop, that's 
+a tremendous amount of software 
+
+298
+00:15:26,300 --> 00:15:28,400
+leading to a tremendous 
+Workforce. 
+
+299
+00:15:28,700 --> 00:15:31,100
+You know, this is a Workforce 
+that's building software that 
+
+300
+00:15:31,100 --> 00:15:34,500
+that as we kind of know, lifts 
+all areas of human quality of 
+
+301
+00:15:34,500 --> 00:15:36,200
+life, right? 
+I mean, sure. 
+
+302
+00:15:36,300 --> 00:15:38,700
+On the one hand, we get to have 
+our cool VR headsets and smart 
+
+303
+00:15:38,700 --> 00:15:40,500
+phones and stuff. 
+On the other hand, we get to 
+
+304
+00:15:40,500 --> 00:15:44,400
+cure diseases faster. 
+We get to model our genome and 
+
+305
+00:15:44,400 --> 00:15:46,800
+put it into a digital twin. 
+I mean, that just happened over 
+
+306
+00:15:46,800 --> 00:15:48,900
+the last over the course of the 
+last year, too. 
+
+307
+00:15:50,000 --> 00:15:53,300
+We have this Workforce, that's 
+lifting so many boats in the 
+
+308
+00:15:53,300 --> 00:15:57,000
+harbor. 
+We now we do this work, force, 
+
+309
+00:15:57,300 --> 00:16:00,100
+an investment in their 
+happiness, and an investment in 
+
+310
+00:16:00,100 --> 00:16:03,500
+their experience. 
+What what bothers me is that we 
+
+311
+00:16:03,500 --> 00:16:06,000
+actually have known this for a 
+long time. 
+
+312
+00:16:06,000 --> 00:16:10,500
+There was a study done in the 
+mid-80s I think it kind of began
+
+313
+00:16:10,500 --> 00:16:14,000
+in the 70s and and really kind 
+of kind of took hold in the mid 
+
+314
+00:16:14,000 --> 00:16:18,700
+80s called the coding War Games,
+Tom Demarcus and Timothy Lister 
+
+315
+00:16:19,500 --> 00:16:21,700
+These are the two primary 
+authors of the book, people, 
+
+316
+00:16:21,700 --> 00:16:25,000
+where that came out in the end. 
+I know those guys. 
+
+317
+00:16:25,000 --> 00:16:28,700
+Yeah, yeah, sure. 
+These folks were thinking about 
+
+318
+00:16:28,700 --> 00:16:32,300
+productivity back, then the 
+coding War Games, was this cool 
+
+319
+00:16:32,300 --> 00:16:34,500
+study where they just they 
+worked with close to 100 
+
+320
+00:16:34,500 --> 00:16:36,100
+different businesses. 
+I want to say maybe more than 
+
+321
+00:16:36,100 --> 00:16:39,300
+that but they took two 
+developers from each of these 
+
+322
+00:16:39,300 --> 00:16:42,400
+businesses and they gave them a 
+coding task. 
+
+323
+00:16:42,500 --> 00:16:45,700
+Intermediate difficulty they 
+didn't enforce the language or 
+
+324
+00:16:45,700 --> 00:16:47,100
+platform. 
+They let them use whatever they 
+
+325
+00:16:47,100 --> 00:16:49,400
+were comfortable with but they 
+asked them to record. 
+
+326
+00:16:49,500 --> 00:16:53,100
+The amount of time that it took 
+for them to complete the task 
+
+327
+00:16:53,100 --> 00:16:55,800
+and these two folks in the 
+organization were not peered, 
+
+328
+00:16:56,100 --> 00:16:58,300
+they were working separately so 
+they're kind of competing with 
+
+329
+00:16:58,300 --> 00:17:01,300
+one another and the idea was, 
+you know how can we what kind of
+
+330
+00:17:01,300 --> 00:17:03,400
+vectors can we what kind of 
+Dimensions going to kind of look
+
+331
+00:17:03,400 --> 00:17:06,200
+at the data that comes out of 
+the study from what they found 
+
+332
+00:17:06,200 --> 00:17:09,000
+was very interesting. 
+First of all, this is probably 
+
+333
+00:17:09,000 --> 00:17:13,500
+where the myth lure of the 10x 
+developer comes from because 
+
+334
+00:17:13,500 --> 00:17:15,900
+they actually found that some 
+developers were producing it 
+
+335
+00:17:15,900 --> 00:17:18,400
+around 10x. 
+The the rate of other developers
+
+336
+00:17:18,700 --> 00:17:21,500
+but was Oh interesting. 
+Was that there wasn't much 
+
+337
+00:17:21,500 --> 00:17:24,700
+variability inside a single 
+organization, right? 
+
+338
+00:17:24,700 --> 00:17:28,200
+So developers, working inside 
+the same organization were 
+
+339
+00:17:28,200 --> 00:17:32,800
+producing a around 21%. 
+Of the same of the same. 
+
+340
+00:17:32,800 --> 00:17:36,100
+Which if you think about a 10 x,
+scaled top to bottom, that's 
+
+341
+00:17:36,100 --> 00:17:39,200
+like the statistically 
+insignificant noise level, 
+
+342
+00:17:39,500 --> 00:17:40,200
+right? 
+Exactly. 
+
+343
+00:17:40,200 --> 00:17:43,200
+So, but what they found was that
+they started digging in. 
+
+344
+00:17:43,800 --> 00:17:47,100
+They looked at these businesses.
+Now developers were about a 10x 
+
+345
+00:17:47,100 --> 00:17:50,200
+differential organizations were 
+over a 11 x. 
+
+346
+00:17:50,500 --> 00:17:53,600
+There were organizations that 
+were 11x more productive than 
+
+347
+00:17:53,600 --> 00:17:55,800
+the bottom quartile of the 
+people who took part in the 
+
+348
+00:17:55,800 --> 00:17:57,800
+study. 
+So they started digging in a 
+
+349
+00:17:57,808 --> 00:17:59,200
+little further, what's 
+different? 
+
+350
+00:17:59,200 --> 00:18:02,200
+Well they ask questions like how
+much work space you have. 
+
+351
+00:18:02,300 --> 00:18:05,600
+And the top-performing people 
+had like something like 70, 80 
+
+352
+00:18:05,600 --> 00:18:08,700
+square feet to work in where the
+bottom performing quartile were 
+
+353
+00:18:08,900 --> 00:18:11,000
+almost half of that amount of 
+space, right? 
+
+354
+00:18:11,000 --> 00:18:12,900
+Yeah. 
+Just crammed in little little 
+
+355
+00:18:12,900 --> 00:18:14,900
+things too. 
+Like, can you silence your, you 
+
+356
+00:18:14,900 --> 00:18:17,200
+know, big bulky conference phone
+that you had back then? 
+
+357
+00:18:17,200 --> 00:18:19,300
+You know, can you can you divert
+your calls, right? 
+
+358
+00:18:19,400 --> 00:18:21,500
+Right. 
+And little things like that. 
+
+359
+00:18:22,300 --> 00:18:25,000
+Overwhelmingly the top 
+performers had a better 
+
+360
+00:18:25,100 --> 00:18:28,400
+experience to list and what it 
+really came down to what the 
+
+361
+00:18:28,400 --> 00:18:32,000
+study told us was that 
+productivity with all about the 
+
+362
+00:18:32,000 --> 00:18:34,500
+type of experience that was 
+being built for developers which
+
+363
+00:18:34,500 --> 00:18:36,200
+should be a no-brainer, right? 
+I mean, at the end of the day 
+
+364
+00:18:36,200 --> 00:18:38,200
+they still human beings, right? 
+These aren't robots. 
+
+365
+00:18:38,200 --> 00:18:41,600
+Cranking out a human Workforce 
+right? 
+
+366
+00:18:41,700 --> 00:18:49,300
+Not yeah knock on wood GPT for 
+on the horizon, one of the first
+
+367
+00:18:49,500 --> 00:18:54,100
+Two companies I worked for had a
+PA system that was going off all
+
+368
+00:18:54,100 --> 00:18:57,200
+the time and it was really kind 
+of a status thing because they 
+
+369
+00:18:57,200 --> 00:19:00,800
+were they were announcing that 
+this salesperson had an 
+
+370
+00:19:00,800 --> 00:19:03,600
+international call or whatever 
+and this was being broadcast 
+
+371
+00:19:03,600 --> 00:19:05,300
+through the engineering 
+department. 
+
+372
+00:19:05,300 --> 00:19:09,300
+And I noticed that around, I 
+would come in late and stay late
+
+373
+00:19:09,300 --> 00:19:12,200
+and around 5:00. 
+My productivity would go up and 
+
+374
+00:19:12,200 --> 00:19:15,300
+I finally realized oh that's 
+when the, that's when the PA 
+
+375
+00:19:15,300 --> 00:19:20,900
+system person went home and 
+finally One of these evenings, I
+
+376
+00:19:20,900 --> 00:19:26,700
+got up on all the desks around 
+my desk and I cut the wires to 
+
+377
+00:19:26,700 --> 00:19:33,000
+the to the speakers to reduce 
+the noise level. 
+
+378
+00:19:33,600 --> 00:19:36,700
+So if you're that was my 
+contribution to developer 
+
+379
+00:19:36,700 --> 00:19:39,400
+productivity engineering, that's
+great. 
+
+380
+00:19:40,000 --> 00:19:41,700
+Love it. 
+Pioneer obviously. 
+
+381
+00:19:43,500 --> 00:19:48,600
+So this is, this is about how 
+can we better keep developers in
+
+382
+00:19:48,600 --> 00:19:51,700
+that flow state. 
+It and there's many different 
+
+383
+00:19:51,700 --> 00:19:55,100
+factors to that. 
+Obviously, the the environment 
+
+384
+00:19:55,100 --> 00:19:58,200
+is you mentioned like, dude, our
+developers comfortable if you 
+
+385
+00:19:58,200 --> 00:19:59,900
+know, their chairs comfortable, 
+whatever. 
+
+386
+00:20:00,000 --> 00:20:03,400
+But then there's the tooling and
+the feedback cycles and all of 
+
+387
+00:20:03,400 --> 00:20:05,900
+that. 
+I want to, I think that your 
+
+388
+00:20:06,700 --> 00:20:13,200
+categorizing DPE into both the 
+tools and the practice is a 
+
+389
+00:20:13,200 --> 00:20:16,100
+really good way to look at it 
+because, you know, yeah, we can 
+
+390
+00:20:16,100 --> 00:20:19,500
+improve the tools but if we're 
+not, if we don't have the That 
+
+391
+00:20:19,500 --> 00:20:23,700
+aside then how do we know we're 
+actually doing all the right 
+
+392
+00:20:23,700 --> 00:20:25,600
+things, right? 
+Like, like, how do you look at 
+
+393
+00:20:25,600 --> 00:20:28,400
+the difference between the tools
+in the practice and I would 
+
+394
+00:20:28,400 --> 00:20:32,900
+throw in on top of that culture 
+and education. 
+
+395
+00:20:33,800 --> 00:20:35,800
+Yeah. 
+Great questions. 
+
+396
+00:20:35,800 --> 00:20:39,200
+Yeah. 
+So the practice is really more 
+
+397
+00:20:39,200 --> 00:20:43,200
+about It's almost, it's almost 
+if you take a look at the way 
+
+398
+00:20:43,200 --> 00:20:45,800
+that space framework is laid out
+where it's not really 
+
+399
+00:20:45,800 --> 00:20:48,600
+prescriptive, you know, it's 
+like these are the five 
+
+400
+00:20:48,600 --> 00:20:52,100
+dimensions and you want to 
+normalize, whatever data you get
+
+401
+00:20:52,100 --> 00:20:55,900
+about productivity back into one
+of these five categories are 
+
+402
+00:20:55,900 --> 00:20:58,600
+dimensions but there's no 
+prescription as to how you 
+
+403
+00:20:58,600 --> 00:21:00,900
+gather the data you know whether
+it's through. 
+
+404
+00:21:00,900 --> 00:21:06,400
+What's the space framework? 
+Yeah, space is a newer framework
+
+405
+00:21:06,400 --> 00:21:13,300
+that was introduced in a paper 
+by Nicole Forest Grand from the 
+
+406
+00:21:13,300 --> 00:21:17,800
+University of Vancouver British 
+Columbia Brian Hook from 
+
+407
+00:21:17,800 --> 00:21:21,500
+Microsoft and a number of other 
+people who kind of contributed 
+
+408
+00:21:21,500 --> 00:21:24,100
+to this. 
+And it's a way of sort of trying
+
+409
+00:21:24,100 --> 00:21:27,200
+to comprehensively define the 
+productivity of a business 
+
+410
+00:21:27,200 --> 00:21:31,500
+through a normalization model. 
+So space stands for satisfaction
+
+411
+00:21:32,600 --> 00:21:37,500
+performance activities, 
+collaboration, and efficiency 
+
+412
+00:21:37,500 --> 00:21:39,700
+and flow. 
+And the way that the framework 
+
+413
+00:21:39,700 --> 00:21:43,400
+is supposed to work, is that you
+Gather feedback somehow from the
+
+414
+00:21:43,400 --> 00:21:46,500
+developer organization. 
+Sometimes, it's just a simple 
+
+415
+00:21:46,500 --> 00:21:48,000
+question. 
+Like there was a study done in 
+
+416
+00:21:48,000 --> 00:21:51,900
+April of 2022 where all they did
+was ask managers and developers.
+
+417
+00:21:52,200 --> 00:21:55,200
+Very simple question, how do you
+think about productivity in your
+
+418
+00:21:55,200 --> 00:21:57,600
+organization or the managers 
+were asked? 
+
+419
+00:21:57,600 --> 00:21:59,400
+How do you think about 
+productivity on your team? 
+
+420
+00:21:59,400 --> 00:22:02,400
+Very, very similar and they 
+would respond with a short 
+
+421
+00:22:02,400 --> 00:22:05,700
+answer and then each sentence 
+would be categorized, okay? 
+
+422
+00:22:05,700 --> 00:22:08,700
+This sentence was about 
+satisfaction, this sentence was 
+
+423
+00:22:08,700 --> 00:22:11,400
+about performance, this sentence
+was about, T. 
+
+424
+00:22:12,000 --> 00:22:16,100
+So it provides this very 
+flexible way and then the goal 
+
+425
+00:22:16,100 --> 00:22:18,800
+to the goal is really to try to 
+balance all five of these 
+
+426
+00:22:18,800 --> 00:22:21,500
+Dimensions. 
+So that as a business you're 
+
+427
+00:22:21,500 --> 00:22:25,700
+giving equal attention to 
+satisfaction performance 
+
+428
+00:22:25,800 --> 00:22:28,900
+activity, collaboration, 
+efficiency and flow to try to 
+
+429
+00:22:28,900 --> 00:22:30,700
+come up with a balanced 
+productivity model. 
+
+430
+00:22:32,400 --> 00:22:38,500
+And so, the space framework is 
+interesting because When you 
+
+431
+00:22:38,500 --> 00:22:41,100
+look at other things like for 
+instance Dora metrics or stuff 
+
+432
+00:22:41,100 --> 00:22:44,100
+like that, those are a little 
+bit more prescriptive and the 
+
+433
+00:22:44,108 --> 00:22:47,000
+doors, the devops research 
+Association metrics. 
+
+434
+00:22:47,000 --> 00:22:52,300
+These metrics were developed 
+inside of Google and are now one
+
+435
+00:22:52,300 --> 00:22:54,600
+of the primary set of metrics 
+that people look at these are 
+
+436
+00:22:54,600 --> 00:22:57,300
+things like mean time to 
+resolution or commit to deploy 
+
+437
+00:22:57,300 --> 00:23:01,400
+other sets of metrics but these 
+metrics are very prescriptive, 
+
+438
+00:23:01,400 --> 00:23:04,000
+you know, and they're like hey 
+gather this data, this way, 
+
+439
+00:23:04,000 --> 00:23:07,900
+improve this thing this way, 
+whereas space what I like about 
+
+440
+00:23:07,900 --> 00:23:11,600
+About it. 
+Is that it goes beyond I think 
+
+441
+00:23:11,600 --> 00:23:14,500
+the tactile parts of 
+productivity like how long did 
+
+442
+00:23:14,500 --> 00:23:18,900
+it take to get from point A to 
+point B and also also explores 
+
+443
+00:23:18,900 --> 00:23:23,100
+things like satisfaction and 
+things like overall efficiency. 
+
+444
+00:23:23,200 --> 00:23:26,700
+Right? 
+And so that's how it relates 
+
+445
+00:23:26,700 --> 00:23:30,600
+back to like culture like how 
+can culture impact impact 
+
+446
+00:23:30,600 --> 00:23:34,100
+productivity. 
+And so not just not just looking
+
+447
+00:23:34,100 --> 00:23:38,200
+at it through the lens of of 
+tools and build times and And 
+
+448
+00:23:38,200 --> 00:23:42,600
+feedback Cycles. 
+But but how often am I getting 
+
+449
+00:23:42,600 --> 00:23:44,200
+stressed out and getting 
+blocked? 
+
+450
+00:23:44,200 --> 00:23:48,500
+Because my manager is, you know,
+being a pain or whatever it is, 
+
+451
+00:23:48,500 --> 00:23:49,700
+right? 
+It's like trying to identify 
+
+452
+00:23:49,700 --> 00:23:52,700
+those sorts of pieces to the 
+equation as well, right? 
+
+453
+00:23:52,700 --> 00:23:54,700
+Yeah. 
+Totally, totally, which again, I
+
+454
+00:23:54,708 --> 00:23:57,400
+think it gives this nice 
+comprehensive you but I love 
+
+455
+00:23:57,400 --> 00:23:58,900
+that. 
+It's a normalized model to 
+
+456
+00:23:58,900 --> 00:24:01,800
+because then it's like really 
+you can gather this data and 
+
+457
+00:24:01,800 --> 00:24:04,000
+whatever makes sense culturally 
+for your organization. 
+
+458
+00:24:04,000 --> 00:24:07,500
+So so then DPE, I would say 
+follows a similar formula. 
+
+459
+00:24:07,900 --> 00:24:13,300
+In that we're not exactly 
+telling you how to do it. 
+
+460
+00:24:13,300 --> 00:24:16,300
+We're telling you what's 
+important and why you should be 
+
+461
+00:24:16,300 --> 00:24:19,700
+looking at it right now. 
+Of course, we go, as far as 
+
+462
+00:24:19,700 --> 00:24:22,900
+great Lenin prize and we're very
+opinionated about how we think 
+
+463
+00:24:22,900 --> 00:24:24,900
+we should gather the data and 
+that sort of thing. 
+
+464
+00:24:25,200 --> 00:24:29,100
+But as a practice, we want this 
+to be equally applicable to a 
+
+465
+00:24:29,100 --> 00:24:33,600
+see native environment, a 
+c-sharp dotnet environment, a 
+
+466
+00:24:33,608 --> 00:24:36,800
+Java jvm environment. 
+Obviously a more JavaScript or 
+
+467
+00:24:36,800 --> 00:24:39,200
+fun, and environment. 
+Any, any environment that 
+
+468
+00:24:39,200 --> 00:24:43,600
+involves writing code testing 
+code, and building code was a 
+
+469
+00:24:43,608 --> 00:24:46,000
+very much where we're, you know,
+if we were in a part of the 
+
+470
+00:24:46,008 --> 00:24:49,200
+devops loop that we focus on its
+that, you know, it's design, how
+
+471
+00:24:49,200 --> 00:24:55,100
+it's built test code, right? 
+And so that's that's very much 
+
+472
+00:24:55,100 --> 00:25:00,400
+part of our focus. 
+And so, so anything that, you 
+
+473
+00:25:00,400 --> 00:25:02,900
+know. 
+So when we talk again about like
+
+474
+00:25:02,900 --> 00:25:05,300
+the practice versus the tool, 
+right? 
+
+475
+00:25:05,300 --> 00:25:09,700
+The practice is more like, hey, 
+You should have something 
+
+476
+00:25:09,800 --> 00:25:12,900
+keeping track of every single 
+build that takes place in your 
+
+477
+00:25:12,900 --> 00:25:15,100
+environment. 
+And there are some important 
+
+478
+00:25:15,100 --> 00:25:18,100
+metrics that you should be 
+gathering and visualizing about 
+
+479
+00:25:18,100 --> 00:25:22,200
+that bill, right? 
+And and, and there are some 
+
+480
+00:25:22,700 --> 00:25:27,800
+aggregate metrics that you 
+should be looking at failure 
+
+481
+00:25:27,800 --> 00:25:31,400
+rates across all builds. 
+For instance, one of the one of 
+
+482
+00:25:31,400 --> 00:25:33,500
+the important kind of pillars of
+developer productivity. 
+
+483
+00:25:33,500 --> 00:25:36,700
+Engineering again is you know 
+consistency reliability of the 
+
+484
+00:25:36,700 --> 00:25:41,100
+tool chain and the elimination 
+Avoidable failures developers 
+
+485
+00:25:41,100 --> 00:25:44,600
+all the time, run into these 
+like non verification failures. 
+
+486
+00:25:44,800 --> 00:25:47,600
+Maybe they're doing an 
+integration test and the API 
+
+487
+00:25:47,600 --> 00:25:51,000
+servers throwing 500 errors 
+intermittently and they've just 
+
+488
+00:25:51,000 --> 00:25:54,100
+waited 15 minutes for this part 
+of the test cycle to come up, 
+
+489
+00:25:54,100 --> 00:25:56,300
+and then it just fails and now 
+they have to start it over 
+
+490
+00:25:56,300 --> 00:25:58,700
+again. 
+Well, in real life, developers 
+
+491
+00:25:58,700 --> 00:26:01,600
+are like, well, that sucked. 
+I better do that again. 
+
+492
+00:26:01,700 --> 00:26:05,800
+Oh, well, and then that's it. 
+But when you're a DPE 
+
+493
+00:26:05,800 --> 00:26:09,700
+organization that failure is 
+bent, Tract and it's been given 
+
+494
+00:26:09,700 --> 00:26:12,300
+some metadata and it's been 
+aggregated. 
+
+495
+00:26:12,300 --> 00:26:18,100
+So then we're able to say this 
+one, failure has impacted 200 
+
+496
+00:26:18,100 --> 00:26:21,800
+developers in the organization 
+over the last week, they waited 
+
+497
+00:26:21,800 --> 00:26:23,600
+10 minutes to encounter the 
+failure. 
+
+498
+00:26:23,900 --> 00:26:26,600
+It went across this. 
+And here's how much it cost. 
+
+499
+00:26:26,600 --> 00:26:29,200
+Here's how, that'll get the 
+yeah. 
+
+500
+00:26:29,200 --> 00:26:31,400
+That'll get the attention of the
+NBA's. 
+
+501
+00:26:31,600 --> 00:26:34,200
+The cost of inaction or the 
+return on investment, whatever 
+
+502
+00:26:34,200 --> 00:26:39,000
+you want to call it of a DP e. 
+DP effort is Is such a 
+
+503
+00:26:39,000 --> 00:26:41,400
+no-brainer James to your point 
+earlier, which is where you 
+
+504
+00:26:41,400 --> 00:26:45,000
+start getting into like, why, 
+why would anyone object to this,
+
+505
+00:26:45,000 --> 00:26:47,900
+you know, and it's like, I don't
+think anybody really does, you 
+
+506
+00:26:47,900 --> 00:26:49,800
+know, I think it's again, it's a
+Consciousness thing. 
+
+507
+00:26:49,800 --> 00:26:52,600
+I mean that's that's, you know, 
+my job really. 
+
+508
+00:26:52,600 --> 00:26:55,100
+I mean obviously, you know, 
+Gradle Enterprise is a product 
+
+509
+00:26:55,100 --> 00:26:59,900
+Focus for me, but my job really 
+is more about spreading word 
+
+510
+00:26:59,900 --> 00:27:03,600
+about this, this practice, you 
+know, which is, which is 
+
+511
+00:27:03,600 --> 00:27:09,500
+something that is like the I'd 
+like I like the flaky Test 
+
+512
+00:27:09,500 --> 00:27:14,600
+example because I think it 
+really is a specific example. 
+
+513
+00:27:14,900 --> 00:27:19,000
+Where every developer deals with
+flaky tests, right? 
+
+514
+00:27:19,000 --> 00:27:24,400
+It's like test can be flaky and 
+that's just reality and yet very
+
+515
+00:27:24,400 --> 00:27:28,300
+few organizations actually take 
+something like the flaky tests 
+
+516
+00:27:28,300 --> 00:27:34,000
+and say how much is this flaky 
+tests actually costumes across 
+
+517
+00:27:34,000 --> 00:27:35,500
+our whole developer 
+organization? 
+
+518
+00:27:35,500 --> 00:27:41,000
+What is the Impact of this flaky
+tests on our productivity like 
+
+519
+00:27:41,900 --> 00:27:44,700
+everyone just kind of accepts 
+flaky tests a reality. 
+
+520
+00:27:44,900 --> 00:27:46,600
+And we can't do anything about 
+it. 
+
+521
+00:27:47,000 --> 00:27:50,800
+And doesn't actually look at 
+what the actual cost of this 
+
+522
+00:27:50,800 --> 00:27:53,800
+flaky test is. 
+And if we probably saw the cost,
+
+523
+00:27:53,900 --> 00:27:57,200
+the billions of dollars that 
+across the world were wasting on
+
+524
+00:27:57,200 --> 00:28:00,300
+flaky tests. 
+Maybe we would like, do 
+
+525
+00:28:00,300 --> 00:28:03,300
+something about it, you know? 
+And I don't see, I think one of 
+
+526
+00:28:03,300 --> 00:28:10,000
+the problems is that we it Kind 
+of like the compiling cartoon is
+
+527
+00:28:10,000 --> 00:28:12,800
+that we don't think it's an 
+option. 
+
+528
+00:28:13,100 --> 00:28:17,100
+We think we're oh no, this is 
+just this tool. 
+
+529
+00:28:17,100 --> 00:28:19,500
+That's how long it takes. 
+We don't have any choice here. 
+
+530
+00:28:19,800 --> 00:28:23,700
+And if the idea of DPE, is 
+saying, well, you do have a 
+
+531
+00:28:23,700 --> 00:28:25,900
+choice. 
+You can focus on these things. 
+
+532
+00:28:25,900 --> 00:28:31,600
+You can fix these things and I 
+would like to know, how do you 
+
+533
+00:28:32,200 --> 00:28:37,700
+propose introducing DP? 
+You know, bringing EP into an 
+
+534
+00:28:37,700 --> 00:28:41,700
+organization and, you know, and 
+also revisit the education 
+
+535
+00:28:41,700 --> 00:28:44,300
+question and that I post for. 
+Oh yeah, sorry I didn't had any 
+
+536
+00:28:44,300 --> 00:28:45,900
+of the education, education 
+question. 
+
+537
+00:28:45,900 --> 00:28:49,400
+So yeah, you know, the first 
+part, it starts with an 
+
+538
+00:28:49,400 --> 00:28:51,900
+emotional appeal, right? 
+It starts in the wake-up, call. 
+
+539
+00:28:52,000 --> 00:28:54,600
+I almost think about it, like, 
+the one little prairie, dog in 
+
+540
+00:28:54,600 --> 00:28:56,200
+the cube farm. 
+He likes stands up and says, I 
+
+541
+00:28:56,200 --> 00:28:58,300
+don't have to take this anymore.
+It doesn't have to be this way, 
+
+542
+00:28:58,300 --> 00:29:04,000
+like somebody has to break 
+through and have that have that 
+
+543
+00:29:04,000 --> 00:29:07,000
+kind of insight that that spark 
+that's like A minute. 
+
+544
+00:29:07,600 --> 00:29:08,800
+What have I been doing my whole 
+life? 
+
+545
+00:29:08,800 --> 00:29:11,800
+We could focus on this. 
+We do have the ability to gather
+
+546
+00:29:11,800 --> 00:29:13,400
+this data. 
+We do have the ability to make 
+
+547
+00:29:13,400 --> 00:29:16,700
+this better. 
+We can detect flaky tests. 
+
+548
+00:29:16,700 --> 00:29:20,300
+We can put them on a dashboard 
+to date to gauge their priority 
+
+549
+00:29:20,300 --> 00:29:23,900
+to jeans is point. 
+So, it starts by having that 
+
+550
+00:29:23,900 --> 00:29:25,800
+champion, right? 
+It starts by having that person 
+
+551
+00:29:25,800 --> 00:29:29,500
+who says, you know what and 
+sometimes this is the person who
+
+552
+00:29:29,500 --> 00:29:32,300
+brought devops into the 
+organization 10 years ago, 
+
+553
+00:29:32,400 --> 00:29:34,200
+right? 
+Sometimes this is the senior 
+
+554
+00:29:34,200 --> 00:29:38,000
+developer who spends a few hours
+of their week thinking about 
+
+555
+00:29:38,000 --> 00:29:40,900
+improving productivity for the 
+team, even though it's not a 
+
+556
+00:29:40,900 --> 00:29:44,200
+full time position for them, but
+it's a matter of reaching and 
+
+557
+00:29:44,200 --> 00:29:47,800
+sort of waking these folks up. 
+There's, there's also, there's a
+
+558
+00:29:47,808 --> 00:29:51,100
+virtuous cycle that can occur 
+here to which, which we love to 
+
+559
+00:29:51,100 --> 00:29:52,800
+see. 
+Hopefully, this is what happens,
+
+560
+00:29:53,100 --> 00:29:57,000
+which is where somebody can 
+actually take this practice and 
+
+561
+00:29:57,000 --> 00:30:00,100
+use it to improve their own 
+career path to be able to say, 
+
+562
+00:30:00,100 --> 00:30:02,200
+okay wow, I am now a 
+productivity engineer. 
+
+563
+00:30:02,200 --> 00:30:04,200
+And I make these wonderful 
+contributions to the 
+
+564
+00:30:04,200 --> 00:30:06,300
+organization by reducing this 
+cost. 
+
+565
+00:30:06,500 --> 00:30:09,300
+Reducing this risk improving the
+brand and all these other 
+
+566
+00:30:09,300 --> 00:30:11,500
+things. 
+So it can actually if you think 
+
+567
+00:30:11,500 --> 00:30:14,600
+about the heroism involved in a 
+position like that, you know, I 
+
+568
+00:30:14,600 --> 00:30:17,500
+always like to tell people think
+about who you could have been to
+
+569
+00:30:17,500 --> 00:30:19,000
+your company. 
+If you were the person who 
+
+570
+00:30:19,000 --> 00:30:22,800
+brought in devops five years ago
+or ten years ago, good news is 
+
+571
+00:30:22,800 --> 00:30:26,300
+DPE is new Netflix. 
+Only started doing this back in 
+
+572
+00:30:26,300 --> 00:30:28,500
+2017. 
+LinkedIn started doing this back
+
+573
+00:30:28,500 --> 00:30:31,200
+in 2018, right? 
+It's still new enough that you 
+
+574
+00:30:31,200 --> 00:30:34,400
+haven't missed the boat on it. 
+You can be kind of a Pioneer in 
+
+575
+00:30:34,400 --> 00:30:37,700
+thinking about this. 
+So it starts there, starts with 
+
+576
+00:30:37,700 --> 00:30:40,600
+a champion, then start with a 
+project, right? 
+
+577
+00:30:40,900 --> 00:30:43,600
+It depends on the level of 
+effort that you really want to 
+
+578
+00:30:43,600 --> 00:30:45,300
+put into doing that 
+pre-research. 
+
+579
+00:30:45,500 --> 00:30:48,900
+But ideally you want to pick a 
+really problematic project, 
+
+580
+00:30:48,900 --> 00:30:50,100
+right? 
+Ideally you want to look at a 
+
+581
+00:30:50,100 --> 00:30:53,600
+project that's got an hour plus 
+build and test, cycle time, 
+
+582
+00:30:53,600 --> 00:30:57,900
+associated with it. 
+That has known flakiness known 
+
+583
+00:30:57,900 --> 00:31:01,000
+in consistencies in the build 
+start start with something like 
+
+584
+00:31:01,000 --> 00:31:02,500
+that. 
+But I do say make it a single 
+
+585
+00:31:02,500 --> 00:31:05,300
+project because there's a number
+of vectors that you're going to 
+
+586
+00:31:05,300 --> 00:31:06,300
+have to come in to actually 
+sort. 
+
+587
+00:31:06,500 --> 00:31:09,500
+Improve this right on the 
+acceleration side. 
+
+588
+00:31:09,500 --> 00:31:12,300
+You're going to have to look 
+into which acceleration 
+
+589
+00:31:12,400 --> 00:31:15,500
+Solutions might be, you know, 
+viable for your code base for 
+
+590
+00:31:15,500 --> 00:31:18,600
+the language for the framework. 
+Does your build tool have a 
+
+591
+00:31:18,608 --> 00:31:21,300
+build cash? 
+Can you do build caching, for 
+
+592
+00:31:21,300 --> 00:31:25,000
+instance, caching individual 
+phases of the build so that they
+
+593
+00:31:25,000 --> 00:31:29,500
+don't have to be rerun, you 
+know, a second time are you able
+
+594
+00:31:29,500 --> 00:31:34,000
+to distribute tests right 
+whether that's through CI fan 
+
+595
+00:31:34,000 --> 00:31:36,200
+out or even better than CI fan 
+out? 
+
+596
+00:31:36,800 --> 00:31:39,900
+You know, can you set up like 
+j-unit Runners inside of a 
+
+597
+00:31:39,900 --> 00:31:43,400
+Docker image that you can throw 
+at a horizontal pot autoscaler 
+
+598
+00:31:43,800 --> 00:31:45,600
+in kubernetes? 
+And elastically scale? 
+
+599
+00:31:45,600 --> 00:31:47,700
+The way the tests are 
+determined. 
+
+600
+00:31:48,500 --> 00:31:53,100
+Can you predictively use a model
+as opposed to manually 
+
+601
+00:31:53,100 --> 00:31:56,400
+determining which tests should 
+be selected per run. 
+
+602
+00:31:56,600 --> 00:31:59,400
+Right? 
+So you know can we can we apply 
+
+603
+00:31:59,400 --> 00:32:02,200
+any of these acceleration 
+Technologies to build great? 
+
+604
+00:32:02,700 --> 00:32:06,200
+The the observation the 
+analytics that's almost like the
+
+605
+00:32:06,400 --> 00:32:08,100
+First step. 
+I mean, really. 
+
+606
+00:32:08,100 --> 00:32:10,500
+I, you know, for anybody who's 
+kind of looking at me glazed 
+
+607
+00:32:10,500 --> 00:32:13,400
+over after having a DP top, 
+you're like, I want to do this 
+
+608
+00:32:13,400 --> 00:32:16,600
+but I don't know how, you know, 
+then it's like start with the 
+
+609
+00:32:16,600 --> 00:32:19,400
+measurements, just start with 
+the measurements. 
+
+610
+00:32:19,400 --> 00:32:21,200
+Go. 
+Look at your build scripts, find
+
+611
+00:32:21,200 --> 00:32:23,000
+a way to yank that last bit of 
+data out. 
+
+612
+00:32:23,000 --> 00:32:25,900
+How long did this take? 
+Do science on it being science 
+
+613
+00:32:25,900 --> 00:32:26,900
+on it. 
+Yeah. 
+
+614
+00:32:28,300 --> 00:32:31,100
+Start because we it's you know, 
+it's ancient multiple 
+
+615
+00:32:31,100 --> 00:32:33,300
+thousand-year-old wisdom that 
+what gets measured gets 
+
+616
+00:32:33,300 --> 00:32:37,100
+improved, right? 
+And that's that's a A good place
+
+617
+00:32:37,100 --> 00:32:39,600
+to start is just with that 
+instrumentation and Gathering 
+
+618
+00:32:39,600 --> 00:32:42,800
+some of that Telemetry about 
+what's actually happening with 
+
+619
+00:32:42,800 --> 00:32:46,900
+this build because generally 
+that's enough to start driving 
+
+620
+00:32:46,900 --> 00:32:50,000
+interest Beyond you know, the 
+first person to kind of put this
+
+621
+00:32:50,000 --> 00:32:53,000
+in because as soon as you do 
+that and then maybe you took a 
+
+622
+00:32:53,000 --> 00:32:57,300
+take a look at let's say that 
+this is an hour-long build, but 
+
+623
+00:32:57,300 --> 00:33:00,300
+we did in the case of Gradle we 
+did a build scan on and as a 
+
+624
+00:33:00,300 --> 00:33:04,100
+maven build and we found out 
+that 90% of the build tasks were
+
+625
+00:33:04,100 --> 00:33:08,200
+cacheable. 
+And now, The say we're wasting 
+
+626
+00:33:09,400 --> 00:33:13,600
+90% of an hour waiting for this 
+build to complete. 
+
+627
+00:33:13,700 --> 00:33:15,800
+And we're doing this two 
+thousand times a week. 
+
+628
+00:33:16,200 --> 00:33:19,600
+You know, once those numbers are
+out there, it becomes really 
+
+629
+00:33:19,600 --> 00:33:23,100
+hard to unsee, you know, it 
+becomes one of these things 
+
+630
+00:33:23,100 --> 00:33:24,300
+where you look left, you look 
+right. 
+
+631
+00:33:24,300 --> 00:33:27,600
+And you're like, wow, we are 
+just like bleeding over here, 
+
+632
+00:33:27,900 --> 00:33:30,700
+and I didn't even know this 
+yesterday, but now, I can't stop
+
+633
+00:33:30,700 --> 00:33:33,400
+seeing it, right? 
+But those are actually very 
+
+634
+00:33:33,400 --> 00:33:36,600
+typical reactions. 
+I mean like especially Ali, when
+
+635
+00:33:36,600 --> 00:33:38,800
+you start with folks who are 
+maybe already doing devops for 
+
+636
+00:33:38,800 --> 00:33:41,500
+an organization, there's 
+generally like I'd say kind of 
+
+637
+00:33:41,500 --> 00:33:44,300
+three audiences that we sort of 
+address, right? 
+
+638
+00:33:44,300 --> 00:33:47,600
+I mean obviously the Java user 
+practitioner Community, hey, you
+
+639
+00:33:47,600 --> 00:33:51,100
+deserve better, you know, let us
+help you get there, then there's
+
+640
+00:33:51,100 --> 00:33:53,400
+their bosses. 
+Hey, your employees deserve 
+
+641
+00:33:53,400 --> 00:33:55,400
+better. 
+Let us help you build a better 
+
+642
+00:33:55,400 --> 00:33:59,000
+experience for them, but the 
+devops crowd is really compelled
+
+643
+00:33:59,000 --> 00:34:02,600
+by DP e as well, I'll get in 
+front of a devops audience and 
+
+644
+00:34:02,600 --> 00:34:05,000
+I've had feedback where people 
+do was a great talk. 
+
+645
+00:34:05,000 --> 00:34:09,500
+I learned so much, Was also the 
+most frustrating talk that I've 
+
+646
+00:34:09,500 --> 00:34:12,100
+heard in years because I'm 
+listening to everything you're 
+
+647
+00:34:12,100 --> 00:34:15,600
+saying and just kicking myself 
+that we weren't already doing 
+
+648
+00:34:15,600 --> 00:34:18,600
+these things, right? 
+So a lot of times that's enough 
+
+649
+00:34:18,600 --> 00:34:21,300
+to kind of Catch Fire and the 
+organization is just to start 
+
+650
+00:34:21,300 --> 00:34:25,000
+taking those measurements and 
+showing them to somebody but 
+
+651
+00:34:25,000 --> 00:34:26,800
+then really you know you start 
+with that first project. 
+
+652
+00:34:26,800 --> 00:34:29,600
+You see the success with it, the
+developers are happy. 
+
+653
+00:34:29,900 --> 00:34:33,600
+You know they think about going 
+to the to the world before after
+
+654
+00:34:33,600 --> 00:34:35,500
+you make these improvements to 
+like I never want to go back 
+
+655
+00:34:35,500 --> 00:34:37,900
+there man. 
+And then, you know, it tends to 
+
+656
+00:34:37,900 --> 00:34:40,400
+be a thing that then kind of 
+scales throughout the rest of 
+
+657
+00:34:40,400 --> 00:34:43,300
+the organization. 
+Now, if I had it, my way, if I 
+
+658
+00:34:43,300 --> 00:34:46,400
+was coming in and had the type 
+of power within an organization 
+
+659
+00:34:46,400 --> 00:34:50,300
+to enforce this on day one, I 
+would actually start with the 
+
+660
+00:34:50,300 --> 00:34:52,100
+team. 
+I would actually start 
+
+661
+00:34:52,100 --> 00:34:54,400
+delegating a core team of DP 
+Engineers. 
+
+662
+00:34:54,400 --> 00:34:58,000
+Whose job it is is to go through
+seek opportunities for these 
+
+663
+00:34:58,000 --> 00:35:00,600
+improvements Cascade, those 
+improvements. 
+
+664
+00:35:00,900 --> 00:35:04,600
+Be accountable for those 
+improvements and then, you know,
+
+665
+00:35:04,600 --> 00:35:06,700
+continue to drive the efforts 
+throughout the Ization. 
+
+666
+00:35:06,700 --> 00:35:08,500
+It's much better to have that 
+Focus. 
+
+667
+00:35:10,400 --> 00:35:13,800
+So question on, how do you do 
+you have a way to Think Through?
+
+668
+00:35:14,300 --> 00:35:16,700
+Let's say that we're starting to
+get all this data around. 
+
+669
+00:35:16,700 --> 00:35:21,300
+Like, okay, like incremental 
+builds are terribly slow full 
+
+670
+00:35:21,300 --> 00:35:23,900
+bills, you know, CI builds are 
+incredibly. 
+
+671
+00:35:23,900 --> 00:35:29,400
+Slow flaky tests are costing us 
+acts you were breaking. 
+
+672
+00:35:29,400 --> 00:35:33,000
+Somebody is breaking them build 
+you know, X number of times per 
+
+673
+00:35:33,000 --> 00:35:34,800
+week, whatever. 
+And there's a casa. 
+
+674
+00:35:35,000 --> 00:35:39,000
+So you start to like like get 
+the information about where the 
+
+675
+00:35:39,600 --> 00:35:43,300
+Where the things are broken. 
+But then there's this other step
+
+676
+00:35:43,300 --> 00:35:46,500
+of like, okay, what should we 
+tackle first, or how do we 
+
+677
+00:35:46,500 --> 00:35:49,400
+prioritize these things? 
+Like how much work is it going 
+
+678
+00:35:49,400 --> 00:35:52,800
+to take to fix X and how much 
+return are we going to get on 
+
+679
+00:35:52,800 --> 00:35:54,100
+that? 
+On that work? 
+
+680
+00:35:54,100 --> 00:35:56,200
+Do you have any model for kind 
+of that? 
+
+681
+00:35:56,200 --> 00:35:59,800
+I guess that prioritization of 
+once, you've identified the 
+
+682
+00:35:59,800 --> 00:36:03,000
+broken things, how do you then 
+decide what what to fix for? 
+
+683
+00:36:03,000 --> 00:36:05,200
+No, it's a great question in 
+general. 
+
+684
+00:36:05,200 --> 00:36:08,300
+And of course, it's not always 
+this clean because you have to 
+
+685
+00:36:08,300 --> 00:36:11,500
+always, you know, there's Is 
+this, you know, is it a super 
+
+686
+00:36:11,500 --> 00:36:14,400
+high risk application? 
+You know, is this like one of 
+
+687
+00:36:14,400 --> 00:36:17,100
+these critical applications that
+touches everything else in the 
+
+688
+00:36:17,100 --> 00:36:22,100
+entire business, in which case, 
+you may see a huge impact from 
+
+689
+00:36:22,100 --> 00:36:24,600
+improving this application, but 
+it may also come at a fairly 
+
+690
+00:36:24,600 --> 00:36:25,800
+high risk. 
+All right. 
+
+691
+00:36:25,800 --> 00:36:30,700
+So, you know, again, the the 
+nice part about sort of 
+
+692
+00:36:30,700 --> 00:36:35,000
+instrumenting, all this, there 
+are things that you can look at 
+
+693
+00:36:35,000 --> 00:36:39,300
+in the build that can give you 
+that can give you some Clues as 
+
+694
+00:36:39,300 --> 00:36:41,600
+to How much impact you know one 
+of these acceleration 
+
+695
+00:36:41,600 --> 00:36:45,500
+Technologies get it is going to 
+move like for instance, going 
+
+696
+00:36:45,500 --> 00:36:50,600
+back to the jvm side of things 
+but even the the free build scan
+
+697
+00:36:50,700 --> 00:36:53,100
+tool that's out there that's 
+available for Gradle and for 
+
+698
+00:36:53,100 --> 00:36:59,500
+Maven and for Basil gives you 
+information on the cash ability 
+
+699
+00:37:00,000 --> 00:37:01,800
+of the different phases of that 
+build. 
+
+700
+00:37:01,800 --> 00:37:04,200
+So like so you get a maven 
+project that Maven project has 
+
+701
+00:37:04,200 --> 00:37:07,500
+three thousand goals. 
+Let's just say a single build 
+
+702
+00:37:07,500 --> 00:37:12,100
+skin can actually tell you. 
+Alright, this project has 80% of
+
+703
+00:37:12,100 --> 00:37:13,600
+its goals that are cashable, 
+right? 
+
+704
+00:37:13,600 --> 00:37:16,200
+We turn on a local cache. 
+We should be seeing this this 
+
+705
+00:37:16,200 --> 00:37:18,900
+amount of savings, right? 
+So typically what we'll do is 
+
+706
+00:37:18,900 --> 00:37:22,200
+we'll say apply this to multiple
+projects and then turn around 
+
+707
+00:37:22,200 --> 00:37:24,900
+and say, you know, what's going 
+to have the most impact? 
+
+708
+00:37:24,900 --> 00:37:26,800
+Then of course, you balance that
+against the risk, right? 
+
+709
+00:37:26,800 --> 00:37:29,100
+I don't care if it's like, this 
+project was like, oh my God, 
+
+710
+00:37:29,100 --> 00:37:30,900
+would you say 99% of the build 
+time? 
+
+711
+00:37:31,300 --> 00:37:33,600
+But it's the most Mission 
+critical project that we have in
+
+712
+00:37:33,600 --> 00:37:36,300
+the whole company and it's 
+whatever an API Center Point for
+
+713
+00:37:36,300 --> 00:37:39,100
+everything else that runs and so
+we turn this thing off and 
+
+714
+00:37:39,100 --> 00:37:40,200
+everything. 
+Else crashes. 
+
+715
+00:37:40,400 --> 00:37:42,300
+Maybe you don't want to start 
+there, right? 
+
+716
+00:37:42,400 --> 00:37:45,900
+You know, so you want to look 
+first at where you can really 
+
+717
+00:37:45,900 --> 00:37:48,600
+see the most some investigation 
+that needs to be done in two, 
+
+718
+00:37:48,600 --> 00:37:53,400
+like taking the information that
+you get out of the tools and and
+
+719
+00:37:53,800 --> 00:37:56,600
+then figuring out how to best a 
+prioritize based on. 
+
+720
+00:37:57,200 --> 00:38:00,200
+And most of these changes can be
+done with very little impact to 
+
+721
+00:38:00,200 --> 00:38:03,400
+the code base itself. 
+I mean, most of them is doing 
+
+722
+00:38:03,400 --> 00:38:07,300
+things like like normalizing, 
+task definitions and Gradle or 
+
+723
+00:38:07,300 --> 00:38:10,300
+normalizing goal input and 
+output in May even right? 
+
+724
+00:38:10,900 --> 00:38:13,300
+Which is all about manipulating 
+build scripts and not really 
+
+725
+00:38:13,300 --> 00:38:17,900
+manipulating the code right. 
+Yeah. 
+
+726
+00:38:17,900 --> 00:38:21,700
+So it does seem like the tools 
+can help you kind of simulate or
+
+727
+00:38:21,700 --> 00:38:24,800
+identify what the hot spots are.
+How things could be better. 
+
+728
+00:38:24,800 --> 00:38:30,300
+Like cache invalidation seems 
+like a fairly easy thing to be 
+
+729
+00:38:30,300 --> 00:38:34,300
+able to for a tool to go in and 
+be like, hey, you know, like you
+
+730
+00:38:34,300 --> 00:38:37,400
+are in validating this cash over
+and over and over again because 
+
+731
+00:38:37,400 --> 00:38:41,000
+of X and that should be a pretty
+simple fix. 
+
+732
+00:38:41,300 --> 00:38:45,000
+It's usually things like, you 
+know, this cat this this this is
+
+733
+00:38:45,000 --> 00:38:47,900
+a normalized task. 
+That's that's Cacheable, usually
+
+734
+00:38:47,900 --> 00:38:52,000
+by the local cache but you're 
+generating timestamps and source
+
+735
+00:38:52,000 --> 00:38:55,000
+code, part of your build is 
+generating source code, you put 
+
+736
+00:38:55,000 --> 00:38:58,000
+in time stamps in there. 
+So technically the inputs to 
+
+737
+00:38:58,000 --> 00:39:00,900
+that part of the build will have
+changed and you get them to your
+
+738
+00:39:00,900 --> 00:39:03,700
+point of cache invalidation or a
+catchment, a cache Miss at that 
+
+739
+00:39:03,700 --> 00:39:05,500
+point. 
+But all you'd have to do you 
+
+740
+00:39:05,500 --> 00:39:09,600
+know, is either normalize that 
+timestamp or not use it anymore 
+
+741
+00:39:09,600 --> 00:39:12,200
+or something like that and then 
+suddenly that task becomes 
+
+742
+00:39:12,200 --> 00:39:13,800
+cashable. 
+There's other things, too. 
+
+743
+00:39:13,800 --> 00:39:16,000
+I mean, there's just 
+architecture, is important here 
+
+744
+00:39:16,000 --> 00:39:18,900
+to write the more Where the 
+project is obviously, the more 
+
+745
+00:39:18,900 --> 00:39:22,500
+impact Akash will have anything 
+about the way the caching works,
+
+746
+00:39:22,500 --> 00:39:25,400
+right? 
+We're taking inputs to a goal or
+
+747
+00:39:25,400 --> 00:39:29,800
+a task or a Target and these 
+inputs are things like source 
+
+748
+00:39:29,800 --> 00:39:33,200
+code classpath, jvm major 
+version things that kind of give
+
+749
+00:39:33,200 --> 00:39:36,200
+us an accurate context of what's
+going into this input. 
+
+750
+00:39:36,200 --> 00:39:40,000
+And if we generate a hash from 
+that, and if the input is 
+
+751
+00:39:40,000 --> 00:39:44,600
+identical further down the road,
+then we take whatever the output
+
+752
+00:39:44,600 --> 00:39:46,800
+from that cash. 
+Was that task was like up the 
+
+753
+00:39:46,800 --> 00:39:48,600
+cash, Ash. 
+And we use that as opposed to 
+
+754
+00:39:48,600 --> 00:39:50,800
+actually rerunning that part of 
+the build, right? 
+
+755
+00:39:50,800 --> 00:39:52,100
+Which is how the build caching 
+works. 
+
+756
+00:39:52,100 --> 00:39:54,400
+Yeah. 
+So, there are some things that 
+
+757
+00:39:54,400 --> 00:39:56,400
+you can do. 
+Then there's the doing this 
+
+758
+00:39:56,400 --> 00:39:59,600
+locally and then doing it across
+an organization, which are kind 
+
+759
+00:39:59,600 --> 00:40:02,000
+of two different levels of cash 
+that you could Implement. 
+
+760
+00:40:02,000 --> 00:40:06,100
+And my guess would be the most 
+folks in the industry of 
+
+761
+00:40:06,100 --> 00:40:10,700
+software are not doing the 
+shared cache across, you know, 
+
+762
+00:40:10,700 --> 00:40:14,700
+multiple users because that 
+gives you a whole nother level 
+
+763
+00:40:14,700 --> 00:40:19,300
+of of productivity. 
+It's like, okay, one person did 
+
+764
+00:40:19,300 --> 00:40:21,900
+this calculation. 
+Now, no one else should be able 
+
+765
+00:40:21,900 --> 00:40:24,500
+to do that. 
+And this is, you know, some of 
+
+766
+00:40:24,500 --> 00:40:26,800
+the stuff we've talked about 
+with unison and some newer 
+
+767
+00:40:26,800 --> 00:40:30,400
+Technologies kind of do this 
+inherently, but it is possible 
+
+768
+00:40:30,400 --> 00:40:37,400
+to apply this to get a more 
+existing tools than not have to 
+
+769
+00:40:37,400 --> 00:40:40,800
+switch your whole programming 
+tool chain and and programming 
+
+770
+00:40:40,800 --> 00:40:43,500
+language to take advantage of 
+the yeah that's that's where we 
+
+771
+00:40:43,500 --> 00:40:46,000
+usually say. 
+Like, you know, look for look 
+
+772
+00:40:46,000 --> 00:40:48,800
+for the availability. 
+D of a cash in your build 
+
+773
+00:40:48,800 --> 00:40:51,100
+system. 
+Like I mean Gradle introduced 
+
+774
+00:40:51,200 --> 00:40:56,700
+local caching to the jvm world 
+in the Java world back in 2008 
+
+775
+00:40:56,700 --> 00:40:58,900
+maybe later than that. 
+Actually that no it was actually
+
+776
+00:40:58,900 --> 00:41:01,200
+later that the local build cash 
+came in so I couldn't do the 
+
+777
+00:41:01,208 --> 00:41:05,200
+exact number on that but you 
+know we build systems like clang
+
+778
+00:41:06,200 --> 00:41:08,900
+had build Cash's, you know, 
+before this, right. 
+
+779
+00:41:08,900 --> 00:41:11,100
+You know. 
+So it's a, it's a pattern that 
+
+780
+00:41:11,100 --> 00:41:13,400
+that's that's fairly well 
+understood. 
+
+781
+00:41:14,800 --> 00:41:17,600
+But the nice thing is that, you 
+know, because it's this Elegant 
+
+782
+00:41:17,600 --> 00:41:22,500
+solution where we generate a key
+a hash based on these inputs to 
+
+783
+00:41:22,500 --> 00:41:24,600
+your point. 
+A remotely distributed cache for
+
+784
+00:41:24,600 --> 00:41:28,500
+a for a team that utilizes CI 
+and maybe a follow, the sun 
+
+785
+00:41:28,500 --> 00:41:30,800
+mechanic it can be extremely 
+helpful. 
+
+786
+00:41:30,800 --> 00:41:33,400
+So if you think about this you 
+have a team that's working 
+
+787
+00:41:33,400 --> 00:41:36,200
+overnight. 
+Working on the same feature 
+
+788
+00:41:36,200 --> 00:41:39,500
+branch that you're working on, I
+want whatever it is and they're 
+
+789
+00:41:39,500 --> 00:41:43,400
+populating the this remote cash 
+with their, you know, with cash 
+
+790
+00:41:43,400 --> 00:41:44,400
+outputs that are coming from 
+there. 
+
+791
+00:41:44,400 --> 00:41:48,700
+Build normally you're coming. 
+In whatever 8:00 9:00 a.m. 
+
+792
+00:41:48,700 --> 00:41:50,800
+you're pulling that all the 
+changes that got made overnight 
+
+793
+00:41:50,800 --> 00:41:53,700
+from the offshore team and then 
+you're sitting in for a long 
+
+794
+00:41:53,700 --> 00:41:56,200
+bill, right along clean bill 
+based on all the changes that 
+
+795
+00:41:56,200 --> 00:41:59,700
+came in the night before or if 
+you're using a remote cash, 
+
+796
+00:41:59,900 --> 00:42:03,200
+you're actually pulling a lot of
+those tasks that were run under 
+
+797
+00:42:03,200 --> 00:42:06,300
+identical conditions by the 
+follow the scent in the evening 
+
+798
+00:42:06,300 --> 00:42:09,000
+team that came before you. 
+And so, you're actually taking 
+
+799
+00:42:09,000 --> 00:42:11,500
+advantage of that cash during 
+the first clean build of the 
+
+800
+00:42:11,500 --> 00:42:14,900
+day, which is unheard of right? 
+And I mean, again going back to 
+
+801
+00:42:14,900 --> 00:42:18,100
+these like patterns that we just
+accept You're like why is it 
+
+802
+00:42:18,100 --> 00:42:19,900
+okay? 
+That like the first action we 
+
+803
+00:42:19,900 --> 00:42:24,000
+take of the day should be to 
+waste an hour, right? 
+
+804
+00:42:24,900 --> 00:42:27,500
+Hazard is my first executive 
+decision of the day. 
+
+805
+00:42:27,800 --> 00:42:32,300
+I'm going to do nothing for an 
+hour, but hey, if you fix this 
+
+806
+00:42:32,300 --> 00:42:34,400
+problem, then people are not 
+going to have that opportunity 
+
+807
+00:42:34,400 --> 00:42:36,300
+to go get their coffee. 
+After they start. 
+
+808
+00:42:36,300 --> 00:42:38,800
+The build is actually the number
+one objection we get. 
+
+809
+00:42:38,800 --> 00:42:41,200
+Is that I like calling my mom 
+first thing in the morning? 
+
+810
+00:42:41,500 --> 00:42:45,300
+All right, was like pouring my 
+puppy catching up on Twitter. 
+
+811
+00:42:45,500 --> 00:42:48,200
+Yeah, well, whatever That's why 
+you can leave early. 
+
+812
+00:42:51,900 --> 00:43:00,300
+So then, what about this realm 
+of having your CI servers do use
+
+813
+00:43:00,300 --> 00:43:02,900
+machine learning to pick test? 
+Oh, yeah. 
+
+814
+00:43:02,900 --> 00:43:07,400
+Because the way that CI 
+typically works today is that 
+
+815
+00:43:07,600 --> 00:43:11,400
+that you maybe have different 
+phases of tests, you know, 
+
+816
+00:43:11,400 --> 00:43:14,200
+you've got like the quick test 
+and then the full test whatever.
+
+817
+00:43:14,200 --> 00:43:17,000
+And and but we've kind of 
+created. 
+
+818
+00:43:17,200 --> 00:43:23,300
+This stacking of test when it 
+seems like maybe a better way is
+
+819
+00:43:23,300 --> 00:43:27,700
+for the system to learn what 
+tests are likely to be needed to
+
+820
+00:43:27,700 --> 00:43:30,000
+be run. 
+Instead of just taking this like
+
+821
+00:43:30,000 --> 00:43:32,800
+black hammer to, to to it every 
+time. 
+
+822
+00:43:32,800 --> 00:43:34,600
+So, yeah. 
+I'm so it seems like there's 
+
+823
+00:43:34,600 --> 00:43:37,700
+been some Innovation there. 
+What's tell us about how the 
+
+824
+00:43:37,800 --> 00:43:40,200
+that comes into DP. 
+This is, yeah, this is one of 
+
+825
+00:43:40,200 --> 00:43:44,600
+the more exciting areas starting
+to actually use real machine 
+
+826
+00:43:44,600 --> 00:43:46,900
+learning for real problem 
+solving. 
+
+827
+00:43:47,000 --> 00:43:49,000
+As opposed to just having it in 
+the loop just to have it in the 
+
+828
+00:43:49,000 --> 00:43:51,600
+loop. 
+The so this was actually not 
+
+829
+00:43:51,600 --> 00:43:54,500
+something that we invented 
+Google Facebook. 
+
+830
+00:43:54,500 --> 00:43:58,500
+Microsoft have all been working 
+on various incarnations of this 
+
+831
+00:43:58,500 --> 00:44:01,600
+and meta. 
+Facebook was the first to get to
+
+832
+00:44:01,900 --> 00:44:05,000
+Academia, with a by publishing a
+paper back in 2019 that they 
+
+833
+00:44:05,000 --> 00:44:09,800
+call predictive test selection. 
+And in that paper, they laid 
+
+834
+00:44:09,800 --> 00:44:13,000
+out, you know, how to build 
+these mechanisms and you can do 
+
+835
+00:44:13,000 --> 00:44:14,700
+it using totally open source 
+Frameworks. 
+
+836
+00:44:14,700 --> 00:44:20,300
+In fact, they used the XG boost.
+Gradient boosted decision, tree 
+
+837
+00:44:21,400 --> 00:44:24,400
+model which is which is nice to.
+It's not a deep learning model, 
+
+838
+00:44:24,400 --> 00:44:26,300
+which means you don't have to 
+sit there and install like an 
+
+839
+00:44:26,300 --> 00:44:29,100
+Nvidia GPU like next to your 
+build tool chain to take 
+
+840
+00:44:29,100 --> 00:44:31,800
+advantage of this, right? 
+It just runs on typical CPU. 
+
+841
+00:44:33,400 --> 00:44:38,900
+And what this does is it looks 
+at historically how source code 
+
+842
+00:44:38,900 --> 00:44:42,700
+changes, have impacted test 
+outputs, in the past different 
+
+843
+00:44:42,700 --> 00:44:44,400
+types of changes. 
+So the different types of 
+
+844
+00:44:44,400 --> 00:44:46,100
+changes are given different 
+features. 
+
+845
+00:44:46,400 --> 00:44:50,700
+And the model is Strained 
+against those features and over 
+
+846
+00:44:50,700 --> 00:44:52,400
+time. 
+What you end up with is a system
+
+847
+00:44:52,400 --> 00:44:55,000
+that says predicts say, okay, 
+well based on the changes that 
+
+848
+00:44:55,000 --> 00:44:57,400
+you just made, I know that 
+you've got these, you know, 
+
+849
+00:44:57,400 --> 00:45:01,300
+incrementally selected, 20,000 
+tests that probably should 
+
+850
+00:45:01,300 --> 00:45:03,600
+execute because they somehow 
+touch the code that you just 
+
+851
+00:45:03,600 --> 00:45:06,700
+touched. 
+But the model is only predicting
+
+852
+00:45:06,900 --> 00:45:11,000
+that these 30 tests have any 
+High likelihood of changing 
+
+853
+00:45:11,000 --> 00:45:13,500
+their outcome from the last time
+that they ran again because we 
+
+854
+00:45:13,508 --> 00:45:15,500
+have all this historical data 
+that we're capturing. 
+
+855
+00:45:16,200 --> 00:45:19,600
+So do They're running them at 
+least three, merge right 
+
+856
+00:45:19,900 --> 00:45:22,700
+post-merge please from 
+everything but pre merge while 
+
+857
+00:45:22,700 --> 00:45:25,100
+you're making incremental 
+changes locally in your in your 
+
+858
+00:45:25,100 --> 00:45:27,100
+environment. 
+And so that's another important 
+
+859
+00:45:27,100 --> 00:45:28,800
+thing here, too. 
+Is that you mentioned, the, this
+
+860
+00:45:28,800 --> 00:45:31,600
+is bound to see I, but what's 
+actually interesting, is that a 
+
+861
+00:45:31,600 --> 00:45:34,400
+properly implemented predicted 
+test, selection model should be 
+
+862
+00:45:34,400 --> 00:45:37,100
+bound, directly to the build 
+tool, and what's ever actually 
+
+863
+00:45:37,100 --> 00:45:39,600
+scheduling the test sets, so it 
+can work in CI. 
+
+864
+00:45:39,600 --> 00:45:42,900
+But also work locally which is 
+really key. 
+
+865
+00:45:43,200 --> 00:45:45,800
+We have a shadow on my shirt. 
+Actually, we're not recording 
+
+866
+00:45:45,800 --> 00:45:48,500
+the video, but I have a shirt 
+that says And local set up by 
+
+867
+00:45:48,500 --> 00:45:50,200
+local. 
+It's like one of our, it's like,
+
+868
+00:45:50,200 --> 00:45:53,300
+kind of our little pet campaign 
+because in this came out of 
+
+869
+00:45:53,308 --> 00:45:55,100
+conversations that we were 
+having with that, I think was 
+
+870
+00:45:55,100 --> 00:45:56,600
+atlassian. 
+We're talking about 
+
+871
+00:45:56,800 --> 00:45:58,000
+productivity. 
+And we were saying, well, you 
+
+872
+00:45:58,008 --> 00:46:00,000
+know, what are some 
+characteristics of a development
+
+873
+00:46:00,000 --> 00:46:02,300
+tool chain that? 
+That's very healthy. 
+
+874
+00:46:02,300 --> 00:46:03,800
+Like what do you what do you 
+consider to be very healthy? 
+
+875
+00:46:03,800 --> 00:46:06,200
+Like, what have you you can do 
+everything locally, right? 
+
+876
+00:46:06,200 --> 00:46:08,500
+I mean if you can do everything 
+locally or test sets all these 
+
+877
+00:46:08,500 --> 00:46:11,700
+things, then you're getting your
+feedback as close to the 
+
+878
+00:46:11,700 --> 00:46:14,000
+developer as possible, right? 
+And you're not relying on 
+
+879
+00:46:14,000 --> 00:46:16,300
+external systems to deliver this
+feedback to you. 
+
+880
+00:46:16,800 --> 00:46:22,800
+So, - is built to to actually 
+plug right into where the build 
+
+881
+00:46:23,000 --> 00:46:26,200
+the build automation is 
+selecting a test set passes that
+
+882
+00:46:26,200 --> 00:46:29,700
+test set, as well as the inputs 
+into the model, that model 
+
+883
+00:46:29,700 --> 00:46:31,700
+extract, the features and then 
+makes the prediction. 
+
+884
+00:46:32,000 --> 00:46:34,600
+And then only the tests that 
+come back from that prediction 
+
+885
+00:46:34,600 --> 00:46:37,000
+or actually run. 
+Then the outcome of those test 
+
+886
+00:46:37,000 --> 00:46:39,600
+is passed back into the model. 
+So it's continually retraining 
+
+887
+00:46:39,600 --> 00:46:41,400
+itself to which is which is 
+really nice. 
+
+888
+00:46:42,100 --> 00:46:46,100
+The net of this though is that? 
+Yeah, right now we tend to 
+
+889
+00:46:46,100 --> 00:46:48,600
+manually select It tests for 
+like our, I worked on this 
+
+890
+00:46:48,600 --> 00:46:50,600
+little part of the app is going 
+to turn off these tests cause I 
+
+891
+00:46:50,608 --> 00:46:52,600
+know I didn't touch any of that 
+stuff, right? 
+
+892
+00:46:52,700 --> 00:46:54,800
+Whereas predictive says, it just
+takes that you don't have to 
+
+893
+00:46:54,800 --> 00:46:56,700
+think about that. 
+Right predictive just says, okay
+
+894
+00:46:56,900 --> 00:46:59,900
+looking at this history, these 
+are the only ones that are 
+
+895
+00:46:59,908 --> 00:47:03,300
+likely to provide any valuable 
+output for you and then where 
+
+896
+00:47:03,300 --> 00:47:07,000
+we've implemented it. 
+We have a usage dashboard and a 
+
+897
+00:47:07,008 --> 00:47:09,200
+simulator dashboard. 
+The simulator. 
+
+898
+00:47:09,200 --> 00:47:12,300
+I think is really important. 
+The simulator can just be turned
+
+899
+00:47:12,300 --> 00:47:16,700
+on and sit there and say I would
+have only selected these tests. 
+
+900
+00:47:17,100 --> 00:47:18,600
+Cause I only think that these 
+are the ones that would have 
+
+901
+00:47:18,608 --> 00:47:20,600
+changed their outcome. 
+And then it can generate a 
+
+902
+00:47:20,608 --> 00:47:22,900
+confidence score, right? 
+We're able to say, like, okay, 
+
+903
+00:47:22,900 --> 00:47:24,900
+well actually running these 
+tests, we found out that we were
+
+904
+00:47:24,900 --> 00:47:30,000
+right 99.8% of the time, right? 
+These are tests, right? 
+
+905
+00:47:30,000 --> 00:47:31,900
+I mean it's dicey, right? 
+You don't want to like you know,
+
+906
+00:47:31,900 --> 00:47:34,800
+you do you want to project a 
+good confidence of the developer
+
+907
+00:47:34,800 --> 00:47:38,100
+so that they trust the model 
+enough to to rely on it to skip 
+
+908
+00:47:38,100 --> 00:47:41,300
+tests. 
+One of the interesting things 
+
+909
+00:47:42,200 --> 00:47:43,900
+about the way that we 
+implemented something that we're
+
+910
+00:47:43,900 --> 00:47:46,700
+pretty proud of. 
+Actually, if you look at some of
+
+911
+00:47:46,700 --> 00:47:49,500
+the Initial measurements that 
+came out of the academic 
+
+912
+00:47:49,500 --> 00:47:53,100
+reports. 
+A lot of these engines were only
+
+913
+00:47:53,100 --> 00:47:57,100
+hitting 80, maybe 85 percent 
+confidence which is good. 
+
+914
+00:47:57,100 --> 00:47:59,800
+Enough, in some cases given the 
+amount of time savings that you 
+
+915
+00:47:59,800 --> 00:48:03,000
+get and that you're still doing 
+post-merge running all tests. 
+
+916
+00:48:03,500 --> 00:48:06,600
+But what we found, we started 
+looking in this training the 
+
+917
+00:48:06,600 --> 00:48:09,100
+model. 
+A lot of people were training in
+
+918
+00:48:09,100 --> 00:48:14,100
+the model, based on flaky tests.
+And what happens when you train 
+
+919
+00:48:14,100 --> 00:48:17,100
+a model based on something 
+non-deterministic you end up 
+
+920
+00:48:17,100 --> 00:48:19,100
+with a non deterministic model, 
+right? 
+
+921
+00:48:19,100 --> 00:48:22,800
+And so this, these lower 
+confidence scores were coming 
+
+922
+00:48:22,800 --> 00:48:25,600
+out of other people playing with
+this stuff who didn't already 
+
+923
+00:48:25,600 --> 00:48:28,900
+have a mechanism in place for 
+detecting and filtering flaky 
+
+924
+00:48:28,900 --> 00:48:31,400
+tests. 
+So we actually combine both of 
+
+925
+00:48:31,400 --> 00:48:33,500
+these knowing whether it's 
+something as flaky as an 
+
+926
+00:48:33,500 --> 00:48:37,100
+important piece to the model. 
+If it's been listed as flaky 
+
+927
+00:48:37,100 --> 00:48:38,900
+than we, don't use it to train 
+the model. 
+
+928
+00:48:39,000 --> 00:48:41,700
+That's how we were able to get 
+from the 80-85 percent 
+
+929
+00:48:41,700 --> 00:48:45,800
+confidence score Is up into the 
+high 99th percentile of 
+
+930
+00:48:45,800 --> 00:48:48,700
+confidence, which is having this
+is fascinating, it was really an
+
+931
+00:48:48,700 --> 00:48:51,700
+interesting thing to watch, kind
+of kind of evolved because it 
+
+932
+00:48:51,708 --> 00:48:55,200
+was like, why can't we get? 
+And, you know, I love that, the 
+
+933
+00:48:55,200 --> 00:48:58,700
+the history of that like, 
+traditionally with tests it was 
+
+934
+00:48:58,700 --> 00:49:01,500
+up to a developer to Market as 
+flaky and then do something 
+
+935
+00:49:01,500 --> 00:49:05,800
+about it but it's like no. 
+Like the system should know if 
+
+936
+00:49:05,800 --> 00:49:09,900
+over time something is flaky and
+know what to do about it. 
+
+937
+00:49:10,100 --> 00:49:15,900
+And to me that just is a great 
+Example of like DPE learning and
+
+938
+00:49:15,900 --> 00:49:19,600
+and getting us to a better 
+outcome that kind of removes 
+
+939
+00:49:20,100 --> 00:49:26,700
+developers trying to to, I don't
+know, likely doing the wrong 
+
+940
+00:49:26,700 --> 00:49:28,100
+thing. 
+It removes that from the 
+
+941
+00:49:28,100 --> 00:49:31,300
+equation, says the system can 
+know and make the right 
+
+942
+00:49:31,300 --> 00:49:34,500
+decisions and has the 
+information to do. 
+
+943
+00:49:34,500 --> 00:49:37,400
+So let's let the system do its 
+let the system do it. 
+
+944
+00:49:37,400 --> 00:49:40,300
+And and because it's a gradient 
+I should have mentioned this to 
+
+945
+00:49:40,300 --> 00:49:43,600
+you know, beyond the the 
+confidence that Able to exhibit 
+
+946
+00:49:43,600 --> 00:49:48,000
+through the simulator because 
+it's a gradient boosted model 
+
+947
+00:49:48,000 --> 00:49:50,000
+and not a deep learning model. 
+It's actually highly 
+
+948
+00:49:50,000 --> 00:49:52,400
+explainable. 
+It's very, very easy for the 
+
+949
+00:49:52,400 --> 00:49:55,000
+model to say why it made the 
+decision that it made. 
+
+950
+00:49:55,600 --> 00:49:58,700
+So even in our dashboard, we 
+have a justification of the test
+
+951
+00:49:58,700 --> 00:50:00,900
+gets skipped, you can highlight 
+over. 
+
+952
+00:50:00,900 --> 00:50:03,700
+And it says, oh, we skip this, 
+because the last 20 times around
+
+953
+00:50:03,700 --> 00:50:06,500
+with the same source code, it 
+was successful, you know, or we 
+
+954
+00:50:06,500 --> 00:50:11,700
+selected this test because it 
+failed once in the last ten runs
+
+955
+00:50:11,700 --> 00:50:13,900
+or something like that. 
+And it could be problematic, 
+
+956
+00:50:13,900 --> 00:50:16,300
+right? 
+So so it's a pretty smart model 
+
+957
+00:50:16,300 --> 00:50:20,200
+but it's very exciting because 
+it's one of these things that, 
+
+958
+00:50:20,200 --> 00:50:22,700
+you know first of all uses 
+machine learning for a real 
+
+959
+00:50:22,800 --> 00:50:26,300
+tangible concrete problem. 
+But then delivers on the promise
+
+960
+00:50:26,300 --> 00:50:29,200
+of machine learning which is 
+literally reducing the overall 
+
+961
+00:50:29,200 --> 00:50:30,800
+amount of work that has to be 
+done. 
+
+962
+00:50:31,300 --> 00:50:33,400
+This has, you know, we didn't 
+and there's so many different 
+
+963
+00:50:33,400 --> 00:50:36,800
+angles that we kind of didn't 
+get into but you know, beyond 
+
+964
+00:50:36,800 --> 00:50:39,000
+being able to improve developer 
+experience. 
+
+965
+00:50:39,300 --> 00:50:42,400
+You know, we're experimenting 
+with message. 
+
+966
+00:50:42,500 --> 00:50:45,600
+Into HR professionals because 
+what we're talking about is 
+
+967
+00:50:45,600 --> 00:50:49,400
+actually something that improves
+wellness and is something that 
+
+968
+00:50:49,400 --> 00:50:51,900
+could be, you know, useful, for 
+employee acquisition and 
+
+969
+00:50:51,900 --> 00:50:57,200
+retention. 
+We, you know, have messaging 
+
+970
+00:50:57,200 --> 00:51:01,800
+that we think can can can 
+transcend a lot of what we've 
+
+971
+00:51:01,800 --> 00:51:04,700
+been talking about here and move
+into things like sustainability.
+
+972
+00:51:05,100 --> 00:51:08,200
+You know, we've had feature 
+request for multiple customers 
+
+973
+00:51:08,200 --> 00:51:10,000
+to say, hey could we get a 
+dashboard? 
+
+974
+00:51:10,200 --> 00:51:12,300
+That shows us our carbon 
+footprints? 
+
+975
+00:51:12,500 --> 00:51:15,800
+Savings from using caching, and 
+from using predictive test 
+
+976
+00:51:15,800 --> 00:51:18,200
+selection, because these are 
+things that are actually 
+
+977
+00:51:18,200 --> 00:51:20,800
+reducing the overall cycle of 
+the tool chain is running. 
+
+978
+00:51:21,000 --> 00:51:24,000
+So, because what we're really 
+talking about is efficiency 
+
+979
+00:51:24,000 --> 00:51:27,800
+here, there are so many 
+cascading impacts, you know, to 
+
+980
+00:51:27,800 --> 00:51:31,300
+an organization who actually 
+puts this into practice, we 
+
+981
+00:51:31,300 --> 00:51:33,000
+didn't talk about CI that much 
+either. 
+
+982
+00:51:33,000 --> 00:51:35,800
+But most of what I like to focus
+on is in that developer 
+
+983
+00:51:35,800 --> 00:51:38,700
+experience realm, but because 
+the so many businesses are sort 
+
+984
+00:51:38,700 --> 00:51:40,800
+of numb to these problems and 
+people are complaining. 
+
+985
+00:51:41,200 --> 00:51:42,300
+A lot of the times these 
+problems. 
+
+986
+00:51:42,500 --> 00:51:46,200
+Are manifesting in CI with 
+agents that are always tied up. 
+
+987
+00:51:46,400 --> 00:51:49,300
+Wait times waiting for agents to
+pick up jobs or jobs that take 
+
+988
+00:51:49,300 --> 00:51:53,400
+too long to execute or jobs 
+again and consistent reliable. 
+
+989
+00:51:53,900 --> 00:51:55,800
+But all of these things that 
+we're talking about here that 
+
+990
+00:51:55,800 --> 00:51:57,300
+apply to the local developer 
+experience. 
+
+991
+00:51:57,300 --> 00:52:00,400
+Also apply to see I. 
+So sometimes what you see is an 
+
+992
+00:52:00,400 --> 00:52:04,100
+organization whose immediate 
+symptoms of putting the 
+
+993
+00:52:04,300 --> 00:52:06,600
+immediate symptoms are actually 
+more related to see. 
+
+994
+00:52:06,600 --> 00:52:09,200
+I and consistency, and 
+inefficiency, you put the stuff 
+
+995
+00:52:09,200 --> 00:52:12,300
+in place you put in, predictive 
+you, put in caching CI benefits.
+
+996
+00:52:12,400 --> 00:52:15,200
+From that as well. 
+Suddenly half of your agents are
+
+997
+00:52:15,200 --> 00:52:16,800
+available all the time. 
+You may even be able to 
+
+998
+00:52:16,800 --> 00:52:18,700
+downscale your CI and save some 
+money. 
+
+999
+00:52:19,400 --> 00:52:22,700
+So you know, again, there are 
+these cascading impacts that are
+
+1000
+00:52:22,700 --> 00:52:27,600
+not always immediately, sort of 
+intuitive that come out of a 
+
+1001
+00:52:27,608 --> 00:52:30,200
+result of introducing all of 
+these efficiencies. 
+
+1002
+00:52:32,400 --> 00:52:36,700
+It's like you make things better
+for the single developer and 
+
+1003
+00:52:36,700 --> 00:52:39,900
+that ends up making things 
+better for everyone in the 
+
+1004
+00:52:39,900 --> 00:52:42,800
+organization as a whole and the 
+end of the day, you know, you're
+
+1005
+00:52:43,000 --> 00:52:45,600
+and you know this is getting 
+back into theory of constraints.
+
+1006
+00:52:45,600 --> 00:52:47,500
+But you know I mean I love this 
+stuff from the theory of 
+
+1007
+00:52:47,500 --> 00:52:49,700
+constraints in the gold write 
+equations or something near and 
+
+1008
+00:52:49,700 --> 00:52:51,500
+dear to me. 
+I think they're some of the most
+
+1009
+00:52:51,500 --> 00:52:55,000
+important and some of the most 
+important business literature 
+
+1010
+00:52:55,000 --> 00:53:00,200
+that that you know exists. 
+But you know, when you start 
+
+1011
+00:53:00,200 --> 00:53:03,800
+getting into anything that will 
+Simultaneously decrease, the 
+
+1012
+00:53:03,800 --> 00:53:06,800
+cost of a system and increases 
+throughput. 
+
+1013
+00:53:07,300 --> 00:53:09,200
+You have a winner. 
+You have a no-brainer and that's
+
+1014
+00:53:09,200 --> 00:53:12,100
+that's why we kind of like to 
+put ourselves as far as DP is 
+
+1015
+00:53:12,100 --> 00:53:14,500
+concerned. 
+We see ourselves historically is
+
+1016
+00:53:14,500 --> 00:53:19,300
+very related to devops and agile
+and lean and business process, 
+
+1017
+00:53:19,300 --> 00:53:21,400
+re-engineering and just-in-time 
+Manufacturing. 
+
+1018
+00:53:21,400 --> 00:53:24,100
+And all of these, you know, big 
+breakthroughs in productivity in
+
+1019
+00:53:24,100 --> 00:53:29,700
+the past because we share this 
+practice shares. 
+
+1020
+00:53:29,700 --> 00:53:32,400
+The same thing that those 
+practices share, which is In 
+
+1021
+00:53:32,400 --> 00:53:34,700
+almost every case that they're 
+implemented, they decrease the 
+
+1022
+00:53:34,700 --> 00:53:37,300
+cost of a system while 
+simultaneously increasing its 
+
+1023
+00:53:37,300 --> 00:53:40,400
+throughput. 
+And you know that's textbook the
+
+1024
+00:53:40,400 --> 00:53:43,800
+goal 101 you know you have an 
+action or a practice that does 
+
+1025
+00:53:43,800 --> 00:53:47,400
+both of these things. 
+It's it's going to win physics. 
+
+1026
+00:53:47,500 --> 00:53:49,700
+Simple physics denotes that it's
+going to win. 
+
+1027
+00:53:53,300 --> 00:53:57,300
+Do you imagine that? 
+There's a future where people 
+
+1028
+00:53:57,300 --> 00:54:00,300
+look at that, XKCD comic and 
+laughing. 
+
+1029
+00:54:00,300 --> 00:54:05,000
+Like, remember those days Can 
+you believe that, you know, they
+
+1030
+00:54:05,000 --> 00:54:09,200
+had to use rocks to like hammer 
+things is, is that is that a 
+
+1031
+00:54:09,200 --> 00:54:13,800
+possible future or is just is 
+there just an endless amount of 
+
+1032
+00:54:13,800 --> 00:54:16,700
+things the, to do to make this? 
+This guy, I'm realizing how 
+
+1033
+00:54:16,700 --> 00:54:20,100
+short-sighted I've been because 
+I felt like, my tangible goal 
+
+1034
+00:54:20,400 --> 00:54:23,200
+was to just have DP as an 
+established product category, 
+
+1035
+00:54:23,500 --> 00:54:26,600
+but now I think the real goal is
+to make make that cartoon 
+
+1036
+00:54:26,600 --> 00:54:29,900
+irrelevant. 
+That's how I will give myself 
+
+1037
+00:54:29,900 --> 00:54:34,200
+going forward things. 
+So Yeah, no II hope. 
+
+1038
+00:54:34,200 --> 00:54:38,900
+So, you know, I really do. 
+I mean we can't keep doing this 
+
+1039
+00:54:38,900 --> 00:54:43,600
+to ourselves. 
+We have a a relative dearth of 
+
+1040
+00:54:43,600 --> 00:54:46,200
+developers compared to the 
+amount of code that needs to be 
+
+1041
+00:54:46,200 --> 00:54:49,600
+written for the world to realize
+its digital transformation 
+
+1042
+00:54:49,600 --> 00:54:53,300
+efforts. 
+We're only going to have a 
+
+1043
+00:54:53,300 --> 00:54:55,700
+greater and greater Reliance on 
+this Workforce. 
+
+1044
+00:54:56,000 --> 00:54:59,400
+So the thought that we would 
+continue to allow all of this 
+
+1045
+00:54:59,700 --> 00:55:03,300
+waste gives me a lot of heart. 
+And like, I really hope that we 
+
+1046
+00:55:03,300 --> 00:55:05,600
+can get to a point where we're 
+thoughtful about this and we're 
+
+1047
+00:55:05,600 --> 00:55:09,500
+improving it because I don't, I 
+don't know that. 
+
+1048
+00:55:09,500 --> 00:55:12,900
+We're able to meet these goals 
+without starting to introduce 
+
+1049
+00:55:12,900 --> 00:55:15,200
+some of these efficiencies that 
+demands are higher. 
+
+1050
+00:55:15,500 --> 00:55:19,500
+The amount of code, we need is 
+greater the amount of things 
+
+1051
+00:55:19,500 --> 00:55:22,100
+that run code. 
+So, you know, is just, I mean 
+
+1052
+00:55:22,100 --> 00:55:25,200
+exploding. 
+And so, I really hope that we 
+
+1053
+00:55:25,208 --> 00:55:29,000
+can get to this point and I 
+think that we take on a lot of 
+
+1054
+00:55:29,000 --> 00:55:33,200
+debt, if we don't, what gets Me 
+out of bed, what gets me 
+
+1055
+00:55:33,200 --> 00:55:38,500
+interested in talking about? 
+This is what this could do to 
+
+1056
+00:55:38,500 --> 00:55:40,700
+our quality of life. 
+From a, from a digital 
+
+1057
+00:55:40,700 --> 00:55:46,800
+perspective, practiced at large,
+if every organization, which is 
+
+1058
+00:55:46,800 --> 00:55:50,200
+now a stakeholder in creating 
+software, every organization was
+
+1059
+00:55:50,200 --> 00:55:52,100
+innovating at 10x the clip that 
+they're innovating. 
+
+1060
+00:55:52,100 --> 00:55:54,700
+Now what does that do to the 
+world around us? 
+
+1061
+00:55:54,900 --> 00:55:58,500
+You know? 
+And and when I was primarily 
+
+1062
+00:55:58,500 --> 00:56:02,000
+evangelizing open source in the 
+Enterprise of my previous role, 
+
+1063
+00:56:02,200 --> 00:56:05,900
+That was the same type of drive,
+you know, if we can get every 
+
+1064
+00:56:05,900 --> 00:56:10,200
+business in an open first 
+mentality, how does that 
+
+1065
+00:56:10,208 --> 00:56:12,400
+accelerate the global pace of 
+innovation? 
+
+1066
+00:56:12,400 --> 00:56:15,700
+And I would go and say these 
+things and they got to the point
+
+1067
+00:56:15,700 --> 00:56:18,100
+where it was like oh open first.
+Yeah, thanks Justin. 
+
+1068
+00:56:18,100 --> 00:56:19,300
+Yeah, we've been doing that for 
+a couple of years. 
+
+1069
+00:56:19,300 --> 00:56:24,300
+We know so it's like now I feel 
+like we have this next practice 
+
+1070
+00:56:24,300 --> 00:56:29,900
+that can be another accelerated 
+open-source made a major made a 
+
+1071
+00:56:29,900 --> 00:56:36,800
+huge impact on our ability to E 
+to innovate faster and maybe DP 
+
+1072
+00:56:36,800 --> 00:56:41,700
+is the next, the next Frontier 
+in that realm, right? 
+
+1073
+00:56:41,700 --> 00:56:46,100
+That's our whole couple things I
+think I'm up for me during this 
+
+1074
+00:56:46,100 --> 00:56:53,000
+conversation one is that I 
+didn't know when I was working 
+
+1075
+00:56:53,000 --> 00:56:55,900
+for companies. 
+I didn't know what I was really 
+
+1076
+00:56:55,900 --> 00:57:01,800
+looking for and I think now it 
+was developer experience guell 
+
+1077
+00:57:01,800 --> 00:57:04,800
+just Whole experience. 
+You know what, what kind of 
+
+1078
+00:57:04,800 --> 00:57:09,300
+experience do you have working? 
+Is this a pleasant place to 
+
+1079
+00:57:09,300 --> 00:57:11,300
+work? 
+That I look forward to going 
+
+1080
+00:57:11,400 --> 00:57:14,400
+into? 
+And the other thing is that if I
+
+1081
+00:57:14,400 --> 00:57:19,400
+was starting my career now, I 
+wonder if I wouldn't have ended 
+
+1082
+00:57:19,400 --> 00:57:23,600
+up in developer engineering. 
+You know, development activity 
+
+1083
+00:57:23,600 --> 00:57:25,000
+engineering. 
+Yeah, what you're doing? 
+
+1084
+00:57:25,000 --> 00:57:29,000
+Yeah, exactly. 
+Because I mean I've my focus has
+
+1085
+00:57:29,000 --> 00:57:34,400
+always been mostly on languages.
+But the interest in languages 
+
+1086
+00:57:34,700 --> 00:57:37,700
+has always been, how do we be 
+more productive? 
+
+1087
+00:57:37,700 --> 00:57:40,800
+How do we do more with less and 
+you're talking about? 
+
+1088
+00:57:40,800 --> 00:57:45,100
+Well let's look at everything 
+around the development process, 
+
+1089
+00:57:45,100 --> 00:57:48,400
+not just the language, I think 
+you're right though. 
+
+1090
+00:57:48,400 --> 00:57:54,300
+I mean languages are just like 
+one Avenue of improvement, but 
+
+1091
+00:57:54,300 --> 00:57:55,800
+there are many others you want 
+to know. 
+
+1092
+00:57:55,800 --> 00:57:58,400
+It's kind of interesting going 
+back to the coding war game 
+
+1093
+00:57:58,400 --> 00:58:03,500
+study that I was talking about 
+earlier one of the First for 
+
+1094
+00:58:03,500 --> 00:58:06,000
+productivity, in the 
+organization actually was the 
+
+1095
+00:58:06,000 --> 00:58:08,800
+language with the exception of 
+the first generation language, 
+
+1096
+00:58:08,800 --> 00:58:11,000
+like assembly. 
+Obviously the assembly Surfer. 
+
+1097
+00:58:11,400 --> 00:58:15,000
+It took a lot longer but younger
+generation languages at least 
+
+1098
+00:58:15,000 --> 00:58:17,500
+back then at the time the 
+mid-80s when this is there was 
+
+1099
+00:58:17,900 --> 00:58:21,100
+no statistical data correlation 
+between whether somebody was 
+
+1100
+00:58:21,100 --> 00:58:26,400
+using, I don't know COBOL or 
+see, you know, they were they 
+
+1101
+00:58:26,400 --> 00:58:29,700
+were producing a roughly the 
+same roughly the same clip. 
+
+1102
+00:58:29,700 --> 00:58:35,300
+So Fortran or I'm just trying to
+pull out stuff Not until so, but
+
+1103
+00:58:35,300 --> 00:58:39,600
+no I think you're right. 
+Bruce and it is like, it's not, 
+
+1104
+00:58:39,700 --> 00:58:42,300
+it's not the mentality of every 
+engineer. 
+
+1105
+00:58:42,300 --> 00:58:46,500
+Every developer it really is a 
+very specific, I think special 
+
+1106
+00:58:46,500 --> 00:58:50,200
+personality, who's able to kind 
+of see the forest from the 
+
+1107
+00:58:50,208 --> 00:58:53,100
+trees, I think and I do think it
+comes down to it. 
+
+1108
+00:58:53,100 --> 00:58:55,800
+I mean I'm a big fan of another,
+another book that takes physics 
+
+1109
+00:58:55,800 --> 00:58:59,400
+and applies it to businesses is 
+called organizational physics by
+
+1110
+00:58:59,400 --> 00:59:03,400
+Lex Sydney. 
+And Other really great piece of 
+
+1111
+00:59:03,400 --> 00:59:06,900
+literature that, you know, if 
+you're like me if you're geeky 
+
+1112
+00:59:06,900 --> 00:59:10,300
+and sciency and you but you're 
+also in business, it's this 
+
+1113
+00:59:10,300 --> 00:59:13,600
+really great merger of taking, 
+you know, physics and applying 
+
+1114
+00:59:13,600 --> 00:59:17,200
+it to the way that systems 
+business is work and they kind 
+
+1115
+00:59:17,200 --> 00:59:20,300
+of organize workers into these 
+four different kind of forces. 
+
+1116
+00:59:20,300 --> 00:59:22,300
+They call them into four 
+different categories. 
+
+1117
+00:59:22,500 --> 00:59:25,200
+One of those categories of the 
+producer category and this is 
+
+1118
+00:59:25,208 --> 00:59:27,900
+the person who wants ten years 
+worth of work in front of them 
+
+1119
+00:59:27,900 --> 00:59:29,600
+all the time. 
+They want to make sure that 
+
+1120
+00:59:29,600 --> 00:59:31,100
+they're all. 
+I got that full pipeline or they
+
+1121
+00:59:31,100 --> 00:59:33,300
+do not feel comfortable. 
+Unless there's just mountains of
+
+1122
+00:59:33,300 --> 00:59:35,000
+work ahead of them. 
+That's, that's where they feel 
+
+1123
+00:59:35,000 --> 00:59:38,200
+naturally comfortable. 
+That's a lot of Engineers. 
+
+1124
+00:59:38,300 --> 00:59:42,300
+I really think a lot of us. 
+We it's the way that our minds 
+
+1125
+00:59:42,300 --> 00:59:46,300
+work we want that work. 
+It's satisfying to us, you know,
+
+1126
+00:59:46,300 --> 00:59:49,300
+and it keeps us in our 
+comfortable state, right? 
+
+1127
+00:59:50,200 --> 00:59:53,000
+I personally get paranoid when I
+don't see enough, work ahead of 
+
+1128
+00:59:53,000 --> 00:59:56,500
+me, you know? 
+But I think that what you're 
+
+1129
+00:59:56,500 --> 01:00:01,000
+actually talking about, the type
+of Personality, who would have 
+
+1130
+01:00:01,000 --> 01:00:05,100
+this focus more on On efficiency
+is what you call a stabilizing 
+
+1131
+01:00:05,100 --> 01:00:07,500
+personality. 
+It was what organizational 
+
+1132
+01:00:07,500 --> 01:00:10,300
+physics calls. 
+A stabilizing personality which 
+
+1133
+01:00:10,300 --> 01:00:13,300
+is the person who actually 
+enjoys putting process around 
+
+1134
+01:00:13,300 --> 01:00:15,800
+things are actually enjoys 
+paying attention to the 
+
+1135
+01:00:15,800 --> 01:00:19,000
+performance of the tools that 
+are being used naturally their 
+
+1136
+01:00:19,000 --> 01:00:22,800
+inclination is to be critical of
+these things and ask questions 
+
+1137
+01:00:23,100 --> 01:00:26,600
+about how efficient the the 
+system really is and could it be
+
+1138
+01:00:26,600 --> 01:00:29,300
+better, right? 
+But what, in our industry, you 
+
+1139
+01:00:29,300 --> 01:00:31,000
+tend to see a lot of producers. 
+A lot of innovators. 
+
+1140
+01:00:31,700 --> 01:00:35,200
+Stabilizers tend to be thought 
+of as as someone difficult to 
+
+1141
+01:00:35,200 --> 01:00:39,400
+work with in our industry 
+because they do have those 
+
+1142
+01:00:39,400 --> 01:00:41,600
+difficult questions. 
+It's not always just an easy. 
+
+1143
+01:00:41,600 --> 01:00:44,500
+Oh let's crank out some code and
+just see what sticks you know. 
+
+1144
+01:00:45,300 --> 01:00:47,200
+It's why are you doing it this 
+way? 
+
+1145
+01:00:47,600 --> 01:00:51,100
+That's right. 
+And I mean and it's very 
+
+1146
+01:00:51,100 --> 01:00:54,400
+important, it's very important. 
+So but I think that but I think 
+
+1147
+01:00:54,400 --> 01:00:56,600
+you're and I think you might 
+have found your way into. 
+
+1148
+01:00:57,200 --> 01:01:00,200
+Hey, you never too late to say 
+it's a new practice. 
+
+1149
+01:01:00,200 --> 01:01:04,400
+So You can jump in feet first 
+now. 
+
+1150
+01:01:04,700 --> 01:01:15,400
+So, Well yeah, the thing that 
+keeps coming to mind for me, is 
+
+1151
+01:01:15,700 --> 01:01:18,600
+that, as we've heard software is
+eating the world. 
+
+1152
+01:01:18,800 --> 01:01:22,100
+But it seems like there is 
+something that is getting us 
+
+1153
+01:01:22,100 --> 01:01:27,000
+further and further behind in 
+that in in what's happening 
+
+1154
+01:01:27,000 --> 01:01:31,600
+there. 
+And I hope that DPE will 
+
+1155
+01:01:31,900 --> 01:01:35,000
+accelerate this. 
+So that software really, truly 
+
+1156
+01:01:35,000 --> 01:01:42,400
+can eat the world and keep up. 
+As it needs to, because just 
+
+1157
+01:01:42,400 --> 01:01:46,400
+like, selfishly, like most 
+software is really horrible like
+
+1158
+01:01:46,600 --> 01:01:49,800
+it. 
+It's why my phone gets so many 
+
+1159
+01:01:49,800 --> 01:01:53,100
+app updates, this a bug fixes 
+and performance improvements. 
+
+1160
+01:01:53,300 --> 01:01:57,900
+It's like why? 
+Like like can we stop fixing 
+
+1161
+01:01:57,900 --> 01:02:00,400
+bugs and actually do useful 
+things, right? 
+
+1162
+01:02:00,400 --> 01:02:03,600
+And it's still too hard to make 
+because I look around you know, 
+
+1163
+01:02:03,600 --> 01:02:06,900
+people go, oh no, the a eyes are
+going to write all the software 
+
+1164
+01:02:06,900 --> 01:02:10,700
+and I'm going Great. 
+Because I mean, we look at the 
+
+1165
+01:02:10,700 --> 01:02:13,800
+bookstore and they have this 
+Antiquated software. 
+
+1166
+01:02:13,900 --> 01:02:18,100
+I'm going, we're not making it 
+good enough fast enough and it's
+
+1167
+01:02:18,100 --> 01:02:20,600
+not a problem of our jobs going 
+away. 
+
+1168
+01:02:20,600 --> 01:02:25,200
+It's a problem that we're not 
+able to easily enough create the
+
+1169
+01:02:25,200 --> 01:02:28,600
+systems that need to be made. 
+We don't, we don't deserve it, 
+
+1170
+01:02:28,800 --> 01:02:34,500
+the bosses are now, you know, I 
+it's an interesting thing with 
+
+1171
+01:02:34,500 --> 01:02:39,100
+the GPT and the code generation 
+because On the one hand, there's
+
+1172
+01:02:39,100 --> 01:02:42,700
+no question that something like 
+a GitHub co-pilot falls under 
+
+1173
+01:02:42,700 --> 01:02:44,500
+what I would consider to be 
+developer productivity 
+
+1174
+01:02:44,500 --> 01:02:45,900
+engineering. 
+No question, right? 
+
+1175
+01:02:45,900 --> 01:02:48,800
+I mean, you're eliminating toil,
+you're helping your using 
+
+1176
+01:02:48,800 --> 01:02:52,900
+technology to do that, but it's 
+still, you know, you can ask it,
+
+1177
+01:02:52,900 --> 01:02:55,600
+like, ask it to go, you know, 
+sometimes like write a 
+
+1178
+01:02:55,600 --> 01:02:58,500
+historical essay about an 
+obscure piece of history and it 
+
+1179
+01:02:58,500 --> 01:03:01,200
+will with the utmost confidence.
+Tell you something that is 
+
+1180
+01:03:01,200 --> 01:03:06,400
+completely false because it has 
+zero sense of shame or personal 
+
+1181
+01:03:06,400 --> 01:03:08,200
+accountability for what? 
+Telling you. 
+
+1182
+01:03:08,500 --> 01:03:12,500
+And so, you know, like some 
+people I've heard of yeah, 
+
+1183
+01:03:13,600 --> 01:03:17,200
+people, it does not feel shame 
+when it gives you code that is 
+
+1184
+01:03:17,200 --> 01:03:20,200
+bugging. 
+People have have, have have have
+
+1185
+01:03:20,200 --> 01:03:22,400
+no excuse, right? 
+But Bots, at least they can say 
+
+1186
+01:03:22,400 --> 01:03:24,000
+that we were, they were biased 
+or whatever. 
+
+1187
+01:03:24,000 --> 01:03:28,000
+But but you know so that what 
+what what frightens me a little 
+
+1188
+01:03:28,000 --> 01:03:33,300
+bit is that you know at the cost
+of productivity kind of always 
+
+1189
+01:03:33,300 --> 01:03:36,600
+comes criticality to a degree 
+like a perfect example. 
+
+1190
+01:03:36,600 --> 01:03:39,900
+I think of this as the open. 
+Our supply chain as big of a fan
+
+1191
+01:03:39,900 --> 01:03:43,600
+of this, as I am, the amount of 
+code that we put into our 
+
+1192
+01:03:43,600 --> 01:03:47,100
+systems, that we are completely 
+blind to its functionality at 
+
+1193
+01:03:47,100 --> 01:03:50,000
+this point is again, really 
+eye-opening. 
+
+1194
+01:03:50,000 --> 01:03:52,500
+I mean, you know, I remember 
+coming up, you coded everything,
+
+1195
+01:03:52,500 --> 01:03:55,400
+and it was even like a, it was 
+like a, it was like an honor 
+
+1196
+01:03:55,400 --> 01:03:57,000
+Batman. 
+Oh, man, I cranked out like two 
+
+1197
+01:03:57,000 --> 01:03:58,700
+hundred thousand lines of code 
+last night. 
+
+1198
+01:03:58,700 --> 01:04:00,400
+Uh, it's like now it's like 
+that. 
+
+1199
+01:04:00,400 --> 01:04:02,600
+Why would you ever do that? 
+Why wouldn't you just use spring
+
+1200
+01:04:02,600 --> 01:04:05,000
+or something? 
+And the amount of faith that we 
+
+1201
+01:04:05,000 --> 01:04:07,400
+put into these dependencies, 
+that are not code that we own is
+
+1202
+01:04:07,408 --> 01:04:09,800
+not Code that we wrote like, but
+but, but again, we kind of 
+
+1203
+01:04:09,800 --> 01:04:13,100
+blindly take it because of the 
+impact that it had sex 
+
+1204
+01:04:13,800 --> 01:04:17,100
+efficiency. 
+The same thing, I am concerned 
+
+1205
+01:04:17,100 --> 01:04:19,400
+can start happening with a i 
+generated coat. 
+
+1206
+01:04:19,500 --> 01:04:23,500
+You know, we become very reliant
+on this to the point where we're
+
+1207
+01:04:23,500 --> 01:04:25,000
+not being as critical as we 
+should be. 
+
+1208
+01:04:25,000 --> 01:04:28,700
+He was reviewing who's reviewing
+the bot you know maybe we have 
+
+1209
+01:04:28,700 --> 01:04:31,900
+Bots reviewing the Bots I mean 
+that would be great too but you 
+
+1210
+01:04:31,900 --> 01:04:34,600
+know there's still quite a bit 
+of work to do I think before we 
+
+1211
+01:04:34,600 --> 01:04:39,300
+can really be confident in that.
+So I may be it, you know, it 
+
+1212
+01:04:39,300 --> 01:04:45,200
+reduces the amount of drudgery I
+guess or the amount of typing 
+
+1213
+01:04:45,200 --> 01:04:47,700
+that we do. 
+But then allows us to focus more
+
+1214
+01:04:47,700 --> 01:04:50,800
+on quality and and architecture.
+And, you know, the things that, 
+
+1215
+01:04:51,200 --> 01:04:54,100
+that a bot won't have a critical
+eye for so. 
+
+1216
+01:04:55,100 --> 01:04:58,000
+So, yeah, it is. 
+It's a fad for yes, yet. 
+
+1217
+01:04:58,000 --> 01:05:01,900
+I never say never right. 
+I think I know better than that.
+
+1218
+01:05:03,700 --> 01:05:06,700
+Well, and to Bruce's Point 
+earlier it's like, what many of 
+
+1219
+01:05:06,700 --> 01:05:10,000
+us desire is to To enjoy our 
+job. 
+
+1220
+01:05:10,200 --> 01:05:15,200
+And when I get into a long 
+feedback cycle, like I did for 
+
+1221
+01:05:15,200 --> 01:05:18,900
+the last three days, trying to 
+get GitHub actions, to build arm
+
+1222
+01:05:18,900 --> 01:05:26,000
+images, and the build the cycle 
+time on testing my like one 
+
+1223
+01:05:26,000 --> 01:05:28,700
+character changes in my GitHub 
+action was 45. 
+
+1224
+01:05:28,700 --> 01:05:32,100
+No no. 
+Like I just want to pound my 
+
+1225
+01:05:32,100 --> 01:05:36,500
+head against a wall repeatedly 
+because that's what it feels 
+
+1226
+01:05:36,500 --> 01:05:41,100
+like to Make a change in wait, 
+45 minutes to see if it was if 
+
+1227
+01:05:41,100 --> 01:05:45,800
+it actually worked. 
+That's not a joy of know and and
+
+1228
+01:05:45,800 --> 01:05:51,100
+hopefully with DPE and I'm sure 
+other things we can get to 
+
+1229
+01:05:51,100 --> 01:05:54,900
+places where we as developers 
+enjoy our jobs more in the as I 
+
+1230
+01:05:54,900 --> 01:05:56,500
+think, certainly part of that as
+well. 
+
+1231
+01:05:56,700 --> 01:05:58,600
+But how can we focus on the 
+enjoyable things? 
+
+1232
+01:05:58,600 --> 01:06:03,300
+That's, that's I think where the
+the central piece to all this I 
+
+1233
+01:06:03,300 --> 01:06:06,400
+think I mean that that is our 
+deepest value, I guess if we 
+
+1234
+01:06:06,400 --> 01:06:07,900
+were to sum it up in one. 
+One. 
+
+1235
+01:06:08,200 --> 01:06:10,700
+They don't need a full sentence.
+It's just Joy equals 
+
+1236
+01:06:10,700 --> 01:06:12,500
+productivity. 
+That's, that's something that 
+
+1237
+01:06:12,500 --> 01:06:15,200
+we've actually used internally. 
+We've used it as our own value 
+
+1238
+01:06:15,200 --> 01:06:17,700
+core value. 
+Something that is as I start 
+
+1239
+01:06:17,700 --> 01:06:21,000
+flushing out, more of the DPE, 
+you know, spoiler we're going to
+
+1240
+01:06:21,000 --> 01:06:24,300
+be looking at like more DP, e 
+dot org, type of stuff, 
+
+1241
+01:06:24,300 --> 01:06:27,600
+Manifesto E-Type things, you 
+know, to try to really drive 
+
+1242
+01:06:27,600 --> 01:06:29,900
+this. 
+But that's a core value right 
+
+1243
+01:06:29,900 --> 01:06:31,600
+there. 
+The joy and productivity are 
+
+1244
+01:06:31,600 --> 01:06:33,600
+really the same thing. 
+You know, when it comes to the 
+
+1245
+01:06:33,608 --> 01:06:37,300
+developer experience happier, 
+developers write better code, 
+
+1246
+01:06:37,300 --> 01:06:39,300
+they write Write more code 
+because they're in their state 
+
+1247
+01:06:39,300 --> 01:06:41,700
+of creative flow and they're 
+they're they're acting 
+
+1248
+01:06:41,800 --> 01:06:44,500
+optimally. 
+And so again it's this really 
+
+1249
+01:06:44,500 --> 01:06:46,800
+virtuous thing where they're 
+doing a better thing for the 
+
+1250
+01:06:46,800 --> 01:06:49,600
+business but they're doing a 
+better thing for themselves to 
+
+1251
+01:06:51,900 --> 01:06:54,300
+nice. 
+Well I love that that is a 
+
+1252
+01:06:54,300 --> 01:06:55,600
+wonderful thoughts and all 
+right? 
+
+1253
+01:06:55,600 --> 01:06:58,000
+Yeah. 
+Thank you, Justin. 
+
+1254
+01:06:58,500 --> 01:07:00,000
+That was awesome pleasure. 
+This was great. 
+
+1255
+01:07:00,000 --> 01:07:01,700
+Yeah. 
+Anyway, took a message. 
+
+1256
+01:07:01,900 --> 01:07:03,200
+I always love to talk about this
+stuff. 
+
+1257
+01:07:03,200 --> 01:07:10,200
+Obviously, clearly does it come 
+through, does a little bit 
+
+1258
+01:07:10,600 --> 01:07:15,700
+little enthusiasm, just a little
+awesome. 
+
+1259
+01:07:16,500 --> 01:07:18,100
+Great. 
+Well, thank you, thank you. 
+
+1260
+01:07:18,100 --> 01:07:20,700
+Appreciate it. 
+And everybody check out the 
+
+1261
+01:07:20,708 --> 01:07:24,700
+winter tech for m.com website, 
+come to come to the winter text 
+
+1262
+01:07:24,700 --> 01:07:26,300
+on the track, when our Tech 
+forum. 
+
+1263
+01:07:26,600 --> 01:07:30,800
+I'm going up and a February and 
+in Crested Butte Colorado. 
+
+1264
+01:07:30,900 --> 01:07:37,900
+Justin, we'd love to have your 
+block it out and now it's all 
+
+1265
+01:07:37,900 --> 01:07:45,700
+open Conference during that 
+time. 
+
+1266
+01:07:45,700 --> 01:07:48,700
+So, we'll, all right. 
+All right, thanks Mel. 
+
+1267
+01:07:48,800 --> 01:07:53,600
+Hopefully, all right, have a 
+good one. 
+
+1268
+01:07:53,600 --> 01:07:54,400
+Thanks. 
+Thanks all. 
+
+1269
+01:07:26,600 --> 01:07:30,800
+I'm going up and a February and 
+in Crested Butte Colorado. 
+
+1270
+01:07:30,900 --> 01:07:37,900
+Justin, we'd love to have your 
+block it out and now it's all 
+
+1271
+01:07:37,900 --> 01:07:45,700
+open Conference during that 
+time. 
+
+1272
+01:07:45,700 --> 01:07:48,700
+So, we'll, all right. 
+All right, thanks Mel. 
+
+1273
+01:07:48,800 --> 01:07:53,600
+Hopefully, all right, have a 
+good one. 
+
+1274
+01:07:53,600 --> 01:07:54,400
+Thanks. 
+Thanks all.
+

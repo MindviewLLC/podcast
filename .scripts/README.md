@@ -42,10 +42,11 @@ individual tools, in the order `update.py` runs them:
 | --- | --- | --- |
 | `feed.py` | Fetches the feed once (with `--refresh`), retrying past a stale CDN copy, and fails if the feed has an episode without a page or YouTube is ahead of the feed (`--feed-behind-ok` turns the last into a warning). Every later step reads the copy it saved. | Yes, read-only apart from the feed cache. |
 | `episode_links.py` | Adds "Play on Apple Podcasts" (iTunes lookup API), "Watch on YouTube" (the real video, never the podcast re-publish) and "Discuss on Discord" (the show's invite from the feed description) to each episode page's hero pills. Leaves the pages alone if Apple or YouTube can't be fetched. | Yes, idempotent — it replaces its own `pill--apple`/`pill--youtube`/`pill--discord` pills. |
+| `transcripts.py` | Saves each episode's Spotify transcript (the feed's `<podcast:transcript>` SRT) as `transcripts/<slug>.srt` and writes the "Transcript" panel (timestamped paragraphs that seek the player) at the end of the episode page's main column. Keeps the saved copy if Spotify's can't be fetched. | Yes, idempotent — it replaces its own `<!-- transcript -->` block and rewrites an `.srt` only when Spotify's copy changed. |
 | `make_cards.py` | Draws `images/og/episodes/<slug>.jpg` and `images/og/guests/<slug>.jpg` — the per-page 1200×630 OpenGraph cards. | Yes. Draws only files that are **missing**. |
 | `social.py` | Rewrites each page's `canonical`…`theme-color` head block, its JSON-LD, its share row and the inline share script. | Yes, idempotent — it replaces its own output. |
 | `make_sitemap.py` | Rebuilds `sitemap.xml` from the pages on disk, with `<lastmod>` from the feed. | Yes. |
-| `make_feed.py` | Rebuilds `feed.xml`, the site's own RSS feed: one item per episode page, newest first, linking to that page, with the podcast feed's audio enclosure. `lastBuildDate` is the newest air date, so it is byte-stable. | Yes. |
+| `make_feed.py` | Rebuilds `feed.xml`, the site's own RSS feed: one item per episode page, newest first, linking to that page, with the podcast feed's audio enclosure and a `<podcast:transcript>` for the site's copy of the transcript. `lastBuildDate` is the newest air date, so it is byte-stable. | Yes. |
 | `make_llms.py` | Rebuilds `llms.txt` (the show, hosts, and a link with a short note for every episode, guest and topic page) and `llms-full.txt` (every episode's facts, listen links, description and resources), read from the pages on disk. | Yes. Byte-stable. |
 | `verify.py` | Parses every page and checks metadata, JSON-LD, links, assets, image width/height and card sizes. Exits non-zero on any problem. | Yes, read-only. |
 | `check_links.py` | Requests every **outbound** link and reports the dead ones. Exits non-zero on a definite 404. | Yes. Only re-requests links it has not seen in 30 days. |
@@ -121,6 +122,7 @@ make_og_default.py   the branded fallback card
 make_cards.py        per-episode and per-guest cards
 social.py            OpenGraph/Twitter/JSON-LD/share rows
 episode_links.py     per-episode Apple Podcasts, YouTube and Discord pills
+transcripts.py       per-episode Spotify transcripts and the page's Transcript panel
 make_sitemap.py      sitemap.xml
 make_feed.py         feed.xml (the site's RSS feed of episodes)
 make_llms.py         llms.txt and llms-full.txt
@@ -131,6 +133,8 @@ update.py            runs the above in order
 
 The feed is cached at `.scripts/.cache/podcast.rss` (gitignored). Pass
 `--refresh` to any tool that reads it to fetch a fresh copy.
+`transcripts/` (at the repo root, served by the site) holds each episode's
+Spotify transcript as published, written by `transcripts.py`.
 
 ## Adding a tool
 

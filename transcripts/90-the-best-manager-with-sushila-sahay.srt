@@ -1,0 +1,3435 @@
+1
+00:00:01,120 --> 00:00:03,520
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,720 --> 00:00:05,600
+I'm Bruce Eckel. 
+I'm James Ward. 
+
+3
+00:00:07,760 --> 00:00:10,000
+Welcome everyone. 
+Thanks for joining us for Happy 
+
+4
+00:00:10,000 --> 00:00:11,920
+Path Programming. 
+I think this is probably our 
+
+5
+00:00:11,920 --> 00:00:13,920
+last one of 2023. 
+So that's. 
+
+6
+00:00:13,920 --> 00:00:16,440
+I think so, yeah. 
+Unless we unless you line 
+
+7
+00:00:16,440 --> 00:00:17,760
+something up for next Friday, 
+it's. 
+
+8
+00:00:17,760 --> 00:00:19,160
+Possible. 
+Possible. 
+
+9
+00:00:19,160 --> 00:00:21,160
+No, no. 
+Maybe last for last? 
+
+10
+00:00:22,000 --> 00:00:24,640
+That's oh, that's right. 
+We have saved the best for last.
+
+11
+00:00:25,040 --> 00:00:29,680
+So, so Sheila is our guest today
+and we'll introduce you in a 
+
+12
+00:00:29,680 --> 00:00:31,240
+second. 
+But we have to talk about Winter
+
+13
+00:00:31,240 --> 00:00:35,720
+Tech Forum first, yes. 
+All indications are it's May 
+
+14
+00:00:35,720 --> 00:00:40,040
+26th. 
+No, wait, February 26th through 
+
+15
+00:00:40,040 --> 00:00:44,080
+March 1st. 
+They're, you know, they the 
+
+16
+00:00:44,080 --> 00:00:47,680
+contract hasn't been inked for 
+the space yet, but the guy said,
+
+17
+00:00:47,720 --> 00:00:50,080
+OK, I'm going to put it on the 
+calendar, so. 
+
+18
+00:00:50,720 --> 00:00:53,960
+And this is our in person get 
+together in Crested Butte where 
+
+19
+00:00:53,960 --> 00:00:58,760
+Bruce and I live, come and ski 
+and hang out nerds and and it's 
+
+20
+00:00:58,760 --> 00:01:00,600
+always. 
+An awesome time. 
+
+21
+00:01:01,080 --> 00:01:06,040
+It's it's always, it always 
+seems like we're having a lot of
+
+22
+00:01:06,040 --> 00:01:10,240
+fun. 
+And yet somehow amidst that, the
+
+23
+00:01:10,240 --> 00:01:14,840
+tech conversations just fly and 
+people come away going. 
+
+24
+00:01:15,040 --> 00:01:19,760
+Not only am I relaxed, but I 
+learned way more than I would in
+
+25
+00:01:19,880 --> 00:01:22,760
+a normal conference or a seminar
+or whatever. 
+
+26
+00:01:22,760 --> 00:01:27,240
+So we're all amazed by how much 
+we learned by doing this. 
+
+27
+00:01:27,240 --> 00:01:32,560
+So if you go to the website 
+wintertechforum.com, the dates 
+
+28
+00:01:32,560 --> 00:01:35,800
+aren't there yet because I'm 
+just, you know, waiting for the 
+
+29
+00:01:35,840 --> 00:01:39,800
+final ink to dry. 
+But but that sure looks like 
+
+30
+00:01:39,800 --> 00:01:43,280
+that's when it's gonna be. 
+So try and keep that open on 
+
+31
+00:01:43,280 --> 00:01:45,000
+your calendar. 
+Nice, great. 
+
+32
+00:01:45,480 --> 00:01:49,320
+And I'm starting to think about 
+what hackathon project I'll be 
+
+33
+00:01:49,320 --> 00:01:52,840
+working on. 
+Maybe I gotta get the Easy Racer
+
+34
+00:01:52,840 --> 00:01:55,880
+stuff done, so maybe I'll try to
+get that wrapped up. 
+
+35
+00:01:55,880 --> 00:01:56,920
+That. 
+I I never. 
+
+36
+00:01:56,920 --> 00:01:58,920
+I got the impression that would 
+never be done. 
+
+37
+00:01:59,640 --> 00:02:01,960
+Maybe it will never be done, so 
+maybe I'll just have to make 
+
+38
+00:02:01,960 --> 00:02:03,080
+some progress on it. 
+Yeah. 
+
+39
+00:02:04,040 --> 00:02:06,800
+And that's the structured 
+concurrency compared against 
+
+40
+00:02:07,080 --> 00:02:09,759
+across a bunch of different 
+languages and frameworks and 
+
+41
+00:02:09,759 --> 00:02:12,080
+stuff. 
+So which we did a hackathon on 
+
+42
+00:02:12,080 --> 00:02:14,000
+last year at the Winter Tech 
+Forum. 
+
+43
+00:02:14,120 --> 00:02:18,320
+So, OK, on to our regularly 
+scheduled guest. 
+
+44
+00:02:18,600 --> 00:02:21,360
+So, Sushila, thanks for joining 
+us. 
+
+45
+00:02:21,360 --> 00:02:24,760
+I wanted to have you on because 
+you are the best manager I've 
+
+46
+00:02:24,760 --> 00:02:28,200
+ever had and I don't think any 
+of my other managers or current 
+
+47
+00:02:28,200 --> 00:02:31,400
+manager listens to the podcast, 
+so hopefully I'm not offending 
+
+48
+00:02:31,400 --> 00:02:34,080
+anyone, but I've really enjoyed 
+working for you. 
+
+49
+00:02:34,080 --> 00:02:38,600
+This was now like 10 years ago 
+at Typesafe, now known as 
+
+50
+00:02:38,600 --> 00:02:42,080
+Lightbend and welcome. 
+Maybe just give us a little bit 
+
+51
+00:02:42,080 --> 00:02:44,240
+of introduction about you and 
+what you're up to now. 
+
+52
+00:02:45,080 --> 00:02:48,720
+Sure, sure. 
+I'm so happy to be here and it's
+
+53
+00:02:48,720 --> 00:02:51,840
+always such a pleasure to engage
+with you guys. 
+
+54
+00:02:51,840 --> 00:02:56,680
+And you know we work in the same
+technology field but in such 
+
+55
+00:02:56,680 --> 00:03:02,000
+different capacities. 
+And I love just hearing about 
+
+56
+00:03:02,000 --> 00:03:05,360
+what's going on in your world, 
+sharing what's going on in my 
+
+57
+00:03:05,360 --> 00:03:11,080
+world and finding all those 
+Nuggets of sameness. 
+
+58
+00:03:11,240 --> 00:03:15,240
+Despite that we're really, you 
+know, you're in the nerdy world 
+
+59
+00:03:15,240 --> 00:03:17,720
+and I'm in the business, 
+annoying world. 
+
+60
+00:03:17,720 --> 00:03:21,280
+And yet we, we have such a great
+relationship. 
+
+61
+00:03:21,280 --> 00:03:23,400
+Our working relationship was 
+fantastic. 
+
+62
+00:03:23,640 --> 00:03:28,080
+Our friendship is so meaningful.
+So yeah, I I'm just really happy
+
+63
+00:03:28,080 --> 00:03:32,680
+to be here. 
+And yeah, gosh, you know, just 
+
+64
+00:03:32,680 --> 00:03:37,880
+so the audience knows, I've had 
+decades and decades and another 
+
+65
+00:03:37,880 --> 00:03:44,000
+decade almost and technology 
+primarily on on well solely on 
+
+66
+00:03:44,000 --> 00:03:49,320
+the business side, primarily 
+running operations and post 
+
+67
+00:03:49,320 --> 00:03:53,800
+sales, customer success groups, 
+services support, customer 
+
+68
+00:03:53,800 --> 00:03:58,440
+success, account management. 
+I have also broadened my 
+
+69
+00:03:58,440 --> 00:04:04,040
+operations experience to cover 
+things like HR, finance, legal. 
+
+70
+00:04:04,240 --> 00:04:08,400
+So what I think is a pretty 
+comprehensive view around the 
+
+71
+00:04:08,400 --> 00:04:13,840
+business and people and my whole
+philosophy is do whatever it 
+
+72
+00:04:13,840 --> 00:04:16,959
+takes to make people successful 
+and that will make a company 
+
+73
+00:04:16,959 --> 00:04:19,839
+successful. 
+I'm glad you went there because 
+
+74
+00:04:19,839 --> 00:04:23,000
+that was actually going to be my
+first question is like do you've
+
+75
+00:04:23,120 --> 00:04:27,160
+you've managed nerds for a long 
+time and including me for for 
+
+76
+00:04:27,160 --> 00:04:31,200
+about a year and 1/2 which was 
+amazing but I I was curious if 
+
+77
+00:04:31,200 --> 00:04:34,680
+you had like a philosophy of 
+management that you've brought 
+
+78
+00:04:34,760 --> 00:04:39,000
+to how you manage people and and
+and maybe specifically nerds and
+
+79
+00:04:39,000 --> 00:04:43,120
+you you just mentioned it which 
+was making people the people 
+
+80
+00:04:43,120 --> 00:04:45,080
+that that work for you 
+successful. 
+
+81
+00:04:45,080 --> 00:04:47,880
+Was that the the right? 
+Yeah, that's really the crux of 
+
+82
+00:04:47,920 --> 00:04:51,560
+it. 
+I think one of the ways that I 
+
+83
+00:04:51,560 --> 00:05:00,240
+really do that is I try to learn
+what are conceptual challenges 
+
+84
+00:05:00,240 --> 00:05:03,400
+that the people who work for me 
+might experience. 
+
+85
+00:05:03,760 --> 00:05:09,440
+And I really try to share what 
+are the objectives of the 
+
+86
+00:05:09,440 --> 00:05:14,200
+company, of the role, of the 
+team, of their individual 
+
+87
+00:05:14,200 --> 00:05:17,160
+contribution, so that we can all
+align. 
+
+88
+00:05:17,200 --> 00:05:22,320
+And then I trust their expertise
+and I help them when they need 
+
+89
+00:05:22,320 --> 00:05:26,880
+it. 
+But I really believe that people
+
+90
+00:05:26,880 --> 00:05:31,760
+can bring unique value and as a 
+leader, as a manager, it's our 
+
+91
+00:05:31,760 --> 00:05:37,160
+job to just foster that in a way
+that aligns with the overall 
+
+92
+00:05:37,400 --> 00:05:40,280
+company success or team success.
+Yeah. 
+
+93
+00:05:40,800 --> 00:05:48,240
+But that requires that you not 
+be threatened by people 
+
+94
+00:05:48,360 --> 00:05:53,640
+underneath you having success 
+and that is not a that is like a
+
+95
+00:05:53,640 --> 00:05:57,680
+whole path for a lot of people 
+in management to go through to 
+
+96
+00:05:57,680 --> 00:06:00,200
+get to that point. 
+You know, that's that's like 
+
+97
+00:06:00,960 --> 00:06:05,480
+life work that they may never 
+achieve in a lifetime. 
+
+98
+00:06:06,040 --> 00:06:07,840
+To get. 
+That level of confidence. 
+
+99
+00:06:08,280 --> 00:06:11,080
+It's funny. 
+I think it's in large part 
+
+100
+00:06:11,080 --> 00:06:16,200
+because I don't care if I'm 
+right. 
+
+101
+00:06:16,680 --> 00:06:25,000
+I care if we do the right thing.
+I'm very outcome focused versus 
+
+102
+00:06:25,120 --> 00:06:29,040
+Sushila focused and I don't 
+know, maybe that's from being 
+
+103
+00:06:29,040 --> 00:06:32,920
+the youngest person. 
+Maybe that's because I feel like
+
+104
+00:06:33,200 --> 00:06:38,080
+if I'm focused on when I said 
+youngest person, I meant on a 
+
+105
+00:06:38,080 --> 00:06:42,600
+leadership team or in my family,
+I was the baby in my heart. 
+
+106
+00:06:43,200 --> 00:06:47,920
+So whenever everyone else around
+me is doing well, like I'm just 
+
+107
+00:06:47,920 --> 00:06:51,480
+propped up that like and I feel 
+really good about it. 
+
+108
+00:06:53,280 --> 00:06:59,200
+I I think it's been interesting 
+being a woman in technology 
+
+109
+00:06:59,200 --> 00:07:03,000
+because you naturally feel 
+threatened because you know 
+
+110
+00:07:03,000 --> 00:07:08,040
+leadership roles aren't as 
+common and so you have to fight 
+
+111
+00:07:08,040 --> 00:07:12,560
+a lot for them. 
+And very early on, I started 
+
+112
+00:07:12,680 --> 00:07:16,600
+realizing like I'm probably not 
+going to win by competing head 
+
+113
+00:07:16,600 --> 00:07:21,360
+to head with a bunch of people. 
+So if I just make a bunch of 
+
+114
+00:07:21,360 --> 00:07:26,320
+people successful, that's just 
+going to naturally lead more, 
+
+115
+00:07:26,360 --> 00:07:28,800
+lead me to more and greater 
+opportunities. 
+
+116
+00:07:28,800 --> 00:07:30,800
+And that's how I've managed my 
+career. 
+
+117
+00:07:30,800 --> 00:07:36,320
+And now I'm the global VP of a 
+public company that does 600 
+
+118
+00:07:36,320 --> 00:07:39,720
+plus $1,000,000 in revenue. 
+And I run a team of over 100 
+
+119
+00:07:39,720 --> 00:07:43,120
+people and you know, and I feel 
+like OK, that was the right 
+
+120
+00:07:43,120 --> 00:07:46,880
+approach to take. 
+I also felt like it was very 
+
+121
+00:07:47,040 --> 00:07:50,760
+rewarding to go down that path. 
+So if I made a sacrifice here 
+
+122
+00:07:50,760 --> 00:07:54,440
+and there where I could have 
+maybe taken the next role by 
+
+123
+00:07:54,440 --> 00:07:58,720
+being more cutthroat and, you 
+know, recognizing threats around
+
+124
+00:07:58,720 --> 00:08:01,440
+me, well, who wants to operate 
+like that? 
+
+125
+00:08:01,440 --> 00:08:03,840
+I don't. 
+I like to have fun at work. 
+
+126
+00:08:03,840 --> 00:08:07,440
+I like to be happy at work. 
+I don't want to have a lot of 
+
+127
+00:08:08,280 --> 00:08:12,600
+contention and negative 
+relationships in my life, and 
+
+128
+00:08:12,600 --> 00:08:16,720
+work is a big part of my life, 
+so I just kind of trust that 
+
+129
+00:08:16,720 --> 00:08:21,440
+it's all going to work out. 
+But it sounds like you kind of 
+
+130
+00:08:21,760 --> 00:08:25,880
+grew up in a particular, I mean 
+it sounds like you naturally 
+
+131
+00:08:26,720 --> 00:08:30,280
+went down that path. 
+You know that's who you are now.
+
+132
+00:08:30,800 --> 00:08:36,280
+Sure. 
+Can we train existing people to 
+
+133
+00:08:36,280 --> 00:08:39,919
+be like that or do we have to 
+just select? 
+
+134
+00:08:39,919 --> 00:08:41,919
+Just get an MBA and then that's 
+solved. 
+
+135
+00:08:42,159 --> 00:08:43,799
+That's it, yeah. 
+Right. 
+
+136
+00:08:43,799 --> 00:08:46,360
+Exactly What do? 
+Because to me it sounds like, 
+
+137
+00:08:46,360 --> 00:08:50,560
+oh, I mean, you have to select 
+people who are already that way.
+
+138
+00:08:50,560 --> 00:08:53,680
+I don't think, unless you put 
+them through massive amounts of 
+
+139
+00:08:53,680 --> 00:08:57,880
+therapy, take years to get to 
+the point where they go, Oh 
+
+140
+00:08:57,880 --> 00:09:01,720
+yeah, I'm not threatened by the 
+success of people underneath me.
+
+141
+00:09:01,720 --> 00:09:05,880
+So of and I know what it feels 
+like to help people be 
+
+142
+00:09:05,880 --> 00:09:09,480
+successful and that that 
+supports me rather than 
+
+143
+00:09:09,480 --> 00:09:10,840
+threatens me. 
+I mean, that's such a 
+
+144
+00:09:10,840 --> 00:09:15,240
+fundamental description of who a
+person is, sure. 
+
+145
+00:09:16,000 --> 00:09:18,120
+I think you have to. 
+How do you, how do you create 
+
+146
+00:09:18,120 --> 00:09:19,640
+that? 
+You know that I mean because. 
+
+147
+00:09:19,640 --> 00:09:22,680
+Here's something, though. 
+Here's something that I think is
+
+148
+00:09:22,680 --> 00:09:26,040
+important to help people evolve 
+that way. 
+
+149
+00:09:27,040 --> 00:09:31,120
+And let's not pretend I'm not 
+hugely competitive. 
+
+150
+00:09:31,440 --> 00:09:35,960
+I am and I want to win. 
+And you know, those are natural 
+
+151
+00:09:35,960 --> 00:09:36,920
+qualities. 
+I have not. 
+
+152
+00:09:37,120 --> 00:09:39,720
+Versus you don't want to win. 
+Versus the people who are 
+
+153
+00:09:39,720 --> 00:09:40,840
+working for you. 
+That's the. 
+
+154
+00:09:41,000 --> 00:09:44,560
+Thing exactly. 
+And you know, when I first had 
+
+155
+00:09:45,440 --> 00:09:51,280
+my Silicon Valley experience 
+decades ago, I was the right 
+
+156
+00:09:51,280 --> 00:09:56,480
+hand to the COO of a company. 
+We were doing so freaking well. 
+
+157
+00:09:56,680 --> 00:09:59,080
+We went public. 
+We were the darlings of Silicon 
+
+158
+00:09:59,080 --> 00:10:00,640
+Valley. 
+And then things, you know, 
+
+159
+00:10:00,640 --> 00:10:04,120
+started. 
+Bubbles started bursting around 
+
+160
+00:10:04,120 --> 00:10:07,960
+us. 
+And you see leaders in action 
+
+161
+00:10:07,960 --> 00:10:11,320
+when times are good and when 
+times are tough. 
+
+162
+00:10:11,760 --> 00:10:16,320
+And all you have to do is 
+observe and see what is what are
+
+163
+00:10:16,320 --> 00:10:19,240
+they doing that's working and 
+not working. 
+
+164
+00:10:19,640 --> 00:10:24,920
+And I would see a lot of people 
+getting really micromanagy which
+
+165
+00:10:24,920 --> 00:10:31,280
+means like not trusting the 
+folks below you really dictating
+
+166
+00:10:31,280 --> 00:10:34,280
+like you must do this, you must 
+do that, you must achieve this, 
+
+167
+00:10:34,280 --> 00:10:38,920
+you must achieve that. 
+And the whole culture became 
+
+168
+00:10:39,600 --> 00:10:46,320
+slightly toxic and the the trust
+in that leader just like 
+
+169
+00:10:46,640 --> 00:10:51,400
+dissolves by all the people that
+are working for them and 
+
+170
+00:10:51,400 --> 00:10:54,440
+everything starts going wrong. 
+Like it's bad enough that the 
+
+171
+00:10:54,440 --> 00:10:57,880
+macro environment is not 
+supporting your business goals, 
+
+172
+00:10:58,200 --> 00:11:03,000
+but now your team is just not 
+motivated to achieve. 
+
+173
+00:11:03,480 --> 00:11:06,200
+You know, everyone just feels 
+shitty all the time. 
+
+174
+00:11:06,760 --> 00:11:11,160
+And that is a very unhealthy, 
+unhappy environment. 
+
+175
+00:11:11,320 --> 00:11:13,840
+I don't want to be a part of it.
+I don't want to create it. 
+
+176
+00:11:14,320 --> 00:11:19,480
+And so I started realizing, wow,
+as a manager, as a leader and 
+
+177
+00:11:19,480 --> 00:11:24,280
+executive, whatever, you have so
+much influence around all of 
+
+178
+00:11:24,280 --> 00:11:28,600
+these things. 
+And if you just try to keep 
+
+179
+00:11:28,600 --> 00:11:34,120
+people engaged, motivated, 
+focused, enthusiastic, and 
+
+180
+00:11:34,120 --> 00:11:39,120
+successful, it's so much easier 
+to get things done. 
+
+181
+00:11:39,120 --> 00:11:42,240
+It's so much more likely that 
+you're going to get things done.
+
+182
+00:11:42,640 --> 00:11:45,800
+And I just learned that by 
+observing. 
+
+183
+00:11:47,120 --> 00:11:52,960
+So sure, I have some natural 
+qualities for it, but I also 
+
+184
+00:11:53,240 --> 00:11:57,320
+thought very specifically, what 
+kind of leader do I want to be 
+
+185
+00:11:57,520 --> 00:11:59,800
+and what kind of leader don't I 
+want to be? 
+
+186
+00:12:00,240 --> 00:12:06,840
+And I've seen people mature as 
+leaders and get to a point where
+
+187
+00:12:06,840 --> 00:12:12,400
+they realize as your scope 
+widens especially and your 
+
+188
+00:12:12,400 --> 00:12:17,480
+influence becomes more 
+necessary, there's no way you 
+
+189
+00:12:17,480 --> 00:12:20,040
+can know it all. 
+There's no way you can do it 
+
+190
+00:12:20,040 --> 00:12:22,560
+all. 
+So you have to build an 
+
+191
+00:12:22,560 --> 00:12:26,160
+environment where you trust 
+people and they like working for
+
+192
+00:12:26,160 --> 00:12:32,000
+you and they're motivated by 
+your philosophy and they feel 
+
+193
+00:12:32,880 --> 00:12:37,120
+engaged and responsible for 
+their own success and your 
+
+194
+00:12:37,120 --> 00:12:40,160
+success. 
+I'm going to push back a little 
+
+195
+00:12:40,560 --> 00:12:44,200
+on what you said. 
+You go, oh, all I do is observe 
+
+196
+00:12:44,200 --> 00:12:46,240
+what other people do and works. 
+Right now. 
+
+197
+00:12:47,400 --> 00:12:49,720
+I went through a period where I 
+was going, OK, I'm going to 
+
+198
+00:12:49,720 --> 00:12:52,520
+solve this business management, 
+whatever problem. 
+
+199
+00:12:52,920 --> 00:12:58,320
+And one of the things that I saw
+was there were all these leaders
+
+200
+00:12:58,680 --> 00:13:04,520
+that would talk about why they 
+were successful and then you'd 
+
+201
+00:13:04,520 --> 00:13:07,560
+listen to the next one and 
+they'd say why they were 
+
+202
+00:13:07,560 --> 00:13:09,320
+successful. 
+And then you go, wait a minute, 
+
+203
+00:13:09,320 --> 00:13:13,000
+that's diametrically opposed to 
+what the previous person said. 
+
+204
+00:13:13,360 --> 00:13:16,720
+And you begin to realize how 
+much delusion there is there. 
+
+205
+00:13:17,000 --> 00:13:21,480
+And that a lot of it, nobody 
+wants to say, well, I was lucky.
+
+206
+00:13:22,640 --> 00:13:25,320
+And a lot of things just came 
+together. 
+
+207
+00:13:25,920 --> 00:13:30,240
+They want to say, oh, I have the
+formula for you and you do this 
+
+208
+00:13:30,240 --> 00:13:33,360
+and this and this thing and then
+when you actually look at the 
+
+209
+00:13:33,360 --> 00:13:38,320
+big picture, you're going, well,
+it's none of those formulas seem
+
+210
+00:13:38,320 --> 00:13:42,920
+to work. 
+And so when you observe and say 
+
+211
+00:13:43,080 --> 00:13:46,160
+this seems to work. 
+I think there needs to be a 
+
+212
+00:13:46,160 --> 00:13:50,680
+filter there that says. 
+This might be something that 
+
+213
+00:13:50,680 --> 00:13:52,880
+works. 
+I think that's an excellent 
+
+214
+00:13:52,880 --> 00:13:55,320
+point. 
+I am wondering if you were 
+
+215
+00:13:55,320 --> 00:14:00,200
+calling me delusional, but get 
+to that later however well. 
+
+216
+00:14:00,760 --> 00:14:02,720
+We all have our cognitive 
+biases, so. 
+
+217
+00:14:02,880 --> 00:14:04,120
+I guess we're all. 
+Delusional. 
+
+218
+00:14:05,520 --> 00:14:08,720
+But I guess I should have 
+prefaced everything with. 
+
+219
+00:14:08,960 --> 00:14:11,960
+That's what works for me. 
+Mm hmm. 
+
+220
+00:14:12,360 --> 00:14:15,840
+But also what I'm. 
+Saying is that you're, I think 
+
+221
+00:14:15,840 --> 00:14:18,600
+what you're you're doing 
+something more than observing. 
+
+222
+00:14:18,840 --> 00:14:22,320
+You're like saying you're 
+observing and you're going oh 
+
+223
+00:14:22,360 --> 00:14:26,400
+and the people who are working 
+in this company are like 
+
+224
+00:14:26,400 --> 00:14:30,200
+motivated and happy. 
+And so those things that I'm 
+
+225
+00:14:30,200 --> 00:14:33,880
+seeing may be contributing to 
+that and that's what you're 
+
+226
+00:14:33,880 --> 00:14:36,360
+looking for without even maybe 
+noticing it. 
+
+227
+00:14:37,040 --> 00:14:40,840
+It's a good point. 
+And I, you know, observing is 
+
+228
+00:14:40,840 --> 00:14:43,640
+one thing, incorporating is 
+another, right? 
+
+229
+00:14:43,880 --> 00:14:47,320
+And so you have to figure out 
+like, OK, if that's working for 
+
+230
+00:14:47,320 --> 00:14:52,840
+that person and that's what I 
+see, how, what do I do with 
+
+231
+00:14:52,840 --> 00:14:57,040
+that? 
+How do I embrace it, demonstrate
+
+232
+00:14:57,040 --> 00:14:57,960
+it? 
+Can I? 
+
+233
+00:14:57,960 --> 00:15:02,480
+Can I still be authentic and 
+true to myself using what I see 
+
+234
+00:15:02,480 --> 00:15:06,680
+working for someone else so it 
+isn't as easy as just observing?
+
+235
+00:15:06,680 --> 00:15:09,640
+And what you just said, 
+authentic and true to myself. 
+
+236
+00:15:09,640 --> 00:15:14,360
+Now I I would argue that most 
+people are not, most managers 
+
+237
+00:15:14,360 --> 00:15:18,280
+are not necessarily 
+incorporating that idea, right. 
+
+238
+00:15:18,480 --> 00:15:21,880
+And but it's just part of your 
+background, it's part of the 
+
+239
+00:15:21,880 --> 00:15:26,080
+water that you swim in. 
+So you so you don't even think 
+
+240
+00:15:26,120 --> 00:15:28,400
+about that, you just go, Well, 
+of course it's got to be 
+
+241
+00:15:28,400 --> 00:15:30,560
+authentic and true to myself. 
+Right. 
+
+242
+00:15:30,720 --> 00:15:36,520
+You know, in part because I like
+and this sounds weird, but I 
+
+243
+00:15:36,520 --> 00:15:39,000
+like to take the path of least 
+resistance. 
+
+244
+00:15:39,080 --> 00:15:43,480
+I'm not someone who loves 
+friction and chaos and drama, 
+
+245
+00:15:44,640 --> 00:15:48,240
+which is part of why I really 
+love focusing on operations. 
+
+246
+00:15:48,240 --> 00:15:50,640
+Because really what you're 
+trying to do is take friction 
+
+247
+00:15:50,640 --> 00:15:55,000
+out of a system and make things 
+as easy as possible. 
+
+248
+00:15:55,000 --> 00:16:00,040
+And I think the easier you can 
+make things, the less stressful 
+
+249
+00:16:00,720 --> 00:16:05,160
+all of that, the better. 
+So you know how that translates 
+
+250
+00:16:05,160 --> 00:16:08,760
+to how I specifically manage 
+people is like I give very clear
+
+251
+00:16:08,760 --> 00:16:11,000
+objectives. 
+I set expectations. 
+
+252
+00:16:11,000 --> 00:16:17,040
+I hold people to timelines so 
+that we can all just be 
+
+253
+00:16:18,120 --> 00:16:22,600
+productive around a system. 
+And I think a lot of leaders 
+
+254
+00:16:22,600 --> 00:16:25,000
+don't think that way. 
+They just think I'm going to 
+
+255
+00:16:25,000 --> 00:16:27,560
+hire a bunch of bright people 
+and they're going to do a bunch 
+
+256
+00:16:27,560 --> 00:16:30,320
+of good things. 
+And then I'm going to tell them 
+
+257
+00:16:30,320 --> 00:16:34,000
+like make sure you hit a 
+deadline and and that's it. 
+
+258
+00:16:34,280 --> 00:16:38,240
+And they don't. 
+Then they're upset that things 
+
+259
+00:16:38,240 --> 00:16:41,880
+went wrong, or someone didn't 
+perform, or, you know, someone 
+
+260
+00:16:42,000 --> 00:16:46,440
+thought they were doing great, 
+and meanwhile nothing that you 
+
+261
+00:16:46,440 --> 00:16:50,120
+expected actually happened. 
+So you have to be very clear 
+
+262
+00:16:50,120 --> 00:16:52,360
+about expectations, and people 
+love that. 
+
+263
+00:16:53,760 --> 00:16:56,480
+But where was I going with all 
+of this? 
+
+264
+00:16:57,120 --> 00:16:59,640
+I wanted to actually hop back 
+for a second, which is I think 
+
+265
+00:16:59,640 --> 00:17:03,440
+what what Bruce was pointing out
+was that as you've figured out 
+
+266
+00:17:03,440 --> 00:17:06,880
+your management philosophy, 
+there was some combination of 
+
+267
+00:17:07,160 --> 00:17:11,960
+who Tsushila is as a wonderful 
+human combined with your 
+
+268
+00:17:11,960 --> 00:17:16,200
+curiosity and desire to learn 
+and understand how something can
+
+269
+00:17:16,200 --> 00:17:20,160
+work with less friction. 
+And those those two things 
+
+270
+00:17:20,160 --> 00:17:23,160
+combined is what I think has 
+made you such an amazing 
+
+271
+00:17:23,160 --> 00:17:25,400
+manager. 
+It That and I I think we're 
+
+272
+00:17:25,400 --> 00:17:27,680
+initially what Bruce was 
+pointing out is that we can't 
+
+273
+00:17:27,680 --> 00:17:31,840
+ignore the fact that Tsushila is
+an amazing human and that's kind
+
+274
+00:17:31,840 --> 00:17:37,440
+of this like foundation of you 
+being able to to learn the like 
+
+275
+00:17:37,440 --> 00:17:39,200
+management aspect that worked 
+well. 
+
+276
+00:17:39,960 --> 00:17:43,720
+Well, and thank you for all the 
+positive feedback. 
+
+277
+00:17:43,720 --> 00:17:47,240
+I'm someone who loves applause 
+and I love compliments and I'm 
+
+278
+00:17:47,240 --> 00:17:51,440
+not going to pretend I don't. 
+I was a singer growing up and 
+
+279
+00:17:51,440 --> 00:17:57,000
+being on stage just, you know, 
+and getting applause, it fed my 
+
+280
+00:17:57,000 --> 00:18:00,680
+soul. 
+So I really appreciate all your 
+
+281
+00:18:00,720 --> 00:18:04,160
+comments. 
+I also strive to be a decent 
+
+282
+00:18:04,160 --> 00:18:10,200
+human being in everything I do. 
+And going back to your point, 
+
+283
+00:18:10,200 --> 00:18:14,600
+Bruce, about or your question 
+about authenticity and my 
+
+284
+00:18:14,600 --> 00:18:18,920
+response around path of least 
+resistance and taking friction 
+
+285
+00:18:18,920 --> 00:18:23,800
+out of a system. 
+When I was first in technology 
+
+286
+00:18:23,800 --> 00:18:30,320
+as a woman, you know, I saw that
+there was an opportunity to try 
+
+287
+00:18:30,320 --> 00:18:34,120
+to be just like all the guys I 
+was working with. 
+
+288
+00:18:34,200 --> 00:18:38,320
+I was often the only woman in 
+the room, the only executive 
+
+289
+00:18:38,320 --> 00:18:43,640
+woman. 
+And and so you know, you thought
+
+290
+00:18:43,640 --> 00:18:51,280
+about like, let me tamp down my 
+feminine qualities and just be 
+
+291
+00:18:51,280 --> 00:18:57,160
+like one of the guys. 
+And I have a lot of amazing male
+
+292
+00:18:57,160 --> 00:19:00,280
+friends and male relationships 
+in my life and. 
+
+293
+00:19:00,720 --> 00:19:02,720
+But we don't need more male 
+energy. 
+
+294
+00:19:03,160 --> 00:19:06,600
+We have enough. 
+Right, But this was decades ago 
+
+295
+00:19:06,640 --> 00:19:07,160
+where? 
+Right. 
+
+296
+00:19:07,840 --> 00:19:10,800
+You. 
+Had to fit in conversation about
+
+297
+00:19:11,480 --> 00:19:14,520
+male energy. 
+The only way you were going to 
+
+298
+00:19:14,520 --> 00:19:19,600
+get ahead was by demonstrating a
+lot of male energy. 
+
+299
+00:19:19,600 --> 00:19:22,560
+Yep. 
+And I'm not going to say I don't
+
+300
+00:19:22,560 --> 00:19:28,880
+have male energy, but what I 
+realized was I'm not just one of
+
+301
+00:19:28,880 --> 00:19:32,880
+the guys. 
+So why not figure out these 
+
+302
+00:19:33,400 --> 00:19:38,200
+things that make me unique, that
+give me a different perspective 
+
+303
+00:19:38,200 --> 00:19:43,680
+in a boardroom or in a meeting 
+and double down on those 
+
+304
+00:19:43,680 --> 00:19:46,160
+qualities. 
+Otherwise you are just going 
+
+305
+00:19:46,160 --> 00:19:51,240
+head to head competing and, you 
+know unlikely to win. 
+
+306
+00:19:51,520 --> 00:19:56,800
+The value of diversity is not 
+taking people in and and making 
+
+307
+00:19:56,800 --> 00:20:01,680
+them like more white men. 
+It's what you bring, the 
+
+308
+00:20:01,680 --> 00:20:06,680
+perspectives that you bring that
+the rest of the room doesn't 
+
+309
+00:20:06,680 --> 00:20:09,120
+know about. 
+And that's why companies make 
+
+310
+00:20:09,120 --> 00:20:10,960
+more money if they're more 
+diverse. 
+
+311
+00:20:11,400 --> 00:20:14,360
+Because they can reach I I think
+it's because they reach more 
+
+312
+00:20:14,360 --> 00:20:15,360
+markets. 
+Because they. 
+
+313
+00:20:15,440 --> 00:20:17,760
+Understand more markets. 
+Exactly. 
+
+314
+00:20:17,760 --> 00:20:22,040
+It's it's that simple. 
+And again though, these were 
+
+315
+00:20:22,440 --> 00:20:26,920
+things that I thought about that
+weren't really supported by 
+
+316
+00:20:28,200 --> 00:20:30,560
+companies philosophies in 
+general. 
+
+317
+00:20:31,680 --> 00:20:37,080
+And but I felt like it was quite
+a privilege to be working at a 
+
+318
+00:20:37,080 --> 00:20:41,240
+level that was senior and be 
+surrounded by a bunch of really 
+
+319
+00:20:41,240 --> 00:20:46,160
+smart people. 
+But I also thought, and this is,
+
+320
+00:20:47,080 --> 00:20:52,200
+you know, probably a product of 
+growing up as a minority person 
+
+321
+00:20:52,200 --> 00:20:58,400
+in a very, what's the opposite 
+of diverse, homogeneous, 
+
+322
+00:20:58,800 --> 00:21:05,200
+homogeneous part of Canada. 
+And so, you know, I just was, 
+
+323
+00:21:05,320 --> 00:21:09,320
+I'm different all the time. 
+Like throughout my life, there's
+
+324
+00:21:09,320 --> 00:21:11,600
+a difference. 
+I'm either the only woman, I'm 
+
+325
+00:21:11,600 --> 00:21:14,400
+the only brown woman, I'm the 
+shortest person in the room. 
+
+326
+00:21:14,400 --> 00:21:17,920
+Like you could go on and on 
+about what makes you different, 
+
+327
+00:21:17,920 --> 00:21:21,040
+right. 
+And so I just had a lot of 
+
+328
+00:21:21,200 --> 00:21:27,640
+confidence that being different 
+could be valuable and and so I. 
+
+329
+00:21:27,680 --> 00:21:31,160
+Found the life experiences that 
+you had outside of the like tech
+
+330
+00:21:31,160 --> 00:21:32,280
+right? 
+Which is? 
+
+331
+00:21:32,440 --> 00:21:35,320
+Probably the whole authenticity 
+thing, right? 
+
+332
+00:21:35,320 --> 00:21:39,120
+You use your life experiences 
+just to be a better person, to 
+
+333
+00:21:39,120 --> 00:21:44,280
+be a better leader, to be a 
+better, to empathize more. 
+
+334
+00:21:45,360 --> 00:21:49,160
+And so that's part of why I 
+think I can manage technical 
+
+335
+00:21:49,160 --> 00:21:57,640
+people and nerds and be married 
+to 1 successfully is because 
+
+336
+00:21:57,640 --> 00:21:59,360
+definitely. 
+She had to add that. 
+
+337
+00:22:00,760 --> 00:22:02,560
+Oh, these nerds. 
+They're hard to get along with. 
+
+338
+00:22:03,000 --> 00:22:09,000
+But you know, but but it's 
+because I try to embrace other 
+
+339
+00:22:09,000 --> 00:22:13,160
+people's experiences and 
+recognize our differences and 
+
+340
+00:22:13,160 --> 00:22:15,560
+figure out how we can come 
+together and bring those 
+
+341
+00:22:15,560 --> 00:22:19,120
+differences together to make the
+sum of the parts greater, 
+
+342
+00:22:19,360 --> 00:22:21,480
+whatever that. 
+Yeah. 
+
+343
+00:22:24,480 --> 00:22:27,160
+I don't know if I'm actually 
+answering any of your questions.
+
+344
+00:22:27,200 --> 00:22:30,080
+No, that's fine I I do find 
+sometimes. 
+
+345
+00:22:30,200 --> 00:22:33,080
+Because. 
+Early on, I had a few awful jobs
+
+346
+00:22:33,080 --> 00:22:35,840
+and I decided, oh, I never want 
+to work for anybody because I 
+
+347
+00:22:35,840 --> 00:22:38,120
+don't want anybody to tell me 
+what to do and all that. 
+
+348
+00:22:38,560 --> 00:22:41,160
+But lately I've been wondering 
+huh. 
+
+349
+00:22:41,480 --> 00:22:45,560
+You know every once in a while 
+in this exploration I've come 
+
+350
+00:22:45,560 --> 00:22:50,560
+across a job that I go oh, that 
+would actually be, you know not 
+
+351
+00:22:50,560 --> 00:22:53,400
+not too bad that that would have
+been maybe pretty pleasant. 
+
+352
+00:22:53,400 --> 00:22:56,680
+And I, you know, if I was 
+working for somebody like you. 
+
+353
+00:22:57,240 --> 00:22:58,680
+I'm wondering huh. 
+How it. 
+
+354
+00:22:58,680 --> 00:23:02,360
+And well and James has had jobs 
+that he's really enjoyed and I'm
+
+355
+00:23:02,360 --> 00:23:06,480
+going oh, maybe I was too I'm 
+I'm almost certain I was too 
+
+356
+00:23:06,480 --> 00:23:08,880
+harsh. 
+But I still think the number of 
+
+357
+00:23:08,880 --> 00:23:12,240
+jobs that would have worked for 
+me it's just such a small 
+
+358
+00:23:12,240 --> 00:23:13,480
+fraction. 
+Right. 
+
+359
+00:23:14,040 --> 00:23:16,400
+And it's good to recognize that,
+right? 
+
+360
+00:23:18,040 --> 00:23:19,800
+You know, I hate being told what
+to do. 
+
+361
+00:23:20,080 --> 00:23:22,320
+I hate it. 
+I absolutely hate it. 
+
+362
+00:23:22,320 --> 00:23:23,760
+Is there? 
+Anybody that likes it? 
+
+363
+00:23:24,400 --> 00:23:28,160
+You know, I think some people do
+actually want to know. 
+
+364
+00:23:28,160 --> 00:23:33,120
+Like, I mean, I do a lot of 
+mentoring and helping people 
+
+365
+00:23:33,120 --> 00:23:36,760
+early in their career. 
+And a lot of people say, like, 
+
+366
+00:23:37,160 --> 00:23:39,560
+tell me what to do to get to the
+next step. 
+
+367
+00:23:39,560 --> 00:23:41,320
+Tell me what to do to get to 
+your level. 
+
+368
+00:23:41,680 --> 00:23:46,440
+And I'm like, hmm, that you have
+to change your mindset because 
+
+369
+00:23:46,440 --> 00:23:47,880
+no one's going to tell you what 
+to do. 
+
+370
+00:23:47,880 --> 00:23:51,080
+You have to find a way to find 
+the opportunities to bring the 
+
+371
+00:23:51,080 --> 00:23:54,160
+value and solve the big 
+problems. 
+
+372
+00:23:54,360 --> 00:23:58,960
+And no one is going to come to 
+you and tell you, James, solve 
+
+373
+00:23:58,960 --> 00:24:01,600
+this problem early in your 
+career. 
+
+374
+00:24:02,280 --> 00:24:04,880
+That's that's funny you bring 
+this up because in mentoring 
+
+375
+00:24:05,560 --> 00:24:09,920
+some developer advocates in the 
+past, some of them would ask the
+
+376
+00:24:09,920 --> 00:24:13,920
+questions like how do I move up 
+the ranks as a developer 
+
+377
+00:24:13,920 --> 00:24:16,880
+advocate? 
+And of course, there's always 
+
+378
+00:24:16,880 --> 00:24:22,680
+the set expectations and the 
+structure that defines how you 
+
+379
+00:24:22,680 --> 00:24:26,040
+move up in any role, especially 
+in large companies. 
+
+380
+00:24:26,520 --> 00:24:29,120
+But the advice I would always 
+give to these people is like, 
+
+381
+00:24:29,280 --> 00:24:32,640
+ignore all of that and what you 
+need to do is something amazing 
+
+382
+00:24:32,640 --> 00:24:35,720
+that is not in that structure 
+and that's how you move up. 
+
+383
+00:24:35,720 --> 00:24:41,560
+Be aware of the structure but 
+just but but then go, OK, you 
+
+384
+00:24:41,560 --> 00:24:46,640
+know ultimately it's doing 
+something impressive that is 
+
+385
+00:24:46,680 --> 00:24:48,080
+what's going to do that. 
+Yeah. 
+
+386
+00:24:48,400 --> 00:24:52,000
+And then the hard question is 
+what is that amazing, impressive
+
+387
+00:24:52,000 --> 00:24:55,320
+thing that you can do. 
+And that's where that's it. 
+
+388
+00:24:55,320 --> 00:24:58,920
+Just that's it. 
+Well, and when you then see, the
+
+389
+00:24:58,920 --> 00:25:02,160
+way I look at it is, well, you 
+go through school and they go, 
+
+390
+00:25:02,160 --> 00:25:03,920
+OK, here's the homework, here's 
+the test. 
+
+391
+00:25:04,120 --> 00:25:06,960
+He will tell you exactly what to
+do to progress. 
+
+392
+00:25:06,960 --> 00:25:09,960
+And you get into that mindset 
+and you go out into work and you
+
+393
+00:25:09,960 --> 00:25:11,840
+go, well, it's just going to be 
+the same, right. 
+
+394
+00:25:12,320 --> 00:25:16,200
+And. 
+And it can be there's a lot of 
+
+395
+00:25:16,200 --> 00:25:18,360
+companies where it's like, yeah,
+we'll tell you what to do. 
+
+396
+00:25:18,360 --> 00:25:20,120
+You do it. 
+We'll, we'll tell you 
+
+397
+00:25:20,160 --> 00:25:21,520
+everything. 
+Yeah. 
+
+398
+00:25:21,520 --> 00:25:28,000
+And but, but it is, yeah, it's 
+it's it's a sad statement on our
+
+399
+00:25:28,440 --> 00:25:30,760
+educational system that it turns
+people into. 
+
+400
+00:25:31,480 --> 00:25:33,360
+I mean that's what it was 
+intended to do. 
+
+401
+00:25:33,360 --> 00:25:38,400
+It was intended I think 
+originally the British you know,
+
+402
+00:25:38,400 --> 00:25:41,720
+Empire said well we need 
+administrators for all of our 
+
+403
+00:25:42,320 --> 00:25:45,360
+empire components and so that's 
+what we're going to teach for 
+
+404
+00:25:46,080 --> 00:25:49,320
+and we're still and and it's 
+just like yeah here's the rules.
+
+405
+00:25:49,320 --> 00:25:51,080
+You got to follow the rules and 
+then you'll get and. 
+
+406
+00:25:51,200 --> 00:25:55,600
+So and maybe there are job 
+profiles where that does work, 
+
+407
+00:25:55,600 --> 00:25:58,000
+like maybe if you're an 
+accountant or something that's 
+
+408
+00:25:58,000 --> 00:26:01,800
+more, I don't know, there's 
+there's not a lot of opportunity
+
+409
+00:26:01,800 --> 00:26:03,920
+for creativity whereas draft 
+only with. 
+
+410
+00:26:03,960 --> 00:26:06,000
+Accounting there is. 
+That's a good point. 
+
+411
+00:26:06,000 --> 00:26:08,000
+We were talking about Enron this
+morning, so. 
+
+412
+00:26:08,520 --> 00:26:10,680
+You can be, yeah. 
+I always thought, I always 
+
+413
+00:26:10,840 --> 00:26:14,080
+thought, yeah, it's just putting
+numbers in in in columns, but 
+
+414
+00:26:14,080 --> 00:26:16,160
+then when you Start learning 
+more about accounting, you're 
+
+415
+00:26:16,160 --> 00:26:19,320
+going, oh, there's a lot of ways
+that they interpret things. 
+
+416
+00:26:19,320 --> 00:26:22,400
+And Seth, it's it can be very 
+creative. 
+
+417
+00:26:24,320 --> 00:26:28,920
+My point with the whole I hate 
+to be told what to do is that I 
+
+418
+00:26:28,920 --> 00:26:31,960
+don't because of that. 
+I don't tell people what to do 
+
+419
+00:26:33,160 --> 00:26:34,280
+because. 
+You know what it feels like. 
+
+420
+00:26:34,760 --> 00:26:39,120
+Yeah, and if I have to tell you 
+what to do, then you're probably
+
+421
+00:26:39,120 --> 00:26:43,320
+not the right person for my team
+and I'm probably not the right 
+
+422
+00:26:43,320 --> 00:26:46,560
+manager for you because I speak 
+in very. 
+
+423
+00:26:48,680 --> 00:26:51,560
+I speak about objectives. 
+I don't tell you how to make a 
+
+424
+00:26:51,560 --> 00:26:56,560
+sausage and but I will help 
+remove obstacles and challenges 
+
+425
+00:26:56,560 --> 00:26:59,400
+and help you problem solve. 
+But I'm not going to tell you 
+
+426
+00:26:59,400 --> 00:27:03,880
+how to do something because you 
+know I brought you on to the 
+
+427
+00:27:03,880 --> 00:27:07,120
+team or you're on my team 
+because I think you are fully 
+
+428
+00:27:07,120 --> 00:27:10,360
+capable of figuring stuff out, 
+bringing your own unique 
+
+429
+00:27:10,360 --> 00:27:14,160
+approach to something. 
+And I love being empowered to 
+
+430
+00:27:14,160 --> 00:27:18,280
+just solve the problem. 
+So I am going to empower you to 
+
+431
+00:27:18,280 --> 00:27:21,280
+solve a problem unless you tell 
+me you need instructions. 
+
+432
+00:27:21,280 --> 00:27:25,560
+In which case I'll say, OK, go 
+talk to this person and go 
+
+433
+00:27:25,560 --> 00:27:28,360
+beyond their team. 
+Because if that's what you need 
+
+434
+00:27:28,360 --> 00:27:33,320
+to do your best work, great. 
+You can get it elsewhere 'cause 
+
+435
+00:27:33,480 --> 00:27:35,760
+I'm not. 
+Well, and I think one of the 
+
+436
+00:27:35,760 --> 00:27:41,040
+biggest problems that we have in
+especially tech companies is 
+
+437
+00:27:41,040 --> 00:27:47,040
+that people who are in 
+management often like to like 
+
+438
+00:27:47,040 --> 00:27:51,600
+the control feeling of saying, 
+oh, I'm gonna, I'm gonna, we we 
+
+439
+00:27:51,600 --> 00:27:54,440
+will use this new language or 
+this new technology. 
+
+440
+00:27:54,440 --> 00:27:57,760
+And they don't have the 
+expertise to make that decision,
+
+441
+00:27:58,560 --> 00:28:04,000
+and yet they want the feeling of
+power of making that decision. 
+
+442
+00:28:04,000 --> 00:28:06,200
+Just rewrite it and go. 
+Everything will be fine. 
+
+443
+00:28:06,200 --> 00:28:09,840
+That's just the classic the 
+classic example. 
+
+444
+00:28:09,920 --> 00:28:12,280
+It's like. 
+We're we're switching everything
+
+445
+00:28:12,280 --> 00:28:15,480
+to go and you're just going. 
+You don't even know what that 
+
+446
+00:28:15,480 --> 00:28:18,640
+means. 
+Programming language is side 
+
+447
+00:28:18,840 --> 00:28:21,720
+saying that you're gonna take 
+all of your software and rewrite
+
+448
+00:28:21,720 --> 00:28:25,640
+it in another language. 
+You have no clue the impact. 
+
+449
+00:28:26,200 --> 00:28:28,360
+So I want to take a small 
+tangent real quick, just to 
+
+450
+00:28:28,360 --> 00:28:33,200
+point out that I think 
+oftentimes when people share 
+
+451
+00:28:33,200 --> 00:28:37,240
+their management philosophy and 
+this stuff, people that have 
+
+452
+00:28:37,240 --> 00:28:40,400
+worked for them can probably 
+listen to that and be like this 
+
+453
+00:28:40,400 --> 00:28:43,120
+person is just lying about 
+everything. 
+
+454
+00:28:43,480 --> 00:28:46,800
+And I think it's really 
+important to point out that I've
+
+455
+00:28:46,800 --> 00:28:50,240
+experienced what you're saying 
+with you and it is actually true
+
+456
+00:28:50,320 --> 00:28:53,160
+and that is that is something 
+amazing. 
+
+457
+00:28:53,160 --> 00:28:57,960
+So as an example to your being 
+focused on objectives, I 
+
+458
+00:28:57,960 --> 00:29:00,920
+remember one of the best 
+management experiences I had 
+
+459
+00:29:00,920 --> 00:29:03,800
+with you was around Scala days. 
+I don't know. 
+
+460
+00:29:03,800 --> 00:29:11,920
+What year was that, 202015201413
+and and you, you were very 
+
+461
+00:29:11,920 --> 00:29:15,080
+clear. 
+We need 500 registrations in two
+
+462
+00:29:15,080 --> 00:29:21,080
+months or something like that. 
+But it was super intense for 
+
+463
+00:29:21,080 --> 00:29:24,320
+various reasons. 
+We were, we had a lot of 
+
+464
+00:29:24,320 --> 00:29:28,120
+pressure on this event. 
+But what was cool about it is 
+
+465
+00:29:28,240 --> 00:29:30,920
+back to what you're saying about
+establishing the objectives. 
+
+466
+00:29:31,200 --> 00:29:35,880
+You gave Laura and I and the 
+rest of the team the freedom to 
+
+467
+00:29:35,880 --> 00:29:38,040
+figure out how we were gonna 
+achieve that. 
+
+468
+00:29:38,600 --> 00:29:40,840
+It was very clear what the 
+objective it was. 
+
+469
+00:29:40,840 --> 00:29:43,360
+It seemed crazy and we actually 
+did achieve it. 
+
+470
+00:29:43,760 --> 00:29:47,000
+But I think it we wouldn't have 
+achieved it if you had instead 
+
+471
+00:29:47,000 --> 00:29:49,840
+said you need to do this and 
+this and like, if you'd 
+
+472
+00:29:49,880 --> 00:29:52,240
+micromanage the whole thing, we 
+would have never gotten there. 
+
+473
+00:29:52,240 --> 00:29:56,840
+But but yeah, we felt ownership 
+over that, that objective and 
+
+474
+00:29:56,840 --> 00:30:00,280
+felt empowered to to do what we 
+need to do to make that. 
+
+475
+00:30:00,320 --> 00:30:02,440
+Autonomy, Mastery and purpose, 
+yeah. 
+
+476
+00:30:03,840 --> 00:30:08,600
+Well, and I think that's a great
+example because it brought, if I
+
+477
+00:30:08,600 --> 00:30:11,920
+remember correctly, and I'm 
+pretty sure we I do, because 
+
+478
+00:30:11,920 --> 00:30:16,080
+this was one of the most 
+stressful things in my 
+
+479
+00:30:16,080 --> 00:30:19,120
+professional career, was having 
+to put together this developer 
+
+480
+00:30:19,120 --> 00:30:23,120
+conference within two months. 
+From finding a venue to 
+
+481
+00:30:23,120 --> 00:30:27,760
+marketing the whole thing to, 
+you know, trying to ensure that 
+
+482
+00:30:27,760 --> 00:30:30,960
+it was gonna be a valuable 
+conference and to get people to 
+
+483
+00:30:30,960 --> 00:30:33,800
+pay for it, like, Oh my God. 
+And then there's just all the 
+
+484
+00:30:33,800 --> 00:30:35,480
+events. 
+There was a lot of pressure. 
+
+485
+00:30:35,480 --> 00:30:39,160
+It was super stressful super 
+short time lens and and you were
+
+486
+00:30:39,400 --> 00:30:42,840
+you like like it was all writing
+on you to make sure that that 
+
+487
+00:30:42,840 --> 00:30:47,320
+was all delivered but you didn't
+you didn't like micromanage us 
+
+488
+00:30:47,320 --> 00:30:48,880
+in this you. 
+I couldn't. 
+
+489
+00:30:48,880 --> 00:30:52,680
+There was first of all I can't 
+like I'm not a micromanager. 
+
+490
+00:30:52,680 --> 00:30:57,200
+It's not something I enjoy want 
+to do like I just not going to 
+
+491
+00:30:57,200 --> 00:30:59,200
+do it and. 
+It's a huge waste of your 
+
+492
+00:30:59,240 --> 00:31:03,080
+energy. 
+And so to that point, I think 
+
+493
+00:31:03,080 --> 00:31:07,880
+one of the things that worked 
+really well there is I got 
+
+494
+00:31:08,120 --> 00:31:14,440
+people with different skills and
+value to bring to this hard 
+
+495
+00:31:14,440 --> 00:31:18,080
+problem that we have to solve 
+with a very specific outcome. 
+
+496
+00:31:18,480 --> 00:31:24,040
+And then allowed you guys 
+trusted you to figure it out 
+
+497
+00:31:24,040 --> 00:31:27,640
+because you all would do 
+something incredibly different 
+
+498
+00:31:27,640 --> 00:31:30,000
+and important to help achieve 
+this goal. 
+
+499
+00:31:30,320 --> 00:31:34,440
+And so James, you were reaching 
+out to the community getting the
+
+500
+00:31:34,440 --> 00:31:40,200
+right speakers and you know 
+making it the content really 
+
+501
+00:31:40,200 --> 00:31:44,800
+meaningful for attendees. 
+Laura was doing the newsletters 
+
+502
+00:31:44,800 --> 00:31:49,120
+and having the bringing the 
+creative around the sponsorship 
+
+503
+00:31:49,120 --> 00:31:52,720
+program and Jen was doing the 
+operational tracking and 
+
+504
+00:31:52,720 --> 00:31:57,280
+registration database and all of
+that and and so there was no 
+
+505
+00:31:57,400 --> 00:32:02,840
+real overlap, but it meant 
+bringing the right team together
+
+506
+00:32:03,080 --> 00:32:05,800
+who could just execute on all 
+the different things. 
+
+507
+00:32:06,120 --> 00:32:10,400
+And you all had my trust that 
+you were going to do it and Oh 
+
+508
+00:32:10,400 --> 00:32:13,280
+my God, there was so much going 
+wrong with every step of the 
+
+509
+00:32:13,280 --> 00:32:15,680
+way. 
+So you know, I had to be very 
+
+510
+00:32:15,680 --> 00:32:21,800
+involved, but not in your 
+specific streams work streams 
+
+511
+00:32:21,800 --> 00:32:24,840
+like you guys were just doing it
+and making things happen, and 
+
+512
+00:32:24,840 --> 00:32:29,040
+the things that got went wrong I
+tried to fix and it was such a 
+
+513
+00:32:29,040 --> 00:32:35,280
+good example of a diverse team 
+just firing on all cylinders and
+
+514
+00:32:35,280 --> 00:32:37,240
+it was such a successful 
+conference. 
+
+515
+00:32:37,400 --> 00:32:38,600
+It was. 
+It was amazing. 
+
+516
+00:32:38,840 --> 00:32:42,120
+So here's a here's the thing 
+that comes to mind where it 
+
+517
+00:32:42,120 --> 00:32:48,240
+seems like a touch from 
+management might be useful when 
+
+518
+00:32:49,800 --> 00:32:55,560
+your team is making things too 
+complicated, too hard. 
+
+519
+00:32:55,840 --> 00:32:59,600
+Yeah, they're not, you know. 
+It's like what you wanna do is 
+
+520
+00:32:59,840 --> 00:33:03,600
+start get something working and 
+then evolve it. 
+
+521
+00:33:04,360 --> 00:33:08,880
+And when people are still in the
+mindset of, OK, we're gonna the 
+
+522
+00:33:08,880 --> 00:33:11,480
+first thing out of the gates 
+gonna have all the features in 
+
+523
+00:33:11,480 --> 00:33:13,200
+it. 
+It's gonna it's gonna do 
+
+524
+00:33:13,200 --> 00:33:16,720
+everything and and we're we're 
+worried about all these little 
+
+525
+00:33:16,720 --> 00:33:20,120
+details that we we can't even 
+tell if they're gonna be details
+
+526
+00:33:21,080 --> 00:33:23,320
+until we get something working. 
+Yeah. 
+
+527
+00:33:23,520 --> 00:33:26,840
+How do you, how would you like 
+go? 
+
+528
+00:33:27,080 --> 00:33:34,000
+Hey, let's take a step back and 
+just look at our overall 
+
+529
+00:33:34,520 --> 00:33:39,680
+objective, which is to get this 
+basic thing working and then see
+
+530
+00:33:39,680 --> 00:33:43,000
+if it works, see where the 
+problems are and then add 
+
+531
+00:33:43,000 --> 00:33:47,120
+features to it. 
+Well, and this is where I think 
+
+532
+00:33:47,120 --> 00:33:56,120
+a lot of startup technology 
+teams and the business side go 
+
+533
+00:33:56,120 --> 00:34:02,720
+very wrong is they focus on that
+question instead of. 
+
+534
+00:34:02,960 --> 00:34:06,960
+Which question? 
+How do we make this technology? 
+
+535
+00:34:06,960 --> 00:34:11,719
+Do XYZ more efficiently? 
+Or they make it a technology 
+
+536
+00:34:11,719 --> 00:34:15,360
+problem? 
+And if you are actually trying 
+
+537
+00:34:15,360 --> 00:34:21,560
+to create a commercial business 
+that provides technology, you 
+
+538
+00:34:21,560 --> 00:34:27,080
+have to start with who is going 
+to use this to do what and why 
+
+539
+00:34:27,080 --> 00:34:34,320
+would they pay for it? 
+And if you have technology that 
+
+540
+00:34:34,600 --> 00:34:37,639
+you know, how do we add features
+to it, how do we make this work?
+
+541
+00:34:37,639 --> 00:34:41,360
+Da, da, da, da, da. 
+You have to go back to the these
+
+542
+00:34:41,360 --> 00:34:44,239
+questions. 
+Who are we building this for to 
+
+543
+00:34:44,239 --> 00:34:47,600
+do what and why? 
+And are they going to pay for 
+
+544
+00:34:47,600 --> 00:34:51,560
+it? 
+And you can't really ask the 
+
+545
+00:34:51,639 --> 00:34:56,679
+expert engineers to answer those
+questions. 
+
+546
+00:34:57,080 --> 00:35:02,520
+You need to talk to potential 
+users, and most of the time your
+
+547
+00:35:02,520 --> 00:35:07,040
+potential users, at least the 
+ones who are going to pay enough
+
+548
+00:35:07,040 --> 00:35:11,120
+to cover the investment of these
+highly skilled people. 
+
+549
+00:35:12,080 --> 00:35:17,640
+They want something fast, easy, 
+cheap, solves a problem. 
+
+550
+00:35:19,400 --> 00:35:24,040
+So you have to talk to them 
+about their use case, what 
+
+551
+00:35:24,040 --> 00:35:27,280
+features they need, and you have
+to bring it back to the 
+
+552
+00:35:27,280 --> 00:35:33,520
+engineers. 
+I think this is like my biggest 
+
+553
+00:35:33,520 --> 00:35:37,560
+learning in technology. 
+And I think asking expert 
+
+554
+00:35:37,560 --> 00:35:45,400
+engineers to design a very 
+simple solution for your average
+
+555
+00:35:45,400 --> 00:35:49,160
+engineer who's working for a big
+company potentially and needs to
+
+556
+00:35:49,400 --> 00:35:55,920
+just move fast and needs things 
+to be simple and has no time to 
+
+557
+00:35:56,480 --> 00:35:59,880
+learn something new or shift a 
+whole paradigm. 
+
+558
+00:36:00,640 --> 00:36:03,560
+You know, that's just not how 
+big companies work. 
+
+559
+00:36:03,760 --> 00:36:09,480
+So you just can't ask the 
+experts to make that leap. 
+
+560
+00:36:09,640 --> 00:36:13,920
+And if they can, that is a 
+Unicorn and that's fantastic. 
+
+561
+00:36:14,160 --> 00:36:18,480
+But by and large it's it's 
+really a challenge and I think 
+
+562
+00:36:18,480 --> 00:36:22,720
+it sets up the team, the 
+technical team for failure. 
+
+563
+00:36:24,120 --> 00:36:26,040
+Right. 
+Well, in a sense, you're asking 
+
+564
+00:36:26,400 --> 00:36:31,560
+the technical people to also be 
+marketers if. 
+
+565
+00:36:31,560 --> 00:36:33,880
+You're in product managers and 
+well, yes. 
+
+566
+00:36:34,560 --> 00:36:38,200
+Yes, exactly. 
+And it would be like you asking 
+
+567
+00:36:38,200 --> 00:36:43,520
+me, you know what's the best 
+architecture for I don't know 
+
+568
+00:36:43,560 --> 00:36:46,560
+what. 
+How would you know until you 
+
+569
+00:36:46,560 --> 00:36:51,760
+try? 
+It yeah, like ask me things that
+
+570
+00:36:51,760 --> 00:36:56,800
+I can answer and I'll ask you 
+things that you can answer and 
+
+571
+00:36:56,800 --> 00:37:00,320
+then we'll you know find the the
+way to go forward. 
+
+572
+00:37:00,720 --> 00:37:04,440
+So I'm going to we're we we have
+a time limit. 
+
+573
+00:37:04,440 --> 00:37:07,600
+And I want to inject a different
+topic here because we were 
+
+574
+00:37:07,600 --> 00:37:09,760
+talking about this this morning 
+and thought you might have some 
+
+575
+00:37:09,760 --> 00:37:17,000
+insights on it. 
+How do we make open source a 
+
+576
+00:37:17,000 --> 00:37:21,520
+viable? 
+I mean, so much terrific stuff 
+
+577
+00:37:21,520 --> 00:37:25,160
+gets created by open source so 
+much better than what comes from
+
+578
+00:37:25,160 --> 00:37:26,720
+inside of companies. 
+Yeah. 
+
+579
+00:37:26,880 --> 00:37:33,800
+So how do we support that? 
+Because so far, maybe our 
+
+580
+00:37:33,800 --> 00:37:36,480
+culture hasn't evolved enough or
+whatever to the point where we 
+
+581
+00:37:36,480 --> 00:37:40,880
+go, well, of course you have to 
+somehow invest in open source, 
+
+582
+00:37:40,920 --> 00:37:42,880
+but right now it's like it's 
+free. 
+
+583
+00:37:42,880 --> 00:37:45,760
+We can, we can. 
+Jeff, you. 
+
+584
+00:37:47,680 --> 00:37:50,720
+So the background for why we're 
+asking Sushila about this is 
+
+585
+00:37:50,720 --> 00:37:53,880
+because you were at type safe 
+like Bend for like a decade, 
+
+586
+00:37:53,880 --> 00:37:58,200
+which is a company founded on 
+open source technologies with a 
+
+587
+00:37:58,520 --> 00:38:02,360
+business model around them. 
+And so I think you have some 
+
+588
+00:38:02,440 --> 00:38:07,440
+insight into open source, how 
+that relates to quality and then
+
+589
+00:38:07,440 --> 00:38:11,160
+how, what's the like business 
+lens on that, so right. 
+
+590
+00:38:11,600 --> 00:38:13,240
+That's. 
+The background for why? 
+
+591
+00:38:13,240 --> 00:38:16,080
+Why we we are going into that 
+with you. 
+
+592
+00:38:16,520 --> 00:38:21,880
+I I think it's such an excellent
+question and it's a hard one to 
+
+593
+00:38:21,880 --> 00:38:25,480
+answer which many, many 
+companies have proven over and 
+
+594
+00:38:25,520 --> 00:38:28,360
+over again. 
+This is not easy. 
+
+595
+00:38:29,200 --> 00:38:34,280
+You know, I think open source is
+so beautiful in so many ways and
+
+596
+00:38:34,280 --> 00:38:41,000
+it actually is a technology that
+kind of it has the same values 
+
+597
+00:38:41,000 --> 00:38:44,360
+that I have as a person, Like, 
+you know, bringing lots of 
+
+598
+00:38:44,360 --> 00:38:49,240
+different ideas and people 
+together to achieve something 
+
+599
+00:38:49,480 --> 00:38:52,280
+better than any independent 
+person can do. 
+
+600
+00:38:53,560 --> 00:38:59,720
+It's like the levels of 
+innovation and the quality of 
+
+601
+00:38:59,720 --> 00:39:03,040
+open source software is 
+astounding. 
+
+602
+00:39:03,560 --> 00:39:10,600
+I in my whole 9 1/2 years at 
+types of flashlight bend, the 
+
+603
+00:39:10,600 --> 00:39:15,560
+number of P zeros we had. 
+I could count on one hand. 
+
+604
+00:39:15,560 --> 00:39:17,960
+And I'm not kidding. 
+It made running a support 
+
+605
+00:39:17,960 --> 00:39:23,000
+organization very easy. 
+You look at you go to other 
+
+606
+00:39:23,480 --> 00:39:28,800
+technology companies with 
+proprietary software OMG the 
+
+607
+00:39:28,800 --> 00:39:32,160
+number of P zeros. 
+You can count them on one hand 
+
+608
+00:39:32,880 --> 00:39:37,560
+for the day or the month or, you
+know, it's like it's astounding 
+
+609
+00:39:37,560 --> 00:39:42,960
+the quality difference. 
+Do you have a sense of like why?
+
+610
+00:39:43,160 --> 00:39:48,640
+Why generally open source has 
+higher quality than compare? 
+
+611
+00:39:49,120 --> 00:39:53,840
+Like, yeah, I think, you know, 
+here's the thing, an open source
+
+612
+00:39:53,840 --> 00:39:56,000
+project, what are really the 
+goals? 
+
+613
+00:39:56,080 --> 00:39:58,040
+You want a lot of people to use 
+it. 
+
+614
+00:39:58,240 --> 00:40:01,120
+It's solving a technology 
+problem. 
+
+615
+00:40:01,320 --> 00:40:03,960
+It's bringing a new idea to the 
+world. 
+
+616
+00:40:04,120 --> 00:40:08,400
+It doesn't have the same. 
+The the project itself doesn't 
+
+617
+00:40:08,400 --> 00:40:13,920
+have commercial goals right? 
+And so you can care a lot about 
+
+618
+00:40:13,920 --> 00:40:18,160
+the quality and try to be 
+perfect and try to write you 
+
+619
+00:40:18,200 --> 00:40:22,280
+know the best code possible. 
+You don't have to always be 
+
+620
+00:40:22,280 --> 00:40:31,640
+thinking about how can I do this
+really fast and trade off the 
+
+621
+00:40:31,640 --> 00:40:35,480
+fact that this is not going to 
+work for everybody and might go 
+
+622
+00:40:35,480 --> 00:40:40,200
+down, but it's good enough. 
+And I think inside a commercial 
+
+623
+00:40:40,200 --> 00:40:44,960
+organization, you're making 
+those trade-offs because you are
+
+624
+00:40:44,960 --> 00:40:49,880
+trying to bring innovative 
+features into something that's 
+
+625
+00:40:50,160 --> 00:40:52,040
+got to be production. 
+Right. 
+
+626
+00:40:52,040 --> 00:40:53,680
+Well, and also you have 
+schedules. 
+
+627
+00:40:54,320 --> 00:40:57,360
+Exactly. 
+And I think that screws up a lot
+
+628
+00:40:57,360 --> 00:40:59,040
+of things. 
+Oh, we got to meet this deadline
+
+629
+00:40:59,040 --> 00:41:00,920
+because we made it up. 
+Right. 
+
+630
+00:41:00,920 --> 00:41:04,920
+Well, because we have to hit a 
+revenue target because we have 
+
+631
+00:41:05,000 --> 00:41:09,640
+investors and stakeholders and 
+shareholders and so you know, it
+
+632
+00:41:09,640 --> 00:41:14,120
+all starts from there. 
+So I think if you have to be 
+
+633
+00:41:14,840 --> 00:41:19,360
+very intentional, like are you 
+putting out an open source 
+
+634
+00:41:19,360 --> 00:41:22,960
+project, creating an open source
+project to solve a technical 
+
+635
+00:41:22,960 --> 00:41:26,800
+problem, or are you actually 
+thinking you are going to build 
+
+636
+00:41:26,800 --> 00:41:30,440
+a commercial organization around
+this project? 
+
+637
+00:41:30,640 --> 00:41:33,400
+Those are two very different 
+things. 
+
+638
+00:41:33,600 --> 00:41:36,640
+And could. 
+I I mean, my hope is that we can
+
+639
+00:41:36,640 --> 00:41:42,560
+create a third category which is
+somebody who wants to make open 
+
+640
+00:41:42,560 --> 00:41:50,000
+source for all the good reasons 
+but would would be able to live 
+
+641
+00:41:50,600 --> 00:41:53,920
+off of their efforts. 
+And I that's what I do you have 
+
+642
+00:41:53,920 --> 00:41:57,360
+ideas about how to do? 
+That I think you have to just It
+
+643
+00:41:57,360 --> 00:42:02,160
+goes back to being intentional 
+about what you're trying to do 
+
+644
+00:42:02,360 --> 00:42:05,360
+with your open source. 
+I'm trying to solve this 
+
+645
+00:42:05,360 --> 00:42:10,120
+problem, but I also want to make
+a living for myself, for 50 
+
+646
+00:42:10,120 --> 00:42:15,840
+engineers, whatever. 
+Like think about the goal and 
+
+647
+00:42:16,040 --> 00:42:20,400
+the outcome you are trying to 
+drive and that will make it a 
+
+648
+00:42:20,400 --> 00:42:25,960
+lot easier to find that fine 
+line between what is going to be
+
+649
+00:42:25,960 --> 00:42:31,920
+freely available and what is 
+going to actually serve a paying
+
+650
+00:42:31,960 --> 00:42:35,960
+market and a paying user. 
+And if you're intentional about 
+
+651
+00:42:35,960 --> 00:42:41,000
+that from the get go, I think 
+you have much higher chances of 
+
+652
+00:42:41,000 --> 00:42:44,760
+success than companies who find 
+an open source project that 
+
+653
+00:42:44,760 --> 00:42:48,400
+looks really valuable, that has 
+a ton of contributors and a lot 
+
+654
+00:42:48,400 --> 00:42:52,000
+of GitHub stars and a lot of 
+users and everyone loves it. 
+
+655
+00:42:52,680 --> 00:42:55,880
+And then you try to 
+commercialize it very, very 
+
+656
+00:42:55,880 --> 00:42:57,760
+hard. 
+Because if all those other 
+
+657
+00:42:57,760 --> 00:43:01,480
+things are true, Tons of users, 
+tons of stars, tons of 
+
+658
+00:43:01,480 --> 00:43:05,320
+contributors, chances are you've
+already got everything that 
+
+659
+00:43:05,320 --> 00:43:07,760
+someone might pay for freely 
+available. 
+
+660
+00:43:09,560 --> 00:43:10,600
+And that's why everyone loves 
+it. 
+
+661
+00:43:10,920 --> 00:43:14,440
+Yeah, right. 
+Well, on that note, I think 
+
+662
+00:43:14,440 --> 00:43:15,520
+we're out of time. 
+Oh. 
+
+663
+00:43:16,200 --> 00:43:18,200
+My gosh, I have loved talking 
+to. 
+
+664
+00:43:18,200 --> 00:43:20,320
+Yourself. 
+It's super fun to chat with you 
+
+665
+00:43:20,400 --> 00:43:22,800
+and really nice. 
+Thank you for being an amazing 
+
+666
+00:43:22,800 --> 00:43:28,080
+person and amazing manager and 
+for I guess I hope that our 
+
+667
+00:43:28,080 --> 00:43:33,120
+listeners would be inspired to 
+to see a picture of what an 
+
+668
+00:43:33,120 --> 00:43:36,480
+amazing leader and manager looks
+like, and if they don't have 
+
+669
+00:43:36,480 --> 00:43:38,080
+that. 
+Go find it. 
+
+670
+00:43:38,120 --> 00:43:41,840
+Go find it, because yeah. 
+Yeah, exactly. 
+
+671
+00:43:41,840 --> 00:43:45,560
+Find a role model, and if you 
+don't have a role model where 
+
+672
+00:43:45,560 --> 00:43:49,880
+you work, get a different job. 
+Yeah, that's it. 
+
+673
+00:43:50,920 --> 00:43:55,800
+You guys are engineers. 
+You're You can change jobs every
+
+674
+00:43:55,800 --> 00:44:00,240
+minute of every day, not like a 
+business. 
+
+675
+00:44:00,560 --> 00:44:01,240
+Deal. 
+Not easy anyway. 
+
+676
+00:44:03,400 --> 00:44:06,320
+No. 
+And in this market especially, 
+
+677
+00:44:07,280 --> 00:44:09,760
+it's not easy for anyone right 
+now. 
+
+678
+00:44:10,040 --> 00:44:14,600
+So I don't mean to minimize that
+experience for anybody, but love
+
+679
+00:44:14,600 --> 00:44:17,120
+talking to you. 
+I will come back anytime. 
+
+680
+00:44:17,280 --> 00:44:19,880
+Next time, let's talk way more 
+about you guys. 
+
+681
+00:44:20,560 --> 00:44:22,320
+OK. 
+Well, and maybe you can come to 
+
+682
+00:44:22,360 --> 00:44:25,200
+our conference. 
+Yes, I was thinking about that. 
+
+683
+00:44:25,200 --> 00:44:27,320
+It's only a four and a half hour
+drive. 
+
+684
+00:44:27,400 --> 00:44:30,320
+Yeah, you're close by. 
+Oh, well then, that makes it 
+
+685
+00:44:30,320 --> 00:44:32,200
+easy, yeah. 
+Awesome. 
+
+686
+00:44:32,960 --> 00:44:34,440
+Thank. 
+You, Sheila, appreciate it. 
+
+687
+00:44:34,920 --> 00:44:36,520
+My pleasure. 
+Take care.
+

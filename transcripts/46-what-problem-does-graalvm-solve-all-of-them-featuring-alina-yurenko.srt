@@ -1,0 +1,5605 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:09,800
+All right. 
+Well, welcome everyone. 
+
+4
+00:00:10,200 --> 00:00:12,800
+And today we have with us Alina 
+who? 
+
+5
+00:00:12,800 --> 00:00:17,500
+I know, I've never actually met 
+you in person but but I've seen 
+
+6
+00:00:17,500 --> 00:00:20,600
+you, well, actually, you think 
+that we met in person at a 
+
+7
+00:00:20,700 --> 00:00:23,400
+conference in Ukraine, which is 
+totally possible, right? 
+
+8
+00:00:24,000 --> 00:00:27,400
+You're just over being. 
+Yeah, I think it is, though. 
+
+9
+00:00:27,400 --> 00:00:30,300
+I try to Google the conference 
+like along with your name and I 
+
+10
+00:00:30,308 --> 00:00:33,100
+cannot find it. 
+So maybe I asked taken after all
+
+11
+00:00:33,100 --> 00:00:37,300
+and you are right? 
+Yeah, I think I have presented 
+
+12
+00:00:37,300 --> 00:00:42,100
+for or Ukrainian based 
+conferences or events, but I 
+
+13
+00:00:42,100 --> 00:00:43,600
+don't think I've ever traveled 
+there. 
+
+14
+00:00:44,700 --> 00:00:47,800
+So I might be wrong, but I would
+really want to do my really, 
+
+15
+00:00:49,500 --> 00:00:54,800
+maybe you've seen the future and
+now I need to to go there for a 
+
+16
+00:00:54,800 --> 00:00:57,200
+conference. 
+So yeah, it's really bright in 
+
+17
+00:00:57,200 --> 00:01:00,300
+here and if you have such huge 
+and great developer communities,
+
+18
+00:01:00,300 --> 00:01:02,000
+so yeah, please come at some 
+point. 
+
+19
+00:01:02,000 --> 00:01:04,200
+I'm sure you will love it here. 
+Yes. 
+
+20
+00:01:04,800 --> 00:01:08,400
+Okay, so we we had you on to 
+talk about a few things but we 
+
+21
+00:01:08,400 --> 00:01:14,900
+have talked about grow VM on a 
+number of episodes and your One 
+
+22
+00:01:14,900 --> 00:01:17,100
+of the experts developer 
+Advocates, right? 
+
+23
+00:01:17,100 --> 00:01:21,600
+For growl, VM and so, so instead
+of talking continuing to talk on
+
+24
+00:01:21,600 --> 00:01:24,700
+our podcast about something, we 
+know very little about we've 
+
+25
+00:01:24,700 --> 00:01:26,900
+used it but I think you don't 
+want it. 
+
+26
+00:01:27,100 --> 00:01:32,900
+Yeah I wanna watch to look to 
+learn about growl via so but 
+
+27
+00:01:32,900 --> 00:01:34,600
+tell us about yourself. 
+What do you what do you do? 
+
+28
+00:01:34,600 --> 00:01:39,300
+And yeah yeah so at the moment 
+I'm a developer advocate for 
+
+29
+00:01:39,300 --> 00:01:43,300
+growl VM and Oracle Labs, right?
+Oracle Labs is this kind of R&D 
+
+30
+00:01:43,300 --> 00:01:47,200
+organization At Oracle original.
+As I know it used to be sun 
+
+31
+00:01:47,200 --> 00:01:50,200
+Microsystems Labs, right? 
+And back then when Oracle 
+
+32
+00:01:50,200 --> 00:01:54,300
+acquired Sun, it became an 
+oracle, a straight and girl VM 
+
+33
+00:01:54,300 --> 00:01:57,700
+is one of our projects. 
+It has been a research project 
+
+34
+00:01:57,700 --> 00:02:00,800
+for quite a long time. 
+And then something like three 
+
+35
+00:02:00,800 --> 00:02:05,200
+years ago we rolled out our 
+first kind of industry ready 
+
+36
+00:02:05,200 --> 00:02:09,000
+production-ready builds, right? 
+And also that's about the time 
+
+37
+00:02:09,000 --> 00:02:11,400
+that I joined the team. 
+So something like three years 
+
+38
+00:02:11,400 --> 00:02:16,300
+ago and then developer advocacy 
+in this Team and yeah, I'm based
+
+39
+00:02:16,300 --> 00:02:18,900
+in Ukraine, in the beautiful 
+city of view. 
+
+40
+00:02:19,000 --> 00:02:21,800
+So that's about it about me, all
+rise. 
+
+41
+00:02:22,200 --> 00:02:26,900
+Awesome, so, give us give us 
+like the 101 information on girl
+
+42
+00:02:26,900 --> 00:02:31,000
+VM for those that may not be 
+familiar with like, first of 
+
+43
+00:02:31,000 --> 00:02:33,200
+all. 
+What problem is it solving? 
+
+44
+00:02:33,500 --> 00:02:36,200
+That's a good question. 
+That's a good question, and it's
+
+45
+00:02:36,200 --> 00:02:40,300
+not so easy to answer because 
+grow VM is a big complex 
+
+46
+00:02:40,300 --> 00:02:43,900
+project, right, and it can 
+answer to so many, you know, 
+
+47
+00:02:43,900 --> 00:02:46,300
+develop. 
+Her needs and problems, but let 
+
+48
+00:02:46,300 --> 00:02:48,100
+me kind of start with the very 
+beginning, right? 
+
+49
+00:02:48,100 --> 00:02:51,200
+So all the m is a 
+high-performance virtual machine
+
+50
+00:02:51,800 --> 00:02:55,300
+and it can execute a number of 
+languages and work in a number 
+
+51
+00:02:55,300 --> 00:02:58,100
+of environments. 
+So I remember when I was about 
+
+52
+00:02:58,100 --> 00:03:01,300
+to join the team and I was doing
+kind of my research about the 
+
+53
+00:03:01,300 --> 00:03:04,400
+project, I really like that kind
+of mission statement that the 
+
+54
+00:03:04,400 --> 00:03:08,900
+team had and I think it was 
+something like we want to make 
+
+55
+00:03:09,000 --> 00:03:11,900
+every language out there fast, 
+right? 
+
+56
+00:03:11,900 --> 00:03:14,200
+So they wanted to create a 
+universal virtual machine. 
+
+57
+00:03:14,400 --> 00:03:17,900
+Meaning that not only like one 
+language or an Arab set of 
+
+58
+00:03:17,900 --> 00:03:20,700
+anchorage's can be fast, but 
+actually every language out 
+
+59
+00:03:20,700 --> 00:03:25,600
+there could be made fast with 
+those ready-to-use Solutions. 
+
+60
+00:03:25,600 --> 00:03:28,800
+And the platform that probiem 
+offers and the fact that that 
+
+61
+00:03:28,800 --> 00:03:30,900
+vision and that mission is 
+pretty amazing, right? 
+
+62
+00:03:30,900 --> 00:03:33,800
+Because there are so many 
+languages out there and to some 
+
+63
+00:03:33,800 --> 00:03:37,700
+extent that re-implement the 
+same components on the same 
+
+64
+00:03:37,700 --> 00:03:41,300
+pieces of Technology, right? 
+And maybe there could be a more 
+
+65
+00:03:41,300 --> 00:03:44,200
+efficient way to do it or maybe 
+even you know, smaller 
+
+66
+00:03:44,300 --> 00:03:46,500
+Languages. 
+So, something just developed by 
+
+67
+00:03:46,500 --> 00:03:49,200
+a group of enthusiasts can also 
+get access to this high 
+
+68
+00:03:49,200 --> 00:03:54,100
+performance platform with 
+considerably less effort than 
+
+69
+00:03:54,100 --> 00:03:57,200
+they would, if they would incur 
+implemented from the ground up, 
+
+70
+00:03:57,200 --> 00:03:59,300
+right? 
+So I think it was a pretty great
+
+71
+00:03:59,300 --> 00:04:02,700
+mission and vision for the 
+project and I think it is true 
+
+72
+00:04:02,700 --> 00:04:04,700
+at this time, right? 
+So at the moment, we have so 
+
+73
+00:04:04,700 --> 00:04:08,500
+many languages that our core 
+team develop and grow opium, but
+
+74
+00:04:08,500 --> 00:04:11,800
+also, there are quite a few that
+the community developed we have 
+
+75
+00:04:11,800 --> 00:04:14,600
+some of them listed on our 
+GitHub repo and I'm sure I do 
+
+76
+00:04:14,600 --> 00:04:17,399
+buy more languages that people 
+just kind of develop out there 
+
+77
+00:04:17,399 --> 00:04:21,399
+and use chromium as a platform 
+that we don't know of but we do 
+
+78
+00:04:21,399 --> 00:04:24,300
+give them this kind of platform 
+where they can develop those new
+
+79
+00:04:24,300 --> 00:04:26,900
+languages so it's a virtual 
+machine. 
+
+80
+00:04:27,000 --> 00:04:31,700
+Yes. 
+But the experience of the end 
+
+81
+00:04:31,700 --> 00:04:36,100
+user is that it just is an 
+executable which includes 
+
+82
+00:04:36,100 --> 00:04:38,600
+everything including the program
+is that right? 
+
+83
+00:04:38,600 --> 00:04:40,100
+I think that's the native image 
+part. 
+
+84
+00:04:40,100 --> 00:04:43,600
+That's the naked interior. 
+Maybe I started from the more 
+
+85
+00:04:44,300 --> 00:04:47,200
+Complex side of things because 
+it was Mike more exciting for 
+
+86
+00:04:47,200 --> 00:04:49,400
+me. 
+But I was thinking about life is
+
+87
+00:04:49,400 --> 00:04:52,600
+experience with girl, VM has 
+been through native image and 
+
+88
+00:04:52,600 --> 00:04:54,100
+so. 
+Okay, so there's a whole nother 
+
+89
+00:04:54,100 --> 00:04:58,300
+side, I think Ralphie. 
+I'm so what I mean, but are we, 
+
+90
+00:04:58,600 --> 00:05:03,500
+are we talking about like, 
+what's the Assembly Language of 
+
+91
+00:05:03,500 --> 00:05:07,600
+this virtual machine? 
+Is it just jvm is that? 
+
+92
+00:05:08,100 --> 00:05:09,900
+That's, that's what it is. 
+It's a jacket. 
+
+93
+00:05:09,900 --> 00:05:12,400
+Yeah, let's be my birthday to 
+write from the like user 
+
+94
+00:05:12,400 --> 00:05:14,200
+perspective, right? 
+Because I started talking about 
+
+95
+00:05:14,300 --> 00:05:17,900
+What language implementers and 
+maybe unnecessarily, complicated
+
+96
+00:05:17,900 --> 00:05:19,900
+things, right? 
+So you don't necessarily have to
+
+97
+00:05:19,900 --> 00:05:21,700
+implement your own language and 
+Robbie. 
+
+98
+00:05:21,700 --> 00:05:23,800
+I'm right. 
+You can just use what use what 
+
+99
+00:05:23,800 --> 00:05:27,000
+is their offered for you in the 
+base download. 
+
+100
+00:05:27,000 --> 00:05:29,300
+Right. 
+And what that is is one thing 
+
+101
+00:05:29,300 --> 00:05:31,900
+you can run your Java programs 
+as you would. 
+
+102
+00:05:31,900 --> 00:05:36,700
+Let's say on openjdk, right? 
+So there is this whole ready to 
+
+103
+00:05:36,700 --> 00:05:40,100
+use jdk distribution that comes 
+with and grow VM that is one 
+
+104
+00:05:40,100 --> 00:05:42,800
+part, right? 
+So girl VM jet where we just 
+
+105
+00:05:42,800 --> 00:05:46,300
+replaced the compiler and You 
+use jdk as you would use any 
+
+106
+00:05:46,300 --> 00:05:48,200
+other to Decay. 
+So that's one piece of 
+
+107
+00:05:48,200 --> 00:05:50,500
+technology, right? 
+In that case, does it use 
+
+108
+00:05:50,500 --> 00:05:54,000
+truffle? 
+So not necessarily right? 
+
+109
+00:05:54,000 --> 00:05:58,900
+You can just use Java straight 
+just based on those two levels, 
+
+110
+00:05:58,900 --> 00:06:01,100
+right? 
+So you would have like openjdk 
+
+111
+00:06:01,100 --> 00:06:05,200
+Oracle jdk as a platform and 
+grow VM as a compiler plugged 
+
+112
+00:06:05,200 --> 00:06:08,000
+into it and you don't need 
+necessarily travel. 
+
+113
+00:06:08,000 --> 00:06:10,700
+In that case, you can just 
+execute Java based those two. 
+
+114
+00:06:11,100 --> 00:06:14,200
+Okay, you could do like again, 
+complicating things, you could, 
+
+115
+00:06:14,700 --> 00:06:18,200
+Use truffle to execute Java as 
+well because now we also have a 
+
+116
+00:06:18,200 --> 00:06:20,900
+Java implementation based on 
+travel, right? 
+
+117
+00:06:21,200 --> 00:06:25,100
+So like one more, I think third 
+already way to execute Java on 
+
+118
+00:06:25,100 --> 00:06:27,600
+grow VM but that is not 
+necessarily the right. 
+
+119
+00:06:27,600 --> 00:06:29,000
+This is something you can do. 
+You can do. 
+
+120
+00:06:29,600 --> 00:06:34,300
+Yeah, yeah. 
+But you can choose truffle or or
+
+121
+00:06:34,500 --> 00:06:38,900
+is it still in that case in case
+of java like basically you can 
+
+122
+00:06:38,900 --> 00:06:43,300
+use growl, vmj the compiler, you
+can use native image and you can
+
+123
+00:06:43,300 --> 00:06:46,000
+use Java on Truffle. 
+So basically, there are three 
+
+124
+00:06:46,000 --> 00:06:48,300
+ways of running Java on Robbie 
+Em, Right? 
+
+125
+00:06:48,600 --> 00:06:50,900
+But just to kind of finish that 
+salt rice. 
+
+126
+00:06:50,900 --> 00:06:54,400
+So what what comes in roll VM 
+and what you can see, and use as
+
+127
+00:06:54,400 --> 00:06:56,900
+an end user. 
+So growl, bmj write, execute 
+
+128
+00:06:56,900 --> 00:06:58,400
+Java. 
+As you normally do on any other 
+
+129
+00:06:58,400 --> 00:07:02,000
+jdk 90 image, where you would 
+ahead of time, compiled Java 
+
+130
+00:07:02,000 --> 00:07:05,000
+into a platform specific, 
+binary, there is trough, all 
+
+131
+00:07:05,000 --> 00:07:08,000
+right, so the language of 
+limitation framework or and you 
+
+132
+00:07:08,000 --> 00:07:11,600
+can use one of those languages 
+such as JavaScript and Python 
+
+133
+00:07:11,600 --> 00:07:14,000
+and are Ruby. 
+And so on that, we implemented 
+
+134
+00:07:14,000 --> 00:07:15,800
+it. 
+Team or you can Implement your 
+
+135
+00:07:15,800 --> 00:07:19,500
+own languages, unroll p.m. and 
+there are also like some tools 
+
+136
+00:07:19,500 --> 00:07:21,300
+and additional capabilities for 
+you. 
+
+137
+00:07:21,300 --> 00:07:24,400
+But in a nutshell those are the 
+main components cool. 
+
+138
+00:07:24,700 --> 00:07:26,200
+Would you tell us a little more 
+about truffle? 
+
+139
+00:07:26,200 --> 00:07:29,000
+Because I mentioned it but then 
+realized I didn't say what 
+
+140
+00:07:29,000 --> 00:07:30,600
+truffle was. 
+Yeah, yeah. 
+
+141
+00:07:30,600 --> 00:07:33,800
+So travel is our language, 
+implementation framework, right?
+
+142
+00:07:33,800 --> 00:07:36,800
+This is the way we Implement 
+languages as a team, and this is
+
+143
+00:07:36,800 --> 00:07:40,700
+the way community, implements 
+those Community languages, and 
+
+144
+00:07:40,700 --> 00:07:43,700
+it allows you to thoroughly 
+easily Implement languages on 
+
+145
+00:07:43,700 --> 00:07:45,000
+the ground. 
+Ian platform. 
+
+146
+00:07:45,000 --> 00:07:49,300
+So in a way, what do you do? 
+You implement an interpreter for
+
+147
+00:07:49,300 --> 00:07:53,400
+your language in Java and then 
+using truffle and using roll VM 
+
+148
+00:07:53,400 --> 00:07:57,900
+as a compiler, you get kind of 
+out-of-the-box implementation 
+
+149
+00:07:57,900 --> 00:08:01,200
+for the language so you can run 
+it on problem and it's quite 
+
+150
+00:08:01,200 --> 00:08:04,200
+interesting. 
+Yeah, they've already written 
+
+151
+00:08:04,200 --> 00:08:09,100
+the Ruby, the python the 
+JavaScript, our language packs 
+
+152
+00:08:09,100 --> 00:08:12,900
+or whatever, they're called to 
+run those languages on truffle 
+
+153
+00:08:12,900 --> 00:08:14,900
+or through truffle or however. 
+Yeah. 
+
+154
+00:08:14,900 --> 00:08:16,800
+Yeah, that's correct. 
+And I was actually thinking 
+
+155
+00:08:16,800 --> 00:08:20,400
+about this interesting example 
+today, so I think some time ago 
+
+156
+00:08:20,400 --> 00:08:24,200
+like six months ago or so we saw
+somebody posted on Twitter that 
+
+157
+00:08:24,200 --> 00:08:27,400
+as a part of their studies. 
+I think like masterpieces or 
+
+158
+00:08:27,400 --> 00:08:30,500
+something. 
+This guy implemented dhp on his 
+
+159
+00:08:30,500 --> 00:08:34,299
+own overall p.m. user travel 
+writer and it was quite 
+
+160
+00:08:34,299 --> 00:08:36,600
+fascinating to me, right? 
+Because it was like, one person,
+
+161
+00:08:36,600 --> 00:08:39,299
+right? 
+It's student just casually doing
+
+162
+00:08:39,299 --> 00:08:41,000
+this, along with his studies, 
+right? 
+
+163
+00:08:41,000 --> 00:08:44,000
+And he implemented PHP enroll 
+via well and it's not 
+
+164
+00:08:44,200 --> 00:08:46,400
+Necessarily like the most 
+complete or production right, 
+
+165
+00:08:46,400 --> 00:08:48,400
+implementation? 
+Perhaps, but just kind of to 
+
+166
+00:08:48,408 --> 00:08:52,100
+give you an idea that it took 
+like one person without previous
+
+167
+00:08:52,100 --> 00:08:54,300
+backgrounds. 
+Probably in Virtual machines and
+
+168
+00:08:54,300 --> 00:08:57,500
+compilers to implement the 
+language and roll VM, which is 
+
+169
+00:08:57,500 --> 00:08:59,500
+pretty fascinating, I think. 
+Yeah. 
+
+170
+00:09:00,100 --> 00:09:06,100
+So if we roll back in time, 
+while there was, there was 
+
+171
+00:09:06,400 --> 00:09:11,300
+jython and jruby were two of the
+big kind of alternative 
+
+172
+00:09:11,400 --> 00:09:14,100
+languages from existing the 
+existing. 
+
+173
+00:09:14,200 --> 00:09:19,000
+Community that were built on top
+of the jvm and there was a lot 
+
+174
+00:09:19,000 --> 00:09:23,300
+of work that had to go into how 
+you take Python and make it run 
+
+175
+00:09:23,300 --> 00:09:26,400
+on the gxy and really fun. 
+Never got updated, right? 
+
+176
+00:09:26,400 --> 00:09:28,200
+Yeah, it's just too painful. 
+Yeah. 
+
+177
+00:09:28,200 --> 00:09:33,500
+And so, so truffle is really an 
+alternative to that and now you 
+
+178
+00:09:33,500 --> 00:09:37,300
+can write python that runs on 
+the jvm and and allegedly would 
+
+179
+00:09:37,300 --> 00:09:40,800
+perform a lot better. 
+So do they have like python 310 
+
+180
+00:09:41,500 --> 00:09:45,900
+translated yet you man? 
+I mean, enjoy that, I mean, our 
+
+181
+00:09:45,900 --> 00:09:51,900
+like grown using truffle, so, I 
+did not remember the exact 
+
+182
+00:09:52,000 --> 00:09:54,900
+version. 
+I'm going to have to check for 
+
+183
+00:09:54,900 --> 00:09:56,700
+that anyway. 
+It's a fairly recent. 
+
+184
+00:09:56,800 --> 00:09:58,800
+I don't remember that transition
+to 3, right? 
+
+185
+00:09:58,800 --> 00:10:02,100
+I just don't recall the exact 
+version, so, I cannot promise. 
+
+186
+00:10:02,300 --> 00:10:03,900
+Yeah. 
+But it's, it is quite different 
+
+187
+00:10:03,900 --> 00:10:05,900
+from jython. 
+And also, like other Ruby 
+
+188
+00:10:05,900 --> 00:10:08,400
+implementation is quite 
+different from jruby. 
+
+189
+00:10:08,400 --> 00:10:10,400
+Right. 
+So it's there written from 
+
+190
+00:10:10,400 --> 00:10:13,800
+scratch and they using truffle 
+and terms of performance they 
+
+191
+00:10:13,800 --> 00:10:16,500
+show very Result. 
+Yeah, so somebody has been 
+
+192
+00:10:16,500 --> 00:10:18,600
+using, you know, jython or 
+jruby. 
+
+193
+00:10:18,600 --> 00:10:22,200
+It's worse to give other 
+implementations a try as well. 
+
+194
+00:10:23,300 --> 00:10:26,400
+Yeah, that's a good point. 
+Is anybody using jruby or jython
+
+195
+00:10:26,400 --> 00:10:28,800
+should probably be going in the 
+garage VM direction? 
+
+196
+00:10:28,900 --> 00:10:31,800
+Oh, well, yeah. 
+Because I think jython got 
+
+197
+00:10:31,800 --> 00:10:36,400
+stopped at two point six, which 
+was how it's been many years 
+
+198
+00:10:36,400 --> 00:10:39,000
+since it's been updated, because
+it was just too much trouble. 
+
+199
+00:10:39,300 --> 00:10:44,000
+Yeah, so there's this Universal 
+VM through trouble with lots of 
+
+200
+00:10:44,200 --> 00:10:48,900
+Different language bindings and 
+I think that's super exciting. 
+
+201
+00:10:48,900 --> 00:10:52,500
+Like why keep on Reinventing the
+wheel of all the great things 
+
+202
+00:10:52,500 --> 00:10:56,400
+that a VM is doing for you. 
+And then there's a key part of 
+
+203
+00:10:56,400 --> 00:11:00,700
+this, which is the function for 
+foreign function, interface 
+
+204
+00:11:00,700 --> 00:11:04,500
+stuffer, I don't remember what 
+it's called in the in the grow 
+
+205
+00:11:04,500 --> 00:11:07,800
+vmworld boat some way to call 
+native code or Link Link 
+
+206
+00:11:07,800 --> 00:11:10,800
+binaries like, like what's that?
+What's that look like in girl 
+
+207
+00:11:10,800 --> 00:11:12,200
+VM? 
+Because that becomes important, 
+
+208
+00:11:12,200 --> 00:11:15,800
+when you start, you know, 
+integrating Library is that are 
+
+209
+00:11:15,800 --> 00:11:18,700
+going to call Native Native 
+libraries or something? 
+
+210
+00:11:19,600 --> 00:11:22,300
+Yeah, I'm not a compiler, 
+engineer myself. 
+
+211
+00:11:22,300 --> 00:11:24,300
+What did I do? 
+Not Implement languages myself. 
+
+212
+00:11:24,300 --> 00:11:26,600
+So I cannot talk about that 
+much. 
+
+213
+00:11:26,800 --> 00:11:28,700
+Yeah, definitely. 
+I know that we have a way for 
+
+214
+00:11:28,700 --> 00:11:31,600
+example, to execute net 
+extensions because we also have 
+
+215
+00:11:31,600 --> 00:11:34,400
+probably should have mentioned, 
+before we have like an llvm 
+
+216
+00:11:34,400 --> 00:11:37,700
+runtime enroll VM as well. 
+Right, it's called so long, soak
+
+217
+00:11:37,700 --> 00:11:41,000
+also have the way to execute 
+those net extensions as well. 
+
+218
+00:11:41,500 --> 00:11:44,000
+Oh, what was it? 
+LM run on. 
+
+219
+00:11:44,100 --> 00:11:47,300
+Entre like do you take the llvm 
+byte code and run it on truffle.
+
+220
+00:11:47,700 --> 00:11:51,100
+So how that works? 
+Or so we do run it on growl VM 
+
+221
+00:11:51,100 --> 00:11:55,100
+and I think yeah it does include
+the Truffle level as well but 
+
+222
+00:11:55,100 --> 00:11:58,900
+yeah, I'm fortunately I can go 
+into more detail, remember 
+
+223
+00:11:58,900 --> 00:12:01,600
+readings, I haven't ever done it
+but it was one of the important 
+
+224
+00:12:01,600 --> 00:12:05,600
+points of. 
+I remember of truffle was being 
+
+225
+00:12:05,600 --> 00:12:09,300
+able to have a better foreign 
+function interface and my 
+
+226
+00:12:09,300 --> 00:12:13,500
+brother to tell. 
+So it probably not only has its 
+
+227
+00:12:13,500 --> 00:12:15,000
+own bike. 
+Codes. 
+
+228
+00:12:15,700 --> 00:12:22,400
+But it has some way to use llvm 
+to compile pieces of it down to 
+
+229
+00:12:22,600 --> 00:12:24,800
+it can execute bit college, 
+right? 
+
+230
+00:12:24,800 --> 00:12:28,200
+So that's what I'm saying? 
+Yeah, okay. 
+
+231
+00:12:28,400 --> 00:12:30,400
+Yeah. 
+But it's how I'm guessing the 
+
+232
+00:12:30,400 --> 00:12:36,900
+Truffle bytecode or intermediate
+form or whatever it is is not 
+
+233
+00:12:37,200 --> 00:12:40,600
+the same as jvm bytecode. 
+So I'm guessing the they 
+
+234
+00:12:40,600 --> 00:12:43,800
+invented something else because 
+otherwise it would have been 
+
+235
+00:12:43,800 --> 00:12:47,400
+just It is hard to implement 
+python? 
+
+236
+00:12:47,600 --> 00:12:49,400
+Yeah. 
+You know as jython. 
+
+237
+00:12:49,400 --> 00:12:52,400
+Yeah, I mean there is one more 
+concept related to travel, 
+
+238
+00:12:52,400 --> 00:12:54,200
+right? 
+And that is abstract syntax 
+
+239
+00:12:54,200 --> 00:12:57,000
+trees, right? 
+So the way as I understand right
+
+240
+00:12:57,000 --> 00:13:00,600
+the way traveled executes, your 
+program is a dose interpreters 
+
+241
+00:13:00,600 --> 00:13:03,000
+out looking at abstract syntax 
+trees of your program and 
+
+242
+00:13:03,000 --> 00:13:06,500
+execute the dose. 
+So it's at a higher level and 
+
+243
+00:13:06,500 --> 00:13:09,500
+that's why it's easier. 
+Well I mean your system already 
+
+244
+00:13:09,500 --> 00:13:12,900
+developed puts out an abstract 
+syntax tree, right? 
+
+245
+00:13:12,900 --> 00:13:15,100
+Yeah. 
+So it hooks Into it at that 
+
+246
+00:13:15,100 --> 00:13:18,600
+point rather than you having to 
+go to buy, cut you go to buy 
+
+247
+00:13:18,600 --> 00:13:21,900
+code, which is he okay, that. 
+Yeah, because L them is like a 
+
+248
+00:13:21,900 --> 00:13:26,000
+universal bytecode so so they 
+they don't necessarily need to 
+
+249
+00:13:26,000 --> 00:13:28,300
+go to the universal bytecode. 
+No, yeah no. 
+
+250
+00:13:28,300 --> 00:13:32,100
+But but I mean, what's important
+is the upset abstract syntax 
+
+251
+00:13:32,100 --> 00:13:32,800
+tree. 
+Yeah. 
+
+252
+00:13:32,800 --> 00:13:36,400
+Well that's what we're talking 
+about with ruin. 
+
+253
+00:13:36,400 --> 00:13:38,000
+Our yeah. 
+Yeah. 
+
+254
+00:13:38,400 --> 00:13:41,700
+Yeah. 
+Yes, it is getting down to the 
+
+255
+00:13:41,700 --> 00:13:46,100
+St and then being able to sort 
+of turns out that after the uml 
+
+256
+00:13:46,100 --> 00:13:49,700
+wasn't the universal description
+language. 
+
+257
+00:13:49,700 --> 00:13:52,100
+It's the AST the universal 
+describe. 
+
+258
+00:13:52,100 --> 00:13:55,000
+Now we need a we need a 
+universal, AST description 
+
+259
+00:13:55,000 --> 00:13:56,800
+language. 
+Oh, yeah. 
+
+260
+00:13:57,300 --> 00:13:59,200
+Well that's what they say. 
+Yeah. 
+
+261
+00:14:00,700 --> 00:14:01,900
+Okay, yeah. 
+So Okay. 
+
+262
+00:14:01,900 --> 00:14:07,500
+So we've got we've got truffle 
+and anger all VM and growl VM 
+
+263
+00:14:07,500 --> 00:14:13,300
+itself is is Is there has 
+something other than hotspot? 
+
+264
+00:14:13,300 --> 00:14:15,700
+Is that right? 
+Or something, like a different 
+
+265
+00:14:15,700 --> 00:14:18,700
+different VM or, I don't know. 
+Tell me how that works. 
+
+266
+00:14:18,700 --> 00:14:21,500
+Yeah, so, for Java, right? 
+When you're insecure Java, in 
+
+267
+00:14:21,500 --> 00:14:25,000
+jet, we use hot spot as a 
+platform, right? 
+
+268
+00:14:25,200 --> 00:14:28,900
+That is, if you're using growl 
+VM to execute Java and Jet mode.
+
+269
+00:14:29,000 --> 00:14:32,100
+Now, in Native image, there is a
+different VM, right? 
+
+270
+00:14:32,100 --> 00:14:35,300
+This is called substrate volume.
+And it's a tiny VM 
+
+271
+00:14:35,300 --> 00:14:39,400
+implementation that we put into 
+that final executable, that you 
+
+272
+00:14:39,600 --> 00:14:41,800
+Build. 
+So it can can can take care of 
+
+273
+00:14:41,800 --> 00:14:43,500
+those. 
+Kind of typical VM tasks for 
+
+274
+00:14:43,500 --> 00:14:46,800
+you, but enjoyed mode is just 
+the same hotspot VM. 
+
+275
+00:14:47,500 --> 00:14:50,700
+So, in, okay, it's the same Hot 
+Spot being a VM but there's, but
+
+276
+00:14:50,700 --> 00:14:53,200
+there's something magical in 
+there because I've seen people 
+
+277
+00:14:53,200 --> 00:14:58,200
+do benchmarks or even production
+rollouts, where they switch from
+
+278
+00:14:58,200 --> 00:15:03,600
+using standard, jdk all that 
+they switch is over to the girl 
+
+279
+00:15:03,600 --> 00:15:05,900
+VM. 
+Jdk. 
+
+280
+00:15:05,900 --> 00:15:08,400
+Yeah, and all of a sudden their 
+performance is significantly 
+
+281
+00:15:08,400 --> 00:15:10,800
+better. 
+I'm glad you said that because 
+
+282
+00:15:10,800 --> 00:15:13,700
+just today I reposted like 
+somebody from Community 
+
+283
+00:15:13,700 --> 00:15:17,700
+reporting holidays operation. 
+Okay, okay so this is where it 
+
+284
+00:15:17,700 --> 00:15:20,800
+is coming from. 
+Yeah, so what they did right I 
+
+285
+00:15:20,800 --> 00:15:23,200
+think they've been using openjdk
+if I remember that fit 
+
+286
+00:15:23,200 --> 00:15:25,700
+correctly, right? 
+And then transition to crawl the
+
+287
+00:15:25,700 --> 00:15:29,200
+em and they saw immediate 
+improvements to latency, right? 
+
+288
+00:15:29,400 --> 00:15:32,400
+So there is something as you're 
+saying magical indeed, right? 
+
+289
+00:15:32,400 --> 00:15:35,400
+And that is the compiler. 
+And so, when you Transition to 
+
+290
+00:15:35,400 --> 00:15:37,900
+grow BM. 
+There is a whole new compiler. 
+
+291
+00:15:38,200 --> 00:15:41,600
+So instead of c 2, you are 
+getting our own girl compiler. 
+
+292
+00:15:41,600 --> 00:15:43,900
+Right? 
+And it's completely new written 
+
+293
+00:15:43,900 --> 00:15:46,500
+from scratch. 
+So that is why this difference 
+
+294
+00:15:46,500 --> 00:15:49,100
+is coming from right there. 
+Are some kind of brand new 
+
+295
+00:15:49,100 --> 00:15:52,300
+optimizations in it. 
+So for some work laws you will 
+
+296
+00:15:52,300 --> 00:15:55,200
+see quite a bit of difference. 
+When you transition to grow 
+
+297
+00:15:55,200 --> 00:15:57,800
+them. 
+For example, of the jvm side, 
+
+298
+00:15:57,800 --> 00:16:02,300
+it's actually on the, on the 
+compiled cider Sylar died 
+
+299
+00:16:02,300 --> 00:16:04,800
+because compiler is responsible 
+for producing. 
+
+300
+00:16:05,100 --> 00:16:08,000
+For optimizing your called right
+producing better machine called,
+
+301
+00:16:08,000 --> 00:16:09,700
+right? 
+So, it's basically where those 
+
+302
+00:16:09,700 --> 00:16:12,200
+performance differences is kinda
+common problem, especially if 
+
+303
+00:16:12,208 --> 00:16:14,600
+you're looking at things like 
+big throughput, for example. 
+
+304
+00:16:14,900 --> 00:16:18,100
+So I'm sure you you saw this 
+talk at conferences, driver 
+
+305
+00:16:18,100 --> 00:16:20,200
+people from Twitter. 
+We talked about how they 
+
+306
+00:16:20,200 --> 00:16:22,300
+transition to grow VM as well, 
+right? 
+
+307
+00:16:22,500 --> 00:16:25,700
+And I'm still quite significant.
+Like, you know, 30% of something
+
+308
+00:16:25,700 --> 00:16:28,500
+improvements in terms of 
+performance, right? 
+
+309
+00:16:28,500 --> 00:16:33,100
+And they are using, I believe, 
+Scala in their God for them. 
+
+310
+00:16:33,100 --> 00:16:35,900
+Yeah, switching to grow VM. 
+Just, you know, just for the 
+
+311
+00:16:35,908 --> 00:16:38,400
+compiler part. 
+They saw very significant 
+
+312
+00:16:38,400 --> 00:16:42,900
+improvements in there. 
+If I just switch my runtime jvm 
+
+313
+00:16:42,900 --> 00:16:46,500
+over the girl VM, I may not see 
+significant improvements 
+
+314
+00:16:46,600 --> 00:16:49,700
+although I think there is even a
+better garbage collector by 
+
+315
+00:16:49,700 --> 00:16:54,200
+default in crawl vm's. 
+So in for Java in jet, we just 
+
+316
+00:16:54,200 --> 00:16:57,300
+kind of offer you. 
+The default that is in your 
+
+317
+00:16:57,300 --> 00:16:59,400
+hotspot VM, right? 
+So things like Japan, for 
+
+318
+00:16:59,400 --> 00:17:02,300
+example, we do not ship our own 
+GC, right? 
+
+319
+00:17:02,300 --> 00:17:04,500
+So guard this performance is 
+coming from is actually 
+
+320
+00:17:04,500 --> 00:17:06,800
+decompose Either. 
+So kinds of whether or not 
+
+321
+00:17:06,800 --> 00:17:08,400
+audible. 
+I know your application with 
+
+322
+00:17:08,400 --> 00:17:11,099
+girl, VM to see any of these 
+before, got it. 
+
+323
+00:17:11,300 --> 00:17:14,700
+Yeah, kind of how you scroll VM 
+as a top-tier compiler, right? 
+
+324
+00:17:14,700 --> 00:17:17,700
+Instead of c 2, so in terms of 
+like whether or not you would 
+
+325
+00:17:17,700 --> 00:17:20,800
+see performance improvements, I 
+don't think there is like one 
+
+326
+00:17:20,900 --> 00:17:22,700
+answer, right? 
+Because every workload is 
+
+327
+00:17:22,700 --> 00:17:25,000
+different, right? 
+So typically what very calm and 
+
+328
+00:17:25,000 --> 00:17:27,200
+like, give it a try, right? 
+Run some part of your 
+
+329
+00:17:27,200 --> 00:17:30,500
+application, girl, VM and see if
+it can give you performance 
+
+330
+00:17:30,500 --> 00:17:34,100
+benefits, because really, there 
+is no one answer that could, you
+
+331
+00:17:34,100 --> 00:17:36,600
+know, satisfied. 
+All the work load and all the, 
+
+332
+00:17:36,800 --> 00:17:41,000
+you know, environment and all 
+this kind of requirements of 
+
+333
+00:17:41,000 --> 00:17:43,100
+each application to just kind of
+give it a try, right? 
+
+334
+00:17:43,100 --> 00:17:46,400
+It's a fairly simple transition 
+as you saw also today in that, 
+
+335
+00:17:46,400 --> 00:17:48,900
+to be it, right? 
+So you might just get 
+
+336
+00:17:48,900 --> 00:17:51,100
+performance benefits out of this
+transition. 
+
+337
+00:17:51,600 --> 00:17:56,500
+So this project is really kind 
+of just saying, oh well how 
+
+338
+00:17:56,500 --> 00:18:00,100
+about if we just completely 
+start from scratch in the whole 
+
+339
+00:18:00,700 --> 00:18:04,800
+of the whole system from top to 
+bottom and take advantage. 
+
+340
+00:18:04,900 --> 00:18:07,800
+Just not having to drag old code
+with us. 
+
+341
+00:18:08,700 --> 00:18:12,800
+I'm not sure about all system 
+guide because for example, we do
+
+342
+00:18:12,800 --> 00:18:15,000
+have still hot spot VM as a 
+platform, right? 
+
+343
+00:18:15,000 --> 00:18:18,100
+So the things it's very unclear 
+implemented, you know the 
+
+344
+00:18:18,100 --> 00:18:21,200
+compiler, right? 
+If you're talking about Java jet
+
+345
+00:18:21,400 --> 00:18:24,500
+now, native image is something 
+rather new right and travel as 
+
+346
+00:18:24,500 --> 00:18:27,300
+framework. 
+But yeah, not sure that 
+
+347
+00:18:27,300 --> 00:18:32,100
+qualifies if as R implementing 
+everything from scratch, but 
+
+348
+00:18:32,200 --> 00:18:36,200
+something was Rewritten in Java.
+Oh, that used to be like C or 
+
+349
+00:18:36,200 --> 00:18:39,800
+C++, wasn't it. 
+There's some piece of chromium 
+
+350
+00:18:39,800 --> 00:18:44,300
+that was that used to be in the 
+traditional so the compiler 
+
+351
+00:18:44,300 --> 00:18:46,600
+itself, right? 
+So I cannot kind of say, for 
+
+352
+00:18:46,600 --> 00:18:50,800
+sure, but I guess it is written 
+in things like C and C++ in 
+
+353
+00:18:50,800 --> 00:18:52,600
+hotspot do. 
+Again, don't quote me on this, 
+
+354
+00:18:52,600 --> 00:18:55,100
+but girl VM was quite 
+interesting was itself written 
+
+355
+00:18:55,100 --> 00:18:58,600
+in Java, right? 
+So we wrote Our Own compiler in 
+
+356
+00:18:58,600 --> 00:19:01,300
+Java. 
+That's cool. 
+
+357
+00:19:01,800 --> 00:19:05,800
+That's probably more 
+maintainable, I guess mmm-hmm. 
+
+358
+00:19:09,000 --> 00:19:13,300
+Okay, so so we've got it's 
+amazing how vast grow VM is 
+
+359
+00:19:13,300 --> 00:19:16,600
+there's just an umbrella with a 
+whole bunch of things underneath
+
+360
+00:19:16,600 --> 00:19:18,500
+it. 
+And so, back to Bruce's, 
+
+361
+00:19:18,500 --> 00:19:21,700
+question of what problem is, it 
+solving itself in a lot of 
+
+362
+00:19:21,700 --> 00:19:24,400
+problems, and there's a lot of 
+different ways to exactly, 
+
+363
+00:19:24,400 --> 00:19:27,100
+because there are so many 
+things, and I remember when we 
+
+364
+00:19:27,100 --> 00:19:31,100
+first started to kind of talking
+about Robby and publicly, And 
+
+365
+00:19:31,100 --> 00:19:33,000
+about all the features and 
+components. 
+
+366
+00:19:33,000 --> 00:19:36,000
+It was quite fascinating to see 
+how people are using it, right? 
+
+367
+00:19:36,000 --> 00:19:39,700
+Because there were some kind of 
+intendant use cases that we saw 
+
+368
+00:19:39,700 --> 00:19:43,100
+coming, but also since because, 
+there are so many components and
+
+369
+00:19:43,100 --> 00:19:45,800
+you can kind of mix and match 
+them, it was pacified quite 
+
+370
+00:19:45,800 --> 00:19:48,700
+fascinating to see how people 
+discover, you know, new and new 
+
+371
+00:19:48,700 --> 00:19:51,400
+ways of using it because there 
+are, you know, so many things in
+
+372
+00:19:51,400 --> 00:19:52,500
+it. 
+Yeah. 
+
+373
+00:19:53,200 --> 00:19:57,100
+Well, and didn't you say one of 
+the issues with the startup 
+
+374
+00:19:57,100 --> 00:19:59,900
+time? 
+So that's native image. 
+
+375
+00:19:59,900 --> 00:20:02,800
+We should probably Lee, we could
+switch gears to talking about - 
+
+376
+00:20:02,800 --> 00:20:06,300
+image specifically, so give us 
+the rundown on Native image and 
+
+377
+00:20:06,300 --> 00:20:09,200
+what it does and a magic. 
+Yeah, yes. 
+
+378
+00:20:09,200 --> 00:20:11,300
+The magic behind native image, 
+right. 
+
+379
+00:20:11,300 --> 00:20:14,200
+So, normally the way you would 
+execute your Java program is 
+
+380
+00:20:14,200 --> 00:20:17,300
+that it will be dynamically 
+executed on the jvm, right? 
+
+381
+00:20:17,300 --> 00:20:20,600
+And it means that you need to 
+have an actual jvm to run your 
+
+382
+00:20:20,600 --> 00:20:23,200
+Java program. 
+Now it is a bit different with 
+
+383
+00:20:23,200 --> 00:20:25,800
+Native image, right? 
+Because what it does, it would 
+
+384
+00:20:25,800 --> 00:20:30,100
+head of time kind of analyze and
+compile your application. 
+
+385
+00:20:30,600 --> 00:20:33,700
+It will look for all the 
+reachable code and only include 
+
+386
+00:20:33,700 --> 00:20:37,100
+all the code that is necessary 
+for your programs execution into
+
+387
+00:20:37,100 --> 00:20:39,400
+this final binary. 
+So it will look at your 
+
+388
+00:20:39,400 --> 00:20:43,100
+application code and the jdk 
+classes uses at the libraries. 
+
+389
+00:20:43,400 --> 00:20:46,800
+And if it only pack, the things 
+that I actually needed for in 
+
+390
+00:20:46,800 --> 00:20:50,300
+your application, but for your 
+application to execute and it 
+
+391
+00:20:50,300 --> 00:20:54,200
+will compile them into this 
+platform, specific Standalone, 
+
+392
+00:20:54,200 --> 00:20:57,800
+binary, and you don't no longer 
+need a jvm to run it, right? 
+
+393
+00:20:57,800 --> 00:21:00,400
+So you can just execute it as 
+and that's pretty. 
+
+394
+00:21:00,500 --> 00:21:02,200
+The fascinated, right? 
+Because what you imagine is 
+
+395
+00:21:02,200 --> 00:21:05,400
+startup times, it improves them 
+significantly, right? 
+
+396
+00:21:05,400 --> 00:21:07,600
+Because everything is 
+pre-compiled Arizona's, 
+
+397
+00:21:07,600 --> 00:21:10,200
+pre-optimized? 
+And one more thing we are doing 
+
+398
+00:21:10,200 --> 00:21:11,500
+when we are building native 
+image. 
+
+399
+00:21:11,500 --> 00:21:15,000
+We also perform hip snap showing
+so you can also start with 
+
+400
+00:21:15,000 --> 00:21:17,800
+pre-populated hip. 
+And this way your application 
+
+401
+00:21:17,800 --> 00:21:21,800
+starts really fast and there is 
+no dislike warm-up curve. 
+
+402
+00:21:21,800 --> 00:21:24,200
+Right. 
+So it's ready from get go and 
+
+403
+00:21:24,200 --> 00:21:27,500
+this is basically, you're saying
+the magic that NATO image does. 
+
+404
+00:21:28,700 --> 00:21:31,900
+Yeah, and the there's a few use 
+cases for this. 
+
+405
+00:21:31,900 --> 00:21:33,800
+That I think are really 
+interesting and people are 
+
+406
+00:21:33,800 --> 00:21:36,700
+beginning to use more than one 
+is is serverless. 
+
+407
+00:21:36,700 --> 00:21:39,000
+That's absolutely. 
+Yeah. 
+
+408
+00:21:39,100 --> 00:21:42,500
+Till then my serverless 
+applications that need that with
+
+409
+00:21:42,500 --> 00:21:44,400
+auto-scaling. 
+They need to be able to start up
+
+410
+00:21:44,400 --> 00:21:50,400
+instantly and it is just 
+ridiculously amazing how quick 
+
+411
+00:21:50,400 --> 00:21:52,900
+these things start. 
+So, in some of the applications 
+
+412
+00:21:52,900 --> 00:21:57,100
+that I've created, I've got a 
+container Docker container that 
+
+413
+00:21:57,100 --> 00:21:59,300
+doesn't even happen to her. 
+In system and it because I've 
+
+414
+00:21:59,300 --> 00:22:03,500
+used static linking in Grove am 
+native image so there's no 
+
+415
+00:22:03,500 --> 00:22:05,400
+operating system just a single 
+file. 
+
+416
+00:22:05,400 --> 00:22:09,800
+That is the head of time, 
+compiled jvm application that no
+
+417
+00:22:09,800 --> 00:22:15,400
+longer uses the jvm and I have 
+in some cases even compressed 
+
+418
+00:22:15,400 --> 00:22:17,800
+these binaries using a tool 
+called upx. 
+
+419
+00:22:18,000 --> 00:22:21,600
+Yeah my whole container image is
+like 10 Meg's for the whole 
+
+420
+00:22:21,600 --> 00:22:24,000
+thing to run. 
+It's just an and put it are 
+
+421
+00:22:24,000 --> 00:22:28,000
+still going through Docker. 
+I wrap that. 
+
+422
+00:22:28,100 --> 00:22:31,300
+Binary in Docker because that's 
+what that gives you the 
+
+423
+00:22:31,300 --> 00:22:35,200
+portability but it doesn't have 
+all of the extra like operating 
+
+424
+00:22:35,200 --> 00:22:36,600
+system. 
+Baggage it doesn't need it. 
+
+425
+00:22:36,600 --> 00:22:39,500
+So Docker containers can. 
+So dr. 
+
+426
+00:22:39,500 --> 00:22:43,300
+Is simply like a facade over 
+your thing, so it plugs in just 
+
+427
+00:22:43,300 --> 00:22:48,400
+the way to tar.gz your binary 
+file and, and then Docker 
+
+428
+00:22:48,400 --> 00:22:53,700
+conveys the platform stuff to 
+the virtualization engine or 
+
+429
+00:22:53,700 --> 00:22:55,200
+something. 
+So that it knows. 
+
+430
+00:22:55,200 --> 00:22:58,100
+Okay, this is a amd64 Linux 
+binaries. 
+
+431
+00:22:58,800 --> 00:23:03,400
+And so then it I'm guessing, you
+know, knows how to run virtually
+
+432
+00:23:03,400 --> 00:23:05,500
+virtually, right? 
+Yeah. 
+
+433
+00:23:05,500 --> 00:23:08,000
+Everything in the right place, 
+but with that, because I always 
+
+434
+00:23:08,000 --> 00:23:12,500
+thought Docker was the virtual 
+operating system and you're 
+
+435
+00:23:12,500 --> 00:23:14,600
+telling me it's possible, we'll 
+leave that out. 
+
+436
+00:23:14,900 --> 00:23:18,200
+Yeah, it's a little weird 
+because most of the time, Docker
+
+437
+00:23:18,200 --> 00:23:20,900
+containers contain, an operating
+system and them. 
+
+438
+00:23:21,200 --> 00:23:23,400
+Yeah. 
+And but it's not necessary. 
+
+439
+00:23:23,500 --> 00:23:27,200
+You can't miss the part of you 
+can just toss a static binary 
+
+440
+00:23:27,200 --> 00:23:28,600
+into a docker. 
+Boehner. 
+
+441
+00:23:29,000 --> 00:23:31,800
+And as long as you don't know, 
+statically linked it in the 
+
+442
+00:23:31,808 --> 00:23:34,900
+right way or something, which 
+grow VM, Native American, do it 
+
+443
+00:23:34,900 --> 00:23:37,800
+just works and it's amazing. 
+Hmm, people have been doing this
+
+444
+00:23:37,800 --> 00:23:41,900
+with go for a little while 
+creating containers without any 
+
+445
+00:23:41,900 --> 00:23:44,500
+operating system, but now you 
+can do it scroll VM native image
+
+446
+00:23:44,500 --> 00:23:49,400
+to that's interesting. 
+Yeah, it's pretty darn cool. 
+
+447
+00:23:49,500 --> 00:23:52,200
+So okay, so serverless is one of
+the big areas. 
+
+448
+00:23:53,200 --> 00:23:57,500
+I think CLI is are becoming a 
+bigger place for this too. 
+
+449
+00:23:57,600 --> 00:23:59,300
+Yeah, I would Say by that as 
+well, right? 
+
+450
+00:23:59,300 --> 00:24:01,900
+Because in sterilize your kind 
+of also want this thing to kind 
+
+451
+00:24:01,900 --> 00:24:03,900
+of start fast. 
+Do something fast right now. 
+
+452
+00:24:03,900 --> 00:24:07,800
+I can I be done with it, right? 
+So CL is also very good for very
+
+453
+00:24:07,800 --> 00:24:12,000
+good use case for Native image 
+and you can make them small 
+
+454
+00:24:12,000 --> 00:24:14,700
+binaries. 
+Like I said like mine, my 
+
+455
+00:24:14,900 --> 00:24:18,100
+servers, that I've built there 
+like 10 Meg binaries, lets you 
+
+456
+00:24:18,100 --> 00:24:22,100
+know, that's an acceptable CLI 
+size where one of the challenges
+
+457
+00:24:22,100 --> 00:24:26,000
+with with Java sea lies before 
+was, oh you need to go download 
+
+458
+00:24:26,000 --> 00:24:29,700
+this 100-plus Meg. 
+GM and then and then download 
+
+459
+00:24:29,700 --> 00:24:32,800
+all these jar files and, you 
+know, it's just like like way 
+
+460
+00:24:32,800 --> 00:24:35,400
+too much for and and then of 
+course it wouldn't start up 
+
+461
+00:24:35,400 --> 00:24:37,700
+instantly. 
+So that was the other downside. 
+
+462
+00:24:37,700 --> 00:24:40,100
+Yeah, and you mentioned several,
+it's right, but it's also 
+
+463
+00:24:40,100 --> 00:24:42,100
+microservices, right? 
+So if you want your 
+
+464
+00:24:42,100 --> 00:24:45,400
+microservices, start fast and 
+also like in addition to start 
+
+465
+00:24:45,400 --> 00:24:47,600
+up right, there is a bunch of 
+other things, like, for example,
+
+466
+00:24:47,600 --> 00:24:50,200
+memory efficiency, right? 
+So, it doesn't need that much 
+
+467
+00:24:50,200 --> 00:24:53,000
+memory again because it doesn't 
+have all the infrastructure, 
+
+468
+00:24:53,000 --> 00:24:54,600
+right? 
+So it doesn't need to log, 
+
+469
+00:24:54,600 --> 00:24:56,900
+classes doesn't need to compile 
+things, right? 
+
+470
+00:24:56,900 --> 00:25:00,400
+So it's also very Efficient. 
+So that's another area where we 
+
+471
+00:25:00,400 --> 00:25:04,100
+see quite a bit of adoption for 
+Native image, both in terms of 
+
+472
+00:25:04,100 --> 00:25:07,200
+users and actually Frameworks 
+that kind of integrate with NATO
+
+473
+00:25:07,200 --> 00:25:09,300
+image and use 90 images of 
+platform. 
+
+474
+00:25:09,600 --> 00:25:11,900
+Yeah, yeah. 
+And so there with with Native 
+
+475
+00:25:11,900 --> 00:25:17,700
+image, there's there's no longer
+like class files and the jvm 
+
+476
+00:25:17,700 --> 00:25:19,900
+like an, you know, interpret all
+the because. 
+
+477
+00:25:20,300 --> 00:25:23,800
+Yeah, I mean, it's it's it's 
+just as Elena you, tell us more 
+
+478
+00:25:23,800 --> 00:25:27,000
+about it, but it is just taking 
+that whole thing of Jar files 
+
+479
+00:25:27,000 --> 00:25:30,300
+because, you know, used Art, 
+which are files and turn it into
+
+480
+00:25:30,300 --> 00:25:35,000
+a magic static executable. 
+Yes, it does. 
+
+481
+00:25:35,000 --> 00:25:38,400
+Have to be like Ericsson has to 
+be known at build time, right? 
+
+482
+00:25:38,400 --> 00:25:40,500
+Because in the end, it's just 
+machine called, right? 
+
+483
+00:25:40,500 --> 00:25:41,800
+So in the end, it's just a 
+binary. 
+
+484
+00:25:41,800 --> 00:25:44,800
+So it doesn't so it's no longer 
+like lots classes. 
+
+485
+00:25:44,800 --> 00:25:48,200
+Right now, longer optimized is 
+called right in the end is just 
+
+486
+00:25:48,900 --> 00:25:51,200
+a binary file. 
+That's why it's so efficient. 
+
+487
+00:25:52,100 --> 00:25:55,800
+What if you have Dynamic code? 
+What does it do with that? 
+
+488
+00:25:56,200 --> 00:25:57,900
+Yeah. 
+So they're they're like every 
+
+489
+00:25:58,100 --> 00:26:00,400
+Has to be known and well time, 
+right? 
+
+490
+00:26:00,400 --> 00:26:05,300
+And one of kind of what I guess 
+if you want to start using a 
+
+491
+00:26:05,300 --> 00:26:08,700
+teh, I think one of the easiest 
+way for you to go would be to go
+
+492
+00:26:08,700 --> 00:26:10,400
+through one of those Frameworks 
+already. 
+
+493
+00:26:10,400 --> 00:26:13,000
+Kind of integrate with it, 
+because they would do some of 
+
+494
+00:26:13,000 --> 00:26:16,200
+that kind of configuration and 
+have a Lifting for you, right? 
+
+495
+00:26:16,200 --> 00:26:19,100
+So if you wanted to kind of try 
+later image, let's say tomorrow 
+
+496
+00:26:19,400 --> 00:26:22,100
+I do recommend checking out one 
+of those Frameworks. 
+
+497
+00:26:22,100 --> 00:26:23,700
+It work with nature in Port 
+Authority. 
+
+498
+00:26:24,300 --> 00:26:26,600
+Yes. 
+Print would not have its own. 
+
+499
+00:26:26,600 --> 00:26:28,300
+You name it right? 
+But I think it just It's like 
+
+500
+00:26:28,300 --> 00:26:31,300
+the easiest way to get started 
+with NATO image and get like a 
+
+501
+00:26:31,308 --> 00:26:34,300
+lot of things out of the box. 
+Just get you started first. 
+
+502
+00:26:34,500 --> 00:26:37,300
+So what those Frameworks have 
+done is they've added tool in 
+
+503
+00:26:37,300 --> 00:26:42,000
+that, will understand the 
+dynamic code paths essentially 
+
+504
+00:26:42,000 --> 00:26:46,000
+and then girl VM, native image 
+needs to know about those 
+
+505
+00:26:46,000 --> 00:26:49,700
+Dynamic places reflection or 
+whatever. 
+
+506
+00:26:49,700 --> 00:26:51,000
+Yeah. 
+And so these Frameworks have 
+
+507
+00:26:51,000 --> 00:26:56,200
+made it automatic to get that 
+information and pass it off to 
+
+508
+00:26:56,200 --> 00:26:59,600
+grow VM native image. 
+And girl VM native image, just 
+
+509
+00:26:59,600 --> 00:27:03,400
+needs to know where where things
+go Dynamic, so that it can 
+
+510
+00:27:03,500 --> 00:27:06,900
+follow those code paths, so that
+it had a kind of head of time 
+
+511
+00:27:06,900 --> 00:27:09,300
+compiled all the necessary code 
+paths. 
+
+512
+00:27:12,100 --> 00:27:15,600
+It's definitely been one of the 
+challenging Parts about doing 
+
+513
+00:27:15,600 --> 00:27:17,800
+native image. 
+If you're not using one of those
+
+514
+00:27:17,800 --> 00:27:21,600
+Frameworks which I've done with 
+Scala, which we did for our book
+
+515
+00:27:22,000 --> 00:27:26,100
+was, we didn't have the support 
+of those Frameworks to do that 
+
+516
+00:27:26,100 --> 00:27:32,400
+and it turns out Scala lazy 
+vows, use son, Miss unsafe. 
+
+517
+00:27:32,400 --> 00:27:35,500
+Underneath the covers for some 
+reason and so that becomes a 
+
+518
+00:27:35,500 --> 00:27:39,500
+dynamic part or the way that 
+they call it becomes Dynamic. 
+
+519
+00:27:39,700 --> 00:27:44,800
+And so so so you have to come up
+with the Declaration to Native 
+
+520
+00:27:44,800 --> 00:27:47,900
+image about the lazy valve parts
+of Scala. 
+
+521
+00:27:48,200 --> 00:27:52,900
+So it was one of the the 
+challenges and luckily grow 
+
+522
+00:27:52,900 --> 00:27:57,100
+them, native image makes it easy
+to create this configuration. 
+
+523
+00:27:57,400 --> 00:28:00,400
+The and this is what actually 
+did for our Booker one that we 
+
+524
+00:28:00,400 --> 00:28:05,400
+did this on was you can run the 
+application on the jvm with a 
+
+525
+00:28:05,400 --> 00:28:07,100
+Java agent. 
+Yeah. 
+
+526
+00:28:07,100 --> 00:28:11,300
+And the Java agent will keep 
+track of all all the dynamic 
+
+527
+00:28:11,300 --> 00:28:15,300
+calls and then produce the 
+configuration that grow VM needs
+
+528
+00:28:15,300 --> 00:28:16,700
+from it. 
+And so you just run your 
+
+529
+00:28:16,700 --> 00:28:19,800
+application with the agent and 
+then you get your configuration 
+
+530
+00:28:19,800 --> 00:28:22,300
+and then you use that 
+configuration with Native image.
+
+531
+00:28:22,800 --> 00:28:24,400
+Yeah, exactly. 
+That's another way to go, right?
+
+532
+00:28:24,400 --> 00:28:27,000
+It was this trace an agent but 
+still I think like it's somewhat
+
+533
+00:28:27,000 --> 00:28:29,700
+easier to do was one of the 
+Frameworks know for sure that if
+
+534
+00:28:29,700 --> 00:28:32,500
+that's an option. 
+Yeah, yeah, yeah, yeah. 
+
+535
+00:28:32,700 --> 00:28:38,500
+So why wouldn't I for, example, 
+use kotlin native instead of 
+
+536
+00:28:40,000 --> 00:28:44,200
+Crawl, binary. 
+So the nice wonderful thing 
+
+537
+00:28:44,200 --> 00:28:48,700
+about growl VM native image 
+stuff is that you are just doing
+
+538
+00:28:48,700 --> 00:28:51,500
+a jvm based application. 
+You still have access to the 
+
+539
+00:28:51,500 --> 00:28:56,000
+whole jvm ecosystem, whereas 
+with cotton native and and Scala
+
+540
+00:28:56,000 --> 00:28:59,200
+native. 
+You lose the jvm ecosystem, you 
+
+541
+00:28:59,200 --> 00:29:02,400
+lose the jvm libraries and you 
+lose. 
+
+542
+00:29:03,300 --> 00:29:05,800
+One of the things that I really 
+like about Native image is that 
+
+543
+00:29:05,800 --> 00:29:08,300
+when I'm doing local 
+development, I'm still running 
+
+544
+00:29:08,300 --> 00:29:11,800
+on the jvm I do everything on 
+the jvm because I don't want to 
+
+545
+00:29:11,800 --> 00:29:14,900
+wait for the ahead of time 
+compilation as part of my local 
+
+546
+00:29:14,900 --> 00:29:17,200
+development process. 
+So it's still a jvm based 
+
+547
+00:29:17,200 --> 00:29:21,600
+application that then you run 
+through the native image tool to
+
+548
+00:29:21,700 --> 00:29:25,200
+create your actual ahead of time
+compared to any existing 
+
+549
+00:29:25,700 --> 00:29:28,200
+third-party libraries in the 
+jvm. 
+
+550
+00:29:28,900 --> 00:29:31,200
+You still have access to 
+exactly. 
+
+551
+00:29:31,300 --> 00:29:31,900
+Yeah. 
+Okay. 
+
+552
+00:29:31,900 --> 00:29:35,000
+Yeah, yeah. 
+And there has been quite a bit 
+
+553
+00:29:35,000 --> 00:29:38,300
+of work happening in the native 
+image component lately, like, 
+
+554
+00:29:38,300 --> 00:29:40,300
+for example, in the latest 
+release, There was so many 
+
+555
+00:29:40,300 --> 00:29:43,200
+changes and I saw the community 
+was very happy about them. 
+
+556
+00:29:43,500 --> 00:29:47,400
+Like, for example, there has 
+been this request from Community
+
+557
+00:29:47,400 --> 00:29:51,700
+to kind of keep working on the 
+image build process, right? 
+
+558
+00:29:51,700 --> 00:29:54,200
+Because sometimes it can take a 
+while, right, especially 
+
+559
+00:29:54,200 --> 00:29:56,600
+depending on how big your 
+project is, right? 
+
+560
+00:29:56,700 --> 00:29:59,200
+And this is something we've been
+doing since find them on that, 
+
+561
+00:29:59,200 --> 00:30:01,900
+alright? 
+And I mean 2:39, we had, we 
+
+562
+00:30:01,900 --> 00:30:05,200
+added even more changes to that.
+So now those boats are faster. 
+
+563
+00:30:05,200 --> 00:30:08,400
+They'll use in last memories. 
+We are kind to make this process
+
+564
+00:30:08,400 --> 00:30:11,900
+trying to make this process. 
+Faster, but also more like 
+
+565
+00:30:11,900 --> 00:30:14,100
+developer friendly. 
+And one more interesting 
+
+566
+00:30:14,100 --> 00:30:17,200
+initiative, we have in this 
+component is that we are also 
+
+567
+00:30:17,200 --> 00:30:20,800
+working on that output that you 
+see when you about the native 
+
+568
+00:30:20,800 --> 00:30:22,700
+image, right? 
+Also trying to make it, you 
+
+569
+00:30:22,700 --> 00:30:25,700
+know, more informative for you 
+show more information, maybe in 
+
+570
+00:30:25,700 --> 00:30:27,300
+more readable way right? 
+To give you more information 
+
+571
+00:30:27,300 --> 00:30:28,900
+about that. 
+What is happening? 
+
+572
+00:30:28,900 --> 00:30:31,600
+What are the main classes that 
+end up in your image? 
+
+573
+00:30:31,600 --> 00:30:35,700
+So like really trying to work on
+that developer experience, part 
+
+574
+00:30:35,700 --> 00:30:39,200
+of the Native image component. 
+Yeah. 
+
+575
+00:30:39,200 --> 00:30:43,300
+So Is it takes a while to run 
+native image on a jvm 
+
+576
+00:30:43,300 --> 00:30:46,300
+application? 
+I just do that in my CI CD 
+
+577
+00:30:46,300 --> 00:30:48,100
+pipeline. 
+I don't ever do that like as 
+
+578
+00:30:48,100 --> 00:30:52,000
+part of any local development or
+anything and, and just as CI, 
+
+579
+00:30:52,000 --> 00:30:55,400
+CDI run, native image, and so 
+it's okay if it takes ten 
+
+580
+00:30:55,400 --> 00:30:58,500
+minutes and I don't know if any 
+of my actually take 10 minutes 5
+
+581
+00:30:58,500 --> 00:31:01,900
+minutes but it's okay if it 
+takes five minutes because this 
+
+582
+00:31:01,900 --> 00:31:05,200
+is just a step to production in 
+the pipeline and the delivery 
+
+583
+00:31:05,200 --> 00:31:11,200
+Pipeline quercus and spring. 
+Reboot and maybe Micra. 
+
+584
+00:31:11,200 --> 00:31:15,400
+Not also have a way to create 
+your native image as part of 
+
+585
+00:31:15,400 --> 00:31:18,100
+your CI process. 
+But then actually run your tests
+
+586
+00:31:18,100 --> 00:31:21,200
+against the native image 
+produced binary. 
+
+587
+00:31:21,200 --> 00:31:25,800
+So that you make sure that what 
+you validated in the JV and jvm 
+
+588
+00:31:25,800 --> 00:31:29,700
+land is going to be able to be 
+validated and Native image land.
+
+589
+00:31:29,900 --> 00:31:33,400
+And and that's a really cool 
+part of ensuring that this thing
+
+590
+00:31:33,400 --> 00:31:35,700
+that is running in a different 
+environment than your 
+
+591
+00:31:35,900 --> 00:31:38,200
+developers. 
+Use to build it in is still 
+
+592
+00:31:38,200 --> 00:31:43,700
+going to work. 
+Yeah, well yeah, it's it's I 
+
+593
+00:31:43,700 --> 00:31:46,500
+think it's super exciting stuff 
+and I haven't done any of the 
+
+594
+00:31:46,500 --> 00:31:52,000
+like truffle VM or truffle 
+multi-language parts of this 
+
+595
+00:31:52,000 --> 00:31:53,100
+yet. 
+And it's something that we 
+
+596
+00:31:53,100 --> 00:31:56,100
+should explore with python and 
+and try to take some of your 
+
+597
+00:31:56,100 --> 00:31:59,000
+python stuff and yeah, but if 
+she didn't, definitely give it a
+
+598
+00:31:59,008 --> 00:32:00,900
+try, right? 
+Because I can see how 90 image 
+
+599
+00:32:00,900 --> 00:32:03,800
+is very exciting ride and we see
+a lot of, you know, traction and
+
+600
+00:32:03,800 --> 00:32:05,800
+questions about it. 
+But also, I'm personally, I'm a 
+
+601
+00:32:05,800 --> 00:32:09,200
+big believer in this polyglot 
+aspect of Ravi em as well, 
+
+602
+00:32:09,200 --> 00:32:11,000
+right? 
+It might be the first impression
+
+603
+00:32:11,000 --> 00:32:12,800
+that, okay, maybe it's a bit too
+exotic. 
+
+604
+00:32:12,800 --> 00:32:16,000
+Like why would I need many 
+languages in my own application,
+
+605
+00:32:16,000 --> 00:32:17,700
+right? 
+I can just stick to one and use 
+
+606
+00:32:17,700 --> 00:32:20,900
+whatever like tools and 
+libraries I have and sometimes 
+
+607
+00:32:20,900 --> 00:32:23,700
+people say, okay, like but does 
+anyone even like need that Polly
+
+608
+00:32:23,700 --> 00:32:25,600
+with capability is just too 
+complex. 
+
+609
+00:32:26,100 --> 00:32:29,700
+And I kind of like that question
+because I do see a lot of those 
+
+610
+00:32:29,700 --> 00:32:31,700
+polyglot use cases in the 
+community. 
+
+611
+00:32:31,900 --> 00:32:35,000
+Like for example there is this 
+one organization who have like 
+
+612
+00:32:35,500 --> 00:32:39,000
+Java developers write her during
+application developer Wildman 
+
+613
+00:32:39,000 --> 00:32:42,300
+and they also Have a database 
+data science team, and those 
+
+614
+00:32:42,300 --> 00:32:45,100
+data science people would much 
+rather work was are right? 
+
+615
+00:32:45,100 --> 00:32:47,500
+Because that's their primary 
+language and it has all the 
+
+616
+00:32:47,500 --> 00:32:50,700
+packages that they want, right? 
+So what they did instead, they 
+
+617
+00:32:50,700 --> 00:32:55,100
+kind of adopted girl VM and this
+way they can kind of compromise 
+
+618
+00:32:55,100 --> 00:32:58,100
+in the middle here, right? 
+So, those application developers
+
+619
+00:32:58,100 --> 00:33:01,400
+can keep working in Java because
+they know what and they like it 
+
+620
+00:33:01,400 --> 00:33:02,500
+they are productive. 
+Is it? 
+
+621
+00:33:02,600 --> 00:33:05,300
+And these data science, 
+Engineers can work with our 
+
+622
+00:33:05,300 --> 00:33:07,300
+right? 
+And they can all kind of use the
+
+623
+00:33:07,300 --> 00:33:09,400
+best tool for the job and just 
+kind of mean. 
+
+624
+00:33:10,000 --> 00:33:13,200
+Meeting between here because 
+probably I'm games gives them a 
+
+625
+00:33:13,200 --> 00:33:15,500
+platform for that. 
+So what does it look like? 
+
+626
+00:33:15,500 --> 00:33:22,100
+When the Java programmers want 
+to call into our assume that the
+
+627
+00:33:22,100 --> 00:33:26,200
+possible to exchange value is 
+between the languages? 
+
+628
+00:33:26,200 --> 00:33:29,000
+Yes, F of 5 from right corn 
+functioning. 
+
+629
+00:33:29,000 --> 00:33:30,900
+Yeah. 
+So they have something for this 
+
+630
+00:33:30,900 --> 00:33:35,000
+and I haven't played with it as 
+a PI, right? 
+
+631
+00:33:35,000 --> 00:33:36,700
+That's one of the things I 
+believe, right. 
+
+632
+00:33:36,700 --> 00:33:39,400
+So it's definitely possible to 
+exchange while this between 
+
+633
+00:33:39,500 --> 00:33:41,900
+Which is right because I guess 
+otherwise it will be just, you 
+
+634
+00:33:41,900 --> 00:33:45,800
+know, not so valuable, right? 
+But you can't you can't pass 
+
+635
+00:33:45,800 --> 00:33:48,600
+while use back and forth if 
+you're running on roll them. 
+
+636
+00:33:49,100 --> 00:33:53,500
+Yeah, because this was a mean 
+way back when I was on the C++ 
+
+637
+00:33:53,500 --> 00:33:56,300
+committee that's what korba got 
+started. 
+
+638
+00:33:56,400 --> 00:33:58,300
+And Corbett was going to do 
+that. 
+
+639
+00:33:58,300 --> 00:34:00,800
+There was going to be like, oh 
+yeah, all languages will be able
+
+640
+00:34:00,800 --> 00:34:04,300
+to call each other and it got 
+stalled. 
+
+641
+00:34:04,300 --> 00:34:07,300
+So yes, has been something. 
+We've been chasing for a long 
+
+642
+00:34:07,300 --> 00:34:09,400
+time. 
+Don't fight about languages. 
+
+643
+00:34:09,600 --> 00:34:11,600
+Call them. 
+Yeah, exactly. 
+
+644
+00:34:13,000 --> 00:34:17,800
+I wonder if Scala and kotlin and
+closure were starting today. 
+
+645
+00:34:17,800 --> 00:34:21,400
+If they would have built on 
+truffle instead of doing their 
+
+646
+00:34:21,400 --> 00:34:25,699
+own bytecode, you mean like the 
+way a lot of things. 
+
+647
+00:34:25,699 --> 00:34:29,100
+Oh like Julia is built on llvm, 
+right? 
+
+648
+00:34:29,199 --> 00:34:31,900
+And I think a lot of other 
+languages do that now too is 
+
+649
+00:34:31,900 --> 00:34:34,699
+like well why would you write 
+your own? 
+
+650
+00:34:34,900 --> 00:34:36,500
+You know, you would just use a 
+la. 
+
+651
+00:34:36,500 --> 00:34:40,400
+Yeah, yeah, that's out there and
+everybody Be supporting it. 
+
+652
+00:34:40,400 --> 00:34:45,000
+And yeah, I'll have to ask the 
+rock guy. 
+
+653
+00:34:45,000 --> 00:34:47,800
+Why he didn't use, why didn't 
+build rock on truffle? 
+
+654
+00:34:48,600 --> 00:34:51,900
+Oh, right. 
+The interesting too because he, 
+
+655
+00:34:51,900 --> 00:34:55,000
+I think, is llvm ready? 
+Yeah, I'm pretty sure. 
+
+656
+00:34:55,100 --> 00:34:57,700
+Yeah, that's I think it's a 
+pretty safe Choice. 
+
+657
+00:34:57,700 --> 00:34:58,700
+Yeah. 
+Yeah. 
+
+658
+00:34:58,900 --> 00:35:01,600
+But what is that? 
+But I mean, you're in like, 
+
+659
+00:35:02,700 --> 00:35:07,700
+Production and people are using 
+girl VM for Sarah. 
+
+660
+00:35:07,700 --> 00:35:08,500
+We're here now. 
+Right? 
+
+661
+00:35:08,500 --> 00:35:10,700
+Okay, yeah. 
+Sounds good. 
+
+662
+00:35:11,100 --> 00:35:13,500
+Yeah, but like talking about 
+production like we were talking 
+
+663
+00:35:13,500 --> 00:35:16,300
+about Native image, right? 
+And I think we, there is one in 
+
+664
+00:35:16,300 --> 00:35:18,300
+very interesting story about 
+using native image in 
+
+665
+00:35:18,300 --> 00:35:21,500
+production. 
+So, for example, Alibaba is 
+
+666
+00:35:21,500 --> 00:35:23,700
+doing this, right? 
+And that was quite interesting 
+
+667
+00:35:23,700 --> 00:35:26,700
+to find out, right? 
+Because at their scale, right? 
+
+668
+00:35:26,900 --> 00:35:29,500
+It's even more fascinating to be
+using native image, right? 
+
+669
+00:35:29,500 --> 00:35:32,700
+Because they have huge laws and 
+in the story that they told As 
+
+670
+00:35:32,700 --> 00:35:36,900
+they said that they had been 
+like, they moved to Nato image 
+
+671
+00:35:36,900 --> 00:35:40,300
+and shortly after that, they had
+like this huge cells Festival. 
+
+672
+00:35:40,300 --> 00:35:43,700
+But they had very fine, a high 
+Lord and their system, right? 
+
+673
+00:35:43,700 --> 00:35:46,800
+So they actually battle-tested 
+like, native image, basically 
+
+674
+00:35:46,800 --> 00:35:49,300
+the next day, right? 
+Under this huge loss and they 
+
+675
+00:35:49,300 --> 00:35:51,300
+were very excited about the 
+results, right? 
+
+676
+00:35:51,400 --> 00:35:54,400
+And I bet they're still using 
+that image right now and also 
+
+677
+00:35:54,400 --> 00:35:57,500
+contributing to the project. 
+So, for them, it's yeah. 
+
+678
+00:35:57,500 --> 00:36:00,100
+It was a very good decision to 
+transition to it. 
+
+679
+00:36:01,100 --> 00:36:06,400
+Now, it's not not all roses and 
+unicorns and rainbows or 
+
+680
+00:36:06,400 --> 00:36:09,000
+whatever in Native image. 
+So, one of the trade-offs you 
+
+681
+00:36:09,000 --> 00:36:12,300
+make with Native image is you 
+get that lower memory usage and 
+
+682
+00:36:12,300 --> 00:36:15,000
+faster startup time. 
+But some of the, like, 
+
+683
+00:36:15,400 --> 00:36:18,800
+long-running process benefits 
+that you get. 
+
+684
+00:36:18,800 --> 00:36:23,100
+We're from the jvm, where the 
+jit has like, really optimized 
+
+685
+00:36:23,100 --> 00:36:26,900
+stuff based on actual execution,
+you lose some of those like, is 
+
+686
+00:36:26,900 --> 00:36:28,600
+it all has to be done at compile
+time. 
+
+687
+00:36:29,000 --> 00:36:30,500
+That's right. 
+Yeah, yeah. 
+
+688
+00:36:30,700 --> 00:36:35,500
+And so it Optimize things like 
+the jit does, which is 
+
+689
+00:36:35,500 --> 00:36:38,400
+optimizing things that real, 
+that's Dynamic optimization. 
+
+690
+00:36:38,400 --> 00:36:41,200
+And I mean not exactly, right? 
+Because we no longer have that 
+
+691
+00:36:41,200 --> 00:36:43,100
+profile and information 
+available, right? 
+
+692
+00:36:43,100 --> 00:36:46,200
+That that jvm has. 
+But again, there are things that
+
+693
+00:36:46,200 --> 00:36:48,600
+could be done about it, right? 
+Like, for example, there is this
+
+694
+00:36:48,600 --> 00:36:51,400
+thing called profile guided 
+simulations, right? 
+
+695
+00:36:51,400 --> 00:36:54,800
+So, if you would collect 
+profiles in advance, and give it
+
+696
+00:36:54,800 --> 00:36:58,900
+to us at the build time, we 
+could kind of consider those and
+
+697
+00:36:58,900 --> 00:37:02,200
+build, and optimize the binary 
+with those profiles in mind, 
+
+698
+00:37:02,200 --> 00:37:02,600
+right? 
+Right. 
+
+699
+00:37:02,600 --> 00:37:06,200
+Yeah, so still that I kind of 
+workarounds for it as well. 
+
+700
+00:37:06,500 --> 00:37:07,900
+Yeah. 
+Huh. 
+
+701
+00:37:08,200 --> 00:37:12,000
+That's cool. 
+So the and then one of the other
+
+702
+00:37:12,000 --> 00:37:15,000
+challenges I was thinking about 
+was you can't do like a jvm 
+
+703
+00:37:15,000 --> 00:37:19,200
+agent right in in a native image
+compiled, binary. 
+
+704
+00:37:19,200 --> 00:37:23,800
+Like it doesn't have the same 
+agent ability that the jvm does 
+
+705
+00:37:23,800 --> 00:37:27,300
+or some agents would work, I 
+believe, right? 
+
+706
+00:37:27,300 --> 00:37:31,400
+But that will be like, you would
+have to check each one and see 
+
+707
+00:37:31,400 --> 00:37:34,700
+my probably just kind of A try 
+and see a rather that works out.
+
+708
+00:37:35,000 --> 00:37:35,900
+Yeah. 
+Yeah. 
+
+709
+00:37:38,000 --> 00:37:43,400
+Overall I think why not? 
+Why not go to Native imagery. 
+
+710
+00:37:43,400 --> 00:37:49,100
+Like most use cases, it's been a
+pretty pretty sure bet for the 
+
+711
+00:37:49,100 --> 00:37:52,500
+people that have gone there. 
+So so I wonder if it said one of
+
+712
+00:37:52,500 --> 00:37:58,500
+the problems that python is had 
+forever is the packaging and 
+
+713
+00:37:58,500 --> 00:38:03,400
+delivery problem and so many 
+people have tried to solve this 
+
+714
+00:38:03,400 --> 00:38:05,800
+in one way or another. 
+And so this seems like this 
+
+715
+00:38:05,800 --> 00:38:09,800
+could be the solution to that. 
+So I mean basically you want to 
+
+716
+00:38:09,800 --> 00:38:13,900
+handle hand, the customer an 
+executable that they don't have 
+
+717
+00:38:13,900 --> 00:38:18,200
+to you know know anything about 
+to understand. 
+
+718
+00:38:18,200 --> 00:38:19,700
+They don't they don't know 
+anything about it. 
+
+719
+00:38:19,700 --> 00:38:24,500
+They just want to run it and 
+that has been a problem forever 
+
+720
+00:38:24,600 --> 00:38:27,800
+in Python. 
+Yeah, it's can I take a truffle 
+
+721
+00:38:27,800 --> 00:38:30,600
+application and Native image of 
+Phi it because I've only ever 
+
+722
+00:38:30,600 --> 00:38:32,800
+done it on like I was thinking 
+Right? 
+
+723
+00:38:32,800 --> 00:38:34,600
+As you were like talking about 
+it, right? 
+
+724
+00:38:34,600 --> 00:38:37,400
+So because that's exactly what I
+had in mind as well. 
+
+725
+00:38:37,400 --> 00:38:41,500
+So what you can do with Nettie 
+image by more thing is that if 
+
+726
+00:38:41,500 --> 00:38:45,000
+you, if your host application is
+a Java application, right? 
+
+727
+00:38:45,000 --> 00:38:49,000
+So, not python by Java and then 
+you call some python from it, 
+
+728
+00:38:49,400 --> 00:38:52,600
+you can compile that to a native
+image. 
+
+729
+00:38:52,700 --> 00:38:56,400
+One thing to keep in mind 
+though, as we wouldn't compile 
+
+730
+00:38:56,500 --> 00:38:59,900
+python or JavaScript, or 
+wherever ahead of time, we would
+
+731
+00:38:59,900 --> 00:39:01,900
+dynamically execute it and run 
+time. 
+
+732
+00:39:02,100 --> 00:39:06,200
+So, You you will have your image
+in the end, right but those 
+
+733
+00:39:06,200 --> 00:39:09,100
+languages will still be 
+dynamically executed but it's 
+
+734
+00:39:09,100 --> 00:39:11,300
+possible to do. 
+Yeah, yeah. 
+
+735
+00:39:11,300 --> 00:39:15,000
+But as a packaging seem so 
+you're saying that you would you
+
+736
+00:39:15,000 --> 00:39:19,800
+would, you would still have to 
+have some Java runtime in other 
+
+737
+00:39:19,800 --> 00:39:23,900
+words more time for JavaScript 
+or python or whatever to make it
+
+738
+00:39:23,900 --> 00:39:24,900
+happen. 
+Yeah. 
+
+739
+00:39:25,500 --> 00:39:29,400
+But but I mean you'd have to 
+have a piece of java code 
+
+740
+00:39:29,600 --> 00:39:34,600
+running in order to be able to 
+call Say the python and Pat. 
+
+741
+00:39:34,600 --> 00:39:36,300
+I think something. 
+I think you can. 
+
+742
+00:39:36,300 --> 00:39:39,400
+You could just do truffle, okay?
+Try just do truffle Standalone. 
+
+743
+00:39:39,400 --> 00:39:42,400
+Yeah, your job would be ahead of
+time compiled and and I would be
+
+744
+00:39:42,400 --> 00:39:45,000
+like runtime for those Dynamic 
+languages and I will be 
+
+745
+00:39:45,000 --> 00:39:47,000
+dynamically executed. 
+Yeah, right. 
+
+746
+00:39:47,000 --> 00:39:48,400
+We should definitely try this 
+with probably. 
+
+747
+00:39:48,400 --> 00:39:49,100
+Yeah. 
+Yeah. 
+
+748
+00:39:49,400 --> 00:39:52,200
+And then tell me to tell me how 
+it worked out. 
+
+749
+00:39:52,200 --> 00:39:56,500
+Yeah, the curious as well, just 
+just being able to deliver an 
+
+750
+00:39:56,500 --> 00:39:59,200
+executable without having to 
+worry about. 
+
+751
+00:39:59,200 --> 00:40:02,500
+All of those things, has been 
+something that python community.
+
+752
+00:40:02,600 --> 00:40:04,900
+Unity has been fighting with for
+ya. 
+
+753
+00:40:05,000 --> 00:40:08,300
+Most of it's life. 
+Basically people keep trying to 
+
+754
+00:40:08,300 --> 00:40:11,200
+solve it. 
+Yeah, so I'm be interesting. 
+
+755
+00:40:12,000 --> 00:40:15,300
+Well, that's super helpful 
+information on growl VM, I 
+
+756
+00:40:15,308 --> 00:40:18,100
+appreciate that. 
+Let's switch gears and talk 
+
+757
+00:40:18,100 --> 00:40:21,100
+about about developer relations 
+and building developer 
+
+758
+00:40:21,100 --> 00:40:22,500
+communities. 
+Since that's something that 
+
+759
+00:40:22,500 --> 00:40:23,800
+you've been doing for many 
+years. 
+
+760
+00:40:23,800 --> 00:40:25,400
+Let's go ahead. 
+Yeah, I'm ready. 
+
+761
+00:40:25,400 --> 00:40:27,700
+Very passionate about it. 
+Yeah. 
+
+762
+00:40:29,000 --> 00:40:30,600
+What are you passionate about 
+about the? 
+
+763
+00:40:31,000 --> 00:40:32,500
+I mean, one thing is 
+communication. 
+
+764
+00:40:32,700 --> 00:40:34,300
+This, right? 
+And I recently had a 
+
+765
+00:40:34,300 --> 00:40:36,900
+conversation with a friend. 
+So he also is in there. 
+
+766
+00:40:36,900 --> 00:40:38,400
+All right? 
+And we were talking about like, 
+
+767
+00:40:38,400 --> 00:40:41,000
+why I, why we are even doing 
+this, right? 
+
+768
+00:40:41,000 --> 00:40:42,700
+And what's in this for us, 
+right? 
+
+769
+00:40:42,700 --> 00:40:45,100
+And I said, okay, but I'm a 
+community person, right? 
+
+770
+00:40:45,100 --> 00:40:46,800
+This is something about very 
+natural for me. 
+
+771
+00:40:46,800 --> 00:40:51,200
+And I cannot really explain why,
+or what like it gives me a ride 
+
+772
+00:40:51,200 --> 00:40:53,500
+but I just feel like being a 
+part of community is the right 
+
+773
+00:40:53,500 --> 00:40:56,200
+thing. 
+And this friend told me that it 
+
+774
+00:40:56,200 --> 00:40:58,700
+actually sounds very kind of 
+reasonable unnaturally, right? 
+
+775
+00:40:58,700 --> 00:41:01,600
+Because we all as human beings, 
+I guess want to belong 
+
+776
+00:41:01,600 --> 00:41:03,600
+somewhere, right? 
+To be A part of something. 
+
+777
+00:41:03,800 --> 00:41:07,300
+So it's not surprised that 
+communities is like one of those
+
+778
+00:41:07,300 --> 00:41:09,800
+groups or tribes that we want to
+belong to, right? 
+
+779
+00:41:09,800 --> 00:41:13,300
+So for me, this is something 
+like very natural and I remember
+
+780
+00:41:13,300 --> 00:41:16,200
+my times being a community 
+organizer, it was like so much 
+
+781
+00:41:16,200 --> 00:41:17,400
+fun. 
+I mean, my team. 
+
+782
+00:41:17,400 --> 00:41:21,000
+And the community itself it was 
+a lot of fun, huh? 
+
+783
+00:41:21,800 --> 00:41:24,400
+That's called bringing 
+developers, together into a 
+
+784
+00:41:24,408 --> 00:41:26,300
+community and building that 
+community. 
+
+785
+00:41:26,300 --> 00:41:29,700
+And it's it, it's rewarding 
+work. 
+
+786
+00:41:29,700 --> 00:41:36,300
+I think it feels feels good too.
+Be part of a community and grow 
+
+787
+00:41:36,300 --> 00:41:40,700
+that Community. 
+It took me a long time in 
+
+788
+00:41:40,700 --> 00:41:46,600
+organizing my own small 
+conferences to realize because I
+
+789
+00:41:46,608 --> 00:41:50,400
+always thought, oh, this is 
+about sharing technology which 
+
+790
+00:41:50,400 --> 00:41:54,000
+it was. 
+But that wasn't the real reason.
+
+791
+00:41:54,500 --> 00:41:57,400
+The real reason that people 
+would come to these events is 
+
+792
+00:41:57,400 --> 00:42:01,100
+because of connection. 
+You know, just that that 
+
+793
+00:42:01,100 --> 00:42:04,600
+connection and we happen to use 
+the Language of technology. 
+
+794
+00:42:04,600 --> 00:42:08,100
+Hmm, do you know about this 
+thing or I don't know about this
+
+795
+00:42:08,100 --> 00:42:11,000
+thing. 
+We can talk about it but what's 
+
+796
+00:42:11,000 --> 00:42:15,500
+really happening is the 
+underlying connections that we 
+
+797
+00:42:15,500 --> 00:42:17,700
+want to connect as humans. 
+Yes, yeah. 
+
+798
+00:42:18,200 --> 00:42:20,000
+Yeah. 
+That was my observation as well 
+
+799
+00:42:20,000 --> 00:42:23,400
+and actually like one of the one
+of my favorite things about 
+
+800
+00:42:23,900 --> 00:42:26,600
+Community was that like we would
+organize, you know, meetups and 
+
+801
+00:42:26,600 --> 00:42:28,500
+conferences. 
+And sometimes there were on very
+
+802
+00:42:28,500 --> 00:42:32,000
+different topics and still, 
+there were people who would show
+
+803
+00:42:32,000 --> 00:42:34,900
+up to every single Angle thing 
+basically no matter what the 
+
+804
+00:42:34,900 --> 00:42:37,900
+topic was and they said like we 
+are just having a because you 
+
+805
+00:42:37,900 --> 00:42:40,700
+like your community and we like 
+the atmosphere here and we can 
+
+806
+00:42:40,700 --> 00:42:42,700
+just kind of like hanging out 
+with you and talking and 
+
+807
+00:42:42,700 --> 00:42:45,800
+learning about whatever just 
+because you like this community.
+
+808
+00:42:45,800 --> 00:42:47,700
+Right? 
+So yeah, that was actually the 
+
+809
+00:42:47,700 --> 00:42:48,700
+best part. 
+Driving people. 
+
+810
+00:42:48,700 --> 00:42:52,000
+Just chill out for a community. 
+And they, you know, they are 
+
+811
+00:42:52,000 --> 00:42:54,800
+open to learning something new 
+because the main value is just 
+
+812
+00:42:54,800 --> 00:42:57,400
+connecting with that community. 
+That was amazing. 
+
+813
+00:42:59,200 --> 00:43:06,000
+How do you build community? 
+Such a complicated question. 
+
+814
+00:43:06,000 --> 00:43:10,200
+I don't even know, like there 
+are so many ways to do it. 
+
+815
+00:43:10,200 --> 00:43:13,300
+I guess there should be some 
+Central piece. 
+
+816
+00:43:13,300 --> 00:43:15,300
+Connecting you all together, 
+right? 
+
+817
+00:43:15,300 --> 00:43:18,200
+So could be a technology, could 
+be something. 
+
+818
+00:43:18,200 --> 00:43:21,000
+You are all trying to accomplish
+as a community. 
+
+819
+00:43:21,700 --> 00:43:26,400
+Could be, I don't even know, but
+there should be something shared
+
+820
+00:43:26,400 --> 00:43:28,900
+values in some way. 
+Yeah, yeah, yeah. 
+
+821
+00:43:29,200 --> 00:43:31,900
+And I think another thing that 
+is important there and people 
+
+822
+00:43:32,000 --> 00:43:34,700
+People that people actually feel
+is. 
+
+823
+00:43:34,700 --> 00:43:39,500
+But when there is like, they 
+know the score organizing team 
+
+824
+00:43:39,500 --> 00:43:42,500
+or whatever, but some people who
+are passionate about it and have
+
+825
+00:43:42,500 --> 00:43:44,600
+this kind of genuine motivation 
+to do it, right? 
+
+826
+00:43:44,600 --> 00:43:47,300
+So they're not doing this for 
+money, they're not doing this 
+
+827
+00:43:47,300 --> 00:43:48,700
+because this is their job, 
+right? 
+
+828
+00:43:48,700 --> 00:43:50,200
+But just because they believe in
+it. 
+
+829
+00:43:50,500 --> 00:43:53,100
+So, I think this kind of 
+attitude, right? 
+
+830
+00:43:53,100 --> 00:43:56,600
+And this passion people always 
+kind of notice it, right? 
+
+831
+00:43:56,600 --> 00:43:58,500
+So, and this is something that 
+attracts them, right? 
+
+832
+00:43:58,500 --> 00:44:01,300
+When they see that, somebody is 
+doing something because they 
+
+833
+00:44:01,300 --> 00:44:03,400
+believe in it. 
+I know because they are forced 
+
+834
+00:44:03,400 --> 00:44:05,900
+to do it because they promised 
+they will do it over ever, 
+
+835
+00:44:05,900 --> 00:44:08,100
+right? 
+So I believe you can always tell
+
+836
+00:44:08,100 --> 00:44:09,900
+when you see those great 
+communities. 
+
+837
+00:44:09,900 --> 00:44:13,400
+Right there are built by people 
+who actually believe in 
+
+838
+00:44:13,400 --> 00:44:16,500
+communities. 
+And for whom this is like a real
+
+839
+00:44:16,500 --> 00:44:19,400
+thing and they would do it. 
+You know, no matter what like 
+
+840
+00:44:19,400 --> 00:44:22,300
+this could like necessarily 
+that, that is not as though, 
+
+841
+00:44:22,300 --> 00:44:24,700
+their job, right? 
+They did not necessarily commit 
+
+842
+00:44:24,700 --> 00:44:26,400
+to it but they just like doing 
+it. 
+
+843
+00:44:26,400 --> 00:44:28,300
+And this is actually something 
+that draws people. 
+
+844
+00:44:28,300 --> 00:44:30,100
+Right? 
+When they see that, it's like a 
+
+845
+00:44:30,100 --> 00:44:31,800
+real thing. 
+Yeah. 
+
+846
+00:44:32,300 --> 00:44:38,500
+Yeah, the the shared passion. 
+Is it spreads right? 
+
+847
+00:44:38,500 --> 00:44:41,000
+And that and I guess that's 
+something that helps the 
+
+848
+00:44:41,000 --> 00:44:47,200
+community grow is is by allowing
+people to bring their passion, 
+
+849
+00:44:47,300 --> 00:44:52,200
+to something to a group and and 
+yeah people's passion for 
+
+850
+00:44:52,200 --> 00:44:54,900
+something spreads, I think that 
+that. 
+
+851
+00:44:54,900 --> 00:44:58,400
+Yeah and I think it's also very 
+nice when communities. 
+
+852
+00:44:58,400 --> 00:45:01,800
+I kind of open and welcoming to 
+new members, right? 
+
+853
+00:45:02,100 --> 00:45:05,800
+So everyone like sometimes I 
+think it could be kind of scary 
+
+854
+00:45:05,800 --> 00:45:08,000
+to join your community, right? 
+Because you know, that there are
+
+855
+00:45:08,000 --> 00:45:11,300
+all those people who have been 
+there for years and now you show
+
+856
+00:45:11,300 --> 00:45:15,000
+up and maybe like, I don't know 
+what other rules or whatever or 
+
+857
+00:45:15,000 --> 00:45:16,600
+what is the culture in that 
+Community, right? 
+
+858
+00:45:16,600 --> 00:45:19,700
+And I think that's a very 
+important, but also challenging 
+
+859
+00:45:19,700 --> 00:45:23,800
+to make sure that your community
+is welcoming to new members and 
+
+860
+00:45:23,800 --> 00:45:27,100
+it's easy for them to join and 
+they will feel like welcomed in 
+
+861
+00:45:27,100 --> 00:45:30,300
+that place. 
+So I think that's another thing 
+
+862
+00:45:30,300 --> 00:45:32,000
+about being a great 
+communicator. 
+
+863
+00:45:32,100 --> 00:45:34,500
+Unity. 
+The python world has done a 
+
+864
+00:45:34,500 --> 00:45:40,800
+really good job of this because 
+we have all kinds of groups that
+
+865
+00:45:40,800 --> 00:45:44,600
+if you're not, if you don't feel
+like you're ready for one there,
+
+866
+00:45:45,100 --> 00:45:48,600
+there's others where you go. 
+Oh, I'll bet if I went there, I 
+
+867
+00:45:48,600 --> 00:45:52,200
+would be welcoming. 
+Yeah, be welcomed sure. 
+
+868
+00:45:53,800 --> 00:45:58,400
+Sure. 
+How do you create, how do you 
+
+869
+00:45:58,408 --> 00:46:01,500
+create safety? 
+As I think this is kind of 
+
+870
+00:46:01,800 --> 00:46:04,600
+related to the welcoming thing. 
+But how do you create safety and
+
+871
+00:46:04,600 --> 00:46:10,900
+communities for people? 
+I think there are so many ways, 
+
+872
+00:46:10,900 --> 00:46:14,400
+like, I think my knee, like for 
+one thing my neck communities, 
+
+873
+00:46:14,400 --> 00:46:19,100
+how code of conduct, right? 
+So this is kind of more of a 
+
+874
+00:46:19,100 --> 00:46:22,900
+written formalized sting, right?
+But it gives you like the thing 
+
+875
+00:46:22,900 --> 00:46:24,800
+that we were saying, right? 
+Sometimes they are not those 
+
+876
+00:46:24,800 --> 00:46:27,600
+unspoken rules but I have, am I 
+supposed to know them right? 
+
+877
+00:46:27,600 --> 00:46:30,500
+When I should just join? 
+I'm considering joining right? 
+
+878
+00:46:30,500 --> 00:46:33,300
+But I don't know what that 
+Community is like, right? 
+
+879
+00:46:33,500 --> 00:46:37,500
+So I think that is one of the 
+things that That helps with that
+
+880
+00:46:37,900 --> 00:46:44,400
+also I think like it's maybe 
+more related to a workplace but 
+
+881
+00:46:44,400 --> 00:46:46,100
+I think would apply to 
+communities as well. 
+
+882
+00:46:46,100 --> 00:46:50,400
+So once I read the statement 
+that teams or workplaces culture
+
+883
+00:46:50,400 --> 00:46:56,800
+is defined by the worst behavior
+that is tolerated, right? 
+
+884
+00:46:56,800 --> 00:47:00,700
+So every single time everyone in
+the community of the leaders, 
+
+885
+00:47:00,800 --> 00:47:05,200
+kind of do not react upon 
+something that can be dangerous 
+
+886
+00:47:05,200 --> 00:47:06,900
+to the community. 
+That's about, Signed, right? 
+
+887
+00:47:06,900 --> 00:47:10,900
+Because it's kind of gives other
+signal that it is acceptable 
+
+888
+00:47:10,900 --> 00:47:12,900
+here, right? 
+So, and I think that is, when 
+
+889
+00:47:12,900 --> 00:47:16,600
+people can feel less safe or can
+wonder about like okay? 
+
+890
+00:47:16,600 --> 00:47:19,200
+What is because you're here, 
+because things like that should 
+
+891
+00:47:19,200 --> 00:47:22,200
+not be happening, right? 
+So that's a very tricky part and
+
+892
+00:47:22,200 --> 00:47:25,600
+even more tricky because 
+communities allows formal, 
+
+893
+00:47:25,600 --> 00:47:27,800
+right? 
+And technically there is maybe 
+
+894
+00:47:27,800 --> 00:47:31,700
+less of Leverage and less of 
+ways to handle those things but 
+
+895
+00:47:31,700 --> 00:47:33,300
+I think this is also important, 
+right? 
+
+896
+00:47:33,300 --> 00:47:36,600
+So making sure things like that,
+don't happen and Anyone in the 
+
+897
+00:47:36,600 --> 00:47:38,400
+community, feel safe and 
+welcome. 
+
+898
+00:47:39,000 --> 00:47:40,700
+Hmm. 
+That's it. 
+
+899
+00:47:40,700 --> 00:47:43,400
+That's a probably a really good 
+important point on communities. 
+
+900
+00:47:43,400 --> 00:47:49,800
+Is that, if, if bad behavior 
+goes undealt with then, yeah, 
+
+901
+00:47:49,800 --> 00:47:55,000
+that is giving you a picture of 
+the culture that is acceptable 
+
+902
+00:47:55,000 --> 00:47:59,800
+in a way or and yeah, because I 
+believe, like, team culture or 
+
+903
+00:47:59,800 --> 00:48:02,800
+Community culture. 
+It's not set in stone, right? 
+
+904
+00:48:02,800 --> 00:48:04,600
+It's a valid flexible thing, 
+right? 
+
+905
+00:48:04,600 --> 00:48:07,400
+And it changes, every time you 
+up, Unless something changes. 
+
+906
+00:48:07,400 --> 00:48:09,500
+Right? 
+So something changes. 
+
+907
+00:48:09,700 --> 00:48:12,900
+One, two, three times, and 
+that's like new normal, right? 
+
+908
+00:48:12,900 --> 00:48:15,500
+So now, your team or your 
+community has like this new 
+
+909
+00:48:15,500 --> 00:48:18,100
+cultural thing, so it's 
+constantly changing and I think 
+
+910
+00:48:18,100 --> 00:48:20,700
+people are very good and picking
+up those signs, right? 
+
+911
+00:48:20,800 --> 00:48:22,700
+And observing, what is like this
+community? 
+
+912
+00:48:23,200 --> 00:48:26,600
+What means it is like like at 
+this point of time, right? 
+
+913
+00:48:26,800 --> 00:48:29,300
+So it's constantly changes. 
+Yeah. 
+
+914
+00:48:30,700 --> 00:48:33,600
+Hmm, is there something at the 
+other end, though? 
+
+915
+00:48:33,600 --> 00:48:37,100
+I mean, it's like you say, well,
+the worst thing that you 
+
+916
+00:48:37,100 --> 00:48:40,700
+tolerate is the culture. 
+What about on the other end? 
+
+917
+00:48:40,800 --> 00:48:43,600
+The best thing, the best thing 
+that can happen. 
+
+918
+00:48:43,800 --> 00:48:47,800
+Yes. 
+Happen would also be important 
+
+919
+00:48:47,800 --> 00:48:49,600
+picture and culture. 
+Mmm. 
+
+920
+00:48:50,100 --> 00:48:51,900
+Yeah. 
+Because maybe maybe, you could 
+
+921
+00:48:51,900 --> 00:48:59,000
+culturally create an environment
+where creativity is, is not 
+
+922
+00:48:59,000 --> 00:49:01,100
+allowed or something. 
+Well, Bye. 
+
+923
+00:49:03,200 --> 00:49:05,400
+Trying to control the worst 
+thing that could happen. 
+
+924
+00:49:05,400 --> 00:49:09,900
+You also May limit the best 
+thing that can happen. 
+
+925
+00:49:10,100 --> 00:49:11,900
+Yeah. 
+Yeah, yeah. 
+
+926
+00:49:11,900 --> 00:49:15,200
+But talking about bus things, I 
+think what should happen there 
+
+927
+00:49:15,200 --> 00:49:18,300
+is all good things should be 
+recognized, right? 
+
+928
+00:49:18,300 --> 00:49:21,900
+And by recognizing that you are 
+kind of sending a signal to the 
+
+929
+00:49:21,900 --> 00:49:24,200
+whole group, right? 
+Like this is what is happening. 
+
+930
+00:49:24,500 --> 00:49:27,300
+You are sending this positive 
+signal to the person who did 
+
+931
+00:49:27,300 --> 00:49:30,800
+this like great job, great 
+project wherever so recognizing 
+
+932
+00:49:30,800 --> 00:49:32,600
+them, right? 
+But also sharing with others. 
+
+933
+00:49:33,000 --> 00:49:35,500
+So I think like, giving tried it
+and recognizing great 
+
+934
+00:49:35,500 --> 00:49:38,400
+contributions is also like 
+probably what you're saying, 
+
+935
+00:49:38,400 --> 00:49:40,100
+right? 
+Like, how, what do we do about 
+
+936
+00:49:40,100 --> 00:49:43,800
+the best positive, you know, 
+contributions and actions. 
+
+937
+00:49:44,600 --> 00:49:48,200
+One of the coolest things I saw 
+in the scholar community over 
+
+938
+00:49:48,200 --> 00:49:51,900
+the last few years was there was
+I forget the name of it but it 
+
+939
+00:49:51,900 --> 00:49:55,600
+was like a day of gratitude and 
+so everyone in this College 
+
+940
+00:49:55,600 --> 00:49:58,100
+Community was just sharing. 
+What they were grateful for in 
+
+941
+00:49:58,100 --> 00:50:01,300
+the scholarly community and I 
+was like what a what a cool 
+
+942
+00:50:01,300 --> 00:50:04,200
+thing to value and why don't? 
+We do, that's amazing. 
+
+943
+00:50:04,200 --> 00:50:08,000
+Yeah, it's amazing right way? 
+Yeah and it made me have a lot 
+
+944
+00:50:08,000 --> 00:50:13,100
+of respect for for people in the
+community because they they were
+
+945
+00:50:13,500 --> 00:50:16,300
+they placed value on gratitude. 
+Hmm. 
+
+946
+00:50:16,300 --> 00:50:18,900
+That was that was really cool. 
+That's actually, right? 
+
+947
+00:50:18,900 --> 00:50:20,900
+And you should too, right? 
+Because I think quite often good
+
+948
+00:50:20,900 --> 00:50:23,600
+things go unnoticed, right? 
+It's just other part of 
+
+949
+00:50:23,600 --> 00:50:26,900
+perception of what is normal, 
+and what is a k&o might be? 
+
+950
+00:50:26,900 --> 00:50:29,500
+Sometimes people would be just 
+kind of shy, right? 
+
+951
+00:50:29,700 --> 00:50:32,100
+To be to say, okay, you did this
+great thing. 
+
+952
+00:50:32,100 --> 00:50:35,200
+I'm so grateful, For this 
+because it completely changed 
+
+953
+00:50:35,200 --> 00:50:38,600
+the way I do things right? 
+So maybe you know, having this 
+
+954
+00:50:38,600 --> 00:50:41,300
+knowledge right? 
+I haven't this particular day or
+
+955
+00:50:41,300 --> 00:50:44,900
+platform to give this gratitude,
+it's really great idea and I'm 
+
+956
+00:50:44,900 --> 00:50:48,300
+sure it had a huge positive 
+impact on the community. 
+
+957
+00:50:48,300 --> 00:50:52,500
+Well, especially because of the 
+built in negativity bias that 
+
+958
+00:50:52,500 --> 00:50:55,400
+humans, have you write a more 
+attention to the negative 
+
+959
+00:50:55,400 --> 00:50:57,200
+things? 
+Because, well, they might eat 
+
+960
+00:50:57,200 --> 00:51:00,600
+us. 
+So it makes sense in the past. 
+
+961
+00:51:00,600 --> 00:51:05,000
+But, but that's built in. 
+No, we got that wired in and so 
+
+962
+00:51:05,100 --> 00:51:10,600
+to actually pay attention to say
+let's take let's focus on paying
+
+963
+00:51:10,600 --> 00:51:12,600
+attention to the positive 
+things. 
+
+964
+00:51:12,700 --> 00:51:15,500
+Yeah, makes a big different 
+energy into this. 
+
+965
+00:51:15,500 --> 00:51:19,600
+Hmm, what was your quote on? 
+What culture is? 
+
+966
+00:51:20,100 --> 00:51:23,900
+Oh every culture is everything. 
+We punish and reward. 
+
+967
+00:51:24,000 --> 00:51:29,500
+Yeah interest just like I mean 
+it's just it's the most succinct
+
+968
+00:51:31,100 --> 00:51:35,900
+one that I've ever heard. 
+And and it I mean at least gives
+
+969
+00:51:35,900 --> 00:51:38,200
+you the direction of what it's 
+like. 
+
+970
+00:51:38,200 --> 00:51:43,400
+Okay, well we promote these 
+things and we try to, you know, 
+
+971
+00:51:43,400 --> 00:51:47,100
+not do these other things. 
+Well, I'd be a good useful tool 
+
+972
+00:51:47,700 --> 00:51:50,800
+where people in a community 
+should maybe periodically 
+
+973
+00:51:50,800 --> 00:51:53,800
+evaluate, what have we punished,
+and what have we were awarded? 
+
+974
+00:51:53,800 --> 00:51:57,000
+And that will give them a 
+picture of what their culture 
+
+975
+00:51:57,100 --> 00:52:00,000
+actually is, and then they can 
+decide if they need to make 
+
+976
+00:52:00,000 --> 00:52:03,100
+changes in our, we're trying to 
+do a different thing to Don 
+
+977
+00:52:03,100 --> 00:52:07,400
+punishment versus maybe maybe 
+focus a little more on rewards 
+
+978
+00:52:07,400 --> 00:52:10,600
+and a little less time on trying
+to punish. 
+
+979
+00:52:10,600 --> 00:52:16,000
+Yeah, yeah, well Cole I'm sure 
+that the the communities you've 
+
+980
+00:52:16,000 --> 00:52:19,200
+been part of are very grateful 
+for your contributions to them 
+
+981
+00:52:19,200 --> 00:52:23,000
+and, and yeah, I should hope. 
+So, right. 
+
+982
+00:52:23,000 --> 00:52:25,200
+But also, I think being a 
+community organizer. 
+
+983
+00:52:25,200 --> 00:52:29,000
+It's also like a challenge to 
+some point, right? 
+
+984
+00:52:29,000 --> 00:52:31,700
+Because I know what's your 
+experience like, but me and my 
+
+985
+00:52:31,700 --> 00:52:35,400
+community it was We had like our
+daytime jobs, right? 
+
+986
+00:52:35,400 --> 00:52:39,400
+And we were Community organizers
+in our free time, and at some 
+
+987
+00:52:39,400 --> 00:52:42,200
+point, it became a bit too much,
+right? 
+
+988
+00:52:42,200 --> 00:52:45,100
+So, probably be that not kind of
+handle all that that well, 
+
+989
+00:52:45,100 --> 00:52:47,400
+right, probably better that 
+people who can handle it better.
+
+990
+00:52:47,700 --> 00:52:51,300
+But, at some point you realize 
+that we cannot, you know, I have
+
+991
+00:52:51,300 --> 00:52:55,000
+our daytime jobs be Community 
+organizers and be crazy 
+
+992
+00:52:55,000 --> 00:52:58,400
+perfectionist as we were, right?
+And kind of make it a 
+
+993
+00:52:58,400 --> 00:53:02,000
+sustainable thing, right? 
+So after after years, it just no
+
+994
+00:53:02,000 --> 00:53:04,300
+longer worked out. 
+Plus, which is a bit sad. 
+
+995
+00:53:04,300 --> 00:53:06,600
+And also, this is something I 
+sometimes see happening to other
+
+996
+00:53:06,600 --> 00:53:09,500
+communities, unfortunately. 
+Right people just burn out, 
+
+997
+00:53:09,500 --> 00:53:11,100
+right? 
+Because they're so committed 
+
+998
+00:53:11,100 --> 00:53:14,300
+that to their communities that 
+at some point, they just cannot 
+
+999
+00:53:15,000 --> 00:53:18,300
+cannot a lot better than any 
+Morgan has Gambit him. 
+
+1000
+00:53:18,500 --> 00:53:23,400
+Well, you know, and when I mean 
+like we burn out poor dick wall.
+
+1001
+00:53:23,400 --> 00:53:27,400
+Yeah, but I mean, well, he threw
+himself out to because he was 
+
+1002
+00:53:27,400 --> 00:53:28,900
+such a perfectionist. 
+Yeah. 
+
+1003
+00:53:28,900 --> 00:53:33,000
+But, you know, eventually at 
+some point he just he was We 
+
+1004
+00:53:33,000 --> 00:53:35,700
+exhausted just didn't have the 
+energy Java Posse. 
+
+1005
+00:53:35,800 --> 00:53:37,800
+Yeah. 
+And on, same thing in the skull 
+
+1006
+00:53:37,800 --> 00:53:43,300
+Community to get burn out on 
+right and Community organization
+
+1007
+00:53:43,300 --> 00:53:46,000
+there. 
+So, but I not burn out our 
+
+1008
+00:53:46,000 --> 00:53:49,200
+community leaders. 
+Yeah, I mean, I'd like to train 
+
+1009
+00:53:49,200 --> 00:53:53,600
+them in the Open Spaces way of 
+holding events where it's like, 
+
+1010
+00:53:53,600 --> 00:53:55,900
+you go, okay? 
+Here's the deal. 
+
+1011
+00:53:56,000 --> 00:54:00,300
+You guys do it and then it 
+doesn't exhaust the organizer. 
+
+1012
+00:54:00,300 --> 00:54:03,600
+Yeah, yeah. 
+In fact, it becomes Relatively 
+
+1013
+00:54:03,600 --> 00:54:06,900
+easy and delightful. 
+Yeah, but technically Advanced. 
+
+1014
+00:54:06,900 --> 00:54:08,200
+I've been meaning to ask some 
+James. 
+
+1015
+00:54:08,200 --> 00:54:09,800
+I believe you just returned from
+dead Works. 
+
+1016
+00:54:09,800 --> 00:54:10,900
+UK right? 
+Yes. 
+
+1017
+00:54:11,000 --> 00:54:15,100
+It's like in person event which 
+is, you know, big these days. 
+
+1018
+00:54:15,100 --> 00:54:18,900
+So, how was it? 
+It was a wonderful to be back 
+
+1019
+00:54:18,900 --> 00:54:23,900
+together in person with Nerds. 
+And it was, it was so delightful
+
+1020
+00:54:23,900 --> 00:54:26,100
+that everybody had to show proof
+of vaccinations. 
+
+1021
+00:54:26,100 --> 00:54:30,300
+Yep, said, yeah, yeah, yeah. 
+So it felt it felt safe. 
+
+1022
+00:54:30,800 --> 00:54:33,700
+As far as I know, there was no, 
+you know, covid-19 Basis or 
+
+1023
+00:54:33,700 --> 00:54:37,300
+anything. 
+And so, it was delightful to be 
+
+1024
+00:54:37,300 --> 00:54:40,400
+back in person with people. 
+I think your first conference 
+
+1025
+00:54:40,400 --> 00:54:43,400
+since College. 
+It's my second person is a conf 
+
+1026
+00:54:43,400 --> 00:54:48,100
+in Denver, again, couple weeks 
+ago and so, yeah, it's so 
+
+1027
+00:54:48,100 --> 00:54:52,800
+wonderful to be to be in person 
+with with the people I care 
+
+1028
+00:54:52,800 --> 00:54:55,500
+about. 
+I'm I said so much. 
+
+1029
+00:54:55,500 --> 00:54:58,000
+I'm kind of hoping that maybe 
+like next season, right? 
+
+1030
+00:54:58,008 --> 00:55:00,900
+Maybe spring right? 
+It'll be, you know, somewhat 
+
+1031
+00:55:00,900 --> 00:55:03,800
+back to normal and we will be 
+able to To go to conferences 
+
+1032
+00:55:03,800 --> 00:55:06,600
+again and talk to people again 
+because yeah, I did miss that a 
+
+1033
+00:55:06,608 --> 00:55:08,100
+lot as well. 
+Yeah. 
+
+1034
+00:55:10,400 --> 00:55:13,100
+Maybe yeah. 
+Hopefully I get to see you in 
+
+1035
+00:55:13,100 --> 00:55:18,700
+person so maybe to end, it would
+be great to hear about your 
+
+1036
+00:55:18,700 --> 00:55:20,800
+experiences of women and 
+Technology. 
+
+1037
+00:55:20,900 --> 00:55:28,700
+What's that been like Yeah, for 
+me, it was rather as smooth 
+
+1038
+00:55:28,700 --> 00:55:30,300
+journey. 
+I would say, right? 
+
+1039
+00:55:30,300 --> 00:55:35,700
+So I don't think I ever had any 
+big, you know, challenges or 
+
+1040
+00:55:35,700 --> 00:55:39,600
+blocks on my road or things like
+that or people, you know, 
+
+1041
+00:55:40,400 --> 00:55:43,900
+rejecting me for jobs and stuff,
+just because I'm a female, 
+
+1042
+00:55:43,900 --> 00:55:45,200
+right? 
+So for me, it was rather smooth 
+
+1043
+00:55:45,200 --> 00:55:48,300
+ride, but also ended up at 
+experiences possible. 
+
+1044
+00:55:48,300 --> 00:55:52,100
+It's not always a bumpy ride, I 
+mean, but also I guess it also 
+
+1045
+00:55:52,100 --> 00:55:56,900
+defines maybe on like, By our do
+your work, or what culture you 
+
+1046
+00:55:56,900 --> 00:55:59,600
+come from. 
+Like, for example, in like, I 
+
+1047
+00:55:59,600 --> 00:56:02,400
+live in Ukraine and I work most 
+of my life in the crane, right? 
+
+1048
+00:56:02,400 --> 00:56:07,200
+So I guess here also to some 
+extent, the kind of grow thicker
+
+1049
+00:56:07,200 --> 00:56:09,700
+skin and I guess some things 
+just kind of go unnoticed for 
+
+1050
+00:56:09,700 --> 00:56:12,100
+you, right? 
+Because just the culture around 
+
+1051
+00:56:12,100 --> 00:56:14,900
+you as like that, right? 
+But also I don't think I ever 
+
+1052
+00:56:14,900 --> 00:56:18,700
+had like major issues in my 
+career but I do not quite a few 
+
+1053
+00:56:18,700 --> 00:56:22,300
+women that do and that's why I 
+strongly believe in those 
+
+1054
+00:56:22,300 --> 00:56:23,900
+diversity and inclusion 
+programs. 
+
+1055
+00:56:24,000 --> 00:56:27,600
+I'd like Ali many communities 
+and companies, and organizations
+
+1056
+00:56:27,600 --> 00:56:31,100
+have at this point, right? 
+I'm a big believer in that big 
+
+1057
+00:56:31,100 --> 00:56:34,000
+booming diversity and also I 
+believe that you cannot be what 
+
+1058
+00:56:34,000 --> 00:56:36,500
+you cannot see. 
+Right, for example, I remember 
+
+1059
+00:56:36,500 --> 00:56:40,900
+like when I was in school 
+unfortunately, there was no such
+
+1060
+00:56:40,900 --> 00:56:43,200
+thing as they are right now. 
+When people just would kind of 
+
+1061
+00:56:43,200 --> 00:56:46,600
+show up to us and talk about 
+their professions and explain 
+
+1062
+00:56:46,600 --> 00:56:49,700
+what it's like right. 
+And maybe if it was a thing back
+
+1063
+00:56:49,700 --> 00:56:51,700
+then. 
+And also, if there were maybe 
+
+1064
+00:56:51,700 --> 00:56:54,900
+more women kind of shoving up 
+and talking about There are jobs
+
+1065
+00:56:54,900 --> 00:56:58,000
+in technology back then, maybe I
+would have made different 
+
+1066
+00:56:58,000 --> 00:56:59,900
+choices. 
+I'm pretty sure that I would 
+
+1067
+00:56:59,900 --> 00:57:03,600
+write, but that's why I'm saying
+that, like, you cannot be, but 
+
+1068
+00:57:03,600 --> 00:57:06,100
+you cannot see. 
+Right, because without Role 
+
+1069
+00:57:06,100 --> 00:57:09,800
+Models, it's really hard to do 
+something right, it just makes 
+
+1070
+00:57:09,800 --> 00:57:12,300
+him impossible to you, right? 
+If you never seen, somebody 
+
+1071
+00:57:12,300 --> 00:57:14,700
+accomplishing like that in front
+of you, right? 
+
+1072
+00:57:15,400 --> 00:57:19,100
+So I do believe that those 
+programs are very necessary and 
+
+1073
+00:57:19,100 --> 00:57:22,000
+I'm so happy that many 
+communities and companies have 
+
+1074
+00:57:22,000 --> 00:57:24,000
+them those days. 
+Yeah. 
+
+1075
+00:57:24,900 --> 00:57:28,700
+That's cool. 
+But yeah, inspirational for my 
+
+1076
+00:57:28,700 --> 00:57:31,600
+six year old daughter. 
+I definitely want her to have 
+
+1077
+00:57:31,700 --> 00:57:36,200
+have technology women in 
+technology role models that you 
+
+1078
+00:57:36,200 --> 00:57:39,700
+know it's just it just as normal
+and there's a lot of women that 
+
+1079
+00:57:39,700 --> 00:57:43,500
+she can look up to and that and 
+that world or, and you know, 
+
+1080
+00:57:43,500 --> 00:57:45,900
+many other worlds to doesn't 
+have to just be technology. 
+
+1081
+00:57:45,900 --> 00:57:48,000
+But yeah. 
+But just gonna, you know, give 
+
+1082
+00:57:48,000 --> 00:57:50,700
+her all the options, right? 
+And kind of make sure that she 
+
+1083
+00:57:50,800 --> 00:57:53,600
+sees all those options, right? 
+It's not necessary that she 
+
+1084
+00:57:53,600 --> 00:57:56,500
+chooses to Let you buy that 
+judges, she grows up with all 
+
+1085
+00:57:56,500 --> 00:57:59,800
+those choices in mind and she 
+knows that she can make any and 
+
+1086
+00:57:59,800 --> 00:58:02,500
+be successful in it. 
+And there will be a place for 
+
+1087
+00:58:02,500 --> 00:58:04,600
+her in that if she wants to do 
+so right? 
+
+1088
+00:58:05,000 --> 00:58:08,500
+Yeah, yeah, definitely. 
+Yeah, just yeah. 
+
+1089
+00:58:08,500 --> 00:58:11,600
+Making it making it an available
+option. 
+
+1090
+00:58:11,600 --> 00:58:15,600
+Whereas yeah, I mean, oh, even 
+in my own experience. 
+
+1091
+00:58:15,600 --> 00:58:18,700
+I look back and I go. 
+Wow, I didn't know I had those 
+
+1092
+00:58:18,700 --> 00:58:23,300
+choices and I'm not even sure 
+how I would have known. 
+
+1093
+00:58:23,500 --> 00:58:28,900
+Yeah, but But yeah, yeah. 
+Just didn't know that those were
+
+1094
+00:58:28,900 --> 00:58:29,800
+available. 
+Yeah. 
+
+1095
+00:58:29,800 --> 00:58:32,600
+I mean, I'm sure if you're 
+you're a six-year-old girl, and 
+
+1096
+00:58:32,700 --> 00:58:35,900
+all you ever see is men and 
+Technology, then then 
+
+1097
+00:58:35,900 --> 00:58:40,000
+subconsciously that says that 
+the, in some ways women aren't 
+
+1098
+00:58:40,300 --> 00:58:44,000
+allowed in technology. 
+Yeah, but in general, even it's 
+
+1099
+00:58:44,000 --> 00:58:47,700
+kinda is you're saying, right? 
+So see all those options, right?
+
+1100
+00:58:47,700 --> 00:58:50,700
+Like, I remember when I was 16 
+finishing school, right? 
+
+1101
+00:58:50,800 --> 00:58:54,000
+I did not even realize that the 
+know how many awesome job. 
+
+1102
+00:58:54,300 --> 00:58:56,700
+Our there, right? 
+Because no one ever talked to me
+
+1103
+00:58:56,700 --> 00:58:58,700
+about them, right? 
+So maybe things like, you know, 
+
+1104
+00:58:58,700 --> 00:59:01,200
+I don't know, developer 
+relations wasn't really a thing 
+
+1105
+00:59:01,200 --> 00:59:03,900
+back then, right? 
+But, you know, just kind of, I 
+
+1106
+00:59:03,900 --> 00:59:07,700
+think we can do more as a 
+society to educate, you know, 
+
+1107
+00:59:07,700 --> 00:59:11,800
+school kids about all the 
+possible options and maybe help 
+
+1108
+00:59:11,800 --> 00:59:15,200
+them choose a bit better, right?
+So that they don't have to, you 
+
+1109
+00:59:15,200 --> 00:59:19,700
+know, just kind of drop 56 years
+of education and going to some 
+
+1110
+00:59:19,700 --> 00:59:22,500
+different field because they 
+because they realize that it's 
+
+1111
+00:59:22,500 --> 00:59:24,600
+not what really inspires Damn, 
+right. 
+
+1112
+00:59:24,600 --> 00:59:27,500
+So I think there is still like 
+long way to go in that regard. 
+
+1113
+00:59:27,900 --> 00:59:32,300
+Yeah, it's true. 
+Well, thank you for being part 
+
+1114
+00:59:32,300 --> 00:59:36,100
+of that and showing that there 
+is a way for a better way, or a 
+
+1115
+00:59:36,200 --> 00:59:39,900
+alternative way that there are 
+options for hopefully, yeah, 
+
+1116
+00:59:39,900 --> 00:59:41,900
+girls that are coming into this 
+world. 
+
+1117
+00:59:41,900 --> 00:59:45,800
+And yeah, thank you for the 
+community leadership that you've
+
+1118
+00:59:45,800 --> 00:59:49,400
+done and, and all I've given to 
+the technology world. 
+
+1119
+00:59:49,400 --> 00:59:52,900
+But thank you so much for giving
+me a chance to talk about it. 
+
+1120
+00:59:53,400 --> 00:59:55,400
+Yeah. 
+Yeah, we really appreciate it. 
+
+1121
+00:59:56,000 --> 00:59:59,500
+Alright, well, thank you Lena. 
+Thanks.
+

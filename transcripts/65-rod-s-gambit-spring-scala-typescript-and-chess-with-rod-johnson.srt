@@ -1,0 +1,5255 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:08,000 --> 00:00:12,300
+All right, so we have with us 
+today, Rod Johnson, who many of 
+
+4
+00:00:12,300 --> 00:00:16,400
+you probably know from Spring 
+creator of spring framework and 
+
+5
+00:00:16,900 --> 00:00:18,800
+who has been up here to Crested?
+Butte actually. 
+
+6
+00:00:18,800 --> 00:00:20,800
+Yeah, we were trying to figure 
+out what the year was. 
+
+7
+00:00:20,800 --> 00:00:24,300
+Do you have any recollection? 
+It was one of ours. 
+
+8
+00:00:24,500 --> 00:00:27,900
+Hi Burris, look, I I'm pretty 
+sure I went twice. 
+
+9
+00:00:27,900 --> 00:00:30,400
+You know? 
+I think it was probably 2003 and
+
+10
+00:00:30,400 --> 00:00:36,900
+2005. 
+Yeah, it was when we were doing 
+
+11
+00:00:36,900 --> 00:00:40,600
+the earlier. 
+Parents with Martin Fowler and I
+
+12
+00:00:40,600 --> 00:00:42,800
+was Martin who invited me 
+actually. 
+
+13
+00:00:42,800 --> 00:00:45,500
+Yes. 
+It was like, that was actually 
+
+14
+00:00:45,500 --> 00:00:48,000
+really cool because I think 
+Mountain just read my book and 
+
+15
+00:00:48,000 --> 00:00:50,300
+reached out and invited me. 
+So he did. 
+
+16
+00:00:50,300 --> 00:00:52,300
+And it's like, you go home, 
+Martin Fowler? 
+
+17
+00:00:52,300 --> 00:00:55,200
+I'll yeah. 
+And I was thinking about him 
+
+18
+00:00:55,200 --> 00:00:55,900
+today. 
+I'm going. 
+
+19
+00:00:56,300 --> 00:01:00,600
+Yeah, it's like he came along. 
+He waved his magic idea want. 
+
+20
+00:01:00,600 --> 00:01:04,000
+And then, you know, and then he 
+moved on what are weird 
+
+21
+00:01:04,000 --> 00:01:07,600
+superpower to have and I'm 
+thinking no, that's a no. 
+
+22
+00:01:07,700 --> 00:01:10,500
+Awesome to be able to give 
+people good ideas. 
+
+23
+00:01:10,500 --> 00:01:12,600
+Yeah, that is an awesome super 
+power. 
+
+24
+00:01:12,600 --> 00:01:15,100
+That is Martin is a superhero. 
+Yeah. 
+
+25
+00:01:15,100 --> 00:01:15,900
+Yeah. 
+Yeah. 
+
+26
+00:01:16,000 --> 00:01:18,000
+He's got the idea of magic wand.
+Yeah. 
+
+27
+00:01:18,000 --> 00:01:20,700
+Sure he does. 
+Yeah, well, I guess he's just 
+
+28
+00:01:20,700 --> 00:01:24,100
+yeah I mean he's really like 
+actually curious I guess. 
+
+29
+00:01:24,100 --> 00:01:25,700
+So that's kind of how he 
+operates. 
+
+30
+00:01:25,700 --> 00:01:29,500
+Like he goes deep into something
+and then, you know, who's on to 
+
+31
+00:01:29,500 --> 00:01:31,400
+other things. 
+Yeah, yeah. 
+
+32
+00:01:32,000 --> 00:01:36,900
+So good to have you ride, thanks
+for joining us and hopefully, 
+
+33
+00:01:36,900 --> 00:01:38,700
+you can make it back up. 
+As to be at some time. 
+
+34
+00:01:39,200 --> 00:01:43,200
+Yeah, I remember when you were 
+waiting some time though, here 
+
+35
+00:01:43,200 --> 00:01:45,000
+you've got nice skiing 
+mountains. 
+
+36
+00:01:45,000 --> 00:01:46,900
+You got any weed instant? 
+Yeah, we do. 
+
+37
+00:01:46,900 --> 00:01:49,300
+And yeah, the winner tech form 
+would be the good time to come 
+
+38
+00:01:49,300 --> 00:01:54,500
+for skiing. 
+But yeah, I remember you, I 
+
+39
+00:01:54,500 --> 00:01:58,800
+tried to understand 
+aspect-oriented programming and 
+
+40
+00:01:58,800 --> 00:02:04,100
+you are explaining it and I 
+didn't, you know, I sort of got 
+
+41
+00:02:04,100 --> 00:02:08,900
+it a little bit but I couldn't I
+didn't I In completely, get it 
+
+42
+00:02:09,300 --> 00:02:12,700
+did spring exist, at that point.
+I was a no, no I don't think so 
+
+43
+00:02:12,700 --> 00:02:16,800
+it was this was this was you 
+were odd was kind of throwing 
+
+44
+00:02:16,800 --> 00:02:20,400
+around ideas in his head around,
+aspect-oriented programming and 
+
+45
+00:02:20,400 --> 00:02:24,300
+how me the foundation for 
+something better and and javal 
+
+46
+00:02:24,300 --> 00:02:26,900
+and feel like it was that is 
+that correct? 
+
+47
+00:02:27,000 --> 00:02:32,100
+Yeah, looking to me, is this 
+time I went spring existed but 
+
+48
+00:02:32,100 --> 00:02:36,400
+was like on Source Village 
+because that was here thing. 
+
+49
+00:02:36,700 --> 00:02:40,200
+So yeah, there They're 
+reasonable amount of spring code
+
+50
+00:02:40,200 --> 00:02:45,200
+on sourceforge, but I mean it 
+was only kind of well, it was 
+
+51
+00:02:45,200 --> 00:02:49,400
+earlier than early adoption, but
+I imagine I probably went back 
+
+52
+00:02:49,400 --> 00:02:52,100
+to wherever I was staying in the
+evening and did a couple of 
+
+53
+00:02:52,100 --> 00:02:54,600
+hours coating on Spring every 
+night. 
+
+54
+00:02:54,900 --> 00:02:58,500
+Yeah, the second time I know 
+there were a couple of other 
+
+55
+00:02:58,500 --> 00:03:00,000
+people from the spring team 
+there. 
+
+56
+00:03:00,400 --> 00:03:04,400
+There was Mark Pollock and 
+alexeevich, I don't know. 
+
+57
+00:03:04,600 --> 00:03:07,500
+I think I invited Mark. 
+I somebody else must have been 
+
+58
+00:03:07,500 --> 00:03:11,400
+very Voted Alex. 
+So yeah that was that was found 
+
+59
+00:03:11,400 --> 00:03:12,800
+at Point. 
+O is established. 
+
+60
+00:03:12,900 --> 00:03:15,100
+Yeah but at that point I had a 
+faction. 
+
+61
+00:03:15,200 --> 00:03:20,200
+It wasn't. 
+Yeah a posse. 
+
+62
+00:03:20,600 --> 00:03:23,900
+Yeah well that was in the 
+summertime see if you haven't 
+
+63
+00:03:23,900 --> 00:03:26,200
+been here in the winter then to 
+experience the skiing and all 
+
+64
+00:03:26,200 --> 00:03:29,100
+that. 
+So I have not actually eating 
+
+65
+00:03:29,100 --> 00:03:33,100
+Colorado, it's probably 
+something I have actually 
+
+66
+00:03:33,100 --> 00:03:39,700
+skating a lot of other places if
+you like Steep and Yes, deep and
+
+67
+00:03:39,700 --> 00:03:43,700
+double blacks and all that then 
+able to come out here for for 
+
+68
+00:03:44,000 --> 00:03:47,100
+skin Crested Butte because it 
+gets its pretty well. 
+
+69
+00:03:47,100 --> 00:03:49,200
+It's not only that it's a yeah 
+there's eight. 
+
+70
+00:03:49,200 --> 00:03:52,800
+We do a couple green and blue. 
+We do have the largest amount of
+
+71
+00:03:52,800 --> 00:03:55,400
+extreme Terrain in the 
+continental US. 
+
+72
+00:03:56,100 --> 00:03:58,100
+Yeah. 
+So, so I've more than more than 
+
+73
+00:03:58,100 --> 00:03:59,600
+Jackson. 
+Yep. 
+
+74
+00:03:59,900 --> 00:04:02,600
+Yeah. 
+It's it's pretty wild. 
+
+75
+00:04:02,900 --> 00:04:05,200
+Mmm. 
+There's many, many places. 
+
+76
+00:04:05,200 --> 00:04:07,400
+I've never been. 
+No, no, and I will never go. 
+
+77
+00:04:08,100 --> 00:04:11,500
+No, no. 
+Yeah. 
+
+78
+00:04:11,900 --> 00:04:15,900
+Well, so I guess that one of the
+things I was thinking about 
+
+79
+00:04:15,900 --> 00:04:19,899
+asking you was you you've been 
+on a journey for, you know, 
+
+80
+00:04:19,899 --> 00:04:21,399
+programming journey and for many
+years. 
+
+81
+00:04:21,399 --> 00:04:23,700
+And I just want to hear a little
+bit about your journey from, 
+
+82
+00:04:23,900 --> 00:04:30,700
+from java Enterprise, spring 
+onto Scala, and then typescript,
+
+83
+00:04:30,700 --> 00:04:33,200
+and, and yeah, where you are 
+now. 
+
+84
+00:04:33,200 --> 00:04:36,200
+So, give us the, give us the 
+lowdown on what were your 
+
+85
+00:04:36,200 --> 00:04:37,600
+journey through, programming has
+been. 
+
+86
+00:04:38,600 --> 00:04:42,000
+Where you've gone where you are 
+now, I guess my journey has been
+
+87
+00:04:42,000 --> 00:04:45,300
+an alternation between 
+exploration phases, that were 
+
+88
+00:04:45,300 --> 00:04:49,700
+kind of driven by curiosity and 
+kind of implementation phases, 
+
+89
+00:04:49,700 --> 00:04:52,400
+which were driven by building 
+something building, a company 
+
+90
+00:04:52,400 --> 00:04:55,400
+building a product. 
+So I've always gone through 
+
+91
+00:04:55,400 --> 00:05:00,200
+those witches and I really like 
+both of those things like 
+
+92
+00:05:00,200 --> 00:05:03,600
+communities. 
+Very, very satisfying to see a 
+
+93
+00:05:03,600 --> 00:05:09,500
+product come together and 
+especially to create a team as 
+
+94
+00:05:09,500 --> 00:05:11,600
+well as the product. 
+And, you know, see that it's 
+
+95
+00:05:11,600 --> 00:05:14,900
+something that goes on really 
+strongly and becomes a lot 
+
+96
+00:05:14,900 --> 00:05:16,200
+bigger than you as an 
+individual. 
+
+97
+00:05:16,300 --> 00:05:20,200
+So I find that satisfying that 
+there is no pleasure in life. 
+
+98
+00:05:20,200 --> 00:05:24,400
+Quite the same as learning a new
+technology or learning a new 
+
+99
+00:05:24,400 --> 00:05:27,200
+programming language because 
+yeah, it kind of enlarges your 
+
+100
+00:05:27,200 --> 00:05:31,400
+brain or activates parts of your
+brain that you previously didn't
+
+101
+00:05:31,400 --> 00:05:34,000
+use enough. 
+So that is also deeply. 
+
+102
+00:05:34,000 --> 00:05:39,600
+Satisfying yeah yeah it seems 
+like that's something that Not 
+
+103
+00:05:39,600 --> 00:05:42,200
+enough people in programming, 
+do, and that's a judgment 
+
+104
+00:05:42,200 --> 00:05:46,000
+against people, but I was 
+talking on Twitter with some 
+
+105
+00:05:46,000 --> 00:05:49,200
+people and there were like, it 
+was rust. 
+
+106
+00:05:49,200 --> 00:05:55,000
+Was was saying how it was, it 
+would be impossible to do. 
+
+107
+00:05:55,500 --> 00:05:57,500
+Oh, to have like, syntax with 
+that semicolons. 
+
+108
+00:05:57,500 --> 00:06:01,000
+This is in the, the great 
+semicolon debate of this week on
+
+109
+00:06:01,000 --> 00:06:03,600
+Twitter, which was, which was 
+very fun. 
+
+110
+00:06:04,700 --> 00:06:09,300
+But, but somebody would pointed 
+to hose kit it from The Zo team 
+
+111
+00:06:09,500 --> 00:06:16,300
+pointed to how rusted decided 
+not to do no semicolons and it 
+
+112
+00:06:16,300 --> 00:06:19,500
+was posting Snippets of the 
+conversation in the rest 
+
+113
+00:06:19,500 --> 00:06:22,800
+Community, about how it would 
+just be impossible for a 
+
+114
+00:06:22,800 --> 00:06:26,100
+programming language to not have
+semicolons and, you know, with 
+
+115
+00:06:26,100 --> 00:06:30,000
+all these different constraints 
+and they were very clearly 
+
+116
+00:06:30,000 --> 00:06:34,100
+unaware of Scala like that Scala
+had already solved all those 
+
+117
+00:06:34,100 --> 00:06:39,100
+problems and it's like, gosh, 
+you know, like I love I would 
+
+118
+00:06:39,100 --> 00:06:42,200
+love for more developers to 
+experience more programming 
+
+119
+00:06:42,200 --> 00:06:44,700
+languages and get that brain 
+enlargement. 
+
+120
+00:06:44,700 --> 00:06:47,600
+So they would even know that it 
+was possible to not have 
+
+121
+00:06:47,600 --> 00:06:49,600
+semicolons Yaks. 
+Yeah. 
+
+122
+00:06:49,700 --> 00:06:52,900
+That's just for that. 
+One alone would be some. 
+
+123
+00:06:52,900 --> 00:06:55,600
+Yeah. 
+Well see and then that it's not 
+
+124
+00:06:55,600 --> 00:06:58,700
+without a cost but that's right.
+Yeah. 
+
+125
+00:06:58,700 --> 00:07:01,700
+Like Scala compiler is slower. 
+I'm sure because of it. 
+
+126
+00:07:02,700 --> 00:07:09,100
+I think to be honest I think I 
+went too long with The C++ and 
+
+127
+00:07:09,100 --> 00:07:14,600
+Java stream like, I mean, you 
+know that, well obviously 
+
+128
+00:07:14,600 --> 00:07:19,700
+created wrote A Few books 
+created spring and spring soil, 
+
+129
+00:07:19,700 --> 00:07:25,200
+so that that implementation 
+phase was like a ten Salon in 
+
+130
+00:07:25,208 --> 00:07:28,400
+taste, and Beyond. 
+During that time, I really 
+
+131
+00:07:28,400 --> 00:07:32,900
+didn't look at other languages 
+except for competitive analysis.
+
+132
+00:07:32,900 --> 00:07:35,400
+So, for example, I remember, 
+looking at rails, I had zero 
+
+133
+00:07:35,400 --> 00:07:37,100
+interest in Ruby as a language. 
+I still have it. 
+
+134
+00:07:37,300 --> 00:07:41,100
+It was Haiti's language with all
+my interest was okay. 
+
+135
+00:07:41,100 --> 00:07:44,300
+This is a competitive web thing,
+you know, what can we learn from
+
+136
+00:07:44,300 --> 00:07:46,400
+it? 
+And ultimately look a lot of 
+
+137
+00:07:46,400 --> 00:07:49,000
+things from rails, more from 
+rails and for Ribbit, yeah, 
+
+138
+00:07:49,200 --> 00:07:54,600
+yeah, it just wasn't an option 
+for me to put in the time to, 
+
+139
+00:07:54,900 --> 00:07:57,700
+you know, look at other things 
+deeply apart from obviously 
+
+140
+00:07:57,700 --> 00:08:02,900
+aspectj. 
+Whereas, once I had moved on 
+
+141
+00:08:02,900 --> 00:08:05,200
+from that, I did start looking 
+around. 
+
+142
+00:08:05,200 --> 00:08:07,700
+And that's what that's what 
+brought me to Scala. 
+
+143
+00:08:08,100 --> 00:08:11,100
+Yeah, yeah. 
+See you you were doing quite a 
+
+144
+00:08:11,100 --> 00:08:15,500
+bit with Scala for a while and 
+and we're on the board of 
+
+145
+00:08:15,500 --> 00:08:17,400
+typesafe now. 
+Light Bend, are you still on the
+
+146
+00:08:17,408 --> 00:08:19,700
+board for? 
+I'm no, I'm not though. 
+
+147
+00:08:19,700 --> 00:08:22,200
+I'm still I'm an investor in the
+company. 
+
+148
+00:08:22,200 --> 00:08:25,100
+So I still have nearest 
+actually, quite coincidentally 
+
+149
+00:08:25,100 --> 00:08:27,700
+had a email exchange with Jonas,
+the other man. 
+
+150
+00:08:27,700 --> 00:08:34,299
+Okay, so so that was overlapped 
+with the time that I was at 
+
+151
+00:08:34,299 --> 00:08:38,100
+typesafe and and was really fun 
+to get your Active on Scala 
+
+152
+00:08:38,100 --> 00:08:42,700
+coming from so many years in the
+Enterprise Java world and kind 
+
+153
+00:08:42,700 --> 00:08:45,800
+of seen how you saw Scala and 
+and its potential. 
+
+154
+00:08:45,800 --> 00:08:49,600
+And and things that it could be.
+And one of the things, maybe 
+
+155
+00:08:49,800 --> 00:08:52,000
+that part of the journey that 
+would be interesting to hear 
+
+156
+00:08:52,000 --> 00:08:56,500
+about is you you and I work 
+together for the Scala Days, 
+
+157
+00:08:56,500 --> 00:09:01,500
+2015, did you say it was money, 
+2013, 2013, you did. 
+
+158
+00:09:01,500 --> 00:09:05,600
+The keynote on the the just of 
+it was about how scholar could 
+
+159
+00:09:05,600 --> 00:09:07,500
+become a mainstream language. 
+Each. 
+
+160
+00:09:07,500 --> 00:09:10,600
+And that was kind of at an 
+inflection point of like scholar
+
+161
+00:09:10,600 --> 00:09:13,300
+can kind of choose which 
+direction it wants to go. 
+
+162
+00:09:13,700 --> 00:09:16,600
+And I don't know, tell us about 
+your recollection of that. 
+
+163
+00:09:16,600 --> 00:09:18,800
+Presentation from almost 10 
+years ago. 
+
+164
+00:09:19,200 --> 00:09:22,200
+That was it was highly 
+entertaining. 
+
+165
+00:09:22,200 --> 00:09:26,600
+Remember, it was in a beautiful 
+Off-Broadway theater. 
+
+166
+00:09:26,900 --> 00:09:28,600
+Yeah, we can guess, was the 
+Schaller? 
+
+167
+00:09:28,600 --> 00:09:31,700
+And Mike Brewer had this knack 
+for finding amazing places. 
+
+168
+00:09:32,400 --> 00:09:35,300
+So it was quite a beautiful 
+environment I think I've ever 
+
+169
+00:09:35,300 --> 00:09:39,500
+spoken in an environment. 
+Like that, it will stylish than 
+
+170
+00:09:39,500 --> 00:09:42,700
+we generally get intact. 
+And I remember the reaction of 
+
+171
+00:09:42,700 --> 00:09:46,500
+the talk was possibly the most 
+polarizing talk I've ever seen. 
+
+172
+00:09:46,700 --> 00:09:49,400
+Like, if I remember correctly, 
+probably two-thirds, 
+
+173
+00:09:49,400 --> 00:09:52,000
+three-quarters of the audience, 
+gave it a standing ovation. 
+
+174
+00:09:52,000 --> 00:09:55,600
+Well, the reminding remainder 
+was sitting scowling and not 
+
+175
+00:09:55,600 --> 00:09:58,100
+clapping at all. 
+So it's actually really 
+
+176
+00:10:01,200 --> 00:10:06,100
+essentially the gist of it was 
+that scale is pretty great. 
+
+177
+00:10:06,600 --> 00:10:09,800
+There are things that are really
+problematic about Scala like 
+
+178
+00:10:09,800 --> 00:10:12,400
+binary compatibility. 
+The fact that every single 
+
+179
+00:10:12,400 --> 00:10:14,300
+release of scale, of breaks a 
+ton of things. 
+
+180
+00:10:14,800 --> 00:10:18,900
+Hey, know you guys don't like 
+Java or a whole lot but just 
+
+181
+00:10:18,900 --> 00:10:21,500
+hold your nose a little bit. 
+While I tell you the reasons 
+
+182
+00:10:21,500 --> 00:10:26,900
+Java is as popular as it is, and
+maybe we should learn, we don't 
+
+183
+00:10:26,900 --> 00:10:29,500
+need to become Java. 
+But hey, maybe we should reflect
+
+184
+00:10:29,500 --> 00:10:33,400
+on those things. 
+There are reasons why Java is so
+
+185
+00:10:33,400 --> 00:10:37,800
+popular and actually, Didn't I 
+start I started that talk by 
+
+186
+00:10:37,800 --> 00:10:41,500
+copying the old idea of pearl. 
+Poetry that's right. 
+
+187
+00:10:41,500 --> 00:10:44,500
+I remember the Poetry what he 
+knew about pill poetry I guess 
+
+188
+00:10:44,500 --> 00:10:49,400
+bad when I was maybe it was 
+slightly after uni but like one 
+
+189
+00:10:49,400 --> 00:10:53,000
+of my uni buddies used to write 
+poetry I thought everybody knew 
+
+190
+00:10:53,000 --> 00:10:56,900
+that you can write you bite her 
+hand and do write poetry and 
+
+191
+00:10:56,900 --> 00:10:59,300
+Pearls a thing. 
+But apparently got a bigger 
+
+192
+00:10:59,300 --> 00:11:01,300
+impact is not that many people 
+knew that. 
+
+193
+00:11:01,300 --> 00:11:06,800
+So I wrote a poem in Scala. 
+It obviously a bit, you need be 
+
+194
+00:11:06,800 --> 00:11:10,000
+because Scala is strongly typed.
+They didn't need to be some code
+
+195
+00:11:10,000 --> 00:11:13,400
+behind the part. 
+But, like, what ishow did 
+
+196
+00:11:13,400 --> 00:11:16,300
+compile, the part of a compiled 
+and it looked exactly like a 
+
+197
+00:11:16,308 --> 00:11:19,700
+poem. 
+And my point was, you know, 
+
+198
+00:11:20,100 --> 00:11:22,900
+languages. 
+You can write poetry in have 
+
+199
+00:11:23,300 --> 00:11:27,300
+pros and cons. 
+So, essentially, I was arguing, 
+
+200
+00:11:27,300 --> 00:11:31,300
+what's Garland needed to make 
+some more pragmatic choices to 
+
+201
+00:11:31,300 --> 00:11:34,200
+become a mainstream language? 
+And I predicted that I would 
+
+202
+00:11:34,400 --> 00:11:38,400
+Little of the talk I think, was 
+Scarlet, 28 aim and the argument
+
+203
+00:11:38,400 --> 00:11:43,100
+was that the moment of truth 
+will be 2018, Scala will 
+
+204
+00:11:43,100 --> 00:11:46,900
+obviously will be either the 
+next mainstream language or it 
+
+205
+00:11:46,900 --> 00:11:49,500
+will have just gone back into 
+its Niche. 
+
+206
+00:11:49,700 --> 00:11:51,700
+And here are some of the things 
+you need to think about. 
+
+207
+00:11:52,300 --> 00:11:56,100
+Yeah, looking back on it. 
+I think, to be honest, I was on,
+
+208
+00:11:56,300 --> 00:12:01,000
+I was on the money and, you 
+know, I think it was I am not 
+
+209
+00:12:01,000 --> 00:12:04,600
+sure whether I mentioned it, but
+I was certainly thinking it That
+
+210
+00:12:04,600 --> 00:12:08,200
+something like Coughlin would 
+come up that would do enough of 
+
+211
+00:12:08,200 --> 00:12:10,600
+the things that people want 
+done. 
+
+212
+00:12:11,800 --> 00:12:15,400
+That the extra bells and 
+whistles of scholar would, you 
+
+213
+00:12:15,400 --> 00:12:18,200
+know, really not present that 
+amazing a trade-off. 
+
+214
+00:12:18,800 --> 00:12:21,100
+Yeah. 
+Yeah, when there is still things
+
+215
+00:12:21,100 --> 00:12:22,700
+in scholar, I haven't written 
+Scarlet. 
+
+216
+00:12:22,700 --> 00:12:25,700
+Probably for five years now and 
+there are still things I miss 
+
+217
+00:12:25,700 --> 00:12:27,800
+every day. 
+Like the fact that every 
+
+218
+00:12:27,800 --> 00:12:30,900
+compound statement is an 
+expression, Yeah. 
+
+219
+00:12:31,400 --> 00:12:34,400
+Others say family languages. 
+That's like the semicolons, 
+
+220
+00:12:34,400 --> 00:12:35,200
+right? 
+Yeah. 
+
+221
+00:12:35,200 --> 00:12:38,200
+It's like obviously Martin or 
+somebody asked the question. 
+
+222
+00:12:38,200 --> 00:12:41,200
+What if every statement was an 
+expression? 
+
+223
+00:12:41,500 --> 00:12:43,400
+What if it doesn't matter if 
+it's in curly as what? 
+
+224
+00:12:43,400 --> 00:12:45,700
+If it returns something? 
+Yeah. 
+
+225
+00:12:46,300 --> 00:12:49,600
+And what's your experience at a 
+hard time going to go? 
+
+226
+00:12:49,600 --> 00:12:52,100
+Why why aren't they all like 
+that? 
+
+227
+00:12:52,100 --> 00:12:55,000
+That's the real question. 
+It's like, who thought it was a 
+
+228
+00:12:55,000 --> 00:12:59,300
+good idea to not do that? 
+It's just that maybe no one had 
+
+229
+00:12:59,300 --> 00:13:01,100
+ever seen. 
+Seen that possible. 
+
+230
+00:13:01,100 --> 00:13:03,900
+Yeah yeah, I don't know but I 
+could semicolon. 
+
+231
+00:13:04,800 --> 00:13:08,500
+I can tell you see the potential
+of not having semicolons. 
+
+232
+00:13:08,500 --> 00:13:11,400
+You don't realize how nice a 
+world without semicolons is. 
+
+233
+00:13:11,400 --> 00:13:15,000
+Yeah but this is even more 
+fundamental because it's like 
+
+234
+00:13:15,000 --> 00:13:18,300
+yeah everything generates a 
+result. 
+
+235
+00:13:18,900 --> 00:13:22,100
+Why why do we treat? 
+Why do we have to treat it 
+
+236
+00:13:22,100 --> 00:13:26,200
+differently in one case it's 
+almost like the red and blue or 
+
+237
+00:13:26,200 --> 00:13:28,900
+that you know the different 
+colored functions for a sink and
+
+238
+00:13:28,900 --> 00:13:31,600
+a weight when you We start 
+digging into it, you go, oh 
+
+239
+00:13:31,600 --> 00:13:34,100
+wait, we don't really need to do
+this, do we? 
+
+240
+00:13:34,100 --> 00:13:35,700
+Yeah. 
+Yeah. 
+
+241
+00:13:35,700 --> 00:13:40,400
+Well I mean I think it just 
+makes things so elegant like it 
+
+242
+00:13:40,400 --> 00:13:45,600
+really annoys me now when I have
+to use immutable variable 
+
+243
+00:13:46,700 --> 00:13:48,900
+because I can't do that. 
+Like, for example, I want to 
+
+244
+00:13:48,908 --> 00:13:53,700
+switch statement to return a 
+value. 
+
+245
+00:13:54,000 --> 00:13:55,500
+Yeah. 
+So yeah. 
+
+246
+00:13:55,500 --> 00:13:59,800
+That that's probably the single 
+biggest thing I miss but I mean 
+
+247
+00:13:59,800 --> 00:14:03,600
+it, Look scholar is a really 
+beautiful language in many ways.
+
+248
+00:14:04,300 --> 00:14:08,500
+It's just that if you're going 
+to have a large team building 
+
+249
+00:14:08,500 --> 00:14:12,200
+something, it is absolutely 
+certain that you will have 
+
+250
+00:14:12,200 --> 00:14:15,600
+somebody came from a high school
+background who will rights Carla
+
+251
+00:14:15,600 --> 00:14:19,400
+that will explode the brains of 
+anyone who looks at it and that 
+
+252
+00:14:19,400 --> 00:14:22,500
+person will not only do it, they
+will take pride in doing it. 
+
+253
+00:14:22,500 --> 00:14:25,100
+And the only way you'll stop 
+them doing it is by firing them 
+
+254
+00:14:25,900 --> 00:14:27,800
+and then they'll probably blog 
+about your company. 
+
+255
+00:14:28,700 --> 00:14:35,100
+So There are practical problems 
+that occur with a language like 
+
+256
+00:14:35,100 --> 00:14:38,400
+that. 
+Whereas a language, if you have 
+
+257
+00:14:38,400 --> 00:14:40,800
+to do something requires a 
+fairly large team, a language 
+
+258
+00:14:40,800 --> 00:14:43,200
+like Java is really pretty safe.
+Yeah. 
+
+259
+00:14:43,700 --> 00:14:46,900
+So, you know, I personally, I 
+will never be one of these 
+
+260
+00:14:46,900 --> 00:14:50,200
+people who hate Java. 
+I think it's a very important 
+
+261
+00:14:50,200 --> 00:14:53,700
+and very beneficial language. 
+I personally don't choose to 
+
+262
+00:14:53,700 --> 00:14:59,300
+write Java at the moment but I 
+think there is a very, very 
+
+263
+00:14:59,300 --> 00:15:02,100
+important. 
+Need for a language like that. 
+
+264
+00:15:02,200 --> 00:15:06,500
+The actually doesn't doesn't try
+to do too much and doesn't try 
+
+265
+00:15:06,500 --> 00:15:08,500
+to do too clever. 
+Be too clever. 
+
+266
+00:15:08,800 --> 00:15:13,000
+Yeah, it's like team structure 
+and team size are an important 
+
+267
+00:15:13,000 --> 00:15:17,400
+factor in programming language. 
+How good a programming languages
+
+268
+00:15:17,400 --> 00:15:20,600
+for you. 
+And in a, if you're in a team 
+
+269
+00:15:20,600 --> 00:15:24,200
+with thousands of developers, I 
+think what you're saying about 
+
+270
+00:15:24,200 --> 00:15:27,400
+Scala and the multitude of ways 
+that people can write Scala has 
+
+271
+00:15:27,400 --> 00:15:29,900
+some real. 
+Downsides, whereas Java and the 
+
+272
+00:15:30,100 --> 00:15:33,600
+Strength of the language work 
+better at that scale. 
+
+273
+00:15:33,600 --> 00:15:38,000
+Yeah. 
+Scala has a number of I don't 
+
+274
+00:15:38,000 --> 00:15:39,800
+know. 
+Are they experimental features 
+
+275
+00:15:39,800 --> 00:15:41,500
+or they just in dark corners or 
+whatever? 
+
+276
+00:15:41,500 --> 00:15:46,400
+That I don't, you know, and and 
+somebody come along and decide 
+
+277
+00:15:46,400 --> 00:15:50,100
+oh we're going to use this 
+feature and now everybody else 
+
+278
+00:15:50,100 --> 00:15:53,400
+on the team has to understand it
+in order to be able to read the 
+
+279
+00:15:53,400 --> 00:15:56,600
+code. 
+It's like I love that Scala 
+
+280
+00:15:56,600 --> 00:16:01,000
+experiments with things but I 
+totally see if you had a team of
+
+281
+00:16:01,000 --> 00:16:04,400
+more than a few people who 
+aren't all Scala wonks. 
+
+282
+00:16:05,700 --> 00:16:09,800
+It's going to be a problem. 
+Yeah, it also this is actually 
+
+283
+00:16:09,800 --> 00:16:12,600
+this brings me to a really 
+interesting point. 
+
+284
+00:16:12,600 --> 00:16:16,300
+I've always thought about 
+languages which is that a low 
+
+285
+00:16:16,300 --> 00:16:18,700
+we've been talking about how 
+languages learning a new 
+
+286
+00:16:18,700 --> 00:16:20,600
+language can grow parts of your 
+brain. 
+
+287
+00:16:22,300 --> 00:16:28,000
+I believe people over indexing 
+languages a language is just one
+
+288
+00:16:28,000 --> 00:16:30,300
+part of the story. 
+It. 
+
+289
+00:16:30,500 --> 00:16:33,600
+So for example, in the scholar 
+Community, one of the things 
+
+290
+00:16:33,600 --> 00:16:38,500
+that they did is they refuse to 
+use any Java Library. 
+
+291
+00:16:38,500 --> 00:16:41,400
+So for example while Springs a 
+framework is not even just a 
+
+292
+00:16:41,400 --> 00:16:44,000
+library but not just bring like 
+anything else that was 
+
+293
+00:16:44,000 --> 00:16:45,900
+mainstream Java. 
+Guess what? 
+
+294
+00:16:45,900 --> 00:16:48,100
+They're in a language where they
+could consume that they could 
+
+295
+00:16:48,100 --> 00:16:50,500
+even put a trivial little skull,
+a wrapper on it that have make 
+
+296
+00:16:50,500 --> 00:16:53,800
+it look beautiful but no no no 
+no nope can't possibly use that 
+
+297
+00:16:53,800 --> 00:16:55,600
+at every grand gala from the 
+ground. 
+
+298
+00:16:55,600 --> 00:16:58,900
+I get Scylla idiomatic. 
+We ended with a bunch of 
+
+299
+00:16:58,900 --> 00:17:01,800
+libraries that were Oggi take, 
+for example, transaction 
+
+300
+00:17:01,800 --> 00:17:05,900
+management, spring transaction 
+management is something that's 
+
+301
+00:17:05,900 --> 00:17:09,800
+been hardened by very smart 
+people with access to, you know,
+
+302
+00:17:09,800 --> 00:17:13,200
+people within the teams in the 
+application servers when that 
+
+303
+00:17:13,200 --> 00:17:16,400
+was still a thing, all that kind
+of stuff for 15 years. 
+
+304
+00:17:16,599 --> 00:17:19,700
+It's been used by probably 
+millions of people. 
+
+305
+00:17:20,300 --> 00:17:22,700
+It is pretty much as stable as 
+you can. 
+
+306
+00:17:22,700 --> 00:17:26,700
+Possibly, get a piece of 
+framework coat you go and write 
+
+307
+00:17:26,700 --> 00:17:29,300
+your scarlet, transaction 
+Library, you kind of go through 
+
+308
+00:17:29,300 --> 00:17:32,800
+the same Amount of learning the 
+difference is you're going to go
+
+309
+00:17:32,800 --> 00:17:35,900
+here, it comes on slower because
+you don't have anything like the
+
+310
+00:17:35,900 --> 00:17:39,100
+same Community behind you. 
+So I think that and I'm sure 
+
+311
+00:17:39,100 --> 00:17:41,000
+that was one of the things in my
+talk. 
+
+312
+00:17:41,000 --> 00:17:43,800
+I think that really held Scylla 
+back to interesting, the closure
+
+313
+00:17:43,800 --> 00:17:46,600
+Community, as far as I 
+understand, have not done that. 
+
+314
+00:17:46,600 --> 00:17:50,400
+And they're happier to use Java 
+libraries that they can consume,
+
+315
+00:17:50,700 --> 00:17:53,100
+and I think that's a really 
+sensible choice. 
+
+316
+00:17:53,500 --> 00:17:56,900
+So, if you're solving a whole 
+lot of real-world problems, 
+
+317
+00:17:58,300 --> 00:18:04,100
+Yeah, language is I think off in
+a second order issue for me the 
+
+318
+00:18:04,300 --> 00:18:07,800
+that comes out when I'm doing 
+anything involving ML and I 
+
+319
+00:18:07,800 --> 00:18:10,600
+played around a bit with neural 
+networks and tensor flow in the 
+
+320
+00:18:10,600 --> 00:18:12,900
+last couple of years for my own 
+Amusement. 
+
+321
+00:18:12,900 --> 00:18:17,100
+I do that in part. 
+Yeah, I do not like programming 
+
+322
+00:18:17,100 --> 00:18:21,400
+in Python personal again. 
+Python is a language that I 
+
+323
+00:18:21,408 --> 00:18:24,500
+think is a really good language 
+and has a really valuable Niche.
+
+324
+00:18:24,500 --> 00:18:27,300
+So this is not me saying I think
+both ends bad language. 
+
+325
+00:18:27,300 --> 00:18:31,400
+It's a I personally find that 
+python is not a language that 
+
+326
+00:18:31,400 --> 00:18:36,200
+was created for people like me. 
+But you know what, if I'm doing 
+
+327
+00:18:36,200 --> 00:18:39,000
+something with training, a 
+neural network, I'd be dumb to 
+
+328
+00:18:39,000 --> 00:18:42,900
+do it in another language 
+because in Python, any answer, I
+
+329
+00:18:42,900 --> 00:18:46,600
+want to anything, I can Google 
+in 30 seconds, whereas if I go 
+
+330
+00:18:46,600 --> 00:18:49,300
+and do it in a different 
+language that I might prefer, 
+
+331
+00:18:49,700 --> 00:18:54,000
+I'm creating a whole world of 
+pain and honestly what for I 
+
+332
+00:18:54,000 --> 00:18:57,400
+mean I have like probably maybe 
+a thousand line. 
+
+333
+00:18:57,600 --> 00:19:01,500
+Lines of python in most of my 
+machine learning projects. 
+
+334
+00:19:01,500 --> 00:19:05,700
+So I mean, compared to what's 
+happening with tensorflow and 
+
+335
+00:19:05,800 --> 00:19:08,700
+all the ml stuff. 
+It's kind of a pretty trivial 
+
+336
+00:19:08,700 --> 00:19:15,400
+thing and to me that it is a 
+mature aspect of programming to 
+
+337
+00:19:15,400 --> 00:19:18,200
+be able to hold your nose and 
+say, you know, maybe I don't 
+
+338
+00:19:18,200 --> 00:19:22,500
+love this language or I don't 
+love this tool, but it is the 
+
+339
+00:19:22,500 --> 00:19:24,500
+practical way to solve this 
+problem. 
+
+340
+00:19:26,000 --> 00:19:28,800
+We tend to get pretty attached 
+to our programming languages and
+
+341
+00:19:28,800 --> 00:19:33,100
+communities, and have a hard 
+time admitting that, that maybe 
+
+342
+00:19:33,100 --> 00:19:36,000
+we should use a different 
+language for a given problem 
+
+343
+00:19:36,100 --> 00:19:40,000
+set. 
+And I think there's an ethos of 
+
+344
+00:19:40,000 --> 00:19:45,200
+it where their scholarly 
+Community, I feel like a lot of 
+
+345
+00:19:45,200 --> 00:19:48,200
+the mentality of it. 
+That's kind of unspoken is oh, 
+
+346
+00:19:48,200 --> 00:19:51,900
+we can do that better. 
+And I think that that's why they
+
+347
+00:19:51,900 --> 00:19:55,300
+didn't use the Java libraries is
+because there it's a lot of Only
+
+348
+00:19:55,300 --> 00:19:59,400
+smart people who really do 
+believe in, probably can do it 
+
+349
+00:19:59,400 --> 00:20:01,700
+better. 
+It's just that the amount of 
+
+350
+00:20:01,700 --> 00:20:06,600
+time it takes to iterate through
+the real world challenges and 
+
+351
+00:20:06,600 --> 00:20:10,200
+optimizations. 
+I didn't realize that, I mean, 
+
+352
+00:20:10,200 --> 00:20:14,200
+what you said about skull, I 
+didn't realize that somebody in 
+
+353
+00:20:14,200 --> 00:20:16,800
+the scholar world had said, no, 
+we're not going to use these 
+
+354
+00:20:17,200 --> 00:20:19,900
+pre-existing tested. 
+Libraries because mean you were 
+
+355
+00:20:19,900 --> 00:20:22,000
+talking about python. 
+That's what brings a lot of 
+
+356
+00:20:22,000 --> 00:20:24,200
+people to python. 
+It's like I have a problem to 
+
+357
+00:20:24,200 --> 00:20:26,200
+solve. 
+Oh, is this library that might 
+
+358
+00:20:26,200 --> 00:20:28,100
+solve it? 
+Well, I wonder if I do this. 
+
+359
+00:20:28,200 --> 00:20:32,400
+So my problem is solved now. 
+You you get that kind of I don't
+
+360
+00:20:32,400 --> 00:20:35,000
+have to write the code 
+experience. 
+
+361
+00:20:35,000 --> 00:20:41,300
+And so to actually turn away 
+from this body of tried and 
+
+362
+00:20:41,300 --> 00:20:45,500
+tested code is an interesting 
+choice. 
+
+363
+00:20:45,500 --> 00:20:48,400
+Yeah, yeah, yeah. 
+I think it was a nice single 
+
+364
+00:20:48,400 --> 00:20:52,100
+person who consciously set that 
+out as a gender. 
+
+365
+00:20:52,100 --> 00:20:54,700
+It just kind of grew out of the 
+community. 
+
+366
+00:20:55,400 --> 00:20:59,800
+And I think it was very, very 
+unfortunate, because again, I 
+
+367
+00:20:59,808 --> 00:21:03,800
+think language people who get 
+really into languages confuse 
+
+368
+00:21:03,800 --> 00:21:06,600
+language smarts with General 
+smarts. 
+
+369
+00:21:07,100 --> 00:21:13,700
+So, you know, just because, for 
+example, you might be more 
+
+370
+00:21:13,700 --> 00:21:19,300
+fluent in truly Advanced 
+obscure, mathematical language, 
+
+371
+00:21:19,700 --> 00:21:21,900
+constructs, or choose to use 
+them. 
+
+372
+00:21:22,000 --> 00:21:24,900
+Does not mean that you actually 
+have a better understanding of 
+
+373
+00:21:24,900 --> 00:21:27,100
+it. 
+A particular Tech domain than 
+
+374
+00:21:27,100 --> 00:21:29,600
+say, a Java programmer who's 
+worked on it for years. 
+
+375
+00:21:29,900 --> 00:21:33,300
+I mean, it may well, be that 
+person is equally smart, but 
+
+376
+00:21:33,300 --> 00:21:37,700
+they decided to spend their 
+intellectual effort on things 
+
+377
+00:21:37,700 --> 00:21:40,700
+other than language syntax 
+constructs. 
+
+378
+00:21:41,200 --> 00:21:42,500
+Yeah. 
+Yeah. 
+
+379
+00:21:42,600 --> 00:21:44,000
+Yeah. 
+Demand problems. 
+
+380
+00:21:44,000 --> 00:21:46,600
+Hmm. 
+Which ultimately is what gets 
+
+381
+00:21:46,600 --> 00:21:51,700
+you to business value? 
+Yeah, yeah, yeah. 
+
+382
+00:21:51,700 --> 00:21:53,900
+I think this color Community is 
+interested in that way. 
+
+383
+00:21:53,900 --> 00:21:57,100
+I see them. 
+Solving a lot of problems that 
+
+384
+00:21:57,200 --> 00:22:01,200
+are not directly tied to 
+business value or trying to 
+
+385
+00:22:01,200 --> 00:22:05,700
+accomplish the yeah. 
+But but they have moved the 
+
+386
+00:22:05,700 --> 00:22:09,700
+whole programming World forward 
+by the experiments that they've 
+
+387
+00:22:09,700 --> 00:22:13,200
+done. 
+So it's like, I think it's a 
+
+388
+00:22:13,208 --> 00:22:15,200
+good trade-off that we got. 
+Yeah. 
+
+389
+00:22:15,200 --> 00:22:19,200
+Maybe Scala isn't the dominant 
+language at this point, but the 
+
+390
+00:22:19,200 --> 00:22:21,500
+things that we've learned from 
+The Scholar experiments have 
+
+391
+00:22:21,500 --> 00:22:24,900
+been very really official for 
+everyone super valuable forever.
+
+392
+00:22:25,100 --> 00:22:26,100
+Buddy. 
+You know, they've totally 
+
+393
+00:22:26,100 --> 00:22:27,500
+against all these other 
+languages. 
+
+394
+00:22:28,000 --> 00:22:29,800
+Yeah. 
+And I mean, you can write, you 
+
+395
+00:22:29,800 --> 00:22:32,400
+can write beautiful code in 
+Scala. 
+
+396
+00:22:33,500 --> 00:22:36,400
+Yeah, all of my Scala code is 
+beautiful. 
+
+397
+00:22:36,500 --> 00:22:41,500
+Yeah, yeah. 
+So, you know, you went through 
+
+398
+00:22:41,500 --> 00:22:45,300
+the Scala phase and and we got 
+to do some of that together. 
+
+399
+00:22:45,300 --> 00:22:48,400
+That was a lot of fun. 
+Where did you go after Scala? 
+
+400
+00:22:50,000 --> 00:22:58,000
+So after Scylla we started to do
+more, I guess on the client side
+
+401
+00:22:58,400 --> 00:23:02,500
+which got me interested in 
+typescript. 
+
+402
+00:23:02,800 --> 00:23:09,400
+Yeah, and I'm a huge fan of 
+typescript, I think it is truly 
+
+403
+00:23:09,400 --> 00:23:12,400
+impressive. 
+What they've done taking the 
+
+404
+00:23:12,400 --> 00:23:19,100
+JavaScript language in ecosystem
+and gradually erecting a Pretty 
+
+405
+00:23:19,100 --> 00:23:22,400
+damn nice type edifice on top of
+it. 
+
+406
+00:23:23,000 --> 00:23:28,000
+Yeah, I found to my great 
+surprise that I enjoyed 
+
+407
+00:23:28,000 --> 00:23:30,600
+programming in typescript, 
+probably more than I enjoyed 
+
+408
+00:23:30,600 --> 00:23:34,700
+programming in Scala, huh? 
+And it just felt that little bit
+
+409
+00:23:34,700 --> 00:23:37,800
+more pragmatic. 
+The top system is actually very 
+
+410
+00:23:37,800 --> 00:23:40,100
+good. 
+The typescript system is 
+
+411
+00:23:40,100 --> 00:23:42,300
+surprisingly good. 
+I mean, of course, there is some
+
+412
+00:23:42,300 --> 00:23:45,400
+beautiful stuff, like, the 
+everything, being an expression 
+
+413
+00:23:45,400 --> 00:23:49,200
+in Scala that you don't have, 
+but the type system, Like, 
+
+414
+00:23:49,200 --> 00:23:53,600
+algebraic types is a whole range
+of things that you can do in 
+
+415
+00:23:53,600 --> 00:23:56,200
+typescript, that are really 
+pretty nice. 
+
+416
+00:23:57,500 --> 00:24:01,400
+So, I've been predominantly 
+coding in typescript probably 
+
+417
+00:24:01,400 --> 00:24:09,000
+for the last four years or so. 
+And again, it started out with 
+
+418
+00:24:09,000 --> 00:24:12,100
+that practical Choice. 
+Like, where is this code going 
+
+419
+00:24:12,100 --> 00:24:12,700
+to run? 
+Okay. 
+
+420
+00:24:12,700 --> 00:24:16,200
+It has to be written in some 
+form of JavaScript. 
+
+421
+00:24:16,500 --> 00:24:19,500
+Yeah. 
+And JavaScript room? 
+
+422
+00:24:19,600 --> 00:24:21,900
+I like strong times. 
+Yes, I like strong tight. 
+
+423
+00:24:21,900 --> 00:24:24,800
+So let's have a look at 
+typescript. 
+
+424
+00:24:25,000 --> 00:24:32,000
+Yeah, I actually think that. 
+The notion of adding typing to a
+
+425
+00:24:32,008 --> 00:24:34,800
+dynamic language. 
+Works really? 
+
+426
+00:24:34,800 --> 00:24:36,300
+Really well. 
+I mean, it's kind of 
+
+427
+00:24:36,300 --> 00:24:38,000
+interesting. 
+I don't think it's anything 
+
+428
+00:24:38,000 --> 00:24:42,800
+we've had before on this. 
+Well, we experienced it with 
+
+429
+00:24:42,800 --> 00:24:45,700
+flex actually sort of went the 
+other way. 
+
+430
+00:24:46,700 --> 00:24:48,800
+What? 
+You could turn it off, right? 
+
+431
+00:24:48,800 --> 00:24:52,200
+It was, it had optional Dynamic 
+type in. 
+
+432
+00:24:52,200 --> 00:24:55,100
+Yeah, so you could turn this, 
+you know, if your code was 
+
+433
+00:24:55,100 --> 00:24:58,500
+starting to get too messy 
+because of the Static typing, 
+
+434
+00:24:58,500 --> 00:25:02,300
+you could temporarily turn off 
+the static typing and right. 
+
+435
+00:25:02,300 --> 00:25:05,400
+You what you wanted? 
+And then of course, pythons 
+
+436
+00:25:05,400 --> 00:25:10,900
+added static optional, static 
+typing and it's I'm totally 
+
+437
+00:25:10,900 --> 00:25:14,500
+addicted to it at this point. 
+Yeah, I do not where you want it
+
+438
+00:25:14,700 --> 00:25:16,900
+but I thin typings I use them in
+English. 
+
+439
+00:25:17,100 --> 00:25:21,600
+Yeah, I guess that's a yeah. 
+I it really annoys me when I 
+
+440
+00:25:21,600 --> 00:25:24,900
+have to read code in a library 
+that hasn't done that because 
+
+441
+00:25:24,900 --> 00:25:30,200
+all we just postcode Yeah, yeah,
+gradual type in I think is one 
+
+442
+00:25:30,200 --> 00:25:35,400
+of the major, but I think, is 
+the term I'm looking for and I 
+
+443
+00:25:35,400 --> 00:25:38,400
+think that works really, really 
+well. 
+
+444
+00:25:38,700 --> 00:25:44,000
+Yeah, I John to goes, has this 
+kind of knock against gradual 
+
+445
+00:25:44,000 --> 00:25:46,000
+type. 
+In that says, he said something 
+
+446
+00:25:46,000 --> 00:25:50,200
+like gradual typing so that you 
+can find out about your errors, 
+
+447
+00:25:50,200 --> 00:25:53,300
+gradually in like a snarky, you 
+know, away. 
+
+448
+00:25:53,600 --> 00:25:58,000
+And I was like, yeah, I feel 
+very snarky about that but But 
+
+449
+00:25:58,000 --> 00:26:01,700
+pragmatically, like there is a 
+lot of people who have a much 
+
+450
+00:26:01,700 --> 00:26:05,100
+better experience finding out 
+about their errors, gradually, 
+
+451
+00:26:05,100 --> 00:26:08,300
+then then trying to get 
+everything to satisfy a 
+
+452
+00:26:08,308 --> 00:26:10,600
+compiler. 
+When you may not actually 
+
+453
+00:26:10,600 --> 00:26:13,200
+understand what types you need 
+to Define yet. 
+
+454
+00:26:14,600 --> 00:26:19,800
+Yeah and there are also some 
+things where the compiler isn't 
+
+455
+00:26:19,800 --> 00:26:22,700
+quite smart enough yet. 
+Like one thing that bugs me is 
+
+456
+00:26:22,700 --> 00:26:26,700
+the ternary operator. 
+Yeah, of course we don't have 
+
+457
+00:26:26,700 --> 00:26:29,900
+everything being Should I have 
+to use the ternary operator? 
+
+458
+00:26:29,900 --> 00:26:32,600
+I would I never use this Colour.
+Yeah. 
+
+459
+00:26:33,100 --> 00:26:38,400
+But with the ternary operator, 
+like obviously if you do, if 
+
+460
+00:26:38,400 --> 00:26:42,900
+condition, the typescript 
+compiler is smart enough to know
+
+461
+00:26:43,300 --> 00:26:47,900
+that, for example, if this thing
+was defined that you can access 
+
+462
+00:26:47,900 --> 00:26:52,100
+it within that block, whereas if
+you use that like the smart 
+
+463
+00:26:52,100 --> 00:26:56,300
+lived in your country 
+expression, cousin, and I feel 
+
+464
+00:26:56,300 --> 00:26:59,200
+like they're like in typescript 
+If the what I would call and 
+
+465
+00:26:59,200 --> 00:27:03,000
+Colin, or what they call smart 
+casting, where it knows that 
+
+466
+00:27:03,000 --> 00:27:05,700
+you've checked the, it's this 
+type and now you can reference. 
+
+467
+00:27:05,700 --> 00:27:09,500
+It is that type of having to a 
+cast so typescript does that. 
+
+468
+00:27:09,600 --> 00:27:12,200
+But then it doesn't do an 
+attorney or expression only. 
+
+469
+00:27:12,200 --> 00:27:15,800
+And only is so that really does 
+annoy me. 
+
+470
+00:27:15,800 --> 00:27:20,400
+Because I end up having to 
+either use, TS ignore, or do a 
+
+471
+00:27:20,400 --> 00:27:28,500
+as any, which is like ugly. 
+So, but by and large, I think 
+
+472
+00:27:28,500 --> 00:27:30,900
+the compiler is really pretty 
+smart. 
+
+473
+00:27:30,900 --> 00:27:34,000
+I mean I think I don't know what
+the equivalent is in typescript 
+
+474
+00:27:34,000 --> 00:27:42,800
+like the writing a little 
+function to say is say that I is
+
+475
+00:27:43,100 --> 00:27:47,200
+Foo that works really really 
+nicely. 
+
+476
+00:27:48,400 --> 00:27:52,700
+So yeah. 
+In in typescript and I've only 
+
+477
+00:27:52,700 --> 00:27:55,800
+done a little bit of typescript 
+so I'm I don't I'm not I don't 
+
+478
+00:27:55,800 --> 00:27:58,300
+have a very good understanding 
+of a lot of Each parts of it, 
+
+479
+00:27:58,300 --> 00:28:03,200
+but does does typescript have 
+the ability to do? 
+
+480
+00:28:03,200 --> 00:28:07,500
+Let's say you're doing a if 
+ifelse, and you have two 
+
+481
+00:28:07,500 --> 00:28:10,900
+different types that are 
+returned between the true and 
+
+482
+00:28:10,900 --> 00:28:16,300
+the false does typescript turn 
+that into an ATT, some type of 
+
+483
+00:28:16,300 --> 00:28:21,100
+those two types. 
+So tops Court will know if, if 
+
+484
+00:28:21,100 --> 00:28:28,300
+there is a binary Choice 
+typescript, we'll know in Else 
+
+485
+00:28:28,900 --> 00:28:33,400
+that this is the other thing. 
+Yeah, all three it does. 
+
+486
+00:28:33,400 --> 00:28:37,400
+But now you intersection of the 
+two times. 
+
+487
+00:28:37,600 --> 00:28:40,600
+Yeah. 
+I don't know, I haven't tried 
+
+488
+00:28:40,600 --> 00:28:42,400
+that. 
+I'm not sure. 
+
+489
+00:28:43,200 --> 00:28:45,700
+So one of the things as we've 
+been exploring scholar, three of
+
+490
+00:28:45,708 --> 00:28:49,100
+those really amazing was that 
+you probably experienced this in
+
+491
+00:28:49,100 --> 00:28:53,200
+Scala to where it would go up to
+type hierarchy, and find the 
+
+492
+00:28:53,200 --> 00:28:55,700
+most common parent across the 
+two different types, whenever 
+
+493
+00:28:55,700 --> 00:28:58,100
+you have something that can 
+return to different, Types. 
+
+494
+00:28:58,300 --> 00:29:00,400
+It will just go up to the common
+parent. 
+
+495
+00:29:00,400 --> 00:29:04,300
+Whereas now it's called a three,
+it doesn't go up the hierarchy, 
+
+496
+00:29:04,300 --> 00:29:09,900
+it assembles a new some type 
+that the it is the from and or 
+
+497
+00:29:09,900 --> 00:29:13,300
+the bar of those. 
+And so now you get a new 
+
+498
+00:29:13,300 --> 00:29:17,900
+Anonymous type for for this and 
+the, the developer ergonomics of
+
+499
+00:29:17,900 --> 00:29:21,600
+that like automatic some typing 
+is, is pretty amazing. 
+
+500
+00:29:21,600 --> 00:29:25,600
+Wow, that's really cool. 
+Yeah, maybe maybe typescript 
+
+501
+00:29:25,600 --> 00:29:29,200
+does it and I'll have to look 
+python doesn't Does it the 
+
+502
+00:29:29,200 --> 00:29:30,500
+automatic? 
+Some typing? 
+
+503
+00:29:30,600 --> 00:29:33,400
+Yeah. 
+Cool it just makes so much sense
+
+504
+00:29:33,400 --> 00:29:35,300
+when you're working when you 
+have a language with some type 
+
+505
+00:29:35,300 --> 00:29:39,300
+of support to do that automatic 
+some typing. 
+
+506
+00:29:40,300 --> 00:29:41,300
+Hmm. 
+Yeah. 
+
+507
+00:29:42,100 --> 00:29:44,900
+So okay. 
+So you did you've done some 
+
+508
+00:29:44,900 --> 00:29:48,800
+typescript and and enjoyed it 
+for the most part a few, a few 
+
+509
+00:29:48,800 --> 00:29:51,400
+little places. 
+Where was it? 
+
+510
+00:29:51,400 --> 00:29:55,500
+Didn't give you the power that 
+Scala gave you but you you then 
+
+511
+00:29:55,500 --> 00:29:59,800
+built atomist. 
+In large part on typescript, is 
+
+512
+00:29:59,800 --> 00:30:04,200
+that, is that accurate? 
+So Adam is the language is 
+
+513
+00:30:04,200 --> 00:30:09,000
+involved on the server side of 
+predominantly closure, running 
+
+514
+00:30:09,000 --> 00:30:14,400
+on the IBM and on the client 
+side because we kind of had a 
+
+515
+00:30:14,400 --> 00:30:20,900
+thick client that would connect 
+to the server was node and 
+
+516
+00:30:20,900 --> 00:30:28,600
+typescript. 
+Yeah, so yeah, I mean the The 
+
+517
+00:30:28,600 --> 00:30:31,600
+part of animus that's actually 
+ended up being most strategic is
+
+518
+00:30:31,600 --> 00:30:35,700
+written in closure, okay? 
+So that's now, you know, the 
+
+519
+00:30:35,700 --> 00:30:41,100
+thing that Docker or vigorously 
+moving forward is actually 
+
+520
+00:30:41,100 --> 00:30:44,700
+virtually all written in closure
+eyes, huh? 
+
+521
+00:30:44,800 --> 00:30:48,600
+That's cool. 
+So then on the the typescript 
+
+522
+00:30:48,600 --> 00:30:52,200
+side, a lot of the plugins that 
+people were building for 
+
+523
+00:30:52,200 --> 00:30:55,500
+atomist, those were 
+predominantly coded in 
+
+524
+00:30:55,500 --> 00:30:57,500
+typescript is all right, like, 
+you're my buddy. 
+
+525
+00:30:58,400 --> 00:30:59,800
+Transcript. 
+I mean, they might have been 
+
+526
+00:30:59,800 --> 00:31:03,000
+some JavaScript but 
+predominantly typescript and I 
+
+527
+00:31:03,000 --> 00:31:07,200
+mean, I think for any library at
+this point in the JavaScript 
+
+528
+00:31:07,200 --> 00:31:10,800
+ecosystem, I mean, having types 
+ideally. 
+
+529
+00:31:10,800 --> 00:31:12,900
+The thing should be written in 
+typescript, but it really does 
+
+530
+00:31:12,900 --> 00:31:16,800
+need to provide types. 
+It really annoys me when I find 
+
+531
+00:31:16,800 --> 00:31:20,400
+something that doesn't have 
+types and it does seem to be the
+
+532
+00:31:20,400 --> 00:31:23,500
+way things are moving. 
+Yeah, yeah. 
+
+533
+00:31:23,500 --> 00:31:26,700
+Tim's, like a big part of that 
+ecosystem is move into 
+
+534
+00:31:26,700 --> 00:31:30,300
+typescript for Very good reason.
+Did you look at or have you 
+
+535
+00:31:30,300 --> 00:31:34,200
+looked at webassembly, much, I 
+have not. 
+
+536
+00:31:34,200 --> 00:31:38,900
+I have a bunch of friends who 
+keep telling me, I need to look 
+
+537
+00:31:38,900 --> 00:31:42,700
+at it, but maybe that's the next
+area where I explain my brain. 
+
+538
+00:31:43,400 --> 00:31:49,400
+If you just, you know, trying to
+keep up a little bit and 
+
+539
+00:31:49,400 --> 00:31:53,100
+understand what's going on. 
+You know, that's primarily at I 
+
+540
+00:31:53,100 --> 00:31:55,700
+haven't written anything in 
+anything that generates 
+
+541
+00:31:55,700 --> 00:32:00,200
+webassembly, but But it's kind 
+of fascinating. 
+
+542
+00:32:00,200 --> 00:32:03,000
+Especially the idea that it 
+could one day displace 
+
+543
+00:32:03,000 --> 00:32:05,100
+JavaScript? 
+Yes. 
+
+544
+00:32:05,300 --> 00:32:07,200
+The exam. 
+No and Java. 
+
+545
+00:32:07,200 --> 00:32:08,400
+So do the script? 
+Yeah. 
+
+546
+00:32:08,500 --> 00:32:10,400
+Webassembly all the things. 
+Yeah. 
+
+547
+00:32:10,400 --> 00:32:12,400
+Well job that's a list. 
+Maybe. 
+
+548
+00:32:12,500 --> 00:32:15,500
+Yeah. 
+So yeah, I have been doing a lot
+
+549
+00:32:15,500 --> 00:32:18,600
+more energy actually displace 
+the jvm so right? 
+
+550
+00:32:18,600 --> 00:32:21,100
+Yeah, yeah, yeah, it's fine. 
+We have assembly. 
+
+551
+00:32:21,100 --> 00:32:23,700
+Okay. 
+It's being like this portable 
+
+552
+00:32:23,900 --> 00:32:27,600
+runtime for boy. 
+If we get a new virtual, 
+
+553
+00:32:27,700 --> 00:32:30,300
+Machine. 
+It sure like it better support 
+
+554
+00:32:30,300 --> 00:32:36,500
+for immutability and yeah, yeah.
+I mean, I'd, I can say the 
+
+555
+00:32:36,500 --> 00:32:39,700
+potential, I have been doing 
+more stuff in the browser 
+
+556
+00:32:39,700 --> 00:32:42,500
+lately. 
+I've always avoided UI 
+
+557
+00:32:42,500 --> 00:32:45,900
+programming like the pipe 
+because it always made me feel 
+
+558
+00:32:45,900 --> 00:32:49,100
+dirty. 
+Like every few years, I dip my 
+
+559
+00:32:49,100 --> 00:32:52,600
+toe, back in the water and write
+something in always think that's
+
+560
+00:32:52,600 --> 00:32:54,100
+really horrible. 
+And I'm not happy. 
+
+561
+00:32:57,700 --> 00:33:01,200
+Most recently, I've been doing 
+stuff in react. 
+
+562
+00:33:01,200 --> 00:33:03,800
+Obviously. 
+Yeah, in typescript, it doesn't 
+
+563
+00:33:03,800 --> 00:33:07,300
+feel like I'm actually quite 
+impressed. 
+
+564
+00:33:07,300 --> 00:33:10,600
+I think we may have finally 
+gotten to the point where we're 
+
+565
+00:33:10,600 --> 00:33:15,800
+starting to get libraries, like,
+react Frameworks that really 
+
+566
+00:33:15,800 --> 00:33:21,100
+enable you to write testable. 
+Nice UI code feels very 
+
+567
+00:33:21,100 --> 00:33:22,300
+different. 
+Yeah. 
+
+568
+00:33:22,600 --> 00:33:24,900
+I feel like I was reading 
+something recently about react, 
+
+569
+00:33:24,900 --> 00:33:29,300
+how they they did something too.
+A screw up the whole component 
+
+570
+00:33:29,300 --> 00:33:32,700
+model of react and newer 
+versions or something, but I 
+
+571
+00:33:32,708 --> 00:33:34,900
+don't know the details. 
+Well, I change from class has 
+
+572
+00:33:34,900 --> 00:33:40,700
+two functions. 
+Okay, we're was a pretty massive
+
+573
+00:33:40,700 --> 00:33:43,200
+change. 
+I think they were probably, 
+
+574
+00:33:43,200 --> 00:33:48,000
+right? 
+But I suspect it may have made 
+
+575
+00:33:48,000 --> 00:33:52,200
+the learning curve tougher and 
+now both models exist. 
+
+576
+00:33:52,200 --> 00:33:55,300
+So that's kind of another exam 
+isn't the only the function 
+
+577
+00:33:55,300 --> 00:33:57,500
+model bit, but yeah, I can see 
+it. 
+
+578
+00:33:57,600 --> 00:34:00,700
+If you're familiar with it, the 
+notion of the component is a 
+
+579
+00:34:00,700 --> 00:34:05,100
+class like makes obvious sense 
+for people who know 
+
+580
+00:34:05,100 --> 00:34:08,400
+object-oriented programming. 
+Where is the way in which the 
+
+581
+00:34:08,400 --> 00:34:11,699
+functions work with other hook 
+functions that side effect in 
+
+582
+00:34:11,699 --> 00:34:15,900
+the like it's actually very 
+powerful but it is, conceptually
+
+583
+00:34:15,900 --> 00:34:18,900
+more complex. 
+I think I was fortunate, I got 
+
+584
+00:34:18,900 --> 00:34:20,500
+into it after they'd made the 
+chain. 
+
+585
+00:34:20,500 --> 00:34:24,400
+So I learned a new way, okay? 
+Come, yeah, yeah, I guess coming
+
+586
+00:34:24,400 --> 00:34:28,500
+into it from the more function 
+or anywhere and You're familiar 
+
+587
+00:34:28,500 --> 00:34:32,000
+with the ideas of like 
+composition over inheritance of 
+
+588
+00:34:32,000 --> 00:34:35,500
+probably that there wasn't a 
+learning curve for you on that 
+
+589
+00:34:35,500 --> 00:34:40,100
+respect. 
+So, do you spend much time on 
+
+590
+00:34:40,100 --> 00:34:43,400
+Spring anymore? 
+Oh no. 
+
+591
+00:34:43,400 --> 00:34:51,800
+I do not like every so often. 
+I check out what's new but no, 
+
+592
+00:34:52,000 --> 00:34:57,400
+no, I haven't haven't probably 
+written a spring up. 
+
+593
+00:34:57,600 --> 00:35:04,100
+For a few years now. 
+I actually seriously would there
+
+594
+00:35:04,100 --> 00:35:06,800
+are a lot of apps that I would 
+or Services. 
+
+595
+00:35:06,800 --> 00:35:11,600
+I would build using spring boot.
+I think it's a great experience.
+
+596
+00:35:12,700 --> 00:35:14,900
+So, yeah, I think they're doing 
+a nice job. 
+
+597
+00:35:15,500 --> 00:35:19,300
+Yeah, I have it just so happens.
+That enough, none of what I'm 
+
+598
+00:35:19,300 --> 00:35:24,700
+doing at the moment is naturally
+suited to the jvm or Java. 
+
+599
+00:35:24,900 --> 00:35:27,500
+So basically these days it's 
+tight script. 
+
+600
+00:35:28,300 --> 00:35:29,900
+Python. 
+Yeah. 
+
+601
+00:35:31,600 --> 00:35:33,800
+So are you are you still working
+on atomist? 
+
+602
+00:35:35,100 --> 00:35:38,600
+I'm still advisor at Dhaka. 
+Yes. 
+
+603
+00:35:38,600 --> 00:35:41,800
+So I'm not I'm not working on 
+code but I'm kind of helping 
+
+604
+00:35:41,800 --> 00:35:45,500
+with strategy and the darker 
+acquired atomist. 
+
+605
+00:35:45,500 --> 00:35:48,600
+The yes, not a serious line 
+animist in June. 
+
+606
+00:35:49,100 --> 00:35:51,300
+Okay, congratulations, that's 
+exciting. 
+
+607
+00:35:52,000 --> 00:35:55,800
+So yeah, I think you can expect 
+to say Obviously, the security 
+
+608
+00:35:55,800 --> 00:35:57,500
+features from Adam is being 
+unique. 
+
+609
+00:35:57,600 --> 00:36:03,300
+Grated with Docker Hub, but I 
+think you can also expect to see
+
+610
+00:36:03,300 --> 00:36:08,300
+some of the animist automation 
+features gradually appear 
+
+611
+00:36:10,200 --> 00:36:12,900
+through Dhaka. 
+So, yeah. 
+
+612
+00:36:12,900 --> 00:36:16,200
+I mean, the team's really happy.
+I think it's think it's a really
+
+613
+00:36:16,200 --> 00:36:19,200
+nice perfect synchronicity. 
+They're good. 
+
+614
+00:36:19,200 --> 00:36:20,400
+Yeah. 
+And of Technologies. 
+
+615
+00:36:20,400 --> 00:36:24,100
+Yeah. 
+Maybe maybe step back a little 
+
+616
+00:36:24,100 --> 00:36:27,000
+bit and tell us a little bit 
+about Adam most and what it is 
+
+617
+00:36:27,000 --> 00:36:29,600
+and what it does. 
+And talk about that for a few 
+
+618
+00:36:29,600 --> 00:36:32,500
+minutes. 
+So Adam is done mean I guess 
+
+619
+00:36:32,500 --> 00:36:36,300
+fundamentally made the mistake 
+of trying to do too much but 
+
+620
+00:36:36,300 --> 00:36:42,000
+essentially what animist is is 
+an event based system centered 
+
+621
+00:36:42,000 --> 00:36:46,200
+on a database that observes 
+everything that happens through 
+
+622
+00:36:46,200 --> 00:36:50,400
+your delivery process. 
+So there's a database that's 
+
+623
+00:36:50,400 --> 00:36:53,300
+correlating things. 
+So you make a committed can 
+
+624
+00:36:53,300 --> 00:36:58,000
+correlate that to say building a
+container various Security 
+
+625
+00:36:58,000 --> 00:37:02,600
+checks that might occur on that 
+to deploying to a Cuban, Eddie's
+
+626
+00:37:02,600 --> 00:37:06,500
+pod. 
+So it's constantly when it 
+
+627
+00:37:06,500 --> 00:37:10,900
+ingesting events it's looking at
+this database and correlating 
+
+628
+00:37:11,100 --> 00:37:14,900
+that event with what it what it 
+knows about. 
+
+629
+00:37:14,900 --> 00:37:18,200
+For example, this commit chart, 
+which is usually the fundamental
+
+630
+00:37:18,600 --> 00:37:23,200
+correlation element and that 
+turns out to be pretty powerful 
+
+631
+00:37:23,200 --> 00:37:27,400
+because it enables, you firstly 
+to have a system of record. 
+
+632
+00:37:27,600 --> 00:37:31,200
+Is what happened from 
+developers? 
+
+633
+00:37:31,200 --> 00:37:36,200
+Commit to production, but it 
+also gives you the ability to 
+
+634
+00:37:36,200 --> 00:37:41,400
+see how things are changing over
+time to see and respond 
+
+635
+00:37:41,400 --> 00:37:46,800
+potentially to Delta's overtime.
+So essentially we pivoted to 
+
+636
+00:37:46,800 --> 00:37:50,000
+security use cases around that 
+because obviously one of the 
+
+637
+00:37:50,100 --> 00:37:55,300
+most one of the most natural 
+immediate values you can get 
+
+638
+00:37:55,300 --> 00:37:57,400
+from knowing the state of the 
+world. 
+
+639
+00:37:57,500 --> 00:38:00,100
+And the impact of changes of the
+world is answering certain 
+
+640
+00:38:00,100 --> 00:38:03,700
+security questions about 
+increases in vulnerabilities. 
+
+641
+00:38:04,100 --> 00:38:10,000
+Yeah. 
+And you know, that was the core 
+
+642
+00:38:10,000 --> 00:38:13,200
+of our business when we sold, 
+but, you know, I think that 
+
+643
+00:38:13,300 --> 00:38:17,300
+Docker totally gets that this 
+database is something that's 
+
+644
+00:38:17,800 --> 00:38:22,200
+quite generalized and I think 
+actually unique and so I think 
+
+645
+00:38:22,200 --> 00:38:26,200
+they see that is an interesting 
+part of their world moving 
+
+646
+00:38:26,200 --> 00:38:27,400
+forward. 
+Yeah. 
+
+647
+00:38:28,300 --> 00:38:31,100
+Yeah. 
+And I remember years ago when 
+
+648
+00:38:31,100 --> 00:38:35,000
+you and I were talking about of 
+mist and and you explain it to 
+
+649
+00:38:35,000 --> 00:38:38,800
+me, the thing that resonated for
+me around it was that it's kind 
+
+650
+00:38:38,800 --> 00:38:43,400
+of bringing the the tooling that
+Google has around Google three, 
+
+651
+00:38:44,200 --> 00:38:49,300
+the mono repo at Google to a 
+micro service micro you know, 
+
+652
+00:38:49,300 --> 00:38:54,500
+reap multi, repo world, and the 
+ability to to take a whole bunch
+
+653
+00:38:54,500 --> 00:38:57,400
+of repose and apply consistent 
+policies. 
+
+654
+00:38:57,500 --> 00:39:02,500
+And checking and and have those 
+defined externally to all of 
+
+655
+00:39:02,500 --> 00:39:04,900
+the, the different repo. 
+So kind of bringing a lot of the
+
+656
+00:39:04,900 --> 00:39:09,200
+mono repo benefits, but to a 
+multi repo world and it's 
+
+657
+00:39:09,200 --> 00:39:11,800
+something that everyone that's 
+not Googled needs. 
+
+658
+00:39:11,800 --> 00:39:14,100
+I think? 
+You know, everyone except for 
+
+659
+00:39:14,100 --> 00:39:22,000
+Google has multiple Repose and 
+no way to to manage policies and
+
+660
+00:39:22,000 --> 00:39:27,400
+and observability around the 
+pipe lines from from commit to 
+
+661
+00:39:27,600 --> 00:39:29,800
+Deployment. 
+And the way that our mr. 
+
+662
+00:39:29,800 --> 00:39:33,700
+Stan says yeah, I was very 
+fascinated by the problem space 
+
+663
+00:39:33,700 --> 00:39:36,200
+that it is in the way that you 
+described. 
+
+664
+00:39:36,200 --> 00:39:40,900
+It reminded me of what Kafka 
+does with the events. 
+
+665
+00:39:41,800 --> 00:39:43,800
+Is there like a ledger? 
+The Ledger? 
+
+666
+00:39:43,800 --> 00:39:44,700
+Yeah. 
+The Ledger. 
+
+667
+00:39:44,700 --> 00:39:46,200
+Yeah. 
+We're just keep track of all the
+
+668
+00:39:46,200 --> 00:39:48,300
+events. 
+Yeah. 
+
+669
+00:39:48,300 --> 00:39:51,300
+Well I feel like the core of 
+animus. 
+
+670
+00:39:51,300 --> 00:39:57,400
+Technically today is diatomic. 
+So yeah. 
+
+671
+00:39:57,500 --> 00:40:00,400
+Is an immutable Ledger. 
+Yeah. 
+
+672
+00:40:00,600 --> 00:40:02,700
+Yeah. 
+And that's why you use closure. 
+
+673
+00:40:02,700 --> 00:40:07,000
+So that yeah well actually you 
+know Jim Clark the Chief 
+
+674
+00:40:07,000 --> 00:40:13,400
+Architect anatomist. 
+Jim is pretty big closure fan 
+
+675
+00:40:13,700 --> 00:40:18,700
+but yeah. 
+Given that the correct the best 
+
+676
+00:40:18,700 --> 00:40:22,400
+fit for the database was 
+definitely day timing for what 
+
+677
+00:40:22,400 --> 00:40:25,800
+we needed and that actually 
+enabled us to solve some really 
+
+678
+00:40:25,800 --> 00:40:27,400
+interesting problems have 
+changes. 
+
+679
+00:40:27,600 --> 00:40:31,800
+The time prior to that, we'd 
+successfully achieve the 
+
+680
+00:40:31,800 --> 00:40:35,200
+relationships and we had a very 
+strong solution for that. 
+
+681
+00:40:35,200 --> 00:40:42,400
+But we did we imposed a lot of 
+work on the author of, you know,
+
+682
+00:40:42,400 --> 00:40:45,100
+and automation to track changes 
+over time. 
+
+683
+00:40:45,100 --> 00:40:48,500
+They have to go and query. 
+Where is what we've been able to
+
+684
+00:40:48,500 --> 00:40:52,800
+do with daytime occurs? 
+Not only keep the state at any 
+
+685
+00:40:52,800 --> 00:40:55,500
+point in time but effectively 
+respond to those changes. 
+
+686
+00:40:55,800 --> 00:41:00,300
+So, at that point, you know, 
+running the code enclosure was a
+
+687
+00:41:00,300 --> 00:41:05,600
+very natural thing and it sounds
+like maybe you took some of your
+
+688
+00:41:05,600 --> 00:41:09,900
+experience from the world of 
+akka and events for sin and cqrs
+
+689
+00:41:09,900 --> 00:41:12,900
+and applied, that those 
+architectural principles and 
+
+690
+00:41:12,900 --> 00:41:16,000
+some way to would, to where 
+you're doing it at a messed. 
+
+691
+00:41:16,000 --> 00:41:18,100
+Is that it all? 
+Definitely? 
+
+692
+00:41:18,100 --> 00:41:21,400
+I mean, like, G Maki ejected 
+that part of the system, but I 
+
+693
+00:41:21,408 --> 00:41:23,200
+know Jim. 
+Jim actually did scholar for a 
+
+694
+00:41:23,208 --> 00:41:27,400
+while he June. 
+I believe tried at one point to 
+
+695
+00:41:27,600 --> 00:41:31,400
+Scholar within Oracle and I 
+don't think he had great success
+
+696
+00:41:31,800 --> 00:41:37,100
+with. 
+No, I cannot imagine a steep 
+
+697
+00:41:37,100 --> 00:41:40,300
+uphill path. 
+Oh yeah, I think there's a hard.
+
+698
+00:41:40,300 --> 00:41:43,900
+No, for that one. 
+Yes, I see. 
+
+699
+00:41:44,000 --> 00:41:49,600
+Apparently, I heard that Oracle 
+these days is insistent that 
+
+700
+00:41:49,600 --> 00:41:53,000
+everything is in Java. 
+Yes. 
+
+701
+00:41:53,700 --> 00:41:56,300
+So apparently of Oracle acquire 
+companies. 
+
+702
+00:41:56,300 --> 00:41:58,300
+They will rewrite this stuff in 
+Java. 
+
+703
+00:41:58,300 --> 00:42:05,500
+Its Essence is a bit extreme but
+they're committed. 
+
+704
+00:42:05,700 --> 00:42:09,000
+Absolutely. 
+They are they are they bought 
+
+705
+00:42:09,000 --> 00:42:11,500
+Java and they're gonna, they're 
+gonna run with it. 
+
+706
+00:42:12,300 --> 00:42:17,800
+Yeah. 
+So, It's cool to hear that Adam 
+
+707
+00:42:17,800 --> 00:42:21,300
+is stuff is going well and with 
+all the open source supply chain
+
+708
+00:42:21,300 --> 00:42:24,600
+stuff that's happening. 
+Seems like it's a good good time
+
+709
+00:42:24,600 --> 00:42:27,000
+for a domestic Canadian to grow 
+a Docker. 
+
+710
+00:42:27,000 --> 00:42:29,900
+So that's that's cool. 
+This even open source have 
+
+711
+00:42:29,900 --> 00:42:35,900
+supply chain problems. 
+Oh yeah, yeah. 
+
+712
+00:42:37,400 --> 00:42:42,500
+It's all malicious o people 
+supply chain. 
+
+713
+00:42:42,500 --> 00:42:45,200
+I mean, the beauty of the kind 
+of database we have is when 
+
+714
+00:42:45,200 --> 00:42:49,600
+something like like the log for 
+Shell exploit occurs, you can 
+
+715
+00:42:49,600 --> 00:42:56,000
+ask the question instantly. 
+If we're is this package across 
+
+716
+00:42:56,400 --> 00:42:59,700
+a customer's estate. 
+So, you know, I think that 
+
+717
+00:42:59,700 --> 00:43:02,600
+because the world is always 
+being, we've always got an 
+
+718
+00:43:02,600 --> 00:43:05,400
+up-to-date model of the world. 
+It means you don't have to wait 
+
+719
+00:43:05,400 --> 00:43:07,200
+for scans. 
+You can say, okay, we know 
+
+720
+00:43:07,200 --> 00:43:09,800
+exactly where this thing is. 
+Yeah. 
+
+721
+00:43:10,600 --> 00:43:15,400
+Yeah, it's a bringing that the 
+the mono repo functionality to 
+
+722
+00:43:15,400 --> 00:43:17,900
+the The repo world. 
+Yeah. 
+
+723
+00:43:17,900 --> 00:43:21,200
+It's been able to query the 
+database and say yeah, across 
+
+724
+00:43:21,200 --> 00:43:26,200
+all of my mini Repose. 
+Where is this dependency being 
+
+725
+00:43:26,200 --> 00:43:28,700
+used? 
+And yeah, that's cool. 
+
+726
+00:43:28,900 --> 00:43:31,600
+Well and and by using a 
+domestic, I'm sure that there's 
+
+727
+00:43:31,600 --> 00:43:36,800
+the ability to assemble the the,
+like bomb the the really class 
+
+728
+00:43:36,800 --> 00:43:41,700
+bomb or whatever, from, from the
+dependencies, as an anatomist 
+
+729
+00:43:41,700 --> 00:43:45,700
+Plug-In or something. 
+Yeah, good. 
+
+730
+00:43:45,900 --> 00:43:49,100
+Good timing for atomist and and 
+it's still going, right? 
+
+731
+00:43:49,100 --> 00:43:53,700
+So if people are interested in 
+that, and yeah, I think I think 
+
+732
+00:43:53,700 --> 00:43:56,700
+Watch the watch the space with 
+Docker thing to be interesting 
+
+733
+00:43:56,700 --> 00:43:59,300
+to see it. 
+Is these bitches start to 
+
+734
+00:43:59,300 --> 00:44:02,500
+surface? 
+Yeah, of course. 
+
+735
+00:44:02,500 --> 00:44:06,800
+So you you're still doing some 
+of that stuff and then you'd 
+
+736
+00:44:06,800 --> 00:44:09,100
+also mention that you're doing 
+some chess stuff. 
+
+737
+00:44:09,100 --> 00:44:12,300
+So I want to hear hear about 
+your exploration, significant, 
+
+738
+00:44:12,300 --> 00:44:17,500
+buddy else, I watched Queens. 
+Gambit do You guys watch guess? 
+
+739
+00:44:17,600 --> 00:44:21,600
+Yeah. 
+Is it it kind of brought brought
+
+740
+00:44:21,600 --> 00:44:26,100
+me back to. 
+I was probably about two or 
+
+741
+00:44:26,100 --> 00:44:27,500
+three years. 
+I was pretty serious about 
+
+742
+00:44:27,500 --> 00:44:29,800
+Junior chess played in the 
+Australian, junior Championship,
+
+743
+00:44:29,800 --> 00:44:35,800
+when I was 16 and I hadn't 
+played chess for 30 years, but I
+
+744
+00:44:35,800 --> 00:44:38,800
+started to get back into chest 
+and then I started to get 
+
+745
+00:44:38,800 --> 00:44:42,000
+interested in the state if chest
+software. 
+
+746
+00:44:43,600 --> 00:44:49,000
+One of the things that I did 
+actually, I think was my first 
+
+747
+00:44:49,000 --> 00:44:51,300
+summer holidays after 3rd Year 
+computer science. 
+
+748
+00:44:51,500 --> 00:44:54,400
+I wrote a chess engine in C++, 
+hi. 
+
+749
+00:44:55,300 --> 00:45:01,400
+And so I'd always had a bit of 
+curiosity about that space, But 
+
+750
+00:45:01,400 --> 00:45:04,900
+what I'm really most interested 
+in is not so much engines. 
+
+751
+00:45:04,900 --> 00:45:09,000
+That's the solve problem in the 
+engine, Magnus Carlsen the world
+
+752
+00:45:09,000 --> 00:45:12,700
+champion has as much chance of 
+beating the best engine as I 
+
+753
+00:45:12,708 --> 00:45:17,400
+have a beating here, which Is to
+it. 
+
+754
+00:45:17,400 --> 00:45:22,100
+He has his much about the same 
+chance of getting a draw with 
+
+755
+00:45:22,100 --> 00:45:24,900
+the best engines, I have of 
+getting a draw with human. 
+
+756
+00:45:25,100 --> 00:45:29,500
+Both of those things are 
+exceptionally unlikely, the 
+
+757
+00:45:30,600 --> 00:45:32,800
+engines really are a solve 
+problem. 
+
+758
+00:45:32,800 --> 00:45:38,200
+I mean, the way we got here is 
+actually totally fascinating but
+
+759
+00:45:38,200 --> 00:45:44,300
+what I'm really interested in is
+trying to bring Ai and software 
+
+760
+00:45:44,700 --> 00:45:47,700
+to Alicia knows how people learn
+chess. 
+
+761
+00:45:48,200 --> 00:45:53,000
+Okay, engines, have can now play
+Chester to essentially Godlike 
+
+762
+00:45:53,000 --> 00:45:57,900
+level, but they most of its 
+neural network based now. 
+
+763
+00:45:57,900 --> 00:46:00,600
+So they can turn on you, why 
+they're making the decision. 
+
+764
+00:46:00,600 --> 00:46:04,900
+They're making no they can't. 
+They don't even know where is 
+
+765
+00:46:06,400 --> 00:46:10,100
+with chest training. 
+I think there's still, we 
+
+766
+00:46:10,100 --> 00:46:13,000
+haven't seen quite the same 
+degree of transformation. 
+
+767
+00:46:13,000 --> 00:46:17,200
+So been been playing around with
+I'm experimentation on this. 
+
+768
+00:46:17,200 --> 00:46:19,700
+I don't know whether it's 
+potentially a business, whether 
+
+769
+00:46:19,700 --> 00:46:23,100
+it's open source, whether it's 
+just something that entertains 
+
+770
+00:46:23,100 --> 00:46:26,500
+me, a few hours a day writing 
+code in typescript or python. 
+
+771
+00:46:26,500 --> 00:46:33,800
+That will say that sounds really
+interesting to me because when I
+
+772
+00:46:33,800 --> 00:46:36,600
+was, I think I was like eight or
+something. 
+
+773
+00:46:36,900 --> 00:46:41,600
+Somebody gave me a chest at for 
+my birthday and I started 
+
+774
+00:46:41,600 --> 00:46:47,500
+learning the game and then My 
+father had never played chest 
+
+775
+00:46:47,900 --> 00:46:53,300
+and I started teaching him how 
+to play the game and while I was
+
+776
+00:46:53,300 --> 00:46:57,200
+teaching him he beat me and that
+just like Rocky. 
+
+777
+00:46:57,300 --> 00:47:01,000
+I've never wanted to play chess 
+since then it just seems 
+
+778
+00:47:01,000 --> 00:47:06,200
+pointless because whoever I 
+teach is just going to well like
+
+779
+00:47:06,300 --> 00:47:10,100
+you I kind of nursed you into 
+mountain biking and now I can't 
+
+780
+00:47:10,100 --> 00:47:12,500
+keep up with you. 
+So it's like this keeps 
+
+781
+00:47:12,500 --> 00:47:13,900
+happening to me so I'm just 
+gone. 
+
+782
+00:47:13,900 --> 00:47:16,500
+I'm out. 
+Where is your world? 
+
+783
+00:47:16,500 --> 00:47:18,900
+Your game would be kind of like 
+a, you know, like when 
+
+784
+00:47:18,900 --> 00:47:21,200
+spell-checking came along and 
+you go oh yeah. 
+
+785
+00:47:21,200 --> 00:47:26,200
+I guess, you know, it kind of 
+just gently taught you to be a 
+
+786
+00:47:26,200 --> 00:47:29,300
+better speller and if I, if I 
+had an experience like what 
+
+787
+00:47:29,300 --> 00:47:32,900
+you're talking about, I'm going 
+okay, you know, don't don't just
+
+788
+00:47:33,200 --> 00:47:36,600
+flatten me every time I play and
+train, you know, good new chest 
+
+789
+00:47:36,600 --> 00:47:38,500
+does that, you know? 
+It doesn't matter where you said
+
+790
+00:47:38,500 --> 00:47:41,700
+is just like, bam, you're dead. 
+It's like if it would just kind 
+
+791
+00:47:41,700 --> 00:47:45,800
+of guide me into it, that could 
+be a whole Different experience.
+
+792
+00:47:45,800 --> 00:47:49,100
+Yeah, yeah, what I started off 
+was riding something. 
+
+793
+00:47:49,100 --> 00:47:52,300
+That was based on a database. 
+I ingested, two million, 
+
+794
+00:47:52,300 --> 00:47:55,700
+Grandmaster games and chop them 
+in a postgres database. 
+
+795
+00:47:55,700 --> 00:48:01,200
+And let essentially the 
+interface was enabled. 
+
+796
+00:48:01,200 --> 00:48:04,200
+You to explore opening Theory 
+and game. 
+
+797
+00:48:04,200 --> 00:48:06,300
+So you could go and drill into 
+an opening variation. 
+
+798
+00:48:06,300 --> 00:48:11,400
+Look at all the Grandmaster 
+games and it was actually quite 
+
+799
+00:48:11,400 --> 00:48:13,500
+nice. 
+But I mean, in terms of 
+
+800
+00:48:13,500 --> 00:48:16,600
+potential business, Use it's a 
+very much a niche market because
+
+801
+00:48:16,600 --> 00:48:18,900
+it's built around people who 
+care about opening Theory. 
+
+802
+00:48:19,200 --> 00:48:23,400
+So you know, when you look at 
+say people who play online, 
+
+803
+00:48:23,800 --> 00:48:29,500
+probably the top 10%, maybe the 
+top, maybe the top 25% care to 
+
+804
+00:48:29,500 --> 00:48:31,100
+some degree about opening 
+Theory. 
+
+805
+00:48:32,500 --> 00:48:37,200
+So like any most games that I 
+play, there's probably going to 
+
+806
+00:48:37,200 --> 00:48:46,000
+be like 5 to 10 moves of theory 
+on each side but The majority of
+
+807
+00:48:46,000 --> 00:48:49,700
+players don't. 
+Aren't yet at the level they 
+
+808
+00:48:49,700 --> 00:48:51,700
+care about that or who knows? 
+Maybe they never going to want 
+
+809
+00:48:51,700 --> 00:48:55,500
+to care about that. 
+And so I think the challenge is 
+
+810
+00:48:55,500 --> 00:48:58,000
+to try to deliver value at 
+different points. 
+
+811
+00:48:58,000 --> 00:49:00,600
+So I've gone back based on some 
+feedback, I've gotten him, 
+
+812
+00:49:00,600 --> 00:49:03,700
+trying to rethink it to provide 
+value for people who are less 
+
+813
+00:49:03,700 --> 00:49:06,300
+experienced. 
+And you know, that's often 
+
+814
+00:49:06,300 --> 00:49:09,800
+things like, well, you play 
+Knight to G5. 
+
+815
+00:49:09,800 --> 00:49:13,600
+There's a black porn and H6, 
+which can take your night. 
+
+816
+00:49:14,500 --> 00:49:17,900
+This is how pollens capture you 
+don't want to do that. 
+
+817
+00:49:18,400 --> 00:49:21,300
+Maybe maybe slightly higher than
+that level but you know, 
+
+818
+00:49:21,300 --> 00:49:24,200
+something that is kind of more 
+more basic. 
+
+819
+00:49:24,600 --> 00:49:28,400
+Yeah, I mean fundamentally, I 
+think the Holy Grail is to try 
+
+820
+00:49:28,400 --> 00:49:32,400
+to explain the why of engine 
+move choice. 
+
+821
+00:49:32,400 --> 00:49:37,300
+And that, that is an incredibly 
+difficult problem. 
+
+822
+00:49:37,800 --> 00:49:42,800
+I mean, what I mean, tardiness 
+to do in program history of 
+
+823
+00:49:42,800 --> 00:49:46,900
+computer chess engines. 
+It's, I'll give it to you 
+
+824
+00:49:46,900 --> 00:49:49,400
+anyway. 
+It's quite fascinating. 
+
+825
+00:49:49,400 --> 00:49:56,200
+So back in. 
+Back in the 60s and 70s. 
+
+826
+00:49:56,200 --> 00:49:59,200
+I mean, people have been working
+on chess engines since at least 
+
+827
+00:49:59,200 --> 00:50:03,100
+the early 60s up until the mid 
+70s they played. 
+
+828
+00:50:03,300 --> 00:50:09,300
+Not that much under beginner 
+level, then they started getting
+
+829
+00:50:09,300 --> 00:50:12,700
+better as computers got better. 
+And they just used Minimax 
+
+830
+00:50:12,700 --> 00:50:15,400
+algorithm with, you know, some 
+tree pruning. 
+
+831
+00:50:15,800 --> 00:50:18,900
+And you got to the point where 
+basically with a relatively 
+
+832
+00:50:18,900 --> 00:50:22,400
+simple terminal evaluation 
+function, which would decide I'd
+
+833
+00:50:22,400 --> 00:50:24,800
+whether the position was better 
+for white or black. 
+
+834
+00:50:24,800 --> 00:50:28,700
+At the end of each variation. 
+IBM built some really really 
+
+835
+00:50:28,700 --> 00:50:33,500
+fancy hardware and deep blue 
+beat Kasparov in 1997. 
+
+836
+00:50:34,200 --> 00:50:38,800
+So essentially you had an 
+incredibly powerful machine, not
+
+837
+00:50:38,800 --> 00:50:42,900
+consumer grade Hardware, by any 
+means that could play marginally
+
+838
+00:50:42,900 --> 00:50:46,900
+better than the world champion 
+in 1997 by a seal, no, no 
+
+839
+00:50:46,900 --> 00:50:49,300
+strategy beyond the the next 
+move. 
+
+840
+00:50:49,500 --> 00:50:52,600
+Yeah, the strategies in the 
+terminal position of a Later. 
+
+841
+00:50:53,000 --> 00:50:56,600
+So, when it gets to the end of a
+variation, it decides who stands
+
+842
+00:50:56,600 --> 00:51:00,800
+better and it would obviously 
+just count the material. 
+
+843
+00:51:00,900 --> 00:51:04,300
+But that will still regardless 
+of how deep your search is that 
+
+844
+00:51:04,300 --> 00:51:09,500
+will still not not have a chance
+of even drawing the game against
+
+845
+00:51:09,500 --> 00:51:15,900
+Kasparov where, but you have to 
+add things like P Square tables.
+
+846
+00:51:15,900 --> 00:51:19,700
+So you give a bonus for pieces 
+being on good squares, Mobility.
+
+847
+00:51:20,000 --> 00:51:21,600
+King safety. 
+So it does some simple 
+
+848
+00:51:21,600 --> 00:51:24,100
+evaluation It says yeah this 
+looks better for what this looks
+
+849
+00:51:24,100 --> 00:51:26,700
+better from lat. 
+But nothing. 
+
+850
+00:51:26,800 --> 00:51:30,500
+Nothing really clever. 
+Yeah so another roll about 10 
+
+851
+00:51:30,500 --> 00:51:34,900
+years, 15 years forward, there's
+not really any great advances in
+
+852
+00:51:34,900 --> 00:51:40,100
+how engines work except more 
+efficient search but you know 
+
+853
+00:51:40,100 --> 00:51:42,600
+just incremental and Hardware 
+gets better. 
+
+854
+00:51:42,600 --> 00:51:47,600
+So you get to like say 2010, 
+we're now your laptop can beat 
+
+855
+00:51:47,600 --> 00:51:51,600
+the world champion. 
+Probably 2015 may be a good 
+
+856
+00:51:51,700 --> 00:51:57,900
+iPhone can They will champion. 
+And then the date mine project 
+
+857
+00:51:57,900 --> 00:52:04,100
+and Alpha 0 emerge from deepmind
+and Google and they applied 
+
+858
+00:52:04,100 --> 00:52:07,900
+neural networks and taught the 
+engine via reinforcement 
+
+859
+00:52:07,900 --> 00:52:13,300
+learning with self play that 
+became. 
+
+860
+00:52:14,100 --> 00:52:18,300
+I think it played a few billion 
+games against itself and had 
+
+861
+00:52:18,300 --> 00:52:21,800
+become the best in the world 
+within a couple of days, even 
+
+862
+00:52:21,800 --> 00:52:23,200
+better. 
+Than the other engines. 
+
+863
+00:52:24,400 --> 00:52:27,900
+And the difference was, it 
+didn't do as deep search, but it
+
+864
+00:52:27,900 --> 00:52:31,400
+used in neural network to 
+evaluate terminal positions, and
+
+865
+00:52:31,400 --> 00:52:36,000
+the neural network evaluation is
+incredibly strong. 
+
+866
+00:52:36,300 --> 00:52:40,500
+So now stockfish, which is the 
+leading open source, engine has 
+
+867
+00:52:40,500 --> 00:52:43,200
+incorporated neural network 
+technology and is actually 
+
+868
+00:52:43,200 --> 00:52:47,100
+better. 
+You still the best engine but 
+
+869
+00:52:47,100 --> 00:52:50,100
+there's also something called 
+Lila chest 0 which is based on 
+
+870
+00:52:50,100 --> 00:52:53,300
+the Google stuff inspired by 
+that, which they're both open. 
+
+871
+00:52:53,400 --> 00:52:56,900
+Open source and they're both 
+incredibly good and they're both
+
+872
+00:52:56,900 --> 00:53:00,100
+kind of digging it out, but it 
+was really fascinating, how 
+
+873
+00:53:00,100 --> 00:53:04,400
+neural networks change things. 
+Where, for the first time we 
+
+874
+00:53:04,400 --> 00:53:08,900
+didn't understand what the 
+evaluation function was like, 
+
+875
+00:53:08,900 --> 00:53:11,800
+for example, any reasonable 
+chess player, could tell you 
+
+876
+00:53:11,800 --> 00:53:15,000
+with the stockfish evaluation 
+function say, before the neural 
+
+877
+00:53:15,000 --> 00:53:16,600
+network explosion. 
+Yeah. 
+
+878
+00:53:16,600 --> 00:53:18,500
+Well, I mean, this is just basic
+stuff. 
+
+879
+00:53:19,100 --> 00:53:22,600
+My understand, all of this new, 
+the new Y is negative. 
+
+880
+00:53:24,100 --> 00:53:28,600
+The lately chest, zero neural 
+network evaluation is. 
+
+881
+00:53:28,800 --> 00:53:32,600
+I haven't verified this myself 
+but I have it on good authority 
+
+882
+00:53:33,000 --> 00:53:37,200
+that with zero. 
+Look ahead Leila chest 0 plays 
+
+883
+00:53:37,200 --> 00:53:41,700
+an international Master Level 
+which is just stunning because 
+
+884
+00:53:41,700 --> 00:53:45,600
+it's positional instincts are so
+good that it can just look at a 
+
+885
+00:53:45,608 --> 00:53:47,600
+position. 
+Look at every position that 
+
+886
+00:53:47,600 --> 00:53:51,700
+would result from every single 
+legal move and just say this one
+
+887
+00:53:51,700 --> 00:53:56,700
+smells best and And it is 
+incredibly strong even doing 
+
+888
+00:53:56,700 --> 00:54:01,800
+that but it has no idea why it 
+has no idea why. 
+
+889
+00:54:02,100 --> 00:54:07,200
+And it's actually been quite 
+fascinating that it started to 
+
+890
+00:54:07,200 --> 00:54:11,000
+revolutionize top-level chess. 
+There's a really fascinating for
+
+891
+00:54:11,000 --> 00:54:16,500
+anyone listening to this who's 
+seriously interested in chess. 
+
+892
+00:54:17,000 --> 00:54:19,400
+There's a wonderful book by an 
+English Grandmaster called 
+
+893
+00:54:19,400 --> 00:54:22,600
+Matthew, Sadler called the 
+Silicon road to chess 
+
+894
+00:54:22,600 --> 00:54:25,800
+Improvement. 
+And he's been enforced. 
+
+895
+00:54:25,800 --> 00:54:27,800
+He's a very strong Grandmaster 
+and he's been interested in 
+
+896
+00:54:27,808 --> 00:54:32,500
+engines for years, and he talks 
+about some of his own personal 
+
+897
+00:54:33,700 --> 00:54:36,900
+training regimes fee. 
+For example, wants to learn a 
+
+898
+00:54:36,908 --> 00:54:40,000
+new opening variation, the 
+typical way that you would have 
+
+899
+00:54:40,000 --> 00:54:40,500
+done. 
+It is. 
+
+900
+00:54:40,500 --> 00:54:44,500
+Look at all the games that human
+Grandmasters that played from 
+
+901
+00:54:44,500 --> 00:54:46,600
+that position because you're 
+playing against many taxi, 
+
+902
+00:54:46,600 --> 00:54:50,500
+you're learning how to be them 
+injuns to play 100 game pairs 
+
+903
+00:54:51,200 --> 00:54:55,700
+with alternating colors and and 
+then he has a look at the games 
+
+904
+00:54:55,700 --> 00:54:57,900
+and figures out. 
+What the plans. 
+
+905
+00:54:57,900 --> 00:54:59,600
+They came up with work. 
+Yeah. 
+
+906
+00:55:00,400 --> 00:55:04,700
+So he's building a model based 
+on the Grandmasters that he's 
+
+907
+00:55:04,700 --> 00:55:07,600
+playing against know. 
+He's building a model based on 
+
+908
+00:55:07,600 --> 00:55:12,300
+engines. 
+He know it looks at human games.
+
+909
+00:55:12,300 --> 00:55:14,300
+Predominantly looks it engine 
+game. 
+
+910
+00:55:14,300 --> 00:55:18,800
+So he creates engine games from 
+any position with engines, 
+
+911
+00:55:18,800 --> 00:55:21,200
+configured differently, and 
+different engines, so that it 
+
+912
+00:55:21,200 --> 00:55:26,600
+gets different games and The 
+interesting evolution is that 
+
+913
+00:55:26,600 --> 00:55:31,900
+the Grandmasters used to play 
+against other Grandmasters and 
+
+914
+00:55:31,900 --> 00:55:36,000
+have to like train their models 
+around the humans are playing 
+
+915
+00:55:36,000 --> 00:55:40,000
+against but now the humans are 
+training their mental models 
+
+916
+00:55:40,000 --> 00:55:42,900
+against the computer models. 
+Exactly. 
+
+917
+00:55:42,900 --> 00:55:45,600
+And they do it not by playing 
+the computer because that's 
+
+918
+00:55:45,600 --> 00:55:47,800
+pointless, even for a strong 
+Grandmaster. 
+
+919
+00:55:47,800 --> 00:55:52,900
+They do it often by having 
+engines evaluate positions and 
+
+920
+00:55:53,400 --> 00:55:57,000
+Deeply looking at the lines that
+the engines are suggesting or 
+
+921
+00:55:57,000 --> 00:56:00,400
+creating engine games between 
+engines, where they look at the 
+
+922
+00:56:00,400 --> 00:56:04,100
+output and it is changed the 
+style of top-level Chess. 
+
+923
+00:56:04,500 --> 00:56:10,400
+There is now in the last, 
+probably five years a style of 
+
+924
+00:56:10,400 --> 00:56:14,500
+super Grandmaster chest. 
+It's never existed before among 
+
+925
+00:56:14,500 --> 00:56:17,900
+people, and it is substantially 
+influenced by the stylistic 
+
+926
+00:56:17,900 --> 00:56:21,400
+findings of engines. 
+But the problem is that people 
+
+927
+00:56:21,400 --> 00:56:23,200
+have to do the work of figuring 
+that out. 
+
+928
+00:56:23,700 --> 00:56:26,700
+So even a grand master, has to 
+sit down for half an hour and 
+
+929
+00:56:26,700 --> 00:56:29,200
+think what the hell is this mu 
+do? 
+
+930
+00:56:32,800 --> 00:56:38,900
+Well, it's fascinating. 
+Yeah, that's what an expansive 
+
+931
+00:56:38,900 --> 00:56:42,600
+space that is that it just blows
+my mind every time I think about
+
+932
+00:56:42,600 --> 00:56:45,000
+it. 
+All the variations that exist in
+
+933
+00:56:45,000 --> 00:56:51,800
+chess and it's I prefer the 
+finite world of programming and 
+
+934
+00:56:51,800 --> 00:56:55,500
+programming languages for it. 
+It's like, you know, that so 
+
+935
+00:56:55,500 --> 00:56:59,000
+many variations. 
+Hey, yeah, you say that, but I 
+
+936
+00:56:59,000 --> 00:57:02,300
+keep finding these things where 
+it's like, Oh, I thought it was 
+
+937
+00:57:02,300 --> 00:57:05,600
+like that but actually, it's 
+know. 
+
+938
+00:57:05,600 --> 00:57:08,600
+There are variations. 
+Yes, we kind of do. 
+
+939
+00:57:08,600 --> 00:57:10,400
+What smells good and 
+programming. 
+
+940
+00:57:11,400 --> 00:57:15,100
+Like the, you use that 
+terminology rod for describing, 
+
+941
+00:57:15,100 --> 00:57:19,000
+how the engines, or the, the, 
+the AI is determine what's nice.
+
+942
+00:57:19,000 --> 00:57:22,300
+It's like oh, this smells good, 
+that's and a really good way of 
+
+943
+00:57:22,300 --> 00:57:23,100
+doing it. 
+Yeah. 
+
+944
+00:57:23,400 --> 00:57:26,800
+Semicolons then one small good 
+way. 
+
+945
+00:57:27,000 --> 00:57:30,100
+I tell, you know, when I said I 
+didn't play chess with 30 years.
+
+946
+00:57:30,100 --> 00:57:33,600
+One of the reasons for that was 
+that programming scratch the 
+
+947
+00:57:33,600 --> 00:57:36,900
+same Niche for me and I could 
+get paid for that. 
+
+948
+00:57:37,800 --> 00:57:44,000
+So it's yes, he's a very 
+beautiful game and I'm glad that
+
+949
+00:57:44,000 --> 00:57:48,900
+I've gotten back into it. 
+And, you know, I'm glad that I'm
+
+950
+00:57:50,100 --> 00:57:55,600
+gradually improving again. 
+But yeah, there's I think a lot 
+
+951
+00:57:55,600 --> 00:58:01,000
+of the beauty is similar to The 
+Beauty in programming and you do
+
+952
+00:58:01,000 --> 00:58:04,900
+get it. 
+Actually, there's a former World
+
+953
+00:58:05,300 --> 00:58:09,200
+Championship Contender, Xavier, 
+creme, Master called Viktor 
+
+954
+00:58:09,200 --> 00:58:12,500
+korchnoi used to That you should
+regularly learn you? 
+
+955
+00:58:12,500 --> 00:58:15,800
+I think because when you learn a
+new opening, you learn something
+
+956
+00:58:15,800 --> 00:58:19,500
+else about Chess and it's a bit,
+like learning a new programming 
+
+957
+00:58:19,500 --> 00:58:22,900
+language. 
+There are these things where 
+
+958
+00:58:22,900 --> 00:58:26,300
+it's just there's this whole set
+of ideas that you've never 
+
+959
+00:58:26,300 --> 00:58:32,000
+encountered before. 
+And so okay, so in this position
+
+960
+00:58:32,700 --> 00:58:37,100
+black can launch an attack with.
+He's a pawn and b-pawn and the 
+
+961
+00:58:37,100 --> 00:58:42,100
+bishop comes to C5 or you know 
+you can Learn these whole 
+
+962
+00:58:42,100 --> 00:58:45,500
+Concepts that kind of feel like 
+they're expanding at least your 
+
+963
+00:58:45,500 --> 00:58:48,800
+chest brand in the same way as 
+like learning scholar. 
+
+964
+00:58:49,200 --> 00:58:53,600
+Do you suppose we'll ever get a 
+like a machine Learning System 
+
+965
+00:58:53,600 --> 00:59:02,400
+that can invent new games? 
+Yeah I I certainly yeah I would 
+
+966
+00:59:02,400 --> 00:59:08,500
+definitely imagine we could. 
+Yeah I mean I did really well 
+
+967
+00:59:08,500 --> 00:59:11,200
+yeah you know what you would 
+have to filter it. 
+
+968
+00:59:11,400 --> 00:59:16,700
+They smell good. 
+I totally think you could. 
+
+969
+00:59:16,800 --> 00:59:23,300
+I mean what I would hope for 
+first though is A way of 
+
+970
+00:59:23,300 --> 00:59:27,400
+explaining the choices made by a
+system like a neural network. 
+
+971
+00:59:28,300 --> 00:59:30,500
+Yes, Not only. 
+Would that be really cool for 
+
+972
+00:59:30,500 --> 00:59:33,800
+chess but you know, I actually 
+wonder if civilization Will 
+
+973
+00:59:33,800 --> 00:59:38,000
+Survive unless it's possible for
+other things like, I mean, as 
+
+974
+00:59:38,000 --> 00:59:42,000
+these determinations of what 
+smells good from a neural 
+
+975
+00:59:42,000 --> 00:59:47,100
+network effects more and more of
+Our Lives, it's kind of pretty 
+
+976
+00:59:47,100 --> 00:59:54,500
+important that we know why. 
+Why Decision was made. 
+
+977
+00:59:55,000 --> 00:59:56,800
+Yeah. 
+But I thought that was like a 
+
+978
+00:59:56,800 --> 01:00:02,700
+big part of it is that we're 
+using we're creating a 
+
+979
+01:00:02,708 --> 01:00:06,000
+scientific model but human isn't
+creating it. 
+
+980
+01:00:06,000 --> 01:00:09,100
+A machine is doing it. 
+Just by looking at a ton of 
+
+981
+01:00:09,100 --> 01:00:11,800
+data. 
+And not. 
+
+982
+01:00:13,100 --> 01:00:16,700
+Yeah, it doesn't have a reason 
+why it says, oh, I should add 
+
+983
+01:00:16,700 --> 01:00:19,500
+this little bump in my 
+algorithm. 
+
+984
+01:00:19,500 --> 01:00:21,400
+It just says it. 
+Fits the data. 
+
+985
+01:00:22,900 --> 01:00:27,700
+But it doesn't, there is really 
+no way of knowing. 
+
+986
+01:00:27,700 --> 01:00:30,600
+Why like, I mean, if you look at
+some of these massively over 
+
+987
+01:00:30,600 --> 01:00:33,800
+parameterize models now that the
+using women, they can be 
+
+988
+01:00:33,800 --> 01:00:41,300
+billions of neurons in the model
+and you know, it's just totally 
+
+989
+01:00:41,300 --> 01:00:43,800
+opaque. 
+Yeah. 
+
+990
+01:00:45,000 --> 01:00:47,200
+So the solution is just more 
+data. 
+
+991
+01:00:49,000 --> 01:00:53,500
+Apparently, always well in the 
+solution, I guess, if we can't 
+
+992
+01:00:53,500 --> 01:00:57,000
+explain it, the solution is 
+ensuring that it gets the right 
+
+993
+01:00:57,000 --> 01:00:58,700
+training data, so you don't get 
+things. 
+
+994
+01:00:58,700 --> 01:01:03,400
+Like, for example, that 
+Microsoft chatbot the band they 
+
+995
+01:01:03,400 --> 01:01:07,500
+just went what boys went? 
+Well, Hitler and within a few 
+
+996
+01:01:07,500 --> 01:01:09,100
+minutes. 
+Yeah. 
+
+997
+01:01:10,000 --> 01:01:12,600
+Yeah. 
+With a friend and I were playing
+
+998
+01:01:12,600 --> 01:01:18,600
+with some machine learning, it 
+would generate Stories. 
+
+999
+01:01:18,900 --> 01:01:22,700
+And one of the things that we've
+discovered was that it was 
+
+1000
+01:01:22,700 --> 01:01:26,400
+really tuned to be positive. 
+I think there were saying, well 
+
+1001
+01:01:26,400 --> 01:01:29,500
+we don't want that thing to 
+happen and if you wanted it to 
+
+1002
+01:01:29,508 --> 01:01:31,500
+go dark you really had to push 
+it. 
+
+1003
+01:01:31,700 --> 01:01:36,600
+Then I'm going to go and then is
+puppy died and then he you know 
+
+1004
+01:01:36,600 --> 01:01:41,200
+that you know and and only then 
+you'd really have to because 
+
+1005
+01:01:41,200 --> 01:01:44,400
+otherwise it would go and then 
+he got a new puppy and it was 
+
+1006
+01:01:44,400 --> 01:01:47,500
+really happy you know, it was 
+just really hard to get. 
+
+1007
+01:01:47,600 --> 01:01:51,000
+Get to the data that was trained
+on was, was much more positively
+
+1008
+01:01:51,000 --> 01:01:54,200
+oriented. 
+They had dialed snobs or music. 
+
+1009
+01:01:54,200 --> 01:01:57,000
+That you hot? 
+That's the tragedy. 
+
+1010
+01:01:57,200 --> 01:01:58,900
+Yeah, had been trained on 
+tragic? 
+
+1011
+01:01:58,900 --> 01:02:03,100
+No, no, yeah. 
+I want to. 
+
+1012
+01:02:03,100 --> 01:02:08,700
+So this reminds me of Dolly the 
+image generator, which was it 
+
+1013
+01:02:08,700 --> 01:02:12,300
+was fascinated to see the images
+that it generated, but for me, 
+
+1014
+01:02:12,300 --> 01:02:16,600
+the most amazing thing of Dolly 
+was not the images that it 
+
+1015
+01:02:16,600 --> 01:02:19,300
+generated. 
+Is the combinations of things 
+
+1016
+01:02:19,300 --> 01:02:21,600
+that humans came up with. 
+It was like the human 
+
+1017
+01:02:21,600 --> 01:02:24,500
+creativity. 
+The way that humans used the 
+
+1018
+01:02:24,500 --> 01:02:28,600
+tool was actually much more 
+amazing to me than the actual 
+
+1019
+01:02:28,600 --> 01:02:31,400
+tool itself. 
+So it's like the human 
+
+1020
+01:02:31,400 --> 01:02:36,000
+creativity element to. 
+This is, is always the thing 
+
+1021
+01:02:36,000 --> 01:02:39,000
+that makes it that gives you 
+the, I don't know the human 
+
+1022
+01:02:39,000 --> 01:02:42,700
+connection of it. 
+The human wonder that when it's 
+
+1023
+01:02:42,700 --> 01:02:46,100
+just purely the AI or just like 
+yeah no no wonder there. 
+
+1024
+01:02:48,900 --> 01:02:53,400
+Yeah, he's funny that with I 
+remember when I was at Uni, a 
+
+1025
+01:02:53,400 --> 01:02:59,200
+professor was they had 
+Department was enthusiastic 
+
+1026
+01:02:59,200 --> 01:03:02,200
+about II and this was during the
+AI winter. 
+
+1027
+01:03:03,100 --> 01:03:06,600
+So he needs to cynically define 
+a is the set of things that 
+
+1028
+01:03:06,600 --> 01:03:10,300
+don't work because he said, as 
+soon as anything is solved, they
+
+1029
+01:03:10,300 --> 01:03:15,900
+say, that's not really, I wear, 
+is roll the clock forward. 
+
+1030
+01:03:15,900 --> 01:03:18,100
+A lot of the algorithms, The 
+same. 
+
+1031
+01:03:18,100 --> 01:03:20,200
+Like, I mean your own networks 
+have been around since the late 
+
+1032
+01:03:20,200 --> 01:03:25,300
+50s and they haven't really been
+that many reticle advances. 
+
+1033
+01:03:25,300 --> 01:03:27,000
+I mean, drop out layers with 
+clever. 
+
+1034
+01:03:27,000 --> 01:03:32,700
+But there's an I mean they if 
+you look at a current the way a 
+
+1035
+01:03:32,700 --> 01:03:35,600
+neural network works today and 
+you show it to a computer 
+
+1036
+01:03:35,600 --> 01:03:38,600
+scientist in the late 50s, they 
+would totally understand it. 
+
+1037
+01:03:38,600 --> 01:03:40,400
+And so yeah that's how it should
+work. 
+
+1038
+01:03:40,600 --> 01:03:43,400
+And yet the difference is that 
+you got faster machines and 
+
+1039
+01:03:43,400 --> 01:03:46,400
+you've got many many, many more 
+data points. 
+
+1040
+01:03:46,700 --> 01:03:50,500
+And so this, Stuff that we knew 
+how to do suddenly starts 
+
+1041
+01:03:50,500 --> 01:03:53,500
+working and having real world 
+consequences. 
+
+1042
+01:03:54,100 --> 01:03:57,900
+Yeah. 
+Fascinating. 
+
+1043
+01:03:58,800 --> 01:04:00,900
+Well, I don't know anything 
+else. 
+
+1044
+01:04:00,900 --> 01:04:05,800
+My mind is expanded. 
+Yes, thank you so much, right. 
+
+1045
+01:04:05,800 --> 01:04:08,900
+It's good to see you. 
+And yeah, fun to learn from you,
+
+1046
+01:04:08,900 --> 01:04:14,200
+as always, so appreciate your 
+time and yeah, so great to see 
+
+1047
+01:04:14,200 --> 01:04:18,300
+you guys going. 
+I really hope that I And get out
+
+1048
+01:04:18,300 --> 01:04:20,200
+to your mountains. 
+Yep. 
+
+1049
+01:04:20,200 --> 01:04:22,200
+Yeah, I'll get. 
+You have to Crestview next 
+
+1050
+01:04:22,200 --> 01:04:26,100
+winner, so we great. 
+All right. 
+
+1051
+01:04:26,100 --> 01:04:27,500
+Well, thanks. 
+Try to have a good one.
+

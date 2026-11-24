@@ -1,0 +1,5255 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,800 --> 00:00:09,200
+All right. 
+Well, welcome everyone. 
+
+4
+00:00:09,200 --> 00:00:13,100
+Today, I'm excited to have with 
+us all the drug bomb and you 
+
+5
+00:00:13,700 --> 00:00:16,700
+we've interacted for over a 
+decade. 
+
+6
+00:00:16,800 --> 00:00:20,000
+You've been up here to Crested 
+Butte to the Java Posse round of
+
+7
+00:00:20,008 --> 00:00:24,900
+you said twice, right? 
+Why is yes. 2009-2012 - awesome 
+
+8
+00:00:25,300 --> 00:00:29,700
+and so great to have you on you,
+you work on the spring team, 
+
+9
+00:00:29,700 --> 00:00:32,200
+currently, right? 
+Yeah, thanks for having me in 
+
+10
+00:00:32,208 --> 00:00:34,600
+the first place. 
+Yeah, I've been an engineer in 
+
+11
+00:00:34,600 --> 00:00:38,900
+the springtime for over a decade
+now, so, I've done a couple of 
+
+12
+00:00:38,900 --> 00:00:41,200
+different things primarily the 
+spring data stuff. 
+
+13
+00:00:41,200 --> 00:00:44,100
+So all the repository 
+abstractions in there. 
+
+14
+00:00:45,300 --> 00:00:48,400
+That's been what I've done with 
+the a team of four or five 
+
+15
+00:00:48,400 --> 00:00:49,700
+people. 
+Now nice. 
+
+16
+00:00:49,800 --> 00:00:52,900
+But yeah, I have moved on into 
+some different topics 
+
+17
+00:00:52,900 --> 00:00:56,300
+architectural related topics 
+recently, right? 
+
+18
+00:00:57,200 --> 00:01:00,400
+And that's actually one of the 
+things that I'm really 
+
+19
+00:01:00,400 --> 00:01:04,500
+interested in kind of picking 
+your brain about because you've 
+
+20
+00:01:04,500 --> 00:01:08,500
+done lots of work in domain 
+Driven design. 
+
+21
+00:01:10,100 --> 00:01:14,600
+Yeah, so, I mean, the spring 
+data projects are the repository
+
+22
+00:01:14,600 --> 00:01:19,100
+abstraction like, like tightly 
+connects to that there is this 
+
+23
+00:01:19,200 --> 00:01:22,600
+concept of a repository, in 
+domain driven design, kind of, 
+
+24
+00:01:22,600 --> 00:01:25,900
+simulating a collection of 
+Aggregates basically, and being 
+
+25
+00:01:25,900 --> 00:01:31,400
+able to select a subset of those
+Aggregates through an API and we
+
+26
+00:01:31,600 --> 00:01:36,100
+built a Java programming model 
+around this, that's become 
+
+27
+00:01:36,100 --> 00:01:38,900
+pretty popular. 
+I think it's the third most 
+
+28
+00:01:39,100 --> 00:01:42,000
+Downloaded spring project like 
+we want me to system. 
+
+29
+00:01:42,200 --> 00:01:46,400
+Wow. 
+Okay, so to get started, I want 
+
+30
+00:01:46,400 --> 00:01:48,700
+first, I want to talk so this 
+mug. 
+
+31
+00:01:48,900 --> 00:01:50,400
+Yeah. 
+Which our listeners can't see 
+
+32
+00:01:50,400 --> 00:01:53,200
+but our listeners campus very 
+nice muggy but has your name on 
+
+33
+00:01:53,208 --> 00:01:57,800
+it has my name on it so what 
+happened and this was to the Sea
+
+34
+00:01:57,800 --> 00:02:05,400
+2013 so ten years ago OK and 
+Eric Evans invited a group of us
+
+35
+00:02:05,400 --> 00:02:08,800
+to what he called the DDD 
+Summit. 
+
+36
+00:02:09,100 --> 00:02:13,200
+And this was based on some of 
+the events that I had here in 
+
+37
+00:02:13,200 --> 00:02:16,900
+Crested Butte because Eric had 
+come to least a couple of them. 
+
+38
+00:02:16,900 --> 00:02:19,700
+And he said, oh, I want to do 
+something like, I see how it 
+
+39
+00:02:19,700 --> 00:02:21,400
+works. 
+I want to do something like that
+
+40
+00:02:21,400 --> 00:02:27,800
+around domain-driven design. 
+So, I went with Barry Hawkins, 
+
+41
+00:02:27,800 --> 00:02:33,000
+who least for a couple of years,
+worked with, Eric to try and, 
+
+42
+00:02:33,000 --> 00:02:36,600
+you know, turn domain-driven 
+design into. 
+
+43
+00:02:36,700 --> 00:02:39,300
+I think, I think, I mean, I 
+think they were looking Looking 
+
+44
+00:02:39,300 --> 00:02:43,400
+at creating a training and 
+consulting firm around it. 
+
+45
+00:02:43,800 --> 00:02:49,500
+And I think that what I came 
+away with was that Eric felt at 
+
+46
+00:02:49,500 --> 00:02:54,200
+the time that it just he was 
+disappointed that it hadn't 
+
+47
+00:02:54,500 --> 00:02:57,700
+gained traction really had the 
+time. 
+
+48
+00:02:57,700 --> 00:03:02,100
+It wasn't, you know, all this 
+his book, well his book had been
+
+49
+00:03:02,600 --> 00:03:05,700
+so this look like before this. 
+Oh yeah, the book had been out. 
+
+50
+00:03:06,100 --> 00:03:08,400
+It's sometimes it's po 2004 
+actually. 
+
+51
+00:03:08,400 --> 00:03:11,700
+Okay. 
+So It's a book for like 10 years
+
+52
+00:03:12,100 --> 00:03:16,100
+and it's like oh was it taken 
+off wasn't taken off and now 
+
+53
+00:03:16,100 --> 00:03:17,900
+let's do a summit. 
+Yeah, it was. 
+
+54
+00:03:18,000 --> 00:03:20,700
+Well, yeah. 
+Maybe that's what he was hoping 
+
+55
+00:03:20,700 --> 00:03:23,900
+for and and I think he did want 
+to ask, you know, all right. 
+
+56
+00:03:23,900 --> 00:03:26,400
+You know what's what should we 
+do about this? 
+
+57
+00:03:26,400 --> 00:03:29,100
+It's, you know, it's kind of 
+like maybe what John to goes has
+
+58
+00:03:29,100 --> 00:03:35,700
+been doing with Scala recently 
+and he he was just, you know, 
+
+59
+00:03:35,700 --> 00:03:39,500
+disappointed at its lack of 
+traction, but now Now, it seems 
+
+60
+00:03:39,500 --> 00:03:44,300
+like in the last couple of 
+years, probably longer people 
+
+61
+00:03:44,300 --> 00:03:47,000
+are all about domain driven 
+design. 
+
+62
+00:03:47,400 --> 00:03:51,700
+And can you tell us like first, 
+like, what is demand-driven? 
+
+63
+00:03:51,700 --> 00:03:55,000
+Well, yes, definitely what I 
+want to hear like what is, what 
+
+64
+00:03:55,000 --> 00:03:57,700
+is the basic? 
+Cuz why I read, you know, a 
+
+65
+00:03:57,700 --> 00:03:59,500
+little pieces of the book but 
+not this. 
+
+66
+00:03:59,500 --> 00:04:01,000
+I never really immersed myself 
+in it. 
+
+67
+00:04:01,000 --> 00:04:04,300
+So, you know, what problem are 
+you trying to solve with domain 
+
+68
+00:04:04,300 --> 00:04:08,100
+driven design? 
+So I can give you the story. 
+
+69
+00:04:08,100 --> 00:04:10,600
+How I discovered the Basically, 
+so it's not sure I think it's 
+
+70
+00:04:11,000 --> 00:04:14,100
+it's been like one of the books 
+that has most fundamentally 
+
+71
+00:04:14,100 --> 00:04:19,899
+changed, the way I look at 
+building software, or yeah, both
+
+72
+00:04:19,899 --> 00:04:24,000
+on the let's say higher level 
+point of view is like how which 
+
+73
+00:04:24,000 --> 00:04:27,000
+systems to build where the 
+boundary is, like, that kind of 
+
+74
+00:04:27,008 --> 00:04:30,200
+stuff. 
+And also on the, let's say more 
+
+75
+00:04:31,000 --> 00:04:35,300
+down to the code aspects, like 
+the content Concepts, and 
+
+76
+00:04:35,300 --> 00:04:37,900
+building blocks, he Eric 
+mentioned in the book. 
+
+77
+00:04:37,900 --> 00:04:43,100
+So it's Be two big Parts. 
+One being this strategic design 
+
+78
+00:04:43,100 --> 00:04:46,800
+which is all about, like, which 
+systems do you actually build? 
+
+79
+00:04:46,800 --> 00:04:50,200
+Like, what Scopes do you have 
+the famous bounded context 
+
+80
+00:04:50,200 --> 00:04:53,300
+notion, how they interact with 
+each other? 
+
+81
+00:04:53,300 --> 00:04:56,500
+How they relate to each other? 
+Like, who's controlling like 
+
+82
+00:04:56,600 --> 00:04:59,000
+certain parts of the model and 
+kind of person like 
+
+83
+00:04:59,000 --> 00:05:01,300
+architectural decisions. 
+Right? 
+
+84
+00:05:01,300 --> 00:05:05,500
+Exactly, so it's kind of that. 
+See that see bigger systems kind
+
+85
+00:05:05,500 --> 00:05:08,900
+of organization part of it. 
+The book. 
+
+86
+00:05:09,100 --> 00:05:11,900
+Ever starts with like the 
+concept of ubiquitous language. 
+
+87
+00:05:11,900 --> 00:05:17,300
+So trying to put the business 
+language into code and also 
+
+88
+00:05:17,300 --> 00:05:22,900
+describes a couple of patterns. 
+I'd say that you find in code 
+
+89
+00:05:23,200 --> 00:05:26,400
+that. 
+Yeah, which you kind of use to 
+
+90
+00:05:26,400 --> 00:05:29,100
+organize your code, Implement, 
+certain tasks or 
+
+91
+00:05:29,100 --> 00:05:32,600
+responsibilities, like, like, 
+scopes of consistency, and 
+
+92
+00:05:32,600 --> 00:05:34,700
+whatnot. 
+So, it's that's the technical 
+
+93
+00:05:34,800 --> 00:05:39,000
+design part and a lot of people 
+actually stop when, when they I 
+
+94
+00:05:39,008 --> 00:05:44,000
+passed this because the book is 
+pretty pretty big, actually, 
+
+95
+00:05:45,100 --> 00:05:50,000
+there's a lot of Concepts in it.
+So yeah people often just maybe 
+
+96
+00:05:50,000 --> 00:05:53,400
+take the easy ones and and I 
+have to admit I mean I've 
+
+97
+00:05:53,400 --> 00:05:56,900
+started as a junior developer 
+back in the days and those 
+
+98
+00:05:56,900 --> 00:05:59,500
+patterns were the things that 
+Drew me to the book because it 
+
+99
+00:05:59,500 --> 00:06:03,300
+was immediately useful for me in
+my day-to-day work, whereas the 
+
+100
+00:06:03,300 --> 00:06:06,900
+other stuff is kind of like, of 
+course, architectural stuff. 
+
+101
+00:06:06,900 --> 00:06:10,400
+That's important as well. 
+But as A day-to-day developer, 
+
+102
+00:06:11,000 --> 00:06:13,700
+you're kind of not really in the
+position, put in the position to
+
+103
+00:06:13,700 --> 00:06:16,000
+decide, okay? 
+We change the whole system's 
+
+104
+00:06:16,000 --> 00:06:18,100
+landscape organized teams around
+it. 
+
+105
+00:06:18,700 --> 00:06:21,900
+But hey, if I can improve the 
+code that I write to some 
+
+106
+00:06:21,900 --> 00:06:24,500
+degree, by applying these 
+patterns, that's a win in the 
+
+107
+00:06:24,508 --> 00:06:27,800
+first place, right? 
+And that's what kind of Drew me 
+
+108
+00:06:27,800 --> 00:06:31,200
+to the, to the Buddha's, almost 
+like a inherit scale to the 
+
+109
+00:06:31,200 --> 00:06:34,600
+problems that it's trying to 
+solve is that there are some 
+
+110
+00:06:34,600 --> 00:06:38,600
+things that apply to an 
+individual developer on a team. 
+
+111
+00:06:39,000 --> 00:06:41,800
+And can be very useful in that 
+context and then there's other 
+
+112
+00:06:41,800 --> 00:06:46,000
+Concepts that would apply kind 
+of more to some someone in a 
+
+113
+00:06:46,200 --> 00:06:50,200
+architecture role that is 
+working with many teams and 
+
+114
+00:06:50,200 --> 00:06:53,000
+thinking about the the system as
+a whole and that sort of thing 
+
+115
+00:06:53,000 --> 00:06:56,300
+that that it's exactly. 
+I mean it's a kind of a holistic
+
+116
+00:06:56,500 --> 00:07:00,300
+view or like approach to 
+software development and allows 
+
+117
+00:07:00,300 --> 00:07:03,400
+you to like depending on what 
+kind of your role is in an 
+
+118
+00:07:03,400 --> 00:07:07,600
+organization or as a consultant 
+and what kind of people you talk
+
+119
+00:07:07,600 --> 00:07:12,200
+to, you can always find Thing to
+kind of improve the current 
+
+120
+00:07:12,200 --> 00:07:15,300
+situation whether that's like a 
+messy code based and you try to 
+
+121
+00:07:15,300 --> 00:07:18,700
+like organize that a bit. 
+But if you like talking to teams
+
+122
+00:07:18,700 --> 00:07:22,800
+or the HR department, that had 
+this kind of setting up the 
+
+123
+00:07:22,800 --> 00:07:27,200
+teams to actually solve problems
+overall, then you rather like 
+
+124
+00:07:27,200 --> 00:07:31,100
+try to fine tune, those like, 
+with all the Conway's law stuff 
+
+125
+00:07:31,100 --> 00:07:32,200
+and what have you? 
+All right. 
+
+126
+00:07:32,200 --> 00:07:36,900
+So it's it's kind of, it's such 
+a big thing that you always find
+
+127
+00:07:36,900 --> 00:07:38,800
+something that you can take 
+forward to. 
+
+128
+00:07:39,200 --> 00:07:40,700
+Like improve the software you 
+build. 
+
+129
+00:07:40,800 --> 00:07:45,300
+So yeah. 
+So can you give us the essence 
+
+130
+00:07:45,900 --> 00:07:48,900
+of? 
+I mean I don't know maybe we 
+
+131
+00:07:48,900 --> 00:07:52,700
+should start at the individual 
+programmer level. 
+
+132
+00:07:52,700 --> 00:07:55,700
+How what? 
+How does that change? 
+
+133
+00:07:55,700 --> 00:08:01,700
+How what, what, what what 
+mindset changes do you 
+
+134
+00:08:01,700 --> 00:08:06,700
+experience when you're coding? 
+So what it did for me was that 
+
+135
+00:08:06,900 --> 00:08:09,300
+are they did a key piece. 
+Was that kind of you Have this 
+
+136
+00:08:09,300 --> 00:08:12,800
+ubiquitous language and to be 
+able to connect to the business 
+
+137
+00:08:12,800 --> 00:08:17,100
+and eventually provide value. 
+You have to talk the language of
+
+138
+00:08:17,100 --> 00:08:21,500
+the problem or the problem space
+and by that the people that are 
+
+139
+00:08:21,500 --> 00:08:26,800
+busy with the problem space. 
+So I was like really into naming
+
+140
+00:08:26,800 --> 00:08:29,000
+things right. 
+How do you find good names? 
+
+141
+00:08:29,000 --> 00:08:33,200
+How do you, how do you make sure
+that the gap between the problem
+
+142
+00:08:33,200 --> 00:08:38,400
+and the code is as small as 
+possible and that's kind of to 
+
+143
+00:08:38,400 --> 00:08:41,700
+find the Right. 
+Abstraction levels getting away 
+
+144
+00:08:41,700 --> 00:08:45,000
+from like technical Concepts to,
+let's say, more higher level 
+
+145
+00:08:45,000 --> 00:08:49,900
+Concepts, to be up, just because
+I was like the promise of 
+
+146
+00:08:49,900 --> 00:08:51,600
+object-oriented programming, 
+right? 
+
+147
+00:08:51,600 --> 00:08:55,700
+We can create our objects to 
+represent problem domain things.
+
+148
+00:08:55,700 --> 00:08:57,400
+Sure. 
+And I mean this different 
+
+149
+00:08:57,400 --> 00:09:00,800
+languages like give you 
+different opportunities to like 
+
+150
+00:09:00,800 --> 00:09:04,900
+do that right to build not 
+saying dsls but rather like 
+
+151
+00:09:04,900 --> 00:09:08,800
+write code that has has 
+expresses the the problem. 
+
+152
+00:09:09,000 --> 00:09:12,800
+Maine. 
+But this at least like in the 
+
+153
+00:09:12,800 --> 00:09:15,000
+code bases, that I've see at 
+customer projects. 
+
+154
+00:09:15,000 --> 00:09:18,300
+For example, there's often a lot
+of room for improvement to 
+
+155
+00:09:18,300 --> 00:09:22,000
+actually do that to just 
+basically name things better and
+
+156
+00:09:22,000 --> 00:09:24,200
+by that make things more 
+expressive. 
+
+157
+00:09:24,600 --> 00:09:29,500
+There is this this great talk by
+done, by Johnson the value 
+
+158
+00:09:29,500 --> 00:09:32,200
+objects talk. 
+I think if you Google it on this
+
+159
+00:09:32,200 --> 00:09:34,600
+end, one on in focal line and 
+put it in. 
+
+160
+00:09:34,600 --> 00:09:37,000
+In Tokyo has a recording. 
+I can find out the link. 
+
+161
+00:09:37,400 --> 00:09:40,900
+Basically takes it could be 
+that's very technical and driven
+
+162
+00:09:40,900 --> 00:09:44,800
+by Frameworks and what have you?
+It's about like money, exchange,
+
+163
+00:09:44,800 --> 00:09:48,400
+and exchange rates and he just 
+adds tiny things, like value 
+
+164
+00:09:48,400 --> 00:09:51,800
+objects to the code base and 
+ends up with a piece of code. 
+
+165
+00:09:51,800 --> 00:09:54,600
+That's just like reads. 
+Like the actual problem 
+
+166
+00:09:54,600 --> 00:09:56,600
+statement and that's even Java, 
+right? 
+
+167
+00:09:56,600 --> 00:09:59,700
+So it's kind of like it's not 
+like the most the most 
+
+168
+00:09:59,700 --> 00:10:04,200
+convenient language to build. 
+Let's say an API that's not like
+
+169
+00:10:04,200 --> 00:10:07,200
+with curly braces and what have 
+you you don't have all that 
+
+170
+00:10:07,200 --> 00:10:10,700
+powerful language soon? 
+X that you haven't Coughlin for 
+
+171
+00:10:10,700 --> 00:10:13,000
+it sounds. 
+All right, with making much more
+
+172
+00:10:13,000 --> 00:10:16,700
+shape. 
+The, the text that you have to 
+
+173
+00:10:16,700 --> 00:10:20,000
+write together data model and 
+there's who know more ceremony 
+
+174
+00:10:20,000 --> 00:10:22,500
+maybe in Java for ya. 
+De tomate. 
+
+175
+00:10:22,500 --> 00:10:23,900
+Right? 
+Well, now, when you say value 
+
+176
+00:10:23,900 --> 00:10:26,400
+object, is that could that be 
+like? 
+
+177
+00:10:26,400 --> 00:10:29,300
+Well for example, I mean, the 
+language is that I'm studying 
+
+178
+00:10:29,300 --> 00:10:33,500
+now have a focus on immutable 
+data structures. 
+
+179
+00:10:34,000 --> 00:10:37,700
+Is that is that what you would 
+call a value object? 
+
+180
+00:10:38,000 --> 00:10:41,800
+Yes, sure, I mean, It's like 
+representing domain Concepts 
+
+181
+00:10:41,800 --> 00:10:46,200
+that are values and that allow 
+you to like performed certain. 
+
+182
+00:10:46,800 --> 00:10:50,900
+I'm not not business operations.
+But again, speak the language of
+
+183
+00:10:50,900 --> 00:10:52,200
+the business. 
+Let's say that the classic 
+
+184
+00:10:52,200 --> 00:10:53,800
+example of an email address, 
+right? 
+
+185
+00:10:53,900 --> 00:10:56,000
+It's not just an arbitrary 
+string that you carry through 
+
+186
+00:10:56,000 --> 00:10:59,800
+the system, but it's actually it
+have followed some structure, it
+
+187
+00:10:59,800 --> 00:11:02,100
+has a local part. 
+It has a server part and you can
+
+188
+00:11:02,600 --> 00:11:04,500
+access those and you can do 
+things to that. 
+
+189
+00:11:04,500 --> 00:11:07,700
+And if you hand this over to 
+some other piece of code, that 
+
+190
+00:11:07,700 --> 00:11:10,900
+other piece of code can be Sure,
+that it's structurally an email 
+
+191
+00:11:10,900 --> 00:11:12,400
+address. 
+It's not just an arbitrary 
+
+192
+00:11:12,400 --> 00:11:16,400
+string but it's that particular 
+domain concept, right? 
+
+193
+00:11:16,400 --> 00:11:20,000
+So you don't have to validate it
+anymore, you get that. 
+
+194
+00:11:20,000 --> 00:11:23,700
+You actually just use the type 
+system to express the main 
+
+195
+00:11:23,700 --> 00:11:27,800
+concept so that the compiler 
+help you like check the 
+
+196
+00:11:28,400 --> 00:11:31,200
+correctness of your of your 
+application code and and the 
+
+197
+00:11:31,200 --> 00:11:35,800
+convey to people reading the 
+code, what the business-oriented
+
+198
+00:11:37,200 --> 00:11:41,000
+side of it is Look at this is 
+like strongly typed method 
+
+199
+00:11:41,000 --> 00:11:43,600
+parameters like string, first 
+name String, last name, String, 
+
+200
+00:11:43,700 --> 00:11:45,700
+email address. 
+And then you mix up the, the 
+
+201
+00:11:45,700 --> 00:11:49,700
+order of that stuff, I'd rather 
+have like explicit like name 
+
+202
+00:11:49,800 --> 00:11:51,700
+class or an email address class 
+or what. 
+
+203
+00:11:51,900 --> 00:11:57,500
+So the is the essence of this 
+that we have business needs that
+
+204
+00:11:57,500 --> 00:12:00,300
+we're trying to address. 
+How do we map those business 
+
+205
+00:12:00,300 --> 00:12:03,500
+needs to the code that we're 
+actually writing in a way that 
+
+206
+00:12:03,700 --> 00:12:07,100
+that has cohesion. 
+And it also sounds like what 
+
+207
+00:12:07,100 --> 00:12:11,300
+some people have been calling. 
+Data structure oriented design 
+
+208
+00:12:12,000 --> 00:12:14,600
+and that one because yeah, I 
+mean it's when you have the 
+
+209
+00:12:14,600 --> 00:12:16,800
+immutable data structures and 
+you go well, what should they 
+
+210
+00:12:16,800 --> 00:12:18,500
+be? 
+They should be something that 
+
+211
+00:12:18,500 --> 00:12:20,500
+relief. 
+Well, at least maybe my 
+
+212
+00:12:20,500 --> 00:12:23,500
+interpretation is they should 
+relate to the problem to me. 
+
+213
+00:12:23,800 --> 00:12:26,800
+So your data structure should be
+something somebody can look at 
+
+214
+00:12:26,800 --> 00:12:28,800
+and go. 
+Oh yeah that's those are the 
+
+215
+00:12:28,800 --> 00:12:32,600
+pieces that we want to 
+manipulate the data starts just 
+
+216
+00:12:32,800 --> 00:12:35,100
+like the term at least in the 
+Java world. 
+
+217
+00:12:35,100 --> 00:12:39,900
+It's a bit of a tricky one 
+because it's Data structures 
+
+218
+00:12:39,900 --> 00:12:42,300
+usually understood as something 
+where you have like Getters and 
+
+219
+00:12:42,300 --> 00:12:46,300
+Setters like this Java Bean 
+concept on it, which kind of is 
+
+220
+00:12:46,300 --> 00:12:49,800
+a bit. 
+Subverting the, some ideas of DD
+
+221
+00:12:49,800 --> 00:12:53,600
+because you wouldn't want to 
+expose those internal structures
+
+222
+00:12:53,800 --> 00:12:56,900
+to your calling code. 
+But rather basically capture 
+
+223
+00:12:56,900 --> 00:12:58,400
+State when you create an 
+instance. 
+
+224
+00:12:58,600 --> 00:13:02,700
+And then that instance is able 
+to answer questions around the 
+
+225
+00:13:02,700 --> 00:13:06,900
+domain rather than basically 
+handing out all the, the the 
+
+226
+00:13:07,300 --> 00:13:10,900
+values that it consists of So 
+capsulation idea. 
+
+227
+00:13:11,000 --> 00:13:13,600
+Exactly. 
+So that's also, a reason that 
+
+228
+00:13:13,600 --> 00:13:17,000
+records that have been like 
+right at it quite recently to 
+
+229
+00:13:17,000 --> 00:13:21,200
+the Java language they are a bit
+of a special thing here. 
+
+230
+00:13:21,200 --> 00:13:24,600
+So some people really dislike 
+them for exactly that that fact 
+
+231
+00:13:24,600 --> 00:13:28,000
+that they kind of says it goes 
+against what they including me, 
+
+232
+00:13:28,100 --> 00:13:32,100
+have been taught all this time 
+is, oh, you want to have 
+
+233
+00:13:32,100 --> 00:13:35,100
+variables inside of these data 
+structures and you want to 
+
+234
+00:13:35,108 --> 00:13:37,300
+protect them through 
+encapsulation etcetera. 
+
+235
+00:13:37,300 --> 00:13:41,200
+This idea of a record where The 
+thing is exposed is definitely a
+
+236
+00:13:41,200 --> 00:13:44,200
+mind shift, but once you see it,
+then you go. 
+
+237
+00:13:44,300 --> 00:13:47,800
+Oh yeah, we don't actually need 
+encapsulation. 
+
+238
+00:13:47,800 --> 00:13:51,900
+If you've got immutable data 
+structures, it's kind of a neat 
+
+239
+00:13:51,900 --> 00:13:55,000
+and need tool where you fall, 
+it's especially like these 
+
+240
+00:13:55,000 --> 00:13:57,300
+single value objects, like an 
+email address or what have you, 
+
+241
+00:13:57,500 --> 00:14:00,100
+where you at some point 
+especially at the boundaries of 
+
+242
+00:14:00,100 --> 00:14:02,200
+your application. 
+You need the raw value again, 
+
+243
+00:14:02,200 --> 00:14:04,300
+right? 
+If you wanted, like serialize it
+
+244
+00:14:04,300 --> 00:14:07,400
+into some Json or what have you 
+or have to actually put it into 
+
+245
+00:14:07,400 --> 00:14:12,700
+some database column? 
+But you you actually get or you 
+
+246
+00:14:12,700 --> 00:14:16,600
+are able to express the concept 
+in a very concise way so that 
+
+247
+00:14:16,600 --> 00:14:18,900
+you can then have that 
+particular type that you carry 
+
+248
+00:14:18,900 --> 00:14:23,100
+around that's matching the 
+business requirements of 
+
+249
+00:14:23,200 --> 00:14:26,800
+basically just the email address
+format whereas like before 
+
+250
+00:14:26,800 --> 00:14:31,400
+records you'd have to create a 
+class Final field. 
+
+251
+00:14:31,400 --> 00:14:35,100
+Constructor equals hashcode, 
+write all this down or let 
+
+252
+00:14:35,100 --> 00:14:40,300
+basically let have your IDE 
+Write this all into your, or 
+
+253
+00:14:40,300 --> 00:14:42,500
+using extended to go like and 
+whatever it is. 
+
+254
+00:14:42,600 --> 00:14:45,200
+That's causing a lot of 
+boilerplate hop and in turn 
+
+255
+00:14:45,200 --> 00:14:49,700
+cause people not like using 
+these classes because it's just 
+
+256
+00:14:49,700 --> 00:14:53,500
+so much boilerplate code, right?
+So factly, and it's leaking in. 
+
+257
+00:14:53,500 --> 00:14:57,200
+It's leaking. 
+Some of the system needs into 
+
+258
+00:14:57,200 --> 00:15:00,500
+the business domain space, which
+I think domain-driven design is 
+
+259
+00:15:00,500 --> 00:15:03,200
+trying to say that. 
+No, let's let's keep our 
+
+260
+00:15:03,200 --> 00:15:06,100
+business domain focused on the 
+business domain. 
+
+261
+00:15:06,400 --> 00:15:09,800
+And at Some point. 
+Yes, you need to take that 
+
+262
+00:15:09,800 --> 00:15:13,000
+object in, serialize it, and 
+there's different system needs 
+
+263
+00:15:13,000 --> 00:15:15,500
+that may come into play, but 
+let's keep that as like a 
+
+264
+00:15:15,500 --> 00:15:18,800
+separate concern. 
+Yeah. 
+
+265
+00:15:19,400 --> 00:15:21,900
+So it's, I guess it's kind of 
+you kind of have to get a feel 
+
+266
+00:15:21,900 --> 00:15:25,900
+for when using a record is like,
+or that record Concept in Java 
+
+267
+00:15:25,900 --> 00:15:28,600
+is the right thing for simple 
+values. 
+
+268
+00:15:28,600 --> 00:15:31,200
+It's perfectly fine. 
+Just that if you basically try 
+
+269
+00:15:31,200 --> 00:15:34,500
+to listen, you have your entire 
+customer modeled as a record 
+
+270
+00:15:34,900 --> 00:15:37,100
+just because it's immutable and 
+it's kind of still. 
+
+271
+00:15:37,200 --> 00:15:40,900
+Yeah. 
+No, it's a, it's a definitely a 
+
+272
+00:15:40,900 --> 00:15:44,700
+mental shift. 
+But once I mean, once I started 
+
+273
+00:15:44,700 --> 00:15:49,000
+seeing I'm going, oh yeah, of 
+course, of course, if I was to 
+
+274
+00:15:49,000 --> 00:15:56,300
+ever rewrite, one of my Java 
+books, it would be records 
+
+275
+00:15:56,400 --> 00:15:59,800
+unless you're forced to not use 
+records. 
+
+276
+00:15:59,800 --> 00:16:03,900
+And usually that's only an 
+efficiency issue. 
+
+277
+00:16:04,300 --> 00:16:11,700
+Yeah, so an example of this is 
+Maybe You you can I think often 
+
+278
+00:16:11,800 --> 00:16:16,100
+maybe pre domain-driven design 
+and and Adoption of that. 
+
+279
+00:16:16,800 --> 00:16:20,400
+Oftentimes, your data layer 
+would model how you needed to 
+
+280
+00:16:20,400 --> 00:16:23,200
+store the data in the database. 
+And somebody would look at your 
+
+281
+00:16:23,200 --> 00:16:25,600
+data layer and be like, if 
+somebody is looking at it from 
+
+282
+00:16:25,600 --> 00:16:28,400
+the business perspective, be 
+like, why is it organized like 
+
+283
+00:16:28,400 --> 00:16:30,200
+this? 
+And the answer would be? 
+
+284
+00:16:30,200 --> 00:16:32,800
+Oh that's because that's how the
+database needs it to be 
+
+285
+00:16:32,800 --> 00:16:37,100
+organized but in domain driven 
+design, you say, no, let's keep 
+
+286
+00:16:37,100 --> 00:16:40,000
+the layer. 
+For the business oriented 
+
+287
+00:16:40,500 --> 00:16:43,300
+totally around the business 
+needs and business domain. 
+
+288
+00:16:43,700 --> 00:16:48,300
+And then we can transform from 
+that layer to the the database. 
+
+289
+00:16:48,300 --> 00:16:51,100
+The way that the database needs 
+the data actually store, right? 
+
+290
+00:16:51,100 --> 00:16:53,600
+And if you use a different kind 
+of database, then you use, then 
+
+291
+00:16:53,600 --> 00:16:56,300
+you can change your triggering 
+condition hard water that having
+
+292
+00:16:56,300 --> 00:16:58,100
+to change into the structure. 
+Yeah. 
+
+293
+00:16:58,200 --> 00:17:01,100
+I guess that's the heart of what
+you just said, is the, she is 
+
+294
+00:17:01,100 --> 00:17:05,599
+like, hidden in these or is also
+represented in these like onion 
+
+295
+00:17:05,599 --> 00:17:08,599
+architecture and hexagonal. 
+Sir, approaches, where you have 
+
+296
+00:17:08,599 --> 00:17:12,300
+your core domain, that really 
+focuses on, like, trying to 
+
+297
+00:17:12,500 --> 00:17:16,400
+write as pure as possible code 
+that represents the domain. 
+
+298
+00:17:16,800 --> 00:17:20,800
+And then you have some kind of 
+adapters or rings in onion 
+
+299
+00:17:20,800 --> 00:17:24,800
+architecture, the translate that
+into like the infrastructure 
+
+300
+00:17:24,800 --> 00:17:29,700
+right into the database or the 
+UI, the way the wi or basically 
+
+301
+00:17:29,700 --> 00:17:35,200
+a. 
+So what now early I can't 
+
+302
+00:17:35,200 --> 00:17:38,200
+remember the phrase you use but 
+you were saying We want 
+
+303
+00:17:38,200 --> 00:17:43,300
+everything to map to, you know, 
+as much as possible to the 
+
+304
+00:17:43,300 --> 00:17:47,500
+business domain. 
+What about like in functional 
+
+305
+00:17:47,500 --> 00:17:50,100
+programming? 
+We have all of these kind of 
+
+306
+00:17:51,000 --> 00:17:54,800
+bowl for functional, its 
+low-level primitive, things like
+
+307
+00:17:54,900 --> 00:17:59,800
+the map and the fold, and the 
+things like that, which allow us
+
+308
+00:17:59,800 --> 00:18:06,000
+to not, or basically, it allows 
+for greater code reuse and 
+
+309
+00:18:06,000 --> 00:18:08,600
+greater reliability. 
+You know, we're not having to 
+
+310
+00:18:08,600 --> 00:18:11,300
+write everything by hand for 
+writing at a slightly higher 
+
+311
+00:18:11,300 --> 00:18:18,100
+level, but it does that. 
+Hmm, intrude, on some of the 
+
+312
+00:18:18,100 --> 00:18:21,100
+ideas and domain driven design, 
+or are they compatible? 
+
+313
+00:18:21,500 --> 00:18:24,500
+That's an interesting question, 
+because I've come across this 
+
+314
+00:18:24,500 --> 00:18:28,200
+quite a lot when I've seen 
+projects and awful. 
+
+315
+00:18:28,200 --> 00:18:31,700
+Also, like the projects I've 
+been in whooping, have used 
+
+316
+00:18:31,700 --> 00:18:33,500
+libraries called way or like 
+waiver. 
+
+317
+00:18:33,500 --> 00:18:34,700
+I'm not sure you've heard of 
+that. 
+
+318
+00:18:34,700 --> 00:18:38,300
+I do not feel like it's 
+basically they're trying to Um, 
+
+319
+00:18:38,900 --> 00:18:40,600
+transport. 
+Some of the concepts, you 
+
+320
+00:18:40,600 --> 00:18:45,500
+haven't scholar into Java like a
+try, monat, and okay, it kind of
+
+321
+00:18:45,700 --> 00:18:49,200
+it. 
+Nudges you to write a bit more, 
+
+322
+00:18:49,200 --> 00:18:54,400
+functional code in Java and I've
+used that in a couple of 
+
+323
+00:18:54,400 --> 00:18:58,500
+projects to to some success. 
+So it's all working fine. 
+
+324
+00:18:58,900 --> 00:19:04,400
+The effect it has on the code is
+a bit of a like a. 
+
+325
+00:19:04,600 --> 00:19:08,900
+I think I'm a bit torn on this 
+one because you Zeus a language.
+
+326
+00:19:08,900 --> 00:19:12,700
+That's familiar to us as 
+developers like, as you said, 
+
+327
+00:19:13,700 --> 00:19:16,900
+Bruce with, like the folds and 
+the maps and what have you? 
+
+328
+00:19:17,200 --> 00:19:19,400
+That's not necessarily the 
+language of the domain. 
+
+329
+00:19:19,400 --> 00:19:23,100
+In fact, it could even exactly 
+can even, it could even like 
+
+330
+00:19:23,200 --> 00:19:27,600
+Shadow concepts of the domain. 
+If you just a method of filter, 
+
+331
+00:19:27,900 --> 00:19:33,400
+like if you talk to a someone 
+from the chemistry domain right?
+
+332
+00:19:33,400 --> 00:19:37,200
+Is that when you say filter, do 
+you describe what you try to? 
+
+333
+00:19:37,600 --> 00:19:39,700
+Keep or what you want to let 
+through. 
+
+334
+00:19:39,900 --> 00:19:43,100
+So, it's cleaner inclusion. 
+This, that's it. 
+
+335
+00:19:43,100 --> 00:19:46,500
+That's a just having that 
+additional language in there. 
+
+336
+00:19:47,800 --> 00:19:51,000
+Can be like beneficial to people
+understanding that language and 
+
+337
+00:19:51,000 --> 00:19:53,900
+the technical language. 
+But at the same time it's also a
+
+338
+00:19:53,908 --> 00:19:57,200
+bit alien to business code to 
+some degree. 
+
+339
+00:19:57,200 --> 00:20:01,500
+So yes, that's really my 
+question that the names the 
+
+340
+00:20:01,500 --> 00:20:06,100
+names are oriented around the 
+actual like mathematical 
+
+341
+00:20:06,100 --> 00:20:08,500
+functions. 
+Mathematical Concepts not 
+
+342
+00:20:08,500 --> 00:20:11,400
+oriented around the business and
+yeah, because you talked about 
+
+343
+00:20:11,400 --> 00:20:14,500
+the common language, and so 
+that's what made me think, okay?
+
+344
+00:20:14,800 --> 00:20:18,800
+I mean really, yes, when you're 
+using the filter, you say, 
+
+345
+00:20:18,800 --> 00:20:21,500
+alright? 
+The essence of the filter is not
+
+346
+00:20:21,500 --> 00:20:26,800
+the action of filtering which is
+standardized and debugged but 
+
+347
+00:20:26,800 --> 00:20:30,200
+this little usually Lambda or 
+whatever function, we pass the 
+
+348
+00:20:30,200 --> 00:20:32,300
+describes, what we're filtering 
+for. 
+
+349
+00:20:32,700 --> 00:20:37,400
+And so that, you know, I think 
+you could say okay that's the 
+
+350
+00:20:37,600 --> 00:20:43,800
+Language of the domain but 
+you're just not used to having 
+
+351
+00:20:43,800 --> 00:20:48,400
+these these higher-level tools 
+that functional programming 
+
+352
+00:20:48,700 --> 00:20:52,700
+provides for you or the error 
+handling models. 
+
+353
+00:20:52,700 --> 00:20:55,000
+That functional programming. 
+I think they are handling. 
+
+354
+00:20:55,000 --> 00:20:57,800
+One is a really interesting 
+example because if in your 
+
+355
+00:20:57,800 --> 00:21:01,000
+domain model you're getting the 
+data from a database or a micro 
+
+356
+00:21:01,000 --> 00:21:05,300
+service or whatever then that's 
+something that may fail. 
+
+357
+00:21:05,600 --> 00:21:10,100
+And do you put like the Try 
+monad into your business domain.
+
+358
+00:21:10,100 --> 00:21:12,700
+When the business domain doesn't
+care at all that the thing 
+
+359
+00:21:12,700 --> 00:21:16,200
+failed, right? 
+It's just, and so that's, that's
+
+360
+00:21:16,200 --> 00:21:17,500
+it. 
+Seems like a place where it 
+
+361
+00:21:17,500 --> 00:21:21,000
+could easily leak in where 
+you're leaking in the actual 
+
+362
+00:21:21,000 --> 00:21:26,700
+technical details into the 
+business domain, what I found 
+
+363
+00:21:26,700 --> 00:21:30,300
+quite useful and it's often or 
+that's also actually coming from
+
+364
+00:21:30,300 --> 00:21:34,900
+Deedee and I see a lot of people
+like not doing. 
+
+365
+00:21:34,900 --> 00:21:40,000
+That is kind of modeling. 
+Is error scenarios as explicit 
+
+366
+00:21:40,000 --> 00:21:44,200
+as part of the domain, right? 
+So not trying to. 
+
+367
+00:21:44,200 --> 00:21:47,500
+Okay, there's an exception or 
+anything, or even that like a 
+
+368
+00:21:47,500 --> 00:21:51,400
+try, like an error result. 
+It just said, okay, the let's 
+
+369
+00:21:51,400 --> 00:21:54,600
+say the request, the account 
+request is just in some 
+
+370
+00:21:54,600 --> 00:22:00,300
+particular state that it that is
+like erroneous that that someone
+
+371
+00:22:00,300 --> 00:22:03,400
+has to look at it or we have to 
+perform so actions on it. 
+
+372
+00:22:03,400 --> 00:22:06,400
+But it's actually that error 
+state is a valid state within 
+
+373
+00:22:06,400 --> 00:22:09,200
+the application. 
+Right, within the software 
+
+374
+00:22:09,200 --> 00:22:12,100
+application of the contract 
+application, for example. 
+
+375
+00:22:13,200 --> 00:22:17,300
+So that often like does it as a 
+bit of a or is it was a bit of a
+
+376
+00:22:17,300 --> 00:22:21,700
+switch in how people can think 
+about stuff and not try to do? 
+
+377
+00:22:21,700 --> 00:22:24,200
+There's this exception that we 
+throw and then we handle this 
+
+378
+00:22:24,200 --> 00:22:27,400
+someplace and we just display a 
+message to the user and then 
+
+379
+00:22:28,100 --> 00:22:29,800
+they have to have to deal with 
+it. 
+
+380
+00:22:29,800 --> 00:22:33,900
+But rather, okay. 
+This thing is it has a new state
+
+381
+00:22:34,300 --> 00:22:35,800
+that represents a problem, 
+right? 
+
+382
+00:22:35,800 --> 00:22:37,300
+So next time, yeah. 
+Or you. 
+
+383
+00:22:37,500 --> 00:22:40,200
+Look something up. 
+Yeah, I mean, you look up the 
+
+384
+00:22:40,208 --> 00:22:42,700
+name of a user and that may not 
+exist. 
+
+385
+00:22:42,800 --> 00:22:46,100
+And that's a legitimate thing in
+your business domain. 
+
+386
+00:22:47,100 --> 00:22:53,600
+We thought go, we looked up the 
+user. 
+
+387
+00:22:53,800 --> 00:22:55,200
+Uh, no. 
+They don't have an account. 
+
+388
+00:22:55,200 --> 00:22:57,000
+Well, that's a totally 
+legitimate. 
+
+389
+00:22:57,300 --> 00:22:59,700
+The example, I usually give 
+there is like, if you have, 
+
+390
+00:22:59,700 --> 00:23:02,500
+let's say an e-commerce 
+application and you have to keep
+
+391
+00:23:02,500 --> 00:23:05,000
+track of stock of products, 
+right? 
+
+392
+00:23:05,200 --> 00:23:09,000
+And then there's of course this 
+easy way to Say, oh, I have four
+
+393
+00:23:09,000 --> 00:23:12,200
+TVs in my inventory, and someone
+wants to order five. 
+
+394
+00:23:12,200 --> 00:23:15,400
+So I throw an exception and 
+basically saying you can't order
+
+395
+00:23:15,400 --> 00:23:18,600
+these five TVs. 
+But what if we just like model 
+
+396
+00:23:18,600 --> 00:23:22,300
+this as like a perfectly valid 
+State and then draw some 
+
+397
+00:23:22,300 --> 00:23:25,300
+conclusions from that that that 
+overdrawn right? 
+
+398
+00:23:25,300 --> 00:23:30,400
+So basically say okay dear 
+people, we have to basically 
+
+399
+00:23:30,400 --> 00:23:33,700
+reorder stock, right? 
+So make turn this into a signal 
+
+400
+00:23:33,700 --> 00:23:39,000
+that after like you you cross a 
+certain threshold, You'd have to
+
+401
+00:23:39,700 --> 00:23:42,500
+do other business activity to 
+solve that problem. 
+
+402
+00:23:42,600 --> 00:23:44,900
+Cool. 
+So it's yeah when it seems like 
+
+403
+00:23:44,900 --> 00:23:48,600
+the the easy naive approach is 
+just a thread, the exception 
+
+404
+00:23:48,600 --> 00:23:52,500
+second, let the color deal with 
+it the but that's not 
+
+405
+00:23:52,600 --> 00:23:55,800
+necessarily in line with what 
+the business needs are because 
+
+406
+00:23:55,900 --> 00:23:58,600
+it could very well be that the 
+business actually wants the 
+
+407
+00:23:58,600 --> 00:24:02,100
+person to place that order and 
+actual that mean and that then 
+
+408
+00:24:02,100 --> 00:24:06,000
+they want to like you said have 
+other business strategies to 
+
+409
+00:24:06,000 --> 00:24:08,800
+then two then rectify. 
+The Oblem or something and 
+
+410
+00:24:09,100 --> 00:24:12,300
+that's exactly the point, right?
+We want to, I want to get the 
+
+411
+00:24:12,300 --> 00:24:16,900
+developers back to realizing, 
+oh, there is a, in this problem,
+
+412
+00:24:16,900 --> 00:24:19,500
+there's a business opportunity 
+or at least some discussion to 
+
+413
+00:24:19,500 --> 00:24:21,500
+be had via. 
+What should, what is the 
+
+414
+00:24:21,500 --> 00:24:23,700
+business want to do in this 
+scenario? 
+
+415
+00:24:23,800 --> 00:24:27,200
+Are we really reject that order 
+like and why and isn't there an 
+
+416
+00:24:27,200 --> 00:24:30,200
+opportunity for us to actually 
+improve? 
+
+417
+00:24:30,200 --> 00:24:34,900
+We can sell you three now and 
+then the others will come 
+
+418
+00:24:35,000 --> 00:24:37,300
+because we're going to order 
+them, you know? 
+
+419
+00:24:37,600 --> 00:24:45,800
+Yeah, I think this is it's so 
+valuable to in the world is 
+
+420
+00:24:45,800 --> 00:24:50,900
+shifted in for developers. 
+It used to be long ago. 20 years
+
+421
+00:24:50,900 --> 00:24:54,400
+ago, when I was writing a bunch 
+of Business Systems that there 
+
+422
+00:24:54,400 --> 00:24:58,100
+was the business, there is the 
+business analyst and then there 
+
+423
+00:24:58,100 --> 00:25:02,000
+was me the developer and that 
+business analyst was responsible
+
+424
+00:25:02,000 --> 00:25:05,300
+for translating discovering and 
+translating the requirements of 
+
+425
+00:25:05,300 --> 00:25:08,900
+the business to a specification.
+Haitian that then I would go 
+
+426
+00:25:08,900 --> 00:25:12,900
+Implement and it seems like that
+business analyst role has in 
+
+427
+00:25:12,900 --> 00:25:17,800
+some ways evaporated and now 
+it's the developer who is having
+
+428
+00:25:17,800 --> 00:25:20,300
+to understand what the business 
+needs are and Implement them 
+
+429
+00:25:20,300 --> 00:25:23,500
+more directly. 
+And maybe domain-driven design 
+
+430
+00:25:23,800 --> 00:25:29,400
+is the best way for developers 
+to create that cohesion. 
+
+431
+00:25:29,400 --> 00:25:33,300
+Cohesion across the movie Office
+Space was so pressing here 
+
+432
+00:25:33,300 --> 00:25:35,600
+because they have the guy who 
+kept explaining. 
+
+433
+00:25:35,800 --> 00:25:38,500
+Yeah. 
+I take the Quirements from the 
+
+434
+00:25:38,500 --> 00:25:41,400
+business people and then I bring
+him to the elevator to the 
+
+435
+00:25:41,400 --> 00:25:43,400
+developers. 
+There's your yeah, there's your 
+
+436
+00:25:43,400 --> 00:25:46,300
+analyst, there's your business. 
+Analyst, I have people skills 
+
+437
+00:25:47,600 --> 00:25:50,000
+and isn't that at the heart of 
+the like agile software 
+
+438
+00:25:50,000 --> 00:25:52,800
+development movement. 
+So it's like developers talking 
+
+439
+00:25:52,800 --> 00:25:56,500
+to business people and in 
+collaboration basically build 
+
+440
+00:25:56,500 --> 00:25:59,600
+stuff that's useful. 
+So, yeah, yeah, yeah. 
+
+441
+00:25:59,600 --> 00:26:05,100
+Instead of The throwing them 
+over the wall and saying, yeah, 
+
+442
+00:26:05,100 --> 00:26:08,700
+built this and wait, that's not 
+what I imagined that it was 
+
+443
+00:26:08,700 --> 00:26:11,100
+going to be exactly. 
+The reason why I think that role
+
+444
+00:26:11,100 --> 00:26:14,600
+has evaporated is because it was
+like the telephone game where 
+
+445
+00:26:14,700 --> 00:26:17,200
+there is this, you know, loss of
+information. 
+
+446
+00:26:17,200 --> 00:26:19,600
+As you worked through that 
+chain. 
+
+447
+00:26:19,800 --> 00:26:23,400
+And we've I think through agile 
+and demand driven design 
+
+448
+00:26:23,400 --> 00:26:27,400
+discovered that, oh, let's just 
+instead of playing the telephone
+
+449
+00:26:27,400 --> 00:26:30,000
+game, let's just have the 
+developers addressing that this 
+
+450
+00:26:30,000 --> 00:26:33,900
+will just give the Uppers, the 
+people skills to talk to the 
+
+451
+00:26:33,900 --> 00:26:37,100
+customers. 
+I mean, that's that's the role 
+
+452
+00:26:37,100 --> 00:26:41,400
+of modern business owners rights
+to, to Foster that translation 
+
+453
+00:26:41,400 --> 00:26:45,400
+and that communication. 
+And I think there's still room 
+
+454
+00:26:45,400 --> 00:26:49,300
+for that skill, especially as 
+like often developers are not 
+
+455
+00:26:49,300 --> 00:26:53,600
+that, that skill that and that 
+but in anyone awesome time, you 
+
+456
+00:26:53,600 --> 00:26:56,400
+got business. 
+Domains are incredibly complex. 
+
+457
+00:26:56,400 --> 00:26:58,600
+Sure. 
+And yeah, asking always asking 
+
+458
+00:26:58,600 --> 00:27:01,100
+the developers to fully 
+understand the business domain. 
+
+459
+00:27:01,300 --> 00:27:05,000
+Can has its own challenges. 
+Yeah, that's work. 
+
+460
+00:27:05,600 --> 00:27:09,500
+Yeah. 
+So did we miss any big pieces of
+
+461
+00:27:09,500 --> 00:27:11,600
+demand rig? 
+Well, no, I have a question. 
+
+462
+00:27:11,600 --> 00:27:14,300
+I have a question. 
+So I feel like we've mostly kind
+
+463
+00:27:14,300 --> 00:27:17,000
+of danced around the low level 
+stuff. 
+
+464
+00:27:17,200 --> 00:27:18,800
+Sure that. 
+Now, I want to know. 
+
+465
+00:27:18,800 --> 00:27:22,200
+All right, so from an 
+architectural standpoint, how do
+
+466
+00:27:22,200 --> 00:27:27,500
+you attack? 
+How do you approach a project 
+
+467
+00:27:27,500 --> 00:27:31,900
+from a DDD standpoint? 
+How do you like Like start 
+
+468
+00:27:31,900 --> 00:27:35,800
+architecting such a thing. 
+Well, that's a that's a broad 
+
+469
+00:27:35,800 --> 00:27:38,200
+question, right? 
+Because then you're depending on
+
+470
+00:27:38,200 --> 00:27:40,200
+like, what? 
+What kind of role you're in and 
+
+471
+00:27:40,200 --> 00:27:42,900
+like, what stuff you're looking 
+at, what what the context is in 
+
+472
+00:27:42,900 --> 00:27:44,500
+which you have to develop the 
+application? 
+
+473
+00:27:45,200 --> 00:27:49,300
+What I've what I usually do when
+I'm getting, like involved in 
+
+474
+00:27:49,300 --> 00:27:54,800
+customer projects and they they 
+asked me to help them architect.
+
+475
+00:27:54,800 --> 00:27:59,900
+Any kind of software is that I 
+let them present their 
+
+476
+00:27:59,900 --> 00:28:03,600
+functional decomposition. 
+In first, so like what are the 
+
+477
+00:28:03,600 --> 00:28:06,000
+big pieces? 
+That what was your what does 
+
+478
+00:28:06,000 --> 00:28:09,700
+your system look like from in 
+from like functional separation 
+
+479
+00:28:09,700 --> 00:28:13,200
+point of view, right? 
+You often get like C4 model 
+
+480
+00:28:13,200 --> 00:28:17,000
+architecture. 
+Diagrams from from Simon Browns 
+
+481
+00:28:17,400 --> 00:28:24,200
+C4 model, that is that one and 
+that kind of helps us like a way
+
+482
+00:28:24,200 --> 00:28:28,800
+to describe the business, the 
+the business objectives and what
+
+483
+00:28:28,800 --> 00:28:31,000
+they want from the system, or 
+what they've built with this. 
+
+484
+00:28:31,200 --> 00:28:35,800
+System, I guess I mean, I just 
+like basically started from the 
+
+485
+00:28:35,800 --> 00:28:38,400
+discussion from or there's an 
+existing system point of view, 
+
+486
+00:28:38,400 --> 00:28:39,700
+right? 
+If you want to help me 
+
+487
+00:28:40,200 --> 00:28:43,300
+understand that if you start 
+from scratch, then I of course, 
+
+488
+00:28:43,300 --> 00:28:46,100
+think you have to look at the 
+organization and their what kind
+
+489
+00:28:46,100 --> 00:28:49,000
+of teams you already have, and 
+what are they working on? 
+
+490
+00:28:49,500 --> 00:28:53,300
+That might give you not like an 
+ideal situation, but just at the
+
+491
+00:28:53,300 --> 00:28:57,000
+state of the of the system you 
+have and then the question is, 
+
+492
+00:28:57,000 --> 00:28:58,400
+okay, what do we actually want 
+to build? 
+
+493
+00:28:58,500 --> 00:29:00,000
+Right? 
+So what's, what's the kind of 
+
+494
+00:29:00,000 --> 00:29:02,600
+thing? 
+What, what business value do we 
+
+495
+00:29:02,600 --> 00:29:05,000
+want to provide? 
+And how does that fit in fit 
+
+496
+00:29:05,000 --> 00:29:09,200
+into the current Arrangement? 
+Because, I mean, so you're out 
+
+497
+00:29:09,200 --> 00:29:12,900
+of work and so we have it on 
+ways law then, yeah, I mean it's
+
+498
+00:29:12,900 --> 00:29:14,600
+you try to align with that, 
+right? 
+
+499
+00:29:14,600 --> 00:29:19,200
+Because there's no point in in 
+being at odds with that and 
+
+500
+00:29:19,200 --> 00:29:23,200
+there's hardly any real 
+Greenfield development and all 
+
+501
+00:29:23,200 --> 00:29:25,500
+anywhere. 
+Because I mean, just a week 
+
+502
+00:29:25,500 --> 00:29:28,400
+after he started and you kind of
+just changed a lot of your 
+
+503
+00:29:28,400 --> 00:29:31,400
+Greenfield. 
+Yeah, but that's kind of Dove. 
+
+504
+00:29:31,400 --> 00:29:36,200
+That's kind of the the the idea 
+here and and it's of course it's
+
+505
+00:29:36,200 --> 00:29:37,600
+a process, right? 
+It's not something you. 
+
+506
+00:29:37,600 --> 00:29:40,900
+Oh here's the thing. 
+The way you do that it's you 
+
+507
+00:29:40,900 --> 00:29:44,500
+could there's like Brenda Leigh 
+I better bone really nice event 
+
+508
+00:29:44,500 --> 00:29:47,000
+stalling right to understand 
+what the business is doing and 
+
+509
+00:29:47,000 --> 00:29:51,600
+then trying to find those those 
+individual pieces, get to the 
+
+510
+00:29:51,600 --> 00:29:56,400
+bounded context, basically areas
+of business of the business 
+
+511
+00:29:56,400 --> 00:30:00,900
+domain that have to be 
+conflict-free in terms of the 
+
+512
+00:30:00,900 --> 00:30:03,600
+language. 
+Which so when I say order and 
+
+513
+00:30:03,600 --> 00:30:07,500
+you say or do we mean the same 
+thing but if Bruce says order e,
+
+514
+00:30:07,500 --> 00:30:11,300
+might mean something different 
+and then you kind of feel, get a
+
+515
+00:30:11,300 --> 00:30:15,400
+feel for where the boundaries 
+are or where you could put them 
+
+516
+00:30:15,400 --> 00:30:21,200
+in place reasonably well. 
+So, because it's especially if 
+
+517
+00:30:21,200 --> 00:30:24,500
+you're new to a domain then it's
+always like a bit of guesswork 
+
+518
+00:30:24,500 --> 00:30:30,500
+involved and then it's just, I 
+guess a question of how to 
+
+519
+00:30:30,500 --> 00:30:33,500
+establish Publish the boundaries
+in a way that they that you can 
+
+520
+00:30:33,500 --> 00:30:36,400
+basically good fences. 
+Make good neighbors, right? 
+
+521
+00:30:36,400 --> 00:30:41,900
+You put them in in place first 
+but might be able to also tweak 
+
+522
+00:30:41,900 --> 00:30:48,300
+and alter them in, like, in a 
+reasonable way so that it's not 
+
+523
+00:30:48,300 --> 00:30:52,300
+as expensive. 
+So so an example, the select the
+
+524
+00:30:52,300 --> 00:30:58,100
+order one is that if you if you 
+don't Define your boundaries and
+
+525
+00:30:58,800 --> 00:31:02,000
+the context that you're the 
+everyone Seeing different things
+
+526
+00:31:02,000 --> 00:31:04,000
+through. 
+Ultimately, what you're going to
+
+527
+00:31:04,008 --> 00:31:07,900
+get is an order object that some
+of the fields are for this 
+
+528
+00:31:07,900 --> 00:31:10,100
+business unit, some of the 
+fields are for this business 
+
+529
+00:31:10,100 --> 00:31:13,100
+unit and some of the fields are 
+for this business unit and 
+
+530
+00:31:13,100 --> 00:31:15,600
+domain driven design, would 
+maybe say that that's a red flag
+
+531
+00:31:15,600 --> 00:31:18,100
+that you haven't bounded the 
+context. 
+
+532
+00:31:18,100 --> 00:31:22,600
+Well, so the I mean, the example
+is pretty great because the 
+
+533
+00:31:22,900 --> 00:31:26,700
+because you if you naively, look
+at this stuff and I mean, I've 
+
+534
+00:31:26,700 --> 00:31:30,600
+been guilty or I am still guilty
+of this myself, because when I 
+
+535
+00:31:30,600 --> 00:31:33,500
+built it, Example projects, they
+are usually very simplistic, 
+
+536
+00:31:33,500 --> 00:31:35,200
+right? 
+And then you have your order, 
+
+537
+00:31:35,200 --> 00:31:37,800
+and then you have your inventory
+and then you have your catalog 
+
+538
+00:31:37,800 --> 00:31:41,100
+with your products. 
+So it's very entity Centric and 
+
+539
+00:31:41,100 --> 00:31:43,500
+you're very, because that's 
+okay. 
+
+540
+00:31:43,500 --> 00:31:45,500
+The, my domain is very simple, 
+right? 
+
+541
+00:31:45,500 --> 00:31:48,400
+My product has a price and 
+that's it. 
+
+542
+00:31:48,700 --> 00:31:52,000
+Whereas, in the real world it 
+just isn't as simple. 
+
+543
+00:31:52,000 --> 00:31:56,200
+Right pricing is can be the most
+complex thing in the world. 
+
+544
+00:31:56,200 --> 00:31:59,400
+And you have, like, tons of 
+different aspects playing into 
+
+545
+00:31:59,400 --> 00:32:02,100
+this. 
+And then the entire Pricing and 
+
+546
+00:32:02,100 --> 00:32:07,900
+product thing could become a 
+separate bounded context the 
+
+547
+00:32:07,900 --> 00:32:10,800
+for. 
+It's usually like shipment and 
+
+548
+00:32:11,000 --> 00:32:15,600
+invoicing that all touch order 
+and customer to some degree, 
+
+549
+00:32:15,600 --> 00:32:17,500
+right? 
+They all have a different 
+
+550
+00:32:17,600 --> 00:32:20,700
+particular view on the order, 
+right? 
+
+551
+00:32:20,800 --> 00:32:22,900
+Invoicing is interested in tax 
+rates. 
+
+552
+00:32:22,900 --> 00:32:27,200
+Shipment is interested in the 
+dimensions of the product boxes 
+
+553
+00:32:27,200 --> 00:32:29,100
+or what have you but not in tax 
+rates. 
+
+554
+00:32:29,100 --> 00:32:33,500
+So you've Edit out the different
+different teams within an 
+
+555
+00:32:33,500 --> 00:32:36,600
+organization, they're going to 
+have different needs on what an 
+
+556
+00:32:36,600 --> 00:32:39,300
+order is to them. 
+And so, and so and domain-driven
+
+557
+00:32:39,300 --> 00:32:44,700
+design, you you design, you 
+don't, you don't try to 
+
+558
+00:32:44,800 --> 00:32:48,800
+assimilate all that into a uber 
+order object. 
+
+559
+00:32:48,900 --> 00:32:52,300
+You instead say this is the 
+order object for what this team 
+
+560
+00:32:52,300 --> 00:32:54,200
+needs, and this is the order 
+object for what this team. 
+
+561
+00:32:54,200 --> 00:32:58,300
+Well, I would think there would 
+also be an essence of an order 
+
+562
+00:32:58,600 --> 00:33:05,200
+object that is going to be this 
+Same common for every team and 
+
+563
+00:33:05,200 --> 00:33:10,000
+then when they get that, they go
+all embedded in our thing and 
+
+564
+00:33:10,000 --> 00:33:12,300
+we'll do our stuff with it. 
+And then when we're ready to 
+
+565
+00:33:12,300 --> 00:33:16,500
+pass it on, we just take the 
+embedded part and pass it on to 
+
+566
+00:33:16,500 --> 00:33:20,900
+you is that it usually is like 
+one of these like systems or 
+
+567
+00:33:21,000 --> 00:33:24,100
+like parts of the system that 
+kind of establish the identity 
+
+568
+00:33:24,100 --> 00:33:27,600
+of something and then the other 
+like systems or parts of the 
+
+569
+00:33:27,608 --> 00:33:30,900
+system, refer to that identity 
+so that you can of course go. 
+
+570
+00:33:31,000 --> 00:33:33,900
+Correlate. 
+The different ideas of an order.
+
+571
+00:33:33,900 --> 00:33:36,900
+Quote-unquote to the same 
+logical thing. 
+
+572
+00:33:38,100 --> 00:33:41,500
+But I've seen like projects 
+where you didn't have even have 
+
+573
+00:33:41,500 --> 00:33:43,800
+like any kind of shared 
+information at all. 
+
+574
+00:33:43,800 --> 00:33:46,700
+It's just like all just an 
+identifier and then everyone 
+
+575
+00:33:46,700 --> 00:33:52,200
+else has their has their the 
+info that they need and then 
+
+576
+00:33:52,200 --> 00:33:55,600
+just like in and eventually 
+consistent way exchange. 
+
+577
+00:33:55,900 --> 00:34:00,100
+Oh, I've done an update to some 
+to that thing that I have and 
+
+578
+00:34:00,100 --> 00:34:03,400
+everyone else is just Pulling 
+out the things that the aspects 
+
+579
+00:34:03,400 --> 00:34:05,600
+that they, that they are 
+interested in because they're 
+
+580
+00:34:06,000 --> 00:34:08,600
+usually, of course, is some 
+overlap that doesn't necessarily
+
+581
+00:34:08,600 --> 00:34:11,900
+mean that you have to kind of 
+use a shared data structure or 
+
+582
+00:34:11,900 --> 00:34:14,500
+anything like that. 
+And all of this should be 
+
+583
+00:34:14,500 --> 00:34:17,500
+tangential to the actual storage
+mechanism. 
+
+584
+00:34:17,500 --> 00:34:20,300
+That's required by different 
+parts of the system. 
+
+585
+00:34:20,600 --> 00:34:27,000
+So I think that that's probably 
+an important shift for me, and 
+
+586
+00:34:27,000 --> 00:34:30,600
+what I've gone through is I 
+would initially long ago. 
+
+587
+00:34:31,000 --> 00:34:34,100
+Design a system about how I 
+wanted to store the data. 
+
+588
+00:34:34,300 --> 00:34:37,300
+And with domain driven design, 
+it says, no start with the 
+
+589
+00:34:37,300 --> 00:34:42,000
+business needs and then and then
+figure out how each piece of 
+
+590
+00:34:42,000 --> 00:34:44,300
+that needs to actually store the
+data or pass it to another 
+
+591
+00:34:44,300 --> 00:34:46,900
+system or whatever may be 
+present. 
+
+592
+00:34:47,000 --> 00:34:50,199
+Because if you do that you can 
+then actually do what you wanted
+
+593
+00:34:50,199 --> 00:34:53,699
+to do in the first place. 
+Choose the best data store for 
+
+594
+00:34:53,699 --> 00:34:55,900
+the problem at hand. 
+Yeah it's so whether it's a 
+
+595
+00:34:56,199 --> 00:34:59,100
+relational database, some 
+documents to our graph database.
+
+596
+00:34:59,100 --> 00:35:01,700
+If you have two recommendations,
+What have you? 
+
+597
+00:35:01,700 --> 00:35:07,000
+So the argument is as which is, 
+I came across this recently 
+
+598
+00:35:07,000 --> 00:35:10,500
+because the argument is oh, well
+this allows you to change the 
+
+599
+00:35:10,500 --> 00:35:16,400
+database and people were going, 
+you know what, that never 
+
+600
+00:35:16,400 --> 00:35:18,800
+happens. 
+Yeah, so that's not a good but 
+
+601
+00:35:18,800 --> 00:35:22,400
+it sounds like it's a the better
+argument is okay, we're 
+
+602
+00:35:22,400 --> 00:35:27,200
+abstracting that away so that we
+don't get muddled up with those 
+
+603
+00:35:27,200 --> 00:35:30,900
+details when we're talking about
+the concepts from the business. 
+
+604
+00:35:31,000 --> 00:35:34,000
+Is standpoint. 
+It really seems like we're 
+
+605
+00:35:34,100 --> 00:35:40,600
+trying to bring programmers away
+from all the you know low-level 
+
+606
+00:35:40,600 --> 00:35:44,900
+stuff that they think about in 
+terms of solving this problem 
+
+607
+00:35:44,900 --> 00:35:48,500
+and just educating them in. 
+Hey, you're solving a real 
+
+608
+00:35:48,500 --> 00:35:51,700
+problem for real person and we 
+should keep. 
+
+609
+00:35:51,700 --> 00:35:55,800
+We should talk about that 
+problem in those context and it 
+
+610
+00:35:55,800 --> 00:35:58,300
+seems like that's kind of what 
+it is. 
+
+611
+00:35:58,600 --> 00:36:01,900
+That mean that this coupling 
+decoupling Russian is something 
+
+612
+00:36:01,900 --> 00:36:05,800
+that comes up in a lot of 
+discussions, I have with teams 
+
+613
+00:36:05,800 --> 00:36:10,400
+because of course, I mean, there
+is this, this notion in domain 
+
+614
+00:36:10,400 --> 00:36:14,100
+driven design that you had that 
+discusses, before that you want 
+
+615
+00:36:14,100 --> 00:36:16,700
+to like be in. 
+Do you have your pure domain 
+
+616
+00:36:16,700 --> 00:36:20,100
+code and then you would want to 
+add at the boundaries of your 
+
+617
+00:36:20,100 --> 00:36:22,500
+application. 
+You kind of map that into some 
+
+618
+00:36:22,500 --> 00:36:26,800
+infrastructure right into some 
+database at the same time and 
+
+619
+00:36:26,900 --> 00:36:30,000
+onion architecture, for example,
+kind of suggests that you have 
+
+620
+00:36:30,000 --> 00:36:32,900
+this outer ring. 
+NG and then in that ring you 
+
+621
+00:36:32,900 --> 00:36:37,200
+have your apis that produce 
+Jason and you have your database
+
+622
+00:36:37,200 --> 00:36:39,300
+that that's a map onto a 
+database table. 
+
+623
+00:36:40,800 --> 00:36:44,300
+I don't really like that picture
+too much because there's a 
+
+624
+00:36:44,300 --> 00:36:48,500
+significant difference in the 
+translation mechanisms, as you 
+
+625
+00:36:48,500 --> 00:36:55,000
+said, Bruce in recent 
+applications, The application 
+
+626
+00:36:55,000 --> 00:36:57,800
+team usually also owns the data 
+store, right? 
+
+627
+00:36:57,800 --> 00:37:02,400
+And there is a there is a direct
+connection or you can actually 
+
+628
+00:37:02,400 --> 00:37:05,300
+make a more direct connection to
+that data store. 
+
+629
+00:37:05,500 --> 00:37:08,800
+You can simplify the mapping you
+couldn't even, let's say, go 
+
+630
+00:37:08,800 --> 00:37:12,500
+ahead and avoid an intimate 
+intimate, an additional layer of
+
+631
+00:37:12,500 --> 00:37:16,200
+mapping because that all also 
+comes with with complexity. 
+
+632
+00:37:17,300 --> 00:37:19,400
+Whereas let's say for the API, 
+right? 
+
+633
+00:37:19,400 --> 00:37:22,300
+If you, if you expose something 
+to third parties, you're not 
+
+634
+00:37:22,300 --> 00:37:25,600
+controlling that Model right. 
+That that thing. 
+
+635
+00:37:25,600 --> 00:37:27,800
+And you can't like arbitrarily 
+change it. 
+
+636
+00:37:27,900 --> 00:37:32,100
+Whereas if I have a customer and
+the customer has a first name. 
+
+637
+00:37:32,100 --> 00:37:38,700
+And the last name, then I want 
+to have my table to have a 
+
+638
+00:37:38,700 --> 00:37:40,400
+customer and the last name 
+field. 
+
+639
+00:37:40,700 --> 00:37:44,400
+I don't want any kind of mapping
+in between so that the thing in 
+
+640
+00:37:44,400 --> 00:37:46,700
+the database could be called 
+something different because 
+
+641
+00:37:46,700 --> 00:37:50,700
+that's all just like cognitive 
+overload that I have to deal 
+
+642
+00:37:50,700 --> 00:37:53,100
+with then, right? 
+So I want these models to be 
+
+643
+00:37:53,600 --> 00:37:58,100
+Clothes from, from some point of
+view, I still want to make sure 
+
+644
+00:37:58,100 --> 00:38:03,500
+that I can use my domain code 
+without the database running 
+
+645
+00:38:03,500 --> 00:38:06,800
+without the database in place. 
+But that's a different. 
+
+646
+00:38:06,800 --> 00:38:09,800
+That's a different kind of 
+aspect of the decoupling like 
+
+647
+00:38:09,800 --> 00:38:13,300
+discussion, right? 
+And I definitely think that you 
+
+648
+00:38:13,300 --> 00:38:16,400
+can have different trade-offs, 
+depending on whether it's the 
+
+649
+00:38:16,400 --> 00:38:18,100
+target. 
+The target model is something 
+
+650
+00:38:18,100 --> 00:38:21,900
+that you control or something 
+that you don't control in the 
+
+651
+00:38:22,300 --> 00:38:26,100
+API case for which It probably 
+makes makes a bit of sense to 
+
+652
+00:38:26,100 --> 00:38:30,100
+have an additional mapping step 
+in between, but at the same 
+
+653
+00:38:30,100 --> 00:38:32,500
+time, of course, if you have the
+customer has a first name and a 
+
+654
+00:38:32,508 --> 00:38:36,100
+last name, there will be a first
+name and the last name field in 
+
+655
+00:38:36,100 --> 00:38:37,800
+the in the Json representation. 
+Right? 
+
+656
+00:38:37,800 --> 00:38:41,600
+So yeah, it's kind of a, it's a 
+more subtle discussion in like, 
+
+657
+00:38:41,600 --> 00:38:44,900
+oh we our domain is pure. 
+And then we decouple this 
+
+658
+00:38:44,900 --> 00:38:50,000
+completely from our database 
+because you're too far with with
+
+659
+00:38:50,000 --> 00:38:54,800
+trying to create isolation when 
+you may not need it. 
+
+660
+00:38:54,800 --> 00:38:56,900
+Yeah. 
+And it's basically it took this 
+
+661
+00:38:56,900 --> 00:39:00,500
+off from from Bruce comment 
+about the we want to exchange 
+
+662
+00:39:00,500 --> 00:39:03,300
+the debate was new Bruce or was 
+it oh, you might change the 
+
+663
+00:39:03,300 --> 00:39:05,700
+database and that's hot. 
+That's not. 
+
+664
+00:39:05,700 --> 00:39:07,100
+Not really, it's not going to 
+happen. 
+
+665
+00:39:07,100 --> 00:39:09,200
+Anyway. 
+And if you, if you'd build your 
+
+666
+00:39:09,200 --> 00:39:12,800
+system in that way, then you're 
+also losing out a lot on the 
+
+667
+00:39:12,800 --> 00:39:15,800
+actual capabilities of the 
+specialized thing that you 
+
+668
+00:39:15,800 --> 00:39:17,700
+actually selected in the first 
+place, right? 
+
+669
+00:39:17,700 --> 00:39:21,800
+You select the graph database 
+because you want to make use of 
+
+670
+00:39:21,800 --> 00:39:25,200
+the nature of the store. 
+It's a Architectural decision. 
+
+671
+00:39:25,600 --> 00:39:27,800
+Exactly. 
+Yeah and it's not something, I 
+
+672
+00:39:27,808 --> 00:39:30,400
+mean you could change, you could
+argue that you would want to 
+
+673
+00:39:30,500 --> 00:39:35,100
+exchange one graph database. 
+Another one, relational database
+
+674
+00:39:35,100 --> 00:39:39,700
+for another. 
+But if that's the, if activities
+
+675
+00:39:39,700 --> 00:39:46,200
+like these are, or if these are 
+the main tasks, you have to 
+
+676
+00:39:46,200 --> 00:39:49,700
+perform on a day-to-day basis, 
+you're not probably going to 
+
+677
+00:39:49,700 --> 00:39:52,000
+earn any money, right? 
+So yeah, that's not that's not 
+
+678
+00:39:52,000 --> 00:39:55,600
+the different business value. 
+We optimize for having it about 
+
+679
+00:39:55,600 --> 00:39:58,000
+their own, being able to ship 
+features, right? 
+
+680
+00:39:58,000 --> 00:40:02,900
+That's that's kind of the thing.
+So, I want to shift to 
+
+681
+00:40:02,900 --> 00:40:05,400
+microservices in monoliths, but 
+I think there's any connection 
+
+682
+00:40:05,400 --> 00:40:08,700
+here, because, on Twitter, or 
+last, I don't know. 
+
+683
+00:40:08,700 --> 00:40:12,400
+A few weeks there's been again, 
+the monolith versus 
+
+684
+00:40:12,400 --> 00:40:15,500
+microservices thing has come up,
+and it seems to be an ongoing 
+
+685
+00:40:15,500 --> 00:40:18,700
+debate, but I'm curious on is 
+from your perspective. 
+
+686
+00:40:18,700 --> 00:40:22,000
+How does domain-driven design 
+impact, the architectural 
+
+687
+00:40:22,000 --> 00:40:26,100
+decisions around For versus 
+micro Services is there, is 
+
+688
+00:40:26,100 --> 00:40:28,600
+there a valuable connection 
+here, are they to kind of 
+
+689
+00:40:28,600 --> 00:40:31,100
+separate things to think about, 
+mmm? 
+
+690
+00:40:32,100 --> 00:40:36,600
+I mean, there are a couple of 
+things in, in domain, driven 
+
+691
+00:40:36,600 --> 00:40:43,100
+design, couple of Concepts that 
+guide the, the potencial 
+
+692
+00:40:43,100 --> 00:40:48,700
+separation of logical system 
+into different logical Parts, 
+
+693
+00:40:48,700 --> 00:40:52,600
+like bound contexts on top. 
+As we discussed already, they 
+
+694
+00:40:52,600 --> 00:40:54,500
+are. 
+There's a tip of a module, 
+
+695
+00:40:54,500 --> 00:40:58,100
+that's kind of a subdivision of 
+a bounded context. 
+
+696
+00:40:58,100 --> 00:41:01,400
+So each part of context can 
+consist of different logical 
+
+697
+00:41:01,400 --> 00:41:05,300
+modules that he'll just help you
+to define something that's 
+
+698
+00:41:05,400 --> 00:41:08,200
+hidden inside and something 
+that's exposed to other modules.
+
+699
+00:41:08,200 --> 00:41:11,300
+And then you can get to these 
+kind of cohesive elements. 
+
+700
+00:41:12,500 --> 00:41:18,800
+There's domain-driven design, 
+does not like form an opinion on
+
+701
+00:41:18,800 --> 00:41:23,400
+what to map those to those 
+logical Concepts to. 
+
+702
+00:41:23,600 --> 00:41:26,300
+Whether a bounded context is 
+supposed to be a sister, a 
+
+703
+00:41:26,308 --> 00:41:30,200
+separate process, it could be a 
+build module, it could be 
+
+704
+00:41:30,200 --> 00:41:32,700
+whatever, module could be a Java
+package or something. 
+
+705
+00:41:32,700 --> 00:41:36,900
+If we're sticking to Java that 
+the that's that's based that's 
+
+706
+00:41:36,900 --> 00:41:40,100
+exactly or that's actually 
+architectural work right to 
+
+707
+00:41:40,100 --> 00:41:45,600
+decide like what physical 
+abstractions if you if we can 
+
+708
+00:41:45,600 --> 00:41:51,900
+talk about yeah physics in in 
+software or physical physical 
+
+709
+00:41:51,900 --> 00:41:55,500
+world. 
+But on each of these like levels
+
+710
+00:41:55,500 --> 00:41:59,300
+processes build modules, let's 
+say something smaller, like 
+
+711
+00:41:59,300 --> 00:42:03,000
+packages, you just you have live
+on with with different 
+
+712
+00:42:03,000 --> 00:42:06,400
+trade-offs of what you can on 
+cannot do anymore. 
+
+713
+00:42:07,500 --> 00:42:13,800
+And first example this let's say
+that you're designing a system 
+
+714
+00:42:13,800 --> 00:42:16,500
+and you've got inventory and 
+order. 
+
+715
+00:42:16,500 --> 00:42:20,800
+I think that's a good system and
+you you design it where that is 
+
+716
+00:42:20,900 --> 00:42:26,000
+all within a bounded context and
+Then in your implementation, you
+
+717
+00:42:26,000 --> 00:42:30,400
+end up having in the same 
+relational database tables, that
+
+718
+00:42:30,400 --> 00:42:33,500
+represent both of those things. 
+And in some pieces, your 
+
+719
+00:42:33,500 --> 00:42:39,000
+application you do database join
+across those two tables that 
+
+720
+00:42:39,600 --> 00:42:42,300
+breaking those two things out 
+into separate. 
+
+721
+00:42:42,300 --> 00:42:46,800
+Microservices becomes really 
+challenging and I think that 
+
+722
+00:42:46,800 --> 00:42:50,700
+maybe owner production. 
+Yeah, part of the value of 
+
+723
+00:42:50,700 --> 00:42:54,300
+domain driven design in this is 
+that it tells you, You where you
+
+724
+00:42:54,300 --> 00:42:57,100
+can split things out. 
+Because you've bounded the 
+
+725
+00:42:57,100 --> 00:42:59,500
+context and you've said, okay, 
+these two things are 
+
+726
+00:42:59,500 --> 00:43:02,300
+intertwined, we're doing a 
+database, join on these things, 
+
+727
+00:43:02,500 --> 00:43:06,600
+on the actual implementation 
+side and so do not try to break 
+
+728
+00:43:06,600 --> 00:43:10,000
+your bounded context apart. 
+That would be a bad place to try
+
+729
+00:43:10,000 --> 00:43:13,100
+to do my Wells and from a 
+management context. 
+
+730
+00:43:13,100 --> 00:43:18,800
+It also would help you decide 
+maybe teams working on things. 
+
+731
+00:43:18,800 --> 00:43:23,000
+Like if you had a remote team in
+a different time zone working on
+
+732
+00:43:23,000 --> 00:43:29,800
+a different, Section you'd want 
+maybe that would be your you 
+
+733
+00:43:29,800 --> 00:43:34,200
+know your API interface that you
+want to end those people would 
+
+734
+00:43:34,200 --> 00:43:37,100
+just you know they would focus 
+on that thing anyway. 
+
+735
+00:43:37,200 --> 00:43:39,400
+Let ya know. 
+Sure it's this. 
+
+736
+00:43:39,400 --> 00:43:42,900
+I guess that's the two primary 
+drivers behind like physical 
+
+737
+00:43:42,900 --> 00:43:45,900
+separation. 
+One is and that's the bigger 
+
+738
+00:43:45,900 --> 00:43:47,700
+one. 
+Even I think is organizational 
+
+739
+00:43:48,200 --> 00:43:52,200
+boundaries, right? 
+Team, which kind of means team 
+
+740
+00:43:52,200 --> 00:43:57,300
+structures and Also deployment 
+Cycles. 
+
+741
+00:43:57,300 --> 00:44:00,300
+Basically, from more from an 
+organizational point of view 
+
+742
+00:44:00,300 --> 00:44:04,200
+rather than from a technical 
+deployment point of view, the 
+
+743
+00:44:04,200 --> 00:44:06,500
+other one is scaling usually, 
+right? 
+
+744
+00:44:06,500 --> 00:44:08,500
+If you have, let's say in that 
+e-commerce system. 
+
+745
+00:44:09,700 --> 00:44:12,800
+If you see that the catalog, but
+just the browse browsing the 
+
+746
+00:44:12,808 --> 00:44:16,900
+catalog is like under heavy 
+load, then you might want to 
+
+747
+00:44:16,900 --> 00:44:19,800
+consider to have a separate 
+system for that, so that you can
+
+748
+00:44:20,100 --> 00:44:23,400
+basically cover the retail out. 
+There there's other options. 
+
+749
+00:44:23,600 --> 00:44:26,100
+That as well. 
+You could try Cassius for these 
+
+750
+00:44:26,100 --> 00:44:27,800
+particular URI. 
+So what have you? 
+
+751
+00:44:28,100 --> 00:44:33,900
+It's not necessarily or it's not
+a necessary thing to to separate
+
+752
+00:44:33,900 --> 00:44:36,300
+that part out if you see that 
+problem. 
+
+753
+00:44:36,400 --> 00:44:39,900
+But the organizational 
+Arrangement usually is a big 
+
+754
+00:44:39,900 --> 00:44:43,900
+driver for that physical 
+separation, everything else. 
+
+755
+00:44:43,900 --> 00:44:48,600
+And we actually see kind of a 
+bit of a trend back to that is, 
+
+756
+00:44:49,700 --> 00:44:55,000
+is something or we see the trend
+to people building what we call 
+
+757
+00:44:55,000 --> 00:44:57,900
+module lithic software these 
+days rights are genetic. 
+
+758
+00:44:58,100 --> 00:44:59,900
+Yeah. 
+It's kind of like, okay, you 
+
+759
+00:44:59,900 --> 00:45:03,600
+build something in a in a, 
+that's a single process. 
+
+760
+00:45:03,600 --> 00:45:09,400
+That's still has some internal 
+structure and that that applies.
+
+761
+00:45:09,600 --> 00:45:13,900
+Actually, some means that you 
+would have to apply if you 
+
+762
+00:45:13,900 --> 00:45:18,400
+separated it out, but you 
+wouldn't usually don't if you 
+
+763
+00:45:18,400 --> 00:45:22,700
+basically keep it contained 
+because it's also means a bit 
+
+764
+00:45:22,700 --> 00:45:27,400
+like Hang up on some convenience
+stuff like you mentioned, James 
+
+765
+00:45:27,400 --> 00:45:30,200
+the that stuff like 
+interconnected database tables, 
+
+766
+00:45:30,200 --> 00:45:32,300
+right? 
+You could you could go ahead and
+
+767
+00:45:32,300 --> 00:45:36,800
+still cleanly separate like the 
+data of your let's say or the 
+
+768
+00:45:36,800 --> 00:45:41,300
+module and the order at the data
+of your inventory module and 
+
+769
+00:45:41,300 --> 00:45:44,100
+make sure that you, let's say 
+just have a store. 
+
+770
+00:45:44,100 --> 00:45:47,400
+Let's say the order IDs, or 
+product IDs or what have you? 
+
+771
+00:45:47,600 --> 00:45:50,900
+But without a foreign key 
+relationships, but you still get
+
+772
+00:45:50,900 --> 00:45:54,500
+the, get the connection. 
+But if If you at some point 
+
+773
+00:45:54,500 --> 00:45:59,700
+decide to actually, to pull out 
+that part of the system, then 
+
+774
+00:45:59,800 --> 00:46:05,600
+you are already prepared and you
+have your data layer basically 
+
+775
+00:46:05,600 --> 00:46:10,500
+prepared that basically, that 
+continues into the the way that 
+
+776
+00:46:10,500 --> 00:46:13,700
+these individual logical modules
+interact with each other. 
+
+777
+00:46:14,200 --> 00:46:18,100
+Whether it's like direct method 
+calls or whether it's like an 
+
+778
+00:46:18,100 --> 00:46:21,000
+event that's published on one 
+side of the system and then 
+
+779
+00:46:21,000 --> 00:46:25,900
+listened to by the other that 
+Would not necessarily have to be
+
+780
+00:46:25,900 --> 00:46:30,600
+that case or it have to be that 
+way in a day in a monolithic 
+
+781
+00:46:30,600 --> 00:46:34,700
+Arrangement but we already do. 
+So because we want to basically 
+
+782
+00:46:35,000 --> 00:46:39,800
+establish these logical 
+boundaries within our system or 
+
+783
+00:46:39,800 --> 00:46:43,100
+monolithic system because it 
+makes the system easier to test 
+
+784
+00:46:43,100 --> 00:46:48,400
+or parts of that easier to test.
+It's basically to what I'm 
+
+785
+00:46:48,800 --> 00:46:53,500
+guessing is bounded context 
+idea. 
+
+786
+00:46:53,600 --> 00:47:00,600
+Help us to decide what pieces 
+potentially could be split off 
+
+787
+00:47:01,100 --> 00:47:05,100
+and for team reasons, or runtime
+performance reasons or whatever 
+
+788
+00:47:05,100 --> 00:47:08,200
+it may be. 
+But is there a connection there?
+
+789
+00:47:08,700 --> 00:47:10,400
+I mean, you could, you could 
+plate. 
+
+790
+00:47:10,400 --> 00:47:14,800
+That's a, a very or reasonable. 
+I'm not saying default mapping, 
+
+791
+00:47:14,800 --> 00:47:16,500
+but you could argue, okay, 
+whatever. 
+
+792
+00:47:16,500 --> 00:47:20,900
+What forms about context, we 
+build as a as a separate system 
+
+793
+00:47:20,900 --> 00:47:22,700
+because we align the team around
+it. 
+
+794
+00:47:23,200 --> 00:47:26,500
+And that's Of like everything 
+order or everything inventory as
+
+795
+00:47:26,500 --> 00:47:30,400
+we as we just already discussed,
+but that Bounty context might 
+
+796
+00:47:30,400 --> 00:47:33,700
+have like an internal structure 
+that we then represent as 
+
+797
+00:47:33,700 --> 00:47:36,900
+individual modules. 
+And then we have again like 
+
+798
+00:47:36,900 --> 00:47:41,100
+mapping step on to either build 
+modules or as we have in this in
+
+799
+00:47:41,100 --> 00:47:44,000
+this new spring project here, 
+the spring module is stuff. 
+
+800
+00:47:44,600 --> 00:47:46,200
+We use packages quite a lot, 
+right? 
+
+801
+00:47:46,200 --> 00:47:50,200
+We basically say that there's a 
+Java package that forms the 
+
+802
+00:47:50,200 --> 00:47:55,500
+entry point into a module and we
+give you a a few guardrails or 
+
+803
+00:47:55,600 --> 00:47:59,100
+means to actually make sure that
+this modular structure that 
+
+804
+00:47:59,100 --> 00:48:04,000
+you've created by just arranging
+your code in a certain way is 
+
+805
+00:48:04,500 --> 00:48:08,200
+you retain that and you're not 
+accidentally introducing like I 
+
+806
+00:48:08,208 --> 00:48:10,100
+like, yeah, I wanna hear more 
+about this because I think I saw
+
+807
+00:48:10,100 --> 00:48:12,600
+a little bit and it seemed 
+really interesting but this is 
+
+808
+00:48:12,600 --> 00:48:17,800
+the idea that you're building a 
+spring project and you're 
+
+809
+00:48:17,800 --> 00:48:21,700
+architecting an organizing it in
+a way that is able to be 
+
+810
+00:48:21,700 --> 00:48:24,000
+modularized. 
+Later. 
+
+811
+00:48:24,000 --> 00:48:28,600
+And and you it doesn't impact 
+you as the developer. 
+
+812
+00:48:28,800 --> 00:48:34,900
+Like you're not having to the 
+developer experience around 
+
+813
+00:48:34,900 --> 00:48:39,000
+creating something that's 
+modular and packaged is nice 
+
+814
+00:48:39,000 --> 00:48:42,200
+versus the traditional way was 
+that? 
+
+815
+00:48:42,200 --> 00:48:45,100
+Oh man like now you got to think
+about you know, how you're going
+
+816
+00:48:45,100 --> 00:48:47,800
+to share your interfaces in the 
+contract and how you do contract
+
+817
+00:48:47,800 --> 00:48:49,100
+testing and all this kind of 
+stuff. 
+
+818
+00:48:49,300 --> 00:48:53,100
+Does that mean? 
+So the the idea of the project 
+
+819
+00:48:53,100 --> 00:48:55,600
+is that you You can build a 
+spring boot application. 
+
+820
+00:48:55,600 --> 00:48:58,700
+That's other what it's based on 
+and that you get the as a 
+
+821
+00:48:58,708 --> 00:49:03,100
+developer, you get the ability 
+to express these logical Parts, 
+
+822
+00:49:03,400 --> 00:49:07,900
+you would use Java packages as 
+to do that on a let's say the 
+
+823
+00:49:08,000 --> 00:49:10,800
+most high level what you get 
+with. 
+
+824
+00:49:10,800 --> 00:49:15,400
+It is means to in from this, 
+from these packages, is to 
+
+825
+00:49:15,400 --> 00:49:19,300
+expose, certain apis, like in 
+the spring beans, which is like 
+
+826
+00:49:19,300 --> 00:49:23,400
+object instances at runtime that
+you can invoke or events. 
+
+827
+00:49:23,400 --> 00:49:26,100
+That Basically are published 
+through the spring event bus 
+
+828
+00:49:26,500 --> 00:49:30,000
+within the jvm so it's not not 
+kind of no messaging at all 
+
+829
+00:49:30,000 --> 00:49:34,600
+involved yet, alright? 
+This point at least you get that
+
+830
+00:49:34,700 --> 00:49:40,200
+and what you get around, this is
+both an arc unit based API to 
+
+831
+00:49:41,200 --> 00:49:44,300
+verify that you have a non 
+cyclic structure. 
+
+832
+00:49:44,500 --> 00:49:49,300
+And if you want to and express 
+like let's say this, module is 
+
+833
+00:49:49,400 --> 00:49:51,300
+allowed to only depend on that 
+other. 
+
+834
+00:49:51,500 --> 00:49:53,400
+You would be able to do that as 
+well. 
+
+835
+00:49:53,500 --> 00:49:59,300
+But as we've seen a simple 
+noncyclic Arrangement, already 
+
+836
+00:49:59,300 --> 00:50:03,700
+gives you kind of 80% of the of 
+the kind of structural 
+
+837
+00:50:03,700 --> 00:50:05,900
+degradation prevention 
+basically. 
+
+838
+00:50:05,900 --> 00:50:10,300
+Yeah, you get the verification 
+and what you also get is the 
+
+839
+00:50:10,300 --> 00:50:15,000
+ability to bootstrap individual 
+modules within that system in a 
+
+840
+00:50:15,008 --> 00:50:19,000
+test so that you can just say. 
+OK, I want to only run the order
+
+841
+00:50:19,000 --> 00:50:23,400
+module, for example, and it 
+would then basically just limit 
+
+842
+00:50:23,400 --> 00:50:26,600
+the Execution to, to those beans
+and and what have you. 
+
+843
+00:50:26,600 --> 00:50:33,100
+So it's a very very non-invasive
+way for developers to get just 
+
+844
+00:50:33,100 --> 00:50:37,400
+structure your applications 
+non-invasive because everything 
+
+845
+00:50:37,400 --> 00:50:40,200
+that's complicated usually puts 
+people off. 
+
+846
+00:50:40,500 --> 00:50:44,000
+If you want to do, we want to be
+be able to do the right thing in
+
+847
+00:50:44,000 --> 00:50:49,300
+a very easy way, to the like, 
+osgi, but actually like usable 
+
+848
+00:50:49,300 --> 00:50:52,100
+and friendly in this. 
+There's been a lot of discussion
+
+849
+00:50:52,100 --> 00:50:54,700
+and is this still Questions that
+come up with. 
+
+850
+00:50:54,700 --> 00:50:59,400
+Like, also around JP + S + OG is
+also another thing, but if you 
+
+851
+00:50:59,408 --> 00:51:03,600
+look at those, especially J pm 
+has been built to modularize the
+
+852
+00:51:03,600 --> 00:51:09,300
+jdk, it's very security focused,
+and you need to the libraries 
+
+853
+00:51:09,300 --> 00:51:12,500
+to, to play to play into this, 
+right? 
+
+854
+00:51:12,500 --> 00:51:14,600
+They have to provide this, none 
+of it. 
+
+855
+00:51:14,900 --> 00:51:18,500
+None of this is usually the at 
+the concern of the developers in
+
+856
+00:51:18,500 --> 00:51:20,700
+the first place. 
+If you again, you have your 
+
+857
+00:51:20,700 --> 00:51:22,600
+domain. 
+What the system needs not work. 
+
+858
+00:51:22,600 --> 00:51:26,500
+It's not with the For needs. 
+I want, I want to structure my 
+
+859
+00:51:26,500 --> 00:51:30,900
+application following the domain
+and I don't necessarily want 
+
+860
+00:51:30,900 --> 00:51:33,700
+each module of that to be a 
+separate jar file, which is what
+
+861
+00:51:33,700 --> 00:51:35,900
+JP mess would require. 
+Um, so it's yeah, it's just 
+
+862
+00:51:35,900 --> 00:51:38,100
+here's my boot app. 
+I just lay out the logical 
+
+863
+00:51:38,100 --> 00:51:41,300
+Parts, the business driven Parts
+in a certain way. 
+
+864
+00:51:42,500 --> 00:51:45,700
+And that's all I care about for 
+now, right? 
+
+865
+00:51:46,500 --> 00:51:51,100
+And it kind of leaves the way a 
+lot of the complexity, it by 
+
+866
+00:51:51,100 --> 00:51:56,800
+also not being and like, as As 
+deep or it's not like that as 
+
+867
+00:51:56,800 --> 00:52:01,000
+deeply ingrained of course in 
+military service in the jvm, but
+
+868
+00:52:01,000 --> 00:52:04,200
+it does the trick. 
+So there's a bigger bang for the
+
+869
+00:52:04,200 --> 00:52:10,100
+buck kind of ratio here and 
+it's, it's kind of that project 
+
+870
+00:52:10,100 --> 00:52:13,500
+is basically a technical 
+implementation of stuff that we 
+
+871
+00:52:13,500 --> 00:52:16,900
+have conveyed through, like 
+presentations, or in 
+
+872
+00:52:16,900 --> 00:52:20,900
+consulting's, oh, go ahead 
+structure, your application like
+
+873
+00:52:20,900 --> 00:52:22,800
+this, put your configuration 
+code in. 
+
+874
+00:52:23,400 --> 00:52:25,600
+Do it like this? 
+It all these recommendations 
+
+875
+00:52:25,600 --> 00:52:30,900
+that we verbally verbally given 
+our kind of now embedded or in 
+
+876
+00:52:31,100 --> 00:52:32,400
+implement the name of the 
+project. 
+
+877
+00:52:32,400 --> 00:52:35,000
+Again. 
+Spring module is basically 
+
+878
+00:52:35,300 --> 00:52:39,300
+spring module with its modulus. 
+Yeah, we want to help help you 
+
+879
+00:52:39,300 --> 00:52:42,900
+build, module istic, application
+applications. 
+
+880
+00:52:42,900 --> 00:52:45,500
+And that doesn't mean, I mean 
+that there's always this 
+
+881
+00:52:45,500 --> 00:52:49,200
+discussion about modulus being 
+so close to monolith. 
+
+882
+00:52:49,200 --> 00:52:51,800
+Do we tell you to build a single
+application? 
+
+883
+00:52:51,800 --> 00:52:54,700
+No, we don't. 
+It's just a means to to whatever
+
+884
+00:52:54,700 --> 00:52:58,900
+system you built, whatever 
+Arrangement that is part of, it 
+
+885
+00:52:58,900 --> 00:53:04,300
+is likely to have some internal 
+structure and we want to help 
+
+886
+00:53:04,300 --> 00:53:06,700
+you to express that internal 
+structure. 
+
+887
+00:53:06,700 --> 00:53:09,900
+And then give you guidance 
+around tests, there's 
+
+888
+00:53:09,900 --> 00:53:14,100
+observability features in there.
+Because in the microservices 
+
+889
+00:53:14,100 --> 00:53:17,800
+arrangement, you usually put 
+something like Zipkin between 
+
+890
+00:53:17,800 --> 00:53:20,800
+the systems to be able to track 
+the, the flow, through the, 
+
+891
+00:53:20,800 --> 00:53:22,500
+through the, through the 
+individual systems. 
+
+892
+00:53:22,500 --> 00:53:27,600
+Why shouldn't you have Something
+available in your module, lithic
+
+893
+00:53:27,600 --> 00:53:30,200
+application, right? 
+So that you can track that the 
+
+894
+00:53:30,200 --> 00:53:33,400
+order module invokes, the 
+inventory or would have you 
+
+895
+00:53:33,400 --> 00:53:37,900
+track the number of events that 
+get published all this, this 
+
+896
+00:53:37,900 --> 00:53:42,300
+this kind of stuff. 
+That's, that's kind of exposed 
+
+897
+00:53:42,300 --> 00:53:47,000
+to any any runtime platform. 
+Then micro Services versus 
+
+898
+00:53:47,000 --> 00:53:51,000
+monolith. 
+The answer is yes, both and it's
+
+899
+00:53:51,000 --> 00:53:54,800
+called module. 
+It's so also there's this quote 
+
+900
+00:53:54,800 --> 00:53:58,900
+from Stephen Covey said, we like
+monolith so much that we would 
+
+901
+00:53:58,900 --> 00:54:02,300
+want to build many of them. 
+And that's kind of that's kind 
+
+902
+00:54:02,300 --> 00:54:05,000
+of the spirit, right? 
+So it's not about like one 
+
+903
+00:54:05,000 --> 00:54:09,400
+system or a thousand systems, 
+it's like, okay, you align the 
+
+904
+00:54:09,400 --> 00:54:13,700
+number of systems with your 
+organizational structure and you
+
+905
+00:54:13,700 --> 00:54:17,800
+still have means to organize 
+within those systems, because 
+
+906
+00:54:18,400 --> 00:54:21,100
+like in the Des public 
+discussion, it's usually like 
+
+907
+00:54:21,200 --> 00:54:25,500
+this, there's this system and if
+it's a micro Then that's the 
+
+908
+00:54:25,700 --> 00:54:28,200
+level of granularity and there's
+nothing in there. 
+
+909
+00:54:28,200 --> 00:54:31,700
+It's like just this one thing 
+which is usually not the case, 
+
+910
+00:54:31,700 --> 00:54:32,500
+right? 
+It's there. 
+
+911
+00:54:33,900 --> 00:54:36,800
+You can rather build it slightly
+bigger thing that has internal 
+
+912
+00:54:36,800 --> 00:54:40,200
+structure. 
+So Embrace Conway's law. 
+
+913
+00:54:40,200 --> 00:54:42,200
+Don't fight it. 
+Yes, I do. 
+
+914
+00:54:42,400 --> 00:54:46,200
+Yeah, it's sort of seems like I 
+would kind of sum this up by 
+
+915
+00:54:46,200 --> 00:54:49,500
+saying that domain driven 
+design. 
+
+916
+00:54:49,900 --> 00:54:53,800
+Well, we make these decisions 
+when we're programming. 
+
+917
+00:54:54,200 --> 00:54:59,100
+And because of our training and 
+our orientation, we make them 
+
+918
+00:54:59,600 --> 00:55:03,800
+purely for technical reasons for
+within our own little world. 
+
+919
+00:55:04,000 --> 00:55:09,700
+What domain driven design does 
+is it says, Ah, I can give you 
+
+920
+00:55:09,700 --> 00:55:14,600
+information to help you make 
+better decisions to produce 
+
+921
+00:55:14,600 --> 00:55:18,500
+better results to produce more 
+maintainable, understandable, 
+
+922
+00:55:19,000 --> 00:55:22,700
+Etc, results. 
+That seems like the kind of what
+
+923
+00:55:22,700 --> 00:55:25,900
+we're going for here. 
+Sounds like a value proposition 
+
+924
+00:55:25,900 --> 00:55:29,000
+of domain-driven design. 
+It's almost like a system of 
+
+925
+00:55:29,000 --> 00:55:33,400
+thinking it is and giving you a 
+lens to see things through that 
+
+926
+00:55:33,800 --> 00:55:37,700
+should help you deliver Better 
+Business outcomes for what you 
+
+927
+00:55:37,700 --> 00:55:40,500
+build. 
+But my question that I kind of 
+
+928
+00:55:40,500 --> 00:55:46,200
+pitched it you at the beginning,
+was why, why is it big now when 
+
+929
+00:55:46,200 --> 00:55:50,000
+it's been 20 years since the 
+book got written. 
+
+930
+00:55:50,300 --> 00:55:52,600
+What's a Jane? 
+I mean, there definitely is a 
+
+931
+00:55:52,600 --> 00:55:56,100
+renascence of the I mean, I've 
+been Starstruck by the book like
+
+932
+00:55:56,100 --> 00:55:58,900
+from the from the very beginning
+and that led to Spring data 
+
+933
+00:55:58,900 --> 00:56:01,900
+repositories and what have you? 
+But I think that that 
+
+934
+00:56:01,900 --> 00:56:05,500
+microservices discussion, like 
+the hype that kind of leaf is 
+
+935
+00:56:05,500 --> 00:56:09,300
+seen like, five years ago at the
+peak with Netflix, thousands of 
+
+936
+00:56:09,300 --> 00:56:11,300
+systems. 
+And what have you that kind of 
+
+937
+00:56:11,300 --> 00:56:15,100
+got people rethinking about, 
+like, where do we put 
+
+938
+00:56:15,100 --> 00:56:18,100
+boundaries, right? 
+And like, do we want to have 
+
+939
+00:56:18,100 --> 00:56:20,800
+like two levels of abstraction 
+or do we want to have multiple 
+
+940
+00:56:20,800 --> 00:56:24,000
+ones and which which quality 
+goals? 
+
+941
+00:56:24,200 --> 00:56:27,500
+Do we align with which level of 
+abstraction write this kind of 
+
+942
+00:56:27,500 --> 00:56:31,800
+organizational stuff at the 
+bound context level and in this 
+
+943
+00:56:31,800 --> 00:56:35,100
+boiling down and how much 
+Freedom do we want or do we need
+
+944
+00:56:35,100 --> 00:56:37,500
+in terms of like the choice of 
+Technology? 
+
+945
+00:56:38,100 --> 00:56:41,500
+Like, do we want to use 
+different programming languages?
+
+946
+00:56:41,500 --> 00:56:44,100
+And if we want to do, so we have
+to do processes. 
+
+947
+00:56:44,200 --> 00:56:46,900
+All these discussions have 
+started with it with the, with 
+
+948
+00:56:46,900 --> 00:56:51,900
+the microservices movement. 
+And it's, I think it's an 
+
+949
+00:56:51,900 --> 00:56:55,500
+important piece also is that 
+Microsoft Services is the has 
+
+950
+00:56:55,500 --> 00:56:58,800
+been the first architectural 
+style, new architectural style 
+
+951
+00:56:59,200 --> 00:57:05,600
+post the agile software 
+development kind of development.
+
+952
+00:57:05,600 --> 00:57:11,400
+So it's so it's breathing that 
+that kind of that kind of idea 
+
+953
+00:57:11,400 --> 00:57:14,200
+or that energy because you would
+want to align your microservices
+
+954
+00:57:14,200 --> 00:57:15,700
+with your business capabilities,
+right? 
+
+955
+00:57:15,700 --> 00:57:19,800
+It's kind of they seem to have 
+the same roots to some degree, 
+
+956
+00:57:20,400 --> 00:57:21,700
+all these these, these 
+movements. 
+
+957
+00:57:21,700 --> 00:57:25,600
+And one being the organizational
+or Side of things and the other 
+
+958
+00:57:25,600 --> 00:57:27,100
+one. 
+Being the technical 
+
+959
+00:57:27,100 --> 00:57:31,200
+implementation idea. 
+But waterfall was, much more 
+
+960
+00:57:31,200 --> 00:57:33,200
+aligned with monoliths 
+conception. 
+
+961
+00:57:33,200 --> 00:57:34,000
+Yeah. 
+Sure. 
+
+962
+00:57:34,000 --> 00:57:38,400
+Because in my user have a 
+project and you build one system
+
+963
+00:57:38,400 --> 00:57:41,000
+to satisfy one project, right? 
+This is kind. 
+
+964
+00:57:41,000 --> 00:57:44,900
+Yeah, been that idea and all 
+this kind of like centered 
+
+965
+00:57:44,900 --> 00:57:47,200
+around like different teams 
+doing different things. 
+
+966
+00:57:47,300 --> 00:57:51,200
+In the aligning, the software 
+structures with that has 
+
+967
+00:57:51,200 --> 00:57:52,900
+definitely. 
+Like or there's there's some 
+
+968
+00:57:52,900 --> 00:57:57,000
+connection there and And I think
+that especially the Strategic 
+
+969
+00:57:57,000 --> 00:58:00,200
+design part of DD, that we kind 
+of, like, just briefly touched 
+
+970
+00:58:00,200 --> 00:58:03,800
+on today, kind of connects to 
+that, right? 
+
+971
+00:58:03,800 --> 00:58:07,300
+And then that's kind of, oh, 
+there's this book, and let's see
+
+972
+00:58:07,300 --> 00:58:10,400
+what ideas were in there, and 
+then people are coming back to 
+
+973
+00:58:10,400 --> 00:58:13,800
+kind of realizing that it's not 
+necessarily about the technical 
+
+974
+00:58:14,100 --> 00:58:17,200
+implementation of microservices,
+but rather about like, 
+
+975
+00:58:17,400 --> 00:58:21,600
+modularity and different 
+different scopes of modularity, 
+
+976
+00:58:21,600 --> 00:58:25,400
+at different levels of 
+abstraction that Our and like, 
+
+977
+00:58:25,400 --> 00:58:28,100
+and the interface between that 
+and the, and the actual 
+
+978
+00:58:28,100 --> 00:58:30,100
+structure of the organization. 
+Yeah. 
+
+979
+00:58:30,100 --> 00:58:33,000
+Sure. 
+And yeah, it did, especially the
+
+980
+00:58:33,000 --> 00:58:35,200
+Blue Book making exactly that 
+connection. 
+
+981
+00:58:35,200 --> 00:58:38,000
+I mean, the partners paper is 
+from what 79 or something. 
+
+982
+00:58:38,400 --> 00:58:42,300
+So it's not particularly well, 
+it's written in the book is kind
+
+983
+00:58:42,300 --> 00:58:47,800
+of a, like a lady. 
+You mentioned the part of this 
+
+984
+00:58:47,800 --> 00:58:50,200
+paper, put modularity paper. 
+Huh. 
+
+985
+00:58:50,300 --> 00:58:52,700
+After it down? 
+Yes. 
+
+986
+00:58:52,900 --> 00:58:54,000
+No. 
+I mean I know that. 
+
+987
+00:58:55,300 --> 00:58:59,500
+It's the I think the, if 
+anything modularity, related, 
+
+988
+00:58:59,500 --> 00:59:00,700
+it's less exciting. 
+This paper. 
+
+989
+00:59:00,700 --> 00:59:02,400
+It's a bit like the Conway's law
+thing. 
+
+990
+00:59:02,800 --> 00:59:06,800
+The Conway's law paper but it's 
+II. 
+
+991
+00:59:06,800 --> 00:59:10,200
+We can look that up for the show
+notes and oh, yeah, sounds 
+
+992
+00:59:10,200 --> 00:59:14,300
+great. 
+So do you have any questions 
+
+993
+00:59:14,300 --> 00:59:17,300
+that you want to ask us and you 
+don't have to it's just anything
+
+994
+00:59:17,300 --> 00:59:18,700
+we missed. 
+Yeah, or anything? 
+
+995
+00:59:18,700 --> 00:59:22,100
+We missed. 
+I'll make maybe maybe also like 
+
+996
+00:59:22,100 --> 00:59:25,700
+for the, for the audience. 
+Because that's probably like 
+
+997
+00:59:25,700 --> 00:59:28,700
+people on the Discord at that 
+are like this into the episode 
+
+998
+00:59:28,700 --> 00:59:31,000
+later. 
+I mean, the thing that I'm 
+
+999
+00:59:31,000 --> 00:59:35,200
+currently like, most interested 
+in is like, what strategies two 
+
+1000
+00:59:35,500 --> 00:59:39,900
+teams, apply to when they have 
+to make all these decisions that
+
+1001
+00:59:39,900 --> 00:59:43,300
+we've discussed right when they 
+and they planted a new piece of 
+
+1002
+00:59:43,300 --> 00:59:48,900
+software and what are their 
+their drivers behind a decision 
+
+1003
+00:59:48,900 --> 00:59:52,300
+to like build a separate system 
+or not, right? 
+
+1004
+00:59:54,300 --> 00:59:56,100
+What is that? 
+Think through that. 
+
+1005
+00:59:56,200 --> 01:00:01,100
+And yeah, and do, do they have 
+architecture team or something 
+
+1006
+01:00:01,100 --> 01:00:05,100
+that they can go to and discuss 
+that with or they being told by 
+
+1007
+01:00:05,100 --> 01:00:08,000
+an architecture Team, how to do 
+it and I'm sure there's a huge 
+
+1008
+01:00:08,000 --> 01:00:14,600
+variety of set up there is this 
+gap between like when you do 
+
+1009
+01:00:14,600 --> 01:00:16,300
+like things like event storming,
+right? 
+
+1010
+01:00:16,300 --> 01:00:20,700
+And you have that that wall of 
+Post-its and then you kind of 
+
+1011
+01:00:20,700 --> 01:00:23,800
+have to somehow translate that 
+into you get back to your 
+
+1012
+01:00:23,800 --> 01:00:26,100
+computer. 
+It is some open up your IDE. 
+
+1013
+01:00:26,800 --> 01:00:29,900
+So there is a as I usually say, 
+posted stoned running 
+
+1014
+01:00:29,900 --> 01:00:33,600
+production, unfortunately, 
+except you work from my road, 
+
+1015
+01:00:33,600 --> 01:00:37,100
+and then they do. 
+But there was an attempt once to
+
+1016
+01:00:37,100 --> 01:00:38,700
+run. 
+You are male models and make 
+
+1017
+01:00:38,700 --> 01:00:49,400
+that your prediction for a long 
+time, and they always go. 
+
+1018
+01:00:49,400 --> 01:00:51,900
+The last time I heard it was uml
+never going. 
+
+1019
+01:00:52,200 --> 01:00:56,100
+Yeah, we're 90% there. 
+We just have to do the last 10% 
+
+1020
+01:00:56,100 --> 01:00:57,400
+and then never heard from him 
+again. 
+
+1021
+01:00:57,400 --> 01:01:01,200
+Yeah, is I think Chris 
+Richardson, you probably. 
+
+1022
+01:01:01,200 --> 01:01:03,900
+Yeah. 
+He recently polled, I have to 
+
+1023
+01:01:03,900 --> 01:01:08,600
+look it up. 
+He recently posted some he's 
+
+1024
+01:01:08,600 --> 01:01:11,700
+formalized this into some kind 
+of process where you basically, 
+
+1025
+01:01:12,500 --> 01:01:14,400
+you finished your domain 
+analysis stuff. 
+
+1026
+01:01:14,400 --> 01:01:18,900
+And then how do you get to the 
+decision of what to build as a 
+
+1027
+01:01:18,900 --> 01:01:21,000
+separate service. 
+And what time does modules 
+
+1028
+01:01:21,000 --> 01:01:22,800
+within? 
+That separates of I can, we can 
+
+1029
+01:01:22,800 --> 01:01:26,200
+definitely look that up. 
+Yeah I don't find it right now 
+
+1030
+01:01:26,200 --> 01:01:29,500
+but yeah yeah I'm sure it's up 
+on his decision. 
+
+1031
+01:01:29,500 --> 01:01:34,900
+Making in general is fascinating
+a something. 
+
+1032
+01:01:34,900 --> 01:01:37,400
+I don't know. 
+I have to I have to look this up
+
+1033
+01:01:37,400 --> 01:01:38,000
+later. 
+Okay. 
+
+1034
+01:01:38,100 --> 01:01:39,900
+I'll go find it. 
+Yeah. 
+
+1035
+01:01:39,900 --> 01:01:43,600
+Anything else we missed? 
+What's been pretty extensive 
+
+1036
+01:01:43,600 --> 01:01:44,500
+discussion? 
+I think. 
+
+1037
+01:01:44,700 --> 01:01:48,300
+So yeah. 
+Very educational for me so yeah.
+
+1038
+01:01:48,700 --> 01:01:51,100
+Yeah, already get some feedback 
+on the Discord Channel. 
+
+1039
+01:01:51,100 --> 01:01:51,900
+Yes. 
+Yes. 
+
+1040
+01:01:51,900 --> 01:01:54,100
+Join I guess we don't often talk
+about the disk. 
+
+1041
+01:01:54,200 --> 01:01:55,900
+Cord Channel and we should 
+mention it. 
+
+1042
+01:01:55,900 --> 01:01:57,200
+That we do have a Discord 
+channel. 
+
+1043
+01:01:57,500 --> 01:02:01,000
+It's always in the description 
+of the podcast and if you want 
+
+1044
+01:02:01,000 --> 01:02:02,900
+to discuss these things more, 
+join us there. 
+
+1045
+01:02:03,100 --> 01:02:06,500
+Yeah, thanks Ali. 
+Thanks Bruce. 
+
+1046
+01:02:06,500 --> 01:01:55,400
+Thanks James for having me. 
+Cord Channel and we should 
+
+1047
+01:01:55,400 --> 01:01:56,800
+mention it. 
+That we do have a Discord 
+
+1048
+01:01:56,800 --> 01:01:59,400
+channel. 
+It's always in the description 
+
+1049
+01:01:59,400 --> 01:02:02,200
+of the podcast and if you want 
+to discuss these things more, 
+
+1050
+01:02:02,200 --> 01:02:04,700
+join us there. 
+Yeah, thanks Ali. 
+
+1051
+01:02:06,100 --> 01:02:08,400
+Thanks Bruce. 
+Thanks James for having me.
+

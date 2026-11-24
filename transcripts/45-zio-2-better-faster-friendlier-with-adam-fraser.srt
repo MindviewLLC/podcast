@@ -1,0 +1,5583 @@
+1
+00:00:01,120 --> 00:00:03,520
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,760 --> 00:00:05,640
+I'm Bruce Eckel. 
+And I'm James Ward. 
+
+3
+00:00:07,960 --> 00:00:10,840
+All right, Well, welcome. 
+Today we have with us Adam 
+
+4
+00:00:10,840 --> 00:00:13,680
+Frazier, who is up and Crested 
+Butte. 
+
+5
+00:00:13,680 --> 00:00:17,480
+So we get to do another live in 
+person podcast. 
+
+6
+00:00:18,160 --> 00:00:22,120
+And so, Adam, you can tell me 
+your actual title, but I of 
+
+7
+00:00:22,120 --> 00:00:25,760
+course know you from Zio scholar
+Zio, which Bruce and. 
+
+8
+00:00:26,600 --> 00:00:28,840
+Bill and I are writing a book 
+about Bill Frazier. 
+
+9
+00:00:28,840 --> 00:00:30,440
+Also, Frazier, do you guys spell
+your last name? 
+
+10
+00:00:30,840 --> 00:00:34,440
+Spell them differently. 
+So maybe long lost relatives. 
+
+11
+00:00:34,600 --> 00:00:37,080
+Yeah. 
+Is a Frazier. 
+
+12
+00:00:37,360 --> 00:00:40,000
+You know, it's like there was a 
+Smith who would do this. 
+
+13
+00:00:40,200 --> 00:00:42,200
+What's a Frazier? 
+Yeah, I think it came from 
+
+14
+00:00:42,200 --> 00:00:45,960
+Scotland at some point, but I 
+don't know much more about the 
+
+15
+00:00:46,160 --> 00:00:48,320
+you're probably involved with 
+making beer. 
+
+16
+00:00:51,360 --> 00:00:55,000
+Yeah, sounds right. 
+Our Scottish listeners were 
+
+17
+00:00:55,320 --> 00:00:57,680
+complaining about my 
+typecasting. 
+
+18
+00:01:00,080 --> 00:01:01,360
+Or not. 
+There I go. 
+
+19
+00:01:01,360 --> 00:01:05,960
+Yep, that's us. 
+So Adam, I know I'm from his 
+
+20
+00:01:05,960 --> 00:01:09,600
+work in Zio and primarily around
+all of the things you've been 
+
+21
+00:01:09,600 --> 00:01:14,240
+doing with the Zio 2 runtime and
+making it just super awesome. 
+
+22
+00:01:14,240 --> 00:01:15,840
+And I'm sure we can get into 
+that, but I don't know. 
+
+23
+00:01:15,840 --> 00:01:18,450
+Tell us what what you do. 
+Everything's. 
+
+24
+00:01:19,410 --> 00:01:22,290
+Yeah, that that's not not a bad 
+description. 
+
+25
+00:01:23,330 --> 00:01:26,330
+Yeah, so I I started Zi Verge 
+with with John. 
+
+26
+00:01:26,810 --> 00:01:30,530
+So it was just the two of you? 
+Well, John, Sandra and Inamar, 
+
+27
+00:01:30,970 --> 00:01:33,010
+OK. 
+So, yeah, the four of us, OK. 
+
+28
+00:01:33,050 --> 00:01:37,650
+And you did you have a customer,
+did you have like a customer at 
+
+29
+00:01:37,650 --> 00:01:40,010
+that time, is that how you were 
+starting it or was it? 
+
+30
+00:01:40,010 --> 00:01:42,250
+Just supporting the open source 
+project. 
+
+31
+00:01:42,730 --> 00:01:45,570
+It was we. 
+We saw the opportunity but that 
+
+32
+00:01:45,810 --> 00:01:49,810
+point we. 
+Hadn't even done the 1.0 release
+
+33
+00:01:49,810 --> 00:01:53,570
+yet and we were already seeing 
+companies that were using it in 
+
+34
+00:01:53,570 --> 00:01:57,170
+production. 
+So it seemed like we were really
+
+35
+00:01:57,210 --> 00:02:01,250
+on to something there and we 
+wanted to do something to really
+
+36
+00:02:01,250 --> 00:02:03,850
+build on that and take that to 
+the next level. 
+
+37
+00:02:04,010 --> 00:02:06,650
+Okay. 
+And how long ago was that the 
+
+38
+00:02:06,810 --> 00:02:12,030
+was that Verge started? 
+So about almost two years ago. 
+
+39
+00:02:12,030 --> 00:02:14,750
+So we we did the first 
+announcement at Functional Scala
+
+40
+00:02:14,750 --> 00:02:18,590
+in London in 2019. 
+Yeah, I didn't realize it was 
+
+41
+00:02:18,590 --> 00:02:20,590
+that recent. 
+Two years, yeah. 
+
+42
+00:02:21,590 --> 00:02:24,710
+Time has maybe moved differently
+with the pandemic and 
+
+43
+00:02:24,710 --> 00:02:27,310
+everything. 
+That and it, it seems like 
+
+44
+00:02:27,390 --> 00:02:32,190
+there's we keep track of time by
+by markers like like milestones,
+
+45
+00:02:32,190 --> 00:02:34,470
+and it seems like there's been 
+so many like markers in the 
+
+46
+00:02:34,470 --> 00:02:37,190
+world of Zeo. 
+Like it's just like, Oh my gosh,
+
+47
+00:02:37,190 --> 00:02:40,230
+another amazing library or 
+another amazing release or 
+
+48
+00:02:40,230 --> 00:02:42,790
+another amazing talk or, you 
+know, whatever it is. 
+
+49
+00:02:42,790 --> 00:02:45,590
+Like there's been so many 
+markers that it seems like like 
+
+50
+00:02:46,190 --> 00:02:51,350
+2 years of calendar time is like
+10 years of of events. 
+
+51
+00:02:51,830 --> 00:02:53,110
+It's two years of sprinting, 
+yeah. 
+
+52
+00:02:53,270 --> 00:02:57,750
+Yeah, Yeah. 
+So I don't know. 
+
+53
+00:02:57,750 --> 00:03:00,230
+Yeah. 
+Tell us about about your history
+
+54
+00:03:00,230 --> 00:03:02,030
+with Zia. 
+Like, how did you get into it? 
+
+55
+00:03:02,030 --> 00:03:04,430
+And. 
+Yeah, so. 
+
+56
+00:03:04,930 --> 00:03:09,610
+I I started out, I had been 
+doing my own Scala stuff just 
+
+57
+00:03:09,650 --> 00:03:12,890
+basically on my laptop for for a
+while. 
+
+58
+00:03:12,890 --> 00:03:17,810
+I was doing finance and 
+investing at the time and I'm 
+
+59
+00:03:17,810 --> 00:03:22,610
+trying to marry the fundamental 
+with the algorithmic and so 
+
+60
+00:03:23,970 --> 00:03:27,450
+developed a bunch of tools for 
+myself to do that and I I had my
+
+61
+00:03:27,450 --> 00:03:32,170
+own like mini effect system and 
+things like that but it was. 
+
+62
+00:03:32,890 --> 00:03:34,130
+Why not the most sustainable 
+thing? 
+
+63
+00:03:34,130 --> 00:03:37,650
+Because time you spend working 
+on that is not time you spend 
+
+64
+00:03:38,250 --> 00:03:40,010
+actually looking at the things 
+you're investing in. 
+
+65
+00:03:40,010 --> 00:03:43,050
+And there's a balance there. 
+So at a certain point, I 
+
+66
+00:03:43,050 --> 00:03:46,290
+decided, hey, if I want to do 
+something with this, I got to, I
+
+67
+00:03:46,290 --> 00:03:49,050
+got to get it, not just be doing
+it myself, but I got to start 
+
+68
+00:03:49,330 --> 00:03:51,210
+working with a broader group of 
+people. 
+
+69
+00:03:51,650 --> 00:03:55,570
+And so I think I did my first 
+contribution to Zio, probably 
+
+70
+00:03:55,570 --> 00:03:58,660
+like. 
+July 2019, something like that. 
+
+71
+00:03:59,300 --> 00:04:03,020
+And I I think I did one of the, 
+I think the symposiums where I 
+
+72
+00:04:03,020 --> 00:04:06,220
+was talking about open source 
+and I actually went back to that
+
+73
+00:04:06,220 --> 00:04:08,980
+PR. 
+And I mean it's a very, it's a 
+
+74
+00:04:08,980 --> 00:04:11,700
+very basic PR. 
+It's, it's one of those ones 
+
+75
+00:04:11,700 --> 00:04:14,780
+where someone had like scoped 
+out like here's exactly what 
+
+76
+00:04:14,780 --> 00:04:17,339
+needs to be done. 
+Here's basically the code you 
+
+77
+00:04:18,180 --> 00:04:21,019
+hopefully copy and paste in and 
+this should it's kind of like do
+
+78
+00:04:21,019 --> 00:04:23,660
+you remember the draw by 
+numbers? 
+
+79
+00:04:24,290 --> 00:04:26,490
+I was kind of like, Oh yeah, 
+from this number to that. 
+
+80
+00:04:26,850 --> 00:04:31,010
+Yeah, exactly. 
+So exactly well, but. 
+
+81
+00:04:31,130 --> 00:04:35,090
+It seemed like it would be easy,
+OK, but I, I I did it and there 
+
+82
+00:04:35,090 --> 00:04:38,450
+were complications because of 
+all parallelism and concurrency 
+
+83
+00:04:38,450 --> 00:04:42,570
+and all this fun stuff. 
+And very quickly like I got, I 
+
+84
+00:04:42,570 --> 00:04:45,610
+got comments from John, I got 
+comments from Edmar and we had a
+
+85
+00:04:45,610 --> 00:04:48,090
+lot of back and forth and we got
+it in. 
+
+86
+00:04:48,090 --> 00:04:52,930
+But I could see that there was 
+there's a real focus on. 
+
+87
+00:04:53,260 --> 00:04:55,940
+Correctness of it wasn't just 
+like Is this OK? 
+
+88
+00:04:55,940 --> 00:04:58,340
+But is this the best way it can 
+possibly be? 
+
+89
+00:04:58,340 --> 00:05:00,540
+And I think that's my own 
+approach. 
+
+90
+00:05:00,540 --> 00:05:03,940
+So I think finding other people 
+at have a similar. 
+
+91
+00:05:04,020 --> 00:05:09,660
+Like your values aligned with 
+with John and with Edmar, yeah. 
+
+92
+00:05:10,100 --> 00:05:12,300
+And it was also fast. 
+I think that's one of the things
+
+93
+00:05:12,300 --> 00:05:15,780
+I noticed is when when there's a
+problem or when we say we want 
+
+94
+00:05:15,780 --> 00:05:18,260
+to do something, things things 
+get moving. 
+
+95
+00:05:18,260 --> 00:05:21,630
+It's not like there's something 
+that's just sitting there for. 4
+
+96
+00:05:21,630 --> 00:05:24,270
+weeks and people are like, oh, 
+you know, do I think this, do I 
+
+97
+00:05:24,270 --> 00:05:27,070
+think that or like, OK, we got 
+to make some decision here 
+
+98
+00:05:27,070 --> 00:05:29,510
+because the wrong decision, we 
+got to move forward? 
+
+99
+00:05:29,510 --> 00:05:31,750
+Of course, you were working with
+a fairly small group at that 
+
+100
+00:05:31,750 --> 00:05:36,430
+time because one of the things 
+that we have been pondering is 
+
+101
+00:05:36,430 --> 00:05:41,030
+like, well, what is it when you 
+all agree? 
+
+102
+00:05:41,510 --> 00:05:42,670
+Consensus. 
+Consensus. 
+
+103
+00:05:42,990 --> 00:05:44,910
+OK. 
+Because I've gone back and forth
+
+104
+00:05:44,910 --> 00:05:48,790
+with consensus, and it's like, 
+oh, actually consensus is good 
+
+105
+00:05:49,500 --> 00:05:52,140
+if you have just a few people, 
+but it doesn't scale. 
+
+106
+00:05:52,980 --> 00:05:55,460
+And so that's when people start 
+running into issues. 
+
+107
+00:05:55,460 --> 00:05:57,940
+It's when you start getting more
+and more people involved and 
+
+108
+00:05:57,940 --> 00:06:01,540
+then consensus is hard. 
+Yeah, and then you just go to 
+
+109
+00:06:01,820 --> 00:06:04,900
+the benevolent dictator because 
+consensus doesn't work anymore. 
+
+110
+00:06:04,900 --> 00:06:07,740
+So yeah, just like that. 
+Yeah, unless you're the Apache 
+
+111
+00:06:07,780 --> 00:06:10,940
+Foundation and you stick with, 
+try to stick with consensus. 
+
+112
+00:06:11,540 --> 00:06:12,660
+But then there's a lot of 
+fireworks. 
+
+113
+00:06:12,660 --> 00:06:14,900
+See what happens. 
+Yeah, yeah. 
+
+114
+00:06:15,340 --> 00:06:18,500
+So you've probably been doing 
+Scholar for a long time then 
+
+115
+00:06:18,540 --> 00:06:20,860
+before. 
+It's about 2014, yeah. 
+
+116
+00:06:21,020 --> 00:06:26,460
+OK, and do you have a background
+in like Haskell or or Scholar 
+
+117
+00:06:26,460 --> 00:06:27,700
+was? 
+Pretty. 
+
+118
+00:06:28,140 --> 00:06:32,380
+I mean I I did a tiny amount of 
+Java 1st and then I moved to the
+
+119
+00:06:32,420 --> 00:06:35,500
+Scala and so you if you looked 
+at my old code you could 
+
+120
+00:06:35,500 --> 00:06:38,980
+definitely see like it started 
+as a Java with semicolons and it
+
+121
+00:06:38,980 --> 00:06:41,460
+went from there. 
+Yeah, yeah, yeah. 
+
+122
+00:06:41,780 --> 00:06:43,940
+That's how I started too. 
+Was from Java to Scala and I 
+
+123
+00:06:43,940 --> 00:06:46,900
+wrote my Scala Java without 
+semicolons and. 
+
+124
+00:06:47,430 --> 00:06:52,630
+And and now I'm like, you know 
+full on Zeo like affects pure 
+
+125
+00:06:52,630 --> 00:06:55,470
+functions like that whole world.
+What about math? 
+
+126
+00:06:55,470 --> 00:06:56,750
+Do you have a background in 
+math? 
+
+127
+00:06:57,670 --> 00:07:00,990
+I I'd studied chemistry and 
+philosophy as an undergraduate, 
+
+128
+00:07:00,990 --> 00:07:04,350
+so I got some of it, but I'm 
+definitely not a not a 
+
+129
+00:07:04,350 --> 00:07:07,670
+mathematician or a yeah yeah, 
+computer scientist, yeah. 
+
+130
+00:07:08,550 --> 00:07:13,950
+So cool to like go from from not
+the Haskell world into Zeo, 
+
+131
+00:07:13,950 --> 00:07:15,950
+because it seems like you know, 
+obviously John and. 
+
+132
+00:07:16,700 --> 00:07:20,580
+I don't know about about Edmar 
+others but like it seems like 
+
+133
+00:07:20,620 --> 00:07:25,980
+like there was kind of this pull
+from that direction but I think 
+
+134
+00:07:25,980 --> 00:07:28,420
+it's so important to have a 
+different perspective that and I
+
+135
+00:07:28,420 --> 00:07:31,100
+think it's probably what part of
+what's made zero great is that 
+
+136
+00:07:31,100 --> 00:07:35,180
+it's it's not Haskell and I I 
+could never really get into 
+
+137
+00:07:35,180 --> 00:07:36,980
+cats. 
+You know, it's like it was too 
+
+138
+00:07:37,900 --> 00:07:41,780
+cats and and even scholars Ed 
+were just too, too far from my 
+
+139
+00:07:41,780 --> 00:07:44,650
+realm of what I was. 
+Familiar with and Zeo is the 
+
+140
+00:07:44,650 --> 00:07:47,210
+first time where I'm like, this 
+is something that I can do. 
+
+141
+00:07:47,450 --> 00:07:51,930
+I remember at one no, I think 
+it's when we had like a Scala 
+
+142
+00:07:51,930 --> 00:07:55,370
+summit or something. 
+We all tried to watch one of the
+
+143
+00:07:55,370 --> 00:08:02,090
+Zeo not Zeo Scala's ad 
+presentations, and I wonder now 
+
+144
+00:08:02,090 --> 00:08:05,470
+if I went back and watched it, 
+if any of it would make. 
+
+145
+00:08:05,470 --> 00:08:10,150
+Because none of it made sense. 
+It was just totally a you know 
+
+146
+00:08:10,150 --> 00:08:13,150
+what, I guess it was an 
+introductory or something, but I
+
+147
+00:08:13,150 --> 00:08:16,550
+wonder if I would grasp more of 
+it now or if it would still be 
+
+148
+00:08:17,230 --> 00:08:18,910
+hard to. 
+I would grasp more of it now, 
+
+149
+00:08:18,910 --> 00:08:20,590
+but yeah, I mean I was the same 
+way. 
+
+150
+00:08:20,590 --> 00:08:24,350
+I was coming from a oh oh Java 
+background. 
+
+151
+00:08:24,830 --> 00:08:28,860
+All these ideas of like. 
+Applicatives and funktors like 
+
+152
+00:08:28,860 --> 00:08:32,140
+all of it just was like I don't 
+even understand is this 
+
+153
+00:08:32,340 --> 00:08:35,460
+programming or is it something 
+else? 
+
+154
+00:08:35,460 --> 00:08:39,059
+Yeah. 
+Yeah, so that was that was where
+
+155
+00:08:39,059 --> 00:08:42,260
+it started And then and then 
+you've done a whole lot since 
+
+156
+00:08:42,260 --> 00:08:47,060
+then in terms of like the 
+runtime and the API like surface
+
+157
+00:08:47,060 --> 00:08:50,020
+layer, like what developers use 
+and I don't know, tell us more 
+
+158
+00:08:50,020 --> 00:08:52,300
+about what? 
+Well, I I started out really 
+
+159
+00:08:52,300 --> 00:08:55,460
+working on on Zio test. 
+That was the thing I got most 
+
+160
+00:08:55,460 --> 00:08:59,330
+involved with at the beginning. 
+And I think it was a good time 
+
+161
+00:08:59,610 --> 00:09:03,090
+for me because that project was 
+really just starting out. 
+
+162
+00:09:03,410 --> 00:09:08,370
+And so at the beginning I, I, I,
+I always tried to take just 
+
+163
+00:09:08,370 --> 00:09:11,290
+about every poll request there 
+or take every issue that there 
+
+164
+00:09:11,290 --> 00:09:13,050
+was for ZIO Test. 
+If it would come up, I would 
+
+165
+00:09:13,050 --> 00:09:15,850
+take it, I would try to do it 
+the next day or so and I would 
+
+166
+00:09:15,970 --> 00:09:19,250
+take another one. 
+And I I always when I'm giving 
+
+167
+00:09:19,250 --> 00:09:22,490
+people advice about open source,
+I I always suggest that they try
+
+168
+00:09:22,490 --> 00:09:25,290
+to find something that they can.
+Take ownership of. 
+
+169
+00:09:25,330 --> 00:09:28,250
+Maybe it's a whole library or 
+maybe it's just like this data 
+
+170
+00:09:28,250 --> 00:09:30,930
+structure. 
+But take ownership of that thing
+
+171
+00:09:30,930 --> 00:09:33,650
+of obviously you're not 
+literally owning it, but you're 
+
+172
+00:09:33,650 --> 00:09:35,410
+going to be the responsible 
+person there. 
+
+173
+00:09:35,410 --> 00:09:38,210
+And if there's an issue there, 
+you're going to do your best to 
+
+174
+00:09:38,210 --> 00:09:41,650
+come up with a solution or bring
+people together to get to a 
+
+175
+00:09:41,650 --> 00:09:44,050
+solution. 
+And I think that way you build 
+
+176
+00:09:44,050 --> 00:09:47,690
+expertise and you build value 
+that you're bringing or people 
+
+177
+00:09:47,690 --> 00:09:50,330
+are then coming to you and being
+like, hey, I want this extra 
+
+178
+00:09:50,330 --> 00:09:53,530
+thing, how can I do it? 
+And then you give yourself a. 
+
+179
+00:09:54,020 --> 00:09:57,460
+Base to branch out from, whereas
+I think some people just do a 
+
+180
+00:09:57,460 --> 00:10:00,540
+little bit here and there, which
+if you want to that that's fine,
+
+181
+00:10:00,540 --> 00:10:03,260
+but I think you can maybe you 
+have find it more rewarding for 
+
+182
+00:10:03,260 --> 00:10:06,700
+yourself as well as have more 
+impact if you find something 
+
+183
+00:10:06,700 --> 00:10:09,420
+that you can immerse yourself. 
+Yeah, exactly. 
+
+184
+00:10:09,700 --> 00:10:13,220
+On something that people like 
+know you for and will go to you 
+
+185
+00:10:13,220 --> 00:10:16,780
+for like like that you like you 
+said you own when you own a 
+
+186
+00:10:16,780 --> 00:10:19,380
+piece, then yeah, it's 
+different. 
+
+187
+00:10:19,380 --> 00:10:19,820
+So. 
+Yeah. 
+
+188
+00:10:19,820 --> 00:10:21,860
+And then you can branch out from
+there overtime. 
+
+189
+00:10:22,760 --> 00:10:24,640
+Had you done much open source 
+before? 
+
+190
+00:10:24,760 --> 00:10:27,160
+This. 
+No, I had done almost nothing. 
+
+191
+00:10:28,000 --> 00:10:31,960
+Yeah, I think I did one thing to
+Scala check way back and that 
+
+192
+00:10:31,960 --> 00:10:37,640
+was about it. 
+Wow, I mean wild to go from like
+
+193
+00:10:37,640 --> 00:10:41,680
+no real open source 
+contributions to contributing to
+
+194
+00:10:41,680 --> 00:10:45,320
+like one of the most in a way is
+like hardcore like Scala 
+
+195
+00:10:45,320 --> 00:10:48,360
+libraries you could possibly 
+find and contributing like like 
+
+196
+00:10:48,520 --> 00:10:52,160
+difficult pieces, like anything 
+around concurrency I'm sure is. 
+
+197
+00:10:52,690 --> 00:10:54,690
+Not easy. 
+Yeah. 
+
+198
+00:10:54,690 --> 00:10:57,770
+Well, I think that's one of the 
+things that is a real testament 
+
+199
+00:10:57,770 --> 00:11:00,690
+to folks like John is at the 
+beginning, he spent a lot of 
+
+200
+00:11:00,690 --> 00:11:04,410
+time like you would do a poll 
+request and there would be very 
+
+201
+00:11:04,410 --> 00:11:08,770
+detailed feedback and you you 
+incorporate that and you you 
+
+202
+00:11:08,770 --> 00:11:11,290
+learn from that, you really get 
+a lot out of that. 
+
+203
+00:11:11,490 --> 00:11:14,810
+Yeah, yeah. 
+And grow in your own 
+
+204
+00:11:16,250 --> 00:11:19,810
+understanding and and ability to
+to then go further. 
+
+205
+00:11:19,810 --> 00:11:24,190
+So yeah. 
+Yeah, we had Weem on couple 
+
+206
+00:11:24,190 --> 00:11:27,550
+episodes ago and she she said 
+very similar things about John's
+
+207
+00:11:27,550 --> 00:11:30,390
+mentoring and how how it had 
+helped her. 
+
+208
+00:11:30,390 --> 00:11:35,150
+But also maybe that's part of 
+what's made Zeo great is that 
+
+209
+00:11:35,430 --> 00:11:39,030
+John has mentored people well 
+and helped them become 
+
+210
+00:11:39,790 --> 00:11:42,590
+significant contributors to the 
+project. 
+
+211
+00:11:46,430 --> 00:11:48,270
+So. 
+So yeah, So what are some of the
+
+212
+00:11:48,270 --> 00:11:50,990
+Zo parts of Zo that you've 
+worked on since Scala test? 
+
+213
+00:11:52,310 --> 00:11:53,950
+Sorry, Zo. 
+Test No, no, it's Okay. 
+
+214
+00:11:54,550 --> 00:11:56,070
+We can just replace on with the 
+others. 
+
+215
+00:11:58,350 --> 00:12:05,030
+So I did the Z hub concurrent 
+data structure okay and then I 
+
+216
+00:12:05,030 --> 00:12:09,390
+did the scheduler for Zo 2.0, 
+the fiber scheduler. 
+
+217
+00:12:10,590 --> 00:12:13,190
+And that was, I think your most 
+recent presentation I watched 
+
+218
+00:12:13,190 --> 00:12:16,270
+was about the Zot scheduler. 
+And I'm just like, amazing. 
+
+219
+00:12:17,530 --> 00:12:21,890
+Some really hard problems that 
+that are underneath all that. 
+
+220
+00:12:21,970 --> 00:12:23,570
+There's some interesting stuff 
+there. 
+
+221
+00:12:23,570 --> 00:12:24,930
+And there's there's actually 
+more coming. 
+
+222
+00:12:25,010 --> 00:12:25,930
+Yeah. 
+Awesome. 
+
+223
+00:12:27,730 --> 00:12:31,210
+So, so yeah, a couple of those 
+big things and then I find it's 
+
+224
+00:12:31,210 --> 00:12:35,810
+always a balance of there's the 
+those big things, but then 
+
+225
+00:12:35,810 --> 00:12:39,170
+they're also just the little 
+things of a lot of what I think 
+
+226
+00:12:39,170 --> 00:12:42,170
+about around open source is just
+continuous improvement and. 
+
+227
+00:12:42,640 --> 00:12:44,800
+You have a lot of things that 
+just make type inference a 
+
+228
+00:12:44,800 --> 00:12:46,360
+little bit better on this 
+method. 
+
+229
+00:12:46,360 --> 00:12:47,960
+Make this thing a little more 
+efficient. 
+
+230
+00:12:48,240 --> 00:12:49,880
+Add something that's going to 
+make it a little easier to do 
+
+231
+00:12:49,880 --> 00:12:52,840
+this and if you just keep going 
+in the right direction 
+
+232
+00:12:52,840 --> 00:12:55,200
+consistently, that really adds 
+up over time. 
+
+233
+00:12:55,600 --> 00:12:59,720
+Yeah, we've been, we've had some
+impressive surprises when 
+
+234
+00:12:59,720 --> 00:13:05,120
+playing with Zo 2 and and some 
+of the error messages and and 
+
+235
+00:13:05,160 --> 00:13:08,160
+inference that it's done and 
+it's like how can it know that? 
+
+236
+00:13:08,760 --> 00:13:11,340
+Yeah. 
+Yeah, there was just not used to
+
+237
+00:13:11,340 --> 00:13:15,020
+it in other languages. 
+Well, just like the the error 
+
+238
+00:13:15,020 --> 00:13:19,140
+message we got on the layers 
+that we were looking at and how 
+
+239
+00:13:19,140 --> 00:13:24,140
+it was like, whoa, how did how 
+did they produce such a precise,
+
+240
+00:13:24,140 --> 00:13:26,340
+precise and helpful error 
+message? 
+
+241
+00:13:27,020 --> 00:13:28,380
+Kit did a really good job with 
+that. 
+
+242
+00:13:28,860 --> 00:13:31,780
+Yeah, yeah. 
+We were looking into like how 
+
+243
+00:13:31,780 --> 00:13:34,780
+that was actually implemented 
+with like implicit not founders 
+
+244
+00:13:35,020 --> 00:13:38,820
+some some amazingness but but 
+yeah, to put effort into. 
+
+245
+00:13:39,620 --> 00:13:42,140
+The developer experience, I 
+think that's something that Zio 
+
+246
+00:13:42,140 --> 00:13:44,660
+has done a really good job of 
+is, is investing in the 
+
+247
+00:13:44,660 --> 00:13:48,540
+developer experience side of 
+things that that most, most, a 
+
+248
+00:13:48,540 --> 00:13:52,060
+lot of people don't put. 
+That guy works. 
+
+249
+00:13:52,420 --> 00:13:54,500
+Yeah, well, it's hard enough to 
+get it to. 
+
+250
+00:13:54,740 --> 00:13:58,500
+Work to use versus oh, what's 
+the experience that somebody's 
+
+251
+00:13:58,500 --> 00:14:01,300
+going to have? 
+Can they just cargo cult their 
+
+252
+00:14:01,300 --> 00:14:05,460
+way into using this thing and 
+get a good result, which I think
+
+253
+00:14:05,460 --> 00:14:10,080
+is a big, you know, benefit If I
+can just I go, I wonder if this 
+
+254
+00:14:10,080 --> 00:14:13,760
+will work and we'll go, no, that
+won't work because these reasons
+
+255
+00:14:13,760 --> 00:14:17,720
+do this. 
+Wow, that's really helpful. 
+
+256
+00:14:18,880 --> 00:14:25,120
+Yeah, the developer experiences 
+is something I've been very very
+
+257
+00:14:25,120 --> 00:14:29,600
+pleased with using ZIO and even 
+we're mostly using it now with 
+
+258
+00:14:29,600 --> 00:14:34,280
+Scala 3 and I realized how 
+Intellij. 
+
+259
+00:14:37,390 --> 00:14:40,350
+I I just can't even write code 
+anymore without Intellij. 
+
+260
+00:14:40,950 --> 00:14:43,190
+That's kind of sad because I 
+used to be able to write a lot 
+
+261
+00:14:43,190 --> 00:14:47,150
+of code in VI and now it's like 
+I'm so dependent on Intellij, 
+
+262
+00:14:48,350 --> 00:14:52,390
+but Intellij in Scholar three 
+has not been super awesome. 
+
+263
+00:14:52,390 --> 00:14:53,430
+You've been on the bleeding 
+edge. 
+
+264
+00:14:53,470 --> 00:14:58,110
+Yeah, and so it's been 
+interesting to kind of struggle 
+
+265
+00:14:58,110 --> 00:15:03,310
+through not having a very 
+functional IDE, but even with 
+
+266
+00:15:03,310 --> 00:15:06,990
+that, like huge hit to the 
+developer experience. 
+
+267
+00:15:07,310 --> 00:15:10,950
+It's it's been such a joy to use
+Zeo like like things. 
+
+268
+00:15:10,950 --> 00:15:16,350
+We were talking with Bill about 
+the the the NZO 2, the naming of
+
+269
+00:15:16,350 --> 00:15:20,870
+the methods. 
+Just like when I go to try to 
+
+270
+00:15:20,870 --> 00:15:24,510
+find something, you can guess. 
+You can guess, like guess 
+
+271
+00:15:24,510 --> 00:15:26,790
+ability. 
+Yeah, the guess ability is, Oh 
+
+272
+00:15:26,790 --> 00:15:29,110
+yeah, which is like, you 
+realize, oh, we're doing this 
+
+273
+00:15:29,110 --> 00:15:33,110
+all the time, but they're not 
+thinking about that normally. 
+
+274
+00:15:33,110 --> 00:15:36,110
+So if somebody actually thinks 
+about, can we make this more 
+
+275
+00:15:36,110 --> 00:15:38,650
+guessable? 
+Really helpful. 
+
+276
+00:15:38,770 --> 00:15:43,570
+Yeah. 
+And then the so there's the 
+
+277
+00:15:43,570 --> 00:15:46,490
+guest ability part that was that
+was really important. 
+
+278
+00:15:46,490 --> 00:15:49,210
+But then also consistency and 
+naming. 
+
+279
+00:15:49,610 --> 00:15:56,970
+So there like in Zo one it's 
+what put sterling and it's the 
+
+280
+00:15:56,970 --> 00:15:59,650
+Haskells and read line. 
+Oh is that from Haskell? 
+
+281
+00:15:59,650 --> 00:16:01,810
+That's exactly where it's from. 
+It's interesting to understand 
+
+282
+00:16:02,410 --> 00:16:04,250
+the history of that. 
+Yeah. 
+
+283
+00:16:04,250 --> 00:16:07,200
+But now it's like no. 
+We don't need that and it's more
+
+284
+00:16:07,360 --> 00:16:11,280
+it's more useful to have names 
+that that make sense. 
+
+285
+00:16:11,320 --> 00:16:14,320
+Or actually English words. 
+Or English words and there's 
+
+286
+00:16:14,320 --> 00:16:18,320
+something that I would think of 
+or you know, most developers 
+
+287
+00:16:18,320 --> 00:16:20,320
+would think of like what is it 
+now? 
+
+288
+00:16:20,320 --> 00:16:23,000
+Read line and. 
+Read line and print line print. 
+
+289
+00:16:23,000 --> 00:16:25,120
+Line Yeah it's like. 
+That just makes sense. 
+
+290
+00:16:25,640 --> 00:16:27,360
+Yeah, I really appreciate the 
+API. 
+
+291
+00:16:27,440 --> 00:16:30,720
+I'm personally a fan of just 
+read and print myself, but. 
+
+292
+00:16:31,200 --> 00:16:33,560
+That's what Python does. 
+It's just like read and print. 
+
+293
+00:16:34,400 --> 00:16:36,360
+Yeah, there there there is a 
+print, but it doesn't. 
+
+294
+00:16:36,360 --> 00:16:37,920
+That one doesn't insert the new 
+line. 
+
+295
+00:16:37,920 --> 00:16:40,520
+But maybe that'll be for Zo 3, 
+yeah? 
+
+296
+00:16:41,920 --> 00:16:44,680
+Yeah. 
+OK. 
+
+297
+00:16:44,680 --> 00:16:48,480
+So I want to hear a little more 
+about the your work in the ZO 
+
+298
+00:16:48,480 --> 00:16:53,640
+scheduler and I don't know just 
+for those and 1st tell us what 
+
+299
+00:16:53,680 --> 00:16:55,320
+this is scheduler? 
+What was? 
+
+300
+00:16:55,400 --> 00:16:58,240
+What problem does it solve? 
+Yeah, absolutely. 
+
+301
+00:16:58,240 --> 00:17:03,120
+So in a system like Zo you have 
+all these different fibers. 
+
+302
+00:17:03,550 --> 00:17:07,950
+And each fiber is you can think 
+of as kind of a user land thread
+
+303
+00:17:08,230 --> 00:17:10,950
+that has a set of tasks that 
+it's supposed to execute. 
+
+304
+00:17:11,550 --> 00:17:15,550
+And you could have million 
+fibers in a large Zo 
+
+305
+00:17:15,550 --> 00:17:19,310
+application. 
+And for efficiency, you probably
+
+306
+00:17:19,310 --> 00:17:22,150
+only want a number of physical 
+threads equal to the actual 
+
+307
+00:17:22,150 --> 00:17:25,190
+number of cores on your system. 
+So maybe that's the ideal for 
+
+308
+00:17:25,230 --> 00:17:28,520
+cache? 
+What's the word concurrency? 
+
+309
+00:17:28,800 --> 00:17:31,160
+No. 
+Like cache locality and avoiding
+
+310
+00:17:31,160 --> 00:17:33,160
+the cost of context switching. 
+Yeah, yeah. 
+
+311
+00:17:33,160 --> 00:17:37,280
+So you have maybe eight of these
+threads and so you need to 
+
+312
+00:17:37,280 --> 00:17:41,360
+schedule these. 
+Fibers onto the different 
+
+313
+00:17:41,920 --> 00:17:45,560
+threads, and these fibers may 
+also be doing things where they 
+
+314
+00:17:45,560 --> 00:17:48,680
+may suspend at some point. 
+They may go into an asynchronous
+
+315
+00:17:48,680 --> 00:17:50,960
+state where they do some work 
+and now they're done for a while
+
+316
+00:17:50,960 --> 00:17:54,440
+until someone has a result for 
+them and they need to go and 
+
+317
+00:17:54,440 --> 00:17:56,960
+they need to wait and then 
+eventually need to get run. 
+
+318
+00:17:57,520 --> 00:18:04,440
+And so in Co 1.0 we basically 
+just used an Executor that is 
+
+319
+00:18:04,440 --> 00:18:08,080
+one of the standard Java 
+concurrent fixed thread pools. 
+
+320
+00:18:08,650 --> 00:18:13,410
+And what that essentially does 
+is just has one work queue that 
+
+321
+00:18:13,410 --> 00:18:15,530
+all of these threads pull off 
+of. 
+
+322
+00:18:15,810 --> 00:18:18,730
+So you can think of every time 
+you offer new work, you just add
+
+323
+00:18:18,730 --> 00:18:22,210
+it to the end of this giant 
+queue and you have these 
+
+324
+00:18:22,210 --> 00:18:24,450
+threads, they're just always 
+trying to pick things off of 
+
+325
+00:18:24,450 --> 00:18:27,010
+this queue. 
+And that works. 
+
+326
+00:18:27,010 --> 00:18:29,290
+Okay. 
+It worked okay for the life of 
+
+327
+00:18:29,290 --> 00:18:32,010
+ZO1. 
+But there are a couple of issues
+
+328
+00:18:32,010 --> 00:18:34,490
+with it. 
+Of 1, you've got a lot of 
+
+329
+00:18:34,490 --> 00:18:37,370
+contention for taking from the 
+head of that queue because 
+
+330
+00:18:37,370 --> 00:18:40,840
+you've got these. 8 or however 
+many different threads that are 
+
+331
+00:18:40,840 --> 00:18:43,280
+potentially trying to get that 
+value. 
+
+332
+00:18:43,840 --> 00:18:47,280
+And the other problem you have 
+is you have a loss of that cache
+
+333
+00:18:47,280 --> 00:18:51,440
+locality where you may have part
+of your computation that you're 
+
+334
+00:18:51,440 --> 00:18:55,440
+doing on one of these threads, 
+but then you enter one of these 
+
+335
+00:18:55,440 --> 00:18:58,280
+asynchronous states, you submit 
+it to the back of that queue. 
+
+336
+00:18:58,640 --> 00:19:01,800
+Well, when it comes to the front
+of the queue, it's completely 
+
+337
+00:19:01,800 --> 00:19:05,480
+random which thread is going to 
+take that, and so you may have a
+
+338
+00:19:05,480 --> 00:19:08,120
+different thread that no longer 
+has that in its cache. 
+
+339
+00:19:08,890 --> 00:19:14,050
+And so and what sort of impact, 
+I mean it obviously it's a big 
+
+340
+00:19:14,050 --> 00:19:17,050
+enough impact that you spend all
+this time fixing the problem. 
+
+341
+00:19:17,450 --> 00:19:19,410
+Yeah. 
+So it's one of those. 
+
+342
+00:19:19,730 --> 00:19:23,770
+I think the benchmarks are hard 
+because to measure it you do 
+
+343
+00:19:23,970 --> 00:19:27,490
+micro benchmarks and there you 
+can you can do it very 
+
+344
+00:19:27,490 --> 00:19:31,010
+quantitatively on some of these 
+that's it's twice as fast when 
+
+345
+00:19:31,010 --> 00:19:33,810
+you do it with this now the 
+micro benchmark is. 
+
+346
+00:19:34,220 --> 00:19:38,100
+A micro benchmark, when you go 
+and you call some database and 
+
+347
+00:19:38,100 --> 00:19:40,940
+you do something over the 
+network like that adds up really
+
+348
+00:19:40,940 --> 00:19:43,580
+quickly. 
+So for your particular 
+
+349
+00:19:43,580 --> 00:19:46,780
+application you may see that 
+more or less. 
+
+350
+00:19:46,780 --> 00:19:49,740
+But one of the things we really 
+want to do is we want to 
+
+351
+00:19:50,020 --> 00:19:53,540
+minimize the overhead that an 
+effect system like Zio brings, 
+
+352
+00:19:53,540 --> 00:19:56,640
+so that Zio is. 
+To the maximum extent possible, 
+
+353
+00:19:56,640 --> 00:20:00,040
+Never a reason to not do. 
+It's never a reason not do 
+
+354
+00:20:00,040 --> 00:20:01,720
+something. 
+The efficiency is never a. 
+
+355
+00:20:01,960 --> 00:20:03,800
+The efficiency is never a reason
+exactly. 
+
+356
+00:20:03,920 --> 00:20:07,120
+Should never have to take the 
+escape hatch down to some lower 
+
+357
+00:20:07,120 --> 00:20:09,320
+level primitive in order to work
+around. 
+
+358
+00:20:09,320 --> 00:20:12,680
+Ideally you don't think about it
+exactly, you just go. 
+
+359
+00:20:12,720 --> 00:20:15,520
+I will write my code the way I 
+want to write it and I know it 
+
+360
+00:20:15,520 --> 00:20:19,680
+will run efficiently. 
+Exactly head of line blocking? 
+
+361
+00:20:19,680 --> 00:20:23,360
+It wasn't that one of the other 
+issues with the like where? 
+
+362
+00:20:25,100 --> 00:20:30,340
+You can get these tasks stacked 
+up behind like one that's taking
+
+363
+00:20:30,340 --> 00:20:33,300
+a long time and consuming on the
+CPU and so it gets kind of 
+
+364
+00:20:33,300 --> 00:20:38,100
+blocked and can't get scheduled 
+when it could just move to a 
+
+365
+00:20:38,100 --> 00:20:41,100
+different thread or something. 
+And run and that would be 
+
+366
+00:20:41,100 --> 00:20:42,460
+faster. 
+Wasn't that one of the things 
+
+367
+00:20:42,460 --> 00:20:44,580
+you talked about? 
+Well, so that that's more an 
+
+368
+00:20:44,580 --> 00:20:47,420
+issue you got to watch out for 
+when you try to improve on this.
+
+369
+00:20:47,860 --> 00:20:50,580
+So like you've got this naive 
+where you have the queue and 
+
+370
+00:20:50,580 --> 00:20:53,580
+there you're OK there because 
+everything's in just in the 
+
+371
+00:20:53,580 --> 00:20:54,980
+queue. 
+So someone's going to take 
+
+372
+00:20:54,980 --> 00:20:56,540
+things as long as there's work 
+to take. 
+
+373
+00:20:56,540 --> 00:20:59,740
+So everyone stays busy. 
+That's the advantage of that 
+
+374
+00:20:59,820 --> 00:21:00,900
+architecture. 
+Yeah. 
+
+375
+00:21:01,460 --> 00:21:03,980
+But you have this loss of 
+locality and you have this 
+
+376
+00:21:03,980 --> 00:21:06,340
+competition. 
+So you could you kind of think 
+
+377
+00:21:06,340 --> 00:21:09,780
+of that as like 1 extreme of OK,
+you have this one shared state 
+
+378
+00:21:09,780 --> 00:21:13,420
+of this queue. 
+The other extreme is what you 
+
+379
+00:21:13,420 --> 00:21:15,580
+could think of as a completely 
+sharded system. 
+
+380
+00:21:15,900 --> 00:21:18,780
+So you could say, I'm going to 
+have eight different queues, I'm
+
+381
+00:21:18,780 --> 00:21:22,780
+going to have one for each of 
+these threads, and each of these
+
+382
+00:21:22,780 --> 00:21:25,140
+threads is just going to be 
+doing work from its own queue. 
+
+383
+00:21:25,380 --> 00:21:27,700
+And when it has new 
+continuations, it should put 
+
+384
+00:21:27,700 --> 00:21:31,740
+them back on its own queue. 
+And so there you've got almost 
+
+385
+00:21:31,740 --> 00:21:35,340
+the opposite set of tradeoffs of
+there's no contention on these 
+
+386
+00:21:35,340 --> 00:21:38,180
+queues, there's 100% cash 
+locality. 
+
+387
+00:21:38,610 --> 00:21:41,810
+But you create the issue that 
+you raised that depending on 
+
+388
+00:21:41,810 --> 00:21:44,570
+what run out of distribution, 
+right one one is just sitting 
+
+389
+00:21:44,570 --> 00:21:47,450
+there while another one is back.
+Is empty and 1 is backed. 
+
+390
+00:21:47,650 --> 00:21:50,370
+Up, right. 
+So that model, it's actually the
+
+391
+00:21:50,370 --> 00:21:55,490
+model you see in some some 
+either languages or some 
+
+392
+00:21:55,490 --> 00:22:01,110
+paradigms like C Star does that.
+But what that does is it pushes 
+
+393
+00:22:01,110 --> 00:22:04,750
+more of the work on to the user 
+to say how are they going to 
+
+394
+00:22:04,750 --> 00:22:09,110
+manage that concurrency of say 
+like OK, I've got 10,000 tasks. 
+
+395
+00:22:09,110 --> 00:22:11,670
+I think these are all roughly 
+the same amount of work. 
+
+396
+00:22:11,670 --> 00:22:14,990
+So split them out evenly or well
+I think these are more, these 
+
+397
+00:22:14,990 --> 00:22:17,950
+are going to take longer. 
+So give these more weight versus
+
+398
+00:22:17,950 --> 00:22:20,990
+the other ones. 
+So if something is in a queue, 
+
+399
+00:22:20,990 --> 00:22:24,510
+is it always ready to run or can
+it be in the queue and in a 
+
+400
+00:22:24,510 --> 00:22:27,180
+suspended state? 
+So if it's a suspended state, it
+
+401
+00:22:27,180 --> 00:22:28,540
+hasn't gone back into the queue 
+yet. 
+
+402
+00:22:28,540 --> 00:22:31,300
+I don't think it's in the queue 
+is ready to is ready to be run, 
+
+403
+00:22:31,500 --> 00:22:47,740
+okay, because that's different. 
+Got it, got it. 
+
+404
+00:22:32,740 --> 00:22:35,420
+I mean, most of my current 
+thinking right now is from 
+
+405
+00:22:35,420 --> 00:22:39,820
+Python And you just you have a 
+bunch of tasks and some of them 
+
+406
+00:22:39,820 --> 00:22:42,260
+are ready to run and some of 
+them aren't, and the scheduler 
+
+407
+00:22:42,260 --> 00:22:45,420
+just kind of randomly chooses 
+them and if it's not ready to 
+
+408
+00:22:45,420 --> 00:22:51,940
+run, it goes and finds another. 
+Yeah, so that model can be very 
+
+409
+00:22:51,940 --> 00:22:54,220
+efficient, but it pushes its 
+complexity on to the. 
+
+410
+00:22:54,890 --> 00:22:59,330
+Users, which is not the typical 
+experience that you want as a zo
+
+411
+00:22:59,330 --> 00:23:02,090
+user and. 
+So that I want to think. 
+
+412
+00:23:02,810 --> 00:23:05,970
+About exactly. 
+So the work of this is to kind 
+
+413
+00:23:05,970 --> 00:23:07,730
+of try to get the best of both 
+worlds. 
+
+414
+00:23:08,130 --> 00:23:11,090
+And we do that through work 
+stealing. 
+
+415
+00:23:11,770 --> 00:23:16,970
+So you have those different 
+queues, but each of the threads 
+
+416
+00:23:16,970 --> 00:23:20,410
+has the queue that it. 
+Owns, but it also has the 
+
+417
+00:23:20,410 --> 00:23:23,570
+ability to go and try to steal, 
+so if it runs out of tasks, 
+
+418
+00:23:23,650 --> 00:23:25,010
+it'll get them from the other 
+one. 
+
+419
+00:23:25,010 --> 00:23:25,890
+Somebody else. 
+Okay. 
+
+420
+00:23:25,970 --> 00:23:27,930
+Yeah, exactly. 
+In which case they wouldn't have
+
+421
+00:23:27,930 --> 00:23:31,250
+the cache locality but. 
+But you're better than sitting 
+
+422
+00:23:31,250 --> 00:23:32,930
+there doing nothing. 
+Exactly. 
+
+423
+00:23:33,170 --> 00:23:33,770
+Okay. 
+Yeah. 
+
+424
+00:23:34,090 --> 00:23:36,450
+So it's one of those things. 
+It makes a ton of sense. 
+
+425
+00:23:36,530 --> 00:23:38,710
+It's. 
+Easier said than done in a 
+
+426
+00:23:38,710 --> 00:23:42,030
+concurrent environment because 
+you need to make sure that when 
+
+427
+00:23:42,030 --> 00:23:44,910
+you take that thing that it 
+never gets done twice that you 
+
+428
+00:23:44,910 --> 00:23:48,470
+never get in a situation where 
+you think there is not work and 
+
+429
+00:23:48,470 --> 00:23:52,310
+then work gets submitted and all
+of your threads have gone to 
+
+430
+00:23:52,310 --> 00:23:53,710
+sleep. 
+So there's there's definitely 
+
+431
+00:23:53,710 --> 00:23:56,750
+more complexity there, but 
+there's actually there was some 
+
+432
+00:23:56,750 --> 00:24:01,310
+really good work that was done 
+in in Rust in their their Tokyo 
+
+433
+00:24:01,310 --> 00:24:05,070
+system there, so, so that was 
+definitely some inspiration for 
+
+434
+00:24:05,070 --> 00:24:08,470
+what we did. 
+But yeah, I think it's it's 
+
+435
+00:24:08,470 --> 00:24:11,670
+worked well so far and we've got
+some interesting stuff in the 
+
+436
+00:24:11,670 --> 00:24:13,550
+works to to build on that 
+further. 
+
+437
+00:24:14,430 --> 00:24:20,790
+So I'm presuming that if you're 
+working with the ZEO scheduler 
+
+438
+00:24:20,790 --> 00:24:25,430
+and concurrency system, you're 
+assuming that everything is pure
+
+439
+00:24:25,430 --> 00:24:31,070
+functions so that you know. 
+In other words, so if I if I'm 
+
+440
+00:24:31,070 --> 00:24:33,670
+in a task and I need some 
+information from another task, I
+
+441
+00:24:33,670 --> 00:24:36,110
+can just read it and I don't 
+have to worry about it changing 
+
+442
+00:24:36,110 --> 00:24:39,870
+or me modifying it. 
+Is this my like the ballpark? 
+
+443
+00:24:40,670 --> 00:24:47,390
+The the mutability is exposed 
+through like a a raff or other 
+
+444
+00:24:47,390 --> 00:24:49,550
+higher level constructs if there
+is mutability. 
+
+445
+00:24:50,770 --> 00:24:54,450
+So it's managed mutability. 
+So, so it's an effect based 
+
+446
+00:24:54,650 --> 00:24:55,890
+commutability. 
+Yeah. 
+
+447
+00:24:56,250 --> 00:24:59,330
+At the level of the scheduler, 
+these are just essentially 
+
+448
+00:24:59,330 --> 00:25:01,690
+runnables that it's running, so 
+it doesn't care about. 
+
+449
+00:25:01,970 --> 00:25:05,090
+I'm just thinking. 
+But yeah, ideally it's suspended
+
+450
+00:25:05,090 --> 00:25:07,410
+somewhere. 
+Whether it's a pure function or 
+
+451
+00:25:07,410 --> 00:25:11,690
+whether it's a effect that 
+suspends some arbitrary block of
+
+452
+00:25:11,690 --> 00:25:15,410
+code, yeah. 
+One of the things that has 
+
+453
+00:25:15,450 --> 00:25:19,130
+bothered me with with like, I 
+don't know, I did this in Play 
+
+454
+00:25:19,130 --> 00:25:22,680
+Framework and. 
+Other systems where I would have
+
+455
+00:25:22,680 --> 00:25:27,680
+to tell the system this thing is
+blocking and so use this other 
+
+456
+00:25:27,880 --> 00:25:31,360
+thread pool for this blocking 
+operation and I'm like, why? 
+
+457
+00:25:31,560 --> 00:25:36,880
+Why am I, the developer, telling
+you that something is blocking 
+
+458
+00:25:36,880 --> 00:25:39,280
+and needs to use a different 
+blocking thread pool? 
+
+459
+00:25:41,160 --> 00:25:44,160
+What's in ZEO? 
+Like do you do you have to? 
+
+460
+00:25:44,160 --> 00:25:47,040
+Does the developer ever have to 
+designate like this thing needs 
+
+461
+00:25:47,040 --> 00:25:49,400
+a blocking thread pool because 
+otherwise it's going to block 
+
+462
+00:25:49,400 --> 00:25:51,020
+all the? 
+All the threads are. 
+
+463
+00:25:51,700 --> 00:25:54,700
+So if you've got something 
+that's literally blocking the 
+
+464
+00:25:54,700 --> 00:25:58,260
+thread, then yeah, you want to 
+designate that as blocking. 
+
+465
+00:25:58,260 --> 00:26:00,340
+With there's just a zeal 
+blocking operator and you just 
+
+466
+00:26:00,340 --> 00:26:01,980
+do it around and you designate 
+that. 
+
+467
+00:26:02,260 --> 00:26:04,660
+We're working on ways to improve
+that. 
+
+468
+00:26:05,500 --> 00:26:08,540
+But when in this environment 
+where you have a limited number 
+
+469
+00:26:08,540 --> 00:26:10,540
+of threads, you need to be 
+careful that one of them doesn't
+
+470
+00:26:10,540 --> 00:26:12,110
+just. 
+Get stuck. 
+
+471
+00:26:13,070 --> 00:26:16,990
+And so you have to be careful 
+about how you manage that and 
+
+472
+00:26:17,030 --> 00:26:19,830
+it's it's challenging I think 
+both from a sometimes from a 
+
+473
+00:26:19,830 --> 00:26:23,830
+user as well as from a library 
+author perspective of just 
+
+474
+00:26:23,830 --> 00:26:27,470
+identifying what things are 
+blocking because you know you 
+
+475
+00:26:27,470 --> 00:26:29,790
+can look at a library and you 
+can sometimes not know. 
+
+476
+00:26:29,910 --> 00:26:32,870
+Yeah, like, yeah, exactly like, 
+how do I know if this thing is 
+
+477
+00:26:32,870 --> 00:26:34,230
+blocking? 
+Because really, like what we 
+
+478
+00:26:34,230 --> 00:26:37,830
+mean in that sense by blocking 
+is it takes a long time. 
+
+479
+00:26:38,550 --> 00:26:42,080
+You know, like because like if 
+something takes. 10 milliseconds
+
+480
+00:26:42,080 --> 00:26:44,040
+to to run? 
+We probably wouldn't put that 
+
+481
+00:26:44,040 --> 00:26:46,880
+into a blocking context. 
+It's like short enough. 
+
+482
+00:26:47,080 --> 00:26:48,920
+Well, you might not. 
+It depends. 
+
+483
+00:26:49,520 --> 00:26:52,080
+That's the problem with 
+concurrency is that it all 
+
+484
+00:26:52,080 --> 00:26:54,840
+depends and so you you use 
+different strategies for 
+
+485
+00:26:54,840 --> 00:26:57,520
+different situations. 
+So 10 milliseconds could be a 
+
+486
+00:26:57,520 --> 00:26:59,440
+long time. 
+Yeah, in your program. 
+
+487
+00:26:59,560 --> 00:27:01,880
+Or it might not. 
+Well, and it also really 
+
+488
+00:27:01,880 --> 00:27:04,240
+matters. 
+Is it just taking a long time 
+
+489
+00:27:04,240 --> 00:27:05,840
+because it's doing compute work 
+then? 
+
+490
+00:27:06,080 --> 00:27:08,480
+Or is it taking a long time 
+because it's literally in a 
+
+491
+00:27:08,480 --> 00:27:11,160
+thread blocking state? 
+Because if it's doing compute, 
+
+492
+00:27:11,160 --> 00:27:12,840
+then okay. 
+Maybe from a fairness 
+
+493
+00:27:12,840 --> 00:27:15,400
+perspective you'd like to give 
+someone else a chance to get in,
+
+494
+00:27:15,600 --> 00:27:18,360
+but that work presumably has to 
+be done at some point. 
+
+495
+00:27:18,640 --> 00:27:21,360
+You're doing work that needs to 
+be done, versus if you're 
+
+496
+00:27:21,360 --> 00:27:24,080
+literally just blocking, then 
+there's other work that could be
+
+497
+00:27:24,080 --> 00:27:27,080
+done by that thread that is not 
+being done because it's in that.
+
+498
+00:27:27,320 --> 00:27:29,360
+Box. 
+Yeah what are the? 
+
+499
+00:27:29,960 --> 00:27:32,440
+Other than calling like thread 
+dot sleep, what are the other 
+
+500
+00:27:32,440 --> 00:27:35,440
+blocking things that can block a
+thread unnecessarily? 
+
+501
+00:27:35,930 --> 00:27:37,810
+I guess blocking I/O would be 
+another one. 
+
+502
+00:27:38,050 --> 00:27:41,170
+Right. 
+It's typically some variant of 
+
+503
+00:27:41,170 --> 00:27:45,330
+that, but like if you have a 
+countdown latch and you wait for
+
+504
+00:27:45,330 --> 00:27:49,530
+the countdown latch, Yeah, 
+anything where there's some 
+
+505
+00:27:49,610 --> 00:27:52,770
+asyncs you're like waiting. 
+You've been in the reactive 
+
+506
+00:27:52,810 --> 00:27:54,930
+world for so long, like 
+blocking. 
+
+507
+00:27:55,170 --> 00:27:58,810
+The only place where blocking 
+makes any sense to me is CPU 
+
+508
+00:27:58,930 --> 00:28:02,900
+like heavy computations. 
+Like I don't ever want to see 
+
+509
+00:28:02,900 --> 00:28:04,980
+blocking when it's not near, you
+know, like. 
+
+510
+00:28:05,180 --> 00:28:07,020
+Right. 
+As a user, you really shouldn't 
+
+511
+00:28:07,020 --> 00:28:10,140
+have to deal with it at all. 
+And hopefully we get to a point 
+
+512
+00:28:10,140 --> 00:28:13,460
+where there are more and more 
+ZEO libraries that if you want 
+
+513
+00:28:13,460 --> 00:28:16,060
+to do this type of IO, you just 
+use this library. 
+
+514
+00:28:16,060 --> 00:28:19,020
+And they've thought about that 
+and they've looked at all these 
+
+515
+00:28:19,020 --> 00:28:22,180
+operators in detail and said is 
+this something we need to shift 
+
+516
+00:28:22,180 --> 00:28:24,740
+or not? 
+But probably they're always 
+
+517
+00:28:24,740 --> 00:28:26,900
+going to be things you want to 
+do that don't fit into a 
+
+518
+00:28:26,900 --> 00:28:30,150
+particular library. 
+And then we want to have better 
+
+519
+00:28:30,150 --> 00:28:31,750
+functionality for that. 
+So that's something we're 
+
+520
+00:28:31,750 --> 00:28:34,950
+working on. 
+I'll have to look at the code. 
+
+521
+00:28:34,950 --> 00:28:37,950
+Remember I was showing you last 
+week the code that I wrote with 
+
+522
+00:28:37,950 --> 00:28:42,870
+the ZEO streams and part of the 
+code was using the Levenstein 
+
+523
+00:28:42,870 --> 00:28:46,270
+distance algorithm which 
+computes like the distance 
+
+524
+00:28:46,270 --> 00:28:50,710
+between two different strings 
+and it's pretty CPU and heavy, 
+
+525
+00:28:50,950 --> 00:28:53,430
+but I don't think I put it into 
+a ZEO blocking. 
+
+526
+00:28:54,830 --> 00:28:58,950
+But it should be like because 
+it's and I wonder if I didn't, 
+
+527
+00:28:58,950 --> 00:29:01,550
+if I added it, if I put it in 
+zero blocking, if that would 
+
+528
+00:29:01,870 --> 00:29:03,990
+make any difference from that 
+particular. 
+
+529
+00:29:04,230 --> 00:29:08,390
+Well, if it's just compute 
+intensive, then it's really only
+
+530
+00:29:08,390 --> 00:29:11,590
+a matter of fairness. 
+It's not a matter of correctness
+
+531
+00:29:11,630 --> 00:29:15,670
+of you need to be computing that
+distance so you're doing that 
+
+532
+00:29:15,670 --> 00:29:17,510
+work. 
+There's no one who's sitting 
+
+533
+00:29:17,510 --> 00:29:19,200
+idle there, right? 
+Yeah. 
+
+534
+00:29:19,200 --> 00:29:22,160
+By fairness, you mean, oh, 
+there's other tasks that should 
+
+535
+00:29:22,360 --> 00:29:24,000
+be. 
+That should potentially getting 
+
+536
+00:29:24,000 --> 00:29:26,720
+some time, but that may or may 
+not be important to your 
+
+537
+00:29:26,720 --> 00:29:29,480
+application. 
+If if you've got eight of, if 
+
+538
+00:29:29,480 --> 00:29:32,400
+you have 8 cores, you've got 
+eight of those going on and 
+
+539
+00:29:32,400 --> 00:29:34,760
+you're not seeing that you got a
+signal from someone that says, 
+
+540
+00:29:34,760 --> 00:29:37,000
+well, I don't actually need this
+distance calculate anymore, 
+
+541
+00:29:37,320 --> 00:29:39,320
+that's a problem. 
+If your whole application is 
+
+542
+00:29:39,320 --> 00:29:44,080
+just calculating these distances
+and you've then you've got to do
+
+543
+00:29:44,120 --> 00:29:45,960
+what you've got to do. 
+That computer has to happen. 
+
+544
+00:29:47,240 --> 00:29:51,560
+Yeah, this is a fun little 
+example that took a file with a 
+
+545
+00:29:51,560 --> 00:29:55,960
+bunch of tweets in it and then 
+it streamed through the file. 
+
+546
+00:29:56,160 --> 00:30:01,280
+So it streamed the file and then
+used the ZEO JSON streaming 
+
+547
+00:30:01,280 --> 00:30:05,760
+support and Parse to use as a 
+JSON file and then and then 
+
+548
+00:30:05,760 --> 00:30:08,560
+streamed it through. 
+It did like a like a moving 
+
+549
+00:30:08,560 --> 00:30:12,440
+window through the file to look 
+for duplicate tweets using 
+
+550
+00:30:12,440 --> 00:30:15,940
+Levenstein distance and it was. 
+I just loved it because it was 
+
+551
+00:30:15,940 --> 00:30:18,180
+like so concise. 
+You know, it was like 7 lines of
+
+552
+00:30:18,180 --> 00:30:20,060
+code to like do this thing. 
+And. 
+
+553
+00:30:20,060 --> 00:30:22,540
+But the cool part that I was 
+showing Bruce and Bill was when 
+
+554
+00:30:22,540 --> 00:30:26,660
+I run it, all sixteen of my CPUs
+are fully, yeah. 
+
+555
+00:30:27,060 --> 00:30:31,300
+And it's a good sign, right. 
+So that was a fun one. 
+
+556
+00:30:31,340 --> 00:30:34,180
+But OK, so the scheduler stuff 
+is cool. 
+
+557
+00:30:34,580 --> 00:30:38,340
+It's I'm super excited about 
+where all that goes. 
+
+558
+00:30:38,340 --> 00:30:41,550
+And it's. 
+It really bothers me when we 
+
+559
+00:30:41,550 --> 00:30:46,270
+waste resources like. 
+Like we in typical computing, we
+
+560
+00:30:46,270 --> 00:30:50,110
+waste a lot of our resources and
+those could be used for mining, 
+
+561
+00:30:51,590 --> 00:30:55,550
+yes. 
+That that's what we really need.
+
+562
+00:30:55,550 --> 00:30:58,590
+We'll just, we'll discover any 
+unused threads you have, and 
+
+563
+00:30:58,590 --> 00:31:01,550
+we'll just get those going to 
+work until you have more. 
+
+564
+00:31:01,630 --> 00:31:03,510
+Create a zero library that would
+do that, yeah. 
+
+565
+00:31:03,910 --> 00:31:06,060
+You could, yeah. 
+Yeah. 
+
+566
+00:31:06,060 --> 00:31:09,100
+Or with supply chain attacks, 
+somebody will do it for you. 
+
+567
+00:31:09,220 --> 00:31:10,180
+Yeah, right. 
+Right. 
+
+568
+00:31:10,580 --> 00:31:15,460
+There you go. 
+Yeah, so the scheduler stuff is 
+
+569
+00:31:15,580 --> 00:31:19,060
+is awesome and yeah, I'm really 
+excited about what's what's 
+
+570
+00:31:19,060 --> 00:31:25,060
+happening there. 
+I had a question about ohh so 
+
+571
+00:31:25,260 --> 00:31:27,500
+Java. 
+Is the Jvm's working on that 
+
+572
+00:31:27,500 --> 00:31:29,840
+new? 
+Fiber model. 
+
+573
+00:31:29,880 --> 00:31:30,840
+Project loom. 
+Loom. 
+
+574
+00:31:31,000 --> 00:31:32,480
+That's right, yeah, I just 
+forget the name of it for SO. 
+
+575
+00:31:33,440 --> 00:31:36,320
+It's also very poetic, right? 
+The fibers are on the loom. 
+
+576
+00:31:36,960 --> 00:31:38,400
+It is. 
+Yeah, that'll be a good way to 
+
+577
+00:31:38,400 --> 00:31:42,160
+remember it. 
+How does that impact any of this
+
+578
+00:31:42,160 --> 00:31:46,640
+stuff? 
+So I think it potentially just 
+
+579
+00:31:46,640 --> 00:31:49,680
+helps us make Zeo faster, which 
+is great. 
+
+580
+00:31:50,200 --> 00:31:55,840
+I think one of the nice things 
+about Zeo is I think it's going 
+
+581
+00:31:55,840 --> 00:32:01,420
+to give you a more consistent. 
+Way that you can develop as we 
+
+582
+00:32:01,420 --> 00:32:04,300
+go through this transition 
+because essentially what Loom is
+
+583
+00:32:04,300 --> 00:32:08,740
+doing is it's reversing what is 
+you're supposed to do of in the 
+
+584
+00:32:08,740 --> 00:32:11,300
+old world. 
+In today's world don't do 
+
+585
+00:32:11,300 --> 00:32:14,300
+blocking right, never do thread 
+dot sleep, never wait for these 
+
+586
+00:32:14,300 --> 00:32:15,700
+things. 
+These are all terrible things to
+
+587
+00:32:15,700 --> 00:32:17,740
+do. 
+Have everything be called back 
+
+588
+00:32:17,740 --> 00:32:21,380
+and async based and Loom is 
+going to come. 
+
+589
+00:32:21,380 --> 00:32:25,060
+Turn that around and those 
+things where you're just 
+
+590
+00:32:25,340 --> 00:32:28,340
+blocking for the result are 
+going to be the fastest things. 
+
+591
+00:32:29,640 --> 00:32:32,600
+And so there's going to be, if 
+you're kind of writing that 
+
+592
+00:32:32,840 --> 00:32:34,920
+callback based code yourself, 
+there's going to be a lot of 
+
+593
+00:32:34,920 --> 00:32:38,640
+rewriting to be done because 
+you're going to have to, you 
+
+594
+00:32:38,640 --> 00:32:42,200
+know, want to change all that 
+back to a much more traditional 
+
+595
+00:32:42,200 --> 00:32:44,760
+style of code. 
+And so I think one of the value 
+
+596
+00:32:44,760 --> 00:32:51,160
+propositions Zio can bring there
+is give more consistency to the 
+
+597
+00:32:51,160 --> 00:32:54,360
+rest of people who are using 
+Zio, because essentially when 
+
+598
+00:32:54,360 --> 00:32:56,850
+that comes along. 
+We're going to go in and we're 
+
+599
+00:32:56,850 --> 00:32:59,970
+going to Zo runtime change some 
+of the things we do to take 
+
+600
+00:32:59,970 --> 00:33:03,210
+advantage of that and do that. 
+But as a user of Zo, you're not 
+
+601
+00:33:03,210 --> 00:33:06,330
+going to have to do that, right?
+So I think that's like the 
+
+602
+00:33:06,330 --> 00:33:07,730
+first. 
+Zo's. 
+
+603
+00:33:08,210 --> 00:33:10,690
+Message there. 
+Insulate you from having to 
+
+604
+00:33:10,690 --> 00:33:14,410
+think about how the fibers and 
+scheduling and all that stuff 
+
+605
+00:33:14,410 --> 00:33:16,450
+happens. 
+And how that's changing exactly?
+
+606
+00:33:16,450 --> 00:33:18,930
+And how that's changing, Yeah, 
+so you've got a nice isolation 
+
+607
+00:33:18,930 --> 00:33:19,890
+layer there. 
+Yeah. 
+
+608
+00:33:19,890 --> 00:33:21,850
+So I think that's the first 
+thing and I think the second 
+
+609
+00:33:21,850 --> 00:33:25,050
+thing that you. 
+You may see and and I think this
+
+610
+00:33:25,050 --> 00:33:26,730
+is contributing to this as well 
+as some of the work that 
+
+611
+00:33:26,730 --> 00:33:30,610
+actually Maradowski is 
+potentially doing is can we 
+
+612
+00:33:30,610 --> 00:33:32,370
+eventually get away from the 
+forward comprehension. 
+
+613
+00:33:33,730 --> 00:33:37,730
+Right, the forward comprehension
+it's it's it's the best way you 
+
+614
+00:33:37,730 --> 00:33:42,250
+can express a imperative type, 
+do this, do that, then do this 
+
+615
+00:33:42,250 --> 00:33:46,010
+other thing in a functional 
+effect system based style. 
+
+616
+00:33:46,010 --> 00:33:48,210
+But it's still not the greatest 
+and. 
+
+617
+00:33:48,610 --> 00:33:52,530
+I think we've got to acknowledge
+the barrier to adoption. 
+
+618
+00:33:52,530 --> 00:33:55,410
+There are people who are coming 
+from Java or whatever who are 
+
+619
+00:33:55,410 --> 00:33:58,650
+like this is weird. 
+Why can I not just do Val X 
+
+620
+00:33:58,650 --> 00:34:03,410
+equals this and this equals this
+so it's not the greatest? 
+
+621
+00:34:03,410 --> 00:34:05,890
+What are the problems with for 
+comprehension? 
+
+622
+00:34:06,530 --> 00:34:09,210
+Well, I think the biggest one 
+might just be that it's 
+
+623
+00:34:09,250 --> 00:34:10,730
+different than people are used 
+to, right? 
+
+624
+00:34:10,730 --> 00:34:14,070
+If I'm a Java. 
+Developer and I'm telling me 
+
+625
+00:34:14,070 --> 00:34:17,550
+like I got to do this calling 
+magical maps and. 
+
+626
+00:34:17,710 --> 00:34:19,790
+Yeah, a little bit that I've got
+to kind of explain. 
+
+627
+00:34:19,790 --> 00:34:23,630
+These are maps and flat maps. 
+And then there are some things 
+
+628
+00:34:23,630 --> 00:34:26,989
+that are like not completely 
+regular of like if I'm not in a 
+
+629
+00:34:26,989 --> 00:34:29,389
+four comprehension I want to 
+assign some of the variable I 
+
+630
+00:34:29,389 --> 00:34:33,710
+would do Val X equals so and so.
+But within a four comprehension 
+
+631
+00:34:33,710 --> 00:34:35,510
+I don't do the Val, I just do 
+the X. 
+
+632
+00:34:35,870 --> 00:34:38,750
+Why is that? 
+And and OK fine, I'm saving some
+
+633
+00:34:38,909 --> 00:34:40,710
+lines. 
+But yeah, if I don't know it 
+
+634
+00:34:40,710 --> 00:34:42,440
+like. 
+That's a little bit weird. 
+
+635
+00:34:42,440 --> 00:34:46,199
+Or there's if I want to 
+destructure something, if I want
+
+636
+00:34:46,199 --> 00:34:51,520
+to destructure a tuple. 
+If I just do Val xy equals 1/2, 
+
+637
+00:34:51,520 --> 00:34:54,000
+that works. 
+But if I want to do that in a 
+
+638
+00:34:54,000 --> 00:34:57,120
+four comprehension and I've got 
+the arrow there, that's not 
+
+639
+00:34:57,120 --> 00:34:59,440
+going to work for me. 
+I've got to do kind of the whole
+
+640
+00:34:59,440 --> 00:35:01,840
+variable in one line. 
+I've got to do an equal to in 
+
+641
+00:35:01,840 --> 00:35:04,070
+the next line. 
+So there are all these like 
+
+642
+00:35:04,070 --> 00:35:06,150
+little things and I think 
+overall. 
+
+643
+00:35:06,190 --> 00:35:08,950
+Parallelism is another one that 
+I've encountered with the for 
+
+644
+00:35:08,950 --> 00:35:12,470
+comprehension is that because it
+is like compared, you know it's 
+
+645
+00:35:12,470 --> 00:35:15,950
+just sequential, it's sequential
+and and so there's times where I
+
+646
+00:35:15,950 --> 00:35:19,750
+want to do something that 
+something in parallel and and 
+
+647
+00:35:19,750 --> 00:35:22,190
+the for comprehension obviously 
+doesn't make sense in that case.
+
+648
+00:35:22,590 --> 00:35:25,030
+So you have to go to. 
+You have to reach for some other
+
+649
+00:35:25,030 --> 00:35:27,870
+mechanism other than the for 
+comprehension. 
+
+650
+00:35:27,990 --> 00:35:31,510
+So what might replace that? 
+Then what? 
+
+651
+00:35:31,510 --> 00:35:35,890
+What's the? 
+Well, so you could imagine some 
+
+652
+00:35:35,890 --> 00:35:41,410
+future world where you just 
+assign variables to the results 
+
+653
+00:35:41,730 --> 00:35:46,650
+of operations that are effects 
+and some in the language 
+
+654
+00:35:46,650 --> 00:35:49,690
+essentially along with maybe 
+some of these tools like. 
+
+655
+00:35:49,690 --> 00:35:51,970
+I mean, I think project one 
+would really be necessary to 
+
+656
+00:35:52,490 --> 00:35:56,250
+enable this in a nonblocking 
+way, but it translates that into
+
+657
+00:35:56,650 --> 00:36:00,450
+you said Val X = Z O async so 
+and so. 
+
+658
+00:36:01,170 --> 00:36:03,850
+Well, what we we're going to 
+say, what you really meant there
+
+659
+00:36:03,850 --> 00:36:07,850
+is you meant run that ZEO thing 
+and once it has its result, 
+
+660
+00:36:07,890 --> 00:36:10,610
+assign it to X and then go on to
+the next line. 
+
+661
+00:36:11,010 --> 00:36:13,290
+So basically, do the logic you 
+were doing in the for 
+
+662
+00:36:13,290 --> 00:36:19,010
+comprehension, but do it in a 
+way where that syntax is more 
+
+663
+00:36:19,010 --> 00:36:21,690
+familiar to the user. 
+Could that be done with macros? 
+
+664
+00:36:25,490 --> 00:36:28,450
+There. 
+Was there was a scholar project 
+
+665
+00:36:28,450 --> 00:36:32,450
+that through macros was doing 
+the they were doing it on 
+
+666
+00:36:32,450 --> 00:36:34,250
+futures? 
+Yeah, I think there's one called
+
+667
+00:36:34,250 --> 00:36:37,490
+Monad Less. 
+I think there are a couple of 
+
+668
+00:36:37,490 --> 00:36:39,530
+things there. 
+So yeah, I think there have been
+
+669
+00:36:39,530 --> 00:36:43,770
+a couple of different strands 
+that are potentially connecting 
+
+670
+00:36:43,770 --> 00:36:47,370
+that direction of of macros of 
+some of the work that Oderski's 
+
+671
+00:36:47,370 --> 00:36:51,130
+doing of Project Loom and we'll 
+see if those eventually come 
+
+672
+00:36:51,130 --> 00:36:53,890
+together. 
+But I think at some point that 
+
+673
+00:36:53,890 --> 00:36:55,790
+could. 
+Become important. 
+
+674
+00:36:55,790 --> 00:36:57,590
+I think right now we're still 
+growing. 
+
+675
+00:36:57,590 --> 00:37:00,670
+We've got enough other 
+accessibility issues to solve 
+
+676
+00:37:00,670 --> 00:37:02,590
+that. 
+That's not our limiting factor 
+
+677
+00:37:02,590 --> 00:37:05,910
+yet, but sometime if we're 
+successful enough, that may 
+
+678
+00:37:05,910 --> 00:37:07,950
+become the limiting factor. 
+Yeah, yeah. 
+
+679
+00:37:10,230 --> 00:37:14,990
+And then maybe we'll have to use
+the new Scala 31 exception stuff
+
+680
+00:37:14,990 --> 00:37:18,710
+for the air for the air handling
+piece, cuz that's always my 
+
+681
+00:37:18,710 --> 00:37:21,850
+concern with. 
+With as people talk about Loom 
+
+682
+00:37:21,850 --> 00:37:24,930
+and being able to do all this 
+async stuff without without 
+
+683
+00:37:24,930 --> 00:37:29,210
+monads or something like monads 
+is that you lose the like air 
+
+684
+00:37:29,210 --> 00:37:32,700
+channel. 
+Unless you go to unless you go 
+
+685
+00:37:32,700 --> 00:37:37,020
+back to exceptions or something.
+Well, I think the way you 
+
+686
+00:37:37,020 --> 00:37:40,540
+ultimately want to go is you 
+don't lose the monad, you just 
+
+687
+00:37:40,540 --> 00:37:43,100
+have syntax that makes it easier
+to work with the monad. 
+
+688
+00:37:43,140 --> 00:37:45,420
+Yeah. 
+So you're still using Zeo? 
+
+689
+00:37:45,460 --> 00:37:48,340
+Yeah, you just got syntax that 
+maybe lets you get away from the
+
+690
+00:37:48,340 --> 00:37:51,920
+four comprehension for that. 
+But I I I think the idea of 
+
+691
+00:37:51,920 --> 00:37:55,400
+losing the effect system at all.
+You you get so much else from 
+
+692
+00:37:55,400 --> 00:37:57,040
+the effect system. 
+You get errors, you get 
+
+693
+00:37:57,040 --> 00:38:00,680
+environment, you get you manage 
+resources, You get much more 
+
+694
+00:38:00,680 --> 00:38:04,440
+control over that concurrency of
+OK, it's great to like fork 
+
+695
+00:38:04,440 --> 00:38:07,240
+things and wait for them, but 
+how about interrupting all of 
+
+696
+00:38:07,240 --> 00:38:09,560
+the other things once one thing 
+fails? 
+
+697
+00:38:09,560 --> 00:38:12,120
+There's there's a lot more that 
+goes into that. 
+
+698
+00:38:15,760 --> 00:38:18,840
+It keeps popping in my head. 
+So tell me about the fiber 
+
+699
+00:38:18,840 --> 00:38:21,180
+tracing stuff. 
+Yeah. 
+
+700
+00:38:21,180 --> 00:38:22,380
+So that's that's. 
+Pretty cool. 
+
+701
+00:38:22,660 --> 00:38:25,340
+Yeah, and it's actually 
+something we're working very 
+
+702
+00:38:25,340 --> 00:38:27,340
+actively on this weekend for the
+hackathon. 
+
+703
+00:38:28,340 --> 00:38:30,540
+So it it's had a couple of of 
+steps. 
+
+704
+00:38:30,540 --> 00:38:35,140
+So the first one has been trying
+to move the work of capturing 
+
+705
+00:38:35,140 --> 00:38:39,860
+the execution traces from 
+runtime to compile time. 
+
+706
+00:38:40,700 --> 00:38:45,660
+So in Zo one there was this 
+stack tracer that essentially 
+
+707
+00:38:46,020 --> 00:38:49,140
+every time when we were running 
+the Zo interpreter, every time 
+
+708
+00:38:49,140 --> 00:38:51,450
+we. 
+Execute an operation, we would 
+
+709
+00:38:51,690 --> 00:38:54,770
+capture a stack trace for it, 
+and we would put those together 
+
+710
+00:38:54,770 --> 00:38:56,450
+into the stack trace that would 
+go into. 
+
+711
+00:38:56,450 --> 00:39:00,170
+If you ever saw an error and you
+saw the giant line of all the 
+
+712
+00:39:00,170 --> 00:39:03,130
+different fails that occurred, 
+that's where it comes from. 
+
+713
+00:39:03,610 --> 00:39:07,010
+And that was definitely a big 
+improvement over the state 
+
+714
+00:39:07,010 --> 00:39:11,370
+before that, because before that
+you didn't really have a trace 
+
+715
+00:39:11,370 --> 00:39:15,370
+of what went wrong of the path 
+to failure in asynchronous code,
+
+716
+00:39:15,370 --> 00:39:17,650
+because the stack trace itself 
+didn't give you that 
+
+717
+00:39:17,650 --> 00:39:21,640
+information. 
+But it has pretty significant 
+
+718
+00:39:21,640 --> 00:39:25,280
+overhead. 
+That's another roughly 2X in 
+
+719
+00:39:25,600 --> 00:39:30,400
+micro benchmarks factor, and 
+it's 1 where when we show 
+
+720
+00:39:30,400 --> 00:39:32,520
+benchmarks we don't include 
+that. 
+
+721
+00:39:32,520 --> 00:39:35,520
+But the reality is the vast 
+majority of people who are using
+
+722
+00:39:35,520 --> 00:39:38,000
+effect systems are using it with
+tracing because they want to be 
+
+723
+00:39:38,000 --> 00:39:40,560
+able to see what happened when 
+something went wrong. 
+
+724
+00:39:41,430 --> 00:39:45,230
+So what this does is it moves 
+that from runtime to compile 
+
+725
+00:39:45,230 --> 00:39:48,030
+time. 
+So the downside is if you've 
+
+726
+00:39:48,030 --> 00:39:51,310
+used Zo 2, at least in the very 
+latest versions you've noticed, 
+
+727
+00:39:51,390 --> 00:39:54,430
+You may have noticed there's 
+this implicit Z trace element 
+
+728
+00:39:54,430 --> 00:40:00,150
+that is on just about every Zo 
+operator, and you'd really you 
+
+729
+00:40:00,150 --> 00:40:01,390
+don't have to do anything with 
+it. 
+
+730
+00:40:01,510 --> 00:40:04,350
+It does make the signatures a 
+little bit uglier, and that's 
+
+731
+00:40:04,430 --> 00:40:07,910
+one downside there, but it 
+essentially takes away that cost
+
+732
+00:40:07,910 --> 00:40:11,260
+of doing the tracing. 
+Because those are just at 
+
+733
+00:40:11,300 --> 00:40:14,340
+compile time, it's just this 
+implicit is just synthesized. 
+
+734
+00:40:14,340 --> 00:40:17,900
+There's a macro that captures 
+the information on what the 
+
+735
+00:40:17,900 --> 00:40:20,660
+scope is that you're in. 
+And so that's just all was 
+
+736
+00:40:20,660 --> 00:40:23,740
+available. 
+And so it both reduces the cost 
+
+737
+00:40:23,740 --> 00:40:26,780
+of doing that as well as it's 
+going to make them a lot 
+
+738
+00:40:26,780 --> 00:40:28,580
+cleaner. 
+So one of the things you may 
+
+739
+00:40:28,580 --> 00:40:32,420
+have noticed is there were a lot
+of lines that's like ZEO flat 
+
+740
+00:40:32,420 --> 00:40:34,460
+maps, ZEO flat maps, ZEO 
+ensuring. 
+
+741
+00:40:34,460 --> 00:40:36,100
+And that doesn't really help 
+you. 
+
+742
+00:40:36,740 --> 00:40:41,940
+So one of the advantages of this
+is that for all the internal ZEO
+
+743
+00:40:41,940 --> 00:40:44,940
+operators, we take an existing 
+implicit trace and we just pass 
+
+744
+00:40:44,940 --> 00:40:47,780
+that through. 
+For user operators, you don't, 
+
+745
+00:40:47,900 --> 00:40:50,940
+we generate a new trace. 
+And so when you look at one of 
+
+746
+00:40:50,940 --> 00:40:53,900
+these traces, you're going to 
+see your code. 
+
+747
+00:40:54,060 --> 00:40:56,660
+You're no longer going to see 
+the internals of Zeo. 
+
+748
+00:40:56,780 --> 00:40:59,780
+That's cool. 
+It's counterintuitive, though 
+
+749
+00:41:00,340 --> 00:41:05,020
+tracing at compile time doesn't.
+You know, like. 
+
+750
+00:41:05,390 --> 00:41:08,550
+But tracing is inherently A 
+runtime activity, it seems like.
+
+751
+00:41:08,790 --> 00:41:13,430
+Well, so capturing the 
+information on the path we've 
+
+752
+00:41:13,430 --> 00:41:17,750
+taken can occur, or that a 
+method gets called from can 
+
+753
+00:41:17,750 --> 00:41:21,390
+occur at compile time. 
+But then which one is generated,
+
+754
+00:41:21,790 --> 00:41:23,110
+right, Which one we actually 
+render? 
+
+755
+00:41:23,110 --> 00:41:25,110
+Because most of them, we're not 
+going to do anything with this 
+
+756
+00:41:25,110 --> 00:41:28,190
+tracing information because it's
+just a successful effect. 
+
+757
+00:41:28,190 --> 00:41:30,550
+It's the event of failure. 
+We're going to take that 
+
+758
+00:41:30,550 --> 00:41:33,420
+information that was generated 
+and we're going to use that. 
+
+759
+00:41:33,500 --> 00:41:36,420
+So you're treating tracing as 
+another effect. 
+
+760
+00:41:39,380 --> 00:41:44,540
+We're being lazy about it, Yeah.
+Yeah, we're being lazy about 
+
+761
+00:41:44,540 --> 00:41:46,140
+actually using the traces. 
+Yeah. 
+
+762
+00:41:47,140 --> 00:41:53,500
+So that was the work that 
+occurred up to a few days ago. 
+
+763
+00:41:53,580 --> 00:41:57,900
+And then the latest is John 
+actually did some really good 
+
+764
+00:41:57,900 --> 00:42:02,440
+work that got merged a day or 
+two ago that changes the way 
+
+765
+00:42:02,440 --> 00:42:09,000
+those traces are rendered. 
+So they look almost identical to
+
+766
+00:42:09,400 --> 00:42:12,520
+the stack trace that you would 
+get for any Java program. 
+
+767
+00:42:13,040 --> 00:42:15,840
+And so that way if you have any 
+tools that are working with 
+
+768
+00:42:15,840 --> 00:42:18,920
+stack traces that are parsing 
+them, those are going to work 
+
+769
+00:42:18,920 --> 00:42:21,200
+with the traces that get 
+generated by Zio. 
+
+770
+00:42:21,640 --> 00:42:24,640
+And it just it looks the way 
+that you, for better or worse, 
+
+771
+00:42:24,640 --> 00:42:28,560
+you've you've seen a million 
+times the way a Java stack trace
+
+772
+00:42:28,560 --> 00:42:31,100
+works, and now these are going 
+to look the same way. 
+
+773
+00:42:31,380 --> 00:42:33,700
+And for those that aren't 
+familiar, the amazing thing 
+
+774
+00:42:33,700 --> 00:42:37,620
+about this is that it crosses 
+async boundaries, which there's 
+
+775
+00:42:37,620 --> 00:42:40,380
+so much code that I'm writing 
+now where it's just, well, that 
+
+776
+00:42:40,380 --> 00:42:42,380
+I've written for the last, I 
+don't know how many years, many 
+
+777
+00:42:42,380 --> 00:42:45,660
+years that's async and so the 
+stack traces just have no value.
+
+778
+00:42:46,220 --> 00:42:49,220
+And so these, because they are 
+not stack traces, they're fiber 
+
+779
+00:42:49,220 --> 00:42:52,580
+traces. 
+Now they have actual value 
+
+780
+00:42:52,580 --> 00:42:55,860
+across the async boundaries. 
+Yeah, so just so I'm clear, 
+
+781
+00:42:55,860 --> 00:43:00,480
+there's still some runtime 
+overhead for tracing right there
+
+782
+00:43:00,480 --> 00:43:02,120
+there there is a, There's a 
+small amount. 
+
+783
+00:43:02,160 --> 00:43:05,400
+It's just super small versus 
+small versus looking for it. 
+
+784
+00:43:05,760 --> 00:43:06,400
+Yeah. 
+All right. 
+
+785
+00:43:06,680 --> 00:43:08,200
+Yeah. 
+Otherwise it would have been 
+
+786
+00:43:08,200 --> 00:43:14,120
+complete, yes, yes. 
+That's cool stuff. 
+
+787
+00:43:16,000 --> 00:43:21,240
+One thing I think a lot about is
+how we help Java Spring 
+
+788
+00:43:21,240 --> 00:43:27,720
+developers move forward into 
+more modern stuff. 
+
+789
+00:43:28,280 --> 00:43:31,550
+And. 
+I'm obviously so convinced that 
+
+790
+00:43:31,790 --> 00:43:37,430
+Zio is so much better of a model
+than Spring for so many things. 
+
+791
+00:43:38,830 --> 00:43:42,670
+And I don't know. 
+I feel like like the Spring 
+
+792
+00:43:42,670 --> 00:43:47,150
+community, the users of Spring, 
+are just they so need Zio. 
+
+793
+00:43:47,430 --> 00:43:51,590
+How do we get them to to? 
+How do we help help them? 
+
+794
+00:43:52,270 --> 00:43:55,350
+I think there's another question
+which is for what percentage is 
+
+795
+00:43:55,350 --> 00:43:59,150
+it actually possible? 
+I think you need to take that 
+
+796
+00:43:59,150 --> 00:44:02,910
+into account. 
+I think there's some percentage 
+
+797
+00:44:02,910 --> 00:44:09,550
+where it's not feasible and so 
+you should say let's look at the
+
+798
+00:44:09,550 --> 00:44:12,510
+people who are and what their 
+needs are rather than trying to 
+
+799
+00:44:13,230 --> 00:44:17,110
+cover everybody. 
+Yeah. 
+
+800
+00:44:17,430 --> 00:44:20,430
+For what percentage? 
+I mean, I would love it if all 
+
+801
+00:44:20,430 --> 00:44:23,310
+of them made the switch. 
+How do we make that happen? 
+
+802
+00:44:24,360 --> 00:44:27,080
+But it was, it's similar to what
+I was talking about before with 
+
+803
+00:44:27,080 --> 00:44:31,720
+the the study on generics and 
+that the vast, you know, over 
+
+804
+00:44:31,720 --> 00:44:35,360
+90% of people were just using 
+List of String and Map of String
+
+805
+00:44:35,360 --> 00:44:37,200
+to String. 
+They were just putting Strings 
+
+806
+00:44:37,200 --> 00:44:40,400
+in there and that's like all the
+generics mechanisms were just 
+
+807
+00:44:40,400 --> 00:44:45,040
+kind of pointless. 
+So it's like you're not going to
+
+808
+00:44:45,040 --> 00:44:51,040
+convince that person to, you 
+know, go in this direction. 
+
+809
+00:44:51,040 --> 00:44:53,490
+You don't think I can? 
+Well, I mean, this is what we're
+
+810
+00:44:53,490 --> 00:44:56,010
+trying to do with the book, but.
+Yeah. 
+
+811
+00:44:56,450 --> 00:44:57,530
+Yeah. 
+I mean, that's kind of the point
+
+812
+00:44:57,530 --> 00:44:58,850
+of the book. 
+The kind of point of the book, 
+
+813
+00:44:58,850 --> 00:45:01,210
+but I think it's still going to 
+be too. 
+
+814
+00:45:01,370 --> 00:45:04,730
+I'm starting to think of it as 
+people who have at least seen a 
+
+815
+00:45:04,730 --> 00:45:07,850
+little bit of functional style 
+of programming, even if it's 
+
+816
+00:45:07,850 --> 00:45:13,810
+just, you know, using Map in 
+Scala in Java 8 or, you know, 
+
+817
+00:45:14,930 --> 00:45:17,890
+just, you know a little bit, oh,
+that functional thing. 
+
+818
+00:45:17,890 --> 00:45:19,970
+I want to know more about that, 
+but I think they have to at 
+
+819
+00:45:19,970 --> 00:45:23,550
+least be there before. 
+They're interested in reading 
+
+820
+00:45:23,550 --> 00:45:26,230
+our book. 
+Yeah, well I think the other 
+
+821
+00:45:26,230 --> 00:45:30,590
+thing is having solutions to 
+particular problems like I think
+
+822
+00:45:31,110 --> 00:45:34,110
+Caliban or something is 
+interesting there of like look 
+
+823
+00:45:34,110 --> 00:45:37,670
+you wanna do Graphql like this 
+is a great Graphql library. 
+
+824
+00:45:37,670 --> 00:45:40,210
+This is gonna let you write this
+small amount of code and you're 
+
+825
+00:45:40,210 --> 00:45:43,730
+going to have your client and 
+server and if that's the payoff 
+
+826
+00:45:43,730 --> 00:45:46,530
+then you're like all right well 
+I guess I got to like figure out
+
+827
+00:45:46,530 --> 00:45:48,650
+like what the deal with this 
+like implicit Val I need to 
+
+828
+00:45:48,650 --> 00:45:51,370
+define to like make this work 
+and maybe the first time you do 
+
+829
+00:45:51,370 --> 00:45:54,210
+it to your point earlier you 
+don't really understand what the
+
+830
+00:45:54,690 --> 00:45:56,810
+implicit Val is. 
+You're just like, I guess they 
+
+831
+00:45:56,810 --> 00:45:58,770
+told me I need to do this, so 
+this is what I'm going to do, 
+
+832
+00:45:58,770 --> 00:46:00,970
+which every fear is what you do 
+with, right. 
+
+833
+00:46:00,970 --> 00:46:02,890
+If you use coffee, I probably 
+they tell you all you need to 
+
+834
+00:46:02,890 --> 00:46:05,390
+configure this way and you don't
+know all those settings at the 
+
+835
+00:46:05,390 --> 00:46:07,990
+beginning but just do what they 
+tell you and it works and you're
+
+836
+00:46:07,990 --> 00:46:10,310
+happy. 
+So you start there and then if 
+
+837
+00:46:10,590 --> 00:46:12,470
+you're like, OK, well now I 
+guess I've got a Scala 
+
+838
+00:46:12,470 --> 00:46:15,110
+application, I guess what am I 
+going to do with this? 
+
+839
+00:46:15,110 --> 00:46:18,230
+And then you Start learning 
+things from there. 
+
+840
+00:46:18,670 --> 00:46:21,870
+So I think we almost have to 
+like get past the effect system 
+
+841
+00:46:22,750 --> 00:46:24,830
+of like how long in Scala have 
+we spent. 
+
+842
+00:46:24,830 --> 00:46:29,350
+I would love to be able to 
+convince Spring users that 
+
+843
+00:46:29,630 --> 00:46:33,470
+effect systems are a much better
+model and type. 
+
+844
+00:46:34,090 --> 00:46:37,330
+Type system based dependency 
+injection is a much better model
+
+845
+00:46:37,570 --> 00:46:39,730
+and air channels are a much 
+better model. 
+
+846
+00:46:39,730 --> 00:46:42,050
+Like like, like. 
+I'd love to convince them of 
+
+847
+00:46:42,050 --> 00:46:44,130
+those things. 
+And I think maybe to your point 
+
+848
+00:46:44,130 --> 00:46:46,650
+Bruce, like there is a small 
+percentage that will be 
+
+849
+00:46:46,650 --> 00:46:49,930
+convinced by those things. 
+But probably what you're saying 
+
+850
+00:46:49,930 --> 00:46:53,730
+is true, Adam, that the majority
+will be convinced because they 
+
+851
+00:46:53,730 --> 00:46:57,890
+are trying to solve a particular
+problem and Zeo makes it easier.
+
+852
+00:46:57,890 --> 00:47:01,290
+To get stuck in Java or 
+something. 
+
+853
+00:47:01,870 --> 00:47:04,870
+And they go, Oh my God, this is 
+like an impossible problem to 
+
+854
+00:47:04,870 --> 00:47:07,750
+solve. 
+And then they go, oh, I could 
+
+855
+00:47:07,750 --> 00:47:09,630
+solve it in this. 
+And it does everything. 
+
+856
+00:47:09,630 --> 00:47:11,750
+And I don't have to kill myself.
+Yeah. 
+
+857
+00:47:11,750 --> 00:47:14,870
+And that's probably more, Yeah. 
+That direct experience is more 
+
+858
+00:47:14,870 --> 00:47:18,030
+convincing than anything. 
+Yeah, yeah. 
+
+859
+00:47:18,030 --> 00:47:21,510
+And I guess that kind of matches
+with my journey through all this
+
+860
+00:47:21,870 --> 00:47:24,870
+stuff too is. 
+If you don't know James. 
+
+861
+00:47:25,230 --> 00:47:27,950
+Will take something and he'll 
+just jump in and try it out 
+
+862
+00:47:27,950 --> 00:47:29,430
+without knowing anything about 
+it. 
+
+863
+00:47:29,430 --> 00:47:31,430
+That's that's his favorite way 
+of doing things. 
+
+864
+00:47:32,470 --> 00:47:34,670
+It is a good way. 
+It is a good way. 
+
+865
+00:47:34,670 --> 00:47:36,550
+I have such a hard time getting 
+there though. 
+
+866
+00:47:36,790 --> 00:47:40,390
+Like, no, no, I have to know all
+this stuff before it makes it. 
+
+867
+00:47:40,710 --> 00:47:42,990
+James goes, let's just try it, 
+see what we can make. 
+
+868
+00:47:43,270 --> 00:47:45,430
+And it's really good to be a 
+really. 
+
+869
+00:47:46,030 --> 00:47:49,030
+Good way maybe like like 
+statically type pure functional 
+
+870
+00:47:49,030 --> 00:47:52,870
+stuff is because. 
+It's just it reduces the churn 
+
+871
+00:47:52,870 --> 00:47:56,910
+on on bashing through, no. 
+Chance that's not the way to do 
+
+872
+00:47:56,910 --> 00:47:57,710
+it. 
+Do it this way the. 
+
+873
+00:47:57,710 --> 00:48:00,510
+Compiler just keeps telling me, 
+you know do it exactly until I 
+
+874
+00:48:00,510 --> 00:48:02,070
+do it right. 
+Yeah, yeah, yeah. 
+
+875
+00:48:02,270 --> 00:48:03,390
+That's nice. 
+It's just a good fit. 
+
+876
+00:48:03,550 --> 00:48:07,910
+That's why I hate YAML, because 
+Oh my God, I indebted something.
+
+877
+00:48:07,950 --> 00:48:11,110
+I had one extra space somewhere 
+he was failing and. 
+
+878
+00:48:12,300 --> 00:48:15,260
+And I I don't find out, like 
+there's no feedback that tells 
+
+879
+00:48:15,260 --> 00:48:18,700
+me that I'm an idiot. 
+But there are spaces now I mean 
+
+880
+00:48:18,700 --> 00:48:22,100
+we we have meaningful in 
+detection in scholar 3. 
+
+881
+00:48:22,870 --> 00:48:25,470
+We've been doing for the book 
+just. 
+
+882
+00:48:26,030 --> 00:48:29,070
+Yeah, just pure. 
+As pure as possible. 
+
+883
+00:48:29,150 --> 00:48:31,990
+I think it's the future. 
+You've just gotta go there. 
+
+884
+00:48:31,990 --> 00:48:35,670
+Yeah, but I think we're getting 
+tooling that when you format, it
+
+885
+00:48:35,670 --> 00:48:37,990
+tells you that, or when it's not
+indebted. 
+
+886
+00:48:37,990 --> 00:48:39,830
+It gives you a compilation 
+error. 
+
+887
+00:48:39,830 --> 00:48:41,230
+So that's right. 
+Yeah. 
+
+888
+00:48:41,430 --> 00:48:44,830
+I mean, I think that'll be fine.
+Right, which is actually easier 
+
+889
+00:48:44,830 --> 00:48:48,670
+than Python, which just gives 
+you a runtime error, yeah. 
+
+890
+00:48:48,990 --> 00:48:54,110
+Yeah, I hate runtime errors. 
+I guess that's that's a really 
+
+891
+00:48:54,830 --> 00:48:56,390
+good way to look at this whole 
+spring thing. 
+
+892
+00:48:56,390 --> 00:48:59,430
+And the way that I'm thinking 
+about it is like I wasn't 
+
+893
+00:48:59,430 --> 00:49:05,190
+convinced to move forward in my 
+scholar journey because because 
+
+894
+00:49:05,190 --> 00:49:08,550
+of the technical arguments. 
+And I've been trying to make the
+
+895
+00:49:08,550 --> 00:49:11,750
+technical arguments for why 
+effect systems are important and
+
+896
+00:49:11,750 --> 00:49:14,510
+better to people, and it's not 
+working. 
+
+897
+00:49:14,670 --> 00:49:18,180
+And so like like. 
+It's just somebody believes the 
+
+898
+00:49:18,220 --> 00:49:21,220
+Earth is flat. 
+Explaining to them that it's not
+
+899
+00:49:21,220 --> 00:49:22,660
+doesn't, it just makes them dig 
+in. 
+
+900
+00:49:23,700 --> 00:49:26,060
+Yeah. 
+Apologies to our Flat Earther 
+
+901
+00:49:26,060 --> 00:49:29,460
+listeners, but we don't think 
+there's more than one. 
+
+902
+00:49:29,460 --> 00:49:32,100
+Another, and you've just 
+compared Spring users to Flat 
+
+903
+00:49:32,100 --> 00:49:33,380
+Earthers. 
+I didn't do that. 
+
+904
+00:49:33,620 --> 00:49:37,060
+I I didn't say that. 
+Well, I'll go that far and say 
+
+905
+00:49:37,100 --> 00:49:40,860
+that they're they're basically 
+if you're doing dynamic wiring 
+
+906
+00:49:40,900 --> 00:49:43,660
+of dependencies. 
+But it's working for them. 
+
+907
+00:49:45,160 --> 00:49:47,720
+Is it though? 
+Cuz it's not working for me. 
+
+908
+00:49:47,800 --> 00:49:50,200
+They think it's working. 
+For them, they think it's 
+
+909
+00:49:50,200 --> 00:49:52,560
+already. 
+I run into so many issues and 
+
+910
+00:49:52,560 --> 00:49:55,000
+I'm working on these dynamic 
+applications. 
+
+911
+00:49:55,400 --> 00:49:57,600
+Just it's painful. 
+Just like, come on, give me my 
+
+912
+00:49:57,600 --> 00:50:00,760
+Zeo. 
+But also are we giving them the 
+
+913
+00:50:00,760 --> 00:50:03,020
+solution at them right level, 
+right? 
+
+914
+00:50:03,020 --> 00:50:06,140
+Like what you want to use is be 
+more interested as they want the
+
+915
+00:50:06,220 --> 00:50:09,980
+program to edit their music or 
+to watch their movie. 
+
+916
+00:50:10,260 --> 00:50:13,260
+And we're kind of telling them, 
+well there's a better operating 
+
+917
+00:50:13,260 --> 00:50:15,140
+system is like, OK, I don't 
+really care about your operating
+
+918
+00:50:15,140 --> 00:50:17,390
+system. 
+I just want to like, edit my 
+
+919
+00:50:17,390 --> 00:50:20,870
+music file, and that's what 
+we've eventually got to get to. 
+
+920
+00:50:20,870 --> 00:50:23,870
+And I think as we're starting to
+go with, OK, we've got Zia, 
+
+921
+00:50:23,870 --> 00:50:26,950
+we've got a solid foundation 
+now, we're starting to build 
+
+922
+00:50:26,950 --> 00:50:30,390
+other things on top of that that
+are starting to get close to 
+
+923
+00:50:30,390 --> 00:50:32,830
+like the actual problems that 
+people have. 
+
+924
+00:50:33,750 --> 00:50:39,150
+The I think the argument that 
+we're making in the book is that
+
+925
+00:50:39,430 --> 00:50:42,350
+we're we're not trying to solve 
+the problem of. 
+
+926
+00:50:42,940 --> 00:50:46,060
+Just producing software quickly,
+which has been the last few 
+
+927
+00:50:46,060 --> 00:50:47,780
+decades, how do we make software
+quicker? 
+
+928
+00:50:48,300 --> 00:50:51,740
+We're looking, we're saying 
+okay, we can do that now, but 
+
+929
+00:50:52,020 --> 00:50:55,300
+it's not reliable software. 
+And so our focus is on 
+
+930
+00:50:55,300 --> 00:50:58,540
+reliability. 
+And if somebody is just saying, 
+
+931
+00:50:58,780 --> 00:51:01,660
+well, you know, I did this thing
+in JavaScript and it worked and 
+
+932
+00:51:01,660 --> 00:51:04,900
+I'm able to work. 
+They're not, they don't have any
+
+933
+00:51:04,900 --> 00:51:08,820
+pain about it. 
+So I think, and I think the pain
+
+934
+00:51:08,820 --> 00:51:13,190
+point is reliability. 
+Remember WE, Our acronym for the
+
+935
+00:51:13,190 --> 00:51:15,870
+book before we started calling 
+it Effect Oriented Programming 
+
+936
+00:51:16,030 --> 00:51:19,030
+was Prep because it was 
+combining. 
+
+937
+00:51:19,550 --> 00:51:23,710
+I'm gonna correct that was your.
+You still love it. 
+
+938
+00:51:23,750 --> 00:51:26,790
+Yes, we understand. 
+So it's combining performance. 
+
+939
+00:51:26,790 --> 00:51:32,430
+Reliability. 
+No so expressive. 
+
+940
+00:51:32,710 --> 00:51:36,690
+Expressiveness and. 
+Something else and productivity.
+
+941
+00:51:37,090 --> 00:51:41,210
+So it was so that it's yes, we 
+want to build more reliable 
+
+942
+00:51:41,210 --> 00:51:45,570
+software more easily but we also
+want it to be performant and 
+
+943
+00:51:45,570 --> 00:51:49,050
+that's where like Zio comes in 
+with amazing schedulers and that
+
+944
+00:51:49,050 --> 00:51:51,010
+kind of stuff. 
+But it's yeah. 
+
+945
+00:51:51,010 --> 00:51:55,970
+So that was, it's oh, the other 
+one I was thinking of, which I 
+
+946
+00:51:55,970 --> 00:51:57,970
+think we're going to add in 
+another R into prep. 
+
+947
+00:51:58,860 --> 00:52:00,540
+I keep saying we keep saying you
+weren't gonna. 
+
+948
+00:52:01,220 --> 00:52:05,620
+You keep saying refactorability,
+so this is something where I. 
+
+949
+00:52:06,100 --> 00:52:07,540
+Prep. 
+Prep. 
+
+950
+00:52:07,740 --> 00:52:08,740
+Prepper. 
+Prepper. 
+
+951
+00:52:09,100 --> 00:52:11,540
+Prepper. 
+No, that sounds, you know that's
+
+952
+00:52:11,540 --> 00:52:16,420
+somebody who's already taken. 
+Let's just It is amazing when 
+
+953
+00:52:16,420 --> 00:52:21,340
+you go into a code base and can 
+do massive overhauls on it and 
+
+954
+00:52:21,860 --> 00:52:26,180
+the compiler. 
+Says OK, and then the thing 
+
+955
+00:52:26,180 --> 00:52:28,180
+just. 
+Works or compiler says no. 
+
+956
+00:52:28,740 --> 00:52:31,380
+Well, compiler says no a lot. 
+And then eventually you get it 
+
+957
+00:52:31,380 --> 00:52:35,300
+to say Yup, yeah. 
+My first experience with C when 
+
+958
+00:52:35,300 --> 00:52:40,620
+I started using it way back when
+was, Oh my gosh, unlike C, if C 
+
+959
+00:52:40,620 --> 00:52:43,140
+compiles, it works. 
+And of course that was a 
+
+960
+00:52:43,140 --> 00:52:46,300
+stretch, but it was way more 
+than what C would do. 
+
+961
+00:52:46,900 --> 00:52:47,580
+Yeah. 
+So. 
+
+962
+00:52:47,580 --> 00:52:50,820
+And this is much closer anymore,
+yeah, yeah. 
+
+963
+00:52:51,390 --> 00:52:54,550
+It does what I told it to do and
+it does that correctly. 
+
+964
+00:52:54,910 --> 00:52:58,430
+May not be what I wanted it to 
+do actually, but yeah. 
+
+965
+00:52:58,990 --> 00:53:01,710
+As you know, I've been trying to
+convince people that Builder the
+
+966
+00:53:01,710 --> 00:53:07,830
+builder pattern is horrible, and
+the main reason for this is that
+
+967
+00:53:07,830 --> 00:53:11,350
+you only find out at runtime 
+that you that there's some some 
+
+968
+00:53:11,350 --> 00:53:13,750
+necessary thing that you've 
+missed or something. 
+
+969
+00:53:14,430 --> 00:53:17,310
+And it's amazing how hard it is 
+to convince people that it's a 
+
+970
+00:53:17,310 --> 00:53:20,470
+good thing that your compiler 
+should be able to validate as 
+
+971
+00:53:20,470 --> 00:53:23,870
+much of the program as possible,
+even in the Java community. 
+
+972
+00:53:23,870 --> 00:53:26,350
+It's like, I'm like, why is it 
+so hard? 
+
+973
+00:53:27,310 --> 00:53:30,630
+Why? 
+Why isn't everybody, like, fully
+
+974
+00:53:30,630 --> 00:53:33,030
+on board with? 
+Yes, let's put as much in the 
+
+975
+00:53:33,030 --> 00:53:36,880
+compiler. 
+Verification as we possibly can.
+
+976
+00:53:37,400 --> 00:53:41,240
+Because Java works for me and 
+you're attacking it. 
+
+977
+00:53:41,440 --> 00:53:42,280
+That's why. 
+Yeah. 
+
+978
+00:53:42,600 --> 00:53:44,120
+Yeah. 
+You're you're saying it's. 
+
+979
+00:53:44,200 --> 00:53:46,240
+Yeah you do. 
+Yeah. 
+
+980
+00:53:46,240 --> 00:53:46,800
+Yeah. 
+Yeah. 
+
+981
+00:53:46,800 --> 00:53:51,200
+I think so. 
+But yeah and and I've been, I've
+
+982
+00:53:51,200 --> 00:53:54,720
+been you know struggling with 
+the whole builder thing going, 
+
+983
+00:53:55,000 --> 00:53:57,640
+what is the issue here. 
+And I think the issue is that 
+
+984
+00:53:57,640 --> 00:54:02,080
+it's a stateful thing because it
+has multiple states as you're 
+
+985
+00:54:02,080 --> 00:54:05,960
+building the object and. 
+Well, yeah, it's basically 
+
+986
+00:54:06,120 --> 00:54:07,680
+visible. 
+Mutation is what? 
+
+987
+00:54:07,680 --> 00:54:13,440
+Brian gets calls it the 
+ordinality issue or something 
+
+988
+00:54:13,440 --> 00:54:16,760
+like that, that when you have a 
+builder and you call something 
+
+989
+00:54:16,760 --> 00:54:20,360
+you don't know, let's say if 
+it's a list that's the back end 
+
+990
+00:54:20,360 --> 00:54:22,840
+like data underneath it. 
+You don't know if calling that 
+
+991
+00:54:22,840 --> 00:54:28,400
+thing twice is going to add new 
+things onto the list, or it 
+
+992
+00:54:28,400 --> 00:54:31,970
+doesn't at all express. 
+Like how the mutations are half 
+
+993
+00:54:31,970 --> 00:54:34,490
+the builder doesn't express the 
+how the mutations are actually 
+
+994
+00:54:34,490 --> 00:54:36,290
+happening. 
+Are they being appended? 
+
+995
+00:54:36,290 --> 00:54:40,450
+Are they and and so that's why 
+I'm like gosh like yes, the 
+
+996
+00:54:40,450 --> 00:54:43,290
+mutability is a problem. 
+The lack of compile time 
+
+997
+00:54:43,290 --> 00:54:45,970
+validation is a problem. 
+Anyways, that was quite a 
+
+998
+00:54:45,970 --> 00:54:51,530
+tangent to my hate of builders. 
+It's a hobby horse or a 
+
+999
+00:54:52,410 --> 00:54:54,330
+stalking. 
+Thankfully there are no builders
+
+1000
+00:54:54,330 --> 00:54:56,090
+in Zio. 
+There's no builders, right? 
+
+1001
+00:54:56,130 --> 00:54:57,090
+There's. 
+I don't think there's any. 
+
+1002
+00:54:57,170 --> 00:55:00,680
+Well, I think Z layer is 
+probably the closest thing to a 
+
+1003
+00:55:00,680 --> 00:55:02,160
+builder. 
+I mean, hopefully without the 
+
+1004
+00:55:02,160 --> 00:55:06,120
+bad aspects, yeah, yeah. 
+It is like builds the services 
+
+1005
+00:55:06,120 --> 00:55:09,600
+that your application needs. 
+Yeah, at least it's immutable 
+
+1006
+00:55:09,720 --> 00:55:14,040
+and you do get compile time 
+feedback if you're missing a 
+
+1007
+00:55:14,040 --> 00:55:16,400
+layer and exactly. 
+Yeah. 
+
+1008
+00:55:17,880 --> 00:55:24,820
+But is that a step wise process?
+Well, the construction. 
+
+1009
+00:55:24,820 --> 00:55:27,700
+If you have layers that depend 
+on each other, it can be a 
+
+1010
+00:55:27,700 --> 00:55:30,220
+stepwise process. 
+But that you can think of more 
+
+1011
+00:55:30,220 --> 00:55:34,900
+as function composition. 
+Of you have a database service 
+
+1012
+00:55:34,900 --> 00:55:36,820
+that depends on a logging 
+service and then you have a 
+
+1013
+00:55:36,820 --> 00:55:39,180
+logging service. 
+So you put those two layers 
+
+1014
+00:55:39,180 --> 00:55:42,220
+together and the first one 
+generates the logging service 
+
+1015
+00:55:42,220 --> 00:55:45,060
+and then that gets fed into the 
+database and used by the 
+
+1016
+00:55:45,060 --> 00:55:48,300
+database. 
+But that's happening, I mean, I 
+
+1017
+00:55:48,300 --> 00:55:51,320
+guess from the. 
+Standpoint of the user is that. 
+
+1018
+00:55:51,360 --> 00:55:53,680
+All. 
+Sort of an atomic operation. 
+
+1019
+00:55:53,680 --> 00:55:57,120
+In other words, I say go. 
+I'm not saying take this now, 
+
+1020
+00:55:57,120 --> 00:55:59,680
+later take this. 
+That's all happening, yeah. 
+
+1021
+00:55:59,680 --> 00:56:02,040
+You're describing that you're 
+creating a recipe for building 
+
+1022
+00:56:02,040 --> 00:56:04,200
+your application. 
+And then it builds it more or 
+
+1023
+00:56:04,280 --> 00:56:06,000
+less atomically right before 
+your. 
+
+1024
+00:56:06,000 --> 00:56:08,280
+Application, so that doesn't 
+have the problem that we're 
+
+1025
+00:56:08,360 --> 00:56:10,000
+talking about. 
+Right here, but I think the 
+
+1026
+00:56:10,200 --> 00:56:13,600
+closest, the functional analogy 
+of the of the builder pattern. 
+
+1027
+00:56:13,600 --> 00:56:17,040
+Yeah, that's the Z layer stuff, 
+yeah, yeah. 
+
+1028
+00:56:20,410 --> 00:56:22,530
+What? 
+What are you excited about in 
+
+1029
+00:56:22,530 --> 00:56:25,810
+ZIO? 
+What's coming up that is, well, 
+
+1030
+00:56:25,810 --> 00:56:28,450
+I'm excited about getting Zio 2 
+out the door. 
+
+1031
+00:56:28,650 --> 00:56:31,930
+We've, I mean we've all been 
+working hard, but it's it's 
+
+1032
+00:56:31,930 --> 00:56:35,170
+been, it's been a while now and 
+I think it'll be really nice 
+
+1033
+00:56:35,170 --> 00:56:37,250
+when people can really start 
+using it. 
+
+1034
+00:56:37,250 --> 00:56:39,970
+Because we've been in this 
+little bit of in between state 
+
+1035
+00:56:39,970 --> 00:56:42,790
+where people have been excited 
+about it and there have been for
+
+1036
+00:56:42,790 --> 00:56:46,430
+a while now milestones available
+of ZO2 but not necessarily of 
+
+1037
+00:56:46,430 --> 00:56:48,150
+all the other libraries you 
+would need. 
+
+1038
+00:56:48,550 --> 00:56:51,950
+And hopefully over the next few 
+days we'll be doing the first 
+
+1039
+00:56:51,950 --> 00:56:56,070
+release candidate and along with
+that doing a big push to get 
+
+1040
+00:56:56,070 --> 00:57:00,910
+releases of basically all the ZO
+ecosystem libraries supporting 
+
+1041
+00:57:00,910 --> 00:57:02,990
+ZO2. 
+So that you can really take your
+
+1042
+00:57:02,990 --> 00:57:05,550
+application. 
+And I think you're you're being 
+
+1043
+00:57:05,550 --> 00:57:09,110
+an early adopter, but everyone 
+can take their applications and 
+
+1044
+00:57:09,110 --> 00:57:10,870
+you can take all the 
+dependencies you were working 
+
+1045
+00:57:10,870 --> 00:57:14,140
+with before and you can just run
+them on Zo 2. 
+
+1046
+00:57:14,460 --> 00:57:17,100
+So I think that's going to be 
+really. 
+
+1047
+00:57:17,140 --> 00:57:20,900
+So what's the? 
+What are the changes that 
+
+1048
+00:57:20,900 --> 00:57:23,660
+somebody will have to do to go 
+from 01 to 02? 
+
+1049
+00:57:23,940 --> 00:57:27,020
+So basically what you're going 
+to do is you're going to use 
+
+1050
+00:57:27,220 --> 00:57:30,820
+Scala fix rule. 
+So Kit did a really good job, 
+
+1051
+00:57:30,820 --> 00:57:35,580
+and we'll help from Bill putting
+together a Scala fix rule where 
+
+1052
+00:57:35,940 --> 00:57:41,100
+you basically run this on your 
+code base and it should 
+
+1053
+00:57:41,740 --> 00:57:45,860
+generally compile on Zo 2 after 
+you've run that snalfix rule. 
+
+1054
+00:57:47,380 --> 00:57:51,380
+There's a lot of renaming of 
+like put sterling becomes print 
+
+1055
+00:57:51,380 --> 00:57:55,220
+line and so you have to do that 
+renaming, but skullfix will just
+
+1056
+00:57:55,220 --> 00:57:59,740
+do it for you, so. 
+Do you have any favorite 
+
+1057
+00:57:59,740 --> 00:58:07,300
+features in Skull Three? 
+I'm really excited for union 
+
+1058
+00:58:07,300 --> 00:58:12,230
+types. 
+When you do a little bit more, I
+
+1059
+00:58:12,230 --> 00:58:17,110
+guess fancy stuff with types, 
+you you find there's a duality 
+
+1060
+00:58:17,110 --> 00:58:21,070
+between intersection types and 
+union types that were kind of 
+
+1061
+00:58:21,070 --> 00:58:24,310
+missing in Scala 2. 
+And so like with the environment
+
+1062
+00:58:24,310 --> 00:58:28,230
+type in Zio, the the 
+intersection of two environment 
+
+1063
+00:58:28,230 --> 00:58:31,950
+types is exactly what you want 
+and is what's produced by has. 
+
+1064
+00:58:31,950 --> 00:58:37,110
+And that works very naturally as
+a type level function of from A 
+
+1065
+00:58:37,110 --> 00:58:41,420
+to B to A and B versus you don't
+have that other part, you don't 
+
+1066
+00:58:41,420 --> 00:58:43,460
+have the A and the B to the A or
+B. 
+
+1067
+00:58:43,900 --> 00:58:47,540
+And so like if you're talking 
+about error types, you can, you 
+
+1068
+00:58:47,540 --> 00:58:50,940
+can widen the error type, which 
+is what we do in like a flat 
+
+1069
+00:58:50,940 --> 00:58:53,820
+map, say on ZO. 
+But there are times when you 
+
+1070
+00:58:53,820 --> 00:58:57,940
+want to describe more of a type 
+level function that that 
+
+1071
+00:58:57,940 --> 00:59:01,140
+combines 2 errors. 
+And in Skyla 2 there's really 
+
+1072
+00:59:01,140 --> 00:59:05,300
+not a good way to say give me 
+the unification of these two 
+
+1073
+00:59:05,300 --> 00:59:09,450
+things. 
+Give me the least upper bound of
+
+1074
+00:59:09,450 --> 00:59:12,010
+these two things. 
+And so that that definitely 
+
+1075
+00:59:12,010 --> 00:59:15,010
+comes up a few times as 
+something that we're we're 
+
+1076
+00:59:15,010 --> 00:59:19,130
+missing and so it'll be it'll be
+fun to get to use that though I 
+
+1077
+00:59:19,130 --> 00:59:22,090
+think sometimes the the sad part
+of being the library author is 
+
+1078
+00:59:22,250 --> 00:59:24,210
+we have to be a little bit 
+slower on some of these things 
+
+1079
+00:59:24,210 --> 00:59:27,890
+because we can't use a feature 
+that's not goes for on scale 2 
+
+1080
+00:59:27,890 --> 00:59:30,650
+until we're really dropping 
+support for scale two which 
+
+1081
+00:59:31,170 --> 00:59:32,730
+we're pretty far away from at 
+this point. 
+
+1082
+00:59:34,170 --> 00:59:37,130
+Yeah, I've seen union types in a
+number even. 
+
+1083
+00:59:37,170 --> 00:59:40,730
+System has added union types and
+I think they were talking about 
+
+1084
+00:59:40,730 --> 00:59:44,490
+putting it in even Java. 
+Maybe I could be wrong about 
+
+1085
+00:59:44,490 --> 00:59:47,410
+that, but that. 
+Would be the future sometime, 
+
+1086
+00:59:47,650 --> 00:59:48,930
+yeah. 
+I mean, the sealed traits are 
+
+1087
+00:59:48,930 --> 00:59:51,850
+kind. 
+Of sealed classes or whatever. 
+
+1088
+00:59:52,090 --> 00:59:55,490
+Sealed whatever's and Java are 
+kind of. 
+
+1089
+00:59:55,530 --> 00:59:57,170
+I guess that gives you an 
+emulation of them. 
+
+1090
+00:59:57,170 --> 01:00:00,170
+But the nice thing that in call 
+of three and even is already 
+
+1091
+01:00:00,170 --> 01:00:04,290
+working well with ZEO is when 
+you combine 2 Zeos with two 
+
+1092
+01:00:04,290 --> 01:00:10,940
+different air types it. 
+It oars them into a union. 
+
+1093
+01:00:12,340 --> 01:00:14,340
+It's amazing. 
+The first time we saw this 
+
+1094
+01:00:14,460 --> 01:00:16,580
+happen, we're like that didn't 
+just happen, did it? 
+
+1095
+01:00:16,580 --> 01:00:20,260
+But it was so cool. 
+And then, but the thing that I 
+
+1096
+01:00:20,260 --> 01:00:23,260
+think you'll be able to take 
+advantage of in the future is 
+
+1097
+01:00:23,260 --> 01:00:29,420
+how do you then handle one error
+type and so that then your ZEO 
+
+1098
+01:00:29,420 --> 01:00:32,180
+no longer has that local 
+elimination right which with the
+
+1099
+01:00:32,180 --> 01:00:34,540
+environment? 
+As well has been, yeah. 
+
+1100
+01:00:34,700 --> 01:00:36,460
+Something we've been working on 
+for a while. 
+
+1101
+01:00:36,460 --> 01:00:38,420
+Yeah, nice. 
+Yeah, that would be cool. 
+
+1102
+01:00:38,940 --> 01:00:41,580
+Well, the expressiveness. 
+Is also really nice. 
+
+1103
+01:00:41,580 --> 01:00:43,980
+When you see it, you go, Oh 
+yeah, it's this thing or that 
+
+1104
+01:00:43,980 --> 01:00:47,300
+thing just says what it is. 
+Yeah, food or bar. 
+
+1105
+01:00:47,900 --> 01:00:51,540
+Makes sense, and that's 
+equivalent to bar or food, which
+
+1106
+01:00:51,540 --> 01:00:53,260
+is cool. 
+Just reflects. 
+
+1107
+01:00:54,260 --> 01:00:55,060
+Is that the? 
+Word for it. 
+
+1108
+01:00:56,100 --> 01:00:56,980
+Commutative. 
+I think it's. 
+
+1109
+01:00:59,040 --> 01:00:59,640
+Mouth. 
+I'm not. 
+
+1110
+01:01:00,000 --> 01:01:02,880
+I'm my you're my mouth. 
+Major Yeah, that's right. 
+
+1111
+01:01:02,880 --> 01:01:05,760
+You should know. 
+Yeah, we didn't worry so. 
+
+1112
+01:01:05,800 --> 01:01:07,200
+Much about that stuff in 
+physics. 
+
+1113
+01:01:09,800 --> 01:01:11,480
+Well, thank you, Adam. 
+Thanks for all your 
+
+1114
+01:01:11,480 --> 01:01:13,760
+contributions to Zio. 
+And thanks for joining us. 
+
+1115
+01:01:13,760 --> 01:01:16,640
+Taking time away from the 
+hackathon to to do this with us.
+
+1116
+01:01:16,680 --> 01:01:18,440
+Yeah. 
+Thank you so much for having me.
+
+1117
+01:01:18,440 --> 01:01:18,960
+It was a real.

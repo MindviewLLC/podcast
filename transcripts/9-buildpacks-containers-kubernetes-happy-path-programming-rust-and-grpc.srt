@@ -1,0 +1,5700 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:08,000 --> 00:00:11,400
+This week, I think we're 
+starting with build packs, which
+
+4
+00:00:11,400 --> 00:00:14,600
+is something. 
+I don't know what that is, but 
+
+5
+00:00:14,600 --> 00:00:17,200
+apparently there's been a fair 
+amount of activity in it. 
+
+6
+00:00:17,800 --> 00:00:19,400
+Recent, yeah. 
+And I've been a part of 
+
+7
+00:00:19,400 --> 00:00:23,800
+buildpack stuff for a long time,
+Heroku were was the inventors of
+
+8
+00:00:23,800 --> 00:00:28,400
+build packs and so a little bit 
+of history about build packs, I 
+
+9
+00:00:28,400 --> 00:00:30,700
+think probably a lot of our 
+listeners come from the Java 
+
+10
+00:00:30,700 --> 00:00:33,200
+world. 
+So I'll start with context 
+
+11
+00:00:33,200 --> 00:00:38,100
+around that we're back in the 
+day with Java, we would Of 
+
+12
+00:00:38,100 --> 00:00:40,300
+containers or application 
+servers. 
+
+13
+00:00:40,700 --> 00:00:43,800
+And what we do is we would 
+packaged up our application into
+
+14
+00:00:43,800 --> 00:00:46,500
+a jar file or War file, or your 
+file. 
+
+15
+00:00:46,700 --> 00:00:50,900
+And we would give that to the 
+container and really that that 
+
+16
+00:00:50,900 --> 00:00:56,000
+archive file was just a bunch of
+class files and but it was also 
+
+17
+00:00:56,100 --> 00:00:58,700
+it must have had like an 
+interface or some sort of 
+
+18
+00:00:58,700 --> 00:01:02,000
+protocols so that the container 
+could look at it and do 
+
+19
+00:01:02,000 --> 00:01:03,600
+something reasonable with. 
+That's right? 
+
+20
+00:01:03,600 --> 00:01:06,000
+Yeah, exactly. 
+So that was part of the j2ee or 
+
+21
+00:01:06,000 --> 00:01:10,400
+Java ee specification. 
+Was some things around how that 
+
+22
+00:01:10,600 --> 00:01:15,200
+contract between the container 
+and that that application would 
+
+23
+00:01:15,200 --> 00:01:18,900
+interact and it's a really 
+you're just implementing apis 
+
+24
+00:01:18,900 --> 00:01:21,800
+because you're running in the 
+same jvm that can. 
+
+25
+00:01:21,800 --> 00:01:25,300
+The container is running the 
+jvm, it has implemented a bunch 
+
+26
+00:01:25,300 --> 00:01:27,900
+of things and then you give it 
+your jar file and it knows how 
+
+27
+00:01:27,900 --> 00:01:30,200
+to take that jar file and load 
+it and run it and all that kind 
+
+28
+00:01:30,200 --> 00:01:32,600
+of stuff. 
+So, but now we have other kinds 
+
+29
+00:01:32,600 --> 00:01:35,200
+of containerization systems, 
+exactly. 
+
+30
+00:01:35,200 --> 00:01:39,800
+So that need that, that worked 
+well for Other and jvm stuff. 
+
+31
+00:01:39,800 --> 00:01:43,300
+But then when we started getting
+more polyglot, we needed 
+
+32
+00:01:43,300 --> 00:01:45,700
+something that worked outside of
+the jvm. 
+
+33
+00:01:45,900 --> 00:01:49,000
+And so, Heroku is one of the 
+first, when I was at Heroku, 
+
+34
+00:01:49,000 --> 00:01:52,600
+where they invented a way to 
+essentially, do 
+
+35
+00:01:52,600 --> 00:01:57,500
+containerization, for for user 
+applications and run them on 
+
+36
+00:01:57,500 --> 00:01:59,600
+their infrastructure, shared 
+infrastructure. 
+
+37
+00:02:00,000 --> 00:02:03,500
+The the container was called a 
+slug file, or is called a slug 
+
+38
+00:02:03,500 --> 00:02:07,100
+file in Heroku, terminology, 
+sorry, the container image. 
+
+39
+00:02:07,100 --> 00:02:11,000
+So that are Archive that you 
+give to Heroku is called a slug 
+
+40
+00:02:11,000 --> 00:02:14,900
+file, but then the the place 
+where it runs on Heroku is 
+
+41
+00:02:14,900 --> 00:02:18,500
+Alexi, which is the Linux 
+container project and so. 
+
+42
+00:02:19,100 --> 00:02:23,200
+So pretty similar to the way 
+that we did things in the Java 
+
+43
+00:02:23,200 --> 00:02:26,700
+world, you have a image that 
+contains the things that need to
+
+44
+00:02:26,700 --> 00:02:28,400
+run and then you have something 
+that can run it. 
+
+45
+00:02:28,800 --> 00:02:33,000
+And so then interestingly a 
+competitor to Heroku called duck
+
+46
+00:02:33,000 --> 00:02:36,400
+Cloud invented. 
+A technology that was also 
+
+47
+00:02:36,400 --> 00:02:39,800
+similar to that. 
+Then became Docker and is now 
+
+48
+00:02:39,800 --> 00:02:44,000
+the primary technology that we 
+use for container related stuff.
+
+49
+00:02:44,600 --> 00:02:49,000
+So with with Docker, you've got 
+your container image, it's 
+
+50
+00:02:49,000 --> 00:02:52,700
+basically like tar files. 
+And then you have the thing that
+
+51
+00:02:52,700 --> 00:02:56,200
+runs the container which could 
+be Docker or could be kubernetes
+
+52
+00:02:56,200 --> 00:02:59,400
+or other things like Cloud, run,
+Google Cloud, run, that kind of 
+
+53
+00:02:59,400 --> 00:03:01,000
+thing. 
+So different places to actually 
+
+54
+00:03:01,000 --> 00:03:03,000
+run this container images so 
+similar. 
+
+55
+00:03:03,000 --> 00:03:07,600
+But when Heroku invented this 
+containerization stuff, for the 
+
+56
+00:03:07,700 --> 00:03:12,000
+The didn't invent LXE but 
+started using LXE and giving 
+
+57
+00:03:12,000 --> 00:03:16,000
+people a way to, to run their 
+applications on Heroku that can 
+
+58
+00:03:16,000 --> 00:03:19,000
+run anything. 
+It doesn't just have to be Java.
+
+59
+00:03:19,000 --> 00:03:21,200
+Obviously, it can be anything 
+that runs in LXE. 
+
+60
+00:03:22,000 --> 00:03:25,800
+They needed to have a standard 
+way to convert from source code 
+
+61
+00:03:25,900 --> 00:03:30,500
+to that slug file to that 
+container image and so Heroku. 
+
+62
+00:03:30,500 --> 00:03:32,000
+And then it was called Bill 
+packs. 
+
+63
+00:03:32,300 --> 00:03:35,800
+So Bill packs were a standard 
+way to go from source code to 
+
+64
+00:03:35,800 --> 00:03:37,600
+that. 
+That container him. 
+
+65
+00:03:37,800 --> 00:03:42,200
+Which kind of a build system. 
+So it is a way to just take your
+
+66
+00:03:42,200 --> 00:03:46,800
+source code and compile it. 
+If you have a compiler and turn 
+
+67
+00:03:46,800 --> 00:03:50,200
+it into the things that can then
+run inside of the container. 
+
+68
+00:03:50,600 --> 00:03:55,800
+And so in the case of Roku they 
+supported build packs for python
+
+69
+00:03:55,800 --> 00:04:02,400
+Ruby PHP Java node, then added 
+go and some other other 
+
+70
+00:04:02,400 --> 00:04:04,600
+languages. 
+But really what they did was 
+
+71
+00:04:04,600 --> 00:04:07,500
+they just created a standard way
+to do that transformation. 
+
+72
+00:04:07,700 --> 00:04:10,800
+From source to that container 
+image and they're continuing 
+
+73
+00:04:10,800 --> 00:04:13,000
+image was pre Docker. 
+So we're not talking Docker 
+
+74
+00:04:13,000 --> 00:04:16,600
+containers, we're talking slug 
+files and in the case of Roku, 
+
+75
+00:04:17,000 --> 00:04:20,500
+did you have to program a 
+special way in order to work 
+
+76
+00:04:20,500 --> 00:04:22,700
+with this? 
+So that was the whole idea of 
+
+77
+00:04:22,700 --> 00:04:25,300
+Bill packs is you take your 
+source code and you shouldn't 
+
+78
+00:04:25,300 --> 00:04:28,400
+have to do anything. 
+You just you give your source 
+
+79
+00:04:28,400 --> 00:04:31,800
+code in the case of Heroku to 
+Heroku and they're going to run 
+
+80
+00:04:31,800 --> 00:04:34,600
+the build back on it to turn it 
+into the slug file. 
+
+81
+00:04:34,600 --> 00:04:39,000
+So any operating system calls. 
+You make our Somehow translate 
+
+82
+00:04:39,000 --> 00:04:43,800
+it into whatever the container 
+is using. 
+
+83
+00:04:44,500 --> 00:04:47,400
+Yes, exactly. 
+So that's part of like the 
+
+84
+00:04:47,400 --> 00:04:51,000
+virtualization piece of the 
+actual container Runner is where
+
+85
+00:04:51,000 --> 00:04:53,500
+it actually will take your 
+operating system calls and 
+
+86
+00:04:53,500 --> 00:04:56,100
+sandbox them and do whatever it 
+needs to do. 
+
+87
+00:04:57,100 --> 00:05:01,200
+But so the build pack is that 
+source to potentially container 
+
+88
+00:05:01,200 --> 00:05:07,500
+image process and what what 
+happened a few years ago is that
+
+89
+00:05:07,700 --> 00:05:10,400
+At Heroku, started collaborating
+with pivotal because pivotal 
+
+90
+00:05:10,400 --> 00:05:16,300
+also used build packs is part of
+cloud Foundry, and they took the
+
+91
+00:05:16,500 --> 00:05:21,300
+idea of build packs and took it 
+into the world of Docker. 
+
+92
+00:05:21,500 --> 00:05:24,400
+And so, instead of compiling to 
+a slug file, or whatever it is, 
+
+93
+00:05:24,400 --> 00:05:27,900
+in the pivotal Cloud Foundry 
+World, they started they change 
+
+94
+00:05:27,900 --> 00:05:31,800
+the output format to be a 
+container a Docker container 
+
+95
+00:05:31,800 --> 00:05:35,900
+image. 
+So, Heroku was working with one 
+
+96
+00:05:35,900 --> 00:05:40,100
+of their competitors. 
+Did not necessarily working with
+
+97
+00:05:40,100 --> 00:05:44,000
+because what happened was that 
+the docker container format 
+
+98
+00:05:44,000 --> 00:05:48,900
+became open source and became 
+just then with standardized 
+
+99
+00:05:48,900 --> 00:05:52,400
+under something called oci. 
+So now it's the docker container
+
+100
+00:05:52,400 --> 00:05:55,100
+format is that she said, 
+collaborated, you said Heroku, 
+
+101
+00:05:55,100 --> 00:05:56,900
+was collaborating with this 
+other company. 
+
+102
+00:05:56,900 --> 00:05:58,500
+They collaborated with pivotal 
+pivotal. 
+
+103
+00:05:58,500 --> 00:06:01,200
+Yeah, right, yeah, yeah, yeah. 
+Yes, they were essentially 
+
+104
+00:06:01,200 --> 00:06:03,900
+collaborating with with with a 
+competitor which is but there 
+
+105
+00:06:03,900 --> 00:06:08,200
+was benefits for them to do that
+because well, that was My point 
+
+106
+00:06:08,200 --> 00:06:12,800
+is that, is that just looking at
+everything as competition 
+
+107
+00:06:13,300 --> 00:06:16,200
+doesn't necessarily, I'm sorry, 
+produce the best results. 
+
+108
+00:06:16,200 --> 00:06:19,000
+Well, and, and for user. 
+So, what had happened was, 
+
+109
+00:06:19,000 --> 00:06:22,200
+Heroku, had their build packs 
+and pivotal had their belt packs
+
+110
+00:06:22,200 --> 00:06:24,400
+and they were different. 
+They did different things. 
+
+111
+00:06:24,700 --> 00:06:28,600
+And so it was it, and we're 
+producing different output 
+
+112
+00:06:28,600 --> 00:06:30,900
+formats. 
+And so there's definitely a lot 
+
+113
+00:06:30,900 --> 00:06:34,800
+of benefit from them building 
+common infrastructure so that 
+
+114
+00:06:34,800 --> 00:06:37,100
+they could serve each other's 
+knees so that they could serve 
+
+115
+00:06:37,100 --> 00:06:40,200
+their own. 
+It's but share some foundational
+
+116
+00:06:40,200 --> 00:06:44,300
+technology and so, that became 
+Cloud native build packs under 
+
+117
+00:06:44,300 --> 00:06:46,400
+the CN. 
+CF the cloud native Computing 
+
+118
+00:06:46,400 --> 00:06:49,300
+foundation. 
+And so again, same goal take 
+
+119
+00:06:49,300 --> 00:06:51,400
+source code. 
+You shouldn't have to do 
+
+120
+00:06:51,400 --> 00:06:54,900
+anything and it'll can turn it 
+into the Container image. 
+
+121
+00:06:55,100 --> 00:06:58,800
+And so that the that project 
+Cloud native, build packs has 
+
+122
+00:06:58,800 --> 00:07:01,800
+been going on for a few years. 
+But what I wanted to get to was 
+
+123
+00:07:01,800 --> 00:07:05,000
+a cool announcement that Google 
+made last week, is that we 
+
+124
+00:07:05,000 --> 00:07:09,200
+announced our open source Cloud 
+native build packs. 
+
+125
+00:07:09,200 --> 00:07:11,600
+And so there's the Google Cloud 
+build packs now. 
+
+126
+00:07:11,800 --> 00:07:15,900
+And so what that means is that 
+you can use Heroku is built 
+
+127
+00:07:15,900 --> 00:07:17,900
+packs with Cloud native built 
+packs. 
+
+128
+00:07:17,900 --> 00:07:20,400
+You can use pivot has built 
+packs with clown interval packs 
+
+129
+00:07:20,600 --> 00:07:23,100
+or you can use Google clouds. 
+Build packs with Cloud native 
+
+130
+00:07:23,100 --> 00:07:26,200
+build packs. 
+And it's I think it's actually 
+
+131
+00:07:26,200 --> 00:07:28,800
+one of the downsides of built 
+boxes that there's not like a 
+
+132
+00:07:28,800 --> 00:07:31,400
+common shared buildpack that 
+there are all the different 
+
+133
+00:07:31,400 --> 00:07:34,800
+build packs but it turns out 
+that Roku does have slightly 
+
+134
+00:07:34,800 --> 00:07:37,500
+different needs than them Google
+Cloud. 
+
+135
+00:07:37,700 --> 00:07:40,400
+As and so on. 
+And so it's nice that using the 
+
+136
+00:07:40,408 --> 00:07:44,300
+same tooling you can choose 
+which buildpack provider you 
+
+137
+00:07:44,300 --> 00:07:46,700
+want to use. 
+But ultimately it works the same
+
+138
+00:07:46,700 --> 00:07:49,800
+way, you give it source code and
+it's going to turn it into a 
+
+139
+00:07:49,808 --> 00:07:51,900
+container image that. 
+Then you can run wherever 
+
+140
+00:07:52,000 --> 00:07:57,200
+contain Docker containers run. 
+So so the so the Google build 
+
+141
+00:07:57,200 --> 00:07:59,800
+packs are still creating Docker 
+containers. 
+
+142
+00:07:59,800 --> 00:08:00,800
+Yes. 
+Yeah. 
+
+143
+00:08:00,800 --> 00:08:03,200
+Our doctor images. 
+Yeah. 
+
+144
+00:08:03,200 --> 00:08:05,800
+Docker container images. 
+Yeah, container images. 
+
+145
+00:08:05,800 --> 00:08:09,200
+Yeah, okay. 
+So so So I could use any of 
+
+146
+00:08:09,200 --> 00:08:13,100
+these and still produce a Docker
+container imager and then run it
+
+147
+00:08:13,100 --> 00:08:15,500
+on my Docker wherever I got to. 
+Yeah. 
+
+148
+00:08:15,500 --> 00:08:17,200
+Okay. 
+So it's making things more 
+
+149
+00:08:17,200 --> 00:08:18,500
+Universal. 
+Yeah. 
+
+150
+00:08:18,600 --> 00:08:19,600
+Okay. 
+Yeah. 
+
+151
+00:08:19,600 --> 00:08:22,600
+And so what was interesting is 
+that last week, Google Cloud 
+
+152
+00:08:22,600 --> 00:08:27,500
+announced their build packs but 
+also digitalocean announced a 
+
+153
+00:08:27,508 --> 00:08:30,300
+new platform as a service that's
+also built on belt packs. 
+
+154
+00:08:30,600 --> 00:08:36,000
+And then just yesterday, Hashi 
+Corp announced a new kind of 
+
+155
+00:08:36,000 --> 00:08:38,799
+platform as a service to lie. 
+Sweet. 
+
+156
+00:08:38,900 --> 00:08:40,500
+That's also built on build 
+packs. 
+
+157
+00:08:40,500 --> 00:08:43,400
+And so just in the last week, 
+there's been a lot of action 
+
+158
+00:08:43,400 --> 00:08:47,500
+around build packs and and I 
+think it's so the traditional 
+
+159
+00:08:47,500 --> 00:08:50,600
+way that people create their 
+container images, is that they 
+
+160
+00:08:50,600 --> 00:08:53,700
+write a Docker file and those 
+doctor files get pretty tedious 
+
+161
+00:08:53,800 --> 00:08:56,600
+and you have to maintain them, 
+whereas build packs, it's great 
+
+162
+00:08:56,600 --> 00:09:00,300
+because somebody else is taking 
+care of figuring out the the 
+
+163
+00:09:00,300 --> 00:09:05,300
+best way to go from source to a 
+container so that the no one 
+
+164
+00:09:05,300 --> 00:09:08,100
+should have to think about no 
+one working on a Source, code 
+
+165
+00:09:08,100 --> 00:09:10,500
+project should have to think 
+about how the process of 
+
+166
+00:09:10,508 --> 00:09:14,300
+transformation from source code 
+to a container image and it's 
+
+167
+00:09:14,300 --> 00:09:17,200
+like maintaining your own 
+compiler or whatever you don't 
+
+168
+00:09:17,200 --> 00:09:21,000
+want to do that. 
+So why would I choose one 
+
+169
+00:09:21,000 --> 00:09:25,300
+buildpack over another? 
+There there are some trade-offs 
+
+170
+00:09:25,300 --> 00:09:31,200
+I don't think that there's been 
+a lot of documentation or maybe 
+
+171
+00:09:31,200 --> 00:09:34,300
+this would be a good blog post 
+for me to compare the different 
+
+172
+00:09:34,300 --> 00:09:36,400
+build packs. 
+So just yesterday I was working 
+
+173
+00:09:36,400 --> 00:09:40,300
+with somebody on my team. 
+Mm who was using build backs to 
+
+174
+00:09:40,400 --> 00:09:43,800
+take their it was a go 
+application and turn it into a 
+
+175
+00:09:43,800 --> 00:09:47,500
+container and when they use the 
+Google Cloud built backs, the 
+
+176
+00:09:47,500 --> 00:09:50,600
+resulting container image was 
+like 120 Meg's or something like
+
+177
+00:09:50,600 --> 00:09:54,300
+that and when they use the it's 
+called pet keto build packs 
+
+178
+00:09:54,300 --> 00:09:57,800
+which are the ones that pivotal 
+uses, the container image was 
+
+179
+00:09:57,800 --> 00:09:59,600
+like 30 minutes or something 
+like that. 
+
+180
+00:09:59,600 --> 00:10:02,700
+And so it's clear that keto had 
+done some more deeper 
+
+181
+00:10:02,700 --> 00:10:07,400
+optimizations around around 
+there, their process. 
+
+182
+00:10:07,600 --> 00:10:09,500
+Of doing this. 
+So it's a sighs. 
+
+183
+00:10:09,500 --> 00:10:12,000
+What about performance? 
+Is there any in that case? 
+
+184
+00:10:12,000 --> 00:10:14,100
+It should be the same there 
+guys. 
+
+185
+00:10:14,100 --> 00:10:17,600
+It's just maybe the Google ones 
+are sooner, so they haven't 
+
+186
+00:10:17,600 --> 00:10:20,800
+figured out how to write very 
+not as mature. 
+
+187
+00:10:20,800 --> 00:10:23,400
+So yeah, having to put as much 
+work into the optimizations and 
+
+188
+00:10:23,400 --> 00:10:27,000
+that sort of thing. 
+So, spring, boot now has 
+
+189
+00:10:27,000 --> 00:10:29,500
+built-in support for the packet.
+Oh, build packs, actually. 
+
+190
+00:10:29,500 --> 00:10:32,700
+I think you can use any build 
+packs, but, but they're, what is
+
+191
+00:10:32,700 --> 00:10:34,800
+out of the box is the pack out 
+of build packs. 
+
+192
+00:10:35,000 --> 00:10:40,300
+So, now a spring, you say, Then 
+our Gradle build image and it 
+
+193
+00:10:40,300 --> 00:10:42,800
+creates a container image and 
+underneath the covers. 
+
+194
+00:10:42,800 --> 00:10:47,000
+It's all built on top of build 
+packs to do that because it's 
+
+195
+00:10:47,000 --> 00:10:50,100
+you know it's nice for spring 
+people in the spring world to be
+
+196
+00:10:50,100 --> 00:10:53,900
+able to easily go from source 
+code to a container and so they 
+
+197
+00:10:53,900 --> 00:10:57,300
+just built it into their tooling
+and built on top of build packs.
+
+198
+00:10:57,300 --> 00:11:01,400
+So lots of cool stuff happening 
+around Bill packs and it's been 
+
+199
+00:11:01,500 --> 00:11:07,300
+fun to be part of those projects
+and I built all the samples for 
+
+200
+00:11:07,300 --> 00:11:11,600
+the Google Cloud buildpack ones 
+and working with our team, 
+
+201
+00:11:11,600 --> 00:11:13,900
+building our buildpack. 
+So yeah. 
+
+202
+00:11:14,700 --> 00:11:16,600
+So yeah, that's Bill packs. 
+I thought that was kind of new 
+
+203
+00:11:16,600 --> 00:11:20,900
+and exciting and it is what a 
+new world that we move into 
+
+204
+00:11:20,900 --> 00:11:23,900
+with, with Docker and all that 
+stuff. 
+
+205
+00:11:24,000 --> 00:11:27,100
+Yeah, yeah. 
+Actually, while we're on the 
+
+206
+00:11:27,100 --> 00:11:31,000
+subject, what is the difference 
+between Docker and kubernetes? 
+
+207
+00:11:31,000 --> 00:11:33,700
+I don't think we've talked about
+low of an interesting one. 
+
+208
+00:11:33,800 --> 00:11:38,200
+Yeah. 
+So Docker was really the The 
+
+209
+00:11:38,200 --> 00:11:44,300
+first open source technology 
+that that standardized 
+
+210
+00:11:44,300 --> 00:11:48,800
+containers in a, in an open 
+source way, whereas back to the 
+
+211
+00:11:48,800 --> 00:11:50,700
+conversation about Heroku and 
+Heroku, did it? 
+
+212
+00:11:51,000 --> 00:11:53,500
+They have their slug filed, they
+had their build packs in the 
+
+213
+00:11:53,500 --> 00:11:59,200
+packs were open source, but it 
+wasn't, it wasn't, it wasn't a 
+
+214
+00:11:59,200 --> 00:12:04,300
+universal portable solution. 
+What Docker did is they took the
+
+215
+00:12:04,300 --> 00:12:07,600
+same ideas and they made them 
+Universal. 
+
+216
+00:12:07,600 --> 00:12:13,300
+So, so if I give you a Docker 
+container image, you could run 
+
+217
+00:12:13,300 --> 00:12:16,000
+that thing. 
+Anywhere you can run it through 
+
+218
+00:12:16,000 --> 00:12:18,500
+Docker, you can run it through 
+Docker on Linux, Mac, or 
+
+219
+00:12:18,500 --> 00:12:21,400
+Windows. 
+You can run it on kubernetes, 
+
+220
+00:12:21,400 --> 00:12:23,700
+you can run it anywhere that you
+can run containers. 
+
+221
+00:12:24,000 --> 00:12:28,300
+So it actually created this 
+Universal portable format that 
+
+222
+00:12:28,300 --> 00:12:32,200
+we've really had with jar files 
+and War files in here, files. 
+
+223
+00:12:32,400 --> 00:12:35,500
+Back in the jvm day, stuck on 
+the JV. 
+
+224
+00:12:35,500 --> 00:12:41,000
+Exactly and so, so what it did 
+is it is a comp accomplishing, 
+
+225
+00:12:41,000 --> 00:12:44,600
+the same sorts of goals but 
+doing it in a more Universal way
+
+226
+00:12:44,800 --> 00:12:47,300
+because you can put whatever you
+want inside of your container. 
+
+227
+00:12:48,000 --> 00:12:50,100
+It's totally up to you. 
+What goes in there. 
+
+228
+00:12:51,300 --> 00:12:55,600
+So so, so Docker was the 
+original. 
+
+229
+00:12:55,700 --> 00:12:57,900
+Open-source tooling to address 
+this. 
+
+230
+00:12:58,300 --> 00:13:01,100
+They had originally started with
+Alexei, the same thing, the 
+
+231
+00:13:01,100 --> 00:13:05,000
+Heroku is using, Or actually 
+running the container but switch
+
+232
+00:13:05,000 --> 00:13:09,000
+to another container Runner 
+technology. 
+
+233
+00:13:09,300 --> 00:13:13,200
+That's more portable across 
+platforms because Alexi 
+
+234
+00:13:13,200 --> 00:13:17,600
+obviously Linux and so not as 
+portable little LX, e stands for
+
+235
+00:13:17,600 --> 00:13:20,600
+Linux containers and so so the 
+one that they switch to which 
+
+236
+00:13:20,600 --> 00:13:23,500
+I'm spacing on the name of it 
+but it is portable across 
+
+237
+00:13:23,500 --> 00:13:27,500
+platforms which is nice. 
+Oh because I thought I mean, I 
+
+238
+00:13:27,508 --> 00:13:31,600
+thought that Docker was kind of 
+like when you were programming 
+
+239
+00:13:32,000 --> 00:13:34,200
+to. 
+After you were programming to a 
+
+240
+00:13:34,200 --> 00:13:40,600
+Linux, there's environment they 
+have have recently actually 
+
+241
+00:13:40,600 --> 00:13:43,900
+added different architecture 
+support. 
+
+242
+00:13:43,900 --> 00:13:46,100
+We're now you and I think is 
+probably Microsoft that 
+
+243
+00:13:46,100 --> 00:13:48,300
+contributed to this but now you 
+can actually use Docker 
+
+244
+00:13:48,300 --> 00:13:51,800
+containers with Windows being 
+the underline system. 
+
+245
+00:13:52,000 --> 00:13:56,600
+So, the way that the 
+virtualization is is done, it 
+
+246
+00:13:56,600 --> 00:14:00,200
+doesn't actually have to be 
+Linux and so I don't know all 
+
+247
+00:14:00,200 --> 00:14:05,100
+the details of that. 
+But so it's somehow knows what 
+
+248
+00:14:05,400 --> 00:14:08,700
+operating system. 
+You're programming to there. 
+
+249
+00:14:08,700 --> 00:14:12,900
+There is a, there is an API. 
+I don't know if it's like G, 
+
+250
+00:14:12,900 --> 00:14:16,700
+lib, C or whatever it is, but 
+there is an underlying API that 
+
+251
+00:14:16,700 --> 00:14:22,500
+translates your sis calls to, to
+the underlying operating system 
+
+252
+00:14:22,500 --> 00:14:23,800
+syscalls. 
+I would guess. 
+
+253
+00:14:24,100 --> 00:14:30,600
+And so, so as long as you can 
+translate like Windows API calls
+
+254
+00:14:30,800 --> 00:14:34,400
+to to, and Rely on operating 
+system maybe those have to run 
+
+255
+00:14:34,400 --> 00:14:36,000
+on Windows or something like 
+that. 
+
+256
+00:14:36,200 --> 00:14:42,400
+But but so so the, the actual 
+Docker container technology is 
+
+257
+00:14:42,400 --> 00:14:46,200
+not necessarily operating system
+specific interesting? 
+
+258
+00:14:46,200 --> 00:14:48,300
+Yeah, okay. 
+And I don't, I don't know all 
+
+259
+00:14:48,300 --> 00:14:51,500
+the details on that, but it 
+really is intended to be this, 
+
+260
+00:14:51,500 --> 00:14:57,700
+like Universal format for, for 
+sharing these things that can 
+
+261
+00:14:57,700 --> 00:15:02,100
+run inside of a container and 
+container B. 
+
+262
+00:15:02,300 --> 00:15:04,300
+Um, Docker kubernetes that kind 
+of thing. 
+
+263
+00:15:04,300 --> 00:15:10,800
+Okay, so what is kubernetes? 
+Okay, so kubernetes a big part 
+
+264
+00:15:10,800 --> 00:15:15,300
+of kubernetes is containers. 
+The the unit that you give 
+
+265
+00:15:15,300 --> 00:15:21,200
+kubernetes to run is a container
+image and Docker container image
+
+266
+00:15:21,200 --> 00:15:24,300
+or oci container image. 
+Oci is the standard 
+
+267
+00:15:24,400 --> 00:15:27,700
+standardization of Docker 
+container so but you give it a 
+
+268
+00:15:27,708 --> 00:15:29,400
+container image and it's going 
+to run it. 
+
+269
+00:15:29,400 --> 00:15:36,200
+So what kubernetes does is 
+Kubernetes you, you it's 
+
+270
+00:15:36,200 --> 00:15:40,800
+cluster, it's a cluster. 
+Let's put it this way. 
+
+271
+00:15:40,800 --> 00:15:43,800
+It's a higher level of 
+abstraction over just a single 
+
+272
+00:15:43,800 --> 00:15:48,100
+Linux operating system. 
+It abstracts across multiple 
+
+273
+00:15:48,100 --> 00:15:51,200
+systems. 
+And so it creates this higher 
+
+274
+00:15:51,200 --> 00:15:56,000
+level where what you do is you 
+run, you run kubernetes 
+
+275
+00:15:56,000 --> 00:16:00,800
+essentially on a bunch of nodes 
+and then you say, you tell you 
+
+276
+00:16:00,800 --> 00:16:04,200
+talk to kubernetes The kind of 
+like you would SSH into a Linux 
+
+277
+00:16:04,200 --> 00:16:08,500
+machine, instead you use it to a
+tool called Cube CTL, which is 
+
+278
+00:16:08,500 --> 00:16:11,400
+our crew control. 
+It's the it's the interface to 
+
+279
+00:16:11,400 --> 00:16:14,200
+the API of kubernetes that's 
+running on a cluster of 
+
+280
+00:16:14,200 --> 00:16:17,400
+machines. 
+And what you do is you you give 
+
+281
+00:16:17,500 --> 00:16:22,500
+kubernetes a document and that 
+document tells kubernetes the 
+
+282
+00:16:22,500 --> 00:16:24,800
+state that you want the cluster 
+to be in. 
+
+283
+00:16:25,300 --> 00:16:29,500
+And then underneath the covers 
+what happens is kubernetes it. 
+
+284
+00:16:29,500 --> 00:16:32,300
+Looks at that document and says,
+okay, here's what I need. 
+
+285
+00:16:32,400 --> 00:16:35,300
+To do to get to that state. 
+I need to take this container 
+
+286
+00:16:35,300 --> 00:16:37,600
+and run it on this machine. 
+I need to take this container 
+
+287
+00:16:37,600 --> 00:16:39,900
+around on this machine so on and
+so forth. 
+
+288
+00:16:39,900 --> 00:16:43,400
+So it's actually doing 
+underneath the covers doing a 
+
+289
+00:16:43,400 --> 00:16:45,600
+bunch of networking 
+configuration doing a bunch of 
+
+290
+00:16:45,600 --> 00:16:48,400
+the virtualization to run the 
+containers but it creates this 
+
+291
+00:16:48,400 --> 00:16:51,000
+higher level of abstraction 
+where you say, here's the 
+
+292
+00:16:51,000 --> 00:16:53,700
+cluster stated I want and 
+kubernetes resolves that to 
+
+293
+00:16:53,700 --> 00:16:55,900
+actually running what you've 
+declared. 
+
+294
+00:16:55,900 --> 00:16:59,900
+So it sort of reminds me of 
+like, a thread pool, executor, 
+
+295
+00:17:00,100 --> 00:17:02,600
+you know, rather than you 
+managing all the threads are If 
+
+296
+00:17:02,600 --> 00:17:05,800
+you just say, here's my task. 
+Executor run it somehow. 
+
+297
+00:17:05,800 --> 00:17:06,599
+Yep. 
+Yep. 
+
+298
+00:17:06,800 --> 00:17:13,300
+So so I could hand kubernetes a 
+bunch of different but it still 
+
+299
+00:17:13,300 --> 00:17:15,300
+works with Docker images. 
+Yeah, yeah. 
+
+300
+00:17:15,300 --> 00:17:16,700
+Okay. 
+So I can hand it a bunch of 
+
+301
+00:17:16,700 --> 00:17:21,700
+Docker images and say Here's how
+I want you to run these or will 
+
+302
+00:17:21,700 --> 00:17:24,300
+it figure it out? 
+Even if I don't tell it is it 
+
+303
+00:17:24,300 --> 00:17:28,099
+that smarter is so you see there
+you have to tell it what their 
+
+304
+00:17:28,400 --> 00:17:33,200
+the what you usually tell 
+kubernetes is So here's a 
+
+305
+00:17:33,208 --> 00:17:37,400
+container image. 
+And here's here's the resources 
+
+306
+00:17:37,400 --> 00:17:39,800
+that I want you to allocate to 
+that container image. 
+
+307
+00:17:40,000 --> 00:17:43,900
+And here's how many instances I 
+want you to run that on. 
+
+308
+00:17:44,400 --> 00:17:50,600
+And so then kubernetes will will
+try to resolve that definition 
+
+309
+00:17:50,600 --> 00:17:53,600
+of the state that you want to be
+in based on its actual 
+
+310
+00:17:53,600 --> 00:17:56,800
+resources. 
+So let's say that you have a 
+
+311
+00:17:56,800 --> 00:18:00,900
+node in your kubernetes pool, 
+that is has eight gigs of RAM 
+
+312
+00:18:01,400 --> 00:18:07,600
+and You say, all right, I want 
+this container image to, to it's
+
+313
+00:18:07,600 --> 00:18:09,700
+going to only take two gigs of 
+RAM. 
+
+314
+00:18:10,300 --> 00:18:12,800
+I need to allocate 2 gigs of RAM
+to this container image. 
+
+315
+00:18:13,000 --> 00:18:15,800
+Well, it's going to look at that
+node and be like, oh, I have a 
+
+316
+00:18:15,800 --> 00:18:18,100
+gigs RAM, and I haven't 
+allocated any of that. 
+
+317
+00:18:18,100 --> 00:18:23,300
+So, I have space now to allocate
+a to GG, chunk to this container
+
+318
+00:18:23,300 --> 00:18:25,200
+image. 
+So, sure enough. 
+
+319
+00:18:25,800 --> 00:18:27,500
+We can do that and up and 
+running. 
+
+320
+00:18:28,200 --> 00:18:30,700
+Now, if you have a second node 
+and you've told kubernetes, 
+
+321
+00:18:30,700 --> 00:18:32,200
+okay, I want this container 
+image. 
+
+322
+00:18:32,400 --> 00:18:35,500
+And that's going to require two 
+gigs of RAM to be run on two 
+
+323
+00:18:35,500 --> 00:18:38,700
+machines than kubernetes is 
+going to look at it available 
+
+324
+00:18:38,700 --> 00:18:42,300
+resources and say, all right, do
+do I have the resources? 
+
+325
+00:18:42,300 --> 00:18:46,700
+Do I have two nodes where I can 
+run this container image and do 
+
+326
+00:18:46,700 --> 00:18:50,000
+I have the available resources 
+and so there is obviously the 
+
+327
+00:18:50,000 --> 00:18:53,300
+the chance that you're not going
+to have the available resources 
+
+328
+00:18:53,300 --> 00:18:56,900
+in your cluster to be able to 
+get to that desired State and 
+
+329
+00:18:56,900 --> 00:18:59,700
+kubernetes is going to tell you 
+that it's a like sorry and Tanis
+
+330
+00:18:59,700 --> 00:19:01,600
+do it at all. 
+Okay. 
+
+331
+00:19:01,800 --> 00:19:05,700
+So Say that you only, let's say 
+that your max instant size was 
+
+332
+00:19:05,700 --> 00:19:07,900
+eight gigs and you said, all 
+right. 
+
+333
+00:19:07,900 --> 00:19:10,400
+I need 16 gigs for this 
+container in which it's going to
+
+334
+00:19:10,400 --> 00:19:12,200
+be. 
+Like I can't find any enough 
+
+335
+00:19:12,200 --> 00:19:15,600
+resources on an instance to be 
+able to allocate that so it's 
+
+336
+00:19:15,600 --> 00:19:19,300
+just going to it. 
+Relays that information to you 
+
+337
+00:19:20,000 --> 00:19:24,200
+that it can't can't do it. 
+So is it only for Distributing 
+
+338
+00:19:24,600 --> 00:19:29,100
+like a single container image to
+multiple nodes or can you have 
+
+339
+00:19:29,100 --> 00:19:32,800
+multiple different container 
+image as and say, I mean this 
+
+340
+00:19:32,800 --> 00:19:34,800
+one's doing database stuff. 
+Exactly. 
+
+341
+00:19:34,800 --> 00:19:37,400
+Oh you can do that. 
+Yeah, so typical kubernetes 
+
+342
+00:19:37,400 --> 00:19:41,800
+cluster will run, tens hundreds,
+thousands of container images 0 
+
+343
+00:19:42,000 --> 00:19:47,100
+and I the node I think that the 
+largest number of nodes you can 
+
+344
+00:19:47,100 --> 00:19:49,800
+have in a kubernetes cluster is 
+like 4,000 or something like 
+
+345
+00:19:49,800 --> 00:19:52,700
+that but that's on a single 
+cluster. 
+
+346
+00:19:53,600 --> 00:19:58,700
+And and so you what people, what
+large Enterprises that are using
+
+347
+00:19:58,700 --> 00:20:02,200
+kubernetes are doing the they'll
+have hundreds of kubernetes. 
+
+348
+00:20:02,300 --> 00:20:06,000
+Sisters each with hundreds or 
+thousands of nodes underneath 
+
+349
+00:20:06,000 --> 00:20:07,800
+them. 
+And, yeah, it gets pretty 
+
+350
+00:20:07,800 --> 00:20:09,800
+mind-boggling but it's a whole 
+lot better. 
+
+351
+00:20:09,800 --> 00:20:12,600
+The imagine, if you were trying 
+to do that scale of things by 
+
+352
+00:20:12,600 --> 00:20:17,000
+SSH, ssh, gene into individual 
+machines, like you don't want to
+
+353
+00:20:17,600 --> 00:20:22,400
+imagine that. 
+So, is there some kind of 
+
+354
+00:20:23,700 --> 00:20:28,200
+protocol for these containers to
+talk to each other when 
+
+355
+00:20:28,200 --> 00:20:33,400
+kubernetes is in play? 
+Yes, so the The protocol is just
+
+356
+00:20:33,400 --> 00:20:36,000
+standard networking TCP. 
+I think you could probably do 
+
+357
+00:20:36,000 --> 00:20:39,100
+UDP networking, underneath the 
+covers. 
+
+358
+00:20:39,100 --> 00:20:42,900
+I think that kubernetes is 
+actually doing like iptables 
+
+359
+00:20:42,900 --> 00:20:46,700
+Linux stuff and so if our speed 
+yeah. 
+
+360
+00:20:46,700 --> 00:20:48,200
+Yeah. 
+So it's like setting up the 
+
+361
+00:20:48,200 --> 00:20:50,800
+routing for you so that 
+containers can talk to each 
+
+362
+00:20:50,800 --> 00:20:57,400
+other without with with little 
+overhead and and so, but there's
+
+363
+00:20:57,400 --> 00:21:01,200
+a challenge there of like, how 
+do you know the name of the 
+
+364
+00:21:01,200 --> 00:21:04,400
+machine to? 
+And so, a big part of kubernetes
+
+365
+00:21:04,400 --> 00:21:12,600
+is setting up the DNS names so 
+that you can address your 
+
+366
+00:21:12,600 --> 00:21:17,300
+containers. 
+So for instance I recently 
+
+367
+00:21:17,300 --> 00:21:24,000
+deployed Kafka on a kubernetes 
+cluster and and so when I 
+
+368
+00:21:24,000 --> 00:21:27,200
+deployed my so when I click off 
+gone and kubernetes, I'm 
+
+369
+00:21:27,200 --> 00:21:31,000
+deploying a container image and 
+telling kubernetes to run Kafka 
+
+370
+00:21:31,000 --> 00:21:33,100
+essentially on. 
+On its cluster. 
+
+371
+00:21:33,300 --> 00:21:35,700
+But then I've got an application
+that I also Deploy on 
+
+372
+00:21:35,700 --> 00:21:38,100
+kubernetes, that's connecting to
+that Kafka. 
+
+373
+00:21:38,400 --> 00:21:42,400
+And so somewhere, I need to tell
+my application how to wear to 
+
+374
+00:21:42,400 --> 00:21:46,100
+call what sure and so, so what 
+what? 
+
+375
+00:21:46,100 --> 00:21:53,000
+When I, when I deploy Kafka on 
+to my kubernetes cluster I get a
+
+376
+00:21:55,100 --> 00:22:00,500
+name, a DNS name to address my 
+Kafka cluster with that is 
+
+377
+00:22:01,400 --> 00:22:04,300
+determinate. 
+So I know what that name is. 
+
+378
+00:22:04,400 --> 00:22:07,300
+So then when I configure my 
+application to connect to Kafka,
+
+379
+00:22:07,700 --> 00:22:12,400
+I know what name to plug in and 
+then kubernetes is set up the 
+
+380
+00:22:12,400 --> 00:22:16,200
+routing and the DNS such that my
+application tries to establish a
+
+381
+00:22:16,208 --> 00:22:20,100
+connection to let's say Kafka 
+it's like Kafka dot local or 
+
+382
+00:22:20,108 --> 00:22:24,400
+something like that. 
+That that in kubernetes it knows
+
+383
+00:22:24,400 --> 00:22:30,100
+what what essentially node to 
+call to make that work. 
+
+384
+00:22:30,200 --> 00:22:34,900
+Yeah it's like well Way Way Back
+In Assembly Language days we had
+
+385
+00:22:34,900 --> 00:22:37,200
+linkers okay. 
+Yeah the to resolve the 
+
+386
+00:22:37,200 --> 00:22:41,200
+addresses of things so that's a 
+kubernetes has a network Linker 
+
+387
+00:22:41,200 --> 00:22:44,200
+essential for the stuff that's 
+running within a cluster. 
+
+388
+00:22:44,300 --> 00:22:48,700
+Sure because it decides at 
+configuration time, what those 
+
+389
+00:22:48,700 --> 00:22:51,500
+addresses are and has to relay 
+those back somehow. 
+
+390
+00:22:51,600 --> 00:22:53,200
+Exactly. 
+Okay, exactly. 
+
+391
+00:22:53,200 --> 00:22:57,200
+Okay, well, that your banana is 
+the network Linker or yeah, at 
+
+392
+00:22:57,200 --> 00:22:58,700
+least one part of it is one part
+of it. 
+
+393
+00:22:58,700 --> 00:23:01,000
+Is that okay? 
+Yeah, I think I understand. 
+
+394
+00:23:01,100 --> 00:23:04,200
+Yeah, yeah. 
+So You would you would probably 
+
+395
+00:23:04,200 --> 00:23:08,600
+never use kubernetes unless you 
+were doing cluster stuff? 
+
+396
+00:23:08,700 --> 00:23:13,400
+Like like if you if you're doing
+it remember like I'm still doing
+
+397
+00:23:13,400 --> 00:23:17,300
+this but number like lamp stack,
+it was you know I've got my 
+
+398
+00:23:17,300 --> 00:23:20,000
+Linux server, that's running my 
+application. 
+
+399
+00:23:20,000 --> 00:23:26,000
+I've got my my SQL database like
+running on this other server. 
+
+400
+00:23:26,200 --> 00:23:29,500
+And, you know, this was like 
+just that easy standard way to 
+
+401
+00:23:29,500 --> 00:23:35,400
+like build build a system back 
+in the And and you can handle a 
+
+402
+00:23:35,408 --> 00:23:40,500
+lot of traffic on a single node 
+and you know, single database 
+
+403
+00:23:40,500 --> 00:23:44,300
+netted single application node. 
+If you're if like, that's what 
+
+404
+00:23:44,300 --> 00:23:48,100
+you need, if that's sufficient 
+for you, that kind of set up 
+
+405
+00:23:48,100 --> 00:23:50,000
+essentially, then you don't need
+kubernetes. 
+
+406
+00:23:50,000 --> 00:23:51,900
+Like, kubernetes is way 
+Overkill. 
+
+407
+00:23:51,900 --> 00:23:54,500
+There's, you know, a lot of 
+management effort that's going 
+
+408
+00:23:54,500 --> 00:23:58,300
+to go into dealing with 
+kubernetes this for big scaling.
+
+409
+00:23:58,300 --> 00:24:00,500
+It's for yeah, exactly. 
+Hmm. 
+
+410
+00:24:01,400 --> 00:24:03,900
+There are some nice Things that 
+it does for you even in that 
+
+411
+00:24:03,900 --> 00:24:08,300
+smaller, use case of like if a 
+server dies, then kubernetes 
+
+412
+00:24:08,300 --> 00:24:11,400
+will get you back to the state 
+that you declared. 
+
+413
+00:24:11,400 --> 00:24:14,100
+So it's going to restart your 
+container automatically for you.
+
+414
+00:24:14,100 --> 00:24:16,200
+It has health check. 
+So it will check to make sure 
+
+415
+00:24:16,200 --> 00:24:18,300
+that your application is 
+responding. 
+
+416
+00:24:18,400 --> 00:24:21,100
+And if it's not, it's gonna 
+start up a new one. 
+
+417
+00:24:21,200 --> 00:24:23,900
+So it happened doctor wouldn't 
+do that because it's just on one
+
+418
+00:24:23,900 --> 00:24:25,800
+node. 
+There is something I think 
+
+419
+00:24:25,800 --> 00:24:29,700
+called Docker swarm, that does 
+some similar things, but most of
+
+420
+00:24:29,700 --> 00:24:32,100
+the industry is just using 
+kubernetes for this kind of 
+
+421
+00:24:32,100 --> 00:24:35,000
+thing. 
+Yeah, generally when I'm using 
+
+422
+00:24:35,000 --> 00:24:36,900
+Docker I'm just running it on a 
+single node. 
+
+423
+00:24:37,200 --> 00:24:38,500
+Good? 
+Yeah. 
+
+424
+00:24:39,400 --> 00:24:43,800
+So there are some nice things 
+even for the like I'm sure you 
+
+425
+00:24:43,800 --> 00:24:46,400
+experience like in the lamp 
+stack kind of days was your 
+
+426
+00:24:46,400 --> 00:24:48,800
+server would crash and you have 
+to like a restart it. 
+
+427
+00:24:48,800 --> 00:24:51,000
+Whatever. 
+And so those sorts of problems, 
+
+428
+00:24:51,000 --> 00:24:55,100
+go away with kubernetes but 
+there are better ways to solve 
+
+429
+00:24:55,100 --> 00:24:58,600
+those at lower scale today than 
+than going all the way to 
+
+430
+00:24:58,600 --> 00:25:00,700
+kubernetes. 
+Just use a platform as a service
+
+431
+00:25:00,700 --> 00:25:04,000
+like Cloud run or whatever. 
+And and so that you can still 
+
+432
+00:25:04,000 --> 00:25:07,500
+run your containers but don't 
+have to deal with with the 
+
+433
+00:25:07,500 --> 00:25:11,600
+complexity of kubernetes. 
+So, see I think kubernetes is 
+
+434
+00:25:11,600 --> 00:25:18,000
+for large-scale cluster stuff. 
+Still, okay, yeah, I think I 
+
+435
+00:25:18,000 --> 00:25:19,200
+have the perspective on that 
+now. 
+
+436
+00:25:19,200 --> 00:25:22,200
+So one of the nice things about 
+containers, for all this is that
+
+437
+00:25:22,200 --> 00:25:25,000
+because they're so portable. 
+I can take my container and I 
+
+438
+00:25:25,008 --> 00:25:28,700
+can run a locally and Docker I 
+can run it on a managed service 
+
+439
+00:25:28,700 --> 00:25:31,000
+iCloud, run. 
+If for some reason I need to 
+
+440
+00:25:31,000 --> 00:25:33,600
+scale or I have run into 
+Limitations with that kind of 
+
+441
+00:25:33,600 --> 00:25:36,300
+thing. 
+Then I can go to kubernetes and 
+
+442
+00:25:36,300 --> 00:25:39,500
+I shouldn't ever have to change.
+My container, like my container 
+
+443
+00:25:39,500 --> 00:25:43,100
+is portable and so there is, I 
+think that's that. 
+
+444
+00:25:43,300 --> 00:25:47,400
+That's one of the big Evolutions
+that happened with containers is
+
+445
+00:25:47,400 --> 00:25:51,000
+this ability to pour across 
+multiple runtime different 
+
+446
+00:25:51,000 --> 00:25:56,000
+runtimes that actually works 
+where we kind of had been 
+
+447
+00:25:56,000 --> 00:25:59,600
+promised this in the past and a 
+variety of ways and it never, 
+
+448
+00:25:59,600 --> 00:26:02,500
+really panned out. 
+And I think this time It's 
+
+449
+00:26:02,500 --> 00:26:05,000
+actually kind of painting, a, 
+we're actually getting there. 
+
+450
+00:26:05,000 --> 00:26:11,200
+So could this solve could 
+container solve the problem of 
+
+451
+00:26:12,800 --> 00:26:15,600
+Distributing applications? 
+I mean, this is always been a 
+
+452
+00:26:15,600 --> 00:26:19,200
+problem in Python is like, okay.
+Yeah, there are ways. 
+
+453
+00:26:19,900 --> 00:26:22,900
+How do you, how do you get your 
+Python program running on 
+
+454
+00:26:22,900 --> 00:26:25,900
+somebody else's machine when you
+don't have anything? 
+
+455
+00:26:26,000 --> 00:26:28,400
+Yeah. 
+Is that so you definitely can 
+
+456
+00:26:28,400 --> 00:26:32,800
+use containers for that and, and
+people do there There is a 
+
+457
+00:26:32,800 --> 00:26:37,400
+trade-off to that whereas where,
+which is when you run inside of 
+
+458
+00:26:37,400 --> 00:26:43,600
+containers, it creates some 
+complexity around around the 
+
+459
+00:26:43,600 --> 00:26:47,200
+resources that that container 
+has access to and how accesses 
+
+460
+00:26:47,200 --> 00:26:49,900
+them. 
+So, for example, if you wanted 
+
+461
+00:26:49,900 --> 00:26:55,800
+to to have your Python program, 
+read some files as part of what 
+
+462
+00:26:55,800 --> 00:26:58,600
+it's doing. 
+And I'll put some files that 
+
+463
+00:26:58,600 --> 00:27:03,300
+actually is a is a tricky thing 
+for for a container to do 
+
+464
+00:27:03,400 --> 00:27:07,300
+because by default a container 
+doesn't have access to the host 
+
+465
+00:27:07,300 --> 00:27:11,300
+file system. 
+You can mount your local pieces 
+
+466
+00:27:11,300 --> 00:27:14,400
+of your local file system into a
+Docker container and you can 
+
+467
+00:27:14,400 --> 00:27:17,300
+mount them as read, right? 
+But there's, there's all sorts 
+
+468
+00:27:17,300 --> 00:27:19,400
+of issues that crop up in that 
+case. 
+
+469
+00:27:19,900 --> 00:27:25,300
+So I have seen, I have seen 
+people Yeah, provide the option 
+
+470
+00:27:25,300 --> 00:27:28,500
+for people to like just run 
+their their, let's say, python 
+
+471
+00:27:28,500 --> 00:27:31,900
+programs from a container but I 
+think what more people are doing
+
+472
+00:27:31,900 --> 00:27:36,200
+is they're using go or rust or 
+whatever and creating Linux Mac 
+
+473
+00:27:36,200 --> 00:27:42,400
+and windows executables is the 
+way that most people have gone 
+
+474
+00:27:42,400 --> 00:27:44,900
+for that particular use case. 
+I thought you said there was 
+
+475
+00:27:44,900 --> 00:27:49,300
+another solution to this that 
+you thought was solving that 
+
+476
+00:27:49,300 --> 00:27:51,400
+problem gravity on. 
+Yes. 
+
+477
+00:27:51,400 --> 00:27:52,700
+That was it? 
+Yeah, yeah. 
+
+478
+00:27:52,700 --> 00:27:55,300
+So girl. 
+I am does have the capabilities 
+
+479
+00:27:55,300 --> 00:27:58,300
+to produce those native 
+executables and people are 
+
+480
+00:27:58,300 --> 00:28:03,200
+beginning to do growl, veeam 
+based like CLI applications 
+
+481
+00:28:03,500 --> 00:28:06,000
+because then they can write them
+in Java or cotton or scholar 
+
+482
+00:28:06,000 --> 00:28:10,700
+whatever. 
+And and so yeah, that is that is
+
+483
+00:28:10,700 --> 00:28:15,200
+something that people are doing 
+the go and rust are quite a bit 
+
+484
+00:28:15,200 --> 00:28:17,500
+more evolved for this particular
+use case. 
+
+485
+00:28:17,900 --> 00:28:23,100
+And so, so, I think it's most 
+people are reaching for for go 
+
+486
+00:28:23,200 --> 00:28:27,700
+Oh arrest for this today but 
+growl VM is starting to get more
+
+487
+00:28:27,700 --> 00:28:31,100
+more traction there because it 
+can, it can technically do the 
+
+488
+00:28:31,100 --> 00:28:34,700
+same sorts of things. 
+But it's kind of hard to create 
+
+489
+00:28:34,700 --> 00:28:38,100
+the windows Mac and Linux 
+executables withdrawal VM 
+
+490
+00:28:38,100 --> 00:28:40,600
+because you can't, like, as far 
+as I know, you can't like crust 
+
+491
+00:28:40,600 --> 00:28:43,300
+Target, the operating system. 
+Like, I can't sit. 
+
+492
+00:28:43,300 --> 00:28:46,300
+You have to have a Mac to 
+produce a Mac. 
+
+493
+00:28:46,300 --> 00:28:48,400
+Yeah, as far as I know with girl
+via. 
+
+494
+00:28:48,500 --> 00:28:49,900
+Okay. 
+Okay. 
+
+495
+00:28:49,900 --> 00:28:53,100
+Well, it's alright, there's some
+tricky things, I think, Rob. 
+
+496
+00:28:53,300 --> 00:28:55,400
+Is starting to get a little more
+traction around that. 
+
+497
+00:28:55,400 --> 00:28:58,200
+Hmm. 
+I really like the idea of 
+
+498
+00:28:58,200 --> 00:29:01,100
+writing kotlin CL eyes and 
+turning them into native 
+
+499
+00:29:01,100 --> 00:29:04,000
+executables. 
+But and there's a project called
+
+500
+00:29:04,000 --> 00:29:09,100
+Pico CLI, which makes a lot of 
+this stuff easier around using 
+
+501
+00:29:09,100 --> 00:29:12,300
+growl vm4 CLI specific 
+applications. 
+
+502
+00:29:12,600 --> 00:29:13,300
+No. 
+Okay. 
+
+503
+00:29:13,300 --> 00:29:15,600
+Yeah. 
+At least people are working on 
+
+504
+00:29:15,600 --> 00:29:17,000
+the problem. 
+Yeah, yeah. 
+
+505
+00:29:18,100 --> 00:29:20,800
+Yeah. 
+So containers kubernetes and all
+
+506
+00:29:20,800 --> 00:29:22,800
+that. 
+I think there's it. 
+
+507
+00:29:23,200 --> 00:29:27,800
+A lot of it is a good step in 
+the right direction, for how we 
+
+508
+00:29:27,900 --> 00:29:32,600
+distribute applications, but 
+really, for like server 
+
+509
+00:29:32,600 --> 00:29:37,000
+applications and not for not 
+necessarily for CLI. 
+
+510
+00:29:37,000 --> 00:29:38,500
+So it's good that clarify 
+though. 
+
+511
+00:29:38,700 --> 00:29:42,100
+Yep. 
+So okay, I feel pretty complete 
+
+512
+00:29:42,100 --> 00:29:44,100
+with that topic. 
+What else are we going to talk 
+
+513
+00:29:44,100 --> 00:29:49,000
+about? 
+So we we talked about maybe 
+
+514
+00:29:49,000 --> 00:29:52,100
+going into Happy path 
+programming, and that idea a 
+
+515
+00:29:52,100 --> 00:29:54,500
+little more. 
+We've Stunner in different 
+
+516
+00:29:54,500 --> 00:29:59,200
+episodes. 
+But maybe good to to, to expand 
+
+517
+00:29:59,200 --> 00:30:01,500
+on that further. 
+Oh, you mean just the name 
+
+518
+00:30:01,500 --> 00:30:02,500
+itself? 
+Yeah. 
+
+519
+00:30:02,500 --> 00:30:05,300
+Like or the the idea of happy 
+path programming. 
+
+520
+00:30:05,400 --> 00:30:08,000
+Yeah. 
+What is that idea, right? 
+
+521
+00:30:09,500 --> 00:30:13,300
+Yeah. 
+Well, it's we sort of stumbled 
+
+522
+00:30:13,300 --> 00:30:18,900
+across the name and it kind of 
+stuck, but the idea of the happy
+
+523
+00:30:18,900 --> 00:30:22,100
+path. 
+It's it's funny because it's a 
+
+524
+00:30:22,100 --> 00:30:26,900
+little bit. 
+Derogatory because it's like 
+
+525
+00:30:27,800 --> 00:30:31,100
+what it says is you go oh, I 
+want to solve this problem and 
+
+526
+00:30:31,100 --> 00:30:34,900
+I'll just assume nothing goes, 
+wrong assume the happy past 
+
+527
+00:30:34,900 --> 00:30:37,000
+assume and that's assuming the 
+happy path. 
+
+528
+00:30:37,000 --> 00:30:41,200
+So, so nothing I'll just I'll 
+just program directly towards 
+
+529
+00:30:41,200 --> 00:30:47,400
+the Target that I want to reach.
+And if stuff goes wrong, I'll 
+
+530
+00:30:47,400 --> 00:30:50,700
+just assume it won't happen. 
+And then you end up with 
+
+531
+00:30:50,700 --> 00:30:54,100
+something, which is, you know, 
+it might sound Of your problem, 
+
+532
+00:30:54,100 --> 00:30:58,800
+but it's not terribly viable to 
+dealing with problems. 
+
+533
+00:30:58,900 --> 00:31:03,900
+And so that's why when we say, 
+oh, you're just programming down
+
+534
+00:31:03,900 --> 00:31:06,500
+the happy path. 
+It's a bit of a derogatory 
+
+535
+00:31:06,500 --> 00:31:12,100
+statement, but at the same time 
+we want to reach that, you know,
+
+536
+00:31:12,700 --> 00:31:17,600
+when we talk about, for example,
+you know, monad based 
+
+537
+00:31:17,600 --> 00:31:22,300
+programming, that is an example 
+of a kind of happy path 
+
+538
+00:31:22,300 --> 00:31:25,800
+programming, because, I can take
+functions and I can compose them
+
+539
+00:31:25,800 --> 00:31:27,800
+together. 
+Without worrying about what 
+
+540
+00:31:27,800 --> 00:31:33,000
+happens between each function. 
+And I thought, you know what we 
+
+541
+00:31:33,000 --> 00:31:37,100
+talked about before, it was 
+really interesting with the idea
+
+542
+00:31:37,100 --> 00:31:42,000
+that the, that checked 
+exceptions prevents you from 
+
+543
+00:31:42,000 --> 00:31:45,600
+doing composition, because you 
+have to deal with something 
+
+544
+00:31:45,600 --> 00:31:47,700
+between each function call. 
+So that. 
+
+545
+00:31:47,700 --> 00:31:52,400
+Yeah, prevents that. 
+Yes, our perspective on this, is
+
+546
+00:31:52,400 --> 00:31:59,100
+that The rolling back in time 
+there was a lot of overhead to 
+
+547
+00:31:59,100 --> 00:32:03,200
+programming. 
+The happy path correctly like 
+
+548
+00:32:03,200 --> 00:32:07,500
+programming programming for the 
+happy path but accounting for 
+
+549
+00:32:07,500 --> 00:32:08,900
+all the things that could go 
+wrong. 
+
+550
+00:32:09,900 --> 00:32:14,600
+So we need a name for like the 
+Happy path that the one that 
+
+551
+00:32:14,700 --> 00:32:16,800
+accounts for the things that can
+go wrong. 
+
+552
+00:32:16,800 --> 00:32:20,200
+Because what so the evolution 
+that we've seen is that it was 
+
+553
+00:32:20,200 --> 00:32:24,500
+really hard to program. 
+And for the happy path. 
+
+554
+00:32:24,500 --> 00:32:29,700
+But but with the are hand, with 
+the necessary are handling, and 
+
+555
+00:32:29,700 --> 00:32:32,500
+what we've seen is 
+evolutionarily, it's gotten 
+
+556
+00:32:32,500 --> 00:32:35,500
+easier to program for the happy 
+path, but deal with the things 
+
+557
+00:32:35,500 --> 00:32:37,800
+that can go wrong. 
+Yeah. 
+
+558
+00:32:37,800 --> 00:32:41,200
+Because it used to be that if 
+you program down the happy path 
+
+559
+00:32:41,600 --> 00:32:44,800
+and you didn't deal with 
+anything, you would get like, 
+
+560
+00:32:44,900 --> 00:32:47,400
+you know, on Windows the blue 
+screen, you know, we're just 
+
+561
+00:32:47,400 --> 00:32:50,300
+freeze your machine, it would do
+and it's like well and then we 
+
+562
+00:32:50,300 --> 00:32:56,100
+introduced exceptions and Least 
+when that happened, you'd get 
+
+563
+00:32:56,100 --> 00:32:58,800
+some kind of message that 
+something went wrong and the 
+
+564
+00:32:58,800 --> 00:33:01,500
+program would end and it 
+wouldn't like take down the 
+
+565
+00:33:01,500 --> 00:33:06,600
+entire operating system so it 
+was better and it was still not 
+
+566
+00:33:06,600 --> 00:33:09,700
+great. 
+If you didn't do anything except
+
+567
+00:33:09,700 --> 00:33:13,800
+let the let the exceptions get 
+thrown if you didn't like maybe 
+
+568
+00:33:13,800 --> 00:33:18,200
+and then as we've discussed, not
+all exceptions. 
+
+569
+00:33:18,200 --> 00:33:20,800
+Most exceptions can't be 
+recovered from, you know, 
+
+570
+00:33:20,800 --> 00:33:24,200
+there's a few, there's a turns 
+out a small, Full, which is a 
+
+571
+00:33:24,200 --> 00:33:27,300
+problem with the exception 
+handling theory is that because 
+
+572
+00:33:27,300 --> 00:33:30,300
+it was kind of based on the idea
+of well we want to be able to 
+
+573
+00:33:30,300 --> 00:33:32,500
+recover from these things. 
+Well, and if you can't recover 
+
+574
+00:33:32,500 --> 00:33:35,700
+from most of these things then 
+that sort of brings that into 
+
+575
+00:33:35,700 --> 00:33:37,200
+question. 
+Yeah. 
+
+576
+00:33:37,700 --> 00:33:39,400
+Yeah, some. 
+So part of the way I look at 
+
+577
+00:33:39,400 --> 00:33:44,900
+this is it's like how yucky does
+it feel to ignore the air 
+
+578
+00:33:44,900 --> 00:33:49,600
+conditions, that may happen the 
+the unexpected things, how yucky
+
+579
+00:33:49,600 --> 00:33:55,300
+does it feel and in the case of 
+And it didn't really feel that 
+
+580
+00:33:55,300 --> 00:33:57,700
+yucky, like I would, you know, 
+yeah, I'd have to put in a 
+
+581
+00:33:57,708 --> 00:33:59,900
+try-catch. 
+Maybe I'd put in a try-catch if 
+
+582
+00:33:59,900 --> 00:34:02,000
+maybe, if you were forced to 
+write. 
+
+583
+00:34:02,400 --> 00:34:07,200
+But even if in my catch block, I
+was just like, log this are or, 
+
+584
+00:34:07,200 --> 00:34:10,199
+or ignore it or what like how 
+many times have you seen in a 
+
+585
+00:34:10,199 --> 00:34:13,000
+catch? 
+Block, / /, ignore this error. 
+
+586
+00:34:13,000 --> 00:34:15,800
+It'll never happen or something 
+like that and like that didn't 
+
+587
+00:34:15,800 --> 00:34:20,100
+feel that yucky and then go came
+around and they did like the 
+
+588
+00:34:20,100 --> 00:34:23,900
+Tuple return type where you on 
+what is The left side, get the 
+
+589
+00:34:23,900 --> 00:34:26,900
+value, the right side, get the 
+air or something like that but 
+
+590
+00:34:26,900 --> 00:34:29,600
+still optional used to the 
+programmers still has to be. 
+
+591
+00:34:29,600 --> 00:34:35,199
+Yeah and you see in a lot of of 
+go code you know if are ignore 
+
+592
+00:34:35,199 --> 00:34:39,699
+basically shrike. 
+Yeah shrug and and so it didn't 
+
+593
+00:34:39,699 --> 00:34:44,800
+feel that yucky to like ignore 
+the possible are states and then
+
+594
+00:34:45,400 --> 00:34:49,100
+in when you say it didn't feel 
+that yucky you meant as a 
+
+595
+00:34:49,100 --> 00:34:51,699
+programmer you could go. 
+I'll just ignore this for now 
+
+596
+00:34:51,699 --> 00:34:54,300
+and I'll come back if it's 
+Problem will come back and deal 
+
+597
+00:34:54,300 --> 00:34:57,100
+with it. 
+That's just like I didn't I 
+
+598
+00:34:57,100 --> 00:35:02,300
+don't feel shame around this, 
+letting that code, ignore the 
+
+599
+00:35:02,300 --> 00:35:06,200
+possible things that end you're 
+saying, you should feel shame. 
+
+600
+00:35:06,800 --> 00:35:10,700
+I think, yes, I think you should
+feel shame or maybe the 
+
+601
+00:35:10,700 --> 00:35:14,700
+programming models should should
+make it easy for you to program 
+
+602
+00:35:14,700 --> 00:35:18,400
+on the happy path. 
+So that you so that you you 
+
+603
+00:35:18,400 --> 00:35:21,100
+don't have to feel shame or 
+anything. 
+
+604
+00:35:21,200 --> 00:35:26,000
+It just is so easy to count for 
+the air conditions that that you
+
+605
+00:35:26,008 --> 00:35:29,000
+don't have to feel yucky, you 
+don't have to feel shame, you 
+
+606
+00:35:29,000 --> 00:35:31,800
+just do it because it's easy, 
+you program, the happy path that
+
+607
+00:35:31,800 --> 00:35:35,800
+accounts for errors because I 
+see so what you're talking about
+
+608
+00:35:35,800 --> 00:35:39,600
+is making the happy path. 
+The one that takes care of 
+
+609
+00:35:39,600 --> 00:35:40,500
+Errors. 
+That's right. 
+
+610
+00:35:40,600 --> 00:35:42,000
+Right. 
+And it will the program the 
+
+611
+00:35:42,000 --> 00:35:45,300
+happy path but also account for 
+the possible things that could 
+
+612
+00:35:45,300 --> 00:35:50,100
+go wrong and and what Cedric was
+saying was that one way to do 
+
+613
+00:35:50,100 --> 00:35:53,000
+that is using monads one way to 
+do. 
+
+614
+00:35:53,200 --> 00:35:58,400
+That is using the kotlin 
+approach of of returning, null 
+
+615
+00:35:58,700 --> 00:36:01,700
+or the, or a value. 
+And so, yeah. 
+
+616
+00:36:01,700 --> 00:36:03,600
+So there's a spectrum of 
+approaches. 
+
+617
+00:36:03,600 --> 00:36:05,900
+You can take to doing that. 
+Yeah, yeah, yeah. 
+
+618
+00:36:05,900 --> 00:36:11,000
+And so in in Scala or really any
+language that has like kind of a
+
+619
+00:36:11,000 --> 00:36:17,500
+TT algebraic data types of Port,
+where I can say this this 
+
+620
+00:36:17,500 --> 00:36:21,900
+function is going to return 
+return, either an air or a value
+
+621
+00:36:22,700 --> 00:36:26,400
+and then That's built into the 
+language to be able to say that 
+
+622
+00:36:26,700 --> 00:36:29,100
+because if the ADT can do it 
+without the adt's. 
+
+623
+00:36:29,100 --> 00:36:32,100
+Okay, so well, right, I mean go 
+you have any hair, does that? 
+
+624
+00:36:32,200 --> 00:36:35,100
+Yeah, yeah. 
+If you have inheritance then you
+
+625
+00:36:35,100 --> 00:36:40,400
+can you can Model A neither 
+which is a ATT some type. 
+
+626
+00:36:41,800 --> 00:36:44,500
+So you can model that with 
+inheritance, it's just not quite
+
+627
+00:36:44,500 --> 00:36:46,700
+as convenient. 
+So the I think you could use 
+
+628
+00:36:46,700 --> 00:36:48,500
+generics to do it too. 
+Right. 
+
+629
+00:36:48,900 --> 00:36:51,200
+Mmm. 
+I thought I had seen it. 
+
+630
+00:36:51,200 --> 00:36:55,600
+Yeah, maybe yeah. 
+So but when your type system, 
+
+631
+00:36:55,600 --> 00:37:02,200
+actually conveys that back to 
+you as the caller, then it it 
+
+632
+00:37:02,200 --> 00:37:06,100
+becomes easier to especially if 
+you have good pattern matching, 
+
+633
+00:37:06,900 --> 00:37:10,400
+then it becomes easier to 
+pattern match on that thing. 
+
+634
+00:37:10,800 --> 00:37:14,400
+And yeah, you can still ignore 
+the possibility that it can 
+
+635
+00:37:14,400 --> 00:37:16,600
+fail. 
+But when it's in the type system
+
+636
+00:37:16,600 --> 00:37:21,100
+for me when it's encoded, like 
+that as it either, it feels 
+
+637
+00:37:21,100 --> 00:37:24,100
+really bad to just like, Like 
+toss out. 
+
+638
+00:37:24,100 --> 00:37:27,200
+I'm just gonna ignore this it. 
+Well, it's I think it's what 
+
+639
+00:37:27,200 --> 00:37:29,600
+checked exceptions were intended
+to do. 
+
+640
+00:37:29,900 --> 00:37:33,500
+I mean initially, in C++ 
+exception, specifications were 
+
+641
+00:37:33,500 --> 00:37:36,500
+supposed to help you do that. 
+And then Java went one step 
+
+642
+00:37:36,500 --> 00:37:40,600
+further and said, no will will, 
+you know, force you to do that. 
+
+643
+00:37:40,600 --> 00:37:45,000
+Yeah, yeah, yeah. 
+And so, in some ways, this 
+
+644
+00:37:45,000 --> 00:37:48,400
+programming model is like 
+checked exceptions where the the
+
+645
+00:37:48,500 --> 00:37:55,300
+possible are states are explicit
+and It requires the developer. 
+
+646
+00:37:55,300 --> 00:37:58,700
+So like in the case of, I don't 
+think it's the default but in 
+
+647
+00:37:58,700 --> 00:38:03,100
+the case of both kotlin and 
+Scala if you pattern match on on
+
+648
+00:38:03,100 --> 00:38:08,400
+a essentially, a Some Type A ATT
+some type and you don't account 
+
+649
+00:38:08,400 --> 00:38:12,800
+for all of the possible 
+conditions. 
+
+650
+00:38:13,100 --> 00:38:16,100
+Then the compiler, I think by 
+default with Bose Colin, Colin 
+
+651
+00:38:16,100 --> 00:38:19,100
+it gives you a warning, but you 
+can tell it to turn that worn in
+
+652
+00:38:19,100 --> 00:38:21,100
+into an air. 
+So it actually won't compile 
+
+653
+00:38:21,100 --> 00:38:24,800
+unless you in your pattern match
+of Handled all of the possible 
+
+654
+00:38:24,800 --> 00:38:27,000
+ones. 
+Yes, you can handle it and still
+
+655
+00:38:27,000 --> 00:38:29,100
+ignore it. 
+That is a possibility but that's
+
+656
+00:38:29,100 --> 00:38:32,400
+where the yuckiness factor comes
+in is that it should feel pretty
+
+657
+00:38:32,400 --> 00:38:38,200
+yucky to the developer to say 
+yes, I recognize that this thing
+
+658
+00:38:38,200 --> 00:38:42,500
+could fail and I don't care like
+that should feel pretty yucky 
+
+659
+00:38:42,700 --> 00:38:49,700
+you're forced to explicitly say 
+you don't care, rust has a 
+
+660
+00:38:49,700 --> 00:38:55,200
+function which I didn't realize 
+Is that like go didn't have an 
+
+661
+00:38:55,200 --> 00:38:56,700
+equivalent of this? 
+Or maybe it doesn't. 
+
+662
+00:38:56,700 --> 00:38:59,900
+I didn't know about it, but they
+have something called unwrapped 
+
+663
+00:38:59,900 --> 00:39:03,500
+because they pray, they return, 
+you know, this package of 
+
+664
+00:39:03,500 --> 00:39:07,400
+information and if you want to 
+get the data out, you can call 
+
+665
+00:39:07,400 --> 00:39:11,400
+unwrapped which I think if it's 
+a failure at throws an 
+
+666
+00:39:11,400 --> 00:39:13,900
+exception, otherwise it Returns 
+the value. 
+
+667
+00:39:13,900 --> 00:39:16,800
+So it's kind of the shortcut or 
+in a sense. 
+
+668
+00:39:16,800 --> 00:39:18,400
+The I don't care. 
+Yeah. 
+
+669
+00:39:18,400 --> 00:39:19,800
+But you see those? 
+Yeah. 
+
+670
+00:39:19,800 --> 00:39:23,300
+And you go okay, I think the 
+compiler like tells you like 
+
+671
+00:39:23,500 --> 00:39:27,500
+This is unsafe for this, you 
+know, you should probably do 
+
+672
+00:39:27,500 --> 00:39:30,700
+some better stuff here. 
+See. 
+
+673
+00:39:30,700 --> 00:39:34,800
+Also the some types I think are 
+good evolution in this. 
+
+674
+00:39:34,800 --> 00:39:39,400
+This direction monads are, I 
+think the even better way to 
+
+675
+00:39:39,400 --> 00:39:45,900
+deal with this because with 
+monads it's it's easier to to 
+
+676
+00:39:45,900 --> 00:39:50,500
+chain together, operations, and 
+stay on that, happy path, but 
+
+677
+00:39:50,800 --> 00:39:53,300
+also be able to easily account 
+for when things. 
+
+678
+00:39:53,400 --> 00:39:57,600
+Things go wrong and this is 
+because if you call flatmap on 
+
+679
+00:39:57,600 --> 00:40:01,000
+something that is either an 
+error value, that thing is only 
+
+680
+00:40:01,000 --> 00:40:03,800
+going to happen if you're on the
+happy path. 
+
+681
+00:40:04,000 --> 00:40:09,400
+And then but then ultimately 
+you're chaining together the the
+
+682
+00:40:09,500 --> 00:40:13,500
+that some type of this in can 
+succeed or this thing can fail 
+
+683
+00:40:13,700 --> 00:40:17,500
+and so you can be chaining your 
+you're happy path. 
+
+684
+00:40:17,500 --> 00:40:20,900
+Like this work, this work, this 
+work, this work, but then 
+
+685
+00:40:20,900 --> 00:40:24,800
+ultimately that the thing that 
+you get at the Of that is still 
+
+686
+00:40:24,800 --> 00:40:28,100
+wrapped into something that can 
+either succeed or fail and I 
+
+687
+00:40:28,100 --> 00:40:34,100
+think Cedric's argument was that
+yes but there's a significant 
+
+688
+00:40:34,100 --> 00:40:36,800
+amount of overhead in to achieve
+that. 
+
+689
+00:40:37,100 --> 00:40:40,600
+Yeah. 
+He was talking about the the 
+
+690
+00:40:40,900 --> 00:40:44,700
+lack of universal composability 
+of monads. 
+
+691
+00:40:44,700 --> 00:40:49,100
+I think that's what it was and 
+the the that whole like chaining
+
+692
+00:40:49,100 --> 00:40:53,000
+these monads together and stay 
+on the happy path, it works. 
+
+693
+00:40:53,000 --> 00:40:55,700
+Well, Well if all of your monads
+are the same type, they're all 
+
+694
+00:40:55,700 --> 00:40:57,900
+futures or they're all options 
+or whatever. 
+
+695
+00:40:58,000 --> 00:41:01,000
+But as soon as you start mixing 
+and matching Futures and options
+
+696
+00:41:01,000 --> 00:41:04,300
+or whatever it may be different 
+monads, then you run into some 
+
+697
+00:41:04,300 --> 00:41:07,900
+complexity and you have to think
+about how to deal with that and 
+
+698
+00:41:07,900 --> 00:41:10,800
+then you get into monad 
+Transformers and so they're so 
+
+699
+00:41:10,800 --> 00:41:14,400
+that so does that, I mean it 
+sounds like that happens enough 
+
+700
+00:41:14,400 --> 00:41:17,000
+that you need a thing called a 
+monad Transformer. 
+
+701
+00:41:17,400 --> 00:41:19,200
+I don't use monad Transformer. 
+Okay. 
+
+702
+00:41:19,200 --> 00:41:21,800
+See now because this is what we 
+were talking about at coffee is 
+
+703
+00:41:21,800 --> 00:41:25,300
+like, are we solving a problem? 
+I'm that doesn't, you know, like
+
+704
+00:41:25,300 --> 00:41:31,000
+my example of a list of cats and
+putting a dog in it and, oh, 
+
+705
+00:41:31,000 --> 00:41:33,100
+that would be terrible. 
+But how often does it happen? 
+
+706
+00:41:33,100 --> 00:41:35,400
+And how hard is it to see it 
+when it does? 
+
+707
+00:41:35,400 --> 00:41:37,800
+Yeah. 
+Maybe this is a situation where.
+
+708
+00:41:38,600 --> 00:41:45,400
+Yeah, so I run into this so 
+infrequently that I do basically
+
+709
+00:41:46,000 --> 00:41:52,300
+manual monad Transformers so but
+the mathematicians would want to
+
+710
+00:41:52,300 --> 00:41:55,400
+include that. 
+To be complete for them. 
+
+711
+00:41:55,400 --> 00:41:58,800
+Even though it may not be a 
+problem that we actually have to
+
+712
+00:41:58,800 --> 00:42:02,500
+solve everything. 
+So it's like, oh, okay. 
+
+713
+00:42:02,900 --> 00:42:07,700
+Yeah, yeah, it's a to Cedric's 
+point it's not monad 
+
+714
+00:42:07,700 --> 00:42:11,800
+Transformers are not something 
+that everyone needs to reach 
+
+715
+00:42:11,800 --> 00:42:14,500
+for. 
+Most of the time when I'm doing 
+
+716
+00:42:15,000 --> 00:42:18,600
+composition of stuff, I am 
+actually composing the same type
+
+717
+00:42:18,600 --> 00:42:20,900
+of thing and so it's not an 
+issue. 
+
+718
+00:42:20,900 --> 00:42:23,300
+It's like yeah I'm composing 
+future. 
+
+719
+00:42:23,500 --> 00:42:26,300
+With other Futures. 
+And so they they obviously do 
+
+720
+00:42:26,300 --> 00:42:29,200
+compose because they're, and 
+that sort of makes sense, that 
+
+721
+00:42:29,200 --> 00:42:31,800
+you would compose something that
+would be dealing with the same 
+
+722
+00:42:31,900 --> 00:42:34,800
+time. 
+So I'm not saying I never have 
+
+723
+00:42:34,800 --> 00:42:39,100
+had to compose like options and 
+Futures but it's happened. 
+
+724
+00:42:39,100 --> 00:42:41,700
+So infrequently for me and I'm 
+able to do it. 
+
+725
+00:42:41,700 --> 00:42:46,600
+So easy manually that the I 
+haven't had to reach for General
+
+726
+00:42:46,600 --> 00:42:49,300
+monad Transformers. 
+See well, that's an interesting 
+
+727
+00:42:49,300 --> 00:42:51,000
+data point then. 
+Yeah. 
+
+728
+00:42:51,500 --> 00:42:55,700
+But ultimately, What? 
+For me monads. 
+
+729
+00:42:55,700 --> 00:42:59,200
+Have helped me program. 
+The happy path but actually 
+
+730
+00:42:59,200 --> 00:43:04,700
+doing the explicit are handling.
+And I at this point. 
+
+731
+00:43:04,700 --> 00:43:08,200
+Can't imagine going back to 
+like, Tuple return types or 
+
+732
+00:43:08,900 --> 00:43:13,700
+exceptions or any of the more 
+kind of primitive ways that we 
+
+733
+00:43:13,700 --> 00:43:16,200
+dealt with with happy path 
+programming. 
+
+734
+00:43:16,500 --> 00:43:22,100
+It just, for me, it's, it is 
+made my programs much more 
+
+735
+00:43:22,100 --> 00:43:27,900
+robust with Dealing with are 
+conditions like my I have I have
+
+736
+00:43:27,900 --> 00:43:31,300
+a number of applications built 
+on this Paradigm, running in 
+
+737
+00:43:31,300 --> 00:43:35,400
+production that run have run for
+years and never had a runtime 
+
+738
+00:43:35,400 --> 00:43:39,200
+exception. 
+Never had a condition that 
+
+739
+00:43:39,200 --> 00:43:43,200
+wasn't handled. 
+Nothing unexpectedly unexpected,
+
+740
+00:43:43,200 --> 00:43:45,400
+yeah, exactly. 
+Hmm. 
+
+741
+00:43:46,300 --> 00:43:50,900
+And it was not a lot of 
+cognitive or programming 
+
+742
+00:43:50,900 --> 00:43:55,900
+overhead to be able to do that. 
+But I did have to learn my 
+
+743
+00:43:55,900 --> 00:43:59,300
+dad's. 
+Maybe we've gotten a little 
+
+744
+00:43:59,300 --> 00:44:01,500
+closer and explaining yeah. 
+Yeah. 
+
+745
+00:44:02,400 --> 00:44:06,600
+So so I think on, on this 
+podcast, I hope that we continue
+
+746
+00:44:06,600 --> 00:44:08,700
+to weave in the idea of happy 
+path. 
+
+747
+00:44:08,700 --> 00:44:12,600
+Programming and talk about the 
+different ways that it that it 
+
+748
+00:44:12,700 --> 00:44:14,700
+impacts, all sorts of different 
+things. 
+
+749
+00:44:14,700 --> 00:44:17,700
+Like we talked about the Builder
+pattern with Cedric and I've had
+
+750
+00:44:17,700 --> 00:44:21,400
+a lot of Twitter conversations 
+about the Builder pattern and 
+
+751
+00:44:21,400 --> 00:44:25,500
+for me like like Builder 
+pattern, it is not It's not 
+
+752
+00:44:25,500 --> 00:44:31,200
+helping you stay on the happy 
+path in in the way that I would 
+
+753
+00:44:31,200 --> 00:44:33,600
+want. 
+Well, before you completely dive
+
+754
+00:44:33,600 --> 00:44:35,400
+into the Builder pattern, which 
+I know you want? 
+
+755
+00:44:35,400 --> 00:44:37,800
+No, we don't. 
+We didn't even go back to the 
+
+756
+00:44:37,800 --> 00:44:39,900
+other pattern like way too many 
+times we have. 
+
+757
+00:44:40,000 --> 00:44:46,600
+Um, cuz I to me the idea of the 
+happy path is not limited to 
+
+758
+00:44:46,600 --> 00:44:50,800
+that because I just think of it 
+as in general higher level 
+
+759
+00:44:50,800 --> 00:44:52,200
+Concepts. 
+Yeah. 
+
+760
+00:44:52,400 --> 00:44:57,500
+And so you're able to Use this 
+concept and program more 
+
+761
+00:44:57,500 --> 00:45:02,100
+effectively rather than you know
+some of the lower-level 
+
+762
+00:45:02,300 --> 00:45:05,800
+languages that we've had before.
+I've always wanted to crawl up 
+
+763
+00:45:05,800 --> 00:45:09,100
+that ladder to higher-level 
+Concepts and being able to do 
+
+764
+00:45:09,100 --> 00:45:11,900
+things more powerfully. 
+So that's the general idea. 
+
+765
+00:45:11,900 --> 00:45:16,300
+I think, I think this, you know,
+how do we compose functions is 
+
+766
+00:45:16,900 --> 00:45:22,800
+is a specific instance of that. 
+But and I think that is why I 
+
+767
+00:45:22,800 --> 00:45:27,400
+keep getting drawn back into 
+Python, because it has. 
+
+768
+00:45:27,400 --> 00:45:32,000
+It's not just the I don't know 
+flavor of it, but it has so 
+
+769
+00:45:32,000 --> 00:45:37,700
+many, you know, solved problems 
+out there that I can find by 
+
+770
+00:45:37,700 --> 00:45:43,900
+just doing a pip install and 
+looking at well yeah see that's 
+
+771
+00:45:43,900 --> 00:45:47,200
+a good example because when you 
+when you get a library usually 
+
+772
+00:45:47,200 --> 00:45:52,300
+the easiest thing that you find 
+to do is the thing that works 
+
+773
+00:45:52,300 --> 00:45:56,400
+and so that probably what Keeps 
+drawing me back to it. 
+
+774
+00:45:56,400 --> 00:46:00,400
+It's like, oh, I could solve 
+this problem and some other 
+
+775
+00:46:00,400 --> 00:46:02,800
+system, but it would be harder. 
+Probably. 
+
+776
+00:46:02,800 --> 00:46:07,100
+Yeah, and it would be happier 
+and easier to do in this case. 
+
+777
+00:46:07,200 --> 00:46:10,800
+Yeah, yeah, yeah. 
+So but I'm you know, there's 
+
+778
+00:46:10,800 --> 00:46:15,000
+definitely higher level 
+languages that on that we have 
+
+779
+00:46:15,000 --> 00:46:16,400
+an imagined yet. 
+That's right. 
+
+780
+00:46:16,400 --> 00:46:18,200
+Yeah. 
+So yeah we're that in there that
+
+781
+00:46:18,200 --> 00:46:21,900
+I think like we said the 
+higher-level languages continue 
+
+782
+00:46:21,900 --> 00:46:24,700
+to make the happy path the real 
+path. 
+
+783
+00:46:24,900 --> 00:46:27,200
+Happy path. 
+We are accounting for the air 
+
+784
+00:46:27,200 --> 00:46:31,300
+conditions, easier to error 
+conditions and all the other 
+
+785
+00:46:31,300 --> 00:46:33,400
+things. 
+I mean, it's not I what I mean 
+
+786
+00:46:33,400 --> 00:46:40,600
+is it's not limited to that but 
+well and we had a our friend 
+
+787
+00:46:40,600 --> 00:46:44,000
+Jeremy Cerise, came for a 
+developer Retreat. 
+
+788
+00:46:44,000 --> 00:46:48,200
+And that's this thing that we do
+here occasionally, which is 
+
+789
+00:46:48,500 --> 00:46:51,400
+people show up and it's usually 
+a small handful of people like 
+
+790
+00:46:51,400 --> 00:46:53,900
+no more than I don't know if 
+we've had any more than 8. 
+
+791
+00:46:53,900 --> 00:46:56,700
+So it's very small. 
+All an intimate and we work on a
+
+792
+00:46:56,708 --> 00:46:59,800
+problem which is usually kind of
+ill-defined. 
+
+793
+00:47:00,400 --> 00:47:04,200
+And so part of the process is 
+just to kind of wander around 
+
+794
+00:47:04,200 --> 00:47:06,500
+and discover what problem we all
+want to solve. 
+
+795
+00:47:06,700 --> 00:47:10,600
+And in this case, Jeremy said he
+had been here during the winter 
+
+796
+00:47:10,600 --> 00:47:13,300
+tech for him and we all came 
+down with covid. 
+
+797
+00:47:13,300 --> 00:47:17,200
+So we felt that we probably 
+weren't going to, you know, 
+
+798
+00:47:17,200 --> 00:47:22,800
+cause problems in that way. 
+And so he wanted to investigate 
+
+799
+00:47:22,800 --> 00:47:28,500
+rust further and so we Ed and I 
+we had tried this a couple of 
+
+800
+00:47:28,500 --> 00:47:32,400
+years ago and I came away with 
+kind of a bad taste in my mouth.
+
+801
+00:47:32,800 --> 00:47:38,200
+And so we he wanted to revisit 
+it so we did and I have to say 
+
+802
+00:47:38,200 --> 00:47:44,100
+it was a much better experience 
+than my first encounter with it 
+
+803
+00:47:44,600 --> 00:47:51,300
+but I did come away realizing 
+that, okay, this is what I would
+
+804
+00:47:51,300 --> 00:47:55,400
+call a very high level Assembly 
+Language, which is I know to 
+
+805
+00:47:55,400 --> 00:48:01,900
+really extreme ideas but but it 
+really felt like if like I would
+
+806
+00:48:02,000 --> 00:48:06,900
+so much rather do it. 
+Use if you were saying, well use
+
+807
+00:48:06,900 --> 00:48:11,700
+Assembly Language or some, you 
+know, very low-level approach C 
+
+808
+00:48:11,700 --> 00:48:15,000
+for that matter or use rust. 
+I would go. 
+
+809
+00:48:15,200 --> 00:48:21,100
+Okay, for that problem. 
+I would probably be willing to 
+
+810
+00:48:21,900 --> 00:48:24,700
+go through and, you know, figure
+out all the ins and outs. 
+
+811
+00:48:24,800 --> 00:48:29,200
+Russ because it's like a super 
+powerful Assembly. 
+
+812
+00:48:29,200 --> 00:48:31,300
+Language is kind of what it felt
+like to me. 
+
+813
+00:48:31,600 --> 00:48:35,000
+But like one of the things in 
+the book and I have to say, the 
+
+814
+00:48:35,000 --> 00:48:38,900
+rest book is amazingly. 
+Well, written and very 
+
+815
+00:48:38,900 --> 00:48:41,400
+insightful. 
+And I got some some really good 
+
+816
+00:48:41,400 --> 00:48:44,600
+new ideas from just the scanning
+of it that I did. 
+
+817
+00:48:44,700 --> 00:48:50,100
+But they say, in the Rust book 
+that ownership is the primary 
+
+818
+00:48:50,300 --> 00:48:54,100
+Concept in Rust. 
+And that's a really interesting 
+
+819
+00:48:54,200 --> 00:48:58,500
+place to To plant your flag but 
+it also says that. 
+
+820
+00:48:58,500 --> 00:49:01,900
+Yeah, we're dealing with super 
+low level stuff here. 
+
+821
+00:49:02,300 --> 00:49:05,300
+And if that's not what you need,
+this isn't the right language 
+
+822
+00:49:05,300 --> 00:49:08,600
+for you, but one of the things 
+that we kind of wandered around 
+
+823
+00:49:08,600 --> 00:49:11,100
+for a while, figuring out, what 
+problem we wanted to solve, but 
+
+824
+00:49:11,100 --> 00:49:14,600
+eventually, both Jeremy and I 
+have a lot of background in 
+
+825
+00:49:14,600 --> 00:49:18,200
+Python. 
+And so we decided to look at 
+
+826
+00:49:18,300 --> 00:49:21,100
+well, you know, what would it be
+like to create a python 
+
+827
+00:49:21,100 --> 00:49:28,500
+extension using rust? 
+And We ran into issues here and 
+
+828
+00:49:28,500 --> 00:49:34,200
+there until we discovered, this 
+Library called, piyo 3py 03. 
+
+829
+00:49:34,200 --> 00:49:38,000
+And I think it's, I think it's 
+something like python IAM 
+
+830
+00:49:38,000 --> 00:49:42,000
+trioxide, or something it's not,
+it's well with rest, you know, 
+
+831
+00:49:42,000 --> 00:49:44,300
+they're always looking at 
+oxidation and things like that, 
+
+832
+00:49:44,300 --> 00:49:48,600
+because that's what rest area. 
+So, but this thing basically 
+
+833
+00:49:48,800 --> 00:49:54,900
+would pop out the framework for 
+a rust extension for python And 
+
+834
+00:49:54,900 --> 00:49:59,300
+from python, it would just look 
+like import module. 
+
+835
+00:49:59,300 --> 00:50:01,100
+Used module. 
+Like it was just a regular 
+
+836
+00:50:01,100 --> 00:50:04,500
+python module, but at the rest 
+end it, you know, it was all 
+
+837
+00:50:04,500 --> 00:50:07,100
+worked out so that you could 
+write your rest code and it 
+
+838
+00:50:07,100 --> 00:50:10,900
+would just be totally right to 
+the metal. 
+
+839
+00:50:10,900 --> 00:50:13,500
+Yeah. 
+And so from an efficiency 
+
+840
+00:50:13,500 --> 00:50:16,800
+standpoint, I would say like if 
+you're running into speed 
+
+841
+00:50:16,800 --> 00:50:21,100
+issues, this might be because 
+I've looked at the various 
+
+842
+00:50:21,100 --> 00:50:23,000
+different I mean people have 
+been trying to solve this 
+
+843
+00:50:23,000 --> 00:50:26,800
+problem from the beginning. 
+Like, how do you make it easy to
+
+844
+00:50:26,800 --> 00:50:30,400
+write, C extension C++ 
+extensions anything that are 
+
+845
+00:50:30,400 --> 00:50:34,000
+times, you need to go down to 
+the metal and somehow make it 
+
+846
+00:50:34,000 --> 00:50:36,000
+faster that easy. 
+Yeah. 
+
+847
+00:50:36,000 --> 00:50:39,800
+And this I have to say, well, 
+you're probably not going to get
+
+848
+00:50:39,800 --> 00:50:44,300
+any closer to the metal and 
+probably not have an easier 
+
+849
+00:50:44,300 --> 00:50:48,200
+time, like, setting up this 
+module and getting it to work. 
+
+850
+00:50:48,200 --> 00:50:51,300
+So, I have to say that was 
+pretty impressive. 
+
+851
+00:50:51,600 --> 00:50:57,200
+And then we also looked at using
+Go because Jeremy had had a lot 
+
+852
+00:50:57,200 --> 00:50:59,600
+of experiences and go and he 
+didn't want to quite give that 
+
+853
+00:50:59,600 --> 00:51:02,500
+up yet because I mean, it has 
+some benefits. 
+
+854
+00:51:02,500 --> 00:51:04,700
+Like, if you're doing 
+concurrency stuff, it's pretty 
+
+855
+00:51:04,700 --> 00:51:06,200
+sweet. 
+You know, it's pretty 
+
+856
+00:51:06,400 --> 00:51:10,300
+transparent you just resultant, 
+go some use cases. 
+
+857
+00:51:10,300 --> 00:51:14,400
+Yes, of course, as, with all 
+concurrency, it's like for 
+
+858
+00:51:14,400 --> 00:51:18,000
+certain class of problems, but a
+pretty good-sized class of 
+
+859
+00:51:18,000 --> 00:51:22,000
+problems I would say. 
+So and then we didn't find 
+
+860
+00:51:22,000 --> 00:51:24,600
+anything like what rusted done 
+with this Pi 0. 
+
+861
+00:51:25,400 --> 00:51:30,000
+But I remembered grp C. 
+So we started looking into that 
+
+862
+00:51:30,100 --> 00:51:35,900
+and there's some really nice 
+setups for connecting from 
+
+863
+00:51:35,900 --> 00:51:40,100
+python to go using algae are PC.
+So that was before we go on a 
+
+864
+00:51:40,108 --> 00:51:44,600
+little bit of grp see stuff, the
+I haven't done any rust. 
+
+865
+00:51:44,600 --> 00:51:48,300
+I've looked at some code and 
+even though it is very low 
+
+866
+00:51:48,300 --> 00:51:52,100
+level, it seems like they've 
+actually embraced some pretty 
+
+867
+00:51:52,100 --> 00:51:57,700
+modern programming paradigms. 
+Like type classes type classes 
+
+868
+00:51:57,700 --> 00:51:59,700
+are fully support. 
+I forget what they actually call
+
+869
+00:51:59,700 --> 00:52:02,900
+them and rust. 
+I have a different name, but but
+
+870
+00:52:02,900 --> 00:52:06,500
+type classes are just just 
+supported and and invariance and
+
+871
+00:52:06,500 --> 00:52:08,400
+lambdas. 
+And, oh, yeah, it has. 
+
+872
+00:52:08,600 --> 00:52:13,400
+It has a lot of higher-level 
+Concepts but all, you know, 
+
+873
+00:52:13,400 --> 00:52:15,600
+designed around. 
+I mean, you always have that 
+
+874
+00:52:15,600 --> 00:52:18,800
+metallic taste in your mouth 
+when you're working with rust. 
+
+875
+00:52:18,900 --> 00:52:21,200
+It's like, you know, you're 
+right next to the metal. 
+
+876
+00:52:21,200 --> 00:52:24,400
+Yeah. 
+And it's so it's really 
+
+877
+00:52:24,400 --> 00:52:25,700
+impressive. 
+Serve that way. 
+
+878
+00:52:25,700 --> 00:52:29,100
+I have to say I'm much more 
+interested and there's a whole 
+
+879
+00:52:29,100 --> 00:52:31,000
+bunch of fascinating things 
+about it, though. 
+
+880
+00:52:31,000 --> 00:52:35,600
+Ownership thing, which isn't 
+just for managing memory, 
+
+881
+00:52:35,600 --> 00:52:37,700
+without a garbage collector. 
+I mean, that's the other way 
+
+882
+00:52:37,700 --> 00:52:40,200
+that you could look at it, you 
+want to, you want to do these 
+
+883
+00:52:40,200 --> 00:52:42,500
+things but you don't want to 
+have to have, you don't want the
+
+884
+00:52:42,500 --> 00:52:46,500
+overhead or uncertainty of a 
+garbage collector, then you know
+
+885
+00:52:46,900 --> 00:52:50,300
+it solves that problem. 
+But then there's the ownership 
+
+886
+00:52:50,300 --> 00:52:54,600
+also works well with concurrency
+issues. 
+
+887
+00:52:54,700 --> 00:52:56,800
+Shoes. 
+And so it protects you from a 
+
+888
+00:52:56,808 --> 00:52:59,400
+whole bunch of things that 
+remember our Explorations into 
+
+889
+00:52:59,400 --> 00:53:03,800
+Pony Lang while back and they 
+have a similar model of making 
+
+890
+00:53:03,800 --> 00:53:08,000
+the ownership, very explicit and
+they're based on the actor 
+
+891
+00:53:08,000 --> 00:53:10,400
+model. 
+But but yeah, it's interesting 
+
+892
+00:53:10,400 --> 00:53:13,400
+that both rust and pony to 
+pretty modern languages have 
+
+893
+00:53:13,400 --> 00:53:17,900
+both from very different kind of
+perspectives, and levels of 
+
+894
+00:53:17,900 --> 00:53:22,700
+abstraction and have both 
+embraced the explicit ownership 
+
+895
+00:53:22,900 --> 00:53:25,800
+as a core. 
+The language. 
+
+896
+00:53:26,500 --> 00:53:32,200
+Yeah well and the more recent 
+versions of C++ with their smart
+
+897
+00:53:32,200 --> 00:53:38,200
+pointers and shared pointers I 
+think you know they have adapted
+
+898
+00:53:38,200 --> 00:53:41,800
+that and and then made that 
+issue the issue of memory 
+
+899
+00:53:41,800 --> 00:53:43,700
+management much easier. 
+Yeah. 
+
+900
+00:53:43,800 --> 00:53:50,400
+So no any way I can. 
+So back to GRCC so I've been 
+
+901
+00:53:50,400 --> 00:53:55,000
+pretty involved in jira, PC 
+kotlin in the project and And I 
+
+902
+00:53:55,008 --> 00:53:59,700
+think there's a lot of 
+interesting things to gr PC as a
+
+903
+00:53:59,700 --> 00:54:05,800
+protocol for communicating 
+across networks, one of the 
+
+904
+00:54:05,900 --> 00:54:11,600
+underpinnings of GRCC is Proto 
+Buffs, which is the compact 
+
+905
+00:54:11,600 --> 00:54:15,100
+format for serializing stuff. 
+But the the kind of great thing 
+
+906
+00:54:15,100 --> 00:54:19,300
+about protobufs is that you have
+that idea where you define the 
+
+907
+00:54:19,400 --> 00:54:22,300
+structure of your messages 
+interface description language. 
+
+908
+00:54:22,300 --> 00:54:27,100
+Thank you. 
+And then Then Proto protobuf 
+
+909
+00:54:27,100 --> 00:54:32,000
+scan, then generate many 
+different languages that can 
+
+910
+00:54:32,000 --> 00:54:33,800
+read and write the same 
+protobuf. 
+
+911
+00:54:33,800 --> 00:54:36,100
+So you get really great 
+interoperability across 
+
+912
+00:54:36,100 --> 00:54:38,300
+languages, which is a really 
+cool thing. 
+
+913
+00:54:38,300 --> 00:54:42,700
+So then gr PC adds the 
+networking piece on top of that 
+
+914
+00:54:42,800 --> 00:54:46,400
+so you get really high 
+Performance http2 Based 
+
+915
+00:54:47,000 --> 00:54:51,000
+networking with protobuf says 
+the serialization format. 
+
+916
+00:54:52,500 --> 00:54:55,900
+So yeah, I think there's there's
+There is a lot of interesting 
+
+917
+00:54:55,900 --> 00:55:00,500
+pieces to GRCC in a lot of it. 
+You and I have always looked for
+
+918
+00:55:00,500 --> 00:55:04,500
+like what's what's kind of the 
+the easy way to build 
+
+919
+00:55:04,500 --> 00:55:09,500
+distributed systems and Angie 
+multi-language systems? 
+
+920
+00:55:09,500 --> 00:55:12,800
+Yeah, yeah. 
+And multi-language systems and 
+
+921
+00:55:12,800 --> 00:55:16,400
+it feels like gr PC is a good 
+step in a good direction there. 
+
+922
+00:55:16,800 --> 00:55:23,100
+It's not quite the I call a 
+Panacea that Unison is but but 
+
+923
+00:55:23,300 --> 00:55:26,500
+you know, unison's out of it. 
+Further for today GRCC is 
+
+924
+00:55:26,500 --> 00:55:32,200
+probably a great option. 
+Yeah, but you can, I mean you 
+
+925
+00:55:32,200 --> 00:55:37,200
+talked about Network systems but
+it can also be within a single 
+
+926
+00:55:37,600 --> 00:55:40,500
+application. 
+You can like this is what we 
+
+927
+00:55:40,500 --> 00:55:43,200
+were looking at it for is like, 
+okay, I'm running python but I 
+
+928
+00:55:43,208 --> 00:55:47,200
+want to do something that works 
+better and go so I can use to be
+
+929
+00:55:47,200 --> 00:55:52,900
+seed a call and as the, what's 
+the name for the function form 
+
+930
+00:55:52,900 --> 00:55:54,500
+from a procedure calls you 
+jerk-off? 
+
+931
+00:55:54,600 --> 00:55:56,300
+Yeah, yeah, yeah. 
+But you have essentially two 
+
+932
+00:55:56,300 --> 00:55:58,800
+different processes. 
+See it may be running on the 
+
+933
+00:55:58,800 --> 00:56:01,400
+same machine, so it doesn't 
+necessarily have to go over a 
+
+934
+00:56:01,400 --> 00:56:04,900
+network, but you do need to 
+serialize in a standard format 
+
+935
+00:56:04,900 --> 00:56:08,500
+that can be re read and written 
+on both sides and that sort of 
+
+936
+00:56:08,500 --> 00:56:10,400
+thing. 
+So yeah. 
+
+937
+00:56:10,600 --> 00:56:12,800
+Yeah. 
+As I RPC framework. 
+
+938
+00:56:13,300 --> 00:56:15,900
+Yeah. 
+I mean, G gr PC, is what Google 
+
+939
+00:56:15,900 --> 00:56:19,400
+our PC or something like that. 
+I assume they never explicitly 
+
+940
+00:56:19,400 --> 00:56:21,700
+said g is for Google. 
+I think you're just supposed to 
+
+941
+00:56:21,700 --> 00:56:23,500
+guess. 
+Yeah, yeah. 
+
+942
+00:56:23,500 --> 00:56:29,400
+So Yeah, and that's my interest 
+is like, how do we you know, 
+
+943
+00:56:29,400 --> 00:56:33,400
+some languages do things really 
+well and some languages do other
+
+944
+00:56:33,400 --> 00:56:36,400
+things really well. 
+And I've always been fascinated 
+
+945
+00:56:36,400 --> 00:56:39,800
+with this idea of being able to 
+say, well you do this, good. 
+
+946
+00:56:39,900 --> 00:56:42,200
+Let's use you for that. 
+And you do this good and let you
+
+947
+00:56:42,200 --> 00:56:44,400
+use use for that and then we 
+have that. 
+
+948
+00:56:44,400 --> 00:56:46,200
+Are we how do we Bridge the 
+right? 
+
+949
+00:56:46,200 --> 00:56:47,200
+How do we Bridge? 
+Those? 
+
+950
+00:56:47,200 --> 00:56:52,600
+And then so so we found this pie
+03 thing for rust and then gr PC
+
+951
+00:56:52,800 --> 00:56:57,700
+seems like I mean the video we 
+watched said that Google itself 
+
+952
+00:56:58,500 --> 00:57:06,100
+runs billions of G RPC calls per
+second and so probably pretty 
+
+953
+00:57:06,100 --> 00:57:09,800
+well optimized and that's the 
+one thing we haven't gotten to 
+
+954
+00:57:10,100 --> 00:57:16,400
+quite yet is just a simple 
+comparison between you know say 
+
+955
+00:57:16,800 --> 00:57:21,000
+calling a python function a 
+million times and calling grp C 
+
+956
+00:57:21,000 --> 00:57:22,900
+function that does the same 
+thing. 
+
+957
+00:57:23,000 --> 00:57:26,200
+Yeah, a million times and what 
+Overhead of the series called. 
+
+958
+00:57:28,900 --> 00:57:31,500
+Yeah, interesting. 
+I'm guessing it's pretty 
+
+959
+00:57:31,500 --> 00:57:35,000
+efficient just from the from the
+standpoint and well, for one 
+
+960
+00:57:35,000 --> 00:57:38,100
+thing like every time you say, 
+serialization, I get this 
+
+961
+00:57:38,100 --> 00:57:42,900
+little, but it's not because 
+your, you've got this packet of 
+
+962
+00:57:42,900 --> 00:57:47,200
+information, it's not, it's not 
+going out like the way. 
+
+963
+00:57:47,200 --> 00:57:50,900
+I've always, you know, cereal as
+a serial Port was like, here's 
+
+964
+00:57:50,900 --> 00:57:52,400
+the thing, here's the thing, 
+here's the thing, here's the 
+
+965
+00:57:52,400 --> 00:57:54,400
+thing, and then you go, okay, 
+got it all at this. 
+
+966
+00:57:54,600 --> 00:57:57,900
+End, and now I can do something.
+Whereas this is like, now this 
+
+967
+00:57:57,900 --> 00:58:01,500
+is just a format where I'm 
+handing, you a packet of data. 
+
+968
+00:58:01,500 --> 00:58:03,900
+And it's all really packed 
+together efficiently. 
+
+969
+00:58:04,000 --> 00:58:07,100
+It's just that one packet and 
+then, yeah. 
+
+970
+00:58:07,100 --> 00:58:09,800
+And then that makes the call. 
+So, it doesn't feel exactly like
+
+971
+00:58:09,800 --> 00:58:12,300
+what I've always thought of as 
+serialization earning objects 
+
+972
+00:58:12,300 --> 00:58:15,600
+into B representations. 
+Mmm. 
+
+973
+00:58:16,100 --> 00:58:17,000
+Right. 
+Yeah. 
+
+974
+00:58:17,100 --> 00:58:20,900
+But much more compact than, at 
+least traditional cereal is it? 
+
+975
+00:58:20,900 --> 00:58:21,700
+Yes. 
+Yeah. 
+
+976
+00:58:21,700 --> 00:58:24,500
+And I'm way more compact than 
+Jason. 
+
+977
+00:58:25,600 --> 00:58:29,900
+All the other well, like xml-rpc
+was was one that, you know, it 
+
+978
+00:58:29,908 --> 00:58:35,800
+would work, but I wouldn't want 
+to do too heavy of a lid on it. 
+
+979
+00:58:35,800 --> 00:58:40,700
+Yeah, I think I was telling you 
+about recite it for the podcast 
+
+980
+00:58:40,700 --> 00:58:49,900
+about how back in the Java ee, 
+j2ee days JBoss was what marklar
+
+981
+00:58:49,900 --> 00:58:53,900
+was presenting about JBoss at 
+the Denver, Java user group and 
+
+982
+00:58:54,600 --> 00:58:56,600
+Remember, it's something they 
+said it's really stuck with me 
+
+983
+00:58:56,600 --> 00:59:01,600
+because he was talking about how
+in ejb world's you as a 
+
+984
+00:59:01,608 --> 00:59:04,600
+developer, you could either 
+program to the local interface 
+
+985
+00:59:04,600 --> 00:59:08,700
+for an ejb or the remote 
+interfacer for ejb and it was up
+
+986
+00:59:08,700 --> 00:59:10,600
+to you, the developer to make 
+that decision. 
+
+987
+00:59:10,800 --> 00:59:14,800
+Is this thing, running in the 
+container where I am and I can 
+
+988
+00:59:14,800 --> 00:59:18,600
+just call it via in memory call,
+or is it running on a remote 
+
+989
+00:59:18,600 --> 00:59:20,000
+machine? 
+And it how would you know 
+
+990
+00:59:20,000 --> 00:59:21,700
+serialization and 
+deserialization right. 
+
+991
+00:59:21,700 --> 00:59:24,500
+Like you as a developer have to 
+understand Network. 
+
+992
+00:59:24,600 --> 00:59:28,000
+The G, the deployment Network 
+topology which is just silly, 
+
+993
+00:59:28,000 --> 00:59:29,800
+right? 
+Well, because you would probably
+
+994
+00:59:29,800 --> 00:59:31,700
+want to change that at times. 
+That's right. 
+
+995
+00:59:31,700 --> 00:59:33,100
+Yeah. 
+And it could be dynamic, write 
+
+996
+00:59:33,100 --> 00:59:34,800
+it, right? 
+And so you're programmed into 
+
+997
+00:59:34,800 --> 00:59:37,200
+local interface and all of a 
+sudden somebody split those 
+
+998
+00:59:37,200 --> 00:59:38,400
+split. 
+That the thing that you're 
+
+999
+00:59:38,400 --> 00:59:41,400
+calling out to another machine, 
+your code is going to break, 
+
+1000
+00:59:41,400 --> 00:59:44,200
+right? 
+And so it was, it was a, it was 
+
+1001
+00:59:44,200 --> 00:59:47,400
+a bad idea. 
+But what, what ended up 
+
+1002
+00:59:47,400 --> 00:59:49,800
+happening is that everyone 
+started just programming to the 
+
+1003
+00:59:49,800 --> 00:59:52,600
+remote interface because they 
+were that sure the guaranteed 
+
+1004
+00:59:52,900 --> 00:59:54,300
+yes, exactly. 
+It's going to work. 
+
+1005
+00:59:54,700 --> 00:59:59,000
+And so the containers, what they
+would do is let's say that your 
+
+1006
+00:59:59,000 --> 01:00:02,300
+2gb's, you're talking, we're 
+running in the same container. 
+
+1007
+01:00:02,600 --> 01:00:05,500
+If you're doing a remote call, 
+it's going to go through the all
+
+1008
+01:00:05,500 --> 01:00:09,500
+the XML serialization stuff 
+because they were using, XML 
+
+1009
+01:00:09,500 --> 01:00:11,600
+you? 
+Oh, yeah, I think that was like 
+
+1010
+01:00:11,600 --> 01:00:14,600
+the standard serialization 
+foremost containers. 
+
+1011
+01:00:14,600 --> 01:00:16,700
+I think containers could 
+implement it differently but 
+
+1012
+01:00:17,300 --> 01:00:20,100
+extremely was the universal 
+solution at the time. 
+
+1013
+01:00:20,200 --> 01:00:22,100
+That's right. 
+So if you're to each of these 
+
+1014
+01:00:22,100 --> 01:00:23,800
+are running in the same 
+container, it's still going to 
+
+1015
+01:00:23,800 --> 01:00:26,300
+do all this. 
+Shows ation and deserialization 
+
+1016
+01:00:26,800 --> 01:00:30,400
+and some work flurry what he was
+like JBoss is so much faster 
+
+1017
+01:00:30,400 --> 01:00:33,700
+than everybody else because as 
+the container, if we see that 
+
+1018
+01:00:33,700 --> 01:00:37,100
+you're making a remote ejb call 
+and we have the bean in the 
+
+1019
+01:00:37,100 --> 01:00:39,900
+local container. 
+We just do, the in-memory call 
+
+1020
+01:00:39,900 --> 01:00:42,800
+instead of doing all the 
+unnecessary, a serialization, 
+
+1021
+01:00:42,800 --> 01:00:45,900
+and deserialization. 
+And all of a sudden JBoss in, 
+
+1022
+01:00:45,900 --> 01:00:48,100
+you know, if you're making an 
+in-memory if you're making a 
+
+1023
+01:00:48,100 --> 01:00:51,700
+local call but you define it as 
+a remote call, it can optimize 
+
+1024
+01:00:51,700 --> 01:00:55,100
+that for you and make it in 
+memory, which is Thousand times 
+
+1025
+01:00:55,100 --> 01:00:59,000
+faster or whatever. 
+And so, so, it always stuck with
+
+1026
+01:00:59,000 --> 01:01:03,200
+me that a lot of times we 
+program for a network, a 
+
+1027
+01:01:03,208 --> 01:01:05,900
+distributed system. 
+And in the case of GRCC were 
+
+1028
+01:01:05,900 --> 01:01:10,500
+programming for distributed 
+system with serialization and 
+
+1029
+01:01:10,500 --> 01:01:12,500
+deserialization. 
+Yeah, that serialization and 
+
+1030
+01:01:12,500 --> 01:01:15,500
+deserialization is a whole lot 
+faster than XML and all that 
+
+1031
+01:01:15,500 --> 01:01:19,000
+kind of stuff, but wouldn't it 
+be nice to have a programming 
+
+1032
+01:01:19,000 --> 01:01:22,200
+model or we as the developer 
+don't have to make the decision 
+
+1033
+01:01:22,800 --> 01:01:26,100
+and the environment know. 
+Was what to do. 
+
+1034
+01:01:26,100 --> 01:01:29,700
+See I was kind of imagining that
+grp see worked that way. 
+
+1035
+01:01:30,700 --> 01:01:33,700
+And you're telling me it's not 
+as far as I know, it doesn't but
+
+1036
+01:01:33,700 --> 01:01:37,900
+uh but I mean it could it could 
+it could because yeah it's just 
+
+1037
+01:01:37,900 --> 01:01:40,500
+a yeah it's just oh I see you're
+doing this. 
+
+1038
+01:01:40,500 --> 01:01:43,300
+I'll just I'll rewire that for 
+you. 
+
+1039
+01:01:43,400 --> 01:01:45,400
+Yeah. 
+Yeah I think it could I don't 
+
+1040
+01:01:45,400 --> 01:01:49,500
+know if it does but yeah but 
+don't you forget. 
+
+1041
+01:01:49,500 --> 01:01:51,000
+This is where you could find it 
+out. 
+
+1042
+01:01:51,000 --> 01:01:54,000
+That's right. 
+I could go find Unison. 
+
+1043
+01:01:54,200 --> 01:01:59,100
+I Think has the best opportunity
+to actually give us the future 
+
+1044
+01:01:59,100 --> 01:02:02,400
+that we want around? 
+Decoupling our programming from 
+
+1045
+01:02:02,400 --> 01:02:08,600
+Network topologies because with 
+unison, everything is a function
+
+1046
+01:02:08,600 --> 01:02:14,400
+with a hash and so that function
+with the hash it like, you don't
+
+1047
+01:02:14,400 --> 01:02:17,800
+care if it's in the local 
+machine or if you have to 
+
+1048
+01:02:17,800 --> 01:02:21,500
+serialize and go over a network 
+whatever like it is just a 
+
+1049
+01:02:21,500 --> 01:02:24,400
+function with a hash that that 
+you should. 
+
+1050
+01:02:24,600 --> 01:02:28,100
+Able to and I would hope that at
+some point Unison is able to 
+
+1051
+01:02:28,400 --> 01:02:30,800
+help the thing. 
+That's running your program, 
+
+1052
+01:02:30,800 --> 01:02:34,900
+make the decision around. 
+Do I do this locally or do I do 
+
+1053
+01:02:34,900 --> 01:02:37,300
+this remotely? 
+Then all of a sudden you get 
+
+1054
+01:02:37,500 --> 01:02:43,100
+like transparent distribution of
+your application where something
+
+1055
+01:02:43,100 --> 01:02:46,100
+can be making the decisions for 
+you of around? 
+
+1056
+01:02:46,200 --> 01:02:49,000
+Do, should I run this somewhere 
+else or should I run this here? 
+
+1057
+01:02:49,800 --> 01:02:51,600
+Well, yeah. 
+I could see. 
+
+1058
+01:02:51,600 --> 01:02:55,100
+I could imagine like a 
+dispatcher if For some reason, 
+
+1059
+01:02:55,100 --> 01:02:58,000
+it makes me think of Julia 
+because the first time you call 
+
+1060
+01:02:58,000 --> 01:03:01,000
+a Julia function, it compiles it
+down to native code. 
+
+1061
+01:03:01,000 --> 01:03:03,500
+And then the next time, you're 
+just calling a native code. 
+
+1062
+01:03:03,500 --> 01:03:08,600
+So if you, if you made a call 
+and the first time you made the 
+
+1063
+01:03:08,600 --> 01:03:12,700
+call the dispatcher said, oh 
+this is local. 
+
+1064
+01:03:12,700 --> 01:03:16,000
+This is remote. 
+This is maybe other decisions it
+
+1065
+01:03:16,000 --> 01:03:18,400
+makes yeah. 
+And then it says oh, it's local.
+
+1066
+01:03:18,400 --> 01:03:20,500
+So I'll just, why are you to 
+that? 
+
+1067
+01:03:20,500 --> 01:03:25,000
+And then your call. 
+Now from then on just Comes that
+
+1068
+01:03:25,000 --> 01:03:28,800
+direct call or if it's remote? 
+It does something else? 
+
+1069
+01:03:28,800 --> 01:03:31,300
+Yeah. 
+Yeah, it doesn't seem that. 
+
+1070
+01:03:31,300 --> 01:03:34,200
+I mean, as long as you have, 
+that con seems possible matcher.
+
+1071
+01:03:34,600 --> 01:03:37,600
+Yeah. 
+Yeah, it know, it seems like I 
+
+1072
+01:03:37,600 --> 01:03:40,600
+think this is the ultimate 
+direction that Unison is is 
+
+1073
+01:03:40,600 --> 01:03:44,900
+heading and a reason for some of
+their design decisions but we 
+
+1074
+01:03:44,900 --> 01:03:48,300
+should get one of the Unison 
+folks on our podcast, there you 
+
+1075
+01:03:48,300 --> 01:03:50,000
+go. 
+Yeah, so you've looked at the 
+
+1076
+01:03:50,000 --> 01:03:52,200
+language, right? 
+I've looked at it and played 
+
+1077
+01:03:52,200 --> 01:03:55,500
+with it, just a tiny bit and 
+what is It is the syntax look 
+
+1078
+01:03:55,500 --> 01:03:59,000
+like it's functional syntaxes. 
+So I mean it's just a look like 
+
+1079
+01:03:59,000 --> 01:04:02,300
+Haskell or is it look like like 
+how functional did it? 
+
+1080
+01:04:02,300 --> 01:04:03,900
+But I haven't. 
+I haven't done Haskell. 
+
+1081
+01:04:04,000 --> 01:04:06,100
+I don't know. 
+It's very functional. 
+
+1082
+01:04:06,300 --> 01:04:10,700
+Okay. 
+Yeah, it's very functional and 
+
+1083
+01:04:10,700 --> 01:04:14,000
+it was the year is a while ago 
+that I played with, you know, 
+
+1084
+01:04:14,000 --> 01:04:18,000
+since I don't have a good clear 
+memory on what it, what I was 
+
+1085
+01:04:18,000 --> 01:04:20,100
+like, but I need to play with it
+more and we should get ruin our 
+
+1086
+01:04:20,100 --> 01:04:25,100
+somebody from Paul somebody from
+Unison, on onto Talk more about 
+
+1087
+01:04:25,100 --> 01:04:28,900
+it because I every time I hear 
+one of them talk about it, I'm 
+
+1088
+01:04:28,900 --> 01:04:31,200
+just like, oh my God, this is 
+the future. 
+
+1089
+01:04:31,200 --> 01:04:33,000
+I'm just an a murdered with what
+they're doing. 
+
+1090
+01:04:33,000 --> 01:04:37,600
+Mmm, so yeah, yeah. 
+But Gia preceded, you have 
+
+1091
+01:04:37,600 --> 01:04:41,000
+anything else on your 
+experiences with jira, PC? 
+
+1092
+01:04:41,500 --> 01:04:43,300
+No. 
+No, I think that's about as far 
+
+1093
+01:04:43,300 --> 01:04:45,900
+as we got. 
+It just looks really promising 
+
+1094
+01:04:46,000 --> 01:04:50,800
+as a way to call out from python
+to other languages. 
+
+1095
+01:04:50,900 --> 01:04:54,300
+Yeah, which again my interest is
+process communication. 
+
+1096
+01:04:54,400 --> 01:04:57,800
+Tatian protocol. 
+Yeah, it seems like it has a lot
+
+1097
+01:04:57,800 --> 01:04:58,800
+of promise there. 
+Yeah. 
+
+1098
+01:04:58,800 --> 01:05:04,400
+So but we're still like Jeremy's
+working on a, on an example to, 
+
+1099
+01:05:04,800 --> 01:05:09,100
+to test it out and intern and 
+the the interface description 
+
+1100
+01:05:09,100 --> 01:05:13,500
+language is. 
+I found it very intuitive and 
+
+1101
+01:05:13,700 --> 01:05:18,400
+and it's not overreaching 
+because when we initially, when 
+
+1102
+01:05:18,400 --> 01:05:22,100
+I was on the C++ standards 
+committee, we started, there was
+
+1103
+01:05:22,100 --> 01:05:27,400
+a parallel thing that went on 
+which was Common object request 
+
+1104
+01:05:27,400 --> 01:05:30,400
+broker architecture. 
+I means it just the name itself 
+
+1105
+01:05:30,400 --> 01:05:36,400
+is complicated and then there 
+was the committee for it which 
+
+1106
+01:05:36,400 --> 01:05:39,700
+was the I don't remember the 
+name of it, but it required. 
+
+1107
+01:05:39,700 --> 01:05:46,200
+A lot of it was it was just so 
+it was committee first design 
+
+1108
+01:05:46,200 --> 01:05:48,600
+basically. 
+And you had a bunch of competing
+
+1109
+01:05:49,000 --> 01:05:52,400
+companies on this committee who 
+wanted their things in. 
+
+1110
+01:05:52,400 --> 01:05:54,100
+And so there was a whole bunch 
+of that. 
+
+1111
+01:05:54,400 --> 01:05:58,900
+And as a result we didn't have, 
+I mean we had an ideal but there
+
+1112
+01:05:58,900 --> 01:06:03,600
+wasn't like the tools to take 
+the ideology generate things 
+
+1113
+01:06:03,600 --> 01:06:07,300
+with it that that wasn't, you 
+know, to. 
+
+1114
+01:06:07,300 --> 01:06:09,600
+So you had to do a lot of 
+studies about declarative 
+
+1115
+01:06:09,600 --> 01:06:12,000
+languages. 
+It's like so many times it's 
+
+1116
+01:06:12,000 --> 01:06:15,200
+like, oh, the the tools will be 
+great and it's going to be 
+
+1117
+01:06:15,200 --> 01:06:17,400
+awesome and then the create 
+tools, never come. 
+
+1118
+01:06:17,400 --> 01:06:20,200
+And so, yeah, stuck with this. 
+Terrible idea. 
+
+1119
+01:06:20,200 --> 01:06:25,800
+Eventually they got theirs, but 
+around Corvette around Corbett, 
+
+1120
+01:06:25,800 --> 01:06:28,200
+I guess. 
+But I think everybody had pretty
+
+1121
+01:06:28,200 --> 01:06:32,600
+much moved on by that time. 
+Whereas my experience with grp 
+
+1122
+01:06:32,600 --> 01:06:36,200
+see is like, you know, oh, 
+here's the ideal. 
+
+1123
+01:06:36,200 --> 01:06:41,700
+It's not very complicated. 
+It's not trying to do all the 
+
+1124
+01:06:41,700 --> 01:06:43,300
+things. 
+I can't even remember all the 
+
+1125
+01:06:43,300 --> 01:06:44,700
+things that core beliefs trying 
+to do. 
+
+1126
+01:06:44,700 --> 01:06:46,500
+It's not trying to do all those 
+things. 
+
+1127
+01:06:46,800 --> 01:06:52,400
+You just write this it generates
+code for you and, you know, you 
+
+1128
+01:06:52,400 --> 01:06:54,800
+write some some other stuff and 
+it works. 
+
+1129
+01:06:54,800 --> 01:06:57,000
+Yeah. 
+So it's like much more 
+
+1130
+01:06:57,000 --> 01:07:00,500
+accessible. 
+I think it seems. 
+
+1131
+01:07:01,400 --> 01:07:04,000
+It seems to have a lot of 
+Promise, so I, I would 
+
+1132
+01:07:04,000 --> 01:07:08,700
+definitely look into that if I 
+was having either performance or
+
+1133
+01:07:09,200 --> 01:07:11,400
+well, most of the time it would 
+be performance issues. 
+
+1134
+01:07:11,400 --> 01:07:14,800
+Even if you're looking at 
+concurrency issues, you know, 
+
+1135
+01:07:14,900 --> 01:07:17,700
+generally that's a that's going 
+to be a performance. 
+
+1136
+01:07:17,800 --> 01:07:19,700
+Yeah. 
+In fact if you're doing 
+
+1137
+01:07:19,700 --> 01:07:22,700
+concurrency that isn't trying to
+solve a performance problem, 
+
+1138
+01:07:22,700 --> 01:07:28,500
+then I would say Think your life
+just making things hard for no 
+
+1139
+01:07:28,500 --> 01:07:30,400
+reason? 
+Yes, exactly. 
+
+1140
+01:07:31,600 --> 01:07:33,600
+All right. 
+Yeah, thanks for listening.
+

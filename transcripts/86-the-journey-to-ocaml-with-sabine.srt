@@ -1,0 +1,5613 @@
+1
+00:00:01,120 --> 00:00:03,520
+Welcome. 
+To Happy Path Programming. 
+
+2
+00:00:03,760 --> 00:00:05,640
+I'm Bruce Eckel. 
+And I'm James Ward. 
+
+3
+00:00:07,920 --> 00:00:10,360
+All right, welcome, everyone. 
+Thanks for joining us on Happy 
+
+4
+00:00:10,360 --> 00:00:15,360
+Path Programming today. 
+We have with us Sabine, who I 
+
+5
+00:00:15,920 --> 00:00:18,760
+really just met you on Twitter 
+recently because everyone is 
+
+6
+00:00:18,760 --> 00:00:21,120
+talking about Ocaml. 
+So it's like, hey, let's have 
+
+7
+00:00:21,120 --> 00:00:25,280
+Sabine on and learn about Ocaml.
+And Bruce and I have over the 
+
+8
+00:00:25,280 --> 00:00:28,720
+last week I've written some code
+in Ocaml and explored it a bit 
+
+9
+00:00:28,720 --> 00:00:31,000
+and so excited to have you on. 
+Welcome, Sabine. 
+
+10
+00:00:31,480 --> 00:00:34,280
+Well, thank you for having me. 
+I'm very happy to be here. 
+
+11
+00:00:35,120 --> 00:00:40,160
+And yes, actually I only became 
+an Ocaml org maintainer last 
+
+12
+00:00:40,160 --> 00:00:42,640
+year. 
+Okay more incidentally. 
+
+13
+00:00:42,720 --> 00:00:47,810
+So, one year of Ocaml for me. 
+Nice. 
+
+14
+00:00:48,130 --> 00:00:51,570
+So what is your day job? 
+Do you work on Ocaml? 
+
+15
+00:00:51,570 --> 00:00:53,930
+Use Ocaml? 
+What's yes, what do you? 
+
+16
+00:00:54,010 --> 00:00:56,850
+Do normally. 
+In fact, my day job is Ocaml 
+
+17
+00:00:57,650 --> 00:01:00,330
+Nice. 
+And in fact it's Ocaml org. 
+
+18
+00:01:00,970 --> 00:01:03,570
+Okay. 
+What is Ocaml org? 
+
+19
+00:01:04,010 --> 00:01:06,450
+That's the official Ocaml 
+website. 
+
+20
+00:01:06,850 --> 00:01:08,970
+Okay, we're. 
+Just written in Ocaml. 
+
+21
+00:01:09,770 --> 00:01:10,890
+Nice. 
+Awesome. 
+
+22
+00:01:10,890 --> 00:01:13,930
+Which is kind of the usual flex 
+that every programming language 
+
+23
+00:01:13,930 --> 00:01:16,850
+has to go through, having their 
+own website or some 
+
+24
+00:01:16,850 --> 00:01:19,210
+infrastructure written in 
+itself. 
+
+25
+00:01:19,730 --> 00:01:23,290
+Yeah, the first step after you 
+have your own compiler written 
+
+26
+00:01:23,290 --> 00:01:28,490
+in the language, yeah, how is it
+that you get to work on Ocaml 
+
+27
+00:01:28,690 --> 00:01:33,730
+stuff as your day job? 
+Luck, to be honest. 
+
+28
+00:01:34,370 --> 00:01:38,970
+Sheer luck and being in the 
+right place at the right time. 
+
+29
+00:01:41,360 --> 00:01:46,840
+Probably also credentials, Okay.
+So is there a company behind 
+
+30
+00:01:46,960 --> 00:01:49,600
+Ocaml that's funding that work, 
+or how does that work? 
+
+31
+00:01:49,760 --> 00:01:54,240
+Yeah, so there's multiple 
+companies in the Ocaml ecosystem
+
+32
+00:01:54,240 --> 00:01:56,120
+that are funding Ocaml 
+development. 
+
+33
+00:01:56,120 --> 00:02:01,480
+Some of Ocaml development is 
+funded also by research grants, 
+
+34
+00:02:01,480 --> 00:02:04,720
+but that's more on the compiler 
+side, on the tooling side. 
+
+35
+00:02:05,940 --> 00:02:10,259
+There's a handful of companies 
+like Tari Des Ocaml Pro and a 
+
+36
+00:02:10,259 --> 00:02:14,140
+few others who contribute to 
+this development, and I work at 
+
+37
+00:02:14,140 --> 00:02:19,380
+Tari Des who is very active in 
+improving the tooling at the 
+
+38
+00:02:19,380 --> 00:02:24,420
+moment, and also the stewards of
+the Ocaml org website at the 
+
+39
+00:02:24,420 --> 00:02:25,860
+moment. 
+Nice. 
+
+40
+00:02:26,460 --> 00:02:30,620
+And so you get to just improve 
+the experience of Ocaml and 
+
+41
+00:02:30,620 --> 00:02:32,860
+learning of Ocaml as your day 
+job. 
+
+42
+00:02:33,790 --> 00:02:37,590
+Yes, I do. 
+And it's kind of a pretty 
+
+43
+00:02:37,590 --> 00:02:41,510
+demanding position in the sense 
+that you are in this open source
+
+44
+00:02:41,510 --> 00:02:45,950
+universe and you know that a lot
+of people will be very excited 
+
+45
+00:02:45,950 --> 00:02:49,710
+to do this job. 
+And they have high expectations 
+
+46
+00:02:49,710 --> 00:02:53,270
+on you in a good way. 
+I mean, because you really want 
+
+47
+00:02:53,270 --> 00:02:58,670
+to do a good job for them, yeah.
+Positive pressure, Positive. 
+
+48
+00:03:00,720 --> 00:03:04,120
+So how did you get into Ocaml? 
+What's your story? 
+
+49
+00:03:05,360 --> 00:03:10,440
+This is a longer story, so that 
+starts with studying computer 
+
+50
+00:03:10,440 --> 00:03:15,640
+science in the early 2000s when 
+my first language in Zabrukun, 
+
+51
+00:03:16,360 --> 00:03:22,400
+Germany, so university that was 
+more heavy on theory. 
+
+52
+00:03:24,550 --> 00:03:27,550
+And one of the universities that
+would start out in first year 
+
+53
+00:03:27,550 --> 00:03:29,990
+computer science by teaching 
+Standard ML. 
+
+54
+00:03:30,470 --> 00:03:33,350
+So I don't know if you have 
+heard of or used Standard ML, 
+
+55
+00:03:33,350 --> 00:03:35,910
+but this is basically some kind 
+of Ocaml light. 
+
+56
+00:03:36,510 --> 00:03:39,350
+Okay. 
+So what's the connection between
+
+57
+00:03:39,470 --> 00:03:42,370
+Ocaml and Standard ML? 
+Cuz we hear I've heard the 
+
+58
+00:03:42,370 --> 00:03:47,250
+terminology like Scala is in the
+family of ML languages or 
+
+59
+00:03:47,250 --> 00:03:49,410
+whatever. 
+What does it actually mean to be
+
+60
+00:03:49,410 --> 00:03:53,450
+like what is the ML family? 
+So there's a very rich academic 
+
+61
+00:03:53,450 --> 00:03:57,530
+tradition behind this that goes 
+back to the type systems 
+
+62
+00:03:57,530 --> 00:04:03,050
+explored by Hindley and Mooner, 
+and they came up with the type 
+
+63
+00:04:03,050 --> 00:04:05,980
+Lambda calculus. 
+Or I'm actually not even sure 
+
+64
+00:04:05,980 --> 00:04:07,940
+anymore. 
+I forgot so much, I learned so 
+
+65
+00:04:07,940 --> 00:04:11,740
+much and I forgot so much. 
+But there's always come start 
+
+66
+00:04:11,740 --> 00:04:14,020
+back to Hindley Mulner. 
+And if you want to go down this 
+
+67
+00:04:14,020 --> 00:04:16,300
+rabbit hole, it's a deep rabbit 
+hole. 
+
+68
+00:04:16,500 --> 00:04:21,540
+So you can learn a lot about 
+type Lambda calculus, about 
+
+69
+00:04:21,540 --> 00:04:26,740
+statically typed functional 
+programming languages where you 
+
+70
+00:04:26,740 --> 00:04:30,180
+have type systems that are very 
+very expressive that allow you 
+
+71
+00:04:30,220 --> 00:04:33,500
+to model what your data looks 
+like in a very fine grained 
+
+72
+00:04:33,500 --> 00:04:38,120
+fashion. 
+Where you can describe units of 
+
+73
+00:04:38,120 --> 00:04:42,360
+data in in such a way that you 
+you have these discriminated 
+
+74
+00:04:42,360 --> 00:04:45,000
+unions. 
+These some types sometimes you 
+
+75
+00:04:45,000 --> 00:04:48,120
+call variant types, so in Ocaml 
+they're called variant types, 
+
+76
+00:04:50,080 --> 00:04:55,960
+where you say that a value of a 
+given data type is for example, 
+
+77
+00:04:56,000 --> 00:05:01,120
+either a success value has a 
+certain shape certain fields, or
+
+78
+00:05:01,120 --> 00:05:05,560
+an error value has other fields.
+And you can model anything you 
+
+79
+00:05:05,600 --> 00:05:10,560
+want this way. 
+Trees, graphs, JSON Data. 
+
+80
+00:05:10,560 --> 00:05:14,600
+So from practical perspective, 
+you're mostly modeling these 
+
+81
+00:05:14,600 --> 00:05:18,000
+kinds of more things that you 
+see in the wild. 
+
+82
+00:05:18,000 --> 00:05:22,080
+Uh, huh. 
+So the Henley Milner, am I 
+
+83
+00:05:22,120 --> 00:05:23,240
+saying that right? 
+Type system? 
+
+84
+00:05:23,240 --> 00:05:25,280
+Yeah. 
+So the type this is like the 
+
+85
+00:05:25,280 --> 00:05:30,640
+type system calculus stuff was. 
+This was decades and decades 
+
+86
+00:05:30,640 --> 00:05:34,890
+ago, and then languages started 
+like more kind of academic 
+
+87
+00:05:34,890 --> 00:05:39,370
+languages started to try to 
+implement those ideas. 
+
+88
+00:05:39,450 --> 00:05:41,090
+Is that the right way to say 
+that? 
+
+89
+00:05:41,530 --> 00:05:44,330
+Yeah, that's right. 
+Actually there were multiple 
+
+90
+00:05:44,330 --> 00:05:48,130
+languages that developed mostly 
+in an academic setting because 
+
+91
+00:05:48,130 --> 00:05:50,210
+they were wonderful research 
+projects. 
+
+92
+00:05:51,010 --> 00:05:55,050
+And one of these languages is 
+Ocaml that was created by Xavier
+
+93
+00:05:55,050 --> 00:05:58,090
+Laurent. 
+In the 90s. 
+
+94
+00:05:58,330 --> 00:06:01,850
+It was in the 90s, yeah, that's.
+What he found but but. 
+
+95
+00:06:01,850 --> 00:06:04,890
+ML itself, when that was in the 
+60s, wasn't. 
+
+96
+00:06:04,930 --> 00:06:07,130
+It. 
+Yes, that's much older. 
+
+97
+00:06:07,130 --> 00:06:10,210
+So the general ideas underlying 
+Ocaml are much older. 
+
+98
+00:06:10,210 --> 00:06:18,010
+Even so, Ocaml became one of the
+ML family languages that took 
+
+99
+00:06:18,010 --> 00:06:23,250
+these ideas and tried to build a
+real language around them. 
+
+100
+00:06:23,770 --> 00:06:26,580
+Is that is that the accurate? 
+Yeah. 
+
+101
+00:06:26,700 --> 00:06:30,820
+Yeah, that's pretty accurate. 
+And the O is for object right? 
+
+102
+00:06:31,900 --> 00:06:35,140
+Yes. 
+So this is Objective Camel. 
+
+103
+00:06:35,620 --> 00:06:39,540
+So there was a language was 
+earlier called Camel and it 
+
+104
+00:06:39,540 --> 00:06:43,540
+became Objective Camel and it's 
+actually quite fun to look at. 
+
+105
+00:06:43,860 --> 00:06:48,860
+Look at the old website of that.
+So I really like looking at 
+
+106
+00:06:48,860 --> 00:06:52,420
+stuff on the Internet Archive 
+the way that machine looking at 
+
+107
+00:06:52,420 --> 00:06:55,810
+how. 
+How things looked like back in 
+
+108
+00:06:55,810 --> 00:06:58,610
+the 90s. 
+Yeah, I mean, I was there for 
+
+109
+00:06:58,610 --> 00:07:00,890
+some of it, but I was not there 
+for Ocaml. 
+
+110
+00:07:00,890 --> 00:07:08,010
+So do some archaeological digs 
+into the past to see how we got 
+
+111
+00:07:08,010 --> 00:07:09,890
+to where we are today. 
+It is always. 
+
+112
+00:07:10,010 --> 00:07:13,730
+So it sounds like your 
+experience was you went to this 
+
+113
+00:07:13,730 --> 00:07:20,170
+more theoretical computer 
+science program, and then when 
+
+114
+00:07:20,170 --> 00:07:24,400
+you saw. 
+Camel O camel it was just. 
+
+115
+00:07:24,880 --> 00:07:28,320
+No, no, not at all. 
+So actually, it was much, much, 
+
+116
+00:07:28,440 --> 00:07:34,840
+much weirder. 
+So I happened to stick around in
+
+117
+00:07:34,880 --> 00:07:40,280
+academia until I after I had a 
+PhD in formal verification. 
+
+118
+00:07:40,280 --> 00:07:44,280
+So I kind of just swam along. 
+I didn't know what to do, so I. 
+
+119
+00:07:45,220 --> 00:07:48,100
+I didn't really even have the 
+passion that you should usually 
+
+120
+00:07:48,100 --> 00:07:54,460
+have for a PhD. 
+But it's one day I I just 
+
+121
+00:07:54,460 --> 00:07:57,700
+decided like, OK, I'm not going 
+to stay in academia. 
+
+122
+00:07:57,700 --> 00:07:59,540
+It's it's not going to work for 
+me. 
+
+123
+00:07:59,540 --> 00:08:02,820
+I'm. 
+I don't care enough about this 
+
+124
+00:08:03,460 --> 00:08:10,100
+whole institutional model. 
+But this was after you got your 
+
+125
+00:08:10,100 --> 00:08:12,020
+PhD. 
+This was after I got my. 
+
+126
+00:08:12,380 --> 00:08:14,620
+OK, so you were starting to 
+teach and things. 
+
+127
+00:08:15,010 --> 00:08:16,570
+I should have been starting to 
+teach. 
+
+128
+00:08:16,570 --> 00:08:22,210
+I was basically poised to go go 
+to Carnegie Mellon University on
+
+129
+00:08:22,210 --> 00:08:25,330
+a research grant. 
+So I successfully applied for 
+
+130
+00:08:25,330 --> 00:08:28,170
+that. 
+But I couldn't see myself going 
+
+131
+00:08:28,170 --> 00:08:35,289
+there with a toddler and with 
+the US Standards of work ethics.
+
+132
+00:08:35,530 --> 00:08:40,049
+Yeah. 
+So were you in your PhD program 
+
+133
+00:08:40,049 --> 00:08:45,090
+or before that? 
+Were you using Ocaml and and the
+
+134
+00:08:45,090 --> 00:08:48,850
+No formal verification? 
+Really, there was no really 
+
+135
+00:08:49,330 --> 00:08:52,010
+pretty much no Ocaml for me 
+until last year. 
+
+136
+00:08:52,010 --> 00:08:55,370
+And and this makes it even more 
+ironic, considering how many 
+
+137
+00:08:55,370 --> 00:08:59,690
+people out there are really 
+really into Ocaml and basically 
+
+138
+00:08:59,690 --> 00:09:05,090
+dying to get this job. 
+But but you. 
+
+139
+00:09:05,330 --> 00:09:09,330
+On the other hand, what I did in
+the meantime after I left my 
+
+140
+00:09:09,330 --> 00:09:12,050
+PhD, that prepared me uniquely 
+for this. 
+
+141
+00:09:12,710 --> 00:09:15,270
+Kind of opportunity. 
+Right. 
+
+142
+00:09:15,350 --> 00:09:21,190
+I would think because like for 
+me and my first, I don't know, 
+
+143
+00:09:21,190 --> 00:09:26,550
+functional language was quite a 
+struggle at at at the beginning.
+
+144
+00:09:26,830 --> 00:09:30,910
+But then the more I saw it and 
+the more I understood then like 
+
+145
+00:09:30,910 --> 00:09:33,590
+you, you pick up a language and 
+you go, Oh yeah, I see what 
+
+146
+00:09:33,590 --> 00:09:35,670
+you're doing here and here and 
+here and here and you can 
+
+147
+00:09:35,670 --> 00:09:38,830
+actually have a pretty deep 
+understanding fairly quickly. 
+
+148
+00:09:39,030 --> 00:09:40,990
+So I would imagine with your 
+background. 
+
+149
+00:09:41,730 --> 00:09:44,850
+When you did start picking up O 
+Camel, it was like, oh, a lot of
+
+150
+00:09:44,850 --> 00:09:46,410
+familiarity, yeah. 
+Yes. 
+
+151
+00:09:46,410 --> 00:09:49,970
+So when you've used Standard ML,
+and when you have done a few 
+
+152
+00:09:49,970 --> 00:09:54,770
+proofs in Isabelle Hall, which 
+is a proof checker, so automated
+
+153
+00:09:55,570 --> 00:09:58,490
+prover Isabelle, what was it? 
+Isabelle Hall. 
+
+154
+00:09:58,490 --> 00:10:02,090
+So he's basically at the time. 
+Back then it was the other one 
+
+155
+00:10:02,130 --> 00:10:05,570
+next to Coq. 
+OK And and Coq is more on the O 
+
+156
+00:10:05,570 --> 00:10:11,170
+camel side and Isabelle was more
+on the standard ML side. 
+
+157
+00:10:11,850 --> 00:10:15,410
+Ah. 
+So obviously that gives you some
+
+158
+00:10:15,570 --> 00:10:20,130
+some intuition for how to use 
+this and how to write pure 
+
+159
+00:10:20,130 --> 00:10:23,210
+functions, how to write 
+recursive functions, how to do 
+
+160
+00:10:23,210 --> 00:10:25,290
+the FP things. 
+Yeah. 
+
+161
+00:10:25,410 --> 00:10:29,570
+OK, so you were doing this in at
+least in the PhD side with 
+
+162
+00:10:29,690 --> 00:10:33,890
+Isabel. 
+And then were you using other ML
+
+163
+00:10:33,890 --> 00:10:36,210
+languages before you got into 
+Ocaml, or was it? 
+
+164
+00:10:36,210 --> 00:10:38,090
+Mostly, yes. 
+In fact, I did. 
+
+165
+00:10:38,930 --> 00:10:43,090
+Yeah, in fact I on my journey I 
+passed O Camel by because it 
+
+166
+00:10:43,090 --> 00:10:46,490
+looked to have such a small 
+community, because it looked to 
+
+167
+00:10:46,490 --> 00:10:54,050
+be so secluded, so hard to get 
+into in in terms of available 
+
+168
+00:10:54,050 --> 00:10:58,690
+ecosystem, in terms of being 
+able to to reach people, talk to
+
+169
+00:10:58,690 --> 00:11:02,490
+people. 
+Back then, that was in in 2015. 
+
+170
+00:11:02,490 --> 00:11:07,890
+Sixteen when I looked at O Camel
+for a moment and passed it by. 
+
+171
+00:11:08,480 --> 00:11:10,520
+Where'd you go? 
+Where'd you go instead? 
+
+172
+00:11:10,880 --> 00:11:14,400
+Haskell. 
+OK, OK, so the journey to 
+
+173
+00:11:14,400 --> 00:11:16,800
+Haskell. 
+So you were doing Haskell for a 
+
+174
+00:11:16,800 --> 00:11:19,360
+while. 
+So it sounds like your world is 
+
+175
+00:11:19,480 --> 00:11:22,800
+basically heavily functional 
+languages. 
+
+176
+00:11:23,400 --> 00:11:28,080
+Not really, because the first 
+thing I did after I threw away 
+
+177
+00:11:28,080 --> 00:11:32,680
+academia and said no more of 
+this was that I wanted to build 
+
+178
+00:11:32,720 --> 00:11:39,940
+a website for people that saw. 
+In Python, Django all the things
+
+179
+00:11:40,180 --> 00:11:43,900
+and and I learned a lot from 
+that, the good and the bad, the 
+
+180
+00:11:43,900 --> 00:11:46,180
+good about me and the bad about 
+me. 
+
+181
+00:11:46,860 --> 00:11:50,340
+Because when you don't write 
+tests in Python, you are not 
+
+182
+00:11:50,340 --> 00:11:55,500
+going to have a good time and I 
+did not want to write tests. 
+
+183
+00:11:55,740 --> 00:12:00,580
+And were you doing this before 
+Python had type annotations? 
+
+184
+00:12:01,140 --> 00:12:05,180
+Yes, type annotations in Python 
+we're very very often not 
+
+185
+00:12:05,180 --> 00:12:06,260
+usable. 
+Actually, OK. 
+
+186
+00:12:06,990 --> 00:12:10,470
+At this point, yeah. 
+And I think while to go from 
+
+187
+00:12:10,470 --> 00:12:16,590
+like formal verification ML 
+stuff to like the total Wild 
+
+188
+00:12:16,590 --> 00:12:21,430
+West of Python dynamic typing, 
+yes, it's like hopping to the 
+
+189
+00:12:21,830 --> 00:12:24,030
+other end of the universe, yes. 
+Right. 
+
+190
+00:12:24,030 --> 00:12:27,390
+So it was also hopping from from
+the one side, from the academic 
+
+191
+00:12:27,390 --> 00:12:30,950
+universe to the universe of OK, 
+we are going to do this solo 
+
+192
+00:12:30,950 --> 00:12:35,630
+bootstrapper thing where where 
+we build something and have a 
+
+193
+00:12:35,630 --> 00:12:37,950
+lot of people use it. 
+Don't pay us for it. 
+
+194
+00:12:39,710 --> 00:12:43,110
+Yes, it's not that simple. 
+You can't be naive even when you
+
+195
+00:12:43,110 --> 00:12:47,470
+have a PhD, you know. 
+So as part of your thinking, I 
+
+196
+00:12:47,470 --> 00:12:50,950
+don't need to write tests 
+because why would I write tests?
+
+197
+00:12:50,950 --> 00:12:55,670
+I write types. 
+Right, but this is not true 
+
+198
+00:12:55,670 --> 00:12:58,870
+either. 
+So you should still test some 
+
+199
+00:12:58,870 --> 00:13:01,510
+things, but there's a lot of 
+things you don't need to test 
+
+200
+00:13:01,510 --> 00:13:06,190
+when you have types. 
+Yeah, so okay. 
+
+201
+00:13:06,190 --> 00:13:12,350
+So you did some work in Python 
+And then passed by Ocaml and 
+
+202
+00:13:12,350 --> 00:13:15,430
+then went to Haskell. 
+What was your experience like in
+
+203
+00:13:15,430 --> 00:13:18,990
+Haskell? 
+Well, in Haskell you have this 
+
+204
+00:13:18,990 --> 00:13:24,590
+kind of steep learning curve in 
+terms of getting through this 
+
+205
+00:13:24,590 --> 00:13:27,470
+wall of thing. 
+How do I deal with these 
+
+206
+00:13:27,670 --> 00:13:29,510
+different monads? 
+How do I? 
+
+207
+00:13:30,350 --> 00:13:34,350
+How do I make it compile and run
+so I know what I want to do? 
+
+208
+00:13:34,510 --> 00:13:38,950
+I have a tutorial in front of me
+and then I have some not 
+
+209
+00:13:38,950 --> 00:13:46,550
+immediately obvious type errors,
+so I read a lot of Monarch 
+
+210
+00:13:46,550 --> 00:13:50,990
+tutorials. 
+I'm sure that was helpful. 
+
+211
+00:13:51,870 --> 00:13:53,950
+Well, actually it was at some 
+point. 
+
+212
+00:13:53,950 --> 00:13:56,590
+Like when you do it often 
+enough, it works like you just 
+
+213
+00:13:56,590 --> 00:13:59,390
+have to be really stubborn and 
+you have to want it. 
+
+214
+00:13:59,980 --> 00:14:02,700
+Or you have to have someone who 
+shows you what to do. 
+
+215
+00:14:03,180 --> 00:14:06,740
+I didn't, but that was cool 
+because you can make up a lot by
+
+216
+00:14:06,740 --> 00:14:10,540
+being just stubborn and keep 
+trying, doing and reading 
+
+217
+00:14:10,540 --> 00:14:13,500
+different things. 
+That's generally my strategy as 
+
+218
+00:14:13,500 --> 00:14:15,580
+I just go. 
+I know it was just from my 
+
+219
+00:14:15,580 --> 00:14:18,540
+physics background, which I 
+didn't understand very well at 
+
+220
+00:14:18,540 --> 00:14:22,060
+the time, but I knew that if I 
+just kept flinging myself at the
+
+221
+00:14:22,060 --> 00:14:25,050
+problem. 
+Eventually something would give.
+
+222
+00:14:25,610 --> 00:14:28,570
+And so that's the strategy I've 
+used for everything else. 
+
+223
+00:14:28,570 --> 00:14:31,770
+Yeah. 
+It's like, yeah, so the strategy
+
+224
+00:14:31,770 --> 00:14:37,290
+is read many things about monads
+and this is at least my 
+
+225
+00:14:37,290 --> 00:14:39,690
+strategy, still not understand 
+them. 
+
+226
+00:14:39,930 --> 00:14:43,080
+And then as soon as I did 
+understand them, I'm going to 
+
+227
+00:14:43,080 --> 00:14:45,600
+write my own monad tutorial, 
+which I did. 
+
+228
+00:14:46,120 --> 00:14:47,440
+Yeah, I never saw that. 
+Yeah, that's cool. 
+
+229
+00:14:48,240 --> 00:14:49,480
+Yeah. 
+Yeah, I didn't. 
+
+230
+00:14:49,480 --> 00:14:54,040
+And of course that just adds to 
+the corpus of monad tutorials 
+
+231
+00:14:54,040 --> 00:14:57,440
+that that, yeah, don't that 
+ultimately aren't helpful or 
+
+232
+00:14:57,440 --> 00:15:01,520
+something. 
+But but so OK Haskell and and 
+
+233
+00:15:01,760 --> 00:15:04,720
+some some beating your head 
+against monads. 
+
+234
+00:15:05,800 --> 00:15:08,520
+Any other part to that journey 
+before you get to O Camel? 
+
+235
+00:15:10,510 --> 00:15:15,710
+Well, not so much, I think so. 
+Well, there was also Elm. 
+
+236
+00:15:15,870 --> 00:15:18,550
+There was also. 
+So actually I did Elm before 
+
+237
+00:15:18,550 --> 00:15:21,390
+Haskell. 
+Yeah, because I wanted to build 
+
+238
+00:15:21,390 --> 00:15:24,350
+great user experience. 
+I wanted to build something 
+
+239
+00:15:24,350 --> 00:15:26,470
+interactive, something that 
+Django couldn't. 
+
+240
+00:15:26,990 --> 00:15:30,470
+I believe Django couldn't do. 
+Or at least Django. 
+
+241
+00:15:30,670 --> 00:15:37,630
+Plus my mess of Frankensteinish 
+jQuery and publicly available. 
+
+242
+00:15:38,130 --> 00:15:44,130
+Libraries could, yeah. 
+Nowadays I think that's a much 
+
+243
+00:15:44,130 --> 00:15:47,890
+more enormous thing. 
+For me Elm was. 
+
+244
+00:15:47,890 --> 00:15:51,010
+I haven't done any Haskell, but 
+for me, Elm. 
+
+245
+00:15:52,450 --> 00:15:56,730
+When I did Elm I'd been doing 
+some functional programming and 
+
+246
+00:15:56,730 --> 00:16:00,250
+but it hadn't used the Haskell 
+style syntax and I really liked 
+
+247
+00:16:00,250 --> 00:16:04,370
+Elm and I would much rather 
+build a web app in Elm than 
+
+248
+00:16:04,370 --> 00:16:07,910
+jQuery and Python. 
+Yes for sure. 
+
+249
+00:16:08,910 --> 00:16:12,310
+Just the way I wanted to build 
+the web app, it was not very 
+
+250
+00:16:12,310 --> 00:16:14,950
+suitable for Elm. 
+So I wanted to do this single 
+
+251
+00:16:14,950 --> 00:16:20,030
+page app thing where you had the
+bookmarkable URLs where you had 
+
+252
+00:16:20,030 --> 00:16:25,750
+the proper URL parsing. 
+Basically it worked but it got 
+
+253
+00:16:25,750 --> 00:16:29,750
+pretty slow in compiling because
+I just wanted to do everything 
+
+254
+00:16:29,750 --> 00:16:33,750
+and this is not how you use Elm.
+So Elm is more like you, you 
+
+255
+00:16:33,750 --> 00:16:38,480
+make smaller components. 
+You make individual pages and 
+
+256
+00:16:38,480 --> 00:16:41,480
+then have the interactivity for 
+them implemented in Elm. 
+
+257
+00:16:41,480 --> 00:16:43,680
+That works very well. 
+And that's incidentally also the
+
+258
+00:16:43,680 --> 00:16:47,920
+use case that no red ink had for
+Elm, that they have lots of 
+
+259
+00:16:47,920 --> 00:16:51,360
+small components, and Elm is 
+wonderful for that, and still 
+
+260
+00:16:51,360 --> 00:16:54,320
+is, despite people declaring it 
+dead. 
+
+261
+00:16:54,400 --> 00:16:58,120
+I don't think it's dead. 
+It's still very solid. 
+
+262
+00:16:58,320 --> 00:17:01,600
+It's not great for single page 
+applications. 
+
+263
+00:17:03,030 --> 00:17:06,630
+Yeah, so for single page 
+applications you have to to deal
+
+264
+00:17:06,630 --> 00:17:09,510
+with with a lot of these data 
+loading. 
+
+265
+00:17:10,349 --> 00:17:14,869
+You get very very huge case 
+switches depending on which page
+
+266
+00:17:14,869 --> 00:17:17,750
+are you on. 
+If you do the the the real 
+
+267
+00:17:17,750 --> 00:17:20,589
+single page application kind of 
+the the router and the like 
+
+268
+00:17:20,589 --> 00:17:23,589
+client side router. 
+Right, the router, the data 
+
+269
+00:17:23,589 --> 00:17:27,230
+loading and all that. 
+Other than that, it works 
+
+270
+00:17:27,230 --> 00:17:31,080
+actually quite fine. 
+But does seem like Elm is is 
+
+271
+00:17:31,320 --> 00:17:33,800
+probably a great path to 
+Haskell. 
+
+272
+00:17:34,080 --> 00:17:36,160
+Like, yeah, if you wanna learn 
+Haskell, Elm might. 
+
+273
+00:17:36,320 --> 00:17:37,680
+Be a good place to start? 
+Yeah. 
+
+274
+00:17:38,200 --> 00:17:40,080
+Interesting. 
+So maybe my Elm experience 
+
+275
+00:17:40,080 --> 00:17:42,760
+helped me with the Ocaml that 
+that we've. 
+
+276
+00:17:43,120 --> 00:17:45,240
+Been I would, I would say, I 
+mean certainly, yeah, some of 
+
+277
+00:17:45,240 --> 00:17:49,720
+the things like, you know, 
+initially the syntax if you've 
+
+278
+00:17:49,720 --> 00:17:54,160
+never seen that alternative 
+syntax without the parentheses 
+
+279
+00:17:54,160 --> 00:17:56,240
+and without the commas for 
+function calls. 
+
+280
+00:17:56,710 --> 00:17:59,270
+That's a little jarring, but 
+once you're used to it, yeah, 
+
+281
+00:17:59,270 --> 00:18:01,230
+they're like curried function 
+style. 
+
+282
+00:18:01,470 --> 00:18:06,030
+Yeah, yeah, that's. 
+But at first it's like, this is 
+
+283
+00:18:06,030 --> 00:18:07,390
+too weird. 
+Yeah. 
+
+284
+00:18:08,110 --> 00:18:09,590
+So, I don't know. 
+Possibly. 
+
+285
+00:18:09,590 --> 00:18:13,190
+Yeah, and for a lot of people 
+having to write recursive 
+
+286
+00:18:13,190 --> 00:18:17,070
+functions instead of for loops 
+or while loops, that is quite 
+
+287
+00:18:17,070 --> 00:18:20,790
+mind bending. 
+Yeah, So is a wonderful entry 
+
+288
+00:18:20,790 --> 00:18:24,830
+drug. 
+Is yeah, I'm still. 
+
+289
+00:18:25,340 --> 00:18:28,700
+I know that that's often in 
+tutorials on functional 
+
+290
+00:18:28,700 --> 00:18:31,500
+programming. 
+The recursive function is often 
+
+291
+00:18:31,500 --> 00:18:33,140
+the first thing, one of the 
+first things, yeah. 
+
+292
+00:18:33,260 --> 00:18:36,380
+And I had trouble with that. 
+And also it gives you the 
+
+293
+00:18:36,380 --> 00:18:39,300
+impression that you're going to 
+be writing a lot of recursive 
+
+294
+00:18:39,300 --> 00:18:42,580
+functions. 
+But then eventually, and correct
+
+295
+00:18:42,580 --> 00:18:48,220
+me if I'm wrong, I felt like, 
+oh, the recursion is actually 
+
+296
+00:18:48,220 --> 00:18:51,150
+built into a lot of the 
+functors. 
+
+297
+00:18:51,230 --> 00:18:54,870
+A lot of the things like map and
+all those things. 
+
+298
+00:18:55,110 --> 00:18:59,030
+So maybe it's not the first 
+thing that you wanna show 
+
+299
+00:18:59,030 --> 00:19:02,630
+people, because I think it gives
+people the wrong impression and 
+
+300
+00:19:02,630 --> 00:19:04,670
+drives them away, right? 
+You can show them a fold and 
+
+301
+00:19:04,670 --> 00:19:07,430
+then you could go write your own
+fold with recursion. 
+
+302
+00:19:07,430 --> 00:19:10,550
+And that, but not right away. 
+Just say here's a tool that you 
+
+303
+00:19:10,550 --> 00:19:13,920
+use the fold. 
+But later on. 
+
+304
+00:19:14,040 --> 00:19:17,440
+Even earlier starting even 
+earlier, just the list map. 
+
+305
+00:19:17,440 --> 00:19:19,920
+I mean, the list map is now in 
+every language. 
+
+306
+00:19:19,920 --> 00:19:22,320
+Yeah, pretty much. 
+Yeah, right. 
+
+307
+00:19:22,320 --> 00:19:26,000
+The language that doesn't have 
+this is rare nowadays. 
+
+308
+00:19:26,280 --> 00:19:31,240
+Yeah, right, exactly. 
+Show them how to use the higher 
+
+309
+00:19:31,320 --> 00:19:33,960
+level, the higher level tools 
+and then. 
+
+310
+00:19:34,550 --> 00:19:37,910
+In a later chat, back the covers
+to say hey and recurs. 
+
+311
+00:19:37,910 --> 00:19:39,710
+See. 
+How this works and why it works 
+
+312
+00:19:39,710 --> 00:19:43,710
+and everything but I've seen so 
+many tutorials that go 
+
+313
+00:19:43,870 --> 00:19:44,790
+recursion. 
+Let's. 
+
+314
+00:19:45,990 --> 00:19:46,950
+Isn't it exciting? 
+Isn't. 
+
+315
+00:19:47,750 --> 00:19:50,870
+It exciting and then tail 
+recursion optimization. 
+
+316
+00:19:50,870 --> 00:19:54,830
+You need to understand that at 
+this point and then I feel like.
+
+317
+00:19:55,330 --> 00:19:57,250
+You know you've lost 90% of 
+your. 
+
+318
+00:19:57,610 --> 00:20:00,850
+Right, exactly. 
+That's the thing that's that's 
+
+319
+00:20:00,850 --> 00:20:04,050
+also the thing about Haskell. 
+Haskell is very front loaded in 
+
+320
+00:20:04,050 --> 00:20:07,170
+teaching because it's coming 
+from this academic background, 
+
+321
+00:20:07,170 --> 00:20:12,450
+from this background of having 
+having joy in exploring these 
+
+322
+00:20:12,450 --> 00:20:16,010
+models. 
+But most of the people out there
+
+323
+00:20:16,010 --> 00:20:19,290
+and including me, they, they 
+really didn't want to explore 
+
+324
+00:20:19,290 --> 00:20:21,690
+these models. 
+They want to do something. 
+
+325
+00:20:21,690 --> 00:20:24,490
+They want to change the world 
+and build something. 
+
+326
+00:20:25,220 --> 00:20:27,940
+Right. 
+And so you have to show them, 
+
+327
+00:20:27,980 --> 00:20:31,700
+like, where are the baby steps? 
+Where is the first rungs of the 
+
+328
+00:20:31,700 --> 00:20:34,820
+letter to building something 
+that the world cares about? 
+
+329
+00:20:35,620 --> 00:20:41,140
+Yes, actually that kind of 
+segues into our onboarding 
+
+330
+00:20:41,140 --> 00:20:46,730
+experience with O'caml. 
+Yes, always very, very 
+
+331
+00:20:46,730 --> 00:20:50,650
+interested in doing that because
+my colleague is spending a lot 
+
+332
+00:20:50,650 --> 00:20:54,010
+of time writing better 
+tutorials. 
+
+333
+00:20:54,970 --> 00:20:58,770
+Okay, there's still a lot to do.
+Yeah, we yeah. 
+
+334
+00:20:58,770 --> 00:21:04,450
+I mean we followed the just the 
+installation instructions and as
+
+335
+00:21:04,450 --> 00:21:10,650
+usual James refused to just take
+a curl command and. 
+
+336
+00:21:10,650 --> 00:21:14,090
+Yeah, that's same again. 
+So, so we had to switch to 
+
+337
+00:21:14,090 --> 00:21:17,970
+Nick's so that he could create 
+this environment that he knew 
+
+338
+00:21:17,970 --> 00:21:21,850
+would just manage and not mess 
+around with any of his regular. 
+
+339
+00:21:21,850 --> 00:21:23,690
+And it all worked great. 
+And it works. 
+
+340
+00:21:23,810 --> 00:21:25,570
+Yeah, what you? 
+Presently, it's not always 
+
+341
+00:21:25,570 --> 00:21:27,290
+support. 
+Yeah, don't always know if 
+
+342
+00:21:27,290 --> 00:21:29,930
+that's gonna work with Nick's, 
+but so we were safe. 
+
+343
+00:21:30,370 --> 00:21:37,000
+But then the next page was your 
+first day with O'camel, which 
+
+344
+00:21:37,160 --> 00:21:39,400
+sounded a little intimidating, 
+but. 
+
+345
+00:21:40,480 --> 00:21:42,600
+I can tell you a funny story 
+about this. 
+
+346
+00:21:43,080 --> 00:21:45,240
+Yeah. 
+Originally this was named your 
+
+347
+00:21:45,240 --> 00:21:50,120
+first hour with o'camel and it 
+was not shorter, not short 
+
+348
+00:21:50,120 --> 00:21:51,840
+enough to do. 
+It was not shorter. 
+
+349
+00:21:53,120 --> 00:21:54,400
+It's still a day's worth of 
+work. 
+
+350
+00:21:54,480 --> 00:21:57,360
+Understandable. 
+That wasn't too big of a hurdle,
+
+351
+00:21:57,360 --> 00:22:01,960
+to be honest. 
+But then we almost immediately 
+
+352
+00:22:01,960 --> 00:22:04,790
+ran into. 
+Well, what was it? 
+
+353
+00:22:04,830 --> 00:22:08,230
+Oh, I know there were. 
+Speaking of recursion, that was 
+
+354
+00:22:08,230 --> 00:22:12,390
+actually one of the original 
+examples in your first day with.
+
+355
+00:22:13,070 --> 00:22:14,510
+Was it Fibonacci or was it 
+something else? 
+
+356
+00:22:14,510 --> 00:22:16,390
+It was no, I think it was 
+Fibonacci. 
+
+357
+00:22:16,390 --> 00:22:21,710
+Yeah, it was a Fibonacci 
+generator and and there was a 
+
+358
+00:22:21,710 --> 00:22:24,950
+keyword that wasn't explained 
+that we guessed at which was 
+
+359
+00:22:24,950 --> 00:22:26,390
+REC. 
+Let rec. 
+
+360
+00:22:26,870 --> 00:22:28,510
+Oh, yes, I see. 
+Yeah. 
+
+361
+00:22:28,590 --> 00:22:32,350
+And it was like, so I had to 
+guess, but I, you know, we. 
+
+362
+00:22:33,160 --> 00:22:36,400
+We asked, We asked ChatGPT for a
+lot of explanation. 
+
+363
+00:22:36,440 --> 00:22:39,400
+Yeah, we started asking chat for
+for things. 
+
+364
+00:22:39,400 --> 00:22:43,080
+We came up with the idea that, 
+you know, just like their 
+
+365
+00:22:43,360 --> 00:22:45,600
+language. 
+What do they call them that plug
+
+366
+00:22:45,600 --> 00:22:49,480
+into your editor language? 
+LSP Yeah, language. 
+
+367
+00:22:49,560 --> 00:22:51,880
+Language server protocol, 
+language server protocol. 
+
+368
+00:22:51,880 --> 00:22:55,080
+There should be the equivalent 
+for programming languages. 
+
+369
+00:22:55,080 --> 00:22:59,680
+You should should have be able 
+to have your own dedicated yeah,
+
+370
+00:23:00,280 --> 00:23:03,000
+machine learning. 
+Yeah, your own chat GPD for that
+
+371
+00:23:03,000 --> 00:23:05,640
+language. 
+Yeah, right, exactly. 
+
+372
+00:23:05,640 --> 00:23:08,320
+That would that would plug into.
+Your That will be a game 
+
+373
+00:23:08,320 --> 00:23:10,800
+changer, yes. 
+What will be? 
+
+374
+00:23:10,920 --> 00:23:12,480
+I'm sure that. 
+It'll happen. 
+
+375
+00:23:12,560 --> 00:23:14,640
+Yeah, sure. 
+Will be absolutely. 
+
+376
+00:23:14,720 --> 00:23:18,720
+So let's talk about Ocaml, the 
+language. 
+
+377
+00:23:19,080 --> 00:23:22,000
+One of the things that we are 
+curious about is like what's 
+
+378
+00:23:22,000 --> 00:23:26,320
+like the the big selling point 
+or big differentiator with Ocaml
+
+379
+00:23:26,320 --> 00:23:31,900
+that's like in the realm of. 
+Not academia, but usefulness to 
+
+380
+00:23:31,900 --> 00:23:36,220
+programmers. 
+Well, in a sense, Ocaml is 
+
+381
+00:23:36,220 --> 00:23:40,220
+positioned in a quite 
+interesting position. 
+
+382
+00:23:41,860 --> 00:23:45,300
+It has a type system that is 
+simpler than TypeScript and 
+
+383
+00:23:45,300 --> 00:23:48,980
+nowadays a lot of people are 
+putting up with TypeScript in 
+
+384
+00:23:48,980 --> 00:23:53,540
+order to be able to write huge 
+web applications to write. 
+
+385
+00:23:53,860 --> 00:23:57,740
+Huge server side applications 
+with node JS and TypeScript or 
+
+386
+00:23:57,740 --> 00:24:03,140
+with Dino and TypeScript 
+eventually and TypeScript had to
+
+387
+00:24:03,140 --> 00:24:10,180
+make some sacrifices in terms of
+its type system to wrap 
+
+388
+00:24:10,180 --> 00:24:12,300
+JavaScript. 
+Correctly. 
+
+389
+00:24:12,300 --> 00:24:13,740
+There's some real constraints 
+there. 
+
+390
+00:24:13,780 --> 00:24:15,780
+I don't know what they can. 
+Do Yes, yes. 
+
+391
+00:24:15,780 --> 00:24:19,420
+So learning TypeScript is 
+actually and use learning to use
+
+392
+00:24:19,420 --> 00:24:22,060
+TypeScript in a properly safe 
+way. 
+
+393
+00:24:22,380 --> 00:24:26,140
+It's actually non trivial 
+endeavor and there's a lot of 
+
+394
+00:24:26,140 --> 00:24:29,820
+people teaching it, which is 
+good because I still think this 
+
+395
+00:24:29,820 --> 00:24:32,860
+is a much better way to work 
+with bigger systems than just 
+
+396
+00:24:32,860 --> 00:24:37,220
+using JavaScript, and it's also 
+much better than most of the 
+
+397
+00:24:37,220 --> 00:24:40,400
+other alternatives. 
+And Ocaml is in a better 
+
+398
+00:24:40,400 --> 00:24:43,320
+position in this regard because 
+it's it's coming from this 
+
+399
+00:24:43,320 --> 00:24:51,160
+Hindley Milliner type Lambda 
+calculus systems, where you have
+
+400
+00:24:51,160 --> 00:24:55,400
+a type system that has been 
+built in from the start and 
+
+401
+00:24:55,400 --> 00:24:59,040
+where the language has been 
+designed to find a compromise 
+
+402
+00:24:59,720 --> 00:25:04,000
+between what language does and 
+how you can express that in the 
+
+403
+00:25:04,000 --> 00:25:05,200
+type system. 
+So. 
+
+404
+00:25:06,690 --> 00:25:10,250
+There's much lower learning 
+curve for Ocaml type system, I 
+
+405
+00:25:10,250 --> 00:25:14,050
+would argue, cuz there's not so 
+many special cases because of 
+
+406
+00:25:14,050 --> 00:25:16,570
+the compromises. 
+Right, there's not so many 
+
+407
+00:25:16,650 --> 00:25:19,890
+special cases because of the 
+compromises, not so many 
+
+408
+00:25:20,250 --> 00:25:24,650
+oddities that you have to do, or
+not so many features that they 
+
+409
+00:25:24,650 --> 00:25:28,010
+had to retroactively add in 
+order, for example, to get 
+
+410
+00:25:28,010 --> 00:25:31,490
+exhaustive pattern matching, to 
+make the compiler check that 
+
+411
+00:25:31,490 --> 00:25:34,250
+you're really checking for every
+single case. 
+
+412
+00:25:34,910 --> 00:25:37,750
+That your data can have. 
+Yeah. 
+
+413
+00:25:38,950 --> 00:25:43,950
+So one of the big selling points
+is a very powerful type system 
+
+414
+00:25:44,270 --> 00:25:50,350
+that is learnable easily. 
+Yes, I would argue so. 
+
+415
+00:25:50,390 --> 00:25:52,590
+I mean there needs to be good 
+teaching materials. 
+
+416
+00:25:52,590 --> 00:25:58,070
+So that's that's the thing. 
+Yeah, like in our. 
+
+417
+00:25:58,990 --> 00:26:01,190
+We have to explicitly set any 
+types. 
+
+418
+00:26:01,190 --> 00:26:03,310
+I don't think we did. 
+I think everything was inferred.
+
+419
+00:26:04,500 --> 00:26:08,260
+I think that's one of the things
+about ML languages is. 
+
+420
+00:26:08,460 --> 00:26:10,940
+That not necessarily. 
+Not all of them have this 
+
+421
+00:26:10,940 --> 00:26:14,980
+powerful type inference. 
+So there's ML languages where 
+
+422
+00:26:14,980 --> 00:26:16,700
+you really have to annotate a 
+lot. 
+
+423
+00:26:16,700 --> 00:26:19,780
+So you have to do it like the 
+rest way, write the function 
+
+424
+00:26:19,780 --> 00:26:22,460
+signatures, write the type 
+signatures on these. 
+
+425
+00:26:23,100 --> 00:26:26,610
+But in Ocaml. 
+They they went for a design 
+
+426
+00:26:26,610 --> 00:26:30,170
+decision in the language to to 
+try and do as much type of 
+
+427
+00:26:30,210 --> 00:26:33,890
+inference as they can so that 
+you don't have to annotate so 
+
+428
+00:26:33,890 --> 00:26:35,930
+much. 
+But do you still? 
+
+429
+00:26:35,930 --> 00:26:38,730
+Are there special cases that 
+you're still forced to annotate?
+
+430
+00:26:38,730 --> 00:26:41,130
+Yes, there are. 
+There are cases where you should
+
+431
+00:26:41,130 --> 00:26:44,850
+do that, and there are cases 
+where you get really not so nice
+
+432
+00:26:44,850 --> 00:26:48,690
+error messages when you don't. 
+So when you learn a Camel, it's 
+
+433
+00:26:48,690 --> 00:26:53,170
+a lot about seeing OK, how much 
+type annotations do I need, or 
+
+434
+00:26:53,290 --> 00:26:56,210
+when does a type annotation? 
+Help me when debugging? 
+
+435
+00:26:56,650 --> 00:27:00,130
+Or when is it so obvious that I 
+just omit it because the code is
+
+436
+00:27:00,130 --> 00:27:04,850
+shorter, more readable? 
+Yeah, So is that just a little 
+
+437
+00:27:04,850 --> 00:27:10,090
+aside? 
+Is that something that can be 
+
+438
+00:27:10,330 --> 00:27:15,770
+proven one way or another? 
+That no matter how sophisticated
+
+439
+00:27:15,770 --> 00:27:18,330
+your type system, there will 
+always be special cases where 
+
+440
+00:27:18,330 --> 00:27:21,810
+you're forced to tell the 
+compiler what this type is? 
+
+441
+00:27:23,300 --> 00:27:26,460
+Well, there there is something 
+called decidability. 
+
+442
+00:27:27,700 --> 00:27:31,180
+So some type systems are 
+undecidable, and Haskell for 
+
+443
+00:27:31,180 --> 00:27:34,460
+sure has an undecidable type 
+system. 
+
+444
+00:27:36,140 --> 00:27:38,900
+Without Camel. 
+I'm not even sure at the moment,
+
+445
+00:27:39,060 --> 00:27:44,540
+and it's not the part I care 
+about a lot sure, so I just care
+
+446
+00:27:44,540 --> 00:27:46,860
+about the theory stuff at this. 
+Point right. 
+
+447
+00:27:46,900 --> 00:27:54,060
+I'm yeah, I I'm kind of. 
+But for practical uses, Ocaml 
+
+448
+00:27:54,380 --> 00:28:00,980
+has a mathematically based type 
+system that should be easy to 
+
+449
+00:28:00,980 --> 00:28:06,900
+learn and provides really strong
+type inference. 
+
+450
+00:28:07,100 --> 00:28:08,860
+Right. 
+And it provides really strong 
+
+451
+00:28:08,860 --> 00:28:11,540
+guarantees. 
+So unlike TypeScript, it doesn't
+
+452
+00:28:11,540 --> 00:28:17,980
+have have any or unknowns or 
+such, so you have everything 
+
+453
+00:28:17,980 --> 00:28:21,820
+typed. 
+That was actually one thing we 
+
+454
+00:28:21,820 --> 00:28:26,940
+we explored was OK if I create a
+list that contains a string and 
+
+455
+00:28:27,060 --> 00:28:33,780
+an int, is it going to up level 
+this type to some common thing 
+
+456
+00:28:33,780 --> 00:28:35,660
+that is string and int? 
+And not. 
+
+457
+00:28:35,660 --> 00:28:38,500
+Emma just let you know it. 
+It's just like compiler, you 
+
+458
+00:28:38,500 --> 00:28:41,220
+can't do that. 
+Right, you can do it. 
+
+459
+00:28:41,860 --> 00:28:46,420
+But you have to use some feature
+from the type system to do it. 
+
+460
+00:28:46,700 --> 00:28:49,020
+Yeah okay, you have to like 
+create your own type. 
+
+461
+00:28:49,180 --> 00:28:52,180
+You have to create your own type
+that has these different. 
+
+462
+00:28:52,740 --> 00:28:54,620
+Would that be a product type? 
+Would you have a product? 
+
+463
+00:28:54,740 --> 00:28:57,780
+You could do this as a product 
+type or you, depending on how 
+
+464
+00:28:57,780 --> 00:28:59,700
+you use it. 
+You could also do this as a 
+
+465
+00:28:59,940 --> 00:29:03,540
+GADT, which is something kind of
+magical, so. 
+
+466
+00:29:04,510 --> 00:29:08,390
+But not that magical. 
+So ADT. 
+
+467
+00:29:08,670 --> 00:29:12,910
+This is the product type or the 
+sum type, where you have 
+
+468
+00:29:12,910 --> 00:29:15,910
+different cases, different 
+variants how the data looks. 
+
+469
+00:29:16,230 --> 00:29:19,590
+And GADT is something more 
+general than that. 
+
+470
+00:29:19,590 --> 00:29:22,390
+It looks similar, but it's more 
+general than that. 
+
+471
+00:29:24,720 --> 00:29:29,000
+And this goes in the direction 
+of existential types, where you 
+
+472
+00:29:29,000 --> 00:29:32,840
+can actually hide A type 
+parameter within another type to
+
+473
+00:29:32,840 --> 00:29:35,360
+make it look like it's just one 
+type. 
+
+474
+00:29:36,840 --> 00:29:40,640
+So this is this is quite 
+magical, but you don't need it. 
+
+475
+00:29:40,760 --> 00:29:44,000
+So the Go people have proven 
+that you don't need this. 
+
+476
+00:29:44,000 --> 00:29:48,840
+They are dealing on a much more 
+concrete level, and in Ocaml you
+
+477
+00:29:48,840 --> 00:29:51,200
+can work basically at the level 
+of Go. 
+
+478
+00:29:52,430 --> 00:29:54,910
+Very well. 
+You can write fine code at the 
+
+479
+00:29:54,910 --> 00:30:00,550
+level of what Goes type system 
+does, just that Ocaml does it 
+
+480
+00:30:00,550 --> 00:30:04,750
+better in a sense. 
+So Go is very weak with some 
+
+481
+00:30:04,750 --> 00:30:07,990
+types. 
+With these unions, I feel like 
+
+482
+00:30:07,990 --> 00:30:11,150
+they really have to patch this 
+up and they really have to fix 
+
+483
+00:30:11,150 --> 00:30:13,750
+this and bring this missing 
+feature into the language. 
+
+484
+00:30:13,750 --> 00:30:19,270
+And that is fine language. 
+Yeah, I do appreciate languages 
+
+485
+00:30:19,270 --> 00:30:24,450
+when you can start with. 
+Very familiar kind of basic type
+
+486
+00:30:24,450 --> 00:30:28,450
+system usage. 
+But then as you want more power,
+
+487
+00:30:28,650 --> 00:30:32,450
+you can reach for it to 
+existential types or phantom 
+
+488
+00:30:32,450 --> 00:30:35,530
+types, or you know all the other
+kind of powerful type system 
+
+489
+00:30:35,530 --> 00:30:39,200
+things and and. 
+Yeah, I think with Go, my 
+
+490
+00:30:39,200 --> 00:30:42,600
+experience is like, I really 
+wish I had this feature, this 
+
+491
+00:30:42,600 --> 00:30:45,280
+other kind of type system 
+feature, at some point, and it's
+
+492
+00:30:45,280 --> 00:30:48,320
+just not there. 
+And so I'm glad that yeah, Ocaml
+
+493
+00:30:48,320 --> 00:30:50,880
+and Skala and others kind of 
+have these more advanced type 
+
+494
+00:30:50,880 --> 00:30:53,920
+system features that when you 
+need them, you can at least get 
+
+495
+00:30:53,920 --> 00:30:55,640
+them. 
+Same, Same. 
+
+496
+00:30:55,640 --> 00:30:56,960
+That's how I feel about GO, 
+yeah. 
+
+497
+00:30:58,720 --> 00:31:02,420
+So. 
+Any other, like any other things
+
+498
+00:31:02,420 --> 00:31:06,500
+about Ocaml that are kind of in 
+that value proposition area of 
+
+499
+00:31:06,500 --> 00:31:09,940
+like why developers should be 
+interested in Ocaml? 
+
+500
+00:31:10,580 --> 00:31:16,860
+Well, it's a compile language. 
+It has a byte code compiler that
+
+501
+00:31:16,860 --> 00:31:20,300
+produces byte code that can run 
+be interpreted on different 
+
+502
+00:31:20,300 --> 00:31:22,180
+platforms, so it's portable in 
+that sense. 
+
+503
+00:31:22,460 --> 00:31:25,580
+It has also multiple native 
+backends, so. 
+
+504
+00:31:26,310 --> 00:31:30,590
+The only thing that I would say 
+in terms of platform support 
+
+505
+00:31:30,590 --> 00:31:34,550
+that's not great yet is Windows,
+but it's getting there, so work 
+
+506
+00:31:34,550 --> 00:31:38,990
+is being done on that. 
+And it has a pretty fast 
+
+507
+00:31:38,990 --> 00:31:42,750
+compiler, so people are always 
+surprised how fast Ocaml 
+
+508
+00:31:42,750 --> 00:31:48,870
+compiles when they're coming 
+from, say, Rust or Haskell or C 
+
+509
+00:31:49,350 --> 00:31:51,830
+or such. 
+Oh yeah, we noticed it was. 
+
+510
+00:31:51,990 --> 00:31:58,280
+It's to be extremely fast. 
+Yeah, but I I've always thought 
+
+511
+00:31:58,280 --> 00:32:01,320
+that ohh, if you do all this 
+advanced type system stuff and 
+
+512
+00:32:01,320 --> 00:32:05,040
+you do all this amazing type 
+inference that your compiler had
+
+513
+00:32:05,040 --> 00:32:07,880
+to be slow. 
+But Ocaml is kind of showing 
+
+514
+00:32:07,880 --> 00:32:10,680
+that no, that's not the case. 
+Like Okay, how does it that 
+
+515
+00:32:10,680 --> 00:32:13,840
+Ocaml's been able to do all the 
+amazing type system stuff 
+
+516
+00:32:13,840 --> 00:32:17,460
+without the slow compiler? 
+Well, it doesn't do all the 
+
+517
+00:32:17,460 --> 00:32:20,020
+amazing type system stuff like 
+Haskell does. 
+
+518
+00:32:20,020 --> 00:32:22,580
+So it doesn't do higher kind of 
+types. 
+
+519
+00:32:23,660 --> 00:32:27,540
+It just doesn't do a lot of 
+things that become hard to 
+
+520
+00:32:27,540 --> 00:32:30,860
+check. 
+And that's that's what's put it 
+
+521
+00:32:30,860 --> 00:32:33,860
+in an interesting position that 
+it's in between. 
+
+522
+00:32:33,860 --> 00:32:38,340
+So it's in no place. 
+It's the language that excels or
+
+523
+00:32:38,340 --> 00:32:41,740
+that really pushes the boundary 
+in a huge way. 
+
+524
+00:32:42,060 --> 00:32:45,460
+It's just the language that sits
+in kind of a sweet spot. 
+
+525
+00:32:47,320 --> 00:32:51,560
+In the trade-offs that you have 
+to make between like compile 
+
+526
+00:32:51,560 --> 00:32:59,160
+time speed versus more powerful 
+type features, in the trade off 
+
+527
+00:32:59,160 --> 00:33:05,000
+between runtime speed and I 
+don't know, more yeah, more 
+
+528
+00:33:05,000 --> 00:33:08,240
+something. 
+So you wouldn't pitch Ocaml as 
+
+529
+00:33:08,240 --> 00:33:10,840
+having the most advanced type 
+system. 
+
+530
+00:33:12,080 --> 00:33:14,640
+No, no, no. 
+Actually I would anti picture 
+
+531
+00:33:14,680 --> 00:33:20,200
+because when you are tired of 
+the most most expansive type 
+
+532
+00:33:20,200 --> 00:33:24,040
+system, then then you're the 
+person who would enjoy a camera.
+
+533
+00:33:24,040 --> 00:33:27,640
+So when you have done rust and 
+you've seen like oh I love rust,
+
+534
+00:33:27,960 --> 00:33:34,080
+it's so fast, it's wonderful. 
+But you have to do all these 
+
+535
+00:33:34,160 --> 00:33:35,720
+types. 
+You have to write all these 
+
+536
+00:33:35,720 --> 00:33:40,600
+types, or these clones, or these
+lifetimes and. 
+
+537
+00:33:41,060 --> 00:33:44,060
+It can be really distracting, so
+for some projects it's really 
+
+538
+00:33:44,060 --> 00:33:45,820
+worth it. 
+You need to squeeze out the 
+
+539
+00:33:45,820 --> 00:33:49,420
+performance you cannot afford a 
+garbage collector, Then do Rust.
+
+540
+00:33:49,420 --> 00:33:52,300
+That's wonderful When you're 
+doing something like web 
+
+541
+00:33:52,300 --> 00:33:57,060
+development, where it's mostly 
+IO bound, where you're waiting 
+
+542
+00:33:57,060 --> 00:34:00,340
+on the database, where you're 
+waiting on the HTTP request, 
+
+543
+00:34:00,340 --> 00:34:05,380
+where you're doing all this kind
+of waiting, there is really no 
+
+544
+00:34:05,380 --> 00:34:09,570
+point to carry the burden. 
+Of having to write all these 
+
+545
+00:34:09,570 --> 00:34:11,810
+types. 
+Instead, you're in a situation 
+
+546
+00:34:11,810 --> 00:34:14,610
+where you're developing 
+something that you want people 
+
+547
+00:34:14,610 --> 00:34:20,170
+to use and people, they give 
+feedback, and they are really, 
+
+548
+00:34:20,170 --> 00:34:23,130
+really happy when you react to 
+that feedback and when you can 
+
+549
+00:34:23,130 --> 00:34:27,530
+make a quick change when you 
+don't have to, like, rearrange 
+
+550
+00:34:27,530 --> 00:34:32,460
+and refactor your types and. 
+Yeah, do all these things that 
+
+551
+00:34:32,460 --> 00:34:37,139
+you have to do in order to to do
+a full refactor on a on a 
+
+552
+00:34:37,139 --> 00:34:39,820
+language with a very powerful 
+type system. 
+
+553
+00:34:40,940 --> 00:34:48,739
+Yeah, so there are some kind of 
+extensions is maybe not the 
+
+554
+00:34:48,739 --> 00:34:52,780
+right way to say it of Ocaml 
+that I've come across that I'd 
+
+555
+00:34:52,780 --> 00:34:55,580
+like to to learn more about, 
+which is we. 
+
+556
+00:34:55,780 --> 00:34:59,100
+I've seen the reason ML stuff 
+and Coc and. 
+
+557
+00:34:59,390 --> 00:35:03,030
+What's the orientation between 
+those and Ocaml? 
+
+558
+00:35:03,510 --> 00:35:08,270
+OK, so Coq is an automated 
+theorem prover. 
+
+559
+00:35:08,270 --> 00:35:11,830
+So it's basically a similar 
+thing as Isabelle Hall, where 
+
+560
+00:35:11,830 --> 00:35:17,670
+you write proofs, and you 
+perform these proofs by applying
+
+561
+00:35:17,670 --> 00:35:22,470
+logic rules or having the tool 
+apply logic rules to the point 
+
+562
+00:35:22,470 --> 00:35:25,870
+where it doesn't know what to 
+do, and you're talking about 
+
+563
+00:35:25,870 --> 00:35:29,980
+just any mathematical proof. 
+You're not talking about 
+
+564
+00:35:29,980 --> 00:35:33,260
+something interesting to 
+computer science. 
+
+565
+00:35:33,260 --> 00:35:34,340
+Or what. 
+Whatever. 
+
+566
+00:35:34,540 --> 00:35:37,180
+Yes, both, both. 
+So with Coq you can do any 
+
+567
+00:35:37,180 --> 00:35:40,180
+mathematical proof, but you can 
+also prove properties about 
+
+568
+00:35:40,180 --> 00:35:44,140
+programs, which is the thing 
+that's very popular to do in 
+
+569
+00:35:44,140 --> 00:35:48,460
+highly safety critical 
+industries like automotive, 
+
+570
+00:35:48,460 --> 00:35:51,980
+medical, these kinds of 
+industries where you have to 
+
+571
+00:35:51,980 --> 00:35:59,390
+have your product certified. 
+You can write code in Coq, and 
+
+572
+00:35:59,390 --> 00:36:02,630
+you can write proofs in Coq. 
+And then you can generate Ocaml 
+
+573
+00:36:02,630 --> 00:36:06,790
+code, for example, and run that.
+And this Ocaml code is proven to
+
+574
+00:36:06,790 --> 00:36:09,350
+obey the specification you've 
+wrote in Coq. 
+
+575
+00:36:09,350 --> 00:36:16,070
+So basically this is a much more
+strange way of writing tests. 
+
+576
+00:36:16,070 --> 00:36:18,390
+You could imagine it like that. 
+So when you write a test, you're
+
+577
+00:36:18,390 --> 00:36:21,190
+testing some inputs and some 
+outputs. 
+
+578
+00:36:21,780 --> 00:36:24,300
+Whereas with formal 
+verification, you're making a 
+
+579
+00:36:24,340 --> 00:36:27,700
+proof over all inputs and all 
+the outputs. 
+
+580
+00:36:28,020 --> 00:36:32,900
+So the coverage is is just on a 
+different level when you do 
+
+581
+00:36:32,900 --> 00:36:35,660
+formal verification. 
+But this is something that that 
+
+582
+00:36:35,660 --> 00:36:38,740
+only affects the people who work
+in these industries and these 
+
+583
+00:36:38,740 --> 00:36:44,100
+jobs are fairly rare. 
+So reason and Mel, that's 
+
+584
+00:36:44,100 --> 00:36:47,980
+something that's much closer to 
+I think what the majority of us 
+
+585
+00:36:47,980 --> 00:36:49,900
+have to deal with and want to 
+deal with. 
+
+586
+00:36:51,190 --> 00:36:55,510
+And that I don't really know the
+history of all of this very 
+
+587
+00:36:55,510 --> 00:36:58,390
+well. 
+But in short, there is an 
+
+588
+00:36:58,390 --> 00:37:04,590
+alternative syntax for Ocaml. 
+So at some point a community 
+
+589
+00:37:04,950 --> 00:37:08,790
+broke off from Ocaml to say 
+that, well, we disagree with 
+
+590
+00:37:08,950 --> 00:37:12,790
+Ocaml's syntax. 
+We we don't like that it's so 
+
+591
+00:37:12,830 --> 00:37:17,070
+alien to the average programmer.
+We don't like that the 
+
+592
+00:37:17,070 --> 00:37:20,630
+JavaScript developer can't just 
+take it and write code and we 
+
+593
+00:37:20,630 --> 00:37:22,350
+can show them and they are 
+familiar. 
+
+594
+00:37:22,630 --> 00:37:26,870
+Instead people get this kind of 
+angsty reaction seeing like oh 
+
+595
+00:37:27,070 --> 00:37:31,310
+this syntax it looks unfamiliar.
+I'm I'm a bit very can I read 
+
+596
+00:37:31,310 --> 00:37:33,310
+this? 
+Can I understand this and this 
+
+597
+00:37:33,310 --> 00:37:37,350
+is what what reason and all? 
+Yeah, so are the reasons syntax?
+
+598
+00:37:37,350 --> 00:37:38,950
+Bring a more familiar syntax to 
+it. 
+
+599
+00:37:39,230 --> 00:37:42,710
+How much of the like Ocaml, 
+foundational tool chain, 
+
+600
+00:37:42,710 --> 00:37:45,030
+compiler? 
+All that kind of stuff is shared
+
+601
+00:37:45,030 --> 00:37:51,270
+to Coc and Reasonml? 
+Is is there a common foundation 
+
+602
+00:37:51,270 --> 00:37:53,230
+or are these kind of separate 
+worlds or? 
+
+603
+00:37:53,510 --> 00:37:57,990
+Yeah, so as I understand, 
+Reasonml makes heavy use of the 
+
+604
+00:37:58,110 --> 00:38:01,510
+Ocaml compiler, so they're very 
+close and you're sharing a lot 
+
+605
+00:38:02,510 --> 00:38:05,180
+in this regard. 
+Coc, however, that's the 
+
+606
+00:38:05,180 --> 00:38:08,700
+different application. 
+So it's just basically an Ocaml 
+
+607
+00:38:08,980 --> 00:38:11,580
+application. 
+So Coc is written in Ocaml. 
+
+608
+00:38:11,860 --> 00:38:14,140
+Got it. 
+OK, but a different syntax, 
+
+609
+00:38:14,140 --> 00:38:16,460
+different compiler. 
+And then as you said, you can 
+
+610
+00:38:16,460 --> 00:38:20,460
+take Coc and like do some 
+transplation or something down 
+
+611
+00:38:20,460 --> 00:38:23,180
+to Ocaml, but but essentially. 
+Yeah. 
+
+612
+00:38:23,180 --> 00:38:27,620
+So Coc is actually a very rich 
+academic ecosystem and academic 
+
+613
+00:38:27,620 --> 00:38:30,780
+and used in highly safety 
+critical industries. 
+
+614
+00:38:31,380 --> 00:38:35,590
+So. 
+For example, there was the Comp 
+
+615
+00:38:35,590 --> 00:38:42,270
+Cert project to certify a small 
+C compiler to prove that it 
+
+616
+00:38:42,270 --> 00:38:47,550
+compiles the code correctly to 
+assembly code through multiple 
+
+617
+00:38:47,550 --> 00:38:50,590
+layers of intermediate 
+representations. 
+
+618
+00:38:50,590 --> 00:38:56,790
+So that's pretty impressive 
+projects, but a lot of this form
+
+619
+00:38:56,790 --> 00:39:01,350
+of verification is not quite so 
+ergonomic that you could do 
+
+620
+00:39:01,350 --> 00:39:04,220
+this. 
+As scale or that you would find 
+
+621
+00:39:04,220 --> 00:39:06,300
+people easily who can do this as
+scale. 
+
+622
+00:39:06,300 --> 00:39:10,740
+So you can teach people, but 
+it's slower than writing just 
+
+623
+00:39:10,740 --> 00:39:14,580
+the program when you have to 
+write the program and prove the 
+
+624
+00:39:14,580 --> 00:39:17,380
+correctness, or when you have to
+express the program in this 
+
+625
+00:39:17,380 --> 00:39:19,900
+other language, then prove the 
+correctness over there. 
+
+626
+00:39:20,140 --> 00:39:25,580
+Generate code. 
+But so Reason ML is a prover as 
+
+627
+00:39:25,580 --> 00:39:28,260
+well. 
+No, Reasonable is not a prover. 
+
+628
+00:39:28,260 --> 00:39:33,460
+So Reasonable is just like an 
+alternative syntax to Ocaml, and
+
+629
+00:39:33,460 --> 00:39:37,140
+it comes with a community that 
+is very practical minded. 
+
+630
+00:39:37,580 --> 00:39:42,460
+So lots of great things have 
+have come to the Ocaml ecosystem
+
+631
+00:39:42,740 --> 00:39:47,060
+thanks to the Reason community 
+who were very interested in like
+
+632
+00:39:47,060 --> 00:39:51,340
+using React safely from Ocaml. 
+So there's a wonderful project, 
+
+633
+00:39:51,340 --> 00:39:56,650
+Reason React that reps react. 
+You know Camel so that you are 
+
+634
+00:39:56,650 --> 00:40:04,370
+in reason so nowadays. 
+So Reasonml is kind of like kind
+
+635
+00:40:04,370 --> 00:40:08,450
+of like Ocaml with a more 
+approachable syntax or more 
+
+636
+00:40:08,450 --> 00:40:11,130
+familiar syntax. 
+Yes, with more brackets I think 
+
+637
+00:40:11,490 --> 00:40:16,410
+more. 
+Brackets, I see. 
+
+638
+00:40:16,770 --> 00:40:20,050
+Well, I mean, so far from what 
+I've heard, the most 
+
+639
+00:40:20,050 --> 00:40:23,090
+interesting. 
+You know the the thing that 
+
+640
+00:40:23,090 --> 00:40:28,690
+Ocaml does that's kind of unique
+is proving correctness. 
+
+641
+00:40:29,850 --> 00:40:33,330
+And I can see, I mean like I 
+don't know any other you know 
+
+642
+00:40:33,650 --> 00:40:36,490
+I'm at least I'm unaware of any 
+other system that could do that 
+
+643
+00:40:36,850 --> 00:40:42,170
+and and so with varying degrees 
+of of complexity. 
+
+644
+00:40:42,170 --> 00:40:45,890
+So sounds like if you go all the
+way to cock you can prove yes 
+
+645
+00:40:45,890 --> 00:40:48,770
+you can have proofs. 
+But it's a lot of work but it 
+
+646
+00:40:48,770 --> 00:40:51,610
+seems like. 
+I mean, could that be used for 
+
+647
+00:40:51,610 --> 00:40:58,810
+like security? 
+Validating the correctness of 
+
+648
+00:40:58,810 --> 00:41:01,010
+your security system or 
+something like that. 
+
+649
+00:41:01,730 --> 00:41:04,890
+Depends. 
+I mean, usually security is in 
+
+650
+00:41:04,890 --> 00:41:08,130
+the plumbing, or security issues
+are in the plumbing, right? 
+
+651
+00:41:08,130 --> 00:41:10,890
+So, and the plumbing isn't 
+usually the thing that you 
+
+652
+00:41:10,890 --> 00:41:14,850
+verify unless you first 
+establish a verified platform 
+
+653
+00:41:14,850 --> 00:41:18,610
+that verifies all the plumbing 
+through all the layers. 
+
+654
+00:41:20,270 --> 00:41:25,110
+Which is in principle doable, 
+but it's a giant project, giant 
+
+655
+00:41:25,110 --> 00:41:29,430
+project and very, very hard to 
+do at an industry escape. 
+
+656
+00:41:29,430 --> 00:41:32,230
+I mean there's there's things 
+out there, but I haven't been in
+
+657
+00:41:32,230 --> 00:41:36,910
+the loop on that. 
+But what I do see is like they 
+
+658
+00:41:36,910 --> 00:41:40,390
+have wonderful applications for 
+this kind of verified software, 
+
+659
+00:41:40,990 --> 00:41:45,830
+for example satellites in space,
+so you only get one chance to 
+
+660
+00:41:45,830 --> 00:41:49,760
+deploy into production. 
+So you want to do it right? 
+
+661
+00:41:50,440 --> 00:41:52,080
+Yeah. 
+And that's obviously a wonderful
+
+662
+00:41:52,080 --> 00:41:57,320
+use case for a language that can
+be fully formally verified and 
+
+663
+00:41:57,320 --> 00:42:00,600
+has been exceptionally stable 
+and backwards compatible over 
+
+664
+00:42:00,600 --> 00:42:04,600
+the last decades. 
+So it sounds like one of the 
+
+665
+00:42:04,680 --> 00:42:12,140
+kind of killer features of Ocaml
+is the ability to, in varying 
+
+666
+00:42:12,140 --> 00:42:17,180
+degrees, prove the correctness 
+of programs and going all the 
+
+667
+00:42:17,180 --> 00:42:20,660
+way to Coc. 
+If you wanna like like get, go 
+
+668
+00:42:20,660 --> 00:42:24,340
+to the extreme end of that. 
+But even just base Ocaml gives 
+
+669
+00:42:24,340 --> 00:42:28,660
+you the ability to to prove 
+correctness in a in a in a good 
+
+670
+00:42:28,660 --> 00:42:32,220
+way. 
+Well, you just think it's like 
+
+671
+00:42:32,220 --> 00:42:35,480
+one of the killer features or? 
+It is one of the killer 
+
+672
+00:42:35,480 --> 00:42:37,720
+features, but the use cases are 
+not a lot. 
+
+673
+00:42:37,720 --> 00:42:41,160
+So we really want to to have 
+more killer features of Ocaml. 
+
+674
+00:42:41,160 --> 00:42:44,800
+And I think web is web is a is a
+pretty good one. 
+
+675
+00:42:44,800 --> 00:42:48,160
+Like Ocaml has a wonderful graph
+ql library. 
+
+676
+00:42:48,720 --> 00:42:51,400
+I I don't know. 
+Have you have you used Graph QL 
+
+677
+00:42:51,400 --> 00:42:55,680
+in anger? 
+Yes and no. 
+
+678
+00:42:55,680 --> 00:42:59,480
+Like I I I like some of the 
+ideas of it. 
+
+679
+00:42:59,480 --> 00:43:04,030
+But yeah, I think generally the 
+the times I've used it, it felt 
+
+680
+00:43:04,030 --> 00:43:07,390
+like a struggle. 
+So maybe if Ocaml can make 
+
+681
+00:43:07,390 --> 00:43:10,910
+Graphql not feel like a 
+struggle, that would be nice. 
+
+682
+00:43:11,110 --> 00:43:14,790
+So actually Ocaml is the first 
+language where I felt that 
+
+683
+00:43:14,790 --> 00:43:19,350
+Graphql was not a struggle 
+because it had a good, good 
+
+684
+00:43:19,350 --> 00:43:21,510
+library and it had a good 
+library. 
+
+685
+00:43:21,510 --> 00:43:24,870
+It has a good library that makes
+use of the type system in such a
+
+686
+00:43:24,870 --> 00:43:28,670
+way that you can declare the 
+schema in such a way that you're
+
+687
+00:43:28,670 --> 00:43:30,510
+actually forced to obey the 
+schema. 
+
+688
+00:43:31,860 --> 00:43:35,540
+And when you know you obey the 
+schema, that's that's pretty 
+
+689
+00:43:35,540 --> 00:43:38,940
+nice, so you know at compile 
+time that you obey the schema. 
+
+690
+00:43:39,180 --> 00:43:42,620
+So not at runtime when something
+crashes and unexpected stuff 
+
+691
+00:43:42,620 --> 00:43:47,150
+happens, but at compile time. 
+And there's a pretty nice blog 
+
+692
+00:43:47,150 --> 00:43:49,350
+post series. 
+There's a wonderful blog post 
+
+693
+00:43:49,350 --> 00:43:50,950
+series. 
+I keep shilling that one because
+
+694
+00:43:50,950 --> 00:43:54,190
+I would like to read it again 
+because it also shows like the 
+
+695
+00:43:54,190 --> 00:44:00,110
+feature Gadts. 
+So how you can use Gadts to 
+
+696
+00:44:00,110 --> 00:44:04,270
+model these Graphql schemas and 
+at the point where you have a 
+
+697
+00:44:04,270 --> 00:44:09,170
+verified or. 
+A correct Graphql schema. 
+
+698
+00:44:09,210 --> 00:44:12,650
+Then you can use the code 
+generation technology from the 
+
+699
+00:44:12,650 --> 00:44:17,730
+JavaScript TypeScript ecosystem 
+to generate typed bindings for 
+
+700
+00:44:17,730 --> 00:44:21,210
+your TypeScript code, and you 
+connect to all the existing 
+
+701
+00:44:21,210 --> 00:44:23,970
+ecosystem that people already 
+use. 
+
+702
+00:44:26,090 --> 00:44:28,130
+That's cool. 
+That sounds like maybe one of 
+
+703
+00:44:28,130 --> 00:44:31,970
+the other potential killer 
+features is kind of correctness 
+
+704
+00:44:31,970 --> 00:44:35,940
+with Graphql. 
+Yeah, or correctness was was 
+
+705
+00:44:35,940 --> 00:44:40,020
+mostly anything like correctness
+in in database access. 
+
+706
+00:44:40,100 --> 00:44:43,820
+So there's still, there's still 
+room to explore. 
+
+707
+00:44:44,940 --> 00:44:49,940
+But when I when I compare what I
+used in Rust for database access
+
+708
+00:44:49,940 --> 00:44:53,940
+for for type safe database 
+access, well, wasn't really 
+
+709
+00:44:53,980 --> 00:44:57,020
+fully type safe. 
+Yeah, because it's kind of kind 
+
+710
+00:44:57,020 --> 00:45:00,500
+of hard to to get this right in 
+terms of ergonomics like these, 
+
+711
+00:45:00,500 --> 00:45:05,320
+kind of. 
+Database wrappers, This schema, 
+
+712
+00:45:06,520 --> 00:45:12,280
+These SQL builders. 
+I'm pretty sure no one wants an 
+
+713
+00:45:12,280 --> 00:45:17,400
+ORM anymore these days. 
+I think mostly it's been kind of
+
+714
+00:45:18,160 --> 00:45:24,840
+shown to be not too restrictive,
+like not everything maps to 
+
+715
+00:45:24,840 --> 00:45:27,720
+objects. 
+Right, exactly. 
+
+716
+00:45:27,720 --> 00:45:30,080
+And that's not what you do in 
+Ocaml in general. 
+
+717
+00:45:30,080 --> 00:45:33,110
+So you don't deal with. 
+With objects, you deal with 
+
+718
+00:45:33,150 --> 00:45:36,230
+values and you deal with 
+functions operating on them. 
+
+719
+00:45:36,230 --> 00:45:39,230
+So it's it's a much simpler way 
+of thinking. 
+
+720
+00:45:39,390 --> 00:45:42,670
+Instead of thinking about an 
+object that has methods on it, 
+
+721
+00:45:43,110 --> 00:45:46,710
+you just have data. 
+And like in C you just have 
+
+722
+00:45:46,710 --> 00:45:49,510
+data. 
+This is what I like about C only
+
+723
+00:45:49,510 --> 00:45:52,590
+having data. 
+Yeah, well, and I think taking 
+
+724
+00:45:52,590 --> 00:45:55,670
+inheritance out of the picture, 
+like Go and Rust, and I think 
+
+725
+00:45:55,830 --> 00:45:58,590
+Ocaml, does Ocaml have 
+inheritance? 
+
+726
+00:45:59,680 --> 00:46:01,440
+No, Ocaml doesn't do 
+inheritance. 
+
+727
+00:46:01,440 --> 00:46:05,960
+So at camel markets itself as 
+the rehabilitation clinic for 
+
+728
+00:46:05,960 --> 00:46:08,480
+the OOP program. 
+Right, exactly. 
+
+729
+00:46:08,760 --> 00:46:11,920
+So. 
+I find that taking inheritance 
+
+730
+00:46:11,960 --> 00:46:15,400
+out of the picture seems obvious
+in hindsight. 
+
+731
+00:46:16,600 --> 00:46:20,600
+No, but it was kind of looking 
+cool back then, right? 
+
+732
+00:46:20,680 --> 00:46:22,080
+Ohh. 
+Yeah, at first like it was like,
+
+733
+00:46:22,120 --> 00:46:25,000
+but we didn't understand what 
+the limitations were, what the 
+
+734
+00:46:25,000 --> 00:46:28,360
+tradeoffs were and and like 
+also. 
+
+735
+00:46:28,950 --> 00:46:33,510
+I think because of small talk 
+where they just everything was 
+
+736
+00:46:33,510 --> 00:46:38,310
+inheritance and everything was 
+inheritance and adding methods 
+
+737
+00:46:38,310 --> 00:46:42,910
+to these things, which is like 
+how does that balance with the 
+
+738
+00:46:42,910 --> 00:46:48,150
+liscov substitution principle. 
+It doesn't, Yeah, we we didn't 
+
+739
+00:46:48,150 --> 00:46:51,910
+really get all that at first. 
+It was just all shiny and oh 
+
+740
+00:46:51,910 --> 00:46:55,350
+look, you can do everything like
+in small talk, but with the 
+
+741
+00:46:55,350 --> 00:46:58,080
+constraints that we had. 
+You couldn't. 
+
+742
+00:46:58,200 --> 00:47:01,120
+You couldn't. 
+It wasn't small talk well, and I
+
+743
+00:47:01,120 --> 00:47:05,360
+think it took us a while to 
+realize that that we can 
+
+744
+00:47:06,200 --> 00:47:09,800
+adequately model what we need 
+with some types of product 
+
+745
+00:47:09,800 --> 00:47:12,200
+types. 
+And if you yeah and instead of 
+
+746
+00:47:12,200 --> 00:47:16,360
+inheritance you use composition 
+and yeah and that works 
+
+747
+00:47:16,440 --> 00:47:19,760
+perfectly well. 
+I wanna ask a really basic 
+
+748
+00:47:19,760 --> 00:47:22,880
+question because when we were 
+going through the onboarding we 
+
+749
+00:47:23,360 --> 00:47:26,080
+immediately came across the 
+double semi colon. 
+
+750
+00:47:26,660 --> 00:47:28,340
+And. 
+Oh yes, the one thing that it 
+
+751
+00:47:28,340 --> 00:47:31,580
+said was you have to put this in
+here, it's essential. 
+
+752
+00:47:31,820 --> 00:47:34,380
+But there was no description of 
+what does it mean and. 
+
+753
+00:47:34,460 --> 00:47:38,940
+We couldn't find it, yes. 
+So I think this will most likely
+
+754
+00:47:38,980 --> 00:47:43,100
+be resolved when we push the 
+work in progress Tutorial life 
+
+755
+00:47:43,780 --> 00:47:47,260
+again. 
+This is an idea of synchrony of 
+
+756
+00:47:47,620 --> 00:47:51,210
+the repple. 
+So of you top or of the ocaml 
+
+757
+00:47:51,210 --> 00:47:55,130
+repel where you write an 
+expression and where you have to
+
+758
+00:47:55,130 --> 00:47:56,930
+tell it where the expression 
+ends. 
+
+759
+00:47:57,330 --> 00:48:00,970
+So it's basically just like in 
+post grace. 
+
+760
+00:48:00,970 --> 00:48:03,970
+You also have to enter the semi 
+colon and it's the same thing, 
+
+761
+00:48:03,970 --> 00:48:06,690
+just that you're telling the 
+repel I'm done with my 
+
+762
+00:48:06,690 --> 00:48:08,650
+expression. 
+I'm done with my expression, 
+
+763
+00:48:08,650 --> 00:48:10,970
+that's all it says. 
+But when you're in a source file
+
+764
+00:48:10,970 --> 00:48:13,250
+in VS Code. 
+No, you don't do this. 
+
+765
+00:48:13,250 --> 00:48:15,210
+You don't need it because no. 
+You don't do this. 
+
+766
+00:48:15,450 --> 00:48:20,610
+Yeah, say that so okay. 
+Well that's helpful, but I would
+
+767
+00:48:20,610 --> 00:48:22,410
+just like to. 
+I mean, since it seems like 
+
+768
+00:48:22,410 --> 00:48:24,730
+you're working on some of this 
+stuff, I would like to put in a 
+
+769
+00:48:24,730 --> 00:48:29,730
+request, which is yeah, don't 
+use the REPL to show your 
+
+770
+00:48:29,730 --> 00:48:34,690
+examples, use files that can. 
+Because one of the things about 
+
+771
+00:48:34,690 --> 00:48:38,010
+it is like I'm looking at the 
+REPL code and I'm going has how 
+
+772
+00:48:38,010 --> 00:48:39,770
+is how. 
+How are they testing that? 
+
+773
+00:48:40,480 --> 00:48:44,720
+Whereas if you have standalone 
+files, you know if you're 
+
+774
+00:48:44,720 --> 00:48:48,480
+testing it by typing it in and 
+checking it then then it's gonna
+
+775
+00:48:48,480 --> 00:48:50,640
+get out of sync. 
+Automated testing of the code. 
+
+776
+00:48:50,640 --> 00:48:54,080
+That's. 
+Already there's some work on 
+
+777
+00:48:54,080 --> 00:48:55,920
+testing this in an automated 
+fashion. 
+
+778
+00:48:56,480 --> 00:49:00,040
+I think you're you're right. 
+So what we what we want to do is
+
+779
+00:49:00,040 --> 00:49:05,240
+we want to make this runnable. 
+So we we want to make these run 
+
+780
+00:49:05,240 --> 00:49:08,480
+in a little interpreter in the 
+browser so that you can click 
+
+781
+00:49:08,480 --> 00:49:11,500
+play and then it's. 
+Yes, giving you your response, 
+
+782
+00:49:11,980 --> 00:49:16,700
+but this is there's no ETA for 
+this, but that's that's the 
+
+783
+00:49:16,700 --> 00:49:17,500
+plan. 
+Nice. 
+
+784
+00:49:17,740 --> 00:49:23,140
+OK, how does Ocaml work? 
+Well, a little background. 
+
+785
+00:49:23,820 --> 00:49:30,820
+I'm fascinated with Rust, but 
+only in the to the degree that I
+
+786
+00:49:30,820 --> 00:49:33,620
+can make Python extensions with 
+Rust, which is. 
+
+787
+00:49:34,210 --> 00:49:36,850
+The first and only language I've
+been easily able to create, 
+
+788
+00:49:36,850 --> 00:49:39,570
+Python. 
+I've tried it in C and all that.
+
+789
+00:49:39,570 --> 00:49:42,850
+It's always run into problems. 
+Rust just works, so I don't 
+
+790
+00:49:42,850 --> 00:49:45,810
+wanna write big Rust programs, 
+or at least that's not where I 
+
+791
+00:49:45,810 --> 00:49:48,690
+am now, but as extensions to 
+Python. 
+
+792
+00:49:48,970 --> 00:49:54,610
+So as what I saw in the O Camel 
+docs is that it works well with 
+
+793
+00:49:54,610 --> 00:49:56,170
+C. 
+Yes, but it does. 
+
+794
+00:49:57,050 --> 00:50:01,660
+But I'm not so interested in 
+working with C you're. 
+
+795
+00:50:02,260 --> 00:50:04,060
+Interested. 
+Yeah, yeah, no, that's that's 
+
+796
+00:50:04,260 --> 00:50:07,580
+the person who's more interested
+in working with C is the O Camel
+
+797
+00:50:07,580 --> 00:50:11,460
+Deaf who wants to do heavy 
+number crunching or wants to use
+
+798
+00:50:11,460 --> 00:50:15,700
+libraries from the C ecosystem. 
+So, so yes, there is a big gap 
+
+799
+00:50:15,700 --> 00:50:19,820
+in terms of showing how to do 
+the FFI with popular languages 
+
+800
+00:50:19,980 --> 00:50:24,500
+that are slower than O Camel. 
+So for foam O camel can be the 
+
+801
+00:50:24,500 --> 00:50:27,620
+faster one. 
+Or slower or. 
+
+802
+00:50:28,650 --> 00:50:30,770
+Not as. 
+Not as safe. 
+
+803
+00:50:31,250 --> 00:50:35,010
+Not as safe, exactly. 
+So if I go, oh, here's a piece 
+
+804
+00:50:35,090 --> 00:50:39,850
+of my program that I am worried 
+about safety. 
+
+805
+00:50:40,250 --> 00:50:43,210
+Okay. 
+Now that might compel me to say,
+
+806
+00:50:43,210 --> 00:50:45,450
+all right, let's do that piece 
+in Ocaml. 
+
+807
+00:50:45,850 --> 00:50:49,730
+But what's the story for 
+connecting? 
+
+808
+00:50:49,730 --> 00:50:51,370
+Is it? 
+Is it just C? 
+
+809
+00:50:51,370 --> 00:50:55,330
+Is that just the way it is or is
+there any kind of tooling to 
+
+810
+00:50:55,330 --> 00:50:57,490
+help me or? 
+This is a good question. 
+
+811
+00:50:57,490 --> 00:51:01,050
+I don't know so I've never tried
+to integrate with Python, so I 
+
+812
+00:51:01,050 --> 00:51:04,450
+think it's possible. 
+So someone else has integrated 
+
+813
+00:51:04,450 --> 00:51:07,090
+with Rust. 
+Used Rust from. 
+
+814
+00:51:08,120 --> 00:51:10,720
+Russ libraries in their Ocaml 
+application. 
+
+815
+00:51:11,520 --> 00:51:14,960
+In their I see they use Russ. 
+Yeah, yeah, but the other way 
+
+816
+00:51:14,960 --> 00:51:17,680
+around too. 
+So between Ocaml and Russ, 
+
+817
+00:51:17,680 --> 00:51:21,240
+there's interesting work ongoing
+to formalize both of their 
+
+818
+00:51:21,800 --> 00:51:29,000
+memory model boundary so they 
+can interact safely, but this is
+
+819
+00:51:29,000 --> 00:51:33,320
+not something that's very 
+available yet. 
+
+820
+00:51:34,810 --> 00:51:37,290
+So there's another thing that I 
+came across in the 
+
+821
+00:51:37,330 --> 00:51:41,450
+documentation, which is this is 
+a little bit of a hobby horse of
+
+822
+00:51:41,450 --> 00:51:44,930
+mine. 
+Something that has gotten into 
+
+823
+00:51:45,530 --> 00:51:51,290
+the general programming world is
+the use of the term variable to 
+
+824
+00:51:51,290 --> 00:51:54,330
+mean anything and. 
+Yes, it means anything. 
+
+825
+00:51:55,050 --> 00:51:56,250
+Yeah, I mean. 
+Sure. 
+
+826
+00:51:56,330 --> 00:51:59,370
+Oh no. 
+It's a variable that you can't 
+
+827
+00:51:59,370 --> 00:52:02,640
+change. 
+Or something immutable variable.
+
+828
+00:52:02,760 --> 00:52:04,720
+Yes, it's. 
+An immutable variable. 
+
+829
+00:52:04,720 --> 00:52:07,680
+And it's like, that just drives 
+me crazy, because those words 
+
+830
+00:52:07,760 --> 00:52:09,080
+are. 
+Trimetrically. 
+
+831
+00:52:09,080 --> 00:52:13,080
+Imposed and I have noticed the 
+use well and it's confusing when
+
+832
+00:52:13,080 --> 00:52:16,120
+you're looking into it and they 
+say oh and you use this variable
+
+833
+00:52:16,120 --> 00:52:19,680
+and this variable and my 
+question is is it variable or is
+
+834
+00:52:19,680 --> 00:52:23,560
+it immutable so? 
+In fact, in fact it's immutable 
+
+835
+00:52:23,560 --> 00:52:25,720
+unless it's a reference to the 
+heap. 
+
+836
+00:52:26,360 --> 00:52:30,200
+Immutable reference, unless it's
+a mutable reference to some kind
+
+837
+00:52:30,200 --> 00:52:31,120
+of structure. 
+On the heap. 
+
+838
+00:52:31,120 --> 00:52:33,280
+And so you say mute or something
+to? 
+
+839
+00:52:33,280 --> 00:52:38,480
+Make that ref ref so you can do 
+let X equals ref 0 to get a 
+
+840
+00:52:39,080 --> 00:52:43,120
+reference points at an integer 
+that you can modify at runtime. 
+
+841
+00:52:43,240 --> 00:52:48,560
+I prefer Rust's mute to ref 
+because ref ref just tells me, 
+
+842
+00:52:48,640 --> 00:52:50,880
+oh, this is a reference to that.
+It doesn't tell me anything 
+
+843
+00:52:50,880 --> 00:52:54,360
+about the mutability of it. 
+So well, but the mute is on the 
+
+844
+00:52:54,360 --> 00:52:58,050
+type. 
+So here the ref is the value, so
+
+845
+00:52:58,050 --> 00:53:02,490
+it's part of the the expression,
+but your type actually then 
+
+846
+00:53:02,490 --> 00:53:05,450
+becomes mute of int or something
+or. 
+
+847
+00:53:06,650 --> 00:53:09,730
+It doesn't, so I think it's also
+named ref or something. 
+
+848
+00:53:10,130 --> 00:53:13,810
+OK, I didn't do a lot of the 
+mutable stuff right, so I'm 
+
+849
+00:53:13,810 --> 00:53:17,210
+actually in some regards I'm 
+very much an Ocaml newbie, 
+
+850
+00:53:17,690 --> 00:53:21,010
+because Ocaml has all these 
+different features that you 
+
+851
+00:53:21,010 --> 00:53:23,750
+don't have to use. 
+So you can write. 
+
+852
+00:53:23,790 --> 00:53:27,390
+You can do very well with a very
+small subset of Ocaml. 
+
+853
+00:53:27,670 --> 00:53:31,470
+So kind of like M Plus, yeah, 
+so. 
+
+854
+00:53:32,270 --> 00:53:36,470
+That would be the tutorial that 
+I would want to see is What is 
+
+855
+00:53:36,470 --> 00:53:39,670
+this subset that you can do very
+well in? 
+
+856
+00:53:40,870 --> 00:53:44,710
+And maybe specifically like 
+you're mentioning, Elm is the 
+
+857
+00:53:44,910 --> 00:53:52,500
+another possible value of Ocaml 
+is look at using Ocaml to build 
+
+858
+00:53:52,500 --> 00:53:55,180
+a web application or something 
+like that in a way that you 
+
+859
+00:53:55,180 --> 00:53:59,220
+would maybe do with Elm, but 
+doing with Ocaml and some subset
+
+860
+00:53:59,220 --> 00:54:01,460
+of all the power would be 
+interesting. 
+
+861
+00:54:01,580 --> 00:54:04,980
+Yeah, that could be compelling. 
+I did wanna highlight the 
+
+862
+00:54:04,980 --> 00:54:10,710
+features of Ocaml as we were 
+learning about it that I I 
+
+863
+00:54:10,710 --> 00:54:12,630
+thought were great. 
+Yeah, I think every when we were
+
+864
+00:54:12,630 --> 00:54:16,190
+going through learning Ocaml, 
+we're like, OK great. 
+
+865
+00:54:16,190 --> 00:54:19,590
+It has product in some types, it
+has type inference, it has 
+
+866
+00:54:19,590 --> 00:54:23,790
+exhaustive pattern matching. 
+We dug into a bit the 
+
+867
+00:54:23,790 --> 00:54:26,790
+concurrency and parallelism. 
+We're like, yes, this, you know,
+
+868
+00:54:26,790 --> 00:54:32,270
+being able to do joins on on 
+threads and tasks. 
+
+869
+00:54:32,990 --> 00:54:35,470
+Yes, the library around this. 
+Yeah. 
+
+870
+00:54:35,470 --> 00:54:38,270
+And it it all looked good. 
+I think, you know, looking at 
+
+871
+00:54:38,270 --> 00:54:41,190
+it, it's like, OK, it has like 
+all the modern language features
+
+872
+00:54:41,190 --> 00:54:44,830
+that I would hope any, you know,
+every language has today. 
+
+873
+00:54:45,430 --> 00:54:49,590
+The one feature that we were 
+like was exceptions and I'm 
+
+874
+00:54:49,590 --> 00:54:53,390
+curious to your perspective on 
+it on like that, just a legacy 
+
+875
+00:54:53,390 --> 00:54:56,910
+thing that like people don't use
+anymore or what's what's the 
+
+876
+00:54:56,910 --> 00:54:59,390
+story? 
+On so, so, so, so clear. 
+
+877
+00:54:59,390 --> 00:55:01,030
+It depends. 
+Very clear. 
+
+878
+00:55:01,030 --> 00:55:04,310
+It depends, because I mean with 
+exceptions, it's like you have 
+
+879
+00:55:04,310 --> 00:55:06,640
+to cover your. 
+Your basis. 
+
+880
+00:55:06,640 --> 00:55:10,480
+You really have to be a nice 
+person, because when you when 
+
+881
+00:55:10,480 --> 00:55:15,400
+you write a library that throws 
+exceptions, you have better 
+
+882
+00:55:15,400 --> 00:55:19,720
+written very good documentation.
+But instead I would prefer if 
+
+883
+00:55:19,720 --> 00:55:23,680
+you would return result types. 
+Yeah, so you can't do exceptions
+
+884
+00:55:23,680 --> 00:55:26,600
+within your library because 
+they're fast. 
+
+885
+00:55:27,080 --> 00:55:29,600
+So they're just faster than 
+threading around all the results
+
+886
+00:55:29,600 --> 00:55:34,600
+and everything because it's like
+interruption like handler and 
+
+887
+00:55:34,600 --> 00:55:37,710
+stuff like that. 
+So it's just naturally faster. 
+
+888
+00:55:37,710 --> 00:55:41,310
+And for that it's fine and you 
+can use them responsibly. 
+
+889
+00:55:41,310 --> 00:55:43,270
+And in some places it's actually
+quite convenient. 
+
+890
+00:55:43,270 --> 00:55:48,550
+So when you are writing a web 
+application in Rust, you have to
+
+891
+00:55:48,590 --> 00:55:51,870
+thread your error types all the 
+way through. 
+
+892
+00:55:52,510 --> 00:55:55,870
+On the positive side, Rust gives
+you a lot of power here. 
+
+893
+00:55:56,110 --> 00:56:00,150
+It has the question mark 
+operator to automatically try to
+
+894
+00:56:00,150 --> 00:56:04,340
+convert the error types. 
+Using the trade that you 
+
+895
+00:56:04,340 --> 00:56:07,220
+provide. 
+So it's pretty pretty fine. 
+
+896
+00:56:08,140 --> 00:56:12,900
+But Ocaml doesn't have this kind
+of error operator and instead 
+
+897
+00:56:13,380 --> 00:56:17,620
+comes from from a legacy of 
+having these exceptions instead.
+
+898
+00:56:18,100 --> 00:56:21,940
+And now it has even expanded on 
+the exceptions by adding effect 
+
+899
+00:56:21,940 --> 00:56:25,700
+handlers, which is like a more 
+general thing that allows you to
+
+900
+00:56:25,940 --> 00:56:30,020
+to do this kind of resumable 
+computation, this resumable 
+
+901
+00:56:30,060 --> 00:56:37,200
+stack switching computation. 
+So is there a way to guarantee 
+
+902
+00:56:37,200 --> 00:56:40,320
+that you handle all possible 
+exceptions? 
+
+903
+00:56:41,360 --> 00:56:44,080
+Unfortunately not. 
+And that's why I strongly 
+
+904
+00:56:44,080 --> 00:56:48,360
+recommend any library author to 
+use the result type instead. 
+
+905
+00:56:48,360 --> 00:56:52,680
+Because then it's part of the 
+function signature and your user
+
+906
+00:56:52,680 --> 00:56:56,520
+will be happy and thankful that 
+you did right. 
+
+907
+00:56:56,760 --> 00:56:58,800
+Because then your type system 
+it's part of your type system. 
+
+908
+00:56:58,800 --> 00:56:59,680
+It's part. 
+Of your type system. 
+
+909
+00:56:59,760 --> 00:57:04,810
+I really like that rust. 
+Doesn't have exceptions and more
+
+910
+00:57:04,810 --> 00:57:07,810
+or less forces you to use the 
+result type for. 
+
+911
+00:57:08,850 --> 00:57:14,410
+So in the world of Ocaml, maybe 
+the exceptions are in a place 
+
+912
+00:57:14,410 --> 00:57:18,230
+similar to mutability. 
+It's like if you need, if you 
+
+913
+00:57:18,230 --> 00:57:21,510
+need this for some reason, do it
+in your little constrained 
+
+914
+00:57:21,510 --> 00:57:24,470
+world, but don't expose it to 
+your caller. 
+
+915
+00:57:24,750 --> 00:57:28,150
+And yeah, I think that, yeah, 
+exceptions and mutability, maybe
+
+916
+00:57:28,150 --> 00:57:31,070
+you're in that same boat of 
+like, sure, you you can use 
+
+917
+00:57:31,070 --> 00:57:35,190
+these more powerful maybe when 
+you need some performance 
+
+918
+00:57:35,190 --> 00:57:38,270
+benefit or something, but don't 
+expose that to your call. 
+
+919
+00:57:38,270 --> 00:57:43,030
+Yeah, sandbox everything inside.
+I think that may be a general 
+
+920
+00:57:43,030 --> 00:57:44,870
+principle. 
+I mean, I feel like I 
+
+921
+00:57:44,870 --> 00:57:46,510
+encountered that in the Red 
+Book. 
+
+922
+00:57:47,060 --> 00:57:49,260
+Where they were saying this is 
+the scholar red boat. 
+
+923
+00:57:49,340 --> 00:57:50,380
+Sorry. 
+Oh yeah. 
+
+924
+00:57:52,500 --> 00:57:56,100
+Where they were saying, OK, so 
+here's how recursion works. 
+
+925
+00:57:56,380 --> 00:58:00,100
+And then at the lowest level but
+hidden from everybody, there's 
+
+926
+00:58:00,100 --> 00:58:02,260
+mutability that's happening. 
+And you're going what? 
+
+927
+00:58:02,260 --> 00:58:04,900
+Mutability? 
+That's not OK And then you see 
+
+928
+00:58:04,900 --> 00:58:08,540
+this principle. 
+It's like mutability, which is a
+
+929
+00:58:09,020 --> 00:58:14,300
+thing that is not scalable. 
+So you keep it at a controllable
+
+930
+00:58:14,300 --> 00:58:17,850
+scale. 
+And then it's it's a fine 
+
+931
+00:58:17,850 --> 00:58:21,650
+technique, but your end user 
+doesn't know anything about that
+
+932
+00:58:21,650 --> 00:58:24,690
+that's happening, so they can 
+still live in this immutable. 
+
+933
+00:58:24,690 --> 00:58:27,090
+Right, right. 
+Yes. 
+
+934
+00:58:27,090 --> 00:58:31,650
+This is a very, very common 
+philosophy in in Ocaml land as 
+
+935
+00:58:31,650 --> 00:58:33,010
+well. 
+So I think this is something 
+
+936
+00:58:33,010 --> 00:58:37,770
+that all these more functional 
+languages, the ones that care 
+
+937
+00:58:37,770 --> 00:58:42,370
+about you writing correct code 
+using immutability to your 
+
+938
+00:58:42,370 --> 00:58:45,490
+advantage like. 
+Using side effect freedom to 
+
+939
+00:58:45,490 --> 00:58:50,170
+your advantage would recommend, 
+but Ocaml is a very permissive 
+
+940
+00:58:50,170 --> 00:58:53,610
+language, so it lets you shoot 
+yourself in the foot. 
+
+941
+00:58:53,610 --> 00:58:57,050
+So it's not like Haskell that 
+puts this kind of power suit 
+
+942
+00:58:57,050 --> 00:59:01,850
+around you that makes it kind of
+awkward to move at 1st until you
+
+943
+00:59:01,850 --> 00:59:07,350
+figure out how to operate this. 
+Ocaml is more approachable in 
+
+944
+00:59:07,350 --> 00:59:09,430
+this sense. 
+So if you've used an imperative 
+
+945
+00:59:09,430 --> 00:59:13,030
+language, you know that OK, when
+I write, when I declare A 
+
+946
+00:59:13,030 --> 00:59:16,630
+variable, so when I bind an 
+expression to a name, then it 
+
+947
+00:59:16,630 --> 00:59:19,790
+gets evaluated. 
+So in half click it wouldn't, so
+
+948
+00:59:20,390 --> 00:59:21,270
+it would. 
+It's good. 
+
+949
+00:59:21,270 --> 00:59:25,230
+Evaluated anytime later, 
+whenever necessary, whenever, 
+
+950
+00:59:27,190 --> 00:59:32,270
+whenever it's convenient. 
+Ocaml's strict evaluation is 
+
+951
+00:59:32,270 --> 00:59:34,310
+that the right word for it? 
+Strict evaluation, not lazy 
+
+952
+00:59:34,800 --> 00:59:39,360
+Evaluate them as the default and
+then there is a way to do lazy 
+
+953
+00:59:39,360 --> 00:59:43,520
+when you want it in Ocaml, and 
+for me that's the right 
+
+954
+00:59:43,520 --> 00:59:46,360
+direction is make strict the 
+default lazy if you need it. 
+
+955
+00:59:47,080 --> 00:59:49,720
+Is there a version of Ocaml that
+runs on the JVM? 
+
+956
+00:59:49,720 --> 00:59:55,560
+Or is that even possible? 
+That's a common question and I 
+
+957
+00:59:55,560 --> 01:00:00,800
+don't well. 
+Now I'm I'm mixing this up with 
+
+958
+01:00:00,800 --> 01:00:04,520
+LLVM. 
+So on the yeah, on LLVM it's 
+
+959
+01:00:04,520 --> 01:00:08,400
+difficult because you don't, you
+have the garbage collector. 
+
+960
+01:00:08,400 --> 01:00:10,080
+So in LLVM is not good with 
+garbage. 
+
+961
+01:00:10,080 --> 01:00:13,840
+But on the LVM on the JVM, I 
+don't know. 
+
+962
+01:00:13,840 --> 01:00:17,680
+So there's definitely. 
+There's Jsofo came to compile to
+
+963
+01:00:17,680 --> 01:00:20,040
+JavaScript. 
+There's Milash, who compiles 
+
+964
+01:00:20,480 --> 01:00:25,040
+Ocaml or Reason syntax to 
+JavaScript again. 
+
+965
+01:00:26,980 --> 01:00:29,220
+But to chat. 
+Do you know if there's been any 
+
+966
+01:00:29,460 --> 01:00:33,700
+Ocaml to wazem GC? 
+There's work being done on this.
+
+967
+01:00:33,980 --> 01:00:37,340
+Nice, that's. 
+There's very promising work 
+
+968
+01:00:37,340 --> 01:00:39,820
+going on. 
+Cool, cuz they're the kind of 
+
+969
+01:00:39,820 --> 01:00:44,900
+PhD student thing. 
+Yeah, that seems like that could
+
+970
+01:00:44,900 --> 01:00:49,100
+be a gateway to 
+interoperability, yeah. 
+
+971
+01:00:49,100 --> 01:00:50,700
+Yes. 
+So we have high hopes in Web 
+
+972
+01:00:50,700 --> 01:00:53,940
+Assembly because it's just a 
+natural way to do things. 
+
+973
+01:00:54,300 --> 01:00:57,700
+And because Web assembly would 
+unlock writing writing 
+
+974
+01:00:57,700 --> 01:01:01,660
+frameworks like doing something 
+like swelled but in your Camel 
+
+975
+01:01:02,140 --> 01:01:06,700
+fully type safe instead of with 
+types patched on and and with 
+
+976
+01:01:06,700 --> 01:01:11,540
+gaps in in the type safety. 
+Because I like swelled. 
+
+977
+01:01:11,540 --> 01:01:16,330
+So I really like that you you is
+short, so short it's readable. 
+
+978
+01:01:16,330 --> 01:01:21,490
+So you write HTML, you write 
+your templates as you used to, 
+
+979
+01:01:21,850 --> 01:01:27,130
+don't do any funny syntax things
+and now if you had the similar 
+
+980
+01:01:27,130 --> 01:01:29,850
+thing in your camel, that would 
+be quite nice. 
+
+981
+01:01:30,170 --> 01:01:36,050
+That would be quite nice. 
+I like that in the concurrency 
+
+982
+01:01:36,050 --> 01:01:38,040
+world. 
+We played with some of the 
+
+983
+01:01:38,040 --> 01:01:40,160
+concurrency stuff and and it was
+good. 
+
+984
+01:01:40,800 --> 01:01:45,280
+I didn't get a chance to dive 
+into the the kind of IO 
+
+985
+01:01:45,280 --> 01:01:49,560
+libraries, but I did like the 
+idea that that you could use EIO
+
+986
+01:01:49,560 --> 01:01:53,170
+for kind of the. 
+Algebraic effects or you could 
+
+987
+01:01:53,170 --> 01:01:58,650
+use I forget the other one. 
+Or yeah, for monadic based 
+
+988
+01:01:59,850 --> 01:02:04,170
+effects, yeah and I was like 
+cool, I wanna try them both. 
+
+989
+01:02:04,690 --> 01:02:08,770
+But what's your take on EIO and 
+the kind of algebraic effects 
+
+990
+01:02:08,770 --> 01:02:14,870
+style and or direct style of 
+effects and well what I can see 
+
+991
+01:02:14,870 --> 01:02:20,110
+is that well EIO is the new kid 
+on the block so so there is EIO 
+
+992
+01:02:20,110 --> 01:02:23,470
+adoption being pushed to see 
+like is this the thing that the 
+
+993
+01:02:23,470 --> 01:02:27,390
+community will will do is this 
+the thing that will see adoption
+
+994
+01:02:27,870 --> 01:02:35,710
+or where is this going. 
+I've used EIO EIO once just to 
+
+995
+01:02:35,950 --> 01:02:40,910
+to write a little example 
+program, more or less like just 
+
+996
+01:02:40,910 --> 01:02:43,430
+translate someone's Go program 
+from Twitter. 
+
+997
+01:02:43,430 --> 01:02:45,790
+So I don't know, you know this 
+tax guy. 
+
+998
+01:02:45,790 --> 01:02:49,590
+So the one who sometimes asks 
+really really good questions, 
+
+999
+01:02:50,070 --> 01:02:56,990
+and I translated the question 
+about like running multiple as 
+
+1000
+01:02:56,990 --> 01:03:00,510
+in threats, evading them in the 
+most. 
+
+1001
+01:03:00,790 --> 01:03:06,710
+Concurrently and the, yeah, I 
+mean you gotta set up channels 
+
+1002
+01:03:06,710 --> 01:03:09,310
+and. 
+And do your go routine. 
+
+1003
+01:03:09,310 --> 01:03:12,150
+No, it wasn't so bad it. 
+Wasn't so bad. 
+
+1004
+01:03:12,270 --> 01:03:15,310
+It wasn't so bad, but the Ocaml 
+code was not worse than the Go 
+
+1005
+01:03:15,310 --> 01:03:19,390
+code, so that was actually 
+pretty fine I think. 
+
+1006
+01:03:20,070 --> 01:03:21,870
+But I don't do a lot of his 
+concurrency. 
+
+1007
+01:03:21,870 --> 01:03:26,470
+So on the Ocaml org website we 
+still use Lwt because all our 
+
+1008
+01:03:26,470 --> 01:03:32,510
+libraries use Lwt and when they 
+migrate to EIO we will use EIO. 
+
+1009
+01:03:32,910 --> 01:03:36,470
+OK, is there algebraic effects? 
+Like there's not algebraic 
+
+1010
+01:03:36,470 --> 01:03:41,310
+effects actually in Ocaml's 
+language, but somehow Eio was 
+
+1011
+01:03:41,310 --> 01:03:44,830
+able to create there are 
+algebraic effects in Ocaml's 
+
+1012
+01:03:44,830 --> 01:03:47,710
+language now. 
+So same patch that landed 
+
+1013
+01:03:47,710 --> 01:03:52,150
+Multicore also added these 
+effects, but for now they are 
+
+1014
+01:03:52,150 --> 01:03:55,940
+untyped. 
+So work on a type system for 
+
+1015
+01:03:55,940 --> 01:04:00,660
+that is still open Research like
+finding a good balance between 
+
+1016
+01:04:01,140 --> 01:04:06,300
+expressiveness and what you have
+to write in order to type check 
+
+1017
+01:04:06,300 --> 01:04:12,900
+this. 
+So I assume on your the site 
+
+1018
+01:04:12,900 --> 01:04:17,860
+that you manage about Camel, you
+probably have a list of 
+
+1019
+01:04:17,860 --> 01:04:22,450
+companies that use it. 
+Yeah, well we have a job listing
+
+1020
+01:04:22,450 --> 01:04:27,770
+board on where you can see see 
+quite a few companies who may be
+
+1021
+01:04:27,770 --> 01:04:31,570
+hiring, but depends you know. 
+So these companies are of the 
+
+1022
+01:04:31,570 --> 01:04:35,490
+sort of like, OK, we we have on 
+we have a listing just so that 
+
+1023
+01:04:35,490 --> 01:04:39,050
+we can snatch up promising 
+candidates as they come to us. 
+
+1024
+01:04:40,690 --> 01:04:46,570
+Well, So what is the like if a 
+company is using Ocaml, do they 
+
+1025
+01:04:46,570 --> 01:04:51,800
+find that they need to take? 
+You know, pro some other 
+
+1026
+01:04:51,800 --> 01:04:54,000
+programmer and train. 
+Are they hiring Haskell 
+
+1027
+01:04:54,000 --> 01:04:55,440
+programmers and? 
+Or, yeah. 
+
+1028
+01:04:55,480 --> 01:04:57,840
+Or is it? 
+Is that or or? 
+
+1029
+01:04:57,880 --> 01:05:01,160
+The street for sure has to 
+because they are very large. 
+
+1030
+01:05:01,160 --> 01:05:06,160
+So Jane St. as I am told has 
+around 900 or more Ocaml 
+
+1031
+01:05:06,160 --> 01:05:10,560
+programmers. 
+So they do have a certain churn 
+
+1032
+01:05:10,560 --> 01:05:14,680
+and a need for Ocaml programmers
+and they do extensive in house 
+
+1033
+01:05:14,680 --> 01:05:17,070
+training to get them up to 
+speed. 
+
+1034
+01:05:17,230 --> 01:05:20,990
+Also up to speed with their own 
+internal very advanced processes
+
+1035
+01:05:21,350 --> 01:05:27,030
+which are partially aligning now
+with the broader ecosystem as 
+
+1036
+01:05:27,190 --> 01:05:33,310
+tooling improvements are made. 
+So for smaller companies, I I 
+
+1037
+01:05:33,310 --> 01:05:34,990
+don't know, they just. 
+Hire people away from. 
+
+1038
+01:05:34,990 --> 01:05:37,310
+They just hire people who who 
+are around. 
+
+1039
+01:05:37,310 --> 01:05:41,070
+So they hire people who already 
+know Ocaml most likely because 
+
+1040
+01:05:41,070 --> 01:05:46,540
+they don't have this intense 
+pipeline atarius they they do 
+
+1041
+01:05:46,540 --> 01:05:49,700
+hire both. 
+So I I was one of the no Ocaml 
+
+1042
+01:05:49,700 --> 01:05:54,500
+people so but but Haskell, 
+Haskell is really a a keyword 
+
+1043
+01:05:54,500 --> 01:05:58,300
+that that gets you somewhere. 
+So if you can write Template 
+
+1044
+01:05:58,300 --> 01:06:04,020
+Haskell, you're you're already 
+in a good position to be hired 
+
+1045
+01:06:04,020 --> 01:06:09,700
+by these kind of companies that 
+do Ocaml, F# or Scala or such, 
+
+1046
+01:06:09,700 --> 01:06:13,380
+because you've kind of 
+demonstrated okay you managed to
+
+1047
+01:06:13,380 --> 01:06:15,940
+reach the Haskell adoption 
+barrier. 
+
+1048
+01:06:17,060 --> 01:06:20,580
+Yeah, so the career path for 
+people that are in the Haskell 
+
+1049
+01:06:20,580 --> 01:06:25,660
+is Ocaml or Rust at this point. 
+Yeah, Rust. 
+
+1050
+01:06:25,660 --> 01:06:29,340
+Rust is nice. 
+Yeah, I'm enjoying it. 
+
+1051
+01:06:32,160 --> 01:06:34,200
+Have we missed anything? 
+I feel like we've kind of 
+
+1052
+01:06:34,200 --> 01:06:37,760
+covered your journey, the Ocaml 
+language a little bit about the 
+
+1053
+01:06:37,760 --> 01:06:43,560
+features, the exciting things. 
+Anything on the future of Ocaml 
+
+1054
+01:06:43,640 --> 01:06:46,560
+that's worth highlighting? 
+Like, what's coming, future of 
+
+1055
+01:06:46,680 --> 01:06:49,120
+Ocaml? 
+Well, what's coming? 
+
+1056
+01:06:49,120 --> 01:06:52,840
+I mean, we really have to get 
+this ecosystem more complete. 
+
+1057
+01:06:52,840 --> 01:06:58,550
+So the future, it depends a lot 
+on what we do, I guess. 
+
+1058
+01:07:00,110 --> 01:07:02,310
+You're creating the future right
+now, right? 
+
+1059
+01:07:02,310 --> 01:07:03,910
+Right. 
+We're creating the future and 
+
+1060
+01:07:03,910 --> 01:07:06,230
+we're having to make these kind 
+of decisions. 
+
+1061
+01:07:06,230 --> 01:07:09,870
+Like, for me, the personal 
+decision would be to OK, do I, 
+
+1062
+01:07:09,870 --> 01:07:12,030
+do I stay more like behind the 
+scenes? 
+
+1063
+01:07:12,030 --> 01:07:15,030
+Or do I go down the route of 
+like becoming more of the 
+
+1064
+01:07:15,030 --> 01:07:19,230
+community manager of Ocaml? 
+Like organizing things? 
+
+1065
+01:07:19,230 --> 01:07:23,730
+Or like, encouraging and 
+bringing people together to 
+
+1066
+01:07:23,730 --> 01:07:27,250
+build the kind of projects and 
+the kind of frameworks and 
+
+1067
+01:07:27,250 --> 01:07:30,690
+libraries that people need in 
+order to have a happy experience
+
+1068
+01:07:30,690 --> 01:07:33,730
+with Ocaml? 
+Yeah, it's a good question. 
+
+1069
+01:07:33,890 --> 01:07:39,450
+Like you're in a position where 
+you can invest your time to grow
+
+1070
+01:07:39,450 --> 01:07:42,430
+Ocaml. 
+And what, where should you put 
+
+1071
+01:07:42,430 --> 01:07:44,670
+that investment? 
+Yes, exactly. 
+
+1072
+01:07:44,790 --> 01:07:47,950
+A fun place to be like exactly. 
+Is it in documentation? 
+
+1073
+01:07:47,950 --> 01:07:49,950
+Is it in tooling? 
+Is it in libraries? 
+
+1074
+01:07:49,950 --> 01:07:51,150
+Is it in? 
+You know, there's all these 
+
+1075
+01:07:51,150 --> 01:07:53,990
+different parts of the ecosystem
+that you could invent into and 
+
+1076
+01:07:54,110 --> 01:07:57,590
+so, so the great part is. 
+Most impact, right? 
+
+1077
+01:07:57,590 --> 01:08:01,390
+The great part is that is not me
+alone making these kinds of 
+
+1078
+01:08:01,390 --> 01:08:05,350
+decisions, so, but they really 
+need so. 
+
+1079
+01:08:05,430 --> 01:08:10,020
+So Ocaml really just needs 
+people to come together and have
+
+1080
+01:08:10,020 --> 01:08:12,300
+fun. 
+Well, it sounds like you just 
+
+1081
+01:08:12,300 --> 01:08:16,979
+answered your question, yeah. 
+Bringing people together? 
+
+1082
+01:08:18,660 --> 01:08:19,899
+Yeah. 
+Nice. 
+
+1083
+01:08:20,020 --> 01:08:21,979
+Cool. 
+Well, yeah. 
+
+1084
+01:08:21,979 --> 01:08:24,740
+Anything else? 
+No, I don't know. 
+
+1085
+01:08:24,859 --> 01:08:27,340
+So that was really. 
+Cool. 
+
+1086
+01:08:27,939 --> 01:08:30,819
+I will continue my explorations 
+with Ocaml. 
+
+1087
+01:08:30,819 --> 01:08:34,830
+I have a. 
+A little obstacle course for 
+
+1088
+01:08:34,830 --> 01:08:38,229
+concurrency called Easy Racer. 
+And I do want to try to build 
+
+1089
+01:08:38,229 --> 01:08:43,670
+the Ocaml version of Easy Racer,
+so maybe you and I could work 
+
+1090
+01:08:43,670 --> 01:08:45,710
+together on that. 
+Yeah, that sounds cool. 
+
+1091
+01:08:45,910 --> 01:08:48,590
+So are you doing this publicly 
+somewhere? 
+
+1092
+01:08:48,630 --> 01:08:49,069
+Oh yeah. 
+Yep. 
+
+1093
+01:08:49,470 --> 01:08:52,630
+Yeah, it's on my GitHub. 
+We've got implementations and. 
+
+1094
+01:08:53,170 --> 01:08:56,450
+Scala, Rust, Go type screw 
+that's. 
+
+1095
+01:08:56,689 --> 01:09:00,649
+Kotlin, Java, you know, we got 
+all sorts of different Python. 
+
+1096
+01:09:00,649 --> 01:09:04,010
+We did a Python, we did get a 
+Python working one working. 
+
+1097
+01:09:04,890 --> 01:09:07,569
+I'll send it to you and maybe we
+maybe we work together on the 
+
+1098
+01:09:07,569 --> 01:09:08,930
+Ocaml one. 
+Do you send it to me? 
+
+1099
+01:09:08,970 --> 01:09:13,170
+I'm very interested in this. 
+Cuz then you can compare well 
+
+1100
+01:09:13,170 --> 01:09:18,689
+and also it shows you does a 
+language library system support.
+
+1101
+01:09:19,270 --> 01:09:22,109
+Even this, yes, particular 
+approach. 
+
+1102
+01:09:22,189 --> 01:09:26,149
+And then, and also it's been 
+good because it's created sort 
+
+1103
+01:09:26,149 --> 01:09:31,470
+of a list of here's the kinds of
+things that you probably are 
+
+1104
+01:09:31,470 --> 01:09:34,550
+gonna need if you're building 
+something with concurrency. 
+
+1105
+01:09:34,790 --> 01:09:37,790
+Yeah, so sounds like a great 
+reference too. 
+
+1106
+01:09:37,790 --> 01:09:41,149
+It is like when you know how to 
+do this in Go, for example, then
+
+1107
+01:09:41,149 --> 01:09:43,310
+you can see ohh, OK, so that's 
+the Go code. 
+
+1108
+01:09:43,510 --> 01:09:46,149
+And now this is the 
+corresponding, yeah exactly 
+
+1109
+01:09:46,149 --> 01:09:48,029
+Ocaml. 
+That helps a lot, I think. 
+
+1110
+01:09:48,910 --> 01:09:53,189
+Specifically for people who 
+learn by by doing and by seeing,
+
+1111
+01:09:53,189 --> 01:09:56,430
+by imitating instead of by 
+reading the manual. 
+
+1112
+01:09:57,230 --> 01:09:58,830
+Right. 
+And I like these people because 
+
+1113
+01:09:58,910 --> 01:10:00,510
+they're just busy building 
+stuff. 
+
+1114
+01:10:00,830 --> 01:10:02,310
+Yeah, so it's it's. 
+That's for me. 
+
+1115
+01:10:02,470 --> 01:10:05,270
+I gotta gotta write some code to
+actually understand it. 
+
+1116
+01:10:05,790 --> 01:10:07,830
+Yeah, it's true. 
+Awesome. 
+
+1117
+01:10:07,910 --> 01:10:11,430
+Well Sabine, thanks for joining 
+us and thanks for all your work 
+
+1118
+01:10:11,430 --> 01:10:15,430
+on building the O Camel 
+community and making it awesome.
+
+1119
+01:10:16,470 --> 01:10:20,350
+Well, thanks for having me and I
+hope you will have a lot of fun 
+
+1120
+01:10:20,430 --> 01:10:24,750
+whatever you do next and I will 
+check out your repository. 
+
+1121
+01:10:24,750 --> 01:10:27,030
+This is looking so exciting. 
+Awesome. 
+
+1122
+01:10:27,110 --> 01:10:28,390
+Great. 
+Thanks. 
+
+1123
+01:10:28,470 --> 01:10:28,750
+Bye.

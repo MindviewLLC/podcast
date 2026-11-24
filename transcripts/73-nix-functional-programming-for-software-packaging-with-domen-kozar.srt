@@ -1,0 +1,4928 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,700 --> 00:00:10,100
+All right. 
+Well, welcome, yay. 
+
+4
+00:00:10,300 --> 00:00:14,000
+Here we are been a few weeks, 
+but today we have with us. 
+
+5
+00:00:14,400 --> 00:00:16,800
+Dolman, did I say that right? 
+Yes, that's correct. 
+
+6
+00:00:16,800 --> 00:00:21,200
+Okay. 
+And you are well, I'll have you 
+
+7
+00:00:21,200 --> 00:00:23,200
+introduced yourself, but the 
+reason why we had you on this 
+
+8
+00:00:23,200 --> 00:00:26,600
+because so many times on the 
+podcast and on Twitter and 
+
+9
+00:00:26,600 --> 00:00:31,000
+places, everyone tells us that 
+Nick's is the thing we dream of 
+
+10
+00:00:31,200 --> 00:00:34,900
+it's like like when I complain 
+about anything, they're like oh,
+
+11
+00:00:34,900 --> 00:00:37,700
+Nick solves that and we just 
+hear that over and over. 
+
+12
+00:00:37,700 --> 00:00:40,500
+Over and over again. 
+And so we thought we'd have an 
+
+13
+00:00:40,500 --> 00:00:43,400
+episode on Nick so that we can 
+learn more about it, right? 
+
+14
+00:00:43,400 --> 00:00:47,700
+And and for how it will soften 
+the upcoming episode, stimulated
+
+15
+00:00:47,700 --> 00:00:50,600
+us to take a dive into it. 
+That's right. 
+
+16
+00:00:50,600 --> 00:00:57,100
+I ended up installing Nick's on 
+Windows subsystem for Linux, or 
+
+17
+00:00:57,100 --> 00:01:01,100
+a little few hiccups there, but,
+but it's working now. 
+
+18
+00:01:01,100 --> 00:01:05,900
+So, yeah, yeah, I put in an 
+issue when I got stuck and I 
+
+19
+00:01:05,900 --> 00:01:09,600
+ended up solving it, so it's Of 
+a soft drone issue if somebody 
+
+20
+00:01:09,600 --> 00:01:14,100
+has trouble, installing it then 
+just go look for my issue on 
+
+21
+00:01:14,100 --> 00:01:17,700
+their and specifically in sign 
+of the nwsl. 
+
+22
+00:01:17,700 --> 00:01:20,000
+Yeah. 
+Yeah, because it's not an 
+
+23
+00:01:20,000 --> 00:01:27,400
+officially supported package or 
+is that that distribution? 
+
+24
+00:01:27,400 --> 00:01:32,300
+That's correct, right? 
+Yeah, yeah, it's kind of like 
+
+25
+00:01:32,700 --> 00:01:36,300
+some people use it and they 
+contribute fixes but it's not 
+
+26
+00:01:36,300 --> 00:01:39,000
+actually be tested. 
+So, It's good to see, open the 
+
+27
+00:01:39,008 --> 00:01:42,500
+issues and keep going. 
+Yeah, yeah. 
+
+28
+00:01:42,600 --> 00:01:44,700
+So maybe let's start with about 
+you. 
+
+29
+00:01:44,700 --> 00:01:48,500
+We you know we this is the first
+we've met you and so tell us who
+
+30
+00:01:48,500 --> 00:01:51,400
+you are and what you do and 
+yeah, what your history is 
+
+31
+00:01:51,400 --> 00:01:54,300
+nixes. 
+Oh, there's a lot of history. 
+
+32
+00:01:54,700 --> 00:01:58,000
+I'll try to keep it short. 
+Yeah, I didn't realize it 
+
+33
+00:01:58,000 --> 00:02:01,400
+started like 15 years ago. 
+That was surprising to me 
+
+34
+00:02:01,400 --> 00:02:04,100
+because I don't actually 20. 
+There are 20 years. 
+
+35
+00:02:04,700 --> 00:02:07,500
+Yeah, there's gonna be like, 
+kind of like celebration and 
+
+36
+00:02:07,700 --> 00:02:11,000
+March hopefully that you're 
+trying to put together because 
+
+37
+00:02:11,000 --> 00:02:14,800
+of the currents and yes, there's
+a year. 
+
+38
+00:02:14,800 --> 00:02:18,200
+Well there was a yearly 
+conference so it's a every three
+
+39
+00:02:18,200 --> 00:02:22,100
+years something from the last. 
+But yeah, there is one and there
+
+40
+00:02:22,100 --> 00:02:25,800
+is going to be likely one in 
+u.s. actually hopefully this 
+
+41
+00:02:25,800 --> 00:02:26,600
+year. 
+Oh, cool. 
+
+42
+00:02:28,100 --> 00:02:30,500
+Okay. 
+So who are you, right? 
+
+43
+00:02:30,500 --> 00:02:37,700
+So I've been doing kind of 
+packaging and soft Our 
+
+44
+00:02:37,700 --> 00:02:42,000
+distribution work since I was a 
+student, I did a Google summer 
+
+45
+00:02:42,000 --> 00:02:52,900
+of code for I think two or three
+times even that was 2010 and 
+
+46
+00:02:52,900 --> 00:02:55,300
+something like this. 
+I think that was the first year 
+
+47
+00:02:57,300 --> 00:03:01,000
+and I used to use gen2 that was 
+sent to you. 
+
+48
+00:03:01,800 --> 00:03:04,600
+I gen to you is one of my 
+favorite things in the world. 
+
+49
+00:03:04,600 --> 00:03:08,500
+I don't use it anymore, but just
+got a little I didn't want to be
+
+50
+00:03:08,500 --> 00:03:13,000
+a sysadmin anymore but but I you
+know ranjan to servers and 
+
+51
+00:03:13,000 --> 00:03:18,000
+Magento is my desktop. 
+And anyways, yeah, great agent. 
+
+52
+00:03:18,000 --> 00:03:21,900
+You, I used to love gensou and I
+still doing it was. 
+
+53
+00:03:21,900 --> 00:03:26,600
+Yeah, my favorite distribution. 
+And one of the reasons I 
+
+54
+00:03:26,600 --> 00:03:29,200
+switched to Nick's from gender 
+was actually that, you know, 
+
+55
+00:03:29,200 --> 00:03:33,800
+once I was a decline in Finland,
+and I needed to recompile the 
+
+56
+00:03:33,800 --> 00:03:36,600
+whole computer because there was
+something I needed. 
+
+57
+00:03:36,600 --> 00:03:38,500
+And it was, it was Has quite a 
+hell. 
+
+58
+00:03:38,700 --> 00:03:41,800
+Yeah. 
+So I needed to find a something 
+
+59
+00:03:41,800 --> 00:03:46,000
+that works better for those kind
+of scenarios. 
+
+60
+00:03:46,300 --> 00:03:48,100
+But anyway, we can talk about 
+this later. 
+
+61
+00:03:48,100 --> 00:03:52,300
+So so I did dad. 
+And I used to also do python 
+
+62
+00:03:52,500 --> 00:03:56,900
+python development, kind of a 
+bit of everything and I was part
+
+63
+00:03:56,900 --> 00:03:59,100
+of a small community called 
+pallone. 
+
+64
+00:03:59,100 --> 00:04:04,300
+It's a very old CMS, are you? 
+I worked with the some of the 
+
+65
+00:04:04,300 --> 00:04:07,300
+plone people and we've had what 
+we had Jim. 
+
+66
+00:04:08,200 --> 00:04:12,400
+Fulton Jim Fulton. 
+He came out here for a developer
+
+67
+00:04:12,400 --> 00:04:17,000
+retreat at one point and I know 
+I've known him for for many 
+
+68
+00:04:17,000 --> 00:04:19,800
+years and some of the other 
+people on the plane. 
+
+69
+00:04:20,100 --> 00:04:24,400
+I never figured it out myself 
+but I got I got you know a 
+
+70
+00:04:24,400 --> 00:04:27,300
+little bit into it. 
+Yeah so they were so you never 
+
+71
+00:04:27,300 --> 00:04:29,800
+really smart people. 
+They're working on the blow 
+
+72
+00:04:29,800 --> 00:04:32,400
+Community. 
+Yeah and that's brought a lot of
+
+73
+00:04:32,400 --> 00:04:36,400
+good stuff and the bad stuff so 
+that was interesting. 
+
+74
+00:04:36,400 --> 00:04:39,100
+Yeah I worked I used. 
+To work with Paul and it was 
+
+75
+00:04:39,300 --> 00:04:44,200
+still my favorite Community out 
+there in open source, but one 
+
+76
+00:04:44,200 --> 00:04:46,900
+problem we did have is that it 
+was really big and hard to 
+
+77
+00:04:46,900 --> 00:04:51,400
+package. 
+And one day Florian freezed of 
+
+78
+00:04:51,400 --> 00:04:54,100
+my friend came to me and said 
+that, you know, he has some 
+
+79
+00:04:54,100 --> 00:04:56,600
+friends who are doing PhD and, 
+you know, about Nick. 
+
+80
+00:04:56,600 --> 00:05:01,800
+So this was I took 2012 or 
+something about yeah, more than 
+
+81
+00:05:01,800 --> 00:05:03,500
+10 years ago. 
+I think so. 
+
+82
+00:05:03,500 --> 00:05:08,800
+The next start is a PhD project.
+Yes, it did. those throated as a
+
+83
+00:05:08,808 --> 00:05:15,500
+PhD project in with tract, which
+has one of the Biggest I think 
+
+84
+00:05:15,500 --> 00:05:20,200
+in Europe functional language, 
+like I don't know what it called
+
+85
+00:05:20,200 --> 00:05:24,000
+Laboratories or setting the 
+universities or in the world. 
+
+86
+00:05:24,000 --> 00:05:26,300
+Probably. 
+So yeah. 
+
+87
+00:05:27,400 --> 00:05:32,000
+So we try to use NYX to, to kind
+of fix blown packaging, which we
+
+88
+00:05:32,000 --> 00:05:37,800
+didn't end up doing that easily.
+But we did, I did end up using 
+
+89
+00:05:37,800 --> 00:05:43,300
+necks and going deeper into the 
+whole ecosystem of what has been
+
+90
+00:05:43,300 --> 00:05:46,900
+built there. 
+He dove into the world of necks 
+
+91
+00:05:46,900 --> 00:05:51,300
+and and started contributing at 
+some point and and yes. 
+
+92
+00:05:51,600 --> 00:05:55,000
+And then where you at now? 
+Like I think I saw there's a 
+
+93
+00:05:55,008 --> 00:05:57,900
+company kind of behind Nick's 
+that you co-founded. 
+
+94
+00:05:57,900 --> 00:06:00,000
+Is that right? 
+Yes. 
+
+95
+00:06:01,000 --> 00:06:06,200
+So I did some I think it was 
+2016. 
+
+96
+00:06:06,200 --> 00:06:08,500
+I started Consulting, I don't 
+thinks. 
+
+97
+00:06:09,600 --> 00:06:13,300
+But in quickly, I saw that, you 
+know, So many people need is 
+
+98
+00:06:13,300 --> 00:06:16,600
+that it's Consulting is not the 
+best approach because it's too 
+
+99
+00:06:16,600 --> 00:06:18,500
+much tailored to specific 
+people. 
+
+100
+00:06:19,300 --> 00:06:26,300
+So I created cash, fix in 2000. 
+Wait, it's been four or five 
+
+101
+00:06:26,300 --> 00:06:27,500
+years? 
+I don't even know how. 
+
+102
+00:06:27,500 --> 00:06:33,400
+I don't keep track. 
+Yeah, it looks 2018 and it grew 
+
+103
+00:06:33,400 --> 00:06:35,900
+up, basically out of a simple 
+project, which is. 
+
+104
+00:06:35,900 --> 00:06:39,900
+Okay, let's so next, you have 
+this concert where you can build
+
+105
+00:06:39,900 --> 00:06:45,900
+a package and distribute it to 
+To some file systems and storage
+
+106
+00:06:45,900 --> 00:06:51,400
+tank S3 or something. 
+And then if you build the same 
+
+107
+00:06:51,400 --> 00:06:54,700
+package again, which has the 
+same hash and you know this hash
+
+108
+00:06:54,700 --> 00:06:58,300
+kind of means that it is exactly
+the same package, then you can 
+
+109
+00:06:58,300 --> 00:07:01,900
+kind of short circuit that 
+process of building the package 
+
+110
+00:07:02,200 --> 00:07:06,600
+and just get the binary and, you
+know, Skip the whole build so 
+
+111
+00:07:06,600 --> 00:07:11,000
+that Source versus binary 
+distribution is not a dilemma 
+
+112
+00:07:11,000 --> 00:07:13,400
+anymore. 
+It's Of a design Choice. 
+
+113
+00:07:13,400 --> 00:07:19,200
+It makes that you can have both.
+And so what cash checks did was 
+
+114
+00:07:19,200 --> 00:07:22,400
+like created a project where you
+can just you know with a few 
+
+115
+00:07:22,400 --> 00:07:26,800
+clicks create is your own 
+namespace, your own thing and 
+
+116
+00:07:26,800 --> 00:07:30,800
+you know, it's really nice 
+because for GitHub small 
+
+117
+00:07:30,800 --> 00:07:33,600
+projects for open source 
+projects or Pride projects. 
+
+118
+00:07:33,600 --> 00:07:37,800
+It makes it much easier to set 
+up and then I created a company 
+
+119
+00:07:38,400 --> 00:07:41,600
+which which does like a freemium
+model like GitHub, you know? 
+
+120
+00:07:41,700 --> 00:07:44,700
+Private stuff is paid and public
+stuff is kind of free. 
+
+121
+00:07:47,000 --> 00:07:52,500
+That's so the core technology 
+then is the like binary cash 
+
+122
+00:07:52,600 --> 00:07:54,900
+side underneath Nick's or 
+something. 
+
+123
+00:07:54,900 --> 00:08:00,400
+So yeah that's the that's the 
+main thing that cash checks does
+
+124
+00:08:01,600 --> 00:08:06,700
+and then based on, you know, 
+customers paying for days, I've 
+
+125
+00:08:06,700 --> 00:08:11,500
+been working on cash shakes and 
+I did. 
+
+126
+00:08:11,700 --> 00:08:15,900
+The dev which is I think still 
+one of the best resources to 
+
+127
+00:08:15,900 --> 00:08:19,800
+learn things today. 
+I wrote like about 15 tutorials 
+
+128
+00:08:20,000 --> 00:08:23,000
+like how to set it up for 
+Raspberry Pi how to build Docker
+
+129
+00:08:23,000 --> 00:08:26,700
+images and all this kind of like
+common stuff. 
+
+130
+00:08:29,100 --> 00:08:30,600
+Yeah and it's funded a bunch of 
+things. 
+
+131
+00:08:30,600 --> 00:08:34,299
+Now we have Cushing's deployed 
+that van and so on so we can we 
+
+132
+00:08:34,308 --> 00:08:36,200
+can talk about those nice. 
+Yeah. 
+
+133
+00:08:37,000 --> 00:08:39,900
+So assume that we know nothing 
+about next. 
+
+134
+00:08:39,900 --> 00:08:41,600
+What is next? 
+What? 
+
+135
+00:08:41,700 --> 00:08:49,100
+Um, is it solving, right? 
+So, so Nixon makes kind of tries
+
+136
+00:08:49,100 --> 00:08:53,300
+to to, to look at. 
+This was the PHD actually try to
+
+137
+00:08:53,300 --> 00:08:56,300
+look at software, distribution 
+and packaging and apply. 
+
+138
+00:08:57,700 --> 00:09:00,700
+Functional programming kind of 
+thinking to it on. 
+
+139
+00:09:00,700 --> 00:09:05,200
+This is not a, how you would 
+today describe next. 
+
+140
+00:09:05,200 --> 00:09:07,300
+But this was, you know, how it 
+used to be. 
+
+141
+00:09:07,400 --> 00:09:12,700
+However, came to be how I would 
+say today is, It's a devops 
+
+142
+00:09:12,700 --> 00:09:17,800
+toolkit where you have kind of 
+one tool that does package 
+
+143
+00:09:17,800 --> 00:09:22,000
+manager, roll? 
+It does software distribution. 
+
+144
+00:09:22,000 --> 00:09:26,600
+Deployments roll. 
+It does, you know, building of 
+
+145
+00:09:26,600 --> 00:09:29,700
+anything you can think of, from 
+developer environments to Docker
+
+146
+00:09:29,700 --> 00:09:33,200
+images. 
+It's, I like the way I like to 
+
+147
+00:09:33,200 --> 00:09:35,100
+see it. 
+It's kind of like a small 
+
+148
+00:09:35,100 --> 00:09:39,900
+language, which allows you to 
+describe your software 
+
+149
+00:09:39,900 --> 00:09:42,700
+distribution, you know. 
+No whole Pipeline and 
+
+150
+00:09:42,700 --> 00:09:45,800
+everything. 
+Yeah, and as it's not, yeah, 
+
+151
+00:09:45,800 --> 00:09:49,200
+more. 
+Yes, it is not yellow. 
+
+152
+00:09:50,500 --> 00:09:55,600
+It's a fairly small language, 
+but because it's functional, it 
+
+153
+00:09:55,600 --> 00:09:59,500
+takes a bit of time for people 
+to kind of grasp the concepts. 
+
+154
+00:10:00,200 --> 00:10:05,600
+How it works found that because 
+I was just in the last day I've 
+
+155
+00:10:05,600 --> 00:10:10,200
+been looking at the language 
+itself and I was realizing okay,
+
+156
+00:10:10,200 --> 00:10:14,100
+I have been immersed. 
+Just enough in functional 
+
+157
+00:10:14,100 --> 00:10:16,100
+languages that I can look at 
+this and go. 
+
+158
+00:10:16,100 --> 00:10:20,700
+Sure I get what you're doing 
+here but it's like, okay, I'm 
+
+159
+00:10:20,700 --> 00:10:24,600
+over the hump. 
+Yes, people before the hump who 
+
+160
+00:10:24,600 --> 00:10:28,300
+are used to, you know, what do 
+we call them? 
+
+161
+00:10:28,300 --> 00:10:29,500
+Alcohol. 
+Style. 
+
+162
+00:10:29,500 --> 00:10:31,700
+Languages. 
+I don't remember what how we 
+
+163
+00:10:31,700 --> 00:10:36,600
+classify. 
+You know, C Java, you know, all 
+
+164
+00:10:36,600 --> 00:10:38,400
+these other languages syntax 
+style. 
+
+165
+00:10:38,400 --> 00:10:40,300
+Yeah, that particular syntax 
+style. 
+
+166
+00:10:40,300 --> 00:10:42,900
+There's a there's a Overarching 
+name. 
+
+167
+00:10:42,900 --> 00:10:44,900
+I think for it. 
+It's like if you're coming from 
+
+168
+00:10:44,900 --> 00:10:46,500
+that, you look at this. 
+And you go. 
+
+169
+00:10:46,500 --> 00:10:48,300
+What, why are you? 
+Because I've had that 
+
+170
+00:10:48,300 --> 00:10:51,500
+experience, it was letting out 
+it going for this seems really 
+
+171
+00:10:51,500 --> 00:10:55,400
+awkward and now it's like no, 
+that's fine. 
+
+172
+00:10:55,400 --> 00:10:58,500
+I get it. 
+But you have to have a certain 
+
+173
+00:10:58,500 --> 00:11:05,800
+amount of exposure to this other
+style, before it seems natural. 
+
+174
+00:11:06,600 --> 00:11:13,000
+And I'm not sure how we 
+Shepherd, Washington asses into 
+
+175
+00:11:13,400 --> 00:11:16,900
+this style functional languages.
+And yeah that's what I mean. 
+
+176
+00:11:16,900 --> 00:11:19,100
+This is what we've been striving
+away from a while. 
+
+177
+00:11:19,100 --> 00:11:22,600
+Having Hamill Harrison how do we
+make functional languages make 
+
+178
+00:11:22,600 --> 00:11:27,300
+sense to people who are used to 
+who and I'm responsible 
+
+179
+00:11:27,300 --> 00:11:29,700
+partially for making 
+object-oriented. 
+
+180
+00:11:29,700 --> 00:11:31,800
+Programming seemed like a good 
+idea. 
+
+181
+00:11:32,700 --> 00:11:37,000
+So how do we fix it was? 
+It was at a time, right? 
+
+182
+00:11:37,000 --> 00:11:40,700
+I think it had it. 
+Well, I think It was a good 
+
+183
+00:11:40,700 --> 00:11:42,700
+hypothesis. 
+Yeah. 
+
+184
+00:11:42,700 --> 00:11:48,200
+And then in the process of 
+actually doing, you know, using 
+
+185
+00:11:48,200 --> 00:11:55,900
+it a long time we've seen. 
+Oh yeah, maybe encapsulation it 
+
+186
+00:11:55,900 --> 00:11:59,500
+had a good intention. 
+But yeah, way that it actually 
+
+187
+00:11:59,500 --> 00:12:04,900
+works isn't really that big of a
+help especially compared to 
+
+188
+00:12:05,200 --> 00:12:08,500
+immutability. 
+Yes, that the way, the way I 
+
+189
+00:12:08,500 --> 00:12:12,000
+like to think about it, It is 
+like OG coding with roaming is 
+
+190
+00:12:12,000 --> 00:12:14,900
+more like how the world works. 
+You know we have a tree and it 
+
+191
+00:12:14,900 --> 00:12:19,200
+has properties versus functional
+is more how machines actually 
+
+192
+00:12:19,200 --> 00:12:21,200
+works. 
+So it's more modeled swords. 
+
+193
+00:12:21,800 --> 00:12:26,900
+It's just like one way to look 
+at it but I think it's the it's 
+
+194
+00:12:26,900 --> 00:12:31,100
+just takes time. 
+And, you know, I actually like 
+
+195
+00:12:31,700 --> 00:12:36,000
+react in JavaScript it, a 
+fantastic job of teaching, 
+
+196
+00:12:36,000 --> 00:12:38,700
+people functional language 
+principles. 
+
+197
+00:12:40,300 --> 00:12:43,900
+And I think, I think, you know, 
+a lot of people have done react,
+
+198
+00:12:43,900 --> 00:12:47,300
+so if they did it, they already 
+know quite a few. 
+
+199
+00:12:48,000 --> 00:12:50,800
+So I think the way to teach 
+people is well, to get them 
+
+200
+00:12:50,800 --> 00:12:54,600
+young and to do next is this 
+concert? 
+
+201
+00:12:54,600 --> 00:12:59,600
+Whoa, yeah. 
+And then, yeah, I've also come 
+
+202
+00:12:59,600 --> 00:13:03,100
+to the, I've started thinking 
+well, you know, 00 isn't 
+
+203
+00:13:03,100 --> 00:13:05,400
+completely useless because some 
+people will go. 
+
+204
+00:13:05,400 --> 00:13:07,400
+Oh, we made a huge mistake. 
+We should never have done. 
+
+205
+00:13:07,700 --> 00:13:11,000
+It's like on the sort of of 
+surface level. 
+
+206
+00:13:11,000 --> 00:13:16,600
+It's a nice way to package your 
+library because it, you know, it
+
+207
+00:13:16,600 --> 00:13:19,300
+handles. 
+It provides a nice interface to 
+
+208
+00:13:19,300 --> 00:13:22,700
+the library and you have dot 
+completion and you've got the 
+
+209
+00:13:22,700 --> 00:13:25,600
+constructors and destructors 
+stuff like that. 
+
+210
+00:13:25,600 --> 00:13:29,300
+So for the end user of that 
+Library, it does make things 
+
+211
+00:13:29,300 --> 00:13:32,600
+nicer is just that. 
+We took it too far. 
+
+212
+00:13:32,600 --> 00:13:35,600
+If we, if we had kept it at that
+surface level, I think we would 
+
+213
+00:13:35,600 --> 00:13:41,500
+have been better off. 
+Yeah, current thinking Like me, 
+
+214
+00:13:42,100 --> 00:13:45,400
+but my my thinking has always 
+been like, you know, as long as 
+
+215
+00:13:45,400 --> 00:13:47,800
+it's a small scraped and it's 
+something that you know, will 
+
+216
+00:13:47,800 --> 00:13:51,900
+not grow Beyond, you know, like 
+a small thing it's perfectly 
+
+217
+00:13:51,900 --> 00:13:55,300
+valid and it does two jobs on 
+the small man in the beginning. 
+
+218
+00:13:55,300 --> 00:13:56,600
+You know, we keep running into 
+that. 
+
+219
+00:13:56,600 --> 00:14:04,600
+So I am trying to one of the 
+things that I found confusing 
+
+220
+00:14:05,200 --> 00:14:10,700
+about my early brushes with 
+Nick's was the difference 
+
+221
+00:14:10,700 --> 00:14:16,500
+between Knicks and Nick's OS. 
+And why does Nick's OS exist? 
+
+222
+00:14:17,000 --> 00:14:22,700
+And also it was just presented 
+as oh well this is an operating 
+
+223
+00:14:22,700 --> 00:14:25,400
+system and my first thought was 
+I have to learn another 
+
+224
+00:14:25,400 --> 00:14:29,000
+operating system. 
+It the stuff that I've seen 
+
+225
+00:14:29,000 --> 00:14:33,000
+didn't present it as and maybe 
+I'm wrong about this but it 
+
+226
+00:14:33,000 --> 00:14:36,100
+looks like a Linux distro to me?
+Yeah. 
+
+227
+00:14:36,200 --> 00:14:38,700
+Yes. 
+And is it a Linux distro? 
+
+228
+00:14:38,700 --> 00:14:44,000
+Or did you actually Hold up a 
+clone of a posix system using 
+
+229
+00:14:44,000 --> 00:14:48,800
+NYX. 
+So yeah, there's there's many me
+
+230
+00:14:48,800 --> 00:14:51,600
+snow Mercy, makes Community 
+because it was done in such a 
+
+231
+00:14:51,600 --> 00:14:56,200
+long time ago and never fixed. 
+But it is a Linux distro 
+
+232
+00:14:56,200 --> 00:14:59,700
+essentially, it's a bunch of you
+know packages glued together 
+
+233
+00:14:59,700 --> 00:15:03,400
+which bunch of configuration. 
+The only thing that is different
+
+234
+00:15:03,400 --> 00:15:06,500
+is that you have like one 
+declarative file that you can 
+
+235
+00:15:06,500 --> 00:15:10,600
+kind of copy to a machine and 
+say okay this is How I describe 
+
+236
+00:15:10,600 --> 00:15:14,100
+my machine and, you know, build 
+it and and you know, this is how
+
+237
+00:15:14,100 --> 00:15:18,100
+it this is, how it should look. 
+And you can copy to there and 
+
+238
+00:15:18,300 --> 00:15:21,400
+build it and kind of activate it
+as we say. 
+
+239
+00:15:22,200 --> 00:15:24,800
+And this makes it extremely 
+nice. 
+
+240
+00:15:24,800 --> 00:15:27,300
+Because in the good old days, 
+you would, you know, go and 
+
+241
+00:15:27,300 --> 00:15:29,500
+install one package and another 
+package. 
+
+242
+00:15:29,500 --> 00:15:33,400
+It configure something. 
+And, you know, few months later 
+
+243
+00:15:34,100 --> 00:15:37,300
+probably years, you have no idea
+how to reproduce that machine. 
+
+244
+00:15:37,300 --> 00:15:42,900
+Anything it's just There is no 
+way to go to replicate that. 
+
+245
+00:15:44,200 --> 00:15:46,500
+So this is me. 
+Try to draw an analogy real 
+
+246
+00:15:46,500 --> 00:15:49,300
+quick. 
+We did an episode a while back 
+
+247
+00:15:49,300 --> 00:15:54,000
+on like event sourcing and and 
+the idea that there's two 
+
+248
+00:15:54,000 --> 00:15:58,000
+different ways that you can do 
+data and the day of data world, 
+
+249
+00:15:58,000 --> 00:16:01,600
+you can have a table. 
+And when you have a table view 
+
+250
+00:16:01,600 --> 00:16:05,200
+of the world like a traditional 
+database, any updates you do to 
+
+251
+00:16:05,200 --> 00:16:09,700
+that table, the the event that 
+caused the change in the table. 
+
+252
+00:16:09,800 --> 00:16:13,400
+All is essentially gone after 
+its before, take the table, you 
+
+253
+00:16:13,400 --> 00:16:16,200
+meet the table based on the 
+events at then you don't care 
+
+254
+00:16:16,200 --> 00:16:18,500
+about the event. 
+Yeah where is event sourcing 
+
+255
+00:16:18,500 --> 00:16:23,000
+says no let's not keep a table, 
+let's keep track of just all the
+
+256
+00:16:23,000 --> 00:16:28,000
+events and then if we could 
+always materialize our state by 
+
+257
+00:16:28,000 --> 00:16:31,200
+replaying the events. 
+And so it sounds to me like 
+
+258
+00:16:31,200 --> 00:16:35,500
+like, Nick's, let's start with a
+traditional operating system. 
+
+259
+00:16:35,700 --> 00:16:38,700
+Traditional operating system is 
+like a table you've lost the 
+
+260
+00:16:38,700 --> 00:16:41,400
+history. 
+Of all the mutations that you 
+
+261
+00:16:41,400 --> 00:16:43,900
+did to get to your current 
+state. 
+
+262
+00:16:44,000 --> 00:16:47,800
+And so it's very hard to. 
+If you need to recreate your 
+
+263
+00:16:47,800 --> 00:16:50,200
+current state, it's very hard to
+figure out how you got into that
+
+264
+00:16:50,200 --> 00:16:52,400
+state and I experience pain with
+this all the time. 
+
+265
+00:16:52,400 --> 00:16:56,700
+Whenever I get a new laptop, it 
+takes me days to get it back to 
+
+266
+00:16:57,200 --> 00:17:00,500
+the state that I want my laptop.
+And because they're inevitably 
+
+267
+00:17:00,500 --> 00:17:03,400
+is some configuration file that 
+I changed at some point. 
+
+268
+00:17:03,400 --> 00:17:05,300
+And I forgot that I changed that
+file. 
+
+269
+00:17:05,400 --> 00:17:07,700
+And so then I have to, you know,
+go on this path of re 
+
+270
+00:17:07,700 --> 00:17:11,300
+remembering all the changes that
+I made. 8 to get to my laptop 
+
+271
+00:17:11,300 --> 00:17:16,900
+Stadium Windsor so fallible. 
+So follicle so approach and says
+
+272
+00:17:17,200 --> 00:17:21,500
+let's keep track of all the 
+changes that need to be made to 
+
+273
+00:17:21,500 --> 00:17:25,700
+get to your current state of an 
+operating system that you know 
+
+274
+00:17:25,700 --> 00:17:28,800
+does what you needed to is that 
+is that a correct analogy? 
+
+275
+00:17:30,300 --> 00:17:33,900
+It's it's hard to say it's half.
+Correct. 
+
+276
+00:17:33,900 --> 00:17:38,400
+So the only difference is that 
+we don't need to keep pretty the
+
+277
+00:17:38,400 --> 00:17:42,900
+state. 
+Like the changes but because 
+
+278
+00:17:42,900 --> 00:17:46,900
+it's not like I think that you 
+well you have the history of 
+
+279
+00:17:46,900 --> 00:17:49,400
+course. 
+So you can go back and each each
+
+280
+00:17:49,400 --> 00:17:51,900
+kind of like each time you 
+activate the system. 
+
+281
+00:17:51,900 --> 00:17:54,800
+You kind of have a snapshot of 
+what does build and what was 
+
+282
+00:17:54,800 --> 00:17:58,100
+that system. 
+But you don't need really 
+
+283
+00:17:58,100 --> 00:18:01,200
+differences because everything 
+is built from scratch and kind 
+
+284
+00:18:01,200 --> 00:18:04,600
+of glued together based on the 
+config file that you're kind of,
+
+285
+00:18:04,700 --> 00:18:06,900
+you know, that's the ultimate 
+source of Truth. 
+
+286
+00:18:07,600 --> 00:18:09,700
+So there's I think there is a 
+really good. 
+
+287
+00:18:09,800 --> 00:18:15,300
+Good paper that talks about a 
+congruent, that convergent 
+
+288
+00:18:15,400 --> 00:18:19,600
+configuration systems. 
+So convergent is like ansible 
+
+289
+00:18:19,600 --> 00:18:22,200
+you say, you know, I want this 
+user to exist. 
+
+290
+00:18:22,200 --> 00:18:25,300
+So what it needs to do is is 
+like it needs to go to the 
+
+291
+00:18:25,300 --> 00:18:29,400
+machine check, if this user 
+exists, if not, it will edit, if
+
+292
+00:18:29,400 --> 00:18:32,900
+it exists, it will, you know, 
+inspect the properties of the 
+
+293
+00:18:32,900 --> 00:18:35,800
+user and then it will do it. 
+If, you know, this the home 
+
+294
+00:18:35,800 --> 00:18:39,000
+exist, does it not right on and 
+it will try to like kind of 
+
+295
+00:18:39,008 --> 00:18:41,500
+converge The desired State. 
+Okay. 
+
+296
+00:18:41,500 --> 00:18:44,700
+And I think the conclusion is 
+where you kind of build that 
+
+297
+00:18:44,700 --> 00:18:47,300
+image. 
+Kind of, you know, immutably 
+
+298
+00:18:47,300 --> 00:18:51,800
+like you say here are all the 
+users that should exist and here
+
+299
+00:18:51,800 --> 00:18:55,600
+you happy, here you go. 
+And you don't have to do this 
+
+300
+00:18:55,600 --> 00:18:59,200
+trickery state things, where you
+have to kind of mutate state but
+
+301
+00:18:59,200 --> 00:19:01,300
+you kind of just build 
+everything from scratch. 
+
+302
+00:19:01,300 --> 00:19:03,200
+Yeah. 
+So of course it difference 
+
+303
+00:19:03,200 --> 00:19:08,300
+between like Transformations on 
+immutable data versus mutating 
+
+304
+00:19:08,500 --> 00:19:11,100
+file system or what mutating 
+something. 
+
+305
+00:19:12,100 --> 00:19:15,100
+Yes. 
+So the idea is to just build 
+
+306
+00:19:15,100 --> 00:19:18,200
+everything as much as we can 
+from scratch and and of course, 
+
+307
+00:19:18,200 --> 00:19:20,800
+there is, you know, things like 
+there is State, you know, 
+
+308
+00:19:20,800 --> 00:19:22,800
+there's configuration data and 
+so on. 
+
+309
+00:19:22,800 --> 00:19:26,000
+So those things cannot be done 
+this way, but for the most part,
+
+310
+00:19:26,000 --> 00:19:34,400
+we can sew So the thing is, the 
+way I understand it is that all 
+
+311
+00:19:34,400 --> 00:19:42,400
+of these characteristics work if
+you just install Nicks and don't
+
+312
+00:19:42,400 --> 00:19:44,800
+install, Nick's OS. 
+Is that right? 
+
+313
+00:19:44,800 --> 00:19:47,700
+All of these abilities? 
+Yes, yes. 
+
+314
+00:19:47,800 --> 00:19:50,200
+Okay. 
+So is Nick so ask kind of a 
+
+315
+00:19:50,200 --> 00:19:55,400
+proof of concept or I'm still 
+not sure why it exists. 
+
+316
+00:19:56,100 --> 00:20:01,600
+So, so next is like, It 
+generally applicable. 
+
+317
+00:20:01,600 --> 00:20:05,400
+So, so next size was just like, 
+well, actually, you know, you 
+
+318
+00:20:05,400 --> 00:20:10,100
+can sort of days next packages 
+which is a collection of 70,000 
+
+319
+00:20:10,100 --> 00:20:12,700
+packages and it was 80,000 yen 
+now 80. 
+
+320
+00:20:12,700 --> 00:20:16,600
+Now, 80,000 most up-to-date 
+repository, because we have a 
+
+321
+00:20:16,608 --> 00:20:22,300
+lot of bots doing automation the
+most secure in terms of like the
+
+322
+00:20:22,300 --> 00:20:24,800
+time that we need to take to 
+apply patches. 
+
+323
+00:20:24,800 --> 00:20:28,100
+And so, and so we've done a lot 
+of automation work because of 
+
+324
+00:20:28,100 --> 00:20:30,100
+Nick's properties. 
+Not because we have superhuman. 
+
+325
+00:20:30,200 --> 00:20:35,200
+Humans, you know community, and 
+yeah. 
+
+326
+00:20:35,200 --> 00:20:38,500
+So then that is okay. 
+Now we use next to create 
+
+327
+00:20:38,500 --> 00:20:40,700
+packages, but then what is an 
+operating system? 
+
+328
+00:20:40,700 --> 00:20:43,300
+Well, it's packages and 
+configuration stuff. 
+
+329
+00:20:43,700 --> 00:20:46,900
+Configuration stuff is nothing 
+more than a simple package, 
+
+330
+00:20:47,100 --> 00:20:51,300
+which we call a file and then we
+build all of that and glue it 
+
+331
+00:20:51,300 --> 00:20:55,300
+together and you have a, you 
+know, a Linux distribution and 
+
+332
+00:20:55,300 --> 00:21:00,000
+it's not a proof of concept 
+anymore because it's, I think 
+
+333
+00:21:00,300 --> 00:21:08,000
+Sighs paper came out 2004 or I 
+don't know, it's very old it can
+
+334
+00:21:08,000 --> 00:21:13,700
+quite quickly after next and 
+it's it's really I would say 
+
+335
+00:21:14,400 --> 00:21:17,200
+very widely used operating 
+system this. 
+
+336
+00:21:17,300 --> 00:21:20,800
+Well the Linux distribution 
+depends on the terminology pick 
+
+337
+00:21:20,800 --> 00:21:25,300
+so I can use NYX without having 
+xos and the reason why I would 
+
+338
+00:21:25,300 --> 00:21:31,700
+want to do that is because I 
+want to have some Some software,
+
+339
+00:21:31,700 --> 00:21:36,800
+packaging definition defined by 
+the Knicks language for, you 
+
+340
+00:21:36,800 --> 00:21:40,300
+know, whatever for some server 
+that I'm building or whatever. 
+
+341
+00:21:41,700 --> 00:21:45,800
+If I want to have my whole 
+operating system, be controlled 
+
+342
+00:21:45,800 --> 00:21:52,100
+through Nick's and Nick's 
+scripts and I cuz this packages 
+
+343
+00:21:52,400 --> 00:21:55,900
+then I can use NYX OS so I can 
+kind of decide where what level 
+
+344
+00:21:56,100 --> 00:21:58,200
+I want to be at for my NYX 
+usage. 
+
+345
+00:21:58,200 --> 00:22:01,800
+Is that a correct summary? 
+That is the correct summary are.
+
+346
+00:22:01,900 --> 00:22:07,000
+There is also how manager which 
+is kind of like a less ambitious
+
+347
+00:22:07,000 --> 00:22:11,000
+project in terms of not taking 
+the whole operating system, but 
+
+348
+00:22:11,000 --> 00:22:13,900
+it will kind of manage your 
+home, use your home, so, it will
+
+349
+00:22:13,900 --> 00:22:18,300
+manage that files, configuration
+files for that user, so that can
+
+350
+00:22:18,300 --> 00:22:21,800
+be used with any Linux 
+distribution or on Mac OS. 
+
+351
+00:22:21,800 --> 00:22:30,000
+Even kha'zix anything. 
+Yes, I assume so since Nixon 
+
+352
+00:22:30,200 --> 00:22:36,100
+Itself is not attached to an 
+xos. 
+
+353
+00:22:37,100 --> 00:22:41,800
+What's the story with the 
+world's largest operating system
+
+354
+00:22:41,800 --> 00:22:45,000
+Windows? 
+It's like it seems like you 
+
+355
+00:22:45,000 --> 00:22:47,700
+could support Windows with 
+Nick's if you wanted to. 
+
+356
+00:22:47,700 --> 00:22:52,500
+Is that not true or you mean 
+like us a native -? 
+
+357
+00:22:52,800 --> 00:22:59,000
+Yeah, there's quite a few things
+that are that are quite hard to 
+
+358
+00:22:59,000 --> 00:23:03,100
+implement there. 
+I'm a bit out of sync on that, 
+
+359
+00:23:03,600 --> 00:23:09,600
+but, you know, we WSL coming and
+being so good people. 
+
+360
+00:23:09,600 --> 00:23:14,800
+Stopped caring that much. 
+I think because it kind of, you 
+
+361
+00:23:14,800 --> 00:23:18,000
+know, just the job of people to 
+be able to use it. 
+
+362
+00:23:18,700 --> 00:23:22,900
+But there's there's there's 
+would be some quite The, there's
+
+363
+00:23:22,900 --> 00:23:26,300
+some operations that needs does.
+For example, if I remember one 
+
+364
+00:23:26,300 --> 00:23:32,900
+of the atomic operations on 
+Linux has same link and when is 
+
+365
+00:23:32,900 --> 00:23:35,800
+going to bring up some links and
+that being a challenge. 
+
+366
+00:23:36,300 --> 00:23:38,900
+Yeah. 
+So so when, when Nick switches 
+
+367
+00:23:38,900 --> 00:23:42,600
+from what it calls a profile, 
+so, that's a snapshot of 
+
+368
+00:23:42,600 --> 00:23:44,300
+something. 
+You, you have, you know, it 
+
+369
+00:23:44,300 --> 00:23:49,300
+could be just a package or 40s, 
+or whatever it will switch a 
+
+370
+00:23:49,308 --> 00:23:51,500
+stream links from One Tree to 
+another. 
+
+371
+00:23:51,800 --> 00:23:55,500
+And this is how it does, you 
+know, why did claims its Atomic 
+
+372
+00:23:55,500 --> 00:23:57,100
+and while you can roll back and 
+all that. 
+
+373
+00:23:57,400 --> 00:24:00,700
+So that is not an atomic 
+operation in Windows as far as 
+
+374
+00:24:00,700 --> 00:24:02,900
+I'm aware. 
+So, you know, all these things 
+
+375
+00:24:02,900 --> 00:24:07,100
+become, you know, leaky and 
+Epsilon. 
+
+376
+00:24:07,600 --> 00:24:12,600
+Yeah. 
+Okay, so, all right packages. 
+
+377
+00:24:12,800 --> 00:24:16,200
+Okay, I know there's a concept 
+of derivation. 
+
+378
+00:24:16,200 --> 00:24:20,200
+'S is all right. 
+Okay, so there's are evasions, 
+
+379
+00:24:20,600 --> 00:24:26,300
+but then, There's packages. 
+And when I did my and WSL, 
+
+380
+00:24:26,300 --> 00:24:30,000
+installation, I decided, okay. 
+I'll see if I can do the little 
+
+381
+00:24:30,000 --> 00:24:34,600
+project that I'm working on now,
+which is using the python hatch 
+
+382
+00:24:35,100 --> 00:24:40,300
+environment manager and, you 
+know, anyway and so but I had to
+
+383
+00:24:40,300 --> 00:24:46,100
+install git and Python and both 
+of those were Nick's packages 
+
+384
+00:24:46,400 --> 00:24:50,300
+and I guess anything that I run 
+under Nick, so s, it has to be a
+
+385
+00:24:50,308 --> 00:24:56,600
+next package. 
+Is that sound right? 
+
+386
+00:24:56,800 --> 00:25:00,600
+Yeah, so that's where it gets a 
+bit tricky. 
+
+387
+00:25:00,600 --> 00:25:08,600
+So if you're using NYX last and 
+then What the, what the normal, 
+
+388
+00:25:09,100 --> 00:25:13,000
+any any binary? 
+You build expects usually is 
+
+389
+00:25:13,000 --> 00:25:17,700
+kind of like The Interpreter 
+that is kind of encoded. 
+
+390
+00:25:18,100 --> 00:25:21,100
+And and this is non-existent as 
+a global thing in ink. 
+
+391
+00:25:21,100 --> 00:25:24,000
+So if you just download the 
+binary, you know, from a boon to
+
+392
+00:25:24,000 --> 00:25:27,600
+and you kind of run it, it will 
+just not work. 
+
+393
+00:25:28,900 --> 00:25:32,900
+It has because packages as a 
+Knicks package. 
+
+394
+00:25:33,200 --> 00:25:35,600
+Exactly. 
+So what we have in Next is 
+
+395
+00:25:35,600 --> 00:25:38,700
+something called patch elf, 
+which patches the elf 
+
+396
+00:25:38,700 --> 00:25:43,400
+information of a binary and it 
+will kind of hard code something
+
+397
+00:25:43,400 --> 00:25:46,200
+to, to The Interpreter and 
+libraries. 
+
+398
+00:25:46,600 --> 00:25:50,900
+So we also have a utility called
+Auto patch half, which will just
+
+399
+00:25:50,900 --> 00:25:53,500
+kind of discover these things 
+and do it for you. 
+
+400
+00:25:53,900 --> 00:25:56,700
+But idea, is that you have to 
+like, calling these things 
+
+401
+00:25:56,700 --> 00:26:00,500
+against a specific Knicks 
+packages for these things to 
+
+402
+00:26:00,500 --> 00:26:02,900
+work. 
+And nowadays, there's more 
+
+403
+00:26:02,900 --> 00:26:06,700
+things that that people develop 
+To, to make it more seamless. 
+
+404
+00:26:06,700 --> 00:26:10,800
+But so the and the reason for 
+this is that a normal Linux 
+
+405
+00:26:10,800 --> 00:26:14,300
+system is going to have lib c 
+and a specific place. 
+
+406
+00:26:14,300 --> 00:26:18,700
+And so when a binary runs it 
+knows where to find lib C and it
+
+407
+00:26:18,700 --> 00:26:23,100
+knows you know what lib C is and
+what you know assumes some 
+
+408
+00:26:23,100 --> 00:26:24,500
+version of lib C. 
+Whatever. 
+
+409
+00:26:24,500 --> 00:26:27,700
+So there's a bunch of bunch of 
+assumptions that are made about 
+
+410
+00:26:27,700 --> 00:26:31,700
+the the the underlying 
+dependencies and a Knicks. 
+
+411
+00:26:31,900 --> 00:26:36,400
+Every dependency needs to be 
+explicit and Part of, yeah, and 
+
+412
+00:26:36,400 --> 00:26:40,200
+part of Nicks. 
+And so so you have to take a 
+
+413
+00:26:40,200 --> 00:26:44,000
+binary and and make it 
+understand the nics system 
+
+414
+00:26:44,000 --> 00:26:46,800
+because it can't just go find 
+lib C in the usual place or 
+
+415
+00:26:46,800 --> 00:26:51,000
+something, is that accurate? 
+Yeah that's accurate and and I 
+
+416
+00:26:51,000 --> 00:26:54,300
+think you know make steaks it's 
+really far and I think that 
+
+417
+00:26:54,300 --> 00:26:56,700
+there is going to be more and 
+more in the future as people 
+
+418
+00:26:56,700 --> 00:27:01,000
+adopt makes like helpers. 
+You know because sometimes you 
+
+419
+00:27:01,000 --> 00:27:03,900
+know you get like governments 
+house or something like this and
+
+420
+00:27:03,900 --> 00:27:08,200
+you know it just needs to work. 
+So there's quite a few methods 
+
+421
+00:27:08,200 --> 00:27:11,300
+out there to run these kind of 
+things but in general you don't 
+
+422
+00:27:11,300 --> 00:27:14,400
+want that because then you're 
+back to the old days, right? 
+
+423
+00:27:15,300 --> 00:27:18,000
+And yeah, you really want to 
+have it from the ground up like 
+
+424
+00:27:18,000 --> 00:27:22,000
+everything understanding the 
+world of Nick's but a package 
+
+425
+00:27:22,100 --> 00:27:26,300
+takes an existing executable. 
+Does it not? 
+
+426
+00:27:26,300 --> 00:27:29,700
+And then wrap something around 
+it or something else. 
+
+427
+00:27:30,400 --> 00:27:33,300
+Okay, so base. 
+So what it does is it takes 
+
+428
+00:27:33,400 --> 00:27:37,000
+binary and it will patch Each 
+endpoint all the dynamic 
+
+429
+00:27:37,000 --> 00:27:40,100
+libraries and pin it, you know, 
+specifically to what is provided
+
+430
+00:27:40,100 --> 00:27:44,100
+by next. 
+So it's kind of like a typical 
+
+431
+00:27:44,100 --> 00:27:47,300
+build, but instead of building 
+from Source, it will just hard 
+
+432
+00:27:47,300 --> 00:27:49,700
+code. 
+The dynamic libraries and The 
+
+433
+00:27:49,700 --> 00:27:51,400
+Interpreter Julep, see 
+everything. 
+
+434
+00:27:51,400 --> 00:27:56,600
+And you have to kind of skip 
+links for all of that, it's 
+
+435
+00:27:56,600 --> 00:28:00,000
+using patch. 
+Also, it will actually patch the
+
+436
+00:28:00,000 --> 00:28:03,400
+binary and, and kind of 
+replaced. 
+
+437
+00:28:03,400 --> 00:28:07,600
+So usually you would have Have 
+The Interpreter and how to look 
+
+438
+00:28:07,600 --> 00:28:10,800
+up this the libraries and then 
+it will just say you know load 
+
+439
+00:28:10,800 --> 00:28:15,900
+leap something.so but in this 
+case it will be the full path to
+
+440
+00:28:15,900 --> 00:28:19,600
+the package so you know Niche / 
+Nick's life store, the hash and 
+
+441
+00:28:19,600 --> 00:28:21,700
+you know, G lips, e 2.3 and so 
+on. 
+
+442
+00:28:23,200 --> 00:28:31,400
+So every package Every part of 
+every package is pinned to a 
+
+443
+00:28:31,400 --> 00:28:38,600
+specific hash hash and so. 
+And if that hash doesn't exist 
+
+444
+00:28:38,600 --> 00:28:40,500
+on that machine, it goes and 
+gets it. 
+
+445
+00:28:42,200 --> 00:28:48,000
+Yeah, that way there's never a 
+surprise like, if I happen to be
+
+446
+00:28:48,000 --> 00:28:54,000
+running something and it's using
+an older version of lib C that 
+
+447
+00:28:54,000 --> 00:28:57,100
+has a bug in it or something 
+like that, that doesn't show up 
+
+448
+00:28:57,100 --> 00:29:02,500
+because I know exactly every 
+single component that's in my 
+
+449
+00:29:02,600 --> 00:29:07,600
+application, but it's not 
+embedded in a in a binary, it's 
+
+450
+00:29:07,600 --> 00:29:12,200
+all linked. 
+And so if you have Most of those
+
+451
+00:29:12,200 --> 00:29:14,800
+things, it doesn't have to go 
+download them and just goes and 
+
+452
+00:29:14,800 --> 00:29:19,300
+gets what you need. 
+Okay, so you're nodding now, 
+
+453
+00:29:20,000 --> 00:29:26,500
+there is another system which is
+it was you know what I'm talking
+
+454
+00:29:26,500 --> 00:29:28,300
+about? 
+The guys who wrote The Red Book 
+
+455
+00:29:28,300 --> 00:29:30,700
+there. 
+Oh, Unison Unison. 
+
+456
+00:29:30,800 --> 00:29:35,300
+So do you know about Unison? 
+I know about Unison and some of 
+
+457
+00:29:35,300 --> 00:29:38,200
+the ideas but I'm not that 
+familiar is a lot. 
+
+458
+00:29:38,200 --> 00:29:40,600
+It sounds like a lot of the 
+ideas here. 
+
+459
+00:29:41,800 --> 00:29:45,000
+You know, hashing everything and
+never you wouldn't ever all 
+
+460
+00:29:45,000 --> 00:29:47,700
+references, being hashed 
+reference, you hash references. 
+
+461
+00:29:47,700 --> 00:29:50,800
+It, you wouldn't have never 
+recompile anything, unless 
+
+462
+00:29:50,800 --> 00:29:54,800
+something changes and in which 
+case you recompile it and that 
+
+463
+00:29:54,800 --> 00:29:57,700
+thing now has a new hash all of 
+that sounds like what? 
+
+464
+00:29:58,000 --> 00:29:59,800
+Unison's been working on? 
+Yeah. 
+
+465
+00:30:00,000 --> 00:30:03,600
+As well at the program in like a
+general purpose. / yeah. 
+
+466
+00:30:03,600 --> 00:30:05,300
+Language learning that right. 
+So much. 
+
+467
+00:30:05,300 --> 00:30:07,700
+It's so, so that's kind of 
+fascinating. 
+
+468
+00:30:07,900 --> 00:30:10,700
+Yeah, yeah. 
+Yeah, Unison is quite similar in
+
+469
+00:30:10,700 --> 00:30:11,600
+that. 
+Sense. 
+
+470
+00:30:11,600 --> 00:30:15,400
+Except it kind of transfers that
+to general computing? 
+
+471
+00:30:16,800 --> 00:30:17,800
+Yeah. 
+Right. 
+
+472
+00:30:18,400 --> 00:30:21,000
+Right. 
+Not systems. 
+
+473
+00:30:21,100 --> 00:30:23,800
+Right? 
+Right now looking at packaging 
+
+474
+00:30:23,800 --> 00:30:25,400
+and Building Systems in 
+particular. 
+
+475
+00:30:26,000 --> 00:30:31,400
+So a lot of this is targeted at 
+alleviating. 
+
+476
+00:30:31,400 --> 00:30:35,800
+Some of the pain that we've had 
+with, with portability of a 
+
+477
+00:30:35,800 --> 00:30:38,900
+binary essentially, right? 
+It's like I've got this program 
+
+478
+00:30:39,200 --> 00:30:41,500
+and I want to run it over. 
+Here. 
+
+479
+00:30:41,900 --> 00:30:44,100
+Well, what does that? 
+Binary essentially linked 
+
+480
+00:30:44,100 --> 00:30:45,900
+against, what does it need to 
+run? 
+
+481
+00:30:46,200 --> 00:30:51,200
+And Nick says, all right, you're
+you're Nick's package describes 
+
+482
+00:30:51,200 --> 00:30:55,200
+everything that it needs in the,
+you know, full tree. 
+
+483
+00:30:55,200 --> 00:31:00,400
+So, that always knows how to get
+to get a program able to run 
+
+484
+00:31:00,400 --> 00:31:04,600
+based on that dependency tree. 
+Is that accurate? 
+
+485
+00:31:04,700 --> 00:31:06,800
+It sounds. 
+Yeah, that's that's accurate. 
+
+486
+00:31:06,800 --> 00:31:13,100
+Yes, it knows the full graph of 
+So basically when you build up, 
+
+487
+00:31:13,500 --> 00:31:16,900
+you know package it has the full
+graph of build dependencies and 
+
+488
+00:31:16,900 --> 00:31:20,700
+then to determine the runtime 
+dependencies, just kind of scans
+
+489
+00:31:20,700 --> 00:31:24,400
+for these hashes and you know, 
+everything that that it depends 
+
+490
+00:31:24,400 --> 00:31:27,400
+on then is a dependency for 
+running because it's in the 
+
+491
+00:31:27,400 --> 00:31:31,800
+source and then if you copy 
+that, you know, we call it 
+
+492
+00:31:31,800 --> 00:31:34,000
+closures. 
+It's a, you know, that 
+
+493
+00:31:34,300 --> 00:31:36,800
+dependency tree to another 
+machine. 
+
+494
+00:31:36,800 --> 00:31:40,200
+You can just run it as long as 
+you know, it's the same system. 
+
+495
+00:31:40,600 --> 00:31:43,800
+Yeah. 
+So one of the one of the really 
+
+496
+00:31:43,800 --> 00:31:48,000
+nice things about Nick's is 
+replicating developer 
+
+497
+00:31:48,000 --> 00:31:51,400
+environments, for example 
+because you have Linux and Mac 
+
+498
+00:31:51,400 --> 00:31:54,600
+OS support, and and you can pin 
+all these things. 
+
+499
+00:31:54,600 --> 00:31:59,600
+So, you know, anyone can just 
+get the same kind of tooling and
+
+500
+00:31:59,600 --> 00:32:02,800
+and, you know, in the in the old
+days, you would install some 
+
+501
+00:32:02,800 --> 00:32:05,800
+software from your favorite 
+distributions, but you had a 
+
+502
+00:32:05,808 --> 00:32:09,500
+team of 20 people and now, you 
+know, their everybody has a 
+
+503
+00:32:09,500 --> 00:32:10,900
+different version, different 
+tags. 
+
+504
+00:32:11,000 --> 00:32:13,200
+And so on. 
+Yeah, yeah. 
+
+505
+00:32:13,200 --> 00:32:17,100
+And then all sorts of pain. 
+When you end up biting binding 
+
+506
+00:32:17,100 --> 00:32:20,900
+to some native library and then,
+you know, how does the user 
+
+507
+00:32:20,900 --> 00:32:23,300
+install, the native Library 
+that's needed and the build 
+
+508
+00:32:23,300 --> 00:32:26,800
+chain likes of the build chain 
+can support it, like, just so 
+
+509
+00:32:26,800 --> 00:32:33,100
+many challenges, so I can 
+understand why the World created
+
+510
+00:32:33,100 --> 00:32:37,400
+Docker. 
+But yes, it seems like like, I 
+
+511
+00:32:37,400 --> 00:32:44,000
+don't know to me having a If 
+dependency definition from what 
+
+512
+00:32:44,000 --> 00:32:49,400
+you're building all the way down
+is a much better approach than 
+
+513
+00:32:49,700 --> 00:32:54,200
+than just like trying to shove a
+bunch of binaries around. 
+
+514
+00:32:54,200 --> 00:32:57,500
+And I don't know, we can talk 
+about Docker and all the issues 
+
+515
+00:32:57,500 --> 00:33:01,200
+that I have with it but maybe 
+maybe do far off topic. 
+
+516
+00:33:02,700 --> 00:33:07,000
+Yeah, well the way I see this is
+like darker was kind of hijacked
+
+517
+00:33:07,000 --> 00:33:10,900
+to solve the building issues but
+really they're a bit. 
+
+518
+00:33:11,000 --> 00:33:13,900
+Orthogonal, and they work 
+together really well. 
+
+519
+00:33:13,900 --> 00:33:17,700
+So, the way I see doctor is it's
+kind of like runtime isolation, 
+
+520
+00:33:17,700 --> 00:33:21,300
+you know, between you know 
+networking that Wrecking 
+
+521
+00:33:21,300 --> 00:33:25,100
+isolation file system, isolation
+all that while the something 
+
+522
+00:33:25,100 --> 00:33:30,000
+runs or containers, you know. 
+But Nick's is a all about the 
+
+523
+00:33:30,000 --> 00:33:32,400
+building part. 
+So when you actually glue those 
+
+524
+00:33:32,400 --> 00:33:35,700
+two things together, you get 
+kind of like the perfect thing. 
+
+525
+00:33:37,300 --> 00:33:40,200
+But under the hand when you do, 
+like, let's say local 
+
+526
+00:33:40,200 --> 00:33:42,800
+development. 
+In containers are a complete 
+
+527
+00:33:42,800 --> 00:33:49,700
+Overkill because you don't 
+really need a containers in that
+
+528
+00:33:49,700 --> 00:33:52,700
+case. 
+Yeah because yeah usually you 
+
+529
+00:33:52,700 --> 00:33:55,900
+want like Europe your people 
+reach for containers for that 
+
+530
+00:33:55,900 --> 00:33:59,700
+because that was kind of the the
+only thing available to give you
+
+531
+00:33:59,700 --> 00:34:04,700
+some some developer environment 
+consistency but it was just like
+
+532
+00:34:04,700 --> 00:34:08,800
+such a blunt force object to 
+solving the problem. 
+
+533
+00:34:08,800 --> 00:34:13,800
+Like you didn't, people don't 
+need To go that far the adapter 
+
+534
+00:34:13,800 --> 00:34:17,199
+pattern on steroids. 
+Yeah, yes. 
+
+535
+00:34:19,400 --> 00:34:22,699
+So let's let's talk a little 
+more about developer environment
+
+536
+00:34:22,699 --> 00:34:27,600
+stuff with Nick's because I have
+not tried to use NYX as a 
+
+537
+00:34:27,600 --> 00:34:33,300
+developer environment. 
+What I'm assuming would happen 
+
+538
+00:34:33,300 --> 00:34:37,400
+is so I do a lot of stuff in 
+Java and Colin and Scala and so 
+
+539
+00:34:37,400 --> 00:34:41,699
+I would have a NYX script in my 
+git repo that Be able to 
+
+540
+00:34:41,699 --> 00:34:46,699
+bootstrap my tool chain so that 
+then I could have, you know, be 
+
+541
+00:34:46,699 --> 00:34:49,199
+sure that I've got the right 
+version of java that I've got 
+
+542
+00:34:49,199 --> 00:34:50,900
+any system dependencies that I 
+need. 
+
+543
+00:34:50,900 --> 00:34:54,900
+I've got the build tool Gradle 
+spt, whatever. 
+
+544
+00:34:55,300 --> 00:35:02,900
+And so then I could run Nixon 
+nicshelle against my NYX script 
+
+545
+00:35:02,900 --> 00:35:06,700
+that's in my git repo and now 
+have my development environment 
+
+546
+00:35:06,700 --> 00:35:08,600
+set up and ready to go with 
+everything that I need. 
+
+547
+00:35:08,600 --> 00:35:11,600
+Is that was that that's right. 
+I look at. 
+
+548
+00:35:12,100 --> 00:35:17,400
+So one of the problems in Nick's
+is that that each language has 
+
+549
+00:35:17,400 --> 00:35:21,700
+kind of like a different API. 
+And so, so actually, I don't 
+
+550
+00:35:21,700 --> 00:35:25,500
+know if you guys have seen, but 
+I've started this project called
+
+551
+00:35:25,500 --> 00:35:29,000
+deaf and dumb sh in. 
+I did see that. 
+
+552
+00:35:29,000 --> 00:35:31,900
+Yeah. 
+In the of a, I think we're, 
+
+553
+00:35:31,900 --> 00:35:34,600
+which kind of tries to, to make 
+this quite simple. 
+
+554
+00:35:34,600 --> 00:35:38,200
+So you just say, it's kind of 
+like Nick's voice configuration 
+
+555
+00:35:38,200 --> 00:35:40,800
+but for projects and development
+environments you can say 
+
+556
+00:35:41,900 --> 00:35:45,500
+Languages dot Java, dot snabel 
+languages dot called Fender 
+
+557
+00:35:45,500 --> 00:35:49,800
+table, and it will kind of pin 
+everything down and provide you 
+
+558
+00:35:49,800 --> 00:35:56,100
+the basic tooling for that 
+language and what I would like 
+
+559
+00:35:56,100 --> 00:35:58,000
+to do. 
+And what I'm working on now is 
+
+560
+00:35:58,000 --> 00:36:02,600
+that you can go, you know, 
+between different versions and 
+
+561
+00:36:02,600 --> 00:36:06,900
+you can you can read, he's like 
+kind of launch processes without
+
+562
+00:36:06,900 --> 00:36:09,900
+containers. 
+So the idea is that that when 
+
+563
+00:36:09,900 --> 00:36:13,300
+you do local, Up man, you don't 
+use containers but then you can 
+
+564
+00:36:13,300 --> 00:36:15,900
+say build image and upload it to
+wherever you want. 
+
+565
+00:36:15,900 --> 00:36:19,500
+And then you know for deployment
+part you you then use containers
+
+566
+00:36:19,900 --> 00:36:23,500
+but you're sure that both of 
+these are the same versions 
+
+567
+00:36:23,500 --> 00:36:25,600
+running in containers on your 
+machine. 
+
+568
+00:36:26,100 --> 00:36:30,500
+Yeah. 
+So it's like I wanna extend from
+
+569
+00:36:30,500 --> 00:36:33,500
+the local development to the 
+packaging and like deployment 
+
+570
+00:36:33,500 --> 00:36:36,800
+stop. 
+So I would have a NYX script 
+
+571
+00:36:36,800 --> 00:36:39,500
+that would define how I get my 
+environment ready for 
+
+572
+00:36:39,500 --> 00:36:41,600
+development. 
+But then I would I Like another 
+
+573
+00:36:41,600 --> 00:36:46,600
+Nick's script that would define 
+how it how my application then 
+
+574
+00:36:46,600 --> 00:36:50,800
+gets packaged and then, and then
+I would take that Nick script 
+
+575
+00:36:50,800 --> 00:36:54,200
+and put it on a server somewhere
+and be able to bootstrap my 
+
+576
+00:36:54,500 --> 00:36:57,900
+essentially server process or 
+something from from NYX. 
+
+577
+00:36:57,900 --> 00:37:00,300
+Is that I thinking about? 
+Yeah that's correct. 
+
+578
+00:37:00,300 --> 00:37:04,000
+So you would you would be able 
+to generate a container and then
+
+579
+00:37:04,000 --> 00:37:08,100
+you can run it wherever you 
+want, for example, do you would 
+
+580
+00:37:08,100 --> 00:37:11,800
+you would potentially still 
+views a container is as your as 
+
+581
+00:37:11,800 --> 00:37:16,600
+your packaging format for your 
+server if you want to but do 
+
+582
+00:37:16,600 --> 00:37:18,900
+example. 
+So you can do it that way and 
+
+583
+00:37:18,900 --> 00:37:22,800
+then do people also just like in
+production have a Nick script 
+
+584
+00:37:22,800 --> 00:37:25,800
+that you know, builds their 
+production server is that an 
+
+585
+00:37:25,800 --> 00:37:29,000
+option to or? 
+Yeah you can you can just copy 
+
+586
+00:37:29,000 --> 00:37:32,000
+that that thing to any computer 
+and run it. 
+
+587
+00:37:32,000 --> 00:37:36,900
+So it's you're not tight going 
+to convert to Containers as long
+
+588
+00:37:36,900 --> 00:37:40,800
+as as long as you can copy to / 
+Knicks last store. 
+
+589
+00:37:41,800 --> 00:37:44,400
+You're good to go. 
+So that's the only kind of 
+
+590
+00:37:44,400 --> 00:37:51,500
+requirement that doesn't play 
+well with like vs code in 
+
+591
+00:37:51,500 --> 00:37:54,500
+IntelliJ. 
+Yeah. 
+
+592
+00:37:54,500 --> 00:38:01,700
+So for kind of like this editor 
+Integrations, you need to, to be
+
+593
+00:38:01,700 --> 00:38:06,200
+able to tell the editor, like, 
+you know, kind of run a command 
+
+594
+00:38:07,000 --> 00:38:11,500
+to activate the environment and 
+then kind of source that so in, 
+
+595
+00:38:12,100 --> 00:38:16,400
+I don't know IntelliJ, but I 
+know that for visual code 
+
+596
+00:38:16,400 --> 00:38:21,700
+Studio, there is like Durand of 
+integration and they kind of 
+
+597
+00:38:21,700 --> 00:38:24,700
+develop this X. 
+Like they helped develop this 
+
+598
+00:38:24,700 --> 00:38:28,800
+extensions for the deer end so 
+that you can say, okay dear of 
+
+599
+00:38:28,800 --> 00:38:32,300
+and will load a Bosch 
+environment and that will then 
+
+600
+00:38:32,300 --> 00:38:36,200
+be kind of like the source of 
+Truth for the editor of what is 
+
+601
+00:38:36,200 --> 00:38:41,600
+the environment about and we 
+hope that more editors will 
+
+602
+00:38:41,600 --> 00:38:45,900
+support that. 
+Not all of them do but that's 
+
+603
+00:38:45,900 --> 00:38:50,800
+kind of like the because then 
+this is kind of nice because you
+
+604
+00:38:50,800 --> 00:38:55,900
+can encapsulate everything. 
+Um, and you don't have to, you 
+
+605
+00:38:55,900 --> 00:38:59,000
+know, access any of this stuff 
+from the system except the 
+
+606
+00:38:59,000 --> 00:39:00,500
+editor itself. 
+Yeah. 
+
+607
+00:39:00,500 --> 00:39:06,200
+That case nice enough to mess 
+around with that, I've had a lot
+
+608
+00:39:06,200 --> 00:39:08,700
+of pain trying to do local 
+development with Docker 
+
+609
+00:39:08,700 --> 00:39:12,900
+containers and it's like, do you
+run your server in a container 
+
+610
+00:39:12,900 --> 00:39:16,800
+but then you lose things like, I
+like to do file watching to, you
+
+611
+00:39:16,800 --> 00:39:21,000
+know, be able to reload my 
+server when I change something 
+
+612
+00:39:21,000 --> 00:39:24,900
+and that doesn't work when When 
+your processes in a container 
+
+613
+00:39:24,900 --> 00:39:29,500
+and then the ID connection with 
+a container like it's just, it's
+
+614
+00:39:29,500 --> 00:39:34,000
+just so much pain. 
+So I like the idea of not not 
+
+615
+00:39:34,000 --> 00:39:38,500
+doing that and instead having my
+editor just be Nix, environment 
+
+616
+00:39:38,500 --> 00:39:42,400
+aware and and I would certainly 
+save a lot of pain. 
+
+617
+00:39:42,400 --> 00:39:50,400
+So the language is my impression
+of the language is that the goal
+
+618
+00:39:50,400 --> 00:39:58,500
+is to is off is to only do 
+enough to be able to create the 
+
+619
+00:40:00,200 --> 00:40:03,500
+I forgot what the term is, the 
+derivations, the derivation, 
+
+620
+00:40:03,600 --> 00:40:09,700
+okay, which which which is this 
+text description of what's going
+
+621
+00:40:09,700 --> 00:40:14,900
+on Is that, yeah, yeah, the 
+language is trying to be minimal
+
+622
+00:40:14,900 --> 00:40:21,600
+so that, you know, it's kind of 
+easy to learn, but I always, I 
+
+623
+00:40:21,600 --> 00:40:25,900
+always joke and it's, there's 
+more truth to it than a joke and
+
+624
+00:40:25,900 --> 00:40:29,700
+I say that makes is like the 
+JavaScript for devops because 
+
+625
+00:40:31,800 --> 00:40:36,500
+the language has some quirks. 
+And honestly, I think you know, 
+
+626
+00:40:36,500 --> 00:40:39,400
+if someone would have designed 
+it today, they would have done a
+
+627
+00:40:39,400 --> 00:40:43,900
+different job and it was not Not
+meant to be the devops toolkit, 
+
+628
+00:40:43,900 --> 00:40:47,100
+just just like JavaScript has 
+never been to, to run the world,
+
+629
+00:40:48,700 --> 00:40:52,600
+but I'm still hopeful that, you 
+know, now that there's a lot 
+
+630
+00:40:52,600 --> 00:40:55,800
+more companies coming to the 
+ecosystem, that it will have 
+
+631
+00:40:55,800 --> 00:41:00,300
+kind of same fate as JavaScript 
+that people will will, you know,
+
+632
+00:41:00,300 --> 00:41:03,900
+nurture it and improve it and 
+make it better. 
+
+633
+00:41:04,800 --> 00:41:07,400
+So, kind of developer and 
+experience, has been a pretty 
+
+634
+00:41:08,500 --> 00:41:12,600
+popular Topic in the last year 
+or two And yeah, that's where a 
+
+635
+00:41:12,600 --> 00:41:16,200
+lot of focus comes to did. 
+The next language, was it 
+
+636
+00:41:16,200 --> 00:41:21,300
+created like at the same time as
+Nick's itself like and maybe I'm
+
+637
+00:41:21,300 --> 00:41:24,500
+getting terminology wrong, like 
+I imagined nix's kind of the 
+
+638
+00:41:25,700 --> 00:41:28,800
+there's different pieces to it. 
+One is the language that you 
+
+639
+00:41:28,800 --> 00:41:32,700
+define Nick scripts or whatever 
+and irvision the derivations and
+
+640
+00:41:32,700 --> 00:41:35,900
+then there's the thing that 
+actually reads those and does 
+
+641
+00:41:35,900 --> 00:41:38,400
+something with them. 
+So it was the language, always 
+
+642
+00:41:38,700 --> 00:41:41,900
+there like from the beginning or
+did That come later, what was 
+
+643
+00:41:41,900 --> 00:41:44,600
+the history on that? 
+As far as I know the language 
+
+644
+00:41:44,600 --> 00:41:47,200
+came together with the, the 
+package manager? 
+
+645
+00:41:47,200 --> 00:41:50,500
+Yeah, took ya. 
+So that's one of the confusing 
+
+646
+00:41:50,500 --> 00:41:55,000
+part is the naming, so it's the 
+package manager language. 
+
+647
+00:41:56,500 --> 00:42:01,200
+And then that the packages that 
+come are just kind of one 
+
+648
+00:42:01,200 --> 00:42:04,300
+implementation of that. 
+There could be another, but it's
+
+649
+00:42:04,300 --> 00:42:07,300
+the only one. 
+So, yeah. 
+
+650
+00:42:07,400 --> 00:42:09,800
+Those screws of the language was
+used elsewhere. 
+
+651
+00:42:09,800 --> 00:42:16,300
+We had Gabriella from dahlen on 
+a while back and it was 
+
+652
+00:42:16,300 --> 00:42:18,500
+interesting to see how doll was 
+being used in a variety of 
+
+653
+00:42:18,500 --> 00:42:19,900
+different places in different 
+ways. 
+
+654
+00:42:19,900 --> 00:42:24,000
+But is, is Nick's only used in 
+Nick's or people picked up for 
+
+655
+00:42:24,000 --> 00:42:27,700
+other uses as well. 
+Oh, people have done crazy 
+
+656
+00:42:27,700 --> 00:42:32,500
+things that I did. 
+What, what, what have? 
+
+657
+00:42:32,600 --> 00:42:34,200
+I don't know. 
+I think someone wrote a lisp 
+
+658
+00:42:34,200 --> 00:42:36,900
+interpreter and Nixon and things
+like that. 
+
+659
+00:42:37,100 --> 00:42:41,800
+Well, I don't think there's many
+crazy, really, Useful things. 
+
+660
+00:42:41,800 --> 00:42:45,200
+But, you know, people people 
+always try to to be creative and
+
+661
+00:42:45,200 --> 00:42:46,500
+it's cold. 
+But yeah. 
+
+662
+00:42:46,500 --> 00:42:50,500
+It's very specific to, to, to 
+describing how, you know, 
+
+663
+00:42:50,500 --> 00:42:54,200
+softer, he's glued together. 
+Essentially, I also beyond that.
+
+664
+00:42:54,200 --> 00:42:57,400
+I think it has a lot of views 
+Beyond art. 
+
+665
+00:42:58,400 --> 00:43:01,600
+Well, yeah, and I think I read 
+in the documentation, they, 
+
+666
+00:43:01,600 --> 00:43:05,400
+somebody described it as this is
+a domain, specific language. 
+
+667
+00:43:06,100 --> 00:43:07,100
+Yes. 
+Exactly. 
+
+668
+00:43:07,200 --> 00:43:13,800
+General purpose language. 
+Yes, which I think is nice 
+
+669
+00:43:13,800 --> 00:43:16,100
+because it makes it less 
+confusing. 
+
+670
+00:43:16,900 --> 00:43:19,300
+Because, you know, if it's 
+general-purpose truing, well, 
+
+671
+00:43:19,300 --> 00:43:22,400
+when would I ever use this 
+feature and the answer is, well,
+
+672
+00:43:22,400 --> 00:43:24,300
+you wouldn't. 
+So why is it in the language? 
+
+673
+00:43:24,700 --> 00:43:27,500
+Whereas here, it's just like, 
+no, all we're doing is creating 
+
+674
+00:43:27,500 --> 00:43:31,300
+these derivations. 
+And yes, it has functions but 
+
+675
+00:43:31,300 --> 00:43:33,400
+their goal is to create the 
+derivations. 
+
+676
+00:43:34,700 --> 00:43:37,300
+Exactly. 
+And actually gooey eggs, I never
+
+677
+00:43:37,300 --> 00:43:39,200
+know if that's the right, the 
+right pronunciation. 
+
+678
+00:43:39,400 --> 00:43:43,700
+A kind of a friendly Fork that 
+Luda which did many years ago 
+
+679
+00:43:45,100 --> 00:43:49,100
+and and their take is that they 
+took scheme, which is I think at
+
+680
+00:43:49,100 --> 00:43:51,900
+least implementation and is a 
+general language and they kind 
+
+681
+00:43:51,900 --> 00:43:56,900
+of do the same thing. 
+But with a general language I do
+
+682
+00:43:56,900 --> 00:44:00,000
+I personally am not a fan of 
+scheme but I understand why. 
+
+683
+00:44:00,000 --> 00:44:05,100
+And it's kind of, you know, an 
+interesting path. 
+
+684
+00:44:05,600 --> 00:44:08,100
+Yeah, it's interesting. 
+Do you start with a general 
+
+685
+00:44:08,100 --> 00:44:11,800
+purpose language? 
+And then Try to DSL it into a 
+
+686
+00:44:11,808 --> 00:44:17,000
+more constrained thing and 
+that's what s did with python we
+
+687
+00:44:17,000 --> 00:44:22,000
+learned about in our last 
+episode and that's similar to 
+
+688
+00:44:22,008 --> 00:44:25,900
+what Gradle did with groovy and 
+with Scotland or do you just 
+
+689
+00:44:25,900 --> 00:44:29,600
+have a language that is 
+intentionally constrained and 
+
+690
+00:44:29,600 --> 00:44:32,000
+doesn't you know let you do 
+that. 
+
+691
+00:44:32,000 --> 00:44:36,300
+I think one of the challenges 
+with with what we've seen a lot 
+
+692
+00:44:36,300 --> 00:44:39,100
+of times with declarative 
+languages like yeah. 
+
+693
+00:44:39,300 --> 00:44:43,600
+Mold for kubernetes llamo for 
+whatever, is that people pretty 
+
+694
+00:44:43,600 --> 00:44:47,900
+quickly, reached the the bounds 
+of what the language enables you
+
+695
+00:44:47,900 --> 00:44:50,200
+to do and then you need to 
+figure out. 
+
+696
+00:44:50,200 --> 00:44:52,500
+Okay, what's my escaped? 
+We hack on it? 
+
+697
+00:44:52,500 --> 00:44:54,200
+Yeah. 
+How do we end? 
+
+698
+00:44:54,200 --> 00:44:55,700
+They end up. 
+You know, coming up with all 
+
+699
+00:44:55,700 --> 00:44:59,700
+sorts of crazy ways to generate 
+the declarative language using 
+
+700
+00:44:59,700 --> 00:45:03,500
+yet another language and it just
+all falls apart very quickly. 
+
+701
+00:45:03,700 --> 00:45:08,300
+Whereas I really like the the 
+Knicks and doll approach is like
+
+702
+00:45:08,300 --> 00:45:12,400
+we're to be constrained, but 
+you're at least going to have 
+
+703
+00:45:12,400 --> 00:45:16,200
+some like, fundamental things 
+that you likely will need like 
+
+704
+00:45:16,200 --> 00:45:18,700
+four. 
+Yes, well, yeah, functions. 
+
+705
+00:45:18,700 --> 00:45:24,000
+And also, I noticed the wreck 
+where, oh, you're creating this 
+
+706
+00:45:24,000 --> 00:45:26,700
+set and I know. 
+And I noticed they're very clear
+
+707
+00:45:26,700 --> 00:45:28,400
+about set. 
+So there's new dope. 
+
+708
+00:45:28,400 --> 00:45:32,900
+Look, it's just and then, oh 
+well, sometimes you need to 
+
+709
+00:45:32,900 --> 00:45:35,600
+refer to other things within 
+that set definition. 
+
+710
+00:45:35,600 --> 00:45:39,500
+So we have a way to do that and 
+if you didn't have that it Be 
+
+711
+00:45:39,500 --> 00:45:41,400
+messy. 
+Yeah. 
+
+712
+00:45:41,400 --> 00:45:44,900
+So there's there's a few helpers
+like that in the language but 
+
+713
+00:45:44,900 --> 00:45:48,300
+essentially it's like the way I 
+see it is like, it's like Json 
+
+714
+00:45:48,300 --> 00:45:49,900
+with functions. 
+You know. 
+
+715
+00:45:49,900 --> 00:45:54,600
+There is Jason mad and Q naught 
+and Q language and so on and it 
+
+716
+00:45:54,600 --> 00:45:56,900
+was those are for Jason. 
+Yeah. 
+
+717
+00:45:56,900 --> 00:46:01,600
+Those are like more really Jason
+and and functions whereas Nexus 
+
+718
+00:46:01,600 --> 00:46:04,700
+is basically the same except it 
+has this derivation function 
+
+719
+00:46:04,700 --> 00:46:07,200
+which does you know all the 
+heavy lifting of builds. 
+
+720
+00:46:07,600 --> 00:46:11,000
+So that's the third. 
+Component to the language that I
+
+721
+00:46:11,000 --> 00:46:12,000
+would say. 
+Yeah, yeah. 
+
+722
+00:46:12,000 --> 00:46:17,000
+No, it is all starting to make 
+sense to me now, and in the 
+
+723
+00:46:17,000 --> 00:46:23,000
+process of installing Nick's on,
+as my WSL, I ended up wiping out
+
+724
+00:46:23,000 --> 00:46:27,900
+the the other one. 
+So it's my only WSL right now. 
+
+725
+00:46:27,900 --> 00:46:31,200
+So it's like and you know, it 
+seems to be working and I'm 
+
+726
+00:46:31,200 --> 00:46:33,700
+curious about low, well, how far
+can I take this? 
+
+727
+00:46:33,700 --> 00:46:38,900
+What do I need to do? 
+So I am, I am continuing to be 
+
+728
+00:46:38,900 --> 00:46:40,600
+curious. 
+It's about all of this. 
+
+729
+00:46:40,700 --> 00:46:45,200
+I need to break off a partition 
+on my laptop and install next to
+
+730
+00:46:45,200 --> 00:46:49,700
+us on and give it a good solid 
+try because I just yesterday, 
+
+731
+00:46:50,500 --> 00:46:54,100
+finally, got my audio in a bun 
+to actually working. 
+
+732
+00:46:54,300 --> 00:46:58,400
+And I intentionally put the 
+tweet for, like, how I got it. 
+
+733
+00:46:58,400 --> 00:47:02,600
+Working again, a tweet so that 
+when I get a new laptop, I'm 
+
+734
+00:47:02,600 --> 00:47:05,400
+gonna remember to like, you 
+know, go run that same command 
+
+735
+00:47:05,400 --> 00:47:09,000
+but if I just switch to mix 0s, 
+then Twitter is still alive. 
+
+736
+00:47:09,200 --> 00:47:13,900
+Every time you, you can go 
+download it my archive but not 
+
+737
+00:47:13,900 --> 00:47:16,800
+since the Tweet yesterday, right
+on to go read down the driveway 
+
+738
+00:47:16,800 --> 00:47:24,400
+or what I recommend is like and 
+what many people do is just to 
+
+739
+00:47:24,400 --> 00:47:29,200
+have a virtual machine and kind 
+of try to if you intend to get 
+
+740
+00:47:29,200 --> 00:47:32,600
+my with virtual box with with 
+the actors and virtualbox and 
+
+741
+00:47:32,600 --> 00:47:35,700
+that is a nice way to play with 
+it but and WSL is kind of a 
+
+742
+00:47:35,700 --> 00:47:38,100
+virtual machine. 
+It, you know, it can crash and 
+
+743
+00:47:38,100 --> 00:47:41,600
+burn in, it's not going. 
+Bring my windows down with it, 
+
+744
+00:47:42,100 --> 00:47:42,500
+please. 
+Yeah. 
+
+745
+00:47:42,500 --> 00:47:45,900
+That's that's the way that's, 
+it's also nice hair. 
+
+746
+00:47:46,400 --> 00:47:49,200
+Yeah, well, because the 
+instructions, the first 
+
+747
+00:47:49,200 --> 00:47:51,200
+instruction was, here's how to 
+install it. 
+
+748
+00:47:51,400 --> 00:47:55,000
+Just curl this thing off the 
+internet and let it do whatever 
+
+749
+00:47:55,000 --> 00:47:58,000
+it wants on your machine and we 
+were like going why we don't 
+
+750
+00:47:58,000 --> 00:48:00,500
+know enough about this to to 
+trust that. 
+
+751
+00:48:01,200 --> 00:48:06,000
+So so that's when we ended up 
+setting up a virtual box to dry 
+
+752
+00:48:06,000 --> 00:48:08,300
+it out without. 
+Yeah. 
+
+753
+00:48:08,300 --> 00:48:14,800
+So i i people I think we're 
+correct in telling us that nixes
+
+754
+00:48:15,500 --> 00:48:17,000
+solves. 
+A lot of the things that we 
+
+755
+00:48:17,000 --> 00:48:20,800
+complain about and we need to 
+dive, certainly dive further 
+
+756
+00:48:20,800 --> 00:48:24,000
+into it and I'm fascinated, give
+it, give it a good shot button. 
+
+757
+00:48:25,100 --> 00:48:28,500
+So, thank you. 
+I'm very excited about diving in
+
+758
+00:48:28,500 --> 00:48:30,900
+further and I don't know why it 
+took me so long because people 
+
+759
+00:48:30,900 --> 00:48:37,200
+have been telling me for well I 
+do because the, I don't know the
+
+760
+00:48:37,200 --> 00:48:41,500
+introductory experience. 
+Is not. 
+
+761
+00:48:41,500 --> 00:48:45,200
+It's it's confusing and like all
+functional, programming things. 
+
+762
+00:48:45,200 --> 00:48:48,500
+Well, I don't think it's just 
+the functional programming and 
+
+763
+00:48:48,500 --> 00:48:50,700
+it's like, I mean, in 
+countering. 
+
+764
+00:48:50,700 --> 00:48:52,000
+Okay? 
+So there's this thing called 
+
+765
+00:48:52,000 --> 00:48:54,400
+Nixon and their 60s and I'm 
+going Y. 
+
+766
+00:48:55,000 --> 00:48:59,100
+And and then, yeah, I mean, 
+there's a number of things that 
+
+767
+00:48:59,100 --> 00:49:03,900
+I think are really tuned more 
+towards. 
+
+768
+00:49:04,400 --> 00:49:09,100
+Maybe someone who's already have
+build engineer or somebody. 
+
+769
+00:49:09,200 --> 00:49:13,400
+Who really is thinking about 
+packaging problem gun, you know,
+
+770
+00:49:13,400 --> 00:49:18,400
+wanting to, to have a level of 
+expertise that they're able to 
+
+771
+00:49:18,400 --> 00:49:21,100
+look at this. 
+It's not. 
+
+772
+00:49:21,100 --> 00:49:24,800
+Yeah it doesn't have a real 
+introductory onboarding 
+
+773
+00:49:25,500 --> 00:49:27,100
+introduction process. 
+Yeah. 
+
+774
+00:49:27,100 --> 00:49:30,400
+So that's what I would say kept 
+me, you know, because I'd look 
+
+775
+00:49:30,400 --> 00:49:33,100
+at it and go. 
+No, this is too weird and now 
+
+776
+00:49:33,100 --> 00:49:34,600
+I'm to the point where I look at
+and go. 
+
+777
+00:49:34,600 --> 00:49:38,500
+Oh my gosh, this is actually 
+really fascinated. 
+
+778
+00:49:38,500 --> 00:49:43,800
+Oh yeah. 
+Yeah, a lot of people like like 
+
+779
+00:49:43,800 --> 00:49:49,100
+want to just ignore that you 
+have to have some way to get to 
+
+780
+00:49:49,100 --> 00:49:51,900
+a place where you can run 
+programs. 
+
+781
+00:49:52,200 --> 00:49:54,200
+I did. 
+Like in time I just want to 
+
+782
+00:49:54,208 --> 00:49:57,200
+ignore that. 
+That is reality and just run a 
+
+783
+00:49:57,200 --> 00:49:58,600
+program. 
+Sure. 
+
+784
+00:49:58,900 --> 00:50:03,200
+And yeah, it's like, you know, I
+just want to have a button that 
+
+785
+00:50:03,200 --> 00:50:07,100
+deploys everything that was, you
+know, kind of a big exactly. 
+
+786
+00:50:07,600 --> 00:50:10,600
+Why is it so hard? 
+Why is it so Our distribution. 
+
+787
+00:50:11,000 --> 00:50:12,700
+Yeah, yeah. 
+You had to go through a lot of 
+
+788
+00:50:12,700 --> 00:50:15,700
+pain to contain X and for it to 
+be feasible. 
+
+789
+00:50:15,700 --> 00:50:20,000
+But one of the, one of the 
+things I see that a lot of the 
+
+790
+00:50:20,000 --> 00:50:23,400
+companies and their ecosystems 
+are working together now on 
+
+791
+00:50:23,400 --> 00:50:26,400
+like, you know, improving the 
+installer experience on, 
+
+792
+00:50:26,400 --> 00:50:33,000
+improving the interfaces, 
+documentation, and developer 
+
+793
+00:50:33,000 --> 00:50:37,200
+environments, and so on. 
+And I think that will that will 
+
+794
+00:50:37,200 --> 00:50:41,700
+like You know increase the 
+adoption quite a bit. 
+
+795
+00:50:42,200 --> 00:50:47,300
+Yeah yeah I think when you know 
+the more people who kiss for me 
+
+796
+00:50:47,300 --> 00:50:51,400
+it took a long time to even 
+understand the pain Point. 
+
+797
+00:50:51,400 --> 00:50:55,300
+Especially I do a lot of stuff 
+with python and with python 
+
+798
+00:50:55,300 --> 00:50:58,000
+that's like a lot of times 
+everything just works, you know,
+
+799
+00:50:58,000 --> 00:51:02,700
+you just do Global installs and 
+and and things work, okay? 
+
+800
+00:51:03,100 --> 00:51:08,100
+And so it's like, why are why do
+I have to add this extra thing? 
+
+801
+00:51:08,100 --> 00:51:11,500
+Where Managing the environment 
+and everything everything seems 
+
+802
+00:51:11,500 --> 00:51:14,300
+to work, okay? 
+And that makes it worse because 
+
+803
+00:51:14,300 --> 00:51:17,900
+you don't get the, you know, you
+don't understand the pain. 
+
+804
+00:51:18,300 --> 00:51:21,200
+If it's like, yeah, I can get it
+to work on my machine and it's 
+
+805
+00:51:21,200 --> 00:51:22,600
+fine. 
+And I don't want to hassle with 
+
+806
+00:51:22,600 --> 00:51:27,500
+it and then you have to have 
+that big picture of, oh, there's
+
+807
+00:51:27,500 --> 00:51:32,500
+all these parts and they can all
+move, they can all change, and 
+
+808
+00:51:32,500 --> 00:51:37,800
+they can change and randomly 
+break your thing on another 
+
+809
+00:51:37,800 --> 00:51:39,800
+person's. 
+Machine so. 
+
+810
+00:51:40,100 --> 00:51:41,100
+Oh. 
+Okay. 
+
+811
+00:51:41,300 --> 00:51:44,500
+But it takes a while to come to 
+that realization. 
+
+812
+00:51:44,500 --> 00:51:46,000
+Yeah. 
+Yeah. 
+
+813
+00:51:46,000 --> 00:51:48,500
+You need to lose a lot of hours 
+in this standard. 
+
+814
+00:51:49,000 --> 00:51:53,000
+Never get those back. 
+Yeah. 
+
+815
+00:51:53,000 --> 00:51:55,400
+And if you don't have that 
+experience, if it's like 
+
+816
+00:51:55,400 --> 00:51:57,900
+everything's working. 
+Okay, for me for what I'm doing.
+
+817
+00:51:58,200 --> 00:52:01,600
+Then this is just like, why are 
+you guys bothering with all of 
+
+818
+00:52:01,600 --> 00:52:04,100
+this? 
+It's kind of similar to what we 
+
+819
+00:52:04,100 --> 00:52:06,800
+talked about, you know, with 
+object to object oriented 
+
+820
+00:52:06,800 --> 00:52:09,500
+programming. 
+You need to Spent a lot of time 
+
+821
+00:52:09,500 --> 00:52:12,800
+into that debugger to start 
+thinking maybe I, you know, 
+
+822
+00:52:12,800 --> 00:52:16,000
+there is a better way to model 
+this that I don't have to spend,
+
+823
+00:52:16,500 --> 00:52:18,800
+you know, four hours debugging 
+my state. 
+
+824
+00:52:20,200 --> 00:52:23,400
+But that's before that it's just
+it's just natural. 
+
+825
+00:52:23,400 --> 00:52:24,900
+You just debugging? 
+That's nice. 
+
+826
+00:52:24,900 --> 00:52:30,300
+How you solve problems well and 
+it's a big mental shift to go 
+
+827
+00:52:30,300 --> 00:52:35,800
+from 0 0, which makes sense in 
+your head to this other thing 
+
+828
+00:52:35,800 --> 00:52:38,300
+which is like, well, you've 
+you've just broken. 
+
+829
+00:52:38,400 --> 00:52:42,400
+Everything that I've maybe 
+learned over the last 20 years. 
+
+830
+00:52:42,800 --> 00:52:45,000
+Yeah. 
+Why, why do I do this? 
+
+831
+00:52:45,000 --> 00:52:48,000
+Give me the y-yes really hard to
+motivate. 
+
+832
+00:52:48,000 --> 00:52:52,100
+I think in a lot of cases it is,
+it is, you know, it's 
+
+833
+00:52:52,100 --> 00:52:53,900
+fascinating. 
+How did we get here? 
+
+834
+00:52:53,900 --> 00:52:56,200
+One? 
+What do you say, one bad 
+
+835
+00:52:56,200 --> 00:52:57,800
+decision at a time? 
+Or one? 
+
+836
+00:52:57,800 --> 00:53:00,600
+Maybe not that. 
+No one logical. 
+
+837
+00:53:00,600 --> 00:53:03,300
+Step at one logical. 
+Step that we we got. 
+
+838
+00:53:03,300 --> 00:53:07,200
+We got where we got one logical 
+step at a time but eat so each 
+
+839
+00:53:07,200 --> 00:53:09,100
+logical step mates. 
+Right. 
+
+840
+00:53:09,100 --> 00:53:11,900
+But then when you see the whole 
+chain of am you going? 
+
+841
+00:53:11,900 --> 00:53:17,700
+Okay, but that now we're dead. 
+End it into a bad place? 
+
+842
+00:53:17,700 --> 00:53:23,700
+Yes, yes, doctor, just when I 
+got there, one logical step at a
+
+843
+00:53:23,708 --> 00:53:28,000
+time, but so, um, where's mix 
+going? 
+
+844
+00:53:28,000 --> 00:53:32,000
+What's, what's, what's the 
+future like future? 
+
+845
+00:53:32,900 --> 00:53:37,200
+So now, what's happening is 
+there's more and more companies 
+
+846
+00:53:37,200 --> 00:53:42,200
+in the ecosystem and One of the 
+cool thing is, is we created the
+
+847
+00:53:42,800 --> 00:53:45,700
+week kind of recreated, an 
+exercise Foundation, which is 
+
+848
+00:53:45,700 --> 00:53:50,100
+kind of a showing currently. 
+It's like a joint thing between 
+
+849
+00:53:50,100 --> 00:53:54,500
+different companies and it's 
+kind of vendor lesson, that 
+
+850
+00:53:54,500 --> 00:53:57,900
+sense that, you know, it's an 
+open source project and an open 
+
+851
+00:53:57,900 --> 00:54:01,200
+source Community, kind of like 
+the python software Foundation. 
+
+852
+00:54:01,800 --> 00:54:03,000
+Exactly. 
+Yes. 
+
+853
+00:54:03,600 --> 00:54:07,100
+And and what's happening now is 
+that, you know, there's more 
+
+854
+00:54:07,100 --> 00:54:10,600
+money coming in mark. 
+Pennies that we have even to VC 
+
+855
+00:54:10,600 --> 00:54:12,900
+companies. 
+VC funded companies now. 
+
+856
+00:54:13,400 --> 00:54:16,800
+So, I think a lot of these 
+companies are betting including 
+
+857
+00:54:16,800 --> 00:54:20,400
+me that, you know, we will make 
+it as easy that anyone can use 
+
+858
+00:54:20,400 --> 00:54:24,700
+next and, you know, it becomes, 
+you know, kind of like darker 
+
+859
+00:54:24,700 --> 00:54:27,000
+and the standing that Doug has 
+liquidus. 
+
+860
+00:54:27,000 --> 00:54:30,100
+Yeah, it has a smaller surface 
+useful area. 
+
+861
+00:54:30,100 --> 00:54:33,500
+Then it was sold to. 
+And I think Nick's will kind of 
+
+862
+00:54:33,900 --> 00:54:39,100
+take over some part of that. 
+So, More or less I would say 
+
+863
+00:54:39,100 --> 00:54:42,200
+developer experience. 
+This is where when X is going to
+
+864
+00:54:42,200 --> 00:54:43,500
+to your focus? 
+Yes. 
+
+865
+00:54:43,900 --> 00:54:46,000
+Yes, Dad. 
+Oh God. 
+
+866
+00:54:46,000 --> 00:54:49,500
+Yeah. 
+I think that could make a huge 
+
+867
+00:54:49,500 --> 00:54:51,800
+difference. 
+Yeah, yeah. 
+
+868
+00:54:51,800 --> 00:54:55,600
+It's like the vision of, you 
+know, let's let slippery. 
+
+869
+00:54:55,600 --> 00:55:01,100
+Look at all the foundations and 
+come up with a better way and 
+
+870
+00:55:01,500 --> 00:55:05,500
+and the better way has existed 
+and exists but then how do we 
+
+871
+00:55:05,500 --> 00:55:07,300
+get it into the hands of the 
+masses? 
+
+872
+00:55:07,300 --> 00:55:09,600
+And that In the kind of the 
+next. 
+
+873
+00:55:09,700 --> 00:55:14,100
+The next place you go with all, 
+this thing's seems great. 
+
+874
+00:55:15,400 --> 00:55:17,300
+What about the cloud story? 
+We're like? 
+
+875
+00:55:17,300 --> 00:55:20,400
+Okay, as you said like you could
+always just, you know, take your
+
+876
+00:55:20,400 --> 00:55:23,000
+neck stuff and create a Docker 
+container run it you know and 
+
+877
+00:55:23,000 --> 00:55:24,600
+green eyes or whatever class 
+did. 
+
+878
+00:55:24,600 --> 00:55:28,100
+You also do it with put putting 
+Nick's 0s in the cloud? 
+
+879
+00:55:28,100 --> 00:55:32,100
+Is that something people do? 
+Yeah of course there's like this
+
+880
+00:55:32,100 --> 00:55:35,300
+is quite a big topic and it's 
+really nice. 
+
+881
+00:55:35,300 --> 00:55:39,100
+So a lot of the like you know 
+for Amazon On, we have just 
+
+882
+00:55:39,100 --> 00:55:42,200
+images, you know, you can just 
+run xos. 
+
+883
+00:55:42,200 --> 00:55:44,700
+And a lot of providers that 
+allow you to do that. 
+
+884
+00:55:45,100 --> 00:55:48,400
+There's more most likely going 
+to be an xos image. 
+
+885
+00:55:49,600 --> 00:55:51,600
+But then we have a couple of 
+interesting things. 
+
+886
+00:55:51,600 --> 00:55:57,600
+We have something called, well, 
+it's called, Chi Chi, Chi exact 
+
+887
+00:55:57,600 --> 00:56:02,700
+feature of Colonel where you can
+kind of like, put another like 
+
+888
+00:56:02,800 --> 00:56:06,200
+operating like another kernel 
+that replaces the previous one. 
+
+889
+00:56:08,400 --> 00:56:13,600
+And so we have it's called Nick 
+sighs assimilate or there's 
+
+890
+00:56:13,600 --> 00:56:15,400
+different versions different 
+naming for it. 
+
+891
+00:56:15,700 --> 00:56:17,900
+So you can just like, kind of 
+bootstrap. 
+
+892
+00:56:17,900 --> 00:56:21,900
+Nick says, let's say, take cloud
+provider, we Debian and you can 
+
+893
+00:56:21,900 --> 00:56:26,600
+just kind of like, you know, 
+launch Nick's OS, and he takes 
+
+894
+00:56:26,600 --> 00:56:29,000
+over that machine simulator. 
+Yeah, absolutely. 
+
+895
+00:56:29,000 --> 00:56:31,900
+Yes. 
+Like it, like I like your work 
+
+896
+00:56:31,900 --> 00:56:35,300
+and related. 
+Yeah, so for example, you know, 
+
+897
+00:56:35,300 --> 00:56:38,000
+in Europe, we have had snow 
+which is crazy cheap. 
+
+898
+00:56:38,000 --> 00:56:44,300
+You In get like, you know, 16 
+corizon for 50 bucks, a month. 
+
+899
+00:56:45,700 --> 00:56:47,700
+And, and it's a, it's a bare 
+metal. 
+
+900
+00:56:47,700 --> 00:56:50,900
+So, and and you have one 
+command, none. 
+
+901
+00:56:50,900 --> 00:56:52,800
+Tight folks have written 
+something called Nick. 
+
+902
+00:56:52,800 --> 00:56:56,900
+So it's remote, which will just 
+you do declarative. 
+
+903
+00:56:56,900 --> 00:57:00,900
+We describe your petitioning and
+your OS and everything and it 
+
+904
+00:57:00,900 --> 00:57:04,400
+will with one command just run 
+over and you have an xos 
+
+905
+00:57:04,400 --> 00:57:08,200
+running. 
+So there's there is a lot of 
+
+906
+00:57:08,500 --> 00:57:11,600
+There's a lot of tooling around 
+the cloud that I've done in the 
+
+907
+00:57:11,600 --> 00:57:14,100
+past. 
+Well, it seems like one of the 
+
+908
+00:57:14,100 --> 00:57:18,000
+things that you hear stories 
+about so often in Cloud stuff is
+
+909
+00:57:18,000 --> 00:57:21,200
+that somebody pushes some 
+configuration change and then it
+
+910
+00:57:21,200 --> 00:57:23,600
+breaks a bunch of stuff, you 
+know, it's always like like 
+
+911
+00:57:23,600 --> 00:57:27,800
+configuration change, it seems 
+to me like Nick's plus Cloud 
+
+912
+00:57:27,900 --> 00:57:31,200
+gives you the opportunity to 
+replicate your full environment 
+
+913
+00:57:31,200 --> 00:57:35,900
+in a, you know, fully reap 
+reproducible way and then test 
+
+914
+00:57:35,900 --> 00:57:39,300
+and roll back and, you know, 
+have all those those Those nice 
+
+915
+00:57:39,300 --> 00:57:43,200
+things that you would want in a 
+more reliable kind of execution 
+
+916
+00:57:43,400 --> 00:57:47,700
+cloud system, but Nick's just 
+would form so much better of a 
+
+917
+00:57:47,700 --> 00:57:50,900
+basis for all that than the, 
+what we have currently. 
+
+918
+00:57:52,000 --> 00:57:56,200
+Yeah. 
+So that's kind of, that's kind 
+
+919
+00:57:56,200 --> 00:58:00,100
+of a solved problem. 
+What I think like expect will 
+
+920
+00:58:00,100 --> 00:58:03,900
+happen in the next year's. 
+We will probably see some kind 
+
+921
+00:58:03,900 --> 00:58:10,100
+of Heroku but using nigga. 
+Popped up exactly. 
+
+922
+00:58:11,000 --> 00:58:14,500
+Yeah, the Heroku fornix. 
+You just you go a lot with 
+
+923
+00:58:14,500 --> 00:58:17,600
+GitHub and point it to your Nick
+scripts and boom. 
+
+924
+00:58:17,600 --> 00:58:22,100
+You've got your whole 
+environment and your whole life 
+
+925
+00:58:22,100 --> 00:58:24,900
+cycle management, you know, all 
+your Dev Ops stuff, just all 
+
+926
+00:58:24,900 --> 00:58:27,100
+based on. 
+That would be, that would be. 
+
+927
+00:58:27,800 --> 00:58:31,600
+Hopefully somebody creates that 
+because I definitely think that 
+
+928
+00:58:31,608 --> 00:58:33,200
+I'm absolutely sure it will 
+happen. 
+
+929
+00:58:34,600 --> 00:58:37,700
+God, what's exciting, nice Roku 
+for necks. 
+
+930
+00:58:38,700 --> 00:58:41,600
+Really interesting. 
+Cool. 
+
+931
+00:58:41,700 --> 00:58:45,100
+Well, anything we missed 
+anything, is it? 
+
+932
+00:58:45,100 --> 00:58:48,000
+We're total newbies in the space
+of necks. 
+
+933
+00:58:48,000 --> 00:58:53,400
+I mean, I can talk about this 
+for for for, you know, for 
+
+934
+00:58:53,400 --> 00:58:58,000
+hours. 
+But the ecosystem is much bigger
+
+935
+00:58:58,600 --> 00:59:01,700
+than just what we talked about. 
+There's like something called 
+
+936
+00:59:01,700 --> 00:59:04,700
+mix was tests where you can 
+describe different machines and 
+
+937
+00:59:04,700 --> 00:59:08,100
+then kind of like a script that 
+guides and automate. 
+
+938
+00:59:08,300 --> 00:59:12,000
+No, it can say like launch a 
+service there and wait for its 
+
+939
+00:59:12,000 --> 00:59:14,900
+port to happen. 
+And then you know, assert a few 
+
+940
+00:59:14,900 --> 00:59:20,000
+things so there is like the 
+orchestration of of more than 
+
+941
+00:59:20,000 --> 00:59:23,000
+just a single process, 
+orchestration of a whole system.
+
+942
+00:59:23,200 --> 00:59:24,200
+It's like oh hi. 
+Yeah. 
+
+943
+00:59:24,300 --> 00:59:28,800
+Database and the database needs 
+an ldap and held the, you know, 
+
+944
+00:59:28,800 --> 00:59:32,400
+like like kind of construct the 
+whole, the whole thing is that a
+
+945
+00:59:32,400 --> 00:59:38,500
+replacement Goodwin Ares, 
+kubernetes could be its In this 
+
+946
+00:59:38,500 --> 00:59:41,300
+case, it's more like a testing 
+framework. 
+
+947
+00:59:41,300 --> 00:59:44,800
+So, you know, you just, it's a 
+normal mix derivation, but will 
+
+948
+00:59:44,800 --> 00:59:47,400
+launch a bunch of Yen's run, 
+Doug's. 
+
+949
+00:59:47,400 --> 00:59:49,200
+Wonderful. 
+Pose is like that. 
+
+950
+00:59:49,200 --> 00:59:51,300
+Yeah. 
+And then insert the things. 
+
+951
+00:59:53,100 --> 00:59:58,800
+So what I would say is like, 
+where anyone could benefit from,
+
+952
+00:59:58,900 --> 01:00:01,400
+you know, using nyx's just 
+developer environment. 
+
+953
+01:00:01,400 --> 01:00:06,500
+So I think that's the smallest 
+step and the most useful one as 
+
+954
+01:00:06,500 --> 01:00:11,400
+well. 
+Just add it to to, to the git 
+
+955
+01:00:11,400 --> 01:00:14,800
+repo and have the tooling 
+provided for your favorite 
+
+956
+01:00:14,800 --> 01:00:17,000
+language for your favorite 
+tooling and so on. 
+
+957
+01:00:18,200 --> 01:00:22,200
+So that would be the starting 
+point and then slowly, you know,
+
+958
+01:00:22,200 --> 01:00:28,700
+go around and explore the rest 
+of the existing Awesome 
+
+959
+01:00:30,000 --> 01:00:31,200
+exciting. 
+Yes. 
+
+960
+01:00:31,200 --> 01:00:33,000
+Well I'm looking forward to 
+diving further. 
+
+961
+01:00:33,000 --> 01:00:37,900
+Yeah, yeah I'm intrigued before 
+we go. 
+
+962
+01:00:38,000 --> 01:00:40,600
+Yes. 
+I want to plug the winter tech 
+
+963
+01:00:40,600 --> 01:00:43,500
+for him. 
+Yes which is coming up and it's 
+
+964
+01:00:43,500 --> 01:00:49,300
+just a beauty rest of you 
+Colorado up if so it's not about
+
+965
+01:00:49,400 --> 01:00:54,700
+skiing and outdoor activities, 
+but we do that and it's for 
+
+966
+01:00:54,700 --> 01:00:57,400
+that, it is the end. 
+End of. 
+
+967
+01:00:57,800 --> 01:01:02,200
+It's the last it's the week of 
+February and March where they 
+
+968
+01:01:02,200 --> 01:01:04,100
+overlap. 
+How come, I don't remember the 
+
+969
+01:01:04,100 --> 01:01:07,300
+dates exactly. 
+But if you go to Winter tech for
+
+970
+01:01:07,300 --> 01:01:12,900
+them.com, you'll see. 
+And this is all about creating 
+
+971
+01:01:12,900 --> 01:01:15,400
+conversations. 
+We don't have speakers. 
+
+972
+01:01:15,400 --> 01:01:20,500
+We have Open Spaces sessions and
+we have discussions and things 
+
+973
+01:01:20,500 --> 01:01:23,700
+are happening from the moment. 
+You wake up till the moment you 
+
+974
+01:01:23,700 --> 01:01:26,500
+collapse into bed, you're 
+interacting with people. 
+
+975
+01:01:26,600 --> 01:01:30,500
+And that's the great thing about
+it and I imagine we will spend 
+
+976
+01:01:30,500 --> 01:01:34,200
+some time, exploring, Nick's 
+further, I imagine there will be
+
+977
+01:01:34,200 --> 01:01:38,000
+a workshop on it or it may be a 
+hack day. 
+
+978
+01:01:38,000 --> 01:01:44,900
+We got project cartel, so Cool. 
+Well don't thank you so much. 
+
+979
+01:01:45,000 --> 01:01:49,200
+I was incredibly helpful. 
+And yeah, thanks for all your 
+
+980
+01:01:49,200 --> 01:01:52,100
+work on Nick's and definitely 
+look forward to diving in 
+
+981
+01:01:52,100 --> 01:01:54,600
+further. 
+Yeah, thank you for having me. 
+
+982
+01:01:54,600 --> 01:01:59,200
+It was a lot of fun and 
+interested in quite really good 
+
+983
+01:01:59,200 --> 01:02:02,600
+questions. 
+About how Knicks could be used 
+
+984
+01:02:02,600 --> 01:02:05,000
+and how it is used. 
+Thank you so much for having me.
+
+985
+01:02:05,600 --> 01:02:06,800
+All right. 
+Have a good one. 
+
+986
+01:02:06,800 --> 01:02:07,500
+Yeah, bye.

@@ -3,8 +3,9 @@
 
 Every item links to the episode's page on happypathprogramming.com (its guid
 too), carries the page's "About this episode" text and resources, the episode's
-share card as its image, and the audio enclosure from the podcast feed, so the
-feed also plays in a podcast app. Only episodes go in it: guest and topic pages
+share card as its image, the audio enclosure from the podcast feed, so the
+feed also plays in a podcast app, and a `<podcast:transcript>` pointing at the
+site's own copy of the transcript (`transcripts/<slug>.srt`) when it has one. Only episodes go in it: guest and topic pages
 are not news.
 
 Everything is read back from the episode pages plus the cached podcast feed,
@@ -16,6 +17,7 @@ with nothing new rewrites an identical file.
 """
 from __future__ import annotations
 
+import os
 import re
 import sys
 from email.utils import format_datetime
@@ -93,6 +95,9 @@ def item(slug: str, feed: dict[int, dict]) -> tuple[str, str]:
     if info.get("seconds"):
         lines.append(f"      <itunes:duration>{info['seconds']}</itunes:duration>")
     lines.append(f'      <itunes:image href="{attr(SITE)}/images/og/episodes/{attr(slug)}.jpg"/>')
+    if os.path.exists(f"transcripts/{slug}.srt"):
+        lines.append(f'      <podcast:transcript url="{attr(SITE)}/transcripts/{attr(slug)}.srt" '
+                     'type="application/x-subrip"/>')
     lines.append("    </item>")
     return "\n".join(lines), info.get("published", "")
 
@@ -111,7 +116,8 @@ def main() -> None:
     head = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" '
-        'xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">',
+        'xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" '
+        'xmlns:podcast="https://podcastindex.org/namespace/1.0">',
         "  <channel>",
         f"    <title>{escape(SITE_NAME)}</title>",
         f"    <link>{SITE}/</link>",

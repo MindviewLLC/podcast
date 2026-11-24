@@ -1,0 +1,5345 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:11,200
+You had an observation that you 
+want to start there with. 
+
+4
+00:00:11,200 --> 00:00:11,800
+Yeah. 
+Okay. 
+
+5
+00:00:12,200 --> 00:00:14,000
+Okay. 
+So this was something I tweeted 
+
+6
+00:00:14,100 --> 00:00:18,400
+this week where I said, 
+developer experience is often 
+
+7
+00:00:18,400 --> 00:00:22,300
+terrible because we'd rather 
+solve hard technical problems. 
+
+8
+00:00:22,600 --> 00:00:25,100
+Then solve hard user experience 
+problems. 
+
+9
+00:00:25,400 --> 00:00:27,900
+Somebody pointed out, this is 
+actually true for easy, user 
+
+10
+00:00:27,900 --> 00:00:31,000
+experience problems. 
+And then Brian gets had a good 
+
+11
+00:00:31,000 --> 00:00:33,600
+follow-up that I think said it 
+better than I did. 
+
+12
+00:00:33,700 --> 00:00:37,100
+He said, you mean we'd rather 
+solve the problems we enjoy 
+
+13
+00:00:37,100 --> 00:00:39,200
+solving. 
+Rather than the ones that need 
+
+14
+00:00:39,200 --> 00:00:41,200
+solving. 
+It sounds so obvious. 
+
+15
+00:00:41,200 --> 00:00:43,800
+When he says it I know God he's 
+just so good. 
+
+16
+00:00:43,900 --> 00:00:47,400
+Yes he's dead. 
+Dude is so smart. 
+
+17
+00:00:47,400 --> 00:00:50,500
+He is so smart. 
+Um so I've been thinking about 
+
+18
+00:00:50,500 --> 00:00:54,300
+developer experience a lot 
+lately and why it's so bad now? 
+
+19
+00:00:54,300 --> 00:00:57,800
+Wait and really do you mean I 
+mean the way you originally said
+
+20
+00:00:57,800 --> 00:01:01,000
+it, I would have almost said 
+user experience is so bad 
+
+21
+00:01:01,000 --> 00:01:03,500
+because developers are solving 
+the problems they want to solve 
+
+22
+00:01:03,500 --> 00:01:06,200
+rather than I think it's true 
+for both. 
+
+23
+00:01:06,300 --> 00:01:10,700
+So if I'm using if I'm a user of
+a developer tool, my user 
+
+24
+00:01:10,700 --> 00:01:13,300
+experience is what I'd call 
+developer experience. 
+
+25
+00:01:14,100 --> 00:01:19,200
+If I am a user of my banking app
+I would just call that a user 
+
+26
+00:01:19,200 --> 00:01:20,100
+accuser. 
+It's great. 
+
+27
+00:01:20,300 --> 00:01:22,700
+Yeah. 
+Yeah so developer experience is 
+
+28
+00:01:22,700 --> 00:01:26,500
+just a severe narrowing it down 
+to developer tools the 
+
+29
+00:01:26,500 --> 00:01:28,300
+experience it doesn't developer 
+tools. 
+
+30
+00:01:28,300 --> 00:01:31,100
+Yeah, maybe this is true. 
+Universally with all user 
+
+31
+00:01:31,100 --> 00:01:33,500
+experience. 
+What I care most about, is 
+
+32
+00:01:33,500 --> 00:01:36,400
+developer experience in the 
+tools that I use, because that 
+
+33
+00:01:36,400 --> 00:01:39,200
+Oliver ethic, that's Well, and 
+I'm a developer and I use these 
+
+34
+00:01:39,200 --> 00:01:45,200
+tools all day every day and so 
+they're often get frustrated 
+
+35
+00:01:45,200 --> 00:01:49,700
+with the state of our tools, 
+just because I think tools 
+
+36
+00:01:49,700 --> 00:01:54,400
+platforms Frameworks programming
+languages like everything that I
+
+37
+00:01:54,400 --> 00:01:58,800
+use as a developer, I have to 
+get frustrated by The Experience
+
+38
+00:01:58,800 --> 00:02:02,600
+being poor and I've been trying 
+to think. 
+
+39
+00:02:02,600 --> 00:02:06,800
+Why are the experience is poor? 
+Because I mean, this is a very 
+
+40
+00:02:07,000 --> 00:02:10,900
+your you're looking at a glass 
+half empty where as I looked at 
+
+41
+00:02:10,900 --> 00:02:16,700
+it and I go Man, the tools are 
+so much better now. 
+
+42
+00:02:16,700 --> 00:02:19,600
+Yeah. 
+That you know, I can be so much 
+
+43
+00:02:19,600 --> 00:02:23,900
+more productive because I don't 
+have to well and and admittedly 
+
+44
+00:02:23,900 --> 00:02:29,000
+I didn't actually start using 
+the jetbrains tools until like 
+
+45
+00:02:29,000 --> 00:02:30,900
+last December. 
+You know, I was just using a 
+
+46
+00:02:30,900 --> 00:02:35,100
+plain text editor and and, and 
+so I'm still kind of on a high 
+
+47
+00:02:35,100 --> 00:02:38,000
+from that. 
+Wow, I don't have to do all this
+
+48
+00:02:38,000 --> 00:02:41,400
+stuff, it just tells me and 
+gives me coaching and you know, 
+
+49
+00:02:42,200 --> 00:02:45,000
+Ellijay is amazing, an amazing 
+tool. 
+
+50
+00:02:45,000 --> 00:02:47,700
+And I think that they really 
+care about and focus on 
+
+51
+00:02:47,700 --> 00:02:51,700
+developer experience. 
+I think Roku is also kind of one
+
+52
+00:02:51,700 --> 00:02:54,600
+of the gold standards for for 
+cloud-based. 
+
+53
+00:02:54,600 --> 00:02:58,000
+Yeah. 
+So what's interesting with those
+
+54
+00:02:58,000 --> 00:03:03,900
+examples is that there is a 
+cultural value and focus on the 
+
+55
+00:03:03,900 --> 00:03:08,700
+experience being great. 
+And so it certainly is possible 
+
+56
+00:03:08,800 --> 00:03:12,700
+for people to create great 
+developer experiences but even I
+
+57
+00:03:12,800 --> 00:03:16,900
+don't tend towards wanting to 
+solve those problems. 
+
+58
+00:03:17,300 --> 00:03:22,200
+I naturally tend towards wanting
+to solve hard technical problems
+
+59
+00:03:23,400 --> 00:03:25,500
+and so I was thinking about it 
+for myself. 
+
+60
+00:03:25,500 --> 00:03:28,000
+Why don't I create good 
+developer experiences in the 
+
+61
+00:03:28,000 --> 00:03:32,000
+things that I build Ike? 
+I have an answer for that 
+
+62
+00:03:32,500 --> 00:03:36,300
+because you're too smart. 
+Well, so let's say you're at it,
+
+63
+00:03:36,300 --> 00:03:39,000
+let me explain that. 
+Let me explain that because the 
+
+64
+00:03:39,000 --> 00:03:43,900
+reason that I, because I create 
+a lot Of tools tooling for my 
+
+65
+00:03:43,900 --> 00:03:47,200
+own things because I discovered 
+that if I have to do something 
+
+66
+00:03:47,200 --> 00:03:49,700
+more than once, or if it looks 
+like, you know, there's a 
+
+67
+00:03:49,708 --> 00:03:53,000
+duplication involved. 
+I might as well just stop and 
+
+68
+00:03:53,000 --> 00:03:56,400
+develop a tool to do that 
+because I'm going to mess it up.
+
+69
+00:03:56,500 --> 00:03:59,900
+Yeah. 
+If I do it by hand and then what
+
+70
+00:03:59,900 --> 00:04:02,900
+I've discovered over time is 
+that when I go back to a 
+
+71
+00:04:02,900 --> 00:04:08,000
+project, if I haven't laid 
+things out nicely, I'm not going
+
+72
+00:04:08,000 --> 00:04:09,500
+to. 
+I'm going to have to spend a lot
+
+73
+00:04:09,500 --> 00:04:11,500
+of time figuring out. 
+How does this Tool Work? 
+
+74
+00:04:11,500 --> 00:04:14,200
+What is it? 
+To do, I don't remember, I will 
+
+75
+00:04:14,200 --> 00:04:16,200
+forget it because you know, I've
+moved on. 
+
+76
+00:04:16,500 --> 00:04:22,100
+So I've started making tools 
+that help me when I go back to 
+
+77
+00:04:22,100 --> 00:04:24,400
+them and they explain what's 
+going on. 
+
+78
+00:04:24,500 --> 00:04:28,000
+There's a tool that a library 
+that I use in Python called 
+
+79
+00:04:28,000 --> 00:04:33,200
+click and it makes really nice 
+command line utilities that, you
+
+80
+00:04:33,200 --> 00:04:36,200
+know, have all these different 
+commands and documentation, you 
+
+81
+00:04:36,200 --> 00:04:39,700
+know, that just you type the 
+command and it says, oh, here's 
+
+82
+00:04:39,700 --> 00:04:42,000
+what this does and hear all the 
+sub commands in yours. 
+
+83
+00:04:42,100 --> 00:04:46,900
+How to use it and it's like I 
+have to have that because I'm, 
+
+84
+00:04:47,100 --> 00:04:50,200
+you know, forget I got to forget
+how to use your own program. 
+
+85
+00:04:50,200 --> 00:04:53,000
+I will forget how to use my own 
+program because you know and so 
+
+86
+00:04:53,000 --> 00:04:57,400
+being being guided or choosing 
+something that provides a great 
+
+87
+00:04:57,400 --> 00:05:01,100
+developer experience out of the 
+box is helpful and valuable to 
+
+88
+00:05:01,100 --> 00:05:05,400
+you because I'm serving my own 
+needs right? 
+
+89
+00:05:05,500 --> 00:05:08,500
+Well and you know those those 
+people who are really good at 
+
+90
+00:05:08,500 --> 00:05:13,200
+Unix command line stuff and you 
+I need to do this thing. 
+
+91
+00:05:13,200 --> 00:05:15,000
+I'll just type out these 
+commands that because they 
+
+92
+00:05:15,000 --> 00:05:17,000
+remember them all somehow. 
+Yeah. 
+
+93
+00:05:17,300 --> 00:05:21,400
+And you know, I don't remember, 
+yeah, all those things. 
+
+94
+00:05:22,200 --> 00:05:25,200
+So yeah, that's why. 
+Anyway, yeah you what was your 
+
+95
+00:05:25,500 --> 00:05:29,100
+argument? 
+So if you're in a company that 
+
+96
+00:05:29,200 --> 00:05:36,000
+optimizes its hiring and and 
+talent to be in, really smart 
+
+97
+00:05:36,000 --> 00:05:40,100
+people who are focused on 
+solving generally focused on 
+
+98
+00:05:40,100 --> 00:05:43,500
+solving really hard. 
+Technical Seems I think that's 
+
+99
+00:05:43,500 --> 00:05:47,200
+very different from a company, 
+like, Heroku that instead 
+
+100
+00:05:47,200 --> 00:05:53,400
+focuses its talent, and it's 
+hiring on people that want to 
+
+101
+00:05:53,400 --> 00:05:56,500
+solve user problems and their 
+case developer experience 
+
+102
+00:05:56,500 --> 00:05:58,500
+problems. 
+And we want, probably point out 
+
+103
+00:05:58,500 --> 00:06:00,000
+that you used to work for 
+Heroku. 
+
+104
+00:06:00,000 --> 00:06:01,700
+So that's what you know, that's 
+right. 
+
+105
+00:06:01,700 --> 00:06:04,200
+Yeah, yeah. 
+And so they're just as this 
+
+106
+00:06:04,200 --> 00:06:09,600
+cultural force of valuing and 
+hiring for for that goal. 
+
+107
+00:06:10,800 --> 00:06:15,500
+And I think that The majority of
+people creating developer tools,
+
+108
+00:06:17,400 --> 00:06:20,800
+it they're not as interested in 
+saw in solving the developer 
+
+109
+00:06:20,800 --> 00:06:22,600
+experience or user experience 
+problems. 
+
+110
+00:06:23,100 --> 00:06:29,800
+They're working with Scala and 
+the Scala ecosystem, it became 
+
+111
+00:06:29,800 --> 00:06:36,800
+pretty, like, look at spt SBT 
+is, it's gotten better, but it 
+
+112
+00:06:36,800 --> 00:06:38,700
+is not a great developer 
+experience. 
+
+113
+00:06:38,700 --> 00:06:41,800
+It's been a pretty painful 
+developer experience. 
+
+114
+00:06:42,200 --> 00:06:44,800
+For years and years and years. 
+It was created by one of the 
+
+115
+00:06:44,800 --> 00:06:50,600
+smartest people, I know. 
+And I think that Mark, oh, God 
+
+116
+00:06:50,700 --> 00:06:52,700
+forgive me his last name, but, 
+Mark, he used to. 
+
+117
+00:06:52,700 --> 00:06:55,100
+He is one of the early type 
+safe. 
+
+118
+00:06:55,900 --> 00:06:58,800
+Now, light Bend in place, he was
+probably even there when it was 
+
+119
+00:06:58,800 --> 00:07:04,000
+scalable Solutions, but, but he,
+he's a physicist, he's like a 
+
+120
+00:07:04,100 --> 00:07:06,800
+doctorate physicist, and he 
+created spt. 
+
+121
+00:07:07,000 --> 00:07:09,600
+And so spt, it's funny because 
+it's called the simple build 
+
+122
+00:07:09,600 --> 00:07:12,700
+tool, because it probably was 
+simple to Marks, but It is like 
+
+123
+00:07:12,700 --> 00:07:16,100
+the most complex build tool at 
+ever used but to Market is 
+
+124
+00:07:16,100 --> 00:07:20,600
+probably simple, but so so 
+that's just one example. 
+
+125
+00:07:20,600 --> 00:07:25,000
+Where really smart people were 
+creating the tools that not 
+
+126
+00:07:25,000 --> 00:07:28,200
+smart people like me were using 
+and having a hard time with 
+
+127
+00:07:28,200 --> 00:07:31,600
+them. 
+Well, sparked a, that's an 
+
+128
+00:07:31,600 --> 00:07:33,800
+interesting area, you know, it's
+kind of over. 
+
+129
+00:07:34,100 --> 00:07:38,800
+It's like, yeah, there's 
+different kinds of smart, you 
+
+130
+00:07:38,800 --> 00:07:44,900
+know, there is this morning. 
+So, So, my focus has been on. 
+
+131
+00:07:44,900 --> 00:07:50,400
+How do I explain something in a 
+way that everybody can get it, 
+
+132
+00:07:51,000 --> 00:07:53,600
+and that takes a lot of effort, 
+and it takes a lot of focus in 
+
+133
+00:07:53,600 --> 00:07:56,000
+that direction and I miss out 
+on. 
+
+134
+00:07:57,300 --> 00:08:00,500
+You know, some of the fun 
+programming things that you can 
+
+135
+00:08:00,500 --> 00:08:01,700
+do. 
+If you're not worried about 
+
+136
+00:08:01,700 --> 00:08:04,000
+that, if you're just going on, I
+want to solve this problem on, 
+
+137
+00:08:04,300 --> 00:08:07,500
+you know, do these things and 
+and like when I'm solving my own
+
+138
+00:08:07,500 --> 00:08:12,400
+problems, it really is super 
+enjoyable to get those kinds of 
+
+139
+00:08:12,400 --> 00:08:13,700
+results. 
+Yeah. 
+
+140
+00:08:13,800 --> 00:08:17,200
+So I can see the draw to that 
+but I can also there's a lot of 
+
+141
+00:08:17,200 --> 00:08:20,100
+satisfaction and make we have 
+some people in the python 
+
+142
+00:08:20,100 --> 00:08:26,300
+Community who are really good at
+figuring out, what is going to 
+
+143
+00:08:26,308 --> 00:08:28,900
+be. 
+Easy for the user to use. 
+
+144
+00:08:28,900 --> 00:08:31,900
+How can we make this as simple 
+as possible but still powerful? 
+
+145
+00:08:31,900 --> 00:08:35,400
+Yeah, and I mean those people, 
+well, and in the scholarly 
+
+146
+00:08:35,400 --> 00:08:40,799
+Community, you have, who's the 
+guy from the Far East? 
+
+147
+00:08:42,100 --> 00:08:50,400
+He builds a big fan of him. 
+Okay, I can't remember his name.
+
+148
+00:08:50,400 --> 00:08:52,200
+Yeah. 
+He's like he creates these 
+
+149
+00:08:52,200 --> 00:08:56,700
+libraries that people like a man
+died from Howie. 
+
+150
+00:08:57,300 --> 00:09:00,600
+Hmm, don't think so. 
+But anyway there are people in 
+
+151
+00:09:00,600 --> 00:09:02,900
+this College Community who 
+create these libraries that 
+
+152
+00:09:02,900 --> 00:09:06,200
+everybody goes. 
+Oh that's so clear and it's so 
+
+153
+00:09:06,200 --> 00:09:08,100
+easy to use. 
+Yeah you know. 
+
+154
+00:09:08,300 --> 00:09:12,100
+So and there are I don't know 
+how do we create more of those 
+
+155
+00:09:12,100 --> 00:09:13,100
+people? 
+Yeah. 
+
+156
+00:09:13,200 --> 00:09:16,400
+Yeah because they've got both 
+the technical skills and then 
+
+157
+00:09:16,400 --> 00:09:21,500
+they also understand how to make
+this something that's easy to 
+
+158
+00:09:21,500 --> 00:09:24,200
+understand and you well they 
+value that they value that. 
+
+159
+00:09:24,200 --> 00:09:28,500
+Yeah and czar and so they 
+There's a motivation for them 
+
+160
+00:09:28,500 --> 00:09:32,400
+to, to want to do that. 
+Whereas, I think what I was 
+
+161
+00:09:32,400 --> 00:09:35,100
+trying to say my tree is that I 
+think most developers they don't
+
+162
+00:09:35,100 --> 00:09:36,800
+value that, and they don't want 
+that. 
+
+163
+00:09:36,800 --> 00:09:39,600
+They want to, they want to it 
+would much rather. 
+
+164
+00:09:39,600 --> 00:09:43,600
+They value solving the hard 
+technical problems, much more. 
+
+165
+00:09:43,800 --> 00:09:46,400
+Well, because of the buzz, you 
+know, it's like playing a video 
+
+166
+00:09:46,400 --> 00:09:48,700
+game or whatever. 
+When you level up, I guess 
+
+167
+00:09:48,700 --> 00:09:53,500
+because I don't keep looking for
+a game that I want to play and 
+
+168
+00:09:53,500 --> 00:09:56,300
+then it releases endorphins. 
+So what they're, what they're 
+
+169
+00:09:56,300 --> 00:09:58,000
+all really. 
+Laughter is the Endorphin 
+
+170
+00:09:58,000 --> 00:10:02,100
+release and they don't maybe 
+realize that by creating a tool 
+
+171
+00:10:02,100 --> 00:10:06,800
+that everybody loves you get a 
+lot of that over time, rather 
+
+172
+00:10:06,800 --> 00:10:09,200
+than the immediate oh, solve 
+this problem. 
+
+173
+00:10:09,400 --> 00:10:13,500
+Yeah, in the python, when you 
+say, what is it import this, or 
+
+174
+00:10:13,500 --> 00:10:16,700
+whatever in Python, it has the 
+kind of python, Manifesto thing.
+
+175
+00:10:16,700 --> 00:10:18,200
+Yes. 
+Is there something in there 
+
+176
+00:10:18,200 --> 00:10:26,500
+about about developer experience
+or making like, well, it's Can 
+
+177
+00:10:26,600 --> 00:10:30,300
+run it right now and see. 
+I'm I feel like there's 
+
+178
+00:10:30,300 --> 00:10:35,500
+something in there that Let's 
+see, does that? 
+
+179
+00:10:35,500 --> 00:10:37,200
+Okay, so this is to the center 
+python. 
+
+180
+00:10:37,200 --> 00:10:41,800
+Yeah, somebody I know from the 
+community beautiful spider than 
+
+181
+00:10:41,800 --> 00:10:44,300
+ugly, explicit is better than 
+implicit. 
+
+182
+00:10:44,500 --> 00:10:47,100
+Simple is better than complex. 
+Complex is better than 
+
+183
+00:10:47,100 --> 00:10:50,300
+complicated, flat is better than
+nested. 
+
+184
+00:10:50,300 --> 00:10:53,900
+Sparse is better than dense. 
+Readability counts. 
+
+185
+00:10:53,900 --> 00:10:57,300
+I guess that would be part of 
+it, special cases aren't special
+
+186
+00:10:57,300 --> 00:11:00,800
+enough to break the rules. 
+Although practicality beats 
+
+187
+00:11:00,800 --> 00:11:03,300
+Purity. 
+Errors should never pass 
+
+188
+00:11:03,300 --> 00:11:05,300
+silently. 
+I like that one. 
+
+189
+00:11:05,800 --> 00:11:08,800
+I guess, although what we've 
+been talking about, you know, 
+
+190
+00:11:08,800 --> 00:11:11,500
+with you know, the monadic 
+chains. 
+
+191
+00:11:11,500 --> 00:11:15,500
+They do pass silently until the 
+end but anyway, unless 
+
+192
+00:11:15,500 --> 00:11:19,200
+explicitly silenced, okay, I 
+guess that solves that, in the 
+
+193
+00:11:19,200 --> 00:11:23,100
+face of ambiguity review, 
+refused the temptation to guess 
+
+194
+00:11:23,800 --> 00:11:25,400
+like that there should be one 
+in. 
+
+195
+00:11:25,400 --> 00:11:30,000
+Preferably only one obvious way 
+to do it, although that way may 
+
+196
+00:11:30,000 --> 00:11:33,000
+not be obvious at first, unless 
+you're Dutch, she's making a 
+
+197
+00:11:33,000 --> 00:11:36,000
+reference to Guido. 
+An awesome is Dutch now it's 
+
+198
+00:11:36,000 --> 00:11:38,900
+better than ever. 
+Although never is often better 
+
+199
+00:11:38,900 --> 00:11:42,100
+than right now. 
+See, Tim is brilliant. 
+
+200
+00:11:42,100 --> 00:11:46,000
+Yeah, if the implementation is 
+hard to explain it's a bad idea.
+
+201
+00:11:46,000 --> 00:11:47,800
+There were there, we're at to 
+it. 
+
+202
+00:11:47,900 --> 00:11:52,400
+If the implementation is easy to
+explain, it may be a good idea. 
+
+203
+00:11:53,100 --> 00:11:55,900
+Namespaces are one honking. 
+Great idea, let's do more of 
+
+204
+00:11:55,900 --> 00:11:57,900
+those, huh? 
+I love that. 
+
+205
+00:11:57,900 --> 00:12:03,900
+I love the design of python, 
+kind of sets the foundation for 
+
+206
+00:12:04,000 --> 00:12:05,500
+What's valued in the python 
+community? 
+
+207
+00:12:05,500 --> 00:12:09,800
+And I think that those things 
+create a culture design, a 
+
+208
+00:12:09,800 --> 00:12:13,300
+python creates a culture that 
+values making things easy and 
+
+209
+00:12:13,300 --> 00:12:18,500
+you can see by the trajectory of
+pythons growth, I think it's 
+
+210
+00:12:18,500 --> 00:12:20,600
+working. 
+Yeah, yeah. 
+
+211
+00:12:20,600 --> 00:12:27,300
+Well and that doesn't see, I 
+would say that sums up more. 
+
+212
+00:12:27,300 --> 00:12:32,600
+The technical pillar of the 
+community, but then, there's at 
+
+213
+00:12:32,600 --> 00:12:36,300
+least one other person. 
+A pillar, which is how do we 
+
+214
+00:12:36,300 --> 00:12:37,400
+treat people? 
+Yeah. 
+
+215
+00:12:37,500 --> 00:12:42,000
+And you know has always been 
+like be, you know, be nice. 
+
+216
+00:12:42,400 --> 00:12:45,000
+The person who's asking this 
+question might be 13. 
+
+217
+00:12:45,000 --> 00:12:48,400
+Yeah. 
+And and, and it really puts, you
+
+218
+00:12:48,400 --> 00:12:52,100
+know, just that one phrase which
+stuck in my head, really puts it
+
+219
+00:12:52,100 --> 00:12:54,500
+in perspective. 
+You know, you wouldn't abuse a 
+
+220
+00:12:54,500 --> 00:12:59,700
+child and so assume whoever 
+you're talking to and you're 
+
+221
+00:12:59,700 --> 00:13:04,700
+trying to answer their question.
+Anyway, he's, you know, Down in 
+
+222
+00:13:04,700 --> 00:13:06,900
+the culture from the beginning. 
+Yeah. 
+
+223
+00:13:07,000 --> 00:13:13,600
+And he also because I just 
+finished the atomic kotlin like 
+
+224
+00:13:13,800 --> 00:13:17,500
+last week. 
+It's up on its up on Lane Pub 
+
+225
+00:13:17,500 --> 00:13:22,300
+now and yeah, that's exciting. 
+It is, it is it's like, it feels
+
+226
+00:13:22,300 --> 00:13:28,100
+like an accomplishment and I 
+feel like it's good work but I 
+
+227
+00:13:28,100 --> 00:13:30,600
+was talking about Python and I 
+said that. 
+
+228
+00:13:31,400 --> 00:13:33,900
+Yeah, as kind of putting 
+everything into perspective. 
+
+229
+00:13:34,000 --> 00:13:35,700
+Perspective. 
+Why would you choose kotlin? 
+
+230
+00:13:35,700 --> 00:13:40,100
+And so, let's look at these 
+historic languages and I think 
+
+231
+00:13:40,100 --> 00:13:42,700
+the first sentence was that 
+Guido wanted to. 
+
+232
+00:13:43,000 --> 00:13:45,300
+He have this vision of 
+programming for everyone. 
+
+233
+00:13:45,800 --> 00:13:48,600
+Yep. 
+And that that kind of fits with 
+
+234
+00:13:48,600 --> 00:13:49,800
+it. 
+Yeah, and that's one of the 
+
+235
+00:13:49,800 --> 00:13:51,700
+reasons. 
+I, it's interesting. 
+
+236
+00:13:51,700 --> 00:13:54,000
+I think about the Zen of python 
+is being the. 
+
+237
+00:13:54,500 --> 00:13:58,600
+I would say developer 
+experience, Manifesto or culture
+
+238
+00:14:00,200 --> 00:14:03,700
+cultural values of the Python 
+Community, but then there is 
+
+239
+00:14:03,700 --> 00:14:08,000
+also The other side around. 
+How do we treat each other and 
+
+240
+00:14:08,000 --> 00:14:11,100
+it's cool. 
+A you I'm sure need both to have
+
+241
+00:14:11,100 --> 00:14:15,800
+a healthy culture. 
+Yeah, yeah but but I think that 
+
+242
+00:14:16,000 --> 00:14:19,700
+the Zen of python is such a 
+great summary of great developer
+
+243
+00:14:19,700 --> 00:14:24,000
+experience, right? 
+And it you know you look at this
+
+244
+00:14:24,000 --> 00:14:27,200
+and you go. 
+Well, if I follow this I'm going
+
+245
+00:14:27,200 --> 00:14:30,600
+to write code that people can 
+read. 
+
+246
+00:14:30,700 --> 00:14:33,000
+Yep. 
+And that makes sense to them and
+
+247
+00:14:33,400 --> 00:14:37,100
+yeah. 
+What's interesting is that that 
+
+248
+00:14:37,100 --> 00:14:40,600
+I think this is very different 
+from a Zen of something else 
+
+249
+00:14:40,600 --> 00:14:47,100
+that maybe more do the most 
+efficient thing possible or like
+
+250
+00:14:47,100 --> 00:14:51,800
+there's the you could have as 
+have a Manifesto like this. 
+
+251
+00:14:52,000 --> 00:14:56,200
+That is not at all focused on 
+the developer experience and so 
+
+252
+00:14:56,200 --> 00:14:59,900
+that's I think what what I'm 
+what I think is unique and 
+
+253
+00:14:59,900 --> 00:15:02,100
+interesting about the python 
+Community is how they have 
+
+254
+00:15:02,100 --> 00:15:06,900
+focused so much. 
+On the developer experience and 
+
+255
+00:15:07,100 --> 00:15:10,900
+and most people love it and it's
+growing like crazy. 
+
+256
+00:15:11,900 --> 00:15:19,700
+Yeah, it's the language that 
+taught me to not worry about 
+
+257
+00:15:19,900 --> 00:15:25,100
+efficiency because I came from. 
+I mean, like one of the first 
+
+258
+00:15:25,100 --> 00:15:28,900
+projects that I did was I wrote 
+in Assembly Language a floating 
+
+259
+00:15:28,900 --> 00:15:32,100
+Point math, library for this 
+box. 
+
+260
+00:15:32,100 --> 00:15:39,200
+This multimeter and, And so I 
+was you know, thinking very 
+
+261
+00:15:39,200 --> 00:15:43,200
+low-level efficiency from doing 
+that and it took me until I 
+
+262
+00:15:43,200 --> 00:15:46,500
+started working with python 
+because I would go oh I could 
+
+263
+00:15:46,500 --> 00:15:48,700
+write the code this way but that
+wouldn't be efficient. 
+
+264
+00:15:48,700 --> 00:15:51,700
+So I'll do it this other way and
+then I discovered the more 
+
+265
+00:15:51,700 --> 00:15:54,600
+complicated messy way was 
+slower. 
+
+266
+00:15:54,600 --> 00:15:57,200
+Hmm. 
+And that if you just do it the 
+
+267
+00:15:57,200 --> 00:16:00,000
+obvious way, it's going to run 
+fine. 
+
+268
+00:16:00,500 --> 00:16:03,400
+And if it's not running fine, 
+then you investigate that you 
+
+269
+00:16:03,600 --> 00:16:07,600
+use a profiler and find out 
+where The bottleneck it was 
+
+270
+00:16:07,600 --> 00:16:09,200
+which is never where you think 
+it is. 
+
+271
+00:16:09,300 --> 00:16:11,400
+I would say I'm going to stand 
+by that. 
+
+272
+00:16:11,400 --> 00:16:13,400
+It's never where you think it's 
+going to be. 
+
+273
+00:16:13,900 --> 00:16:18,100
+And so so you're always 
+optimizing for the wrong thing. 
+
+274
+00:16:18,100 --> 00:16:22,200
+If you start prematurely up 
+dancing but most of the time 
+
+275
+00:16:22,600 --> 00:16:23,400
+now. 
+The language. 
+
+276
+00:16:23,400 --> 00:16:25,700
+Well we'll take care of you. 
+Yeah. 
+
+277
+00:16:25,800 --> 00:16:27,700
+And I think that's true with a 
+lot of languages. 
+
+278
+00:16:28,600 --> 00:16:33,200
+So do you think in a community 
+that doesn't necessarily value 
+
+279
+00:16:33,200 --> 00:16:37,400
+developer experience? 
+Is it worth trying to change 
+
+280
+00:16:37,400 --> 00:16:42,800
+that? 
+Or, or do I just give up? 
+
+281
+00:16:42,800 --> 00:16:47,700
+And, and because I feel like 
+I've been on this path of I'm 
+
+282
+00:16:47,700 --> 00:16:50,700
+going to change culture. 
+I'm gonna, I'm gonna get 
+
+283
+00:16:50,700 --> 00:16:53,500
+developers to care about the 
+developer experiences that they 
+
+284
+00:16:53,500 --> 00:16:56,300
+create. 
+I don't think that's a bad 
+
+285
+00:16:56,300 --> 00:17:05,400
+thing, but I suspect your 
+strategies May Need some 
+
+286
+00:17:05,400 --> 00:17:07,300
+rethinking. 
+It's like, how do you change 
+
+287
+00:17:07,300 --> 00:17:09,800
+culture? 
+So one of the strategies that I 
+
+288
+00:17:09,800 --> 00:17:14,599
+have around, this was my friend 
+Ray saying and I we created this
+
+289
+00:17:14,599 --> 00:17:17,200
+principles of developer 
+experience which is four 
+
+290
+00:17:17,200 --> 00:17:21,700
+principles that help you. 
+Determine if a if a developer 
+
+291
+00:17:21,700 --> 00:17:24,000
+trance is good or bad. 
+And what are those principles 
+
+292
+00:17:25,900 --> 00:17:29,200
+one is do the simplest thing 
+that could possibly work. 
+
+293
+00:17:29,300 --> 00:17:32,600
+I really learned that one from 
+you, which I I didn't make that 
+
+294
+00:17:32,600 --> 00:17:34,600
+one up, I didn't. 
+But the you're the one that 
+
+295
+00:17:34,600 --> 00:17:43,300
+instilled that value and that 
+one's a little bit like the What
+
+296
+00:17:43,300 --> 00:17:50,000
+is it? 
+Occam's razor because Occam's 
+
+297
+00:17:50,000 --> 00:17:54,300
+razor is. 
+Well, people think it's the 
+
+298
+00:17:54,300 --> 00:17:59,800
+simplest way is the right way, 
+but actually Occam's razor just 
+
+299
+00:17:59,800 --> 00:18:05,000
+says try the simplest way first,
+because if and if you think 
+
+300
+00:18:05,000 --> 00:18:08,700
+about it, it's just a very basic
+way to approach something. 
+
+301
+00:18:08,900 --> 00:18:10,600
+Why wouldn't you try the 
+simplest thing first? 
+
+302
+00:18:10,600 --> 00:18:13,200
+Because if it works, you don't 
+have to try all the complicated 
+
+303
+00:18:13,200 --> 00:18:15,700
+ways, right? 
+So it's not as simple, but but 
+
+304
+00:18:15,700 --> 00:18:18,500
+you'll see this In movies and 
+things that go, or using Occam's
+
+305
+00:18:18,500 --> 00:18:21,000
+razor where the simplest way is,
+always the right way. 
+
+306
+00:18:21,100 --> 00:18:28,200
+Now, it's not, it isn't and and 
+with that one I went back and 
+
+307
+00:18:28,200 --> 00:18:32,600
+found the original quote and it 
+was try the simplest way. 
+
+308
+00:18:32,800 --> 00:18:34,800
+It could possibly work, huh? 
+Try to end. 
+
+309
+00:18:34,800 --> 00:18:37,500
+So it's really just a variation 
+of Occam's razor, huh? 
+
+310
+00:18:37,600 --> 00:18:39,100
+Anyway that's awesome. 
+Yeah. 
+
+311
+00:18:39,100 --> 00:18:40,900
+I didn't know that all the 
+backstory on that. 
+
+312
+00:18:40,900 --> 00:18:46,800
+So so actually I think I should 
+start with the One. 
+
+313
+00:18:47,300 --> 00:18:50,000
+I got them out of order because 
+there is a kind of natural order
+
+314
+00:18:50,000 --> 00:18:51,400
+to the way that ran I had to 
+find them. 
+
+315
+00:18:51,400 --> 00:18:55,100
+So the kind of starting one is 
+respect the users knowledge and 
+
+316
+00:18:55,100 --> 00:19:03,200
+goals and as an example People 
+do a lot of evaluation of 
+
+317
+00:19:03,200 --> 00:19:07,100
+developer experience. 
+And what I've seen often happen 
+
+318
+00:19:07,300 --> 00:19:10,500
+is that they when they do an 
+evaluation of a developer 
+
+319
+00:19:10,500 --> 00:19:13,400
+experience that they've created,
+what they'll do is, they'll 
+
+320
+00:19:13,500 --> 00:19:16,700
+usually base it on a piece of 
+documentation. 
+
+321
+00:19:16,900 --> 00:19:19,500
+So we'll say that. 
+Oh, the users got through this 
+
+322
+00:19:19,500 --> 00:19:22,200
+piece of documentation, easily, 
+or whatever. 
+
+323
+00:19:22,600 --> 00:19:27,500
+But what the, what that often 
+excludes is that, that 
+
+324
+00:19:27,500 --> 00:19:31,200
+documentation may not actually 
+aligned With what the users 
+
+325
+00:19:31,200 --> 00:19:35,400
+actually trying to accomplish 
+may not usually doesn't. 
+
+326
+00:19:35,500 --> 00:19:38,900
+Yeah. 
+So as a practical example of 
+
+327
+00:19:38,900 --> 00:19:46,000
+this, we could think that the 
+user wants to put their 
+
+328
+00:19:46,100 --> 00:19:49,000
+application into a Docker 
+container upload. 
+
+329
+00:19:49,000 --> 00:19:53,300
+That Docker container to a 
+website deploy, that Docker 
+
+330
+00:19:53,300 --> 00:19:56,200
+container onto a service that 
+will run it. 
+
+331
+00:19:56,300 --> 00:19:59,400
+Have a HTTP endpoint for that 
+service. 
+
+332
+00:20:00,100 --> 00:20:04,600
+We could think that that's what 
+the user wants, but oftentimes 
+
+333
+00:20:04,600 --> 00:20:08,300
+as not what the user wants, the 
+user just wants to take their 
+
+334
+00:20:08,300 --> 00:20:10,800
+piece of source code that 
+they're working on and get it 
+
+335
+00:20:10,800 --> 00:20:14,600
+running up on the internet. 
+And that's ultimately what their
+
+336
+00:20:14,600 --> 00:20:19,900
+goal is in this in this use case
+and so so Docker is one way to 
+
+337
+00:20:19,900 --> 00:20:21,200
+do that. 
+Exactly right. 
+
+338
+00:20:21,200 --> 00:20:26,400
+And so so it's real easy to 
+focus, our thoughts around our 
+
+339
+00:20:26,400 --> 00:20:28,800
+developer experience in our 
+evaluation of a developer 
+
+340
+00:20:28,800 --> 00:20:32,200
+experience on the Technical kind
+of nitty-gritty steps that are 
+
+341
+00:20:32,200 --> 00:20:34,600
+needed. 
+When really? 
+
+342
+00:20:35,500 --> 00:20:37,600
+What I'm, what this what? 
+This first principle of 
+
+343
+00:20:37,600 --> 00:20:40,100
+developer experience? 
+As is no focus on what the user 
+
+344
+00:20:40,100 --> 00:20:42,200
+is actually trying to 
+accomplish. 
+
+345
+00:20:42,200 --> 00:20:43,900
+And this is where Heroku is just
+amazing. 
+
+346
+00:20:43,900 --> 00:20:47,100
+It's like like you just get push
+Roker master and guess what your
+
+347
+00:20:47,100 --> 00:20:48,500
+application is up on the 
+Internet? 
+
+348
+00:20:49,200 --> 00:20:51,400
+It's such a wonderful developer 
+experience. 
+
+349
+00:20:51,400 --> 00:20:53,800
+Are they using like dr. 
+Under the covers? 
+
+350
+00:20:53,800 --> 00:20:56,300
+Or what they have someone they 
+don't, they usually knows. 
+
+351
+00:20:56,300 --> 00:20:59,900
+But okay their own stuff. 
+Yeah okay yeah. 
+
+352
+00:21:00,000 --> 00:21:05,000
+And then respecting their 
+knowledge means that like I I 
+
+353
+00:21:05,000 --> 00:21:08,300
+want every developer to use 
+Unison, I think it's an amazing 
+
+354
+00:21:08,300 --> 00:21:10,700
+programming language. 
+It's so forward-thinking and all
+
+355
+00:21:10,700 --> 00:21:16,300
+that, but that if I were to, if 
+you were to say, how do I build 
+
+356
+00:21:16,300 --> 00:21:18,600
+a rest service and I'm like, oh 
+just use Unison. 
+
+357
+00:21:19,000 --> 00:21:23,300
+Like that is not respecting, not
+in your your current knowledge, 
+
+358
+00:21:23,300 --> 00:21:25,800
+your current knowledge is kotlin
+and Python. 
+
+359
+00:21:26,100 --> 00:21:29,700
+And so if I want to respect to 
+your current knowledge, I need 
+
+360
+00:21:29,700 --> 00:21:32,200
+to Um to you and say, okay, 
+here's how we can accomplish 
+
+361
+00:21:32,200 --> 00:21:34,500
+your goal with what you know 
+today. 
+
+362
+00:21:34,900 --> 00:21:37,900
+And that's not saying that we 
+can't always help people take a 
+
+363
+00:21:37,908 --> 00:21:40,800
+step forward into something 
+something new and great. 
+
+364
+00:21:41,300 --> 00:21:43,300
+But there's another rule that 
+dinner telling me. 
+
+365
+00:21:43,300 --> 00:21:45,600
+Well it's almost like how Java 
+got invented. 
+
+366
+00:21:45,700 --> 00:21:48,600
+It's like here. 
+You guys make this set-top box 
+
+367
+00:21:48,600 --> 00:21:52,000
+so we can sell it. 
+We're going we don't like C++. 
+
+368
+00:21:52,100 --> 00:21:54,300
+We're going to invent a new 
+language instead of doing what 
+
+369
+00:21:54,300 --> 00:21:56,900
+you told us to do. 
+That's or what you see on 
+
+370
+00:21:56,900 --> 00:21:59,500
+stackoverflow a lot. 
+Yeah and somebody goes I'm 
+
+371
+00:21:59,500 --> 00:22:02,100
+trying to This problem. 
+Well why don't you do it this? 
+
+372
+00:22:02,100 --> 00:22:05,000
+Other way that I know. 
+Yeah it's like that doesn't 
+
+373
+00:22:05,000 --> 00:22:10,300
+help. 
+Yeah there it's it's a it's not 
+
+374
+00:22:10,300 --> 00:22:15,100
+a either-or situation because 
+they're definitely can be cases 
+
+375
+00:22:15,100 --> 00:22:19,200
+where where you need to help 
+move people forward into a 
+
+376
+00:22:19,208 --> 00:22:21,400
+different path. 
+So it's not saying that we don't
+
+377
+00:22:21,400 --> 00:22:23,200
+ever do that. 
+It's just saying, we need to 
+
+378
+00:22:23,200 --> 00:22:25,900
+respect where they are today, 
+right? 
+
+379
+00:22:25,900 --> 00:22:29,200
+And when you for example, go to 
+stack Overflow and ask a 
+
+380
+00:22:29,200 --> 00:22:32,300
+question. 
+When you're trying to solve that
+
+381
+00:22:32,300 --> 00:22:35,700
+problem. 
+Now, not, whereas maybe when 
+
+382
+00:22:35,700 --> 00:22:40,200
+you're between projects, oh now 
+it's time to take a step back, 
+
+383
+00:22:40,200 --> 00:22:43,500
+do maybe even do a formal 
+retrospective and see what 
+
+384
+00:22:43,500 --> 00:22:46,600
+worked and what didn't and say, 
+oh, how can we do this better 
+
+385
+00:22:46,600 --> 00:22:49,600
+next time? 
+Maybe that's changing to a 
+
+386
+00:22:49,608 --> 00:22:54,000
+language that knows about 
+versioning intrinsically like 
+
+387
+00:22:54,000 --> 00:22:55,300
+Unison does. 
+Yep. 
+
+388
+00:22:55,900 --> 00:22:59,600
+So which I think eventually 
+other languages will slow down 
+
+389
+00:23:00,400 --> 00:23:02,900
+Yeah yeah. 
+So that's that's really the 
+
+390
+00:23:02,900 --> 00:23:05,200
+first prince first. 
+Then then do the simplest thing 
+
+391
+00:23:05,200 --> 00:23:06,500
+that could possibly work 
+Customs. 
+
+392
+00:23:06,500 --> 00:23:09,600
+The second one and the third one
+is probably the simplest try the
+
+393
+00:23:09,600 --> 00:23:13,700
+simplest thing. 
+The third one is learning to be 
+
+394
+00:23:13,700 --> 00:23:20,100
+incremental so we very often in 
+our developer experiences, don't
+
+395
+00:23:20,100 --> 00:23:23,800
+help people take the next step 
+and know what the next step is 
+
+396
+00:23:23,900 --> 00:23:29,800
+step is and and so that's what 
+it pairs with do the simple. 
+
+397
+00:23:29,900 --> 00:23:32,200
+This thing that are try, the 
+simplest thing that could 
+
+398
+00:23:32,200 --> 00:23:36,700
+possibly work because we all we 
+do want to start simple but 
+
+399
+00:23:36,700 --> 00:23:39,400
+often the things that we're 
+trying to accomplish are not 
+
+400
+00:23:39,900 --> 00:23:42,600
+simple. 
+And so, how do we get from that 
+
+401
+00:23:42,800 --> 00:23:45,500
+that simplest thing to the next 
+level? 
+
+402
+00:23:45,500 --> 00:23:47,900
+And then to the next level and 
+then to the next level. 
+
+403
+00:23:48,200 --> 00:23:51,500
+And so it's just highlighting 
+that we should help. 
+
+404
+00:23:51,500 --> 00:23:53,800
+We should think about laying out
+a path that makes this 
+
+405
+00:23:53,800 --> 00:23:58,900
+incremental. 
+So, as an example of this, we 
+
+406
+00:23:59,300 --> 00:24:02,400
+could have the same Cloud run 
+button, which makes it so on a 
+
+407
+00:24:02,408 --> 00:24:05,600
+GitHub repo, you just click a 
+button and it deploys that 
+
+408
+00:24:05,600 --> 00:24:08,900
+application on Google's cloud 
+services about clutter on the 
+
+409
+00:24:08,908 --> 00:24:10,700
+repo. 
+Yeah, in the readme. 
+
+410
+00:24:11,600 --> 00:24:14,100
+Oh yeah. 
+Oh, you just put in you just 
+
+411
+00:24:14,100 --> 00:24:16,700
+stuck in like some HTML or yeah.
+Yeah, okay, yeah. 
+
+412
+00:24:16,700 --> 00:24:18,800
+Just a button, marked down 
+tiger, whatever. 
+
+413
+00:24:18,800 --> 00:24:22,200
+He's a markdown, she's click the
+button and it takes that repo 
+
+414
+00:24:22,300 --> 00:24:26,000
+and deploys it on the cloud. 
+So to me it's the simplest 
+
+415
+00:24:26,000 --> 00:24:28,000
+thing. 
+If your, if your goal going back
+
+416
+00:24:28,000 --> 00:24:31,200
+to principal one, if your goal 
+is to go, Oh from source code to
+
+417
+00:24:31,200 --> 00:24:34,200
+something running on the cloud. 
+It's the simplest thing that 
+
+418
+00:24:34,200 --> 00:24:38,500
+could possibly work. 
+But what we explicitly do when 
+
+419
+00:24:38,500 --> 00:24:41,700
+we when someone clicks the 
+button is, we tell them all the 
+
+420
+00:24:41,700 --> 00:24:44,000
+steps that were actually doing 
+for them. 
+
+421
+00:24:44,300 --> 00:24:46,600
+When they push the button, you 
+list the steps. 
+
+422
+00:24:46,700 --> 00:24:48,100
+Yeah. 
+As they're actually happening. 
+
+423
+00:24:48,100 --> 00:24:51,000
+No. 
+And so so so Lee guides them 
+
+424
+00:24:51,000 --> 00:24:53,200
+into understanding the deeper? 
+That's right. 
+
+425
+00:24:53,400 --> 00:24:55,200
+Oh, we're building a Docker 
+container. 
+
+426
+00:24:55,300 --> 00:24:57,400
+Oh, we're storing that Docker 
+container on the container 
+
+427
+00:24:57,400 --> 00:24:59,500
+registry. 
+Oh we're telling Cloud, run to 
+
+428
+00:24:59,500 --> 00:25:00,600
+deploy. 
+That container. 
+
+429
+00:25:01,000 --> 00:25:04,600
+So we actually tell them all the
+steps that were actually going. 
+
+430
+00:25:04,600 --> 00:25:07,400
+They don't have to figure those 
+steps out before they can get 
+
+431
+00:25:07,400 --> 00:25:09,000
+something deployed. 
+Exactly. 
+
+432
+00:25:09,100 --> 00:25:09,900
+Right. 
+Exactly. 
+
+433
+00:25:10,400 --> 00:25:14,100
+And so, so for that specific 
+goal, we're trying to make that 
+
+434
+00:25:14,100 --> 00:25:16,900
+experience incremental in the 
+learning of it incremental and 
+
+435
+00:25:16,900 --> 00:25:20,700
+not make the user, have to make 
+a bunch of decisions that they 
+
+436
+00:25:20,700 --> 00:25:24,500
+may not know the answer to. 
+So we could ask them. 
+
+437
+00:25:24,700 --> 00:25:26,800
+Do you want the service to be 
+authenticated or 
+
+438
+00:25:26,800 --> 00:25:29,400
+unauthenticated? 
+We don't ask them that we just 
+
+439
+00:25:29,400 --> 00:25:31,400
+make it. 
+We assume that they're clicking 
+
+440
+00:25:31,400 --> 00:25:33,700
+on some random GitHub repo that 
+they want this. 
+
+441
+00:25:34,000 --> 00:25:36,200
+That their goal is to make a 
+public service. 
+
+442
+00:25:36,200 --> 00:25:39,100
+And so we just make it public. 
+They can only is the repo can 
+
+443
+00:25:39,100 --> 00:25:41,100
+actually say one's it, to be 
+private. 
+
+444
+00:25:41,100 --> 00:25:45,600
+But so we try to significantly 
+limit the number of decisions 
+
+445
+00:25:45,600 --> 00:25:48,500
+that the user has to make in 
+order to do that and then help 
+
+446
+00:25:48,500 --> 00:25:51,600
+them learn about the the 
+decisions that were made for 
+
+447
+00:25:51,600 --> 00:25:55,100
+them. 
+The the steps that were taken 
+
+448
+00:25:55,100 --> 00:25:59,200
+that and these are examples that
+you've created in your GitHub 
+
+449
+00:25:59,200 --> 00:26:01,700
+repos anymore. 
+You can put the button on there.
+
+450
+00:26:01,700 --> 00:26:04,700
+Anybody can put the button in, 
+but you're putting this in your 
+
+451
+00:26:04,700 --> 00:26:06,800
+example, so that they can easily
+exactly. 
+
+452
+00:26:06,900 --> 00:26:09,900
+Yeah, I have button. 
+I used all my samples. 
+
+453
+00:26:10,000 --> 00:26:14,800
+Okay, now, now, their Cloud run 
+button is actually, in some 
+
+454
+00:26:14,800 --> 00:26:20,300
+ways, not a great example of 
+this because it one thing that 
+
+455
+00:26:20,300 --> 00:26:21,800
+I've been meaning to work on in 
+clutter and button. 
+
+456
+00:26:21,800 --> 00:26:25,200
+But haven't done yet is great. 
+We've deployed the application 
+
+457
+00:26:25,300 --> 00:26:29,100
+so that accomplished one goal. 
+But there's something that the 
+
+458
+00:26:29,100 --> 00:26:33,700
+user is Going to want to do 
+next, which is, I want to set up
+
+459
+00:26:33,700 --> 00:26:36,100
+a continuous delivery pipeline 
+for my application. 
+
+460
+00:26:36,100 --> 00:26:37,900
+Hey, let's say that. 
+That's their next goal. 
+
+461
+00:26:38,600 --> 00:26:42,900
+And today, clobberin button 
+doesn't tell them how to get to 
+
+462
+00:26:42,900 --> 00:26:46,500
+that how to move to that next 
+step in what they may want to 
+
+463
+00:26:46,500 --> 00:26:48,800
+do. 
+And so while it's incremental 
+
+464
+00:26:48,800 --> 00:26:53,600
+for like the one particular 
+goal, it stops at a point. 
+
+465
+00:26:53,600 --> 00:26:56,500
+And so that's something I need 
+to do is, is help the user. 
+
+466
+00:26:56,500 --> 00:26:59,700
+Learn how to take the next step 
+and that would make it even 
+
+467
+00:26:59,700 --> 00:27:01,300
+better. 
+Are on this particular 
+
+468
+00:27:01,700 --> 00:27:03,500
+principles of developer 
+experience. 
+
+469
+00:27:03,600 --> 00:27:06,600
+So are you thinking like a 
+continuous delivery button in 
+
+470
+00:27:06,600 --> 00:27:08,100
+addition to the cloud run 
+button? 
+
+471
+00:27:08,300 --> 00:27:09,500
+Yeah, exactly. 
+Exactly. 
+
+472
+00:27:09,500 --> 00:27:11,400
+It would just configure that for
+you. 
+
+473
+00:27:11,400 --> 00:27:12,100
+That's right. 
+Yeah. 
+
+474
+00:27:12,100 --> 00:27:14,300
+So today would be nice. 
+It would take great, you've 
+
+475
+00:27:14,300 --> 00:27:16,800
+deployed your application, 
+you've done it once. 
+
+476
+00:27:17,000 --> 00:27:19,300
+And now you probably want to 
+start making changes to this 
+
+477
+00:27:19,300 --> 00:27:22,300
+application and running them 
+through a continuous, delivery 
+
+478
+00:27:22,300 --> 00:27:26,000
+pipeline, click here to do that.
+I like it. 
+
+479
+00:27:26,200 --> 00:27:29,300
+So that would that would make it
+a much more incremental 
+
+480
+00:27:29,700 --> 00:27:32,800
+incremental process actually for
+people learning about this thing
+
+481
+00:27:33,200 --> 00:27:36,500
+and like again, it's like, oh 
+well I got the thing working, 
+
+482
+00:27:36,500 --> 00:27:39,700
+I'll just work with it. 
+The way it is rather than having
+
+483
+00:27:39,700 --> 00:27:41,800
+to go learn this continuous 
+delivery stuff. 
+
+484
+00:27:41,800 --> 00:27:45,100
+But if you go, no, will take you
+into it and show you how great 
+
+485
+00:27:45,100 --> 00:27:49,100
+it is. 
+Because I find myself having to 
+
+486
+00:27:49,500 --> 00:27:53,400
+say no, no, I'm going even 
+though it's going to take more 
+
+487
+00:27:53,400 --> 00:27:57,700
+work now, I'm going to benefit 
+It's so much by doing this but 
+
+488
+00:27:57,700 --> 00:28:01,900
+that only comes from experience.
+So I, you know, I push myself 
+
+489
+00:28:01,900 --> 00:28:03,900
+into okay, automate everything, 
+yeah. 
+
+490
+00:28:04,200 --> 00:28:07,400
+And and so if you have a button 
+that gets you there, then you'll
+
+491
+00:28:07,400 --> 00:28:11,000
+learn how valuable it is and 
+you'll internalize it. 
+
+492
+00:28:11,100 --> 00:28:14,200
+Yeah, so that's three. 
+Yep. 
+
+493
+00:28:14,300 --> 00:28:17,600
+So then the last one is I think 
+we say it as wasted time as a 
+
+494
+00:28:17,608 --> 00:28:25,000
+waste and in developer 
+experiences, they they often are
+
+495
+00:28:25,200 --> 00:28:29,800
+Our, if there's not a focus on 
+the developer experience, they 
+
+496
+00:28:29,900 --> 00:28:34,200
+will just waste the developers 
+time for no reason whatsoever. 
+
+497
+00:28:34,500 --> 00:28:38,000
+So, an example, this one is on 
+Heroku. 
+
+498
+00:28:38,400 --> 00:28:41,600
+If you want to add a postgres 
+database to your application, 
+
+499
+00:28:41,800 --> 00:28:43,600
+you like click a button or 
+whatever you could do it. 
+
+500
+00:28:43,600 --> 00:28:45,700
+A lot of ways, but you click a 
+button, add postgres. 
+
+501
+00:28:46,000 --> 00:28:47,900
+And it is like, instantly 
+available. 
+
+502
+00:28:48,500 --> 00:28:51,000
+Whereas on most other cloud 
+services, when you want to add 
+
+503
+00:28:51,000 --> 00:28:53,600
+postgres, it takes like, 10 
+minutes for the thing to come 
+
+504
+00:28:53,600 --> 00:28:56,200
+up. 
+And what Who does because they 
+
+505
+00:28:56,200 --> 00:28:58,300
+actually really care about 
+developer experience. 
+
+506
+00:28:58,300 --> 00:29:02,100
+What they do is they keep a pool
+of postgres database is ready to
+
+507
+00:29:02,100 --> 00:29:04,100
+go. 
+So that as soon as somebody 
+
+508
+00:29:04,100 --> 00:29:06,800
+says, I want one, they just pull
+one out of this pool. 
+
+509
+00:29:07,000 --> 00:29:09,800
+And it's like, God, they 
+actually like thought about 
+
+510
+00:29:09,800 --> 00:29:12,100
+making this. 
+A great experience, is the work 
+
+511
+00:29:12,100 --> 00:29:16,100
+and did the work for saving. 
+I mean, I could totally see how 
+
+512
+00:29:16,100 --> 00:29:18,200
+somebody would go out of. 
+It's just 10 minutes, that 
+
+513
+00:29:18,200 --> 00:29:21,300
+doesn't really matter. 
+Let's work on something else. 
+
+514
+00:29:21,300 --> 00:29:24,200
+Yeah, huh. 
+That's another example. 
+
+515
+00:29:24,200 --> 00:29:27,600
+This is Is things that that fail
+early. 
+
+516
+00:29:28,200 --> 00:29:33,100
+So I was trying to deploy an 
+application on some service and 
+
+517
+00:29:33,500 --> 00:29:38,300
+30 minutes after I told it to 
+start it failed with an error 
+
+518
+00:29:38,400 --> 00:29:41,000
+and it's like, God, I really 
+wish I would have like gotten 
+
+519
+00:29:41,000 --> 00:29:44,100
+that are like at the very 
+beginning instead of you know, 
+
+520
+00:29:44,100 --> 00:29:46,400
+after waiting 30 minutes for 
+this thing, that's the whole 
+
+521
+00:29:46,400 --> 00:29:49,300
+reason. 
+We do unit testing the way that 
+
+522
+00:29:49,300 --> 00:29:54,300
+we do so that you make a change,
+you know, instantly that it's 
+
+523
+00:29:54,300 --> 00:29:56,400
+failed. 
+So you go It was that change 
+
+524
+00:29:56,400 --> 00:30:00,400
+that I made but not piled in 
+piled of changes and then you go
+
+525
+00:30:00,400 --> 00:30:02,000
+oh some failed to No Doubt 
+though. 
+
+526
+00:30:02,300 --> 00:30:06,500
+Yeah that that immediate 
+response tells us so much fail, 
+
+527
+00:30:06,500 --> 00:30:10,000
+early don't waste the users time
+with things that can be 
+
+528
+00:30:10,000 --> 00:30:13,300
+optimized through pools and 
+caches and all that kind of 
+
+529
+00:30:13,308 --> 00:30:17,300
+stuff. 
+But you have to actually value a
+
+530
+00:30:17,300 --> 00:30:21,100
+great developer experience to 
+invest the time to do this. 
+
+531
+00:30:21,700 --> 00:30:25,000
+Well, more than that, you have 
+to know what it is. 
+
+532
+00:30:25,100 --> 00:30:29,400
+You can't be someone who just 
+says, oh I'll just do all this 
+
+533
+00:30:29,400 --> 00:30:35,200
+stuff by hand right which yeah. 
+I mean yeah. 
+
+534
+00:30:35,200 --> 00:30:37,000
+Yeah. 
+You really have to understand 
+
+535
+00:30:37,000 --> 00:30:40,500
+what those things are and be 
+looking for them. 
+
+536
+00:30:40,700 --> 00:30:43,200
+Yeah. 
+Saying oh this is this is 
+
+537
+00:30:43,200 --> 00:30:48,100
+problematic. 
+So I have a question. 
+
+538
+00:30:48,100 --> 00:30:52,000
+That's a little different. 
+Well, significantly different, I
+
+539
+00:30:52,000 --> 00:30:59,500
+guess, which is I keep coming 
+across this Low code, no code 
+
+540
+00:31:00,100 --> 00:31:02,200
+meme. 
+That's going around and every 
+
+541
+00:31:02,200 --> 00:31:06,600
+article that I read about it 
+because I'm trying to figure out
+
+542
+00:31:06,600 --> 00:31:10,500
+what do they mean? 
+It's like saying oh this is 
+
+543
+00:31:10,500 --> 00:31:13,300
+going to be great and it's going
+to change everything but they 
+
+544
+00:31:13,300 --> 00:31:16,800
+never say what it is and it 
+really smells like I don't know 
+
+545
+00:31:16,800 --> 00:31:21,200
+if you remember when we had the 
+but if they call it the AI 
+
+546
+00:31:21,200 --> 00:31:23,200
+Revolution or something in the 
+90s. 
+
+547
+00:31:23,300 --> 00:31:25,600
+Yeah. 
+And it turned out to be complete
+
+548
+00:31:25,600 --> 00:31:31,100
+marketing. 
+Thor's get manure and and it's 
+
+549
+00:31:31,100 --> 00:31:35,300
+like this really smells like 
+that to me because I haven't 
+
+550
+00:31:35,300 --> 00:31:39,000
+ever seen an example of it or 
+anything. 
+
+551
+00:31:39,000 --> 00:31:40,900
+Do you know what it means? 
+Yeah. 
+
+552
+00:31:41,800 --> 00:31:45,800
+Working at Salesforce, I had a 
+lot of experience with no Code 
+
+553
+00:31:45,800 --> 00:31:49,000
+and low code and Salesforce is 
+using that marketing 
+
+554
+00:31:49,000 --> 00:31:54,000
+terminology, a lot of the 
+describe their platform and so 
+
+555
+00:31:56,200 --> 00:31:59,000
+Most developers, I think are 
+using general purpose, 
+
+556
+00:31:59,000 --> 00:32:04,300
+programming languages, python 
+Java, whatever and are using 
+
+557
+00:32:04,300 --> 00:32:07,700
+libraries and Frameworks to 
+accomplish some goal. 
+
+558
+00:32:08,300 --> 00:32:12,600
+But it turns out companies have 
+a hard time, hiring skilled 
+
+559
+00:32:12,600 --> 00:32:16,000
+developers who know how to use a
+general-purpose programming 
+
+560
+00:32:16,000 --> 00:32:22,700
+language to build a phone app or
+a web for whatever they need to 
+
+561
+00:32:22,700 --> 00:32:28,500
+build. 
+And so, So the one possible 
+
+562
+00:32:28,500 --> 00:32:32,200
+solution to this problem is, 
+let's make it much easier for 
+
+563
+00:32:32,200 --> 00:32:36,100
+people to build stuff so that 
+you don't have to be a 20-year 
+
+564
+00:32:36,100 --> 00:32:39,100
+programming veteran to be able 
+to deliver something. 
+
+565
+00:32:39,100 --> 00:32:41,200
+Haven't we been trying to do 
+that all along? 
+
+566
+00:32:41,300 --> 00:32:43,000
+Make it much easier to build 
+stuff. 
+
+567
+00:32:43,000 --> 00:32:46,800
+I feel like that's always been. 
+So people have been trying to do
+
+568
+00:32:46,800 --> 00:32:48,800
+it with general purpose, 
+programming languages. 
+
+569
+00:32:48,800 --> 00:32:55,000
+And I think python is a amazing 
+example of of Veteran 
+
+570
+00:32:55,000 --> 00:32:57,700
+programmers, being able to 
+deliver things. 
+
+571
+00:32:57,700 --> 00:33:00,100
+Sure, very well. 
+I think draw Java, one of the 
+
+572
+00:33:00,100 --> 00:33:05,300
+reasons it's been so successful 
+is for this reason as well but 
+
+573
+00:33:05,400 --> 00:33:10,300
+there's been other efforts which
+say okay what if we what if we 
+
+574
+00:33:10,300 --> 00:33:13,100
+didn't use general purpose, 
+programming languages to do 
+
+575
+00:33:13,100 --> 00:33:15,900
+this. 
+What if we instead made like GUI
+
+576
+00:33:15,900 --> 00:33:21,600
+Builders? 
+We made very limited programming
+
+577
+00:33:21,600 --> 00:33:25,300
+languages dsls. 
+Usually these are I mean how is 
+
+578
+00:33:25,300 --> 00:33:27,200
+this different from the idea of 
+DSL? 
+
+579
+00:33:28,000 --> 00:33:30,100
+It'll mean it's one specific 
+language. 
+
+580
+00:33:30,100 --> 00:33:33,000
+Thank you. 
+It's intertwined because they're
+
+581
+00:33:33,000 --> 00:33:38,700
+definitely can be dsls in the 
+low code version of this but the
+
+582
+00:33:38,700 --> 00:33:42,900
+idea is just to put so many 
+guardrails on what the user can 
+
+583
+00:33:42,900 --> 00:33:45,600
+do that. 
+You really constrain you 
+
+584
+00:33:45,600 --> 00:33:50,400
+constrain the programming 
+ability so much that it's much 
+
+585
+00:33:50,400 --> 00:33:52,900
+easier for people to learn. 
+Then I think Salesforce has 
+
+586
+00:33:52,900 --> 00:33:54,500
+probably been the most 
+successful. 
+
+587
+00:33:54,600 --> 00:33:56,900
+Awful at doing this. 
+There's a lot of people who 
+
+588
+00:33:56,900 --> 00:33:58,700
+don't come from programming 
+backgrounds. 
+
+589
+00:33:58,700 --> 00:34:02,700
+Don't do any general purpose, 
+programming and our building web
+
+590
+00:34:02,700 --> 00:34:05,900
+applications and mobile 
+applications using Salesforce. 
+
+591
+00:34:06,300 --> 00:34:10,400
+And so Salesforce has a way to 
+build stuff with no code and 
+
+592
+00:34:10,400 --> 00:34:14,600
+then if you need more 
+flexibility, then you can drop 
+
+593
+00:34:14,600 --> 00:34:17,199
+down to their DSL, which is 
+called Apex. 
+
+594
+00:34:17,199 --> 00:34:20,699
+It's a Java like programming 
+language, but very constrained. 
+
+595
+00:34:20,699 --> 00:34:23,400
+You can't, you can't do 
+libraries like you. 
+
+596
+00:34:23,699 --> 00:34:26,000
+It is. 
+I have a database trigger 
+
+597
+00:34:26,000 --> 00:34:31,000
+language like pl/sql and so, so 
+it's very constrained in what 
+
+598
+00:34:31,000 --> 00:34:33,800
+you can do. 
+You can write web pages web page
+
+599
+00:34:33,800 --> 00:34:35,699
+back ends and some of that kind 
+of stuff with it too. 
+
+600
+00:34:35,699 --> 00:34:37,800
+But so it's kind of been what's 
+interesting? 
+
+601
+00:34:37,800 --> 00:34:42,100
+Is that what often happens with 
+these low code programming 
+
+602
+00:34:42,100 --> 00:34:45,100
+environment, is that people need
+more and more power. 
+
+603
+00:34:45,100 --> 00:34:49,300
+And so then there's just this 
+endless like feature creep to 
+
+604
+00:34:49,300 --> 00:34:51,800
+the language where ends up 
+creeping towards a general 
+
+605
+00:34:51,800 --> 00:34:56,400
+purpose language and so So, so I
+think that there is certainly 
+
+606
+00:34:56,400 --> 00:35:02,600
+validity in the no code, low 
+code, the need for it, what, 
+
+607
+00:35:02,600 --> 00:35:07,400
+what I've what I have been 
+questioning lately is can't we 
+
+608
+00:35:07,400 --> 00:35:10,400
+just do this and shouldn't we 
+just do this on top of the 
+
+609
+00:35:10,400 --> 00:35:15,800
+general purpose, programming 
+languages, and create layers of 
+
+610
+00:35:15,800 --> 00:35:19,800
+usability around them. 
+So that when we need more power,
+
+611
+00:35:19,800 --> 00:35:24,900
+we can we can just always drop 
+down to that, that The 
+
+612
+00:35:24,900 --> 00:35:27,200
+lower-level general-purpose 
+programming language. 
+
+613
+00:35:27,200 --> 00:35:33,600
+One of my first like eye-opening
+experiences with python was, I 
+
+614
+00:35:33,600 --> 00:35:35,800
+don't know. 
+This is a long time ago because 
+
+615
+00:35:35,800 --> 00:35:39,500
+I started using python in 97, I 
+think. 
+
+616
+00:35:40,100 --> 00:35:43,800
+And but I remember saying, oh, 
+here's a problem. 
+
+617
+00:35:43,800 --> 00:35:47,200
+I want to solve, I wanted to 
+like resize a bunch of images 
+
+618
+00:35:47,900 --> 00:35:51,100
+and I thought, well, you know, 
+based on past experience this is
+
+619
+00:35:51,108 --> 00:35:56,700
+going to take a while to figure 
+out and I found that I think, 
+
+620
+00:35:56,700 --> 00:35:58,600
+you know, there's an image 
+library or something. 
+
+621
+00:35:58,600 --> 00:36:01,400
+I don't know. 
+If it's part of the standard 
+
+622
+00:36:01,400 --> 00:36:03,000
+distribution or one of the Open 
+Sea. 
+
+623
+00:36:03,300 --> 00:36:05,700
+Anyway, I thought, oh well, this
+will help. 
+
+624
+00:36:05,800 --> 00:36:09,800
+And then, I think I had the 
+problem solved within five 
+
+625
+00:36:09,800 --> 00:36:14,200
+minutes because it was like, oh,
+here's how you resize it, you 
+
+626
+00:36:14,200 --> 00:36:18,500
+know, it had exactly that. 
+So, it seemed very, I mean, I 
+
+627
+00:36:18,500 --> 00:36:22,100
+could see somebody who doesn't 
+know much about python who has a
+
+628
+00:36:22,100 --> 00:36:25,900
+problem to solve and going, oh, 
+I If this Library will do it and
+
+629
+00:36:25,900 --> 00:36:29,900
+then they're done and that's 
+kind of sort of what you're 
+
+630
+00:36:29,900 --> 00:36:31,800
+talking about. 
+Yeah, yeah. 
+
+631
+00:36:32,500 --> 00:36:39,200
+And pythons Library ecosystem, 
+enables essentially a low code 
+
+632
+00:36:39,200 --> 00:36:44,900
+experience for a lot of people 
+because npm and Java are similar
+
+633
+00:36:45,100 --> 00:36:48,800
+in that you just grab a library 
+and and write a couple lines of 
+
+634
+00:36:48,800 --> 00:36:50,600
+code in your done and it's easy 
+with. 
+
+635
+00:36:50,600 --> 00:36:53,900
+So I think the key is that it's 
+easy enough to use because one 
+
+636
+00:36:53,900 --> 00:36:57,600
+of my first Experiences with a 
+library was using C. 
+
+637
+00:36:58,000 --> 00:37:01,000
+And here's this library that 
+supposed to do something, and 
+
+638
+00:37:01,000 --> 00:37:03,700
+then they, then they said, oh, 
+and you have to allocate some 
+
+639
+00:37:03,700 --> 00:37:07,400
+storage and then you have to 
+release the storage and there 
+
+640
+00:37:07,400 --> 00:37:10,400
+was a bunch of weird, you know, 
+complicated low-level things 
+
+641
+00:37:10,400 --> 00:37:12,600
+that I had to do. 
+But now that you know, we have 
+
+642
+00:37:12,600 --> 00:37:15,500
+garbage collectors and things 
+like that is just make the 
+
+643
+00:37:15,500 --> 00:37:18,800
+object, call some operations on 
+the object. 
+
+644
+00:37:18,900 --> 00:37:22,500
+Okay, you're done. 
+Yeah yeah yeah. 
+
+645
+00:37:22,500 --> 00:37:24,400
+So so I think what will be 
+interested in? 
+
+646
+00:37:24,700 --> 00:37:30,100
+Is do, will we see people using 
+the general-purpose languages 
+
+647
+00:37:30,100 --> 00:37:33,100
+for the low code? 
+No code experiences. 
+
+648
+00:37:34,000 --> 00:37:37,600
+One of the this actually relates
+to another tweet that that I had
+
+649
+00:37:37,600 --> 00:37:44,100
+teed up to maybe talk about 
+where I said, hmm, so much weed.
+
+650
+00:37:44,100 --> 00:37:47,100
+I said Superior to Lynn is often
+cited as a primary reason for 
+
+651
+00:37:47,100 --> 00:37:49,700
+declarative languages. 
+And yet somehow, I've never 
+
+652
+00:37:49,700 --> 00:37:52,200
+experienced a period of tooling 
+for a declarative language. 
+
+653
+00:37:52,500 --> 00:37:54,200
+Most often the tooling is 
+abysmal. 
+
+654
+00:37:54,500 --> 00:37:57,500
+So in this context, and how it 
+relates to the previous one? 
+
+655
+00:37:57,500 --> 00:38:00,500
+Is that oftentimes low code is a
+declarative? 
+
+656
+00:38:00,500 --> 00:38:05,300
+No code, is based on a 
+declarative language because you
+
+657
+00:38:05,300 --> 00:38:10,000
+can build tooling around a 
+declarative language is, is been
+
+658
+00:38:10,000 --> 00:38:12,800
+one of the arguments for 
+creating all these custom 
+
+659
+00:38:12,800 --> 00:38:15,800
+declarative languages. 
+And so then when you want to 
+
+660
+00:38:15,808 --> 00:38:20,500
+take the escape hatch because 
+the UI Builder around the 
+
+661
+00:38:20,500 --> 00:38:23,300
+declarative language is 
+insufficient, then you can drop 
+
+662
+00:38:23,300 --> 00:38:28,900
+down and actually Code. 
+So actually get into the way to 
+
+663
+00:38:28,900 --> 00:38:30,500
+do everything that you need to 
+do. 
+
+664
+00:38:30,500 --> 00:38:33,400
+That's right. 
+And so so a lot of times and is 
+
+665
+00:38:33,400 --> 00:38:37,600
+the case with Salesforce is that
+you start in a UI Builder. 
+
+666
+00:38:37,700 --> 00:38:39,700
+That's creating declarative code
+for you. 
+
+667
+00:38:40,500 --> 00:38:43,300
+If you need more power, you 
+tweak the declarative code week 
+
+668
+00:38:43,300 --> 00:38:46,100
+thing to declarative code and 
+then if you need more power than
+
+669
+00:38:46,100 --> 00:38:48,900
+there's usually a procedural 
+language that you can drop down 
+
+670
+00:38:48,900 --> 00:38:52,000
+to behind that. 
+So there is a nice escape hatch 
+
+671
+00:38:52,000 --> 00:38:54,300
+process but where it falls 
+usually. 
+
+672
+00:38:54,500 --> 00:38:57,800
+Lee This falls off is like we 
+talked about before is that when
+
+673
+00:38:57,800 --> 00:39:02,300
+you reach the limits of that, 
+that procedural language you're 
+
+674
+00:39:02,300 --> 00:39:04,400
+not in a general purpose, 
+programming language. 
+
+675
+00:39:04,400 --> 00:39:09,200
+So you hit the cliff and you're 
+stuck and so and and then 
+
+676
+00:39:09,200 --> 00:39:11,800
+there's there's also a similar 
+Cliff with the declarative 
+
+677
+00:39:11,800 --> 00:39:15,300
+language side. 
+Is that when I was working at 
+
+678
+00:39:15,300 --> 00:39:18,300
+Adobe, they had a declarative 
+language called mxml. 
+
+679
+00:39:18,600 --> 00:39:23,100
+And they the idea was always, oh
+well, have all this great 
+
+680
+00:39:23,100 --> 00:39:26,100
+tooling. 
+You know, you'll be able to 
+
+681
+00:39:26,100 --> 00:39:30,500
+design your UI and it's just 
+going to write the mxml for you,
+
+682
+00:39:31,200 --> 00:39:34,000
+which was all great, but then 
+it's like, okay so then if I do 
+
+683
+00:39:34,000 --> 00:39:37,000
+need to take the escape hatch 
+and go actually write some 
+
+684
+00:39:37,000 --> 00:39:41,000
+declarative code, what are the 
+what are the chances that my 
+
+685
+00:39:41,000 --> 00:39:44,000
+changes that I've made? 
+Are going to allow me to go back
+
+686
+00:39:44,500 --> 00:39:47,900
+to the the UI Builder and use 
+the UI Builder. 
+
+687
+00:39:48,100 --> 00:39:51,900
+And this is part of this, part 
+of the one-way door. 
+
+688
+00:39:52,000 --> 00:39:55,800
+It's exactly once Can't use your
+UI Builder. 
+
+689
+00:39:55,800 --> 00:39:59,700
+And that's right that I saw in 
+the very first UI Builder that I
+
+690
+00:39:59,700 --> 00:40:02,500
+used, which I can't remember. 
+I mean, it was way back when 
+
+691
+00:40:02,500 --> 00:40:07,500
+Windows was getting started and 
+somebody came up with GUI 
+
+692
+00:40:07,500 --> 00:40:09,100
+builder for you. 
+Yeah. 
+
+693
+00:40:09,100 --> 00:40:11,000
+And it was like, oh, this is 
+awesome. 
+
+694
+00:40:11,000 --> 00:40:14,000
+I don't have to go in and figure
+out all these Arcane Windows 
+
+695
+00:40:14,000 --> 00:40:15,700
+things because it would do it 
+for you. 
+
+696
+00:40:16,100 --> 00:40:20,500
+But then at some point you were 
+done with that and you had to go
+
+697
+00:40:20,500 --> 00:40:25,600
+in and start doing it by hand 
+and it was Big help and then he 
+
+698
+00:40:25,800 --> 00:40:28,900
+but it was just one, get was one
+way. 
+
+699
+00:40:28,900 --> 00:40:31,400
+You have not reincorporate that.
+Yeah. 
+
+700
+00:40:31,900 --> 00:40:33,800
+So there's always been this 
+promise that declarative 
+
+701
+00:40:33,800 --> 00:40:36,600
+languages are going to allow us 
+to build great tools. 
+
+702
+00:40:36,800 --> 00:40:40,100
+And, you know, I have seen some 
+great tools, but there's always 
+
+703
+00:40:40,100 --> 00:40:42,200
+like that point where it just 
+stops working. 
+
+704
+00:40:42,400 --> 00:40:46,000
+Hmm. 
+And, and so, people are declare 
+
+705
+00:40:46,000 --> 00:40:49,900
+creating declarative languages 
+and are using languages, like 
+
+706
+00:40:49,900 --> 00:40:53,200
+yeah, mall to do all sorts of 
+things with the intention. 
+
+707
+00:40:53,200 --> 00:40:56,200
+Here's what I hear often. 
+X is, is we're going to be able 
+
+708
+00:40:56,200 --> 00:41:00,000
+to build such great tooling 
+around it because it's possible 
+
+709
+00:41:00,200 --> 00:41:03,000
+and they never do it. 
+They never actually deliver it. 
+
+710
+00:41:03,000 --> 00:41:07,000
+I heard this for mxml, it was 0 
+with mxml, we're going to be 
+
+711
+00:41:07,000 --> 00:41:10,300
+able to have round-trip tooling 
+that that was the is so they 
+
+712
+00:41:10,300 --> 00:41:13,700
+know the problem they and they 
+thought that they were going to 
+
+713
+00:41:13,700 --> 00:41:16,700
+be the ones the first and only 
+ones to actually create 
+
+714
+00:41:16,700 --> 00:41:19,400
+round-trip tool in the 
+declarative for declared for the
+
+715
+00:41:19,400 --> 00:41:20,100
+clarify. 
+Why? 
+
+716
+00:41:20,100 --> 00:41:24,300
+And they never did they know it?
+Never ship problem happens. 
+
+717
+00:41:24,600 --> 00:41:28,000
+Again and again, what's your 
+hypothesis? 
+
+718
+00:41:28,300 --> 00:41:32,000
+I think, in some ways it relates
+to the previous conversation 
+
+719
+00:41:32,000 --> 00:41:36,400
+about developer experience 
+because I think that that I've 
+
+720
+00:41:36,400 --> 00:41:38,900
+done, I've done exactly that. 
+So I'll tell you a story. 
+
+721
+00:41:38,900 --> 00:41:44,500
+So I I decided to create a 
+workflow tool when I was at 
+
+722
+00:41:44,500 --> 00:41:47,800
+Salesforce. 
+I don't know why, but because I 
+
+723
+00:41:47,808 --> 00:41:50,200
+want to serve solve hard 
+technical problems. 
+
+724
+00:41:50,500 --> 00:41:54,400
+And so I start creating a Json 
+based workflow language each 
+
+725
+00:41:54,408 --> 00:41:59,700
+like why did I think that that I
+needed to create my own Jason 
+
+726
+00:41:59,700 --> 00:42:02,500
+workflow language? 
+It got to the point where I was 
+
+727
+00:42:02,500 --> 00:42:05,800
+implementing my workflow engine 
+had to implement Boolean logic 
+
+728
+00:42:05,800 --> 00:42:09,500
+that was coming out of Jason and
+interpreting that. 
+
+729
+00:42:09,500 --> 00:42:14,300
+And and so in some ways this was
+just this like, slippery slope 
+
+730
+00:42:14,300 --> 00:42:16,700
+of okay, I need this. 
+And so I need this. 
+
+731
+00:42:16,700 --> 00:42:20,200
+And so I need this and all of a 
+sudden I have my own programming
+
+732
+00:42:20,200 --> 00:42:24,800
+language, basically. 
+And so, they're like I Totally 
+
+733
+00:42:24,800 --> 00:42:26,500
+see. 
+You know, it's your because 
+
+734
+00:42:26,500 --> 00:42:30,700
+reasons thing, how did I get to 
+where I was because reasons like
+
+735
+00:42:30,700 --> 00:42:35,400
+this one step at a time. 
+Solving One technical problem at
+
+736
+00:42:35,400 --> 00:42:38,700
+a time without pulling my 
+headache to the think about the 
+
+737
+00:42:38,700 --> 00:42:40,900
+big picture and what am I really
+doing? 
+
+738
+00:42:41,100 --> 00:42:43,600
+And what is the user actually 
+want? 
+
+739
+00:42:44,600 --> 00:42:49,700
+Led me to where I got to. 
+I I had this experience well 
+
+740
+00:42:49,700 --> 00:42:52,600
+with build Tools in general 
+because I've learned a bunch of 
+
+741
+00:42:52,600 --> 00:42:57,200
+build tools over time and The 
+initial one was make and I used 
+
+742
+00:42:57,200 --> 00:42:59,300
+a lot. 
+I mean, I mean, I still 
+
+743
+00:42:59,300 --> 00:43:03,600
+sometimes miss the, the 
+straightforwardness and speed of
+
+744
+00:43:03,600 --> 00:43:10,600
+make but in particular new make,
+which was an extension of make 
+
+745
+00:43:10,800 --> 00:43:15,000
+you begin to see cuz you get 
+this little suspicion that well,
+
+746
+00:43:15,200 --> 00:43:18,900
+we're not really just looking at
+dependencies and doing things. 
+
+747
+00:43:18,900 --> 00:43:22,100
+There's there's oh it always 
+seems like there's something 
+
+748
+00:43:22,100 --> 00:43:24,300
+sneaks in that's a programming 
+problem. 
+
+749
+00:43:24,400 --> 00:43:28,100
+Yep. 
+And I could see where the 
+
+750
+00:43:28,500 --> 00:43:34,200
+creators of canoe make gave up 
+and it was like they realized oh
+
+751
+00:43:34,400 --> 00:43:37,100
+what we need is a programming 
+language and we're building a 
+
+752
+00:43:37,100 --> 00:43:39,700
+build tool. 
+Oh, and then they stopped. 
+
+753
+00:43:39,900 --> 00:43:41,400
+You just see where they hit that
+wall. 
+
+754
+00:43:41,400 --> 00:43:43,100
+Yeah. 
+And I feel like that's happened 
+
+755
+00:43:43,100 --> 00:43:45,800
+in a bunch of places. 
+Built tools are really 
+
+756
+00:43:45,800 --> 00:43:48,500
+fascinating example, that's 
+because I think we've seen it so
+
+757
+00:43:48,500 --> 00:43:51,200
+many times in build tools where 
+it's like okay we're going to 
+
+758
+00:43:51,208 --> 00:43:53,900
+start start with this 
+declarative language whether 
+
+759
+00:43:53,900 --> 00:43:58,400
+it's Ml basis. 
+So aunt was xml-based, yeah. 
+
+760
+00:43:58,400 --> 00:44:02,600
+Aunt was xml-based. 
+It's been so long, but then you 
+
+761
+00:44:02,600 --> 00:44:07,000
+reach the Cliff of what that 
+language, what that created 
+
+762
+00:44:07,000 --> 00:44:09,600
+language can do and you need 
+more power. 
+
+763
+00:44:09,600 --> 00:44:12,100
+So what do you do? 
+So what we did in the Ant World 
+
+764
+00:44:12,100 --> 00:44:15,400
+was exactly what you're 
+describing is someone I think it
+
+765
+00:44:15,400 --> 00:44:20,000
+was drenched, James Strachan, 
+maybe the creator of groovy, I 
+
+766
+00:44:20,000 --> 00:44:22,700
+think, before he created groovy 
+maybe getting this totally 
+
+767
+00:44:22,700 --> 00:44:29,500
+wrong, but Someone created an 
+xml-based logic language called 
+
+768
+00:44:29,500 --> 00:44:34,300
+jelly and so in your aunt build 
+you could write XML in XML, you 
+
+769
+00:44:34,300 --> 00:44:37,700
+could say if whatever. 
+So you could do Loop you could 
+
+770
+00:44:37,700 --> 00:44:41,700
+like so all of a sudden we had 
+XML and XML based programming 
+
+771
+00:44:41,700 --> 00:44:46,700
+language just to be able to get 
+us, get us a rickety Bridge 
+
+772
+00:44:46,700 --> 00:44:50,400
+across the cliff that we reached
+with, with what we could do an 
+
+773
+00:44:50,400 --> 00:44:52,400
+ant. 
+I know a lot about aunt wants 
+
+774
+00:44:52,400 --> 00:44:55,000
+and yeah, it was just like, wow.
+Why? 
+
+775
+00:44:56,000 --> 00:44:59,300
+Because XML was cool. 
+So we should do everything in 
+
+776
+00:44:59,300 --> 00:45:01,700
+XML. 
+Yeah, you remember when SNL was 
+
+777
+00:45:01,700 --> 00:45:03,600
+like oh yeah the next great 
+thing I do. 
+
+778
+00:45:03,608 --> 00:45:05,000
+Gosh. 
+Yeah. 
+
+779
+00:45:05,000 --> 00:45:08,300
+And so why not build a program 
+in language in it right and and 
+
+780
+00:45:08,300 --> 00:45:12,000
+try at the time try and say 
+anything negative about XML and 
+
+781
+00:45:12,000 --> 00:45:14,600
+you just got everyone jumped on 
+you, okay? 
+
+782
+00:45:14,700 --> 00:45:18,200
+Why would you say XML is bad? 
+Yes, a built. 
+
+783
+00:45:18,200 --> 00:45:21,600
+Those are fascinating because 
+we've seen exactly this play out
+
+784
+00:45:21,700 --> 00:45:24,300
+over and over and over again 
+with build tools. 
+
+785
+00:45:24,700 --> 00:45:27,300
+It was interesting about Gradle 
+I, you know, I have issues with 
+
+786
+00:45:27,300 --> 00:45:28,900
+Gradle but thank goodness and 
+great. 
+
+787
+00:45:28,900 --> 00:45:32,600
+All it's based on on actual 
+general, purpose, programming 
+
+788
+00:45:32,600 --> 00:45:35,600
+languages. 
+And so the tooling is actually 
+
+789
+00:45:35,600 --> 00:45:38,800
+great. 
+So I used now kotlin for my 
+
+790
+00:45:38,800 --> 00:45:44,100
+griddle builds and it is Colin 
+and so I don't have to learn a 
+
+791
+00:45:44,100 --> 00:45:48,000
+new language IntelliJ. 
+Understands my build files you 
+
+792
+00:45:48,000 --> 00:45:50,500
+don't have to worry about 
+running out of gas with whatever
+
+793
+00:45:50,500 --> 00:45:52,500
+language they've created. 
+Exactly. 
+
+794
+00:45:53,600 --> 00:45:58,900
+So So, for all of my issues with
+with Gradle, I do really 
+
+795
+00:45:58,900 --> 00:46:01,200
+appreciate that. 
+They said let's just use 
+
+796
+00:46:01,200 --> 00:46:04,200
+general-purpose a 
+general-purpose language and 
+
+797
+00:46:04,200 --> 00:46:06,900
+forget about this whole 
+declarative thing, because we're
+
+798
+00:46:06,900 --> 00:46:08,400
+never going to build the tools 
+for it. 
+
+799
+00:46:08,400 --> 00:46:15,400
+Anyways, the my experience with 
+emacs when I first started using
+
+800
+00:46:15,400 --> 00:46:19,900
+it and and then well, this was 
+new, we Max not Gosling in Unix 
+
+801
+00:46:20,400 --> 00:46:25,500
+and stallman had built it on top
+of lisp and That really 
+
+802
+00:46:25,500 --> 00:46:30,000
+impressed me because it's like 
+oh he started with this powerful
+
+803
+00:46:30,000 --> 00:46:33,100
+tool that he built on top of it 
+and the tool wasn't going to run
+
+804
+00:46:33,100 --> 00:46:36,700
+out of gas. 
+Yeah, and it seems to me like I 
+
+805
+00:46:36,700 --> 00:46:39,400
+mean it always seemed to me like
+if you were going to create a 
+
+806
+00:46:39,400 --> 00:46:42,900
+build tool, you would want to 
+start with the programming 
+
+807
+00:46:42,900 --> 00:46:46,600
+language and build the tool on 
+top of that and people have 
+
+808
+00:46:46,600 --> 00:46:47,700
+tried. 
+Yeah. 
+
+809
+00:46:47,800 --> 00:46:52,000
+And I mean and and, and I think 
+this is going to be the same way
+
+810
+00:46:52,000 --> 00:46:54,000
+that job. 
+I brought garbage collection of 
+
+811
+00:46:54,000 --> 00:46:55,200
+virtual. 
+Will machines into the 
+
+812
+00:46:55,200 --> 00:46:58,900
+mainstream, I think, maybe now, 
+you know, people will start with
+
+813
+00:46:58,900 --> 00:47:02,200
+build tools and go. 
+Let's use, let's build on top of
+
+814
+00:47:02,208 --> 00:47:05,500
+the language, rather than, you 
+know, the other approach that 
+
+815
+00:47:05,500 --> 00:47:07,600
+we've been using. 
+So maybe it's mainstream enough 
+
+816
+00:47:07,600 --> 00:47:11,900
+now, and I think it in the past,
+it was hard to go, this route, 
+
+817
+00:47:11,900 --> 00:47:17,600
+and it still is initially 
+initially, it's easier to create
+
+818
+00:47:17,600 --> 00:47:22,200
+your own language, but then, but
+then you realize at some point 
+
+819
+00:47:22,200 --> 00:47:24,200
+that your language is creeping 
+towards. 
+
+820
+00:47:24,800 --> 00:47:28,400
+A general-purpose language and 
+you are spending a lot of time 
+
+821
+00:47:28,400 --> 00:47:32,000
+as a language designer. 
+And so, so I think there is 
+
+822
+00:47:32,100 --> 00:47:36,100
+there, there is this initial 
+thing where it seems like the 
+
+823
+00:47:36,100 --> 00:47:39,400
+right way to go because it's 
+easier at the beginning. 
+
+824
+00:47:39,400 --> 00:47:43,100
+So, that seems like a problem in
+general with a DSL. 
+
+825
+00:47:43,700 --> 00:47:46,400
+Anytime you go. 
+O will have this domain specific
+
+826
+00:47:46,400 --> 00:47:48,600
+language. 
+How do you know? 
+
+827
+00:47:49,400 --> 00:47:51,800
+I mean, typically, a DSL is 
+created. 
+
+828
+00:47:51,800 --> 00:47:55,000
+Well, I guess they have internal
+and external Al's right? 
+
+829
+00:47:55,000 --> 00:47:58,100
+So like what kotlin creates as 
+an internal DSL. 
+
+830
+00:47:58,100 --> 00:48:01,500
+So you still have Coughlin right
+there if you want to use it. 
+
+831
+00:48:01,500 --> 00:48:04,800
+So this is where Scala and 
+kotlin and my don't know whether
+
+832
+00:48:04,800 --> 00:48:09,300
+other examples are where they 
+they explicitly one of their 
+
+833
+00:48:09,300 --> 00:48:13,100
+goals was to make it easy to 
+build dsls so that you can 
+
+834
+00:48:13,100 --> 00:48:18,100
+create a subset experience of 
+the general purpose language. 
+
+835
+00:48:18,100 --> 00:48:20,800
+But you could always drop down 
+to the general purpose language 
+
+836
+00:48:20,800 --> 00:48:23,800
+when when needed and Ice 
+transparent lie without doing 
+
+837
+00:48:23,800 --> 00:48:26,600
+anything special. 
+That's right, it is it is common
+
+838
+00:48:26,800 --> 00:48:27,600
+right. 
+Cam? 
+
+839
+00:48:27,600 --> 00:48:30,100
+You've been a cotton DSL is 
+Colin so right? 
+
+840
+00:48:30,100 --> 00:48:34,500
+And so like you can just put it 
+into IntelliJ and you get the 
+
+841
+00:48:34,500 --> 00:48:39,100
+benefits from it, that's right. 
+And so, in the case of Gradle, I
+
+842
+00:48:39,100 --> 00:48:43,200
+believe I heard that there were 
+language changes that kotlin 
+
+843
+00:48:43,200 --> 00:48:47,900
+made to make it easier for 
+great, all to have a nice build 
+
+844
+00:48:47,900 --> 00:48:51,800
+DSL. 
+So there was a coevolution of 
+
+845
+00:48:51,800 --> 00:48:56,000
+the to which, which I think, 
+Ultimately produced a really 
+
+846
+00:48:56,000 --> 00:49:01,200
+nice language for defining 
+builds but it is just Colin. 
+
+847
+00:49:01,800 --> 00:49:02,900
+Yep. 
+Yeah. 
+
+848
+00:49:02,900 --> 00:49:07,400
+Well that's the the extension 
+Lambda. 
+
+849
+00:49:07,500 --> 00:49:11,500
+Yeah, and exactly and that is 
+used heavily and write in Cotton
+
+850
+00:49:11,500 --> 00:49:14,000
+bill and I refer derails cam 
+belts. 
+
+851
+00:49:14,000 --> 00:49:18,000
+Yeah, yeah, yeah. 
+And that was like one of the 
+
+852
+00:49:18,000 --> 00:49:21,600
+very few features that they 
+invented rather than looking at 
+
+853
+00:49:21,600 --> 00:49:24,200
+other languages and saying, oh, 
+that's really popular. 
+
+854
+00:49:24,400 --> 00:49:26,900
+And works. 
+Well, we'll adopt that feature. 
+
+855
+00:49:27,000 --> 00:49:29,100
+Yeah, yeah, so that's been very 
+helpful. 
+
+856
+00:49:29,200 --> 00:49:36,900
+Um, so I have a I've been 
+working the last week or so on 
+
+857
+00:49:36,900 --> 00:49:41,700
+doing some tooling to. 
+Well, one of the things I'm 
+
+858
+00:49:41,700 --> 00:49:45,400
+doing is I'm translating the old
+thinking, and Java fourth 
+
+859
+00:49:45,400 --> 00:49:48,400
+edition into, so that it's on 
+lean Pub. 
+
+860
+00:49:48,600 --> 00:49:51,900
+Nice. 
+So it's, you know, nicer for 
+
+861
+00:49:51,900 --> 00:49:53,600
+reading devices and things like 
+that. 
+
+862
+00:49:53,800 --> 00:49:57,400
+And so, So I'm building a lot of
+tooling and I always do that in 
+
+863
+00:49:57,400 --> 00:50:01,300
+Python but one of the things 
+that I've started to notice as 
+
+864
+00:50:01,300 --> 00:50:08,500
+kind of a strategy or a theme, a
+is what I'm sort of calling the 
+
+865
+00:50:10,300 --> 00:50:14,200
+conversion object or the 
+conversion class because what I 
+
+866
+00:50:14,200 --> 00:50:17,300
+start out doing is writing a 
+bunch of functions and 
+
+867
+00:50:17,300 --> 00:50:20,400
+functionality and just tweaking 
+with things and then it gets too
+
+868
+00:50:20,400 --> 00:50:23,600
+messy. 
+And what I have discovered is 
+
+869
+00:50:23,600 --> 00:50:28,100
+that By putting whatever I'm 
+doing because usually I'm trying
+
+870
+00:50:28,100 --> 00:50:34,000
+to convert this thing. 
+Say it's a piece of code into a 
+
+871
+00:50:34,000 --> 00:50:38,200
+piece of code which is all 
+broken down where I understand. 
+
+872
+00:50:38,400 --> 00:50:41,700
+Say, for example, oh this this 
+is importing a package or it's 
+
+873
+00:50:41,700 --> 00:50:44,600
+using and as definitions and 
+enter it just as a main 
+
+874
+00:50:44,600 --> 00:50:46,100
+interest. 
+See you know it's got all these 
+
+875
+00:50:46,100 --> 00:50:51,000
+aspects and I start out by 
+writing functions to do that or 
+
+876
+00:50:51,000 --> 00:50:53,500
+just writing straight code and 
+then it's just too messy. 
+
+877
+00:50:54,200 --> 00:50:58,300
+And then I realize, oh, you 
+know, what would be nice is just
+
+878
+00:50:58,300 --> 00:51:01,200
+to do all of this stuff in the 
+Constructor. 
+
+879
+00:51:01,200 --> 00:51:06,800
+And here's the important part is
+to keep all of the artifacts and
+
+880
+00:51:06,800 --> 00:51:09,600
+I learned this from functional 
+programming because, you know, 
+
+881
+00:51:09,600 --> 00:51:15,300
+you never one of the kind of bad
+idioms in Python because it's so
+
+882
+00:51:15,300 --> 00:51:18,000
+dynamic. 
+As you can say, Foo equals this 
+
+883
+00:51:18,000 --> 00:51:21,600
+and then, the next line you go 
+Foo equals this, which often 
+
+884
+00:51:21,600 --> 00:51:25,100
+operates on the old Foo and can 
+produce a Different type. 
+
+885
+00:51:25,400 --> 00:51:28,900
+And it's a very, you know, short
+handy way of doing things and 
+
+886
+00:51:28,900 --> 00:51:31,400
+it's tempting to do that because
+you don't always want to be 
+
+887
+00:51:31,400 --> 00:51:35,000
+making up identifiers in your 
+head to do things. 
+
+888
+00:51:35,300 --> 00:51:39,900
+But it's like then if you want 
+to go back and go, oh wait a 
+
+889
+00:51:39,908 --> 00:51:41,100
+minute. 
+What happened here? 
+
+890
+00:51:41,400 --> 00:51:44,500
+Everything's been overwritten. 
+Yeah, it's it goes back to our 
+
+891
+00:51:44,500 --> 00:51:47,300
+old days of saving memory. 
+So you know with functional 
+
+892
+00:51:47,300 --> 00:51:50,100
+programming you go I make a 
+thing and that thing never 
+
+893
+00:51:50,100 --> 00:51:53,900
+changes and if I want to, if I 
+want to transform it, I make a 
+
+894
+00:51:53,908 --> 00:51:57,600
+new Ooh, thing. 
+And so what I've done in this 
+
+895
+00:51:58,800 --> 00:52:04,600
+idiom or whatever, this object 
+converter, is that, I keep all 
+
+896
+00:52:04,600 --> 00:52:07,900
+of the intermediate values and 
+it turns out that that, 
+
+897
+00:52:07,900 --> 00:52:11,500
+including the the value that was
+passed in that I initially work 
+
+898
+00:52:11,500 --> 00:52:13,900
+on turns out. 
+Wow, that's really useful 
+
+899
+00:52:13,900 --> 00:52:19,200
+because anytime I'm say wanting 
+to debug it or I discover oh 
+
+900
+00:52:19,200 --> 00:52:21,500
+there's this other piece of 
+information that I want. 
+
+901
+00:52:21,600 --> 00:52:22,800
+It's all there. 
+Yeah. 
+
+902
+00:52:23,100 --> 00:52:28,400
+And but the Object is really 
+only the Constructor and the 
+
+903
+00:52:28,400 --> 00:52:31,100
+creation of all these 
+properties. 
+
+904
+00:52:31,300 --> 00:52:34,500
+That then I can go look at and 
+say, oh, is it? 
+
+905
+00:52:34,600 --> 00:52:39,700
+So but but my main code then 
+becomes very clear and easy to 
+
+906
+00:52:39,700 --> 00:52:43,000
+understand. 
+I take say the code listing and 
+
+907
+00:52:43,000 --> 00:52:46,800
+I converted into this thing and 
+then I asked questions, I go. 
+
+908
+00:52:47,100 --> 00:52:49,500
+Oh, does this thing have an 
+import? 
+
+909
+00:52:49,900 --> 00:52:51,600
+Well, then I don't care about if
+it doesn't. 
+
+910
+00:52:51,900 --> 00:52:54,600
+And does it have a main or does 
+it have a, you know, All these 
+
+911
+00:52:54,600 --> 00:52:57,600
+things and I just asked it and 
+the code becomes really clear 
+
+912
+00:52:57,900 --> 00:53:01,300
+and I feel like that isn't. 
+I mean, I don't believe I've 
+
+913
+00:53:01,300 --> 00:53:07,000
+ever seen that before. 
+Yeah, I think in Java, we the 
+
+914
+00:53:07,000 --> 00:53:09,600
+pattern for doing something 
+similar was maybe the visitor 
+
+915
+00:53:09,600 --> 00:53:16,300
+pattern, The visitor pattern. 
+That one's that one's messy. 
+
+916
+00:53:16,300 --> 00:53:21,700
+Because what that's actually for
+is to be able to add new 
+
+917
+00:53:21,700 --> 00:53:25,600
+functions, add new functionality
+without. 
+
+918
+00:53:25,600 --> 00:53:29,300
+So you have a, you have a 
+hierarchy and you want to, it's 
+
+919
+00:53:29,300 --> 00:53:33,100
+basically you want to add member
+functions to that hierarchy 
+
+920
+00:53:33,100 --> 00:53:35,200
+without touching the hierarchy, 
+right? 
+
+921
+00:53:35,900 --> 00:53:40,800
+And so that doesn't match. 
+How do you see that as being 
+
+922
+00:53:40,800 --> 00:53:42,300
+say? 
+Safe explain that. 
+
+923
+00:53:43,100 --> 00:53:49,200
+So you I think you're thinking 
+about it as is adding methods 
+
+924
+00:53:49,200 --> 00:53:51,500
+but I think it can also add 
+state right. 
+
+925
+00:53:51,500 --> 00:53:57,300
+And so what in your use case you
+have, you have some, some State,
+
+926
+00:53:57,300 --> 00:54:03,900
+you have some, some object and 
+you want to to add some things 
+
+927
+00:54:03,900 --> 00:54:07,700
+on to that as as it gets visited
+or something. 
+
+928
+00:54:07,700 --> 00:54:08,800
+So maybe that's wrong. 
+I don't know. 
+
+929
+00:54:09,300 --> 00:54:12,800
+So there's a few other thoughts 
+that I had around This maybe 
+
+930
+00:54:12,800 --> 00:54:17,400
+maybe visitor patterns not a 
+good analogous thing for. 
+
+931
+00:54:17,600 --> 00:54:23,300
+So type classes are a way to 
+maybe do something similar where
+
+932
+00:54:23,300 --> 00:54:27,800
+you you need to convert from A 
+to B and so type class can be 
+
+933
+00:54:27,800 --> 00:54:30,700
+can provide the the conversion 
+order automatically. 
+
+934
+00:54:30,800 --> 00:54:31,700
+Yeah. 
+Yeah. 
+
+935
+00:54:31,700 --> 00:54:33,900
+I don't think this is even that 
+complicated. 
+
+936
+00:54:33,900 --> 00:54:37,500
+This is really just a code this 
+isn't I wouldn't call. 
+
+937
+00:54:38,300 --> 00:54:39,800
+I don't know. 
+I'd hesitate to call it a 
+
+938
+00:54:39,808 --> 00:54:42,100
+pattern. 
+It's more of A strategy for 
+
+939
+00:54:42,100 --> 00:54:47,600
+solving that problem and it just
+it goes from a bunch of messy 
+
+940
+00:54:47,600 --> 00:54:49,800
+code, you know. 
+So it's pretty simple. 
+
+941
+00:54:50,100 --> 00:54:55,800
+It goes from a bunch of messy 
+code to a much simpler because 
+
+942
+00:54:55,800 --> 00:54:57,600
+you're looking in the 
+Constructor. 
+
+943
+00:54:57,600 --> 00:55:01,700
+You see you dissect and do all 
+the things and just keep making 
+
+944
+00:55:01,700 --> 00:55:03,200
+more and more properties. 
+Yeah. 
+
+945
+00:55:03,400 --> 00:55:07,000
+And then once the Constructor is
+done, all the information that 
+
+946
+00:55:07,000 --> 00:55:12,500
+you want has been automatically 
+extracted Then you just ask that
+
+947
+00:55:12,500 --> 00:55:17,300
+object for those properties. 
+So it's like a really simple 
+
+948
+00:55:17,300 --> 00:55:21,800
+thing, but I don't think I see a
+lot of people doing it and I 
+
+949
+00:55:21,800 --> 00:55:25,100
+found it. 
+I don't know I guess I've been 
+
+950
+00:55:25,100 --> 00:55:29,100
+in your use case you want to 
+keep track of kind of the steps 
+
+951
+00:55:29,100 --> 00:55:32,200
+that it's gone through. 
+Well instead of you can I'm 
+
+952
+00:55:32,200 --> 00:55:34,800
+following the functional 
+practice of never throwing 
+
+953
+00:55:34,800 --> 00:55:38,700
+anything away but making a new 
+thing every time you do this 
+
+954
+00:55:38,700 --> 00:55:40,900
+like oh I want to know what the 
+first line is. 
+
+955
+00:55:41,000 --> 00:55:44,700
+While I leave, you know, I have 
+all my lines broken up and I 
+
+956
+00:55:44,708 --> 00:55:47,900
+look at the first one I guess in
+there may be Parts a little and 
+
+957
+00:55:47,900 --> 00:55:50,700
+I store that. 
+And then, as I'm going, I'm just
+
+958
+00:55:50,700 --> 00:55:56,300
+all I'm doing in the Constructor
+is doing this deconstruction of 
+
+959
+00:55:56,300 --> 00:55:58,300
+whatever object you've handed 
+me. 
+
+960
+00:55:58,400 --> 00:56:00,800
+Yeah. 
+And saving all of the 
+
+961
+00:56:00,800 --> 00:56:05,700
+intermediate state in the 
+process of doing that as 
+
+962
+00:56:05,700 --> 00:56:07,700
+properties that then I can just 
+go. 
+
+963
+00:56:07,700 --> 00:56:10,400
+Say yeah. 
+What's up with you? 
+
+964
+00:56:11,100 --> 00:56:13,200
+I think the other possible 
+pattern and functional 
+
+965
+00:56:13,200 --> 00:56:16,600
+programming which I don't, I'm 
+don't know much about and I need
+
+966
+00:56:16,600 --> 00:56:19,200
+to learn more about. 
+It is the applicative pattern. 
+
+967
+00:56:19,400 --> 00:56:21,300
+Hmm. 
+And I think that so where I've 
+
+968
+00:56:21,300 --> 00:56:25,300
+seen applicative used is on 
+validation. 
+
+969
+00:56:25,900 --> 00:56:31,100
+So if I need to, if I get an 
+object and I want to run it 
+
+970
+00:56:31,100 --> 00:56:35,400
+through a bunch of steps, in the
+case of validation, I want to 
+
+971
+00:56:35,500 --> 00:56:38,700
+make some some test essentially 
+against that thing. 
+
+972
+00:56:39,400 --> 00:56:43,500
+What an applicative will do. 
+Do is keep track of all of the, 
+
+973
+00:56:43,900 --> 00:56:50,400
+the result of those applications
+of different validations and and
+
+974
+00:56:50,400 --> 00:56:53,800
+so that, then at the end, I can 
+look at it and ask it. 
+
+975
+00:56:53,800 --> 00:56:55,900
+Oh, did this particular 
+validation rule? 
+
+976
+00:56:56,100 --> 00:57:00,500
+Give me all of the validation 
+results back together. 
+
+977
+00:57:00,500 --> 00:57:04,000
+So yeah, it's I think that'd be 
+similar kind of similar to what 
+
+978
+00:57:04,000 --> 00:57:09,900
+I'm doing and it isn't you know 
+this thing is this isn't like 
+
+979
+00:57:11,100 --> 00:57:15,200
+Really until thing it's just 
+I've discovered that it makes my
+
+980
+00:57:15,200 --> 00:57:19,900
+code much easier to both right 
+and use and understand. 
+
+981
+00:57:19,900 --> 00:57:23,800
+Yeah. 
+So it's like it's I would call 
+
+982
+00:57:23,800 --> 00:57:26,000
+it too simple to call it a 
+pattern. 
+
+983
+00:57:26,000 --> 00:57:29,200
+Right? 
+It's just but it's not very 
+
+984
+00:57:29,200 --> 00:57:31,100
+helpful. 
+You can be very helpful because 
+
+985
+00:57:31,100 --> 00:57:37,500
+I keep I you know look at 
+functional versus 
+
+986
+00:57:37,500 --> 00:57:40,500
+object-oriented and of course 
+the combination of the two that 
+
+987
+00:57:40,500 --> 00:57:47,000
+we see In languages like Python 
+and kotlin and and Scala is, and
+
+988
+00:57:47,000 --> 00:57:51,000
+then you start going, oh well if
+I'm not in Java, which says 
+
+989
+00:57:51,000 --> 00:57:53,600
+everything must be an object. 
+That's the only way of thinking 
+
+990
+00:57:53,600 --> 00:57:56,000
+about things. 
+How do you decide? 
+
+991
+00:57:56,200 --> 00:58:01,200
+And what I usually find is that 
+if I start out by writing just 
+
+992
+00:58:01,200 --> 00:58:05,400
+basic, Code. 
+And then I see, oh, here's some 
+
+993
+00:58:05,400 --> 00:58:07,900
+repetition here. 
+I'll put this into a function or
+
+994
+00:58:07,900 --> 00:58:09,900
+this is awkward. 
+I'll put it into a function. 
+
+995
+00:58:09,900 --> 00:58:12,400
+And that's actually another 
+thing I want to talk about 
+
+996
+00:58:12,400 --> 00:58:18,000
+shortly is then sometimes I'll 
+get to a point where I look at 
+
+997
+00:58:18,000 --> 00:58:21,000
+it and go oh, this thing wants 
+to be an object, it would be 
+
+998
+00:58:21,000 --> 00:58:24,100
+actually a lot easier and the 
+object doesn't necessarily have 
+
+999
+00:58:24,100 --> 00:58:26,300
+to do much. 
+Like in this case all it needs 
+
+1000
+00:58:26,300 --> 00:58:28,700
+is a Constructor. 
+Usually there's a two string so 
+
+1001
+00:58:28,700 --> 00:58:31,600
+that I can make sure that 
+everything is working, right? 
+
+1002
+00:58:31,700 --> 00:58:35,800
+But all I need Is a Constructor 
+to solve these problems and 
+
+1003
+00:58:35,800 --> 00:58:37,400
+store the information and 
+properties. 
+
+1004
+00:58:37,600 --> 00:58:40,300
+So that I take this thing, put 
+it in this object and then I go.
+
+1005
+00:58:40,600 --> 00:58:43,500
+Hey, what's up with you? 
+What can you do or, you know, 
+
+1006
+00:58:43,500 --> 00:58:48,400
+our am I interested in you. 
+So I'm just kind of like looking
+
+1007
+00:58:48,400 --> 00:58:52,600
+because I'm not in the camp of 
+oh objects are bad now. 
+
+1008
+00:58:52,600 --> 00:58:54,500
+Throw everything out its 
+objects. 
+
+1009
+00:58:54,500 --> 00:58:56,800
+Sometimes they're quite useful. 
+Yep. 
+
+1010
+00:58:56,800 --> 00:59:00,900
+It's just not all the time. 
+Just what Java told us that it's
+
+1011
+00:59:00,900 --> 00:59:03,700
+like and small talk. 
+And Java was being based on 
+
+1012
+00:59:03,700 --> 00:59:06,200
+small time. 
+So one thing that is also useful
+
+1013
+00:59:06,200 --> 00:59:14,400
+in this, this use case is if you
+if you are given create an 
+
+1014
+00:59:14,400 --> 00:59:17,500
+object with Constructor 
+parameters and then you have 
+
+1015
+00:59:17,500 --> 00:59:22,900
+some things that you may 
+interrogate or process from that
+
+1016
+00:59:22,900 --> 00:59:25,800
+constructed object. 
+If you have a language that 
+
+1017
+00:59:25,800 --> 00:59:29,500
+supports lazy evaluation like 
+Colin or scholar, I'm sure many 
+
+1018
+00:59:29,500 --> 00:59:33,500
+others then, you can actually 
+make Take those things, lazy 
+
+1019
+00:59:33,500 --> 00:59:36,500
+properties. 
+So, let's say that in your code 
+
+1020
+00:59:36,500 --> 00:59:41,400
+path, you may not actually 
+interrogate each different piece
+
+1021
+00:59:41,600 --> 00:59:43,600
+and want to actually evaluate 
+each piece. 
+
+1022
+00:59:43,600 --> 00:59:47,900
+So instead of doing it on your 
+Constructor, you do it as as 
+
+1023
+00:59:47,900 --> 00:59:51,200
+lazy as lazily evaluated 
+properties and then that can be 
+
+1024
+00:59:51,200 --> 00:59:54,600
+a more efficient usage. 
+So rather than doing it every 
+
+1025
+00:59:54,600 --> 00:59:58,700
+time all the time, you just do 
+it as there as they're actually 
+
+1026
+00:59:58,700 --> 01:00:00,500
+buying, right? 
+If you start running into 
+
+1027
+01:00:00,500 --> 01:00:02,100
+performance problems, you can. 
+Yeah. 
+
+1028
+01:00:02,400 --> 01:00:06,400
+Tweak it, which is when it's the
+language makes it easy to do to 
+
+1029
+01:00:06,400 --> 01:00:09,300
+do then. 
+Then maybe you just default to 
+
+1030
+01:00:09,300 --> 01:00:12,800
+making these things lazy. 
+Yeah, you could you can 
+
+1031
+01:00:12,800 --> 01:00:16,400
+definitely do that kind of thing
+in Python but it's not, it's not
+
+1032
+01:00:16,400 --> 01:00:19,500
+as trivial as saying by lazier 
+by blazing. 
+
+1033
+01:00:19,500 --> 01:00:20,400
+Yeah. 
+Yeah. 
+
+1034
+01:00:21,100 --> 01:00:25,200
+Or I mean, they all it's lazy 
+valve has both lazy and late 
+
+1035
+01:00:25,200 --> 01:00:26,600
+initialization. 
+Okay? 
+
+1036
+01:00:26,800 --> 01:00:29,500
+Yeah. 
+Whereas late initialization is 
+
+1037
+01:00:29,900 --> 01:00:32,100
+really well. 
+Actually, both of them. 
+
+1038
+01:00:32,500 --> 01:00:37,400
+Allows you to avoid, making 
+something nullable while still 
+
+1039
+01:00:37,600 --> 01:00:39,800
+late initialization is much more
+like that. 
+
+1040
+01:00:39,800 --> 01:00:46,300
+It's like I guarantee that 
+before you use this it will be 
+
+1041
+01:00:46,300 --> 01:00:49,300
+initialized by some other piece 
+of code Tom. 
+
+1042
+01:00:49,300 --> 01:00:52,400
+And if you don't do it, then you
+get an exception that says, hey,
+
+1043
+01:00:52,400 --> 01:00:54,300
+you know, you didn't your code 
+is wrong. 
+
+1044
+01:00:54,300 --> 01:00:57,800
+You didn't initialize this 
+before, but but then you never 
+
+1045
+01:00:57,800 --> 01:01:00,200
+have to say that it's nullable 
+and they, you don't do those 
+
+1046
+01:01:00,200 --> 01:01:04,200
+notes and I so that's nice. 
+But yeah. 
+
+1047
+01:01:04,200 --> 01:01:06,300
+So the, how are we doing for 
+time? 
+
+1048
+01:01:11,600 --> 01:01:12,900
+Oh wow. 
+Okay. 
+
+1049
+01:01:12,900 --> 01:01:15,500
+We should probably bring it to a
+close. 
+
+1050
+01:01:15,500 --> 01:01:19,300
+Yeah, yeah. 
+So well feel like we we stayed 
+
+1051
+01:01:19,300 --> 01:01:20,900
+on the happy path. 
+Yes. 
+
+1052
+01:01:22,200 --> 01:01:24,700
+Help people? 
+Well happy path. 
+
+1053
+01:01:24,700 --> 01:01:27,100
+Anyway, we're envisioning the 
+happy path. 
+
+1054
+01:01:27,100 --> 01:01:28,800
+That's right here. 
+And that's what we're doing. 
+
+1055
+01:01:28,900 --> 01:01:31,800
+And that's, you know, and I 
+think at some point we can 
+
+1056
+01:01:31,800 --> 01:01:35,600
+actually after we've done this 
+for a while, we can talk about 
+
+1057
+01:01:35,700 --> 01:01:38,100
+how we came to that name. 
+Yeah. 
+
+1058
+01:01:38,100 --> 01:01:40,900
+How how it has some interesting 
+little twists. 
+
+1059
+01:01:40,900 --> 01:01:43,800
+Our And for the happy path. 
+Our vision for yes we're 
+
+1060
+01:01:43,800 --> 01:01:46,000
+looking. 
+We're seeking the happy path. 
+
+1061
+01:01:46,000 --> 01:01:47,200
+Is what we're doing. 
+That's right. 
+
+1062
+01:01:47,700 --> 01:01:52,600
+But it also has that that 
+connotation of programmers, 
+
+1063
+01:01:52,600 --> 01:01:55,700
+ignoring the problems in just 
+wanting to go down the happy 
+
+1064
+01:01:55,700 --> 01:01:59,300
+path and get those little 
+endorphin bursts and not worry 
+
+1065
+01:01:59,300 --> 01:02:01,900
+about all of those problems that
+can happen. 
+
+1066
+01:02:01,900 --> 01:02:05,200
+Yeah, so great. 
+Well, this was fun. 
+
+1067
+01:02:05,500 --> 01:02:06,800
+Yes, it was. 
+Let's do it again. 
+
+1068
+01:02:06,800 --> 01:02:08,300
+Let's do it again. 
+Maybe in a week. 
+
+1069
+01:02:08,500 --> 01:02:09,700
+Sounds good. 
+Okay.
+

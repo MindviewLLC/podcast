@@ -1,0 +1,4490 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:08,300 --> 00:00:13,300
+So I had to treat this morning, 
+the thought would be interesting
+
+4
+00:00:13,300 --> 00:00:17,600
+to discuss with you so I asked 
+people in a poll what's keeping 
+
+5
+00:00:17,600 --> 00:00:20,800
+you from migrating your server 
+side stuff from java to kotlin 
+
+6
+00:00:21,400 --> 00:00:24,100
+and the options. 
+I provided we're in sufficient 
+
+7
+00:00:24,100 --> 00:00:31,100
+value company policy, technical 
+difficulties or other and ask 
+
+8
+00:00:31,100 --> 00:00:36,100
+people to reply. 
+So, 54 percent currently with 66
+
+9
+00:00:36,100 --> 00:00:40,100
+votes said, Value. 
+And so I wanted to dive into 
+
+10
+00:00:40,100 --> 00:00:45,100
+that a little bit more. 
+I'm convinced that there are 
+
+11
+00:00:45,100 --> 00:00:49,700
+sufficient value in kotlin to 
+move from java, but apparently 
+
+12
+00:00:50,000 --> 00:00:52,700
+that's not everyone. 
+Well, but you are asking a very 
+
+13
+00:00:52,700 --> 00:00:56,300
+specific question. 
+You were saying why not take 
+
+14
+00:00:56,300 --> 00:00:59,400
+your server side application and
+move it over true. 
+
+15
+00:00:59,400 --> 00:01:02,800
+They already have a server-side 
+application, that's working. 
+
+16
+00:01:02,800 --> 00:01:06,200
+Presumably in Java. 
+And it's like, what is the 
+
+17
+00:01:06,200 --> 00:01:10,200
+benefit of them and They have a 
+crew of people who know how to 
+
+18
+00:01:10,200 --> 00:01:13,100
+maintain it. 
+So what is the benefit of taking
+
+19
+00:01:13,100 --> 00:01:15,100
+that and rewriting it? 
+That's a good point. 
+
+20
+00:01:15,100 --> 00:01:20,900
+I didn't ask, why did you choose
+Java over Colin for a new 
+
+21
+00:01:21,200 --> 00:01:23,100
+application or totally different
+question? 
+
+22
+00:01:23,200 --> 00:01:26,900
+Yeah, yeah, yeah. 
+So I can see that while I might 
+
+23
+00:01:26,900 --> 00:01:31,100
+be convinced that kotlin has 
+sufficient value over java for, 
+
+24
+00:01:31,100 --> 00:01:37,600
+for me to use, is it sufficient 
+value for me to migrate a Java? 
+
+25
+00:01:37,800 --> 00:01:40,400
+Application to and yeah, I can 
+see that that's very different 
+
+26
+00:01:40,400 --> 00:01:43,300
+that that is because that's 
+could be a lot of work. 
+
+27
+00:01:43,300 --> 00:01:45,800
+There's a lot of debugging, you 
+have something that works and it
+
+28
+00:01:46,100 --> 00:01:48,400
+goes wrong you can go in and 
+find the problem. 
+
+29
+00:01:48,400 --> 00:01:52,000
+But do you remember long ago I 
+came up with a definition for 
+
+30
+00:01:52,500 --> 00:01:55,400
+maybe not definition a way to 
+talk about what enterprise 
+
+31
+00:01:55,400 --> 00:02:00,600
+software is. 
+So because we you and I have 
+
+32
+00:02:00,600 --> 00:02:03,100
+discussed this a lot as well. 
+What is enterprise software? 
+
+33
+00:02:03,200 --> 00:02:06,300
+Okay, I is I don't recall it. 
+So I would like to hear what he 
+
+34
+00:02:06,300 --> 00:02:07,500
+said. 
+Do you remember DHA? 
+
+35
+00:02:07,700 --> 00:02:10,600
+H is, I'm pretty sure his dhh, 
+but maybe somebody else invented
+
+36
+00:02:10,600 --> 00:02:14,800
+this, which was move fast and 
+break things, right? 
+
+37
+00:02:14,800 --> 00:02:17,800
+I think I'm saying that, right? 
+I thought that was Facebook, 
+
+38
+00:02:18,000 --> 00:02:20,800
+maybe as Facebook and they 
+certainly brought this to me 
+
+39
+00:02:20,800 --> 00:02:23,400
+wasn't dhh, maybe it was Mark 
+Zuckerberg. 
+
+40
+00:02:25,500 --> 00:02:28,800
+I think that is Facebook. 
+Anyway, dhh had something to. 
+
+41
+00:02:28,800 --> 00:02:32,600
+Yeah, so so my way to talk about
+enterprise software related to 
+
+42
+00:02:32,608 --> 00:02:37,600
+that is move slowly and break, 
+nothing is, I think kind of 
+
+43
+00:02:37,800 --> 00:02:42,200
+Captures the difference between 
+enterprise software and and not 
+
+44
+00:02:42,200 --> 00:02:45,900
+enterprise software because my 
+definition after many years of 
+
+45
+00:02:45,900 --> 00:02:53,100
+being confused about what it is,
+is that it's it's trying to 
+
+46
+00:02:53,100 --> 00:02:56,900
+figure out what is common among 
+all the things that these 
+
+47
+00:02:56,900 --> 00:03:01,400
+companies need so that it can. 
+And then they have, they need to
+
+48
+00:03:01,400 --> 00:03:03,600
+adapt it to their particular 
+needs. 
+
+49
+00:03:03,900 --> 00:03:06,900
+And so there's, you know, 
+there's things that are common 
+
+50
+00:03:06,900 --> 00:03:12,600
+database Has and and connecting 
+with the world in UI and all 
+
+51
+00:03:12,600 --> 00:03:14,300
+that kind of stuff. 
+There's all that. 
+
+52
+00:03:15,000 --> 00:03:18,200
+There's all that there and then 
+there's the customization. 
+
+53
+00:03:18,200 --> 00:03:20,900
+Yeah. 
+And so I think that versus off 
+
+54
+00:03:20,900 --> 00:03:22,600
+the shipping, you know, 
+quote-unquote off-the-shelf 
+
+55
+00:03:22,600 --> 00:03:24,800
+software which just does what 
+you need it to. 
+
+56
+00:03:25,300 --> 00:03:29,000
+This is like you have to take 
+these pieces, unique trait of 
+
+57
+00:03:29,000 --> 00:03:31,600
+them of enterprise software 
+versus non enterprise. 
+
+58
+00:03:31,600 --> 00:03:37,600
+Software is the the, the need 
+for dramatic customization of 
+
+59
+00:03:38,300 --> 00:03:41,300
+Yeah, and the end, the reason 
+that we had all these different 
+
+60
+00:03:41,300 --> 00:03:45,200
+libraries, so many of them, 
+which were just shots in the 
+
+61
+00:03:45,200 --> 00:03:48,900
+dark. 
+I mean, you JB's were that was 
+
+62
+00:03:48,900 --> 00:03:51,500
+that was a Ivory Tower. 
+Yeah. 
+
+63
+00:03:51,900 --> 00:03:54,200
+Analysis. 
+And then they pushed it on 
+
+64
+00:03:54,200 --> 00:03:57,900
+everybody and it costs billions 
+of dollars. 
+
+65
+00:03:58,000 --> 00:04:03,100
+Yep of loss over over the years 
+because we thought was a good 
+
+66
+00:04:03,100 --> 00:04:05,800
+idea. 
+Yeah and so it's like well how 
+
+67
+00:04:05,800 --> 00:04:09,400
+can we find what? 
+Changes and what stays the same.
+
+68
+00:04:09,800 --> 00:04:13,900
+And then when you customize 
+enterprise software, you're 
+
+69
+00:04:14,000 --> 00:04:15,500
+adapting. 
+The things that changes of 
+
+70
+00:04:15,500 --> 00:04:17,899
+course. 
+Yeah, never know, for sure. 
+
+71
+00:04:18,000 --> 00:04:20,700
+Yeah, what's yeah. 
+So that's what is, this is, 
+
+72
+00:04:20,700 --> 00:04:24,000
+always changing which is this is
+changing needs are changing, you
+
+73
+00:04:24,000 --> 00:04:26,700
+know, you can anticipate some 
+needs and say that oh well 
+
+74
+00:04:26,700 --> 00:04:30,300
+that's in the common database 
+and then here's the stuff that 
+
+75
+00:04:30,300 --> 00:04:35,300
+we change. 
+But anyway, so back to the move 
+
+76
+00:04:35,300 --> 00:04:38,400
+slowly and break nothing. 
+Yeah, it's I think that 
+
+77
+00:04:38,600 --> 00:04:43,500
+enterprises one of the can kind 
+of definitions or key traits of 
+
+78
+00:04:43,500 --> 00:04:49,300
+Enterprises is risk mitigation. 
+And so I think it's very Central
+
+79
+00:04:49,300 --> 00:04:53,500
+to a lot of Enterprises is try 
+to mitigate as much risk as 
+
+80
+00:04:53,500 --> 00:04:57,100
+possible. 
+And so, I think where that comes
+
+81
+00:04:57,100 --> 00:05:03,100
+out in software is that change 
+is risk, change, involves risk. 
+
+82
+00:05:03,200 --> 00:05:07,700
+And so, so part of the reason 
+why Enterprises move very I 
+
+83
+00:05:07,700 --> 00:05:11,600
+slowly and Technology adoption 
+is because it's a risk to make a
+
+84
+00:05:11,600 --> 00:05:14,500
+change if it's working, why 
+change it? 
+
+85
+00:05:14,800 --> 00:05:17,500
+And this is why we still have 
+all sorts of mainframes running.
+
+86
+00:05:17,500 --> 00:05:22,300
+Go protocol running COBOL with 
+credit, very critical systems on
+
+87
+00:05:22,300 --> 00:05:24,900
+them. 
+Is it works, let's not touch it.
+
+88
+00:05:24,900 --> 00:05:30,700
+Yeah, and well, plus there's the
+sunk cost fallacy, which I think
+
+89
+00:05:30,700 --> 00:05:33,900
+is a big thing. 
+Here is like cuz you look at 
+
+90
+00:05:33,900 --> 00:05:37,300
+your COBOL programming, you go, 
+we spent millions of dollars 
+
+91
+00:05:37,300 --> 00:05:41,700
+developing Being that and so 
+changing it and changing it is 
+
+92
+00:05:41,700 --> 00:05:43,900
+expensive. 
+And so the idea is that. 
+
+93
+00:05:43,900 --> 00:05:48,400
+Well if we were to rewrite it in
+a new language that would cost 
+
+94
+00:05:48,400 --> 00:05:53,400
+us the same amount and have the 
+same impact, but it wouldn't 
+
+95
+00:05:53,400 --> 00:05:57,300
+because a they know what the 
+system is supposed to do and be 
+
+96
+00:05:57,300 --> 00:06:00,200
+you're using much more slavery 
+tool. 
+
+97
+00:06:00,200 --> 00:06:02,500
+That's right. 
+Hopefully better more modern but
+
+98
+00:06:02,500 --> 00:06:04,900
+we've been told before I mean 
+you remember Ada. 
+
+99
+00:06:04,900 --> 00:06:08,400
+Yeah, it was supposed to solve. 
+All the problems. 
+
+100
+00:06:08,400 --> 00:06:13,500
+And and that the department 
+defense got behind it, just like
+
+101
+00:06:13,500 --> 00:06:15,100
+it did with Cobalt. 
+Yeah. 
+
+102
+00:06:15,400 --> 00:06:19,700
+That is that, you know, COBOL 
+would have faded away if the dod
+
+103
+00:06:19,700 --> 00:06:23,200
+hadn't said, well, this is 
+clearly the good language and so
+
+104
+00:06:23,200 --> 00:06:25,000
+we'll get behind it and pushed 
+it on. 
+
+105
+00:06:25,200 --> 00:06:26,900
+Yeah. 
+A whole bunch of companies. 
+
+106
+00:06:26,900 --> 00:06:30,400
+Yeah. 
+So yeah, we have a bad history 
+
+107
+00:06:30,400 --> 00:06:33,300
+with yeah. 
+The dod deciding what? 
+
+108
+00:06:33,500 --> 00:06:35,200
+I guess. 
+Maybe the more meta related 
+
+109
+00:06:35,200 --> 00:06:40,000
+point is that we've been burned 
+by Being told, oh, this thing is
+
+110
+00:06:40,000 --> 00:06:44,400
+better and you should move to it
+and so we've been burned before.
+
+111
+00:06:44,400 --> 00:06:46,500
+So that's made us even more 
+risk-averse. 
+
+112
+00:06:46,600 --> 00:06:48,900
+I've been burned too many times 
+many times. 
+
+113
+00:06:48,900 --> 00:06:54,200
+I mean there was an and it's you
+know you get a sense of the 
+
+114
+00:06:54,200 --> 00:06:57,400
+smell of this thing. 
+This is why I'm skeptical of the
+
+115
+00:06:57,400 --> 00:07:01,700
+low code. 
+You know, thing is because it it
+
+116
+00:07:01,700 --> 00:07:06,700
+well, I mean, on one side it's 
+like sure system that allows you
+
+117
+00:07:06,700 --> 00:07:10,900
+to put together. 
+Whether an application with less
+
+118
+00:07:10,900 --> 00:07:12,500
+effort. 
+I'm all for that. 
+
+119
+00:07:12,600 --> 00:07:16,500
+Yeah but when the marketing 
+people get excited about it it 
+
+120
+00:07:16,500 --> 00:07:21,900
+just stinks flag is with any 
+technology when the marketing 
+
+121
+00:07:21,900 --> 00:07:24,700
+people get excited about it. 
+Oh man, run away. 
+
+122
+00:07:25,400 --> 00:07:27,200
+Kinda. 
+It's just it. 
+
+123
+00:07:27,600 --> 00:07:30,200
+Let's just say it's worrisome, 
+you know, I mean the last time I
+
+124
+00:07:30,208 --> 00:07:33,300
+really saw it was the AI 
+revolution. 
+
+125
+00:07:33,300 --> 00:07:36,400
+In the 90s we got nobody 
+remembers because it wasn't, 
+
+126
+00:07:36,400 --> 00:07:42,000
+yeah, the tent So a man 
+marketing got so excited to have
+
+127
+00:07:42,000 --> 00:07:44,700
+that term SOA. 
+You need your SOA. 
+
+128
+00:07:44,800 --> 00:07:48,600
+Oh and you're so well and then 
+they also had. 
+
+129
+00:07:49,700 --> 00:07:53,900
+Yeah they are a we got excited 
+about Ras well in back then 
+
+130
+00:07:53,900 --> 00:07:56,100
+client-server was a big thing, 
+you know. 
+
+131
+00:07:56,100 --> 00:08:00,200
+It's like that was where the 
+marketing really likes to have 
+
+132
+00:08:00,200 --> 00:08:10,000
+like a term It's like they find 
+that term HTML5 Web 2.0, so like
+
+133
+00:08:10,300 --> 00:08:13,900
+it's a package. 
+It says we have this thing, you 
+
+134
+00:08:13,900 --> 00:08:16,200
+want it and there's so much 
+value. 
+
+135
+00:08:16,200 --> 00:08:20,000
+You need to rewrite into this. 
+And that is all packaged in that
+
+136
+00:08:20,000 --> 00:08:23,400
+that term. 
+And I've definitely seen this 
+
+137
+00:08:23,400 --> 00:08:29,000
+sentiment in sentiment in terms 
+of kotlin where people are like,
+
+138
+00:08:29,100 --> 00:08:32,600
+oh, you keep trying to tell me 
+Collins better but I just don't,
+
+139
+00:08:32,799 --> 00:08:37,900
+Asked you because I've been 
+burned by this before with Scala
+
+140
+00:08:37,900 --> 00:08:41,600
+or with it away, with whatever, 
+right? 
+
+141
+00:08:41,600 --> 00:08:46,500
+They've been burned been told 
+that x amount that there's the 
+
+142
+00:08:46,500 --> 00:08:49,700
+Silver Bullet that if they just 
+change everything and adopt this
+
+143
+00:08:49,700 --> 00:08:51,700
+new thing life will be so much 
+better. 
+
+144
+00:08:52,100 --> 00:08:54,600
+And so I definitely see a lot of
+reluctance. 
+
+145
+00:08:54,600 --> 00:08:58,300
+So so I think we can. 
+I mean, we've been burned so we 
+
+146
+00:08:58,300 --> 00:09:00,900
+can only have compassion for 
+that reactants. 
+
+147
+00:09:01,100 --> 00:09:04,100
+Yeah, you know, it makes It 
+makes sense, we should be 
+
+148
+00:09:04,100 --> 00:09:07,700
+skeptical because there are 
+people out there who want to 
+
+149
+00:09:07,700 --> 00:09:10,400
+take your money and not give you
+the value that they promised. 
+
+150
+00:09:10,400 --> 00:09:11,400
+Yeah. 
+Yeah. 
+
+151
+00:09:11,800 --> 00:09:18,500
+That's a common thing and yeah, 
+and the only way to to really 
+
+152
+00:09:18,900 --> 00:09:23,000
+understand it is yeah, I mean is
+there a better way? 
+
+153
+00:09:23,000 --> 00:09:26,300
+Because it's like well it's what
+Jeremy and I are going to do in 
+
+154
+00:09:26,300 --> 00:09:28,900
+the next few days. 
+We're having this rest Retreat 
+
+155
+00:09:29,300 --> 00:09:36,600
+and we're going to do Then and 
+analyze it and see, you know, 
+
+156
+00:09:37,200 --> 00:09:39,700
+what is this thing that 
+everybody's been raving about 
+
+157
+00:09:39,700 --> 00:09:41,500
+and programmers are raving about
+it? 
+
+158
+00:09:41,500 --> 00:09:44,600
+So it's like, well, that's true 
+and people that I trust. 
+
+159
+00:09:44,900 --> 00:09:47,500
+So I going, well, there's 
+something in there. 
+
+160
+00:09:47,600 --> 00:09:51,300
+I just, it's more, does it meet 
+my needs? 
+
+161
+00:09:51,300 --> 00:09:57,400
+And I guess that's the thing. 
+It's we have a tool that's going
+
+162
+00:09:57,400 --> 00:09:59,000
+to meet. 
+Everybody's needs its 
+
+163
+00:09:59,000 --> 00:10:01,500
+universally great. 
+You should buy it. 
+
+164
+00:10:01,500 --> 00:10:05,400
+Yeah, versus Understanding that 
+while your needs are different 
+
+165
+00:10:05,400 --> 00:10:09,100
+than others needs, as maybe, 
+maybe rusted. 
+
+166
+00:10:09,100 --> 00:10:12,000
+I mean, I just read an article 
+comparing rest and go. 
+
+167
+00:10:12,200 --> 00:10:15,900
+And this guy was a go fan, but 
+he was, I mean, I think he was, 
+
+168
+00:10:16,100 --> 00:10:18,700
+you know, looking at rust. 
+Seriously. 
+
+169
+00:10:18,700 --> 00:10:22,600
+Yeah. 
+And but in the end, he is, he's 
+
+170
+00:10:22,600 --> 00:10:26,400
+still biased towards to go, huh.
+And but maybe he's right, you 
+
+171
+00:10:26,400 --> 00:10:31,400
+know, because it's easier for, 
+you know, for a bunch of things.
+
+172
+00:10:31,700 --> 00:10:35,900
+Whereas with Russ, Maybe like 
+you're you're creating a 
+
+173
+00:10:35,900 --> 00:10:38,000
+particular kind of thing and you
+go. 
+
+174
+00:10:38,000 --> 00:10:41,700
+Well, that's what we want 
+because of performance, right? 
+
+175
+00:10:43,700 --> 00:10:49,100
+Yeah, yeah, I guess that's where
+it's hard is value, is in the 
+
+176
+00:10:49,100 --> 00:10:52,000
+eye of the beholder, everything 
+the needs of the neat, your 
+
+177
+00:10:52,000 --> 00:10:54,700
+needs Define, what brings you 
+value. 
+
+178
+00:10:54,700 --> 00:10:58,100
+And so it can be different for 
+everyone depending on what 
+
+179
+00:10:58,100 --> 00:11:00,700
+they're building. 
+What their team makeup is like, 
+
+180
+00:11:00,700 --> 00:11:02,700
+what there, there's probably so 
+many. 
+
+181
+00:11:02,800 --> 00:11:06,900
+Factors were misusing the term 
+marketing to because marketing 
+
+182
+00:11:06,900 --> 00:11:10,900
+is actually figuring out what 
+the customer needs. 
+
+183
+00:11:11,200 --> 00:11:15,100
+And and it's gotten polluted to 
+the point where it's basically 
+
+184
+00:11:15,300 --> 00:11:18,800
+well, and even a good sales 
+person is someone who figures 
+
+185
+00:11:18,800 --> 00:11:22,000
+out what is customer needs and 
+whether it's a good fit and 
+
+186
+00:11:22,000 --> 00:11:24,600
+doesn't just push whatever 
+product that they have. 
+
+187
+00:11:24,800 --> 00:11:30,900
+So, but that's all gotten biased
+in the Interests of money. 
+
+188
+00:11:31,900 --> 00:11:34,300
+Yeah, pretty much. 
+Yeah, much. 
+
+189
+00:11:34,700 --> 00:11:38,200
+So it's we are seeing a lot of 
+server-side kotlin adoption. 
+
+190
+00:11:38,200 --> 00:11:41,000
+So, we do see the. 
+But can you tell if it's new, 
+
+191
+00:11:41,000 --> 00:11:44,700
+Adoption or transfer translating
+existing apps? 
+
+192
+00:11:44,700 --> 00:11:46,700
+It's a good question. 
+I don't know how much is new 
+
+193
+00:11:46,700 --> 00:11:52,000
+versus Green Field versus brown 
+field is the new is that? 
+
+194
+00:11:52,000 --> 00:11:54,600
+I don't know if it's a new 
+terminology but it's I've been 
+
+195
+00:11:54,600 --> 00:11:58,700
+hearing that terminology a lot 
+lately so you obviously know But
+
+196
+00:11:59,000 --> 00:12:04,900
+now Brownfield is the taking 
+some old thing and and making it
+
+197
+00:12:04,900 --> 00:12:09,000
+modern or whatever. 
+And so so yeah. 
+
+198
+00:12:09,300 --> 00:12:12,500
+So I don't know what percentage 
+of the kotlin server-side 
+
+199
+00:12:12,500 --> 00:12:17,900
+adoption is coming via green or 
+brown be interesting to know. 
+
+200
+00:12:18,000 --> 00:12:23,000
+Yeah, to me, that's, that's 
+probably the most critical 
+
+201
+00:12:23,500 --> 00:12:25,500
+question to ask, maybe in your 
+next. 
+
+202
+00:12:25,500 --> 00:12:30,500
+Yeah, yeah, find that out. 
+So, non-cotton specifically, 
+
+203
+00:12:30,500 --> 00:12:35,500
+it's interesting to try to match
+needs and values with it 
+
+204
+00:12:35,800 --> 00:12:38,300
+specifically. 
+So I'm thinking about one of the
+
+205
+00:12:38,300 --> 00:12:45,800
+values of kotlin is the the 
+handling of nulls and I, I can 
+
+206
+00:12:45,800 --> 00:12:47,200
+see that. 
+That's a huge value. 
+
+207
+00:12:47,200 --> 00:12:50,900
+Oh you whenever get a null 
+pointer exception again but if 
+
+208
+00:12:50,900 --> 00:12:53,400
+you're in a brown field 
+application moving from java to 
+
+209
+00:12:53,400 --> 00:12:56,500
+kotlin you don't immediately get
+that value. 
+
+210
+00:12:56,600 --> 00:13:00,400
+You actually have to rewrite. 
+All of your code and identify 
+
+211
+00:13:00,400 --> 00:13:04,200
+the things that could be null 
+and make those those things 
+
+212
+00:13:04,200 --> 00:13:06,500
+explicit. 
+I mean it's like it's have to 
+
+213
+00:13:06,700 --> 00:13:11,000
+you can you can see every time I
+cross the boundary between 
+
+214
+00:13:11,300 --> 00:13:14,100
+Scotland and Java. 
+I know that what I'm going to 
+
+215
+00:13:14,100 --> 00:13:21,100
+get is knowable and everything 
+is nullable or um yeah I mean as
+
+216
+00:13:21,100 --> 00:13:24,200
+long as you're staying within 
+the kotlin world you can say but
+
+217
+00:13:24,200 --> 00:13:27,700
+to realize until like actually 
+gain that value you actually 
+
+218
+00:13:27,700 --> 00:13:30,700
+have to write Right. 
+The cotton coded that that then 
+
+219
+00:13:30,700 --> 00:13:34,900
+handles the the potential eknoll
+places. 
+
+220
+00:13:35,200 --> 00:13:38,200
+And so I can see that very 
+different between a that value 
+
+221
+00:13:38,200 --> 00:13:41,900
+is is applied, very differently 
+between green and brown field. 
+
+222
+00:13:42,700 --> 00:13:46,700
+Whereas there's maybe other 
+things of kotlin other values of
+
+223
+00:13:46,700 --> 00:13:50,400
+kotlin that you would get 
+without without as much work or 
+
+224
+00:13:51,200 --> 00:13:53,600
+well. 
+When our friend Bill, did an 
+
+225
+00:13:53,600 --> 00:13:57,900
+experiment where he created a 
+cutland, module 4. 
+
+226
+00:13:58,900 --> 00:14:05,900
+Large Java project and he still 
+benefited greatly from the 
+
+227
+00:14:05,900 --> 00:14:09,600
+non-null ability of what he did.
+It's just that when you hit the 
+
+228
+00:14:09,608 --> 00:14:12,300
+boundaries, when you're calling 
+in and out to the rest of the 
+
+229
+00:14:12,300 --> 00:14:15,600
+Java thing, you have to do a 
+little bit of extra work to say.
+
+230
+00:14:16,100 --> 00:14:17,200
+Okay. 
+This is nullable. 
+
+231
+00:14:17,200 --> 00:14:18,400
+What do I do? 
+All right. 
+
+232
+00:14:18,700 --> 00:14:24,400
+Yeah, and then there's the I 
+mean the fact that they're using
+
+233
+00:14:24,400 --> 00:14:28,100
+null for two different purposes,
+which it took me a while to get 
+
+234
+00:14:28,100 --> 00:14:29,100
+clear on that. 
+Yeah. 
+
+235
+00:14:29,100 --> 00:14:32,100
+Because it's also, it's all 
+about the non null ability and 
+
+236
+00:14:32,100 --> 00:14:36,500
+then within the cotton 
+libraries, they will themselves 
+
+237
+00:14:36,800 --> 00:14:39,700
+return a null. 
+Yeah, and you're going wait, 
+
+238
+00:14:39,700 --> 00:14:41,500
+well, I thought we went to a lot
+of trouble. 
+
+239
+00:14:41,500 --> 00:14:43,400
+Listen, no ability is what we 
+should call it. 
+
+240
+00:14:43,400 --> 00:14:48,200
+Yeah. 
+And that's really more of a. 
+
+241
+00:14:48,800 --> 00:14:54,000
+And this was actually, one of my
+questions is that The variation 
+
+242
+00:14:54,000 --> 00:14:58,200
+of a monad. 
+Oh, because what you're doing. 
+
+243
+00:14:58,200 --> 00:15:03,600
+So so if we look at a monad as a
+package of information that 
+
+244
+00:15:03,800 --> 00:15:07,800
+travels from one function to 
+another so that we can chain 
+
+245
+00:15:07,800 --> 00:15:14,200
+function calls, then this kind 
+of fits that because when you 
+
+246
+00:15:14,200 --> 00:15:19,600
+call a function, in Scotland 
+that can explicitly return. 
+
+247
+00:15:19,600 --> 00:15:24,100
+Null, you're saying, well, I can
+either Get information or I can 
+
+248
+00:15:24,100 --> 00:15:28,200
+get nothing. 
+I can get know something failed,
+
+249
+00:15:28,200 --> 00:15:31,600
+something didn't work out or 
+that thing isn't in your map or 
+
+250
+00:15:31,600 --> 00:15:35,700
+whatever it's like. 
+And it's, it's really a message.
+
+251
+00:15:36,200 --> 00:15:39,100
+And when you take the two 
+together, it's basically a 
+
+252
+00:15:39,108 --> 00:15:40,400
+neither. 
+Yeah. 
+
+253
+00:15:40,800 --> 00:15:46,600
+So is that, I mean, it's 
+certainly monadic thinking I 
+
+254
+00:15:46,600 --> 00:15:50,500
+would say, but could you even 
+call that amount out? 
+
+255
+00:15:52,000 --> 00:15:56,000
+Oh God. 
+I like to segue into monads. 
+
+256
+00:15:56,800 --> 00:16:01,600
+Could you call that a monad? 
+So, I get a little mathy when we
+
+257
+00:16:01,600 --> 00:16:04,100
+talk about, could you call it a 
+monad, okay? 
+
+258
+00:16:04,100 --> 00:16:09,300
+So before before we let you get 
+mathy, let me explain the 
+
+259
+00:16:09,300 --> 00:16:11,900
+conclusion. 
+That I've come to about what a 
+
+260
+00:16:11,908 --> 00:16:17,300
+monad is and the problem with 
+the explanations that I've seen 
+
+261
+00:16:17,300 --> 00:16:19,900
+is precisely the math in. 
+Yeah. 
+
+262
+00:16:19,900 --> 00:16:23,700
+And so what I'm looking at is 
+what What's our you-know-whats? 
+
+263
+00:16:24,300 --> 00:16:26,600
+It's an actor would say. 
+What's my motivation? 
+
+264
+00:16:26,900 --> 00:16:30,600
+Why is, why are we trying to do 
+this thing? 
+
+265
+00:16:30,600 --> 00:16:38,200
+And the answer I believe, is 
+primarily we want to chain 
+
+266
+00:16:38,200 --> 00:16:40,200
+functions together or compose 
+them. 
+
+267
+00:16:40,200 --> 00:16:43,700
+I think, you know, it's kind of 
+a variation of the same thing. 
+
+268
+00:16:43,900 --> 00:16:45,900
+We want to chain these functions
+together. 
+
+269
+00:16:46,400 --> 00:16:51,200
+Now, if we do it the old way, 
+every function We call, we have 
+
+270
+00:16:51,200 --> 00:16:53,400
+to go. 
+What's the Salt of that. 
+
+271
+00:16:53,400 --> 00:16:55,600
+What am I going to do with it? 
+And we have a whole bunch of 
+
+272
+00:16:55,600 --> 00:16:59,400
+code around it, and we don't 
+have this nice composition where
+
+273
+00:16:59,400 --> 00:17:02,800
+I can say, hey, calls, be called
+Sea and the result of all of 
+
+274
+00:17:02,800 --> 00:17:07,200
+that, we do something with we 
+have to intercede. 
+
+275
+00:17:07,500 --> 00:17:10,300
+Yeah, we have to intercede after
+each function call. 
+
+276
+00:17:10,400 --> 00:17:13,000
+I mean, this is the way 
+basically go. 
+
+277
+00:17:13,000 --> 00:17:16,500
+Does it. 
+It says, okay, I'll return kind 
+
+278
+00:17:16,500 --> 00:17:22,400
+of a either a result or an error
+condition in a single package. 
+
+279
+00:17:22,500 --> 00:17:27,599
+And so that's the goal. 
+And to achieve that instead of 
+
+280
+00:17:27,599 --> 00:17:31,400
+just returning a result, we have
+to return a package of 
+
+281
+00:17:31,400 --> 00:17:35,400
+information which is passed on. 
+And then when you get mathy, 
+
+282
+00:17:35,400 --> 00:17:39,600
+it's like well what is, you 
+know, what are the rules for 
+
+283
+00:17:39,600 --> 00:17:45,200
+that package of information but 
+then but starting at that point 
+
+284
+00:17:45,300 --> 00:17:47,700
+just confuses the heck out of 
+everybody. 
+
+285
+00:17:47,700 --> 00:17:50,100
+Yeah, because they're going, I 
+don't understand. 
+
+286
+00:17:50,200 --> 00:17:52,400
+I don't even understand why 
+we're trying to do this thing. 
+
+287
+00:17:52,800 --> 00:17:56,500
+And if you do if you look at it 
+from the standpoint of well 
+
+288
+00:17:56,500 --> 00:17:59,900
+we're trying to do it so that we
+can chain operation operations, 
+
+289
+00:17:59,900 --> 00:18:02,100
+which is really an essential 
+part of functional. 
+
+290
+00:18:02,100 --> 00:18:05,300
+Programming is composition, we 
+want to be able to compose 
+
+291
+00:18:05,600 --> 00:18:10,700
+functions together and the only 
+thing that doesn't fit that 
+
+292
+00:18:10,700 --> 00:18:15,300
+model is the monad. 
+When you are, you know, you're 
+
+293
+00:18:15,300 --> 00:18:18,900
+trying to make everything 
+invariant and then you have the 
+
+294
+00:18:18,900 --> 00:18:21,700
+monad that changes things. 
+You know, that connects to the 
+
+295
+00:18:21,700 --> 00:18:24,400
+outside world. 
+Door is the clock or something 
+
+296
+00:18:24,400 --> 00:18:25,300
+like that. 
+Yeah. 
+
+297
+00:18:25,300 --> 00:18:29,800
+So what's wrong with that 
+discussion? 
+
+298
+00:18:29,800 --> 00:18:32,500
+Is that least? 
+Yeah I think that I think it's 
+
+299
+00:18:32,500 --> 00:18:34,600
+good. 
+I think I think you are very 
+
+300
+00:18:34,600 --> 00:18:40,500
+right to identify that monads 
+are a way to deal with chaining 
+
+301
+00:18:40,500 --> 00:18:47,300
+of functions or operations. 
+Where you need, you need 
+
+302
+00:18:47,500 --> 00:18:49,700
+something other than just the 
+value. 
+
+303
+00:18:50,600 --> 00:18:55,400
+Because it with with just 
+functions if you have a function
+
+304
+00:18:55,500 --> 00:18:59,800
+that returns a value and then 
+you want to chain that to that 
+
+305
+00:18:59,800 --> 00:19:04,500
+value to another function, that 
+then takes in that value and 
+
+306
+00:19:04,500 --> 00:19:08,500
+returns a new value. 
+That's all great until that 
+
+307
+00:19:08,500 --> 00:19:12,900
+value needs. 
+Some more information about it, 
+
+308
+00:19:12,900 --> 00:19:19,300
+some some something Beyond just 
+the value, right? 
+
+309
+00:19:19,400 --> 00:19:20,400
+Just appeared. 
+You. 
+
+310
+00:19:20,500 --> 00:19:25,500
+So in the case of error 
+handling, you want to know the 
+
+311
+00:19:25,500 --> 00:19:28,200
+other information you want to 
+know is did the succeed or did 
+
+312
+00:19:28,200 --> 00:19:31,700
+this fail? 
+And if you don't, if you don't 
+
+313
+00:19:31,700 --> 00:19:34,700
+just return the value, like the 
+succeeded but instead you have 
+
+314
+00:19:34,700 --> 00:19:37,400
+you returned something that 
+says, did the succeed or did 
+
+315
+00:19:37,400 --> 00:19:41,000
+this fail and if it succeeded, 
+here's the value package of 
+
+316
+00:19:41,000 --> 00:19:42,800
+information package of 
+information. 
+
+317
+00:19:42,900 --> 00:19:45,700
+Yep. 
+Then now all of a sudden your 
+
+318
+00:19:45,700 --> 00:19:49,900
+function that you want to chain 
+that to you needs to take the 
+
+319
+00:19:50,100 --> 00:19:54,200
+The that that thing that holds 
+the information about did the 
+
+320
+00:19:54,200 --> 00:19:58,700
+succeed or did this fail and 
+know how to extract the value 
+
+321
+00:19:58,700 --> 00:20:03,000
+out of it, or know how in the 
+case of failure to to move on 
+
+322
+00:20:03,100 --> 00:20:07,100
+which it so sense to me, when I 
+put it in the context of the 
+
+323
+00:20:07,100 --> 00:20:08,600
+problem that we're trying to 
+solve. 
+
+324
+00:20:08,600 --> 00:20:12,600
+But when you start with that and
+go, oh well, it's a monoid in 
+
+325
+00:20:12,600 --> 00:20:16,600
+the category of endo functors 
+and you know, it's like I don't 
+
+326
+00:20:16,600 --> 00:20:19,900
+know why we're doing that but if
+but if you look at it with if 
+
+327
+00:20:20,100 --> 00:20:22,900
+Start with this explanation. 
+Then you say, oh, and each 
+
+328
+00:20:22,900 --> 00:20:26,600
+function has to have a way to 
+unpack it and then pass its own 
+
+329
+00:20:26,600 --> 00:20:28,500
+package of information along. 
+Okay? 
+
+330
+00:20:28,700 --> 00:20:32,300
+So I get that now. 
+So, to take this example, 
+
+331
+00:20:32,300 --> 00:20:37,400
+further of are handling, all of 
+a sudden, then the the functions
+
+332
+00:20:37,400 --> 00:20:39,800
+that you want to chain on your 
+second third, whatever 
+
+333
+00:20:39,800 --> 00:20:43,000
+functions. 
+If we don't have monads they 
+
+334
+00:20:43,000 --> 00:20:44,600
+would have to take as a 
+parameter. 
+
+335
+00:20:45,000 --> 00:20:49,200
+The the the thing I don't want 
+to call it a box or a burrito or
+
+336
+00:20:49,200 --> 00:20:51,700
+whatever but they need to take 
+the thing with more information 
+
+337
+00:20:52,100 --> 00:20:56,100
+and then inside of that function
+be like okay here's what I need 
+
+338
+00:20:56,100 --> 00:20:58,800
+to do if it's a success here's 
+what I need to do with it. 
+
+339
+00:20:58,800 --> 00:21:01,800
+If it's a failure and it's good 
+that you brought up go because 
+
+340
+00:21:02,000 --> 00:21:06,100
+go has the like are Tuple 
+returns which is just a 
+
+341
+00:21:06,108 --> 00:21:10,700
+convention just a convention but
+that requires the if you were to
+
+342
+00:21:10,700 --> 00:21:14,400
+pass that result to a function 
+you would in your function then 
+
+343
+00:21:14,400 --> 00:21:17,600
+have to look. 
+So is this a success or a 
+
+344
+00:21:17,600 --> 00:21:19,700
+failure and then decide what you
+want to do? 
+
+345
+00:21:20,100 --> 00:21:23,200
+And I don't know, I mean, I 
+haven't seen any examples of 
+
+346
+00:21:23,200 --> 00:21:26,600
+people doing that. 
+I think mostly, it's just called
+
+347
+00:21:26,600 --> 00:21:30,700
+a function, check the result. 
+So so what if we had a way to 
+
+348
+00:21:30,700 --> 00:21:39,000
+chain operations together that 
+inherently knew what to do if it
+
+349
+00:21:39,000 --> 00:21:44,600
+gets a thing with more 
+information and and could then 
+
+350
+00:21:46,100 --> 00:21:49,900
+Provide a way to continue the 
+chaining to allow to enable 
+
+351
+00:21:49,900 --> 00:21:53,700
+chaining as with as much 
+changing as you want to do. 
+
+352
+00:21:55,400 --> 00:21:58,700
+And so yeah I think that that's 
+that is a good way to look at 
+
+353
+00:21:58,700 --> 00:22:02,200
+monads. 
+What I don't know is is that the
+
+354
+00:22:02,200 --> 00:22:06,000
+only way to look at monads? 
+I think maybe some some deeper 
+
+355
+00:22:06,000 --> 00:22:09,200
+functional programming language.
+Experts may say that's only one 
+
+356
+00:22:09,600 --> 00:22:15,000
+one aspect to monads but when 
+you're maybe not much, does he 
+
+357
+00:22:15,000 --> 00:22:18,300
+owe? 
+Library it says okay we're going
+
+358
+00:22:18,300 --> 00:22:22,100
+to handle errors and we're going
+to, you can attach environment, 
+
+359
+00:22:22,100 --> 00:22:24,500
+you can attach time. 
+You can attach these other 
+
+360
+00:22:24,500 --> 00:22:27,600
+things to it and will pass all 
+those things through. 
+
+361
+00:22:28,100 --> 00:22:32,800
+As you know, monad call so you 
+can change chain your calls 
+
+362
+00:22:32,800 --> 00:22:35,600
+together. 
+And yes still seems to fit. 
+
+363
+00:22:35,800 --> 00:22:39,600
+Yeah. 
+And and and it also because when
+
+364
+00:22:39,600 --> 00:22:43,800
+people start talking about 
+burritos, it's like I don't 
+
+365
+00:22:43,800 --> 00:22:45,300
+know. 
+Why would they choose that? 
+
+366
+00:22:45,500 --> 00:22:49,100
+That whereas if they'd simply 
+said a package of information, a
+
+367
+00:22:49,100 --> 00:22:52,100
+package of information that 
+would have been because why do 
+
+368
+00:22:52,100 --> 00:22:54,400
+you need to have the extra 
+abstraction of a burrito? 
+
+369
+00:22:54,400 --> 00:22:56,800
+That's right. 
+Somebody's being cute. 
+
+370
+00:22:57,800 --> 00:23:02,500
+I think the I'm not totally sure
+if monads only involve the 
+
+371
+00:23:02,500 --> 00:23:06,300
+package of information or if 
+that is just a very common way. 
+
+372
+00:23:06,300 --> 00:23:09,500
+A common thing that we use them 
+for because there's there's 
+
+373
+00:23:09,500 --> 00:23:13,400
+there's so many different places
+where monads get used and but 
+
+374
+00:23:13,400 --> 00:23:21,600
+but I think ultimately the chain
+Is, is Central and and necessary
+
+375
+00:23:21,800 --> 00:23:24,800
+because I don't think you would 
+ever use monads if you never 
+
+376
+00:23:24,800 --> 00:23:29,000
+wanted to do any chain, if you, 
+if you for some reason, a thing 
+
+377
+00:23:29,000 --> 00:23:32,200
+only did one thing and you 
+didn't need to do any chaining 
+
+378
+00:23:32,200 --> 00:23:35,000
+of operations. 
+I don't think there's any reason
+
+379
+00:23:35,000 --> 00:23:42,500
+for monads. 
+No, I can't see that but Yeah, 
+
+380
+00:23:42,500 --> 00:23:47,900
+the chaining seems to be and and
+I would say well it's everything
+
+381
+00:23:47,900 --> 00:23:50,100
+that's necessary to make that 
+chaining happen. 
+
+382
+00:23:50,100 --> 00:23:54,700
+But the easiest way to explain 
+it to somebody at the beginning 
+
+383
+00:23:54,700 --> 00:23:58,100
+is to say we want to pass this 
+package of information, then you
+
+384
+00:23:58,100 --> 00:24:02,800
+get into it and you go well it'd
+be nice if each function had a 
+
+385
+00:24:02,800 --> 00:24:06,900
+consistent way to unpackage and 
+then repackage that information 
+
+386
+00:24:06,900 --> 00:24:11,000
+so that it wouldn't be as much 
+work for the programmer to do it
+
+387
+00:24:11,000 --> 00:24:13,500
+and they wouldn't have to think 
+about Is my stuff and then you 
+
+388
+00:24:13,500 --> 00:24:17,700
+get into well, what would that 
+look like mathematically and 
+
+389
+00:24:17,708 --> 00:24:19,900
+then and then you get mathy 
+about it? 
+
+390
+00:24:20,000 --> 00:24:26,400
+Yeah, we'll get math him out in 
+a minute, but um, I as far as I 
+
+391
+00:24:26,400 --> 00:24:31,900
+know, monads always, always do 
+have a package or like something
+
+392
+00:24:31,900 --> 00:24:33,800
+Beyond. 
+Just the pure value. 
+
+393
+00:24:34,000 --> 00:24:37,800
+I think, I think I haven't seen 
+a use of monads where that's not
+
+394
+00:24:37,800 --> 00:24:40,100
+true. 
+But but so, what's, what? 
+
+395
+00:24:40,100 --> 00:24:43,800
+I find interesting with monads 
+is That some some really smart 
+
+396
+00:24:43,800 --> 00:24:47,700
+people kind of solve this 
+problem of chaining. 
+
+397
+00:24:47,700 --> 00:24:50,900
+They saw this problem of what's 
+called like State monads. 
+
+398
+00:24:50,900 --> 00:24:57,100
+I saw this problem of chaining 
+optional things chaining success
+
+399
+00:24:57,900 --> 00:25:03,000
+or failure things together. 
+They saw a bunch of different 
+
+400
+00:25:03,000 --> 00:25:10,200
+things and they said, oh there's
+there is, there is an abstract 
+
+401
+00:25:10,700 --> 00:25:14,400
+core idea. 
+That can, that can accomplish 
+
+402
+00:25:14,400 --> 00:25:20,100
+all of those different things 
+and with, as with, I think in 
+
+403
+00:25:20,600 --> 00:25:25,700
+all functional programming and, 
+and in math, when we find those 
+
+404
+00:25:25,700 --> 00:25:31,200
+abstractions, those abstractions
+obey mathematical laws. 
+
+405
+00:25:31,500 --> 00:25:37,100
+So that so that we know when we 
+use it for this thing, we can be
+
+406
+00:25:37,100 --> 00:25:40,000
+guaranteed that this is this is 
+the behavior that we're going to
+
+407
+00:25:40,000 --> 00:25:44,700
+get from from that abstraction. 
+And so, that's where it gets 
+
+408
+00:25:44,900 --> 00:25:47,700
+mathy. 
+Is that a monad? 
+
+409
+00:25:47,900 --> 00:25:53,300
+Technically is just something 
+that implements three different 
+
+410
+00:25:53,300 --> 00:25:57,900
+algebraic laws and so. 
+So technically that abstraction 
+
+411
+00:25:57,900 --> 00:26:01,500
+is just defined by the 
+mathematical laws that it that 
+
+412
+00:26:01,500 --> 00:26:08,900
+it abides by. 
+But I don't even think about the
+
+413
+00:26:08,900 --> 00:26:14,400
+abstract mathematical laws. 
+I Monads for all sorts of things
+
+414
+00:26:14,800 --> 00:26:19,000
+and it's it's like the 
+difference between physics and 
+
+415
+00:26:19,000 --> 00:26:22,200
+Engineering. 
+It's like well you know we 
+
+416
+00:26:22,200 --> 00:26:26,800
+figured out all these things in 
+physics and in engineering you 
+
+417
+00:26:26,800 --> 00:26:28,600
+know. 
+I just want to weld the beams 
+
+418
+00:26:28,600 --> 00:26:31,000
+together and make sure that 
+they're going to stay together. 
+
+419
+00:26:31,000 --> 00:26:35,600
+I don't need to, you know, know 
+the yeah. 
+
+420
+00:26:35,600 --> 00:26:37,800
+Underlying physics of this thing
+welding. 
+
+421
+00:26:37,800 --> 00:26:40,900
+Yeah, you know just, you know, 
+make sure the beam is big 
+
+422
+00:26:40,900 --> 00:26:42,000
+enough. 
+Yeah. 
+
+423
+00:26:42,100 --> 00:26:44,200
+Yeah, etcetera. 
+And it's like and you know that 
+
+424
+00:26:44,200 --> 00:26:51,100
+that weld will hold based on on 
+you your expectations of how you
+
+425
+00:26:51,100 --> 00:26:54,600
+have ways to test it. 
+But yeah, but knowing at the 
+
+426
+00:26:54,600 --> 00:26:58,600
+atomic level, how the world 
+actually happens is not not 
+
+427
+00:26:59,100 --> 00:27:02,600
+necessary, it's that you can 
+expect a particular result, you 
+
+428
+00:27:02,600 --> 00:27:05,400
+can expect a way for it to 
+behave. 
+
+429
+00:27:05,400 --> 00:27:09,400
+So yeah, somebody did those 
+equations once and now we're 
+
+430
+00:27:09,400 --> 00:27:12,000
+going to rely on them. 
+Yeah, exactly. 
+
+431
+00:27:12,200 --> 00:27:16,200
+And so somebody found somebody 
+figured it out and now we can 
+
+432
+00:27:16,200 --> 00:27:20,000
+just use it and not have to 
+understand the reason why the 
+
+433
+00:27:20,000 --> 00:27:21,600
+abstraction Works. 
+Hmm. 
+
+434
+00:27:24,500 --> 00:27:26,900
+So I don't know. 
+It's probably not useful to talk
+
+435
+00:27:26,900 --> 00:27:30,800
+about the actual like algebraic 
+laws of monads and and I always 
+
+436
+00:27:30,800 --> 00:27:33,200
+have a hard time remembering 
+them off the top of my head. 
+
+437
+00:27:34,600 --> 00:27:38,000
+But, but I think the important 
+point is that there are laws 
+
+438
+00:27:38,000 --> 00:27:40,500
+that they abide by which allow 
+us to expect a particular 
+
+439
+00:27:40,500 --> 00:27:43,100
+behavior from things that are 
+Our that are moanin. 
+
+440
+00:27:43,300 --> 00:27:47,800
+Yeah, it helps us engineer. 
+How we're going to chain these 
+
+441
+00:27:47,900 --> 00:27:50,400
+functions together? 
+How we're going to compose them?
+
+442
+00:27:50,400 --> 00:27:53,500
+That's all right, and exactly, 
+that's what we need to get to. 
+
+443
+00:27:53,600 --> 00:27:59,800
+But but now I understand why 
+it's been so confusing for so 
+
+444
+00:27:59,800 --> 00:28:05,200
+long is because people the math 
+a people came first and that's 
+
+445
+00:28:05,200 --> 00:28:09,100
+how they explained it. 
+Yeah not well and and remember 
+
+446
+00:28:09,100 --> 00:28:12,300
+at the very beginning of us 
+talking about monads, you you 
+
+447
+00:28:12,300 --> 00:28:20,500
+asked like something around, is 
+this a monad and, and I think 
+
+448
+00:28:20,500 --> 00:28:22,900
+that there's there's two 
+different ways that you can go 
+
+449
+00:28:22,900 --> 00:28:27,000
+with that conversation but the 
+math person in me wants to say 
+
+450
+00:28:27,100 --> 00:28:29,600
+the way that we prove that 
+something is a monad is, does 
+
+451
+00:28:29,600 --> 00:28:33,800
+it, does it fulfill the law? 
+The mathematical algebraic laws 
+
+452
+00:28:33,800 --> 00:28:35,900
+of monads. 
+And that's how we know if it's a
+
+453
+00:28:35,900 --> 00:28:40,000
+moan and the engineer and me 
+says, okay if our goal is to 
+
+454
+00:28:40,000 --> 00:28:44,800
+chain, is to compose functions. 
+And this thing allows us to 
+
+455
+00:28:44,800 --> 00:28:51,600
+compose functions then, at least
+it's That Mona dish. 
+
+456
+00:28:51,900 --> 00:28:55,000
+Yeah, you know it's got the 
+basic ideas in there which is 
+
+457
+00:28:55,000 --> 00:28:58,400
+that instead of just returning 
+result, you're returning a 
+
+458
+00:28:58,408 --> 00:29:01,400
+package of information which in 
+this case includes has the 
+
+459
+00:29:01,400 --> 00:29:05,000
+result. 
+And then this null to tell you 
+
+460
+00:29:05,200 --> 00:29:08,200
+that there wasn't a result not. 
+Yeah. 
+
+461
+00:29:08,400 --> 00:29:15,400
+And so and and the ability for 
+something to know what to do 
+
+462
+00:29:15,400 --> 00:29:19,400
+with that package and make a 
+decision about what it returns. 
+
+463
+00:29:19,900 --> 00:29:27,100
+Because in back to your question
+of is the is returning a null or
+
+464
+00:29:27,100 --> 00:29:30,200
+a value? 
+Is that monadic? 
+
+465
+00:29:30,700 --> 00:29:35,800
+And I itself I would say no 
+because well we could you know 
+
+466
+00:29:35,800 --> 00:29:37,000
+we could talk about it on the 
+Masa. 
+
+467
+00:29:37,000 --> 00:29:40,600
+I don't want it's not but I 
+think on the monad ish side. 
+
+468
+00:29:40,600 --> 00:29:43,500
+Is this even mowed at not mode 
+addict but Mona a dish. 
+
+469
+00:29:43,900 --> 00:29:48,400
+Then I would say no because the 
+so the way that we usually 
+
+470
+00:29:48,400 --> 00:29:52,600
+convey if They the package of 
+information is through the type 
+
+471
+00:29:52,600 --> 00:29:58,400
+system, and in the case of your 
+example of returning, a null or 
+
+472
+00:29:58,400 --> 00:30:02,300
+a value, your type system is not
+actually conveying that 
+
+473
+00:30:02,300 --> 00:30:06,000
+information. 
+The return, the return, the 
+
+474
+00:30:06,000 --> 00:30:09,700
+return type that you are 
+returning, does not convey that 
+
+475
+00:30:09,700 --> 00:30:15,300
+your two possible things are, 
+are no Laura value, well, plus 
+
+476
+00:30:15,300 --> 00:30:20,000
+there's no mechanism built into 
+the well, actually that mean Not
+
+477
+00:30:20,000 --> 00:30:21,600
+be true. 
+A lot of the functions. 
+
+478
+00:30:21,600 --> 00:30:26,200
+May check foreign handle nulls 
+and pass that along. 
+
+479
+00:30:26,300 --> 00:30:31,700
+So it's who needs to check that 
+and and decide what to do with 
+
+480
+00:30:31,700 --> 00:30:38,500
+that and in the in the case of 
+monads, my code doesn't have to 
+
+481
+00:30:38,500 --> 00:30:44,900
+check the the it doesn't have to
+check the package information. 
+
+482
+00:30:45,600 --> 00:30:49,100
+It's a my function that I'm 
+operating on my second 
+
+483
+00:30:49,100 --> 00:30:51,300
+operation. 
+On, on this package of 
+
+484
+00:30:51,300 --> 00:30:54,400
+information doesn't have to look
+at the package information, to 
+
+485
+00:30:54,400 --> 00:30:56,800
+decide what to do. 
+And I think that's part of the 
+
+486
+00:30:56,800 --> 00:31:01,300
+difference with monads is that 
+so it's wired into each function
+
+487
+00:31:01,600 --> 00:31:04,800
+to say, oh, well, this failed, 
+I'll just pass it along. 
+
+488
+00:31:05,400 --> 00:31:08,400
+For example, for example, for 
+example, I mean lots of other 
+
+489
+00:31:08,400 --> 00:31:13,600
+possibilities, But, but so, in 
+the case of a function, that 
+
+490
+00:31:13,600 --> 00:31:17,300
+returns a null, or result and 
+let's say you even have cotton 
+
+491
+00:31:17,300 --> 00:31:19,200
+in that can be expressed in the 
+type system. 
+
+492
+00:31:20,100 --> 00:31:24,500
+When you call a function that 
+returns that you need to, to 
+
+493
+00:31:24,500 --> 00:31:28,100
+take to do something with that. 
+You need to actually have like 
+
+494
+00:31:28,100 --> 00:31:30,800
+a, if and say, if this was 
+normal, then do this. 
+
+495
+00:31:31,100 --> 00:31:34,000
+If this wasn't all then, get the
+value and do this. 
+
+496
+00:31:34,500 --> 00:31:40,300
+And when things become monad, 
+Ashan this use case is, when I 
+
+497
+00:31:40,300 --> 00:31:42,000
+don't have to do that. 
+Check in. 
+
+498
+00:31:42,400 --> 00:31:46,600
+I just, I just say okay, take 
+take the output of that function
+
+499
+00:31:46,900 --> 00:31:51,500
+and give it to this function. 
+And I don't have to do, I don't 
+
+500
+00:31:51,500 --> 00:31:53,600
+have to do the check in about, I
+don't have to look at the 
+
+501
+00:31:53,600 --> 00:31:56,600
+package information. 
+You just do what you want to do 
+
+502
+00:31:56,600 --> 00:31:59,200
+and the rest of its automated, 
+right? 
+
+503
+00:31:59,300 --> 00:32:02,300
+Yeah. 
+And and so the one of the ways 
+
+504
+00:32:02,300 --> 00:32:07,100
+to do this is with flat map. 
+So I provide my second 
+
+505
+00:32:07,100 --> 00:32:09,700
+operation. 
+So I take a something that's has
+
+506
+00:32:09,700 --> 00:32:12,600
+that package information and I 
+call flat map on it and give it 
+
+507
+00:32:12,600 --> 00:32:14,300
+a function. 
+And when I give it, that 
+
+508
+00:32:14,300 --> 00:32:17,300
+function, that function again, 
+doesn't have to look at the 
+
+509
+00:32:17,300 --> 00:32:22,400
+package information. 
+But that's a special flatmap, 
+
+510
+00:32:22,400 --> 00:32:24,600
+right? 
+That's not just any flat map. 
+
+511
+00:32:25,200 --> 00:32:30,400
+It is a so, so the the flagman 
+overload it, right? 
+
+512
+00:32:31,200 --> 00:32:35,400
+So we'll sew on the case of an 
+option option has a flat map 
+
+513
+00:32:35,400 --> 00:32:40,200
+function, right? 
+And so, so when I call flat map 
+
+514
+00:32:40,200 --> 00:32:45,600
+on an option, that is where that
+is where the monad decides. 
+
+515
+00:32:45,700 --> 00:32:49,600
+Oh, if it was none, then I'm 
+just Going to return. 
+
+516
+00:32:49,600 --> 00:32:52,800
+None. 
+If, if it was some, if it had a 
+
+517
+00:32:52,808 --> 00:32:55,900
+value, then I'm going to apply 
+the function that you gave me to
+
+518
+00:32:55,900 --> 00:33:01,600
+that value, which can then that 
+function needs to return an 
+
+519
+00:33:01,600 --> 00:33:06,800
+option as well. 
+So each monad has its own well, 
+
+520
+00:33:06,800 --> 00:33:13,200
+for example flatmap, it has its 
+own defined set of operations to
+
+521
+00:33:13,200 --> 00:33:19,000
+perform on itself and the I 
+don't know user of this. 
+
+522
+00:33:19,200 --> 00:33:22,600
+Goes I'm going to assume you 
+have for example, a flat map and
+
+523
+00:33:22,600 --> 00:33:25,600
+I'm just going to call it. 
+You're going to do you know it's
+
+524
+00:33:25,800 --> 00:33:29,200
+well actually it's kind of 
+polymorphic right? 
+
+525
+00:33:29,800 --> 00:33:32,500
+Because it works with all these 
+different types as long as they 
+
+526
+00:33:32,500 --> 00:33:34,400
+have a flat map. 
+I'm just going to call your flat
+
+527
+00:33:34,400 --> 00:33:38,500
+map and it's so different 
+different languages and 
+
+528
+00:33:38,600 --> 00:33:40,800
+Technologies of implemented this
+differently. 
+
+529
+00:33:40,900 --> 00:33:44,300
+Sure. 
+One way to implement it is to 
+
+530
+00:33:44,300 --> 00:33:50,500
+have a a use inheritance to say.
+Say okay, if I inherit 
+
+531
+00:33:50,500 --> 00:33:54,000
+essentially from from monad, 
+then I get a flat map. 
+
+532
+00:33:54,400 --> 00:33:58,300
+And so then you can be sure that
+if you are dealing with 
+
+533
+00:33:58,300 --> 00:34:01,200
+something that inherits her 
+monad that it's monadic and you 
+
+534
+00:34:01,200 --> 00:34:03,600
+can call flat map on it. 
+That's one way to do a course, 
+
+535
+00:34:03,600 --> 00:34:06,600
+you have to, then override the 
+flat map to do the appropriate 
+
+536
+00:34:06,600 --> 00:34:08,600
+thing for your maybe, your maybe
+limo. 
+
+537
+00:34:08,600 --> 00:34:10,699
+But yeah, sure. 
+Yeah, usual, yeah. 
+
+538
+00:34:10,699 --> 00:34:13,000
+It monad is a trade. 
+Doesn't have an implementation 
+
+539
+00:34:13,000 --> 00:34:16,100
+by default. 
+So a list would have a different
+
+540
+00:34:16,100 --> 00:34:18,900
+implementation than an option 
+and it's not it. 
+
+541
+00:34:19,100 --> 00:34:22,000
+Fourth. 
+So that's one way to do it. 
+
+542
+00:34:22,000 --> 00:34:24,699
+The scholar standard Library 
+doesn't do it this way the 
+
+543
+00:34:24,699 --> 00:34:29,199
+scholar standard Library. 
+Says if something has a flat map
+
+544
+00:34:29,199 --> 00:34:33,300
+function on it just a function 
+called flat map, then we're 
+
+545
+00:34:33,300 --> 00:34:38,000
+going to consider it a monad. 
+And so, so what's interesting 
+
+546
+00:34:38,000 --> 00:34:40,699
+is, if you look so in the 
+scholar standard Library, there 
+
+547
+00:34:40,699 --> 00:34:43,900
+is no monad. 
+Sure, trade. 
+
+548
+00:34:45,100 --> 00:34:48,300
+There are a lot of things that 
+have a flat map on them and so, 
+
+549
+00:34:48,300 --> 00:34:52,000
+by convention, Auction by 
+convention, is how how, you know
+
+550
+00:34:52,000 --> 00:34:54,800
+that things are and that's all 
+it needs is a flat map. 
+
+551
+00:34:58,800 --> 00:35:04,200
+I think it needs a flat map and 
+a filter well so no. 
+
+552
+00:35:04,200 --> 00:35:07,000
+Okay filter would be different. 
+So there so where this actually 
+
+553
+00:35:07,000 --> 00:35:10,400
+matters is to places and Scholar
+standard Library. 
+
+554
+00:35:10,600 --> 00:35:13,900
+One, is that in the 
+documentation it will say this 
+
+555
+00:35:13,900 --> 00:35:18,000
+is monadic and so it's kind of 
+like just conveying information 
+
+556
+00:35:18,000 --> 00:35:19,900
+to the user like this is 
+monadic. 
+
+557
+00:35:19,900 --> 00:35:23,700
+And then then the other place 
+where it gets used, is that 
+
+558
+00:35:25,900 --> 00:35:33,000
+Chaining these monads together 
+is, is nesting, right? 
+
+559
+00:35:33,000 --> 00:35:36,600
+So, if I, so if I have something
+that returns a genetic value, 
+
+560
+00:35:36,700 --> 00:35:39,000
+and then I want to perform 
+another operation on it with a 
+
+561
+00:35:39,008 --> 00:35:41,200
+flat map, and then another one 
+on that value. 
+
+562
+00:35:41,200 --> 00:35:44,000
+And then another one, another 
+one, I'm just doing this very 
+
+563
+00:35:44,000 --> 00:35:48,600
+deep nesting in my code and it 
+it's kind of cumbersome. 
+
+564
+00:35:48,600 --> 00:35:52,700
+It doesn't look very nice and so
+as far as I know Haskell but 
+
+565
+00:35:52,700 --> 00:35:54,000
+maybe it came before high 
+school. 
+
+566
+00:35:54,300 --> 00:36:01,200
+There was a A a language syntax 
+that knew how to make make 
+
+567
+00:36:01,700 --> 00:36:05,600
+dealing with monads look 
+imperative instead of so making 
+
+568
+00:36:05,600 --> 00:36:08,700
+it look. 
+You actually structure your code
+
+569
+00:36:08,700 --> 00:36:09,800
+like first. 
+I do this. 
+
+570
+00:36:09,800 --> 00:36:11,100
+Then I do this. 
+Then I do this. 
+
+571
+00:36:11,100 --> 00:36:12,100
+Then I do this. 
+Yep. 
+
+572
+00:36:12,100 --> 00:36:15,200
+So make it look imperative. 
+I do this and and on different 
+
+573
+00:36:15,200 --> 00:36:19,700
+lines instead of nesting and in 
+Haskell is called do notation. 
+
+574
+00:36:20,100 --> 00:36:25,000
+And so in Scala, they created 
+their own do notation thing. 
+
+575
+00:36:25,100 --> 00:36:31,400
+That knows how to handle monads.
+And so when you are, when you 
+
+576
+00:36:31,400 --> 00:36:35,900
+are, are using the do notation, 
+which is with a, for the, for 
+
+577
+00:36:35,900 --> 00:36:41,400
+syntax and Scala to get that 
+imperative style of code, which 
+
+578
+00:36:41,400 --> 00:36:45,100
+reads and looks a whole lot 
+nicer in order for you. 
+
+579
+00:36:45,100 --> 00:36:47,300
+The Scala compiler. 
+Enforces that in order for you 
+
+580
+00:36:47,300 --> 00:36:52,300
+to use something in that way, in
+that do notation style, it has 
+
+581
+00:36:52,300 --> 00:36:56,200
+to have a flat map method and it
+has to have Map method. 
+
+582
+00:36:57,700 --> 00:37:00,100
+And the reason why I have to 
+have a map method is because 
+
+583
+00:37:00,100 --> 00:37:03,700
+when you get to the last 
+statement in do notation you 
+
+584
+00:37:03,700 --> 00:37:07,300
+don't call flatmap, you Call map
+and so it's really just the 
+
+585
+00:37:07,300 --> 00:37:10,500
+syntactic sugar around the 
+chaining through flat map and 
+
+586
+00:37:10,500 --> 00:37:13,600
+map to make your code look 
+imperative. 
+
+587
+00:37:13,800 --> 00:37:17,300
+Hmm. 
+Yeah, because a lot of, I mean, 
+
+588
+00:37:17,300 --> 00:37:25,000
+like even Java 8 kind of took on
+that do this Dot and then on the
+
+589
+00:37:25,100 --> 00:37:28,800
+Next line, dot do, the next 
+thing to do the next thing which
+
+590
+00:37:28,900 --> 00:37:32,500
+I think originated from 
+functional programming that that
+
+591
+00:37:32,500 --> 00:37:36,800
+style of China together. 
+So so you can't do that with 
+
+592
+00:37:36,800 --> 00:37:39,800
+with monads. 
+You can't do that style of 
+
+593
+00:37:39,800 --> 00:37:42,600
+chaining with monads because the
+way that you chain monads is 
+
+594
+00:37:42,600 --> 00:37:46,300
+through flat map and so that's 
+where that's why you get into 
+
+595
+00:37:46,300 --> 00:37:51,700
+the nesting with monads is that 
+you're not, you're not calling 
+
+596
+00:37:54,100 --> 00:37:56,400
+your calling. 
+Then it takes a function as a 
+
+597
+00:37:56,400 --> 00:38:00,400
+parameter and so that's why you 
+end up nesting deeper and deeper
+
+598
+00:38:00,400 --> 00:38:04,100
+and deeper, by default. 
+Whereas in the Java style you're
+
+599
+00:38:04,100 --> 00:38:06,500
+talking about, you're not 
+calling things that take 
+
+600
+00:38:06,500 --> 00:38:10,900
+functions. 
+You're just calling methods on 
+
+601
+00:38:10,900 --> 00:38:14,600
+on a thing and so you can do 
+chaining and that's that would 
+
+602
+00:38:14,600 --> 00:38:17,900
+just be like like function 
+chaining basically without 
+
+603
+00:38:17,900 --> 00:38:20,900
+monads. 
+But you could, I mean it seems 
+
+604
+00:38:20,900 --> 00:38:26,100
+like if you're if each one of 
+those Patrick, Returns. 
+
+605
+00:38:27,200 --> 00:38:29,100
+You know, a package of 
+information. 
+
+606
+00:38:30,200 --> 00:38:33,900
+Then the next one, could accept 
+that and do something useful 
+
+607
+00:38:33,900 --> 00:38:36,300
+with it. 
+Maybe not as nicely as what 
+
+608
+00:38:36,300 --> 00:38:38,400
+you're talking about, but it 
+still could. 
+
+609
+00:38:39,600 --> 00:38:41,200
+Yeah. 
+Could you have syntax that would
+
+610
+00:38:41,200 --> 00:38:45,100
+give you like the dot notation 
+across monads? 
+
+611
+00:38:47,800 --> 00:38:50,100
+Not with our current languages 
+that I've seen. 
+
+612
+00:38:50,100 --> 00:38:53,800
+Because because the way that 
+you, the way that you operate on
+
+613
+00:38:53,800 --> 00:38:57,500
+a monad is by by calling flatmap
+with a function. 
+
+614
+00:38:57,500 --> 00:39:00,500
+That's going to do that. 
+Do that next operation. 
+
+615
+00:39:01,700 --> 00:39:04,200
+Yeah. 
+Which I see makes sense because 
+
+616
+00:39:04,200 --> 00:39:07,300
+you're wanting to have all of 
+that internal scaffolding that 
+
+617
+00:39:07,300 --> 00:39:09,200
+you don't have to reproduce for 
+each function. 
+
+618
+00:39:09,200 --> 00:39:10,400
+That's right. 
+Right. 
+
+619
+00:39:10,400 --> 00:39:13,900
+So that that makes sense. 
+But now I'm also intrigued by 
+
+620
+00:39:13,900 --> 00:39:21,500
+this idea of being able to Well 
+and see what what the the null 
+
+621
+00:39:21,600 --> 00:39:26,300
+versus value thing does in 
+kotlin. 
+
+622
+00:39:26,300 --> 00:39:29,000
+Which I you know, is a 
+compromise for sure. 
+
+623
+00:39:29,000 --> 00:39:32,300
+Because they could have they 
+know about monads. 
+
+624
+00:39:32,300 --> 00:39:34,300
+They could have gone full monad.
+Yeah. 
+
+625
+00:39:34,700 --> 00:39:38,000
+Could have gone full moon? 
+Add ammonia and but they chose 
+
+626
+00:39:38,000 --> 00:39:43,800
+not to for you know this same 
+reason that, you know, C++ is 
+
+627
+00:39:43,800 --> 00:39:46,400
+backwards compatible with see. 
+I think they thought it was 
+
+628
+00:39:46,400 --> 00:39:51,300
+going to be too big. 
+Of a of a shift, but it does 
+
+629
+00:39:51,300 --> 00:39:55,700
+allow you to chain things 
+together and then each one can 
+
+630
+00:39:55,700 --> 00:39:58,500
+say, oh, if it's null pass it 
+on. 
+
+631
+00:39:58,700 --> 00:40:01,400
+Yep. 
+If it's, if it's not in on, let 
+
+632
+00:40:01,400 --> 00:40:04,200
+somebody else deal with it, or 
+maybe even add a hat. 
+
+633
+00:40:04,200 --> 00:40:08,600
+Include say an exception that 
+gets thrown or, or, you know, 
+
+634
+00:40:08,600 --> 00:40:10,700
+some kind of error condition. 
+Yeah. 
+
+635
+00:40:10,700 --> 00:40:14,500
+So there I've seen some 
+discussion on Twitter around the
+
+636
+00:40:14,600 --> 00:40:20,100
+Elvis, operator, and how in 
+JavaScript and in kotlin and 
+
+637
+00:40:20,600 --> 00:40:23,400
+other languages too. 
+I'm sure it was really just used
+
+638
+00:40:23,400 --> 00:40:27,000
+for Knoll ability and being able
+to walk through a chain of of 
+
+639
+00:40:27,000 --> 00:40:35,000
+knowable things, but That is one
+specific place that you would 
+
+640
+00:40:35,000 --> 00:40:37,900
+want to do chain ability. 
+And one of the the discussions 
+
+641
+00:40:37,900 --> 00:40:40,600
+that I saw was saying it would 
+have been a whole lot more 
+
+642
+00:40:40,600 --> 00:40:43,900
+interesting. 
+If they had had done that 
+
+643
+00:40:44,000 --> 00:40:48,800
+enabled that Syntax for 
+anything, that can be chained 
+
+644
+00:40:49,300 --> 00:40:52,600
+basically through monads, 
+instead of just for nullable 
+
+645
+00:40:52,600 --> 00:40:54,400
+things. 
+And I thought that was 
+
+646
+00:40:54,400 --> 00:40:56,900
+interesting was I think what 
+they would eventually have 
+
+647
+00:40:56,900 --> 00:41:00,300
+gotten to his something like do 
+notation, right? 
+
+648
+00:41:00,600 --> 00:41:02,800
+For doing that. 
+Chaining but what was 
+
+649
+00:41:02,800 --> 00:41:07,800
+interesting that that JavaScript
+in kotlin, only only looked at 
+
+650
+00:41:07,800 --> 00:41:12,800
+that problem chain ability for 
+knowable things and they didn't 
+
+651
+00:41:12,800 --> 00:41:16,600
+look at oh we might want to 
+chain asynchronous operations in
+
+652
+00:41:16,600 --> 00:41:21,900
+the same way or we might want to
+chain other things that you 
+
+653
+00:41:21,900 --> 00:41:25,700
+know, and other monadic things 
+in the same way. 
+
+654
+00:41:25,900 --> 00:41:28,300
+And how can we, how can we 
+generalize this? 
+
+655
+00:41:28,500 --> 00:41:31,500
+Instead of making it specific? 
+The nice thing about making it 
+
+656
+00:41:31,500 --> 00:41:35,400
+specific to just know ability is
+that it constrains the problem 
+
+657
+00:41:35,400 --> 00:41:38,200
+and makes it a lot easier to 
+learn a lot simpler and to 
+
+658
+00:41:38,200 --> 00:41:40,400
+implement with the compiler and 
+all that kind of stuff. 
+
+659
+00:41:40,400 --> 00:41:43,200
+Yeah. 
+And whereas do notation much 
+
+660
+00:41:43,200 --> 00:41:48,400
+more powerful, the imperative 
+syntax for for doing chaining of
+
+661
+00:41:48,400 --> 00:41:51,300
+things because you can do it 
+with anything with a flat map 
+
+662
+00:41:51,300 --> 00:41:57,100
+basically, but at the same time 
+it because it's so General, it 
+
+663
+00:41:57,100 --> 00:41:59,000
+is more confusing. 
+I remember when you and I were 
+
+664
+00:41:59,000 --> 00:42:04,100
+First Learning Ads we work until
+you were lured by Nats. 
+
+665
+00:42:04,100 --> 00:42:06,200
+I was confused about the for way
+longer. 
+
+666
+00:42:06,300 --> 00:42:09,700
+I remember we were specifically 
+looking at chaining Scala 
+
+667
+00:42:09,700 --> 00:42:14,500
+Futures in with using the the do
+notation and we're confused 
+
+668
+00:42:14,500 --> 00:42:17,200
+about about something related to
+that. 
+
+669
+00:42:17,400 --> 00:42:22,300
+And so I think that in some ways
+the general - of do notation and
+
+670
+00:42:22,300 --> 00:42:26,600
+and monadic operations and Scala
+makes it harder to learn about 
+
+671
+00:42:26,600 --> 00:42:28,600
+confusing. 
+Absolutely, this is the surface 
+
+672
+00:42:28,600 --> 00:42:31,900
+area definitely. 
+I mean In now that it's starting
+
+673
+00:42:31,900 --> 00:42:36,500
+to come together for me, I can 
+see exactly why it's so much 
+
+674
+00:42:36,500 --> 00:42:40,800
+more confusing. 
+And why you don't want to drop 
+
+675
+00:42:40,800 --> 00:42:46,000
+all of that stuff on somebody 
+right away, which is pretty much
+
+676
+00:42:46,000 --> 00:42:49,300
+what everybody does and they try
+and mitigate it by going. 
+
+677
+00:42:49,300 --> 00:42:53,400
+Well, it's a burrito but that 
+just confuses the situation, I 
+
+678
+00:42:53,400 --> 00:42:54,400
+think. 
+Yeah, yeah. 
+
+679
+00:42:54,408 --> 00:42:58,300
+So one of the things that I've 
+said a number of times or on 
+
+680
+00:42:58,300 --> 00:43:02,500
+monads is I really think people 
+Should use monads for years 
+
+681
+00:43:02,500 --> 00:43:06,400
+before they try to understand 
+what they actually are because I
+
+682
+00:43:06,400 --> 00:43:10,400
+fell into the Trap of on ads are
+so cool and everybody's talking 
+
+683
+00:43:10,400 --> 00:43:14,800
+about monads, I want understand 
+what they are and it really kind
+
+684
+00:43:14,800 --> 00:43:18,300
+of threw me off from what I 
+think needed to focus on at the 
+
+685
+00:43:18,300 --> 00:43:23,600
+time was just use monads and and
+learn the abstraction. 
+
+686
+00:43:23,600 --> 00:43:25,600
+The generalized abstraction 
+later. 
+
+687
+00:43:26,100 --> 00:43:28,000
+Yeah. 
+Well, I mean, it's essentially 
+
+688
+00:43:28,000 --> 00:43:31,700
+what I'm saying with start with 
+the ation as like. 
+
+689
+00:43:31,700 --> 00:43:36,800
+How does this help me before any
+of that other stuff? 
+
+690
+00:43:36,800 --> 00:43:39,500
+If I can, if I can see it, 
+mechanically working. 
+
+691
+00:43:40,000 --> 00:43:43,600
+Then that's much more 
+motivating. 
+
+692
+00:43:43,700 --> 00:43:49,800
+Yeah, but it's well, I mean I 
+don't know if I feel like you 
+
+693
+00:43:49,800 --> 00:43:52,700
+and I came up with the idea of a
+curse, the curse of the monad. 
+
+694
+00:43:52,700 --> 00:43:56,300
+But I've no that was Doug, Doug 
+Crawford as if it was on Doug. 
+
+695
+00:43:56,600 --> 00:43:59,500
+And this was like he said this, 
+like 10 years ago. 
+
+696
+00:43:59,500 --> 00:44:01,900
+I'm sure like that. 
+Is when he coined the okay, 
+
+697
+00:44:01,900 --> 00:44:05,900
+Kirsten the monad. 
+Yeah, but yeah, that right. 
+
+698
+00:44:05,900 --> 00:44:07,500
+You should say what the curse of
+the month at is. 
+
+699
+00:44:07,500 --> 00:44:10,600
+Well as soon as you understand 
+what monads are you become 
+
+700
+00:44:10,600 --> 00:44:12,900
+unable to explain them to anyone
+else. 
+
+701
+00:44:12,900 --> 00:44:14,400
+Yeah. 
+And we've been fighting that 
+
+702
+00:44:14,400 --> 00:44:18,300
+curse for going on. 
+What 57 years now or something 
+
+703
+00:44:18,300 --> 00:44:20,500
+like that? 
+We're gonna overcome it. 
+
+704
+00:44:20,800 --> 00:44:25,200
+Oh I'm sure everyone is confused
+by monads that's listening right
+
+705
+00:44:25,200 --> 00:44:29,200
+now. 
+But because the curse is so far 
+
+706
+00:44:29,800 --> 00:44:32,700
+I feel Like we've made some 
+progress here though because 
+
+707
+00:44:32,900 --> 00:44:40,100
+well, but at least I don't know,
+I could be just becoming cursed.
+
+708
+00:44:40,300 --> 00:44:42,200
+That's right. 
+I could just be going. 
+
+709
+00:44:42,600 --> 00:44:45,600
+I'm starting to see it now. 
+That's all of the clarity is 
+
+710
+00:44:45,600 --> 00:44:48,000
+fading away. 
+I can't explain anymore. 
+
+711
+00:44:48,500 --> 00:44:50,700
+Um, yeah so what now make sense 
+to you? 
+
+712
+00:44:50,700 --> 00:44:53,200
+Make sense to no one. 
+I don't know, but I feel like I 
+
+713
+00:44:53,200 --> 00:44:56,900
+mean that's my that's kind of my
+thing is remembering what it 
+
+714
+00:44:56,900 --> 00:44:59,000
+feels like to not understand 
+something. 
+
+715
+00:44:59,000 --> 00:45:01,700
+So I think I might be able to On
+to this long enough to. 
+
+716
+00:45:01,800 --> 00:45:05,900
+Yeah, it's still a challenge. 
+It's not like I've cracked it, 
+
+717
+00:45:05,900 --> 00:45:09,000
+but I feel like this ID this, 
+some of these ideas that we've 
+
+718
+00:45:09,000 --> 00:45:14,700
+talked about here is so John de 
+goes had a good kind of 
+
+719
+00:45:14,700 --> 00:45:18,300
+explanation of monads, which 
+which is something we've talked 
+
+720
+00:45:18,300 --> 00:45:20,400
+about already, but I want to 
+reiterate. 
+
+721
+00:45:21,300 --> 00:45:23,000
+He said I should have had the 
+Tweet ready. 
+
+722
+00:45:23,000 --> 00:45:26,200
+But he said something along the 
+lines of like monads, what 
+
+723
+00:45:26,200 --> 00:45:29,900
+they're really about is allowing
+you to program. 
+
+724
+00:45:30,300 --> 00:45:32,200
+Relatively and functional 
+programming. 
+
+725
+00:45:33,000 --> 00:45:38,400
+And without the ability to do 
+with without the existence of 
+
+726
+00:45:38,400 --> 00:45:41,400
+monads in functional 
+programming, there just is no 
+
+727
+00:45:41,400 --> 00:45:43,500
+way to like, have something that
+looks imperative. 
+
+728
+00:45:44,200 --> 00:45:49,300
+So it's not really imperative 
+because it's functions and the 
+
+729
+00:45:49,300 --> 00:45:52,500
+functions are just composed and 
+chained, but you can make it 
+
+730
+00:45:52,500 --> 00:45:57,300
+look imperative with monads and 
+monads are the only way to 
+
+731
+00:45:58,800 --> 00:46:00,600
+actually I think there is 
+another way that We've been 
+
+732
+00:46:00,600 --> 00:46:02,300
+talking about Byford, forgive 
+it's called. 
+
+733
+00:46:02,300 --> 00:46:05,500
+But anyways, it's the primary 
+way that we've discovered to 
+
+734
+00:46:05,500 --> 00:46:07,800
+make functional stuff look 
+imperative. 
+
+735
+00:46:09,300 --> 00:46:11,700
+Mmm. 
+And I don't know if that helps 
+
+736
+00:46:11,700 --> 00:46:17,200
+at all but well it fits in with 
+the model that I've been 
+
+737
+00:46:17,200 --> 00:46:22,300
+creating in my head whether it 
+helps someone trying to 
+
+738
+00:46:22,500 --> 00:46:25,100
+understand monads from scratch 
+as another question. 
+
+739
+00:46:25,400 --> 00:46:32,200
+Yeah, you know so but I think 
+yeah, I think and it's one of 
+
+740
+00:46:32,208 --> 00:46:36,600
+those things where I took a 
+screenwriting class once and the
+
+741
+00:46:36,600 --> 00:46:38,900
+teacher was saying, is so what 
+you want to do. 
+
+742
+00:46:39,700 --> 00:46:43,800
+Is set it up so that when you 
+hit this certain point in the 
+
+743
+00:46:43,800 --> 00:46:49,000
+story in the, you know, reader 
+or Watchers brain, it's like, 
+
+744
+00:46:49,000 --> 00:46:51,800
+dominoes falling, it's like, oh,
+that means this. 
+
+745
+00:46:51,800 --> 00:46:53,400
+And that means this. 
+And that means this. 
+
+746
+00:46:53,700 --> 00:46:57,500
+And I can sort of, I can sort of
+feel that happening, but I'm 
+
+747
+00:46:57,500 --> 00:47:00,200
+also trying to hang on to. 
+Yeah. 
+
+748
+00:47:00,200 --> 00:47:04,900
+But if you didn't understand 
+anything about this, how would 
+
+749
+00:47:04,900 --> 00:47:08,800
+you gain entry? 
+And I think the error condition,
+
+750
+00:47:09,000 --> 00:47:11,600
+Is probably the most compelling.
+Yeah. 
+
+751
+00:47:11,600 --> 00:47:16,300
+One because you know you've seen
+other approaches to try and 
+
+752
+00:47:16,700 --> 00:47:18,800
+Report handle errors. 
+Yeah. 
+
+753
+00:47:19,200 --> 00:47:27,600
+And I just kind of an aside one 
+of the kotlin designers had a 
+
+754
+00:47:27,600 --> 00:47:32,100
+nice blog post in the last month
+or two and then we're talking 
+
+755
+00:47:32,200 --> 00:47:35,600
+about exception. 
+Yeah yeah you know which one I'm
+
+756
+00:47:35,600 --> 00:47:38,900
+talking about yeah is ready, 
+made some very clear. 
+
+757
+00:47:39,100 --> 00:47:42,700
+Sanctions about here's where 
+because when they were 
+
+758
+00:47:42,700 --> 00:47:45,800
+introduced into C++, I was on 
+the committee then and I was 
+
+759
+00:47:45,800 --> 00:47:48,400
+trying to figure out what is 
+this, you know, this doesn't 
+
+760
+00:47:48,400 --> 00:47:53,400
+look anything like what I'm used
+to looking at and, and it was 
+
+761
+00:47:53,400 --> 00:47:57,800
+supposed to handle. 
+All it was it was the unified 
+
+762
+00:47:57,800 --> 00:48:03,600
+way of reporting errors and and 
+the goal was ultimately to be 
+
+763
+00:48:03,600 --> 00:48:07,500
+able to recover from errors. 
+Yeah, and I think what this blog
+
+764
+00:48:07,500 --> 00:48:13,500
+post Pointed out. 
+Was there are such things as 
+
+765
+00:48:13,500 --> 00:48:17,600
+recoverable errors but they're 
+really rare and then everything 
+
+766
+00:48:17,600 --> 00:48:22,600
+else is really just reporting 
+and the exception using an 
+
+767
+00:48:22,600 --> 00:48:27,900
+exception whose primary goal was
+recovery to do everything. 
+
+768
+00:48:28,900 --> 00:48:32,700
+Well was a mistake. 
+Yeah and then Java took the 
+
+769
+00:48:32,700 --> 00:48:36,600
+mistake and ran with it and now 
+Colin did too well which we're 
+
+770
+00:48:36,600 --> 00:48:38,900
+going to talk about with Cedric 
+next. 
+
+771
+00:48:39,600 --> 00:48:42,700
+Oh, so that's one of his topics 
+he wants to revisit some things 
+
+772
+00:48:42,700 --> 00:48:44,300
+we talked about with Colin. 
+Yeah. 
+
+773
+00:48:44,300 --> 00:48:47,800
+And and the exceptions is one of
+them said be more about that and
+
+774
+00:48:47,800 --> 00:48:51,700
+they didn't, I wouldn't, you 
+know, I would kind of guess they
+
+775
+00:48:51,700 --> 00:48:54,600
+would have probably if they were
+able to start from scratch. 
+
+776
+00:48:54,600 --> 00:49:00,400
+They would have narrowed them 
+down to be used for things that 
+
+777
+00:49:00,400 --> 00:49:03,500
+you could actually recover from 
+and then do something else for 
+
+778
+00:49:03,500 --> 00:49:06,400
+everything else. 
+But they had to, you know, 
+
+779
+00:49:06,400 --> 00:49:10,100
+they're working on the jvm so 
+they had to Deal with it. 
+
+780
+00:49:10,500 --> 00:49:12,100
+What Java does. 
+Yeah. 
+
+781
+00:49:12,100 --> 00:49:14,000
+So but they don't have checked 
+exceptions. 
+
+782
+00:49:14,700 --> 00:49:17,800
+So yeah, there there are no 
+checked exceptions added and 
+
+783
+00:49:17,800 --> 00:49:20,300
+kotlin. 
+Yeah, and they don't respect 
+
+784
+00:49:20,300 --> 00:49:24,100
+checked exceptions from java. 
+So just stand there is a change 
+
+785
+00:49:24,100 --> 00:49:28,500
+there. 
+So this is similar to a 
+
+786
+00:49:28,508 --> 00:49:32,300
+conversation that I had with 
+with some folks who are building
+
+787
+00:49:32,800 --> 00:49:36,200
+a UI framework and this UI 
+framework. 
+
+788
+00:49:37,500 --> 00:49:45,200
+It was In mutation, like hidden 
+mutation to chain chain things 
+
+789
+00:49:45,200 --> 00:49:49,200
+together. 
+And when I, when I saw it, I was
+
+790
+00:49:49,200 --> 00:49:54,300
+like, man, like, like I wish 
+they would have used monads for 
+
+791
+00:49:54,300 --> 00:49:56,800
+this instead because monads are 
+just such a great. 
+
+792
+00:49:56,900 --> 00:50:00,800
+This is wait, I'll chain know 
+some of them, I don't want to 
+
+793
+00:50:01,700 --> 00:50:04,600
+disclose because okay, but um, 
+because I'm going to talk dirty 
+
+794
+00:50:04,600 --> 00:50:09,500
+about about them and are. 
+But so, so I I talked to the 
+
+795
+00:50:09,500 --> 00:50:12,800
+engineers, some of the engineers
+and I was like, I was like, why 
+
+796
+00:50:12,800 --> 00:50:14,600
+didn't you all use monads for 
+this? 
+
+797
+00:50:14,600 --> 00:50:18,100
+Instead, it would, it monads fit
+this so much better. 
+
+798
+00:50:18,500 --> 00:50:22,700
+And they said, well, monads are 
+too complex and no one would 
+
+799
+00:50:22,700 --> 00:50:25,700
+understand it. 
+And all that and I've wondered 
+
+800
+00:50:25,700 --> 00:50:30,500
+if that attitude towards monads,
+which yes, monads. 
+
+801
+00:50:30,500 --> 00:50:33,200
+They're like as we've 
+experienced like, it's not the 
+
+802
+00:50:33,200 --> 00:50:37,900
+easiest subject but I wonder if 
+the attitude towards monads of 
+
+803
+00:50:38,300 --> 00:50:43,600
+nobody can They're too hard. 
+His actually propagated using 
+
+804
+00:50:44,000 --> 00:50:50,700
+inferior design choices and kept
+people from from something that 
+
+805
+00:50:50,700 --> 00:50:54,400
+they really should do like kept 
+people from the way that they 
+
+806
+00:50:54,400 --> 00:50:57,100
+should be doing things, the 
+better way. 
+
+807
+00:50:57,100 --> 00:51:01,300
+And I know this is always hard 
+and there's you know, it's hard 
+
+808
+00:51:01,300 --> 00:51:04,600
+to know always know when you 
+should go with a better way or 
+
+809
+00:51:04,600 --> 00:51:07,800
+not. 
+But with monads I'm always like 
+
+810
+00:51:07,800 --> 00:51:11,300
+God we should It's like, get 
+over this monads or hard thing 
+
+811
+00:51:11,300 --> 00:51:14,800
+and just use monads where we 
+should use monads and we're 
+
+812
+00:51:14,800 --> 00:51:17,200
+relates back to your previous 
+conversation is like God. 
+
+813
+00:51:17,200 --> 00:51:20,600
+I wish Collinwood use Moon ads 
+for their return types because 
+
+814
+00:51:20,600 --> 00:51:22,500
+it's just is so much better of a
+way. 
+
+815
+00:51:22,700 --> 00:51:25,000
+And yeah, people are going to 
+have to learn monads and that's 
+
+816
+00:51:25,000 --> 00:51:28,600
+going to be hard, but wouldn't 
+we rather them learn the right? 
+
+817
+00:51:28,600 --> 00:51:33,200
+The better way to do this, then 
+then propagating the the wrong 
+
+818
+00:51:33,600 --> 00:51:36,800
+way, the exceptions and that 
+messiness. 
+
+819
+00:51:37,400 --> 00:51:42,700
+Mmm. 
+Well I can't say I've ever seen 
+
+820
+00:51:42,700 --> 00:51:48,900
+an article which like, says 
+here, use yummy you because you 
+
+821
+00:51:48,900 --> 00:51:51,100
+keep saying, you know, people 
+should just use monads. 
+
+822
+00:51:51,300 --> 00:51:53,000
+Well, I haven't really seen an 
+article. 
+
+823
+00:51:53,000 --> 00:51:55,100
+It says, here we are using 
+monads. 
+
+824
+00:51:55,100 --> 00:51:58,800
+See how easy it is? 
+Don't see that a lot and I think
+
+825
+00:51:58,800 --> 00:52:03,200
+that's the direction that it 
+needs to be taken from, but I 
+
+826
+00:52:03,208 --> 00:52:07,600
+have it. 
+Do you know of any languages 
+
+827
+00:52:07,600 --> 00:52:12,600
+that are being developed? 
+All up to that are using monads 
+
+828
+00:52:12,600 --> 00:52:18,400
+is first class. 
+You know, integrated Elm is the 
+
+829
+00:52:18,400 --> 00:52:24,800
+is one of the most recent ones. 
+And then I think that they don't
+
+830
+00:52:24,800 --> 00:52:27,700
+talk about monads and he'll sure
+that they don't really talk 
+
+831
+00:52:27,700 --> 00:52:30,200
+about money on ads. 
+But but yeah, it definitely. 
+
+832
+00:52:30,200 --> 00:52:35,000
+And there is, I mean, my under 
+from what I study developed 
+
+833
+00:52:35,200 --> 00:52:39,800
+there was like well we do all 
+this stuff but The mutation 
+
+834
+00:52:39,800 --> 00:52:45,000
+happens in this hidden place and
+it confused me. 
+
+835
+00:52:45,000 --> 00:52:50,200
+I still was, but I assume 
+that's, that's the monad. 
+
+836
+00:52:50,700 --> 00:52:53,400
+It's all monads. 
+It's been a while since I've 
+
+837
+00:52:53,400 --> 00:52:57,500
+done, but I remember they had 
+like this pipe operator thing 
+
+838
+00:52:57,800 --> 00:52:59,900
+and the pipe operator. 
+I think was like they're flat 
+
+839
+00:52:59,900 --> 00:53:03,600
+map essentially saying like take
+the results of this thing and 
+
+840
+00:53:03,600 --> 00:53:07,100
+pass it on to this other thing, 
+you know, they do. 
+
+841
+00:53:07,400 --> 00:53:10,300
+So I think that the pipe It is 
+essentially they're flat map, 
+
+842
+00:53:10,300 --> 00:53:13,400
+but it's been a while. 
+But that is, that was pretty 
+
+843
+00:53:13,400 --> 00:53:15,300
+straightforward to look at, 
+right? 
+
+844
+00:53:15,300 --> 00:53:17,100
+And so, what was interesting is,
+I think you're right. 
+
+845
+00:53:17,100 --> 00:53:19,400
+They didn't actually talk about 
+that as being, they were very 
+
+846
+00:53:19,400 --> 00:53:21,600
+careful. 
+Never to use the word Mount. 
+
+847
+00:53:21,600 --> 00:53:26,200
+Yeah. 
+Other languages all the like 
+
+848
+00:53:26,200 --> 00:53:28,700
+Haskell derivations. 
+Of course, are all because 
+
+849
+00:53:28,700 --> 00:53:31,000
+Elmo's, basically copy of 
+Haskell. 
+
+850
+00:53:31,000 --> 00:53:32,800
+Yeah. 
+So, yeah, I think anything that 
+
+851
+00:53:32,800 --> 00:53:37,000
+kind of has its roots in Haskell
+is going to be monad, monad kind
+
+852
+00:53:37,000 --> 00:53:43,200
+of first. 
+And then I've started to do some
+
+853
+00:53:43,300 --> 00:53:50,200
+exploration into Unison, which 
+is, I'm so enamored by Unison 
+
+854
+00:53:50,200 --> 00:53:54,800
+and we should do an episode 
+astute with with them, but but I
+
+855
+00:53:54,800 --> 00:53:57,100
+think that what a lot of what 
+they're doing is based on one 
+
+856
+00:53:57,100 --> 00:54:00,600
+ads, but, but I haven't done 
+enough with unison. 
+
+857
+00:54:00,600 --> 00:54:03,200
+To kind of know how foundational
+that concept is. 
+
+858
+00:54:04,800 --> 00:54:08,800
+And is that I thought that that 
+was still like being developed, 
+
+859
+00:54:09,000 --> 00:54:12,300
+It's not, it's like ready for 
+Prime Times very early days for 
+
+860
+00:54:12,300 --> 00:54:14,000
+okay Unison. 
+But yeah, we should do an 
+
+861
+00:54:14,000 --> 00:54:19,400
+episode on Unison, and get will 
+get ruin our skies from Unison 
+
+862
+00:54:19,400 --> 00:54:22,000
+on. 
+Because I'm, I think Unison is 
+
+863
+00:54:22,000 --> 00:54:27,000
+the most Innovative thing to 
+happen in programming languages 
+
+864
+00:54:27,000 --> 00:54:29,600
+and a really long time. 
+So, mmm. 
+
+865
+00:54:29,600 --> 00:54:34,800
+But anyways, what else on 
+monads? 
+
+866
+00:54:34,800 --> 00:54:41,500
+Are we Puts we should, we should
+live listeners with some monadic
+
+867
+00:54:41,500 --> 00:54:45,500
+advice or something like, like 
+what do you like, people people?
+
+868
+00:54:45,500 --> 00:54:48,100
+I think are interested in 
+monads. 
+
+869
+00:54:49,400 --> 00:54:52,600
+I do my advices, use them. 
+Just use them. 
+
+870
+00:54:52,600 --> 00:54:55,500
+Like when I started doing Scala,
+I always know what that means 
+
+871
+00:54:55,500 --> 00:54:56,600
+though. 
+Just use them. 
+
+872
+00:54:56,800 --> 00:55:00,100
+Well, I guess like in the case 
+of Colin one, answer. 
+
+873
+00:55:00,100 --> 00:55:04,600
+Not really, not used very often.
+And so, but there are, I mean, 
+
+874
+00:55:04,900 --> 00:55:08,500
+there's some articles showing 
+Here's what a monad helper, 
+
+875
+00:55:08,500 --> 00:55:10,300
+psyche. 
+And there's Arrow, which is the 
+
+876
+00:55:10,300 --> 00:55:12,300
+pricing. 
+That's it library for now. 
+
+877
+00:55:12,400 --> 00:55:15,100
+That's my yeah. 
+Yeah, yeah. 
+
+878
+00:55:16,200 --> 00:55:19,900
+So you certainly can use my nads
+and and Colin, but it's not kind
+
+879
+00:55:19,900 --> 00:55:23,500
+of the the defaults not a 
+first-class, it's not in the 
+
+880
+00:55:23,500 --> 00:55:26,800
+core language and standard 
+Library, like it is in Scala. 
+
+881
+00:55:30,200 --> 00:55:33,500
+Yeah. 
+So if so use monads has like, a 
+
+882
+00:55:33,508 --> 00:55:35,700
+lot of people aren't really in a
+place where they can. 
+
+883
+00:55:35,700 --> 00:55:38,500
+And so we're in a Technology set
+where they can, so that's not 
+
+884
+00:55:38,500 --> 00:55:43,200
+good advice. 
+I don't know. 
+
+885
+00:55:45,200 --> 00:55:47,100
+We will keep. 
+We'll keep trying to explain 
+
+886
+00:55:47,100 --> 00:55:48,900
+monads. 
+Yeah, whether or not people can 
+
+887
+00:55:48,900 --> 00:55:50,400
+use them? 
+Yeah. 
+
+888
+00:55:50,700 --> 00:55:53,100
+No. 
+It's it's, it's been an 
+
+889
+00:55:53,100 --> 00:55:57,300
+interesting challenge, but I'm 
+starting to see it. 
+
+890
+00:55:57,700 --> 00:56:02,900
+Yeah, well, I think, once you, 
+once you see that with 
+
+891
+00:56:02,900 --> 00:56:06,400
+functional programming, if you 
+want to program in an imperative
+
+892
+00:56:06,400 --> 00:56:09,000
+style, you really have no other 
+option. 
+
+893
+00:56:09,100 --> 00:56:11,200
+Hmm. 
+And then, I think when you get 
+
+894
+00:56:11,300 --> 00:56:15,700
+It to you like a, the highest 
+level of Enlightenment you see 
+
+895
+00:56:16,000 --> 00:56:19,700
+mathematically? 
+Why the laws are required to 
+
+896
+00:56:19,700 --> 00:56:22,900
+enable that? 
+Hmm, not quite there yet. 
+
+897
+00:56:23,100 --> 00:56:26,800
+Mmm. 
+Okay. 
+
+898
+00:56:27,100 --> 00:56:29,300
+Alright, that was fun. 
+Thanks for listening.
+

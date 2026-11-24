@@ -1,0 +1,5355 @@
+1
+00:00:01,120 --> 00:00:03,520
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,760 --> 00:00:08,200
+I'm Bruce Eckel. 
+I'm James Warden with us 
+
+3
+00:00:08,200 --> 00:00:12,520
+Dormain, Door Wits and Dormain. 
+You and I met long ago. 
+
+4
+00:00:12,520 --> 00:00:14,200
+Did I say your name right? 
+No. 
+
+5
+00:00:14,520 --> 00:00:15,560
+Your last name? 
+No. 
+
+6
+00:00:15,560 --> 00:00:18,720
+I drew wits. 
+Dre drew wits. 
+
+7
+00:00:19,240 --> 00:00:19,840
+Yeah. 
+Oh, my God. 
+
+8
+00:00:20,000 --> 00:00:21,680
+I screwed it up. 
+She gave you a cue. 
+
+9
+00:00:21,680 --> 00:00:23,640
+She. 
+Gave me the cue and I still 
+
+10
+00:00:23,640 --> 00:00:24,880
+screwed it up. 
+Amazing. 
+
+11
+00:00:25,200 --> 00:00:26,080
+I'm so sorry. 
+No. 
+
+12
+00:00:26,520 --> 00:00:27,880
+It's OK. 
+It's OK. 
+
+13
+00:00:28,990 --> 00:00:32,229
+It's just funny how it's like, 
+that's a new one. 
+
+14
+00:00:32,229 --> 00:00:36,590
+Literature 2, you came up with 
+the illiterate. 
+
+15
+00:00:36,790 --> 00:00:39,510
+I totally did, yeah. 
+Okay, awesome. 
+
+16
+00:00:39,830 --> 00:00:45,790
+So we met for the first time pre
+Pandemic at a Spring one in 
+
+17
+00:00:45,790 --> 00:00:48,550
+Austin, TX. 
+I think it was, yeah. 
+
+18
+00:00:48,550 --> 00:00:50,550
+And at the time you were working
+at VMware? 
+
+19
+00:00:50,930 --> 00:00:53,210
+We're hanging out with Josh Long
+and good buddy Josh. 
+
+20
+00:00:53,250 --> 00:00:56,530
+And yeah, that was a lot of fun.
+But anyways, I've since then 
+
+21
+00:00:56,530 --> 00:00:59,610
+I've, you know, followed you on 
+Twitter and seen awesome stuff 
+
+22
+00:00:59,610 --> 00:01:01,370
+for me. 
+So I thought it'd be fun to talk
+
+23
+00:01:01,370 --> 00:01:03,330
+about something that I don't 
+think we've really talked about,
+
+24
+00:01:03,330 --> 00:01:06,970
+which is kind of like this whole
+world of like like how do you, 
+
+25
+00:01:06,970 --> 00:01:10,930
+what happens after you deploy, 
+how do you deploy it in a 
+
+26
+00:01:11,450 --> 00:01:14,930
+whatever your application is in 
+a way that's stable and 
+
+27
+00:01:14,930 --> 00:01:17,850
+reliable. 
+And yeah, and there, I guess 
+
+28
+00:01:17,850 --> 00:01:20,350
+that's. 
+Like the Ilities? 
+
+29
+00:01:20,430 --> 00:01:23,710
+Yeah, you know, do you have OPS 
+and things like that? 
+
+30
+00:01:23,870 --> 00:01:28,750
+And yeah, SRE, so I'll start 
+with a question around this. 
+
+31
+00:01:29,270 --> 00:01:34,270
+OK. 
+Like, OK, like you get your 
+
+32
+00:01:34,270 --> 00:01:36,150
+thing, you get it into 
+production. 
+
+33
+00:01:36,870 --> 00:01:40,950
+What is the what's, what's like 
+the biggest thing that people 
+
+34
+00:01:40,950 --> 00:01:45,150
+need to know when they when they
+move to that step of production?
+
+35
+00:01:45,830 --> 00:01:48,270
+Yeah. 
+Like is there like a mindset or?
+
+36
+00:01:48,850 --> 00:01:53,010
+A approach or like what's the 
+framework for for that side of 
+
+37
+00:01:53,010 --> 00:01:57,490
+life? 
+I don't think I've ever thought 
+
+38
+00:01:57,490 --> 00:01:59,770
+about it in those terms because 
+there's you know when you look 
+
+39
+00:01:59,770 --> 00:02:04,770
+at the, you know the in the 
+Infinity loop of DevOps and I'm 
+
+40
+00:02:04,810 --> 00:02:07,770
+I'm drawing those with my 
+fingers right now for people who
+
+41
+00:02:07,770 --> 00:02:10,370
+are just listening. 
+What is the Infinity loop of 
+
+42
+00:02:10,370 --> 00:02:11,650
+DevOps? 
+I can't. 
+
+43
+00:02:11,650 --> 00:02:15,570
+There's like, it's like, you 
+know, it's like plan. 
+
+44
+00:02:16,130 --> 00:02:20,610
+Monitor Task monitor. 
+I can't even remember all the 
+
+45
+00:02:20,610 --> 00:02:23,010
+stages right, but it's. 
+Like react to your page you're 
+
+46
+00:02:23,010 --> 00:02:28,330
+going off and then have and then
+have a retrospective on what 
+
+47
+00:02:28,330 --> 00:02:30,890
+went wrong. 
+I'd have no idea I'm making this
+
+48
+00:02:30,890 --> 00:02:32,930
+up. 
+Yeah, that's like the SRE. 
+
+49
+00:02:33,170 --> 00:02:36,810
+Definitely like the postmortem 
+is kind of that one of the SRE 
+
+50
+00:02:36,890 --> 00:02:42,010
+principles, but okay, it's. 
+It's and I like that you 
+
+51
+00:02:42,010 --> 00:02:44,410
+included mindset because maybe 
+that's actually a better way 
+
+52
+00:02:44,410 --> 00:02:48,490
+because otherwise it's really 
+easy I think for people to get 
+
+53
+00:02:48,490 --> 00:02:52,890
+locked in on ohh what is the 
+tool that I need? 
+
+54
+00:02:52,930 --> 00:02:56,050
+What is what is the you know 
+what's the most important. 
+
+55
+00:02:56,050 --> 00:03:01,810
+The one thing if I, if I, you 
+know add this to my code then 
+
+56
+00:03:01,810 --> 00:03:03,490
+I'm done right? 
+Just like sprinkle. 
+
+57
+00:03:03,610 --> 00:03:06,930
+Sprinkle some of this magic, you
+know whatever on it and and 
+
+58
+00:03:07,330 --> 00:03:08,650
+production, everything is going 
+to be good. 
+
+59
+00:03:09,060 --> 00:03:12,820
+Just let me what cow do I need 
+to trade for what beans to put 
+
+60
+00:03:12,820 --> 00:03:14,300
+in the ground And then we're 
+good. 
+
+61
+00:03:15,700 --> 00:03:20,420
+But I think and there's like, 
+there are some great, I think 
+
+62
+00:03:20,420 --> 00:03:22,380
+Kevin Hoffman talks about like 
+scaffolding, right? 
+
+63
+00:03:22,380 --> 00:03:26,620
+And it's, it's definitely things
+like, yeah, have a way to 
+
+64
+00:03:26,660 --> 00:03:29,420
+observe and monitor your code, 
+right? 
+
+65
+00:03:29,420 --> 00:03:33,100
+Like you're going to need that, 
+and there's things you can do 
+
+66
+00:03:33,100 --> 00:03:35,810
+earlier on. 
+To just prepare for that. 
+
+67
+00:03:35,810 --> 00:03:39,290
+But I mean that's pretty well 
+understood at this point. 
+
+68
+00:03:39,370 --> 00:03:45,770
+And so it's, I think, you know, 
+one thing that is starts to bump
+
+69
+00:03:45,770 --> 00:03:49,410
+up to more whether it's mindset 
+or whether it's more that 
+
+70
+00:03:49,410 --> 00:03:55,890
+sociotechnical problem does have
+to do with the accountability 
+
+71
+00:03:55,890 --> 00:04:00,890
+question, right, Which is whose 
+job is it if this? 
+
+72
+00:04:01,330 --> 00:04:03,770
+Stops working right or 
+something's going wrong 
+
+73
+00:04:03,770 --> 00:04:07,330
+something's and that it's a 
+deceptively simple question 
+
+74
+00:04:07,330 --> 00:04:13,130
+because even the whole you know 
+you you code it. 
+
+75
+00:04:13,450 --> 00:04:18,290
+You own it sort of mantra, 
+right, that you know is 
+
+76
+00:04:18,850 --> 00:04:22,410
+attributed back to Verner Vogels
+and and a WS. 
+
+77
+00:04:23,130 --> 00:04:26,410
+It's like, yeah, it's still not 
+that simple because you know 
+
+78
+00:04:26,410 --> 00:04:31,130
+you're you're not literally. 
+The developer who's writing that
+
+79
+00:04:31,130 --> 00:04:34,890
+code is they're not all the way 
+down to like, I'm literally like
+
+80
+00:04:34,890 --> 00:04:37,570
+racking the server, right? 
+I mean you know that's like 
+
+81
+00:04:37,890 --> 00:04:42,330
+that's some they're depending 
+somewhere on an AWS service. 
+
+82
+00:04:43,090 --> 00:04:46,490
+There's there's layers of these 
+dependencies and abstractions. 
+
+83
+00:04:47,450 --> 00:04:51,810
+And so you can't say you code 
+it, you own it, because with the
+
+84
+00:04:51,810 --> 00:04:54,290
+dependency graph of a running 
+service. 
+
+85
+00:04:55,120 --> 00:04:58,280
+You can't possibly own 
+everything that is be 
+
+86
+00:04:58,280 --> 00:05:01,320
+responsible for everything that 
+is underneath the given service.
+
+87
+00:05:01,640 --> 00:05:03,440
+Right. 
+And this is kind of where I 
+
+88
+00:05:03,440 --> 00:05:09,440
+think like the, the concept of, 
+you know, platform engineering 
+
+89
+00:05:09,680 --> 00:05:14,120
+is, it is useful because it's 
+sort of saying that there's 
+
+90
+00:05:14,120 --> 00:05:20,200
+like, hey, there's going to be 
+this layer of of folks who are 
+
+91
+00:05:20,200 --> 00:05:23,040
+sort of taking accountability up
+to a certain point. 
+
+92
+00:05:23,350 --> 00:05:29,030
+Right up to the point of you 
+know the code or at least like 
+
+93
+00:05:29,030 --> 00:05:30,550
+the code getting into a 
+container. 
+
+94
+00:05:30,550 --> 00:05:33,550
+Maybe the developer owns like up
+to that layer, but but then 
+
+95
+00:05:33,550 --> 00:05:36,630
+everything from there, how much 
+can you offload? 
+
+96
+00:05:37,070 --> 00:05:43,390
+And then then, you know, a 
+developer can say, OK, I I do 
+
+97
+00:05:43,390 --> 00:05:45,550
+take accountability for 
+everything up to that point 
+
+98
+00:05:45,550 --> 00:05:49,750
+because I I actually, truly feel
+like I'm empowered to control 
+
+99
+00:05:49,750 --> 00:05:52,150
+those pieces. 
+Because I think it's not 
+
+100
+00:05:52,150 --> 00:05:57,030
+realistic to, you know, ask 
+someone to take accountability 
+
+101
+00:05:57,030 --> 00:06:01,550
+for something that they don't 
+really have any control over, 
+
+102
+00:06:01,550 --> 00:06:06,430
+right. 
+And so I think that's, I think 
+
+103
+00:06:06,430 --> 00:06:11,350
+that's where it's this really 
+interesting dynamic that 
+
+104
+00:06:11,830 --> 00:06:17,110
+involves you have to think about
+your teams and and what are 
+
+105
+00:06:17,110 --> 00:06:22,360
+different teams responsible for.
+You go back to a model if you 
+
+106
+00:06:22,360 --> 00:06:26,280
+don't have a platform and a 
+developer is like, well, I have 
+
+107
+00:06:26,280 --> 00:06:31,440
+to put in 15 different tickets 
+to get, you know, the different 
+
+108
+00:06:31,440 --> 00:06:33,360
+pieces I need. 
+And it went from, hey sure it 
+
+109
+00:06:33,360 --> 00:06:36,880
+was fast to get a VM and then 
+layers of well now we need to 
+
+110
+00:06:36,880 --> 00:06:42,280
+make sure that each VM is loaded
+up with different bits of 
+
+111
+00:06:42,280 --> 00:06:45,200
+middleware and monitoring and 
+management around it. 
+
+112
+00:06:45,200 --> 00:06:46,770
+That's. 
+Not really used by the 
+
+113
+00:06:46,770 --> 00:06:49,130
+developer, It's used by some 
+other team, but now it means 
+
+114
+00:06:49,130 --> 00:06:53,730
+that it's gonna take three 
+months to just get a VM out so 
+
+115
+00:06:53,730 --> 00:06:56,290
+that a developer can work with 
+something. 
+
+116
+00:06:56,530 --> 00:07:02,890
+So things, for example, yeah, 
+like we a week or so ago we had 
+
+117
+00:07:02,890 --> 00:07:07,650
+the Rust developer retreat here.
+And one of the attendees has 
+
+118
+00:07:07,650 --> 00:07:15,720
+spent a lot of time tuning the 
+JVM on deployments, you know, 
+
+119
+00:07:16,200 --> 00:07:18,400
+garbage collector and all the 
+other things. 
+
+120
+00:07:18,760 --> 00:07:24,680
+And he observed he goes, you 
+know, without a garbage 
+
+121
+00:07:24,680 --> 00:07:28,840
+collector and all the attendant 
+stuff, there's nothing to tune. 
+
+122
+00:07:29,200 --> 00:07:31,640
+It's already running as fast as 
+it can. 
+
+123
+00:07:31,720 --> 00:07:34,640
+Yeah. 
+So which kind of struck me. 
+
+124
+00:07:34,640 --> 00:07:38,920
+It's like, wow, how much time do
+we spend tuning? 
+
+125
+00:07:38,920 --> 00:07:41,040
+Turning knobs that maybe 
+shouldn't exist. 
+
+126
+00:07:41,560 --> 00:07:45,880
+Yeah, and then right. 
+Yeah, and it just takes them all
+
+127
+00:07:45,880 --> 00:07:50,480
+away. 
+Yeah, so back to the mindset. 
+
+128
+00:07:50,640 --> 00:07:56,080
+It sounds like, at least on this
+aspect, maybe the mindset is 
+
+129
+00:07:56,640 --> 00:07:59,720
+you. 
+When you go to production, you 
+
+130
+00:07:59,720 --> 00:08:04,040
+should have it clearly defined 
+who is responsible for which 
+
+131
+00:08:04,040 --> 00:08:07,920
+pieces. 
+And you can't just say simply, 
+
+132
+00:08:08,080 --> 00:08:12,480
+oh, the developer owns owns the 
+the production of this because. 
+
+133
+00:08:12,850 --> 00:08:17,290
+There's like security incidents.
+There's network operations. 
+
+134
+00:08:17,290 --> 00:08:19,930
+There's, you know all these 
+different different dimensions 
+
+135
+00:08:20,250 --> 00:08:23,490
+and you need to like look at 
+that whole landscape and say who
+
+136
+00:08:23,490 --> 00:08:29,170
+actually owns these individual 
+pieces of it and and if 
+
+137
+00:08:29,170 --> 00:08:33,210
+something goes wrong, how does 
+somebody know and how does it 
+
+138
+00:08:33,210 --> 00:08:37,610
+get resolved is that am I 
+getting to like a a mindset 
+
+139
+00:08:37,610 --> 00:08:41,309
+around production? 
+Yeah, I I think that's, I think 
+
+140
+00:08:41,309 --> 00:08:45,150
+that's a big part of it. 
+And then from there like when 
+
+141
+00:08:45,150 --> 00:08:52,750
+those things are clear, then 
+that that often drives the 
+
+142
+00:08:52,750 --> 00:08:59,350
+behavior that needs to happen in
+order for those outcomes to 
+
+143
+00:08:59,350 --> 00:09:01,670
+exist, right. 
+And if the outcomes are, hey, 
+
+144
+00:09:02,150 --> 00:09:09,060
+that you know, the DevOps being.
+I think most succinctly defined 
+
+145
+00:09:09,060 --> 00:09:13,420
+as it's not a tool chain or a a 
+you know, use these technologies
+
+146
+00:09:13,420 --> 00:09:15,540
+and beanstalks and you know 
+Wizards happen. 
+
+147
+00:09:15,540 --> 00:09:20,300
+It's like it's just doing what 
+you need to do so that you can 
+
+148
+00:09:20,300 --> 00:09:23,460
+ship code to production faster 
+and more frequently. 
+
+149
+00:09:24,020 --> 00:09:27,700
+And that part about you got to 
+be able to ship it to production
+
+150
+00:09:27,700 --> 00:09:30,820
+because it's like all the I I 
+can do things really fast in my 
+
+151
+00:09:30,820 --> 00:09:35,020
+development environment, but it 
+can't get to production is like,
+
+152
+00:09:35,020 --> 00:09:36,900
+well, you've solved it. 
+That's a different problem. 
+
+153
+00:09:38,210 --> 00:09:40,810
+Excuse me. 
+So that's kind of an operative 
+
+154
+00:09:40,810 --> 00:09:47,170
+word higher quality code and so 
+and what does that mean, right. 
+
+155
+00:09:47,530 --> 00:09:54,130
+There's, it's more stable, it's 
+it's more secure, right. 
+
+156
+00:09:54,570 --> 00:09:56,850
+So there's that kind of brings 
+with it. 
+
+157
+00:09:56,890 --> 00:10:02,770
+OK, now I have to think about 
+what are the types of what am I 
+
+158
+00:10:02,770 --> 00:10:06,370
+doing in order to make sure that
+at the at the end? 
+
+159
+00:10:06,800 --> 00:10:08,560
+What I'm shipping into 
+production is going to be higher
+
+160
+00:10:08,560 --> 00:10:11,640
+quality, so I'm going to write 
+some. 
+
+161
+00:10:11,640 --> 00:10:15,640
+Texts assume that your platform 
+engineering team is going to 
+
+162
+00:10:15,640 --> 00:10:20,680
+take your crappy application 
+that's crashing all the time and
+
+163
+00:10:20,680 --> 00:10:22,840
+somehow magically make it 
+stable. 
+
+164
+00:10:23,840 --> 00:10:28,280
+You've got to do as much upfront
+as you can to create that 
+
+165
+00:10:28,440 --> 00:10:31,480
+stability so that the platform 
+engineering team hopefully has 
+
+166
+00:10:31,480 --> 00:10:35,200
+to do a lot less or your SRE 
+team or whoever it is right has 
+
+167
+00:10:35,200 --> 00:10:38,540
+to do a lot less to. 
+Add that stability to the the 
+
+168
+00:10:38,540 --> 00:10:40,300
+foundation. 
+Yeah. 
+
+169
+00:10:41,140 --> 00:10:43,780
+And it's interesting because 
+it's like we've come a long way,
+
+170
+00:10:44,260 --> 00:10:48,380
+right, with underlying platform 
+technologies and you know it's 
+
+171
+00:10:48,380 --> 00:10:52,780
+like Kubernetes for example is 
+it's going to restart, right? 
+
+172
+00:10:52,780 --> 00:10:56,540
+Something is is failing within 
+like it's sort of scope of 
+
+173
+00:10:56,540 --> 00:11:00,580
+control. 
+It will be restarting and sort 
+
+174
+00:11:00,580 --> 00:11:03,540
+of OK You told me that you 
+wanted this. 
+
+175
+00:11:03,910 --> 00:11:07,350
+Configuration of containers 
+running and talking to each 
+
+176
+00:11:07,350 --> 00:11:09,870
+other in this way. 
+And something's going wrong. 
+
+177
+00:11:10,190 --> 00:11:12,550
+I'm just going to kill that one.
+I'm going to start a new one. 
+
+178
+00:11:13,110 --> 00:11:15,670
+And what that means, like, that 
+could be really horrible. 
+
+179
+00:11:16,790 --> 00:11:19,270
+It's like, but it's 
+resuscitating, right? 
+
+180
+00:11:19,270 --> 00:11:22,670
+It's just going to be constantly
+resuscitating back to the state 
+
+181
+00:11:22,710 --> 00:11:28,390
+that you told it. 
+But that means that you need to 
+
+182
+00:11:28,390 --> 00:11:31,150
+make sure that your application 
+is prepared to do that. 
+
+183
+00:11:32,570 --> 00:11:35,770
+And so, you know, maybe that's 
+less of a concern with like 
+
+184
+00:11:35,770 --> 00:11:39,690
+something that people are 
+building now, but a lot of 
+
+185
+00:11:39,690 --> 00:11:44,810
+organizations then have just, 
+you know, piles of legacy code 
+
+186
+00:11:44,810 --> 00:11:47,330
+and applications where they're 
+like, ooh, you don't, actually. 
+
+187
+00:11:47,880 --> 00:11:51,040
+The restart process is pretty 
+gnarly. 
+
+188
+00:11:51,040 --> 00:11:56,240
+And so we just keep kind of like
+adding you know duct tape and 
+
+189
+00:11:56,240 --> 00:11:59,480
+baling wire to kind of keep this
+thing up and alive because no 
+
+190
+00:11:59,680 --> 00:12:04,240
+one wants to restart this thing.
+And at the end of the day like 
+
+191
+00:12:04,720 --> 00:12:07,920
+you know you think about that 
+that that can fix a lot of 
+
+192
+00:12:07,920 --> 00:12:14,560
+problems, but if if it's going 
+to introduce like a major outage
+
+193
+00:12:15,000 --> 00:12:17,320
+then. 
+No one wants to do that. 
+
+194
+00:12:17,520 --> 00:12:21,600
+And it also means that you can't
+entrust Kubernetes to run that 
+
+195
+00:12:21,600 --> 00:12:24,200
+for you. 
+You have to do some refactoring 
+
+196
+00:12:24,360 --> 00:12:28,840
+cuz that is Kubernetes only mode
+is let it fail and then restart 
+
+197
+00:12:28,840 --> 00:12:32,040
+it. 
+Yeah, there's sort of like that.
+
+198
+00:12:32,240 --> 00:12:35,720
+Yeah, you're there's that. 
+Like the fundamental sort of 
+
+199
+00:12:36,080 --> 00:12:39,560
+cloud native approach is instead
+of. 
+
+200
+00:12:40,310 --> 00:12:44,230
+Assuming like, hey build things 
+and then they they will, they 
+
+201
+00:12:44,230 --> 00:12:46,190
+will run forever until you tell 
+them to stop. 
+
+202
+00:12:46,190 --> 00:12:48,350
+It's like no, no, no things 
+fail, right. 
+
+203
+00:12:48,710 --> 00:12:52,070
+So we're going to take a cloud 
+native approach which is we're 
+
+204
+00:12:52,070 --> 00:12:56,870
+going to accept that failures 
+happen at all kinds of different
+
+205
+00:12:56,870 --> 00:13:00,030
+levels. 
+And instead of that being 
+
+206
+00:13:00,030 --> 00:13:05,230
+something that is an abnormal 
+event that we are scrambling to 
+
+207
+00:13:05,230 --> 00:13:08,670
+deal with, we embrace that is 
+like that is normal and now how 
+
+208
+00:13:08,670 --> 00:13:11,260
+do we? 
+Build around that, right. 
+
+209
+00:13:11,260 --> 00:13:16,020
+How do we just assume that's 
+what is our our default mode to 
+
+210
+00:13:16,020 --> 00:13:24,700
+handle those types of failures 
+And so that like there there's 
+
+211
+00:13:24,740 --> 00:13:28,820
+there's technology layers that 
+can help with these things and 
+
+212
+00:13:28,820 --> 00:13:33,100
+that's certainly been you know 
+in the last five, 6-7 years, 
+
+213
+00:13:33,100 --> 00:13:35,100
+right. 
+This kind of emergence of 
+
+214
+00:13:35,380 --> 00:13:38,500
+platform teams where it's like 
+hey Kubernetes provides. 
+
+215
+00:13:39,040 --> 00:13:45,800
+Like a a a really useful set of 
+primitives that allow me to 
+
+216
+00:13:45,800 --> 00:13:50,240
+build something that is really 
+powerful, but I I still have to 
+
+217
+00:13:50,240 --> 00:13:54,640
+do a lot of work around it in 
+order to create something that a
+
+218
+00:13:54,640 --> 00:13:58,840
+developer is like 00 K Now I 
+understand this is these are the
+
+219
+00:13:58,840 --> 00:14:03,120
+sort of the contracts that I 
+have between what I'm building 
+
+220
+00:14:03,440 --> 00:14:07,880
+and maybe containerizing and 
+handing over and. 
+
+221
+00:14:08,220 --> 00:14:12,300
+What that platform is going to 
+do and that's the point at which
+
+222
+00:14:12,740 --> 00:14:16,500
+you know to what you were 
+saying, James like this is like,
+
+223
+00:14:16,580 --> 00:14:21,460
+OK, now I'm willing to accept 
+accountability for that versus 
+
+224
+00:14:22,220 --> 00:14:25,260
+the platform team is like, hey, 
+we we actually own everything up
+
+225
+00:14:25,260 --> 00:14:28,340
+to that point and we accept 
+accountability for making sure 
+
+226
+00:14:28,340 --> 00:14:31,420
+that those pieces are working. 
+Yeah. 
+
+227
+00:14:31,940 --> 00:14:34,940
+Yeah. 
+So, like clearly delineating who
+
+228
+00:14:34,940 --> 00:14:41,750
+is responsible for what. 
+Is is key to this, but I'm sure 
+
+229
+00:14:41,750 --> 00:14:46,990
+it's also like very hard because
+you there's I'm sure spaces that
+
+230
+00:14:46,990 --> 00:14:49,430
+you get into you where who owns 
+this? 
+
+231
+00:14:49,470 --> 00:14:54,070
+Ohh you're in a space that 
+either is multi owned or unclear
+
+232
+00:14:54,070 --> 00:14:56,910
+who owns this particular piece 
+of of the production 
+
+233
+00:14:56,910 --> 00:15:00,830
+infrastructure or some failure 
+mode that you didn't expect or 
+
+234
+00:15:01,070 --> 00:15:04,350
+something like that that that 
+makes things you know ohh, we 
+
+235
+00:15:04,350 --> 00:15:06,430
+didn't think about that. 
+We didn't think that could fail 
+
+236
+00:15:06,430 --> 00:15:08,150
+in this way my code is working 
+working. 
+
+237
+00:15:08,270 --> 00:15:10,390
+That's right. 
+Yeah, I've tested it. 
+
+238
+00:15:10,390 --> 00:15:13,150
+It must be the. 
+Platform. 
+
+239
+00:15:13,430 --> 00:15:16,230
+Yeah, yeah. 
+Well, yeah, this is, this is 
+
+240
+00:15:16,230 --> 00:15:19,230
+then like, well, what's 
+interesting also is like you 
+
+241
+00:15:19,230 --> 00:15:26,110
+have, you have like those sort 
+of, I don't know, like the minor
+
+242
+00:15:26,110 --> 00:15:28,110
+failure, right. 
+It's like, hey, not everything 
+
+243
+00:15:28,110 --> 00:15:32,030
+is down, but you've gotten 
+you're sort of like a it's a 
+
+244
+00:15:32,030 --> 00:15:36,360
+quiet failure. 
+You know, particularly you know,
+
+245
+00:15:36,440 --> 00:15:38,080
+microservices architecture, 
+right? 
+
+246
+00:15:38,080 --> 00:15:41,200
+It's like the whole thing isn't 
+down, but if you look closely 
+
+247
+00:15:41,200 --> 00:15:44,640
+like that entire feature is not 
+showing up, right. 
+
+248
+00:15:44,640 --> 00:15:47,800
+The end user like they they may 
+be because the other parts of it
+
+249
+00:15:47,800 --> 00:15:50,120
+are working. 
+I mean that's actually a great 
+
+250
+00:15:50,760 --> 00:15:52,960
+design. 
+Is that OK we can gracefully 
+
+251
+00:15:52,960 --> 00:15:56,880
+fail and have have one piece 
+that's failing and it's not 
+
+252
+00:15:56,880 --> 00:16:01,200
+taking everything down, right? 
+That's that's like we've come a 
+
+253
+00:16:01,200 --> 00:16:06,710
+long way there but. 
+If it's a if that happens to be 
+
+254
+00:16:06,710 --> 00:16:11,150
+something like the the checkout 
+feature, right? 
+
+255
+00:16:11,630 --> 00:16:15,830
+Like, that's pretty critical. 
+Or something. 
+
+256
+00:16:15,870 --> 00:16:17,470
+Someone. 
+Someone hopefully. 
+
+257
+00:16:17,980 --> 00:16:22,580
+Is responsible for knowing that 
+a particular feature has gone 
+
+258
+00:16:22,580 --> 00:16:25,020
+down. 
+You know, maybe it's error rate 
+
+259
+00:16:25,020 --> 00:16:27,460
+monitoring or, you know, I'm 
+sure different approaches for 
+
+260
+00:16:27,460 --> 00:16:31,700
+how someone would know that some
+piece of the overall system has 
+
+261
+00:16:31,700 --> 00:16:35,260
+gone down and then, you know, 
+figure out what to do about 
+
+262
+00:16:35,260 --> 00:16:35,860
+that. 
+But. 
+
+263
+00:16:36,060 --> 00:16:38,060
+Yeah. 
+Well, that's where it's a 
+
+264
+00:16:38,060 --> 00:16:43,580
+combination of things between 
+how do the, how do each of those
+
+265
+00:16:43,580 --> 00:16:46,500
+teams that have kind of clear 
+ownership for. 
+
+266
+00:16:46,880 --> 00:16:53,000
+Their parts and pieces, how how 
+have they set up their own 
+
+267
+00:16:53,000 --> 00:16:57,880
+monitoring? 
+And but it to your point about 
+
+268
+00:16:57,880 --> 00:17:02,000
+like it can get more complicated
+because well, my code is working
+
+269
+00:17:02,000 --> 00:17:05,280
+but it's it. 
+The feature still isn't showing 
+
+270
+00:17:05,280 --> 00:17:07,400
+up because something else 
+somewhere else, right? 
+
+271
+00:17:07,400 --> 00:17:14,560
+And you know, it's probably DNS,
+but like you gotta have, you 
+
+272
+00:17:14,560 --> 00:17:18,970
+know, this is where. 
+How do you then correlate across
+
+273
+00:17:19,250 --> 00:17:25,250
+several different layers to be 
+able to understand where where 
+
+274
+00:17:25,250 --> 00:17:27,530
+is that issue happening? 
+And then the other part that's 
+
+275
+00:17:29,170 --> 00:17:35,450
+kind of remarkable is actually 
+the the fact that like a huge 
+
+276
+00:17:35,450 --> 00:17:39,650
+number of times like if it's a 
+customer facing type of feature,
+
+277
+00:17:40,890 --> 00:17:44,210
+a large percentage of the time 
+it your monitoring systems don't
+
+278
+00:17:44,210 --> 00:17:48,790
+catch it at all. 
+And it can, it can vary widely. 
+
+279
+00:17:48,790 --> 00:17:53,910
+I think I've seen stats out 
+there that it's like 50 ish 
+
+280
+00:17:53,910 --> 00:17:57,190
+percent. 
+I know that I've seen like 
+
+281
+00:17:57,350 --> 00:18:03,750
+internal case studies where you 
+know it was 95% of the time they
+
+282
+00:18:03,750 --> 00:18:09,550
+were finding about a customer 
+facing issue because customers 
+
+283
+00:18:09,550 --> 00:18:13,430
+reporting it. 
+So we, you know, we we actually 
+
+284
+00:18:13,430 --> 00:18:18,890
+have built in. 
+Like applications that sit 
+
+285
+00:18:18,970 --> 00:18:22,410
+inside with the customer support
+teams they use like Salesforce 
+
+286
+00:18:22,410 --> 00:18:26,370
+and Zendesk and those those 
+types of systems. 
+
+287
+00:18:26,650 --> 00:18:30,210
+So we've actually built in a 
+widget there so that they can 
+
+288
+00:18:30,970 --> 00:18:35,170
+flag that and some of the data 
+in terms of now we're we're able
+
+289
+00:18:35,170 --> 00:18:37,530
+to look at it across lots of 
+organizations. 
+
+290
+00:18:38,010 --> 00:18:41,170
+And like sure enough, it's like 
+you know about 1/3 for 
+
+291
+00:18:41,170 --> 00:18:43,650
+organizations that are like, 
+Yep, they've got all their 
+
+292
+00:18:43,650 --> 00:18:47,410
+monitoring systems painted, 
+pointed at pager duty, but 
+
+293
+00:18:47,410 --> 00:18:52,090
+they're also have it wired into 
+their customer support team and 
+
+294
+00:18:52,090 --> 00:18:57,450
+like a third or so of the the 
+incidents in their those 
+
+295
+00:18:57,450 --> 00:18:59,530
+environments like, you know, 
+average. 
+
+296
+00:19:00,140 --> 00:19:02,220
+A third of them are coming in 
+from that customer. 
+
+297
+00:19:02,220 --> 00:19:05,620
+Support from customers reporting
+it, not the monitoring system 
+
+298
+00:19:05,620 --> 00:19:08,140
+detecting an issue. 
+So how would you? 
+
+299
+00:19:08,780 --> 00:19:12,300
+I mean, we're almost back to the
+JavaScript discussion because a 
+
+300
+00:19:12,340 --> 00:19:19,220
+lot of those things are how 
+would you monitor the end user 
+
+301
+00:19:19,220 --> 00:19:23,580
+UI? 
+I have a philosophy, Yeah. 
+
+302
+00:19:23,580 --> 00:19:25,380
+What's that? 
+I have a philosophy on this. 
+
+303
+00:19:25,420 --> 00:19:27,740
+Yeah, What's that? 
+I think that some of the 
+
+304
+00:19:27,740 --> 00:19:31,590
+foundational. 
+Problems in in where we are 
+
+305
+00:19:31,630 --> 00:19:35,110
+generally with programming is 
+that our programming models have
+
+306
+00:19:35,110 --> 00:19:39,710
+not forced people to explicitly 
+deal with air conditions and 
+
+307
+00:19:39,910 --> 00:19:45,790
+that leads to hidden errors all 
+the way across the stack and 
+
+308
+00:19:46,550 --> 00:19:50,470
+more modern programming 
+technologies. 
+
+309
+00:19:50,940 --> 00:19:56,100
+Make it so that you can't just 
+just glide down the happy path 
+
+310
+00:19:56,100 --> 00:19:59,180
+that ignores the possibility of 
+all the failures. 
+
+311
+00:19:59,580 --> 00:20:02,300
+And of course, we've talked 
+about this with Zeo, and I think
+
+312
+00:20:02,300 --> 00:20:03,980
+Rust is. 
+Very much really. 
+
+313
+00:20:03,980 --> 00:20:07,140
+Driving this forward, but it's 
+like no like. 
+
+314
+00:20:07,430 --> 00:20:09,990
+Like, I'm sorry it's going to be
+painful for you, but you're 
+
+315
+00:20:09,990 --> 00:20:13,630
+going to have to program for the
+possibility that these things 
+
+316
+00:20:13,630 --> 00:20:15,990
+can fail. 
+Painful at first, I think once 
+
+317
+00:20:15,990 --> 00:20:19,270
+you get used to it, it's like, 
+yes, of course I want, I want it
+
+318
+00:20:19,270 --> 00:20:21,950
+to be painful now and not later.
+Exactly. 
+
+319
+00:20:21,990 --> 00:20:23,190
+Right. 
+So yeah. 
+
+320
+00:20:24,030 --> 00:20:28,230
+So I think some of this has to 
+really be a shift in programming
+
+321
+00:20:28,470 --> 00:20:33,600
+culture to to. 
+Not being able to easily ignore 
+
+322
+00:20:33,600 --> 00:20:36,840
+the fact that things can fail. 
+Yeah, and we're we're in that 
+
+323
+00:20:36,840 --> 00:20:40,280
+transition right now. 
+I guess so, but there's a whole 
+
+324
+00:20:40,280 --> 00:20:44,600
+lot of people using JavaScript 
+for Uis and well, Web Assembly 
+
+325
+00:20:45,120 --> 00:20:47,480
+can change a lot of that, you 
+know. 
+
+326
+00:20:47,520 --> 00:20:52,000
+So there it requires opt in, but
+there is ways in JavaScript for 
+
+327
+00:20:52,000 --> 00:20:56,600
+example to set like a global air
+catch handler that. 
+
+328
+00:20:57,250 --> 00:21:01,570
+Any other uncut exception or 
+whatever can then be fed into 
+
+329
+00:21:01,570 --> 00:21:06,050
+Pager Duty or some other system.
+But I'm sure it gets so noisy in
+
+330
+00:21:06,050 --> 00:21:09,210
+most most applications that they
+just end up turning it off and 
+
+331
+00:21:09,210 --> 00:21:11,610
+they're like, oh, there's a 
+whole lot of uncut errors we 
+
+332
+00:21:11,610 --> 00:21:13,170
+didn't do what happen at 
+runtime. 
+
+333
+00:21:15,410 --> 00:21:21,570
+So do you know like how 
+predominant is the use of things
+
+334
+00:21:21,570 --> 00:21:24,490
+like chaos Monkey? 
+I mean, you're familiar with 
+
+335
+00:21:24,490 --> 00:21:25,910
+that? 
+Yeah, yeah. 
+
+336
+00:21:27,310 --> 00:21:32,590
+You know, I don't know exactly. 
+I think we're still like pretty 
+
+337
+00:21:32,590 --> 00:21:36,990
+early if I had to guess in terms
+of people really because it 
+
+338
+00:21:36,990 --> 00:21:44,030
+takes a lot of discipline and 
+you know there's like you're 
+
+339
+00:21:44,030 --> 00:21:50,470
+then looking at, you have to 
+have a team that is actively 
+
+340
+00:21:50,910 --> 00:21:53,230
+working on Okay. 
+We're going to, we're going to 
+
+341
+00:21:53,230 --> 00:21:56,880
+run a game day. 
+There's actually a great 
+
+342
+00:21:56,960 --> 00:22:01,880
+interview from a couple weeks 
+ago where Mandy Walls, one of 
+
+343
+00:22:01,880 --> 00:22:06,720
+our, our, our advocates sat down
+with you know, a couple of folks
+
+344
+00:22:06,760 --> 00:22:12,920
+in our own like SRE team and 
+database reliability engineering
+
+345
+00:22:12,920 --> 00:22:17,080
+team to talk about like 10 years
+on this journey of failure 
+
+346
+00:22:17,080 --> 00:22:22,560
+Fridays and just like the 
+practice that that involves 
+
+347
+00:22:22,560 --> 00:22:26,190
+because things are. 
+You're it's not like OK, we just
+
+348
+00:22:26,190 --> 00:22:30,350
+do this for a couple of Fridays 
+or whatever you know pick pick 
+
+349
+00:22:30,350 --> 00:22:32,910
+your interval and. 
+What's up? 
+
+350
+00:22:33,070 --> 00:22:37,670
+What's the failure Friday? 
+It's like sort of setting aside 
+
+351
+00:22:37,670 --> 00:22:40,550
+and scheduling the time for when
+you're gonna be like, OK, we're 
+
+352
+00:22:40,550 --> 00:22:44,310
+gonna, we're gonna introduce 
+some instability into the system
+
+353
+00:22:44,310 --> 00:22:46,670
+and it's gonna break our system.
+Gonna try. 
+
+354
+00:22:46,670 --> 00:22:49,270
+I mean, that's what you do with 
+like a chaos monkey or 
+
+355
+00:22:49,270 --> 00:22:55,480
+something, but the. 
+The idea is if you're, I mean 
+
+356
+00:22:55,480 --> 00:22:57,840
+this is sort of a general chaos 
+engineering principles. 
+
+357
+00:22:57,840 --> 00:23:03,320
+It's like it's not about like 
+just haphazardly breaking stuff 
+
+358
+00:23:04,800 --> 00:23:08,720
+you're you're you want to run it
+more like an experiment right? 
+
+359
+00:23:08,720 --> 00:23:14,040
+Like, you know, get scientific 
+about it and so you you might 
+
+360
+00:23:14,040 --> 00:23:18,030
+pick a certain part of. 
+The architecture that you're 
+
+361
+00:23:18,030 --> 00:23:20,350
+like, OK, we know we're going to
+sort of test here and you know, 
+
+362
+00:23:20,510 --> 00:23:23,390
+but everyone's going to be ready
+and we're going to prepare 
+
+363
+00:23:23,390 --> 00:23:28,390
+people and then we're going to 
+really closely observe what is 
+
+364
+00:23:28,390 --> 00:23:31,670
+what happens when this type of 
+failure occurs. 
+
+365
+00:23:31,910 --> 00:23:34,750
+So we're going to do get. 
+Our monitor and catch it, Did 
+
+366
+00:23:34,750 --> 00:23:38,990
+you know are people responsible 
+for for this? 
+
+367
+00:23:39,630 --> 00:23:42,430
+Yeah, did did. 
+Did it cause something else? 
+
+368
+00:23:43,210 --> 00:23:48,770
+To sort of you know, in one 
+place and like the arrow pushes 
+
+369
+00:23:48,770 --> 00:23:51,690
+over somewhere else. 
+So just sort of understanding 
+
+370
+00:23:51,690 --> 00:23:54,970
+like OK what's the, what is the 
+the nature of this type of 
+
+371
+00:23:54,970 --> 00:23:58,890
+thing. 
+And it's not like OK, you know 
+
+372
+00:23:58,890 --> 00:24:04,490
+we'll we'll cover 10% this week 
+and after 10 weeks we'll have 
+
+373
+00:24:04,490 --> 00:24:06,490
+covered 100%. 
+It's like it doesn't work that 
+
+374
+00:24:06,490 --> 00:24:09,410
+way. 
+Like, you know, one because you 
+
+375
+00:24:09,410 --> 00:24:12,210
+know you're not going to cover 
+like 10% like how do you? 
+
+376
+00:24:12,610 --> 00:24:17,010
+How do you quantify that? 
+But also you're constantly 
+
+377
+00:24:17,010 --> 00:24:22,890
+changing, right, what you what 
+you sort of tested last quarter,
+
+378
+00:24:24,250 --> 00:24:27,090
+if you're releasing frequently 
+like it's it's you're just 
+
+379
+00:24:27,090 --> 00:24:30,570
+dealing with a different, a 
+different environment. 
+
+380
+00:24:31,450 --> 00:24:33,850
+It's always evolving and so 
+there's always kind of, you know
+
+381
+00:24:33,850 --> 00:24:37,170
+just becomes like this practice 
+like brushing your teeth, right.
+
+382
+00:24:37,170 --> 00:24:43,230
+That's just that becomes. 
+I think more of the, again it's 
+
+383
+00:24:43,230 --> 00:24:50,830
+like it's a sociotechnical 
+problem that thinking about who 
+
+384
+00:24:50,830 --> 00:24:56,070
+is accountable for that and who 
+is going to own that And it's 
+
+385
+00:24:56,070 --> 00:24:58,750
+certainly something that like 
+the site reliability engineering
+
+386
+00:24:58,750 --> 00:25:04,270
+team is it, it fits really well 
+within sort of their charter, 
+
+387
+00:25:04,670 --> 00:25:08,750
+but they they're not going to do
+it in a vacuum, right, like to 
+
+388
+00:25:08,750 --> 00:25:13,420
+really do that well like it's. 
+All every team has to be sort of
+
+389
+00:25:13,460 --> 00:25:17,060
+on board and all the different 
+engineering and development 
+
+390
+00:25:17,060 --> 00:25:21,100
+teams like kind of have to sort 
+of be bought in on the fact 
+
+391
+00:25:21,100 --> 00:25:24,300
+that's like, hey, when we do 
+this like one we're going to 
+
+392
+00:25:24,300 --> 00:25:28,540
+surface stuff that at the end of
+the day like it's your job to 
+
+393
+00:25:28,540 --> 00:25:32,220
+fix. 
+We're just going to approach it 
+
+394
+00:25:32,220 --> 00:25:34,780
+in a way that's going to help 
+try to surface these things. 
+
+395
+00:25:35,110 --> 00:25:39,350
+Before they surface in a way 
+that we're not prepared for and 
+
+396
+00:25:39,430 --> 00:25:41,990
+we don't really want to be in 
+that situation or it's going to 
+
+397
+00:25:41,990 --> 00:25:46,830
+affect customers. 
+It's almost like the the similar
+
+398
+00:25:46,830 --> 00:25:50,830
+to the security red team who's 
+trying to to find the holes 
+
+399
+00:25:50,830 --> 00:25:57,550
+through you know security, this 
+is being done on a reliability 
+
+400
+00:25:57,670 --> 00:26:03,120
+kind of dimension and so. 
+But it does seem like you need 
+
+401
+00:26:03,120 --> 00:26:09,520
+to have a culture in place that 
+that wants to understand ahead 
+
+402
+00:26:09,520 --> 00:26:15,920
+of time how things can fail and 
+establish ownership and and make
+
+403
+00:26:15,920 --> 00:26:18,880
+sure that that you know the the 
+cases are all covered. 
+
+404
+00:26:19,840 --> 00:26:22,480
+So yeah, I think it's it's 
+definitely insightful. 
+
+405
+00:26:22,480 --> 00:26:25,560
+You point out that this is like 
+the sociotechnical issue of like
+
+406
+00:26:25,760 --> 00:26:31,120
+somebody has to care about this.
+For there to four things to get 
+
+407
+00:26:31,120 --> 00:26:32,680
+better, I guess. 
+Yeah. 
+
+408
+00:26:32,920 --> 00:26:38,000
+And you're you're going to cross
+team boundaries and it's just 
+
+409
+00:26:38,000 --> 00:26:42,120
+like you know an architecture 
+with different services and 
+
+410
+00:26:42,120 --> 00:26:46,760
+you're thinking about you know 
+data is going to cross some 
+
+411
+00:26:46,760 --> 00:26:50,720
+boundary from from one service 
+to another and there's there has
+
+412
+00:26:50,720 --> 00:26:53,400
+to be an agreement between 
+those. 
+
+413
+00:26:53,400 --> 00:26:56,120
+And I I often think of like 
+API's or promises. 
+
+414
+00:26:56,120 --> 00:27:00,380
+They are agreements between. 
+You know like from one service 
+
+415
+00:27:00,580 --> 00:27:05,260
+to any other service is like 
+this is our promise of when you 
+
+416
+00:27:05,260 --> 00:27:11,420
+when you when you ask this way 
+we will answer this way and the 
+
+417
+00:27:11,420 --> 00:27:17,620
+with the sociotechnical element 
+is that it's like you also have 
+
+418
+00:27:17,620 --> 00:27:21,460
+the humans on the other side 
+which is what is the agreement 
+
+419
+00:27:21,780 --> 00:27:28,220
+between different teams around. 
+Whether it's like we're going to
+
+420
+00:27:28,820 --> 00:27:35,180
+simulate a failure, like for the
+sake of, you know, being the 
+
+421
+00:27:35,180 --> 00:27:39,180
+wiser of our own 
+vulnerabilities, I should choose
+
+422
+00:27:39,180 --> 00:27:41,140
+a different word because that's 
+obviously loaded. 
+
+423
+00:27:41,500 --> 00:27:49,460
+But being the wiser of our our 
+own weaknesses and you know, but
+
+424
+00:27:49,460 --> 00:27:51,760
+that. 
+The the team that might be 
+
+425
+00:27:52,280 --> 00:27:56,920
+really skilled at being able to 
+help surface those may not be 
+
+426
+00:27:56,920 --> 00:27:59,280
+the team that's actually going 
+to fix the problem. 
+
+427
+00:27:59,800 --> 00:28:02,400
+Yeah, you're gonna run into the 
+Dunning Kruger effect there a 
+
+428
+00:28:02,400 --> 00:28:05,600
+lot. 
+Dunning Kruger effects, OK, 
+
+429
+00:28:06,200 --> 00:28:10,800
+That's the one where the less 
+you know, the more you think you
+
+430
+00:28:10,800 --> 00:28:12,440
+know. 
+OK. 
+
+431
+00:28:12,880 --> 00:28:17,680
+Yeah. 
+Yeah, I've so. 
+
+432
+00:28:18,560 --> 00:28:21,880
+The failure Fridays, is that 
+what it's called is and is that 
+
+433
+00:28:21,880 --> 00:28:25,200
+just a Pager Duty practice or is
+that like a more industry wide 
+
+434
+00:28:25,200 --> 00:28:27,160
+thing? 
+I mean that's definitely what 
+
+435
+00:28:27,160 --> 00:28:28,520
+the pager duty practice has 
+been. 
+
+436
+00:28:28,520 --> 00:28:34,160
+I I'm not even you know I think 
+like I remember talking to Tammy
+
+437
+00:28:34,880 --> 00:28:39,360
+Vito overhead back when she was 
+at Gremlin years ago and I 
+
+438
+00:28:39,360 --> 00:28:42,160
+really like the way she kind of 
+broke it down and in a very it's
+
+439
+00:28:42,160 --> 00:28:45,880
+like it's a very scientific 
+thing and and she would call him
+
+440
+00:28:45,880 --> 00:28:47,800
+game days right. 
+So the idea of like. 
+
+441
+00:28:48,840 --> 00:28:52,880
+You you're going to schedule a 
+game day of like this is when 
+
+442
+00:28:52,880 --> 00:28:57,400
+we're going to run this test. 
+So if it's Friday, I mean like 
+
+443
+00:28:57,560 --> 00:29:00,640
+failure, Friday has a little bit
+of a nice ring to it, I guess, 
+
+444
+00:29:02,040 --> 00:29:04,320
+and it does the. 
+Interesting thing about failure 
+
+445
+00:29:04,320 --> 00:29:08,120
+Friday is that if you do happen 
+to cause some catastrophic. 
+
+446
+00:29:09,020 --> 00:29:11,180
+Issue then your weekend is 
+torched. 
+
+447
+00:29:11,420 --> 00:29:14,820
+So it's funny that that Friday 
+is the the day that they do it. 
+
+448
+00:29:14,820 --> 00:29:18,060
+I wonder if that makes people a 
+little reluctant, Like maybe we 
+
+449
+00:29:18,060 --> 00:29:21,060
+shouldn't go kill this node 
+because oh man, that could 
+
+450
+00:29:21,060 --> 00:29:26,260
+cascade in some bad way, but. 
+Well, that would be well, I I 
+
+451
+00:29:26,260 --> 00:29:32,740
+should you know, you should hear
+from from Rich and SJP because 
+
+452
+00:29:32,740 --> 00:29:33,980
+they're really the experts on 
+it. 
+
+453
+00:29:33,980 --> 00:29:36,580
+But it's the other thing is 
+like. 
+
+454
+00:29:37,050 --> 00:29:38,930
+You know, the goal isn't to like
+trigger something that would be 
+
+455
+00:29:39,370 --> 00:29:41,850
+super catastrophic and go into 
+the weekend. 
+
+456
+00:29:41,850 --> 00:29:45,450
+But point is, the other thing 
+with it is like, hey, that's a 
+
+457
+00:29:45,450 --> 00:29:48,570
+weekly cadence. 
+That's like, this is not 
+
+458
+00:29:48,570 --> 00:29:53,290
+something that you do and forget
+for three months and then try to
+
+459
+00:29:53,290 --> 00:29:56,210
+revive again. 
+Like it's the same thing with 
+
+460
+00:29:56,210 --> 00:29:59,530
+certain types of even just like 
+how you check in with people. 
+
+461
+00:30:00,490 --> 00:30:03,850
+If you're doing it monthly, like
+what happens if you miss one, 
+
+462
+00:30:03,930 --> 00:30:05,370
+then you've gone two months 
+like. 
+
+463
+00:30:05,770 --> 00:30:10,810
+The 6th of the year has gone by 
+between whatever it is you're 
+
+464
+00:30:10,810 --> 00:30:14,530
+trying to do or keep on top of, 
+so it's. 
+
+465
+00:30:14,650 --> 00:30:16,970
+Got to be a practice that you 
+have a cadence to, yeah. 
+
+466
+00:30:17,490 --> 00:30:24,570
+Yeah. 
+So the IT does seem like like 
+
+467
+00:30:24,570 --> 00:30:27,970
+there's this like huge 
+sociotechnical kind of cultural 
+
+468
+00:30:27,970 --> 00:30:31,650
+aspect to get into higher 
+reliability. 
+
+469
+00:30:33,530 --> 00:30:35,170
+How? 
+How do we get? 
+
+470
+00:30:35,210 --> 00:30:40,650
+I care more about reliability. 
+I mean one of the things that I,
+
+471
+00:30:40,970 --> 00:30:45,850
+you know the the you code it, 
+you own it sort of mantra right 
+
+472
+00:30:45,890 --> 00:30:49,330
+and and it's it's the painful 
+way right. 
+
+473
+00:30:49,330 --> 00:30:54,450
+Which is like, OK, you carry the
+pager and then you have an 
+
+474
+00:30:54,450 --> 00:30:59,490
+incentive to make sure that what
+you're putting out there is more
+
+475
+00:30:59,490 --> 00:31:04,240
+reliable. 
+That's that's a little bit of, I
+
+476
+00:31:04,240 --> 00:31:11,600
+think, the the stick method and 
+it really needs to be paired 
+
+477
+00:31:11,760 --> 00:31:15,920
+with. 
+I think it has. 
+
+478
+00:31:15,920 --> 00:31:19,600
+Definitely worked in a lot of 
+organizations, but again, it has
+
+479
+00:31:19,600 --> 00:31:23,640
+to be paired with like Okay are.
+We also like giving people the 
+
+480
+00:31:23,640 --> 00:31:26,320
+time to make sure that they're 
+like they're writing the test so
+
+481
+00:31:26,320 --> 00:31:30,840
+that they are the higher degree 
+of confidence and what they are 
+
+482
+00:31:30,840 --> 00:31:34,200
+shipping. 
+Have we, if we embrace that, do 
+
+483
+00:31:34,200 --> 00:31:40,440
+we have kind of the other 
+scaffolding for teams? 
+
+484
+00:31:40,440 --> 00:31:43,360
+Like, I think that's that'd be 
+pretty cold if it was like, 
+
+485
+00:31:43,360 --> 00:31:45,800
+you're just gonna have to figure
+this out, right? 
+
+486
+00:31:45,800 --> 00:31:47,840
+It's like, right? 
+And then there's this McKinsey 
+
+487
+00:31:47,840 --> 00:31:50,880
+report that just came out, where
+they go, yeah, we know how to 
+
+488
+00:31:50,920 --> 00:31:54,800
+measure developer productivity. 
+Now we we made-up some new stuff
+
+489
+00:31:54,800 --> 00:31:57,760
+to do that. 
+And it's causing all kinds of 
+
+490
+00:31:57,960 --> 00:32:02,400
+and it's like, well, OK, now the
+push is going to be for we want 
+
+491
+00:32:02,400 --> 00:32:04,200
+our developers to be more 
+productive. 
+
+492
+00:32:04,200 --> 00:32:08,240
+And what you're talking about is
+saying, let's slow down, let's 
+
+493
+00:32:08,240 --> 00:32:12,480
+take a breath and think about 
+what we're doing more and maybe 
+
+494
+00:32:12,480 --> 00:32:13,880
+not crank. 
+Yeah. 
+
+495
+00:32:15,760 --> 00:32:16,600
+Yeah. 
+Like you. 
+
+496
+00:32:16,760 --> 00:32:18,960
+If are you giving people time, 
+right. 
+
+497
+00:32:18,960 --> 00:32:22,440
+And there's even like charity 
+majors had some great insights 
+
+498
+00:32:23,080 --> 00:32:28,640
+on this around thinking about 
+when you're the time that you're
+
+499
+00:32:28,640 --> 00:32:31,120
+putting people on like, hey, 
+you're on call. 
+
+500
+00:32:31,460 --> 00:32:36,500
+In this window, right. 
+And so you're the person who is 
+
+501
+00:32:36,500 --> 00:32:38,820
+going to be interrupted to go 
+deal with anything. 
+
+502
+00:32:38,820 --> 00:32:41,820
+And many of these things are 
+probably small and not literally
+
+503
+00:32:41,820 --> 00:32:44,700
+taking it down. 
+But, you know, probably they 
+
+504
+00:32:44,700 --> 00:32:51,260
+need to be dealt with. 
+And the the mental mode that 
+
+505
+00:32:51,260 --> 00:32:53,940
+you're in, right? 
+Are you Are you really doing? 
+
+506
+00:32:54,770 --> 00:32:56,250
+OK. 
+We'll just you're still on 
+
+507
+00:32:56,250 --> 00:32:59,290
+feature development except 
+you're also going to be on call 
+
+508
+00:32:59,370 --> 00:33:02,090
+in this window and you're going 
+to get interrupted a bunch 
+
+509
+00:33:02,610 --> 00:33:07,930
+versus what if you took that 
+time of like OK, if you're if 
+
+510
+00:33:07,930 --> 00:33:12,530
+you're on call, you know say 20%
+of the time for your team or 10%
+
+511
+00:33:12,530 --> 00:33:14,890
+of the time, it's like what if 
+that's the time where you 
+
+512
+00:33:14,890 --> 00:33:18,490
+actually go back and you work 
+through some of the old tech 
+
+513
+00:33:18,490 --> 00:33:20,450
+deck, right. 
+That's been causing these 
+
+514
+00:33:20,450 --> 00:33:23,570
+issues. 
+And so again, it's like, what is
+
+515
+00:33:23,570 --> 00:33:26,950
+the? 
+What's that? 
+
+516
+00:33:27,670 --> 00:33:31,950
+It's not just like scaffolding 
+in a in a like an infrastructure
+
+517
+00:33:31,950 --> 00:33:34,710
+way? 
+Like, do you have like good CICD
+
+518
+00:33:34,710 --> 00:33:38,030
+pipelines that are helping 
+people, you know, make sure 
+
+519
+00:33:38,030 --> 00:33:41,950
+everything is well tested and 
+covered before, But sure, that's
+
+520
+00:33:41,950 --> 00:33:43,990
+important. 
+But then there's that again, 
+
+521
+00:33:44,190 --> 00:33:48,830
+sociotechnical. 
+The culture around it, that's 
+
+522
+00:33:48,830 --> 00:33:52,270
+saying like, OK we're we're 
+embracing this and we're also 
+
+523
+00:33:52,270 --> 00:33:56,790
+like we're we're figuring out 
+how do we spend that time on 
+
+524
+00:33:57,230 --> 00:33:59,430
+really working through the 
+underlying issues. 
+
+525
+00:33:59,430 --> 00:34:03,190
+So I've also talked to teams 
+with like, yeah, like we've got 
+
+526
+00:34:03,190 --> 00:34:06,310
+our on call rotation, but like 
+the number of times that 
+
+527
+00:34:07,030 --> 00:34:09,949
+actually gotten woken up in the 
+middle of the night in the last 
+
+528
+00:34:09,949 --> 00:34:14,630
+year is like 0, right, Because 
+we've actually we've taken the 
+
+529
+00:34:14,630 --> 00:34:17,610
+approach and done the work. 
+So we have a really high degree 
+
+530
+00:34:17,610 --> 00:34:22,290
+of confidence in the code that 
+we have and we also like know 
+
+531
+00:34:22,290 --> 00:34:26,010
+that like listen not everything 
+is worth waking someone up in 
+
+532
+00:34:26,010 --> 00:34:30,250
+the middle of the night for. 
+So you have to like spend a 
+
+533
+00:34:30,250 --> 00:34:33,610
+little bit of time like setting 
+your like what is really high 
+
+534
+00:34:33,610 --> 00:34:40,010
+urgency, you know and and that's
+just a willingness to understand
+
+535
+00:34:41,730 --> 00:34:44,810
+what what does the business 
+actually tolerate. 
+
+536
+00:34:45,670 --> 00:34:48,190
+And this kind of comes back to a
+lot of Site Reliability 
+
+537
+00:34:48,429 --> 00:34:56,469
+Engineering principles right 
+around an SLO and sorry service.
+
+538
+00:34:56,469 --> 00:35:02,710
+Level objective right, which is 
+to not everything is like 5 
+
+539
+00:35:02,710 --> 00:35:08,030
+nines, like 5 nines is like a 
+really expensive threshold. 
+
+540
+00:35:08,400 --> 00:35:12,400
+To hit in terms of everything 
+from the design principles to 
+
+541
+00:35:12,400 --> 00:35:16,240
+just like the people and around 
+the like, it's really expensive 
+
+542
+00:35:16,240 --> 00:35:18,280
+to figure that out because 
+there's going to be so many 
+
+543
+00:35:18,280 --> 00:35:22,160
+points of failure across all the
+different layers, right? 
+
+544
+00:35:22,200 --> 00:35:24,000
+It's just it is a hard problem 
+to solve. 
+
+545
+00:35:24,640 --> 00:35:27,200
+A lot of things don't need 5 
+nines, right? 
+
+546
+00:35:27,200 --> 00:35:30,080
+Some things only need 3 nines. 
+Some things like it's okay if 
+
+547
+00:35:30,080 --> 00:35:34,400
+it's last, so. 
+Instead of trying to like paint 
+
+548
+00:35:34,400 --> 00:35:37,920
+the world of like we're going to
+make everything a really super 
+
+549
+00:35:37,920 --> 00:35:45,720
+high availability rate which 
+means that the the error budget 
+
+550
+00:35:45,720 --> 00:35:51,120
+that you have is basically 
+what's 100% minus whatever 
+
+551
+00:35:51,120 --> 00:35:55,320
+you've said that is your error 
+budget is what's ever that's 
+
+552
+00:35:55,320 --> 00:35:59,360
+what's left. 
+So if it's 99% you get 1% error 
+
+553
+00:35:59,360 --> 00:36:03,470
+budget and. 
+You have to remember like while 
+
+554
+00:36:04,150 --> 00:36:07,190
+my underlying services that I'm 
+depending on like those are 
+
+555
+00:36:07,190 --> 00:36:10,830
+gonna eat some of my error 
+budget, so if I'm gonna run on 
+
+556
+00:36:10,830 --> 00:36:17,590
+this cloud service then that 
+cloud service is not 100% right.
+
+557
+00:36:17,990 --> 00:36:20,470
+It's gonna building on 
+foundations that are already 
+
+558
+00:36:20,790 --> 00:36:23,430
+taking some of your error budget
+from you, right? 
+
+559
+00:36:23,430 --> 00:36:26,870
+So like. 
+You know, I remember talking to 
+
+560
+00:36:28,310 --> 00:36:31,570
+a team and it was like. 
+They were there, the internal 
+
+561
+00:36:31,570 --> 00:36:34,370
+team not naming names. 
+Internal team was like, we want 
+
+562
+00:36:34,370 --> 00:36:37,290
+you to move to our internally 
+built platform and we're trying 
+
+563
+00:36:37,290 --> 00:36:39,930
+to do all these things and that 
+engineering team was like, 
+
+564
+00:36:40,530 --> 00:36:44,890
+you're I've looked at it and it 
+would consume too much of my 
+
+565
+00:36:44,890 --> 00:36:48,130
+error budget, right? 
+I will not go to that platform 
+
+566
+00:36:48,130 --> 00:36:50,890
+until you can improve the 
+availability of it, because 
+
+567
+00:36:51,090 --> 00:36:54,510
+until then. 
+I'm actually doing better taking
+
+568
+00:36:54,510 --> 00:36:58,150
+accountability for more of the 
+stack or using some other 
+
+569
+00:36:58,150 --> 00:37:03,230
+provider which sure I might 
+actually have to do more. 
+
+570
+00:37:04,950 --> 00:37:09,150
+I have to engineer deeper like 
+layers of the of the stack, but 
+
+571
+00:37:09,590 --> 00:37:12,550
+I trust that more, right. 
+And so that's what that's like 
+
+572
+00:37:12,550 --> 00:37:15,630
+the the agreement that you have 
+to kind of. 
+
+573
+00:37:16,160 --> 00:37:18,320
+Be able to offer something 
+that's like am I offering 
+
+574
+00:37:18,320 --> 00:37:20,520
+something better than this 
+person could do themselves? 
+
+575
+00:37:20,520 --> 00:37:24,760
+Like as a platform team, that is
+your goal, right? 
+
+576
+00:37:24,760 --> 00:37:27,760
+It's that you can offer 
+something better than that 
+
+577
+00:37:27,760 --> 00:37:29,840
+development team could build 
+themselves. 
+
+578
+00:37:30,080 --> 00:37:32,560
+Because I'm sure like most 
+development teams would happily 
+
+579
+00:37:32,560 --> 00:37:37,000
+give up having to manage all the
+way down to you know the the, 
+
+580
+00:37:37,120 --> 00:37:39,320
+the virtual machine layer or 
+bare metal. 
+
+581
+00:37:39,600 --> 00:37:44,800
+It happily give up that if they 
+could get a better. 
+
+582
+00:37:45,440 --> 00:37:48,840
+Reliable system that meets their
+needs from someone else. 
+
+583
+00:37:49,080 --> 00:37:52,440
+I mean This is why I like, you 
+know folks 15 years ago just 
+
+584
+00:37:52,440 --> 00:37:55,280
+started like I'm just going to 
+go to AWS like I can get 
+
+585
+00:37:55,840 --> 00:37:59,600
+basically what I need faster and
+cheaper than waiting on my 
+
+586
+00:37:59,600 --> 00:38:04,960
+internal IT department. 
+So that that error budget 
+
+587
+00:38:04,960 --> 00:38:08,320
+concept is is I think really 
+powerful. 
+
+588
+00:38:09,830 --> 00:38:14,110
+And knowing that, elucidate a 
+bit on the error budget concept.
+
+589
+00:38:14,470 --> 00:38:15,230
+Yeah. 
+And I. 
+
+590
+00:38:15,510 --> 00:38:18,670
+Like I have to let me pull up 
+because it's like the the 
+
+591
+00:38:18,670 --> 00:38:23,270
+classic is you just the the the 
+number of nines you have right 
+
+592
+00:38:23,270 --> 00:38:27,150
+is gives you the number of 
+minutes per year or month or 
+
+593
+00:38:27,150 --> 00:38:30,110
+whatever you have of of downtime
+that you can tolerate. 
+
+594
+00:38:31,350 --> 00:38:33,750
+And so let me see because it's 
+like otherwise I have to do all 
+
+595
+00:38:33,750 --> 00:38:40,540
+the math, so error budgets. 
+Calculator your budget. 
+
+596
+00:38:41,740 --> 00:38:44,900
+Yeah, you just. 
+Google it and it's there, right?
+
+597
+00:38:45,060 --> 00:38:51,900
+So let me see. 
+Some of these folks have just 
+
+598
+00:38:51,900 --> 00:38:54,820
+they've already done the math on
+like how many minutes of 
+
+599
+00:38:54,860 --> 00:38:56,940
+downtime. 
+That's what I'm trying to see. 
+
+600
+00:38:56,940 --> 00:38:59,180
+If I can find no this Sumo logic
+article. 
+
+601
+00:38:59,340 --> 00:39:02,230
+Here it is. 
+OK, if you have an error, an 
+
+602
+00:39:02,230 --> 00:39:06,870
+SLA, an SLSLA and you want your 
+SLA to be a little bit of an SLO
+
+603
+00:39:06,870 --> 00:39:11,190
+of 99%, air budget is 1% and 
+then a 28 day window, that's 
+
+604
+00:39:11,190 --> 00:39:19,030
+6.72 hours of downtime. 
+So what that means is that as 
+
+605
+00:39:19,030 --> 00:39:23,270
+you're approaching a Friday, 
+like if you've been tracking, 
+
+606
+00:39:23,270 --> 00:39:27,110
+it's just like your checkbook if
+you've been tracking and you're 
+
+607
+00:39:27,110 --> 00:39:31,480
+like, you know. 
+We're coming up on a rolling 20 
+
+608
+00:39:31,480 --> 00:39:35,920
+day window and like we're 
+nowhere near that 6.7 hours, 
+
+609
+00:39:35,920 --> 00:39:39,360
+like we can take some risks, 
+right. 
+
+610
+00:39:39,440 --> 00:39:43,840
+We can run that failure Friday 
+and because we we're actually 
+
+611
+00:39:43,840 --> 00:39:49,000
+like we've got we're we're we've
+got budget but if stuff is going
+
+612
+00:39:49,000 --> 00:39:53,640
+on and you're looking at like we
+are super close to hitting that 
+
+613
+00:39:54,480 --> 00:39:57,370
+error budget limit. 
+You might say you know what code
+
+614
+00:39:57,370 --> 00:40:01,330
+freeze like on a Friday don't 
+press anything because like we 
+
+615
+00:40:01,330 --> 00:40:04,970
+just we've got to figure out 
+like other there's enough things
+
+616
+00:40:04,970 --> 00:40:09,050
+that have introduced instability
+and so you you can use it to 
+
+617
+00:40:09,050 --> 00:40:15,170
+make decisions on on like a very
+how much risk you're willing to.
+
+618
+00:40:15,170 --> 00:40:17,890
+Take on and so that. 
+Lets you. 
+
+619
+00:40:19,610 --> 00:40:22,450
+That lets you make just more, 
+like informed decisions about. 
+
+620
+00:40:23,200 --> 00:40:26,000
+Those types of resilience tests 
+that you're going to run. 
+
+621
+00:40:26,600 --> 00:40:31,160
+But it also means that like the 
+the folks who are going to be on
+
+622
+00:40:31,160 --> 00:40:37,200
+call, like they have, they they 
+know it's like, hey listen we're
+
+623
+00:40:37,200 --> 00:40:41,040
+about to blow through our error 
+budget, which means like you we 
+
+624
+00:40:41,040 --> 00:40:45,640
+need to be ready to like respond
+and so not let things pass 
+
+625
+00:40:45,640 --> 00:40:47,200
+through. 
+And like I'll deal with it in 
+
+626
+00:40:47,200 --> 00:40:49,800
+the morning, right. 
+Whereas like if you have if 
+
+627
+00:40:49,800 --> 00:40:52,480
+you've got a lot of room in your
+error budget. 
+
+628
+00:40:53,020 --> 00:40:54,340
+It can. 
+You can take a different 
+
+629
+00:40:54,340 --> 00:40:57,100
+approach of like I'll get to it 
+in the morning, right? 
+
+630
+00:40:57,100 --> 00:41:02,820
+Like those are the kinds of it 
+gives you a framework to think 
+
+631
+00:41:02,820 --> 00:41:08,300
+about, like how you make 
+decisions and and decide what 
+
+632
+00:41:08,300 --> 00:41:10,580
+risks you need to take or not 
+take. 
+
+633
+00:41:10,940 --> 00:41:13,420
+Yeah, the hard. 
+Part is, how do we start to 
+
+634
+00:41:13,420 --> 00:41:18,020
+explain this to a generation of 
+developers who don't understand 
+
+635
+00:41:18,020 --> 00:41:24,130
+what balancing A checkbook is? 
+It's it's like the. 
+
+636
+00:41:24,130 --> 00:41:27,370
+Analogy to Would it make sense? 
+To managers too, I mean, 
+
+637
+00:41:27,370 --> 00:41:30,410
+especially up higher in the 
+organization, the idea of an 
+
+638
+00:41:30,410 --> 00:41:33,010
+error budget, would it make 
+sense to them? 
+
+639
+00:41:33,610 --> 00:41:37,210
+Sounds It's kind of weird idea, 
+I think. 
+
+640
+00:41:37,210 --> 00:41:39,770
+What? 
+I think what's hard there is 
+
+641
+00:41:39,770 --> 00:41:43,730
+that you can you get folks who 
+have this sort of knee jerk 
+
+642
+00:41:43,730 --> 00:41:46,770
+reaction where they're just they
+just want to put the big number 
+
+643
+00:41:46,770 --> 00:41:50,700
+of like we are. 
+Super available and like how 
+
+644
+00:41:50,700 --> 00:41:52,860
+available we want, we want 100% 
+right. 
+
+645
+00:41:53,420 --> 00:41:58,620
+And it's like that like walking 
+through like well what does that
+
+646
+00:41:58,620 --> 00:42:03,020
+cost versus what can we actually
+tolerate. 
+
+647
+00:42:03,020 --> 00:42:08,700
+I think that is the hardest 
+shift from like especially folks
+
+648
+00:42:08,820 --> 00:42:13,140
+you know where from an 
+availability perspective on like
+
+649
+00:42:13,140 --> 00:42:18,550
+the the IT side. 
+It was you know for years it was
+
+650
+00:42:18,550 --> 00:42:21,950
+just kind of like beaten into 
+folks that it was like no, no. 
+
+651
+00:42:21,950 --> 00:42:24,550
+And you know it's up time. 
+We just that's what we're 
+
+652
+00:42:24,550 --> 00:42:27,590
+measuring on is up time, which 
+means you want that to be just 
+
+653
+00:42:27,590 --> 00:42:31,310
+as close to 100%. 
+There wasn't really deeper 
+
+654
+00:42:31,310 --> 00:42:36,990
+thinking about does it actually 
+need to be that, you know, and 
+
+655
+00:42:36,990 --> 00:42:38,790
+what's the cost associated with 
+that? 
+
+656
+00:42:39,270 --> 00:42:41,870
+Like, I could certainly see 
+people in management saying, 
+
+657
+00:42:42,330 --> 00:42:46,650
+saying, look, google.com, it's 
+got 100% uptime and thinking 
+
+658
+00:42:46,650 --> 00:42:50,130
+that they could get that too. 
+And it's like, oh, how much 
+
+659
+00:42:50,130 --> 00:42:53,850
+money is actually spent to get 
+that kind of availability for 
+
+660
+00:42:53,850 --> 00:42:55,850
+something of that scale? 
+And it does that. 
+
+661
+00:42:55,970 --> 00:43:00,770
+Produce the value commensurate 
+value exactly, I mean and you 
+
+662
+00:43:00,770 --> 00:43:01,370
+look. 
+At any. 
+
+663
+00:43:01,370 --> 00:43:09,690
+Type of IT service, right that 
+like you know there there's like
+
+664
+00:43:09,690 --> 00:43:13,470
+there's a pain. 
+Associated with something is 
+
+665
+00:43:13,470 --> 00:43:18,550
+down but the the there's like a 
+mythology that's like somehow 
+
+666
+00:43:18,550 --> 00:43:22,990
+people are supposed to always 
+keep things up like how many 
+
+667
+00:43:22,990 --> 00:43:26,350
+times it's like ohh the Wi-Fi is
+down in the office right. 
+
+668
+00:43:26,390 --> 00:43:30,710
+It's it's like you know OK I 
+mean yes. 
+
+669
+00:43:30,710 --> 00:43:33,950
+Was there some loss problems? 
+Are trained, Tolerate failure, 
+
+670
+00:43:34,870 --> 00:43:35,270
+right. 
+It's. 
+
+671
+00:43:35,270 --> 00:43:37,110
+Those maxims. 
+Networking. 
+
+672
+00:43:37,550 --> 00:43:41,290
+Yeah, but it's like. 
+Yeah, it. 
+
+673
+00:43:41,410 --> 00:43:46,850
+It's it will fail and and like 
+yeah you want to build for 
+
+674
+00:43:46,850 --> 00:43:50,570
+resilience and and have like 
+make it so that it's not 
+
+675
+00:43:50,570 --> 00:43:54,530
+something like yeah we we can't 
+tolerate 6 hours without the 
+
+676
+00:43:54,530 --> 00:44:01,690
+network or everyone would be 
+completely unproductive but but 
+
+677
+00:44:01,690 --> 00:44:06,930
+the reality is saying that it's 
+zero percent is like does that 
+
+678
+00:44:06,930 --> 00:44:10,270
+ever happen. 
+Like, are we, are we setting a 
+
+679
+00:44:10,270 --> 00:44:15,430
+standard that's like no one ever
+actually achieves anyways, and 
+
+680
+00:44:16,230 --> 00:44:19,750
+and then we're not thinking 
+critically about what we 
+
+681
+00:44:19,790 --> 00:44:23,750
+actually have to deal with? 
+Like, what's? 
+
+682
+00:44:23,950 --> 00:44:29,110
+Have you ever read the book? 
+Waltzing with Bears it's about. 
+
+683
+00:44:30,240 --> 00:44:35,360
+It's well, a lot of it's about 
+estimation, like schedule 
+
+684
+00:44:35,360 --> 00:44:37,240
+estimation, that's the example 
+that they use. 
+
+685
+00:44:37,240 --> 00:44:40,000
+But they go everything is a 
+probability curve. 
+
+686
+00:44:41,080 --> 00:44:47,120
+And when you say give me your 
+best guess, you know give me 
+
+687
+00:44:47,160 --> 00:44:49,440
+what's the shortest amount of 
+time you could do that. 
+
+688
+00:44:49,760 --> 00:44:53,320
+Well, if you look at that in 
+terms of probability, that's the
+
+689
+00:44:53,320 --> 00:44:58,400
+front tail of the curve and the 
+probability is 0. 
+
+690
+00:44:58,980 --> 00:45:02,100
+That you will hit that. 
+And then you have all of these 
+
+691
+00:45:02,100 --> 00:45:05,380
+other systems and it's like, OK,
+what's the best we can do on all
+
+692
+00:45:05,380 --> 00:45:08,060
+of these? 
+All of them have a probability 
+
+693
+00:45:08,060 --> 00:45:11,340
+of 0 and what you need to do is 
+move into the middle of the 
+
+694
+00:45:11,340 --> 00:45:14,740
+probability curve, which is the 
+most likely situation. 
+
+695
+00:45:15,100 --> 00:45:18,460
+But boy, that's a hard concept 
+to get across, yes. 
+
+696
+00:45:18,780 --> 00:45:23,940
+There's and there's a I will 
+join you in playing the Have you
+
+697
+00:45:23,940 --> 00:45:28,820
+read game. 
+The book I started listening to 
+
+698
+00:45:28,820 --> 00:45:31,660
+over the summer, so I haven't 
+finished it, but it's Thinking 
+
+699
+00:45:31,660 --> 00:45:35,140
+in Bets by Annie Duke. 
+I've I. 
+
+700
+00:45:35,140 --> 00:45:36,420
+Started it? 
+Yeah. 
+
+701
+00:45:36,820 --> 00:45:39,980
+OK, so. 
+That's you've probably consumed 
+
+702
+00:45:39,980 --> 00:45:45,140
+the same out, but like a really 
+great, you know, cognitive 
+
+703
+00:45:45,140 --> 00:45:50,220
+scientist turned poker player. 
+But this idea that it's just 
+
+704
+00:45:50,220 --> 00:45:55,740
+like, you know, unlike chess 
+where you have all the 
+
+705
+00:45:55,740 --> 00:46:01,140
+information that you need. 
+In order to make the exact best 
+
+706
+00:46:01,140 --> 00:46:05,660
+next move and and it's why like 
+the master will always beat the 
+
+707
+00:46:05,660 --> 00:46:09,380
+novice like unless you know the 
+master was drunk. 
+
+708
+00:46:09,420 --> 00:46:16,780
+I don't know like, but it 
+there's it's not really like 
+
+709
+00:46:16,780 --> 00:46:20,720
+life at all. 
+And so, you know, she kind of 
+
+710
+00:46:20,720 --> 00:46:23,560
+gets into the background of, you
+know, game theory being a lot 
+
+711
+00:46:23,560 --> 00:46:27,600
+more based on something like 
+poker where you are, you are 
+
+712
+00:46:27,600 --> 00:46:31,120
+having to make a lot of 
+decisions with imperfect 
+
+713
+00:46:31,120 --> 00:46:37,640
+information and but that means 
+that sometimes like the best 
+
+714
+00:46:37,640 --> 00:46:42,330
+decision. 
+Will not guarantee success. 
+
+715
+00:46:42,370 --> 00:46:46,130
+And so I think the term is like 
+resulting where it's like this 
+
+716
+00:46:46,130 --> 00:46:52,810
+judgment as a very natural human
+thing we're we judge the outcome
+
+717
+00:46:53,810 --> 00:46:56,810
+and and then kind of critique 
+like with the decision to get 
+
+718
+00:46:56,810 --> 00:46:59,810
+there even though it's like well
+actually given given the 
+
+719
+00:46:59,810 --> 00:47:02,090
+information that was available 
+at the time that was the best 
+
+720
+00:47:02,090 --> 00:47:03,810
+decision. 
+It's just, you know, she talked 
+
+721
+00:47:03,810 --> 00:47:06,490
+about it was like, you can just 
+get unlucky, right? 
+
+722
+00:47:06,490 --> 00:47:08,530
+And she gives an example like 
+some, some. 
+
+723
+00:47:09,100 --> 00:47:12,740
+Football thing where you know 
+the the coach called a play to 
+
+724
+00:47:12,740 --> 00:47:15,260
+do a pass and then it was 
+intercepted and it was like well
+
+725
+00:47:15,260 --> 00:47:19,700
+actually like statistically 
+speaking it would probably would
+
+726
+00:47:19,700 --> 00:47:24,900
+have worked better but wow the 
+the Black Swan event of that 
+
+727
+00:47:24,900 --> 00:47:29,420
+interception happening was 
+really unlikely and and 
+
+728
+00:47:29,420 --> 00:47:32,980
+unfortunately like they got 
+unlucky in that scenario but 
+
+729
+00:47:32,980 --> 00:47:37,300
+that's sort of that is a really 
+to your point of like how do you
+
+730
+00:47:37,300 --> 00:47:41,140
+get. 
+Anyone in the organization to 
+
+731
+00:47:41,140 --> 00:47:44,660
+kind of embrace it is you have 
+to start thinking in more of 
+
+732
+00:47:44,660 --> 00:47:48,660
+those like, yeah, probabilistic 
+terms and like what's the, 
+
+733
+00:47:50,260 --> 00:47:53,780
+what's the, the, the likelihood 
+given the information that we 
+
+734
+00:47:53,780 --> 00:47:55,660
+have? 
+Because again, it's all of this 
+
+735
+00:47:55,660 --> 00:48:01,540
+is you are trying to operate an 
+environment with imperfect 
+
+736
+00:48:01,540 --> 00:48:03,660
+information. 
+Yeah, but all you have. 
+
+737
+00:48:03,660 --> 00:48:06,700
+To do is run into one person who
+goes we'll just. 
+
+738
+00:48:07,170 --> 00:48:11,050
+Find the right answer. 
+There's a right answer, and who 
+
+739
+00:48:11,090 --> 00:48:15,810
+can't think in terms of 
+probabilities, yeah. 
+
+740
+00:48:17,170 --> 00:48:19,250
+Well, that's a hard problem, 
+isn't it? 
+
+741
+00:48:19,690 --> 00:48:23,930
+But again, which is? 
+To quote Gerald Weinberg, no 
+
+742
+00:48:23,930 --> 00:48:26,210
+matter what they tell you, it's 
+always a people problem. 
+
+743
+00:48:27,530 --> 00:48:31,210
+It's the hardest part. 
+It is the technology is the easy
+
+744
+00:48:31,210 --> 00:48:34,900
+part. 
+But I think like what's gotten 
+
+745
+00:48:34,900 --> 00:48:38,780
+people's attention right is that
+the organizations that have been
+
+746
+00:48:40,100 --> 00:48:43,980
+successful with these types of 
+Google being of course like you 
+
+747
+00:48:43,980 --> 00:48:50,780
+know the the the source right of
+of the site reliability kind of 
+
+748
+00:48:50,780 --> 00:48:57,140
+approach wrote the book and that
+then of course is like well so 
+
+749
+00:48:57,140 --> 00:48:59,620
+many folks admire it then that 
+opens up the. 
+
+750
+00:49:00,770 --> 00:49:02,810
+Conversation of like well how do
+they do it? 
+
+751
+00:49:02,810 --> 00:49:05,530
+Is like, well how they did it is
+they change the way that they're
+
+752
+00:49:05,530 --> 00:49:08,610
+thinking about the problem or 
+they just were thinking about it
+
+753
+00:49:08,610 --> 00:49:09,890
+differently the whole time. 
+I don't know. 
+
+754
+00:49:10,130 --> 00:49:16,610
+But point is like when when 
+something that's successful and 
+
+755
+00:49:16,610 --> 00:49:20,570
+working starts to get associated
+with, you've got to think about 
+
+756
+00:49:20,570 --> 00:49:24,890
+this problem differently. 
+That is like the the influence 
+
+757
+00:49:24,890 --> 00:49:27,500
+game to. 
+Change people's minds. 
+
+758
+00:49:27,500 --> 00:49:31,100
+Or get people to at least stop 
+asking for the thing that that 
+
+759
+00:49:31,100 --> 00:49:35,220
+doesn't actually make sense. 
+And here's now social proof, 
+
+760
+00:49:35,420 --> 00:49:39,020
+right? 
+That people are solving this 
+
+761
+00:49:39,020 --> 00:49:41,460
+problem a different way and it's
+working. 
+
+762
+00:49:42,260 --> 00:49:44,780
+Yeah, yeah, you need those 
+proofs. 
+
+763
+00:49:45,500 --> 00:49:47,900
+Yeah, Okay. 
+Random question, should you 
+
+764
+00:49:47,900 --> 00:49:52,720
+deploy on Fridays? 
+I think if you should, you 
+
+765
+00:49:52,720 --> 00:49:55,840
+should be trying to get to the 
+point where you can confidently 
+
+766
+00:49:55,960 --> 00:49:58,720
+deploy on Fridays. 
+I think that's that's a great 
+
+767
+00:49:59,240 --> 00:50:03,760
+like aspiration. 
+If you're if if that's going to 
+
+768
+00:50:04,240 --> 00:50:08,800
+blow through your error budget 
+like yeah, maybe not today like,
+
+769
+00:50:08,800 --> 00:50:11,000
+but maybe you should be working 
+towards that. 
+
+770
+00:50:12,240 --> 00:50:16,680
+So, you know, it seems like a 
+great goal of just like, yeah, 
+
+771
+00:50:16,680 --> 00:50:19,560
+sure, like I have the 
+confidence. 
+
+772
+00:50:20,090 --> 00:50:24,090
+We as a team have the confidence
+to deploy on Fridays. 
+
+773
+00:50:24,210 --> 00:50:29,650
+Like, that's a great goal, yeah.
+But how do you balance that with
+
+774
+00:50:29,650 --> 00:50:31,530
+your air budget? 
+And that's a good way to look at
+
+775
+00:50:31,530 --> 00:50:33,250
+it, right? 
+And that might also. 
+
+776
+00:50:33,410 --> 00:50:37,170
+Mean that like generally we're 
+feel good about deploying on 
+
+777
+00:50:37,170 --> 00:50:41,410
+Fridays, but this particular 
+Friday we do not, right because 
+
+778
+00:50:41,410 --> 00:50:46,560
+of what we're seeing. 
+In our environment and you know 
+
+779
+00:50:46,600 --> 00:50:51,240
+we've been shipping code every 
+day, multiple times a day and 
+
+780
+00:50:51,720 --> 00:50:56,040
+those are always some of the 
+most likely sources of 
+
+781
+00:50:56,640 --> 00:50:59,160
+introducing instability. 
+And it's it's not a game day, 
+
+782
+00:50:59,160 --> 00:51:01,160
+it's just literally we just 
+shipped code. 
+
+783
+00:51:01,160 --> 00:51:04,720
+So bringing in for example like 
+you've got, sure you got 
+
+784
+00:51:04,720 --> 00:51:07,760
+monitoring day in logs, but 
+change events right? 
+
+785
+00:51:07,760 --> 00:51:10,560
+Being able to pull in the data 
+directly from. 
+
+786
+00:51:11,300 --> 00:51:15,900
+You know your CICD pipeline 
+that's like yeah we're we're 
+
+787
+00:51:15,900 --> 00:51:19,940
+tracking like every single 
+change that you did and marry 
+
+788
+00:51:19,940 --> 00:51:24,620
+that with oh and and then we 
+also saw like an alert go off 
+
+789
+00:51:24,620 --> 00:51:28,940
+from data dog and then we've we 
+can go auto capture. 
+
+790
+00:51:28,940 --> 00:51:30,980
+This is another thing we didn't 
+even get into is the idea of 
+
+791
+00:51:30,980 --> 00:51:34,700
+like now those complex 
+environments which is we talked 
+
+792
+00:51:34,700 --> 00:51:37,620
+about at the beginning where 
+it's like at the end of the day 
+
+793
+00:51:38,140 --> 00:51:40,220
+you want like one team to be 
+accountable but. 
+
+794
+00:51:40,620 --> 00:51:43,820
+No one's in a vacuum. 
+And there's always other systems
+
+795
+00:51:43,820 --> 00:51:47,340
+like the development teams don't
+necessarily have the keys to the
+
+796
+00:51:47,380 --> 00:51:50,460
+underlying Kubernetes platform. 
+They may not even have the keys 
+
+797
+00:51:50,740 --> 00:51:53,220
+to the database. 
+They may, you know, not have the
+
+798
+00:51:53,220 --> 00:51:57,260
+keys to the load balancer. 
+So how do you avoid still 
+
+799
+00:51:57,260 --> 00:52:02,380
+getting in a situation where to 
+figure out like, OK, where's the
+
+800
+00:52:02,380 --> 00:52:05,660
+smoking gun? 
+How do I not have to go like 
+
+801
+00:52:05,660 --> 00:52:09,950
+interrupt 6 different people? 
+And they all get pulled in as 
+
+802
+00:52:09,950 --> 00:52:12,590
+basically guilty until proven 
+innocent, right? 
+
+803
+00:52:12,910 --> 00:52:15,150
+Right. 
+And that's the thing that's an 
+
+804
+00:52:15,150 --> 00:52:17,830
+automation problem we've been 
+working on, which is kind of I 
+
+805
+00:52:17,830 --> 00:52:20,870
+like the. 
+I think I heard you say 
+
+806
+00:52:20,870 --> 00:52:26,590
+something like look for ways to 
+change the game and I'm 
+
+807
+00:52:26,590 --> 00:52:31,750
+wondering if there's if you can 
+imagine other ways that we might
+
+808
+00:52:31,950 --> 00:52:34,910
+change this game because because
+we've been looking at this. 
+
+809
+00:52:35,270 --> 00:52:38,630
+I think a little bit like, well,
+I mean the example I gave with 
+
+810
+00:52:38,630 --> 00:52:43,750
+Rust, no garbage collector to 
+tune, no, no, you know, no 
+
+811
+00:52:43,750 --> 00:52:46,910
+particular speedups that you're 
+going to be able to achieve. 
+
+812
+00:52:48,110 --> 00:52:54,710
+But also we've been looking at 
+Zai Verge's new Gollum system 
+
+813
+00:52:55,150 --> 00:52:58,990
+and that seems like that could 
+be something that changes the 
+
+814
+00:52:58,990 --> 00:53:02,230
+game. 
+It runs first of all in the. 
+
+815
+00:53:03,580 --> 00:53:04,820
+Waasm. 
+Yeah. 
+
+816
+00:53:04,940 --> 00:53:11,620
+Runs inside of Waasm. 
+And it's all, I mean, they. 
+
+817
+00:53:13,100 --> 00:53:14,900
+I mean, they're seriously 
+changing the game. 
+
+818
+00:53:15,100 --> 00:53:17,540
+Yeah, yeah. 
+It's like a serverless model 
+
+819
+00:53:17,540 --> 00:53:21,840
+where you don't have to 
+extrapolate state to another 
+
+820
+00:53:21,840 --> 00:53:23,960
+system. 
+It's like you're you just build 
+
+821
+00:53:23,960 --> 00:53:27,840
+your application and it 
+maintains state and can you know
+
+822
+00:53:27,840 --> 00:53:30,520
+survive through crashes and 
+restore state and all that. 
+
+823
+00:53:30,520 --> 00:53:32,400
+Anyway, it's it's pretty 
+fascinating. 
+
+824
+00:53:32,600 --> 00:53:36,600
+I think we'll hopefully talk to 
+John folks about that. 
+
+825
+00:53:38,400 --> 00:53:41,120
+I let's see there was another 
+question I had for you. 
+
+826
+00:53:41,120 --> 00:53:44,360
+Ohh. 
+OK, we got to talk about AI, 
+
+827
+00:53:44,360 --> 00:53:46,320
+because everything's all about 
+AI these days. 
+
+828
+00:53:46,360 --> 00:53:49,280
+We got to yes. 
+We got to but I don't want to 
+
+829
+00:53:49,280 --> 00:53:50,480
+talk about Gen. 
+AI. 
+
+830
+00:53:50,760 --> 00:53:54,440
+You know that's like the the hot
+you know thing and and all that.
+
+831
+00:53:54,840 --> 00:53:59,280
+Here's here's a crazy thing. 
+It seems like like the the 
+
+832
+00:53:59,280 --> 00:54:03,400
+systems that we need to have in 
+place to like do all this this 
+
+833
+00:54:03,440 --> 00:54:08,880
+reliability stuff, well are. 
+Incredibly complex because the 
+
+834
+00:54:08,880 --> 00:54:11,400
+problems that they're solving 
+are incredibly complex. 
+
+835
+00:54:12,120 --> 00:54:15,240
+Can we just, like slap an AI on 
+this and like, make the AI, 
+
+836
+00:54:15,240 --> 00:54:21,880
+like, figure all this out? 
+So what's funny is at, you know,
+
+837
+00:54:21,880 --> 00:54:24,960
+Full disclosure, not an expert 
+in AI, not really an expert in 
+
+838
+00:54:24,960 --> 00:54:26,680
+anything, to be perfectly 
+honest. 
+
+839
+00:54:26,680 --> 00:54:31,360
+That's not, that's not really in
+my description. 
+
+840
+00:54:31,720 --> 00:54:39,320
+But there's there's this this 
+kind of notion of AI OPS which. 
+
+841
+00:54:39,740 --> 00:54:44,700
+Is that AI doing OPS or is that 
+OPS For AI systems it's. 
+
+842
+00:54:44,940 --> 00:54:54,660
+AI helping with OPS and so, 
+which is what it sounded like 
+
+843
+00:54:54,660 --> 00:54:56,660
+usually like can't we just have 
+an AI help with this? 
+
+844
+00:54:57,820 --> 00:55:00,140
+And it's not like a new term or 
+concept. 
+
+845
+00:55:00,140 --> 00:55:04,660
+I mean, I think Gartner's been 
+publishing market guides around 
+
+846
+00:55:04,660 --> 00:55:08,410
+it where, you know, they. 
+That just means like they are 
+
+847
+00:55:08,410 --> 00:55:11,770
+providing advice to buyers about
+these the kinds of things you 
+
+848
+00:55:11,770 --> 00:55:13,810
+should look for which means it's
+like there's enough happening 
+
+849
+00:55:13,810 --> 00:55:16,450
+there for them to actually spend
+the time to do that. 
+
+850
+00:55:18,050 --> 00:55:22,370
+But the sort of high levels like
+basically you're using data and 
+
+851
+00:55:22,370 --> 00:55:26,890
+you're you're analyzing it using
+machine learning and in order to
+
+852
+00:55:26,890 --> 00:55:30,930
+help with these kind of 
+operational tasks and. 
+
+853
+00:55:32,370 --> 00:55:38,210
+It gets it's strongly associated
+around monitoring and you see a 
+
+854
+00:55:38,210 --> 00:55:41,370
+lot of monitoring vendors start 
+to talk about doing Aops. 
+
+855
+00:55:41,370 --> 00:55:48,810
+But what's challenging is that 
+the complexity isn't just what 
+
+856
+00:55:48,810 --> 00:55:50,690
+we have to do to make things 
+reliable. 
+
+857
+00:55:51,490 --> 00:55:57,850
+The complexity is also like the 
+the architectures and patterns 
+
+858
+00:55:57,850 --> 00:56:01,770
+that we've adopted over time. 
+In order to be able to build 
+
+859
+00:56:01,770 --> 00:56:05,890
+what we need to build faster, 
+right, and more reliably, like 
+
+860
+00:56:05,890 --> 00:56:13,410
+part of it, you know, having 
+sort of clean contracts between 
+
+861
+00:56:13,410 --> 00:56:16,210
+services so that one can 
+gracefully fail and not, you 
+
+862
+00:56:16,210 --> 00:56:18,970
+know, take down everything else.
+Sure, that's part of it. 
+
+863
+00:56:19,250 --> 00:56:22,370
+But the other part is so that, 
+you know, one team can make 
+
+864
+00:56:22,370 --> 00:56:26,290
+changes, because it's not like 
+this giant monolith that, like 
+
+865
+00:56:26,290 --> 00:56:29,530
+no one can wrap their head 
+around what's going on in there.
+
+866
+00:56:30,170 --> 00:56:33,930
+You know, you can just, you can 
+reason over the code better. 
+
+867
+00:56:33,930 --> 00:56:36,690
+Like that's another really good 
+reason to kind of break things 
+
+868
+00:56:36,690 --> 00:56:39,210
+apart. 
+But it always then introduces 
+
+869
+00:56:39,210 --> 00:56:42,330
+like more complexity, right? 
+You've broken things apart, 
+
+870
+00:56:43,570 --> 00:56:46,530
+you're you've got a lot of new 
+dependencies between stuff. 
+
+871
+00:56:46,730 --> 00:56:50,610
+OK. 
+So now all of those different 
+
+872
+00:56:51,170 --> 00:56:53,930
+parts of the puzzle and you've 
+got your, your infrastructure 
+
+873
+00:56:53,930 --> 00:56:57,490
+layers, you know platforms 
+underneath it as well, all of 
+
+874
+00:56:57,490 --> 00:57:01,840
+those different pieces. 
+Are generating events, right. 
+
+875
+00:57:01,840 --> 00:57:04,040
+I was just like this happened, 
+this happened, this happened. 
+
+876
+00:57:04,680 --> 00:57:11,800
+And how do you understand across
+all of those what's actually 
+
+877
+00:57:11,800 --> 00:57:13,760
+happening? 
+And I'll give you an example of 
+
+878
+00:57:14,000 --> 00:57:19,680
+like a database failure since 
+like an underlying database can 
+
+879
+00:57:19,680 --> 00:57:23,320
+actually like touch a lot of 
+different things and and make 
+
+880
+00:57:23,320 --> 00:57:26,400
+failures that are like, it's 
+like I call it the disturbance 
+
+881
+00:57:26,400 --> 00:57:30,400
+of in the force. 
+Well, it's funny that Zencaster,
+
+882
+00:57:30,400 --> 00:57:34,800
+our recording software, crashed 
+right when Domain was talking 
+
+883
+00:57:34,800 --> 00:57:36,400
+about the disturbance and the 
+Force. 
+
+884
+00:57:37,360 --> 00:57:41,640
+But we got things running again,
+so here we go, continuing after 
+
+885
+00:57:42,080 --> 00:57:46,040
+recovery from the crash. 
+Okay, welcome back. 
+
+886
+00:57:46,040 --> 00:57:49,960
+Wow, that was such a great thing
+to have happened in this 
+
+887
+00:57:49,960 --> 00:57:52,560
+particular conversation, because
+Zencaster. 
+
+888
+00:57:52,560 --> 00:57:57,260
+Just totally, totally died. 
+Like that was amazing. 
+
+889
+00:57:57,540 --> 00:58:01,140
+Like massive failure. 
+Took us a while to get back to 
+
+890
+00:58:01,140 --> 00:58:03,460
+working. 
+They used up their budget for. 
+
+891
+00:58:04,420 --> 00:58:07,500
+Yeah. 
+I think that my last comment was
+
+892
+00:58:07,500 --> 00:58:12,620
+something about like all the 
+voices crying out silenced and 
+
+893
+00:58:12,620 --> 00:58:14,260
+then sure enough we were 
+silenced. 
+
+894
+00:58:14,300 --> 00:58:21,860
+So and yeah anyways point is 
+like that can then that that'll 
+
+895
+00:58:21,860 --> 00:58:26,280
+trigger like 60 different. 
+Systems to all send off an alert
+
+896
+00:58:26,280 --> 00:58:30,360
+of like I felt something I felt 
+something and so that could be 
+
+897
+00:58:30,360 --> 00:58:33,560
+just a ton of noise and 
+interruption for a bunch of 
+
+898
+00:58:33,560 --> 00:58:37,280
+different teams. 
+So this is where to your to your
+
+899
+00:58:37,280 --> 00:58:42,480
+question, yes, you can use a I, 
+if you will really just kind of,
+
+900
+00:58:42,640 --> 00:58:48,480
+in this case, fancy machine 
+learning in order to be able to 
+
+901
+00:58:48,480 --> 00:58:51,280
+recognize like these are all 
+related. 
+
+902
+00:58:52,190 --> 00:58:55,390
+Things are all one thing. 
+Like, that's one example of how 
+
+903
+00:58:56,390 --> 00:59:00,470
+AI correlations across the large
+data set for you, yes. 
+
+904
+00:59:01,790 --> 00:59:07,230
+And so that that's really 
+powerful because of all these 
+
+905
+00:59:07,230 --> 00:59:10,790
+layers of complexity and 
+interconnected things where 
+
+906
+00:59:11,350 --> 00:59:17,310
+there's that a disturbance in 
+the Force events will cause a 
+
+907
+00:59:17,310 --> 00:59:19,990
+lot of. 
+Other systems to feel something 
+
+908
+00:59:19,990 --> 00:59:24,990
+maybe not catastrophically, but 
+that can just be really, really 
+
+909
+00:59:24,990 --> 00:59:27,990
+noisy. 
+And so how do you find the real?
+
+910
+00:59:27,990 --> 00:59:31,190
+And then of course there's the 
+side that's like how do you, 
+
+911
+00:59:31,230 --> 00:59:33,710
+which we started with, like how 
+do you replace just like the 
+
+912
+00:59:33,710 --> 00:59:38,190
+customer calling in saying 
+something is not working right. 
+
+913
+00:59:39,470 --> 00:59:43,670
+But yeah, there's a lot that, 
+you know, whether you want to 
+
+914
+00:59:43,670 --> 00:59:46,990
+debate and call it, is it a I? 
+Yeah, it's. 
+
+915
+00:59:46,990 --> 00:59:49,910
+Not generative. 
+It's not it's not summarizing 
+
+916
+00:59:49,910 --> 00:59:52,830
+something for you, but it's it's
+doing that. 
+
+917
+00:59:53,910 --> 00:59:56,790
+It's helping a lot. 
+Yeah, that's what I'm finding. 
+
+918
+00:59:57,870 --> 01:00:00,510
+Yeah, the generative stuff. 
+But I think in this case it's 
+
+919
+01:00:00,510 --> 01:00:05,310
+more about being able to have a 
+ton of data and being able to 
+
+920
+01:00:05,310 --> 01:00:11,310
+kind of compress that down into 
+more specific things. 
+
+921
+01:00:11,310 --> 01:00:15,330
+And so in the case of. 
+Everyone's pagers going off all 
+
+922
+01:00:15,330 --> 01:00:18,450
+at once maybe. 
+Yeah, I could help to narrow 
+
+923
+01:00:18,450 --> 01:00:22,130
+that down to oh, here's like 
+root cause or here's the 
+
+924
+01:00:22,210 --> 01:00:26,210
+component that actually is is 
+underlying, so which everyone's 
+
+925
+01:00:26,290 --> 01:00:28,010
+set. 
+Up one person's pager instead? 
+
+926
+01:00:28,410 --> 01:00:31,890
+Yeah, I mean. 
+But that's like the cost of 
+
+927
+01:00:31,890 --> 01:00:35,690
+that, you know, to an 
+organization to have one person 
+
+928
+01:00:35,690 --> 01:00:38,530
+interrupted versus, you know, 
+50. 
+
+929
+01:00:39,110 --> 01:00:43,190
+Like, is huge, right? 
+Not just like for the time. 
+
+930
+01:00:43,190 --> 01:00:46,590
+There's like anytime you're 
+interrupting developers, I I 
+
+931
+01:00:46,590 --> 01:00:51,950
+call it like the double tax. 
+There's like the time that it's 
+
+932
+01:00:51,950 --> 01:00:54,830
+going to take to get them 
+engaged and what they have to 
+
+933
+01:00:54,830 --> 01:00:56,190
+do. 
+But there's also the time that 
+
+934
+01:00:56,190 --> 01:01:00,430
+like they could have been 
+spending on building whatever 
+
+935
+01:01:00,430 --> 01:01:02,990
+that thing was that you wanted 
+them to build, right? 
+
+936
+01:01:02,990 --> 01:01:05,670
+Whether it's like a that was 
+going to generate some revenue 
+
+937
+01:01:05,670 --> 01:01:07,790
+and now it got pushed out like 
+another week. 
+
+938
+01:01:08,730 --> 01:01:10,770
+OK. 
+Well, there's a cost to that. 
+
+939
+01:01:10,770 --> 01:01:13,290
+So these are all just 
+opportunity costs. 
+
+940
+01:01:13,650 --> 01:01:17,730
+But that's that's something 
+that's really helpful. 
+
+941
+01:01:18,490 --> 01:01:20,850
+And being able to also do that 
+where you're like, listen, 
+
+942
+01:01:20,850 --> 01:01:25,290
+you've got 50 different teams. 
+They're not all using the same 
+
+943
+01:01:25,450 --> 01:01:30,170
+monitoring system like how 
+what's the who's watching the 
+
+944
+01:01:30,170 --> 01:01:32,330
+watchers, like that's what you 
+want. 
+
+945
+01:01:32,330 --> 01:01:36,210
+That's where you want to be able
+to do that type of processing as
+
+946
+01:01:36,210 --> 01:01:38,910
+opposed to. 
+Can really, really fine tune my 
+
+947
+01:01:38,910 --> 01:01:41,510
+monitoring system. 
+But like, how's that going to 
+
+948
+01:01:41,510 --> 01:01:44,910
+help you in a larger 
+organization where you've got a 
+
+949
+01:01:44,910 --> 01:01:47,830
+bunch of different teams and and
+there are dependencies. 
+
+950
+01:01:49,510 --> 01:01:56,270
+That's that's kind of 1 aspect. 
+And then there's also thinking 
+
+951
+01:01:56,270 --> 01:02:02,590
+about, can we enrich the data, 
+right, so that by the time we're
+
+952
+01:02:02,590 --> 01:02:05,830
+actually pulling in that one 
+person, what are they looking 
+
+953
+01:02:05,830 --> 01:02:08,910
+at? 
+Like what did to get to a 
+
+954
+01:02:08,910 --> 01:02:11,190
+resolution. 
+Yeah, you know. 
+
+955
+01:02:11,190 --> 01:02:14,110
+It's it's one thing to be like, 
+OK, I got an alert. 
+
+956
+01:02:14,550 --> 01:02:17,390
+It's another thing where it's 
+like what's the the next steps 
+
+957
+01:02:17,390 --> 01:02:19,550
+that they're gonna go do is like
+at least three legs of the 
+
+958
+01:02:19,550 --> 01:02:20,910
+stool. 
+Right. 
+
+959
+01:02:21,150 --> 01:02:24,910
+And I'm gonna then I need to go 
+track down what were the changes
+
+960
+01:02:24,910 --> 01:02:29,550
+that were made because eight 
+times out of 10 it's probably 
+
+961
+01:02:29,550 --> 01:02:32,790
+there was a change that was 
+socalled, you know air quotes 
+
+962
+01:02:32,870 --> 01:02:37,310
+planned change but. 
+Okay, it had an unplanned 
+
+963
+01:02:37,310 --> 01:02:41,110
+consequence and. 
+Then and then that's. 
+
+964
+01:02:41,270 --> 01:02:45,110
+How it might help you? 
+Find those things quicker and 
+
+965
+01:02:45,110 --> 01:02:47,190
+like. 
+You wanna enrich what the 
+
+966
+01:02:47,190 --> 01:02:50,350
+person's looking at for that. 
+And then there's Now I'm gonna 
+
+967
+01:02:50,350 --> 01:02:53,590
+go find the logs. 
+So it's like, well, what if the 
+
+968
+01:02:53,750 --> 01:02:57,470
+AI is also helping you bring all
+that together, right? 
+
+969
+01:02:58,000 --> 01:03:00,800
+Go grab. 
+Those just go grab those logs. 
+
+970
+01:03:00,800 --> 01:03:03,800
+Like at the point, like, don't 
+make the person have to go do 
+
+971
+01:03:03,800 --> 01:03:07,120
+that, like do that for the 
+person. 
+
+972
+01:03:07,120 --> 01:03:10,000
+And that's where it's like the 
+person is still going to be 
+
+973
+01:03:10,000 --> 01:03:13,080
+reasoning over what they're 
+looking at, but you've saved 
+
+974
+01:03:13,080 --> 01:03:16,320
+them like this sort of menial 
+step. 
+
+975
+01:03:16,840 --> 01:03:20,360
+And it also may be like, well, 
+you might have to grab logs from
+
+976
+01:03:20,360 --> 01:03:23,640
+like 4 different places. 
+You may not have access to all 
+
+977
+01:03:23,640 --> 01:03:25,640
+those places which that gets 
+back to the like. 
+
+978
+01:03:25,990 --> 01:03:29,270
+How many people do they have to 
+then go interrupt just to be 
+
+979
+01:03:29,270 --> 01:03:31,790
+like is the database loading 
+data? 
+
+980
+01:03:31,790 --> 01:03:34,070
+Can you check? 
+Because like I I'm looking at my
+
+981
+01:03:34,070 --> 01:03:37,590
+code, my code's fine, but like 
+the network team is like is 
+
+982
+01:03:37,590 --> 01:03:39,430
+there something going on in the 
+load balancer, right? 
+
+983
+01:03:39,710 --> 01:03:42,910
+Those are all the first, can you
+correlate the data? 
+
+984
+01:03:42,950 --> 01:03:48,710
+And then second, can you then 
+get deeper diagnostics and state
+
+985
+01:03:48,750 --> 01:03:52,990
+in order to be able to see OK, 
+what's the actual thing we need 
+
+986
+01:03:52,990 --> 01:03:55,520
+to? 
+Restart or fix, I mean that the 
+
+987
+01:03:55,520 --> 01:03:59,760
+restarts is also like a a great 
+thing that's just like just auto
+
+988
+01:03:59,760 --> 01:04:02,480
+restart it, get the service 
+restored. 
+
+989
+01:04:02,600 --> 01:04:06,600
+Because at the end of the day, 
+if you're managing by way of an 
+
+990
+01:04:06,600 --> 01:04:12,920
+error budget, the goal isn't can
+we get to the root cause and fix
+
+991
+01:04:12,920 --> 01:04:15,640
+it right. 
+Like this is where there's there
+
+992
+01:04:15,640 --> 01:04:20,160
+can sometimes be a divergence 
+between the engineering team 
+
+993
+01:04:20,160 --> 01:04:22,440
+that would love to understand 
+the root cause. 
+
+994
+01:04:23,030 --> 01:04:28,990
+But the root cause might be the 
+$64,000 question, and it's you 
+
+995
+01:04:28,990 --> 01:04:33,470
+don't actually need that to 
+restore the service and get it 
+
+996
+01:04:33,470 --> 01:04:36,030
+back online and like, that's. 
+Yeah, and the. 
+
+997
+01:04:36,030 --> 01:04:40,150
+Service is provide you know it 
+was working up until it hit that
+
+998
+01:04:40,150 --> 01:04:42,990
+condition. 
+So it's doing some of its job, 
+
+999
+01:04:43,550 --> 01:04:47,390
+and so putting it back up will 
+keep your system working as long
+
+1000
+01:04:47,390 --> 01:04:51,150
+as you're logging the problem 
+and eventually you get around to
+
+1001
+01:04:51,470 --> 01:04:53,380
+fix it. 
+If you're if you spend. 
+
+1002
+01:04:53,380 --> 01:04:56,980
+All the time to get to the root 
+cause and and try to solve it 
+
+1003
+01:04:56,980 --> 01:04:59,300
+there. 
+Like you could blow through your
+
+1004
+01:04:59,300 --> 01:05:04,660
+error budget in that time if you
+know like, listen let's let's 
+
+1005
+01:05:04,660 --> 01:05:06,900
+grab some some state and some 
+logs. 
+
+1006
+01:05:07,100 --> 01:05:12,140
+Let's roll back to that last 
+change or like restart that note
+
+1007
+01:05:12,140 --> 01:05:15,100
+or whatever, see if we can just 
+get the system back online 
+
+1008
+01:05:15,100 --> 01:05:17,140
+because then we're not bleeding 
+error budget. 
+
+1009
+01:05:17,660 --> 01:05:20,380
+So great, now the service is 
+back. 
+
+1010
+01:05:21,020 --> 01:05:23,900
+Now we need to go and actually 
+dig a little deeper, But like, 
+
+1011
+01:05:23,900 --> 01:05:27,780
+that's kind of like when the 
+house is on fire. 
+
+1012
+01:05:28,300 --> 01:05:30,620
+Like, that's not when you're 
+doing the investigation to 
+
+1013
+01:05:30,620 --> 01:05:35,260
+figure out was this arson, like,
+you're like, just get the family
+
+1014
+01:05:35,340 --> 01:05:38,740
+out of the house, put the fire. 
+Yeah, right. 
+
+1015
+01:05:39,380 --> 01:05:43,440
+And deal with that. 
+Then then, like the 
+
+1016
+01:05:43,440 --> 01:05:47,000
+investigation team can come in 
+and like pour over, you know, 
+
+1017
+01:05:47,000 --> 01:05:49,800
+like what happened and 
+everything, but sure, once the 
+
+1018
+01:05:49,800 --> 01:05:51,720
+fire is out. 
+Once the. 
+
+1019
+01:05:51,720 --> 01:05:54,000
+Fire's out like but you know, 
+put the fire out. 
+
+1020
+01:05:54,160 --> 01:06:00,000
+So that's, I mean that's kind of
+intense, but yeah, I see so. 
+
+1021
+01:06:00,000 --> 01:06:02,640
+Much of this running, No, I 
+think it's a good analogy. 
+
+1022
+01:06:02,640 --> 01:06:04,480
+You want something that sticks 
+with you. 
+
+1023
+01:06:04,920 --> 01:06:06,040
+I just. 
+I don't know. 
+
+1024
+01:06:06,040 --> 01:06:11,090
+I come back just with so many. 
+Management problems involved 
+
+1025
+01:06:11,090 --> 01:06:14,530
+here because not people don't 
+understand that you know they 
+
+1026
+01:06:14,530 --> 01:06:17,410
+don't understand so many of the 
+things that we've talked about 
+
+1027
+01:06:17,410 --> 01:06:21,210
+here. 
+And you've you've almost got to 
+
+1028
+01:06:21,210 --> 01:06:25,890
+have your got to be up to your 
+elbows in the thing to 
+
+1029
+01:06:25,890 --> 01:06:30,690
+understand what the issues 
+actually are and management 
+
+1030
+01:06:30,690 --> 01:06:33,530
+coming in and demanding it be 
+this way or that way because 
+
+1031
+01:06:33,570 --> 01:06:38,050
+they had a conversation on the 
+golf course that just. 
+
+1032
+01:06:38,460 --> 01:06:41,500
+It just seems like a real. 
+That's a thing. 
+
+1033
+01:06:41,500 --> 01:06:45,940
+We need to have some, some let's
+reset, you know, Let's rethink 
+
+1034
+01:06:45,940 --> 01:06:50,100
+this whole problem issue that 
+is. 
+
+1035
+01:06:50,180 --> 01:06:56,700
+Another topic in terms of 
+convincing people that is a 
+
+1036
+01:06:56,740 --> 01:07:00,620
+whole other can of squirrel. 
+It's a teaching process really. 
+
+1037
+01:07:01,500 --> 01:07:04,260
+Which is unfortunate, but it's 
+also the. 
+
+1038
+01:07:04,660 --> 01:07:08,800
+Incentive, right? 
+It's like, how do you understand
+
+1039
+01:07:09,200 --> 01:07:11,800
+teaching is also psychology 
+right now. 
+
+1040
+01:07:12,240 --> 01:07:16,960
+What gets people's attention? 
+What appeals to what people 
+
+1041
+01:07:17,000 --> 01:07:20,080
+want? 
+Understand what are the, what is
+
+1042
+01:07:20,080 --> 01:07:26,200
+it that they want, and then 
+frame what you're trying to 
+
+1043
+01:07:26,200 --> 01:07:30,080
+explain in the terms of getting 
+them what they want. 
+
+1044
+01:07:32,760 --> 01:07:34,720
+Yeah. 
+And I think there's often 
+
+1045
+01:07:34,720 --> 01:07:39,130
+challenges with like generally 
+in most organizations, I'm sure 
+
+1046
+01:07:39,130 --> 01:07:42,570
+that the people in charge of 
+reliability or owning 
+
+1047
+01:07:42,570 --> 01:07:47,130
+reliability aren't necessarily 
+being incentivized to increase 
+
+1048
+01:07:47,130 --> 01:07:51,890
+reliability where. 
+The like, oh what feature did 
+
+1049
+01:07:51,890 --> 01:07:56,090
+you add a friend? 
+Who is in a organization that 
+
+1050
+01:07:57,410 --> 01:08:00,810
+has kind of evolved from a 
+engineering organization to a 
+
+1051
+01:08:00,810 --> 01:08:05,000
+sales organization? 
+And so their whole incentive is 
+
+1052
+01:08:05,160 --> 01:08:10,760
+sell more stuff and everything 
+else is just, you know, not as 
+
+1053
+01:08:10,760 --> 01:08:12,080
+important. 
+Yeah. 
+
+1054
+01:08:12,080 --> 01:08:16,040
+And it's like, oh boy, yeah, 
+another people problem. 
+
+1055
+01:08:16,120 --> 01:08:17,319
+Yeah. 
+Should we? 
+
+1056
+01:08:20,520 --> 01:08:26,760
+Well, fun problems. 
+Thank you Dormaine. 
+
+1057
+01:08:26,800 --> 01:08:31,359
+That was incredibly helpful for 
+learning about all this from me,
+
+1058
+01:08:31,359 --> 01:08:33,819
+so appreciate that I wasn't sure
+it was like. 
+
+1059
+01:08:33,859 --> 01:08:36,620
+I'm not sure to have enough to 
+fill an hour, but I guess we 
+
+1060
+01:08:36,620 --> 01:08:37,979
+did. 
+Yeah, pretty easy. 
+
+1061
+01:08:38,020 --> 01:08:41,020
+And we could probably keep going
+for, yeah, more hours, because 
+
+1062
+01:08:41,020 --> 01:08:43,220
+until we dropped. 
+And then we dropped. 
+
+1063
+01:08:43,779 --> 01:08:46,420
+Yeah, until Zen Koster crashes 
+again. 
+
+1064
+01:08:46,500 --> 01:08:48,260
+That's true. 
+That's, you know, they're just 
+
+1065
+01:08:48,260 --> 01:08:51,060
+sort of politely. 
+Being like, come on so Friday, 
+
+1066
+01:08:51,060 --> 01:08:52,060
+let me go. 
+That's right. 
+
+1067
+01:08:52,380 --> 01:08:53,979
+Exactly, Yeah, exactly they 
+were. 
+
+1068
+01:08:53,979 --> 01:08:55,779
+Trying to tell us we had gone 
+too long. 
+
+1069
+01:08:56,100 --> 01:08:58,939
+Yeah, exactly. 
+Well, thank you so much. 
+
+1070
+01:08:59,100 --> 01:09:01,770
+I mean, that was super fun. 
+Been a pleasure. 
+
+1071
+01:09:01,930 --> 01:09:04,689
+Thank you. 
+Bye.
+

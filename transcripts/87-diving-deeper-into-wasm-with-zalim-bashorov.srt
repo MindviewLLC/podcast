@@ -1,0 +1,4130 @@
+1
+00:00:01,120 --> 00:00:03,520
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,760 --> 00:00:05,240
+I'm Bruce Eckel. 
+I'm James. 
+
+3
+00:00:05,240 --> 00:00:09,080
+Warden all right. 
+Well, welcome. 
+
+4
+00:00:09,120 --> 00:00:13,240
+Happy PATH Programming. 
+So today we have with us Zalem 
+
+5
+00:00:13,600 --> 00:00:15,840
+Boschordoff. 
+Did I get that at all? 
+
+6
+00:00:15,840 --> 00:00:18,440
+close. 
+Yeah, that's nice. 
+
+7
+00:00:18,640 --> 00:00:19,480
+Yeah. 
+Close enough. 
+
+8
+00:00:20,560 --> 00:00:22,880
+Yeah. 
+Thank you for having me. 
+
+9
+00:00:23,120 --> 00:00:24,080
+Nice to see you. 
+Yeah. 
+
+10
+00:00:24,080 --> 00:00:25,560
+Good. 
+To see you. 
+
+11
+00:00:26,180 --> 00:00:32,100
+So you work on Kotlin WASUM and 
+WASUM is, is obviously there's a
+
+12
+00:00:32,100 --> 00:00:34,300
+lot of exciting things happening
+around it. 
+
+13
+00:00:34,300 --> 00:00:37,060
+And Bruce and I have been diving
+in a bit deeper. 
+
+14
+00:00:37,380 --> 00:00:41,540
+And so we did an episode on 
+WASUM, I don't know, a while 
+
+15
+00:00:41,540 --> 00:00:44,660
+ago. 
+And I think now we know more and
+
+16
+00:00:44,660 --> 00:00:47,260
+have more questions. 
+So mostly get more questions. 
+
+17
+00:00:48,500 --> 00:00:51,340
+So great to have you. 
+So maybe start with telling us 
+
+18
+00:00:51,340 --> 00:00:57,910
+what you work on at Jeff Brands.
+Well, I, as you said, I'm 
+
+19
+00:00:57,910 --> 00:01:05,670
+working on web assembly some few
+years for for now already I'm 
+
+20
+00:01:05,710 --> 00:01:13,990
+actually working for COTLIN into
+the brains about 11 years. 
+
+21
+00:01:14,230 --> 00:01:19,270
+Next next week, next week it it 
+will be exactly 11 years. 
+
+22
+00:01:20,070 --> 00:01:20,870
+That's amazing. 
+That's. 
+
+23
+00:01:20,870 --> 00:01:23,710
+Almost at the beginning, right? 
+Because Collin is. 
+
+24
+00:01:24,190 --> 00:01:25,710
+About 12 or 13 years old or 
+what? 
+
+25
+00:01:26,790 --> 00:01:34,510
+It was started in 2010 I think 
+and publicly was announced in 
+
+26
+00:01:34,510 --> 00:01:40,310
+2011. 
+I was joined in 2012, head of 
+
+27
+00:01:40,310 --> 00:01:43,230
+this year. 
+Yeah, so all this time. 
+
+28
+00:01:43,510 --> 00:01:46,910
+I was working. 
+Yeah, almost. 
+
+29
+00:01:48,090 --> 00:01:51,810
+Were you working mostly on the 
+JVM backend and then and then 
+
+30
+00:01:51,810 --> 00:01:54,890
+you a couple years ago started 
+working on the Waasm backend or?
+
+31
+00:01:57,690 --> 00:02:03,810
+During this 10 past years I 
+actually worked on different 
+
+32
+00:02:03,810 --> 00:02:08,729
+things. 
+Most of time I think I spent on 
+
+33
+00:02:08,889 --> 00:02:13,370
+web things, on JavaScript 
+backend and web assembly 
+
+34
+00:02:13,370 --> 00:02:17,330
+backends, compiler backends. 
+At some point I. 
+
+35
+00:02:17,700 --> 00:02:23,940
+Worked even on on front end and 
+JVM back end a bit, especially 
+
+36
+00:02:24,380 --> 00:02:30,020
+before 1.0. 
+We all focused on stabilizing 
+
+37
+00:02:30,500 --> 00:02:36,900
+language itself and GVM back end
+specifically what? 
+
+38
+00:02:36,980 --> 00:02:42,220
+What else? 
+Another big thing what I worked 
+
+39
+00:02:42,380 --> 00:02:45,700
+is probably in Chromato 
+compilation infrastructure. 
+
+40
+00:02:47,770 --> 00:02:53,610
+At that time focused on JVM, so 
+me and a few folks we worked on 
+
+41
+00:02:53,730 --> 00:02:57,490
+incremental compilation. 
+So if you're using, I think if 
+
+42
+00:02:57,490 --> 00:03:02,210
+you use JVM you use incremental 
+compilation and at some point I.
+
+43
+00:03:04,090 --> 00:03:07,290
+I I did big part of of that, 
+yeah. 
+
+44
+00:03:08,090 --> 00:03:10,970
+Thank you for making my 
+developer loop faster because 
+
+45
+00:03:11,290 --> 00:03:13,770
+that depends on a fast 
+incremental compile. 
+
+46
+00:03:13,770 --> 00:03:18,170
+So. 
+Actually now they they face 
+
+47
+00:03:19,050 --> 00:03:24,890
+other developers who who are 
+doing a lot of things especially
+
+48
+00:03:24,890 --> 00:03:28,530
+inside the gradle to make it 
+more cacheable, more 
+
+49
+00:03:28,530 --> 00:03:32,250
+incremental. 
+So yeah, goodest to to them. 
+
+50
+00:03:33,170 --> 00:03:33,970
+Yeah. 
+Yeah. 
+
+51
+00:03:33,970 --> 00:03:35,650
+There's been continued 
+improvements. 
+
+52
+00:03:36,370 --> 00:03:40,570
+So let's talk about Wazm. 
+Let me ask a basic question 
+
+53
+00:03:40,570 --> 00:03:44,010
+first, because my understanding 
+is that the whole project 
+
+54
+00:03:44,010 --> 00:03:50,650
+started by taking a subset of 
+JavaScript instructions and 
+
+55
+00:03:50,650 --> 00:03:56,810
+putting them into asm dot JS and
+then you could compile to that 
+
+56
+00:03:56,810 --> 00:04:00,330
+subset. 
+But now that's not the way it 
+
+57
+00:04:00,330 --> 00:04:05,620
+works, right? 
+Yeah there was at some point 
+
+58
+00:04:05,660 --> 00:04:11,300
+there was asm dot JS. 
+What is subset of JavaScript? 
+
+59
+00:04:11,420 --> 00:04:16,300
+It's valid subset of JavaScript.
+So even your JavaScript engine, 
+
+60
+00:04:16,300 --> 00:04:20,660
+your browser don't support don't
+know anything about asmjs. 
+
+61
+00:04:20,980 --> 00:04:26,060
+It just work but not so fast but
+works it under hood. 
+
+62
+00:04:26,060 --> 00:04:32,020
+Asmjs used some tricks like 
+binary operations to help. 
+
+63
+00:04:33,420 --> 00:04:39,500
+Virtual machine to infer write 
+types like in JavaScript if you 
+
+64
+00:04:39,700 --> 00:04:48,340
+do binary operations you get. 
+You surely get I42 values. 
+
+65
+00:04:48,340 --> 00:04:51,660
+So you can use it some virtual 
+machines. 
+
+66
+00:04:52,300 --> 00:04:58,300
+You use it for optimizations. 
+Another important part of what 
+
+67
+00:04:58,540 --> 00:05:03,660
+azmjs was binary. 
+Memory. 
+
+68
+00:05:04,060 --> 00:05:12,460
+It used heavily typed arrays, so
+you can virtual machine can be 
+
+69
+00:05:12,460 --> 00:05:20,260
+sure about types, yeah? 
+So after that. 
+
+70
+00:05:21,100 --> 00:05:27,180
+There was some initial work to 
+kind of optimize the asm dot JS 
+
+71
+00:05:27,260 --> 00:05:33,390
+stuff in the actual JavaScript. 
+Runtime VM, all that kind of 
+
+72
+00:05:33,390 --> 00:05:36,310
+stuff. 
+Yeah, but yeah it it was born in
+
+73
+00:05:37,030 --> 00:05:42,270
+in Mozilla in inside Firefox and
+Firefox had special pipeline 
+
+74
+00:05:42,270 --> 00:05:48,230
+compilation for Azim JS and it 
+was it was it was worked very 
+
+75
+00:05:48,230 --> 00:05:54,590
+well at that time they had some 
+showcase with some game engine. 
+
+76
+00:05:56,390 --> 00:06:03,830
+At the same time there was 
+compiler mscripten which compile
+
+77
+00:06:03,910 --> 00:06:09,510
+C to JavaScript at the start and
+the waiter to asmjs. 
+
+78
+00:06:10,070 --> 00:06:17,790
+So you can you could take your C
+project and compile to asmjs and
+
+79
+00:06:17,790 --> 00:06:23,260
+run inside browser. 
+In parallel with this story, 
+
+80
+00:06:23,500 --> 00:06:28,820
+there was a story inside Google.
+Inside Google folks wanted to 
+
+81
+00:06:28,860 --> 00:06:36,500
+have something to work quickly 
+inside browser to make projects 
+
+82
+00:06:36,540 --> 00:06:41,860
+like Google Earth. 
+So it was Narco. 
+
+83
+00:06:42,910 --> 00:06:50,750
+And later there was Pinnacle. 
+So the idea of Narco was about 
+
+84
+00:06:50,750 --> 00:06:59,670
+taking X86 instructions, make 
+some restrictions around it and 
+
+85
+00:06:59,790 --> 00:07:08,750
+to compile to some restricted 
+X86 binary and run inside 
+
+86
+00:07:08,750 --> 00:07:11,420
+browser. 
+So this is like it's like a 
+
+87
+00:07:11,500 --> 00:07:17,100
+special Chrome only thing and 
+Yep NaCl is NaCl. 
+
+88
+00:07:18,260 --> 00:07:23,060
+And so this was just essentially
+a project where Chrome is like 
+
+89
+00:07:23,060 --> 00:07:27,140
+we need to make a faster runtime
+in the browser and so they 
+
+90
+00:07:27,140 --> 00:07:31,020
+started creating this like 
+subset of X86 instructions and 
+
+91
+00:07:31,020 --> 00:07:34,180
+being able to run them securely 
+in the browser or something 
+
+92
+00:07:34,740 --> 00:07:37,920
+right? 
+So what does wasm the wasm 
+
+93
+00:07:37,920 --> 00:07:41,760
+instruction set look like now? 
+Does it look anything like the 
+
+94
+00:07:42,160 --> 00:07:45,360
+original asm dot JS or is it a 
+completely? 
+
+95
+00:07:45,680 --> 00:07:52,000
+Or like knuckle. 
+Well, it's not look like asmjs. 
+
+96
+00:07:52,480 --> 00:08:01,120
+I'd say at some point it looks 
+like assembler, X86 assembler at
+
+97
+00:08:01,120 --> 00:08:06,090
+some point. 
+Instruction mass of instructions
+
+98
+00:08:06,370 --> 00:08:12,850
+inside web assembly is very 
+close to machine instructions. 
+
+99
+00:08:13,970 --> 00:08:20,250
+Another close thing is JVM 
+bytecode. 
+
+100
+00:08:20,250 --> 00:08:25,850
+Maybe if you if. 
+Listen is more familiar with 
+
+101
+00:08:26,090 --> 00:08:31,850
+Java by bytecode, it's. 
+Yeah, it's familiar with Java 
+
+102
+00:08:31,850 --> 00:08:35,289
+bytecode as well. 
+There is no so much instructions
+
+103
+00:08:35,530 --> 00:08:39,210
+compare. 
+If you compare it to X86 phase, 
+
+104
+00:08:39,690 --> 00:08:45,650
+a lot of instructions in in 
+Wazen phase, not so much because
+
+105
+00:08:45,650 --> 00:08:49,570
+it's an abstraction and it's 
+yeah, here's here's what we need
+
+106
+00:08:49,570 --> 00:08:55,290
+to represent a program. 
+But then at that point, So what 
+
+107
+00:08:55,290 --> 00:09:01,050
+I deliver, say if I write a WASM
+component in Rust, and So what 
+
+108
+00:09:01,050 --> 00:09:04,290
+I'm delivering is something that
+has these WASM. 
+
+109
+00:09:04,490 --> 00:09:08,890
+It's compiled down to the wasm 
+by instructions. 
+
+110
+00:09:09,290 --> 00:09:16,660
+And then as it's being loaded 
+into the, what would you call 
+
+111
+00:09:16,660 --> 00:09:17,900
+it? 
+A virtual machine? 
+
+112
+00:09:18,100 --> 00:09:19,580
+I mean is. 
+It, yeah, yeah. 
+
+113
+00:09:19,780 --> 00:09:22,380
+It's virtual machine. 
+Yeah, it's a virtual machine, 
+
+114
+00:09:22,380 --> 00:09:25,940
+but then it actually takes those
+instructions and compiles them 
+
+115
+00:09:25,940 --> 00:09:28,300
+to whatever the native processor
+is using, right? 
+
+116
+00:09:29,300 --> 00:09:33,060
+Yeah, yeah, it could be actually
+interpreted. 
+
+117
+00:09:33,780 --> 00:09:42,220
+Yeah, many Vms has interpreter. 
+Many most of them actually has. 
+
+118
+00:09:43,720 --> 00:09:48,680
+A quick compiler we just quick 
+as quick as possible compile and
+
+119
+00:09:48,680 --> 00:09:55,840
+run your code and all of them 
+has optimizing back end. 
+
+120
+00:09:58,240 --> 00:10:02,960
+All browsers have service. 
+Well, except that it seems like 
+
+121
+00:10:02,960 --> 00:10:05,280
+it would be a pretty 
+straightforward, you know, if 
+
+122
+00:10:05,280 --> 00:10:10,130
+you've got a Waasm instruction, 
+it's just gonna map fairly 
+
+123
+00:10:10,130 --> 00:10:13,810
+quickly to the machine, whatever
+machine, You know, a few machine
+
+124
+00:10:13,810 --> 00:10:15,890
+code instructions, or maybe even
+just one. 
+
+125
+00:10:15,970 --> 00:10:18,330
+I do want to point out one of 
+the great things about WASM is 
+
+126
+00:10:18,330 --> 00:10:20,770
+that abstraction away from the 
+architecture. 
+
+127
+00:10:20,770 --> 00:10:25,450
+So similar to JVM byte code 
+where it's portable, WASM is the
+
+128
+00:10:25,450 --> 00:10:30,090
+WASM that you build is agnostic 
+to the underlying architecture, 
+
+129
+00:10:30,090 --> 00:10:32,350
+right? 
+And so then that gives you the 
+
+130
+00:10:32,350 --> 00:10:36,030
+ability to, I'm sure, do all 
+sorts of fancy things in that 
+
+131
+00:10:36,110 --> 00:10:39,390
+pipeline to actually machine 
+code, because you can then 
+
+132
+00:10:39,390 --> 00:10:40,710
+figure out okay for this 
+machine. 
+
+133
+00:10:40,710 --> 00:10:43,550
+We're gonna do take this path 
+that's more efficient or 
+
+134
+00:10:43,550 --> 00:10:44,670
+something like that, I'm 
+guessing. 
+
+135
+00:10:45,750 --> 00:10:50,550
+I think there is important 
+difference from Java byte code 
+
+136
+00:10:50,550 --> 00:10:56,310
+or assembler. 
+It is what in Watson there is. 
+
+137
+00:10:57,150 --> 00:11:02,190
+Structure control flow. 
+So you can't jump to. 
+
+138
+00:11:02,190 --> 00:11:05,510
+You don't have kind of jump 
+instruction or go to 
+
+139
+00:11:05,510 --> 00:11:10,430
+instruction, so you can't jump 
+from 1 instruction to any 
+
+140
+00:11:10,430 --> 00:11:15,390
+instruction you have. 
+Instead you have structured if 
+
+141
+00:11:15,390 --> 00:11:21,230
+structured box oops. 
+So you can jump only within this
+
+142
+00:11:21,270 --> 00:11:24,710
+box. 
+It's important because it's. 
+
+143
+00:11:26,210 --> 00:11:29,410
+It's simplifies verification 
+phase. 
+
+144
+00:11:30,890 --> 00:11:37,330
+You know one of important 
+property of web assembly is 
+
+145
+00:11:37,730 --> 00:11:41,970
+security. 
+So verification is important 
+
+146
+00:11:41,970 --> 00:11:47,290
+part and verification should be 
+fast. 
+
+147
+00:11:49,770 --> 00:11:53,090
+That was because there's no 
+unconditional jumps. 
+
+148
+00:11:53,090 --> 00:11:56,620
+So you know, okay, you can't 
+just do anything. 
+
+149
+00:11:57,300 --> 00:12:02,820
+Yeah it also helps optimizing 
+compilers actually because you 
+
+150
+00:12:02,820 --> 00:12:07,820
+don't have jumps inside your 
+woop so you don't have 
+
+151
+00:12:07,820 --> 00:12:12,780
+irreducible woops, so it 
+simplify your optimizer. 
+
+152
+00:12:13,060 --> 00:12:22,940
+I think there is most of 
+optimizers, especially just in 
+
+153
+00:12:22,940 --> 00:12:28,610
+time optimizers they. 
+Just ignore such of irreducible 
+
+154
+00:12:28,610 --> 00:12:31,970
+loops. 
+There is some workarounds, but 
+
+155
+00:12:32,130 --> 00:12:37,010
+it's it doesn't work well you 
+actually in code length. 
+
+156
+00:12:37,010 --> 00:12:41,970
+For example, you can easily get 
+irreducible loops when you use 
+
+157
+00:12:41,970 --> 00:12:46,470
+core chains, because core. 
+Routing code. 
+
+158
+00:12:46,990 --> 00:12:52,830
+Split your loop inside in the 
+middle and you easily get a 
+
+159
+00:12:53,550 --> 00:12:57,470
+reducible loop where you can 
+jump inside the loop in the 
+
+160
+00:12:57,510 --> 00:13:03,710
+middle or loop and it will be 
+work not so well in Hotspot, 
+
+161
+00:13:04,070 --> 00:13:08,550
+especially with C2. 
+There is some tricky in Graph VM
+
+162
+00:13:08,550 --> 00:13:14,180
+I think to support it somehow. 
+But interesting that in the case
+
+163
+00:13:14,180 --> 00:13:18,860
+of like coroutines, the the wasm
+that gets created and the kind 
+
+164
+00:13:18,860 --> 00:13:22,220
+of limitations around the wasm 
+that can be created actually 
+
+165
+00:13:22,220 --> 00:13:26,540
+enables it to have to unroll 
+loops or or do more efficiency 
+
+166
+00:13:26,540 --> 00:13:30,580
+in loops than than is possible 
+on on maybe other Vms or other 
+
+167
+00:13:30,820 --> 00:13:33,940
+byte code formats that don't 
+that don't have the constraints 
+
+168
+00:13:33,940 --> 00:13:35,060
+that that wasm has. 
+Yeah. 
+
+169
+00:13:35,340 --> 00:13:37,140
+Like the constraints enable. 
+Yeah. 
+
+170
+00:13:37,140 --> 00:13:39,100
+The liberating constraints, 
+Yeah. 
+
+171
+00:13:39,100 --> 00:13:41,060
+Yeah. 
+No. 
+
+172
+00:13:43,020 --> 00:13:46,180
+So OK, we've got the Wazm 
+bytecode and the run times and 
+
+173
+00:13:46,180 --> 00:13:50,340
+the optimizers and all this 
+stuff has been under, seems like
+
+174
+00:13:50,340 --> 00:13:54,060
+pretty heavy development over 
+the past few years and been 
+
+175
+00:13:54,060 --> 00:13:59,260
+making a ton of progress. 
+It's what's your, what's your 
+
+176
+00:13:59,260 --> 00:14:03,980
+kind of high level take on the 
+future in regards to Wazm? 
+
+177
+00:14:03,980 --> 00:14:06,660
+Like, I think you're excited 
+about it, but like, why? 
+
+178
+00:14:06,700 --> 00:14:09,140
+Like what? 
+Well, like is the future. 
+
+179
+00:14:09,790 --> 00:14:12,430
+How much of the future of our 
+future is Wazem Like? 
+
+180
+00:14:12,430 --> 00:14:15,070
+What's your What drives your 
+excitement around this? 
+
+181
+00:14:17,510 --> 00:14:25,190
+Yeah, it's a tough question on 
+one side just I just like 
+
+182
+00:14:26,190 --> 00:14:30,750
+technically as technical. 
+Yeah, actually, I. 
+
+183
+00:14:32,060 --> 00:14:38,220
+I joined Kotlin because at that 
+time I started working on 
+
+184
+00:14:38,220 --> 00:14:42,820
+interpreters, virtual machines, 
+compiler stuff, and I like it. 
+
+185
+00:14:43,140 --> 00:14:48,420
+I still like these things, so 
+that's why probably I like web 
+
+186
+00:14:48,420 --> 00:14:55,300
+assembly, new cool things, 
+virtual machines, new 
+
+187
+00:14:56,180 --> 00:15:01,490
+technology, what? 
+Designed from scratch, you're 
+
+188
+00:15:02,170 --> 00:15:09,730
+keeping in mind what what is 
+done before in JVM, in NACO and 
+
+189
+00:15:09,770 --> 00:15:13,090
+and so on. 
+Learning from all the the past 
+
+190
+00:15:13,090 --> 00:15:18,010
+VM byte code technologies and 
+being able to do it better and 
+
+191
+00:15:18,010 --> 00:15:20,410
+it does seem like in a lot of 
+ways wasm is doing a lot of the 
+
+192
+00:15:20,410 --> 00:15:22,770
+stuff better cuz they have the 
+opportunity to, you know, learn 
+
+193
+00:15:22,770 --> 00:15:28,010
+from the past discoveries and. 
+Yeah, something is better, 
+
+194
+00:15:28,010 --> 00:15:32,560
+definitely, Yeah. 
+Probably there is own mistakes, 
+
+195
+00:15:32,760 --> 00:15:37,360
+but yeah, we will now it in 10 
+years, yeah. 
+
+196
+00:15:37,680 --> 00:15:39,160
+That's exactly. 
+Right. 
+
+197
+00:15:39,200 --> 00:15:48,920
+Yeah, so yeah, it's. 
+There is a few properties of web
+
+198
+00:15:48,920 --> 00:15:52,600
+assembly. 
+What looks promising is 
+
+199
+00:15:52,720 --> 00:16:00,610
+portability security. 
+And at some time it could be 
+
+200
+00:16:00,610 --> 00:16:06,810
+fast, yeah. 
+So I personally believe we need 
+
+201
+00:16:06,810 --> 00:16:13,730
+something like that inside 
+browser to make development on 
+
+202
+00:16:13,850 --> 00:16:21,770
+front end side more friendly for
+any language, not only 
+
+203
+00:16:21,770 --> 00:16:28,640
+JavaScript. 
+To allow any language to target 
+
+204
+00:16:29,200 --> 00:16:33,760
+web front end without targeting 
+JavaScript. 
+
+205
+00:16:35,760 --> 00:16:40,920
+JavaScript has been the assembly
+of the web essentially forever. 
+
+206
+00:16:41,380 --> 00:16:44,460
+And with many languages cross 
+compiling to JavaScript. 
+
+207
+00:16:44,700 --> 00:16:46,340
+But what a horrible way to do 
+things. 
+
+208
+00:16:46,340 --> 00:16:49,180
+One, I don't want to write 
+JavaScript, and two, I don't 
+
+209
+00:16:49,180 --> 00:16:52,580
+really want to have a language 
+that compiles to JavaScript 
+
+210
+00:16:52,580 --> 00:16:55,960
+because. 
+It just is not the best way to 
+
+211
+00:16:55,960 --> 00:16:58,360
+go. 
+So many so many, so many 
+
+212
+00:16:58,360 --> 00:17:01,760
+challenges with that. 
+And so Web Assembly gives us the
+
+213
+00:17:01,760 --> 00:17:04,599
+ability, like you said, to use 
+whatever language we want and 
+
+214
+00:17:04,599 --> 00:17:07,920
+not have to do a weird 
+translation in JavaScript and 
+
+215
+00:17:07,920 --> 00:17:09,880
+gives me the opportunity to not 
+have to write JavaScript. 
+
+216
+00:17:09,880 --> 00:17:14,880
+So I like all those things. 
+Yeah, it's actually was designed
+
+217
+00:17:15,160 --> 00:17:23,520
+for browser use cases and it. 
+It affects how Web assembly was 
+
+218
+00:17:23,520 --> 00:17:30,080
+designed. 
+In good example of that is what 
+
+219
+00:17:30,080 --> 00:17:34,760
+web assembly is designed to be 
+able compiled. 
+
+220
+00:17:35,840 --> 00:17:40,320
+While you don't know what you're
+binary, you did it when you. 
+
+221
+00:17:41,030 --> 00:17:43,790
+Didn't finish downloading your 
+binary. 
+
+222
+00:17:44,350 --> 00:17:48,150
+Compiler actually can start 
+compile, things can. 
+
+223
+00:17:48,150 --> 00:17:51,510
+Do like progressive, like 
+beginning to run a program 
+
+224
+00:17:51,510 --> 00:17:53,390
+before it's even fully loaded 
+the waasm. 
+
+225
+00:17:53,710 --> 00:17:59,450
+Yeah, each browser has. 
+This streaming compiler, so all 
+
+226
+00:17:59,490 --> 00:18:03,650
+our browsers actually when 
+download your web assembly, they
+
+227
+00:18:03,810 --> 00:18:08,690
+compile it at the same time and 
+almost when you finish this 
+
+228
+00:18:08,690 --> 00:18:13,490
+streaming compiler so fast. 
+So when you finish downloading 
+
+229
+00:18:13,530 --> 00:18:17,570
+web assembly binary, you already
+have something to run. 
+
+230
+00:18:18,690 --> 00:18:22,930
+Wow, it's nice. 
+It is one of great property of 
+
+231
+00:18:22,930 --> 00:18:28,170
+Web assembly. 
+Anyway, web assembly was so nice
+
+232
+00:18:28,170 --> 00:18:37,290
+so some folks outside of browser
+starting working on it and using
+
+233
+00:18:37,370 --> 00:18:42,400
+it outside of browser and. 
+It's it looks amazing. 
+
+234
+00:18:42,440 --> 00:18:47,640
+It looks very promising. 
+Especially for cases when you 
+
+235
+00:18:48,560 --> 00:18:54,800
+need to run something quickly. 
+Yeah, web assembly, Virtual 
+
+236
+00:18:54,800 --> 00:18:57,400
+machines. 
+Usually lightweight. 
+
+237
+00:18:58,400 --> 00:19:02,920
+Running a new web assembly model
+is usually super simple. 
+
+238
+00:19:06,280 --> 00:19:10,050
+Super easy. 
+It's interesting that a lot of 
+
+239
+00:19:10,050 --> 00:19:15,010
+the benefits that the browser 
+gets from web assembly, 
+
+240
+00:19:15,290 --> 00:19:18,970
+serverless cloud platforms also 
+need those same things like the 
+
+241
+00:19:18,970 --> 00:19:23,850
+nice security model, the like, 
+instant startup and run and high
+
+242
+00:19:23,850 --> 00:19:28,450
+performance and being able to 
+write in any language and. 
+
+243
+00:19:29,810 --> 00:19:32,610
+Yeah, I think there's, there's, 
+oh, yeah, both sides. 
+
+244
+00:19:32,610 --> 00:19:35,290
+Now seems very obvious like, oh 
+of course this thing we built 
+
+245
+00:19:35,290 --> 00:19:39,010
+for the browser is also great in
+this whole other domain, so and 
+
+246
+00:19:39,010 --> 00:19:41,490
+even like Clis like, I think 
+we're gonna get to the point 
+
+247
+00:19:41,490 --> 00:19:43,650
+where like, sure, why not? 
+Just build a CLI? 
+
+248
+00:19:43,650 --> 00:19:45,370
+Why not everything? 
+Why not everything? 
+
+249
+00:19:45,370 --> 00:19:50,130
+Well OK so on that note I have a
+question which is like, will I 
+
+250
+00:19:50,130 --> 00:19:53,530
+be able to run wasm on a 
+Raspberry Pi? 
+
+251
+00:19:55,810 --> 00:20:01,010
+Yeah why not If you have I I 
+think yeah there is a lot of 
+
+252
+00:20:01,010 --> 00:20:08,450
+virtual machines targeting RM. 
+You can use some Raspberry Pi 
+
+253
+00:20:08,690 --> 00:20:12,810
+based WASM free interpreter. 
+Sorry. 
+
+254
+00:20:13,530 --> 00:20:15,490
+Can you run it on Raspberry Pi 
+now? 
+
+255
+00:20:16,130 --> 00:20:18,610
+Yes, yeah, I'm, I'm sure it's 
+possible. 
+
+256
+00:20:19,490 --> 00:20:20,670
+Okay. 
+So. 
+
+257
+00:20:20,670 --> 00:20:24,590
+Probably it's it. 
+Yeah, In general it's possible. 
+
+258
+00:20:24,710 --> 00:20:29,390
+If we speak about web assembly 
+with Kotlin was specifically 
+
+259
+00:20:29,510 --> 00:20:34,070
+there could be some tricky 
+because Kotlin was depends on 
+
+260
+00:20:34,990 --> 00:20:39,270
+wasm GC proposal which is not 
+supported everywhere yet. 
+
+261
+00:20:39,750 --> 00:20:45,630
+I I think it will be change this
+year I, I, I I personally expect
+
+262
+00:20:46,030 --> 00:20:51,390
+at the end of year we'll we'll 
+get support in stand on Vms so 
+
+263
+00:20:51,510 --> 00:20:54,570
+as MGC. 
+And next year we can. 
+
+264
+00:20:54,570 --> 00:20:57,850
+Seems like it's been being 
+worked on in in many of the Vms.
+
+265
+00:20:57,850 --> 00:21:02,210
+The the node runtime for wasm 
+does support through a flag 
+
+266
+00:21:02,210 --> 00:21:04,170
+right? 
+The wasm GC and so. 
+
+267
+00:21:04,810 --> 00:21:08,890
+But then the other, the other 
+more non node runtimes that are 
+
+268
+00:21:08,890 --> 00:21:13,250
+out there, so there's wasm time,
+there's with some of the other 
+
+269
+00:21:13,410 --> 00:21:17,410
+other kind of standalone 
+runtimes for wasm is so yeah, so
+
+270
+00:21:17,530 --> 00:21:20,920
+OK. 
+Good good notice about not JS. 
+
+271
+00:21:20,960 --> 00:21:25,840
+I I think you can run not JS on 
+Raspberry Pi, so not JS. 
+
+272
+00:21:26,280 --> 00:21:30,280
+Using site V8V8 support. 
+Running Kotlin wasm. 
+
+273
+00:21:30,320 --> 00:21:34,280
+So yeah, it should work. 
+So if I've got OK, I've got my 
+
+274
+00:21:34,280 --> 00:21:39,920
+wasm running on a Raspberry Pi. 
+Now a Raspberry Pi has limited 
+
+275
+00:21:40,240 --> 00:21:48,260
+services that it can supply. 
+So what happens if I load a was 
+
+276
+00:21:48,260 --> 00:21:54,460
+a module onto my Raspberry Pi 
+and it needs a service that the 
+
+277
+00:21:54,460 --> 00:21:57,220
+Raspberry Pi doesn't have? 
+How does that all? 
+
+278
+00:22:00,780 --> 00:22:04,500
+So this is getting into like 
+Wazi and like cuz the place 
+
+279
+00:22:04,500 --> 00:22:07,780
+where you're probably gonna run 
+into this is you've built 
+
+280
+00:22:07,780 --> 00:22:10,260
+something against some Wazi 
+interface and. 
+
+281
+00:22:11,010 --> 00:22:14,770
+I think your question is what if
+I have built against a Wazi 
+
+282
+00:22:14,770 --> 00:22:17,370
+interface that is not 
+implemented on a particular 
+
+283
+00:22:17,370 --> 00:22:24,130
+platform that I'm gonna run on? 
+What happens if? 
+
+284
+00:22:25,290 --> 00:22:30,130
+Well, Web assembly model itself 
+and web assembly specification 
+
+285
+00:22:30,130 --> 00:22:39,390
+itself don't provide much so. 
+If you want to do something 
+
+286
+00:22:39,390 --> 00:22:45,150
+inside your web assembly model, 
+you need to it should be 
+
+287
+00:22:45,150 --> 00:22:51,990
+provided outside, so embedder 
+usually it called host should 
+
+288
+00:22:51,990 --> 00:22:55,390
+provide APIs inside web 
+assembly. 
+
+289
+00:22:56,030 --> 00:23:01,390
+So whatever is possible on the 
+host. 
+
+290
+00:23:01,710 --> 00:23:06,150
+And what you want to provide to 
+web assembly model, you provide 
+
+291
+00:23:06,150 --> 00:23:09,910
+explicitly and this model can 
+use it. 
+
+292
+00:23:10,870 --> 00:23:15,910
+There is different ways how you 
+can provide these functions. 
+
+293
+00:23:15,910 --> 00:23:20,190
+Some virtual machines just have 
+some API to. 
+
+294
+00:23:21,940 --> 00:23:26,140
+To provide some host functions 
+to your web assembly model. 
+
+295
+00:23:26,140 --> 00:23:28,980
+It is one way, it's not 
+portable. 
+
+296
+00:23:29,060 --> 00:23:31,940
+It sticks to your specific 
+virtual machine. 
+
+297
+00:23:32,220 --> 00:23:37,420
+Another way, if your host is 
+JavaScript, VM is not JS, for 
+
+298
+00:23:37,420 --> 00:23:40,540
+example, you can use node dot JS
+capabilities. 
+
+299
+00:23:40,540 --> 00:23:45,580
+You can use JavaScript 
+capabilities and the. 
+
+300
+00:23:47,440 --> 00:23:55,160
+And last way I now is Wazi Web 
+Assembly System interface. 
+
+301
+00:23:55,200 --> 00:23:59,720
+It is. 
+It is. 
+
+302
+00:24:03,120 --> 00:24:09,920
+It is attempt of standardized, 
+some interfaces, some functions,
+
+303
+00:24:11,120 --> 00:24:16,800
+different APIs what could be 
+useful for day-to-day 
+
+304
+00:24:16,960 --> 00:24:22,680
+development, kind of accessing 
+to time, random generator, 
+
+305
+00:24:23,360 --> 00:24:31,560
+networking. 
+And main point about Wiz is it 
+
+306
+00:24:31,560 --> 00:24:36,400
+is. 
+Important part is security and 
+
+307
+00:24:36,400 --> 00:24:41,560
+the portability I think. 
+Yeah, so. 
+
+308
+00:24:41,720 --> 00:24:46,560
+My conceptual model for this is 
+that in the world of Wazm, with 
+
+309
+00:24:46,560 --> 00:24:53,520
+Wazi you build a Wazm that is 
+going to make a call through. 
+
+310
+00:24:53,960 --> 00:24:58,320
+Kind of like an FFI layer, and 
+that FFI layer is implemented by
+
+311
+00:24:58,320 --> 00:25:01,280
+your runtime that you're running
+your WAZM in. 
+
+312
+00:25:01,560 --> 00:25:04,920
+And so at the point when you're 
+going to make this wazy system 
+
+313
+00:25:04,920 --> 00:25:08,440
+call out, your runtime has to be
+like, OK, I know what to do with
+
+314
+00:25:08,440 --> 00:25:11,360
+this call and be able to 
+translate that into a call to 
+
+315
+00:25:11,360 --> 00:25:13,920
+the kernel or or whatever it may
+be. 
+
+316
+00:25:14,160 --> 00:25:17,040
+But the nice thing about this is
+that and especially for cloud 
+
+317
+00:25:17,040 --> 00:25:21,080
+providers, is that they can 
+provide a runtime. 
+
+318
+00:25:21,710 --> 00:25:26,030
+That then has the implementation
+that they want without having to
+
+319
+00:25:26,030 --> 00:25:29,030
+change the Wasm. 
+Because you the WASM comes in 
+
+320
+00:25:29,230 --> 00:25:31,990
+and then the actual like system 
+interface is defined by the 
+
+321
+00:25:31,990 --> 00:25:34,310
+runtime and so that the runtime 
+that. 
+
+322
+00:25:35,260 --> 00:25:37,820
+Whatever your cloud service or 
+whatever is running your wasm 
+
+323
+00:25:37,820 --> 00:25:41,220
+with can decide, all right, I'm 
+gonna do this when if you wanna 
+
+324
+00:25:41,220 --> 00:25:43,580
+write a file, I'm actually not 
+gonna write the file system. 
+
+325
+00:25:43,580 --> 00:25:46,220
+I'm gonna, let's say, keep it in
+memory or whatever it may be, 
+
+326
+00:25:46,220 --> 00:25:49,420
+And the WASM runtime that gets 
+provided to you that you're 
+
+327
+00:25:49,420 --> 00:25:51,740
+running and can do that. 
+But then you can run that same 
+
+328
+00:25:51,740 --> 00:25:55,140
+wasm on your local machine and 
+the runtime on your local 
+
+329
+00:25:55,140 --> 00:25:57,020
+machine could do something 
+totally different. 
+
+330
+00:25:57,460 --> 00:26:01,100
+I mean it's it's like the. 
+I mean container model. 
+
+331
+00:26:01,100 --> 00:26:04,990
+The container is providing these
+services for you, and they're 
+
+332
+00:26:04,990 --> 00:26:07,150
+actually connecting to the 
+underlying system. 
+
+333
+00:26:07,150 --> 00:26:11,430
+But what if I mean like, say 
+with my Raspberry Pi? 
+
+334
+00:26:12,030 --> 00:26:15,070
+It wants to write something to 
+the file system or to the 
+
+335
+00:26:15,070 --> 00:26:18,950
+console, and there isn't one, So
+does it? 
+
+336
+00:26:19,230 --> 00:26:23,470
+Is that detected at load time 
+that it's going to try and do 
+
+337
+00:26:23,470 --> 00:26:28,030
+something that isn't going to 
+work and you get a, you get some
+
+338
+00:26:28,030 --> 00:26:32,390
+kind of message that says, okay,
+you're trying to run your WSM on
+
+339
+00:26:32,390 --> 00:26:35,350
+a system that doesn't have a 
+full set of services. 
+
+340
+00:26:35,910 --> 00:26:39,310
+I think you could do it at like 
+upload of the WSM time. 
+
+341
+00:26:39,310 --> 00:26:41,510
+You don't necessarily need to do
+it at runtime because you can 
+
+342
+00:26:41,550 --> 00:26:43,590
+right? 
+Parse the WSM and look at it and
+
+343
+00:26:43,590 --> 00:26:45,710
+say, oh you're trying to make 
+this system call. 
+
+344
+00:26:45,710 --> 00:26:47,430
+I don't support that system 
+call, right? 
+
+345
+00:26:47,630 --> 00:26:49,190
+Denied. 
+Your right? 
+
+346
+00:26:49,270 --> 00:26:52,510
+So you can't even get started. 
+I mean, that's what would make 
+
+347
+00:26:52,510 --> 00:26:54,910
+sense to me. 
+Is this very static and? 
+
+348
+00:26:55,390 --> 00:26:59,110
+Yeah, static and out pre roll 
+out, Yeah, tell tell us how or 
+
+349
+00:26:59,110 --> 00:27:01,150
+do we understand any of this at 
+this point? 
+
+350
+00:27:01,970 --> 00:27:03,850
+Yeah, it's it's close. 
+Yeah. 
+
+351
+00:27:04,370 --> 00:27:10,050
+In my understanding at least, 
+when you have was a model, it 
+
+352
+00:27:10,050 --> 00:27:15,410
+statically define what imports 
+and exports it has. 
+
+353
+00:27:15,650 --> 00:27:21,890
+So you import specific things 
+like functions, memory and so 
+
+354
+00:27:21,970 --> 00:27:25,370
+on. 
+API you usually get like 
+
+355
+00:27:25,450 --> 00:27:28,650
+functions. 
+It's now statically. 
+
+356
+00:27:29,010 --> 00:27:34,050
+And when you create new instance
+of this model, you need to 
+
+357
+00:27:34,130 --> 00:27:40,290
+statically provide all these 
+imports so they. 
+
+358
+00:27:41,210 --> 00:27:45,170
+Phase signatures should match, 
+names and signatures should 
+
+359
+00:27:45,170 --> 00:27:51,850
+match and if phase something not
+matched in terms of signature or
+
+360
+00:27:52,210 --> 00:28:00,450
+some required imports not 
+provided, so it is a roar at 
+
+361
+00:28:00,610 --> 00:28:07,770
+instantiation time. 
+So if you get instant, actually 
+
+362
+00:28:07,770 --> 00:28:12,310
+you can provide. 
+As this import functions 
+
+363
+00:28:12,390 --> 00:28:17,950
+anything you can provide some 
+real implementation. 
+
+364
+00:28:17,950 --> 00:28:20,670
+You can virtualize this 
+implementation. 
+
+365
+00:28:20,670 --> 00:28:25,590
+Maybe you want to not to want to
+provide directly write to 
+
+366
+00:28:25,590 --> 00:28:31,110
+screen, but instead want to 
+write to in memory or to file. 
+
+367
+00:28:31,430 --> 00:28:35,990
+You can virtualize it do 
+anything you want on host side. 
+
+368
+00:28:36,640 --> 00:28:43,600
+From point of view of WSO model,
+it's transparent verse model 
+
+369
+00:28:43,600 --> 00:28:50,200
+actually don't know anything 
+what you're doing in the host if
+
+370
+00:28:50,200 --> 00:28:56,120
+you want to. 
+So with WSI you provide access 
+
+371
+00:28:56,200 --> 00:29:02,080
+to APIs you want to provide 
+explicitly and directories or 
+
+372
+00:29:02,080 --> 00:29:07,170
+anything. 
+They code it capability based 
+
+373
+00:29:07,170 --> 00:29:12,090
+security. 
+It's not a new term but it's not
+
+374
+00:29:12,090 --> 00:29:17,250
+widely implemented. 
+Wiz is one of implementation of 
+
+375
+00:29:17,690 --> 00:29:23,410
+AD of capability based security 
+when you provide specific things
+
+376
+00:29:23,410 --> 00:29:29,210
+what your application can do and
+how it can be done. 
+
+377
+00:29:31,650 --> 00:29:34,230
+So. 
+Maybe we'll come back to the 
+
+378
+00:29:34,230 --> 00:29:39,230
+Wasm component model and and 
+Wazi and Wit and all that kind 
+
+379
+00:29:39,230 --> 00:29:42,550
+of stuff, but I didn't want to 
+hop back real quick to Wasm GC. 
+
+380
+00:29:43,550 --> 00:29:47,870
+So give us the rundown on what 
+is it that Wasm GC actually does
+
+381
+00:29:47,870 --> 00:29:52,190
+on top of normal Wasm? 
+Yeah, OK. 
+
+382
+00:29:53,580 --> 00:29:57,140
+I'd start from 1. 
+Funny thing about WASMGC. 
+
+383
+00:29:57,860 --> 00:30:01,980
+What? 
+Actually the specification has 
+
+384
+00:30:02,220 --> 00:30:06,020
+only one sentence mentioning 
+garbage collection and that's 
+
+385
+00:30:06,020 --> 00:30:08,500
+it. 
+Yeah, there's a whole. 
+
+386
+00:30:08,540 --> 00:30:11,700
+Specification in WASMGC and it 
+only talks about garbage 
+
+387
+00:30:11,700 --> 00:30:13,980
+collection and yeah. 
+It's fine. 
+
+388
+00:30:14,140 --> 00:30:15,260
+It's not. 
+It's not. 
+
+389
+00:30:16,790 --> 00:30:24,390
+Only one specification with such
+funny property anyway, So wasn't
+
+390
+00:30:24,390 --> 00:30:32,830
+GC actually introduced some 
+primitives building blocks for 
+
+391
+00:30:32,830 --> 00:30:38,150
+languages specifically for 
+managed languages like 
+
+392
+00:30:38,630 --> 00:30:44,250
+structures, references? 
+So inside structure you can have
+
+393
+00:30:45,450 --> 00:30:52,450
+fields with reference types or 
+some integer or some other 
+
+394
+00:30:52,450 --> 00:30:56,130
+types. 
+And using these primitives 
+
+395
+00:30:57,970 --> 00:31:02,730
+virtual machine can decide which
+part of memory is reachable, 
+
+396
+00:31:02,890 --> 00:31:06,970
+which part is already garbage, 
+so it could be collected. 
+
+397
+00:31:07,090 --> 00:31:10,410
+Yeah, general idea is about 
+primitives. 
+
+398
+00:31:11,240 --> 00:31:15,880
+So it's just adding adding more 
+information into the wasm byte 
+
+399
+00:31:15,880 --> 00:31:20,920
+codes so that then the VM can 
+know how to correctly garbage 
+
+400
+00:31:20,920 --> 00:31:23,360
+collect the the memory when 
+it's. 
+
+401
+00:31:23,480 --> 00:31:25,840
+When it's you know references 
+reaches 0. 
+
+402
+00:31:26,280 --> 00:31:33,600
+Yeah, yeah, it it's more types. 
+So with these types you can 
+
+403
+00:31:33,600 --> 00:31:44,130
+define your structures how your.
+How your data is represented 
+
+404
+00:31:44,170 --> 00:31:50,450
+inside memory and it adds 
+instructions to manipulate with 
+
+405
+00:31:50,850 --> 00:31:54,730
+these structures. 
+You can create new structure, 
+
+406
+00:31:54,730 --> 00:31:59,730
+you can access to fields of 
+structure, mutate or so on. 
+
+407
+00:32:00,810 --> 00:32:03,930
+Basically, so this is different 
+from normal wasm and normal 
+
+408
+00:32:03,930 --> 00:32:06,010
+wasm. 
+The wasm doesn't know about 
+
+409
+00:32:06,010 --> 00:32:10,250
+structures and how they relate, 
+which means that there's. 
+
+410
+00:32:10,330 --> 00:32:13,010
+There's no ability for it to 
+automatically garbage collect 
+
+411
+00:32:13,010 --> 00:32:17,770
+things, but in the case of 
+Wazmgc you now can represent the
+
+412
+00:32:17,770 --> 00:32:24,330
+structure of how values and 
+references are connected so that
+
+413
+00:32:24,330 --> 00:32:28,370
+the VM can then know when things
+can get cleaned up. 
+
+414
+00:32:30,210 --> 00:32:37,450
+Yeah, before WASMGC you have 
+only linear memory with bytes, 
+
+415
+00:32:37,530 --> 00:32:42,050
+so you can write read bytes and 
+nothing else. 
+
+416
+00:32:43,850 --> 00:32:50,410
+With wasmgc you get an ability 
+to create objects outside of 
+
+417
+00:32:50,410 --> 00:32:54,850
+this memory, in the heap 
+actually. 
+
+418
+00:32:55,920 --> 00:32:59,560
+They store separately from this 
+linear memory. 
+
+419
+00:33:00,520 --> 00:33:09,960
+And yeah, so if I were to say 
+I'm using Python And I have some
+
+420
+00:33:09,960 --> 00:33:14,280
+kind of Python object that I'm 
+creating, it sounds like wazmgc 
+
+421
+00:33:14,800 --> 00:33:19,410
+allows me to define that using 
+their system. 
+
+422
+00:33:19,410 --> 00:33:23,650
+And when I want to create one of
+those, I actually ask wasmgc to 
+
+423
+00:33:23,650 --> 00:33:26,570
+create one of those things for 
+me, and now it's managing it. 
+
+424
+00:33:26,570 --> 00:33:31,210
+Is that something like? 
+Something like that. 
+
+425
+00:33:31,330 --> 00:33:37,530
+I just don't remember if you can
+add new fields at runtime with 
+
+426
+00:33:37,570 --> 00:33:41,810
+Python. 
+Ohh yeah because with wasmgc 
+
+427
+00:33:41,890 --> 00:33:48,090
+everything should still static 
+because we want to provide. 
+
+428
+00:33:49,640 --> 00:33:54,920
+Security we we need to be able 
+verify. 
+
+429
+00:33:54,960 --> 00:34:01,080
+Still verify at compile time 
+your wasm binary what everything
+
+430
+00:34:01,440 --> 00:34:05,800
+you're doing is safe. 
+What you You didn't get at some 
+
+431
+00:34:05,800 --> 00:34:10,040
+point? 
+Dogs where you expected cats, 
+
+432
+00:34:11,320 --> 00:34:12,280
+right? 
+Sure. 
+
+433
+00:34:12,719 --> 00:34:16,440
+So so in the case of like kotlin
+with wasm GC. 
+
+434
+00:34:17,090 --> 00:34:20,889
+Is Does every class in Kotlin 
+get represented as one of these 
+
+435
+00:34:20,889 --> 00:34:25,210
+structs in wasm byte code? 
+Yeah, yeah, okay. 
+
+436
+00:34:25,409 --> 00:34:26,570
+Funny things. 
+By the way. 
+
+437
+00:34:26,570 --> 00:34:32,570
+What web assembly verification 
+is more strong than JVM for 
+
+438
+00:34:32,570 --> 00:34:37,250
+example. 
+Yeah, doing developing things in
+
+439
+00:34:37,250 --> 00:34:40,730
+Kotlin wasm or porting some 
+libraries. 
+
+440
+00:34:40,730 --> 00:34:45,570
+We found some bugs. 
+What wasn't found before with 
+
+441
+00:34:45,889 --> 00:34:50,650
+over our became. 
+With JVM JS native all these 
+
+442
+00:34:50,650 --> 00:34:54,250
+packets works fine with this 
+some a. 
+
+443
+00:34:56,210 --> 00:34:58,890
+Bit dynamic in the JVM 
+essentially. 
+
+444
+00:34:58,890 --> 00:35:04,450
+And it sounds like with Wazmgc 
+there's no real dynamicness to 
+
+445
+00:35:04,450 --> 00:35:06,330
+it. 
+It's gonna be very strict on 
+
+446
+00:35:06,330 --> 00:35:08,850
+your structures and references 
+and all that. 
+
+447
+00:35:11,180 --> 00:35:16,820
+So okay so my with with Kotlin 
+wasm and wasm GC. 
+
+448
+00:35:17,060 --> 00:35:20,940
+My Kotlin program with its class
+structure is being represented 
+
+449
+00:35:21,100 --> 00:35:25,860
+in Wasm and then that allows the
+Wasm VM to keep track of 
+
+450
+00:35:25,860 --> 00:35:28,740
+references and and do garbage 
+collection for me. 
+
+451
+00:35:30,240 --> 00:35:35,160
+That all sounds pretty awesome 
+and I wonder Rust because it's 
+
+452
+00:35:35,160 --> 00:35:39,040
+not a memory managed language. 
+Is there any benefit for them to
+
+453
+00:35:39,040 --> 00:35:43,960
+also represent a Rust program 
+with these structures or or is 
+
+454
+00:35:43,960 --> 00:35:48,960
+there no no reason that you 
+would want to do that that works
+
+455
+00:35:48,960 --> 00:35:52,960
+without Waasm GC so? 
+Yeah it does work without Waasm 
+
+456
+00:35:53,080 --> 00:35:56,800
+GC, but is there is there any 
+other any other benefit to 
+
+457
+00:35:57,080 --> 00:36:00,610
+representing? 
+Those those memory structures 
+
+458
+00:36:00,730 --> 00:36:05,290
+other than than the GC overhead.
+Yeah, I I don't know actually. 
+
+459
+00:36:05,610 --> 00:36:11,370
+I I can read Rust, but I don't. 
+I don't write in Rust. 
+
+460
+00:36:11,890 --> 00:36:17,410
+Yeah, I think I saw some 
+discussion around trying to use 
+
+461
+00:36:18,930 --> 00:36:24,250
+this struct new new struct 
+things for Rust and C++. 
+
+462
+00:36:29,740 --> 00:36:38,260
+The base restrictions with these
+wasm structs, so I think with C 
+
+463
+00:36:38,260 --> 00:36:44,500
+it will be hard because in sub C
+for example you can get pointer 
+
+464
+00:36:45,060 --> 00:36:50,180
+to the middle of your struct and
+the web, web assembly structures
+
+465
+00:36:50,220 --> 00:36:52,940
+don't allow it to do such 
+things. 
+
+466
+00:36:53,560 --> 00:36:57,880
+I don't know if if the same 
+possible in Rust. 
+
+467
+00:36:58,040 --> 00:37:06,120
+Probably if you go to unsafe 
+things in Rust it's already 
+
+468
+00:37:06,160 --> 00:37:09,120
+impossible in with this web 
+assembly. 
+
+469
+00:37:09,120 --> 00:37:13,070
+Structs, I don't know. 
+Right, cool. 
+
+470
+00:37:13,070 --> 00:37:15,630
+Okay. 
+Well yeah, definitely Looking 
+
+471
+00:37:15,630 --> 00:37:19,990
+forward to wasm GC and it seems 
+like it'll open up a lot of new 
+
+472
+00:37:19,990 --> 00:37:23,630
+opportunities for for wasm and 
+especially with memory managed 
+
+473
+00:37:23,630 --> 00:37:25,950
+languages. 
+Yeah, that's an interesting. 
+
+474
+00:37:25,950 --> 00:37:30,990
+I don't know if you'll know 
+about this, but see when Python 
+
+475
+00:37:31,270 --> 00:37:37,230
+was ported to the Java Virtual 
+Machine, one of the things that 
+
+476
+00:37:37,670 --> 00:37:42,230
+because it used the garbage 
+collector and the memory system 
+
+477
+00:37:42,550 --> 00:37:47,070
+of the JVM, they didn't have to 
+have the Global interpreter 
+
+478
+00:37:47,070 --> 00:37:50,790
+lock. 
+And I don't know if that would 
+
+479
+00:37:50,790 --> 00:37:54,950
+also possibly happen with Python
+on Waasm. 
+
+480
+00:37:59,110 --> 00:38:02,670
+Good question. 
+Seems plausible. 
+
+481
+00:38:02,670 --> 00:38:06,790
+Plausible, Yeah. 
+It's yeah probably they can 
+
+482
+00:38:07,270 --> 00:38:14,510
+somehow use these structs, but 
+in case of such dynamic 
+
+483
+00:38:14,510 --> 00:38:21,430
+languages like Python they 
+should provide additional. 
+
+484
+00:38:23,110 --> 00:38:25,430
+I guess you have to know what 
+your struct is to define it in 
+
+485
+00:38:25,430 --> 00:38:27,390
+Waasm and so that. 
+Yeah, maybe the harder there is.
+
+486
+00:38:27,510 --> 00:38:31,310
+Well, and there is a way in 
+Python to disallow dynamic 
+
+487
+00:38:31,310 --> 00:38:34,550
+edition of fields to an existing
+object. 
+
+488
+00:38:35,070 --> 00:38:38,150
+Maybe with some slots? 
+Some constraints around Python 
+
+489
+00:38:38,150 --> 00:38:39,350
+perhaps? 
+I don't know. 
+
+490
+00:38:39,350 --> 00:38:40,750
+I mean, because you'd want 
+there's all. 
+
+491
+00:38:40,750 --> 00:38:42,990
+Kinds of, yeah. 
+They they could actually mix 
+
+492
+00:38:43,430 --> 00:38:50,270
+static part and dynamic part 
+with free slots which work like 
+
+493
+00:38:51,910 --> 00:38:54,410
+dictionary. 
+Yeah, right, right. 
+
+494
+00:38:55,210 --> 00:38:58,850
+So OK WASM GC sounds great. 
+Looking forward to it. 
+
+495
+00:39:00,330 --> 00:39:03,690
+We there's a number of other 
+specifications we were looking 
+
+496
+00:39:03,690 --> 00:39:06,930
+through the list of of kind of 
+other proposals and stuff in the
+
+497
+00:39:06,930 --> 00:39:11,930
+in the WASM space. 
+Let's let's talk next about WASM
+
+498
+00:39:11,930 --> 00:39:14,290
+threads. 
+We don't know how much you know 
+
+499
+00:39:14,290 --> 00:39:17,170
+about that but sounds like an 
+interesting proposal. 
+
+500
+00:39:17,570 --> 00:39:20,010
+Have you looked at it and what's
+your, what's your thoughts on 
+
+501
+00:39:20,010 --> 00:39:21,010
+it? 
+And and? 
+
+502
+00:39:21,560 --> 00:39:25,160
+What's the correlation to cover?
+Well, and also JavaScript is a 
+
+503
+00:39:25,160 --> 00:39:30,840
+single threaded language and so 
+how would this you know? 
+
+504
+00:39:30,960 --> 00:39:35,200
+Would this allow you to use all 
+the cores on your target 
+
+505
+00:39:35,200 --> 00:39:37,520
+machine? 
+Yes, right. 
+
+506
+00:39:39,240 --> 00:39:42,560
+Yeah, not so it's. 
+Yeah, it's. 
+
+507
+00:39:44,250 --> 00:39:49,130
+Yeah, he is the same funny joke 
+about what the Freight's 
+
+508
+00:39:49,130 --> 00:39:52,050
+proposal Don't say much about 
+freights, actually. 
+
+509
+00:39:52,690 --> 00:39:59,930
+Instead, it introduces some 
+primitives for synchronize your 
+
+510
+00:39:59,930 --> 00:40:04,850
+works between different freights
+workers. 
+
+511
+00:40:05,800 --> 00:40:08,120
+It didn't sound like. 
+A lot of it was focused on the 
+
+512
+00:40:08,160 --> 00:40:12,760
+mutexes and the atomic 
+references and all that much on 
+
+513
+00:40:12,760 --> 00:40:16,600
+the actual, yeah, there is no 
+mutexes, there is atomic 
+
+514
+00:40:16,600 --> 00:40:19,920
+operations, yeah, it's. 
+Only atomic operations? 
+
+515
+00:40:21,470 --> 00:40:26,190
+Yeah, you can create your mutex 
+using atomic operations. 
+
+516
+00:40:26,190 --> 00:40:30,550
+Yeah, right. 
+Base primitives for atomic 
+
+517
+00:40:31,030 --> 00:40:36,430
+reads, writes and some 
+primitives for waiting for 
+
+518
+00:40:37,510 --> 00:40:43,030
+changes in inside some part of 
+memory. 
+
+519
+00:40:43,310 --> 00:40:46,310
+Also you can notify about these 
+changes. 
+
+520
+00:40:47,900 --> 00:40:54,900
+Yeah, basically this primitives 
+was is introduced by Fred's 
+
+521
+00:40:54,900 --> 00:40:58,300
+proposal. 
+All of these primitives works on
+
+522
+00:40:58,300 --> 00:41:05,840
+top of binary liner memory. 
+So was wasmgc and Fred's not 
+
+523
+00:41:05,840 --> 00:41:11,800
+work together yet? 
+Yeah, we need yeah, next 
+
+524
+00:41:11,800 --> 00:41:17,840
+proposal which introduces same 
+primitives for structs 
+
+525
+00:41:17,880 --> 00:41:22,840
+introduced by wasmgc. 
+Fred's proposal, if I remember 
+
+526
+00:41:22,880 --> 00:41:28,450
+correctly, on phase three for 
+now and I think there is someone
+
+527
+00:41:28,570 --> 00:41:34,850
+next week to vote for moving to 
+last phase four. 
+
+528
+00:41:35,970 --> 00:41:42,190
+Yeah, Next week by the way, 
+we'll have in person meeting of 
+
+529
+00:41:42,390 --> 00:41:44,630
+web assembly community group in 
+Munich. 
+
+530
+00:41:45,150 --> 00:41:50,190
+So phase and you're going for 
+that, a lot of votes changes. 
+
+531
+00:41:50,190 --> 00:41:56,030
+I think many proposals on phase 
+three will be moved to phase 
+
+532
+00:41:56,030 --> 00:42:00,230
+four and yeah. 
+You'll be there in Munich for 
+
+533
+00:42:00,230 --> 00:42:02,230
+that, Yeah, Yeah, I'm going to 
+be there. 
+
+534
+00:42:03,100 --> 00:42:05,060
+And we talked. 
+So real quick on the threads. 
+
+535
+00:42:05,180 --> 00:42:07,140
+Threads one does it actually 
+have? 
+
+536
+00:42:07,140 --> 00:42:10,940
+Does the specification have a 
+way to get a new OS thread? 
+
+537
+00:42:11,220 --> 00:42:13,180
+Is that part of it or no? 
+No. 
+
+538
+00:42:14,100 --> 00:42:21,640
+Yeah, finally No, no. 
+So how you run your threads? 
+
+539
+00:42:22,320 --> 00:42:26,720
+It's on host side, actually on 
+your virtual machine. 
+
+540
+00:42:26,880 --> 00:42:31,120
+Inside browsers we actually have
+kind of threads. 
+
+541
+00:42:31,120 --> 00:42:35,320
+It's web workers. 
+So you can create this web 
+
+542
+00:42:35,320 --> 00:42:42,520
+worker and put to your web 
+assembly models as linear memory
+
+543
+00:42:42,800 --> 00:42:45,960
+shared array buffer. 
+So this shared array buffer 
+
+544
+00:42:45,960 --> 00:42:51,540
+could be shared between 
+different workers and inside 
+
+545
+00:42:51,540 --> 00:42:57,300
+these workers you can use these 
+atomic primitives inside web 
+
+546
+00:42:57,300 --> 00:43:00,740
+assembly. 
+You can sync these threads 
+
+547
+00:43:01,860 --> 00:43:06,420
+whatever you want. 
+Actually the same primitives 
+
+548
+00:43:06,780 --> 00:43:14,710
+existed inside JavaScript. 
+I'm I don't know on which face 
+
+549
+00:43:14,950 --> 00:43:21,070
+this proposal inside JavaScript 
+script, but face proposal for 
+
+550
+00:43:21,070 --> 00:43:26,830
+script to introduce the same 
+primitives for atomic writes, 
+
+551
+00:43:26,870 --> 00:43:30,990
+atomic operations, notification,
+waiting things. 
+
+552
+00:43:31,870 --> 00:43:36,390
+So it sounds like for actual 
+multi threaded stuff. 
+
+553
+00:43:36,950 --> 00:43:41,150
+If you're in the context of V8 
+or web, web browser, whatever, 
+
+554
+00:43:41,150 --> 00:43:44,550
+you're gonna use web workers, do
+any of the like Wazi, Wazm, 
+
+555
+00:43:44,550 --> 00:43:49,990
+time, What are any of those? 
+Have some way to get a thread or
+
+556
+00:43:49,990 --> 00:43:51,910
+all those just expected to be 
+single threaded? 
+
+557
+00:43:52,030 --> 00:43:56,390
+Yeah, outside of browser phase, 
+some activities in Wazi, inside 
+
+558
+00:43:56,390 --> 00:44:03,730
+Wazi phase, kind of Wazi threads
+proposal, which yeah, actually 
+
+559
+00:44:04,250 --> 00:44:12,090
+what you need, what you asked is
+about API to create operating 
+
+560
+00:44:12,090 --> 00:44:13,930
+system threads. 
+I guess it would make sense that
+
+561
+00:44:13,930 --> 00:44:17,010
+you would do that through Wazi, 
+because Wazi is the system. 
+
+562
+00:44:17,690 --> 00:44:22,770
+Yeah, so that's and does that 
+have, are they using a 
+
+563
+00:44:22,770 --> 00:44:25,810
+structured concurrency model for
+that? 
+
+564
+00:44:26,210 --> 00:44:33,640
+Do you know, I think no, no. 
+I think wisely threads just 
+
+565
+00:44:33,640 --> 00:44:38,680
+introduces a way to create 
+threads. 
+
+566
+00:44:39,640 --> 00:44:45,560
+Honestly I don't know much about
+threads, I just a few things. 
+
+567
+00:44:47,160 --> 00:44:52,970
+And yeah, as I said, current 
+threads proposal inside Web 
+
+568
+00:44:52,970 --> 00:44:58,490
+Assembly core introduce it on 
+the Super wall level primitive. 
+
+569
+00:44:58,610 --> 00:44:59,570
+Right. 
+They're trying to get the 
+
+570
+00:44:59,570 --> 00:45:03,410
+underlying mechanisms airtight 
+so that you can build on it. 
+
+571
+00:45:03,410 --> 00:45:04,730
+That makes sense. 
+Which is really just about 
+
+572
+00:45:04,890 --> 00:45:06,330
+shared memory. 
+Yeah, control. 
+
+573
+00:45:07,010 --> 00:45:14,130
+Yeah, structural concurrency. 
+Yeah, every language code build 
+
+574
+00:45:14,370 --> 00:45:22,630
+on version, Yeah, but it will 
+not be shared across web 
+
+575
+00:45:22,630 --> 00:45:26,190
+assembly ecosystem. 
+Maybe at some point we need to 
+
+576
+00:45:26,510 --> 00:45:30,550
+introduce common things for 
+structure concurrency. 
+
+577
+00:45:32,030 --> 00:45:34,750
+Yeah, what's the current state? 
+And thinking around the 
+
+578
+00:45:34,750 --> 00:45:38,670
+correlation between Kotlin 
+coroutines and any of this, 
+
+579
+00:45:38,670 --> 00:45:43,190
+like, do you? 
+Yeah, that's a good question. 
+
+580
+00:45:44,460 --> 00:45:49,900
+Right now it's just we just 
+simply compile everything to 
+
+581
+00:45:50,540 --> 00:45:55,940
+state machine as we do on all 
+other platforms. 
+
+582
+00:45:57,180 --> 00:46:01,900
+It works well. 
+It's something that, yeah, 
+
+583
+00:46:03,220 --> 00:46:08,500
+verified to work the last few 
+years in Kotlin and even outside
+
+584
+00:46:08,500 --> 00:46:11,220
+of Kotlin C# doing the same 
+thing. 
+
+585
+00:46:11,220 --> 00:46:17,710
+For example, there is proposals 
+inside web assembly code to 
+
+586
+00:46:17,710 --> 00:46:21,950
+simplify things like code 
+things, proposal code stack 
+
+587
+00:46:21,950 --> 00:46:26,550
+switching. 
+Actually for now there is I 
+
+588
+00:46:26,550 --> 00:46:35,600
+think 3 different proposals. 
+So yeah, we will have hot months
+
+589
+00:46:35,600 --> 00:46:41,080
+next month we are discussing, 
+yeah, which proposal should be 
+
+590
+00:46:41,680 --> 00:46:47,280
+actually finalized. 
+Yeah, this proposal. 
+
+591
+00:46:47,400 --> 00:46:52,600
+Some of this proposal has proof 
+of concept implementation and 
+
+592
+00:46:52,720 --> 00:46:59,160
+interpreter. 
+And in wasm time and preliminary
+
+593
+00:46:59,360 --> 00:47:07,510
+results works promising. 
+In terms of size, I think size 
+
+594
+00:47:07,510 --> 00:47:12,830
+was reduced 2/5 times. 
+Yeah. 
+
+595
+00:47:13,590 --> 00:47:20,310
+In terms of performance, it's 
+not so good for now, but it's 
+
+596
+00:47:20,310 --> 00:47:23,070
+not. 
+Not been really optimized, it's 
+
+597
+00:47:23,070 --> 00:47:27,550
+not comparing same things. 
+Because what comparison what I 
+
+598
+00:47:27,550 --> 00:47:36,370
+saw was for without this 
+proposal, web assembly binary 
+
+599
+00:47:36,370 --> 00:47:41,650
+was optimized, virtual machine 
+can optimize easily all these 
+
+600
+00:47:41,650 --> 00:47:45,770
+things. 
+And with stack switching 
+
+601
+00:47:45,810 --> 00:47:51,130
+proposal it was implementation 
+wasn't optimized yet. 
+
+602
+00:47:51,410 --> 00:47:57,130
+There was no tooling to be able 
+to optimize stack switching byte
+
+603
+00:47:57,130 --> 00:48:01,370
+code. 
+So it's not fair comparison, 
+
+604
+00:48:02,210 --> 00:48:06,330
+yeah. 
+So I hope at least at some point
+
+605
+00:48:06,530 --> 00:48:09,370
+it could be at the same 
+performance. 
+
+606
+00:48:09,730 --> 00:48:13,530
+Maybe in some cases it could be 
+better with state switching, 
+
+607
+00:48:13,530 --> 00:48:16,170
+yeah? 
+It just so you mentioned 
+
+608
+00:48:16,170 --> 00:48:19,690
+optimization and didn't want to 
+touch on that because there is a
+
+609
+00:48:19,890 --> 00:48:22,490
+kind of seems like a vibrant 
+ecosystem around. 
+
+610
+00:48:22,920 --> 00:48:26,400
+Taking the wasm that's created 
+by your compiler and then 
+
+611
+00:48:26,400 --> 00:48:29,160
+performing some optimizations on
+that wasm. 
+
+612
+00:48:29,160 --> 00:48:32,800
+Creating a new wasm. 
+So Binarian is the one from the 
+
+613
+00:48:32,800 --> 00:48:35,840
+Chrome team, right? 
+And then there may be others 
+
+614
+00:48:36,120 --> 00:48:39,040
+that do this, but so it seems 
+like it. 
+
+615
+00:48:39,080 --> 00:48:41,960
+You know, usually a compiler is 
+going to kind of give you a bit 
+
+616
+00:48:41,960 --> 00:48:45,920
+of a direct representation of of
+what your what your code's doing
+
+617
+00:48:46,160 --> 00:48:49,920
+in the wasm, but then an 
+optimizer can then what like 
+
+618
+00:48:49,920 --> 00:48:52,800
+unroll loops or figure out other
+places that it. 
+
+619
+00:48:52,920 --> 00:48:56,360
+And you know, dead code 
+elimination, whatever it may be.
+
+620
+00:48:56,920 --> 00:48:58,120
+Am I thinking about that 
+correctly? 
+
+621
+00:48:58,120 --> 00:49:06,600
+For the optimizer side, yeah, 
+Binarian actually doing great 
+
+622
+00:49:09,040 --> 00:49:15,880
+things with web assembly. 
+In our list builds we able to 
+
+623
+00:49:15,880 --> 00:49:22,000
+use binarian for optimizations 
+and been correctly reduce size 
+
+624
+00:49:22,040 --> 00:49:28,120
+and improve runtime performance.
+It's able to remove unreachable 
+
+625
+00:49:28,520 --> 00:49:32,760
+decorations. 
+It's able to even it's able to 
+
+626
+00:49:32,760 --> 00:49:40,120
+do the virtualization for Kotlin
+or JVM for Java when you compile
+
+627
+00:49:40,120 --> 00:49:47,710
+it to web assembly. 
+I I actually don't know if there
+
+628
+00:49:47,710 --> 00:49:54,150
+is other tools what able to 
+optimize from web assembly to 
+
+629
+00:49:54,190 --> 00:49:59,670
+web assembly. 
+Some compilers just use LLVM as 
+
+630
+00:49:59,670 --> 00:50:04,550
+code again and optimizer. 
+So if you go through LLVM you 
+
+631
+00:50:04,550 --> 00:50:08,630
+get LLVM optimizations and can 
+generate web assembly. 
+
+632
+00:50:10,070 --> 00:50:15,410
+We in case of cotton wasm, we 
+don't go through LLVM because 
+
+633
+00:50:16,130 --> 00:50:20,690
+yeah, we want to control whole 
+pipeline because we want to have
+
+634
+00:50:20,810 --> 00:50:24,250
+super fast compilation, 
+especially in development we 
+
+635
+00:50:24,250 --> 00:50:27,930
+want to have. 
+Under the second compilation 
+
+636
+00:50:27,930 --> 00:50:36,490
+time we want to have incremental
+compilation and it is tricky to 
+
+637
+00:50:36,490 --> 00:50:41,940
+achieve all this stuff with LLVM
+and is bonus thing. 
+
+638
+00:50:41,940 --> 00:50:47,060
+With our solution current 
+solution we can easily 
+
+639
+00:50:47,060 --> 00:50:51,140
+experiment with new things 
+because we control whole 
+
+640
+00:50:51,140 --> 00:50:55,900
+pipeline, we don't need to wait 
+a little VM or other tools. 
+
+641
+00:50:57,740 --> 00:51:02,020
+Yeah, I think in general back to
+optimizers. 
+
+642
+00:51:02,180 --> 00:51:08,920
+It's possible to build something
+like wasm to wasm optimizer on 
+
+643
+00:51:08,920 --> 00:51:15,680
+top of LLVM, but I didn't see 
+such solution yet. 
+
+644
+00:51:17,680 --> 00:51:22,200
+Okay, one question on WASM kind 
+of structures that I just 
+
+645
+00:51:22,200 --> 00:51:25,610
+thought of was. 
+It seems like usually in the 
+
+646
+00:51:25,610 --> 00:51:29,330
+world of wasm, you compile kind 
+of a monolithic executable. 
+
+647
+00:51:29,330 --> 00:51:33,690
+Essentially it's got kind of 
+everything that's needed in in 
+
+648
+00:51:33,690 --> 00:51:37,450
+the WASM for a full program. 
+Is there a way to like like 
+
+649
+00:51:37,490 --> 00:51:41,930
+break a wasm into runtime 
+modules that then could get 
+
+650
+00:51:41,930 --> 00:51:46,610
+loaded dynamically progressively
+as they're needed or something? 
+
+651
+00:51:46,610 --> 00:51:48,730
+Does that kind of thing exist 
+yet or is it still kind of 
+
+652
+00:51:49,050 --> 00:51:56,060
+generally monolithic Wasms? 
+It's possible with tricks. 
+
+653
+00:51:57,060 --> 00:52:03,100
+It's not something supported 
+directly inside the web assembly
+
+654
+00:52:03,100 --> 00:52:09,340
+core, but since you have inside 
+web assembly you have ability to
+
+655
+00:52:09,340 --> 00:52:16,100
+call functions indirectly 
+through some special table or 
+
+656
+00:52:16,100 --> 00:52:23,270
+using reference on function. 
+And you can get this function 
+
+657
+00:52:23,350 --> 00:52:26,190
+outside of your wasm model and 
+code fam. 
+
+658
+00:52:26,950 --> 00:52:34,430
+So this property could be used 
+for such kind of dynamic 
+
+659
+00:52:35,350 --> 00:52:40,550
+wording, dynamic compilation 
+base. 
+
+660
+00:52:42,830 --> 00:52:45,070
+I don't remember name of 
+project. 
+
+661
+00:52:45,070 --> 00:52:50,950
+Base project was able to run X86
+instructions inside browser. 
+
+662
+00:52:51,780 --> 00:52:56,420
+It built by a company called 
+cleaning technology I think. 
+
+663
+00:52:57,340 --> 00:53:05,790
+So they they able to JIT X86 
+instructions inside your browser
+
+664
+00:53:05,790 --> 00:53:12,790
+run inside web assembly. 
+So while your program is run at 
+
+665
+00:53:12,790 --> 00:53:18,590
+some point it decided to some 
+hot paths and compile it to web 
+
+666
+00:53:18,590 --> 00:53:23,390
+assembly and to replace your 
+this function with compiled 
+
+667
+00:53:23,390 --> 00:53:27,990
+optimized version. 
+Yeah it's possible. 
+
+668
+00:53:29,230 --> 00:53:36,210
+I I hope at some point actually 
+we we use this some kind of this
+
+669
+00:53:36,210 --> 00:53:43,730
+techniques and we'll implement 
+some things in Cortland. 
+
+670
+00:53:43,930 --> 00:53:46,490
+Yeah, exactly. 
+That would be cool. 
+
+671
+00:53:49,010 --> 00:53:51,050
+Cool. 
+The next thing I want to talk 
+
+672
+00:53:51,050 --> 00:53:55,250
+about was the Wasm component 
+model, and my kind of mental 
+
+673
+00:53:55,250 --> 00:54:01,780
+model for this is that we. 
+In WASM, we have the opportunity
+
+674
+00:54:01,780 --> 00:54:08,100
+to say, all right, I've got an 
+interface, and I'm going to have
+
+675
+00:54:08,460 --> 00:54:10,460
+something that provides the 
+implementation of that 
+
+676
+00:54:10,460 --> 00:54:12,060
+interface. 
+And then I've got the side 
+
+677
+00:54:12,060 --> 00:54:13,820
+that's going to use that 
+interface. 
+
+678
+00:54:14,220 --> 00:54:19,700
+And from the WASM perspective, 
+it doesn't care which language 
+
+679
+00:54:19,700 --> 00:54:22,100
+or whatever those different 
+pieces are written in, because 
+
+680
+00:54:22,100 --> 00:54:26,560
+there's the common. 
+IDL called wit, right, which is 
+
+681
+00:54:27,000 --> 00:54:31,280
+the IDL for that, that describes
+that that interface with the 
+
+682
+00:54:31,280 --> 00:54:36,400
+imports and exports and so 
+that's the the wasm component 
+
+683
+00:54:36,400 --> 00:54:43,480
+model, which should bring us 
+like true polyglot FFI. 
+
+684
+00:54:43,980 --> 00:54:47,980
+For like kind of the first time 
+in history, it seems like and so
+
+685
+00:54:47,980 --> 00:54:50,780
+it seems like there's there's 
+kind of this is one of the most 
+
+686
+00:54:50,780 --> 00:54:53,660
+exciting areas of of future 
+wasm. 
+
+687
+00:54:53,660 --> 00:54:55,500
+Or maybe it is current wasm, I 
+don't know. 
+
+688
+00:54:56,580 --> 00:55:01,780
+Is this this idea to like be 
+able to actually have a polyglot
+
+689
+00:55:02,300 --> 00:55:07,980
+library ecosystem that can 
+actually interoperate together? 
+
+690
+00:55:07,980 --> 00:55:09,500
+Is it? 
+Am I thinking about this all 
+
+691
+00:55:10,020 --> 00:55:16,320
+right? 
+Yeah, I I think Component model 
+
+692
+00:55:16,320 --> 00:55:21,320
+is probably next big things in 
+Web Assembly ecosystem. 
+
+693
+00:55:21,920 --> 00:55:29,760
+For now idea is what it is layer
+on top of wasm core. 
+
+694
+00:55:31,080 --> 00:55:36,600
+Not everything. 
+At least what's developed inside
+
+695
+00:55:36,600 --> 00:55:41,720
+component model will be part of 
+Web assembly core. 
+
+696
+00:55:44,280 --> 00:55:53,240
+So before we move to component 
+model, how does it work right 
+
+697
+00:55:53,240 --> 00:55:55,400
+now? 
+Interrupt in wasm core? 
+
+698
+00:55:56,560 --> 00:56:02,040
+In wasm core, as I said before, 
+you have imports, exports, you 
+
+699
+00:56:02,040 --> 00:56:10,860
+can import functions, part of 
+memory, some types and in terms 
+
+700
+00:56:10,860 --> 00:56:22,860
+of functions, you don't have 
+many things to explain your API.
+
+701
+00:56:23,060 --> 00:56:27,460
+You have super basic things, 
+level things, kind of numbers, 
+
+702
+00:56:27,460 --> 00:56:33,740
+14 numbers. 
+You have references, some kind 
+
+703
+00:56:33,740 --> 00:56:38,590
+of references, and it is for. 
+This is for. 
+
+704
+00:56:38,590 --> 00:56:42,950
+Essentially like interop or FFI 
+in Wazem core today, in the the 
+
+705
+00:56:42,950 --> 00:56:48,110
+state of it today, Yeah, yeah, 
+it's kind of when you're writing
+
+706
+00:56:48,110 --> 00:56:54,110
+some native library and you 
+provide CPI today when you want 
+
+707
+00:56:54,230 --> 00:57:03,630
+to to, when you want to combine 
+two or more web assembly models,
+
+708
+00:57:03,870 --> 00:57:11,150
+they actually speak in API level
+in C API like things. 
+
+709
+00:57:11,590 --> 00:57:17,990
+And probably nowadays we want to
+think we need to have something 
+
+710
+00:57:17,990 --> 00:57:23,950
+better than just C API. 
+We want to distinguish numbers 
+
+711
+00:57:23,950 --> 00:57:31,590
+from pointers from resources 
+handlers inside C API. 
+
+712
+00:57:31,590 --> 00:57:34,030
+It's all of these things is 
+numbers. 
+
+713
+00:57:34,390 --> 00:57:44,070
+We want to distinguish them. 
+Phase we need it for to have a 
+
+714
+00:57:44,070 --> 00:57:47,230
+better API and for security 
+reason as well. 
+
+715
+00:57:48,370 --> 00:57:55,970
+And I think component model is 
+attempt to yeah, provide better,
+
+716
+00:57:56,530 --> 00:58:06,290
+more high level ability to 
+describe these APIs, yeah. 
+
+717
+00:58:06,490 --> 00:58:12,820
+So the wit part of it is the. 
+The creating this this 
+
+718
+00:58:12,980 --> 00:58:17,740
+essentially language that 
+defines the the APIs that are 
+
+719
+00:58:17,740 --> 00:58:22,740
+shared or fifiable and then the 
+component model. 
+
+720
+00:58:25,140 --> 00:58:28,300
+So Wit then compiles down into 
+Wasm, but then the component 
+
+721
+00:58:28,300 --> 00:58:28,980
+model. 
+What? 
+
+722
+00:58:28,980 --> 00:58:34,300
+What does the component model do
+in addition to to what Wit is? 
+
+723
+00:58:38,910 --> 00:58:41,190
+Is it like they're kind of 
+defined separately? 
+
+724
+00:58:41,190 --> 00:58:43,390
+There's WIT and then there's the
+component model and they're 
+
+725
+00:58:43,390 --> 00:58:47,830
+related. 
+But I wasn't totally grasping 
+
+726
+00:58:49,790 --> 00:58:52,630
+what's the difference between 
+WIT and the actual component 
+
+727
+00:58:52,630 --> 00:58:56,630
+model. 
+It's tricky question. 
+
+728
+00:58:56,630 --> 00:59:04,830
+I think biggest part of 
+component model is this ideal, 
+
+729
+00:59:05,550 --> 00:59:10,190
+which as a language to describe 
+your APIs. 
+
+730
+00:59:10,630 --> 00:59:16,390
+It provides high level 
+primitives to describe your 
+
+731
+00:59:16,390 --> 00:59:19,510
+APIs. 
+Not only numbers, but there is 
+
+732
+00:59:20,910 --> 00:59:25,270
+resources, handlers, there is 
+lists, even string. 
+
+733
+00:59:27,030 --> 00:59:34,870
+So you can provide better API, 
+it's a language natural API. 
+
+734
+00:59:36,550 --> 00:59:42,910
+Aside of that, I'm not sure what
+component model actually I 
+
+735
+00:59:42,950 --> 00:59:44,270
+think. 
+One of the pieces to the 
+
+736
+00:59:44,270 --> 00:59:48,630
+component model is the registry 
+where you can like publish your 
+
+737
+00:59:48,630 --> 00:59:50,910
+wasm component and then consume 
+it. 
+
+738
+00:59:52,740 --> 00:59:55,300
+I think it's outside of 
+component model. 
+
+739
+00:59:56,020 --> 01:00:00,620
+Yeah, there is some proposal 
+about introducing some registry 
+
+740
+01:00:00,620 --> 01:00:05,140
+for your components, but main 
+point of component model is 
+
+741
+01:00:05,140 --> 01:00:13,420
+providing this common language 
+in Turk's format and binary 
+
+742
+01:00:13,420 --> 01:00:20,300
+format what? 
+Should be language agnostic. 
+
+743
+01:00:20,900 --> 01:00:28,580
+It should be actually agnostic 
+from your use cases. 
+
+744
+01:00:29,020 --> 01:00:33,620
+And on top of this language you 
+can build things like Wazi. 
+
+745
+01:00:34,700 --> 01:00:45,440
+Wazi originally was used on on 
+ideal on language for describing
+
+746
+01:00:45,480 --> 01:00:48,920
+APIs. 
+And Preview 1 Wazi Preview one 
+
+747
+01:00:48,920 --> 01:00:53,680
+is like kind of using its own 
+IDL to describe the interfaces, 
+
+748
+01:00:53,680 --> 01:00:57,640
+and then preview two said let's 
+just use Wit and the Wazm 
+
+749
+01:00:57,640 --> 01:00:59,920
+component model to describe the 
+system interfaces. 
+
+750
+01:01:00,960 --> 01:01:05,140
+That makes sense. 
+And today I think when I when I 
+
+751
+01:01:05,140 --> 01:01:07,620
+played with it recently, the 
+Kotlin wasum was still on 
+
+752
+01:01:07,620 --> 01:01:09,940
+Preview one, but I'm sure at 
+some point you'll be able to 
+
+753
+01:01:10,060 --> 01:01:15,900
+switch it to preview 2. 
+And yeah, in one point 9.20 we 
+
+754
+01:01:15,900 --> 01:01:21,620
+just introduced it to Wazi. 
+Basic Wazi support in Kotlin 
+
+755
+01:01:21,620 --> 01:01:29,260
+wasum and it used Preview 1 yet.
+Yeah, but actually Preview 2 is 
+
+756
+01:01:29,260 --> 01:01:33,100
+not released yet. 
+Yeah, so after. 
+
+757
+01:01:33,100 --> 01:01:37,500
+Next week and next week we need.
+To get it get it done, yeah. 
+
+758
+01:01:38,820 --> 01:01:46,940
+So a bit of this one which I I I
+know always border what is part 
+
+759
+01:01:46,940 --> 01:01:56,710
+of ideal, but component model in
+general it's it provides a way 
+
+760
+01:01:56,710 --> 01:02:02,350
+to compose with different 
+models, compose different 
+
+761
+01:02:02,350 --> 01:02:10,270
+languages. 
+In the border you have types 
+
+762
+01:02:10,350 --> 01:02:16,590
+that introduce it in compound 
+model like string. 
+
+763
+01:02:16,830 --> 01:02:24,180
+But inside your model, inside 
+your language Rust or C, this 
+
+764
+01:02:24,180 --> 01:02:28,300
+string representation could be 
+different and component model 
+
+765
+01:02:28,300 --> 01:02:34,500
+provides you an ability to 
+transform this component model 
+
+766
+01:02:34,500 --> 01:02:39,020
+string to your representation. 
+Yeah, back and forth. 
+
+767
+01:02:39,980 --> 01:02:48,170
+And one of great idea is what 
+your virtual machine can see 
+
+768
+01:02:48,170 --> 01:02:52,170
+these transformations and 
+combine this transformation. 
+
+769
+01:02:53,170 --> 01:02:58,730
+For example, if it's C, on one 
+side it's C and the other side 
+
+770
+01:02:58,730 --> 01:03:03,810
+it's C, you don't need to do all
+this transformation, you just 
+
+771
+01:03:03,810 --> 01:03:09,890
+can copy this bunch of memory to
+another model and nothing else. 
+
+772
+01:03:11,180 --> 01:03:16,740
+Or even there is different 
+languages on both sides, but on 
+
+773
+01:03:16,780 --> 01:03:23,140
+one side is it uses UDF 8, at 
+another side it's say UDF 8. 
+
+774
+01:03:23,340 --> 01:03:27,260
+Again, you don't need to do this
+all transformation, just copy 
+
+775
+01:03:27,260 --> 01:03:30,660
+this part of memory, yeah? 
+That's cool. 
+
+776
+01:03:32,220 --> 01:03:35,700
+It's pretty exciting where where
+the wasm component model stuff 
+
+777
+01:03:35,700 --> 01:03:37,860
+will go. 
+Is there any correlation yet 
+
+778
+01:03:37,860 --> 01:03:42,260
+between wasm GC and the like 
+structs and wasm GC with the the
+
+779
+01:03:42,260 --> 01:03:46,900
+type representations in in the 
+wasm component model? 
+
+780
+01:03:48,180 --> 01:03:54,940
+No component model as in now 
+don't integrate anything from 
+
+781
+01:03:54,940 --> 01:04:02,240
+wasm GC and probably it's one 
+one thing what we need to do 
+
+782
+01:04:02,560 --> 01:04:07,120
+next few months. 
+Thinking about how a new wasmgc 
+
+783
+01:04:07,360 --> 01:04:12,280
+primitives could be integrated 
+inside component model. 
+
+784
+01:04:12,840 --> 01:04:18,720
+How new languages like Kotlin 
+who use these structures 
+
+785
+01:04:19,960 --> 01:04:27,280
+structure things could be 
+integrated to component model 
+
+786
+01:04:27,280 --> 01:04:28,900
+world? 
+Nice. 
+
+787
+01:04:30,500 --> 01:04:34,980
+More work to do. 
+Did you spend all of your time 
+
+788
+01:04:35,500 --> 01:04:38,820
+working on WASM stuff? 
+Is that your life? 
+
+789
+01:04:41,660 --> 01:04:45,980
+I spent all my work time at 
+least on this. 
+
+790
+01:04:46,340 --> 01:04:52,140
+Yeah, and maybe. 
+Some fun time, a bit more, yeah.
+
+791
+01:04:53,380 --> 01:04:55,980
+Nice. 
+That seems like a fun space to 
+
+792
+01:04:55,980 --> 01:04:56,860
+be part of. 
+And. 
+
+793
+01:04:57,230 --> 01:05:03,710
+Lots of there is a lot of things
+to do, to watch, to read, to be 
+
+794
+01:05:03,710 --> 01:05:09,310
+part. 
+So there is much more things 
+
+795
+01:05:09,630 --> 01:05:14,150
+when I have time actually. 
+Yeah, seems kind of. 
+
+796
+01:05:14,630 --> 01:05:17,670
+It's a very large space. 
+It's moving very quickly well, 
+
+797
+01:05:17,790 --> 01:05:19,990
+so probably fun to be. 
+Part of the disabilities just 
+
+798
+01:05:19,990 --> 01:05:23,330
+seem amazing just. 
+I mean, you've got the right 
+
+799
+01:05:23,330 --> 01:05:28,810
+ones, run everywhere actual, not
+the, not the Java version. 
+
+800
+01:05:28,850 --> 01:05:32,090
+Actually right ones. 
+And then the, the mixing, the 
+
+801
+01:05:32,090 --> 01:05:37,330
+ability to mix languages in a 
+single project seems like that 
+
+802
+01:05:37,330 --> 01:05:41,410
+could have tremendous 
+productivity. 
+
+803
+01:05:41,770 --> 01:05:43,250
+Yeah. 
+Value, yeah. 
+
+804
+01:05:44,730 --> 01:05:47,370
+It's pretty exciting. 
+Did we miss anything? 
+
+805
+01:05:47,370 --> 01:05:50,490
+Was there any other interesting 
+pieces you'd wanna point out 
+
+806
+01:05:50,490 --> 01:05:52,610
+about? 
+Wazm Where it's at, Where it's 
+
+807
+01:05:52,610 --> 01:05:54,650
+going? 
+Cotton Wazm? 
+
+808
+01:05:59,130 --> 01:06:03,010
+I don't know. 
+I think we there's there's 
+
+809
+01:06:03,010 --> 01:06:05,810
+obviously a whole bunch more 
+specs out there that that we 
+
+810
+01:06:05,810 --> 01:06:09,570
+could go into, but but I think 
+that we covered the ones that 
+
+811
+01:06:09,570 --> 01:06:11,770
+were that were top of mind for 
+me. 
+
+812
+01:06:13,810 --> 01:06:15,690
+Yeah, so cool. 
+Cool. 
+
+813
+01:06:16,610 --> 01:06:19,850
+Yeah. 
+So I've played with Kotlin Wasum
+
+814
+01:06:19,850 --> 01:06:24,970
+and and and tried out the Wazzy 
+stuff and it's pretty exciting. 
+
+815
+01:06:24,970 --> 01:06:28,890
+There's for anybody that's 
+listening that wants to try out 
+
+816
+01:06:28,890 --> 01:06:31,890
+the Kotlin wasum, let us know 
+how it goes because. 
+
+817
+01:06:32,760 --> 01:06:37,440
+It's fun and and has done a 
+great job working on that and 
+
+818
+01:06:37,760 --> 01:06:40,960
+and so give him some feedback if
+you give that a try. 
+
+819
+01:06:41,720 --> 01:06:44,920
+Thank you. 
+Actually I'm not around working 
+
+820
+01:06:44,960 --> 01:06:52,560
+on stuff Yeah based our folks 
+are helping me we will work on 
+
+821
+01:06:52,560 --> 01:06:54,120
+it together. 
+You're just yeah. 
+
+822
+01:06:54,240 --> 01:06:57,280
+The the face of it, speaking at 
+conferences and and all that 
+
+823
+01:06:57,280 --> 01:06:59,780
+about it, so. 
+Cool. 
+
+824
+01:06:59,860 --> 01:07:00,660
+All right. 
+Well. 
+
+825
+01:07:00,700 --> 01:07:03,340
+Salim, thank you so much for 
+joining us and helping us learn 
+
+826
+01:07:03,340 --> 01:07:06,140
+more. 
+Thank you for having me.
+

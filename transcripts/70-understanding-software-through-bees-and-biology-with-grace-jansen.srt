@@ -1,0 +1,5570 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,799 --> 00:00:05,799
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:09,599
+All right. 
+Well, welcome back. 
+
+4
+00:00:09,599 --> 00:00:12,800
+It's been a while. 
+I have been traveling and so 
+
+5
+00:00:12,800 --> 00:00:17,100
+it's good to be back and and 
+today we have with us Grace 
+
+6
+00:00:17,100 --> 00:00:21,100
+Jansen and I ran across Grace's 
+work. 
+
+7
+00:00:21,100 --> 00:00:23,000
+I don't think we've ever 
+actually met in person. 
+
+8
+00:00:23,000 --> 00:00:25,800
+So, it doesn't mean great to see
+you, and hopefully we do cross 
+
+9
+00:00:25,800 --> 00:00:27,199
+paths at a conference, some 
+time. 
+
+10
+00:00:27,800 --> 00:00:31,800
+But I said, seen you presenting 
+about the 15 Factor app and 
+
+11
+00:00:31,800 --> 00:00:34,700
+maybe we'll get into that. 
+Which fascinated me, because I 
+
+12
+00:00:34,700 --> 00:00:37,600
+was at Heroku. 
+When Adam Wiggins wrote, the 
+
+13
+00:00:37,700 --> 00:00:41,000
+Factor app and you said, you 
+helped a little bit of 
+
+14
+00:00:41,000 --> 00:00:45,100
+contribution bringing kind of 
+the Java perspective at the time
+
+15
+00:00:45,100 --> 00:00:49,299
+to that, and had suggested some,
+some changes and stuff to that. 
+
+16
+00:00:49,299 --> 00:00:51,200
+And I don't remember it was a 
+long time ago, so I don't 
+
+17
+00:00:51,200 --> 00:00:53,100
+remember that. 
+But anyways, so as fascinated by
+
+18
+00:00:53,100 --> 00:00:56,899
+your your kind of re 
+invigorating that that, and 
+
+19
+00:00:56,899 --> 00:00:59,200
+adding some factors to it, so 
+maybe we'll get into that. 
+
+20
+00:00:59,200 --> 00:01:01,799
+But but yeah, welcome Grace, 
+good to have you. 
+
+21
+00:01:02,200 --> 00:01:04,200
+Thanks so much for having me. 
+It's great to join you guys and 
+
+22
+00:01:04,200 --> 00:01:06,500
+yeah, hopefully at some point 
+we'll meet face-to-face. 
+
+23
+00:01:06,500 --> 00:01:09,700
+But you know, We'll get you up 
+to Crested Butte for a 
+
+24
+00:01:09,700 --> 00:01:11,099
+conference sometime. 
+Right. 
+
+25
+00:01:11,099 --> 00:01:14,299
+That's the winner tech for him. 
+Yeah true. 
+
+26
+00:01:14,700 --> 00:01:20,000
+I mean since your employer pays 
+for you, two to come to these 
+
+27
+00:01:20,000 --> 00:01:22,599
+things. 
+Yeah we should definitely get 
+
+28
+00:01:22,599 --> 00:01:27,000
+you here. 
+Yeah so we we've been trying to 
+
+29
+00:01:27,000 --> 00:01:30,299
+start with just hearing about 
+what people's journey of 
+
+30
+00:01:30,299 --> 00:01:32,900
+interest is not necessarily your
+companies. 
+
+31
+00:01:32,900 --> 00:01:34,400
+You've worked for. 
+But what are you tell it? 
+
+32
+00:01:34,400 --> 00:01:39,000
+Give us a picture of what? 
+What your journey of interests 
+
+33
+00:01:39,000 --> 00:01:40,500
+have been. 
+Yeah. 
+
+34
+00:01:40,900 --> 00:01:43,900
+So and I drew you into all this,
+huh? 
+
+35
+00:01:44,000 --> 00:01:48,400
+That is a great question. 
+So I come from a slightly and 
+
+36
+00:01:48,400 --> 00:01:53,000
+more unusual background where I 
+didn't study comp sci or 
+
+37
+00:01:53,000 --> 00:01:55,099
+computer science of software 
+engineering at University 
+
+38
+00:01:55,400 --> 00:01:58,700
+actually did biology and then 
+jumped into software 
+
+39
+00:01:58,700 --> 00:02:01,700
+engineering. 
+When I joined IBM, I done a bit 
+
+40
+00:02:01,700 --> 00:02:05,900
+on the side sort of bit of 
+Python Programming, but mostly 
+
+41
+00:02:06,000 --> 00:02:09,699
+sort of, No programming, nothing
+object orientated. 
+
+42
+00:02:09,699 --> 00:02:12,300
+So it was a steep learning 
+curve. 
+
+43
+00:02:12,300 --> 00:02:17,800
+When I first jumped in and was 
+kind of a bit overwhelming 
+
+44
+00:02:17,800 --> 00:02:20,699
+coming in and realizing that 
+true, you know this is huge 
+
+45
+00:02:20,699 --> 00:02:23,099
+language. 
+This huge sort of ecosystem are 
+
+46
+00:02:23,107 --> 00:02:27,000
+different tools and Technologies
+and coming in and realizing the 
+
+47
+00:02:27,000 --> 00:02:30,300
+language is older than me, I say
+oh wow there's a lot to learn. 
+
+48
+00:02:31,099 --> 00:02:33,900
+Yeah, it's intense. 
+But yeah, I kind of started out 
+
+49
+00:02:33,900 --> 00:02:37,500
+with literally just the basics 
+of trying to understand not just
+
+50
+00:02:38,000 --> 00:02:41,400
+Java. 
+But also just the basics of 
+
+51
+00:02:41,400 --> 00:02:45,099
+where we were with sort of 
+creating applications cloud 
+
+52
+00:02:45,099 --> 00:02:48,599
+computing cetera. 
+So I was really lucky that I had
+
+53
+00:02:48,599 --> 00:02:52,599
+a mentor who is a senior 
+technical staff member IBM K. 
+
+54
+00:02:52,607 --> 00:02:56,599
+I basically just unbeknownst to 
+him dragged into mentoring me 
+
+55
+00:02:56,599 --> 00:03:00,900
+for a whole year and sort of use
+that as my opportunity to ask 
+
+56
+00:03:00,900 --> 00:03:05,800
+all my stupid or not. 
+So stupid questions, let me ask 
+
+57
+00:03:05,800 --> 00:03:08,500
+ya. 
+So you Elated with the durian 
+
+58
+00:03:08,500 --> 00:03:12,199
+biology and IBM goes, oh, you 
+have a degree in biology will 
+
+59
+00:03:12,199 --> 00:03:14,099
+just turn you into a computer 
+scientist. 
+
+60
+00:03:14,099 --> 00:03:18,000
+Is that kind of? 
+Yeah, okay, the great thing 
+
+61
+00:03:18,000 --> 00:03:22,800
+about IBM in terms of the hiring
+scheme is that it's not for that
+
+62
+00:03:22,800 --> 00:03:24,900
+grad scheme. 
+Anyway, it's not necessarily A, 
+
+63
+00:03:25,199 --> 00:03:27,900
+can you code? 
+It's a, do you have the right 
+
+64
+00:03:27,900 --> 00:03:33,699
+mindset to learn to code and so 
+I came in and you know they did 
+
+65
+00:03:33,699 --> 00:03:37,199
+ask me the obvious question of 
+why would we hire you over a cup
+
+66
+00:03:37,199 --> 00:03:40,099
+size too? 
+And I think it's just the fact 
+
+67
+00:03:40,099 --> 00:03:44,500
+that it's, you know, I wasn't 
+necessarily, I chosen something 
+
+68
+00:03:44,500 --> 00:03:48,199
+at the age of 18 like a course 
+and that was my life. 
+
+69
+00:03:49,099 --> 00:03:51,400
+I was doing programming in my 
+own time. 
+
+70
+00:03:51,400 --> 00:03:54,099
+Clearly it was a passion of mine
+and there were skills that I 
+
+71
+00:03:54,099 --> 00:03:57,099
+could bring that other people 
+didn't necessarily have who 
+
+72
+00:03:57,099 --> 00:04:00,900
+hadn't done the same? 
+Do you were already dabbling in 
+
+73
+00:04:00,900 --> 00:04:03,000
+programming? 
+I wouldn't know you were 
+
+74
+00:04:03,000 --> 00:04:04,699
+studying biology. 
+Yes. 
+
+75
+00:04:04,699 --> 00:04:07,099
+Yeah. 
+It's like using python stuff. 
+
+76
+00:04:07,599 --> 00:04:10,300
+To like, solve some biological 
+thing. 
+
+77
+00:04:10,300 --> 00:04:11,599
+Yeah, yeah. 
+Yeah. 
+
+78
+00:04:11,599 --> 00:04:13,099
+Yeah. 
+So I got the opportunity was a 
+
+79
+00:04:13,107 --> 00:04:17,000
+really cool module where we were
+using we did one on statistical 
+
+80
+00:04:17,000 --> 00:04:20,300
+analysis in biology. 
+So, we're using our for that and
+
+81
+00:04:20,300 --> 00:04:23,100
+then I did biological modeling 
+using python. 
+
+82
+00:04:23,399 --> 00:04:28,199
+So I was modeling of ironically.
+Now, we covid, I was modeling 
+
+83
+00:04:28,199 --> 00:04:31,500
+virus spread through Air Lines 
+and actually modeling that 
+
+84
+00:04:31,500 --> 00:04:35,899
+system before covid. 
+Yeah, yes, when covid hit was 
+
+85
+00:04:35,899 --> 00:04:37,899
+like, oh, this is kind of 
+predicted in a lot of At the 
+
+86
+00:04:37,907 --> 00:04:40,600
+research I was looking at. 
+Wow. 
+
+87
+00:04:40,699 --> 00:04:42,800
+Yeah, it was really interesting.
+That's cool. 
+
+88
+00:04:42,800 --> 00:04:46,399
+So you are using some of the, 
+the mathematical libraries and 
+
+89
+00:04:46,399 --> 00:04:49,600
+Python, and I don't know. 
+Yeah. 
+
+90
+00:04:49,899 --> 00:04:53,899
+And an R have. 
+What was your experience like 
+
+91
+00:04:54,199 --> 00:04:59,300
+learning python from that side 
+and using the like, was it a lot
+
+92
+00:04:59,300 --> 00:05:00,500
+of Stack over like what? 
+Yeah! 
+
+93
+00:05:00,500 --> 00:05:02,300
+What was your what did it 
+wasn't? 
+
+94
+00:05:02,300 --> 00:05:06,600
+Like we got some basic and I 
+mean, real basic introductions 
+
+95
+00:05:06,600 --> 00:05:11,300
+into More around the syntax of 
+how to use python, as opposed to
+
+96
+00:05:11,600 --> 00:05:14,600
+what you find libraries, what do
+you find all these tools that 
+
+97
+00:05:14,600 --> 00:05:18,300
+you can use? 
+So that was a lot of just if I'm
+
+98
+00:05:18,300 --> 00:05:21,500
+honest, Googling Googling going 
+to help forums. 
+
+99
+00:05:21,899 --> 00:05:24,800
+I was quite lucky that we had a 
+couple of postdoc and PhD 
+
+100
+00:05:24,800 --> 00:05:27,000
+students who were there doing 
+similar sort of stuff. 
+
+101
+00:05:27,600 --> 00:05:29,500
+So I was able to collaborate 
+with them and ask, you know 
+
+102
+00:05:29,500 --> 00:05:32,699
+where do you get your data sets?
+What tools are you using and 
+
+103
+00:05:32,699 --> 00:05:38,699
+that helped a lot but it 
+reflecting back my Sort of the 
+
+104
+00:05:38,699 --> 00:05:41,899
+way that I was programming 
+wasn't exactly best practice. 
+
+105
+00:05:42,000 --> 00:05:45,899
+It was more just sort of cobbled
+together to make it work which 
+
+106
+00:05:45,899 --> 00:05:47,899
+is often how people start. 
+Yeah. 
+
+107
+00:05:48,000 --> 00:05:50,199
+Exactly. 
+Copy and paste, find something 
+
+108
+00:05:50,199 --> 00:05:52,100
+that works and copy/paste 
+slightly. 
+
+109
+00:05:53,500 --> 00:05:57,600
+So that was sort of very much a 
+Hands-On. 
+
+110
+00:05:57,699 --> 00:06:01,000
+Just try it kind of approach and
+I kind of just followed that 
+
+111
+00:06:01,000 --> 00:06:04,600
+through since I've had a bit 
+more structure in terms of that 
+
+112
+00:06:04,600 --> 00:06:07,600
+mentoring that I mentioned. 
+But overall I just kind of Like 
+
+113
+00:06:07,600 --> 00:06:11,100
+getting Hands-On and trying 
+things so you're intrigued by 
+
+114
+00:06:11,100 --> 00:06:14,100
+it, and and wanted to, you know,
+go further with that. 
+
+115
+00:06:14,100 --> 00:06:18,300
+And so that was the impetus to 
+then go to IBM, was It was kind 
+
+116
+00:06:18,300 --> 00:06:22,699
+of taking that further. 
+Yeah, yeah, so yeah, continue 
+
+117
+00:06:22,699 --> 00:06:26,800
+with your, with your journey of 
+interests and yeah, so then I 
+
+118
+00:06:26,800 --> 00:06:30,000
+jumped into the world of java 
+and that was really interesting 
+
+119
+00:06:31,500 --> 00:06:35,600
+and I ended up I can't even 
+remember how I think we had a. 
+
+120
+00:06:35,600 --> 00:06:38,899
+We just had with an IBM. 
+A partnership happening with a 
+
+121
+00:06:38,899 --> 00:06:44,800
+company called light, bend 
+around reactive back in his text
+
+122
+00:06:44,800 --> 00:06:47,300
+day, and it was really 
+interesting. 
+
+123
+00:06:47,300 --> 00:06:51,600
+I sort of took an interest in 
+this new relationship that we 
+
+124
+00:06:51,600 --> 00:06:55,600
+had in this new product, new 
+sort of way of creating 
+
+125
+00:06:55,600 --> 00:07:02,000
+applications and to me, it just,
+it really made sense because I 
+
+126
+00:07:02,000 --> 00:07:05,800
+think the way that my mindset is
+perhaps different to more 
+
+127
+00:07:05,800 --> 00:07:08,100
+traditional developers or 
+perhaps, Apps people who've been
+
+128
+00:07:08,100 --> 00:07:11,100
+in Java for a long time. 
+Is I have the advantage that I 
+
+129
+00:07:11,100 --> 00:07:15,399
+don't have what you might call, 
+baggage of how you originally 
+
+130
+00:07:15,399 --> 00:07:18,500
+did applications and how once 
+done them years ago. 
+
+131
+00:07:19,500 --> 00:07:25,500
+So one of java baggage, Does the
+things that you used to? 
+
+132
+00:07:26,300 --> 00:07:29,100
+Yeah, exactly. 
+Just a mindset. 
+
+133
+00:07:29,100 --> 00:07:33,800
+I think that that is hard to 
+break out of objects. 
+
+134
+00:07:34,300 --> 00:07:39,300
+Well that yeah, I mean, because 
+that comes from C++ and Java and
+
+135
+00:07:39,300 --> 00:07:42,699
+then well and python has objects
+and stuff like that. 
+
+136
+00:07:42,699 --> 00:07:49,699
+But yeah, but really not 
+questioning the, the value of 
+
+137
+00:07:49,699 --> 00:07:53,199
+that, but rather parroting it. 
+Oh yeah, you need in. 
+
+138
+00:07:53,300 --> 00:07:55,500
+Capsulation. 
+It's like guy. 
+
+139
+00:07:55,600 --> 00:07:57,500
+Now we can ask now we can ask. 
+Why? 
+
+140
+00:07:57,500 --> 00:08:01,199
+Because we see something 
+contrasting and I think that's 
+
+141
+00:08:01,199 --> 00:08:02,500
+that's why I keep telling 
+people. 
+
+142
+00:08:02,500 --> 00:08:05,800
+Yeah learn more than one 
+language because those contrasts
+
+143
+00:08:05,800 --> 00:08:10,399
+will allow you to look more. 
+Well, critically at what you're 
+
+144
+00:08:10,407 --> 00:08:13,600
+doing in whatever language 
+you're actually using. 
+
+145
+00:08:14,600 --> 00:08:18,199
+We're definitely seeing that 
+with okay objects. 
+
+146
+00:08:18,199 --> 00:08:23,000
+When are they useful? 
+And when Most of the time, maybe
+
+147
+00:08:23,000 --> 00:08:26,000
+not but sometimes yes, it's 
+like. 
+
+148
+00:08:26,100 --> 00:08:28,399
+Well, okay. 
+Now that that's a, you know, 
+
+149
+00:08:28,407 --> 00:08:30,500
+where is in Java? 
+It's like, there's no question. 
+
+150
+00:08:30,699 --> 00:08:33,299
+It's like yeah, everything has 
+to be an object to Small Talk. 
+
+151
+00:08:33,299 --> 00:08:36,200
+Did it that way but but now 
+we're going. 
+
+152
+00:08:36,200 --> 00:08:40,100
+Oh, so when is it a good time to
+use objects? 
+
+153
+00:08:41,000 --> 00:08:44,799
+Yeah, yeah, yeah. 
+What interview? 
+
+154
+00:08:44,799 --> 00:08:47,899
+Okay, see, what were you working
+on with light Bend which, which 
+
+155
+00:08:47,899 --> 00:08:50,899
+part of their house. 
+So we had a partnership where we
+
+156
+00:08:51,000 --> 00:08:53,899
+We had their reactive platform 
+on our IBM cloud. 
+
+157
+00:08:54,200 --> 00:08:56,500
+And I was actually building the 
+helm chart to be able to add 
+
+158
+00:08:56,500 --> 00:09:00,000
+that into our catalog. 
+Essentially, on the IBM Cloud. 
+
+159
+00:09:00,200 --> 00:09:04,500
+Okay, you got any kubernetes? 
+Yeah man that's all. 
+
+160
+00:09:04,500 --> 00:09:07,600
+That was interesting. 
+Biologists like kubernetes is 
+
+161
+00:09:07,799 --> 00:09:10,799
+got to be a bit wild. 
+Yeah. 
+
+162
+00:09:10,799 --> 00:09:13,600
+Especially because I had no idea
+about anything to do with like 
+
+163
+00:09:13,600 --> 00:09:17,000
+containerization or I didn't 
+even know what a virtual machine
+
+164
+00:09:17,000 --> 00:09:19,299
+was. 
+You know any of these Concepts 
+
+165
+00:09:19,299 --> 00:09:22,899
+were brand new to me. 
+Tell you what actually I found a
+
+166
+00:09:23,000 --> 00:09:27,100
+an amazing resource and it's a 
+children's Illustrated guide to 
+
+167
+00:09:27,100 --> 00:09:31,399
+kubernetes and if you come 
+across any him, it is so good. 
+
+168
+00:09:31,500 --> 00:09:35,500
+I would recommend that to anyone
+who has any grab intern who's 
+
+169
+00:09:35,500 --> 00:09:37,200
+not familiar with communities or
+containers? 
+
+170
+00:09:37,600 --> 00:09:39,899
+Send them to that book. 
+It's free online and it's 
+
+171
+00:09:39,899 --> 00:09:43,700
+basically cartoon illustrations 
+explaining kubernetes. 
+
+172
+00:09:43,799 --> 00:09:47,899
+Yeah, it's great. 
+Yeah, anything we cartoons I'm 
+
+173
+00:09:47,899 --> 00:09:52,100
+there that sounds like something
+that could cause I know it's 
+
+174
+00:09:52,100 --> 00:09:56,200
+something to do with clustering.
+Yeah, that's it. 
+
+175
+00:09:56,200 --> 00:09:59,899
+Yeah, that's all yeah. 
+System for managing a bunch of 
+
+176
+00:09:59,899 --> 00:10:02,200
+processes across a bunch of 
+machines, right? 
+
+177
+00:10:02,200 --> 00:10:03,700
+Okay. 
+Yep. 
+
+178
+00:10:05,000 --> 00:10:09,200
+Course you're doing home charts 
+and reactive stuff in there. 
+
+179
+00:10:09,299 --> 00:10:14,000
+There was a called the reactive 
+platform. 
+
+180
+00:10:14,000 --> 00:10:15,700
+React is something wrong. 
+Yeah, so it's the right to 
+
+181
+00:10:15,700 --> 00:10:18,700
+platform. 
+Yeah, but I took kind of a big 
+
+182
+00:10:18,700 --> 00:10:23,100
+interest in the overall sort of 
+Reactive, Manifesto and this 
+
+183
+00:10:23,100 --> 00:10:27,000
+kind of guiding principles of 
+how to create what you call 
+
+184
+00:10:27,000 --> 00:10:31,299
+reactive applications. 
+Yeah, and I actually started 
+
+185
+00:10:31,299 --> 00:10:36,000
+comparing it to biology because 
+that's kind of just how my brain
+
+186
+00:10:36,000 --> 00:10:38,500
+works. 
+So yeah, I ended up doing a 
+
+187
+00:10:38,508 --> 00:10:43,100
+presentation actually a couple 
+of conferences around how we can
+
+188
+00:10:43,100 --> 00:10:46,299
+see similarities between 
+reactive architecture and 
+
+189
+00:10:46,299 --> 00:10:50,500
+beehives, which is interesting. 
+Yeah, that was a funny more 
+
+190
+00:10:50,500 --> 00:10:53,299
+about that. 
+That fits with we were just 
+
+191
+00:10:53,299 --> 00:10:57,299
+talking about Conway's law and 
+so it seems like this fits with 
+
+192
+00:10:57,299 --> 00:10:58,200
+that. 
+Huh? 
+
+193
+00:10:58,500 --> 00:11:02,000
+Could always Lon beehives? 
+Well no it's just ultimately 
+
+194
+00:11:02,000 --> 00:11:07,500
+we're biological systems and so 
+maybe our software should look 
+
+195
+00:11:07,500 --> 00:11:10,399
+like that. 
+Rather I'm like hierarchical 
+
+196
+00:11:10,399 --> 00:11:13,500
+systems huh? 
+I am always trying to compare 
+
+197
+00:11:13,700 --> 00:11:18,000
+biology to software because I 
+feel like biology is literally 
+
+198
+00:11:18,000 --> 00:11:22,500
+had like centuries to evolve and
+get this So we should maybe be 
+
+199
+00:11:22,500 --> 00:11:26,399
+mimicking that a bit more in 
+terms of like how we design or 
+
+200
+00:11:26,399 --> 00:11:30,200
+build our software and it's so 
+pretty, I mean millions of 
+
+201
+00:11:30,200 --> 00:11:31,100
+years, right? 
+Millions of. 
+
+202
+00:11:31,108 --> 00:11:36,200
+Yeah, but in terms of like long,
+yeah, the the similarities is 
+
+203
+00:11:36,200 --> 00:11:39,899
+just so much we could learn from
+it and use like all of the 
+
+204
+00:11:39,899 --> 00:11:43,500
+algorithms that we use come from
+Inspirations in, or not all, but
+
+205
+00:11:43,500 --> 00:11:46,100
+a lot of them come from 
+Inspirations and nature. 
+
+206
+00:11:46,200 --> 00:11:48,600
+It's amazing. 
+Yeah. 
+
+207
+00:11:48,700 --> 00:11:50,200
+No, it would make a lot of 
+sense. 
+
+208
+00:11:50,899 --> 00:11:54,500
+Tell me more about the Beehive 
+reactive correlation if you 
+
+209
+00:11:54,500 --> 00:11:55,799
+remember it. 
+Yeah, yeah, yeah. 
+
+210
+00:11:55,799 --> 00:12:01,000
+So it was all about sort of so 
+that the reactor Manifesto is 
+
+211
+00:12:01,000 --> 00:12:05,600
+based on four key behaviors. 
+Its underlying, it is an 
+
+212
+00:12:05,600 --> 00:12:08,700
+event-based sort of asynchronous
+messaging backbone. 
+
+213
+00:12:08,700 --> 00:12:12,000
+And then the sort of 
+characteristics are that enables
+
+214
+00:12:12,000 --> 00:12:18,899
+is high, resiliency, and also, 
+elasticity elasticity being not 
+
+215
+00:12:18,899 --> 00:12:21,700
+just scaling up, but also being 
+able to, Scale back down, 
+
+216
+00:12:21,700 --> 00:12:25,700
+dynamically depending on sort of
+workload and then that leading 
+
+217
+00:12:25,700 --> 00:12:28,799
+to responsiveness, which is 
+essentially what we want, our 
+
+218
+00:12:28,799 --> 00:12:31,500
+applications, to be responsive 
+to events that are occurring. 
+
+219
+00:12:32,100 --> 00:12:35,299
+And so these characteristics 
+were actually characteristics 
+
+220
+00:12:35,299 --> 00:12:38,000
+that these already have and that
+these already do. 
+
+221
+00:12:39,200 --> 00:12:42,500
+And it was just this sort of 
+comparison between things like 
+
+222
+00:12:43,299 --> 00:12:45,700
+bees. 
+Have this amazing ability that 
+
+223
+00:12:45,700 --> 00:12:48,200
+they each be has a role in The 
+Hive. 
+
+224
+00:12:48,500 --> 00:12:52,700
+So you might be a guard be, or 
+Or a, you might be a worker bee,
+
+225
+00:12:52,899 --> 00:12:57,000
+they even have air conditioning 
+these that's like amazing to 
+
+226
+00:12:57,000 --> 00:12:59,100
+keep air flow through the hive, 
+right? 
+
+227
+00:12:59,100 --> 00:13:02,500
+And when the hive is under 
+attack, they can dynamically 
+
+228
+00:13:02,500 --> 00:13:04,899
+change roles. 
+So, more of them thing, can 
+
+229
+00:13:04,899 --> 00:13:07,700
+become God bees to essentially 
+deal with that load on the 
+
+230
+00:13:07,708 --> 00:13:09,899
+system. 
+And then they can dynamically 
+
+231
+00:13:09,899 --> 00:13:14,600
+change back again. 
+Who's actors in The become or 
+
+232
+00:13:14,600 --> 00:13:16,000
+directly? 
+Yeah. 
+
+233
+00:13:17,100 --> 00:13:19,899
+What about like resource 
+allocation and ensuring that, 
+
+234
+00:13:19,899 --> 00:13:21,799
+you know, our deal? 
+With a load in your system 
+
+235
+00:13:21,799 --> 00:13:24,500
+appropriately so it can remain 
+responsive. 
+
+236
+00:13:24,500 --> 00:13:27,100
+So yeah, it was kind of 
+analogies like that that I was 
+
+237
+00:13:27,100 --> 00:13:29,200
+drawing. 
+That's really cool. 
+
+238
+00:13:29,899 --> 00:13:33,100
+So teaching people, the reactive
+manifesta, but correlate using 
+
+239
+00:13:33,100 --> 00:13:35,100
+to, he's using bees. 
+Yeah, I like it. 
+
+240
+00:13:35,200 --> 00:13:38,000
+Yeah yeah. 
+I just find that sometimes these
+
+241
+00:13:38,000 --> 00:13:40,399
+concepts are so abstract. 
+Yeah. 
+
+242
+00:13:40,399 --> 00:13:44,100
+But sometimes it can be hard to 
+either relate to or remember is 
+
+243
+00:13:44,100 --> 00:13:46,700
+when you tie it to something 
+concrete that people are like, 
+
+244
+00:13:46,700 --> 00:13:48,100
+yeah. 
+Like everyone kind of knows 
+
+245
+00:13:48,100 --> 00:13:50,799
+about bees. 
+It's a bit easier to remember. 
+
+246
+00:13:50,899 --> 00:13:52,200
+Okay, I have a challenge for 
+you. 
+
+247
+00:13:52,700 --> 00:13:56,100
+What's the biological analogy of
+a monad? 
+
+248
+00:13:57,200 --> 00:13:59,799
+Might as well. 
+And if Grace, can do that for 
+
+249
+00:13:59,799 --> 00:14:09,100
+us, as well as a testament, to 
+your relating, this to biology, 
+
+250
+00:14:09,700 --> 00:14:12,500
+we had asked you to describe 
+this and you, and you were able 
+
+251
+00:14:12,500 --> 00:14:15,399
+to recall the four elements of 
+the reactive. 
+
+252
+00:14:15,399 --> 00:14:19,500
+Manifesto just like off the top 
+of your head, which I think does
+
+253
+00:14:19,500 --> 00:14:22,399
+speak to your Correlation to 
+biology allowed. 
+
+254
+00:14:22,399 --> 00:14:24,299
+You to remember it much more 
+firmly. 
+
+255
+00:14:25,399 --> 00:14:30,100
+I was working at typesafe then 
+now like then when they wrote 
+
+256
+00:14:30,100 --> 00:14:33,799
+the reactive Manifesto and and I
+could not recall the four 
+
+257
+00:14:33,899 --> 00:14:36,399
+pillars of it off the top of my 
+head like you just did. 
+
+258
+00:14:36,399 --> 00:14:39,000
+So yeah. 
+Well it's kind of like a, you 
+
+259
+00:14:39,000 --> 00:14:44,100
+might be familiar with the idea 
+of a Memory Palace. 
+
+260
+00:14:44,600 --> 00:14:46,899
+Yes, yes. 
+Notably cones. 
+
+261
+00:14:47,200 --> 00:14:50,500
+And it's like well and if you're
+doing the thing with bees, 
+
+262
+00:14:50,899 --> 00:14:55,100
+You're able to attach that and 
+then your, yeah, it's easy to 
+
+263
+00:14:55,600 --> 00:14:56,700
+remember. 
+There are cool. 
+
+264
+00:14:57,200 --> 00:15:01,000
+Yeah, exactly cool. 
+So, you were doing reactive 
+
+265
+00:15:01,000 --> 00:15:06,100
+platform and in Java so then you
+went from python to Java and had
+
+266
+00:15:06,100 --> 00:15:07,799
+to learn Java. 
+Yeah. 
+
+267
+00:15:08,500 --> 00:15:11,799
+And then learn reactive and 
+learn kubernetes and helmet. 
+
+268
+00:15:12,000 --> 00:15:15,899
+Like my there's a lot of stuff 
+that you guys a little ones. 
+
+269
+00:15:16,200 --> 00:15:18,500
+Yeah. 
+A lot of pieces with a lot of 
+
+270
+00:15:18,500 --> 00:15:20,799
+like foundational elements that 
+you had to learn. 
+
+271
+00:15:21,000 --> 00:15:24,799
+All at once. 
+What was it like going from 
+
+272
+00:15:24,799 --> 00:15:29,500
+python to Java? 
+It was, as I said, it was 
+
+273
+00:15:29,500 --> 00:15:35,799
+overwhelming at first because I 
+came in and saw that the team 
+
+274
+00:15:35,799 --> 00:15:39,200
+that I joined had a product. 
+That was so Webster, has been 
+
+275
+00:15:39,200 --> 00:15:41,600
+around for, like 25 years and 
+it's still something that's 
+
+276
+00:15:41,600 --> 00:15:44,100
+actively developed on, and 
+that's the department that I 
+
+277
+00:15:44,100 --> 00:15:46,500
+joined at the time. 
+And although, we had things like
+
+278
+00:15:46,500 --> 00:15:49,600
+Liberty and open a beauty, which
+are newer offerings and 
+
+279
+00:15:49,600 --> 00:15:52,799
+Technologies, I looked at things
+like the product and the 
+
+280
+00:15:52,799 --> 00:15:57,700
+language and a lot of the people
+that IBM are there for very long
+
+281
+00:15:57,700 --> 00:16:02,899
+careers and I joined thinking, 
+how am I going to add anything 
+
+282
+00:16:02,899 --> 00:16:07,000
+to this as a biology graduate? 
+And so it was a bit 
+
+283
+00:16:07,000 --> 00:16:12,000
+overwhelming, but I think what 
+helped was kind of having 
+
+284
+00:16:12,100 --> 00:16:14,399
+conversations with some of the 
+colleagues around me and 
+
+285
+00:16:14,399 --> 00:16:18,000
+realizing that not a single one 
+of them knew everything. 
+
+286
+00:16:18,299 --> 00:16:23,100
+And that kind of gave me this A 
+sense of I just need to focus on
+
+287
+00:16:23,100 --> 00:16:26,799
+one particular area and go, you 
+know, really learn that. 
+
+288
+00:16:26,799 --> 00:16:29,500
+And then I can move on to 
+another and learn that and sort 
+
+289
+00:16:29,500 --> 00:16:32,100
+of take it one chunk at a time 
+rather than trying to learn 
+
+290
+00:16:32,100 --> 00:16:35,799
+everything at once. 
+And that mentality, really 
+
+291
+00:16:35,799 --> 00:16:38,500
+helped certain that in 
+particular. 
+
+292
+00:16:38,500 --> 00:16:42,600
+Your focus with that was 
+reactive and the helm pieces to 
+
+293
+00:16:42,600 --> 00:16:44,799
+that, I started. 
+Yeah, yeah, yeah, yeah, cool. 
+
+294
+00:16:45,100 --> 00:16:47,899
+Yeah. 
+It's a good, pretty pretty 
+
+295
+00:16:47,899 --> 00:16:50,500
+amazing place to start because 
+there's not very many people 
+
+296
+00:16:50,500 --> 00:16:54,100
+that That know, I think both of 
+those con both of those 
+
+297
+00:16:54,100 --> 00:16:57,799
+Technologies. 
+Well, and I bet, I mean, my 
+
+298
+00:16:57,799 --> 00:17:00,899
+background in physics and then 
+later, engineering. 
+
+299
+00:17:01,200 --> 00:17:06,200
+And so, and I feel like the 
+science the struggling with 
+
+300
+00:17:06,200 --> 00:17:11,098
+science part of it ended up 
+being really helpful whereas, 
+
+301
+00:17:11,200 --> 00:17:14,000
+you know, computer science 
+programming can be seen as. 
+
+302
+00:17:14,000 --> 00:17:17,500
+Oh well, you know, some smart 
+people made these decisions 
+
+303
+00:17:17,500 --> 00:17:19,299
+about how a language should 
+work. 
+
+304
+00:17:19,500 --> 00:17:20,700
+Yeah. 
+And who am I? 
+
+305
+00:17:20,900 --> 00:17:23,400
+Question. 
+That's just setting, right? 
+
+306
+00:17:23,400 --> 00:17:27,299
+Yep. 
+And then notice fives, you know 
+
+307
+00:17:27,299 --> 00:17:29,099
+times? 
+Yeah, exactly. 
+
+308
+00:17:29,200 --> 00:17:32,099
+I used to ask why? 
+And I didn't realize, I was 
+
+309
+00:17:32,099 --> 00:17:35,700
+asking why so much and all of 
+the guys, who'd been there for 
+
+310
+00:17:35,700 --> 00:17:39,500
+like 20 plus years were like you
+ask, why a lot, huh? 
+
+311
+00:17:40,000 --> 00:17:43,000
+Do I have? 
+Is it's a good thing, it's great
+
+312
+00:17:43,000 --> 00:17:45,500
+like that, we need to ask, why -
+mine? 
+
+313
+00:17:45,500 --> 00:17:47,900
+Yeah? 
+Yeah, yeah. 
+
+314
+00:17:47,900 --> 00:17:50,700
+And then at some point you 
+realize wait a minute. 
+
+315
+00:17:50,799 --> 00:17:52,799
+It. 
+These language designers were 
+
+316
+00:17:52,799 --> 00:17:55,400
+just making this up. 
+They thought it was pretty good 
+
+317
+00:17:55,400 --> 00:17:58,000
+idea but they didn't know. 
+Yeah. 
+
+318
+00:17:58,200 --> 00:18:01,099
+Yeah. 
+They weren't asking why not 
+
+319
+00:18:01,099 --> 00:18:05,900
+enough or they were asking why 
+in the context of where they 
+
+320
+00:18:05,900 --> 00:18:07,299
+were coming from? 
+And you know yeah the 
+
+321
+00:18:07,307 --> 00:18:11,400
+information they had right? 
+Because that changes yeah good. 
+
+322
+00:18:11,500 --> 00:18:15,200
+They could go down a rabbit hole
+and we have seen that happen. 
+
+323
+00:18:15,299 --> 00:18:19,099
+Yep. 
+And and not ask why this was I 
+
+324
+00:18:19,099 --> 00:18:20,700
+guess the the one of the cool 
+things. 
+
+325
+00:18:20,900 --> 00:18:22,599
+About Elm. 
+We've totally bring up LM. 
+
+326
+00:18:22,599 --> 00:18:27,200
+Sometimes the programming 
+language is that when, when a 
+
+327
+00:18:27,200 --> 00:18:31,700
+bunch of people had to ask the 
+elm language designer to add 
+
+328
+00:18:31,700 --> 00:18:37,500
+type classes to it, he just kept
+asking why maybe he has a 
+
+329
+00:18:37,500 --> 00:18:39,900
+science background. 
+I'd be interesting enough if he 
+
+330
+00:18:39,900 --> 00:18:43,400
+does but but he just kept 
+asking, why, why why? 
+
+331
+00:18:43,799 --> 00:18:48,500
+And no one was ever able to 
+quite describe to him the wife 
+
+332
+00:18:48,500 --> 00:18:50,700
+or type classes. 
+This type classes are good. 
+
+333
+00:18:50,799 --> 00:18:51,599
+Good. 
+Yeah, that's right. 
+
+334
+00:18:51,599 --> 00:18:53,799
+Yeah, because that's cool has 
+Type classes, right? 
+
+335
+00:18:53,799 --> 00:18:59,400
+Obviously if you're doing 
+Haskell well, and the guys 
+
+336
+00:18:59,500 --> 00:19:04,099
+developing Rock when he said, oh
+currying. 
+
+337
+00:19:04,099 --> 00:19:05,799
+Yeah, we don't need Curry. 
+And yeah. 
+
+338
+00:19:05,900 --> 00:19:09,000
+It was like, wait. 
+I thought you had to have Curry?
+
+339
+00:19:09,099 --> 00:19:09,799
+Yeah. 
+Yeah. 
+
+340
+00:19:09,799 --> 00:19:13,000
+That was a really and he he came
+out of the helm world is. 
+
+341
+00:19:13,000 --> 00:19:15,200
+Yeah. 
+Yeah, maybe there is a 
+
+342
+00:19:15,599 --> 00:19:19,000
+connection between almond asking
+why it may be there. 
+
+343
+00:19:19,000 --> 00:19:22,799
+We'll talk to ya. 
+Yeah, good to ask. 
+
+344
+00:19:22,799 --> 00:19:27,599
+Why, and when asked, why from 
+the from a general perspective, 
+
+345
+00:19:27,599 --> 00:19:29,400
+which I think maybe that's kind 
+of the science side. 
+
+346
+00:19:29,400 --> 00:19:32,799
+Well, there is a think there's a
+practice called, I think it's 
+
+347
+00:19:32,799 --> 00:19:36,000
+five wise, or something like 
+that, and you just keep asking 
+
+348
+00:19:36,000 --> 00:19:40,400
+why and drill down, you know, at
+each time and if you don't hit 
+
+349
+00:19:40,400 --> 00:19:43,000
+5, then you're not doing it. 
+Hard enough or something like 
+
+350
+00:19:43,000 --> 00:19:44,700
+that. 
+Is that something from science? 
+
+351
+00:19:46,200 --> 00:19:48,900
+I don't know. 
+I think it's just like a general
+
+352
+00:19:48,900 --> 00:19:53,299
+practice like Razor so yeah but 
+more recent. 
+
+353
+00:19:54,700 --> 00:19:57,799
+Yeah. 
+So so you you eventually get to 
+
+354
+00:19:57,799 --> 00:20:03,200
+the y-yeah Mille. 
+It was a yeah it was a 
+
+355
+00:20:03,200 --> 00:20:06,500
+challenging piece of work that 
+we were doing especially because
+
+356
+00:20:06,799 --> 00:20:10,000
+we had you know, as a 
+third-party service that we're 
+
+357
+00:20:10,000 --> 00:20:14,799
+offering on an internal cloud 
+and so often it would both sides
+
+358
+00:20:14,799 --> 00:20:17,299
+would change and we didn't know 
+when they were changing or if 
+
+359
+00:20:17,299 --> 00:20:19,200
+they were changing so I y'all 
+would have to change. 
+
+360
+00:20:19,200 --> 00:20:23,099
+So yeah, it was It was 
+definitely a learning curve for 
+
+361
+00:20:23,099 --> 00:20:26,599
+me, in terms of not just 
+Hellman, the animal, and Alder, 
+
+362
+00:20:26,599 --> 00:20:30,799
+and kubernetes, and all the rest
+of it, but also working with 
+
+363
+00:20:30,799 --> 00:20:33,799
+external developers, not just 
+internal developers as well, 
+
+364
+00:20:34,099 --> 00:20:36,599
+which is something, I think more
+and more developers are having 
+
+365
+00:20:36,599 --> 00:20:39,400
+to get used to as well as of 
+Open Source. 
+
+366
+00:20:39,599 --> 00:20:40,400
+Exactly. 
+Yeah. 
+
+367
+00:20:40,400 --> 00:20:43,700
+Open source collaboration 
+Partnerships. 
+
+368
+00:20:43,799 --> 00:20:46,799
+It's I think it's a lot more 
+collaborative now than it ever 
+
+369
+00:20:46,799 --> 00:20:50,099
+has been in the past between 
+companies that's true. 
+
+370
+00:20:50,900 --> 00:20:55,200
+It's we know single vendor can 
+provide everything that you need
+
+371
+00:20:55,200 --> 00:20:58,400
+anymore. 
+Whereas even like IBM. 
+
+372
+00:20:58,799 --> 00:21:03,799
+Very historically was like we're
+an IBM ShopRite and IBM gives us
+
+373
+00:21:03,799 --> 00:21:07,099
+everything that we need. 
+And so then you don't have to 
+
+374
+00:21:07,099 --> 00:21:09,299
+collaborate with the outside 
+world because you have this 
+
+375
+00:21:09,299 --> 00:21:13,299
+closed ecosystem Microsoft was 
+out modeling self is our model 
+
+376
+00:21:13,299 --> 00:21:16,500
+as well and yeah the world 
+doesn't work like that anymore. 
+
+377
+00:21:16,500 --> 00:21:19,200
+It's not possible to be a closed
+ecosystem. 
+
+378
+00:21:19,200 --> 00:21:20,700
+Do the kinds of things that 
+we're trying. 
+
+379
+00:21:20,799 --> 00:21:26,299
+Going to do unless you involve 
+as many people as possible. 
+
+380
+00:21:26,299 --> 00:21:32,099
+I feel like there's a biology 
+connection hero lines. 
+
+381
+00:21:32,900 --> 00:21:37,900
+If it's B's again or all of 
+biology of mindset, you know. 
+
+382
+00:21:38,000 --> 00:21:40,900
+Yeah. 
+Because it's well because it 
+
+383
+00:21:40,900 --> 00:21:46,099
+seems like there's a lot of 
+people who are able to look at I
+
+384
+00:21:46,099 --> 00:21:49,400
+just I mean, there's some really
+brilliant designs in open-source
+
+385
+00:21:50,200 --> 00:21:51,099
+python. 
+Aries. 
+
+386
+00:21:51,500 --> 00:21:55,000
+And there are these people who 
+can look at a problem and they 
+
+387
+00:21:55,000 --> 00:21:57,400
+go. 
+Oh, I see how to make this clear
+
+388
+00:21:57,400 --> 00:22:01,799
+to everybody and they design a 
+library and it's just brilliant.
+
+389
+00:22:01,799 --> 00:22:05,299
+And it just it's obvious to use 
+and it does everything you need 
+
+390
+00:22:05,299 --> 00:22:07,500
+to use. 
+I don't know. 
+
+391
+00:22:07,500 --> 00:22:10,700
+I'm just amazed when when 
+there's it's like how did that 
+
+392
+00:22:10,700 --> 00:22:14,299
+person? 
+Achieve that Clarity. 
+
+393
+00:22:14,299 --> 00:22:16,200
+See, thank you. 
+Yeah. 
+
+394
+00:22:17,200 --> 00:22:21,700
+Yeah. 
+And so you said You started 
+
+395
+00:22:21,700 --> 00:22:25,599
+speaking around 2018, what Drew 
+you into that. 
+
+396
+00:22:26,799 --> 00:22:30,099
+So I had a couple of colleagues 
+who were actually already 
+
+397
+00:22:30,099 --> 00:22:34,700
+speaking at conferences. 
+So, Steve Paul, he now works at 
+
+398
+00:22:34,700 --> 00:22:37,500
+Cerner type and there are a 
+couple of others like Holly 
+
+399
+00:22:37,500 --> 00:22:41,099
+Cummings, who is now red hat? 
+So they, I was quite lucky that 
+
+400
+00:22:41,099 --> 00:22:44,599
+they were kind of in my circle 
+of influence, within IBM. 
+
+401
+00:22:45,900 --> 00:22:50,700
+And so I got invited by Holly 
+and Steve to come along to the 
+
+402
+00:22:50,900 --> 00:22:54,500
+Oh JC because they were having 
+an event for first time 
+
+403
+00:22:54,500 --> 00:22:57,099
+speakers. 
+So that was really cool. 
+
+404
+00:22:57,099 --> 00:22:59,799
+It was like a speaker clinic. 
+So we went and we were all 
+
+405
+00:22:59,799 --> 00:23:02,400
+invited to present a five 
+minute, presentation on anything
+
+406
+00:23:02,400 --> 00:23:04,900
+we wanted. 
+And then we get feedback from 
+
+407
+00:23:04,900 --> 00:23:07,400
+the mentors that were there, and
+then we'd give it again and 
+
+408
+00:23:07,408 --> 00:23:09,400
+they'd record it so that we 
+could then submit it to 
+
+409
+00:23:09,400 --> 00:23:13,299
+conferences going forward. 
+So it was a great experience. 
+
+410
+00:23:13,299 --> 00:23:16,700
+I would recommend that kind of 
+thing to anyone who's interested
+
+411
+00:23:16,700 --> 00:23:20,200
+in starting to speak huh? 
+Well yeah, that's cool. 
+
+412
+00:23:20,799 --> 00:23:22,799
+Really nice. 
+I did a similar training at 
+
+413
+00:23:22,799 --> 00:23:26,900
+Adobe, it was and I remember I 
+was, it was so terrible. 
+
+414
+00:23:27,000 --> 00:23:30,599
+I was just there is saying if 
+the recording of that exists, 
+
+415
+00:23:30,599 --> 00:23:32,900
+like I'd be blackmail material 
+for me. 
+
+416
+00:23:33,900 --> 00:23:35,500
+It was just how bad you were. 
+Yeah. 
+
+417
+00:23:35,500 --> 00:23:40,000
+He's how bad I want. 
+Ya know, I just, I just somehow 
+
+418
+00:23:40,599 --> 00:23:43,500
+jumped into the deep end and I 
+don't know how bad I was at 
+
+419
+00:23:43,500 --> 00:23:46,799
+first. 
+I'm sure there was some of that 
+
+420
+00:23:47,500 --> 00:23:51,900
+I was awful when I first other 
+speaking, My first presentation 
+
+421
+00:23:51,900 --> 00:23:54,799
+was when I was in school and I 
+was presenting at my mom's a, 
+
+422
+00:23:54,799 --> 00:23:58,400
+primary school teacher and I was
+presenting at her primary 
+
+423
+00:23:58,400 --> 00:24:02,299
+school, which I think is maybe 
+middle school for you guys. 
+
+424
+00:24:02,599 --> 00:24:06,099
+Okay. 
+So kind of young and then yeah I
+
+425
+00:24:06,099 --> 00:24:08,700
+finished the presentation. 
+She walked up to me. 
+
+426
+00:24:08,700 --> 00:24:11,900
+She's like I love you but that 
+was terrible. 
+
+427
+00:24:13,599 --> 00:24:18,299
+Okay, a lot of practice has 
+gotten better not so much 
+
+428
+00:24:18,299 --> 00:24:20,700
+pressure to fill with a bunch of
+small kid. 
+
+429
+00:24:20,799 --> 00:24:27,200
+Ed's you did mother too much. 
+I represented about technology 
+
+430
+00:24:27,200 --> 00:24:32,700
+to a bunch of third graders a 
+few years ago and probably lost 
+
+431
+00:24:32,700 --> 00:24:36,500
+him right away. 
+Oh yeah, let me explain category
+
+432
+00:24:36,500 --> 00:24:41,500
+Theory to you because otherwise,
+none of this makes sense. 
+
+433
+00:24:41,500 --> 00:24:43,000
+I did like a little 
+presentation. 
+
+434
+00:24:43,000 --> 00:24:46,299
+The only thing I remember is 
+that, after my presentation, one
+
+435
+00:24:46,299 --> 00:24:49,400
+of the kids we do Q&A one of the
+kids raised his hands and says, 
+
+436
+00:24:50,000 --> 00:24:53,299
+what viral? 
+Game did you create kind of like
+
+437
+00:24:53,299 --> 00:24:57,500
+so this is what third graders 
+care about with programming is 
+
+438
+00:24:57,900 --> 00:25:01,200
+is what viral game we could 
+create. 
+
+439
+00:25:01,200 --> 00:25:02,900
+Did you make Angry Birds? 
+Yes or no. 
+
+440
+00:25:07,400 --> 00:25:11,400
+So okay, so you you, let's see 
+where were we at in your 
+
+441
+00:25:11,400 --> 00:25:13,799
+journey? 
+You you were doing kubernetes 
+
+442
+00:25:13,799 --> 00:25:19,799
+Java, reactive stuff and and 
+presenting on, on those as well 
+
+443
+00:25:19,799 --> 00:25:21,200
+or yeah. 
+Directly. 
+
+444
+00:25:21,200 --> 00:25:23,400
+Yeah, depending on those that 
+was actually my first 
+
+445
+00:25:23,400 --> 00:25:26,400
+presentation at Jay focus. 
+And Sweden have known about 
+
+446
+00:25:26,400 --> 00:25:28,599
+reactive and bees. 
+So that's kind of where it all 
+
+447
+00:25:28,599 --> 00:25:31,000
+started. 
+Yeah, I like cool. 
+
+448
+00:25:31,400 --> 00:25:36,400
+Yeah, Jay focus is great 
+because, you know, the audience 
+
+449
+00:25:36,400 --> 00:25:42,000
+doesn't seem to convey live. 
+Any any feedback in terms of if 
+
+450
+00:25:42,000 --> 00:25:44,599
+they're liking it or hating it, 
+you just it's just like yeah 
+
+451
+00:25:44,700 --> 00:25:47,200
+yeah yeah blank. 
+Yeah I do get that warning 
+
+452
+00:25:47,200 --> 00:25:48,900
+before I went in. 
+You know. 
+
+453
+00:25:48,900 --> 00:25:50,500
+Just keep going. 
+Yeah. 
+
+454
+00:25:50,799 --> 00:25:55,900
+Two countries in the northern 
+part of Europe, tend to be that 
+
+455
+00:25:55,900 --> 00:25:58,799
+way and they expire I remember 
+the first time I gave a 
+
+456
+00:25:58,807 --> 00:26:02,700
+presentation in. 
+I don't know if it's Norway or 
+
+457
+00:26:02,700 --> 00:26:07,099
+Sweden or one of those places 
+and everybody was just, yeah. 
+
+458
+00:26:07,099 --> 00:26:11,799
+You got zero feedback and I ask 
+somebody about that and they go,
+
+459
+00:26:11,799 --> 00:26:17,000
+oh no, we're trained to just 
+listen, raptly your. 
+
+460
+00:26:17,000 --> 00:26:18,799
+Well yeah, that's what you guys 
+were doing. 
+
+461
+00:26:18,799 --> 00:26:23,400
+It was just like, suddenly 
+totally Ali, no, nothing back. 
+
+462
+00:26:25,599 --> 00:26:30,599
+So then, what was next to that? 
+I kind of got interested in more
+
+463
+00:26:30,599 --> 00:26:33,900
+of the open source sort of 
+community. 
+
+464
+00:26:33,900 --> 00:26:37,799
+So looking at I was I was 
+helping to I was actually 
+
+465
+00:26:37,799 --> 00:26:41,099
+utilizing open Liberty as part 
+of my demos for the reactive 
+
+466
+00:26:41,099 --> 00:26:43,299
+stuff. 
+So looking at that and then also
+
+467
+00:26:43,299 --> 00:26:47,500
+looking at things like my 
+profile to party e, i then 
+
+468
+00:26:47,500 --> 00:26:50,700
+dabbled in a bit of test 
+containers for a little bit and 
+
+469
+00:26:50,700 --> 00:26:54,400
+ice and then yeah, I've been 
+focusing a lot recently on on my
+
+470
+00:26:54,400 --> 00:26:56,599
+crew. 
+If Arlen and sort of high-level 
+
+471
+00:26:56,599 --> 00:26:59,299
+stuff like methodologies. 
+So I branched out into lots of 
+
+472
+00:26:59,299 --> 00:27:01,400
+different directions afterwards.
+Yeah. 
+
+473
+00:27:01,799 --> 00:27:06,099
+So, what's been some interest 
+highlights test containers is 
+
+474
+00:27:06,099 --> 00:27:10,400
+really interesting because I'd 
+not come across some, it just 
+
+475
+00:27:10,400 --> 00:27:13,200
+again it was one of those things
+where I looked at it and went. 
+
+476
+00:27:13,299 --> 00:27:14,900
+Well, why wasn't this a thing 
+before? 
+
+477
+00:27:14,900 --> 00:27:19,599
+Like the three cents is one of 
+those obvious, but not obvious 
+
+478
+00:27:19,900 --> 00:27:24,500
+Innovations of that, make sense.
+Well, so that was react biology.
+
+479
+00:27:24,700 --> 00:27:27,200
+Isn't what you would always 
+desire. 
+
+480
+00:27:27,200 --> 00:27:31,299
+And biology is the ability to 
+easily create a reproducible 
+
+481
+00:27:31,299 --> 00:27:33,599
+environment that you could run 
+tests against. 
+
+482
+00:27:33,900 --> 00:27:35,299
+Yeah. 
+And one that's as close as 
+
+483
+00:27:35,299 --> 00:27:37,400
+possible to what you want to 
+actually create. 
+
+484
+00:27:37,400 --> 00:27:40,900
+Right? 
+So you know, making human cells 
+
+485
+00:27:40,900 --> 00:27:44,599
+and a lab or whether it's 
+testing it on human, clinical 
+
+486
+00:27:44,599 --> 00:27:47,500
+trials were always trying to get
+it as close as possible to the 
+
+487
+00:27:47,500 --> 00:27:51,500
+real thing which again, haven't 
+figured out how to do that in 
+
+488
+00:27:51,500 --> 00:27:56,400
+parallel universes yet. 
+I'll tell you have, but if it's 
+
+489
+00:27:56,400 --> 00:28:01,099
+too hard, will just use male 
+mice because, you know, the 
+
+490
+00:28:02,000 --> 00:28:06,000
+cycles of the female mice. 
+Mess up our data, the thing. 
+
+491
+00:28:06,000 --> 00:28:08,400
+Oh absolutely. 
+That's yeah, yeah. 
+
+492
+00:28:08,400 --> 00:28:10,400
+Oh, right. 
+And then when then when they 
+
+493
+00:28:10,400 --> 00:28:15,000
+actually deliver the drug to the
+human population they haven't 
+
+494
+00:28:15,000 --> 00:28:16,200
+tested it. 
+No. 
+
+495
+00:28:16,200 --> 00:28:20,200
+And so it's like well but you 
+know, that would be hard. 
+
+496
+00:28:20,299 --> 00:28:26,500
+So it's crazy to challenging. 
+So when you started looking at 
+
+497
+00:28:26,500 --> 00:28:30,700
+methodologies, you are looking 
+for something higher level, you 
+
+498
+00:28:30,700 --> 00:28:34,200
+know, some way, how can we think
+about these things in bigger 
+
+499
+00:28:34,200 --> 00:28:36,000
+terms? 
+Yeah, exactly. 
+
+500
+00:28:36,000 --> 00:28:39,000
+Because it was so, yeah. 
+Oh, go ahead. 
+
+501
+00:28:39,000 --> 00:28:42,400
+Is that what led you to the to 
+modifying? 
+
+502
+00:28:42,400 --> 00:28:46,900
+The 12 Factor model? 
+Yes. 
+
+503
+00:28:46,900 --> 00:28:51,200
+So it was it was definitely. 
+I just wanted to know if 
+
+504
+00:28:51,200 --> 00:28:53,799
+someone's trying to either 
+modernize and application or 
+
+505
+00:28:53,799 --> 00:28:57,900
+make a new occation how on Earth
+do they know what steps they 
+
+506
+00:28:57,900 --> 00:29:00,400
+should be taking to actually 
+make an application that's going
+
+507
+00:29:00,400 --> 00:29:03,799
+to be effective on the cloud 
+especially because that 
+
+508
+00:29:03,799 --> 00:29:07,400
+underlying infrastructure 
+changes has changed so much but 
+
+509
+00:29:07,400 --> 00:29:12,000
+also changes so frequently in 
+the current sort of state of or 
+
+510
+00:29:12,500 --> 00:29:15,900
+rate of innovation. 
+And so I ended up stumbling 
+
+511
+00:29:15,900 --> 00:29:19,700
+across the 12 Factor at 
+methodology, which I found 
+
+512
+00:29:19,700 --> 00:29:23,000
+really interesting and there's 
+loads of different case studies 
+
+513
+00:29:23,000 --> 00:29:25,799
+out there that have utilized 
+Squat, effectively. 
+
+514
+00:29:26,099 --> 00:29:29,000
+And the thing that Drew me to it
+was the fact that it was 
+
+515
+00:29:29,000 --> 00:29:31,000
+language. 
+Agnostic language, agnostic 
+
+516
+00:29:31,000 --> 00:29:32,799
+tall, agnostic platform, 
+agnostic. 
+
+517
+00:29:32,900 --> 00:29:36,099
+The fact that anyone could use 
+it, which I thought was great. 
+
+518
+00:29:36,299 --> 00:29:39,400
+So, you talking about General 
+software design, rather than 
+
+519
+00:29:39,400 --> 00:29:42,500
+design using Java or what 
+exactly cools go. 
+
+520
+00:29:42,700 --> 00:29:45,700
+Yeah, cuz you, you probably, at 
+some point got exposed to the 
+
+521
+00:29:45,700 --> 00:29:49,000
+gang of four patterns and those 
+aren't about deployment and 
+
+522
+00:29:49,200 --> 00:29:54,299
+yeah, but and then, he probably 
+also got exposed to in Java ee, 
+
+523
+00:29:54,299 --> 00:29:58,299
+the Like deployment profile and 
+and all that kind of like that 
+
+524
+00:29:58,299 --> 00:30:02,599
+whole side of it, and things 
+like the cloud, native trail 
+
+525
+00:30:02,599 --> 00:30:03,900
+map. 
+That was another interesting 
+
+526
+00:30:03,900 --> 00:30:09,599
+one, but it was very focused on 
+sort of tools as opposed to more
+
+527
+00:30:09,599 --> 00:30:12,299
+General architecture Styles 
+methodologies. 
+
+528
+00:30:13,400 --> 00:30:16,500
+But there's some there's some 
+great sort of tool kits that you
+
+529
+00:30:16,508 --> 00:30:19,900
+can use out there. 
+But I just really resonated with
+
+530
+00:30:19,900 --> 00:30:23,700
+the with the 12 Factor 1 and I 
+have to say, I can't take any 
+
+531
+00:30:23,700 --> 00:30:27,400
+credit for the Into the 15 
+factor that was Kevin Huffman 
+
+532
+00:30:27,400 --> 00:30:30,400
+from dynatrace. 
+I stumbled across his book, he 
+
+533
+00:30:30,408 --> 00:30:34,000
+had a short book on it. 
+Think from O'Reilly you can 
+
+534
+00:30:34,000 --> 00:30:37,900
+access it online if you're 
+interested, he then extended it 
+
+535
+00:30:38,299 --> 00:30:42,400
+to the 15 factors and yet again,
+a lot of the things that he 
+
+536
+00:30:42,400 --> 00:30:44,900
+added was again one of those 
+obvious. 
+
+537
+00:30:45,000 --> 00:30:47,299
+Why don't we have this before 
+that? 
+
+538
+00:30:47,299 --> 00:30:50,200
+I was like, yeah, this week 
+since Bruce area coffee this 
+
+539
+00:30:50,200 --> 00:30:54,000
+morning and talking about 12 
+factor and so Bruce has asked me
+
+540
+00:30:54,000 --> 00:30:57,200
+about some of the Them. 
+And and every time I came up 
+
+541
+00:30:57,200 --> 00:30:58,700
+with one, it was just like oh, 
+yeah. 
+
+542
+00:30:58,700 --> 00:31:00,500
+And that seems totally obvious 
+today. 
+
+543
+00:31:00,900 --> 00:31:06,000
+And so I was like, but when Adam
+wrote 12 factors, like all of it
+
+544
+00:31:06,000 --> 00:31:11,900
+was very foreign to most people 
+and it's I guess that's a, it's 
+
+545
+00:31:11,900 --> 00:31:14,299
+a good sign. 
+When you've defined something 
+
+546
+00:31:14,599 --> 00:31:17,500
+that now just seems obvious it. 
+Like it's containers to. 
+
+547
+00:31:17,500 --> 00:31:20,500
+It's like it just seems obvious 
+and exactly. 
+
+548
+00:31:20,500 --> 00:31:21,900
+Yeah. 
+But at the but there was a time 
+
+549
+00:31:21,900 --> 00:31:24,500
+when it wasn't well, it was new 
+water. 
+
+550
+00:31:24,599 --> 00:31:26,900
+To be swimming in. 
+Yeah, yeah. 
+
+551
+00:31:27,299 --> 00:31:29,400
+And so people, you know, didn't 
+know. 
+
+552
+00:31:29,400 --> 00:31:33,799
+Well, what's, what is the 
+background that eventually? 
+
+553
+00:31:33,799 --> 00:31:36,900
+We're not going to even pay 
+attention to and what are the 
+
+554
+00:31:37,200 --> 00:31:39,099
+actual diff? 
+Everything was hard? 
+
+555
+00:31:39,299 --> 00:31:41,400
+Yeah. 
+So but somebody has to come up 
+
+556
+00:31:41,400 --> 00:31:43,400
+with it. 
+Yep? 
+
+557
+00:31:43,599 --> 00:31:47,200
+Right, right. 
+So what resonated for you with 
+
+558
+00:31:47,200 --> 00:31:51,000
+the 12 or 15 factors? 
+What was what stood out was 
+
+559
+00:31:51,000 --> 00:31:54,299
+different was what? 
+Yeah, so about it. 
+
+560
+00:31:54,700 --> 00:31:58,200
+The so starting with the 12 
+factors, I liked the fact that 
+
+561
+00:31:58,200 --> 00:32:01,799
+it took you right from, you 
+know, getting started with that 
+
+562
+00:32:01,799 --> 00:32:06,000
+one code base, you know, where 
+you store that using things like
+
+563
+00:32:06,000 --> 00:32:08,900
+git, repositories, Etc. 
+So, starting right from the very
+
+564
+00:32:08,900 --> 00:32:12,200
+basics of that application and 
+going all the way through to 
+
+565
+00:32:12,599 --> 00:32:15,099
+behaviors and characteristics 
+that you need in production. 
+
+566
+00:32:15,599 --> 00:32:18,099
+So all the way through from sort
+of the creation stage to the 
+
+567
+00:32:18,099 --> 00:32:22,299
+edit stage to the diploid stage 
+to the sort of monitoring stage.
+
+568
+00:32:23,400 --> 00:32:25,900
+I like the fact that it had 
+character 46 that covered all of
+
+569
+00:32:25,900 --> 00:32:28,000
+those bases, huh? 
+Right. 
+
+570
+00:32:28,000 --> 00:32:29,599
+And to end really? 
+Yeah. 
+
+571
+00:32:29,599 --> 00:32:34,200
+And I guess from your, your 
+journey through technology, you 
+
+572
+00:32:34,200 --> 00:32:37,700
+needed to kind of be told, kind 
+of more prescriptively like, 
+
+573
+00:32:37,700 --> 00:32:41,700
+here's the start to end the 
+whole picture versus just, you 
+
+574
+00:32:41,700 --> 00:32:46,400
+know, that was more useful than 
+just a particular piece think. 
+
+575
+00:32:46,400 --> 00:32:51,900
+So the 12 factors actually start
+with you're using a GitHub 
+
+576
+00:32:51,900 --> 00:32:54,099
+repository. 
+I mean, you're using a 
+
+577
+00:32:54,099 --> 00:32:57,700
+distributed Muted repository 
+they actually a cloud. 
+
+578
+00:32:57,700 --> 00:33:00,200
+So the first factor is code 
+base. 
+
+579
+00:33:00,200 --> 00:33:03,099
+In fact, you can really give 
+this better than I can know that
+
+580
+00:33:03,099 --> 00:33:05,500
+you were involved in. 
+You don't remember I don't have 
+
+581
+00:33:05,500 --> 00:33:09,599
+a recollection of all of them so
+the first one is code base so 
+
+582
+00:33:09,599 --> 00:33:13,799
+it's more around like looking at
+the fact that you should have 
+
+583
+00:33:13,799 --> 00:33:16,700
+one single source of Truth, you 
+should have that one code base 
+
+584
+00:33:16,708 --> 00:33:21,500
+from which you can then deploy 
+different versions of that 
+
+585
+00:33:21,500 --> 00:33:25,000
+application. 
+For example also looking Yet way
+
+586
+00:33:25,000 --> 00:33:28,099
+you stole that code base. 
+So utilizing shared 
+
+587
+00:33:28,099 --> 00:33:31,000
+repositories, whether that be 
+get or get lab or whatever, you 
+
+588
+00:33:31,000 --> 00:33:34,700
+might be using get bucket, gets 
+tons of them out there but being
+
+589
+00:33:34,700 --> 00:33:37,900
+able to have that shared single 
+source of Truth, not just one 
+
+590
+00:33:37,900 --> 00:33:39,500
+that's a locally on your own 
+machine. 
+
+591
+00:33:40,799 --> 00:33:44,299
+So that's kind of Mexican. 
+Interruption a lot of these have
+
+592
+00:33:44,299 --> 00:33:49,200
+have value in the, in the 
+contrast, which is like how we 
+
+593
+00:33:49,200 --> 00:33:53,200
+did things before before this. 
+So, in this case, the contrast 
+
+594
+00:33:53,200 --> 00:33:59,200
+is, there is a number of people 
+in the world of technology who 
+
+595
+00:33:59,200 --> 00:34:04,799
+would in their on their machine.
+In Eclipse, create a war file 
+
+596
+00:34:04,900 --> 00:34:07,599
+and copy that war file up to a 
+server. 
+
+597
+00:34:07,900 --> 00:34:12,699
+And this factor is saying, no, 
+like your your deployment 
+
+598
+00:34:12,699 --> 00:34:18,300
+artifact should should be a 
+product of some Autumn build 
+
+599
+00:34:18,300 --> 00:34:20,300
+automated. 
+I think we will get into the 
+
+600
+00:34:20,300 --> 00:34:23,900
+automated piece of it, but you 
+start with your source code as 
+
+601
+00:34:23,900 --> 00:34:28,699
+being The thing that is the 
+source of Truth, for how you get
+
+602
+00:34:28,699 --> 00:34:32,099
+to a deployment. 
+And so, yeah, and I was speaking
+
+603
+00:34:32,099 --> 00:34:34,500
+to myself about creating more 
+files. 
+
+604
+00:34:35,599 --> 00:34:39,500
+Yes, I did that, it got even 
+worse but we won't go into your 
+
+605
+00:34:39,500 --> 00:34:42,500
+shame. 
+The shame, how I did things 
+
+606
+00:34:42,500 --> 00:34:46,699
+before, 12 Factor before the 
+world of twelve factors. 
+
+607
+00:34:47,599 --> 00:34:48,199
+Yes. 
+Okay. 
+
+608
+00:34:48,199 --> 00:34:52,000
+So, going back, we've got the 
+code base, the the single source
+
+609
+00:34:52,000 --> 00:34:56,800
+of truth that is shareable, that
+is Is ultimately can result in a
+
+610
+00:34:56,800 --> 00:34:59,300
+Deployable and I would think 
+there would be something about 
+
+611
+00:34:59,300 --> 00:35:03,300
+build Automation and automated 
+testing in that as well as Parts
+
+612
+00:35:03,300 --> 00:35:05,099
+in there. 
+So but they come under different
+
+613
+00:35:05,099 --> 00:35:09,099
+factors, it's like, right? 
+So things like for example 
+
+614
+00:35:09,300 --> 00:35:10,900
+there's one called build release
+run. 
+
+615
+00:35:10,900 --> 00:35:13,900
+That's one of the factors. 
+I think it's Factor number five 
+
+616
+00:35:13,900 --> 00:35:17,000
+from what I remember. 
+And it's, it's essentially all 
+
+617
+00:35:17,000 --> 00:35:22,699
+about having these kind of like 
+strictly separate sections, so, 
+
+618
+00:35:22,699 --> 00:35:25,699
+like building it then. 
+Sing it then, running it. 
+
+619
+00:35:25,800 --> 00:35:29,099
+But having some kind of pipeline
+that takes you, through each of 
+
+620
+00:35:29,099 --> 00:35:32,500
+those separate sort of 
+processes, I guess, or stages. 
+
+621
+00:35:33,599 --> 00:35:37,099
+And so, actually, in the 15 
+Factor at methodology that's 
+
+622
+00:35:37,099 --> 00:35:40,800
+extended to, also include the 
+design stage as well. 
+
+623
+00:35:41,099 --> 00:35:43,400
+So, going right from design all 
+the way through and having that 
+
+624
+00:35:43,400 --> 00:35:47,599
+pipeline. 
+So, yeah, it's that kind of is 
+
+625
+00:35:47,599 --> 00:35:50,599
+part of that automation that. 
+How can we automate going 
+
+626
+00:35:50,599 --> 00:35:53,000
+through them, but still keep 
+them as separate stages. 
+
+627
+00:35:53,699 --> 00:35:58,300
+So, one of the Things I notice 
+is that the pragmatic programmer
+
+628
+00:35:58,400 --> 00:35:59,800
+book? 
+Yeah. 
+
+629
+00:35:59,800 --> 00:36:02,800
+And Barry Hawkins is the one who
+first pointed this out. 
+
+630
+00:36:02,800 --> 00:36:05,900
+To me, he said that like, if you
+go in and you're trying to teach
+
+631
+00:36:05,900 --> 00:36:10,699
+somebody agile or you know, some
+whatever higher development 
+
+632
+00:36:10,699 --> 00:36:17,400
+process and they don't have, you
+know, some sort of repository 
+
+633
+00:36:18,300 --> 00:36:21,000
+automated testing automated 
+build. 
+
+634
+00:36:21,099 --> 00:36:24,400
+He goes well that's you can't go
+any further. 
+
+635
+00:36:24,599 --> 00:36:29,300
+Or unless you have those three 
+as in the, in your foundation 
+
+636
+00:36:30,000 --> 00:36:32,699
+gets pointless because you can't
+do refactoring. 
+
+637
+00:36:32,699 --> 00:36:36,800
+For example, unless you have 
+those things and reliable Andy. 
+
+638
+00:36:36,800 --> 00:36:40,400
+Well, yeah, you can. 
+Yeah. 
+
+639
+00:36:40,400 --> 00:36:44,900
+And so I mean it's interesting 
+that well, or obvious that they 
+
+640
+00:36:44,900 --> 00:36:48,800
+would incorporate those here. 
+I think the pragmatic programmer
+
+641
+00:36:48,900 --> 00:36:53,000
+existed before this happened, 
+precious out and I'll never 
+
+642
+00:36:53,000 --> 00:36:54,000
+read. 
+Read that sign. 
+
+643
+00:36:54,099 --> 00:36:55,500
+Yeah. 
+Yeah, too much about it. 
+
+644
+00:36:55,500 --> 00:37:00,500
+But yeah. 
+So so the the kind of the life 
+
+645
+00:37:00,500 --> 00:37:04,699
+cycle of how you get reliably 
+get from your source code, the 
+
+646
+00:37:04,699 --> 00:37:09,599
+first factor to to something 
+runnable and do that in a 
+
+647
+00:37:09,800 --> 00:37:14,699
+repeatable, reliable way. 
+Yeah, yeah, exactly. 
+
+648
+00:37:14,699 --> 00:37:17,400
+And then, it also goes through 
+to other things like, for 
+
+649
+00:37:17,400 --> 00:37:21,300
+example, things like dead 
+Prosperity, which is an 
+
+650
+00:37:21,300 --> 00:37:24,300
+interesting one and that's sort 
+of one that again. 
+
+651
+00:37:24,500 --> 00:37:27,500
+Was extended in the 15 fact, a 
+methodology to be just 
+
+652
+00:37:27,599 --> 00:37:30,599
+environmental parity, sort of, 
+just making it a bit broader 
+
+653
+00:37:30,599 --> 00:37:33,199
+because we don't just have Dev 
+and Broad. 
+
+654
+00:37:33,199 --> 00:37:35,400
+Now, we normally have either 
+staging. 
+
+655
+00:37:35,400 --> 00:37:40,000
+QA testing Dev CycleOps any of 
+these environments. 
+
+656
+00:37:40,000 --> 00:37:43,900
+So ensuring that, that parity 
+part really is just meaning, 
+
+657
+00:37:43,900 --> 00:37:47,000
+like, ensuring that there is 
+similar as possible, so that 
+
+658
+00:37:47,199 --> 00:37:49,000
+when it is kind of back to test 
+containers, right? 
+
+659
+00:37:49,000 --> 00:37:53,000
+When we're testing we want to be
+testing or developing or staging
+
+660
+00:37:53,000 --> 00:37:55,500
+in an environment that's as 
+close to reduction as possible. 
+
+661
+00:37:56,199 --> 00:38:00,400
+So ensuring that parity exists, 
+which sounds obvious when you 
+
+662
+00:38:00,400 --> 00:38:04,300
+say exactly. 
+Yeah, but you know when you did 
+
+663
+00:38:04,300 --> 00:38:08,500
+this all wrong before exactly, 
+you probably were using. 
+
+664
+00:38:08,500 --> 00:38:10,000
+I don't know, like a really 
+lightweight thing when your 
+
+665
+00:38:10,008 --> 00:38:12,900
+development Machine versus a 
+really, you know, strong and 
+
+666
+00:38:12,900 --> 00:38:16,400
+reliable something else 
+technology on your production. 
+
+667
+00:38:16,699 --> 00:38:18,000
+Yeah. 
+And that kind of made sense at 
+
+668
+00:38:18,000 --> 00:38:19,500
+the time. 
+But when you think about it, 
+
+669
+00:38:19,699 --> 00:38:22,900
+yeah, it's probably going to be 
+issues in terms of parity 
+
+670
+00:38:22,900 --> 00:38:25,800
+between them and are is that you
+Be getting in each production, 
+
+671
+00:38:25,800 --> 00:38:27,900
+each environment. 
+So yeah. 
+
+672
+00:38:27,900 --> 00:38:31,099
+It seems obvious but also wasn't
+obvious. 
+
+673
+00:38:31,400 --> 00:38:32,699
+Yeah. 
+Yeah. 
+
+674
+00:38:32,699 --> 00:38:35,800
+Back since you're an IBM, or 
+you'll probably understand this 
+
+675
+00:38:35,800 --> 00:38:42,099
+but back in the day I was using 
+websphere was with yeah that's 
+
+676
+00:38:42,099 --> 00:38:44,800
+the IBM one right now but I 
+always get Webster and weblogic 
+
+677
+00:38:44,800 --> 00:38:47,900
+mixed up with object to be a 
+then by Oracle anyways. 
+
+678
+00:38:48,000 --> 00:38:51,699
+So using websphere and that was 
+what we had to use in production
+
+679
+00:38:51,699 --> 00:38:56,099
+because you know, with the the 
+Executives decided that was what
+
+680
+00:38:56,099 --> 00:39:00,000
+we were going to use and but 
+none of the developers wanted to
+
+681
+00:39:00,000 --> 00:39:02,900
+run web server on their machines
+because the machines weren't 
+
+682
+00:39:02,900 --> 00:39:07,099
+powerful enough to do that. 
+And so we would use JBoss on our
+
+683
+00:39:07,099 --> 00:39:10,300
+local machines for development, 
+and then create our war files 
+
+684
+00:39:10,300 --> 00:39:13,599
+and hope that they would run 
+correctly and websphere and 
+
+685
+00:39:13,599 --> 00:39:15,099
+usually they did. 
+But not always. 
+
+686
+00:39:15,400 --> 00:39:20,400
+Yeah, just listen. 
+Yeah, we did not have good Dev 
+
+687
+00:39:20,400 --> 00:39:23,900
+prod, parity hope is a strategy.
+It's not a good one. 
+
+688
+00:39:25,400 --> 00:39:27,500
+But it's only time so use. 
+That's right. 
+
+689
+00:39:29,099 --> 00:39:30,900
+Just gonna have to scratch your 
+fingers. 
+
+690
+00:39:34,000 --> 00:39:38,900
+Did you find any biological 
+correlation with the 15 Factor 
+
+691
+00:39:38,900 --> 00:39:45,000
+up methodology methodology? 
+I don't let you, I didn't find 
+
+692
+00:39:45,000 --> 00:39:48,500
+too many mostly because there 
+are some at the individual 
+
+693
+00:39:48,500 --> 00:39:54,099
+Factor level. 
+So for example, like ensuring 
+
+694
+00:39:54,099 --> 00:39:57,500
+things Like disposability 
+containers can be a really great
+
+695
+00:39:57,500 --> 00:40:00,500
+way of doing that because you 
+can just spin them up, take them
+
+696
+00:40:00,500 --> 00:40:06,300
+down, quite quite easily. 
+And so I yeah cattle not pets. 
+
+697
+00:40:06,800 --> 00:40:13,599
+Yeah, that is what that's all 
+about kind of. 
+
+698
+00:40:13,900 --> 00:40:17,599
+So as humans, there is a big 
+difference between the way we 
+
+699
+00:40:17,599 --> 00:40:21,599
+treat something like cattle 
+versus the way we treat our pet 
+
+700
+00:40:21,599 --> 00:40:26,400
+cat call, for example that we 
+give Call a name, we nurse call 
+
+701
+00:40:26,400 --> 00:40:29,199
+back to health because we love 
+him, he's our pet, he's 
+
+702
+00:40:29,199 --> 00:40:32,099
+Irreplaceable. 
+And yet cattle, on the other 
+
+703
+00:40:32,099 --> 00:40:35,199
+hand, like if one of them were 
+to get TB, for example, which is
+
+704
+00:40:35,199 --> 00:40:38,000
+quite common generally, we'll 
+just sort of cull. 
+
+705
+00:40:38,000 --> 00:40:42,699
+The herd so to speak and buy a 
+new one, which is kind of the 
+
+706
+00:40:42,699 --> 00:40:44,500
+mindset. 
+We need to have when we are 
+
+707
+00:40:44,500 --> 00:40:48,000
+introducing, the various 
+elements of our applications 
+
+708
+00:40:48,199 --> 00:40:50,900
+because we need to be in the 
+mindset of cattle of. 
+
+709
+00:40:51,400 --> 00:40:52,900
+Well, if they need to go, they 
+need to go. 
+
+710
+00:40:53,500 --> 00:40:56,199
+We need to be Placing them 
+dynamically to make sure that 
+
+711
+00:40:56,199 --> 00:41:02,099
+performance stays performant. 
+Rather something waiting, where 
+
+712
+00:41:02,099 --> 00:41:07,099
+they say, Kill Your Darlings. 
+It sounds, this makes me think 
+
+713
+00:41:07,099 --> 00:41:09,000
+of that. 
+It just means none of your 
+
+714
+00:41:09,000 --> 00:41:12,400
+writing is so precious that you 
+can't just pull it out. 
+
+715
+00:41:12,400 --> 00:41:13,900
+Throw it away. 
+Yeah, exactly. 
+
+716
+00:41:14,300 --> 00:41:18,099
+Again contrasted to the way we 
+used to do things which was I 
+
+717
+00:41:18,099 --> 00:41:23,300
+would have a server. 
+And that server was, it had a 
+
+718
+00:41:23,308 --> 00:41:27,500
+name And that is server was 
+Irreplaceable. 
+
+719
+00:41:27,500 --> 00:41:31,800
+Like if that server died like oh
+my God, like everything is gone 
+
+720
+00:41:31,800 --> 00:41:34,400
+and that's the end of the world 
+and the server had history and 
+
+721
+00:41:34,400 --> 00:41:37,900
+the server had history, all 
+these things that we did to it, 
+
+722
+00:41:37,900 --> 00:41:40,699
+to get it into the state that it
+was in. 
+
+723
+00:41:40,900 --> 00:41:45,000
+And who knows all of the scripts
+that Iran and all of the 
+
+724
+00:41:45,000 --> 00:41:47,699
+commands that Iran and all the 
+things I installed, and, you 
+
+725
+00:41:47,699 --> 00:41:50,900
+know, getting that getting 
+another machine back to that 
+
+726
+00:41:50,900 --> 00:41:55,500
+state impossible. 
+And so that Had a lot of 
+
+727
+00:41:55,500 --> 00:42:00,000
+downsides to too because you 
+know, what servers did die. 
+
+728
+00:42:00,099 --> 00:42:02,300
+Yeah. 
+And then it was, then I would 
+
+729
+00:42:02,300 --> 00:42:06,400
+spend my Christmas holiday 
+fixing a server in the data 
+
+730
+00:42:06,400 --> 00:42:10,500
+center and that is not a good 
+way to live, especially in the 
+
+731
+00:42:10,500 --> 00:42:13,400
+cloud, where things are less 
+reliable. 
+
+732
+00:42:13,400 --> 00:42:15,800
+Well, yeah. 
+Like the individual pieces are 
+
+733
+00:42:15,800 --> 00:42:19,500
+less reliable generally in the 
+cloud and so that just no longer
+
+734
+00:42:19,500 --> 00:42:22,500
+really worked in the cloud. 
+I had a friend who worked at 
+
+735
+00:42:22,500 --> 00:42:26,500
+Oracle for a while. 
+And to the first thing that he 
+
+736
+00:42:26,500 --> 00:42:31,099
+had to do, and it was expected 
+to take weeks, was to actually 
+
+737
+00:42:31,099 --> 00:42:34,599
+build the code set up as machine
+to build the code base and it 
+
+738
+00:42:34,599 --> 00:42:39,199
+took weeks and he said, you 
+know, sometimes artifacts would 
+
+739
+00:42:39,199 --> 00:42:41,300
+just disappear, you know, parts 
+of it. 
+
+740
+00:42:41,599 --> 00:42:45,199
+And the engineers would say, oh 
+yeah, that's called build loss 
+
+741
+00:42:45,199 --> 00:42:47,900
+each. 
+It was just an expected thing 
+
+742
+00:42:47,900 --> 00:42:51,300
+that stuff would randomly 
+disappear this was years ago. 
+
+743
+00:42:51,300 --> 00:42:57,500
+So I hope they're better now, 
+but Yeah, random disappearing. 
+
+744
+00:42:57,599 --> 00:42:59,900
+Yeah, yeah. 
+Well and it was very hard to 
+
+745
+00:42:59,900 --> 00:43:03,000
+provision new servers. 
+Well yeah, you had to go, you 
+
+746
+00:43:03,000 --> 00:43:08,599
+know, do a procurement request 
+and the they would then go to 
+
+747
+00:43:08,599 --> 00:43:13,699
+Dell or whoever and order a 
+bunch of servers and and then 
+
+748
+00:43:13,699 --> 00:43:16,300
+they'd have to then provision 
+the server's, the operating 
+
+749
+00:43:16,300 --> 00:43:18,300
+system. 
+Anyways, take a few months and 
+
+750
+00:43:18,300 --> 00:43:20,099
+months but you have to run your 
+own machine. 
+
+751
+00:43:20,099 --> 00:43:23,099
+Exactly. 
+And then so, who was the, what 
+
+752
+00:43:23,099 --> 00:43:26,599
+was the Breakthrough where 
+Suddenly got to the point where 
+
+753
+00:43:26,599 --> 00:43:28,599
+we could go. 
+Oh, Cloud! 
+
+754
+00:43:28,599 --> 00:43:31,699
+Please give me a server. 
+When did that happen? 
+
+755
+00:43:32,000 --> 00:43:37,199
+Who was that before I joined 
+Amazon, was an Amazon was really
+
+756
+00:43:37,199 --> 00:43:43,400
+the first one who made that idea
+more masses Centric. 
+
+757
+00:43:43,400 --> 00:43:45,800
+I'm sure that it existed in 
+various places. 
+
+758
+00:43:46,099 --> 00:43:49,599
+There were people kind of doing 
+that concept, but Amazon was the
+
+759
+00:43:49,599 --> 00:43:51,900
+first place. 
+And I remember when I moved from
+
+760
+00:43:52,000 --> 00:43:55,500
+a physical server, that I no 
+longer had to To keep running 
+
+761
+00:43:55,500 --> 00:43:59,300
+and you know, pray that it 
+wouldn't die to an Amazon 
+
+762
+00:43:59,300 --> 00:44:01,699
+virtual server. 
+And oh my God, it was so much 
+
+763
+00:44:01,699 --> 00:44:03,900
+better. 
+And, and of course, like the 
+
+764
+00:44:03,900 --> 00:44:07,199
+physical machine that that was 
+on probably was replaced in its 
+
+765
+00:44:07,199 --> 00:44:10,199
+life many times. 
+But the virtual machine, you 
+
+766
+00:44:10,199 --> 00:44:13,599
+know, is restarted and, you 
+know, run in multiple places. 
+
+767
+00:44:13,599 --> 00:44:19,699
+My brother had my web server on,
+he had to get a T1 into his 
+
+768
+00:44:19,699 --> 00:44:24,599
+garage and he ran my server. 
+When I was giving away, Thinking
+
+769
+00:44:24,599 --> 00:44:28,599
+in Java for free to get people 
+to come to seminars and it. 
+
+770
+00:44:28,599 --> 00:44:31,099
+And so we had to, I don't know, 
+I think I was paying a thousand 
+
+771
+00:44:31,099 --> 00:44:32,900
+dollars a month, for a T1 line. 
+Yeah. 
+
+772
+00:44:33,000 --> 00:44:36,300
+And whatever it costs to the 
+server and then his time and 
+
+773
+00:44:36,300 --> 00:44:39,300
+it's like you think about what 
+were able to do now for a few 
+
+774
+00:44:39,300 --> 00:44:42,400
+cents, you can have a server in 
+the cloud and it's just, they're
+
+775
+00:44:42,400 --> 00:44:44,699
+reliable. 
+Don't have to worry about 
+
+776
+00:44:45,300 --> 00:44:49,599
+whether Todd's, you know, power 
+gets cut or anything like that. 
+
+777
+00:44:49,900 --> 00:44:54,000
+It's amazing. 
+Amazing to have a different, a 
+
+778
+00:44:54,000 --> 00:44:59,300
+different Current mindset around
+this which is the disposability 
+
+779
+00:44:59,300 --> 00:45:02,300
+which is talking about is like 
+treating, our servers, like 
+
+780
+00:45:02,300 --> 00:45:05,800
+cattle not like pets. 
+And that was a big shift like 
+
+781
+00:45:05,800 --> 00:45:12,099
+that took many, many years, to 
+shift us and is also had an 
+
+782
+00:45:12,099 --> 00:45:15,800
+impact in how we architect our 
+applications, because we can no 
+
+783
+00:45:15,800 --> 00:45:20,099
+longer architect, assuming that 
+that, that our caches always 
+
+784
+00:45:20,099 --> 00:45:25,199
+going to be, you know, hydrated 
+and you Just yeah. 
+
+785
+00:45:25,199 --> 00:45:27,800
+Well, and we also think about 
+CPU time, I mean, you know, the 
+
+786
+00:45:27,800 --> 00:45:33,000
+whole Lambda idea of, you know, 
+programming so that it uses as 
+
+787
+00:45:33,000 --> 00:45:37,900
+little, it doesn't keep anything
+running if you can in the 
+
+788
+00:45:37,908 --> 00:45:40,300
+background while it's not being 
+used. 
+
+789
+00:45:40,300 --> 00:45:41,000
+Yeah. 
+Yeah. 
+
+790
+00:45:41,000 --> 00:45:43,099
+That's we didn't worry about 
+that before. 
+
+791
+00:45:43,099 --> 00:45:45,300
+We're like, no, it's my machine.
+Yeah. 
+
+792
+00:45:48,699 --> 00:45:52,800
+On 15 fact drafts that stands 
+out other things. 
+
+793
+00:45:52,900 --> 00:45:56,099
+Yeah, but the thing I was I 
+think most surprised about in 
+
+794
+00:45:56,099 --> 00:45:59,599
+terms of the difference between 
+12 factor in 15 Factor, was that
+
+795
+00:45:59,599 --> 00:46:04,500
+in the 12 fact that there was 
+basically no real shout out to 
+
+796
+00:46:04,500 --> 00:46:09,599
+security? 
+So I was like, oh, big like 
+
+797
+00:46:09,599 --> 00:46:13,599
+surprise again, it's one of 
+those obvious non-obvious has, 
+
+798
+00:46:14,199 --> 00:46:17,300
+if you know what I mean. 
+So in the 15 Factor Added in a 
+
+799
+00:46:17,300 --> 00:46:21,099
+factor called authentication and
+authorization, which was 
+
+800
+00:46:21,099 --> 00:46:23,199
+essentially their cool out to 
+security. 
+
+801
+00:46:23,199 --> 00:46:26,699
+So in some way or another 
+ensuring that people are a 
+
+802
+00:46:26,699 --> 00:46:30,500
+authorized and have the right 
+Authority level to be able to 
+
+803
+00:46:30,500 --> 00:46:33,800
+access that particular service 
+create that particular request 
+
+804
+00:46:33,800 --> 00:46:37,199
+excetera. 
+So I think that was an important
+
+805
+00:46:37,199 --> 00:46:41,300
+addition in terms of adding that
+to those factors, huh? 
+
+806
+00:46:42,199 --> 00:46:45,800
+And that's just about the 
+securing, the essentially data 
+
+807
+00:46:45,800 --> 00:46:49,699
+application. 
+Ian, not so much on securing the
+
+808
+00:46:50,099 --> 00:46:54,300
+the like from developer. 
+Like it's not about the product,
+
+809
+00:46:54,300 --> 00:46:58,000
+the production devops kind of 
+know exactly during side of 
+
+810
+00:46:58,000 --> 00:47:01,400
+things like what's the new term 
+for that Dev SEC Ops or 
+
+811
+00:47:01,400 --> 00:47:02,400
+something? 
+Difficult. 
+
+812
+00:47:02,400 --> 00:47:10,699
+Yeah but what's the? 
+What's that concept of setups? 
+
+813
+00:47:11,099 --> 00:47:15,000
+So I think it's about combining 
+the fact that it's like an 
+
+814
+00:47:15,000 --> 00:47:16,500
+essentially an extended form of 
+death. 
+
+815
+00:47:16,599 --> 00:47:18,699
+UPS. 
+So the fact that as developers 
+
+816
+00:47:18,699 --> 00:47:21,500
+were no longer just doing 
+development and we have a 
+
+817
+00:47:21,500 --> 00:47:25,699
+separate operations team, we are
+now expected to do a bit of both
+
+818
+00:47:25,800 --> 00:47:29,400
+a bit of everything doing, both 
+the deployment as well as the 
+
+819
+00:47:29,400 --> 00:47:34,500
+development initially and having
+that as, as a combined cycle as 
+
+820
+00:47:34,500 --> 00:47:37,800
+a development process and 
+devstack Ops is essentially 
+
+821
+00:47:37,800 --> 00:47:39,400
+bringing insecurity into that as
+well. 
+
+822
+00:47:39,699 --> 00:47:42,900
+So understanding that we can't 
+just rely on an external magical
+
+823
+00:47:42,900 --> 00:47:45,000
+security team anymore. 
+We have to be thinking about 
+
+824
+00:47:45,000 --> 00:47:47,900
+that in our design. 
+Our development process and 
+
+825
+00:47:47,900 --> 00:47:50,599
+continuing to do that as well in
+that development cycle. 
+
+826
+00:47:51,400 --> 00:47:53,900
+That makes sense to me. 
+It does seem like there's a lot 
+
+827
+00:47:53,900 --> 00:47:57,500
+of things that the developers 
+need to be thinking about while 
+
+828
+00:47:57,500 --> 00:48:00,099
+they're well, they're writing 
+code, I mean that's it. 
+
+829
+00:48:00,800 --> 00:48:05,300
+I think this came from back when
+I was getting started there was 
+
+830
+00:48:05,300 --> 00:48:10,300
+a big push to just make 
+programmers more productive and 
+
+831
+00:48:10,300 --> 00:48:13,900
+there was not, you know, I guess
+there were a lot of assumptions 
+
+832
+00:48:13,900 --> 00:48:16,300
+that oh well, and of course, the
+code will work fine. 
+
+833
+00:48:17,000 --> 00:48:19,300
+All we need to do is produce 
+more of it. 
+
+834
+00:48:19,599 --> 00:48:25,199
+Yeah. 
+And and I see that still in our 
+
+835
+00:48:25,199 --> 00:48:28,400
+culture, it's like it's about 
+productivity, it's not about 
+
+836
+00:48:28,400 --> 00:48:31,199
+reliability. 
+I think that's a big shift 
+
+837
+00:48:31,199 --> 00:48:33,800
+that's happened. 
+I would say fairly recently 
+
+838
+00:48:34,099 --> 00:48:38,500
+because I came in and when I 
+came into IBM we had like a Dev 
+
+839
+00:48:38,500 --> 00:48:41,199
+camp or essentially, we don't 
+start directly in our product. 
+
+840
+00:48:41,199 --> 00:48:45,000
+We go and we work on some other 
+side project and we're 
+
+841
+00:48:45,000 --> 00:48:48,800
+essentially taught best Otis has
+right from the get-go so that 
+
+842
+00:48:48,800 --> 00:48:51,300
+when we then join our teams, we 
+hopefully bring those best 
+
+843
+00:48:51,300 --> 00:48:54,699
+practices with us and encourage 
+those into the more outer 
+
+844
+00:48:54,699 --> 00:48:58,300
+ingrained processes that are 
+perhaps part of traditional 
+
+845
+00:48:58,300 --> 00:49:01,500
+product, life cycles. 
+So things like, for example, 
+
+846
+00:49:01,500 --> 00:49:05,699
+pair programming exact software 
+craftsmanship, there was a, 
+
+847
+00:49:05,699 --> 00:49:08,900
+there was a phrase that our 
+tutor taught us where he was 
+
+848
+00:49:08,900 --> 00:49:13,300
+like anybody can write code he 
+said not, anybody can write 
+
+849
+00:49:13,300 --> 00:49:16,400
+readable code, is that your 
+should be you know readable 
+
+850
+00:49:16,599 --> 00:49:21,300
+Deployable maintainable is a 
+anyone can copy and paste from 
+
+851
+00:49:21,300 --> 00:49:24,199
+stack Overflow. 
+It's about being an engineer, 
+
+852
+00:49:24,199 --> 00:49:28,199
+making the best possible class 
+or whatever you need to make to 
+
+853
+00:49:28,199 --> 00:49:29,699
+make that as effective as 
+possible. 
+
+854
+00:49:30,099 --> 00:49:32,800
+So we were quite lucky that that
+was really encouraged from the 
+
+855
+00:49:32,800 --> 00:49:35,599
+get-go in terms of our education
+that sense. 
+
+856
+00:49:37,800 --> 00:49:41,300
+Yeah, I like that idea because 
+well once again the you're 
+
+857
+00:49:41,300 --> 00:49:47,599
+working on a side project so it 
+was a cow and the Learn the 
+
+858
+00:49:47,599 --> 00:49:52,300
+things using the cow rather than
+working on your thing that was 
+
+859
+00:49:52,300 --> 00:49:54,500
+going to be your core project. 
+Yeah. 
+
+860
+00:49:54,800 --> 00:49:57,500
+Discover learn going through, 
+that learning process on Live 
+
+861
+00:49:57,500 --> 00:50:00,500
+code. 
+Yeah, exactly. 
+
+862
+00:50:01,800 --> 00:50:03,699
+So, where are you at in terms of
+Interest? 
+
+863
+00:50:03,699 --> 00:50:06,699
+Now, we also what's its top of 
+mind for you. 
+
+864
+00:50:07,000 --> 00:50:10,699
+I'm at the moment. 
+I'm delving into more around 
+
+865
+00:50:10,699 --> 00:50:14,599
+developer tooling. 
+So I've been looking at things 
+
+866
+00:50:14,599 --> 00:50:18,099
+like language servers. 
+We got some language service 
+
+867
+00:50:18,099 --> 00:50:20,599
+that we've made for my profile 
+and got ee. 
+
+868
+00:50:21,099 --> 00:50:23,599
+Things like Poquito which is 
+like build packs. 
+
+869
+00:50:23,599 --> 00:50:30,199
+Essentially, and other things 
+like utilizing because I was new
+
+870
+00:50:30,199 --> 00:50:34,400
+to the world of ID. 
+He's and I had this naive 
+
+871
+00:50:34,400 --> 00:50:37,500
+assumption, I should admit that.
+I just go in and I just use the 
+
+872
+00:50:37,500 --> 00:50:40,800
+idea and then I got introduced 
+to this magical world of plugins
+
+873
+00:50:40,800 --> 00:50:43,099
+and extensions and it was like, 
+whoa. 
+
+874
+00:50:43,099 --> 00:50:47,099
+I can be way more effective and 
+productive and you know, My make
+
+875
+00:50:47,099 --> 00:50:50,699
+fewer mistakes and enable code 
+generation and all this kind of 
+
+876
+00:50:50,699 --> 00:50:52,199
+stuff. 
+So yeah. 
+
+877
+00:50:52,199 --> 00:50:54,599
+Delving into that world at the 
+moment and how we can enable 
+
+878
+00:50:54,599 --> 00:50:57,300
+developers to be a bit more 
+effective with their time that 
+
+879
+00:50:57,300 --> 00:51:00,199
+you say productivity without 
+compromising on that code 
+
+880
+00:51:00,199 --> 00:51:04,599
+quality and sort of maximizing 
+the use of their time. 
+
+881
+00:51:05,300 --> 00:51:09,099
+Yeah. 
+Have you been exploring like get
+
+882
+00:51:09,099 --> 00:51:11,599
+a co-pilot at all? 
+No I haven't. 
+
+883
+00:51:11,599 --> 00:51:14,800
+No, what's that about? 
+Oh that uses. 
+
+884
+00:51:15,400 --> 00:51:17,599
+It might be a problem. 
+Within IBM. 
+
+885
+00:51:17,599 --> 00:51:21,900
+I'm not sure but because we've 
+encountered other companies that
+
+886
+00:51:22,199 --> 00:51:26,900
+were there going, oh, we can't 
+have this gate what it is, is it
+
+887
+00:51:26,900 --> 00:51:33,599
+looks through the whole anything
+that's open source in GitHub and
+
+888
+00:51:34,000 --> 00:51:38,800
+it's using machine learning to. 
+When you say, oh, I'm starting 
+
+889
+00:51:38,800 --> 00:51:42,000
+to type this, you know, a 
+function, say compare or 
+
+890
+00:51:42,000 --> 00:51:44,000
+whatever it goes. 
+Oh, I think I know what you're 
+
+891
+00:51:44,000 --> 00:51:45,900
+doing and it fills the code in 
+for you. 
+
+892
+00:51:46,500 --> 00:51:49,000
+Wow, that's cool. 
+Oh auto-generate it is, it's 
+
+893
+00:51:49,000 --> 00:51:51,800
+yes. 
+But it's from its from looking 
+
+894
+00:51:51,800 --> 00:51:56,099
+at, you know, hundreds or 
+thousands of of code examples of
+
+895
+00:51:56,099 --> 00:51:59,699
+used and so it can actually kind
+of fill your code in and you go.
+
+896
+00:51:59,699 --> 00:52:01,599
+Oh yeah. 
+Well let's I'll put that in and 
+
+897
+00:52:01,599 --> 00:52:03,599
+maybe make some modifications to
+it or whatever. 
+
+898
+00:52:03,699 --> 00:52:06,000
+Oh, it's mind-blowing. 
+It's amazing. 
+
+899
+00:52:06,300 --> 00:52:09,800
+Yeah, it experiment with that if
+you get the chance because it's 
+
+900
+00:52:09,800 --> 00:52:11,900
+like oh this is a different 
+world. 
+
+901
+00:52:11,900 --> 00:52:16,800
+It's almost like basically an 
+automatic connection to Stack 
+
+902
+00:52:16,800 --> 00:52:18,800
+Overflow? 
+So instead of going and looking 
+
+903
+00:52:18,800 --> 00:52:21,500
+stuff going on, here's what you 
+need. 
+
+904
+00:52:21,500 --> 00:52:24,099
+I know, I know what this is. 
+So it's, you know, people are 
+
+905
+00:52:24,099 --> 00:52:28,000
+going oh it's going to replace 
+programmers like some of these 
+
+906
+00:52:28,000 --> 00:52:31,800
+other Technologies and now now 
+it's you know, stackoverflow 
+
+907
+00:52:31,800 --> 00:52:35,199
+doesn't replace programmers, you
+still don't understand what 
+
+908
+00:52:35,199 --> 00:52:36,800
+you're putting in. 
+Yes. 
+
+909
+00:52:37,099 --> 00:52:40,699
+I'm a bit of a curmudgeon with a
+lot of this stuff where I often 
+
+910
+00:52:40,699 --> 00:52:45,099
+am like, yeah, I'm I don't need 
+that, you know, I don't need the
+
+911
+00:52:45,099 --> 00:52:47,800
+tool helping me. 
+I can do it myself. 
+
+912
+00:52:47,900 --> 00:52:52,400
+And so I was for a long time, I 
+wrote code in VI, and it was the
+
+913
+00:52:52,400 --> 00:52:55,099
+same kind of mentality is like, 
+I don't need the two of the help
+
+914
+00:52:55,099 --> 00:52:57,000
+me. 
+I'm good enough, you know. 
+
+915
+00:52:57,000 --> 00:53:00,300
+He too didn't want to be faced 
+with the idea that I needed 
+
+916
+00:53:00,300 --> 00:53:02,300
+help, you know, embarassingly 
+longer than you. 
+
+917
+00:53:02,300 --> 00:53:05,699
+I think. 
+Yeah, but I've come around. 
+
+918
+00:53:05,699 --> 00:53:08,099
+Oh, my gosh. 
+Not on your not our day, I piece
+
+919
+00:53:08,099 --> 00:53:10,099
+yet. 
+But yeah, but I started using an
+
+920
+00:53:10,099 --> 00:53:13,099
+IDE. 
+Yeah, and I mean, this is years 
+
+921
+00:53:13,099 --> 00:53:17,199
+ago, but, uh, now, my life is 
+dependent on the D, I can't 
+
+922
+00:53:17,199 --> 00:53:20,500
+write code in VI anymore. 
+I and so speak. 
+
+923
+00:53:20,800 --> 00:53:26,400
+Why would you? 
+It's, and it's going and it's 
+
+924
+00:53:26,400 --> 00:53:28,000
+showing all this stuff and 
+doing. 
+
+925
+00:53:28,300 --> 00:53:30,500
+It's like, oh yeah, once you see
+that you, oh well, this is 
+
+926
+00:53:30,500 --> 00:53:33,000
+obviously a white. 
+Why haven't I been doing this 
+
+927
+00:53:33,000 --> 00:53:35,599
+the whole time? 
+So what's fascinating? 
+
+928
+00:53:35,599 --> 00:53:37,800
+I'd like to hear your thoughts 
+on as you're exploring. 
+
+929
+00:53:37,800 --> 00:53:42,199
+This is it seems, we are 
+entering the industry as 
+
+930
+00:53:42,199 --> 00:53:46,300
+entering this phase where the 
+languages and the tool. 
+
+931
+00:53:46,400 --> 00:53:50,599
+Tools are all kind of Co 
+evolving in a way that is 
+
+932
+00:53:50,599 --> 00:53:53,900
+helping us to get to higher 
+productivity higher reliability 
+
+933
+00:53:54,199 --> 00:53:58,099
+in a way that we were not able 
+to do before these things were 
+
+934
+00:53:58,099 --> 00:54:03,500
+Koval wedding together. 
+And I think, like, being kotlin,
+
+935
+00:54:03,500 --> 00:54:06,500
+you know, Centric. 
+Now, the where I see this a lot 
+
+936
+00:54:06,500 --> 00:54:11,000
+is that they they very 
+intentionally think about the 
+
+937
+00:54:11,000 --> 00:54:14,699
+idea experience as they're 
+working on language features for
+
+938
+00:54:14,699 --> 00:54:16,900
+a college for Colin. 
+Yeah. 
+
+939
+00:54:17,000 --> 00:54:20,000
+And so that there's this 
+connection between the tooling 
+
+940
+00:54:20,300 --> 00:54:23,400
+and the language and the exit 
+really nice. 
+
+941
+00:54:23,400 --> 00:54:26,099
+Makes it really nice with this 
+really great experience. 
+
+942
+00:54:26,099 --> 00:54:27,699
+Yeah. 
+Just makes it a pleasant 
+
+943
+00:54:27,699 --> 00:54:30,099
+experience rather than a 
+struggle. 
+
+944
+00:54:30,500 --> 00:54:34,800
+Is it almost brings back the joy
+of programming and the joy of 
+
+945
+00:54:34,800 --> 00:54:39,099
+coding because you have this 
+symbiotic relationship between 
+
+946
+00:54:39,199 --> 00:54:42,099
+the IDE and the language 
+development, and the fact that 
+
+947
+00:54:42,099 --> 00:54:45,599
+these can co-evolved means that 
+you can get those Innovations 
+
+948
+00:54:45,599 --> 00:54:48,099
+immediately. 
+A and utilize that to make 
+
+949
+00:54:48,099 --> 00:54:52,199
+yourself a better programmer. 
+Your code better and enjoy it a 
+
+950
+00:54:52,207 --> 00:54:55,699
+lot more I think. 
+Oh yeah, yeah. 
+
+951
+00:54:55,699 --> 00:54:57,000
+It's really nice. 
+Yeah. 
+
+952
+00:54:57,000 --> 00:54:58,800
+Just the support it gives you 
+can. 
+
+953
+00:54:58,900 --> 00:55:03,400
+You can kind of say oh I think 
+maybe it does this or it'll you 
+
+954
+00:55:03,400 --> 00:55:08,599
+know it'll allow you to generate
+code for things that you 
+
+955
+00:55:08,699 --> 00:55:11,500
+wouldn't, you know? 
+You don't necessarily remember 
+
+956
+00:55:11,500 --> 00:55:14,000
+but you know, you need stuff 
+like that. 
+
+957
+00:55:14,099 --> 00:55:18,699
+Yeah it's I should try copilot 
+and See see how it does. 
+
+958
+00:55:18,699 --> 00:55:21,300
+Yeah. 
+Assuming that they're a I am 
+
+959
+00:55:21,300 --> 00:55:26,900
+sure will be a key piece to this
+continued, coevolution of Towing
+
+960
+00:55:26,900 --> 00:55:29,500
+and languages. 
+Well in all these things, allow 
+
+961
+00:55:29,500 --> 00:55:33,900
+us to move up a level which I 
+started in Assembly Language. 
+
+962
+00:55:33,900 --> 00:55:38,199
+So I know that desire to oh my 
+gosh, I have to write all this 
+
+963
+00:55:38,199 --> 00:55:41,500
+stuff by hand, whereas c will do
+it for me. 
+
+964
+00:55:41,500 --> 00:55:44,900
+He C++ will do things job, you 
+know, and it just and it's like 
+
+965
+00:55:44,900 --> 00:55:49,199
+every time It makes us more 
+powerful and we don't have 
+
+966
+00:55:49,199 --> 00:55:53,599
+enough programmers. 
+So that's what we need to do is 
+
+967
+00:55:53,599 --> 00:55:55,500
+make each program or a lot more 
+powerful. 
+
+968
+00:55:56,599 --> 00:55:58,000
+And I think it's almost like 
+this. 
+
+969
+00:55:58,300 --> 00:56:02,599
+The tools also, I think make us 
+better programmers in terms of, 
+
+970
+00:56:02,900 --> 00:56:06,900
+by suggesting something. 
+They are the thing asking you 
+
+971
+00:56:06,900 --> 00:56:09,900
+why? 
+Like they present you with that 
+
+972
+00:56:09,900 --> 00:56:14,300
+choice of, here's a suggestion. 
+Why would you either use it or 
+
+973
+00:56:14,300 --> 00:56:17,900
+not use it and that in Soap is 
+making you a better programmer 
+
+974
+00:56:17,900 --> 00:56:19,599
+in terms of. 
+Yeah, that's a good question. 
+
+975
+00:56:19,599 --> 00:56:21,300
+Like, should I use? 
+This is just the best thing to 
+
+976
+00:56:21,300 --> 00:56:24,000
+be using, it's a good 
+suggestion, where's it come 
+
+977
+00:56:24,000 --> 00:56:26,900
+from? 
+So it's almost bringing that why
+
+978
+00:56:26,900 --> 00:56:32,000
+to the surface more and more? 
+I think, as we go enough, yes, I
+
+979
+00:56:32,000 --> 00:56:36,900
+do like in IntelliJ when, when 
+I've written some code, and then
+
+980
+00:56:36,900 --> 00:56:40,300
+IntelliJ is like, there's a 
+better way to do this because 
+
+981
+00:56:40,300 --> 00:56:45,199
+it's teaching me that. 
+Oh, like here's you've done 
+
+982
+00:56:45,199 --> 00:56:46,300
+things, maybe in the way that 
+made sense. 
+
+983
+00:56:46,400 --> 00:56:47,900
+Sense to you, but here's a 
+better way. 
+
+984
+00:56:48,000 --> 00:56:54,099
+And that's probably a key part 
+of how we continue to evolve our
+
+985
+00:56:54,099 --> 00:56:55,300
+consciousness of. 
+Yeah. 
+
+986
+00:56:55,599 --> 00:56:58,099
+How we write code is 2. 
+That is to be taught as we're 
+
+987
+00:56:58,099 --> 00:57:01,400
+actually writing the code. 
+Well, I think it's very similar,
+
+988
+00:57:01,400 --> 00:57:06,099
+the very first I'd say instances
+of this was spelling Checkers. 
+
+989
+00:57:06,699 --> 00:57:10,000
+My friend Daniel was a terrible 
+speller and he goes I don't care
+
+990
+00:57:10,000 --> 00:57:12,699
+about spelling spelling stupid 
+I'm not just going to worry 
+
+991
+00:57:12,699 --> 00:57:15,000
+about it. 
+But I think it was because every
+
+992
+00:57:15,000 --> 00:57:17,400
+time you know, there, Wrong 
+word. 
+
+993
+00:57:17,400 --> 00:57:20,800
+It was you know an emotional hit
+so he just didn't want to deal 
+
+994
+00:57:20,800 --> 00:57:22,400
+with that. 
+And then spelling, checker has 
+
+995
+00:57:22,400 --> 00:57:26,900
+come along and they just go 
+yeah, there's no judgment here. 
+
+996
+00:57:27,099 --> 00:57:31,300
+This is this word is misspelled 
+and I'll give you the correct 
+
+997
+00:57:31,300 --> 00:57:34,599
+spelling and a lot of people are
+going o. 
+
+998
+00:57:34,599 --> 00:57:37,500
+People will become terrible 
+spellers now but he became a 
+
+999
+00:57:37,508 --> 00:57:41,400
+really good speller because you 
+can tie it gently. 
+
+1000
+00:57:41,400 --> 00:57:44,900
+He was being taught gently and 
+non-judgmental mentally and I 
+
+1001
+00:57:44,900 --> 00:57:46,599
+think the same thing happens. 
+Here. 
+
+1002
+00:57:46,599 --> 00:57:49,900
+Whereas if you go, well, you 
+know, using objects is stupid, 
+
+1003
+00:57:49,900 --> 00:57:52,099
+you should use functions. 
+Well, that's not going to fly 
+
+1004
+00:57:52,099 --> 00:57:54,699
+very well. 
+But if it's going, hey, I can 
+
+1005
+00:57:54,699 --> 00:57:58,699
+show you how to use a record 
+here, instead of, you know, the 
+
+1006
+00:57:59,199 --> 00:58:02,400
+classic objects. 
+Yeah, well, that would be a, 
+
+1007
+00:58:02,599 --> 00:58:04,300
+that be a wonderful tool. 
+Yeah. 
+
+1008
+00:58:04,800 --> 00:58:07,599
+Yeah. 
+The gentle non-judgmental 
+
+1009
+00:58:07,599 --> 00:58:10,300
+guiding of tools to better ways 
+to write code. 
+
+1010
+00:58:10,400 --> 00:58:14,199
+That's another person teacher. 
+Good title, the gentle 
+
+1011
+00:58:14,199 --> 00:58:20,699
+non-judgmental Yeah, rather than
+for dummies that he has its 
+
+1012
+00:58:20,699 --> 00:58:21,900
+harsh. 
+Yeah. 
+
+1013
+00:58:22,000 --> 00:58:24,300
+Although that resonated with a 
+lot of people they go. 
+
+1014
+00:58:24,300 --> 00:58:25,800
+Yeah. 
+I don't understand this, I'm a 
+
+1015
+00:58:25,800 --> 00:58:27,000
+dummy. 
+So I'll tell you. 
+
+1016
+00:58:27,900 --> 00:58:30,599
+Yeah. 
+I feel like a dummy a lot and I 
+
+1017
+00:58:30,599 --> 00:58:34,500
+look okay, still yeah. 
+Well, after all this time you 
+
+1018
+00:58:34,500 --> 00:58:37,400
+should not say right? 
+Yeah, right. 
+
+1019
+00:58:37,500 --> 00:58:39,400
+Yeah. 
+I think it's not that people 
+
+1020
+00:58:39,400 --> 00:58:43,099
+need to hear more of is people 
+in those positions where you 
+
+1021
+00:58:43,099 --> 00:58:45,800
+guys have been using these 
+languages, these tools for God 
+
+1022
+00:58:45,800 --> 00:58:47,800
+knows how long. 
+You know, whatever it might be 
+
+1023
+00:58:48,199 --> 00:58:52,300
+having newbies come in and hear 
+that, you know, you still 
+
+1024
+00:58:52,599 --> 00:58:55,000
+question yourself. 
+You still feel like a dummy, 
+
+1025
+00:58:55,000 --> 00:58:58,900
+whatever it might be, is really 
+refreshing to hear well, and 
+
+1026
+00:58:58,900 --> 00:59:03,900
+just understanding that that's 
+not a, I don't know this or that
+
+1027
+00:59:03,900 --> 00:59:06,699
+thing, it's just a baseline. 
+We're scientists. 
+
+1028
+00:59:07,000 --> 00:59:10,699
+We don't understand. 
+We know that the world is far 
+
+1029
+00:59:10,699 --> 00:59:13,400
+more complex than we'll ever be 
+able to understand. 
+
+1030
+00:59:13,699 --> 00:59:16,199
+And that's just the way it is 
+rather than oh no. 
+
+1031
+00:59:17,199 --> 00:59:22,900
+I don't understand this thing. 
+That's a fundamental floor exact
+
+1032
+00:59:22,900 --> 00:59:27,599
+that shows how incompetent I am 
+as a human being as like, no, 
+
+1033
+00:59:27,699 --> 00:59:31,900
+no, it's just nobody understands
+this stuff even people who do 
+
+1034
+00:59:31,900 --> 00:59:34,300
+understand. 
+It typically only learn to 
+
+1035
+00:59:34,300 --> 00:59:37,800
+understand and aspect of it. 
+That's just the way it is get 
+
+1036
+00:59:37,800 --> 00:59:39,400
+used to it. 
+I mean, that's this is why the 
+
+1037
+00:59:39,400 --> 00:59:42,900
+physics background was helpful 
+because I was not a good physics
+
+1038
+00:59:42,900 --> 00:59:46,400
+student, I would fight, you 
+know, I was thrashing. 
+
+1039
+00:59:46,800 --> 00:59:50,400
+But then when you are used to 
+that or you go, oh yeah. 
+
+1040
+00:59:50,400 --> 00:59:52,699
+That's just a way to be and 
+you're going to computers and 
+
+1041
+00:59:52,699 --> 00:59:54,599
+it's like, oh yeah, there's a 
+bunch of stuff. 
+
+1042
+00:59:54,599 --> 00:59:57,099
+I don't understand. 
+And it's probably okay stuff 
+
+1043
+00:59:57,099 --> 01:00:00,500
+that nobody is explaining and 
+they probably don't understand 
+
+1044
+01:00:00,500 --> 01:00:03,300
+it and then you're, but you're 
+right. 
+
+1045
+01:00:03,300 --> 01:00:05,900
+You're absolutely right. 
+Everybody, who's coming in needs
+
+1046
+01:00:05,900 --> 01:00:07,500
+to know that as a. 
+Yeah. 
+
+1047
+01:00:07,699 --> 01:00:10,199
+It's like, nope. 
+You're not going to understand 
+
+1048
+01:00:10,199 --> 01:00:11,900
+things. 
+The best you can do. 
+
+1049
+01:00:11,900 --> 01:00:15,599
+Like you did is start by 
+drilling down into something and
+
+1050
+01:00:15,599 --> 01:00:19,400
+getting Local. 
+What do you got? 
+
+1051
+01:00:19,400 --> 01:00:23,199
+Local Mastery. 
+And the experience of Mastery I 
+
+1052
+01:00:23,199 --> 01:00:26,400
+think is key is like oh it is 
+possible to really understand. 
+
+1053
+01:00:26,400 --> 01:00:28,599
+One thing. 
+Now I can go to another thing 
+
+1054
+01:00:28,800 --> 01:00:32,199
+and the more you do that, the 
+more you are able to achieve 
+
+1055
+01:00:32,199 --> 01:00:36,000
+Mastery because you get me the 
+process. 
+
+1056
+01:00:36,400 --> 01:00:39,099
+Yeah. 
+Yeah, completely. 
+
+1057
+01:00:39,599 --> 01:00:42,699
+Yeah. 
+What's up? 
+
+1058
+01:00:42,699 --> 01:00:43,400
+Yeah. 
+What's next? 
+
+1059
+01:00:43,400 --> 01:00:48,400
+What's so you're exploring tools
+and and how they can be helpful?
+
+1060
+01:00:48,500 --> 01:00:52,099
+Is that have you have any 
+insights yet on that or you just
+
+1061
+01:00:52,099 --> 01:00:54,300
+starting that urine? 
+Yeah, I exploring different 
+
+1062
+01:00:54,300 --> 01:00:56,699
+tools. 
+I'm writing a couple of like 
+
+1063
+01:00:56,699 --> 01:01:00,000
+blogs and things and and just 
+articles around the different 
+
+1064
+01:01:00,000 --> 01:01:02,699
+tools. 
+But yeah, it just sort of 
+
+1065
+01:01:02,699 --> 01:01:06,900
+exploring the next iteration, 
+the next Innovations in Java, 
+
+1066
+01:01:06,900 --> 01:01:11,099
+and Things like Tecate, 10 Micro
+46 is coming out. 
+
+1067
+01:01:11,900 --> 01:01:14,000
+Things like cry. 
+You technologies that was kind 
+
+1068
+01:01:14,000 --> 01:01:15,800
+of interesting. 
+What was it? 
+
+1069
+01:01:15,800 --> 01:01:18,300
+That's cry. 
+If you've come across it, I 
+
+1070
+01:01:18,308 --> 01:01:20,300
+don't know. 
+But checkpoint. 
+
+1071
+01:01:20,300 --> 01:01:23,000
+I'm going to not remember this 
+acronym NOW checkpoint 
+
+1072
+01:01:23,000 --> 01:01:30,199
+initiation, something something 
+CRI your UI UI, and it's a tool 
+
+1073
+01:01:30,199 --> 01:01:34,500
+that's being developed that 
+basically enables Java to 
+
+1074
+01:01:34,500 --> 01:01:39,800
+utilize snapshots so that it can
+start Up in much much quicker 
+
+1075
+01:01:40,199 --> 01:01:43,099
+startup times. 
+Very similar to sort of, if you 
+
+1076
+01:01:43,099 --> 01:01:45,300
+were looking at serverless, for 
+example that similar sort of 
+
+1077
+01:01:45,300 --> 01:01:48,400
+start up times. 
+Like so we didn't open up to 
+
+1078
+01:01:48,400 --> 01:01:52,300
+millions of the Jimmy am and 
+it's exactly you can like resume
+
+1079
+01:01:52,300 --> 01:01:56,199
+from this house. 
+Oh it's almost like a 
+
+1080
+01:01:56,199 --> 01:01:59,400
+continuation. 
+I didn't do that. 
+
+1081
+01:02:00,199 --> 01:02:03,900
+Well, I mean, you know, the way 
+a continuation is kind of a 
+
+1082
+01:02:03,908 --> 01:02:06,000
+function that can suspend 
+itself. 
+
+1083
+01:02:06,599 --> 01:02:09,199
+Yes, go back to it. 
+It's just right. 
+
+1084
+01:02:09,199 --> 01:02:13,800
+Where it, well, if there's no VM
+level continuously the right, 
+
+1085
+01:02:13,800 --> 01:02:14,699
+right? 
+Exactly. 
+
+1086
+01:02:14,699 --> 01:02:16,500
+And so, this is what that's 
+trying to enable. 
+
+1087
+01:02:17,500 --> 01:02:20,599
+So, you have this sort of, yeah,
+there's this ability to be able 
+
+1088
+01:02:20,599 --> 01:02:23,400
+to go back to where you were 
+without having to have it up and
+
+1089
+01:02:23,400 --> 01:02:26,599
+running the whole time without 
+having to rebuild the entire 
+
+1090
+01:02:26,599 --> 01:02:28,199
+cow. 
+Yeah, exactly. 
+
+1091
+01:02:28,300 --> 01:02:31,500
+Play a very important out 
+asleep. 
+
+1092
+01:02:32,699 --> 01:02:36,300
+Bruce, wake it up? 
+Yes. 
+
+1093
+01:02:36,300 --> 01:02:43,900
+I'm gonna run with this 
+biological analogy, people that 
+
+1094
+01:02:43,900 --> 01:02:47,599
+are offended by the use of cows.
+And in this metaphor, we 
+
+1095
+01:02:47,599 --> 01:02:49,800
+apologize to the vegans in our 
+audience. 
+
+1096
+01:02:51,000 --> 01:02:53,400
+People care about cows like 
+coils are animals and the 
+
+1097
+01:02:53,400 --> 01:02:56,599
+environment environmental damage
+that cows do. 
+
+1098
+01:02:56,599 --> 01:02:59,500
+Yeah, you know, 100. 
+I'm basically a device of 
+
+1099
+01:02:59,500 --> 01:03:02,599
+species. 
+I think, Joy, a divisive 
+
+1100
+01:03:02,599 --> 01:03:04,300
+species. 
+That's like Mom. 
+
+1101
+01:03:04,300 --> 01:03:11,000
+I don't think we use tofu tofu, 
+everything is problematic but 
+
+1102
+01:03:11,000 --> 01:03:13,300
+yeah that's true. 
+All models are wrong. 
+
+1103
+01:03:13,300 --> 01:03:16,900
+Some are useful. 
+All right. 
+
+1104
+01:03:16,900 --> 01:03:18,099
+Well anything else. 
+Grace? 
+
+1105
+01:03:18,500 --> 01:03:20,599
+No no I it's been great Johnny. 
+You guys. 
+
+1106
+01:03:20,599 --> 01:03:22,199
+Thank you for such a great 
+conversation. 
+
+1107
+01:03:22,300 --> 01:03:23,000
+Yeah. 
+Super fun. 
+
+1108
+01:03:23,000 --> 01:03:24,500
+Thanks for joining us. 
+Yeah. 
+
+1109
+01:03:24,500 --> 01:03:29,900
+And we'll try and see if we can 
+get you to the winter tech for 
+
+1110
+01:03:29,900 --> 01:03:31,000
+him this year. 
+Yes. 
+
+1111
+01:03:31,000 --> 01:03:32,900
+As soon as I figure out when 
+it's going to be. 
+
+1112
+01:03:32,900 --> 01:03:38,000
+Yes, that small little detail. 
+All right. 
+
+1113
+01:03:38,000 --> 01:03:39,800
+Well thank you so much, grace. 
+Have a good one. 
+
+1114
+01:03:40,099 --> 01:03:41,500
+Thanks so much. 
+Bye.
+

@@ -1,0 +1,5568 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,800 --> 00:00:05,800
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:09,300
+All right. 
+Well welcome everyone. 
+
+4
+00:00:09,300 --> 00:00:12,200
+Today we have with us vivec. 
+Did I say that right from 
+
+5
+00:00:12,200 --> 00:00:15,300
+Toronto. 
+And what's your last name? 
+
+6
+00:00:15,600 --> 00:00:19,900
+It's a car, it's a car. 
+And so you and I started working
+
+7
+00:00:19,900 --> 00:00:25,000
+together recently around some 
+wasm stuff and Bruce and I have 
+
+8
+00:00:25,000 --> 00:00:31,500
+we keeps coming up, like wasm is
+this exciting thing with lots of
+
+9
+00:00:31,500 --> 00:00:34,200
+stuff happening around it. 
+Like we got to have somebody on 
+
+10
+00:00:34,200 --> 00:00:35,000
+a talk about lies. 
+Mmm. 
+
+11
+00:00:35,000 --> 00:00:37,500
+So here we have the VAC. 
+Yeah, it is. 
+
+12
+00:00:37,700 --> 00:00:40,200
+About talk to us and help us 
+learn about why is mmm. 
+
+13
+00:00:40,300 --> 00:00:42,900
+And before we get started, I 
+want to plug the winter tech 
+
+14
+00:00:42,900 --> 00:00:45,300
+form, which is coming up in a 
+couple of weeks. 
+
+15
+00:00:45,800 --> 00:00:50,100
+You can still come yes in 
+Crested Butte Colorado to Butte 
+
+16
+00:00:50,100 --> 00:00:52,400
+Colorado. 
+And we have, we're getting more 
+
+17
+00:00:52,400 --> 00:00:56,000
+snow as we speak. 
+So, I mean, you don't have to be
+
+18
+00:00:56,000 --> 00:00:59,000
+a snow person, but if you are, 
+if you are. 
+
+19
+00:00:59,000 --> 00:01:01,700
+It's nice. 
+I'm really excited. 
+
+20
+00:01:02,600 --> 00:01:03,600
+I'll be here. 
+Of course. 
+
+21
+00:01:03,600 --> 00:01:07,100
+Yes. 
+But there's I think we have 
+
+22
+00:01:07,100 --> 00:01:09,200
+decent number. 
+We'll come here and so nuff to 
+
+23
+00:01:09,200 --> 00:01:11,600
+make conversations, which is the
+whole point. 
+
+24
+00:01:12,100 --> 00:01:15,400
+I'm sure we will spend some time
+exploring wasm. 
+
+25
+00:01:15,800 --> 00:01:18,800
+Yeah, maybe that'll be the 
+hackathon day project or 
+
+26
+00:01:18,900 --> 00:01:22,700
+suggestion unless I get sucked 
+in and Nick's so yeah. 
+
+27
+00:01:22,700 --> 00:01:25,400
+I've been you know, I've been on
+this next thing. 
+
+28
+00:01:25,500 --> 00:01:32,100
+Next, picnics kick and there's 
+good my list of my to-do list 
+
+29
+00:01:32,100 --> 00:01:35,200
+with Nick's it initially started
+shrinking. 
+
+30
+00:01:35,400 --> 00:01:37,700
+And now I'm at the point with 
+Nick's where my to-do list is is
+
+31
+00:01:37,700 --> 00:01:45,300
+growing and so could maybe do 
+some Nick's stuff or you know 
+
+32
+00:01:45,300 --> 00:01:46,900
+that easy racer thing I've been 
+working on. 
+
+33
+00:01:46,900 --> 00:01:50,400
+Yes. 
+So somebody I well Jack just we 
+
+34
+00:01:50,400 --> 00:01:51,900
+know Jackie. 
+My wonder if he's going to be 
+
+35
+00:01:51,900 --> 00:01:54,100
+here this year. 
+We're gonna seem like yeah. 
+
+36
+00:01:54,600 --> 00:01:57,800
+He contributed the Go version 
+and is working on a Swift swift 
+
+37
+00:01:57,800 --> 00:02:01,500
+version and then someone else 
+just contributed a Scala, one 
+
+38
+00:02:01,700 --> 00:02:05,200
+with something that loot uses 
+Loom underneath the covers with 
+
+39
+00:02:05,200 --> 00:02:09,000
+Scala, and its really nice. 
+You gotta see this. 
+
+40
+00:02:09,199 --> 00:02:12,600
+It's called Ox is the name of 
+the framework for structured. 
+
+41
+00:02:12,600 --> 00:02:14,900
+Concurrency, and Scala with 
+loom, huh? 
+
+42
+00:02:15,200 --> 00:02:17,600
+Anyways, I've we definitely 
+could spend some time on. 
+
+43
+00:02:17,600 --> 00:02:19,600
+He's all right. 
+Okay, your Tech Farm. 
+
+44
+00:02:19,600 --> 00:02:21,500
+Yeah, where I was going. 
+There's all kinds of 
+
+45
+00:02:21,500 --> 00:02:23,800
+possibilities anyway. 
+We were going to talk about. 
+
+46
+00:02:23,800 --> 00:02:25,200
+Why is it rasim? 
+Okay? 
+
+47
+00:02:25,200 --> 00:02:27,800
+The vet tell us about yourself. 
+Sure. 
+
+48
+00:02:27,800 --> 00:02:31,100
+Yeah, I'm product manager 
+working with the Chrome team on 
+
+49
+00:02:31,700 --> 00:02:35,200
+our web platform side of things.
+So we have a one group that 
+
+50
+00:02:35,200 --> 00:02:37,600
+works on the user facing side 
+for the Chrome browser, and A 
+
+51
+00:02:37,608 --> 00:02:40,000
+group that works with the very 
+standard bodies and partners 
+
+52
+00:02:40,000 --> 00:02:43,000
+across the web ecosystem. 
+And I've been working for the 
+
+53
+00:02:43,000 --> 00:02:46,800
+last couple of years on on wasm 
+or webassembly and it's 
+
+54
+00:02:46,900 --> 00:02:50,100
+incredibly exciting new 
+technology that started years 
+
+55
+00:02:50,100 --> 00:02:53,200
+and years and years ago. 
+But is now really kind of 
+
+56
+00:02:53,900 --> 00:02:56,800
+becoming super relevant and 
+exciting for a lot of different 
+
+57
+00:02:56,800 --> 00:02:59,500
+reasons. 
+And yeah, we're working with 
+
+58
+00:02:59,800 --> 00:03:04,200
+folks work with jetbrains on a 
+cotton compiler to webassembly, 
+
+59
+00:03:04,200 --> 00:03:07,200
+as well as a whole bunch of 
+other potential Technologies and
+
+60
+00:03:07,200 --> 00:03:09,900
+use case. 
+So yeah, it's super exciting 
+
+61
+00:03:09,900 --> 00:03:11,400
+time to be working on 
+webassembly. 
+
+62
+00:03:11,400 --> 00:03:14,900
+It's really great to share it 
+with you guys and James, you 
+
+63
+00:03:14,900 --> 00:03:19,900
+just tried the kotlin wasm. 
+Yeah, we just got to dive into 
+
+64
+00:03:19,900 --> 00:03:24,400
+it last week and you got this 
+thing working did. 
+
+65
+00:03:24,400 --> 00:03:29,300
+The hardest challenge was Nick's
+full circle back to Nick's. 
+
+66
+00:03:29,300 --> 00:03:32,300
+We had some challenges getting 
+getting some Nick's stuff 
+
+67
+00:03:32,300 --> 00:03:35,700
+working at an abandoned building
+into a bun to if anyone, it 
+
+68
+00:03:35,700 --> 00:03:39,300
+wasn't totally unrelated to Oh 
+wow, Zone common when I was um, 
+
+69
+00:03:39,300 --> 00:03:41,500
+and yeah. 
+So we got some some basic stuff 
+
+70
+00:03:41,500 --> 00:03:46,700
+working last week and it's cool 
+like I can for years. 
+
+71
+00:03:46,700 --> 00:03:49,600
+I've been hearing about all the 
+excitement around wasm and the 
+
+72
+00:03:49,608 --> 00:03:53,800
+thing that's always kind of kept
+me from it is that it until the 
+
+73
+00:03:53,800 --> 00:03:55,800
+wasm GC stuff which will get 
+into. 
+
+74
+00:03:56,300 --> 00:04:01,900
+I didn't, I've never actually 
+done C or C++ and so that was 
+
+75
+00:04:01,900 --> 00:04:04,000
+just kind of not a way for me 
+and Wow's. 
+
+76
+00:04:04,000 --> 00:04:08,700
+Mm, I've done a tiny bit of rust
+and that I Have done the rust 
+
+77
+00:04:08,700 --> 00:04:11,300
+wasm thing, and I think that 
+that's interesting. 
+
+78
+00:04:11,300 --> 00:04:13,300
+There's a lot of cool stuff 
+happening there. 
+
+79
+00:04:13,400 --> 00:04:18,000
+But for me, I like the modern 
+monitors, not the quite the 
+
+80
+00:04:18,000 --> 00:04:21,600
+right word, the higher-level 
+languages. 
+
+81
+00:04:21,800 --> 00:04:23,600
+And so now that we're getting 
+some of these higher-level, 
+
+82
+00:04:23,600 --> 00:04:26,400
+languages being able to Target 
+lausanne, you could almost say 
+
+83
+00:04:26,400 --> 00:04:29,500
+the happier path, the happier. 
+Right? 
+
+84
+00:04:29,500 --> 00:04:31,100
+Yeah. 
+Yeah, sure. 
+
+85
+00:04:31,100 --> 00:04:34,600
+High-level languages allow you 
+to do more with less work? 
+
+86
+00:04:34,800 --> 00:04:37,100
+Yeah. 
+So I think maybe we're we start 
+
+87
+00:04:37,100 --> 00:04:39,200
+this. 
+Is to talk about what has been 
+
+88
+00:04:39,200 --> 00:04:44,100
+done for ages. 
+Like oh over a decade. 
+
+89
+00:04:44,200 --> 00:04:48,100
+Maybe to with the web is that if
+you had a language that you 
+
+90
+00:04:48,100 --> 00:04:51,600
+wanted to use and you wanted 
+that language to Target the web 
+
+91
+00:04:51,600 --> 00:04:54,300
+which was in your language is 
+not JavaScript. 
+
+92
+00:04:54,500 --> 00:04:59,700
+You had to transpile your 
+language into JavaScript and 
+
+93
+00:04:59,900 --> 00:05:05,000
+there are just probably endless 
+issues with this with this 
+
+94
+00:05:05,000 --> 00:05:07,400
+approach. 
+Oh yeah, used coffeescript. 
+
+95
+00:05:07,700 --> 00:05:10,800
+And it was actually, I mean, 
+compared to JavaScript, it was 
+
+96
+00:05:10,800 --> 00:05:13,600
+nice but, you know, better than 
+JavaScript, but I guess 
+
+97
+00:05:13,600 --> 00:05:17,100
+JavaScript has gotten a lot of 
+better things in it. 
+
+98
+00:05:17,100 --> 00:05:19,900
+So now a lot of those people, 
+well, they want a better 
+
+99
+00:05:19,900 --> 00:05:23,000
+JavaScript or doing types. 
+Yeah, Isaac typescript has taken
+
+100
+00:05:23,000 --> 00:05:27,900
+over but I think for a long time
+a lot of people have wanted 
+
+101
+00:05:27,900 --> 00:05:30,700
+something that was able to run 
+in the browser. 
+
+102
+00:05:31,400 --> 00:05:34,300
+That is not JavaScript. 
+I certainly have. 
+
+103
+00:05:34,500 --> 00:05:38,200
+And, and so thus wasm, right? 
+It is the beca. 
+
+104
+00:05:38,200 --> 00:05:39,500
+Are we getting that, right? 
+Yeah. 
+
+105
+00:05:39,500 --> 00:05:41,500
+Yeah, no. 
+There's been a whole bunch of 
+
+106
+00:05:41,500 --> 00:05:44,200
+different inroads in the 
+direction of was in my like to 
+
+107
+00:05:44,200 --> 00:05:46,200
+think conceptually. 
+And one of them is exactly that.
+
+108
+00:05:46,200 --> 00:05:51,300
+It's like you know it's hard to 
+say you have a fully explored, 
+
+109
+00:05:51,300 --> 00:05:53,500
+what it means to be a platform 
+if there's only one language 
+
+110
+00:05:53,500 --> 00:05:58,600
+that runs on it and and so we've
+you know, kind of intuited that 
+
+111
+00:05:58,600 --> 00:06:01,700
+you know we want to kind of open
+up the web to lots of different 
+
+112
+00:06:01,700 --> 00:06:05,000
+languages and give them a fair 
+shot at a full kind of kind of 
+
+113
+00:06:05,000 --> 00:06:07,400
+device performance and that 
+wasn't really possible. 
+
+114
+00:06:07,600 --> 00:06:09,500
+World that you're describing, 
+where everything has to be 
+
+115
+00:06:09,500 --> 00:06:12,900
+routed through, JavaScript, and 
+inherit all of its, all of its, 
+
+116
+00:06:12,900 --> 00:06:14,900
+you know, quirks. 
+And and some of those quarks are
+
+117
+00:06:14,900 --> 00:06:16,500
+really amazing. 
+If you're writing JavaScript 
+
+118
+00:06:16,500 --> 00:06:19,200
+code, or typescript code, it's 
+very dynamic or easy to write, 
+
+119
+00:06:19,500 --> 00:06:22,000
+but if you're writing C++ code, 
+you know, you definitely don't 
+
+120
+00:06:22,000 --> 00:06:24,900
+want to be, you know, running 
+that through through JavaScript 
+
+121
+00:06:24,900 --> 00:06:27,700
+because there's just so many 
+different properties, that, that
+
+122
+00:06:27,700 --> 00:06:29,400
+are going to get in the way. 
+So, yeah. 
+
+123
+00:06:29,400 --> 00:06:33,100
+I think the, as an example of 
+one of these, that I think I've 
+
+124
+00:06:33,100 --> 00:06:36,500
+heard about is the way that 
+numbers are represented in 
+
+125
+00:06:36,500 --> 00:06:41,500
+JavaScript. 
+The in, if you are transpiling 
+
+126
+00:06:41,500 --> 00:06:46,400
+to JavaScript you assume this 
+weird thing about JavaScript, 
+
+127
+00:06:46,400 --> 00:06:49,400
+which is like every number is 
+internally a float or something 
+
+128
+00:06:49,400 --> 00:06:51,400
+like that. 
+Is that well inaudible? 
+
+129
+00:06:51,400 --> 00:06:53,400
+Yeah, it's internally 
+unspecified, right? 
+
+130
+00:06:53,400 --> 00:06:55,000
+Like so an implementation with, 
+that's right. 
+
+131
+00:06:55,000 --> 00:06:57,100
+Even better? 
+Yeah, it needs to do. 
+
+132
+00:06:57,100 --> 00:07:01,900
+Exactly, it's just anything. 
+Yeah, but that's, I mean, that's
+
+133
+00:07:01,900 --> 00:07:03,900
+the nature of these sort of 
+like, Dynamic environments, 
+
+134
+00:07:03,900 --> 00:07:05,900
+right? 
+Like, it's, it's an idealized 
+
+135
+00:07:05,900 --> 00:07:07,400
+programming environment. 
+That's really. 
+
+136
+00:07:07,600 --> 00:07:10,500
+The great to use, but it 
+requires some Machinery to 
+
+137
+00:07:10,500 --> 00:07:15,100
+actually make that run on a 
+physical machine and that 
+
+138
+00:07:15,100 --> 00:07:17,700
+Machinery is expensive. 
+And not always well specified 
+
+139
+00:07:17,700 --> 00:07:20,900
+and has run time costs. 
+So yeah, numbers are just a 
+
+140
+00:07:20,900 --> 00:07:23,600
+great example, there's a thing 
+called boxing your types. 
+
+141
+00:07:23,600 --> 00:07:25,900
+So, basically you put everything
+into a container so that you 
+
+142
+00:07:25,900 --> 00:07:27,900
+don't have to worry about how 
+big it is inside. 
+
+143
+00:07:28,400 --> 00:07:30,200
+There's a bunch of other things 
+that, you know, interpreters, 
+
+144
+00:07:30,200 --> 00:07:32,900
+do. 
+And if you need it, it's great. 
+
+145
+00:07:32,900 --> 00:07:35,800
+And if you don't need it, you 
+know, then it's kind of 
+
+146
+00:07:35,900 --> 00:07:39,600
+overhead. 
+And one of the related 
+
+147
+00:07:39,600 --> 00:07:42,700
+limitation, I think with this is
+that in JavaScript you can only 
+
+148
+00:07:42,700 --> 00:07:46,800
+go up to like an ant 32 in terms
+of integer representations, 
+
+149
+00:07:46,800 --> 00:07:50,200
+right? 
+And and so if you need something
+
+150
+00:07:50,200 --> 00:07:54,600
+larger than n 32 then you just 
+stir like well like it gets 
+
+151
+00:07:54,600 --> 00:07:56,200
+hard. 
+I think it just used to. 
+
+152
+00:07:56,900 --> 00:07:59,100
+That's right. 
+Combine two ends together and 
+
+153
+00:07:59,100 --> 00:08:03,600
+yeah, there you go. 
+Anyways, it's this is and I'm 
+
+154
+00:08:03,600 --> 00:08:07,500
+maybe not 100% getting this 
+limitation correctly but the I 
+
+155
+00:08:07,508 --> 00:08:11,600
+think many point is that that 
+when you transpile to 
+
+156
+00:08:11,600 --> 00:08:14,900
+JavaScript, when that is your 
+the, what defines your 
+
+157
+00:08:14,900 --> 00:08:19,000
+limitations there, you're always
+going to be bumping against 
+
+158
+00:08:19,000 --> 00:08:22,500
+something that is not quite the 
+way that you want it to be. 
+
+159
+00:08:22,500 --> 00:08:28,100
+And so many years ago, this idea
+to have an Assembly Language 
+
+160
+00:08:28,100 --> 00:08:33,100
+underneath JavaScript came about
+and that was webassembly, is 
+
+161
+00:08:33,100 --> 00:08:36,600
+that I wait a minute. 
+Let me try this because I my 
+
+162
+00:08:36,600 --> 00:08:38,100
+understanding was that Is that 
+okay? 
+
+163
+00:08:38,100 --> 00:08:42,900
+JavaScript runs on a virtual 
+machine and so it has byte 
+
+164
+00:08:42,900 --> 00:08:44,800
+codes. 
+Is that right? 
+
+165
+00:08:44,900 --> 00:08:47,500
+Does it have bytecodes? 
+It has? 
+
+166
+00:08:47,500 --> 00:08:50,100
+Yes, there are certain 
+intermediate representations 
+
+167
+00:08:50,100 --> 00:08:53,100
+between the JavaScript you would
+write by hand and the code. 
+
+168
+00:08:53,100 --> 00:08:56,000
+That's ultimately executed. 
+But there are various byte 
+
+169
+00:08:56,000 --> 00:08:58,300
+codes, actually going all the 
+way down to machine 
+
+170
+00:08:58,300 --> 00:09:00,200
+instructions. 
+In a just in time compiler. 
+
+171
+00:09:00,200 --> 00:09:03,200
+So yeah, there's it's whole 
+Spectrum inside the inside The 
+
+172
+00:09:03,200 --> 00:09:08,000
+Interpreter magic. 
+So my understanding of wasm That
+
+173
+00:09:08,100 --> 00:09:15,300
+it's some turing-complete subset
+of those byte codes that you're 
+
+174
+00:09:15,300 --> 00:09:17,600
+targeting. 
+When you're compiling from 
+
+175
+00:09:17,600 --> 00:09:19,300
+another language. 
+Is that right? 
+
+176
+00:09:19,900 --> 00:09:23,500
+Um, it's not quite a subset. 
+It's actually kind of a new 
+
+177
+00:09:23,500 --> 00:09:28,100
+language on its own, and so, but
+it's meant to be very close to 
+
+178
+00:09:28,200 --> 00:09:31,400
+the low-level machine languages 
+of a lot of different machines. 
+
+179
+00:09:31,800 --> 00:09:34,800
+So the idea with webassembly and
+this goes even before there was 
+
+180
+00:09:34,800 --> 00:09:37,300
+webassembly, we at Google had a 
+technology called me. 
+
+181
+00:09:37,500 --> 00:09:41,300
+Of client where you could 
+compile a C++ app, you know, 
+
+182
+00:09:41,300 --> 00:09:43,800
+similar to you similar to what 
+you would build with for a 
+
+183
+00:09:43,800 --> 00:09:45,900
+desktop app. 
+Like, you know, Google Maps back
+
+184
+00:09:45,900 --> 00:09:48,800
+in the day or sorry, Google 
+Earth back in the day and then 
+
+185
+00:09:48,800 --> 00:09:51,800
+you can ship that code as an exe
+that would then run, you know, 
+
+186
+00:09:51,800 --> 00:09:55,600
+in an inside a Sandbox in the 
+browser natively on your device 
+
+187
+00:09:55,600 --> 00:09:58,300
+but still sort of protected in 
+the web runtime environment. 
+
+188
+00:09:59,200 --> 00:10:02,000
+And so, what we want to do is 
+take that technology and not 
+
+189
+00:10:02,000 --> 00:10:05,600
+make it sort of specific to one 
+platform or one provider wanted 
+
+190
+00:10:05,600 --> 00:10:07,200
+to open it up. 
+We also didn't want to 
+
+191
+00:10:07,208 --> 00:10:10,700
+necessarily Sara Lee, you know, 
+fix the technology on any one 
+
+192
+00:10:10,700 --> 00:10:12,900
+machine architecture. 
+So we didn't want it to just be 
+
+193
+00:10:12,900 --> 00:10:15,000
+for Intel processors or arm 
+processors. 
+
+194
+00:10:15,000 --> 00:10:18,700
+We wanted to kind of be General.
+So what, you know, you can think
+
+195
+00:10:18,700 --> 00:10:22,400
+of webassembly as the machine 
+language for a logical 
+
+196
+00:10:22,400 --> 00:10:23,900
+processor. 
+A processor that doesn't 
+
+197
+00:10:23,900 --> 00:10:28,100
+physically exist anywhere, but 
+has a well-defined set of 
+
+198
+00:10:28,100 --> 00:10:31,500
+behaviors the way of physical 
+processor would and webassembly 
+
+199
+00:10:31,500 --> 00:10:34,700
+is easily translatable into the 
+physical instructions for a lot 
+
+200
+00:10:34,700 --> 00:10:37,300
+of processors that exist today, 
+including arm devices. 
+
+201
+00:10:37,400 --> 00:10:40,900
+On mobile as well as you know 
+until devices on the on desktop.
+
+202
+00:10:41,600 --> 00:10:44,800
+So it sounds a lot like what 
+they did with the Java virtual 
+
+203
+00:10:44,800 --> 00:10:52,400
+machine, but you're saying that 
+they actually created a bunch 
+
+204
+00:10:52,400 --> 00:10:55,900
+of, did they create a whole new 
+set of opcodes? 
+
+205
+00:10:55,900 --> 00:10:59,600
+Or did they were there some that
+were already. 
+
+206
+00:10:59,600 --> 00:11:01,500
+Okay. 
+And so they could use those and 
+
+207
+00:11:01,500 --> 00:11:05,900
+add and and also how did they 
+shoehorn this into this 
+
+208
+00:11:05,900 --> 00:11:09,600
+JavaScript world? 
+Well yeah, that second question 
+
+209
+00:11:09,600 --> 00:11:12,500
+is a very big open ongoing 
+design question in the 
+
+210
+00:11:12,508 --> 00:11:16,200
+community, but in terms of 
+design the machine, I think they
+
+211
+00:11:16,200 --> 00:11:19,700
+were able to sort of learn from 
+the kind of maturation of 
+
+212
+00:11:19,700 --> 00:11:22,900
+machine instructions over the 
+many years like x86 has been 
+
+213
+00:11:22,900 --> 00:11:24,800
+around for very long time. 
+Arm has been around for a very 
+
+214
+00:11:24,800 --> 00:11:26,700
+long time. 
+All these machine language, 
+
+215
+00:11:26,700 --> 00:11:29,700
+instructions are instruction 
+sets have kind of coalesced 
+
+216
+00:11:29,700 --> 00:11:32,100
+around a common set of, you 
+know, register machines and 
+
+217
+00:11:32,100 --> 00:11:35,600
+stack machines, and common 
+Concepts virtual memory, that 
+
+218
+00:11:35,600 --> 00:11:37,700
+sort of thing that have kind of 
+built up over the many The 
+
+219
+00:11:37,700 --> 00:11:39,900
+years. 
+So they had a really great 
+
+220
+00:11:39,900 --> 00:11:43,300
+starting point just in the in 
+the computer science ecosystem 
+
+221
+00:11:43,300 --> 00:11:44,900
+and the software development 
+ecosystem. 
+
+222
+00:11:45,800 --> 00:11:49,800
+And so it is it's not quite sort
+of like inventing a whole new 
+
+223
+00:11:49,800 --> 00:11:51,200
+machine. 
+That's never existed before. 
+
+224
+00:11:51,200 --> 00:11:53,700
+It's actually just polishing 
+some of the rough edges of 
+
+225
+00:11:53,700 --> 00:11:56,000
+individual architectures and 
+creating something new. 
+
+226
+00:11:57,000 --> 00:12:00,400
+So real quick, when webassembly 
+was created part of that 
+
+227
+00:12:00,500 --> 00:12:04,800
+creation was to at least 
+standardize the the bytecode op 
+
+228
+00:12:04,800 --> 00:12:07,500
+codes that we're going to be 
+supporting. 
+
+229
+00:12:07,700 --> 00:12:13,100
+Headed by this probably at the 
+point, theoretical wasm machine.
+
+230
+00:12:13,300 --> 00:12:15,900
+Yeah, exactly. 
+So the wasm standard essentially
+
+231
+00:12:15,900 --> 00:12:18,600
+is a standard for this machine 
+and what it will do when it 
+
+232
+00:12:18,600 --> 00:12:20,800
+encounters each one of these by 
+codes and how it kind of 
+
+233
+00:12:20,808 --> 00:12:23,500
+manipulates memory and all the 
+kind of performance 
+
+234
+00:12:23,500 --> 00:12:27,000
+characteristics around it. 
+And and it and you know, for the
+
+235
+00:12:27,000 --> 00:12:29,800
+two platforms that are most 
+popular right now x86 and arm, 
+
+236
+00:12:30,100 --> 00:12:31,900
+as well as we hope future 
+platforms. 
+
+237
+00:12:32,100 --> 00:12:34,400
+It should be very easy to 
+realize that those performance 
+
+238
+00:12:34,400 --> 00:12:36,800
+requirements and that 
+specification without the kind 
+
+239
+00:12:36,800 --> 00:12:38,900
+of heavyweight in, Interpreter 
+that you have today with 
+
+240
+00:12:38,900 --> 00:12:42,000
+JavaScript. 
+And so in, you know, at least in
+
+241
+00:12:42,100 --> 00:12:45,000
+platforms, like Android and 
+chrome and V8 we actually can 
+
+242
+00:12:45,000 --> 00:12:46,800
+lower those instructions 
+directly to machine code 
+
+243
+00:12:46,800 --> 00:12:48,800
+instructions. 
+It's a little bit trickier on 
+
+244
+00:12:48,800 --> 00:12:52,700
+iOS because they don't allow 
+kind of code pages to be jaded, 
+
+245
+00:12:52,700 --> 00:12:56,400
+but that's the idea of kind of 
+like it basically is as close as
+
+246
+00:12:56,400 --> 00:12:59,000
+possible to a machine 
+instruction without being tied 
+
+247
+00:12:59,000 --> 00:13:01,800
+to a particular machine. 
+Vendor, huh? 
+
+248
+00:13:03,300 --> 00:13:08,500
+What's amazing is that this Kim 
+I guess in a lot of ways the web
+
+249
+00:13:08,500 --> 00:13:12,000
+is this creating this common 
+denominator across platforms. 
+
+250
+00:13:12,200 --> 00:13:16,900
+And so it seems in some ways 
+weird that that this common 
+
+251
+00:13:17,200 --> 00:13:20,900
+Assembly Language. 
+Common bytecode would come kind 
+
+252
+00:13:20,900 --> 00:13:23,000
+of through the browsers and 
+through the web but then it also
+
+253
+00:13:23,000 --> 00:13:26,400
+kind of makes sense because of 
+the web is always kind of done, 
+
+254
+00:13:26,400 --> 00:13:29,500
+that sort of thing. 
+So yeah oscillating. 
+
+255
+00:13:29,700 --> 00:13:32,600
+Yeah. 
+And so seeing actually What 
+
+256
+00:13:32,600 --> 00:13:35,100
+we're seeing actually you know 
+webassembly being pulled in the 
+
+257
+00:13:35,100 --> 00:13:37,000
+other direction. 
+So we created this like you 
+
+258
+00:13:37,000 --> 00:13:40,000
+said, for the web to run on all 
+different platforms but now 
+
+259
+00:13:40,000 --> 00:13:43,000
+webassembly is starting to show 
+up on cloud, computing platforms
+
+260
+00:13:43,000 --> 00:13:46,300
+and Edge, Computing platforms 
+because of exactly that, it's 
+
+261
+00:13:46,300 --> 00:13:48,300
+this common sort of isolated run
+time. 
+
+262
+00:13:48,600 --> 00:13:51,900
+It's kind of doing four 
+containers, you know, it's doing
+
+263
+00:13:51,900 --> 00:13:54,100
+at the instruction set, what 
+containers did for the kind of 
+
+264
+00:13:54,100 --> 00:13:56,900
+operating system environment, 
+you can create a packaged 
+
+265
+00:13:57,000 --> 00:14:01,000
+binary, that truly does. 
+It is portable, and that's super
+
+266
+00:14:01,000 --> 00:14:02,800
+exciting. 
+Yeah. 
+
+267
+00:14:02,800 --> 00:14:05,900
+So back to Bruce's question 
+which was about, how do you then
+
+268
+00:14:05,900 --> 00:14:08,100
+this? 
+I mean, you've got this huge 
+
+269
+00:14:08,100 --> 00:14:14,600
+JavaScript world and your I 
+mean, so does JavaScript itself 
+
+270
+00:14:14,600 --> 00:14:19,000
+get Rewritten to use webassembly
+or food? 
+
+271
+00:14:19,400 --> 00:14:20,000
+Yeah. 
+What's this? 
+
+272
+00:14:20,200 --> 00:14:24,300
+What's going on? 
+So so in the what we call the 
+
+273
+00:14:24,300 --> 00:14:28,400
+webassembly MVP, the minimum 
+viable product that sort of we 
+
+274
+00:14:28,400 --> 00:14:34,300
+put out as an initial standard 
+basically The it's JavaScript, 
+
+275
+00:14:34,300 --> 00:14:37,200
+you know, you instantiate 
+webassembly runtime from your 
+
+276
+00:14:37,200 --> 00:14:40,700
+JavaScript environment, you load
+webassembly binary into it and 
+
+277
+00:14:40,700 --> 00:14:43,300
+then you can start running it. 
+And there's some very simple 
+
+278
+00:14:43,300 --> 00:14:46,000
+kind of interop where you can 
+kind of basically just exchanged
+
+279
+00:14:46,000 --> 00:14:48,000
+numbers, right? 
+And so, you can construct higher
+
+280
+00:14:48,000 --> 00:14:52,700
+level data structures from these
+kind of Composites of numbers, 
+
+281
+00:14:54,100 --> 00:14:57,900
+that's just sort of a very basic
+kind of, we needed something. 
+
+282
+00:14:57,900 --> 00:15:01,500
+And so we put this in place but 
+it's by no means the end. 
+
+283
+00:15:01,700 --> 00:15:04,800
+State when we get into what 
+we're now, looking at what we 
+
+284
+00:15:04,800 --> 00:15:08,100
+call Wise mgc, which is an 
+integrated Heap between 
+
+285
+00:15:08,100 --> 00:15:10,700
+JavaScript and webassembly, what
+that basically means is, if 
+
+286
+00:15:10,700 --> 00:15:15,300
+you're writing code in kotlin or
+jvm language, then when you 
+
+287
+00:15:15,300 --> 00:15:17,700
+allocate memory in that 
+language, you're actually 
+
+288
+00:15:17,700 --> 00:15:22,200
+allocating memory from a common 
+pool with the JavaScript code 
+
+289
+00:15:22,200 --> 00:15:24,600
+that's running next to you and 
+so that, you know, if you kind 
+
+290
+00:15:24,600 --> 00:15:26,500
+of squint that helps you 
+interoperate because now you can
+
+291
+00:15:26,500 --> 00:15:29,400
+pass objects between kotlin code
+in JavaScript code and back 
+
+292
+00:15:29,400 --> 00:15:32,200
+again and the garbage collector 
+just kind of It was where all 
+
+293
+00:15:32,200 --> 00:15:34,900
+the objects are and can collect 
+cycles and things like that. 
+
+294
+00:15:35,500 --> 00:15:38,700
+So that's a big sort of thing 
+that we're launching this year 
+
+295
+00:15:38,700 --> 00:15:43,600
+that will enable languages like 
+kotlin as well as Dart to to run
+
+296
+00:15:44,000 --> 00:15:46,600
+in this webassembly environment.
+In a way that doesn't require 
+
+297
+00:15:46,600 --> 00:15:48,500
+shipping a whole lot of their 
+own infrastructure. 
+
+298
+00:15:49,200 --> 00:15:51,400
+That don't worry about the 
+problem of how you interoperate 
+
+299
+00:15:51,400 --> 00:15:53,200
+with JavaScript. 
+But it's the beginning of a 
+
+300
+00:15:53,208 --> 00:15:55,700
+solution because JavaScript is 
+this incredibly Dynamic 
+
+301
+00:15:55,700 --> 00:15:57,400
+language? 
+You need to have at least some 
+
+302
+00:15:57,400 --> 00:16:00,400
+dynamism to your object 
+allocation just to even start 
+
+303
+00:16:00,400 --> 00:16:04,900
+that conversation. 
+Are you specifying how a data 
+
+304
+00:16:04,900 --> 00:16:07,900
+structure should be laid out? 
+I mean, when you talk about 
+
+305
+00:16:07,900 --> 00:16:12,800
+passing objects between one 
+language and another, do you you
+
+306
+00:16:12,800 --> 00:16:16,500
+know how to the language is? 
+No at the objects look like it's
+
+307
+00:16:16,500 --> 00:16:19,900
+so right now that's very much 
+left to the implementation. 
+
+308
+00:16:20,400 --> 00:16:23,400
+So if you are writing, you know,
+JavaScript code, that connects 
+
+309
+00:16:23,400 --> 00:16:25,600
+to your calling code, you kind 
+of have to understand what 
+
+310
+00:16:25,600 --> 00:16:27,400
+exactly it is. 
+You're passing back and forth. 
+
+311
+00:16:27,700 --> 00:16:30,200
+Our hope is that you know, 
+libraries will be written to 
+
+312
+00:16:30,300 --> 00:16:32,600
+help facilitate that At the 
+standards level. 
+
+313
+00:16:32,600 --> 00:16:35,500
+We're still a couple of layers 
+below solving that problem. 
+
+314
+00:16:36,300 --> 00:16:39,100
+We're just kind of making it 
+possible to pass objects without
+
+315
+00:16:39,100 --> 00:16:42,200
+messing up, memory allocation 
+and then we'll kind of explore 
+
+316
+00:16:42,200 --> 00:16:45,400
+further things above that. 
+One example of a higher order 
+
+317
+00:16:45,400 --> 00:16:48,800
+structure, that's just kind of 
+one, click higher than think 
+
+318
+00:16:48,800 --> 00:16:51,500
+garbage collection is the string
+wrapped proposal, which is a 
+
+319
+00:16:51,500 --> 00:16:54,600
+very new proposal, but it's the 
+attempt to say, well look, 
+
+320
+00:16:54,600 --> 00:16:55,700
+everybody's going to need 
+strings. 
+
+321
+00:16:55,700 --> 00:16:58,000
+The strings are often 
+dynamically allocated, they're 
+
+322
+00:16:58,000 --> 00:17:00,100
+often passed back and forth 
+across this boundary. 
+
+323
+00:17:00,400 --> 00:17:03,100
+So, maybe there's a kind of 
+Amin, you know, lowest common 
+
+324
+00:17:03,100 --> 00:17:06,400
+denominator for Strings that we 
+can agree on and then make that 
+
+325
+00:17:06,400 --> 00:17:09,000
+work in a way that's sensible, 
+across JavaScript, still very 
+
+326
+00:17:09,000 --> 00:17:11,400
+challenging space. 
+Lot of discussions happening 
+
+327
+00:17:11,400 --> 00:17:14,099
+there but it's exactly what 
+you're describing in terms of 
+
+328
+00:17:14,099 --> 00:17:16,800
+like an example. 
+Like some languages will use 
+
+329
+00:17:16,800 --> 00:17:21,200
+utf-8, some will use utf-16 so 
+we use some other representation
+
+330
+00:17:21,400 --> 00:17:26,200
+exam being able to, to have a 
+string reference across both 
+
+331
+00:17:26,200 --> 00:17:27,900
+sides, like not get screwed up 
+on. 
+
+332
+00:17:27,900 --> 00:17:32,700
+This is yeah place and the big 
+one is Javascript uses. 16 and 
+
+333
+00:17:32,700 --> 00:17:36,800
+very few other languages do. 
+And so we have this interesting 
+
+334
+00:17:36,800 --> 00:17:39,600
+problem where the web strings on
+the web are special case. 
+
+335
+00:17:39,600 --> 00:17:42,000
+Even internally inside Chrome, 
+we have different 
+
+336
+00:17:42,000 --> 00:17:44,800
+representations for Strings as 
+many large software products do.
+
+337
+00:17:44,800 --> 00:17:49,200
+And so yeah, it's a definitely, 
+an area for the research. 
+
+338
+00:17:49,400 --> 00:17:53,400
+So maybe I missed this, but it 
+sounds like there's a standards 
+
+339
+00:17:53,400 --> 00:17:58,800
+committee, and it sounds like 
+you're on it is this we have 
+
+340
+00:17:58,800 --> 00:18:01,600
+Engineers who represent our 
+little neck of the woods. 
+
+341
+00:18:01,600 --> 00:18:04,500
+Woods Chrome and V8 on the 
+standards committee. 
+
+342
+00:18:04,500 --> 00:18:08,200
+We also representatives from the
+other major browser vendors. 
+
+343
+00:18:08,200 --> 00:18:10,900
+So it's a big kind of open 
+Community process. 
+
+344
+00:18:10,900 --> 00:18:14,900
+There's also a very significant 
+participation from the academic 
+
+345
+00:18:14,900 --> 00:18:17,200
+Community because like I said, 
+you know, we're designing this 
+
+346
+00:18:17,200 --> 00:18:20,800
+logical machine and, you know, 
+this is a very kind of complex 
+
+347
+00:18:20,800 --> 00:18:24,300
+and Abstract undertaking. 
+You know what is that type 
+
+348
+00:18:24,300 --> 00:18:25,500
+system? 
+How does it interoperate 
+
+349
+00:18:25,500 --> 00:18:28,000
+prototype system? 
+So we have, you know, so many 
+
+350
+00:18:28,000 --> 00:18:30,700
+people to thank for for getting 
+us even this far. 
+
+351
+00:18:30,700 --> 00:18:32,900
+And we're going to need Ready to
+go further. 
+
+352
+00:18:33,700 --> 00:18:37,000
+Yeah, it's that's what I have 
+seen when I've come across wasm 
+
+353
+00:18:37,000 --> 00:18:38,600
+stuff. 
+It's like oh my gosh, these 
+
+354
+00:18:38,600 --> 00:18:40,500
+people are involved in these 
+people are involved in these 
+
+355
+00:18:40,500 --> 00:18:42,400
+people are involved. 
+It's like, it's like it's 
+
+356
+00:18:42,400 --> 00:18:45,900
+amazing how many people are 
+working together to push the 
+
+357
+00:18:45,900 --> 00:18:48,200
+stuff forward, so that hasn't 
+been cool. 
+
+358
+00:18:48,700 --> 00:18:50,900
+So, coming back real quick to 
+Bruce's question, where he's 
+
+359
+00:18:51,200 --> 00:18:53,600
+think you started to ask a 
+little bit about, like, at the 
+
+360
+00:18:53,600 --> 00:18:58,000
+runtime side of things. 
+What's the relationship between 
+
+361
+00:18:58,200 --> 00:19:03,300
+JavaScript The Interpreter V8? 
+Like all and Wow's them. 
+
+362
+00:19:03,300 --> 00:19:06,200
+Like, how does all that stuff? 
+Kind of end up fitting together?
+
+363
+00:19:06,700 --> 00:19:11,500
+Yeah, so, I mean, the JavaScript
+ecosystem, and the kind of major
+
+364
+00:19:11,500 --> 00:19:14,000
+interpreters that are that are 
+used today V8. 
+
+365
+00:19:14,000 --> 00:19:17,400
+Being one of them, they are 
+incredibly mature and Incredibly
+
+366
+00:19:17,400 --> 00:19:19,900
+sophisticated and so, running 
+JavaScript code. 
+
+367
+00:19:19,900 --> 00:19:24,000
+It's not just like a simple sort
+of, you know, interpreter loop. 
+
+368
+00:19:24,100 --> 00:19:26,500
+It's actually a kind of a 
+just-in-time compiler. 
+
+369
+00:19:26,500 --> 00:19:30,000
+It's profiling your code as it's
+running, it's figuring out kind 
+
+370
+00:19:30,000 --> 00:19:33,400
+of which code is the hot code 
+and Bring that further caching 
+
+371
+00:19:33,400 --> 00:19:36,100
+different versions of different 
+functions, based on the types 
+
+372
+00:19:36,100 --> 00:19:38,300
+that are passed into them. 
+It's an incredibly complex 
+
+373
+00:19:38,300 --> 00:19:41,400
+system. 
+And so, plugging into that, you 
+
+374
+00:19:41,400 --> 00:19:43,500
+know, from the static world is 
+very challenging. 
+
+375
+00:19:44,100 --> 00:19:46,600
+One of the things, one of the 
+great opportunities for 
+
+376
+00:19:46,600 --> 00:19:49,900
+webassembly is you can when 
+webassembly code arrives, you 
+
+377
+00:19:49,900 --> 00:19:53,000
+know from the server, it's 
+already kind of lowered and 
+
+378
+00:19:53,000 --> 00:19:55,700
+optimized, and a little bit, you
+know, it's kind of like ready to
+
+379
+00:19:55,700 --> 00:19:59,300
+run at high speed. 
+So we're super excited about 
+
+380
+00:19:59,300 --> 00:20:03,100
+being able to build V8 and Being
+at the build browser engines 
+
+381
+00:20:03,600 --> 00:20:07,400
+that hit sort of something near 
+their Peak Performance from the 
+
+382
+00:20:07,400 --> 00:20:10,700
+very first, you know, function 
+called the very first kind of 
+
+383
+00:20:10,700 --> 00:20:13,400
+line of code. 
+So that's a real opportunity. 
+
+384
+00:20:13,400 --> 00:20:17,000
+I think for web apps to get 
+really great startup time. 
+
+385
+00:20:17,500 --> 00:20:23,000
+And to load complex, you know, 
+Computer Applications that feel 
+
+386
+00:20:23,000 --> 00:20:26,600
+native from the very first 
+moment that something that's a 
+
+387
+00:20:26,608 --> 00:20:30,000
+little bit trickier to do in the
+JavaScript world today because 
+
+388
+00:20:30,000 --> 00:20:32,900
+of the different tiers of 
+Shouldn't compilers that usually
+
+389
+00:20:32,900 --> 00:20:33,500
+have to go. 
+Yeah. 
+
+390
+00:20:33,500 --> 00:20:35,500
+And like the warm-up phase like 
+it. 
+
+391
+00:20:35,500 --> 00:20:38,000
+Exactly. 
+As you call something more than 
+
+392
+00:20:38,000 --> 00:20:40,500
+it's going to get in line door, 
+whatever. 
+
+393
+00:20:40,800 --> 00:20:44,300
+Not at runtime. 
+But why not just have that Peak 
+
+394
+00:20:44,300 --> 00:20:46,400
+Performance out of the gate? 
+Yeah yeah. 
+
+395
+00:20:46,400 --> 00:20:49,200
+And the ahead-of-time 
+compilation model I think is 
+
+396
+00:20:49,200 --> 00:20:51,500
+something that could really 
+benefit the web, there's still 
+
+397
+00:20:51,500 --> 00:20:54,600
+challenges with code size ahead 
+of time compilation tends to 
+
+398
+00:20:54,608 --> 00:20:57,900
+produce larger binaries than the
+JavaScript equivalent so 
+
+399
+00:20:57,900 --> 00:21:01,800
+Network, traffic becomes the 
+bottleneck and networks are Not 
+
+400
+00:21:01,800 --> 00:21:05,100
+getting as fast as they're not 
+on the same trajectory as sort 
+
+401
+00:21:05,100 --> 00:21:08,000
+of CPUs, in terms of performance
+Improvement. 
+
+402
+00:21:08,100 --> 00:21:10,600
+So we have to do some work there
+to try to figure out how to 
+
+403
+00:21:10,600 --> 00:21:12,200
+reduce the sizes of these 
+payloads. 
+
+404
+00:21:12,500 --> 00:21:15,800
+But yeah, the hope is that 
+developers can build their 
+
+405
+00:21:15,800 --> 00:21:18,200
+applications and their tool 
+chains will do the work to make 
+
+406
+00:21:18,200 --> 00:21:21,300
+those applications ready to run 
+fast right from the get-go. 
+
+407
+00:21:21,600 --> 00:21:24,600
+And that's something that I 
+think could bring real value to 
+
+408
+00:21:24,600 --> 00:21:26,500
+end users without them. 
+Even really noticing that 
+
+409
+00:21:26,500 --> 00:21:30,400
+there's a change. 
+So how does it handle? 
+
+410
+00:21:31,000 --> 00:21:34,300
+I mean it's Flea on the web 
+where you've got, you know, all 
+
+411
+00:21:34,300 --> 00:21:36,700
+kinds of different versions of 
+everything. 
+
+412
+00:21:37,000 --> 00:21:40,600
+How does it handle versioning? 
+So like in particular, would it 
+
+413
+00:21:40,600 --> 00:21:43,900
+be able to cash something? 
+If it knew it was the version 
+
+414
+00:21:43,900 --> 00:21:48,300
+that it wanted versioning of 
+what of a payload you actually 
+
+415
+00:21:48,400 --> 00:21:51,200
+compiles. 
+Yeah, the house to talk about 
+
+416
+00:21:51,200 --> 00:21:55,300
+the component side of Vienna. 
+So the wasm just gets delivered 
+
+417
+00:21:55,300 --> 00:21:58,800
+as this like binary file to the 
+browser, right? 
+
+418
+00:21:58,800 --> 00:22:02,800
+And then today, the way to then 
+run That Wow's them is through 
+
+419
+00:22:02,800 --> 00:22:05,800
+JavaScript you say like like all
+right, here's your here's your 
+
+420
+00:22:05,800 --> 00:22:09,200
+wise on file, with all the byte 
+code in it, run this thing 
+
+421
+00:22:09,700 --> 00:22:11,600
+there, maybe I guess. 
+At some point in the future like
+
+422
+00:22:11,600 --> 00:22:14,700
+a ability to just do a script 
+tag pointed to a wazz on file or
+
+423
+00:22:14,700 --> 00:22:15,700
+something. 
+I'll just run it with. 
+
+424
+00:22:15,700 --> 00:22:17,800
+I've no JavaScript Rock rapper 
+or something. 
+
+425
+00:22:17,800 --> 00:22:21,600
+But today, anyways, JavaScript 
+API, give it the Y's on file. 
+
+426
+00:22:21,800 --> 00:22:25,000
+It runs it. 
+I think we're Bruce was going 
+
+427
+00:22:25,000 --> 00:22:27,500
+with this as well. 
+There must be some kind of 
+
+428
+00:22:27,500 --> 00:22:29,100
+module system. 
+Right. 
+
+429
+00:22:29,100 --> 00:22:30,900
+Exactly. 
+So like if you need and the 
+
+430
+00:22:30,900 --> 00:22:35,300
+modules Do you split up, hurry 
+application into into multiple 
+
+431
+00:22:35,300 --> 00:22:38,600
+ways on file? 
+This is a great question and 
+
+432
+00:22:38,800 --> 00:22:41,600
+you're asking all the right 
+questions, we don't have full 
+
+433
+00:22:41,600 --> 00:22:43,300
+answers to them yet. 
+You're right. 
+
+434
+00:22:43,300 --> 00:22:46,500
+That, the current state is that 
+we have a very well standardized
+
+435
+00:22:46,500 --> 00:22:48,500
+instructions that we can build 
+these binary files, and 
+
+436
+00:22:48,500 --> 00:22:49,900
+instantiate them, and execute 
+them. 
+
+437
+00:22:50,200 --> 00:22:53,500
+How those are stitched together 
+is is currently an out-of-band 
+
+438
+00:22:53,500 --> 00:22:56,100
+question. 
+And so a lot of it goes back to 
+
+439
+00:22:56,100 --> 00:23:00,200
+that question of interrupt there
+was a series of proposals called
+
+440
+00:23:00,200 --> 00:23:03,900
+interface types. 
+Where the, the ecosystem, you 
+
+441
+00:23:03,908 --> 00:23:06,700
+know, the standards bodies and 
+the related interested groups, 
+
+442
+00:23:06,900 --> 00:23:09,400
+were trying to figure out a way 
+to get different modules written
+
+443
+00:23:09,400 --> 00:23:13,000
+in different languages, even to 
+be able to call into each other 
+
+444
+00:23:13,000 --> 00:23:15,600
+and share types. 
+And this this turns out to be 
+
+445
+00:23:15,600 --> 00:23:19,400
+another one of those big sort of
+open research problems, because 
+
+446
+00:23:19,400 --> 00:23:22,500
+even among static languages, 
+they're slightly different, you 
+
+447
+00:23:22,508 --> 00:23:25,700
+know, semantics around what an 
+object is and what it can do, 
+
+448
+00:23:25,700 --> 00:23:29,400
+and how its allocated, how big 
+it is, how it moves around. 
+
+449
+00:23:29,600 --> 00:23:32,000
+And so there's all these kind 
+of, like performance, I swear 
+
+450
+00:23:32,000 --> 00:23:34,400
+you have to convert a string 
+from like you said, one encoding
+
+451
+00:23:34,400 --> 00:23:37,200
+to another. 
+So yeah, we don't have we don't 
+
+452
+00:23:37,200 --> 00:23:39,000
+have a good handle on what that 
+looks like. 
+
+453
+00:23:39,600 --> 00:23:43,100
+What we're excited about is two 
+main areas at least in the in 
+
+454
+00:23:43,100 --> 00:23:46,000
+the interim one is like you 
+said, shipping whole 
+
+455
+00:23:46,000 --> 00:23:49,000
+applications in some cases that 
+make sense because from the 
+
+456
+00:23:49,000 --> 00:23:51,600
+developers point of view, you 
+know, they have a large code 
+
+457
+00:23:51,600 --> 00:23:54,700
+base, it's all in a repo, they 
+want to compile, it build it. 
+
+458
+00:23:54,800 --> 00:23:57,200
+And they actually kind of want 
+that sort of repeatable 
+
+459
+00:23:57,200 --> 00:24:00,500
+experience, where once they have
+that binary, its kind of Frozen 
+
+460
+00:24:00,500 --> 00:24:03,100
+in time and they know it 
+conversion it and they know what
+
+461
+00:24:03,100 --> 00:24:05,200
+the user is getting and what the
+user is experiencing. 
+
+462
+00:24:05,200 --> 00:24:07,500
+So for example, if you get a 
+feedback report, you can, you 
+
+463
+00:24:07,500 --> 00:24:10,000
+know, get a version number and 
+go back and recreate that binary
+
+464
+00:24:10,000 --> 00:24:11,600
+trace it, debug it, that sort of
+thing. 
+
+465
+00:24:12,000 --> 00:24:16,700
+So basically a mono repo, what's
+that a mono repo? 
+
+466
+00:24:16,900 --> 00:24:19,200
+Or at least that's what they 
+call it in the python Community.
+
+467
+00:24:19,500 --> 00:24:22,500
+Yeah, it might be a mono repo, 
+but at least it's a potentially 
+
+468
+00:24:22,500 --> 00:24:24,300
+a reproducible builds. 
+So, even if it's coming from 
+
+469
+00:24:24,300 --> 00:24:26,800
+multiple repos, you'll be able 
+to actually go back to that same
+
+470
+00:24:26,800 --> 00:24:29,600
+artifact and can diagnose it and
+debug it. 
+
+471
+00:24:30,400 --> 00:24:32,800
+The other piece that were super 
+About is the entire Library 
+
+472
+00:24:32,800 --> 00:24:34,600
+strategy. 
+So there's a lot of libraries, 
+
+473
+00:24:35,000 --> 00:24:38,200
+you know, related to text layout
+related, to internationalisation
+
+474
+00:24:38,200 --> 00:24:42,500
+related, to 2D drawing. 
+And these libraries are very 
+
+475
+00:24:42,500 --> 00:24:45,800
+mature, very stable. 
+They tend not to change and even
+
+476
+00:24:45,800 --> 00:24:48,400
+if they do change their very 
+minor changes in the API stays 
+
+477
+00:24:48,400 --> 00:24:50,300
+the same. 
+And so this is an opportunity 
+
+478
+00:24:50,300 --> 00:24:52,900
+where you could have, you know, 
+like half Buzz or freetype, or 
+
+479
+00:24:52,908 --> 00:24:55,900
+some of these kind of like very 
+stable, text and drawing apis 
+
+480
+00:24:56,500 --> 00:25:00,000
+and libraries packaged up in a 
+way that sits on a CDN and can 
+
+481
+00:25:00,000 --> 00:25:01,400
+be accessed by lots of 
+different. 
+
+482
+00:25:01,500 --> 00:25:04,100
+Different sites without 
+necessarily having to fetch it 
+
+483
+00:25:04,100 --> 00:25:06,800
+every single time. 
+And so, there are some 
+
+484
+00:25:06,800 --> 00:25:08,700
+opportunities, even in the 
+static world, where we don't 
+
+485
+00:25:08,700 --> 00:25:10,800
+have the component model. 
+The dynamic component model 
+
+486
+00:25:10,800 --> 00:25:14,400
+figured out where we can 
+actually recognize that. 
+
+487
+00:25:14,400 --> 00:25:17,500
+There's certain parts that are 
+kind of stable enough and pull 
+
+488
+00:25:17,500 --> 00:25:21,900
+those out of applications. 
+And there is some proposal for 
+
+489
+00:25:22,000 --> 00:25:26,200
+for wasm component model or 
+something, some way to, to be 
+
+490
+00:25:26,200 --> 00:25:31,400
+able to publish a was publish of
+Library as well. 
+
+491
+00:25:32,200 --> 00:25:34,800
+And then have someone else 
+consume that library and use it 
+
+492
+00:25:34,800 --> 00:25:37,700
+in their wasm application or 
+something. 
+
+493
+00:25:37,700 --> 00:25:39,600
+Along those lines areas that. 
+Yeah. 
+
+494
+00:25:39,600 --> 00:25:41,300
+There's a couple of different 
+proposals. 
+
+495
+00:25:41,600 --> 00:25:44,700
+There's also just so, you know, 
+simple integration with the 
+
+496
+00:25:44,700 --> 00:25:48,900
+JavaScript ecosystem. 
+So you, you implement wasm as, 
+
+497
+00:25:48,900 --> 00:25:51,400
+as your own kind of 
+implementation detail and you 
+
+498
+00:25:51,400 --> 00:25:54,100
+expose your library as a 
+JavaScript library and people 
+
+499
+00:25:54,100 --> 00:25:56,100
+can, you know, npm install and 
+all that stuff. 
+
+500
+00:25:56,900 --> 00:25:59,400
+And so that's, that's a just a 
+handy way of using 
+
+501
+00:25:59,400 --> 00:26:01,000
+infrastructure that already 
+exists. 
+
+502
+00:26:01,100 --> 00:26:03,100
+The oh, Overhead for that is not
+huge. 
+
+503
+00:26:03,100 --> 00:26:06,100
+It depends on how frequently are
+calling in to the library, but 
+
+504
+00:26:06,100 --> 00:26:09,200
+the JavaScript rapper code can 
+be pretty Compact and you 
+
+505
+00:26:09,208 --> 00:26:12,600
+benefit from, you know, all of 
+the existing sort of ecosystem, 
+
+506
+00:26:13,600 --> 00:26:16,200
+the ecosystem of libraries and 
+tools that can operate on that. 
+
+507
+00:26:16,200 --> 00:26:19,500
+So that's, that's probably kind 
+of the most active right now, 
+
+508
+00:26:20,200 --> 00:26:21,800
+but there may be others in the 
+future. 
+
+509
+00:26:22,600 --> 00:26:30,500
+Yeah, you talked about, let's 
+see, you know, containers and it
+
+510
+00:26:30,500 --> 00:26:37,700
+seems like Well, all JavaScript 
+programs run in a sandbox. 
+
+511
+00:26:37,700 --> 00:26:39,300
+Right? 
+Okay. 
+
+512
+00:26:39,300 --> 00:26:42,600
+So that's maybe some a little 
+bit container e. 
+
+513
+00:26:42,600 --> 00:26:46,600
+But then there's this way Z 
+thing, that sounds like the 
+
+514
+00:26:46,600 --> 00:26:48,800
+equivalent. 
+I mean it sounds like you're 
+
+515
+00:26:48,800 --> 00:26:51,800
+talking to him the operating 
+system facilities. 
+
+516
+00:26:51,800 --> 00:26:53,800
+So it's a little bit like 
+doctor, right? 
+
+517
+00:26:54,700 --> 00:26:57,200
+Yeah. 
+I mean the whole idea, the whole
+
+518
+00:26:57,200 --> 00:27:00,500
+universe of isolation 
+application, isolation is super 
+
+519
+00:27:00,500 --> 00:27:04,200
+interesting. 
+And yeah, we went from VMS to 
+
+520
+00:27:04,200 --> 00:27:08,700
+Containers now to wasm runtimes 
+you know know it also did this 
+
+521
+00:27:08,700 --> 00:27:10,500
+with JavaScript right? 
+Like you just you're running 
+
+522
+00:27:10,500 --> 00:27:15,300
+inside of a you know, quote 
+unquote, web sandbox and and I 
+
+523
+00:27:15,308 --> 00:27:17,900
+think I think it's a real 
+opportunity for wasm for this 
+
+524
+00:27:17,900 --> 00:27:20,500
+kind of like shared machine 
+instruction because you can 
+
+525
+00:27:20,500 --> 00:27:22,500
+isolate at the machine 
+instruction layer. 
+
+526
+00:27:22,800 --> 00:27:26,200
+So we had a project couple of 
+years ago called G visor, where 
+
+527
+00:27:26,200 --> 00:27:29,700
+we would basically isolate guest
+processes and then intercept, 
+
+528
+00:27:29,700 --> 00:27:33,000
+all the system calls and You can
+stop out and kind of secure the 
+
+529
+00:27:33,000 --> 00:27:35,200
+process that way and that 
+created a sort of 
+
+530
+00:27:35,200 --> 00:27:40,000
+posix-compliant sandbox around 
+around a process and it was 
+
+531
+00:27:40,000 --> 00:27:42,800
+hugely popular in the ecosystem.
+I think we've kind of moved on 
+
+532
+00:27:42,800 --> 00:27:45,600
+to different you know, different
+hypervisor Technologies. 
+
+533
+00:27:45,600 --> 00:27:48,300
+Now. 
+But if, if you could do that, 
+
+534
+00:27:48,300 --> 00:27:50,200
+instead of waiting for a 
+syscall, if you can actually do 
+
+535
+00:27:50,200 --> 00:27:53,100
+that you know simulating each in
+machine instruction and ensuring
+
+536
+00:27:53,100 --> 00:27:56,200
+that it is compliant to with 
+some you know security policy. 
+
+537
+00:27:56,700 --> 00:27:58,700
+That's something that the 
+security guys really love. 
+
+538
+00:27:59,100 --> 00:28:00,600
+And so I could imagine wasn't 
+playing. 
+
+539
+00:28:01,500 --> 00:28:04,000
+Interesting role in the kind of 
+container ecosystem. 
+
+540
+00:28:04,800 --> 00:28:08,100
+We've also seen use, cases at 
+with Edge Computing because of 
+
+541
+00:28:08,100 --> 00:28:10,600
+the fast startup time. 
+So it's really slow to start up 
+
+542
+00:28:10,600 --> 00:28:12,500
+a VM. 
+It's faster to start up a 
+
+543
+00:28:12,508 --> 00:28:14,900
+container, but it's really fast 
+and just start interpreting 
+
+544
+00:28:14,900 --> 00:28:17,200
+wasm. 
+And so there's a potential there
+
+545
+00:28:17,200 --> 00:28:20,600
+for folks, to be able to deploy 
+code in response to requests, 
+
+546
+00:28:20,600 --> 00:28:23,600
+rather than pre deploying and 
+consuming resources waiting for 
+
+547
+00:28:23,600 --> 00:28:27,600
+users. 
+Yeah, so, a couple things on on 
+
+548
+00:28:27,600 --> 00:28:31,200
+that first, the I just saw today
+that container d. 
+
+549
+00:28:31,500 --> 00:28:35,200
+Announce there was um support. 
+So it's it is kind of 
+
+550
+00:28:35,200 --> 00:28:37,800
+interesting how the whole 
+container world. 
+
+551
+00:28:37,800 --> 00:28:44,700
+We we basically created a way to
+I think like you said Silo a 
+
+552
+00:28:44,700 --> 00:28:51,100
+posix like something that was a 
+posix system and with Docker 
+
+553
+00:28:51,100 --> 00:28:55,300
+containers you get these Docker 
+containers that have a like full
+
+554
+00:28:55,300 --> 00:28:57,700
+Linux system in them. 
+And then you've got this 
+
+555
+00:28:58,100 --> 00:29:01,100
+hypervisor outside of it. 
+That is controlling what it can 
+
+556
+00:29:01,100 --> 00:29:01,600
+actually. 
+Ali. 
+
+557
+00:29:01,600 --> 00:29:06,400
+Do and Hammer. 
+Like, seems like every month or 
+
+558
+00:29:06,400 --> 00:29:09,600
+some new security vulnerability,
+where you can escape out of this
+
+559
+00:29:09,600 --> 00:29:12,300
+and actually get to the 
+underlying system and lots of 
+
+560
+00:29:12,300 --> 00:29:15,700
+challenges with it, but it 
+always just seemed like a lot of
+
+561
+00:29:15,700 --> 00:29:19,300
+kind of layers to get to a 
+Sandbox. 
+
+562
+00:29:19,500 --> 00:29:21,800
+That never really worked super 
+well. 
+
+563
+00:29:22,100 --> 00:29:26,500
+And so pretty quickly. 
+At least, over the last couple 
+
+564
+00:29:26,500 --> 00:29:30,200
+months, it seems like a number 
+of these container technologies 
+
+565
+00:29:30,500 --> 00:29:32,400
+have enabled. 
+For was awesome. 
+
+566
+00:29:32,600 --> 00:29:35,800
+And I think that the benefits of
+it are just obvious. 
+
+567
+00:29:35,800 --> 00:29:39,400
+Like you said, like you get all 
+these sandboxing easy sandboxing
+
+568
+00:29:39,400 --> 00:29:45,600
+benefits with the portability of
+wasm all combined together, 
+
+569
+00:29:45,800 --> 00:29:49,800
+rather than I just start. 
+Like I've been with the easy 
+
+570
+00:29:49,800 --> 00:29:52,200
+racer project. 
+I had to do Docker, 
+
+571
+00:29:52,200 --> 00:29:58,300
+multi-platform stuff and oh my 
+God, like it is not not fun 
+
+572
+00:29:58,600 --> 00:30:01,300
+where I would much rather just 
+ship something. 
+
+573
+00:30:01,400 --> 00:30:06,000
+Nothing, actually, 
+multi-platform, say wasm and let
+
+574
+00:30:06,000 --> 00:30:10,600
+me explain something here. 
+James, I've watched him bang his
+
+575
+00:30:10,600 --> 00:30:16,100
+head against the wall for hours,
+like he will not give up. 
+
+576
+00:30:16,100 --> 00:30:18,800
+So when he says, oh my God, that
+was hard. 
+
+577
+00:30:19,600 --> 00:30:22,700
+That means something. 
+Well, in the worst part of it 
+
+578
+00:30:22,700 --> 00:30:27,900
+was that GitHub actions. 
+Don't support arm like physical 
+
+579
+00:30:27,900 --> 00:30:34,400
+arm processors anymore or yet 
+and so To create your arm, 
+
+580
+00:30:34,800 --> 00:30:40,000
+container you have to use. 
+What's the, what's the simulator
+
+581
+00:30:40,000 --> 00:30:45,000
+on Linux to simulate other other
+architectures though? 
+
+582
+00:30:45,400 --> 00:30:49,400
+Anyways, you have to use that 
+and it's really freaking slow. 
+
+583
+00:30:49,700 --> 00:30:53,600
+And so the only way that I could
+actually test this was to, to 
+
+584
+00:30:53,600 --> 00:30:58,500
+make a little change, wait an 
+hour because it was so slow. 
+
+585
+00:30:58,500 --> 00:31:03,700
+Where is the the x86 X1 would 
+take like two minutes, you know?
+
+586
+00:31:03,900 --> 00:31:09,100
+And so anyways, that was a long 
+way to say that I would so much 
+
+587
+00:31:09,100 --> 00:31:14,900
+prefer to just send wasm wasm as
+my multi-platform thing. 
+
+588
+00:31:15,600 --> 00:31:18,700
+This makes so much sense for 
+containerization, for the like 
+
+589
+00:31:18,700 --> 00:31:23,500
+the server list the cloud, The 
+Edge functions, then trying to 
+
+590
+00:31:23,500 --> 00:31:29,700
+finagle a non multi-platform, 
+non sandbox technology, and to 
+
+591
+00:31:29,700 --> 00:31:32,400
+having both of those things. 
+Yeah, it's like that. 
+
+592
+00:31:32,400 --> 00:31:38,300
+The only thing of, like, easy 
+fast and portable pick to, 
+
+593
+00:31:38,400 --> 00:31:40,900
+right? 
+And so negatively, easy is the 
+
+594
+00:31:40,900 --> 00:31:43,600
+one that goes out the window 
+because all this stuff is kind 
+
+595
+00:31:43,600 --> 00:31:47,100
+of Cobble together, an 
+unmaintained and either 
+
+596
+00:31:47,100 --> 00:31:48,800
+emulators and simulators 
+involved. 
+
+597
+00:31:48,800 --> 00:31:51,800
+So I think lots of could maybe 
+breakthrough free from that 
+
+598
+00:31:51,800 --> 00:31:54,800
+trade-off. 
+Yeah, see there was an interview
+
+599
+00:31:54,800 --> 00:32:00,600
+that build a nurse did with I 
+think Bill Joy many years ago 
+
+600
+00:32:00,600 --> 00:32:01,800
+about job. 
+Ava. 
+
+601
+00:32:02,200 --> 00:32:07,600
+And and that when you read this,
+You Come Away with, oh, they 
+
+602
+00:32:07,600 --> 00:32:10,800
+were in a big hurry. 
+And so because I mean, when you 
+
+603
+00:32:10,800 --> 00:32:14,300
+look at the number of mistakes, 
+like all face pretty much all of
+
+604
+00:32:14,300 --> 00:32:16,700
+the threads have to be backed 
+off. 
+
+605
+00:32:16,800 --> 00:32:19,800
+Oh years, and years later after 
+I really was scratching their 
+
+606
+00:32:19,800 --> 00:32:21,700
+heads and wear white. 
+Why is my thread or program 
+
+607
+00:32:21,700 --> 00:32:25,200
+isn't work? 
+And and then the write once run 
+
+608
+00:32:25,200 --> 00:32:29,100
+everywhere thing. 
+Just It was a good, you know, 
+
+609
+00:32:29,100 --> 00:32:31,800
+was it good try. 
+It's a start. 
+
+610
+00:32:32,100 --> 00:32:35,400
+We we all now believe in the 
+idea. 
+
+611
+00:32:35,400 --> 00:32:40,200
+Yeah, it's not I don't think 
+it's going to be the yeah way to
+
+612
+00:32:40,200 --> 00:32:41,100
+do it. 
+Where is this? 
+
+613
+00:32:41,500 --> 00:32:45,100
+So here that's a good question. 
+What so what if I wanted to 
+
+614
+00:32:45,100 --> 00:32:47,100
+deploy? 
+Something that was just the 
+
+615
+00:32:47,100 --> 00:32:51,900
+equivalent of a native app on 
+you know that I wasn't running 
+
+616
+00:32:51,900 --> 00:32:55,200
+inside the browser. 
+Is there a wet equivalent of 
+
+617
+00:32:55,200 --> 00:32:57,900
+node? 
+Kind of, there's Couple 
+
+618
+00:32:57,900 --> 00:33:01,000
+different implementations out 
+there for wasm that are detached
+
+619
+00:33:01,000 --> 00:33:04,400
+from the browser, right? 
+Yeah so if you're if you're 
+
+620
+00:33:04,400 --> 00:33:06,600
+thinking about running on the 
+server there as well as I'm only
+
+621
+00:33:06,600 --> 00:33:09,600
+run times that will run your 
+code on the server. 
+
+622
+00:33:10,400 --> 00:33:13,200
+There's also, you know, there's 
+an interesting Direction here 
+
+623
+00:33:13,200 --> 00:33:16,900
+which hasn't been that fully 
+explored just yet because before
+
+624
+00:33:16,900 --> 00:33:19,400
+wise mgc, it wasn't easy to 
+write you know, not a lot of 
+
+625
+00:33:19,408 --> 00:33:22,300
+people writing you know, 
+user-facing apps and C++ anymore
+
+626
+00:33:23,000 --> 00:33:26,100
+but I think it's a really 
+exciting area going forward and 
+
+627
+00:33:26,100 --> 00:33:27,500
+that's the entire space of 
+electron. 
+
+628
+00:33:27,700 --> 00:33:30,700
+Naps. 
+So apps that are packaging up, 
+
+629
+00:33:30,700 --> 00:33:34,500
+web, apis, basically, and 
+bringing them with them to the 
+
+630
+00:33:34,500 --> 00:33:37,800
+desktop platform. 
+For exactly the reason you 
+
+631
+00:33:37,800 --> 00:33:39,600
+mentioned, right? 
+Like the write once Run Anywhere
+
+632
+00:33:39,600 --> 00:33:43,100
+kind of ethos vs code is a great
+example of this. 
+
+633
+00:33:43,100 --> 00:33:45,400
+You know, you can run BS code in
+your browser and I get Hub code 
+
+634
+00:33:45,400 --> 00:33:48,200
+space and then you can also run 
+it on your desktop and the way 
+
+635
+00:33:48,200 --> 00:33:51,900
+that they're doing that is by 
+taking web apis to the desktop 
+
+636
+00:33:51,900 --> 00:33:54,800
+rather than trying to do. 
+The do it the other way around. 
+
+637
+00:33:55,100 --> 00:33:58,400
+So, the prospect of something 
+like wasm, which Things kind of 
+
+638
+00:33:58,400 --> 00:34:02,200
+native performance to the mix 
+along with the sort of 
+
+639
+00:34:02,200 --> 00:34:06,000
+multi-platform multi-language 
+kind of capability you could 
+
+640
+00:34:06,000 --> 00:34:09,300
+start seeing wasm +. 
+Web API is being packaged up as 
+
+641
+00:34:09,300 --> 00:34:14,000
+a native app through technology 
+like electron and then running 
+
+642
+00:34:14,000 --> 00:34:16,400
+at a rate that's 
+indistinguishable on a desktop 
+
+643
+00:34:17,100 --> 00:34:20,300
+compared to Native desktop 
+applications on that platform. 
+
+644
+00:34:21,100 --> 00:34:23,800
+And so that's that's that's an 
+area that we're digging into 
+
+645
+00:34:24,199 --> 00:34:27,800
+quite a lot, especially as it 
+relates to Bringing You know, 
+
+646
+00:34:27,800 --> 00:34:31,600
+Graphics, apis from the web to 
+further the sort of write once, 
+
+647
+00:34:31,600 --> 00:34:34,199
+Run Anywhere. 
+Ethos, if you design your UI to 
+
+648
+00:34:34,199 --> 00:34:36,800
+run against Webb canvas, then 
+you actually can run it on 
+
+649
+00:34:36,800 --> 00:34:39,400
+multiple platforms. 
+If you design your UI to use web
+
+650
+00:34:39,400 --> 00:34:42,400
+GPU, you can actually do 3D 
+graphics on multiple platforms. 
+
+651
+00:34:43,000 --> 00:34:45,600
+And so, that's something that 
+could be a direction that we 
+
+652
+00:34:45,600 --> 00:34:48,699
+take in the future and then on 
+the packaging side, which I 
+
+653
+00:34:48,699 --> 00:34:52,300
+think you're also asking about 
+was today, if you want to run 
+
+654
+00:34:52,300 --> 00:34:56,900
+away as a gram on your machine 
+without not in the browser, you 
+
+655
+00:34:56,900 --> 00:35:00,300
+can get one of Is was mm only 
+run times as out there called 
+
+656
+00:35:00,300 --> 00:35:02,600
+well as am only. 
+I don't know if that's like the 
+
+657
+00:35:02,600 --> 00:35:06,000
+official term for it, but yeah, 
+there's like wasm TimeWise, a 
+
+658
+00:35:06,000 --> 00:35:07,100
+these sorts of runtimes? 
+Okay. 
+
+659
+00:35:07,100 --> 00:35:07,800
+And what? 
+Yeah, what. 
+
+660
+00:35:07,800 --> 00:35:13,900
+So wasm time is one of these and
+so you can install the binary 
+
+661
+00:35:13,900 --> 00:35:17,000
+for wasm time and then that's 
+your wasm interpreter. 
+
+662
+00:35:17,100 --> 00:35:19,200
+So you give it your wives on 
+file and then you're, you're 
+
+663
+00:35:19,200 --> 00:35:22,800
+running your wasm on your, on 
+your machine, but I would guess 
+
+664
+00:35:22,800 --> 00:35:25,500
+that if it doesn't already 
+exist, it will exist to be able 
+
+665
+00:35:25,500 --> 00:35:31,200
+to take one of those. 
+Rasim only run times and a wise,
+
+666
+00:35:31,200 --> 00:35:34,300
+mm file, and create the native 
+executables for different 
+
+667
+00:35:34,300 --> 00:35:37,500
+platforms to like do that 
+packaging step. 
+
+668
+00:35:37,500 --> 00:35:40,300
+Maybe it already exists. 
+I haven't seen it but yeah, it's
+
+669
+00:35:40,300 --> 00:35:42,600
+possible. 
+I'm not sure if it produces like
+
+670
+00:35:42,600 --> 00:35:45,700
+an Exe on a Windows machine or 
+something like that, right? 
+
+671
+00:35:45,800 --> 00:35:50,100
+It's I think there is some point
+but and and be able to Target 
+
+672
+00:35:50,100 --> 00:35:55,500
+like kind of the llvm 44 wasm, 
+I'm sure will exist if it 
+
+673
+00:35:55,500 --> 00:35:59,300
+doesn't already. 
+So robot sounds like we could 
+
+674
+00:35:59,300 --> 00:36:05,500
+eventually be to a point where 
+we go, remember the jvm we go 
+
+675
+00:36:05,500 --> 00:36:10,700
+know there's a big push from a 
+lot of people that this is the 
+
+676
+00:36:10,700 --> 00:36:17,300
+way out of the jvm and I think 
+there's some real real Ville de 
+
+677
+00:36:17,300 --> 00:36:21,600
+do that because it's like yeah 
+if the if your jvm was the thing
+
+678
+00:36:21,600 --> 00:36:26,000
+that was given you portability 
+for Java bytecode if we have a 
+
+679
+00:36:26,000 --> 00:36:30,100
+different bike code and A 
+different VM essentially 
+
+680
+00:36:30,100 --> 00:36:34,200
+different interpreter than yeah,
+that's definitely gives you an 
+
+681
+00:36:34,200 --> 00:36:36,100
+alternative. 
+I'll do you guys one better. 
+
+682
+00:36:36,100 --> 00:36:40,900
+So last year at Google I/O we 
+announced that our Google 
+
+683
+00:36:41,000 --> 00:36:46,700
+workspace team is working on 
+compiling Java code to 
+
+684
+00:36:46,700 --> 00:36:52,700
+webassembly for their web 
+runtime in particular they have 
+
+685
+00:36:52,700 --> 00:36:56,900
+been working since last year to 
+get the Google worksheets calc 
+
+686
+00:36:56,900 --> 00:36:58,800
+engine. 
+The one that kind of goes 
+
+687
+00:36:58,800 --> 00:37:01,300
+through your entire spreadsheet 
+and computes all of the 
+
+688
+00:37:01,500 --> 00:37:06,400
+different formulas that will be 
+a module that is compiled to 
+
+689
+00:37:06,400 --> 00:37:10,000
+webassembly from the original 
+Java code and it's still very 
+
+690
+00:37:10,100 --> 00:37:13,500
+excited like a Google specific 
+tool chain but it is a big step 
+
+691
+00:37:13,500 --> 00:37:17,200
+in terms of deploying this at 
+scale to users speed and 
+
+692
+00:37:17,200 --> 00:37:20,600
+portability. 
+So today that team, they convert
+
+693
+00:37:20,600 --> 00:37:23,700
+Java to JavaScript to run in the
+browser to run that calculation 
+
+694
+00:37:23,700 --> 00:37:27,400
+engine in the browser. 
+And you could imagine that 
+
+695
+00:37:27,700 --> 00:37:30,300
+That's not going to get you to 
+the best performance. 
+
+696
+00:37:30,300 --> 00:37:33,800
+That would maybe like especially
+for large sums Bridge heavy 
+
+697
+00:37:33,800 --> 00:37:38,100
+calculation. 
+Yeah, we we when we were playing
+
+698
+00:37:38,100 --> 00:37:43,400
+with wise and last week we just 
+we did a super quick Fibonacci 
+
+699
+00:37:43,400 --> 00:37:47,800
+test and cotton has Colin Jason 
+cotton wasm so it's pretty easy 
+
+700
+00:37:47,800 --> 00:37:51,500
+to say, okay, take this super 
+simple Fibonacci thing and run 
+
+701
+00:37:51,500 --> 00:37:55,300
+it via, JavaScript, Colin, JS, 
+JavaScript, and cotton. 
+
+702
+00:37:55,300 --> 00:38:00,400
+When I was mm and like, There is
+no code difference between these
+
+703
+00:38:00,400 --> 00:38:05,800
+two and the startup time, or the
+execution time of this thing 
+
+704
+00:38:05,800 --> 00:38:09,000
+that we are playing with was, 
+like, 7 seconds in JavaScript 
+
+705
+00:38:09,000 --> 00:38:10,600
+and two and a half and wise 
+them. 
+
+706
+00:38:11,000 --> 00:38:15,700
+And I was like, okay, like and 
+I'm sure that like, none of this
+
+707
+00:38:15,700 --> 00:38:19,200
+has been, like, really like 
+squeezed, all the performance 
+
+708
+00:38:19,200 --> 00:38:21,200
+out of it yet. 
+Like I know the kotlin Wow's 
+
+709
+00:38:21,200 --> 00:38:24,300
+them, it's super early. 
+They have not definitely not 
+
+710
+00:38:24,300 --> 00:38:26,400
+done a lot of performance 
+optimizations yet. 
+
+711
+00:38:26,500 --> 00:38:29,700
+I think the wise, I'm In times, 
+like they not squeezed, all the 
+
+712
+00:38:29,700 --> 00:38:33,100
+potential performance out of 
+those yet, like like it just 
+
+713
+00:38:33,100 --> 00:38:35,900
+seems like, okay, we're at the 
+beginning of this and we're 
+
+714
+00:38:35,900 --> 00:38:39,300
+already three times, three times
+faster. 
+
+715
+00:38:39,700 --> 00:38:42,400
+Yeah. 
+And there's a lot more Headroom.
+
+716
+00:38:42,700 --> 00:38:45,300
+Yeah, for sure. 
+We've seen, at least 2x speed 
+
+717
+00:38:45,300 --> 00:38:48,100
+improvements on a number of 
+different tests including tests,
+
+718
+00:38:48,100 --> 00:38:52,100
+like all into web apis 
+frequently, numerics benefit the
+
+719
+00:38:52,100 --> 00:38:56,500
+most probably because exactly 
+what you said, you know, we 
+
+720
+00:38:56,500 --> 00:38:59,100
+don't have to worry about Number
+and dealing with what it could 
+
+721
+00:38:59,100 --> 00:39:01,900
+be dynamically. 
+And so, yeah, you're able to 
+
+722
+00:39:01,900 --> 00:39:05,100
+lower those instructions down 
+into the machine code and use in
+
+723
+00:39:05,100 --> 00:39:07,300
+64's and things like that and 
+they get to the machine. 
+
+724
+00:39:08,100 --> 00:39:10,300
+So yeah. 
+It's like I said before like the
+
+725
+00:39:10,300 --> 00:39:15,200
+JavaScript stuff has been very 
+tightly wrong for like eking. 
+
+726
+00:39:15,200 --> 00:39:17,900
+Every last bit of performance we
+can possibly get out of it. 
+
+727
+00:39:17,900 --> 00:39:21,100
+Like like I'm sure performance 
+games games at this point in the
+
+728
+00:39:21,100 --> 00:39:25,700
+JavaScript space are like you 
+really have to work hard to get 
+
+729
+00:39:25,700 --> 00:39:28,900
+like a 2% performance. 
+Meant you know, whereas with 
+
+730
+00:39:28,900 --> 00:39:32,400
+wasm I think we're just at the 
+beginning of like what we're 
+
+731
+00:39:32,400 --> 00:39:34,000
+going to see on the performance 
+side. 
+
+732
+00:39:34,400 --> 00:39:37,700
+So I think it's pretty exciting 
+for performance for sure. 
+
+733
+00:39:39,100 --> 00:39:43,200
+Going to hop Back 2 YZ. 
+So we were talking about about 
+
+734
+00:39:43,200 --> 00:39:48,500
+non kind of browser. 
+Use cases for wasm and the cloud
+
+735
+00:39:48,500 --> 00:39:50,100
+serverless, all that kind of 
+stuff. 
+
+736
+00:39:50,200 --> 00:39:55,000
+Definitely a lot of potential 
+there but often if you want to 
+
+737
+00:39:55,000 --> 00:39:57,400
+run something, you need to 
+interface with. 
+
+738
+00:39:57,600 --> 00:40:00,600
+A system. 
+And that's where y, z comes in, 
+
+739
+00:40:00,600 --> 00:40:05,100
+is giving you those, the ability
+to call in just certain system 
+
+740
+00:40:05,100 --> 00:40:07,200
+apis, right? 
+And I, we touched on this a 
+
+741
+00:40:07,200 --> 00:40:10,400
+little bit, just want to go a 
+little bit further because one 
+
+742
+00:40:10,400 --> 00:40:13,100
+of the things that I see like 
+typical server side, people 
+
+743
+00:40:13,100 --> 00:40:15,100
+getting excited about with wasm 
+as well as e. 
+
+744
+00:40:15,300 --> 00:40:18,700
+So did I characterize y z? 
+And what it's doing correctly. 
+
+745
+00:40:18,800 --> 00:40:20,100
+Yeah, yeah. 
+No, that's exactly right. 
+
+746
+00:40:20,100 --> 00:40:24,800
+I mean, y z is like, it's doing 
+for posix what wasm did for x86.
+
+747
+00:40:25,300 --> 00:40:28,700
+So it's kind of like, one little
+Extra layer of abstraction and 
+
+748
+00:40:28,700 --> 00:40:32,100
+then making it available to the 
+webassembly runtime code. 
+
+749
+00:40:33,900 --> 00:40:39,300
+And and so this is still an area
+of pretty ongoing development. 
+
+750
+00:40:39,300 --> 00:40:42,600
+Like it like it sounds like y z 
+is not fully there yet. 
+
+751
+00:40:42,600 --> 00:40:44,900
+Or what's what's kind of the 
+General State? 
+
+752
+00:40:45,100 --> 00:40:49,800
+It's yeah, it's ongoing in the 
+sense that it's not fully baked 
+
+753
+00:40:49,800 --> 00:40:53,900
+in the ecosystem continues to 
+sort of, add to it, but I would 
+
+754
+00:40:53,900 --> 00:40:57,200
+say that as a system interface, 
+you know, it does have posix2. 
+
+755
+00:40:57,600 --> 00:41:01,400
+Fire that kind of conversation. 
+So there's a sort of rough sense
+
+756
+00:41:01,400 --> 00:41:04,300
+of where it's going to end up. 
+But there's no discussion about 
+
+757
+00:41:04,300 --> 00:41:06,800
+particulars here and there 
+about, you know, suitability for
+
+758
+00:41:06,800 --> 00:41:09,600
+specific use cases or security, 
+implications things like that. 
+
+759
+00:41:10,500 --> 00:41:13,000
+It sounds. 
+So I have to weird questions. 
+
+760
+00:41:13,100 --> 00:41:17,100
+One is does oracle have anybody 
+on the wasm committee? 
+
+761
+00:41:19,400 --> 00:41:23,100
+I don't know, I can check, you 
+know. 
+
+762
+00:41:23,100 --> 00:41:26,400
+I just hope growl is they are 
+adding wasm support through 
+
+763
+00:41:26,400 --> 00:41:29,200
+growl so you know how growl is 
+girl native. 
+
+764
+00:41:29,200 --> 00:41:32,400
+Image is their way to take Java 
+bytecode and ahead of time, 
+
+765
+00:41:32,400 --> 00:41:35,700
+compile it into native binaries.
+And so that's the place where 
+
+766
+00:41:35,700 --> 00:41:40,600
+they have actually been doing 
+some wasm work which is, you 
+
+767
+00:41:40,600 --> 00:41:43,900
+know, for I guess some 
+speculation here. 
+
+768
+00:41:43,900 --> 00:41:47,600
+That Oracle probably has to 
+support wasm in some way 
+
+769
+00:41:47,600 --> 00:41:51,900
+otherwise they miss out on the 
+Dragon but I don't know what 
+
+770
+00:41:52,000 --> 00:41:55,700
+they would be thinking about in 
+terms of how this threatens the,
+
+771
+00:41:55,700 --> 00:41:59,000
+the jvm and what they're what 
+that is, sure seems to. 
+
+772
+00:42:00,700 --> 00:42:06,600
+So the other weird question is, 
+I mean, you know, JavaScript is 
+
+773
+00:42:06,600 --> 00:42:10,000
+so dominant. 
+And so now you have this 
+
+774
+00:42:10,000 --> 00:42:14,800
+webassembly thing and it makes 
+me wonder if you could imagine 
+
+775
+00:42:14,800 --> 00:42:21,200
+somebody developing a processor 
+that Directly executed wasm 
+
+776
+00:42:21,200 --> 00:42:24,700
+assembly. 
+Do you remember when zip people?
+
+777
+00:42:24,700 --> 00:42:26,500
+I think his son was working on 
+the. 
+
+778
+00:42:26,500 --> 00:42:30,400
+Yeah, the like Java processors. 
+Add execute Java bytecode and 
+
+779
+00:42:30,400 --> 00:42:33,400
+even-handed, so got full circle 
+over. 
+
+780
+00:42:33,600 --> 00:42:38,300
+Yeah, but this is. 
+Yeah, well, okay, interesting, 
+
+781
+00:42:38,700 --> 00:42:41,500
+it's closed. 
+Now many me working on a wasm. 
+
+782
+00:42:41,500 --> 00:42:45,300
+So, why isn't she? 
+Yeah, this probably touches. 
+
+783
+00:42:45,300 --> 00:42:47,700
+I have to like confer with some 
+of my more academic and 
+
+784
+00:42:47,700 --> 00:42:50,200
+Technical colleagues, but I 
+think there may be Maybe some 
+
+785
+00:42:50,300 --> 00:42:52,600
+there, I think you would design 
+an instruction set slightly 
+
+786
+00:42:52,600 --> 00:42:55,200
+differently, if it were for a 
+physical machine, then for The 
+
+787
+00:42:55,200 --> 00:42:58,200
+Logical machine that we had, in 
+mind, we always imagine that 
+
+788
+00:42:58,200 --> 00:43:01,100
+there would be this like, 
+interim step of interpretation. 
+
+789
+00:43:01,100 --> 00:43:03,900
+That would be very fast, but 
+there would still be one between
+
+790
+00:43:03,900 --> 00:43:07,100
+wasm and the physical machine. 
+So I wonder if Y is them has may
+
+791
+00:43:07,100 --> 00:43:09,200
+be baked in some assumptions 
+there around that 
+
+792
+00:43:09,200 --> 00:43:12,000
+interpretation. 
+I'm not sure how I'm gonna but 
+
+793
+00:43:12,000 --> 00:43:16,100
+if they were trying to build a 
+Java bytecode processor than you
+
+794
+00:43:16,100 --> 00:43:18,600
+know, I could only imagine it'd 
+be easier to build a wise and 
+
+795
+00:43:18,600 --> 00:43:22,500
+machine and that I'm not sure 
+that it's on the radar right 
+
+796
+00:43:22,500 --> 00:43:26,800
+now. 
+The one place may be related to 
+
+797
+00:43:26,800 --> 00:43:31,200
+this is that I hope to see wasm 
+gain, some traction is on the, 
+
+798
+00:43:31,200 --> 00:43:35,100
+like iot space. 
+So every time I've done iot it's
+
+799
+00:43:35,100 --> 00:43:37,700
+like a cheese. 
+Really like this terrible 
+
+800
+00:43:37,700 --> 00:43:41,500
+variant of see, really. 
+I got to use that to like like 
+
+801
+00:43:41,500 --> 00:43:45,300
+work on this little processor, 
+like man, if well as I might 
+
+802
+00:43:45,300 --> 00:43:49,200
+only use micro pythons, micro 
+python is cool. 
+
+803
+00:43:49,400 --> 00:43:52,800
+But but wouldn't it be nice if 
+these iot devices? 
+
+804
+00:43:52,800 --> 00:43:56,800
+Just ran wasm? 
+And then I could use whatever I 
+
+805
+00:43:56,800 --> 00:44:00,800
+wanted to write. 
+Well, and again, there's a place
+
+806
+00:44:00,800 --> 00:44:08,100
+where a processor might show up,
+see if the Arduino folks have we
+
+807
+00:44:08,600 --> 00:44:16,100
+thought about a wasm Arduino, so
+JavaScript is inherently 
+
+808
+00:44:16,900 --> 00:44:19,900
+single-threaded, right? 
+Yes. 
+
+809
+00:44:19,900 --> 00:44:22,200
+Okay, except for workers but 
+that's not. 
+
+810
+00:44:23,400 --> 00:44:29,100
+Yeah, but I mean like so, how 
+does the say the kotlin 
+
+811
+00:44:30,200 --> 00:44:34,600
+concurrency model map onto 
+webassembly? 
+
+812
+00:44:35,300 --> 00:44:39,300
+Yeah, so I mean, multi-threading
+in the JavaScript runtime 
+
+813
+00:44:39,300 --> 00:44:42,400
+environment has been a major 
+open question with lots of 
+
+814
+00:44:42,400 --> 00:44:45,400
+different proposals, and 
+attempts at IT workers being one
+
+815
+00:44:45,400 --> 00:44:48,600
+of them and there's some 
+trade-offs there as to how that 
+
+816
+00:44:48,600 --> 00:44:51,200
+is particularly, We implemented.
+Not all the apis are available 
+
+817
+00:44:51,200 --> 00:44:53,200
+in workers. 
+Some apis are only available in 
+
+818
+00:44:53,200 --> 00:44:54,900
+workers. 
+There's a degree to which 
+
+819
+00:44:54,900 --> 00:44:57,000
+workers are heavy weight and 
+take some time to start up and 
+
+820
+00:44:57,000 --> 00:44:59,300
+shut down their sort of sub 
+processes, aren't they? 
+
+821
+00:45:00,900 --> 00:45:03,500
+So we use processes differently 
+for browser isolation. 
+
+822
+00:45:03,500 --> 00:45:06,900
+So it's not quite a subprocess, 
+but it is a, it is a heavy 
+
+823
+00:45:06,900 --> 00:45:08,800
+thread, it's a very managed 
+threat. 
+
+824
+00:45:09,400 --> 00:45:11,700
+And in particular the post 
+message between workers and, you
+
+825
+00:45:11,708 --> 00:45:14,700
+know, performance of 
+communication between workers is
+
+826
+00:45:14,700 --> 00:45:16,200
+challenging. 
+The shared memory models. 
+
+827
+00:45:16,200 --> 00:45:18,500
+Not quite there yet, although 
+it's, you know, there's a 
+
+828
+00:45:18,500 --> 00:45:22,300
+version of it. 
+And so for webassembly, yeah, 
+
+829
+00:45:22,300 --> 00:45:24,300
+you're absolutely right. 
+There is an impedance mismatch 
+
+830
+00:45:24,300 --> 00:45:26,900
+between how static language 
+developers like hot lead. 
+
+831
+00:45:26,900 --> 00:45:29,100
+Developers think of 
+multi-threading and co-routines 
+
+832
+00:45:29,100 --> 00:45:32,400
+and you know I used to work on 
+the go programming language and 
+
+833
+00:45:32,400 --> 00:45:35,800
+they call them go routines and 
+they use them extensively and so
+
+834
+00:45:35,800 --> 00:45:37,400
+we have to figure out a model 
+for that. 
+
+835
+00:45:37,700 --> 00:45:40,200
+There's some proposals and 
+discussion around lightweight 
+
+836
+00:45:40,200 --> 00:45:42,700
+threading, specifically for 
+webassembly and you know 
+
+837
+00:45:42,700 --> 00:45:46,100
+creating ways of carving out 
+some processes within the 
+
+838
+00:45:46,100 --> 00:45:48,900
+webassembly static environment 
+that are separate from how we do
+
+839
+00:45:48,900 --> 00:45:51,400
+it in JavaScript. 
+The script this, of course, 
+
+840
+00:45:51,400 --> 00:45:53,600
+opens up a whole bunch of 
+questions around interop which 
+
+841
+00:45:53,600 --> 00:45:55,500
+was your earlier question. 
+So now you've got multiple 
+
+842
+00:45:55,500 --> 00:45:57,400
+threads over here and you've got
+potentially workers in 
+
+843
+00:45:57,400 --> 00:46:00,100
+JavaScript on the other side and
+how do they talk to each other? 
+
+844
+00:46:00,100 --> 00:46:02,300
+How do they synchronize? 
+How do they shared memory? 
+
+845
+00:46:03,000 --> 00:46:06,400
+So yeah, this is an active area 
+of Investigation, but right now 
+
+846
+00:46:06,600 --> 00:46:10,700
+workers is the path forward for 
+multi-threaded True. 
+
+847
+00:46:10,700 --> 00:46:13,700
+Multi-threading in JavaScript 
+and web so early. 
+
+848
+00:46:14,500 --> 00:46:17,000
+Yeah, when you say all these 
+things, there's a part of me 
+
+849
+00:46:17,008 --> 00:46:19,000
+that goes. 
+Oh, it's so much work will 
+
+850
+00:46:19,400 --> 00:46:21,300
+Forget through it and then then 
+I also think. 
+
+851
+00:46:21,300 --> 00:46:25,600
+Oh, but it's the web, the web 
+that, you know, all the things 
+
+852
+00:46:25,600 --> 00:46:27,000
+that people have done. 
+No. 
+
+853
+00:46:27,000 --> 00:46:30,100
+I think they'll get through it, 
+they'll figure it out the web 
+
+854
+00:46:30,100 --> 00:46:31,500
+finds a way whoever finds the 
+way. 
+
+855
+00:46:31,500 --> 00:46:34,800
+He's just exactly right. 
+And this is big enough of a 
+
+856
+00:46:34,800 --> 00:46:36,600
+topic and there's enough eyes on
+it. 
+
+857
+00:46:36,600 --> 00:46:38,300
+I'm pretty confident. 
+We'll have a better answer. 
+
+858
+00:46:38,700 --> 00:46:42,600
+Pretty soon. 
+That's exciting. 
+
+859
+00:46:45,200 --> 00:46:48,900
+Let's see. 
+Otherwise mm things. 
+
+860
+00:46:50,900 --> 00:46:53,100
+What else did we explore around?
+While Simon. 
+
+861
+00:46:53,300 --> 00:46:56,600
+Oh well, what about the you 
+know? 
+
+862
+00:46:56,600 --> 00:47:01,300
+Like kotlin has their cross 
+platform user interface library 
+
+863
+00:47:01,300 --> 00:47:03,800
+that I'm not sure what state 
+it's in. 
+
+864
+00:47:04,400 --> 00:47:09,500
+So just today on endorsed by 
+Google and anyway, but just 
+
+865
+00:47:09,500 --> 00:47:14,300
+today, I saw tweets from the jet
+Brands who's leading cotton 
+
+866
+00:47:14,300 --> 00:47:18,500
+wasm. 
+He shared composed with wasm, 
+
+867
+00:47:18,700 --> 00:47:22,800
+which is the the Island UI 
+framework for Android and that 
+
+868
+00:47:22,800 --> 00:47:25,500
+jetbrains is taken to other 
+platforms and they've made it 
+
+869
+00:47:25,500 --> 00:47:29,900
+work with wasm and the 
+performance is astonishing. 
+
+870
+00:47:31,200 --> 00:47:35,300
+The I didn't look super deep, 
+but I think that part of, at 
+
+871
+00:47:35,300 --> 00:47:40,300
+least part of the potential 
+implementation uses skia. 
+
+872
+00:47:40,300 --> 00:47:47,500
+So skia is this Graphics library
+that Android uses and it's 
+
+873
+00:47:47,500 --> 00:47:49,900
+probably written in C++ or C or 
+something. 
+
+874
+00:47:50,600 --> 00:47:55,000
+Anyways, they can wasm a Phi 
+skia and then, kotlin wise. 
+
+875
+00:47:55,000 --> 00:47:58,600
+I'm can then just call right 
+into skia, and oh, and then 
+
+876
+00:47:58,600 --> 00:48:02,700
+there's ischia to web canvas 
+mapping. 
+
+877
+00:48:02,700 --> 00:48:04,800
+So that's how they actually get 
+the pixels on the screen. 
+
+878
+00:48:04,800 --> 00:48:06,800
+Hmm. 
+Yeah. 
+
+879
+00:48:06,900 --> 00:48:09,600
+It's it's interesting. 
+So, I also work with our 
+
+880
+00:48:09,600 --> 00:48:11,900
+Graphics team, and we're 
+actually looking at some New 
+
+881
+00:48:11,900 --> 00:48:15,600
+Primitives for very high 
+performance graphics and 
+
+882
+00:48:15,700 --> 00:48:18,600
+potentially making it easier to 
+sort of build entire scene, 
+
+883
+00:48:18,600 --> 00:48:22,900
+graphs, In web apis and then 
+render them and update them very
+
+884
+00:48:22,900 --> 00:48:26,400
+quickly at high frame rates. 
+So, yeah, this it's a super 
+
+885
+00:48:26,400 --> 00:48:29,100
+exciting space anywhere, you're 
+doing something with any degree 
+
+886
+00:48:29,100 --> 00:48:31,200
+of intensity. 
+So whether it's numerics or the 
+
+887
+00:48:31,200 --> 00:48:34,700
+sheets recalculation of all your
+formulas or drawing, you know, 
+
+888
+00:48:34,700 --> 00:48:36,800
+low-level graphics on the 
+screen. 
+
+889
+00:48:37,000 --> 00:48:40,100
+Well, as long as a great fit 
+there, and I think, the web apis
+
+890
+00:48:40,400 --> 00:48:43,500
+now that was some is a thing. 
+We can start to evolve web apis,
+
+891
+00:48:44,000 --> 00:48:45,900
+considering that use case as 
+well. 
+
+892
+00:48:45,900 --> 00:48:49,900
+You know, draw commands coming 
+from well as I'm code at a very 
+
+893
+00:48:49,900 --> 00:48:51,700
+high rate. 
+Wait, so that's exciting in 
+
+894
+00:48:51,700 --> 00:48:53,900
+terms of what the graphics 
+capabilities of the web will be 
+
+895
+00:48:53,900 --> 00:48:55,900
+in the next couple of years. 
+Yeah. 
+
+896
+00:48:56,100 --> 00:49:01,500
+Is there any capability or in 
+the system that would allow you 
+
+897
+00:49:01,500 --> 00:49:06,900
+to add web assembly instructions
+later? 
+
+898
+00:49:07,000 --> 00:49:11,600
+Like if you discover that oh my 
+gosh, we missed something or you
+
+899
+00:49:11,600 --> 00:49:13,800
+know the world has changed and 
+now we understand something 
+
+900
+00:49:13,800 --> 00:49:16,100
+better. 
+Yeah, that's for sure. 
+
+901
+00:49:16,500 --> 00:49:19,400
+I mean an opcode is just a 
+number, right? 
+
+902
+00:49:19,400 --> 00:49:23,000
+And so we just I need everybody 
+to agree on what that not in 
+
+903
+00:49:23,000 --> 00:49:24,400
+Hardware. 
+It's just a number. 
+
+904
+00:49:24,500 --> 00:49:27,300
+Yes, yes, exactly, right. 
+And once we kind of agree on 
+
+905
+00:49:27,300 --> 00:49:29,800
+what that new of code does and 
+we'll how it interfaces with 
+
+906
+00:49:29,800 --> 00:49:31,900
+everything else. 
+There's definitely room to be 
+
+907
+00:49:31,900 --> 00:49:33,500
+adding more instructions and I 
+think that's definitely 
+
+908
+00:49:33,500 --> 00:49:36,900
+something we'll be doing, right?
+And that's a reason that you 
+
+909
+00:49:36,900 --> 00:49:40,800
+wouldn't want to cast these 
+things in Hardware, that you 
+
+910
+00:49:40,800 --> 00:49:44,100
+would always want that ideally 
+thin layer. 
+
+911
+00:49:44,200 --> 00:49:51,700
+So that if you added another up 
+code, you could adjust that It 
+
+912
+00:49:51,700 --> 00:49:56,200
+seems like performance is like 
+the big reason for wasm in. 
+
+913
+00:49:56,200 --> 00:50:01,600
+A lot of ways is there other 
+kind of less lesser talked about
+
+914
+00:50:01,600 --> 00:50:04,600
+benefits of wasm that are also 
+interesting? 
+
+915
+00:50:06,200 --> 00:50:09,000
+Yeah, I mean, they touch on 
+performance look. 
+
+916
+00:50:09,000 --> 00:50:10,300
+I mean, JavaScript is turned 
+complete. 
+
+917
+00:50:10,300 --> 00:50:12,800
+So anything that you can compute
+in one framework, you can 
+
+918
+00:50:12,800 --> 00:50:15,700
+compute in the other one. 
+So it's definitely not a 
+
+919
+00:50:15,700 --> 00:50:18,900
+capability story. 
+But performance itself is kind 
+
+920
+00:50:18,900 --> 00:50:21,900
+of one of these weird things. 
+Are you know, if something is 
+
+921
+00:50:21,900 --> 00:50:25,300
+fast it starts to become less a 
+difference of degree, and more 
+
+922
+00:50:25,300 --> 00:50:27,300
+difference of kind, right? 
+When you can really start to 
+
+923
+00:50:27,300 --> 00:50:30,000
+think about game engines, and 
+you can really start to think 
+
+924
+00:50:30,000 --> 00:50:32,300
+about Advanced numerics and 
+machine learning and that sort 
+
+925
+00:50:32,300 --> 00:50:36,000
+of thing running client side. 
+Then the equation of, you know, 
+
+926
+00:50:36,000 --> 00:50:37,600
+even business models change, 
+right? 
+
+927
+00:50:37,600 --> 00:50:40,300
+Like do we need to spin up a 
+whole bunch of servers to do all
+
+928
+00:50:40,300 --> 00:50:42,400
+the work server-side when 
+everybody has these really 
+
+929
+00:50:42,400 --> 00:50:46,400
+powerful devices in their hands,
+we can ship a little binary. 
+
+930
+00:50:46,400 --> 00:50:48,400
+That's the same across all of 
+them, it runs on any 
+
+931
+00:50:48,700 --> 00:50:51,100
+architecture and it runs 
+Relatively fast. 
+
+932
+00:50:51,100 --> 00:50:54,100
+I very low cost the main one. 
+We look at internal. 
+
+933
+00:50:54,100 --> 00:50:57,000
+The flip coin of performances is
+actually resource efficiency. 
+
+934
+00:50:57,000 --> 00:51:00,400
+So can we actually run heavy 
+workloads without you know, 
+
+935
+00:51:00,400 --> 00:51:02,600
+burning battery life on a 
+device? 
+
+936
+00:51:03,000 --> 00:51:05,700
+Can we run workloads, for 
+example, in a service worker 
+
+937
+00:51:05,900 --> 00:51:09,200
+that run periodically in the 
+background and sort of like are 
+
+938
+00:51:09,400 --> 00:51:12,700
+downloading, caching recomputing
+transpiling doing machine, 
+
+939
+00:51:12,700 --> 00:51:15,500
+learning, during Federated 
+learning customizing content, 
+
+940
+00:51:15,500 --> 00:51:16,900
+that sort of thing, and 
+shipping. 
+
+941
+00:51:16,900 --> 00:51:19,700
+Some of those workloads into the
+device for a whole host of 
+
+942
+00:51:19,700 --> 00:51:22,700
+reasons, like, You know, 
+privacy, for example, not 
+
+943
+00:51:22,700 --> 00:51:25,400
+necessarily tracking users 
+server-side but letting the 
+
+944
+00:51:25,400 --> 00:51:28,400
+user's device become gradually 
+smarter at giving the user the 
+
+945
+00:51:28,400 --> 00:51:30,300
+content that they want from a 
+particular service. 
+
+946
+00:51:30,700 --> 00:51:32,900
+So performance is one of those 
+weird things where it just like 
+
+947
+00:51:32,900 --> 00:51:35,400
+a changes, the trade-offs and 
+changes the assumptions of how 
+
+948
+00:51:35,400 --> 00:51:37,900
+people architect their services 
+and their apps. 
+
+949
+00:51:38,400 --> 00:51:42,100
+And so it could realize benefits
+sort of, you know, to privacy 
+
+950
+00:51:42,100 --> 00:51:46,300
+for example or to just you know 
+increasing the sort of compute 
+
+951
+00:51:46,300 --> 00:51:49,300
+power available to startups, for
+example, and allowing them to 
+
+952
+00:51:49,308 --> 00:51:51,500
+ship advanced. 
+Eels that run client side so 
+
+953
+00:51:51,508 --> 00:51:52,900
+that they don't have to pay for 
+the servers. 
+
+954
+00:51:53,600 --> 00:51:56,100
+Those are the kinds of 
+situations where performance 
+
+955
+00:51:56,100 --> 00:51:59,000
+gets really interesting Beyond, 
+just run it faster. 
+
+956
+00:51:59,600 --> 00:52:02,600
+Yeah, yeah. 
+That the increased performance 
+
+957
+00:52:02,600 --> 00:52:05,800
+opens up new ways of doing 
+things and New Opportunities. 
+
+958
+00:52:05,800 --> 00:52:08,700
+And yeah, are we talked to 
+Kristen about rust and why he 
+
+959
+00:52:08,700 --> 00:52:11,900
+loved Russ so much. 
+And and it wasn't necessarily 
+
+960
+00:52:11,900 --> 00:52:13,800
+about the language. 
+Yeah, the language has some nice
+
+961
+00:52:13,800 --> 00:52:16,700
+things but he was like it's 
+about the resource efficiency 
+
+962
+00:52:16,900 --> 00:52:20,300
+that is produced from the from 
+the language. 
+
+963
+00:52:20,400 --> 00:52:23,900
+That is, what was the most 
+compelling thing for him about 
+
+964
+00:52:23,900 --> 00:52:26,200
+Russ. 
+Well, but he was also dealing 
+
+965
+00:52:26,200 --> 00:52:28,400
+with battery-powered Remote 
+device, right? 
+
+966
+00:52:28,400 --> 00:52:32,400
+So, yeah, that was, yeah. 
+Like an overarching issue for 
+
+967
+00:52:32,400 --> 00:52:33,400
+him. 
+So yeah. 
+
+968
+00:52:33,400 --> 00:52:34,500
+Makes sense. 
+Yeah. 
+
+969
+00:52:34,800 --> 00:52:38,800
+But but, but as you pointing 
+out, yeah, it opens doors when 
+
+970
+00:52:38,800 --> 00:52:42,700
+you can be efficient. 
+Yeah. 
+
+971
+00:52:42,700 --> 00:52:46,700
+I mean ultimately the whole 
+point of computers is they can 
+
+972
+00:52:47,000 --> 00:52:52,100
+do things that we can't. 
+And if, if I can do it at the 
+
+973
+00:52:52,100 --> 00:52:56,700
+same speed as the computer, you 
+know, it's kind of a toss-up 
+
+974
+00:52:56,800 --> 00:53:04,400
+right yeah. 
+Huh, yeah, fascinating, um, the 
+
+975
+00:53:05,700 --> 00:53:08,400
+I think one of the questions 
+that comes up a lot around while
+
+976
+00:53:08,400 --> 00:53:11,400
+I was mm is on the interop and 
+we've touched on it a little 
+
+977
+00:53:11,400 --> 00:53:17,200
+bit, but maybe just tell us a 
+little more like, okay, so I've 
+
+978
+00:53:17,200 --> 00:53:19,500
+written something that's 
+compiled down to wise. 
+
+979
+00:53:19,500 --> 00:53:22,200
+Mmm. 
+Is there like an FF? 
+
+980
+00:53:22,200 --> 00:53:26,500
+I already to, like, be able to 
+make a call out to JavaScript 
+
+981
+00:53:26,500 --> 00:53:30,500
+and for JavaScript to call in to
+me or houses that yeah, there 
+
+982
+00:53:30,500 --> 00:53:35,000
+are some I would say relatively 
+rudimentary ways of calling back
+
+983
+00:53:35,000 --> 00:53:37,300
+and forth and passing objects 
+back and forth. 
+
+984
+00:53:38,300 --> 00:53:41,600
+But it doesn't I would say, it 
+doesn't resemble what 
+
+985
+00:53:41,600 --> 00:53:43,800
+programmers are used to 
+accessing directly. 
+
+986
+00:53:44,400 --> 00:53:47,600
+And so usually the way you would
+access it would be through a 
+
+987
+00:53:47,600 --> 00:53:51,800
+library and so you would write a
+library that That has some glue 
+
+988
+00:53:51,800 --> 00:53:54,500
+logic between the code that 
+you're writing in JavaScript and
+
+989
+00:53:54,500 --> 00:53:57,600
+the code that you're writing and
+wisdom in Colin or whatever the 
+
+990
+00:53:57,608 --> 00:54:00,000
+other languages. 
+Or the other thing you would do 
+
+991
+00:54:00,000 --> 00:54:02,800
+is, for example, if you're 
+accessing web, apis that are in 
+
+992
+00:54:02,800 --> 00:54:06,800
+JavaScript, then you would have 
+some kind of web API library in 
+
+993
+00:54:06,900 --> 00:54:08,800
+in kotlin or whatever language 
+you're using. 
+
+994
+00:54:08,800 --> 00:54:12,700
+We actually some of us when we 
+did our sample was Colin has a 
+
+995
+00:54:12,708 --> 00:54:17,300
+library that you just say like 
+document dot something that 
+
+996
+00:54:17,300 --> 00:54:21,300
+added element and, you know, and
+we give it like our Or whatever,
+
+997
+00:54:21,300 --> 00:54:24,200
+and it, rented it on the page. 
+And so there was some mapping 
+
+998
+00:54:24,800 --> 00:54:31,100
+through kotlin API and wasm to 
+actually, making a JavaScript 
+
+999
+00:54:31,100 --> 00:54:34,000
+call to like, add a node to the 
+Dom or something. 
+
+1000
+00:54:34,000 --> 00:54:36,000
+Is that is that? 
+Yeah, that's it. 
+
+1001
+00:54:36,000 --> 00:54:37,600
+Go through the ffi layer, 
+whatever. 
+
+1002
+00:54:37,600 --> 00:54:39,500
+Right, right. 
+But that there would be some 
+
+1003
+00:54:39,500 --> 00:54:42,200
+code in that Library function. 
+That's maybe, you know 
+
+1004
+00:54:42,200 --> 00:54:44,500
+translated, you know, 
+re-encoding the string or, you 
+
+1005
+00:54:44,500 --> 00:54:48,200
+know, creating the JavaScript 
+object and so all of that kind 
+
+1006
+00:54:48,200 --> 00:54:50,600
+of induces, a lot of the sort of
+run time. 
+
+1007
+00:54:50,700 --> 00:54:53,500
+Overheads of JavaScript itself 
+because you're creating a 
+
+1008
+00:54:53,508 --> 00:54:55,600
+dynamic object from a static 
+object. 
+
+1009
+00:54:56,200 --> 00:54:58,000
+It's something. 
+We've been poking around at like
+
+1010
+00:54:58,100 --> 00:55:00,100
+trying to trying to fix and 
+trying to address. 
+
+1011
+00:55:01,100 --> 00:55:03,900
+We're on the V8 side. 
+We're looking at optimizations 
+
+1012
+00:55:03,900 --> 00:55:07,200
+where we can detect that that's 
+happening and then sort of alive
+
+1013
+00:55:07,200 --> 00:55:10,100
+the JavaScript object creation 
+sort of in the engine. 
+
+1014
+00:55:10,900 --> 00:55:12,600
+But it's a it's a very tricky 
+space. 
+
+1015
+00:55:12,600 --> 00:55:14,500
+It's something that requires a 
+little bit more research. 
+
+1016
+00:55:16,100 --> 00:55:19,100
+Yeah. 
+So if the Dom is some shared 
+
+1017
+00:55:19,100 --> 00:55:22,700
+piece of memory like You could 
+you essentially reference the 
+
+1018
+00:55:22,700 --> 00:55:26,200
+Dom from wasm and just like 
+manipulate that directly or 
+
+1019
+00:55:26,200 --> 00:55:28,500
+something? 
+Yeah, it's been an area of 
+
+1020
+00:55:28,500 --> 00:55:31,400
+exploration, but don't know what
+the stairs and the Dom, being a 
+
+1021
+00:55:31,700 --> 00:55:34,700
+entirely JavaScript data 
+structure is entirely Dynamic. 
+
+1022
+00:55:34,700 --> 00:55:36,800
+And so you can attach new 
+methods and do all kinds of 
+
+1023
+00:55:36,808 --> 00:55:40,500
+crazy things to those objects. 
+And so we have to support that 
+
+1024
+00:55:40,500 --> 00:55:43,500
+or expose that somehow. 
+But one thing actually, that 
+
+1025
+00:55:43,500 --> 00:55:45,600
+could be helpful is the string 
+ref proposal. 
+
+1026
+00:55:45,600 --> 00:55:48,000
+I talked about because a lot of 
+the attributes on the Dom are 
+
+1027
+00:55:48,200 --> 00:55:51,500
+our strings inherently. 
+And so we may not be able to 
+
+1028
+00:55:51,500 --> 00:55:54,400
+speed up the creation of all 
+these JavaScript objects without
+
+1029
+00:55:54,400 --> 00:55:57,300
+that sort of like interface 
+layer in between webassembly and
+
+1030
+00:55:57,300 --> 00:55:59,000
+JavaScript. 
+But at least some of the 
+
+1031
+00:55:59,000 --> 00:56:02,500
+Primitives that are very common 
+in that data structure, we might
+
+1032
+00:56:02,500 --> 00:56:06,500
+be able to create sort of native
+versions of them and that might 
+
+1033
+00:56:06,500 --> 00:56:11,100
+get get a sort of like, 80% of 
+the performance, we hope that 
+
+1034
+00:56:11,100 --> 00:56:15,300
+makes sense. 
+So, do you have any sense of a 
+
+1035
+00:56:15,308 --> 00:56:17,700
+timeline when we're going to 
+start seeing? 
+
+1036
+00:56:18,000 --> 00:56:22,200
+I know it's a terrible question 
+to ask, but It's like, you know,
+
+1037
+00:56:22,200 --> 00:56:27,200
+we're curious that. 
+When can we start doing stuff? 
+
+1038
+00:56:27,500 --> 00:56:31,800
+When can you make a web app that
+is why as I am and not 
+
+1039
+00:56:31,800 --> 00:56:33,400
+JavaScript. 
+Yeah. 
+
+1040
+00:56:33,800 --> 00:56:36,700
+Like that. 
+Just just like, you know what, 
+
+1041
+00:56:37,300 --> 00:56:40,100
+what when we might we hope to 
+see some things. 
+
+1042
+00:56:40,700 --> 00:56:44,500
+Well I think this year is going 
+to be a very interesting year 
+
+1043
+00:56:44,500 --> 00:56:47,900
+for webassembly and the web and 
+application development on the 
+
+1044
+00:56:47,900 --> 00:56:49,700
+web. 
+There's a bunch of different 
+
+1045
+00:56:49,700 --> 00:56:51,100
+things. 
+Some of which we've talked about
+
+1046
+00:56:51,100 --> 00:56:53,400
+that are all coming together at 
+once. 
+
+1047
+00:56:54,600 --> 00:56:57,400
+You know, jetbrains has been 
+very active and and has been 
+
+1048
+00:56:57,400 --> 00:57:00,000
+sharing their results. 
+And they've had credible results
+
+1049
+00:57:00,000 --> 00:57:04,800
+compiling kotlin as well as, you
+know, skia as well as compose to
+
+1050
+00:57:04,800 --> 00:57:06,500
+webassembly and running it in 
+the browser. 
+
+1051
+00:57:07,100 --> 00:57:10,500
+So that's super exciting. 
+I my I anticipate some you know 
+
+1052
+00:57:11,400 --> 00:57:16,400
+announcements from their end 
+sometime this year and we 
+
+1053
+00:57:16,400 --> 00:57:18,800
+mentioned last year at I/O that 
+we're doing that internally for 
+
+1054
+00:57:18,800 --> 00:57:22,300
+Java and that's been a big part 
+of kind of Being wise and GC and
+
+1055
+00:57:22,300 --> 00:57:25,800
+bringing that to the ecosystem. 
+And that's something that we 
+
+1056
+00:57:25,800 --> 00:57:28,700
+plan to roll out in Chrome this 
+year as well. 
+
+1057
+00:57:28,800 --> 00:57:31,900
+So that more developers are able
+to and more toolchain authors 
+
+1058
+00:57:31,900 --> 00:57:35,000
+and language developers are able
+to experiment with it. 
+
+1059
+00:57:35,700 --> 00:57:38,200
+And then, yeah, you mentioned 
+sort of the cross-platform 
+
+1060
+00:57:38,200 --> 00:57:41,200
+Frameworks. 
+So compose jetpack compose, 
+
+1061
+00:57:41,200 --> 00:57:42,700
+which is sort of our version of 
+it. 
+
+1062
+00:57:43,200 --> 00:57:45,800
+We also have the flutter 
+framework and a lot of different
+
+1063
+00:57:45,800 --> 00:57:47,500
+folks on the graphic side, as 
+well. 
+
+1064
+00:57:47,500 --> 00:57:50,100
+Are looking at this sort of 
+write, once run anywhere from a 
+
+1065
+00:57:50,108 --> 00:57:51,300
+UI. 
+Point of view. 
+
+1066
+00:57:52,000 --> 00:57:54,900
+And so there's some work being 
+done there on the on the canvas 
+
+1067
+00:57:54,900 --> 00:57:57,600
+and other other web apis to make
+that possible. 
+
+1068
+00:57:58,300 --> 00:58:00,900
+So, yeah, I think, you know this
+year is going to be here where 
+
+1069
+00:58:00,900 --> 00:58:01,800
+we are. 
+Welcome. 
+
+1070
+00:58:02,000 --> 00:58:16,300
+Yeah, totally the time of year. 
+Yeah, they finally got my audio 
+
+1071
+00:58:16,300 --> 00:58:20,500
+working on Linux using Linux on 
+my desktop since. 
+
+1072
+00:58:21,600 --> 00:58:25,100
+I could go back and look at up, 
+everyone's well, like 92 or 
+
+1073
+00:58:25,100 --> 00:58:26,900
+something like that. 
+That's when I started using 
+
+1074
+00:58:26,900 --> 00:58:31,500
+Linux on the desktop and deal, 
+just this year, nope, this year,
+
+1075
+00:58:31,600 --> 00:58:34,300
+got it working. 
+So this year is the Euros, it 
+
+1076
+00:58:34,300 --> 00:58:35,900
+was that, because the Knicks? 
+No, I got it. 
+
+1077
+00:58:35,908 --> 00:58:39,100
+Working on a bun to and then 
+when I switched over to Nick's, 
+
+1078
+00:58:39,100 --> 00:58:41,800
+it just worked on the box. 
+I have to play with it. 
+
+1079
+00:58:41,800 --> 00:58:44,300
+That's mysterious. 
+Yeah, yeah. 
+
+1080
+00:58:45,200 --> 00:58:49,500
+So anyways it's yeah, I think 
+it's this is like the most 
+
+1081
+00:58:49,500 --> 00:58:53,400
+exciting year yet. 
+Yet for wasm and then there's 
+
+1082
+00:58:53,400 --> 00:58:57,100
+there's just so much going into 
+it from Sunny to so many 
+
+1083
+00:58:57,100 --> 00:59:01,300
+different angles that it's just 
+going to get more exciting which
+
+1084
+00:59:01,300 --> 00:59:05,900
+I think is why why I see this 
+hyper on wasm and initially, I 
+
+1085
+00:59:05,900 --> 00:59:09,000
+was like, come on, like, like, 
+is this really that exciting? 
+
+1086
+00:59:09,300 --> 00:59:13,400
+And I think it is, I think that 
+it's going to be a pretty, 
+
+1087
+00:59:13,500 --> 00:59:18,700
+pretty pivotal moment in the way
+that technology is built and 
+
+1088
+00:59:18,700 --> 00:59:24,600
+used and well just the Idea that
+we could actually have a single 
+
+1089
+00:59:24,600 --> 00:59:30,500
+app that runs everywhere is, you
+know, it's like I stopped taking
+
+1090
+00:59:30,500 --> 00:59:34,000
+that seriously along time ago 
+and the fact that it might 
+
+1091
+00:59:34,000 --> 00:59:38,300
+actually happen, that's that's 
+pretty cool because I don't want
+
+1092
+00:59:38,300 --> 00:59:41,300
+to, I don't want to think about 
+all those deployment. 
+
+1093
+00:59:41,300 --> 00:59:43,700
+I mean that's the thing. 
+You think about how much time do
+
+1094
+00:59:43,700 --> 00:59:47,200
+companies spent, you know, 
+worrying about deploying to all 
+
+1095
+00:59:47,200 --> 00:59:50,100
+these different platforms and if
+you could erase that, it would, 
+
+1096
+00:59:50,300 --> 00:59:52,900
+you know, is almost like when 
+everybody who started an 
+
+1097
+00:59:52,900 --> 00:59:56,100
+internet company had to run 
+their own web server Farms, you 
+
+1098
+00:59:56,100 --> 01:00:00,300
+know and then we skipped away 
+from that and now you know you 
+
+1099
+01:00:00,300 --> 01:00:03,700
+know it it jumps you forward and
+this feels like it could be that
+
+1100
+01:00:03,700 --> 01:00:08,000
+kind of jump forward does. 
+I don't know if it'll happen 
+
+1101
+01:00:08,000 --> 01:00:12,900
+this year but probably next year
+I think we're going to see like 
+
+1102
+01:00:12,900 --> 01:00:16,200
+a major operating system that's 
+just going to have wasm support 
+
+1103
+01:00:16,200 --> 01:00:18,400
+out of the box. 
+Just like, you know, you 
+
+1104
+01:00:18,400 --> 01:00:21,600
+download your wasm download a 
+wise on file, Run it and you 
+
+1105
+01:00:21,608 --> 01:00:25,800
+don't have to install any run 
+times just as operating system 
+
+1106
+01:00:25,800 --> 01:00:33,100
+supported and then that's, yeah,
+nice, let me nice happen. 
+
+1107
+01:00:33,900 --> 01:00:36,800
+It's exciting. 
+Well, did we miss anything? 
+
+1108
+01:00:38,200 --> 01:00:40,100
+No, me, and I think we covered a
+lot of ground. 
+
+1109
+01:00:40,700 --> 01:00:43,500
+I'm great. 
+Yeah, thanks so much for joining
+
+1110
+01:00:43,500 --> 01:00:46,000
+us. 
+I learned a ton and yes, if 
+
+1111
+01:00:46,000 --> 01:00:48,600
+you're excited about why zone, 
+so thanks for all your work on 
+
+1112
+01:00:48,600 --> 01:00:51,600
+it, on it and making it better. 
+And Push them forward. 
+
+1113
+01:00:52,200 --> 01:00:53,600
+Awesome, great chatting with you
+guys. 
+
+1114
+01:00:53,600 --> 01:00:54,400
+Thanks for having me.

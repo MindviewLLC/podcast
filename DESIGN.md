@@ -31,7 +31,13 @@ Professional, yet fun podcast site for Happy Path Programming.
 - **Episodes:** unique shareable URL each, cover/thumbnail hero, audio player,
   "Play on Spotify", "Play on Apple Podcasts" and (when the episode has a real
   video) "Watch on YouTube" pills linking that episode on each platform,
-  per-episode Discord link, resources list, guest chips.
+  per-episode Discord link, resources list, guest chips, and (when Spotify has
+  one) a "Transcript" panel below the resources: a muted note that it is
+  machine-generated with a "Download (.srt)" link, then a closed `<details>`
+  ("Read the transcript") of paragraphs, each led by a small mono green
+  timestamp that plays the episode from there; the body scrolls inside the
+  panel (max 70vh) and a `#t-<seconds>` link opens it and highlights that
+  paragraph.
 - **Topics:** episodes are tagged with topics (derived from title/description via
   a curated keyword map). Topic chips show on episode cards and episode pages; a
   Topics page (`topics/index.html`) is a tag cloud with counts, and each topic

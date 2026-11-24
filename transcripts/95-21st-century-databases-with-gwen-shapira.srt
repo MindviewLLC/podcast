@@ -1,0 +1,4880 @@
+1
+00:00:01,120 --> 00:00:03,480
+Welcome to. 
+Happy Path Programming. 
+
+2
+00:00:03,720 --> 00:00:05,600
+I'm Bruce Eckel. 
+I'm James Ward. 
+
+3
+00:00:08,280 --> 00:00:10,640
+All right, well, welcome to 
+Happy Path Programming. 
+
+4
+00:00:11,440 --> 00:00:16,320
+So before we dive into our guest
+today, we had the Winter Tech 
+
+5
+00:00:16,320 --> 00:00:20,560
+Forum up here in Crested Butte, 
+Colorado last week and had had a
+
+6
+00:00:20,560 --> 00:00:23,320
+handful of nerds come up for 
+that and had a great time. 
+
+7
+00:00:24,080 --> 00:00:27,800
+We were losing people just right
+up until the end. 
+
+8
+00:00:28,280 --> 00:00:33,800
+But the the reassuring thing was
+that it's it was still great 
+
+9
+00:00:33,800 --> 00:00:37,080
+even though we only we 
+experimented with having only a 
+
+10
+00:00:37,080 --> 00:00:40,720
+single session because there was
+only ten of us really. 
+
+11
+00:00:41,240 --> 00:00:45,680
+And so it was hard. 
+It was hard and one of the 
+
+12
+00:00:45,680 --> 00:00:50,040
+sessions that I didn't suggest 
+someone else said was about 
+
+13
+00:00:50,040 --> 00:00:52,880
+marketing the conference 'cause 
+they're going, yeah, we want to 
+
+14
+00:00:52,880 --> 00:00:55,600
+get more people here we don't 
+want the conference to Peter 
+
+15
+00:00:55,600 --> 00:00:58,240
+out, etcetera. 
+And so they talked about 
+
+16
+00:00:58,520 --> 00:01:02,200
+different things that we could 
+do because it really is nice 
+
+17
+00:01:02,200 --> 00:01:06,920
+when you have multiple tracks 
+and you can choose some choices.
+
+18
+00:01:07,040 --> 00:01:07,840
+Yeah. 
+You want to go to? 
+
+19
+00:01:07,840 --> 00:01:08,440
+Yes. 
+Yeah. 
+
+20
+00:01:08,440 --> 00:01:10,600
+So we definitely learned some 
+things. 
+
+21
+00:01:11,560 --> 00:01:15,920
+The York dinner was really a 
+good experience and it's, you 
+
+22
+00:01:15,920 --> 00:01:18,680
+know. 
+We had some fun projects that we
+
+23
+00:01:18,680 --> 00:01:23,600
+worked on. 
+We we got some Pickle, the new 
+
+24
+00:01:23,720 --> 00:01:26,920
+Apple configuration language 
+working for GitHub Action, which
+
+25
+00:01:26,920 --> 00:01:30,200
+I gotta say, I was pretty 
+delightful, partly because 
+
+26
+00:01:31,400 --> 00:01:33,040
+you've heard the promises 
+before. 
+
+27
+00:01:33,040 --> 00:01:36,480
+Well, and Apple I've not. 
+I mean, I don't know. 
+
+28
+00:01:36,800 --> 00:01:41,400
+I I've seen really bad Apple 
+software, so I was suspicious of
+
+29
+00:01:41,400 --> 00:01:44,480
+that. 
+But and and also configuration. 
+
+30
+00:01:44,480 --> 00:01:46,720
+I mean, how many configuration 
+systems have we seen? 
+
+31
+00:01:46,720 --> 00:01:50,160
+And they all had pretty 
+significant flaws. 
+
+32
+00:01:50,200 --> 00:01:53,920
+And it's wow. 
+I mean, pickle is like, OK, 
+
+33
+00:01:54,320 --> 00:01:56,920
+that's where we're going, man. 
+Yeah 'cause it's a real 
+
+34
+00:01:56,920 --> 00:01:59,240
+language. 
+It's a delightful experience. 
+
+35
+00:01:59,240 --> 00:01:59,720
+Oh. 
+My gosh. 
+
+36
+00:01:59,840 --> 00:02:03,480
+And we were able to just guess 
+at things. 
+
+37
+00:02:03,520 --> 00:02:05,160
+And most of the time, we were 
+right. 
+
+38
+00:02:05,360 --> 00:02:08,039
+Guess driven development. 
+Oh boy, Pickle, that was, that 
+
+39
+00:02:08,039 --> 00:02:09,400
+was. 
+So we're hoping to have a pickle
+
+40
+00:02:09,400 --> 00:02:12,240
+person on sometime to talk more 
+about. 
+
+41
+00:02:12,240 --> 00:02:14,920
+That to dive into it, 'cause 
+that I gotta say, I was 
+
+42
+00:02:14,920 --> 00:02:18,120
+impressed. 
+Yeah, beginning to end with that
+
+43
+00:02:18,120 --> 00:02:20,800
+experience. 
+So we recorded a few of the 
+
+44
+00:02:20,800 --> 00:02:24,960
+sessions from to from the 
+conference, and we'll try to get
+
+45
+00:02:25,120 --> 00:02:26,600
+those posted soon. 
+Mm hmm. 
+
+46
+00:02:27,080 --> 00:02:31,080
+Yeah. 
+OK Well, with that, welcome Gwen
+
+47
+00:02:31,080 --> 00:02:33,160
+Shapiro. 
+Did I get your last name right? 
+
+48
+00:02:33,800 --> 00:02:35,160
+You got my last name right. 
+Awesome. 
+
+49
+00:02:35,640 --> 00:02:37,040
+Everything. 
+Be on the show. 
+
+50
+00:02:37,360 --> 00:02:41,200
+Yeah, great to have you Gwen. 
+So let me give a little bit of 
+
+51
+00:02:41,200 --> 00:02:44,960
+my background of of knowing you 
+and I don't know if we've ever 
+
+52
+00:02:44,960 --> 00:02:49,920
+even met in person but but the 
+my first kind of encounter with 
+
+53
+00:02:49,920 --> 00:02:54,640
+you was you are one of the Co 
+creators of Kafka when you're at
+
+54
+00:02:54,640 --> 00:02:56,480
+LinkedIn. 
+Am I getting that part right and
+
+55
+00:02:56,480 --> 00:02:58,480
+we can? 
+Actually know a lot of people 
+
+56
+00:02:58,520 --> 00:03:00,360
+think that and that is 
+incorrect. 
+
+57
+00:03:00,400 --> 00:03:04,480
+I was not a Co creator of Kafka 
+and I was not in LinkedIn. 
+
+58
+00:03:05,600 --> 00:03:10,320
+I was adapter while I was 
+actually doing professional 
+
+59
+00:03:10,320 --> 00:03:16,520
+services at Cloudera and I 
+started you know when Cloudera 
+
+60
+00:03:16,520 --> 00:03:18,240
+was the Hadoop company back in 
+the day. 
+
+61
+00:03:18,640 --> 00:03:22,360
+And big problem with Hadoop was 
+how do we get data into it. 
+
+62
+00:03:22,720 --> 00:03:25,880
+And I was trying to help my 
+customers and experimenting with
+
+63
+00:03:25,880 --> 00:03:29,120
+different methods. 
+And my husband was at LinkedIn 
+
+64
+00:03:29,120 --> 00:03:32,560
+at the time and he said you know
+our team is using something 
+
+65
+00:03:32,560 --> 00:03:34,960
+called Kafka and I started using
+it and it's pretty cool and 
+
+66
+00:03:34,960 --> 00:03:36,280
+maybe you should try using it 
+too. 
+
+67
+00:03:36,520 --> 00:03:39,480
+It's we now open source it to 
+Apache so you and your customers
+
+68
+00:03:39,480 --> 00:03:43,760
+can try it and we tried it and 
+it you know it was amazing. 
+
+69
+00:03:44,000 --> 00:03:48,440
+But like any new software that 
+you start using maybe a year 
+
+70
+00:03:48,440 --> 00:03:53,160
+after it came out it had bugs 
+and it had missing features. 
+
+71
+00:03:53,160 --> 00:03:56,320
+So it was very natural for me 
+like you know during the day my 
+
+72
+00:03:56,320 --> 00:04:00,480
+customer tells me I was trying 
+to do this and it didn't quite 
+
+73
+00:04:00,480 --> 00:04:02,720
+work the way I expected. 
+I was like let me look if I can 
+
+74
+00:04:02,720 --> 00:04:05,680
+do anything about it. 
+So I looked and if I could 
+
+75
+00:04:06,080 --> 00:04:08,440
+figure out how to do it, I 
+contributed A batch. 
+
+76
+00:04:08,960 --> 00:04:12,240
+And this thing that really got 
+me about Kafka is that the 
+
+77
+00:04:12,240 --> 00:04:15,800
+community was so great, so 
+welcoming. 
+
+78
+00:04:15,800 --> 00:04:19,480
+Like I put in. 
+I still remember like I was in 
+
+79
+00:04:20,160 --> 00:04:24,760
+Portland consulting to a very 
+big, well known company in the 
+
+80
+00:04:24,760 --> 00:04:27,000
+evening. 
+I wanted to fix a bug for them. 
+
+81
+00:04:27,000 --> 00:04:30,800
+I was sitting in this. 
+They have these pubs in the 
+
+82
+00:04:30,800 --> 00:04:34,880
+converted schools up in Oregon. 
+And so I was sitting in one of 
+
+83
+00:04:34,920 --> 00:04:36,200
+those. 
+Oh, I get. 
+
+84
+00:04:36,200 --> 00:04:38,760
+To that pub that it's What's the
+name of that? 
+
+85
+00:04:38,760 --> 00:04:39,760
+Mick, Mick. 
+Mick. 
+
+86
+00:04:40,040 --> 00:04:43,640
+Mckiminan something like goat. 
+Oh, it's so it's such a fun 
+
+87
+00:04:43,640 --> 00:04:45,320
+place going into this old 
+school. 
+
+88
+00:04:45,320 --> 00:04:48,720
+And it's it's like many rooms 
+that are different pubs and 
+
+89
+00:04:48,720 --> 00:04:49,400
+things. 
+It's super. 
+
+90
+00:04:49,440 --> 00:04:52,280
+Fun like Portland, yeah. 
+Exactly. 
+
+91
+00:04:52,280 --> 00:04:55,200
+So I was sitting in one of those
+and I wrote my patch and I 
+
+92
+00:04:55,200 --> 00:04:58,680
+submitted it and then like an 
+hour later I get a response from
+
+93
+00:04:58,680 --> 00:04:59,880
+Jacob's. 
+This looks OK. 
+
+94
+00:04:59,880 --> 00:05:02,360
+But if you thought about this 
+bit and I was like, yeah, I did 
+
+95
+00:05:02,360 --> 00:05:04,320
+think about this bit. 
+This is why I'm doing it this 
+
+96
+00:05:04,320 --> 00:05:06,920
+way. 
+And like the next day I could 
+
+97
+00:05:06,920 --> 00:05:10,920
+tell my customer, hey, can you 
+build the latest Kafka? 
+
+98
+00:05:10,920 --> 00:05:13,560
+Because the issue fixed for a 
+while and they were very 
+
+99
+00:05:13,560 --> 00:05:15,240
+impressed. 
+I felt really good. 
+
+100
+00:05:15,240 --> 00:05:17,680
+And this obviously starts a 
+really good cycle of 
+
+101
+00:05:18,040 --> 00:05:20,880
+contributing to a project. 
+So that's kind of how I got 
+
+102
+00:05:20,880 --> 00:05:23,440
+pulled in. 
+It's funny that I imagined that 
+
+103
+00:05:23,440 --> 00:05:27,800
+you that you were one of the the
+creators of it because and I 
+
+104
+00:05:27,800 --> 00:05:30,880
+guess you are a significant 
+contributor to Kafka. 
+
+105
+00:05:31,120 --> 00:05:33,400
+But I'd somehow imagined that 
+that history. 
+
+106
+00:05:33,400 --> 00:05:37,800
+So because you've been so I 
+think instrumental in in making 
+
+107
+00:05:37,800 --> 00:05:39,440
+Kafka the amazing thing that it 
+is. 
+
+108
+00:05:39,440 --> 00:05:44,560
+So, so that's that's funny but 
+so then in your journey, oh 
+
+109
+00:05:44,560 --> 00:05:48,120
+wait, let me go back one of the 
+the and maybe this is leaping 
+
+110
+00:05:48,120 --> 00:05:52,360
+forward a little bit too much. 
+But one of the distinct things 
+
+111
+00:05:52,360 --> 00:05:57,360
+that I remember about you was 
+you gave a keynote at I think it
+
+112
+00:05:57,360 --> 00:06:00,680
+was the Kafka conference. 
+What's the name of the Kafka 
+
+113
+00:06:00,800 --> 00:06:02,240
+Confluent conference or 
+something like that. 
+
+114
+00:06:02,480 --> 00:06:07,320
+So you gave this keynote and it 
+was it was the best developer 
+
+115
+00:06:07,320 --> 00:06:11,840
+oriented keynote I'd ever seen 
+because you were very technical 
+
+116
+00:06:11,840 --> 00:06:15,760
+you were able to connect with 
+the developers create some 
+
+117
+00:06:15,760 --> 00:06:20,880
+enthusiasm around Kafka and so 
+so yeah I was that always stood 
+
+118
+00:06:20,880 --> 00:06:25,440
+out to me as as being this like 
+amazing Gwen moment of most. 
+
+119
+00:06:25,440 --> 00:06:29,200
+Most of these keynotes are so 
+dry and marketing driven and 
+
+120
+00:06:29,200 --> 00:06:33,480
+yours was just this authentic 
+developer oriented thing. 
+
+121
+00:06:33,480 --> 00:06:36,160
+And so I love that, that keynote
+and you've probably done many of
+
+122
+00:06:36,160 --> 00:06:38,360
+those, those keynotes, but there
+was one in particular that I'd 
+
+123
+00:06:38,360 --> 00:06:41,760
+watched that I love. 
+So, So yeah, so, so then tell us
+
+124
+00:06:41,760 --> 00:06:44,760
+about your journey to Confluent 
+and ultimately we'll get to 
+
+125
+00:06:44,760 --> 00:06:47,240
+where you are today. 
+But what how did that work? 
+
+126
+00:06:47,240 --> 00:06:50,680
+You're contributing to Kafka? 
+And then and then the Confluent 
+
+127
+00:06:50,680 --> 00:06:55,840
+was like what is that? 
+So obviously while contributing 
+
+128
+00:06:55,840 --> 00:06:59,960
+to a project you make friends 
+and you go to meet UPS and or 
+
+129
+00:06:59,960 --> 00:07:03,120
+you meet them. 
+I think Strata was the big 
+
+130
+00:07:03,120 --> 00:07:06,440
+conference back there. 
+So you kind of meet people, you 
+
+131
+00:07:06,440 --> 00:07:13,600
+talk to them. 
+And then at I think about a year
+
+132
+00:07:13,600 --> 00:07:19,080
+after Confluent was founded, I 
+think I was thinking about 
+
+133
+00:07:19,080 --> 00:07:21,920
+joining for a while. 
+I was just so passionate about 
+
+134
+00:07:21,920 --> 00:07:27,800
+Kafka and Cledera had many 
+interests and the thing that 
+
+135
+00:07:27,800 --> 00:07:33,520
+happened was that Cledera tried 
+to promote me and I did not want
+
+136
+00:07:33,520 --> 00:07:38,880
+to get reported even though. 
+I mean my manager was amazing 
+
+137
+00:07:38,880 --> 00:07:43,760
+and like I had really the best 
+mentors one can possibly dream 
+
+138
+00:07:43,760 --> 00:07:45,880
+of and like such a strong 
+engineers. 
+
+139
+00:07:46,240 --> 00:07:48,080
+But I didn't want to lead the 
+team. 
+
+140
+00:07:48,080 --> 00:07:54,120
+I wanted to work on Kafka and it
+was a bit of a conflict there 
+
+141
+00:07:54,120 --> 00:07:57,920
+because for Cladera, Kafka was 
+not that important. 
+
+142
+00:07:57,920 --> 00:08:01,240
+It was not the core business. 
+So for them, it's like we have 
+
+143
+00:08:01,240 --> 00:08:04,400
+this person who is good from an 
+engineer. 
+
+144
+00:08:04,400 --> 00:08:07,360
+Why are they working on the 
+things that we don't is not that
+
+145
+00:08:07,360 --> 00:08:11,840
+critical for a business. 
+And so I was like, really that's
+
+146
+00:08:11,840 --> 00:08:13,960
+a good point. 
+Why am I working on the things 
+
+147
+00:08:13,960 --> 00:08:15,640
+that is not critical for 
+business? 
+
+148
+00:08:15,640 --> 00:08:19,320
+Why am I not working on the 
+thing for a business that is 
+
+149
+00:08:19,680 --> 00:08:22,520
+that believes in the same things
+that I believe in? 
+
+150
+00:08:23,320 --> 00:08:26,720
+And no, it wasn't just Kafkait 
+was believing in stream 
+
+151
+00:08:26,720 --> 00:08:29,800
+processing as a new paradigm 
+that has a future. 
+
+152
+00:08:30,080 --> 00:08:32,640
+That is the thing that people 
+want to do that has the ability 
+
+153
+00:08:32,640 --> 00:08:36,280
+to change the world. 
+And like, I believe in the world
+
+154
+00:08:36,280 --> 00:08:41,120
+changing and I need to be in a 
+place that is with the same 
+
+155
+00:08:41,120 --> 00:08:43,919
+sorts and beliefs. 
+So at that point I started 
+
+156
+00:08:43,919 --> 00:08:49,080
+talking to Jay and a lot more 
+seriously, like I I need to be 
+
+157
+00:08:49,080 --> 00:08:52,120
+here. 
+I like calling it into Africa, 
+
+158
+00:08:52,120 --> 00:08:56,880
+but I need to be in a place that
+is, that is the future of it. 
+
+159
+00:08:57,360 --> 00:09:01,520
+And so I was happy that they saw
+the same thing, the things I saw
+
+160
+00:09:01,520 --> 00:09:05,600
+the same way. 
+And from the beginning they were
+
+161
+00:09:05,600 --> 00:09:10,640
+so supportive of the way that I 
+wanted to shape my career. 
+
+162
+00:09:10,960 --> 00:09:12,760
+Because from day one I was very 
+clear. 
+
+163
+00:09:12,760 --> 00:09:16,040
+I'm going to work with you and 
+I'm going to do my darndest to 
+
+164
+00:09:16,040 --> 00:09:20,840
+make this space successful. 
+But after that, I want to start 
+
+165
+00:09:20,840 --> 00:09:23,960
+my own company because that was 
+my dream for many years now and 
+
+166
+00:09:23,960 --> 00:09:26,200
+I haven't been doing it. 
+And I'm not getting any younger.
+
+167
+00:09:26,720 --> 00:09:29,440
+And in order to be able to start
+my own company, I need to see 
+
+168
+00:09:29,440 --> 00:09:34,400
+different sides of the business.
+And Jay and Neha gave me this 
+
+169
+00:09:34,400 --> 00:09:36,280
+opportunity. 
+I worked in engineering. 
+
+170
+00:09:36,760 --> 00:09:39,680
+I went to product, I went to 
+marketing. 
+
+171
+00:09:40,520 --> 00:09:43,520
+I did different. 
+I did good marketing, I did 
+
+172
+00:09:43,520 --> 00:09:47,440
+professional services. 
+I just went through all those 
+
+173
+00:09:47,480 --> 00:09:49,640
+things. 
+All the aspects of the business.
+
+174
+00:09:49,640 --> 00:09:52,680
+Yes. 
+And it was such an amazing, you 
+
+175
+00:09:52,680 --> 00:10:00,120
+know, seven-year school of how 
+to build all aspects of the 
+
+176
+00:10:00,120 --> 00:10:06,440
+business from 20 engineer 
+company to, I don't even know 
+
+177
+00:10:06,440 --> 00:10:11,600
+like 2000 plus people like 
+through the IPO. 
+
+178
+00:10:11,600 --> 00:10:15,160
+So it was just such such a great
+time. 
+
+179
+00:10:15,280 --> 00:10:18,600
+Anyone who has an opportunity to
+work on the growing companies 
+
+180
+00:10:18,600 --> 00:10:22,760
+that aligns with their beliefs 
+and highly, highly recommended 
+
+181
+00:10:23,040 --> 00:10:25,400
+best, that's cool Experience of 
+my life, probably. 
+
+182
+00:10:25,400 --> 00:10:28,040
+You mean better than going to 
+Business School and getting an 
+
+183
+00:10:28,040 --> 00:10:31,160
+MBA? 
+Oh, for sure, because you get to
+
+184
+00:10:31,240 --> 00:10:33,480
+learn from people at the top of 
+the business. 
+
+185
+00:10:33,480 --> 00:10:36,120
+While in marketing, I had 
+opportunity to report directly 
+
+186
+00:10:36,120 --> 00:10:39,840
+to the CMO and she was the CMO 
+who took other companies public.
+
+187
+00:10:39,840 --> 00:10:42,360
+She knew so much and she knew 
+product marketing. 
+
+188
+00:10:42,680 --> 00:10:45,040
+And then, you know, I worked 
+closely with sales people. 
+
+189
+00:10:45,040 --> 00:10:48,800
+Every time I'm with a star 
+account executive in the field 
+
+190
+00:10:49,240 --> 00:10:51,440
+they're giving me tips left and 
+right. 
+
+191
+00:10:51,640 --> 00:10:56,080
+When you know shut up before you
+say something the customer is 
+
+192
+00:10:56,080 --> 00:10:58,560
+not going to like. 
+I'd say the minimum you need in 
+
+193
+00:10:58,560 --> 00:11:03,160
+order to make a save and things 
+like listen more than you talk. 
+
+194
+00:11:03,400 --> 00:11:07,160
+You just. 
+It's just this every time I 
+
+195
+00:11:07,160 --> 00:11:10,000
+spend time with someone in a 
+different field I just learned 
+
+196
+00:11:10,000 --> 00:11:12,320
+so much. 
+I had the opportunity to have 
+
+197
+00:11:12,320 --> 00:11:14,640
+creeks as my manager when I did 
+product. 
+
+198
+00:11:15,560 --> 00:11:19,640
+I I have all those quotes that I
+can give you about how to do 
+
+199
+00:11:19,640 --> 00:11:22,680
+product. 
+My manager in engineering was 
+
+200
+00:11:23,600 --> 00:11:27,600
+previously the guy who ran 
+Aurora at AWS. 
+
+201
+00:11:28,240 --> 00:11:31,600
+Come on, just one of the top 
+engineering managers I had the 
+
+202
+00:11:31,600 --> 00:11:36,000
+pleasure of working with and he 
+had all those Amazon quotes. 
+
+203
+00:11:36,960 --> 00:11:39,200
+Is it a one way door or a two 
+way door? 
+
+204
+00:11:39,440 --> 00:11:42,720
+Like all those things that kind 
+of become part of the way you 
+
+205
+00:11:42,800 --> 00:11:45,680
+think after a while. 
+And I think it's a good part of 
+
+206
+00:11:45,680 --> 00:11:48,840
+the way I think now. 
+So you had in your mind this 
+
+207
+00:11:48,840 --> 00:11:51,440
+whole time that you wanted to 
+eventually create your own 
+
+208
+00:11:51,440 --> 00:11:55,240
+startup and by being able to 
+experience all the different 
+
+209
+00:11:55,520 --> 00:11:58,880
+parts of the business that would
+better equip you to be able to 
+
+210
+00:11:59,000 --> 00:12:01,600
+to lead and then ultimately 
+scale a startup. 
+
+211
+00:12:01,600 --> 00:12:04,600
+Is that is that how you were 
+looking at it at the time the? 
+
+212
+00:12:05,000 --> 00:12:08,160
+Idea. 
+Yeah, I'm not 100% sure it's 
+
+213
+00:12:08,200 --> 00:12:12,600
+working the way I imagined it, 
+but I mean, every journey is 
+
+214
+00:12:12,600 --> 00:12:15,280
+just different. 
+Some of the stuff I learned is 
+
+215
+00:12:15,280 --> 00:12:20,040
+useful, but it turns out that 
+there is a lot of learning that 
+
+216
+00:12:20,040 --> 00:12:23,280
+I did not learn back then that 
+I'm learning now, which is good.
+
+217
+00:12:23,480 --> 00:12:27,880
+This keeps life interesting. 
+Yeah and you it seems from the 
+
+218
+00:12:27,880 --> 00:12:30,680
+outside that you kept writing 
+code the whole time. 
+
+219
+00:12:30,680 --> 00:12:34,840
+So I'm imagining that while you 
+were even in in marketing you 
+
+220
+00:12:34,840 --> 00:12:37,880
+were it seemed like you you've 
+never stopped writing code and 
+
+221
+00:12:38,120 --> 00:12:41,480
+and fixing Kafka when you were 
+at Confluent and. 
+
+222
+00:12:42,400 --> 00:12:46,040
+Well, to an extent. 
+I'm looking now at my like, if 
+
+223
+00:12:46,040 --> 00:12:49,160
+you look at my GitHub 
+contributions, you can probably 
+
+224
+00:12:49,280 --> 00:12:53,360
+tell exactly when I was in 
+engineering and when I wasn't. 
+
+225
+00:12:54,720 --> 00:12:58,800
+So I had those maybe 100 
+contributions year. 
+
+226
+00:12:59,120 --> 00:13:02,320
+That was probably when I did 
+product because engineers hate 
+
+227
+00:13:02,320 --> 00:13:05,080
+it when products try writing 
+code and they try to be 
+
+228
+00:13:05,080 --> 00:13:07,400
+respectful of people's 
+sensibilities. 
+
+229
+00:13:07,800 --> 00:13:14,760
+So it has less code in that span
+of time And now that I'm in my 
+
+230
+00:13:14,760 --> 00:13:18,000
+own start up and we're only 
+eight people and there's just so
+
+231
+00:13:18,000 --> 00:13:24,040
+much to do it's shaping up to be
+an 800 contributions year kind 
+
+232
+00:13:24,040 --> 00:13:27,760
+of thing. 
+So you have absent flows. 
+
+233
+00:13:27,760 --> 00:13:30,000
+I think. 
+I think charity major said it 
+
+234
+00:13:30,000 --> 00:13:32,920
+really well. 
+She talked about the engineering
+
+235
+00:13:32,960 --> 00:13:38,000
+manager Pendulums, that it's 
+life has waves to eat. 
+
+236
+00:13:38,040 --> 00:13:41,760
+You have periods and seasons and
+you do different things and 
+
+237
+00:13:41,760 --> 00:13:43,440
+focus on different things at 
+different times. 
+
+238
+00:13:44,440 --> 00:13:48,280
+So let's go on to your new 
+startup and tell us about what 
+
+239
+00:13:48,280 --> 00:13:51,640
+you're doing and the the journey
+over the last couple of years 
+
+240
+00:13:51,640 --> 00:13:53,200
+there. 
+Yeah. 
+
+241
+00:13:53,200 --> 00:14:00,000
+So I started the very beginning.
+I think it the night before 
+
+242
+00:14:00,000 --> 00:14:03,800
+Confluent IPO. 
+I was in New York. 
+
+243
+00:14:03,880 --> 00:14:08,960
+So I'm painting a picture. 
+I'm in New York for the big bell
+
+244
+00:14:08,960 --> 00:14:12,840
+ringing in the NASDAQ. 
+It's just at the tail end of the
+
+245
+00:14:12,840 --> 00:14:15,120
+pandemic. 
+Maybe few months after everyone 
+
+246
+00:14:15,120 --> 00:14:18,280
+got vaccinated, people are 
+coming back into the wild. 
+
+247
+00:14:18,840 --> 00:14:24,600
+And I was sitting with two close
+colleagues, people I've been 
+
+248
+00:14:24,600 --> 00:14:28,640
+working with for since day one 
+almost at Confluent for the last
+
+249
+00:14:29,200 --> 00:14:30,720
+seven years. 
+And we're talking about what do 
+
+250
+00:14:30,720 --> 00:14:34,000
+we do now like we've reached 
+this point of success. 
+
+251
+00:14:34,000 --> 00:14:36,680
+What's next? 
+Are you retiring? 
+
+252
+00:14:37,040 --> 00:14:40,760
+Taking a big vacation? 
+Like what's going to happen now 
+
+253
+00:14:41,280 --> 00:14:43,480
+and. 
+The top of the mountain now, now
+
+254
+00:14:43,640 --> 00:14:46,640
+you're looking, looking out and 
+saying where do I go next? 
+
+255
+00:14:46,640 --> 00:14:47,800
+Yeah. 
+Exactly. 
+
+256
+00:14:48,040 --> 00:14:51,560
+And I was like, I want to start 
+my own company. 
+
+257
+00:14:52,160 --> 00:14:57,120
+And Ram sitting across from me 
+is like, yeah, I'm thinking the 
+
+258
+00:14:57,160 --> 00:15:00,720
+exact same thing. 
+And I have this idea and I was 
+
+259
+00:15:00,720 --> 00:15:04,760
+like, this is a fantastic idea, 
+maybe we should do it together. 
+
+260
+00:15:05,400 --> 00:15:10,520
+And so at the time, I was 
+leading the Cloud native kafko 
+
+261
+00:15:10,520 --> 00:15:14,760
+organization and which was 
+pretty big team at the time. 
+
+262
+00:15:14,760 --> 00:15:18,600
+I think we were like 20 people. 
+So I was kind of getting my 
+
+263
+00:15:18,600 --> 00:15:21,960
+first footsteps into mentoring 
+other managers. 
+
+264
+00:15:22,480 --> 00:15:27,720
+Ram on the other hand, he'd 
+built the 300% cloud, every 
+
+265
+00:15:27,720 --> 00:15:30,320
+single organization basically 
+built Confluent Cloud from 
+
+266
+00:15:30,320 --> 00:15:32,920
+scratch. 
+So and really a person I'm, I'm 
+
+267
+00:15:32,920 --> 00:15:38,000
+still looking up to very much. 
+So it's like this opportunity to
+
+268
+00:15:38,000 --> 00:15:41,080
+do something I'm deeply 
+passionate about with someone I 
+
+269
+00:15:41,080 --> 00:15:44,160
+admire so much. 
+I'm like yes, this is it. 
+
+270
+00:15:44,160 --> 00:15:50,360
+This is what we're doing and and
+I think we announced that we're 
+
+271
+00:15:50,360 --> 00:15:55,080
+leaving maybe 3-4 months later 
+and while we were doing customer
+
+272
+00:15:55,080 --> 00:15:59,920
+calls, nights, evenings, 
+weekends, whiteboarding ideas, 
+
+273
+00:16:00,520 --> 00:16:04,920
+all that and yeah, we just do. 
+You want to talk about the 
+
+274
+00:16:05,080 --> 00:16:10,320
+initial idea that that for the 
+company and what it was or or is
+
+275
+00:16:10,320 --> 00:16:13,560
+that not relevant? 
+It is kind of relevant because 
+
+276
+00:16:13,560 --> 00:16:15,800
+it's a journey. 
+So when we left Confluent, the 
+
+277
+00:16:15,800 --> 00:16:21,760
+main thing was why did RAM need 
+a 300 person organization to 
+
+278
+00:16:22,360 --> 00:16:27,840
+make Kafka a cloud service when 
+Kafka itself was a significantly
+
+279
+00:16:27,840 --> 00:16:31,080
+smaller organization? 
+Why does it take more engineers 
+
+280
+00:16:31,080 --> 00:16:34,600
+to build a managed service than 
+it is to build a database? 
+
+281
+00:16:34,720 --> 00:16:37,360
+Essentially it made absolutely 
+no sense to us. 
+
+282
+00:16:38,000 --> 00:16:42,360
+And so we started the journey 
+into what would make it easier 
+
+283
+00:16:42,800 --> 00:16:47,000
+and what are the hard parts and 
+how what are the ways to build a
+
+284
+00:16:47,000 --> 00:16:49,720
+better developer experience so 
+you can do it with fewer 
+
+285
+00:16:49,720 --> 00:16:54,240
+developers much faster and also 
+make it much more reliable, not 
+
+286
+00:16:54,600 --> 00:17:00,760
+reduce the OPS burden. 
+And we tried a bunch of ideas 
+
+287
+00:17:01,240 --> 00:17:04,319
+and some of them died before we 
+wrote a single line of code. 
+
+288
+00:17:05,160 --> 00:17:08,160
+And but one of them actually 
+seemed promising, which is to 
+
+289
+00:17:08,160 --> 00:17:11,119
+bill it as a control plane. 
+We took ideas from Kubernetes. 
+
+290
+00:17:11,119 --> 00:17:13,040
+We'll have those reconciliation 
+loops. 
+
+291
+00:17:13,359 --> 00:17:16,599
+People will write those 
+configurations as code of how 
+
+292
+00:17:16,599 --> 00:17:20,520
+they want authentication, how 
+they want to billing, and it 
+
+293
+00:17:20,520 --> 00:17:25,040
+will be like just a layer that 
+you put on top of your system, 
+
+294
+00:17:25,160 --> 00:17:27,720
+like maybe a proxy or something 
+like this. 
+
+295
+00:17:28,680 --> 00:17:31,200
+And we start when we start 
+experimenting with it. 
+
+296
+00:17:31,200 --> 00:17:36,960
+We released our first version 
+and it turned out that nobody 
+
+297
+00:17:36,960 --> 00:17:41,320
+gets control place and a few 
+people who get control plane 
+
+298
+00:17:41,320 --> 00:17:46,640
+want to build them themselves. 
+So like just explaining to 
+
+299
+00:17:46,640 --> 00:17:49,280
+people what we do. 
+So do you guys do Kubernetes? 
+
+300
+00:17:49,280 --> 00:17:52,720
+Well, not quite. 
+So do you guys build a database?
+
+301
+00:17:52,720 --> 00:17:56,120
+Well, not exactly. 
+Are you guys a syndication? 
+
+302
+00:17:56,160 --> 00:18:01,520
+Well, no, not really so. 
+I keep hearing stories like 
+
+303
+00:18:01,560 --> 00:18:06,440
+this. 
+And I I coached, sort of coached
+
+304
+00:18:06,760 --> 00:18:11,680
+a Startup weekend once and they 
+really emphasized making some 
+
+305
+00:18:11,680 --> 00:18:15,440
+kind of prototype really early. 
+Because I've heard of people 
+
+306
+00:18:15,760 --> 00:18:18,960
+going through the whole process 
+and building something and then 
+
+307
+00:18:18,960 --> 00:18:22,160
+discovering that, well, no, the 
+customers don't actually want 
+
+308
+00:18:22,160 --> 00:18:24,480
+this. 
+And you go, Oh yeah, that's 
+
+309
+00:18:24,480 --> 00:18:27,320
+something you really want to 
+find out right away. 
+
+310
+00:18:27,360 --> 00:18:29,040
+Yeah. 
+So it sounds like that's what 
+
+311
+00:18:29,040 --> 00:18:31,840
+you did was you built this 
+control plane and then you 
+
+312
+00:18:31,840 --> 00:18:35,720
+started talking to customers 
+about it pretty quickly and then
+
+313
+00:18:35,720 --> 00:18:38,800
+you got that feedback loop. 
+You had a, a a much tighter 
+
+314
+00:18:38,800 --> 00:18:42,240
+feedback loop where you're like,
+oh, we learned some things right
+
+315
+00:18:42,240 --> 00:18:44,520
+away by by building this and 
+putting it in front of 
+
+316
+00:18:44,520 --> 00:18:45,080
+customers. 
+It's. 
+
+317
+00:18:45,520 --> 00:18:49,240
+Like we are solving a pain point
+for them but not in a way that 
+
+318
+00:18:49,240 --> 00:18:50,960
+they understand and can connect 
+to. 
+
+319
+00:18:51,600 --> 00:18:54,000
+So this was new. 
+I always saw that if I solve a 
+
+320
+00:18:54,040 --> 00:18:56,480
+pain point it will be obvious. 
+It was not obvious. 
+
+321
+00:18:58,120 --> 00:19:02,920
+So we went back to the drawing 
+board and for whatever reason it
+
+322
+00:19:02,920 --> 00:19:08,960
+was really obvious for us that 
+the place to put all this value 
+
+323
+00:19:09,040 --> 00:19:12,680
+is not above the product, but 
+under the product. 
+
+324
+00:19:13,560 --> 00:19:18,200
+That we actually, if we could do
+everything in the data layer, it
+
+325
+00:19:18,200 --> 00:19:21,040
+would be a much better 
+experience than trying to layer 
+
+326
+00:19:21,040 --> 00:19:24,840
+things on top of somebody else's
+product and interface with their
+
+327
+00:19:24,840 --> 00:19:27,560
+APIs. 
+Because databases they have, 
+
+328
+00:19:28,040 --> 00:19:31,280
+they're all the same. 
+They essentially they have 
+
+329
+00:19:31,280 --> 00:19:33,840
+sequels. 
+They're much actually a lot more
+
+330
+00:19:33,840 --> 00:19:38,960
+standardized and understandable 
+than API layers where the 
+
+331
+00:19:38,960 --> 00:19:43,880
+variants and the integrations 
+were just much more of a Wild 
+
+332
+00:19:43,880 --> 00:19:46,640
+West. 
+And once we started saying how 
+
+333
+00:19:46,640 --> 00:19:52,080
+can we add immense value to SAS 
+companies at the database layer?
+
+334
+00:19:52,680 --> 00:19:55,880
+And I still remember the day we 
+were sitting in the Hacker Dojo 
+
+335
+00:19:56,280 --> 00:20:00,240
+in Mountain View and which was 
+just after a board meeting, we 
+
+336
+00:20:00,240 --> 00:20:04,320
+were like, we need a value that 
+will be so clear. 
+
+337
+00:20:04,320 --> 00:20:06,800
+That's something that people 
+really struggle with. 
+
+338
+00:20:07,320 --> 00:20:09,720
+And we're like, the hardest 
+thing about a database when 
+
+339
+00:20:09,720 --> 00:20:13,040
+you're SAS is your customers. 
+You never know what they're 
+
+340
+00:20:13,040 --> 00:20:14,720
+going to do. 
+You never know who is going to 
+
+341
+00:20:14,720 --> 00:20:16,760
+cause load. 
+You never know who is going to 
+
+342
+00:20:16,760 --> 00:20:18,880
+fax things up and you need to do
+a store. 
+
+343
+00:20:19,360 --> 00:20:23,120
+And those things are so hard 
+because most of the time you put
+
+344
+00:20:23,160 --> 00:20:25,560
+all your customers in one 
+database and then when something
+
+345
+00:20:25,560 --> 00:20:28,160
+you need to do something for one
+of them or one of them is 
+
+346
+00:20:28,160 --> 00:20:31,640
+loaded, you're stuck. 
+Or one of them has to be in 
+
+347
+00:20:31,640 --> 00:20:33,080
+London. 
+Now you need to start an 
+
+348
+00:20:33,080 --> 00:20:37,080
+entirely new data centre over in
+London because you they and they
+
+349
+00:20:37,080 --> 00:20:38,560
+have different rules and 
+regulations. 
+
+350
+00:20:38,560 --> 00:20:43,560
+Like this thing is the hardest 
+and databases don't even know 
+
+351
+00:20:43,560 --> 00:20:45,800
+your customers exist. 
+There are sync things that are 
+
+352
+00:20:45,800 --> 00:20:49,840
+running one workload, unless you
+actually go to the effort of 
+
+353
+00:20:50,080 --> 00:20:53,200
+giving each customer their own 
+database, which is something 
+
+354
+00:20:53,400 --> 00:21:00,480
+nobody ever did at scale you. 
+And wait, nobody ever did at 
+
+355
+00:21:00,480 --> 00:21:04,240
+scale. 
+Is that just because of 
+
+356
+00:21:04,240 --> 00:21:09,000
+performance overhead? 
+There's a bunch to it, right? 
+
+357
+00:21:09,000 --> 00:21:10,880
+First of all, operational 
+overhead. 
+
+358
+00:21:11,320 --> 00:21:17,280
+Like you have to upgrade 3 
+databases usually and still to 
+
+359
+00:21:17,280 --> 00:21:22,240
+this day if you have to do 
+database upgrade you it's months
+
+360
+00:21:22,240 --> 00:21:26,880
+worth of effort. 
+And I actually did something 
+
+361
+00:21:26,880 --> 00:21:30,280
+similar to what you guys do. 
+I invited a bunch of people who 
+
+362
+00:21:30,280 --> 00:21:33,880
+ran databases at scale for the 
+biggest SAS companies. 
+
+363
+00:21:33,880 --> 00:21:38,560
+I talk to Air Table. 
+I talk to people from FIGMA. 
+
+364
+00:21:38,560 --> 00:21:41,720
+They didn't agree to be on the 
+record, but so we had some 
+
+365
+00:21:41,720 --> 00:21:44,440
+private conversations too. 
+People are very generous with 
+
+366
+00:21:44,440 --> 00:21:49,120
+their time, but I try to share 
+what I learned with the world as
+
+367
+00:21:49,120 --> 00:21:53,080
+I was learning it. 
+And then you really learn that 
+
+368
+00:21:53,160 --> 00:21:58,200
+database upgrades are really 
+difficult and take a long time, 
+
+369
+00:21:58,720 --> 00:22:03,720
+customers with different spikes 
+in activity, different traffic. 
+
+370
+00:22:03,760 --> 00:22:06,040
+Patterns create a lot of 
+complexity. 
+
+371
+00:22:06,840 --> 00:22:09,400
+Exactly. 
+Yeah, exactly. 
+
+372
+00:22:09,640 --> 00:22:14,880
+So we are like, yeah, you know, 
+we think this is the right place
+
+373
+00:22:14,880 --> 00:22:17,000
+to add value. 
+So you had that like light bulb 
+
+374
+00:22:17,000 --> 00:22:20,880
+moment which now looking back 
+seems obvious, but it was like 
+
+375
+00:22:20,880 --> 00:22:26,120
+how do we create a not not the 
+control plane, essentially the 
+
+376
+00:22:26,120 --> 00:22:30,640
+the like like abstract control 
+plane that allows you to do 
+
+377
+00:22:30,640 --> 00:22:34,640
+anything you said. 
+Let's focus on the SAS companies
+
+378
+00:22:34,640 --> 00:22:39,520
+who need a database per customer
+and how do we make that easy for
+
+379
+00:22:39,520 --> 00:22:41,040
+them? 
+Is that the right? 
+
+380
+00:22:42,200 --> 00:22:46,120
+Exactly that, yes. 
+How do we make it easy for them?
+
+381
+00:22:46,880 --> 00:22:49,080
+How do we allow them? 
+A lot of times you have a 
+
+382
+00:22:49,080 --> 00:22:52,720
+database per customer, you need 
+to do reporting, you need to do 
+
+383
+00:22:52,720 --> 00:22:56,080
+routing, you need all those 
+operational tools. 
+
+384
+00:22:56,080 --> 00:22:59,400
+How do I backup restore all 
+those things and? 
+
+385
+00:23:00,040 --> 00:23:02,040
+And upgrade which you mentioned 
+is being. 
+
+386
+00:23:02,080 --> 00:23:06,000
+Wanted to drive costs down, all 
+those things, so yeah. 
+
+387
+00:23:06,440 --> 00:23:09,600
+Billing like, how do you like? 
+How do you decide the the 
+
+388
+00:23:09,600 --> 00:23:13,120
+correlation between what the 
+customer is using and what they 
+
+389
+00:23:13,120 --> 00:23:15,360
+should get billed? 
+And with databases. 
+
+390
+00:23:15,360 --> 00:23:17,440
+Is it about compute? 
+Is it about storage? 
+
+391
+00:23:17,440 --> 00:23:22,480
+Is it about both and? 
+So if I understand correctly, 
+
+392
+00:23:22,480 --> 00:23:29,000
+the original databases were 
+considered so heavyweight that 
+
+393
+00:23:29,000 --> 00:23:31,680
+they were designed that you're 
+going to have a monolithic 
+
+394
+00:23:31,680 --> 00:23:37,400
+database, Whereas what you're 
+doing is saying, oh, we need to 
+
+395
+00:23:37,400 --> 00:23:42,880
+redesign this so that we can 
+easily spin up a database per 
+
+396
+00:23:42,880 --> 00:23:45,400
+customer and deal with all the 
+things. 
+
+397
+00:23:45,400 --> 00:23:48,400
+And the original ones just 
+didn't support that kind of 
+
+398
+00:23:48,400 --> 00:23:49,800
+thing because the vision was 
+wrong. 
+
+399
+00:23:50,320 --> 00:23:54,760
+You know how containers 
+basically change the game in the
+
+400
+00:23:54,800 --> 00:24:00,280
+ways that you can now run a lot 
+of copies of the application and
+
+401
+00:24:00,840 --> 00:24:06,200
+we have easy ways of managing 
+them and we're like the same way
+
+402
+00:24:06,200 --> 00:24:09,640
+it continuous change the 
+application virtualization 
+
+403
+00:24:09,640 --> 00:24:11,880
+space. 
+We can do the same for 
+
+404
+00:24:11,880 --> 00:24:14,320
+databases. 
+We can give each tenant a 
+
+405
+00:24:14,320 --> 00:24:17,440
+virtual database. 
+The developers will have the 
+
+406
+00:24:17,440 --> 00:24:22,040
+same operation developer 
+experience of running one giant 
+
+407
+00:24:22,040 --> 00:24:26,680
+database and paying for shared 
+resources, while we will 
+
+408
+00:24:26,720 --> 00:24:30,160
+actually be able to give this 
+isolation inside the database. 
+
+409
+00:24:30,760 --> 00:24:34,080
+OK, so this is what we call it. 
+We are 9 provides virtual tenant
+
+410
+00:24:34,080 --> 00:24:39,880
+databases and this is what we're
+currently all in on building. 
+
+411
+00:24:39,880 --> 00:24:43,440
+Because remember the old rule, 
+never build the database. 
+
+412
+00:24:43,440 --> 00:24:46,640
+We are obviously breaking it a 
+bit. 
+
+413
+00:24:46,640 --> 00:24:50,080
+We are building on top of 
+Postgres, but we are making big 
+
+414
+00:24:50,080 --> 00:24:55,920
+architectural changes inside 
+Postgres and we are on one hand 
+
+415
+00:24:55,920 --> 00:25:00,960
+it's really hard. 
+So for us, our engineering is 
+
+416
+00:25:00,960 --> 00:25:04,680
+obviously stretch. 
+On the other hand, we're 
+
+417
+00:25:04,680 --> 00:25:07,760
+benefiting from it because in a 
+way, this is our Moat. 
+
+418
+00:25:08,640 --> 00:25:11,440
+Unlike control planes, which 
+turns out that everyone wants to
+
+419
+00:25:11,480 --> 00:25:15,960
+be, we can actually talk to 
+people about the value of 
+
+420
+00:25:16,000 --> 00:25:17,920
+bringing the database and the 
+people. 
+
+421
+00:25:17,960 --> 00:25:21,080
+Getting Yeah, no one wants to 
+build a database virtualization 
+
+422
+00:25:21,080 --> 00:25:26,680
+layer. 
+So it's actually, it feels like 
+
+423
+00:25:27,160 --> 00:25:29,320
+it feels right at this point in 
+time. 
+
+424
+00:25:29,600 --> 00:25:31,160
+Oh. 
+Yeah. 
+
+425
+00:25:31,160 --> 00:25:32,840
+Let's talk for a minute about 
+virtualization. 
+
+426
+00:25:32,840 --> 00:25:35,400
+So Bruce and I were talking this
+morning about some of these like
+
+427
+00:25:35,600 --> 00:25:39,640
+fundamental constructs of 
+programming and one that we 
+
+428
+00:25:39,640 --> 00:25:41,440
+didn't talk about was 
+virtualization. 
+
+429
+00:25:41,680 --> 00:25:47,920
+So virtualization is being able 
+to abstract over physical 
+
+430
+00:25:47,920 --> 00:25:50,520
+resources. 
+How would you put it? 
+
+431
+00:25:50,760 --> 00:25:53,800
+How would you say what just the 
+concept of virtualization is? 
+
+432
+00:25:55,000 --> 00:25:58,200
+Yeah, I definitely think it's a 
+layer of obstruction. 
+
+433
+00:25:59,240 --> 00:26:03,880
+And I think it's not necessarily
+just over physical resources. 
+
+434
+00:26:04,400 --> 00:26:07,440
+And I think it can be, because 
+if you think about the way 
+
+435
+00:26:07,440 --> 00:26:10,960
+Docker works, it doesn't just 
+virtualize physical resources, 
+
+436
+00:26:10,960 --> 00:26:13,840
+it virtualizes the operating 
+system itself, right. 
+
+437
+00:26:13,840 --> 00:26:21,400
+It uses things like C groups and
+it uses things like jails and Ch
+
+438
+00:26:21,440 --> 00:26:24,640
+routes and all those things to 
+basically create what looks like
+
+439
+00:26:24,640 --> 00:26:27,120
+an operating system, except it 
+really isn't. 
+
+440
+00:26:27,680 --> 00:26:31,120
+And this is very different from 
+let's say the Firecracker 
+
+441
+00:26:31,120 --> 00:26:36,600
+approach, right? 
+That is an actual mini virtual 
+
+442
+00:26:36,600 --> 00:26:39,760
+machine and they managed to make
+this mini virtual machine 
+
+443
+00:26:39,760 --> 00:26:44,040
+extremely lightweight in a way 
+that was not possible before. 
+
+444
+00:26:44,040 --> 00:26:47,120
+So it's a different layer of 
+virtualization and I think I 
+
+445
+00:26:47,120 --> 00:26:49,960
+would call both of them 
+virtualization, even though one 
+
+446
+00:26:49,960 --> 00:26:53,960
+of them is obviously a lot lower
+level than the other one. 
+
+447
+00:26:54,040 --> 00:26:56,840
+Different approaches. 
+And then I guess one important 
+
+448
+00:26:56,840 --> 00:27:01,160
+aspect in a in the SAS use of 
+virtualization and maybe many 
+
+449
+00:27:01,160 --> 00:27:05,320
+uses of virtualization is the 
+like sandboxing, being able to 
+
+450
+00:27:05,320 --> 00:27:08,600
+make sure that customers can't 
+see into other customers 
+
+451
+00:27:08,600 --> 00:27:14,760
+workloads, can't you know do 
+anything malicious against those
+
+452
+00:27:15,320 --> 00:27:18,120
+and then being able to control 
+resource utilization. 
+
+453
+00:27:18,280 --> 00:27:20,880
+So being able to say like this 
+customer can't saturate a whole 
+
+454
+00:27:20,880 --> 00:27:24,960
+entire machine, you need to be 
+able to split the the, the 
+
+455
+00:27:25,120 --> 00:27:29,320
+priority prioritization of of 
+running things across customers 
+
+456
+00:27:29,320 --> 00:27:31,040
+and all that so. 
+You nailed it. 
+
+457
+00:27:31,520 --> 00:27:34,560
+Absolutely. 
+We call it a tenant isolation 
+
+458
+00:27:34,560 --> 00:27:37,440
+and you're 100% right that there
+is two sides of tenant 
+
+459
+00:27:37,440 --> 00:27:39,640
+isolation. 
+There is the security isolation 
+
+460
+00:27:40,240 --> 00:27:44,480
+and there is the performance 
+isolation and you really need to
+
+461
+00:27:44,480 --> 00:27:49,160
+solve both of them. 
+One of them is obviously a lot 
+
+462
+00:27:49,160 --> 00:27:53,600
+more critical than the other and
+customers will tolerate small 
+
+463
+00:27:53,600 --> 00:27:56,480
+performance issues way more than
+they will tolerate small 
+
+464
+00:27:56,480 --> 00:27:58,000
+security issues. 
+Yes. 
+
+465
+00:27:58,320 --> 00:28:01,320
+I don't know if there is a thing
+as a small data link, to be 
+
+466
+00:28:01,360 --> 00:28:05,000
+honest. 
+So we are. 
+
+467
+00:28:05,000 --> 00:28:05,280
+Yeah. 
+So. 
+
+468
+00:28:05,320 --> 00:28:09,160
+That's security. 
+Being able to to ensure security
+
+469
+00:28:09,160 --> 00:28:12,720
+is is priority number one in 
+that world of virtualization. 
+
+470
+00:28:12,720 --> 00:28:16,880
+Yeah, you wanna error gap. 
+Basically, you want some 
+
+471
+00:28:16,880 --> 00:28:18,920
+software equivalent of an error 
+gap. 
+
+472
+00:28:18,920 --> 00:28:21,640
+Yeah, it's like do not even 
+allow it. 
+
+473
+00:28:21,880 --> 00:28:24,240
+It's just we can't even see 
+them, yeah. 
+
+474
+00:28:25,160 --> 00:28:29,280
+And you really need to name the 
+developer experience, because in
+
+475
+00:28:29,280 --> 00:28:33,480
+an ideal world, the developer 
+will not even be able to look at
+
+476
+00:28:33,480 --> 00:28:37,480
+the customer data. 
+A practical word, developers 
+
+477
+00:28:37,480 --> 00:28:42,720
+need to debug their application,
+so you need to be very clear 
+
+478
+00:28:42,720 --> 00:28:48,320
+about when developers get those 
+super user permissions and maybe
+
+479
+00:28:48,320 --> 00:28:52,400
+even get consent for that. 
+So you really need to get a good
+
+480
+00:28:52,400 --> 00:28:56,040
+experience for developers when 
+they're debugging an app versus 
+
+481
+00:28:56,040 --> 00:29:00,040
+a good production experience 
+where you cannot make those 
+
+482
+00:29:00,040 --> 00:29:02,200
+mistakes. 
+This is a very common pattern If
+
+483
+00:29:02,200 --> 00:29:04,520
+you think about it, you are 
+building a small application. 
+
+484
+00:29:04,720 --> 00:29:06,600
+I always use To Do List as an 
+example. 
+
+485
+00:29:06,920 --> 00:29:11,000
+So let's say that and users 
+connect to your application. 
+
+486
+00:29:12,080 --> 00:29:14,880
+They authenticate with your 
+application, or maybe they get a
+
+487
+00:29:14,880 --> 00:29:17,960
+token from another service, but 
+then they authenticate to your 
+
+488
+00:29:17,960 --> 00:29:20,080
+application. 
+But then your application uses a
+
+489
+00:29:20,080 --> 00:29:21,760
+single connection pool to the 
+database. 
+
+490
+00:29:22,280 --> 00:29:26,080
+Every single connection to the 
+database has the same user with 
+
+491
+00:29:27,040 --> 00:29:29,240
+permission to see everyone's 
+data. 
+
+492
+00:29:30,880 --> 00:29:33,120
+This is the scariest thing in 
+the world for me. 
+
+493
+00:29:33,160 --> 00:29:35,040
+Everyone. 
+Why are the developers getting 
+
+494
+00:29:35,040 --> 00:29:38,720
+the exact word clauses correct 
+in every single place in their 
+
+495
+00:29:38,720 --> 00:29:41,120
+code? 
+This is terrifying. 
+
+496
+00:29:41,480 --> 00:29:48,520
+So this is if one of the first 
+thing we're tackling is how do 
+
+497
+00:29:48,560 --> 00:29:55,120
+we build into current developer 
+tools the ability to pick the 
+
+498
+00:29:55,120 --> 00:30:00,080
+user and the tenant at the 
+authentication point, push it 
+
+499
+00:30:00,080 --> 00:30:04,400
+down to the database and from 
+there to that point on the 
+
+500
+00:30:04,400 --> 00:30:08,760
+connection is no longer talking 
+to a general database with 
+
+501
+00:30:08,800 --> 00:30:10,720
+everyone's data. 
+It is talking to the virtual 
+
+502
+00:30:10,720 --> 00:30:13,000
+database for this specific 
+tenant that you just 
+
+503
+00:30:13,000 --> 00:30:17,000
+authenticated as you will never 
+see anyone else's data on that 
+
+504
+00:30:17,000 --> 00:30:19,800
+connection. 
+Because the authentication is. 
+
+505
+00:30:19,920 --> 00:30:23,160
+I also have. 
+Another idea here I'm just this 
+
+506
+00:30:23,160 --> 00:30:24,800
+just popped into my head as you 
+were saying it. 
+
+507
+00:30:25,040 --> 00:30:31,800
+When you do that, I can, I could
+imagine another operation which 
+
+508
+00:30:31,800 --> 00:30:35,840
+would be to take all the user 
+data and just kind of obfuscate 
+
+509
+00:30:35,840 --> 00:30:37,440
+it. 
+So it would still be the same 
+
+510
+00:30:37,440 --> 00:30:41,520
+form, but it wouldn't be the 
+actual data. 
+
+511
+00:30:41,920 --> 00:30:45,160
+So that even if a developer 
+screwed up and, I don't know, 
+
+512
+00:30:45,160 --> 00:30:48,400
+opened the door to the Internet,
+the data that they would get 
+
+513
+00:30:48,400 --> 00:30:50,480
+would be. 
+It would be the right form, but 
+
+514
+00:30:50,480 --> 00:30:55,840
+it wouldn't be anything usable. 
+Yeah, could you create another 
+
+515
+00:30:55,840 --> 00:31:00,360
+virtualization layer that was 
+like an obfuscated version of 
+
+516
+00:31:00,360 --> 00:31:03,120
+the database as an example? 
+It's actually something that 
+
+517
+00:31:03,120 --> 00:31:07,240
+we're kind of exploring now, not
+so much as in what you said like
+
+518
+00:31:07,240 --> 00:31:10,640
+open to the world, but 
+obfuscated, but more in the 
+
+519
+00:31:10,680 --> 00:31:16,320
+ideas that database branches are
+becoming popular these days and 
+
+520
+00:31:16,360 --> 00:31:21,600
+people want to take the 
+production database and create a
+
+521
+00:31:21,600 --> 00:31:25,560
+developer branch whereas they 
+will get to work in in developer
+
+522
+00:31:25,560 --> 00:31:27,960
+environment. 
+Can be super important if you 
+
+523
+00:31:27,960 --> 00:31:31,680
+want to test your code with real
+world production data, right? 
+
+524
+00:31:31,680 --> 00:31:35,560
+It makes a lot of sense, but is 
+a branch. 
+
+525
+00:31:35,560 --> 00:31:40,560
+Security gets really hard. 
+Obfuscated branch is a very good
+
+526
+00:31:40,560 --> 00:31:43,120
+point. 
+So this is something we're 
+
+527
+00:31:43,120 --> 00:31:46,840
+playing with. 
+I think it's one of the magic of
+
+528
+00:31:46,840 --> 00:31:53,080
+branches is obviously that it is
+copy on name on write. 
+
+529
+00:31:53,400 --> 00:31:57,640
+So if you just do some kind of 
+performance bit much much that 
+
+530
+00:31:57,640 --> 00:32:01,120
+is really heavy, it doesn't 
+actually cost all that much. 
+
+531
+00:32:01,640 --> 00:32:05,040
+Obfuscation is interesting 
+because means you don't want to 
+
+532
+00:32:05,040 --> 00:32:06,720
+obfuscate the actual data, 
+right? 
+
+533
+00:32:06,720 --> 00:32:11,040
+But you may want to obfuscate it
+in in memory for example, so you
+
+534
+00:32:11,040 --> 00:32:14,560
+wouldn't create a modification. 
+So this is definitely a bunch of
+
+535
+00:32:14,560 --> 00:32:17,680
+ideas that were kind of goofing 
+around with right now. 
+
+536
+00:32:17,920 --> 00:32:21,800
+It'll probably be a while until 
+you get to production, but like 
+
+537
+00:32:21,800 --> 00:32:23,800
+not something that I'm willing 
+to give dates on. 
+
+538
+00:32:23,800 --> 00:32:27,000
+But it's exactly, this is the 
+things that excites us so much. 
+
+539
+00:32:27,000 --> 00:32:30,440
+The moment you hit on the idea 
+of virtual databases, the 
+
+540
+00:32:30,440 --> 00:32:33,880
+possibilities is it open, are so
+wide. 
+
+541
+00:32:34,760 --> 00:32:38,760
+So I can see myself staying 
+excited and kind of delivering 
+
+542
+00:32:39,000 --> 00:32:41,760
+this kind of value for many, 
+many years to come. 
+
+543
+00:32:42,160 --> 00:32:45,000
+Well, it seems like there's so 
+much you can do once you have 
+
+544
+00:32:45,000 --> 00:32:48,280
+this lightweight virtualization 
+layer over databases. 
+
+545
+00:32:48,280 --> 00:32:51,520
+Because sure, you could do a 
+fork that has obfuscated data, 
+
+546
+00:32:51,760 --> 00:32:56,040
+or you could do a fork that has 
+particular Acls applied to it so
+
+547
+00:32:56,040 --> 00:32:58,960
+that you can only read from 
+particular columns or something 
+
+548
+00:32:58,960 --> 00:33:01,040
+like that. 
+And so there's just all sorts of
+
+549
+00:33:01,040 --> 00:33:03,920
+different things you can do when
+you start to think about a 
+
+550
+00:33:03,920 --> 00:33:08,160
+database is being being 
+virtualizable across customers, 
+
+551
+00:33:08,160 --> 00:33:12,800
+across different users or uses 
+within it, across I'm sure like 
+
+552
+00:33:12,800 --> 00:33:16,240
+data analytics would be a huge 
+use for this, is like like being
+
+553
+00:33:16,240 --> 00:33:22,680
+able to have you know your your 
+data warehouse be based on some 
+
+554
+00:33:22,680 --> 00:33:25,680
+virtualization of the actual 
+data. 
+
+555
+00:33:25,720 --> 00:33:29,360
+But another thing that we were 
+talking about this morning was 
+
+556
+00:33:29,360 --> 00:33:36,800
+the fundamental model of a 
+database, which it seems like 
+
+557
+00:33:37,120 --> 00:33:44,720
+you establish the types at the 
+front and yet when you're doing 
+
+558
+00:33:44,760 --> 00:33:48,800
+a search or whatever, you're 
+actually creating a new type. 
+
+559
+00:33:49,240 --> 00:33:52,480
+But because the types have been 
+established in the front, you 
+
+560
+00:33:52,480 --> 00:33:56,120
+have to work around that. 
+And so we were talking about, I 
+
+561
+00:33:56,120 --> 00:34:00,840
+think more of a functional model
+for a database, similar to what 
+
+562
+00:34:00,840 --> 00:34:03,880
+Quill does in the Scala. 
+Quill library the. 
+
+563
+00:34:03,880 --> 00:34:06,920
+Scala Quill library, which I 
+don't know if you've looked at 
+
+564
+00:34:06,920 --> 00:34:08,600
+it all. 
+But it's a different. 
+
+565
+00:34:09,360 --> 00:34:13,960
+It's a different way of of 
+thinking about oh what it. 
+
+566
+00:34:14,199 --> 00:34:17,440
+I mean I'm I'm looking at this 
+and thinking in terms of types 
+
+567
+00:34:17,440 --> 00:34:21,320
+and and I think what got us 
+started was your interest in 
+
+568
+00:34:21,320 --> 00:34:26,040
+Object Relational Mappings. 
+And I thought it was Martin 
+
+569
+00:34:26,040 --> 00:34:28,920
+Fowler sometime in the last 10 
+years where he looked at that 
+
+570
+00:34:28,920 --> 00:34:33,920
+and he goes, okay. 
+This has a limit to it as long 
+
+571
+00:34:33,920 --> 00:34:36,679
+as everything is simple. 
+And James came up with the maxim
+
+572
+00:34:36,679 --> 00:34:39,920
+which I captured which is it 
+works until it doesn't. 
+
+573
+00:34:40,400 --> 00:34:42,320
+And yeah. 
+Right. 
+
+574
+00:34:42,320 --> 00:34:46,040
+Doesn't it doesn't you go Oh 
+yeah that covers a lot in 
+
+575
+00:34:46,440 --> 00:34:49,159
+programming. 
+But the idea that. 
+
+576
+00:34:49,360 --> 00:34:52,159
+Oh yeah, sure. 
+As long as you're doing some you
+
+577
+00:34:52,159 --> 00:34:55,960
+know, simple Ruby on Rails like 
+thing where you're just going OK
+
+578
+00:34:55,960 --> 00:34:58,840
+here's the data and it maps 
+perfectly great. 
+
+579
+00:34:59,080 --> 00:35:02,640
+But that only gets you so far. 
+As soon as you start to have to 
+
+580
+00:35:02,640 --> 00:35:06,720
+modify things then the object 
+relational mapping thing kind of
+
+581
+00:35:06,720 --> 00:35:09,000
+breaks down. 
+And I'm curious about what your 
+
+582
+00:35:09,320 --> 00:35:13,360
+perspective is on all that. 
+Yeah it's funny because I come 
+
+583
+00:35:13,360 --> 00:35:18,120
+very much from the database 
+world where for a long time data
+
+584
+00:35:18,120 --> 00:35:21,640
+architects thought that Orms are
+even because they would look at 
+
+585
+00:35:21,640 --> 00:35:25,360
+the data model and says OK, you 
+need to do things in that way. 
+
+586
+00:35:25,360 --> 00:35:28,760
+Normalize here, denormalizer. 
+Have those tables and then 
+
+587
+00:35:28,760 --> 00:35:32,480
+engineers would go a my ORM 
+doesn't even support what you're
+
+588
+00:35:32,480 --> 00:35:36,920
+currently doing and even if it 
+does, it does this stupid in 
+
+589
+00:35:36,920 --> 00:35:39,400
+memory join. 
+It does not use the database 
+
+590
+00:35:39,440 --> 00:35:43,840
+effectively, and then you have 
+to start finding workarounds for
+
+591
+00:35:43,840 --> 00:35:48,400
+the ORM. 
+And so you kind of get the pain 
+
+592
+00:35:48,400 --> 00:35:50,640
+from both sides. 
+Engineers don't get the data 
+
+593
+00:35:50,640 --> 00:35:54,600
+models that they want, and the 
+data architects don't get the 
+
+594
+00:35:54,600 --> 00:35:58,280
+data models they want. 
+And everyone sees the ORM is the
+
+595
+00:35:58,280 --> 00:36:02,640
+villain in the story. 
+It sure is nice for a developer 
+
+596
+00:36:02,640 --> 00:36:08,360
+productivity, but the downsides 
+that you that you get by having 
+
+597
+00:36:08,360 --> 00:36:12,440
+the developer productivity are 
+you know at some point not not 
+
+598
+00:36:12,440 --> 00:36:13,680
+worth. 
+It seems like it hits the wall 
+
+599
+00:36:13,680 --> 00:36:17,040
+pretty fast. 
+I don't know that just 
+
+600
+00:36:17,040 --> 00:36:21,480
+productivity is all right, 
+because type safety on the 
+
+601
+00:36:21,480 --> 00:36:23,880
+application side is not just 
+about productivity. 
+
+602
+00:36:24,200 --> 00:36:29,280
+It is about code correctness, 
+and it's about getting the most 
+
+603
+00:36:29,400 --> 00:36:32,160
+out of the programming language 
+of your choice. 
+
+604
+00:36:32,400 --> 00:36:37,160
+So this is the problem, right? 
+It's there's really good reasons
+
+605
+00:36:37,160 --> 00:36:43,040
+not to trade off your type 
+system for, like your 
+
+606
+00:36:43,200 --> 00:36:45,920
+programming language type system
+for what the database gives you.
+
+607
+00:36:46,280 --> 00:36:49,080
+And there are also good reasons 
+not to trade off what the 
+
+608
+00:36:49,080 --> 00:36:53,920
+database gives you into the. 
+This is like the age-old 
+
+609
+00:36:53,920 --> 00:36:57,960
+impedance mismatch between how 
+the data should be stored and 
+
+610
+00:36:57,960 --> 00:37:01,120
+how the application developer 
+wants to work with the data. 
+
+611
+00:37:01,720 --> 00:37:03,840
+Yeah. 
+So obviously like really strong 
+
+612
+00:37:03,840 --> 00:37:10,840
+team just build a very strong 
+Dow layer where they build micro
+
+613
+00:37:10,840 --> 00:37:15,840
+services with a data layer for 
+each one that perfectly maps the
+
+614
+00:37:16,640 --> 00:37:21,040
+API layer into a type model and 
+the type model into that model. 
+
+615
+00:37:21,040 --> 00:37:24,560
+And it's all very handwritten, 
+which is I guess where the heat 
+
+616
+00:37:24,560 --> 00:37:27,760
+on developer productivity shows 
+up. 
+
+617
+00:37:28,920 --> 00:37:35,480
+But I also want to say that not 
+all Orams are made equal. 
+
+618
+00:37:36,400 --> 00:37:40,920
+And the there are ones that give
+you. 
+
+619
+00:37:41,000 --> 00:37:44,840
+First of all, learning your ORAM
+and when it makes sense to use 
+
+620
+00:37:44,840 --> 00:37:47,800
+it and when you need to 
+overwrite it is extremely 
+
+621
+00:37:47,800 --> 00:37:50,240
+valuable. 
+You can go a long way being 
+
+622
+00:37:50,240 --> 00:37:55,400
+productive with Rails and then 
+tell Rails OK over here you're 
+
+623
+00:37:55,400 --> 00:38:00,400
+absolutely wrong, like. 
+The, yeah, like a lot of Orms do
+
+624
+00:38:00,400 --> 00:38:03,600
+have the escape hatch that says 
+like I'm going to, you know, 
+
+625
+00:38:03,760 --> 00:38:07,520
+generate what I think is the 
+right SQL query, but if you want
+
+626
+00:38:07,520 --> 00:38:09,880
+to go override that that query, 
+you can. 
+
+627
+00:38:11,040 --> 00:38:13,720
+So yeah, they they often do have
+these escape hatches. 
+
+628
+00:38:14,120 --> 00:38:18,320
+The extent at which Orms are 
+willing to work with my data 
+
+629
+00:38:18,320 --> 00:38:23,800
+model versus what they want to 
+do differs a lot. 
+
+630
+00:38:24,040 --> 00:38:30,120
+Some of them are so opinionated 
+that if you, if you as a 
+
+631
+00:38:30,120 --> 00:38:33,680
+developer or data architect have
+any opinions of your own, you 
+
+632
+00:38:33,680 --> 00:38:34,960
+will not be able to work with 
+them. 
+
+633
+00:38:35,960 --> 00:38:41,440
+And others are like, I mean our 
+job is to translate what you did
+
+634
+00:38:41,440 --> 00:38:45,720
+in the database into objects. 
+We may need more hints, but 
+
+635
+00:38:45,720 --> 00:38:50,920
+we're not going to tell you how 
+to build your data model. 
+
+636
+00:38:50,920 --> 00:38:54,200
+We're just going to help you 
+with the translation. 
+
+637
+00:38:54,800 --> 00:39:02,600
+And and yeah, I mean definitely,
+if you have a choice, forums in 
+
+638
+00:39:02,600 --> 00:39:08,440
+your language, error on the side
+that gives you that works with 
+
+639
+00:39:08,440 --> 00:39:12,920
+you and does not try to impose 0
+opinions on what you're going to
+
+640
+00:39:12,920 --> 00:39:16,200
+do. 
+Yeah, Well, and it and it maybe 
+
+641
+00:39:16,200 --> 00:39:22,840
+depends on on how. 
+How is there a database person 
+
+642
+00:39:22,840 --> 00:39:26,080
+on your team or many people and 
+do they care about the data 
+
+643
+00:39:26,080 --> 00:39:30,440
+model, Are they doing 
+optimizations in the data model?
+
+644
+00:39:30,920 --> 00:39:36,080
+Are they doing things views? 
+But in a lot of cases, I'm sure 
+
+645
+00:39:36,080 --> 00:39:40,000
+that developers they're the ones
+in charge of the database and so
+
+646
+00:39:40,200 --> 00:39:42,440
+they're not doing all the 
+optimizations and they don't 
+
+647
+00:39:42,440 --> 00:39:44,680
+care about how the data is 
+stored and structured and 
+
+648
+00:39:44,680 --> 00:39:47,760
+queried and all that. 
+And so you you reach a point 
+
+649
+00:39:47,760 --> 00:39:52,280
+where it's like OK, the 
+developer is no longer in charge
+
+650
+00:39:52,280 --> 00:39:56,040
+of the data and then does the 
+does the model for interacting 
+
+651
+00:39:56,040 --> 00:39:59,560
+with the data that that they 
+were using work. 
+
+652
+00:39:59,760 --> 00:40:03,720
+And I think in a lot of cases 
+with OR Ms., it's like no, like 
+
+653
+00:40:03,920 --> 00:40:07,000
+you're you're probably not going
+to be able to take the model 
+
+654
+00:40:07,000 --> 00:40:08,120
+that worked when you didn't 
+have. 
+
+655
+00:40:08,200 --> 00:40:11,560
+A data person to now having a 
+data person. 
+
+656
+00:40:11,560 --> 00:40:15,960
+Yeah, because if you looked at 
+Ruby on Rails for its target is 
+
+657
+00:40:15,960 --> 00:40:19,560
+like, well, we wanna be able to 
+put up a website really fast and
+
+658
+00:40:19,560 --> 00:40:24,200
+not have to spend any time 
+coming up with the data, data, 
+
+659
+00:40:24,200 --> 00:40:25,920
+architecture, architecture, 
+whatever. 
+
+660
+00:40:25,920 --> 00:40:29,200
+It's just like, OK, so it's this
+nice, straightforward linear 
+
+661
+00:40:29,200 --> 00:40:33,240
+thing and only if you put up a 
+successful website and it starts
+
+662
+00:40:33,240 --> 00:40:37,040
+to scale and then you start 
+having to think about, wow, 
+
+663
+00:40:37,040 --> 00:40:39,560
+we're we're having this got 
+slow. 
+
+664
+00:40:39,560 --> 00:40:42,120
+Yeah, this got mostly it's 
+performance issues I would 
+
+665
+00:40:42,160 --> 00:40:45,080
+suspect. 
+So I have to plug someone that I
+
+666
+00:40:45,080 --> 00:40:51,680
+met fairly recently and he wrote
+the High Performance Rails and 
+
+667
+00:40:51,680 --> 00:40:56,160
+Postgres book and apparently 
+this guy's entire career and 
+
+668
+00:40:56,160 --> 00:40:58,760
+we're going back. 
+I don't know, like 20 years is 
+
+669
+00:40:58,760 --> 00:41:01,720
+basically to show up at 
+companies at the exact point 
+
+670
+00:41:01,720 --> 00:41:04,880
+where we saw some Ruby and Rails
+on top of the database and now 
+
+671
+00:41:04,880 --> 00:41:10,720
+it no longer scales and figure 
+it out how to grow this into 
+
+672
+00:41:10,720 --> 00:41:14,280
+some things that actually works.
+And he did it at like 3-4 
+
+673
+00:41:14,280 --> 00:41:17,920
+different companies at different
+stages of growth and now he 
+
+674
+00:41:17,920 --> 00:41:20,240
+wrote a book and now he does 
+this as a consultant. 
+
+675
+00:41:20,640 --> 00:41:26,480
+And this is such a great niche 
+for a human to be in because 
+
+676
+00:41:26,480 --> 00:41:28,960
+you're exactly right, You have a
+team of hackers, they want to 
+
+677
+00:41:28,960 --> 00:41:32,160
+move fast. 
+Just throw in some arrays on top
+
+678
+00:41:32,160 --> 00:41:35,480
+of a database and now what? 
+Now what do we do? 
+
+679
+00:41:35,520 --> 00:41:40,320
+We were actually successful, but
+now what do we do with this data
+
+680
+00:41:40,320 --> 00:41:43,920
+models that no longer works for 
+us and we never spent a single 
+
+681
+00:41:43,960 --> 00:41:46,720
+hour of our life thinking about 
+it so. 
+
+682
+00:41:46,720 --> 00:41:50,120
+I guess part of what you've been
+thinking about is could we get 
+
+683
+00:41:50,120 --> 00:41:55,480
+to a model based on database 
+virtualization that would allow 
+
+684
+00:41:55,480 --> 00:42:01,040
+us to to start with the thing 
+that will scale later like but 
+
+685
+00:42:01,040 --> 00:42:04,760
+have the nice concise good 
+developer experience at the 
+
+686
+00:42:04,760 --> 00:42:09,280
+beginning but not be be then 
+constrained later. 
+
+687
+00:42:09,480 --> 00:42:13,040
+And maybe with with the 
+foundation of of database 
+
+688
+00:42:13,040 --> 00:42:17,560
+virtualization we can actually 
+like like start with the easy 
+
+689
+00:42:17,560 --> 00:42:22,520
+thing and have it scale with us 
+as as our our data architecture 
+
+690
+00:42:22,520 --> 00:42:27,600
+and performance needs. 
+Too much overhead on the because
+
+691
+00:42:27,720 --> 00:42:29,560
+the you know the front side you 
+do that. 
+
+692
+00:42:29,760 --> 00:42:32,520
+You're always going to impose 
+some overhead at the. 
+
+693
+00:42:32,520 --> 00:42:34,640
+Simple quote UN quote. 
+Simple, yeah? 
+
+694
+00:42:35,360 --> 00:42:37,000
+Yeah. 
+So this is exactly what we're 
+
+695
+00:42:37,000 --> 00:42:40,240
+exploring. 
+Like this is our mission and 
+
+696
+00:42:40,600 --> 00:42:43,760
+something about me and my Co 
+founder, we are very optimistic.
+
+697
+00:42:44,320 --> 00:42:48,800
+We just because people have not 
+been able to build a good Oram 
+
+698
+00:42:48,800 --> 00:42:50,880
+so far does not mean it's 
+possible. 
+
+699
+00:42:50,880 --> 00:42:57,680
+It's impossible. 
+Just because there is this big 
+
+700
+00:42:57,920 --> 00:43:02,240
+step in between what works, when
+it's easy and fast and what you 
+
+701
+00:43:02,240 --> 00:43:06,240
+need later doesn't mean that we 
+cannot kind of smooth it into a 
+
+702
+00:43:06,640 --> 00:43:09,360
+nicer curve. 
+So I cannot be here and let's 
+
+703
+00:43:09,360 --> 00:43:12,720
+just say how we solved it, but 
+this is exactly the kind of 
+
+704
+00:43:12,720 --> 00:43:16,920
+thing we are trying to solve. 
+Can we smooth the learning 
+
+705
+00:43:16,920 --> 00:43:18,760
+curve? 
+Can we smooth the adoption 
+
+706
+00:43:18,760 --> 00:43:21,720
+curve? 
+Can we start you off in a place 
+
+707
+00:43:21,720 --> 00:43:27,520
+that has a tiny step and then 
+add more steps as you grow, 
+
+708
+00:43:27,520 --> 00:43:31,640
+instead of starting off at no 
+steps and then having one 
+
+709
+00:43:31,640 --> 00:43:34,520
+gigantic step to climb over all 
+at once? 
+
+710
+00:43:34,800 --> 00:43:39,680
+So the one thing I see a 
+challenge could could arise is 
+
+711
+00:43:39,680 --> 00:43:44,400
+that you might need to so 
+fundamentally change the idea of
+
+712
+00:43:44,400 --> 00:43:50,600
+a database that the IT might be 
+too hard for. 
+
+713
+00:43:51,000 --> 00:43:57,720
+Well, so I one of my original 
+experiences was in C++ and I was
+
+714
+00:43:57,720 --> 00:44:00,440
+on the standards committee for 
+eight years and I know that one 
+
+715
+00:44:00,440 --> 00:44:03,520
+of the things that Strewstrip 
+was trying to do was say, OK, 
+
+716
+00:44:03,520 --> 00:44:08,040
+all these people know C and 
+we're we we want to give them a 
+
+717
+00:44:08,040 --> 00:44:12,920
+a path to learn a more 
+sophisticated language and that 
+
+718
+00:44:12,920 --> 00:44:17,720
+was great at the time. 
+But then it has become an 
+
+719
+00:44:17,720 --> 00:44:21,880
+albatross around the neck of CC 
+Plus Plus programmers. 
+
+720
+00:44:22,320 --> 00:44:27,240
+And so if you change, I mean 
+what you do might be what we 
+
+721
+00:44:27,240 --> 00:44:31,160
+eventually get to. 
+But if it's too soon that you 
+
+722
+00:44:31,160 --> 00:44:35,280
+know and there's no how do? 
+You how do you create the bridge
+
+723
+00:44:35,280 --> 00:44:38,560
+from what people know today, 
+which is most people know crud 
+
+724
+00:44:38,560 --> 00:44:43,200
+and yeah, sequel and right. 
+Scala did it really well, right?
+
+725
+00:44:43,320 --> 00:44:48,120
+I mean, they started with. 
+We want to get Java developers 
+
+726
+00:44:48,120 --> 00:44:52,160
+into more sophisticated ways of 
+writing code, and we're going to
+
+727
+00:44:52,160 --> 00:44:57,240
+start by making better Java. 
+Just those small quality of life
+
+728
+00:44:57,240 --> 00:45:00,720
+things that everyone knew Java 
+should have for decades, Those 
+
+729
+00:45:00,720 --> 00:45:04,560
+nice and few chairs. 
+This apply traits. 
+
+730
+00:45:04,600 --> 00:45:08,560
+All those things that are really
+fun to start with and you. 
+
+731
+00:45:08,800 --> 00:45:12,520
+Yes, there are extra effort I 
+had to learn traits, but you get
+
+732
+00:45:12,520 --> 00:45:15,680
+it fairly quickly and you see 
+the benefits fairly quickly. 
+
+733
+00:45:16,080 --> 00:45:20,880
+And you can slowly move on to 
+make more and more out of the 
+
+734
+00:45:20,880 --> 00:45:23,600
+language. 
+And if you stop at Better Java, 
+
+735
+00:45:24,760 --> 00:45:26,720
+it's fine. 
+You still have better Java. 
+
+736
+00:45:26,760 --> 00:45:29,040
+I mean, these days you'd 
+probably do it with Kotlin, but 
+
+737
+00:45:29,160 --> 00:45:31,160
+you see where I'm getting to. 
+Yeah, totally. 
+
+738
+00:45:31,880 --> 00:45:34,000
+Yeah. 
+So like, like you have to start 
+
+739
+00:45:34,000 --> 00:45:38,440
+from something familiar and then
+figure out how you can then 
+
+740
+00:45:39,000 --> 00:45:40,160
+evolve. 
+But. 
+
+741
+00:45:40,160 --> 00:45:43,160
+There was a lot of foundations 
+laid for. 
+
+742
+00:45:45,160 --> 00:45:50,840
+I mean there, there had to be 
+forays into, well, I mean like 
+
+743
+00:45:50,840 --> 00:45:54,640
+Scala which isn't. 
+I mean it's not going to take 
+
+744
+00:45:54,640 --> 00:45:57,120
+over the world. 
+It's got too many experiments in
+
+745
+00:45:57,120 --> 00:45:59,920
+it. 
+And but then we had by pushing 
+
+746
+00:45:59,920 --> 00:46:04,440
+that far then we could kind of 
+back off to Kotlin and we see, 
+
+747
+00:46:04,440 --> 00:46:08,520
+OK, all of these learnings have 
+been incorporated into this 
+
+748
+00:46:08,520 --> 00:46:13,560
+language and it is just so much 
+better and I think we'll see a 
+
+749
+00:46:13,560 --> 00:46:17,720
+more and more of a transition 
+from Java to Kotlin and 
+
+750
+00:46:17,720 --> 00:46:21,840
+languages like it. 
+But it requires, I mean we had 
+
+751
+00:46:21,840 --> 00:46:25,520
+to get a bunch of people, you 
+know, maybe some percentage of 
+
+752
+00:46:25,520 --> 00:46:29,160
+the programming community to the
+point where they go, yes, this 
+
+753
+00:46:29,160 --> 00:46:32,160
+makes sense. 
+Whereas if you just took Scala 
+
+754
+00:46:32,160 --> 00:46:35,480
+pro, I mean if you took Java 
+programmers and well, obviously 
+
+755
+00:46:35,480 --> 00:46:40,160
+throwing them into the Scala 
+pool didn't, only a small 
+
+756
+00:46:40,160 --> 00:46:42,320
+fragment of the programmers were
+ready for that. 
+
+757
+00:46:42,320 --> 00:46:45,920
+Yeah. 
+So I think from your days in 
+
+758
+00:46:45,920 --> 00:46:50,600
+Kafka, one of the things that I 
+was kind of hopeful of is that 
+
+759
+00:46:51,000 --> 00:46:53,680
+if you look at CQRS, Event 
+Sourcing, some of those 
+
+760
+00:46:53,680 --> 00:46:57,680
+architectural models, it seems 
+like those models at a certain 
+
+761
+00:46:57,680 --> 00:47:01,440
+scale make a lot of sense. 
+But the downside to him is that 
+
+762
+00:47:01,760 --> 00:47:05,920
+the overhead to get into that 
+architecture was very high. 
+
+763
+00:47:06,160 --> 00:47:10,840
+You know, to to build a whole 
+like a real system that used, 
+
+764
+00:47:11,160 --> 00:47:15,160
+let's say CQRS like, Oh my God, 
+like like if you compare that to
+
+765
+00:47:15,160 --> 00:47:19,200
+the world of a CRUD database, 
+the number of the amount of 
+
+766
+00:47:19,200 --> 00:47:21,600
+complexity and number of things 
+that the developer needs to 
+
+767
+00:47:21,600 --> 00:47:25,520
+understand is way higher on the 
+complexity scale. 
+
+768
+00:47:25,760 --> 00:47:29,720
+And so it's like, yes, QRS makes
+sense at this scale, CRUD makes 
+
+769
+00:47:29,720 --> 00:47:33,120
+sense at this scale. 
+And so I think the the the 
+
+770
+00:47:33,120 --> 00:47:36,480
+question that you're exploring 
+is how do we create a model that
+
+771
+00:47:36,640 --> 00:47:40,280
+that doesn't have to pick a side
+where you get like the nice 
+
+772
+00:47:40,600 --> 00:47:45,680
+simple models that then also 
+work at at scale and and how do 
+
+773
+00:47:45,680 --> 00:47:48,040
+you do that around a virtualized
+database? 
+
+774
+00:47:48,920 --> 00:47:51,640
+Yeah. 
+So this is not something that we
+
+775
+00:47:51,720 --> 00:47:58,680
+are exactly tackling, but a bit 
+roundabout way around it is that
+
+776
+00:47:59,320 --> 00:48:02,880
+when you think about when and 
+how you need secure REST, you 
+
+777
+00:48:02,880 --> 00:48:07,480
+start with you have a monolith 
+and you have your database 
+
+778
+00:48:07,480 --> 00:48:10,800
+right? 
+And then usually the first step 
+
+779
+00:48:10,840 --> 00:48:15,360
+that people do is create 
+microservices that all talk to 
+
+780
+00:48:15,360 --> 00:48:21,160
+the same database, which is not 
+going to end well. 
+
+781
+00:48:22,520 --> 00:48:28,040
+And then when you transition 
+them to microservices, the 
+
+782
+00:48:28,480 --> 00:48:34,080
+transition is everyone is going 
+to have their own database and 
+
+783
+00:48:34,120 --> 00:48:36,920
+now you can no longer just reach
+out. 
+
+784
+00:48:37,200 --> 00:48:41,920
+There's no join. 
+And grab it right, you've. 
+
+785
+00:48:42,360 --> 00:48:45,120
+Lost your join and so then what 
+do you do? 
+
+786
+00:48:45,920 --> 00:48:50,960
+And so, so then with you're 
+saying a CQRS with with some 
+
+787
+00:48:50,960 --> 00:48:57,000
+materialized views is then a 
+model that can give you the the 
+
+788
+00:48:57,040 --> 00:49:00,760
+join, the the benefits of a join
+in a database but with the 
+
+789
+00:49:00,760 --> 00:49:05,680
+distributed data model. 
+Yeah, and we're even thinking 
+
+790
+00:49:05,840 --> 00:49:11,360
+like some of the time when 
+people move into the SQS model 
+
+791
+00:49:11,360 --> 00:49:13,760
+and you're not allowed to talk 
+to my database, you have to talk
+
+792
+00:49:13,760 --> 00:49:16,600
+to me and I will give you the 
+data that you need out of my 
+
+793
+00:49:16,600 --> 00:49:18,240
+database. 
+You have real APIs. 
+
+794
+00:49:18,840 --> 00:49:21,880
+Sometimes the AP is have real 
+business logic and are very 
+
+795
+00:49:21,920 --> 00:49:26,000
+thoughtful, but sometimes are 
+very seen layer on top of, as 
+
+796
+00:49:26,000 --> 00:49:30,520
+you said, some views essentially
+like it doesn't do all that 
+
+797
+00:49:30,520 --> 00:49:33,160
+much. 
+And this is something that we 
+
+798
+00:49:33,160 --> 00:49:39,960
+believe databases should provide
+a REST layer that if all you do,
+
+799
+00:49:40,000 --> 00:49:43,520
+if all the values that your 
+application provides that your 
+
+800
+00:49:43,520 --> 00:49:48,560
+service provides is some REST, 
+AP is on top of some views, you 
+
+801
+00:49:48,560 --> 00:49:50,760
+don't need an entire service, 
+you don't need to manage its 
+
+802
+00:49:50,760 --> 00:49:52,400
+uptime, you don't need to deploy
+it. 
+
+803
+00:49:52,840 --> 00:49:54,920
+All you need is a REST API on 
+top of a view. 
+
+804
+00:49:55,160 --> 00:50:00,800
+So this is something that I 
+think again can dramatically 
+
+805
+00:50:00,800 --> 00:50:05,480
+improve developer productivity 
+without introducing. 
+
+806
+00:50:05,560 --> 00:50:08,720
+I hope we're just starting to 
+explore it, but without 
+
+807
+00:50:08,720 --> 00:50:12,040
+introducing massive pains down 
+the line. 
+
+808
+00:50:12,480 --> 00:50:16,160
+Well, and once you're in the 
+world of virtualized databases, 
+
+809
+00:50:16,360 --> 00:50:19,600
+maybe there's an opportunity to 
+have a hierarchy of 
+
+810
+00:50:19,600 --> 00:50:23,200
+virtualization. 
+And so you're then materialized 
+
+811
+00:50:23,200 --> 00:50:27,400
+view could actually be a 
+virtualization on top of other 
+
+812
+00:50:27,400 --> 00:50:30,520
+virtualizations. 
+And so then I mean maybe 
+
+813
+00:50:30,520 --> 00:50:35,040
+performance wise it all doesn't 
+work, but but it's you know once
+
+814
+00:50:35,040 --> 00:50:38,120
+you've got the concept of 
+virtualization of a database, 
+
+815
+00:50:38,320 --> 00:50:41,480
+couldn't you then layer those 
+virtualizations so that you 
+
+816
+00:50:41,480 --> 00:50:45,000
+could essentially create the 
+same construct as a materialized
+
+817
+00:50:45,000 --> 00:50:48,440
+view across different actual 
+databases or something? 
+
+818
+00:50:48,680 --> 00:50:51,800
+That's a pretty good idea and 
+there goes my weekend. 
+
+819
+00:50:51,800 --> 00:50:59,880
+It is a good idea, but. 
+Because like maybe where you 
+
+820
+00:50:59,880 --> 00:51:04,160
+started is just creating one 
+layer of virtualization, but why
+
+821
+00:51:04,160 --> 00:51:07,360
+not have as many layers of 
+virtualization as you want? 
+
+822
+00:51:07,960 --> 00:51:12,440
+No, views can be materialized. 
+And obviously materialized views
+
+823
+00:51:12,480 --> 00:51:15,960
+is a good obstruction of a 
+stream of events. 
+
+824
+00:51:16,200 --> 00:51:19,120
+Yeah. 
+So yeah, I think you're on to 
+
+825
+00:51:19,120 --> 00:51:20,880
+something here. 
+Nice. 
+
+826
+00:51:21,360 --> 00:51:22,840
+James has lots of good. 
+Ideas. 
+
+827
+00:51:23,920 --> 00:51:27,160
+Well, the part of what led me to
+thinking about this was that a 
+
+828
+00:51:27,160 --> 00:51:31,240
+view in a database is not 
+distributable, right? 
+
+829
+00:51:31,240 --> 00:51:34,440
+Like, you can't you like. 
+As far as I know with databases,
+
+830
+00:51:34,440 --> 00:51:37,360
+you can't create a view that 
+actually, like, crosses multiple
+
+831
+00:51:37,880 --> 00:51:41,480
+actual databases, right? 
+But what we want in the 
+
+832
+00:51:41,480 --> 00:51:45,240
+distributed systems world is the
+a materialized view which does 
+
+833
+00:51:45,240 --> 00:51:48,800
+materialize across different 
+data sources. 
+
+834
+00:51:49,080 --> 00:51:53,160
+So now that you've got a 
+virtualization layer like your 
+
+835
+00:51:53,160 --> 00:51:55,720
+view, your view is just a 
+virtualized database, right? 
+
+836
+00:51:57,200 --> 00:51:59,560
+Yeah. 
+So we do have virtual like 
+
+837
+00:51:59,560 --> 00:52:05,120
+distributed views that like are 
+we route the requests and then 
+
+838
+00:52:05,120 --> 00:52:06,680
+we kind of collect the result 
+for you. 
+
+839
+00:52:06,760 --> 00:52:09,080
+That's cool. 
+But you're right that it has a 
+
+840
+00:52:09,080 --> 00:52:12,720
+performance overhead and if we 
+did it for materialized views, 
+
+841
+00:52:13,240 --> 00:52:16,680
+we could do it better. 
+Yeah, nice. 
+
+842
+00:52:18,760 --> 00:52:25,320
+So yeah, touching back on the 
+the ORM subject is one of the 
+
+843
+00:52:25,320 --> 00:52:28,760
+challenges that we have with OR 
+Ms. like kind of this this 
+
+844
+00:52:28,760 --> 00:52:33,200
+relates back to views is that 
+views are not well represented 
+
+845
+00:52:33,200 --> 00:52:37,280
+by OR Ms. because you may have 
+different ways that you want to 
+
+846
+00:52:37,880 --> 00:52:43,280
+aggregate data or or view data. 
+And in the world of objects and 
+
+847
+00:52:43,280 --> 00:52:48,400
+types it it typically is very 
+cumbersome to to establish 
+
+848
+00:52:48,400 --> 00:52:50,400
+different types for different 
+views. 
+
+849
+00:52:50,800 --> 00:52:54,240
+Is that one of the challenges 
+that we experience in that like 
+
+850
+00:52:55,080 --> 00:52:57,880
+the the way that we want to view
+the data changes? 
+
+851
+00:52:57,880 --> 00:53:01,760
+And So what do we do? 
+Just write SQL queries, because 
+
+852
+00:53:01,760 --> 00:53:06,000
+SQL queries allow us to pick the
+columns that we want to to get? 
+
+853
+00:53:07,160 --> 00:53:09,400
+Yeah. 
+So I hope that as databases 
+
+854
+00:53:09,400 --> 00:53:12,560
+evolve and you can see it not 
+just in nine, databases are 
+
+855
+00:53:12,560 --> 00:53:16,320
+evolving all the time and there 
+is materialized to which have 
+
+856
+00:53:17,040 --> 00:53:23,520
+view centric database and there 
+are also new Orams being written
+
+857
+00:53:23,840 --> 00:53:27,480
+all the time. 
+So one would hope that newer 
+
+858
+00:53:27,480 --> 00:53:35,640
+Orams would be adapting to 
+changes in the world and we're 
+
+859
+00:53:35,640 --> 00:53:40,040
+definitely seeing it happen. 
+I think TypeScript ecosystem 
+
+860
+00:53:40,040 --> 00:53:43,120
+which traditionally has been a 
+lot faster moving and very 
+
+861
+00:53:43,120 --> 00:53:45,600
+dynamic. 
+You see it maybe a bit more than
+
+862
+00:53:45,600 --> 00:53:49,560
+in other places, but it's 
+definitely a thing. 
+
+863
+00:53:50,280 --> 00:53:52,920
+And and maybe there's an 
+opportunity for languages that 
+
+864
+00:53:52,920 --> 00:53:56,360
+have algebraic data types, 
+product types and some some 
+
+865
+00:53:56,360 --> 00:54:01,920
+types to use AD TS to better 
+represent the the views that you
+
+866
+00:54:01,920 --> 00:54:03,960
+would want on your data or 
+something like that. 
+
+867
+00:54:03,960 --> 00:54:06,840
+So there may be, and I I'm 
+pretty sure TypeScript has AD 
+
+868
+00:54:06,960 --> 00:54:11,280
+TS, so maybe that's one place 
+where there is some possible 
+
+869
+00:54:11,280 --> 00:54:13,040
+experiment and maybe it already 
+exists. 
+
+870
+00:54:13,040 --> 00:54:17,800
+Ultimately, what you want when 
+you go to your database is a is 
+
+871
+00:54:17,800 --> 00:54:20,720
+a type. 
+Isn't Is a collection of of 
+
+872
+00:54:20,720 --> 00:54:23,600
+things of a particular type. 
+You don't want to have to go 
+
+873
+00:54:23,600 --> 00:54:27,520
+through all of that intermediate
+stuff, which is just an artifact
+
+874
+00:54:27,520 --> 00:54:29,960
+of how databases got started. 
+Yeah, yeah. 
+
+875
+00:54:30,480 --> 00:54:32,920
+Exactly that. 
+And you also think like, again, 
+
+876
+00:54:32,920 --> 00:54:35,840
+if you're thinking about 
+microservices, you're talking to
+
+877
+00:54:35,840 --> 00:54:39,920
+a database and you get types, 
+maybe VR or you're talking to 
+
+878
+00:54:39,960 --> 00:54:44,440
+other services, you also need 
+shared types for the replies 
+
+879
+00:54:44,440 --> 00:54:46,440
+that Daza service gives you, 
+right? 
+
+880
+00:54:46,440 --> 00:54:51,400
+So you have those open APIs and 
+GRPC and all those things that 
+
+881
+00:54:51,400 --> 00:54:54,640
+are very typeful and you have to
+manage it this way. 
+
+882
+00:54:54,960 --> 00:54:56,560
+But why does it have to be 
+different? 
+
+883
+00:54:57,320 --> 00:55:01,360
+Why do I get my types one way 
+when I'm talking to my database 
+
+884
+00:55:01,360 --> 00:55:03,520
+and my types in a totally 
+different way when I'm talking 
+
+885
+00:55:03,520 --> 00:55:06,480
+to the other service when at the
+end of the day all I want is 
+
+886
+00:55:06,840 --> 00:55:11,000
+some instances of some objects 
+with the data that I'm looking 
+
+887
+00:55:11,000 --> 00:55:13,440
+for? 
+And this is my original 
+
+888
+00:55:13,560 --> 00:55:17,400
+observation is that the reason 
+it's different is because with 
+
+889
+00:55:17,400 --> 00:55:22,480
+the database you set your types 
+at the front end and not at the 
+
+890
+00:55:22,560 --> 00:55:26,920
+end where the user you know the 
+person getting the query gets 
+
+891
+00:55:26,920 --> 00:55:28,800
+them. 
+And that's I'd say that's where 
+
+892
+00:55:28,800 --> 00:55:31,280
+the disconnect is. 
+We still haven't really figured 
+
+893
+00:55:31,280 --> 00:55:35,520
+out where schema should be 
+defined, how they should evolve,
+
+894
+00:55:35,760 --> 00:55:39,040
+I think. 
+I think Google generally uses 
+
+895
+00:55:39,040 --> 00:55:43,080
+protos to define their data 
+schemas and protos because 
+
+896
+00:55:43,080 --> 00:55:46,680
+they're evolvable. 
+I think that does give you a a 
+
+897
+00:55:46,680 --> 00:55:50,000
+way to at least define schema 
+and evolve it and then generate 
+
+898
+00:55:50,240 --> 00:55:53,120
+the the application layer types 
+from those. 
+
+899
+00:55:54,000 --> 00:55:57,600
+I'm sure there's some trade-offs
+and and downsides to to doing 
+
+900
+00:55:57,600 --> 00:56:00,880
+the schema definition that way. 
+But but yeah schemas becomes one
+
+901
+00:56:00,880 --> 00:56:03,480
+of the other challenging things 
+that I'm sure you're thinking 
+
+902
+00:56:03,480 --> 00:56:06,920
+about is is when and how do 
+schemas get defined, How do they
+
+903
+00:56:06,920 --> 00:56:09,760
+get modified? 
+How to How to How do you, yeah, 
+
+904
+00:56:09,760 --> 00:56:12,960
+deal with splitting a column 
+into two columns Like. 
+
+905
+00:56:13,160 --> 00:56:16,440
+There's all sorts of challenging
+data migration problems, so I'm 
+
+906
+00:56:16,440 --> 00:56:18,600
+sure that's something that 
+you're you're also trying to 
+
+907
+00:56:18,600 --> 00:56:21,800
+tackle at the same time. 
+Exactly that immigrations is 
+
+908
+00:56:21,800 --> 00:56:26,640
+extremely hard and extremely 
+painful and something that tools
+
+909
+00:56:26,640 --> 00:56:32,880
+already exist and they're very 
+opinionated and how to work with
+
+910
+00:56:32,880 --> 00:56:38,080
+existing tools ecosystem while 
+applying migrations in a way 
+
+911
+00:56:38,080 --> 00:56:42,400
+that actually work in a 
+distributed database. 
+
+912
+00:56:42,400 --> 00:56:44,560
+Because if you think about it, 
+it's multi tenant, you have the 
+
+913
+00:56:44,560 --> 00:56:48,880
+tenant, virtual databases, 
+migrations traditionally think 
+
+914
+00:56:48,880 --> 00:56:52,880
+about schema is one thing. 
+They don't think oh this tenant 
+
+915
+00:56:52,880 --> 00:56:55,160
+is on the new schema. 
+This tend to the low schema. 
+
+916
+00:56:55,520 --> 00:56:58,760
+But you as a developer when you 
+upgrade you, it's actually 
+
+917
+00:56:58,760 --> 00:57:03,160
+really beneficial to say OK, 
+this tenant is actually my 
+
+918
+00:57:03,160 --> 00:57:07,640
+product manager, it's a Canary, 
+I'm going to upgrade them first 
+
+919
+00:57:07,640 --> 00:57:09,720
+to the new schema. 
+If anything break, it's going to
+
+920
+00:57:09,720 --> 00:57:12,600
+be on them. 
+Canary migrations. 
+
+921
+00:57:12,600 --> 00:57:14,640
+Oh my God, that's. 
+Yeah, that's. 
+
+922
+00:57:14,640 --> 00:57:16,880
+Amazing databases to the 21st 
+century. 
+
+923
+00:57:17,280 --> 00:57:20,720
+Exactly that. 
+Oh, there's your tagline for 
+
+924
+00:57:20,720 --> 00:57:21,960
+your company. 
+There you go. 
+
+925
+00:57:22,400 --> 00:57:24,480
+Bringing which will work for 100
+years. 
+
+926
+00:57:24,760 --> 00:57:27,880
+Yeah, that's right. 
+Bringing databases to the 21st 
+
+927
+00:57:27,880 --> 00:57:29,320
+century. 
+Yeah, I like it. 
+
+928
+00:57:29,440 --> 00:57:33,320
+It's not a bad idea. 
+Yeah, some cool stuff. 
+
+929
+00:57:33,320 --> 00:57:36,600
+Some really challenging problems
+that you're trying to tackle, 
+
+930
+00:57:36,600 --> 00:57:38,440
+like making this all by the way 
+if. 
+
+931
+00:57:38,440 --> 00:57:42,920
+Anyone is listening? 
+It's a challenging problem. 
+
+932
+00:57:43,520 --> 00:57:45,200
+That's right. 
+There's there's some really fun 
+
+933
+00:57:45,200 --> 00:57:46,880
+problems you could go work on at
+Niall. 
+
+934
+00:57:46,880 --> 00:57:51,360
+So that's Yup, that sounds fun. 
+What other topics that we 
+
+935
+00:57:51,360 --> 00:57:54,440
+haven't touched on that are that
+are interesting to you at the 
+
+936
+00:57:54,440 --> 00:57:57,160
+moment? 
+I'm out of topics. 
+
+937
+00:57:58,000 --> 00:58:01,160
+Out of topics, OK. 
+I guess that's a good sign we've
+
+938
+00:58:01,160 --> 00:58:05,640
+we've exhausted the queue. 
+It always happens around the 
+
+939
+00:58:05,680 --> 00:58:08,000
+hour. 
+It does something about our 
+
+940
+00:58:08,000 --> 00:58:09,600
+brains. 
+Just how does that work? 
+
+941
+00:58:09,600 --> 00:58:10,240
+I don't know. 
+Reach. 
+
+942
+00:58:10,240 --> 00:58:12,280
+Reach. 
+The It's very mysterious, yeah. 
+
+943
+00:58:13,560 --> 00:58:15,680
+Well, cool. 
+Well Gwen, it's been super 
+
+944
+00:58:15,680 --> 00:58:19,000
+interesting to talk to you and 
+and I haven't tried Niall. 
+
+945
+00:58:19,560 --> 00:58:22,480
+I don't know if I'm the target 
+user for it because I'm not 
+
+946
+00:58:22,480 --> 00:58:27,360
+building a a SAS platform you 
+know but but I think you're 
+
+947
+00:58:27,360 --> 00:58:32,480
+doing so much in terms of 
+exploring not just the SAS side 
+
+948
+00:58:32,480 --> 00:58:35,680
+of databases but also the 
+developer experience side for 
+
+949
+00:58:35,680 --> 00:58:40,680
+how developers interact with 
+data and deal with security and 
+
+950
+00:58:40,680 --> 00:58:44,400
+deal with migrations and deal 
+with all these other problems 
+
+951
+00:58:44,400 --> 00:58:48,600
+that probably be interesting for
+me just to to to to see how 
+
+952
+00:58:48,600 --> 00:58:50,080
+you're thinking about some of 
+these problems. 
+
+953
+00:58:50,080 --> 00:58:53,520
+So I need to go play with with 
+Niall and and and to. 
+
+954
+00:58:53,520 --> 00:58:57,760
+Say that this was fascinating. 
+I think I I got some different 
+
+955
+00:58:57,760 --> 00:58:59,800
+perspective. 
+I've always avoided databases 
+
+956
+00:58:59,840 --> 00:59:04,120
+but but I but the but the ideas 
+of them are interesting and I 
+
+957
+00:59:04,120 --> 00:59:06,480
+think I've gotten some different
+perspectives on it. 
+
+958
+00:59:06,960 --> 00:59:10,040
+Yeah. 
+So maybe now I can can someday 
+
+959
+00:59:10,040 --> 00:59:12,600
+reach a point where Bruce will 
+be interested in it. 
+
+960
+00:59:12,600 --> 00:59:16,000
+Because it will because I have 
+changed the model it. 
+
+961
+00:59:16,000 --> 00:59:20,800
+Isn't an immediate drop into, 
+you know, the weird details of 
+
+962
+00:59:20,800 --> 00:59:25,200
+SQL and joins and stuff. 
+You know, it's like I that's 
+
+963
+00:59:25,200 --> 00:59:28,800
+always felt to me like it's 
+like, oh, I mean, I used to 
+
+964
+00:59:28,800 --> 00:59:31,520
+program an assembly language, 
+but I don't want to do that 
+
+965
+00:59:31,520 --> 00:59:34,320
+anymore and this feels like 
+throwing you back into. 
+
+966
+00:59:34,320 --> 00:59:37,440
+That SQL is the assembly 
+language of the database, yeah. 
+
+967
+00:59:37,880 --> 00:59:41,160
+It was meant to be English like 
+and clear to everyone. 
+
+968
+00:59:41,160 --> 00:59:44,680
+That's why we're stuck with 
+things like SELECT and WHERE 
+
+969
+00:59:44,680 --> 00:59:46,320
+AND. 
+So was COBOL. 
+
+970
+00:59:46,440 --> 00:59:57,560
+Yeah, I am not a fan of SQL 
+personally, but yeah, but some 
+
+971
+00:59:57,560 --> 00:59:58,600
+people love it. 
+Yeah. 
+
+972
+00:59:59,240 --> 01:00:02,000
+Well, thank you so much, Gwen. 
+Yeah, it's been awesome to have 
+
+973
+01:00:02,000 --> 01:00:02,960
+you. 
+Appreciate it. 
+
+974
+01:00:02,960 --> 01:00:05,560
+A. 
+Pleasure to be on one of my 
+
+975
+01:00:05,560 --> 01:00:08,360
+favorite podcasts. 
+Nice. 
+
+976
+01:00:08,360 --> 01:00:09,680
+Thank you. 
+Bye.
+

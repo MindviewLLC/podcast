@@ -1,0 +1,6018 @@
+1
+00:00:01,080 --> 00:00:03,880
+Welcome. 
+To Happy Path Programming, I'm 
+
+2
+00:00:03,960 --> 00:00:05,560
+Bruce Eckle. 
+I'm James Ward. 
+
+3
+00:00:07,680 --> 00:00:09,480
+Welcome to Happy PATH 
+Programming. 
+
+4
+00:00:09,720 --> 00:00:11,840
+Oh, man, it's a beautiful day in
+Christmas, Colorado. 
+
+5
+00:00:11,840 --> 00:00:14,680
+It's very nice. 
+It's just early spring. 
+
+6
+00:00:15,440 --> 00:00:15,960
+Yeah. 
+Delightful. 
+
+7
+00:00:16,280 --> 00:00:19,040
+Yeah. 
+Well, today we have with us 
+
+8
+00:00:19,040 --> 00:00:22,480
+Jennifer Reef. 
+And Jennifer, welcome to Happy 
+
+9
+00:00:22,480 --> 00:00:25,480
+PATH Programming. 
+I met you at Dev Nexus just like
+
+10
+00:00:25,480 --> 00:00:30,200
+a month ago and you have a 
+podcast called the break time 
+
+11
+00:00:30,200 --> 00:00:31,640
+Tech talks. 
+Did I get that right? 
+
+12
+00:00:32,119 --> 00:00:33,600
+Yeah. 
+And it's it's delightful. 
+
+13
+00:00:33,600 --> 00:00:35,400
+I've really enjoyed it. 
+It's like these bite sized 
+
+14
+00:00:35,400 --> 00:00:38,040
+Nuggets of of things, but 
+welcome. 
+
+15
+00:00:38,040 --> 00:00:40,120
+And yeah, just introduce 
+yourself and tell us who. 
+
+16
+00:00:40,120 --> 00:00:43,760
+Yeah, my name is Jennifer Rife. 
+I've worked for Your Name Before
+
+17
+00:00:43,760 --> 00:00:48,080
+J, which is a graph database 
+company, for the last seven 
+
+18
+00:00:48,280 --> 00:00:51,800
+years now, and I've just really 
+enjoyed what I do. 
+
+19
+00:00:51,800 --> 00:00:55,120
+I'm a developer advocate there. 
+I focus mostly on the Java 
+
+20
+00:00:55,120 --> 00:00:58,160
+technology and ecosystem space. 
+So anything having to do with 
+
+21
+00:00:58,520 --> 00:01:02,360
+Java tools and architectures and
+things that are going on in the 
+
+22
+00:01:02,360 --> 00:01:06,680
+Java space, of course, where 
+those collide with databases and
+
+23
+00:01:06,680 --> 00:01:09,760
+graph databases specifically, I 
+tend to focus on and I really 
+
+24
+00:01:09,760 --> 00:01:13,080
+just like learning about 
+technology and sharing what I've
+
+25
+00:01:13,080 --> 00:01:15,880
+learned. 
+So that's kind of how the tech 
+
+26
+00:01:15,880 --> 00:01:19,360
+blog came about. 
+I write tech blogs, build 
+
+27
+00:01:19,360 --> 00:01:21,320
+projects and then write blogs 
+about what I've learned. 
+
+28
+00:01:21,320 --> 00:01:25,200
+And then now I've recently, I 
+guess the middle of last year 
+
+29
+00:01:25,200 --> 00:01:27,000
+started up a tech podcast as 
+well. 
+
+30
+00:01:27,320 --> 00:01:30,760
+Again, just kind of a different 
+format and bytes, focusing on 
+
+31
+00:01:30,760 --> 00:01:33,680
+bite sized pieces that I learned
+kind of along the way, whether 
+
+32
+00:01:33,680 --> 00:01:36,200
+that's, you know, project 
+related things or interesting 
+
+33
+00:01:36,200 --> 00:01:38,480
+content that I'm reading or tips
+that I'm picking up. 
+
+34
+00:01:38,560 --> 00:01:40,400
+So just a little bit of of 
+everything. 
+
+35
+00:01:41,120 --> 00:01:42,560
+That's awesome. 
+It's great that you have the 
+
+36
+00:01:42,560 --> 00:01:45,240
+opportunity to learn and then 
+help others learn as well, so. 
+
+37
+00:01:45,440 --> 00:01:46,280
+Yeah, we like that. 
+We. 
+
+38
+00:01:46,960 --> 00:01:48,720
+Like that we. 
+Do that, I enjoy it too. 
+
+39
+00:01:49,440 --> 00:01:50,560
+Yeah. 
+What have you been learning 
+
+40
+00:01:50,560 --> 00:01:53,080
+recently? 
+What's what's what's the the 
+
+41
+00:01:53,080 --> 00:01:55,080
+most recent explorations and 
+learnings? 
+
+42
+00:01:55,600 --> 00:01:58,120
+Yeah, so there's a lot of things
+going on. 
+
+43
+00:01:58,120 --> 00:02:00,840
+I I feel like spring and fall 
+are kind of the busy times for 
+
+44
+00:02:00,840 --> 00:02:02,640
+developer advocates. 
+That's when a lot of events are 
+
+45
+00:02:02,640 --> 00:02:05,160
+going on. 
+And so that's when I tend to 
+
+46
+00:02:05,280 --> 00:02:09,880
+build a lot of things all at 
+once and mostly for for 
+
+47
+00:02:09,880 --> 00:02:12,840
+conferences and demos and 
+applications and things around 
+
+48
+00:02:12,840 --> 00:02:15,120
+that. 
+But I started working on 
+
+49
+00:02:15,120 --> 00:02:20,160
+recently for some conference 
+presentations looking at graph 
+
+50
+00:02:20,160 --> 00:02:23,560
+RAG and then diving into a 
+little bit how vector databases 
+
+51
+00:02:23,560 --> 00:02:25,520
+are different from graph 
+databases and of course how that
+
+52
+00:02:25,520 --> 00:02:30,040
+relates to RAG and the retrieval
+augmented generation in the 
+
+53
+00:02:30,040 --> 00:02:33,120
+generative AI space. 
+And just kind of digging a. 
+
+54
+00:02:33,120 --> 00:02:36,720
+Little bit of a intro to Rag. 
+Yeah. 
+
+55
+00:02:38,160 --> 00:02:44,240
+So generative AI is kind of 
+where you have a large language 
+
+56
+00:02:44,240 --> 00:02:48,480
+model as we've been using with 
+ChatGPT and and other types of 
+
+57
+00:02:48,800 --> 00:02:53,400
+interactions with these models. 
+And generative AI is where it 
+
+58
+00:02:53,400 --> 00:02:57,000
+generates new content that's 
+similar to whatever you've 
+
+59
+00:02:57,000 --> 00:03:00,080
+provided as input. 
+Now, of course, we can do this 
+
+60
+00:03:00,080 --> 00:03:03,280
+through chat, but sometimes you 
+get some really odd answers or 
+
+61
+00:03:03,280 --> 00:03:06,440
+it doesn't have enough context 
+to give you a good answer. 
+
+62
+00:03:06,880 --> 00:03:10,480
+And especially when you're 
+looking at business applications
+
+63
+00:03:10,480 --> 00:03:14,760
+or internal data to companies, 
+the large language model is not 
+
+64
+00:03:14,760 --> 00:03:16,680
+going to be trained or have 
+access to that data. 
+
+65
+00:03:17,080 --> 00:03:22,640
+And so as a way to improve the 
+models answers and to give it 
+
+66
+00:03:22,640 --> 00:03:25,280
+access to some of these things 
+for people to ask questions 
+
+67
+00:03:25,280 --> 00:03:28,720
+about that specific data, you 
+can do something called 
+
+68
+00:03:28,720 --> 00:03:33,000
+retrieval augmented generation, 
+which is kind of where you 
+
+69
+00:03:33,800 --> 00:03:39,680
+augment the LL Ms. generative 
+capabilities by kind of plugging
+
+70
+00:03:39,680 --> 00:03:41,600
+it into a data source of some 
+kind. 
+
+71
+00:03:41,600 --> 00:03:44,920
+So it's going to retrieve data 
+from an external data source. 
+
+72
+00:03:44,920 --> 00:03:47,200
+That's the retrieval piece of 
+rag. 
+
+73
+00:03:47,200 --> 00:03:54,160
+And then it's going to augment 
+the data that's that the LLM is 
+
+74
+00:03:54,160 --> 00:03:56,280
+trained on. 
+It's going to add to that. 
+
+75
+00:03:56,760 --> 00:03:59,640
+And then the piece of the LLM is
+really good at which is 
+
+76
+00:03:59,640 --> 00:04:02,040
+generating an answer in response
+to that. 
+
+77
+00:04:02,680 --> 00:04:04,000
+So, retrieval, augmented 
+generation. 
+
+78
+00:04:04,000 --> 00:04:07,160
+It sounds a lot fancier, but you
+break it down and it's exactly 
+
+79
+00:04:07,160 --> 00:04:10,760
+what it says it is. 
+So so I've recently started 
+
+80
+00:04:10,760 --> 00:04:12,720
+using. 
+I don't know if it's still 
+
+81
+00:04:12,720 --> 00:04:18,680
+experimental, but ChatGPT has a 
+button that says deep research 
+
+82
+00:04:19,120 --> 00:04:21,440
+and it tells you what it's 
+doing. 
+
+83
+00:04:21,440 --> 00:04:23,360
+It's like, OK, I'm looking at 
+this site. 
+
+84
+00:04:23,360 --> 00:04:26,960
+I'm reading that site. 
+Is that retrieval augmented 
+
+85
+00:04:26,960 --> 00:04:30,320
+generation? 
+So it's pieces of it. 
+
+86
+00:04:30,320 --> 00:04:32,960
+What I think the deep research 
+and I haven't done a whole lot 
+
+87
+00:04:32,960 --> 00:04:34,640
+of digging on on that aspect 
+thing. 
+
+88
+00:04:35,360 --> 00:04:40,320
+But what it's doing a lot of is 
+agentic workflows or agentic 
+
+89
+00:04:40,320 --> 00:04:44,920
+processing, which is where it 
+kind of steps through a logical 
+
+90
+00:04:44,920 --> 00:04:49,320
+process of these are the steps 
+that I need in order to complete
+
+91
+00:04:49,320 --> 00:04:51,800
+this full task or have this end 
+result. 
+
+92
+00:04:52,360 --> 00:04:55,000
+And so it breaks down the steps 
+that it needs to take. 
+
+93
+00:04:55,040 --> 00:04:58,480
+And then it might potentially 
+call multiple tools in order to 
+
+94
+00:04:58,480 --> 00:05:01,160
+grab those bits of information 
+from lots of different things 
+
+95
+00:05:01,160 --> 00:05:03,520
+from different APIs, from 
+different data sources, from, 
+
+96
+00:05:03,840 --> 00:05:07,400
+you know, other models or so on.
+And it aggregates those that 
+
+97
+00:05:07,400 --> 00:05:10,480
+information at each step. 
+And as it completes one step, it
+
+98
+00:05:10,480 --> 00:05:13,040
+moves on to the next thing and 
+it basically assembles all those
+
+99
+00:05:13,040 --> 00:05:16,000
+pieces to complete the task. 
+So that's kind of where you get 
+
+100
+00:05:16,000 --> 00:05:22,280
+into the agentic rag is a piece 
+usually of agentic systems, but 
+
+101
+00:05:22,960 --> 00:05:25,680
+agentic kind of breaks out and 
+does a whole lot more complex 
+
+102
+00:05:25,680 --> 00:05:28,600
+things. 
+It's kind of like a workflow 
+
+103
+00:05:28,600 --> 00:05:31,120
+around a bunch of different 
+pieces. 
+
+104
+00:05:31,520 --> 00:05:37,760
+So in Rag, we've got this LLM 
+and we the only like API really 
+
+105
+00:05:37,760 --> 00:05:41,400
+to an LLM is I'm going to give 
+you a prompt and it's going to 
+
+106
+00:05:41,400 --> 00:05:47,160
+then respond with with text or 
+images or whatever modal you 
+
+107
+00:05:47,160 --> 00:05:53,000
+want exactly. 
+But, but so Rag is on the prompt
+
+108
+00:05:53,000 --> 00:05:58,240
+side where I am, I am augmenting
+the the thing that I'm giving to
+
+109
+00:05:58,240 --> 00:06:02,240
+the LLM so that it can then give
+me back something that hopefully
+
+110
+00:06:02,240 --> 00:06:05,920
+is, is better, more suited to 
+what I need, has the data that 
+
+111
+00:06:05,920 --> 00:06:07,160
+it needs. 
+Whatever is it? 
+
+112
+00:06:07,320 --> 00:06:09,800
+Is that the right framing for 
+for RAG? 
+
+113
+00:06:09,800 --> 00:06:13,080
+Essentially, yeah. 
+It's just like like like adding 
+
+114
+00:06:13,080 --> 00:06:15,040
+to the prompt some additional 
+stuff. 
+
+115
+00:06:15,480 --> 00:06:17,600
+That's really. 
+What we wanted it to do all 
+
+116
+00:06:17,600 --> 00:06:20,480
+along, just go out, find the 
+information, give it to us. 
+
+117
+00:06:20,600 --> 00:06:22,520
+So the LLM can't actually reach 
+out. 
+
+118
+00:06:22,520 --> 00:06:25,240
+So you have to have the thing 
+around the LLM that's actually 
+
+119
+00:06:25,240 --> 00:06:29,320
+gonna go do like the the reading
+of some web page or getting some
+
+120
+00:06:29,320 --> 00:06:30,480
+data from an external. 
+Data. 
+
+121
+00:06:30,480 --> 00:06:33,880
+And at some point, we won't even
+talk about this because it'll 
+
+122
+00:06:33,880 --> 00:06:35,880
+just be what it does. 
+Right. 
+
+123
+00:06:36,440 --> 00:06:38,560
+Yeah, that's what you need right
+now, the generative AI 
+
+124
+00:06:38,560 --> 00:06:42,400
+application layer in order to 
+kind of handle all those talking
+
+125
+00:06:42,400 --> 00:06:44,840
+back and forth between all the 
+different pieces and assembling 
+
+126
+00:06:45,200 --> 00:06:47,800
+the bits of information. 
+And I mean, technically you can 
+
+127
+00:06:47,800 --> 00:06:51,320
+go out to ChatGPT, you can 
+provide it a whole lot of 
+
+128
+00:06:51,320 --> 00:06:54,640
+background context. 
+Like, OK, here's an e-mail I got
+
+129
+00:06:55,480 --> 00:06:58,600
+taking this type of approach. 
+Please respond to this person 
+
+130
+00:06:58,720 --> 00:07:01,480
+and tell them this and this. 
+And I mean, that's kind of a 
+
+131
+00:07:01,480 --> 00:07:03,120
+form of rag. 
+You're providing additional 
+
+132
+00:07:03,120 --> 00:07:08,080
+context to the LLM in its prompt
+and sending that information 
+
+133
+00:07:08,080 --> 00:07:11,280
+back. 
+It's just now instead of having 
+
+134
+00:07:11,280 --> 00:07:14,360
+to assemble those pieces 
+yourself and put them into the 
+
+135
+00:07:14,360 --> 00:07:18,520
+prompt, you're calling a 
+database and letting it do the 
+
+136
+00:07:19,240 --> 00:07:22,360
+pull the relevant results and 
+put those into the prompt and 
+
+137
+00:07:22,360 --> 00:07:25,040
+send that to the LLM kind of 
+automatically I guess. 
+
+138
+00:07:25,360 --> 00:07:28,280
+Yeah, like you say, Oh, here's 
+my GitHub repo. 
+
+139
+00:07:28,640 --> 00:07:32,280
+Tell me what's going on with how
+I can do it better or whatever 
+
+140
+00:07:32,280 --> 00:07:35,520
+you point it to that OK. 
+And that's that's Rag. 
+
+141
+00:07:35,800 --> 00:07:39,040
+Yeah, it essentially is, yeah. 
+And I think there's like layers 
+
+142
+00:07:39,040 --> 00:07:41,120
+of this, right? 
+It's like like in the most basic
+
+143
+00:07:41,120 --> 00:07:45,560
+form, RAG could just be, I'm 
+going to add a system prompt in 
+
+144
+00:07:45,560 --> 00:07:48,320
+some ways, like like a system 
+prompt is RAG. 
+
+145
+00:07:48,320 --> 00:07:53,320
+It's like augmenting the thing 
+that I'm sending to the LLM and 
+
+146
+00:07:53,440 --> 00:07:57,800
+adding some information to it. 
+Then then there's the vector 
+
+147
+00:07:57,800 --> 00:07:59,720
+stuff and graph stuff, which 
+we'll get into. 
+
+148
+00:07:59,960 --> 00:08:03,160
+And then there's the tools and 
+MCP, which we talked about on 
+
+149
+00:08:03,160 --> 00:08:05,880
+our our most recent podcast 
+episode. 
+
+150
+00:08:06,680 --> 00:08:11,720
+And so all of this is just like 
+giving more information to that 
+
+151
+00:08:11,720 --> 00:08:16,040
+call to the LLM so that it can 
+hopefully give me back what I 
+
+152
+00:08:16,040 --> 00:08:19,280
+want, right? 
+OK, cool. 
+
+153
+00:08:19,440 --> 00:08:22,200
+So that's that's kind of the 
+basics, I think of of rag and 
+
+154
+00:08:22,200 --> 00:08:24,760
+what's happening there. 
+Let's talk about the different 
+
+155
+00:08:24,760 --> 00:08:27,880
+approaches. 
+So, so in your realm of recent 
+
+156
+00:08:27,960 --> 00:08:33,720
+learnings and teachings, it's 
+been on the the the graph and 
+
+157
+00:08:33,840 --> 00:08:36,799
+and vector side of things. 
+Give us an overview on on those.
+
+158
+00:08:37,400 --> 00:08:40,200
+Yeah. 
+So initially when I started out,
+
+159
+00:08:40,200 --> 00:08:45,320
+I when AI really hit hard, I 
+guess the end of 2022, early 23 
+
+160
+00:08:45,880 --> 00:08:49,320
+vector databases were like the 
+thing these go to storage piece 
+
+161
+00:08:50,000 --> 00:08:54,800
+for retrieval of a generation. 
+And I never really dug deep into
+
+162
+00:08:54,800 --> 00:08:58,200
+how a vector database structures
+things or is organized. 
+
+163
+00:08:59,080 --> 00:09:02,120
+I'd really just kind of focused 
+on how does graph fit into 
+
+164
+00:09:02,120 --> 00:09:04,880
+generative AI. 
+And so this year I wanted to 
+
+165
+00:09:04,880 --> 00:09:08,000
+take a look at, OK, how are, how
+are vector databases different? 
+
+166
+00:09:08,840 --> 00:09:12,720
+Why are they so hugely popular? 
+And why is 1 better than the 
+
+167
+00:09:12,720 --> 00:09:15,440
+other maybe? 
+So I started digging into that a
+
+168
+00:09:15,440 --> 00:09:19,320
+little bit. 
+And I had been told previously 
+
+169
+00:09:19,320 --> 00:09:21,720
+that, oh, it's so easy to get up
+and running with with vector 
+
+170
+00:09:21,720 --> 00:09:24,560
+databases, you just toss 
+something at it and it just kind
+
+171
+00:09:24,560 --> 00:09:27,840
+of knows what to do. 
+And it's not quite that simple, 
+
+172
+00:09:27,840 --> 00:09:31,560
+of course. 
+So I had a little, a few hurdles
+
+173
+00:09:31,600 --> 00:09:35,600
+getting data into Pine Cone. 
+I played with a couple of 
+
+174
+00:09:35,600 --> 00:09:38,440
+different vector databases, but 
+I kind of pine cone was kind of 
+
+175
+00:09:38,440 --> 00:09:39,920
+you go to. 
+No right? 
+
+176
+00:09:39,920 --> 00:09:43,360
+Yes, lots of different options 
+I've the one I've used is PG 
+
+177
+00:09:43,440 --> 00:09:45,720
+vector which is both on 
+Postgres. 
+
+178
+00:09:46,080 --> 00:09:48,280
+Yep. 
+Can we back up a? 
+
+179
+00:09:48,280 --> 00:09:49,920
+Little Yeah. 
+Why do we need a vector 
+
+180
+00:09:49,920 --> 00:09:50,760
+database? 
+Well, no. 
+
+181
+00:09:51,080 --> 00:09:54,200
+Or even further. 
+Let's start with all. 
+
+182
+00:09:54,320 --> 00:09:57,520
+The only experience I've had is 
+with SQL databases. 
+
+183
+00:09:57,520 --> 00:10:01,560
+And I can't say I know how they 
+work, but you know, I, I have a 
+
+184
+00:10:01,560 --> 00:10:05,160
+sense of SQL. 
+I've never successfully done an 
+
+185
+00:10:05,160 --> 00:10:09,200
+inner join or whatever I've, you
+know, all those things. 
+
+186
+00:10:09,400 --> 00:10:15,440
+So what's the matter with that? 
+And what are the other options? 
+
+187
+00:10:15,480 --> 00:10:18,360
+I'm I'm interested in the 
+spectrum of things before we 
+
+188
+00:10:18,360 --> 00:10:20,840
+dive too deeply into it, so. 
+Can you know that? 
+
+189
+00:10:21,440 --> 00:10:26,280
+And that's a, that's a great 
+question and kind of where I 
+
+190
+00:10:27,040 --> 00:10:29,720
+kind of led my learning path for
+getting into this as well, 
+
+191
+00:10:30,240 --> 00:10:34,080
+because I was trained and 
+initially worked on relational 
+
+192
+00:10:34,080 --> 00:10:37,240
+databases before I came to Neo 
+4. 
+
+193
+00:10:37,240 --> 00:10:41,000
+Ji had never heard of a graph 
+database before, had no idea 
+
+194
+00:10:41,000 --> 00:10:44,320
+what it was, and then just 
+started learning about it and 
+
+195
+00:10:44,680 --> 00:10:47,200
+realizing, oh, they, they 
+structure and organize their 
+
+196
+00:10:47,200 --> 00:10:48,880
+data differently. 
+This has some really cool 
+
+197
+00:10:48,880 --> 00:10:51,960
+applications and use cases. 
+And what you end up finding with
+
+198
+00:10:51,960 --> 00:10:56,880
+all these different databases is
+they the challenges in one 
+
+199
+00:10:56,880 --> 00:11:01,760
+database, another database will 
+often solve because they've run 
+
+200
+00:11:01,760 --> 00:11:04,800
+up against use cases with one 
+type of database that it just 
+
+201
+00:11:04,800 --> 00:11:07,320
+doesn't fit really well. 
+Or you have to jam the data into
+
+202
+00:11:07,440 --> 00:11:10,320
+like really odd manipulations in
+order to get it to work. 
+
+203
+00:11:10,960 --> 00:11:13,360
+And then maybe performance is 
+not as great or something like 
+
+204
+00:11:13,360 --> 00:11:15,600
+that. 
+So we've. 
+
+205
+00:11:15,600 --> 00:11:19,560
+Got in the kind of general 
+space, yeah, we need to store 
+
+206
+00:11:19,560 --> 00:11:22,680
+data, we need to access that 
+data. 
+
+207
+00:11:23,040 --> 00:11:26,600
+And most developers are familiar
+with doing this in relational 
+
+208
+00:11:26,600 --> 00:11:29,440
+databases, maybe no SQL 
+databases like document 
+
+209
+00:11:29,440 --> 00:11:33,360
+databases like Mongo. 
+But then there are many other 
+
+210
+00:11:33,360 --> 00:11:36,440
+different ways that you may want
+to store and access data. 
+
+211
+00:11:36,800 --> 00:11:40,840
+And so vector and graph being 
+two of the many other options 
+
+212
+00:11:40,840 --> 00:11:43,080
+that are out there. 
+And it just so happens like 
+
+213
+00:11:43,080 --> 00:11:45,320
+vector and graph are a good fit 
+for Rag. 
+
+214
+00:11:45,320 --> 00:11:47,320
+So we'll tie this all together 
+to that. 
+
+215
+00:11:47,560 --> 00:11:50,760
+But yeah, I think we still need 
+the the overview of different 
+
+216
+00:11:50,800 --> 00:11:54,840
+data representations and why we 
+would why we would need those. 
+
+217
+00:11:54,840 --> 00:11:58,960
+Yeah, and I don't even know what
+a no sequel document databases 
+
+218
+00:11:59,200 --> 00:12:00,840
+so. 
+I'm, I'm happy to discuss that 
+
+219
+00:12:00,840 --> 00:12:03,280
+cause again, all the stuff was 
+new to me as well. 
+
+220
+00:12:03,280 --> 00:12:06,280
+And it's just, I'm adding bits 
+of information as I go along to 
+
+221
+00:12:06,280 --> 00:12:08,640
+try to, you know, try to learn 
+as I go to. 
+
+222
+00:12:08,640 --> 00:12:15,320
+So relational databases are 
+organized around tables and rows
+
+223
+00:12:15,320 --> 00:12:18,240
+and columns. 
+So you'll have a general table 
+
+224
+00:12:18,240 --> 00:12:20,720
+structure you can think of like 
+a, you know, spreadsheet or 
+
+225
+00:12:20,720 --> 00:12:22,360
+matrix or however you want to 
+look at it. 
+
+226
+00:12:22,760 --> 00:12:29,600
+And it has a row which is a 
+unique data piece, if you will, 
+
+227
+00:12:29,600 --> 00:12:33,240
+or, or organizing element. 
+And each individual row is going
+
+228
+00:12:33,240 --> 00:12:36,880
+to represent a unique entity, if
+you will. 
+
+229
+00:12:37,800 --> 00:12:41,240
+And you organize those entities 
+into tables, general categories,
+
+230
+00:12:41,240 --> 00:12:46,320
+things like people or cars or 
+businesses or documents or 
+
+231
+00:12:46,320 --> 00:12:47,600
+software projects or whatever it
+is. 
+
+232
+00:12:48,440 --> 00:12:51,400
+And then the way that you 
+connect those data. 
+
+233
+00:12:51,400 --> 00:12:54,200
+So for instance, we might want 
+to see what people are working 
+
+234
+00:12:54,200 --> 00:12:57,760
+on a software project is that 
+you write a sequel query to say,
+
+235
+00:12:57,760 --> 00:13:00,840
+OK, I have a software project. 
+So I'll go to the software 
+
+236
+00:13:00,840 --> 00:13:05,160
+project table and then I need to
+do a join to the people table to
+
+237
+00:13:05,160 --> 00:13:08,440
+find all the references of this 
+software project and the people 
+
+238
+00:13:08,440 --> 00:13:12,880
+rows they're connected to. 
+And so the more intricate the 
+
+239
+00:13:12,880 --> 00:13:15,640
+connections you have, like for 
+instance, you might want to see,
+
+240
+00:13:15,880 --> 00:13:19,360
+OK, which people are working on 
+a project, which other people 
+
+241
+00:13:19,360 --> 00:13:22,880
+are working on similar projects 
+in these departments, the more 
+
+242
+00:13:22,880 --> 00:13:26,120
+tables you have to join, the 
+more complex those queries get. 
+
+243
+00:13:27,040 --> 00:13:30,520
+And typically the larger your 
+tables get, the higher index, 
+
+244
+00:13:30,520 --> 00:13:33,640
+the higher load that is to do 
+all of those joints across. 
+
+245
+00:13:33,640 --> 00:13:38,080
+Because you're writing those 
+joints at query time, they're 
+
+246
+00:13:38,080 --> 00:13:40,200
+not stored within the table 
+structures at all. 
+
+247
+00:13:40,200 --> 00:13:43,800
+You're doing those lookups to 
+the foreign keys, if you will, 
+
+248
+00:13:43,800 --> 00:13:45,640
+in each of those tables, which 
+means you're having to do a full
+
+249
+00:13:45,640 --> 00:13:48,480
+table scan and and link across 
+those tables. 
+
+250
+00:13:49,080 --> 00:13:52,400
+So anywhere where you have a ton
+of relationships and you're 
+
+251
+00:13:52,400 --> 00:13:55,600
+doing a lot of very complex, 
+intricate queries on the 
+
+252
+00:13:55,600 --> 00:13:59,560
+relationships, that's where your
+typical relational databases, 
+
+253
+00:13:59,560 --> 00:14:02,840
+you'll start to see some 
+performance degradation is with 
+
+254
+00:14:02,840 --> 00:14:07,800
+those queries. 
+So where no sequel kind of came 
+
+255
+00:14:07,800 --> 00:14:10,000
+into play is kind of the next 
+big wave. 
+
+256
+00:14:10,400 --> 00:14:14,160
+And that's where things like 
+Mongo DB and other, I guess you 
+
+257
+00:14:14,160 --> 00:14:15,560
+have a few different options 
+there. 
+
+258
+00:14:15,560 --> 00:14:17,800
+You have like key value storage,
+you have document databases and 
+
+259
+00:14:17,800 --> 00:14:19,320
+so on. 
+But document databases really 
+
+260
+00:14:19,320 --> 00:14:22,920
+kind of took the world by storm 
+because they would embed some of
+
+261
+00:14:22,920 --> 00:14:25,640
+those relationships within the 
+document itself. 
+
+262
+00:14:25,640 --> 00:14:28,800
+So document just kind of being 
+generally, I think of it like an
+
+263
+00:14:28,800 --> 00:14:32,720
+object that you're storing and 
+you can nest some of those 
+
+264
+00:14:32,720 --> 00:14:34,680
+relationships within the 
+original object. 
+
+265
+00:14:34,840 --> 00:14:38,160
+So for instance, you might have 
+a software project document, and
+
+266
+00:14:38,160 --> 00:14:41,840
+you could store the people's 
+identifiers listed on that 
+
+267
+00:14:41,840 --> 00:14:43,240
+project document. 
+So every time you pull the 
+
+268
+00:14:43,240 --> 00:14:45,360
+project, you'd have the full 
+list of people who are working 
+
+269
+00:14:45,360 --> 00:14:48,280
+on that. 
+So instead of having to do these
+
+270
+00:14:48,280 --> 00:14:52,400
+table joins to get to the 
+structures that you need, you 
+
+271
+00:14:52,400 --> 00:14:55,080
+just like have a document that 
+has all that stuff just embedded
+
+272
+00:14:55,080 --> 00:14:58,040
+in it. 
+And so would you say that like 
+
+273
+00:14:58,040 --> 00:15:04,400
+the initial relational database 
+model was emerged because oh, 
+
+274
+00:15:04,400 --> 00:15:09,400
+well, this just seems to make 
+sense as a way to store data 
+
+275
+00:15:09,400 --> 00:15:12,160
+because we're used to 
+spreadsheets or whatever. 
+
+276
+00:15:12,560 --> 00:15:17,640
+And then later we discovered, 
+oh, it gets complicated to put 
+
+277
+00:15:17,640 --> 00:15:21,280
+the data together and the 
+efficiency problems that is this
+
+278
+00:15:21,280 --> 00:15:23,400
+maybe how it evolved. 
+My. 
+
+279
+00:15:24,080 --> 00:15:26,560
+Go ahead and Jennifer. 
+Yeah, My general thought process
+
+280
+00:15:26,560 --> 00:15:32,160
+is that it wasn't necessarily 
+that thought out. 
+
+281
+00:15:32,760 --> 00:15:35,280
+So, I mean, if you think about 
+the way we used to store data, 
+
+282
+00:15:35,280 --> 00:15:37,000
+you had files in a filing 
+cabinet. 
+
+283
+00:15:37,000 --> 00:15:39,360
+You know, you go to the doctor's
+office and you have a paper file
+
+284
+00:15:39,360 --> 00:15:43,200
+that somebody has filled out. 
+You didn't really analyze 
+
+285
+00:15:43,200 --> 00:15:45,440
+relationships. 
+You didn't look at, OK, this 
+
+286
+00:15:45,440 --> 00:15:48,800
+other doctor's office has this 
+person's file and they've had 
+
+287
+00:15:48,800 --> 00:15:52,320
+these medicines for this type of
+of disease or illness they had. 
+
+288
+00:15:52,960 --> 00:15:54,720
+Nobody talked to one another. 
+It was siloed. 
+
+289
+00:15:55,240 --> 00:15:57,800
+So a table structure made 
+perfect sense for that. 
+
+290
+00:15:58,200 --> 00:16:00,440
+But it's when this started 
+growing and growing growing. 
+
+291
+00:16:00,440 --> 00:16:02,960
+And then we started looking at, 
+oh, what are the connections 
+
+292
+00:16:02,960 --> 00:16:04,960
+between all these different 
+pieces of data? 
+
+293
+00:16:05,280 --> 00:16:06,800
+And you started incorporating 
+that. 
+
+294
+00:16:07,280 --> 00:16:12,120
+And as the complexity came up, 
+then we started finding these no
+
+295
+00:16:12,120 --> 00:16:15,280
+longer edge cases anymore where 
+you're doing a lot of those 
+
+296
+00:16:15,280 --> 00:16:16,840
+joins and it gets resource 
+intensive. 
+
+297
+00:16:18,320 --> 00:16:20,760
+And so, yeah, I think to your 
+point, like, like relational 
+
+298
+00:16:20,760 --> 00:16:23,520
+databases became a thing 
+probably because, you know, 
+
+299
+00:16:23,720 --> 00:16:28,200
+organically it just was the path
+of least resistance to how we 
+
+300
+00:16:28,200 --> 00:16:31,000
+stored data. 
+But then, but then we reached 
+
+301
+00:16:31,000 --> 00:16:34,800
+the point where that model 
+didn't work for everything. 
+
+302
+00:16:35,280 --> 00:16:38,320
+And so then we started to see 
+the emergence of other 
+
+303
+00:16:38,880 --> 00:16:42,640
+alternative ways to store and 
+access data and so. 
+
+304
+00:16:42,720 --> 00:16:47,720
+Yeah, and So what is a no sequel
+database do or mean? 
+
+305
+00:16:48,280 --> 00:16:52,200
+Yeah, no. 
+Sequel is a very general broad 
+
+306
+00:16:52,200 --> 00:16:54,400
+category, just meaning non 
+relational. 
+
+307
+00:16:54,880 --> 00:16:58,960
+Generally no SQL really. 
+Call it non relational SQL, it's
+
+308
+00:16:58,960 --> 00:17:00,440
+very. 
+Yeah, no SQL. 
+
+309
+00:17:00,440 --> 00:17:02,440
+They just wanted to get away 
+from SQL databases. 
+
+310
+00:17:03,800 --> 00:17:05,880
+And so that is a general 
+category that literally 
+
+311
+00:17:05,880 --> 00:17:11,079
+encompasses everything except 
+relational databases that kind 
+
+312
+00:17:11,079 --> 00:17:13,960
+of includes graph and includes 
+key value stores and includes 
+
+313
+00:17:13,960 --> 00:17:17,520
+columnar scores and includes 
+document databases and all kinds
+
+314
+00:17:17,520 --> 00:17:18,079
+of other things. 
+Yeah. 
+
+315
+00:17:19,400 --> 00:17:24,200
+So OK, so with that background 
+should we go into vector or 
+
+316
+00:17:24,200 --> 00:17:27,680
+graph first? 
+Yeah, well, my trajectory has 
+
+317
+00:17:27,680 --> 00:17:31,880
+kind of taken me towards graph 
+first, but I mean, I'm happy to 
+
+318
+00:17:31,880 --> 00:17:34,800
+talk anything but I. 
+Mean the way your trajectory 
+
+319
+00:17:34,800 --> 00:17:37,400
+sounds like the one you know 
+best, so. 
+
+320
+00:17:37,480 --> 00:17:39,280
+OK. 
+Let's hear that. 
+
+321
+00:17:39,640 --> 00:17:42,280
+Yeah. 
+So I started, I knew relational,
+
+322
+00:17:42,560 --> 00:17:45,720
+I kind of knew what document 
+databases in Mongo looked like 
+
+323
+00:17:45,720 --> 00:17:48,400
+and the challenges they were 
+trying to overcome from the 
+
+324
+00:17:48,400 --> 00:17:50,280
+relational world. 
+And then I got introduced to 
+
+325
+00:17:50,280 --> 00:17:53,960
+graph databases. 
+And what I realized through 
+
+326
+00:17:53,960 --> 00:17:57,640
+learning graph databases is a 
+lot of the frustrations that I 
+
+327
+00:17:57,640 --> 00:17:59,560
+would just beat my head against 
+a wall trying to write the 
+
+328
+00:17:59,560 --> 00:18:02,960
+sequel query to do in some of 
+the other work I was doing with 
+
+329
+00:18:02,960 --> 00:18:07,640
+relational graph kind of pulled 
+those complexities apart. 
+
+330
+00:18:08,560 --> 00:18:12,760
+They have other challenges to be
+sure, but the frustrations that 
+
+331
+00:18:12,760 --> 00:18:14,880
+I was seeing in the relational 
+world, I did not see in the 
+
+332
+00:18:14,880 --> 00:18:17,120
+graph. 
+And the reason for that is that 
+
+333
+00:18:17,120 --> 00:18:21,400
+the way a graph stores data is 
+through nodes and relationships.
+
+334
+00:18:21,400 --> 00:18:25,880
+So it breaks those each 
+individual entities into nodes 
+
+335
+00:18:27,320 --> 00:18:30,800
+and stores them separately, and 
+then you connect them via 
+
+336
+00:18:30,800 --> 00:18:33,320
+relationship. 
+So it's physically stores the 
+
+337
+00:18:33,360 --> 00:18:36,040
+connection between entities in 
+the database itself. 
+
+338
+00:18:36,560 --> 00:18:39,080
+So a little bit more on the 
+right side, much faster on the 
+
+339
+00:18:39,080 --> 00:18:42,080
+read side when you have a lot of
+like joins, if you will. 
+
+340
+00:18:43,480 --> 00:18:46,000
+So for instance, you know a 
+person works on a software 
+
+341
+00:18:46,000 --> 00:18:49,480
+project who is within a 
+department, who might have 
+
+342
+00:18:49,480 --> 00:18:51,640
+another colleague working on 
+similar projects and so on. 
+
+343
+00:18:51,640 --> 00:18:54,240
+You can connect all those 
+individual pieces via 
+
+344
+00:18:54,240 --> 00:18:57,320
+relationships. 
+And it also makes it much faster
+
+345
+00:18:57,320 --> 00:19:00,960
+when you have to refactor 
+something because no longer are 
+
+346
+00:19:00,960 --> 00:19:04,960
+you touching the entire table to
+update and change which projects
+
+347
+00:19:04,960 --> 00:19:07,800
+somebody is working on, you're 
+just touching that individual 
+
+348
+00:19:07,800 --> 00:19:11,240
+person and the existing projects
+they might be connected to. 
+
+349
+00:19:12,240 --> 00:19:16,120
+So it makes refactoring and 
+updating, maintaining data much 
+
+350
+00:19:16,120 --> 00:19:19,680
+easier and much simpler. 
+I remember the days when I would
+
+351
+00:19:19,680 --> 00:19:22,520
+have to touch a table and add a 
+field or update something. 
+
+352
+00:19:22,720 --> 00:19:25,680
+You'd have to completely take 
+something down, something you 
+
+353
+00:19:25,680 --> 00:19:27,320
+couldn't. 
+Nobody could run stuff against 
+
+354
+00:19:27,320 --> 00:19:30,040
+that table until you were 
+completely done refactoring it. 
+
+355
+00:19:30,440 --> 00:19:31,840
+You don't really have that in 
+the graph. 
+
+356
+00:19:31,840 --> 00:19:34,640
+As long as those queries are not
+touching those specific nodes 
+
+357
+00:19:34,640 --> 00:19:38,080
+and really relationships, you 
+can refactor without like 
+
+358
+00:19:38,240 --> 00:19:40,400
+touching and messing with 
+anybody else's workloads. 
+
+359
+00:19:41,760 --> 00:19:44,600
+And so it's a totally different 
+model for how the data is 
+
+360
+00:19:44,600 --> 00:19:49,080
+stored, but then also how it's 
+queried because you maybe you 
+
+361
+00:19:49,080 --> 00:19:53,360
+could simulate SQL over this, 
+but but the the kind of native 
+
+362
+00:19:53,360 --> 00:19:57,320
+query language to a graph is a 
+graph query language, is that 
+
+363
+00:19:57,360 --> 00:20:00,840
+right? 
+So, yeah, so go ahead. 
+
+364
+00:20:01,240 --> 00:20:04,720
+Why would OK? 
+Is there any reason? 
+
+365
+00:20:05,400 --> 00:20:09,040
+With the advent of graph 
+databases, is there any reason 
+
+366
+00:20:09,040 --> 00:20:13,520
+that someone would would still 
+want to use a relational 
+
+367
+00:20:13,520 --> 00:20:16,000
+database? 
+Oh, yeah, yeah. 
+
+368
+00:20:16,640 --> 00:20:18,720
+I mean, they're, they're not 
+used exclusively. 
+
+369
+00:20:18,720 --> 00:20:20,480
+There's not, you know, one 
+that's better than the other. 
+
+370
+00:20:20,480 --> 00:20:22,320
+It really kind of depends on 
+your use case. 
+
+371
+00:20:22,680 --> 00:20:26,520
+If you're, for instance, just 
+maintaining a list of people in 
+
+372
+00:20:26,520 --> 00:20:29,880
+your company and their job roles
+and their, you know, salaries 
+
+373
+00:20:29,880 --> 00:20:33,040
+and contact information and 
+you're not doing a whole lot of 
+
+374
+00:20:33,040 --> 00:20:34,560
+joins. 
+You just want to see who are the
+
+375
+00:20:34,560 --> 00:20:38,640
+people in my, in my company. 
+Then you wouldn't really need a 
+
+376
+00:20:38,640 --> 00:20:40,080
+graph database. 
+You don't have a ton of 
+
+377
+00:20:40,080 --> 00:20:41,680
+connections. 
+You're not doing a lot of really
+
+378
+00:20:41,680 --> 00:20:47,120
+complex like 6-7 hop 
+relationship queries. 
+
+379
+00:20:48,280 --> 00:20:50,840
+Even if you're just doing a join
+or two, you're probably not 
+
+380
+00:20:50,840 --> 00:20:54,640
+going to see a huge difference 
+in graph versus relational 
+
+381
+00:20:54,640 --> 00:20:56,680
+because it's not deep and 
+complex enough. 
+
+382
+00:20:57,080 --> 00:20:59,640
+Where you start getting really 
+hairy though is when you're 
+
+383
+00:20:59,640 --> 00:21:03,640
+doing multiple hops across 
+multiple tables, a lot of sub 
+
+384
+00:21:03,640 --> 00:21:07,280
+queries and like filterings 
+within certain patterns and so 
+
+385
+00:21:07,280 --> 00:21:09,680
+on. 
+That's where your relational 
+
+386
+00:21:10,120 --> 00:21:12,240
+you're, you're going to see that
+performance degradation kind of 
+
+387
+00:21:12,240 --> 00:21:16,440
+slide pretty quickly and that's 
+where graph picks up and handles
+
+388
+00:21:16,440 --> 00:21:18,520
+those multi hop connections a 
+lot better. 
+
+389
+00:21:19,400 --> 00:21:23,680
+So the more foreign keys you 
+have in a relational structure, 
+
+390
+00:21:24,160 --> 00:21:27,440
+the more value you would see in 
+going to a graph database. 
+
+391
+00:21:27,440 --> 00:21:31,840
+Yep, absolutely. 
+Does a graph database distribute
+
+392
+00:21:32,520 --> 00:21:35,400
+better? 
+It can. 
+
+393
+00:21:35,440 --> 00:21:37,880
+So here's the complexity. 
+Because you're storing all those
+
+394
+00:21:37,880 --> 00:21:42,320
+relationships on disk, it's hard
+to figure out how you break that
+
+395
+00:21:42,320 --> 00:21:46,000
+those structures apart onto 
+separate machines or you know, 
+
+396
+00:21:46,080 --> 00:21:49,840
+wherever, right? 
+So it is harder to Shard or to 
+
+397
+00:21:49,840 --> 00:21:53,680
+distribute those systems. 
+You try to keep the graph as as 
+
+398
+00:21:53,680 --> 00:21:56,800
+close together as you possibly 
+can because that just means it's
+
+399
+00:21:56,800 --> 00:22:00,800
+not going to when it has to hop 
+across multiple computers and or
+
+400
+00:22:00,800 --> 00:22:03,240
+whatever it is to connect those 
+bits of the graph. 
+
+401
+00:22:03,240 --> 00:22:06,840
+That gets complex to retain all 
+those high quality data and good
+
+402
+00:22:06,840 --> 00:22:12,120
+data integrity. 
+I guess the thing about your 
+
+403
+00:22:12,320 --> 00:22:17,480
+analysis of relational databases
+is you're saying, oh, if that's 
+
+404
+00:22:17,480 --> 00:22:22,040
+all you ever need, but and you 
+know, an architect that's going 
+
+405
+00:22:22,040 --> 00:22:25,600
+to look at this and go, I'm not 
+sure what I'm going to need. 
+
+406
+00:22:25,920 --> 00:22:31,520
+And so it seems like maybe the 
+safer bet might be a graph 
+
+407
+00:22:31,520 --> 00:22:34,280
+database or one of these newer 
+database systems. 
+
+408
+00:22:34,280 --> 00:22:36,840
+It could be. 
+Again, it kind of depends on 
+
+409
+00:22:36,840 --> 00:22:38,400
+which challenges you want to 
+face. 
+
+410
+00:22:38,400 --> 00:22:42,440
+If you have somebody coming in 
+that knows relational and is 
+
+411
+00:22:42,440 --> 00:22:44,480
+like, well, here are the 
+questions we're trying to 
+
+412
+00:22:44,480 --> 00:22:46,480
+answer. 
+There's a couple of joins here 
+
+413
+00:22:46,480 --> 00:22:48,840
+and there, but we're not doing 
+anything super complex. 
+
+414
+00:22:49,120 --> 00:22:50,920
+Then why not stick with what you
+know? 
+
+415
+00:22:51,480 --> 00:22:54,080
+Why not stick with, hey, we have
+people already trained and ready
+
+416
+00:22:54,080 --> 00:22:56,240
+to go on a relational database. 
+We're not doing anything 
+
+417
+00:22:56,240 --> 00:23:02,080
+intricately complex or we don't 
+need real time responses on some
+
+418
+00:23:02,080 --> 00:23:03,840
+of these queries. 
+They're ad hoc queries, they run
+
+419
+00:23:03,840 --> 00:23:05,160
+overnight. 
+It's no big deal. 
+
+420
+00:23:05,640 --> 00:23:08,760
+Then I I wouldn't recommend 
+changing that or altering 
+
+421
+00:23:08,760 --> 00:23:10,880
+something or learning something 
+totally new just for the sake of
+
+422
+00:23:10,880 --> 00:23:13,560
+it. 
+However, if you do need those 
+
+423
+00:23:13,560 --> 00:23:18,000
+benefits and they're a major 
+requirement for your business 
+
+424
+00:23:18,000 --> 00:23:21,760
+success or for the the 
+responsive nature of the 
+
+425
+00:23:21,760 --> 00:23:25,960
+application, then it's it is 
+worth looking into having the 
+
+426
+00:23:25,960 --> 00:23:30,360
+right tool for the job. 
+Is there shining use cases of 
+
+427
+00:23:30,360 --> 00:23:32,880
+graph where it's like, oh, 
+that's just like the perfect 
+
+428
+00:23:32,880 --> 00:23:36,040
+place to use graph? 
+Like like I think Facebook does 
+
+429
+00:23:36,040 --> 00:23:40,400
+a lot of graph stuff. 
+So maybe like social, social 
+
+430
+00:23:41,560 --> 00:23:43,800
+speeds and all that is very 
+graph oriented. 
+
+431
+00:23:43,800 --> 00:23:45,760
+I don't know what are the places
+where it's like. 
+
+432
+00:23:45,760 --> 00:23:49,240
+Oh yeah, obviously graph. 
+Yeah, social network was kind of
+
+433
+00:23:49,240 --> 00:23:52,920
+the one that took the world by 
+storm, I guess is the the first 
+
+434
+00:23:52,920 --> 00:23:55,000
+major graph use case, I guess, 
+if you want to look at it. 
+
+435
+00:23:55,840 --> 00:23:58,760
+And so just, you know, 
+maintaining people's connections
+
+436
+00:23:58,760 --> 00:24:01,840
+at any, you know, one particular
+time in real time as people 
+
+437
+00:24:01,840 --> 00:24:04,600
+connected and sent messages and 
+posts and comments and things 
+
+438
+00:24:04,600 --> 00:24:06,680
+like that. 
+Tracking that is a little bit 
+
+439
+00:24:06,880 --> 00:24:09,760
+easier because it is so complex 
+in a graph database. 
+
+440
+00:24:11,200 --> 00:24:13,680
+Other good ones though, are 
+things like fraud detection. 
+
+441
+00:24:13,760 --> 00:24:17,560
+So understanding how people and 
+their identifiers and their 
+
+442
+00:24:17,560 --> 00:24:20,240
+financial transactions and 
+accounts and loans and all 
+
+443
+00:24:20,240 --> 00:24:24,840
+different kinds of things all 
+come together to create a unique
+
+444
+00:24:24,960 --> 00:24:27,840
+financial aspect of a user. 
+And then of course, people try 
+
+445
+00:24:27,840 --> 00:24:30,440
+to take advantage of that by 
+either stealing personal 
+
+446
+00:24:30,440 --> 00:24:33,400
+identifying information or 
+creating loans in their name 
+
+447
+00:24:33,400 --> 00:24:36,120
+that aren't accurate. 
+And so you can start to see this
+
+448
+00:24:36,120 --> 00:24:38,600
+information pop up because you 
+have all these relationships 
+
+449
+00:24:38,600 --> 00:24:42,720
+naturally in a graph. 
+Another good one is like network
+
+450
+00:24:43,200 --> 00:24:46,520
+and IT device management and 
+asset management inside 
+
+451
+00:24:46,520 --> 00:24:48,680
+companies. 
+So understanding what are my 
+
+452
+00:24:48,680 --> 00:24:50,240
+assets that I'm trying to 
+maintain? 
+
+453
+00:24:50,240 --> 00:24:53,720
+Can I predict when they might 
+need replaced? 
+
+454
+00:24:53,720 --> 00:24:56,240
+Or hey, we have one that's 
+that's old and having issues. 
+
+455
+00:24:56,240 --> 00:24:58,360
+Should we replace that? 
+What's it going to impact all 
+
+456
+00:24:58,360 --> 00:25:00,280
+down the line when we disconnect
+this thing? 
+
+457
+00:25:01,560 --> 00:25:04,960
+So there's those I'm trying to 
+think of other major ones that 
+
+458
+00:25:04,960 --> 00:25:06,840
+I'm drawing blanks, but there's,
+there's tons. 
+
+459
+00:25:06,840 --> 00:25:09,360
+I always, always find there's 
+new and interesting use cases 
+
+460
+00:25:09,360 --> 00:25:12,240
+that people apply graph to. 
+And it's like, oh, I never even 
+
+461
+00:25:12,240 --> 00:25:15,000
+thought to use graph for that, 
+but that is so cool that you're 
+
+462
+00:25:15,000 --> 00:25:19,760
+doing that, you know, biological
+and life science systems, health
+
+463
+00:25:19,760 --> 00:25:22,480
+data management and like patient
+connections and patient 
+
+464
+00:25:22,480 --> 00:25:24,240
+journeys. 
+People are doing a lot with 
+
+465
+00:25:24,240 --> 00:25:26,680
+that. 
+Recommendation systems for 
+
+466
+00:25:26,920 --> 00:25:29,360
+products and services that 
+people might be interested in 
+
+467
+00:25:29,360 --> 00:25:32,800
+based on their past history and 
+similar users to them, and so 
+
+468
+00:25:32,800 --> 00:25:36,800
+on. 
+So well, I want to ask 2 
+
+469
+00:25:36,800 --> 00:25:43,960
+questions. 1 is just what's the 
+ease of use like 'cause I think 
+
+470
+00:25:43,960 --> 00:25:47,800
+at some point you said, oh, 
+people just say throw the data 
+
+471
+00:25:47,800 --> 00:25:51,000
+at it and it organizes itself or
+something like that. 
+
+472
+00:25:51,000 --> 00:25:57,520
+And the other is, is there a 
+like a toy, a simple toy local 
+
+473
+00:25:57,520 --> 00:26:00,160
+graph database one would 
+experiment with? 
+
+474
+00:26:01,960 --> 00:26:04,000
+Yes, there's a couple of things 
+there. 
+
+475
+00:26:04,240 --> 00:26:09,240
+On the first side of things, 
+just throwing data at it, I 
+
+476
+00:26:09,240 --> 00:26:13,080
+found never works for a database
+any, for any type of database. 
+
+477
+00:26:14,040 --> 00:26:16,840
+Yeah. 
+And that's, that's kind of been 
+
+478
+00:26:16,840 --> 00:26:18,840
+my experience, you know, with 
+the with the vector stuff as 
+
+479
+00:26:18,840 --> 00:26:21,080
+well. 
+But the, the biggest piece I 
+
+480
+00:26:21,080 --> 00:26:23,720
+think that is different for 
+people when they look at graph 
+
+481
+00:26:23,720 --> 00:26:27,280
+databases is there's a little 
+bit more upfront modelling work 
+
+482
+00:26:27,280 --> 00:26:30,160
+that has to be done. 
+Because it is such a shift from 
+
+483
+00:26:30,760 --> 00:26:33,680
+relational world or even 
+document world where typically 
+
+484
+00:26:33,680 --> 00:26:38,120
+you will organize a schema and 
+that schema is very restrictive 
+
+485
+00:26:38,160 --> 00:26:41,760
+in what you can put into the 
+data that you can import into 
+
+486
+00:26:41,760 --> 00:26:43,960
+that structure. 
+And it has to fit that structure
+
+487
+00:26:43,960 --> 00:26:49,640
+or it doesn't get imported. 
+A graph databases typically are 
+
+488
+00:26:49,640 --> 00:26:54,640
+what's called schema optional 
+schema, less schema free, where 
+
+489
+00:26:54,720 --> 00:26:57,640
+you define that structure up 
+front as kind of like a data 
+
+490
+00:26:57,640 --> 00:27:02,400
+governance aspect and then you 
+import that data to match that 
+
+491
+00:27:02,400 --> 00:27:05,280
+structure. 
+But it doesn't necessarily, 
+
+492
+00:27:05,280 --> 00:27:07,960
+unless you set up certain guard 
+rails, it doesn't necessarily 
+
+493
+00:27:07,960 --> 00:27:11,480
+restrict you from importing data
+in a, you know, new and 
+
+494
+00:27:11,480 --> 00:27:13,200
+different formats. 
+Again, that's where that kind of
+
+495
+00:27:13,200 --> 00:27:17,880
+refactoring and moving and, and 
+the agility of the schema comes 
+
+496
+00:27:17,880 --> 00:27:21,240
+into play in graphs. 
+So that's, I think the biggest 
+
+497
+00:27:21,240 --> 00:27:24,920
+thing is just formatting the 
+data and organizing it into some
+
+498
+00:27:24,920 --> 00:27:28,480
+type of data model that's going 
+to be helpful and useful for 
+
+499
+00:27:28,600 --> 00:27:32,720
+your use case. 
+And so the developer in, you 
+
+500
+00:27:32,720 --> 00:27:34,240
+know, simple forms is going to 
+do this. 
+
+501
+00:27:34,240 --> 00:27:38,440
+They're going to like write 
+their data objects in Python And
+
+502
+00:27:38,440 --> 00:27:43,280
+then they're going to use a 
+graph API to then store the data
+
+503
+00:27:43,280 --> 00:27:45,120
+and, and query the data and that
+sort of thing. 
+
+504
+00:27:45,120 --> 00:27:48,040
+So it's, it's very similar in 
+some ways to the relational 
+
+505
+00:27:48,040 --> 00:27:52,000
+world in that that, yeah, I have
+my data model in my code or my 
+
+506
+00:27:52,000 --> 00:27:55,680
+schemas essentially. 
+And then I can use an API to the
+
+507
+00:27:55,680 --> 00:27:59,040
+graph database to to then do the
+storage and retrieval. 
+
+508
+00:27:59,520 --> 00:28:01,600
+Yeah, Yeah. 
+The biggest difference is I see 
+
+509
+00:28:01,600 --> 00:28:05,000
+there's just a little bit more 
+thought process that goes into 
+
+510
+00:28:05,000 --> 00:28:07,720
+the relationship piece of that 
+and how you want to connect your
+
+511
+00:28:07,720 --> 00:28:10,000
+entities. 
+So you could take the exact same
+
+512
+00:28:10,000 --> 00:28:13,960
+software project and people 
+assigned to those and five 
+
+513
+00:28:13,960 --> 00:28:16,960
+different people will model it 
+completely 5 different ways 
+
+514
+00:28:17,440 --> 00:28:20,520
+where there's less of that. 
+I feel like in the relational 
+
+515
+00:28:20,520 --> 00:28:24,160
+world, typically you'll organize
+the data in certain ways because
+
+516
+00:28:24,160 --> 00:28:26,120
+you have the cardinality rules 
+and so on. 
+
+517
+00:28:26,120 --> 00:28:29,400
+In the foreign key structures, 
+it's a little bit more flexible 
+
+518
+00:28:29,400 --> 00:28:32,120
+in graph, which I think kind of 
+confuses people sometimes. 
+
+519
+00:28:33,360 --> 00:28:36,320
+Yeah, and Bruce's other question
+on like, how do I actually use 
+
+520
+00:28:36,320 --> 00:28:39,480
+this? 
+There are many graph databases 
+
+521
+00:28:39,480 --> 00:28:42,040
+out there. 
+You're probably most familiar 
+
+522
+00:28:42,040 --> 00:28:46,080
+with Neo 4 J, So maybe give us 
+the rundown on Neo 4 J and how 
+
+523
+00:28:46,200 --> 00:28:47,400
+somebody would get started with 
+it. 
+
+524
+00:28:47,960 --> 00:28:51,760
+Yes, yeah, I'm slightly biased 
+in Neo 4 J, of course, but 
+
+525
+00:28:51,920 --> 00:28:55,120
+there's lots of different ways 
+to run graph databases. 
+
+526
+00:28:55,320 --> 00:28:59,320
+Specifically talking from Neo 4 
+J's perspective, we have an app,
+
+527
+00:28:59,360 --> 00:29:02,960
+a downloadable application that 
+you can run local instances of 
+
+528
+00:29:03,360 --> 00:29:06,960
+Neo 4 J, so that's called Neo 4J
+Desktop, and you can spin up as 
+
+529
+00:29:06,960 --> 00:29:09,560
+many databases as you like, but 
+it's all local. 
+
+530
+00:29:10,320 --> 00:29:13,200
+We also have a Docker container 
+as well. 
+
+531
+00:29:13,200 --> 00:29:17,200
+You can spin up Neo 4 J locally 
+or someplace else using a docker
+
+532
+00:29:17,200 --> 00:29:21,160
+container, and then we have. 
+Through test containers with Neo
+
+533
+00:29:21,160 --> 00:29:22,320
+4 J so. 
+There's a nice. 
+
+534
+00:29:22,320 --> 00:29:25,680
+Container so super easy to 
+integrate that into your 
+
+535
+00:29:25,680 --> 00:29:28,560
+integration test. 
+Your local dev love the test 
+
+536
+00:29:28,560 --> 00:29:31,600
+containers and love that Neo 4J 
+has support for test. 
+
+537
+00:29:31,600 --> 00:29:35,120
+Containers, yeah, yeah, we have 
+a few different engineers that 
+
+538
+00:29:35,160 --> 00:29:36,800
+work really hard to maintain 
+that. 
+
+539
+00:29:36,800 --> 00:29:38,880
+And I know they use test 
+containers quite a bit as well. 
+
+540
+00:29:38,880 --> 00:29:41,440
+So it's a really good 
+implementation there. 
+
+541
+00:29:42,240 --> 00:29:44,840
+And then we have a lot of our 
+cloud options too. 
+
+542
+00:29:44,840 --> 00:29:49,640
+So we have a variety of Neo 4J 
+hosted tiers of database. 
+
+543
+00:29:49,640 --> 00:29:52,400
+So we have a free tier and then 
+of course sliding scale of paid 
+
+544
+00:29:52,400 --> 00:29:55,000
+tiers depending on the business 
+needs there. 
+
+545
+00:29:55,480 --> 00:29:57,360
+And then of course, we're 
+available in all of the major 
+
+546
+00:29:57,360 --> 00:30:00,120
+cloud providers too, so Google, 
+AWS and Microsoft. 
+
+547
+00:30:00,680 --> 00:30:04,040
+So the name sounds like it's for
+Java. 
+
+548
+00:30:05,560 --> 00:30:07,800
+Yep, that's a good question when
+we get a lot. 
+
+549
+00:30:08,200 --> 00:30:11,400
+Yeah. 
+Originally this was this project
+
+550
+00:30:11,400 --> 00:30:16,400
+was spun up by our CEO. 
+He was a a developer and needed 
+
+551
+00:30:16,400 --> 00:30:18,800
+to solve a problem. 
+So he wrote a Java library 
+
+552
+00:30:19,400 --> 00:30:24,640
+called Neo 4 J, So Neo being new
+and then four J4 Java. 
+
+553
+00:30:24,640 --> 00:30:27,120
+And that was kind of the the big
+thing everybody was doing is 
+
+554
+00:30:27,120 --> 00:30:29,360
+adding that 4J on to the end of 
+things. 
+
+555
+00:30:29,360 --> 00:30:31,000
+And so that's what he did for 
+the Java library. 
+
+556
+00:30:31,000 --> 00:30:33,240
+Well, and of course, it grew 
+into a completely separate 
+
+557
+00:30:33,320 --> 00:30:36,240
+database that you could run, you
+know, on a server now in the 
+
+558
+00:30:36,240 --> 00:30:38,600
+cloud. 
+And the name just kind of stuck 
+
+559
+00:30:38,600 --> 00:30:40,880
+and stayed. 
+So it's written not technically 
+
+560
+00:30:40,880 --> 00:30:43,200
+fully in Java anymore. 
+They've branched out into other 
+
+561
+00:30:43,200 --> 00:30:46,760
+things in the source code. 
+But yeah, initially that's where
+
+562
+00:30:46,760 --> 00:30:49,640
+it came from. 
+It's always a little sad to hear
+
+563
+00:30:50,360 --> 00:30:54,200
+cuz you described him as our CEO
+used to be a developer. 
+
+564
+00:30:54,960 --> 00:30:58,840
+It's like this is. 
+Don't let everyone we need. 
+
+565
+00:30:59,000 --> 00:31:02,160
+AI to to manage companies so the
+CEO's don't can. 
+
+566
+00:31:02,160 --> 00:31:04,640
+Keep reading code. 
+Can can, you know, do what they 
+
+567
+00:31:04,680 --> 00:31:05,160
+like? 
+Yeah. 
+
+568
+00:31:05,560 --> 00:31:09,040
+And so there's clients then for 
+for Neo 4 J and I'm sure every 
+
+569
+00:31:09,040 --> 00:31:11,480
+language that you would want to 
+use it for, even though it has 
+
+570
+00:31:11,600 --> 00:31:16,000
+those Java roots. 
+And yes, so no matter how people
+
+571
+00:31:16,000 --> 00:31:18,720
+want to interact with Neo 4 J 
+and then there's graph QL. 
+
+572
+00:31:18,720 --> 00:31:21,480
+And we don't have to go into 
+graph QL but but. 
+
+573
+00:31:21,480 --> 00:31:24,000
+So let's let's connect this the 
+graph data. 
+
+574
+00:31:24,080 --> 00:31:30,720
+Before we go on, does this have,
+I don't know, a type system like
+
+575
+00:31:30,800 --> 00:31:37,800
+I mean is it type aware? 
+It so it falls back mostly on. 
+
+576
+00:31:39,160 --> 00:31:42,800
+A lot of the Java data types 
+match up really well with the 
+
+577
+00:31:42,800 --> 00:31:46,520
+NEO 4J. 
+Cipher types is how we define 
+
+578
+00:31:46,520 --> 00:31:49,400
+it. 
+So our Cipher is our graph query
+
+579
+00:31:49,400 --> 00:31:53,840
+language. 
+It is G cool compliant. 
+
+580
+00:31:53,840 --> 00:31:56,200
+So the G cool graph query 
+language standard that was 
+
+581
+00:31:56,200 --> 00:31:59,640
+released last year, Cipher is 
+compliant with that. 
+
+582
+00:32:00,280 --> 00:32:03,040
+That is totally separate from 
+Graph QL, which we could get. 
+
+583
+00:32:03,040 --> 00:32:04,520
+That could be a whole other 
+conversation. 
+
+584
+00:32:05,280 --> 00:32:08,200
+But Cipher is the way that we 
+interact with the data inside 
+
+585
+00:32:08,200 --> 00:32:12,000
+Neo 4 J kind of like you use 
+Sequel to interact with data in 
+
+586
+00:32:12,000 --> 00:32:15,680
+a relational database. 
+And the Cipher type system is 
+
+587
+00:32:15,680 --> 00:32:17,920
+very similar to Java's type 
+system. 
+
+588
+00:32:17,920 --> 00:32:19,440
+But not everything perfectly 
+aligns. 
+
+589
+00:32:19,800 --> 00:32:23,520
+But we have all your major data 
+types like you know text and 
+
+590
+00:32:24,040 --> 00:32:29,280
+links and does. 
+IT support I mean like Java has 
+
+591
+00:32:29,840 --> 00:32:34,960
+a relatively new record 
+mechanism. 
+
+592
+00:32:35,640 --> 00:32:37,440
+I mean probably familiar with 
+records. 
+
+593
+00:32:37,760 --> 00:32:42,520
+It's a database, so it stores 
+data on disk just like a 
+
+594
+00:32:42,520 --> 00:32:44,080
+relational database or anything 
+else does. 
+
+595
+00:32:44,280 --> 00:32:48,120
+And you can absolutely map it to
+Java records or Java entities 
+
+596
+00:32:48,120 --> 00:32:49,800
+when you pull that data out of 
+the database. 
+
+597
+00:32:50,280 --> 00:32:54,440
+But we don't store things as 
+kind of Java objects I guess. 
+
+598
+00:32:55,400 --> 00:32:59,600
+Mm hmm, OK, so your types are 
+basically the Java primitives, 
+
+599
+00:33:00,920 --> 00:33:03,480
+primitive types, you know? 
+Yes, we've got a few complex 
+
+600
+00:33:03,480 --> 00:33:08,120
+types like points for geospatial
+and some of the date, date time 
+
+601
+00:33:08,840 --> 00:33:10,600
+types as well those. 
+Are predefined. 
+
+602
+00:33:11,160 --> 00:33:12,440
+Yeah. 
+OK, all right. 
+
+603
+00:33:12,520 --> 00:33:13,800
+Well, that gives me an idea. 
+OK. 
+
+604
+00:33:13,840 --> 00:33:17,040
+And then you map that back to 
+your your data structures on 
+
+605
+00:33:17,040 --> 00:33:18,600
+your. 
+Application side. 
+
+606
+00:33:18,680 --> 00:33:19,400
+Right. 
+Sure. 
+
+607
+00:33:20,400 --> 00:33:22,520
+And you were about, were you 
+about to ask about vector? 
+
+608
+00:33:22,840 --> 00:33:24,120
+No. 
+So let's go. 
+
+609
+00:33:24,120 --> 00:33:29,600
+From graph to rag and then we 
+can probably talk about vector 
+
+610
+00:33:29,600 --> 00:33:30,680
+as well. 
+Yeah. 
+
+611
+00:33:30,960 --> 00:33:35,680
+So, so it does seem like in the 
+LLM Gen. 
+
+612
+00:33:35,680 --> 00:33:41,200
+AI space that graph databases 
+have have gained this new 
+
+613
+00:33:41,280 --> 00:33:45,680
+superpower and usefulness. 
+Unravel that. 
+
+614
+00:33:46,600 --> 00:33:48,920
+Yeah, you maybe agree or 
+disagree, if that's fine. 
+
+615
+00:33:49,120 --> 00:33:54,000
+So, so it's kind of funny. 
+Neo 4 J didn't really plan to be
+
+616
+00:33:54,000 --> 00:33:56,680
+a major piece. 
+I mean, we all wanted a piece of
+
+617
+00:33:56,680 --> 00:33:58,920
+the Gen. 
+AI hype for sure and the the 
+
+618
+00:33:58,920 --> 00:34:01,720
+Gen. 
+AI wave, but it kind of graph 
+
+619
+00:34:01,720 --> 00:34:05,360
+rag kind of just fell into graph
+databases. 
+
+620
+00:34:05,640 --> 00:34:10,400
+Vendors lapse, right? 
+People realize that oh graph is 
+
+621
+00:34:10,400 --> 00:34:13,440
+super helpful when you're 
+retrieving information from 
+
+622
+00:34:13,440 --> 00:34:15,400
+external sources and adding that
+to the LLM. 
+
+623
+00:34:15,880 --> 00:34:19,000
+The more context and 
+relationships you can give to 
+
+624
+00:34:19,000 --> 00:34:22,760
+that input, the better your 
+response is going to be. 
+
+625
+00:34:22,760 --> 00:34:26,800
+So for instance, let's say we 
+have going back to the people 
+
+626
+00:34:26,800 --> 00:34:29,120
+and software projects. 
+Let's say that you want to ask 
+
+627
+00:34:29,120 --> 00:34:31,679
+the LLM something about, you 
+know, what are all the projects 
+
+628
+00:34:31,679 --> 00:34:37,840
+that I have in this space? 
+And it would go out and look for
+
+629
+00:34:37,840 --> 00:34:39,920
+those software projects and it 
+would retrieve the similar 
+
+630
+00:34:39,920 --> 00:34:41,239
+results and, and send those 
+back. 
+
+631
+00:34:41,719 --> 00:34:45,600
+But now I could hook that up to 
+a graph database and say, OK, I 
+
+632
+00:34:45,600 --> 00:34:48,239
+have all these projects. 
+Here are the departments they're
+
+633
+00:34:48,239 --> 00:34:50,440
+in. 
+Here are their budgets, here are
+
+634
+00:34:50,440 --> 00:34:52,639
+the people that are working on 
+those, retrieve all those 
+
+635
+00:34:52,639 --> 00:34:54,840
+related entities and send that 
+to the LLM. 
+
+636
+00:34:54,840 --> 00:34:57,040
+And now all of a sudden my 
+response is going to be much 
+
+637
+00:34:57,040 --> 00:34:58,840
+more detailed and much more 
+specific. 
+
+638
+00:34:59,120 --> 00:35:02,000
+Like here are the projects 
+you're working on, here are the 
+
+639
+00:35:02,080 --> 00:35:04,560
+topic matters and the business 
+problems they're trying to 
+
+640
+00:35:04,560 --> 00:35:06,320
+solve. 
+Here are the departments that 
+
+641
+00:35:06,320 --> 00:35:09,960
+head those up. 
+Here's kind of a a few people 
+
+642
+00:35:09,960 --> 00:35:12,840
+that might be working on those 
+for contacts and now you get all
+
+643
+00:35:12,840 --> 00:35:15,680
+of that information being added 
+to the LLM and to provide that 
+
+644
+00:35:15,680 --> 00:35:17,960
+as a response. 
+Just throw it all back to the 
+
+645
+00:35:17,960 --> 00:35:20,560
+LLM and let the LLM with all 
+that context. 
+
+646
+00:35:20,560 --> 00:35:24,280
+Then figure out what to to give 
+the user as a response. 
+
+647
+00:35:24,280 --> 00:35:28,960
+So, right, so it's about the, 
+the the special sauce of graph 
+
+648
+00:35:28,960 --> 00:35:33,280
+here with rag is the context, 
+which is relationships. 
+
+649
+00:35:33,560 --> 00:35:37,480
+And so now we can provide so 
+much more contextual information
+
+650
+00:35:37,720 --> 00:35:42,960
+in the graph kind of structured 
+way to the LLM, which is the 
+
+651
+00:35:42,960 --> 00:35:44,520
+more information the better. 
+So does it? 
+
+652
+00:35:45,320 --> 00:35:48,680
+It sounds like the graph 
+database is quote UN quote 
+
+653
+00:35:48,680 --> 00:35:55,200
+easier for the LLM to use. 
+It's easier for us to as 
+
+654
+00:35:55,200 --> 00:36:00,080
+developers to construct what's 
+relevant to an input because we 
+
+655
+00:36:00,080 --> 00:36:03,000
+have all that extra context. 
+The example that NEO 4J 
+
+656
+00:36:03,000 --> 00:36:06,960
+initially used and that I like 
+to revert back to is we dumped 
+
+657
+00:36:07,040 --> 00:36:14,040
+SEC Edgar filings into financial
+filings into NEO 4 J and then 
+
+658
+00:36:14,040 --> 00:36:17,080
+pulled in some external data 
+sources for like companies and 
+
+659
+00:36:17,080 --> 00:36:19,080
+people who own stock in those 
+companies and so on. 
+
+660
+00:36:19,520 --> 00:36:21,120
+And we dumped all that 
+information in. 
+
+661
+00:36:21,480 --> 00:36:25,360
+And initially when you would ask
+the LLM, what are the 
+
+662
+00:36:26,440 --> 00:36:30,960
+liabilities for those who 
+produce lithium ion batteries? 
+
+663
+00:36:31,400 --> 00:36:33,800
+Like what if something happens 
+to the lithium ion battery 
+
+664
+00:36:33,800 --> 00:36:34,920
+industry, what's that going to 
+impact? 
+
+665
+00:36:35,480 --> 00:36:37,960
+And it would retrieve, you know,
+a little bits of information. 
+
+666
+00:36:38,400 --> 00:36:42,360
+But then when you add that in 
+the graph and you say, oh, now I
+
+667
+00:36:42,360 --> 00:36:46,200
+have these companies that are 
+focused in this general industry
+
+668
+00:36:46,600 --> 00:36:50,000
+and here are the stock pilings 
+that add on to that and the 
+
+669
+00:36:50,000 --> 00:36:52,960
+people and other companies that 
+might be impacted by those 
+
+670
+00:36:52,960 --> 00:36:54,800
+things. 
+Now all of a sudden you get much
+
+671
+00:36:54,800 --> 00:36:57,160
+more detail, much more relevance
+when you're looking at, OK, 
+
+672
+00:36:57,680 --> 00:37:01,400
+what's the impact to the lithium
+battery industry if this happens
+
+673
+00:37:01,840 --> 00:37:05,200
+and you get all these extra 
+pieces and you can follow up and
+
+674
+00:37:05,200 --> 00:37:07,760
+say, oh, we're actually going to
+impact this area of our 
+
+675
+00:37:07,760 --> 00:37:09,480
+organization. 
+We didn't realize we need to 
+
+676
+00:37:09,480 --> 00:37:13,920
+reach out to these people and 
+see what we can do to mitigate 
+
+677
+00:37:13,920 --> 00:37:17,400
+that risk and so on. 
+It's, it's fascinating because 
+
+678
+00:37:17,400 --> 00:37:23,960
+the, the, the LLM, the, the 
+model of it is relationships 
+
+679
+00:37:24,240 --> 00:37:27,840
+between things. 
+And so it does make sense that 
+
+680
+00:37:28,200 --> 00:37:34,520
+if it then has data given to it 
+in also relational form, that 
+
+681
+00:37:34,520 --> 00:37:36,640
+it's gonna be able to your. 
+Relationship form. 
+
+682
+00:37:36,640 --> 00:37:39,800
+Your relationship form, yes, 
+not, I'm sorry, not relational. 
+
+683
+00:37:41,000 --> 00:37:42,320
+Yeah, that's a misnomer 
+actually. 
+
+684
+00:37:42,320 --> 00:37:44,920
+Relational database isn't 
+actually super heavy on 
+
+685
+00:37:44,920 --> 00:37:46,160
+relationships, right? 
+Yeah. 
+
+686
+00:37:47,840 --> 00:37:50,240
+You're right, you have to put 
+the relationships in. 
+
+687
+00:37:52,240 --> 00:37:56,720
+But if you provide, if you 
+provide data in a graph 
+
+688
+00:37:56,720 --> 00:38:00,680
+structure to something that is 
+modeled as a graph essentially, 
+
+689
+00:38:00,880 --> 00:38:04,200
+then yeah, it seems rational 
+that this is going to give you 
+
+690
+00:38:04,200 --> 00:38:06,200
+better output. 
+Yeah. 
+
+691
+00:38:06,200 --> 00:38:10,560
+And really it's just helping 
+guide the LLM into the general 
+
+692
+00:38:11,200 --> 00:38:15,440
+path of of the correct 
+probabilities to respond back. 
+
+693
+00:38:15,440 --> 00:38:19,200
+And the more information you can
+kind of guide it into pieces of 
+
+694
+00:38:19,200 --> 00:38:22,880
+its memory and knowledge, the 
+better that answer is going to 
+
+695
+00:38:22,880 --> 00:38:24,280
+be. 
+So if you can direct it, hey, 
+
+696
+00:38:24,280 --> 00:38:27,600
+when I talk about asset 
+managers, I don't mean, you 
+
+697
+00:38:27,600 --> 00:38:30,840
+know, people who own the 
+companies or CE OS. 
+
+698
+00:38:30,840 --> 00:38:34,200
+I really am talking about people
+who own stock and actually own 
+
+699
+00:38:34,320 --> 00:38:35,880
+financial interest in the 
+company. 
+
+700
+00:38:36,280 --> 00:38:38,920
+And you can kind of direct it 
+into the right area of its 
+
+701
+00:38:38,920 --> 00:38:40,760
+knowledge. 
+And then when it retrieves and 
+
+702
+00:38:40,760 --> 00:38:43,720
+sends information and generates 
+the information back to you, 
+
+703
+00:38:44,160 --> 00:38:46,320
+it's much better quality because
+it's more what you're looking 
+
+704
+00:38:46,320 --> 00:38:46,600
+for. 
+Yeah. 
+
+705
+00:38:49,280 --> 00:38:53,400
+What pops into my head is that a
+lot of people are getting away 
+
+706
+00:38:53,400 --> 00:38:57,920
+with things by hiding. 
+It's like all the information's 
+
+707
+00:38:57,920 --> 00:38:59,280
+out there, it's just hard to 
+get. 
+
+708
+00:38:59,520 --> 00:39:02,360
+Something like this is gonna 
+make that harder. 
+
+709
+00:39:03,280 --> 00:39:04,960
+Yeah. 
+And that's where things like 
+
+710
+00:39:04,960 --> 00:39:07,760
+fraud detection, it's super 
+useful for doing that because it
+
+711
+00:39:07,760 --> 00:39:11,160
+surfaces all of those 
+connections that are much more 
+
+712
+00:39:11,160 --> 00:39:13,960
+hidden in a relational database 
+structure. 
+
+713
+00:39:14,520 --> 00:39:17,000
+It surfaces those relationships 
+in a graph and it makes them 
+
+714
+00:39:17,000 --> 00:39:19,280
+very much easier to see, I 
+should say. 
+
+715
+00:39:21,880 --> 00:39:25,040
+Do you could you walk us 
+through? 
+
+716
+00:39:25,040 --> 00:39:29,320
+OK, I've got an agent, it's 
+talking to an LLM and I want to 
+
+717
+00:39:29,320 --> 00:39:33,120
+hook that to a graph database. 
+Like what's actually assembling 
+
+718
+00:39:33,120 --> 00:39:35,440
+the query? 
+And like what's that process 
+
+719
+00:39:35,440 --> 00:39:37,600
+look like? 
+There's a couple of different 
+
+720
+00:39:37,600 --> 00:39:39,960
+methods there. 
+So you could use something like 
+
+721
+00:39:40,320 --> 00:39:44,920
+text to cipher, text to SQL, 
+which are libraries that you ask
+
+722
+00:39:44,920 --> 00:39:48,480
+a question to the LLM. 
+And usually you try to define 
+
+723
+00:39:48,480 --> 00:39:52,440
+your your data model to the LLM 
+so that the LLM has again extra 
+
+724
+00:39:52,440 --> 00:39:55,400
+context reference. 
+And then it tries to generate a 
+
+725
+00:39:55,600 --> 00:40:00,320
+cipher or sequel or whatever 
+query based on the input and the
+
+726
+00:40:00,640 --> 00:40:02,600
+general data structure that you 
+have defined. 
+
+727
+00:40:04,040 --> 00:40:06,640
+We've had mixed results there. 
+Some of them actually are really
+
+728
+00:40:06,640 --> 00:40:08,160
+really good, and then others are
+kind of like. 
+
+729
+00:40:08,440 --> 00:40:12,720
+That's not the greatest query. 
+But an LLM will kind of do that 
+
+730
+00:40:12,720 --> 00:40:17,360
+and do that reasonably well. 
+The other structure is kind of 
+
+731
+00:40:17,360 --> 00:40:20,480
+what I have done in the past, 
+which is OK. 
+
+732
+00:40:20,480 --> 00:40:23,400
+I know I have these relevant 
+entities that are coming back 
+
+733
+00:40:23,400 --> 00:40:26,400
+from a similarity search, which 
+we could talk about separately. 
+
+734
+00:40:27,320 --> 00:40:28,920
+But what's relevant to this 
+input? 
+
+735
+00:40:28,920 --> 00:40:31,400
+And it'll retrieve the items 
+from the database that are most 
+
+736
+00:40:31,400 --> 00:40:35,880
+relevant. 
+And then I write a, I guess a 
+
+737
+00:40:35,880 --> 00:40:39,560
+user expert query or a developer
+expert query, technical expert 
+
+738
+00:40:39,560 --> 00:40:42,520
+query to go out to the database 
+and say, here are the entities 
+
+739
+00:40:42,520 --> 00:40:44,600
+that I have. 
+I want to retrieve these pieces 
+
+740
+00:40:44,600 --> 00:40:47,760
+of the graph that are related to
+that and then surface that 
+
+741
+00:40:47,760 --> 00:40:50,440
+information up. 
+So there again, it's kind of A2 
+
+742
+00:40:50,440 --> 00:40:52,680
+pronged approach. 
+Do you let the LLM figure out 
+
+743
+00:40:52,680 --> 00:40:55,640
+what's important and what's 
+relevant based on it writing a 
+
+744
+00:40:55,640 --> 00:40:59,160
+query or do you have someone 
+who's an expert write that query
+
+745
+00:40:59,160 --> 00:41:01,560
+to define based on this type of 
+question? 
+
+746
+00:41:01,760 --> 00:41:03,920
+These are the the extra things 
+that I want to retrieve from the
+
+747
+00:41:03,920 --> 00:41:05,280
+graph. 
+Gotcha. 
+
+748
+00:41:05,280 --> 00:41:08,280
+OK, so different approaches and 
+probably different use cases 
+
+749
+00:41:08,280 --> 00:41:10,040
+where each of those would make 
+sense. 
+
+750
+00:41:10,040 --> 00:41:15,800
+So in the latter example, we see
+that a query comes in for 
+
+751
+00:41:15,880 --> 00:41:19,720
+something related to people. 
+And so then we're like, oh, I've
+
+752
+00:41:19,720 --> 00:41:23,160
+written the query, the graph 
+query that knows how to get 
+
+753
+00:41:23,160 --> 00:41:26,640
+people and all the things 
+related to people that the LM 
+
+754
+00:41:26,640 --> 00:41:30,760
+may also want to know about, and
+and then and then I can make 
+
+755
+00:41:30,760 --> 00:41:35,120
+that query, feed the results, 
+rag it into the the prompt. 
+
+756
+00:41:35,640 --> 00:41:38,560
+Yep, yeah. 
+And it and you can define like a
+
+757
+00:41:38,560 --> 00:41:41,240
+series of. 
+One example I saw actually just 
+
+758
+00:41:41,240 --> 00:41:44,680
+this week is that somebody had 
+defined a series of tools for a 
+
+759
+00:41:44,680 --> 00:41:47,080
+variety of different queries, 
+like OK, here's my person query,
+
+760
+00:41:47,080 --> 00:41:49,360
+here's my software project 
+query, here's my this or that 
+
+761
+00:41:49,360 --> 00:41:52,720
+query. 
+And then basically the agentic 
+
+762
+00:41:52,720 --> 00:41:55,720
+system would determine based on 
+the input that I have, which 
+
+763
+00:41:55,720 --> 00:41:59,320
+query should I run, and then it 
+runs that query and retrieves 
+
+764
+00:41:59,320 --> 00:42:01,240
+the results. 
+Yeah, yeah. 
+
+765
+00:42:01,240 --> 00:42:04,680
+So let the LM figure out the 
+workflow and throw MCP in there 
+
+766
+00:42:04,680 --> 00:42:10,040
+because MCP in their life. 
+OK, so you, you did mention 
+
+767
+00:42:10,040 --> 00:42:13,160
+similarity search, which I think
+would be a good area to go into 
+
+768
+00:42:13,160 --> 00:42:15,360
+next. 
+So give us the rundown on that. 
+
+769
+00:42:16,000 --> 00:42:17,880
+Yeah. 
+So basically this is kind of 
+
+770
+00:42:17,880 --> 00:42:21,600
+where the vector database space 
+overlaps is in the similarity 
+
+771
+00:42:21,600 --> 00:42:24,760
+search. 
+So previously databases did what
+
+772
+00:42:24,760 --> 00:42:27,960
+was called a keyword search or 
+lexical searches. 
+
+773
+00:42:27,960 --> 00:42:31,120
+You might hear it now sometimes.
+And that's just basically where 
+
+774
+00:42:31,120 --> 00:42:33,760
+I have this, you know, bit of 
+text that I want to search for 
+
+775
+00:42:33,760 --> 00:42:35,960
+this particular value I'm 
+looking for in my data set. 
+
+776
+00:42:36,640 --> 00:42:39,040
+And sometimes you could do fuzzy
+searches or you could provide 
+
+777
+00:42:39,040 --> 00:42:41,640
+it, you know, dictionaries of 
+synonyms and so on that could 
+
+778
+00:42:41,680 --> 00:42:44,200
+look for as well. 
+But that was somewhat limited 
+
+779
+00:42:44,200 --> 00:42:48,240
+into exactly how you defined it.
+So if you didn't have the direct
+
+780
+00:42:48,240 --> 00:42:50,920
+specific synonym, it wouldn't 
+find that one, right? 
+
+781
+00:42:51,480 --> 00:42:56,440
+But now what we're able to do is
+we needed to be able to search 
+
+782
+00:42:56,440 --> 00:43:01,480
+large corpuses of data that are 
+semantically similar rather than
+
+783
+00:43:01,480 --> 00:43:03,280
+just keyword or fuzzy search 
+similar. 
+
+784
+00:43:03,920 --> 00:43:08,000
+And so this is where you had 
+people create a vector 
+
+785
+00:43:08,000 --> 00:43:10,960
+representation, a numeric 
+representation of data. 
+
+786
+00:43:11,320 --> 00:43:15,240
+And the way they do that is they
+pick out key specific features 
+
+787
+00:43:15,240 --> 00:43:18,320
+about a piece of data. 
+Let's say, for instance, if we 
+
+788
+00:43:18,320 --> 00:43:22,000
+want to do that for a word, the 
+example I always give is, let's 
+
+789
+00:43:22,000 --> 00:43:24,840
+say we took the word king and 
+Google actually did this. 
+
+790
+00:43:24,840 --> 00:43:30,080
+They turn vector representations
+to to words and all the things 
+
+791
+00:43:30,080 --> 00:43:32,800
+that we understand and the way 
+we use king in language. 
+
+792
+00:43:33,040 --> 00:43:37,280
+So ruler, wealth, leadership, 
+lives in a castle, those are all
+
+793
+00:43:37,280 --> 00:43:39,840
+particular features. 
+And then based on those 
+
+794
+00:43:39,840 --> 00:43:42,440
+features, you can create a 
+numeric, a list of floats, an 
+
+795
+00:43:42,440 --> 00:43:45,640
+array of floats, numeric 
+representation of that word. 
+
+796
+00:43:46,000 --> 00:43:49,040
+And then you can use it. 
+If you do do the same thing for 
+
+797
+00:43:49,040 --> 00:43:52,160
+other words, you can start using
+it to compare how similar are 
+
+798
+00:43:52,160 --> 00:43:55,360
+these two concepts or how are 
+these two words used in the 
+
+799
+00:43:55,360 --> 00:43:57,240
+English language or whatever 
+language you happen to be 
+
+800
+00:43:57,240 --> 00:44:00,160
+looking at. 
+But of course, as you do that 
+
+801
+00:44:00,160 --> 00:44:02,760
+for more and more data, we can 
+now do that for all different 
+
+802
+00:44:02,760 --> 00:44:04,080
+kinds of data. 
+We can create factor 
+
+803
+00:44:04,080 --> 00:44:07,960
+representations, or embeddings 
+as they're often called, for 
+
+804
+00:44:07,960 --> 00:44:12,760
+images, for text, for videos, 
+for documents, and and so on. 
+
+805
+00:44:13,440 --> 00:44:15,080
+And we can create these numeric 
+representations. 
+
+806
+00:44:15,080 --> 00:44:17,800
+So now we can compare lots of 
+different types of data 
+
+807
+00:44:17,800 --> 00:44:20,960
+modalities, if you will, that we
+couldn't before. 
+
+808
+00:44:20,960 --> 00:44:23,280
+We couldn't take a piece of text
+and say, how is this similar to 
+
+809
+00:44:23,280 --> 00:44:25,440
+this video? 
+Now we can because we can create
+
+810
+00:44:25,440 --> 00:44:29,000
+a numeric representation of the 
+interesting features about that.
+
+811
+00:44:30,040 --> 00:44:34,520
+But of course, the more data you
+have, the more challenging a 
+
+812
+00:44:34,560 --> 00:44:38,040
+search is across all that data. 
+So now how do we optimize that? 
+
+813
+00:44:38,040 --> 00:44:40,920
+How do we make it easy? 
+And that's where vector 
+
+814
+00:44:40,920 --> 00:44:44,760
+similarity search and where you 
+have things like the K 
+
+815
+00:44:44,960 --> 00:44:47,640
+approximate nearest neighbors 
+algorithm come into play where 
+
+816
+00:44:47,640 --> 00:44:52,440
+it tries to select the closest 
+similar results with a couple of
+
+817
+00:44:52,440 --> 00:44:54,360
+different dimensions. 
+The 1st is like a cosine 
+
+818
+00:44:54,360 --> 00:44:56,840
+similarity. 
+So the angle of those vectors, 
+
+819
+00:44:56,840 --> 00:44:59,880
+how close they are together or 
+there's a Euclidean distance, 
+
+820
+00:44:59,880 --> 00:45:02,680
+which is kind of as the crow 
+flies between these two vectors 
+
+821
+00:45:02,680 --> 00:45:06,560
+in space, how similar and how 
+close are they in the multi 
+
+822
+00:45:06,560 --> 00:45:10,720
+dimensional space. 
+So you search and find the 10 
+
+823
+00:45:10,720 --> 00:45:13,240
+nearest neighbors, or 50 nearest
+neighbors, or whatever it is 
+
+824
+00:45:13,720 --> 00:45:16,640
+most similar to this numeric 
+representation of this piece of 
+
+825
+00:45:16,640 --> 00:45:19,440
+data, and then you can surface 
+those relevant results, and 
+
+826
+00:45:19,440 --> 00:45:21,600
+that's going to pull 
+semantically similar things. 
+
+827
+00:45:23,240 --> 00:45:31,160
+So this and this is a way to 
+represent data in in a method 
+
+828
+00:45:31,160 --> 00:45:34,520
+that then can be used in a 
+similarity search. 
+
+829
+00:45:34,520 --> 00:45:36,720
+Is that? 
+I think I just said everything 
+
+830
+00:45:36,720 --> 00:45:40,240
+you said, but. 
+Yeah, the the joke that I like 
+
+831
+00:45:40,240 --> 00:45:43,840
+to make is, you know, people 
+always teased previously about 
+
+832
+00:45:43,920 --> 00:45:45,520
+how you can't compare those two 
+things. 
+
+833
+00:45:45,520 --> 00:45:48,560
+That's apples and oranges. 
+Now we can actually create a 
+
+834
+00:45:48,560 --> 00:45:50,800
+vector representation, numeric 
+representation of an apple and 
+
+835
+00:45:50,800 --> 00:45:53,120
+an orange and actually compare 
+how the two things are similar 
+
+836
+00:45:53,120 --> 00:45:57,520
+because we have a consolidated 
+unique representation, A 
+
+837
+00:45:57,520 --> 00:46:00,840
+comparable representation of all
+these different types of data 
+
+838
+00:46:00,840 --> 00:46:01,800
+now. 
+Yeah. 
+
+839
+00:46:02,520 --> 00:46:05,680
+And so, and I like your apples 
+and oranges example because the 
+
+840
+00:46:05,840 --> 00:46:08,880
+the commonality between apples 
+and oranges is that they're both
+
+841
+00:46:08,880 --> 00:46:11,600
+fruit. 
+And so the vector representation
+
+842
+00:46:11,600 --> 00:46:15,680
+would allow us to identify the 
+relationship between apples and 
+
+843
+00:46:15,680 --> 00:46:16,600
+oranges. 
+Yeah. 
+
+844
+00:46:16,800 --> 00:46:19,280
+In a similar. 
+Particle way that we could 
+
+845
+00:46:19,280 --> 00:46:20,800
+search against. 
+Right. 
+
+846
+00:46:20,880 --> 00:46:23,240
+Yeah. 
+Their skin is different, You eat
+
+847
+00:46:23,240 --> 00:46:27,400
+them differently, but they're 
+similar in size and color, and 
+
+848
+00:46:27,400 --> 00:46:28,840
+they're both fruits, right? 
+Yeah. 
+
+849
+00:46:30,120 --> 00:46:33,520
+Cool. 
+So so then we've, we've got the 
+
+850
+00:46:33,520 --> 00:46:39,400
+vectors for our, our business 
+data like would we take our, you
+
+851
+00:46:39,400 --> 00:46:41,480
+know, employee database and 
+vectorize it? 
+
+852
+00:46:41,720 --> 00:46:44,600
+And so then we could do 
+similarity searches across an 
+
+853
+00:46:44,600 --> 00:46:46,120
+employee database or something 
+like that. 
+
+854
+00:46:47,320 --> 00:46:49,720
+You can. 
+It really depends on the use 
+
+855
+00:46:49,720 --> 00:46:52,760
+case you're going after. 
+So for me specifically, like I 
+
+856
+00:46:52,760 --> 00:46:56,480
+have a book recommendations data
+set and I took user reviews that
+
+857
+00:46:56,480 --> 00:47:00,560
+people had written about books 
+and I took the text and created 
+
+858
+00:47:00,560 --> 00:47:04,320
+an embedding of that and then do
+a similarity search on OK, I 
+
+859
+00:47:04,320 --> 00:47:06,800
+have themes that I really like 
+in books that are very, very 
+
+860
+00:47:06,800 --> 00:47:08,360
+specific. 
+Right now you walk into a 
+
+861
+00:47:08,360 --> 00:47:12,920
+library and you're very limited 
+on, well, I like science 
+
+862
+00:47:12,920 --> 00:47:17,480
+fiction, which is in the fiction
+section, half of the library and
+
+863
+00:47:17,480 --> 00:47:19,200
+it's within the science fiction 
+genre. 
+
+864
+00:47:20,120 --> 00:47:22,720
+And then you're just left kind 
+of picking and choosing, OK, 
+
+865
+00:47:22,720 --> 00:47:25,000
+which author do I want to try? 
+I have to look at the back of 
+
+866
+00:47:25,000 --> 00:47:26,440
+the book to see if it's 
+interesting or not. 
+
+867
+00:47:26,880 --> 00:47:29,200
+But what if I could pick 
+something very, very specific 
+
+868
+00:47:29,640 --> 00:47:32,120
+and let's say, OK, I'm looking 
+for a fantasy book, I really 
+
+869
+00:47:32,120 --> 00:47:34,600
+care about Dragons and magic. 
+What are the books that have 
+
+870
+00:47:34,600 --> 00:47:36,920
+Dragons and magic? 
+That's a much narrower search 
+
+871
+00:47:36,920 --> 00:47:39,520
+set now and more semantically 
+similar. 
+
+872
+00:47:39,760 --> 00:47:42,920
+And now I get much more relevant
+results and things that I care 
+
+873
+00:47:42,920 --> 00:47:46,400
+about in that. 
+Nice. 
+
+874
+00:47:46,400 --> 00:47:48,040
+So that that makes sense on the 
+value of it. 
+
+875
+00:47:48,040 --> 00:47:51,640
+How does that, how does this 
+then relate to LMS and Jenny I 
+
+876
+00:47:51,640 --> 00:47:54,480
+what we're why do we need it 
+there and how's it fit into RAG?
+
+877
+00:47:55,280 --> 00:47:57,440
+Yeah. 
+So again, it's the way that I 
+
+878
+00:47:57,440 --> 00:48:01,600
+see it is that you can't just 
+plug an LLM into any particular 
+
+879
+00:48:01,600 --> 00:48:03,080
+data source it doesn't 
+understand. 
+
+880
+00:48:03,360 --> 00:48:06,640
+It understands text, understands
+images or whatever modality the 
+
+881
+00:48:06,640 --> 00:48:08,240
+LLM is trained to understand, 
+right. 
+
+882
+00:48:08,840 --> 00:48:11,440
+But it doesn't necessarily 
+understand data structures, 
+
+883
+00:48:11,440 --> 00:48:13,360
+relational databases, graph 
+databases, whatever. 
+
+884
+00:48:13,800 --> 00:48:17,600
+And so a vector representation 
+makes a consistent, easy, 
+
+885
+00:48:17,600 --> 00:48:20,840
+searchable way for us to 
+retrieve what's semantically 
+
+886
+00:48:20,840 --> 00:48:23,400
+similar to the user's input, 
+whatever they happen to be 
+
+887
+00:48:23,400 --> 00:48:26,720
+looking for, and then provide 
+that data in a way. 
+
+888
+00:48:26,720 --> 00:48:30,600
+And you, and you don't have to 
+provide the LLM with the vector.
+
+889
+00:48:30,600 --> 00:48:32,720
+You actually provided the data 
+that's coming back. 
+
+890
+00:48:32,720 --> 00:48:35,440
+But the vector representation 
+just makes it easy to search 
+
+891
+00:48:35,440 --> 00:48:36,840
+semantically for what you're 
+looking for. 
+
+892
+00:48:37,280 --> 00:48:39,640
+And then you provide those 
+relevant bits of data. 
+
+893
+00:48:39,720 --> 00:48:42,200
+The actual, you know, rows, if 
+you want, are the objects or 
+
+894
+00:48:42,200 --> 00:48:45,480
+whatever you you're pulling and 
+you feed that to the LLMS text 
+
+895
+00:48:45,480 --> 00:48:46,680
+and then it knows what to do 
+with it. 
+
+896
+00:48:47,840 --> 00:48:51,840
+So in in your case, we have, 
+let's say an agent that is my 
+
+897
+00:48:51,840 --> 00:48:55,120
+library search agent or 
+something and natural language. 
+
+898
+00:48:55,120 --> 00:48:57,960
+You say what you said about you 
+like Dragons and want books that
+
+899
+00:48:57,960 --> 00:49:01,080
+are like that. 
+So then that would your, your 
+
+900
+00:49:01,080 --> 00:49:04,200
+agent would actually do the 
+similarity search against your 
+
+901
+00:49:04,200 --> 00:49:08,800
+vector database and then and 
+then provide the responses from 
+
+902
+00:49:08,800 --> 00:49:11,160
+that similarity search to the 
+LLM. 
+
+903
+00:49:11,560 --> 00:49:13,800
+And then that doesn't 
+necessarily mean that's what the
+
+904
+00:49:13,800 --> 00:49:16,880
+LLM is going to give you. 
+It's going to then augment that 
+
+905
+00:49:16,880 --> 00:49:19,640
+with, you know, it's information
+and it's knowledge and the 
+
+906
+00:49:19,640 --> 00:49:22,920
+question that you asked it to 
+give you the actual response is 
+
+907
+00:49:22,960 --> 00:49:23,360
+it? 
+Yeah. 
+
+908
+00:49:23,600 --> 00:49:27,440
+Vectors are are really just a 
+mechanism for us to search all 
+
+909
+00:49:27,440 --> 00:49:30,280
+different kinds of data that we 
+couldn't previously search if it
+
+910
+00:49:30,280 --> 00:49:33,840
+wasn't stored in a database in a
+readable format somewhere. 
+
+911
+00:49:34,160 --> 00:49:36,600
+Like for instance all the PDFs 
+and all the like. 
+
+912
+00:49:36,600 --> 00:49:39,360
+Lessons learned, documentation 
+that organizations might have 
+
+913
+00:49:39,760 --> 00:49:44,720
+that data was not previously an 
+analyzable or accessible to any 
+
+914
+00:49:44,720 --> 00:49:47,360
+system, and now that we can 
+create a vector representation, 
+
+915
+00:49:47,360 --> 00:49:50,040
+that data is all of a sudden 
+useful and searchable. 
+
+916
+00:49:50,840 --> 00:49:53,200
+Nice. 
+We could search image databases 
+
+917
+00:49:53,200 --> 00:49:57,560
+or video databases or whatever. 
+And then the process of creating
+
+918
+00:49:57,560 --> 00:50:01,640
+the embeddings or the 
+vectorization of this data, are 
+
+919
+00:50:01,640 --> 00:50:05,480
+we using LLMS now to actually do
+that? 
+
+920
+00:50:05,560 --> 00:50:07,360
+Is that how that works? 
+Yeah. 
+
+921
+00:50:07,640 --> 00:50:11,200
+So you'll call an embedding 
+model, which is a model that has
+
+922
+00:50:11,200 --> 00:50:15,120
+been trained specifically to 
+take data and create a numeric 
+
+923
+00:50:15,120 --> 00:50:18,080
+representation based on key 
+features or important things 
+
+924
+00:50:18,080 --> 00:50:20,480
+within that data. 
+And then it spits back out a 
+
+925
+00:50:20,560 --> 00:50:23,160
+vector representation of that, 
+and you save that to. 
+
+926
+00:50:23,160 --> 00:50:26,880
+Use an embedding model to do 
+this that has a lot of knowledge
+
+927
+00:50:26,880 --> 00:50:32,720
+because it it needs to know lots
+of things to create the vector 
+
+928
+00:50:32,720 --> 00:50:34,440
+representation. 
+Yeah. 
+
+929
+00:50:34,440 --> 00:50:37,200
+What are the key features? 
+What are the prominent things in
+
+930
+00:50:37,200 --> 00:50:41,000
+this data that's being provided?
+And then generate a series of 
+
+931
+00:50:41,000 --> 00:50:44,160
+numbers based on the 
+probabilities of all that and 
+
+932
+00:50:44,160 --> 00:50:47,480
+split that number back out. 
+And then the embedding database 
+
+933
+00:50:47,480 --> 00:50:49,560
+that I worked with recently was 
+Cohere. 
+
+934
+00:50:49,880 --> 00:50:53,200
+And then you could use it either
+in a English only mode, which I 
+
+935
+00:50:53,200 --> 00:50:56,480
+assume is just like like if it 
+knows that it's only talking 
+
+936
+00:50:56,480 --> 00:50:59,240
+English, it's, you know, faster 
+and smaller. 
+
+937
+00:50:59,680 --> 00:51:00,400
+Yeah. 
+But then there was the 
+
+938
+00:51:00,400 --> 00:51:04,120
+multilingual model, which which 
+could, you know, understand 
+
+939
+00:51:04,120 --> 00:51:06,720
+probably many, many languages. 
+So probably much more complex 
+
+940
+00:51:06,720 --> 00:51:08,880
+larger model. 
+But then there's other 
+
+941
+00:51:08,880 --> 00:51:13,400
+embeddings models for images and
+videos and other modalities, 
+
+942
+00:51:13,400 --> 00:51:15,520
+right? 
+So that depends on kind of what 
+
+943
+00:51:15,520 --> 00:51:19,040
+we're creating a vector 
+representation of, which kind of
+
+944
+00:51:19,040 --> 00:51:20,360
+embedding model we'd want to 
+use. 
+
+945
+00:51:20,840 --> 00:51:25,160
+Right, exactly. 
+So, so and then different data 
+
+946
+00:51:25,160 --> 00:51:30,000
+storage databases that can store
+the actual vector 
+
+947
+00:51:30,080 --> 00:51:32,720
+representations once we've 
+created the embedding from a 
+
+948
+00:51:32,720 --> 00:51:35,440
+model. 
+Yeah, Vector databases from the 
+
+949
+00:51:35,440 --> 00:51:37,800
+outset were really well designed
+for this because they were 
+
+950
+00:51:37,800 --> 00:51:41,120
+optimized to store the vector 
+and then just a little bit of 
+
+951
+00:51:41,120 --> 00:51:44,560
+metadata alongside that. 
+So and then they're they were 
+
+952
+00:51:44,560 --> 00:51:47,560
+optimized to do those similarity
+searches and to handle those 
+
+953
+00:51:47,560 --> 00:51:49,160
+really well. 
+So that's, I think quite 
+
+954
+00:51:49,160 --> 00:51:52,400
+initially you saw that explosion
+and the huge popularity of 
+
+955
+00:51:52,400 --> 00:51:54,560
+vector databases. 
+But then of course, every other 
+
+956
+00:51:54,560 --> 00:51:56,960
+database on the market was like,
+wait a minute, we can do this 
+
+957
+00:51:56,960 --> 00:52:00,200
+too. 
+And so started tacking on vector
+
+958
+00:52:00,200 --> 00:52:04,080
+functionality and capabilities 
+and indexes onto their existing 
+
+959
+00:52:04,080 --> 00:52:06,400
+data structures in order to help
+support these as well. 
+
+960
+00:52:06,400 --> 00:52:10,240
+So that's why you'll see graph 
+databases, A lot of the graph 
+
+961
+00:52:10,240 --> 00:52:13,000
+database vendors will now have 
+support for vector indexes and 
+
+962
+00:52:13,000 --> 00:52:16,880
+and vector storing the vectors. 
+You have things like PG vector 
+
+963
+00:52:16,880 --> 00:52:20,080
+that are is post grass 
+relational database that now 
+
+964
+00:52:20,080 --> 00:52:22,440
+adds capabilities and 
+optimizations for storing 
+
+965
+00:52:22,440 --> 00:52:25,400
+vectors and searching them and 
+every other database on the 
+
+966
+00:52:25,400 --> 00:52:28,720
+market's doing the same. 
+And Neo 4 J does, yeah, cuz OK, 
+
+967
+00:52:29,040 --> 00:52:34,520
+so you're not really taking like
+if you're going maybe we need a 
+
+968
+00:52:35,120 --> 00:52:37,880
+vector database, you're not 
+really taking a risk. 
+
+969
+00:52:37,880 --> 00:52:41,000
+If you use a graph database, you
+can still use it as a vector. 
+
+970
+00:52:41,000 --> 00:52:44,120
+Data, correct. 
+There's some that argue that 
+
+971
+00:52:45,680 --> 00:52:47,120
+Jack of all trades, master of 
+none. 
+
+972
+00:52:47,120 --> 00:52:51,320
+So the more different kind of 
+features or functionalities you 
+
+973
+00:52:51,320 --> 00:52:54,480
+tack on, the weaker those are 
+gonna be in. 
+
+974
+00:52:54,480 --> 00:52:56,560
+And that was one of the reasons 
+why I started playing with 
+
+975
+00:52:56,560 --> 00:52:58,880
+vector databases is really to 
+see, OK, what strengths and 
+
+976
+00:52:58,880 --> 00:53:00,360
+weaknesses do they bring to the 
+table? 
+
+977
+00:53:00,360 --> 00:53:02,080
+And is it better to go this 
+route? 
+
+978
+00:53:02,720 --> 00:53:06,200
+And for just the use case that 
+I've done so far, I haven't seen
+
+979
+00:53:06,200 --> 00:53:10,840
+a, a huge difference. 
+Vectors have the, the vector 
+
+980
+00:53:10,840 --> 00:53:13,680
+representation, they're meant to
+be quick and efficient about 
+
+981
+00:53:13,680 --> 00:53:16,360
+retrieving those. 
+And then they pull just a little
+
+982
+00:53:16,360 --> 00:53:17,880
+bit of metadata. 
+So you're not going to be able 
+
+983
+00:53:17,880 --> 00:53:19,800
+to pull a whole lot of 
+relationships with that. 
+
+984
+00:53:20,400 --> 00:53:23,160
+But again, is that vital to your
+use case or not? 
+
+985
+00:53:23,160 --> 00:53:26,440
+It's it really depends. 
+And if you're retrieving a ton 
+
+986
+00:53:26,520 --> 00:53:28,880
+of vector similarity and doing a
+ton of vector similarity 
+
+987
+00:53:28,880 --> 00:53:31,040
+searches, maybe the vector 
+database is the better way to 
+
+988
+00:53:31,040 --> 00:53:33,320
+go. 
+But at least for the use case 
+
+989
+00:53:33,320 --> 00:53:36,040
+I've done so far, I haven't seen
+a whole lot of variation in the 
+
+990
+00:53:36,040 --> 00:53:37,760
+2. 
+So it really just depends on 
+
+991
+00:53:37,760 --> 00:53:40,520
+your use case and maybe the load
+that you're putting it through. 
+
+992
+00:53:41,360 --> 00:53:44,520
+And is, is there a scenario 
+where it's a both and where you 
+
+993
+00:53:44,520 --> 00:53:48,400
+want in your agent, your AI 
+agent to be able to do a 
+
+994
+00:53:48,400 --> 00:53:51,720
+similarity search, get that 
+piece of data, then get me the 
+
+995
+00:53:51,720 --> 00:53:54,600
+relationships that I want 
+related to that piece of data 
+
+996
+00:53:54,600 --> 00:53:57,120
+and then feed all that back into
+the LLM together? 
+
+997
+00:53:57,480 --> 00:53:59,080
+Yes. 
+And I've seen people talk about 
+
+998
+00:53:59,080 --> 00:54:02,280
+this and I don't know if 
+anybody's actually doing this in
+
+999
+00:54:02,280 --> 00:54:06,160
+production yet, but we've we've 
+seen where people have explored,
+
+1000
+00:54:06,160 --> 00:54:08,520
+OK, I'll store my vectors in a 
+vector database. 
+
+1001
+00:54:08,800 --> 00:54:11,520
+I'll query those, then go out to
+the graph and retrieve those. 
+
+1002
+00:54:11,520 --> 00:54:14,680
+The benefits that I see there is
+again, a vector database is 
+
+1003
+00:54:14,720 --> 00:54:16,800
+optimized for storing and 
+retrieving the vector. 
+
+1004
+00:54:17,880 --> 00:54:20,880
+And then you could go out to the
+graph and not mess with storing 
+
+1005
+00:54:20,880 --> 00:54:24,000
+these big large arrays of 
+numbers inside your graph to 
+
+1006
+00:54:24,000 --> 00:54:26,800
+potentially take up storage 
+space, especially if you have 
+
+1007
+00:54:26,800 --> 00:54:30,040
+like really large graph maybe. 
+And then go out and just 
+
+1008
+00:54:30,040 --> 00:54:32,960
+retrieve those related entities 
+based on the ID's, you know, 
+
+1009
+00:54:32,960 --> 00:54:34,600
+from those vectors or something 
+like that. 
+
+1010
+00:54:35,160 --> 00:54:37,440
+And I've seen people explore and
+do things like this. 
+
+1011
+00:54:37,440 --> 00:54:40,200
+And again, picking the right 
+tool for the job depends on your
+
+1012
+00:54:40,200 --> 00:54:41,520
+use case. 
+Yeah, Huh. 
+
+1013
+00:54:43,600 --> 00:54:47,480
+Super fascinating. 
+It feels like like, I don't 
+
+1014
+00:54:47,480 --> 00:54:51,840
+know, a few years ago maybe, I 
+don't know, maybe four years ago
+
+1015
+00:54:51,840 --> 00:54:54,840
+or so, no one was really talking
+about vector databases. 
+
+1016
+00:54:55,480 --> 00:54:59,920
+Graph was still interesting in a
+lot of ways, but it seems like 
+
+1017
+00:54:59,920 --> 00:55:03,560
+the LLM Gen. 
+AI space has just exploded both 
+
+1018
+00:55:03,560 --> 00:55:07,760
+of these concepts, vector and 
+and graph just because it's 
+
+1019
+00:55:07,760 --> 00:55:12,280
+like, oh, we, we've got these 
+new ways that we need to 
+
+1020
+00:55:12,280 --> 00:55:15,080
+interact and query data, 
+interact with inquiry data. 
+
+1021
+00:55:15,400 --> 00:55:18,560
+And so that requires different 
+representations of that data, 
+
+1022
+00:55:18,560 --> 00:55:21,840
+different storage mechanisms. 
+And so it's kind of a fun time 
+
+1023
+00:55:21,840 --> 00:55:26,120
+to be in that space where it's 
+like, OK, like like, yeah, a 
+
+1024
+00:55:26,120 --> 00:55:30,360
+relational database, probably 
+not the best fit to to work with
+
+1025
+00:55:30,680 --> 00:55:33,880
+ALM that wants to be able to 
+like join data, needs the 
+
+1026
+00:55:33,880 --> 00:55:35,360
+contacts, that sort of thing. 
+So. 
+
+1027
+00:55:35,480 --> 00:55:39,640
+Yeah. 
+Are there new technologies on 
+
+1028
+00:55:39,640 --> 00:55:41,560
+the horizon for databases? 
+New. 
+
+1029
+00:55:42,840 --> 00:55:44,680
+No. 
+That's that's a really good 
+
+1030
+00:55:44,680 --> 00:55:46,640
+question. 
+You're starting to see like a 
+
+1031
+00:55:46,640 --> 00:55:52,400
+lot of agentic things surface 
+quite a bit where you're having 
+
+1032
+00:55:53,240 --> 00:55:56,840
+the LLM decide which tools to 
+call and in what processing 
+
+1033
+00:55:56,840 --> 00:55:59,320
+order. 
+There's also a lot of talk about
+
+1034
+00:55:59,720 --> 00:56:05,360
+agentic memory, which is looking
+at the memory of the chat. 
+
+1035
+00:56:05,360 --> 00:56:07,760
+And again, all those 
+relationships, there's a lot of 
+
+1036
+00:56:07,760 --> 00:56:10,720
+data and connections there 
+between the memory and all the 
+
+1037
+00:56:10,720 --> 00:56:13,520
+pieces that are being called and
+the external resources that are 
+
+1038
+00:56:13,520 --> 00:56:15,720
+being called in and pulled in 
+for that. 
+
+1039
+00:56:15,720 --> 00:56:20,000
+So I think there's some research
+and and exploration being done 
+
+1040
+00:56:20,000 --> 00:56:24,680
+on using graphs for chat or 
+agentic memory and kind of 
+
+1041
+00:56:24,680 --> 00:56:26,920
+process flows. 
+So looking at evaluations and 
+
+1042
+00:56:26,920 --> 00:56:29,160
+how are people interacting with 
+the systems, you can see all of 
+
+1043
+00:56:29,160 --> 00:56:31,880
+that really well in a graph. 
+So I know there's some things 
+
+1044
+00:56:31,880 --> 00:56:35,640
+being done in that space. 
+As far as what the future will 
+
+1045
+00:56:35,640 --> 00:56:38,000
+hold an AI, I think that 
+changes, you know, on a daily 
+
+1046
+00:56:38,000 --> 00:56:41,000
+basis in a lot of cases. 
+So who knows where we'll be in, 
+
+1047
+00:56:41,040 --> 00:56:43,960
+you know, six weeks or six 
+months, but it's definitely a 
+
+1048
+00:56:43,960 --> 00:56:47,160
+fun and exciting time, so. 
+You know, I'm glad you pointed 
+
+1049
+00:56:47,160 --> 00:56:50,400
+out the chat memory because this
+is actually, I think a place 
+
+1050
+00:56:50,400 --> 00:56:55,800
+where graph is a really good fit
+because so chat memory is I've 
+
+1051
+00:56:55,920 --> 00:56:59,240
+got this, this, you know, 
+sequence of, of conversational 
+
+1052
+00:56:59,240 --> 00:57:01,200
+things that I've had with the 
+LLM. 
+
+1053
+00:57:01,480 --> 00:57:07,360
+But the in that conversational 
+history, there's likely 
+
+1054
+00:57:07,360 --> 00:57:11,240
+relationships to a ton of 
+different things happening and 
+
+1055
+00:57:11,240 --> 00:57:13,280
+deeply nested relationships as 
+well. 
+
+1056
+00:57:13,960 --> 00:57:16,480
+So I called this tool, I got 
+this piece of data back. 
+
+1057
+00:57:16,640 --> 00:57:19,240
+I augmented it with this other 
+piece of data from this other 
+
+1058
+00:57:19,240 --> 00:57:22,720
+system and so on and so forth. 
+You're like building, building 
+
+1059
+00:57:22,720 --> 00:57:26,640
+this the, the relationships as 
+you move through a chat or an 
+
+1060
+00:57:26,640 --> 00:57:29,680
+agent history. 
+And so graph becomes a really 
+
+1061
+00:57:29,680 --> 00:57:33,560
+good way to model and then be 
+able to query in the future that
+
+1062
+00:57:33,840 --> 00:57:38,920
+those that whole database graph 
+of of interactions that happen. 
+
+1063
+00:57:39,320 --> 00:57:43,360
+Yeah, it's. 
+Noticed that like the AI has 
+
+1064
+00:57:43,360 --> 00:57:49,800
+been saying, oh, do you want me 
+to do this for because it's like
+
+1065
+00:57:50,320 --> 00:57:53,680
+quote UN quote aware of, oh, I'm
+working on this project and 
+
+1066
+00:57:53,680 --> 00:57:55,440
+that's why I keep asking these 
+questions. 
+
+1067
+00:57:56,040 --> 00:57:59,640
+And so it's making suggestions 
+about things I could do next 
+
+1068
+00:57:59,720 --> 00:58:01,680
+based on that context that it's 
+holding. 
+
+1069
+00:58:01,720 --> 00:58:04,560
+Yeah. 
+Yeah, and that context in well 
+
+1070
+00:58:04,560 --> 00:58:06,520
+represented as a graph, you 
+know? 
+
+1071
+00:58:07,120 --> 00:58:11,520
+And it's also a really good 
+thing for like understanding the
+
+1072
+00:58:12,400 --> 00:58:17,880
+operational usefulness of your 
+system and for auditability too,
+
+1073
+00:58:17,880 --> 00:58:20,880
+because now you can all of a 
+sudden track where this thing's 
+
+1074
+00:58:20,880 --> 00:58:23,280
+moving and how the system is 
+operating and how users are 
+
+1075
+00:58:23,280 --> 00:58:26,680
+interacting with it. 
+And where are their successes 
+
+1076
+00:58:26,680 --> 00:58:29,040
+and where are their failures? 
+Where is the system letting them
+
+1077
+00:58:29,040 --> 00:58:32,280
+down or not providing as much 
+helpful information as it could?
+
+1078
+00:58:32,600 --> 00:58:35,440
+Where is maybe the LLM getting 
+stuck and caught in the loop 
+
+1079
+00:58:35,440 --> 00:58:37,800
+somewhere that maybe it needs to
+be kind of pulled out of? 
+
+1080
+00:58:38,280 --> 00:58:40,120
+Could you improve your 
+information and your supporting 
+
+1081
+00:58:40,120 --> 00:58:42,480
+documentation to help it kind of
+break out of those things? 
+
+1082
+00:58:43,120 --> 00:58:45,520
+Can you help users get to their 
+solutions faster? 
+
+1083
+00:58:45,520 --> 00:58:48,920
+Instead of maybe 16 messages 
+from the user, could you get 
+
+1084
+00:58:48,920 --> 00:58:52,120
+them there in 5 and and so on. 
+So being able to see and 
+
+1085
+00:58:52,120 --> 00:58:56,440
+understand these, the processes 
+and the interactions that users 
+
+1086
+00:58:56,440 --> 00:58:59,680
+are having with systems, I think
+is super interesting to see in a
+
+1087
+00:58:59,680 --> 00:59:03,720
+graph structure, yeah. 
+So you're obviously very deep 
+
+1088
+00:59:03,720 --> 00:59:09,160
+into this and we are too. 
+I mean, I started using AI as 
+
+1089
+00:59:09,160 --> 00:59:15,560
+soon as it came out, I think. 
+And but I've, I've read some, I 
+
+1090
+00:59:15,600 --> 00:59:18,600
+mean, there's the usual panic 
+articles which say, oh, 
+
+1091
+00:59:18,600 --> 00:59:20,240
+programmers will never work 
+again. 
+
+1092
+00:59:20,800 --> 00:59:23,600
+But I have recently read a 
+couple where the person was 
+
+1093
+00:59:23,600 --> 00:59:26,680
+going, okay, well this is yeah, 
+it's another tool like a 
+
+1094
+00:59:26,680 --> 00:59:32,160
+compiler or whatever. 
+And the argument that this 
+
+1095
+00:59:32,960 --> 00:59:36,240
+person was making, I think he 
+was ACEO over an organization or
+
+1096
+00:59:36,240 --> 00:59:39,680
+something, he was going, we can 
+now solve more problems. 
+
+1097
+00:59:39,680 --> 00:59:45,920
+To think that we we've run out 
+of problems and the AI will 
+
+1098
+00:59:45,920 --> 00:59:50,440
+solve them all is kind of silly.
+And so his perception was that 
+
+1099
+00:59:50,720 --> 00:59:54,920
+we will have a, you know in a 
+maybe might take a couple years 
+
+1100
+00:59:54,920 --> 00:59:58,640
+while the ships around, but we 
+will have a greater demand which
+
+1101
+00:59:58,640 --> 01:00:00,960
+has always happened in the past 
+for. 
+
+1102
+01:00:01,520 --> 01:00:04,160
+Programmers, they will be 
+working at a higher level, 
+
+1103
+01:00:04,640 --> 01:00:06,320
+they'll be more productive, 
+etcetera. 
+
+1104
+01:00:06,560 --> 01:00:09,240
+But there's so many other 
+problems to solve that we have 
+
+1105
+01:00:09,680 --> 01:00:13,400
+that just are not on our radar 
+because they're, they've been 
+
+1106
+01:00:14,160 --> 01:00:17,000
+not economically feasible to 
+solve. 
+
+1107
+01:00:17,200 --> 01:00:19,760
+And so we just go, Oh well, we 
+don't solve that. 
+
+1108
+01:00:19,760 --> 01:00:23,280
+We it's not a problem because 
+it's not economically feasible 
+
+1109
+01:00:23,280 --> 01:00:26,280
+to solve. 
+And now this is making it and 
+
+1110
+01:00:26,280 --> 01:00:30,200
+and that's my perception is that
+it's opening more possibilities 
+
+1111
+01:00:30,200 --> 01:00:32,800
+than it's closing. 
+But do you have opinions about 
+
+1112
+01:00:32,800 --> 01:00:34,000
+that? 
+Yeah. 
+
+1113
+01:00:34,000 --> 01:00:40,480
+My thoughts are that it it's a 
+way to delegate tasks to an AI 
+
+1114
+01:00:41,480 --> 01:00:45,680
+and to handle the things that 
+maybe we could take more off our
+
+1115
+01:00:45,680 --> 01:00:49,000
+plates and then allow us to, 
+again, as you said, you know, 
+
+1116
+01:00:49,000 --> 01:00:51,240
+open up new possibilities and 
+other things we could be doing. 
+
+1117
+01:00:51,640 --> 01:00:56,240
+We're still, I think a human is 
+vital to have in the loop for 
+
+1118
+01:00:56,240 --> 01:00:58,560
+these AI systems. 
+You're going to need those cross
+
+1119
+01:00:58,560 --> 01:01:01,680
+checks and those verifications 
+to make sure that the systems 
+
+1120
+01:01:01,680 --> 01:01:03,440
+are still doing what they're 
+supposed to be doing and are 
+
+1121
+01:01:03,440 --> 01:01:06,360
+still providing the benefits. 
+And you're going to need some 
+
+1122
+01:01:06,360 --> 01:01:08,080
+interaction on a human level for
+that. 
+
+1123
+01:01:08,600 --> 01:01:11,760
+I just listened to the other 
+day, somebody was talking about,
+
+1124
+01:01:12,400 --> 01:01:18,120
+well, you have people now going 
+in and doing fine tuning and you
+
+1125
+01:01:18,120 --> 01:01:21,520
+need humans, you're hiring 
+humans to help do that fine 
+
+1126
+01:01:21,520 --> 01:01:23,200
+tuning. 
+Like, OK, here's the here's the 
+
+1127
+01:01:23,200 --> 01:01:26,280
+input, here's the output. 
+Let a human check and see if 
+
+1128
+01:01:26,280 --> 01:01:28,640
+that's valid and see if that 
+looks good, yes or no. 
+
+1129
+01:01:28,640 --> 01:01:31,440
+Provide that feedback back to 
+the LLM and then train it on 
+
+1130
+01:01:31,440 --> 01:01:33,000
+whether it was a good answer or 
+bad answer. 
+
+1131
+01:01:33,560 --> 01:01:36,680
+And so again, you're, you're 
+changing the way we're working. 
+
+1132
+01:01:36,680 --> 01:01:40,480
+There are productivity levels in
+the task we're working on, but I
+
+1133
+01:01:40,480 --> 01:01:43,520
+don't see necessarily humans 
+being cut out of the loop, at 
+
+1134
+01:01:43,520 --> 01:01:44,920
+least not for a long while, 
+Right? 
+
+1135
+01:01:44,920 --> 01:01:47,520
+I, I still think humans are very
+vital to that loop and 
+
+1136
+01:01:47,520 --> 01:01:50,760
+necessary. 
+It would be a sad, strange, 
+
+1137
+01:01:50,760 --> 01:01:53,960
+crazy, unfortunate world to hand
+it over to the AI as it is. 
+
+1138
+01:01:55,000 --> 01:01:58,560
+But I, I do see us maybe 
+adapting and changing our work 
+
+1139
+01:01:58,560 --> 01:01:59,920
+flows. 
+But I still think like 
+
+1140
+01:01:59,920 --> 01:02:03,240
+architecting the systems, 
+designing maybe higher level, 
+
+1141
+01:02:03,240 --> 01:02:06,240
+like philosophical thinking is 
+where we'll come in and do more 
+
+1142
+01:02:06,240 --> 01:02:08,520
+of those spaces. 
+And like you said, there's new 
+
+1143
+01:02:08,520 --> 01:02:10,680
+problems that we haven't had a 
+chance really to think about or 
+
+1144
+01:02:10,680 --> 01:02:12,320
+solve. 
+Now maybe that opens up brain 
+
+1145
+01:02:12,320 --> 01:02:13,960
+space for us to be able to do 
+that. 
+
+1146
+01:02:17,360 --> 01:02:21,120
+Sounds good to me. 
+I mean, that's yeah, I, I feel 
+
+1147
+01:02:21,120 --> 01:02:25,080
+like I'm empowered and I can 
+solve more problems. 
+
+1148
+01:02:25,080 --> 01:02:27,640
+And there's a lot of problems 
+that I didn't try and solve 
+
+1149
+01:02:28,000 --> 01:02:32,200
+because it was just going to be 
+a distraction or rabbit hole to 
+
+1150
+01:02:32,200 --> 01:02:34,560
+go down and it wasn't really 
+worth it. 
+
+1151
+01:02:34,920 --> 01:02:37,360
+And now I go, oh, I want this to
+happen. 
+
+1152
+01:02:37,680 --> 01:02:41,160
+And at least I try and see can 
+it solve it. 
+
+1153
+01:02:41,200 --> 01:02:45,120
+And very often it can I go, oh, 
+now my, my productivity is 
+
+1154
+01:02:45,120 --> 01:02:46,240
+better. 
+Yeah. 
+
+1155
+01:02:46,240 --> 01:02:49,440
+I'm not sitting down spending 
+hours writing unit tests, 
+
+1156
+01:02:49,440 --> 01:02:52,680
+writing coding unit tests. 
+I'm saying, you know, LLM, 
+
+1157
+01:02:52,680 --> 01:02:54,000
+please generate some unit tests 
+for me. 
+
+1158
+01:02:54,000 --> 01:02:56,400
+And then I'm going through 
+making sure that the use cases 
+
+1159
+01:02:56,400 --> 01:02:58,920
+are valid and that it's actually
+producing the outputs that I'm 
+
+1160
+01:02:58,920 --> 01:03:01,080
+looking for it to produce. 
+And then I move on and do 
+
+1161
+01:03:01,080 --> 01:03:03,960
+something else. 
+Mm hmm, yeah, I think he was 
+
+1162
+01:03:03,960 --> 01:03:09,160
+saying we're that humans are 
+gonna be the guidance for the 
+
+1163
+01:03:09,280 --> 01:03:15,040
+what it is, you know, the our 
+creative aspects are oh, we we 
+
+1164
+01:03:15,040 --> 01:03:18,280
+see the problem that needs to be
+solved that the AI doesn't 
+
+1165
+01:03:18,280 --> 01:03:22,400
+necessarily see right. 
+You know, they'll get better at 
+
+1166
+01:03:22,400 --> 01:03:26,800
+that and everything, but, but 
+they will need guidance and 
+
+1167
+01:03:27,280 --> 01:03:31,640
+we'll be able to come up with, 
+yeah, I, I don't know, I'm not 
+
+1168
+01:03:31,640 --> 01:03:33,520
+worried, but I've been through 
+this. 
+
+1169
+01:03:34,120 --> 01:03:37,320
+Yeah, LLMS are not, not sentient
+at this point in time. 
+
+1170
+01:03:37,560 --> 01:03:40,640
+You know, they don't, they don't
+understand and comprehend and, 
+
+1171
+01:03:40,640 --> 01:03:43,920
+and I mean, they solve limited 
+problems, but they don't look at
+
+1172
+01:03:43,920 --> 01:03:46,360
+bigger pictures and they don't 
+look at, you know, kind of 
+
+1173
+01:03:46,360 --> 01:03:50,800
+general problem spaces and try 
+to figure out solutions to those
+
+1174
+01:03:50,800 --> 01:03:55,160
+in a humane and, you know, 
+economical way, right. 
+
+1175
+01:03:56,160 --> 01:03:59,960
+Yeah. 
+And I think we probably will get
+
+1176
+01:03:59,960 --> 01:04:05,280
+AGI at some point and eventually
+it will be, well, the way I 
+
+1177
+01:04:05,280 --> 01:04:08,800
+describe it to people who are 
+panicking is that it's a science
+
+1178
+01:04:08,800 --> 01:04:10,840
+machine. 
+It will give you better and 
+
+1179
+01:04:10,840 --> 01:04:15,600
+better answers, but it doesn't. 
+I, I think Feynman said this. 
+
+1180
+01:04:15,800 --> 01:04:18,800
+He what he said, I think he 
+taught. 
+
+1181
+01:04:18,800 --> 01:04:20,320
+He was talking about computers 
+in general. 
+
+1182
+01:04:20,320 --> 01:04:23,160
+He's going computers can only 
+give you answers. 
+
+1183
+01:04:23,520 --> 01:04:29,120
+I'm interested in questions and 
+the humans will always be the 
+
+1184
+01:04:29,120 --> 01:04:32,000
+ones asking the questions, even 
+if it's just can I do this 
+
+1185
+01:04:32,000 --> 01:04:35,520
+better or can you do this for me
+or whatever. 
+
+1186
+01:04:36,320 --> 01:04:38,040
+We'll be the ones that come up 
+with those. 
+
+1187
+01:04:39,520 --> 01:04:41,280
+Yeah. 
+Instead of trying to cure 
+
+1188
+01:04:41,280 --> 01:04:44,160
+cancer, we'll move on to, you 
+know, other bigger, better, you 
+
+1189
+01:04:44,320 --> 01:04:46,400
+know, things. 
+Possibly after that solved. 
+
+1190
+01:04:46,400 --> 01:04:49,120
+It's what we've always done. 
+Yeah, hopefully we've asked good
+
+1191
+01:04:49,120 --> 01:04:52,360
+questions and we've done it in a
+way that the AI could not 
+
+1192
+01:04:52,360 --> 01:04:55,840
+replicate. 
+There. 
+
+1193
+01:04:55,920 --> 01:04:58,840
+Yeah, thank you for all your 
+answers and insights and 
+
+1194
+01:04:58,840 --> 01:05:00,040
+teaching us all about this 
+stuff. 
+
+1195
+01:05:00,040 --> 01:05:03,120
+This is fascinating because it's
+a space that I needed to learn 
+
+1196
+01:05:03,120 --> 01:05:05,760
+and wanted to and now I'm 
+excited to dig deeper. 
+
+1197
+01:05:05,760 --> 01:05:08,440
+So, so yeah, really appreciate 
+you sharing all that with us, 
+
+1198
+01:05:08,480 --> 01:05:10,160
+Jennifer. 
+Thank you so much for having me.
+
+1199
+01:05:10,160 --> 01:05:13,080
+I was super excited about this 
+and I feel like it was a really 
+
+1200
+01:05:13,080 --> 01:05:14,840
+great kind of back and forth 
+conversation. 
+
+1201
+01:05:14,840 --> 01:05:18,240
+Lots of good questions so. 
+That's what we like to do. 
+
+1202
+01:05:19,200 --> 01:05:20,360
+I learned. 
+I learned a lot. 
+
+1203
+01:05:20,360 --> 01:05:21,680
+So thank you. 
+Thank you. 
+
+1204
+01:05:21,720 --> 01:05:22,040
+Yeah.

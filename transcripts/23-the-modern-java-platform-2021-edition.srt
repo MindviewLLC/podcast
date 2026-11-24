@@ -1,0 +1,4885 @@
+1
+00:00:01,100 --> 00:00:03,600
+Welcome to happy path 
+programming. 
+
+2
+00:00:03,799 --> 00:00:05,799
+I'm Brew cycle. 
+I'm James Ward. 
+
+3
+00:00:07,900 --> 00:00:12,199
+So yeah we missed last week 
+because I had my vaccine and it 
+
+4
+00:00:12,199 --> 00:00:16,300
+knocked me. 
+I also had my first vaccine but 
+
+5
+00:00:16,300 --> 00:00:20,699
+did I think it's so knocked? 
+Yeah yeah well it's part of the 
+
+6
+00:00:20,707 --> 00:00:22,399
+mysteries of covid. 
+Yep. 
+
+7
+00:00:22,500 --> 00:00:25,500
+Well the nice thing is we'll be 
+able to do like a developer 
+
+8
+00:00:25,500 --> 00:00:28,300
+conference or Retreat or 
+something sometime soon. 
+
+9
+00:00:28,300 --> 00:00:33,899
+Hopefully I will be nice. 
+I really enjoy working on things
+
+10
+00:00:33,899 --> 00:00:40,200
+with no schedule or goals. 
+Person just kind of hanging out 
+
+11
+00:00:40,200 --> 00:00:46,299
+with other programmers and 
+enjoying in, you know, kind of I
+
+12
+00:00:46,299 --> 00:00:51,399
+guess, I guess I take bonding 
+over our mutual fascination of 
+
+13
+00:00:51,799 --> 00:00:55,100
+this technology. 
+That's that's what creates the 
+
+14
+00:00:55,100 --> 00:00:58,000
+connection between us. 
+Is the fascination with the 
+
+15
+00:00:58,000 --> 00:00:59,399
+technology. 
+It's really true. 
+
+16
+00:00:59,600 --> 00:01:03,299
+Yeah, luckily you and Bill and I
+have been able to do that quite 
+
+17
+00:01:03,299 --> 00:01:06,599
+a bit over the last few months 
+working on the atomic scholar 3 
+
+18
+00:01:06,599 --> 00:01:09,599
+buck. 
+It's been a lot of fun, it has, 
+
+19
+00:01:09,599 --> 00:01:12,799
+and I feel like our last session
+was, I don't know, something 
+
+20
+00:01:12,799 --> 00:01:15,799
+really came together there and I
+think part of it was Bill goes, 
+
+21
+00:01:16,500 --> 00:01:18,799
+let's just do something easy 
+this week. 
+
+22
+00:01:19,099 --> 00:01:22,799
+Let's, let's wrestling with type
+classes a month which we've made
+
+23
+00:01:22,799 --> 00:01:24,400
+good progress. 
+I think on. 
+
+24
+00:01:24,400 --> 00:01:28,799
+But it's so, it's like, bang 
+against the wall, you know, just
+
+25
+00:01:28,799 --> 00:01:32,400
+trying to get what's going on 
+here and housework and how do we
+
+26
+00:01:32,700 --> 00:01:35,299
+describe it? 
+And then we just decided to go. 
+
+27
+00:01:35,700 --> 00:01:39,700
+Let's just pluck this Chapter 
+from Atomic kotlin and have a 
+
+28
+00:01:39,708 --> 00:01:41,900
+look at it. 
+And you guys, you guys didn't 
+
+29
+00:01:41,900 --> 00:01:43,900
+even know it was possible to do 
+this thing. 
+
+30
+00:01:44,200 --> 00:01:47,000
+Yeah, that was interesting to 
+discover a skull, a feature 
+
+31
+00:01:47,000 --> 00:01:50,599
+that's been around for a really 
+long time that I had no idea 
+
+32
+00:01:50,599 --> 00:01:55,299
+about its but I don't like it. 
+Well, in the syntax is really 
+
+33
+00:01:55,299 --> 00:01:57,700
+awkward, you know, when you 
+compare it to the way cotton, 
+
+34
+00:01:57,700 --> 00:01:59,500
+does it. 
+So that we're talking about is 
+
+35
+00:01:59,500 --> 00:02:05,000
+basically the properties so 
+cetera and get our foot Setter 
+
+36
+00:02:05,000 --> 00:02:08,699
+and getter and and Scala, I 
+mean, Caitlin has, you know, 
+
+37
+00:02:08,699 --> 00:02:12,000
+nice clear syntax so you know 
+exactly what's going on. 
+
+38
+00:02:12,300 --> 00:02:17,500
+Where is in Scala? 
+It's like name of identifier 
+
+39
+00:02:17,500 --> 00:02:22,199
+underscore equals so it's like 
+an overloading and it's yeah. 
+
+40
+00:02:22,300 --> 00:02:26,300
+It's it's awkward but you 
+probably I mean considering it 
+
+41
+00:02:26,300 --> 00:02:28,099
+Scully probably want it to be 
+awkward. 
+
+42
+00:02:28,099 --> 00:02:31,099
+It's not something you want to. 
+Yeah and so this is used. 
+
+43
+00:02:31,199 --> 00:02:36,400
+If you want to use the equals to
+assign something then then 
+
+44
+00:02:36,400 --> 00:02:38,500
+really what you're doing with 
+the Senator is calling a 
+
+45
+00:02:38,508 --> 00:02:43,900
+function that has this weird 
+syntax that allows you to use 
+
+46
+00:02:43,900 --> 00:02:48,500
+the identifier space equals 
+syntax. 
+
+47
+00:02:49,000 --> 00:02:54,400
+But the only place I can see 
+using this is when you have 
+
+48
+00:02:54,400 --> 00:02:59,300
+mutable values underneath the 
+covers in an object and I just I
+
+49
+00:02:59,300 --> 00:03:06,099
+haven't used having use 
+immutable values variables in so
+
+50
+00:03:06,099 --> 00:03:11,099
+long or so. 
+So pure so pure feels so right. 
+
+51
+00:03:12,400 --> 00:03:19,199
+Yes yes well it's it's there to 
+support the object functional 
+
+52
+00:03:19,199 --> 00:03:22,599
+hybrid system. 
+So yeah and do it if you want to
+
+53
+00:03:22,599 --> 00:03:26,199
+but we're discouraged from it. 
+So that's why you and Bill 
+
+54
+00:03:26,199 --> 00:03:29,800
+didn't even know about it. 
+Yeah and yeah I only knew about 
+
+55
+00:03:29,800 --> 00:03:32,800
+it because we were just trying 
+to cover all the features in the
+
+56
+00:03:32,800 --> 00:03:35,800
+original Atomic Skull somebody 
+on Twitter. 
+
+57
+00:03:35,800 --> 00:03:39,099
+They're like, oh another Use of 
+underscore that I didn't know 
+
+58
+00:03:39,099 --> 00:03:42,400
+about. 
+Yeah. 
+
+59
+00:03:42,699 --> 00:03:46,599
+Yeah, I think and I feel like 
+there's been a lot of 
+
+60
+00:03:46,599 --> 00:03:52,599
+improvements in Scala three in 
+terms of the, you know, 
+
+61
+00:03:52,599 --> 00:03:55,599
+understanding that syntax 
+matters and it feels like with 
+
+62
+00:03:57,199 --> 00:03:59,900
+Scala, you know, the original 
+Scala. 
+
+63
+00:03:59,900 --> 00:04:05,800
+It was like not really a lot of 
+thought given to the way syntax 
+
+64
+00:04:05,800 --> 00:04:09,099
+can just throw it all in pretty 
+much. 
+
+65
+00:04:09,199 --> 00:04:11,099
+I feel like they've been working
+on improving it. 
+
+66
+00:04:11,400 --> 00:04:15,000
+And I mean, the only thing that 
+I guess I wish they would have 
+
+67
+00:04:15,000 --> 00:04:19,199
+changed case classes to data 
+classes. 
+
+68
+00:04:19,199 --> 00:04:22,899
+The way cotton is done it 
+because I don't case class 
+
+69
+00:04:22,899 --> 00:04:24,300
+doesn't really mean anything. 
+To me. 
+
+70
+00:04:24,300 --> 00:04:26,000
+I have to translate it in my 
+head. 
+
+71
+00:04:26,000 --> 00:04:28,600
+Yeah, to being. 
+Oh, it's it's a day to class. 
+
+72
+00:04:28,600 --> 00:04:30,699
+It's a record. 
+It's a, you know, that kind of 
+
+73
+00:04:30,699 --> 00:04:33,000
+overtook. 
+Yeah, data transfer object. 
+
+74
+00:04:33,000 --> 00:04:35,399
+Or, you know, there's a bunch of
+things that they could have 
+
+75
+00:04:35,399 --> 00:04:38,899
+used, you know? 
+But they I've seen this this 
+
+76
+00:04:38,899 --> 00:04:43,500
+happened in C++ when initially 
+Actually be honest said, we want
+
+77
+00:04:43,500 --> 00:04:46,300
+to make this a small language 
+and so there were some 
+
+78
+00:04:46,300 --> 00:04:48,899
+overloading of keywords and 
+things like that. 
+
+79
+00:04:49,000 --> 00:04:52,500
+And then pretty soon, they 
+started realizing this doesn't 
+
+80
+00:04:52,500 --> 00:04:56,800
+actually make it easier, and it 
+doesn't make it smaller, right? 
+
+81
+00:04:56,800 --> 00:04:59,800
+It just seems smaller. 
+And, and yeah, I think it's, I 
+
+82
+00:04:59,808 --> 00:05:03,300
+think it's evolved nicely and 
+way more comfortable with 
+
+83
+00:05:03,600 --> 00:05:07,199
+scholar three than Scala to 
+yeah, yeah, yeah. 
+
+84
+00:05:07,199 --> 00:05:10,699
+We discovered, we were looking 
+into a DTS and we discovered 
+
+85
+00:05:10,699 --> 00:05:19,600
+with ad, Is that when you do an 
+enum to create a some type, then
+
+86
+00:05:19,600 --> 00:05:27,300
+you do case and then the the 
+object type and we're like oh 
+
+87
+00:05:27,300 --> 00:05:31,800
+are those case classes? 
+And we tried it without the case
+
+88
+00:05:32,199 --> 00:05:37,199
+and you can do it, but it's not 
+it's no longer like a class. 
+
+89
+00:05:38,000 --> 00:05:40,500
+But what did we discovered that 
+if you do case and then the 
+
+90
+00:05:40,500 --> 00:05:44,500
+thing that it actually is a case
+class like it has all the goal. 
+
+91
+00:05:44,600 --> 00:05:47,500
+I think what it does is not 
+this, the kind of it does some 
+
+92
+00:05:47,500 --> 00:05:49,600
+fancy unpacking. 
+I don't remember. 
+
+93
+00:05:49,600 --> 00:05:52,199
+It's been too long since since 
+we did the. 
+
+94
+00:05:53,199 --> 00:05:56,399
+It gives it extra Powers. 
+Yeah when you say we weren't 
+
+95
+00:05:56,399 --> 00:05:59,500
+sure if they were the full extra
+powers of a case class. 
+
+96
+00:06:01,800 --> 00:06:05,800
+Anyways, and maybe another 
+overloaded use of the word case.
+
+97
+00:06:05,800 --> 00:06:11,300
+Let me see you wrote a article 
+on. 
+
+98
+00:06:11,600 --> 00:06:17,000
+It was kind of it seemed like 
+the State of the Union of java 
+
+99
+00:06:17,399 --> 00:06:19,100
+Modern Age. 
+In fact, I think you used the 
+
+100
+00:06:19,100 --> 00:06:20,300
+term modern. 
+Yeah. 
+
+101
+00:06:20,500 --> 00:06:23,000
+In your, in your blog post. 
+Yeah, yeah. 
+
+102
+00:06:23,000 --> 00:06:26,100
+And the so this is a Blog on 
+James where.com that I just 
+
+103
+00:06:26,100 --> 00:06:28,600
+published this week. 
+And yeah, it's called like the 
+
+104
+00:06:28,600 --> 00:06:32,800
+modern Java platform. 21 Edition
+because I've kind of written a 
+
+105
+00:06:32,808 --> 00:06:36,899
+similar blog to this like six 
+years ago, that one I had a much
+
+106
+00:06:36,899 --> 00:06:41,699
+catchier title to it was that 
+one was called Java, doesn't 
+
+107
+00:06:41,699 --> 00:06:43,199
+suck. 
+You're just using it wrong. 
+
+108
+00:06:43,199 --> 00:06:45,600
+If you remember that one, 
+remember the title. 
+
+109
+00:06:45,600 --> 00:06:50,899
+Yeah, and that the click Beatty 
+title got, you know, got a lot 
+
+110
+00:06:50,899 --> 00:06:54,699
+more traction and this one, you 
+know, I've gotten old and 
+
+111
+00:06:54,699 --> 00:06:57,500
+boring. 
+And so, so I just gave it a very
+
+112
+00:06:57,500 --> 00:07:00,300
+straightforward title of the 
+modern Java platform. 
+
+113
+00:07:00,399 --> 00:07:02,800
+Ernie 21 Edition. 
+But what I tried to do in the 
+
+114
+00:07:02,800 --> 00:07:08,100
+blog post was for people that 
+have not been in the Java 
+
+115
+00:07:08,199 --> 00:07:12,199
+ecosystem possibly for a long 
+time or maybe never like what is
+
+116
+00:07:12,199 --> 00:07:13,500
+the state of the art? 
+What's new? 
+
+117
+00:07:13,500 --> 00:07:16,500
+What's exciting? 
+What what you're saying that 
+
+118
+00:07:16,500 --> 00:07:19,800
+those people were remembering 
+Java from like ejb day. 
+
+119
+00:07:20,100 --> 00:07:23,899
+So many people that I interact 
+with at work or on Twitter the 
+
+120
+00:07:23,899 --> 00:07:28,000
+Java that they're familiar with 
+is that the the sad? 
+
+121
+00:07:29,199 --> 00:07:33,000
+What's the the Ages of java. 
+It really was the dark ages of 
+
+122
+00:07:33,000 --> 00:07:37,300
+java with EJ bees and all that 
+stuff. 
+
+123
+00:07:37,300 --> 00:07:40,800
+And so that's, that's what they 
+think of, as Java when son was 
+
+124
+00:07:40,800 --> 00:07:44,699
+really pushing, you JB's, are 
+the way to go, and then and then
+
+125
+00:07:44,699 --> 00:07:47,899
+we discover billions of dollars 
+were wasted. 
+
+126
+00:07:48,000 --> 00:07:52,300
+I mean, what's funny, is that a 
+lot of the concepts from that 
+
+127
+00:07:52,500 --> 00:07:55,899
+era are coming back around, 
+right? 
+
+128
+00:07:55,899 --> 00:08:01,899
+That we see a lot of the things 
+that that were Core parts of 
+
+129
+00:08:02,000 --> 00:08:05,300
+java and the ecosystem are our 
+new. 
+
+130
+00:08:05,300 --> 00:08:12,399
+Again, they've just been like 
+like redone in new ways like for
+
+131
+00:08:12,399 --> 00:08:19,699
+example, the ability to to make 
+communication across the wire 
+
+132
+00:08:19,899 --> 00:08:25,300
+easy and transparent like grp 
+see like is kind of done that 
+
+133
+00:08:25,699 --> 00:08:30,100
+and and in a similar way to what
+we were doing job, BJ. 
+
+134
+00:08:30,699 --> 00:08:32,700
+That's alright. 
+The general problem. 
+
+135
+00:08:32,700 --> 00:08:36,200
+Yeah and so so what we've seen 
+is like a lot of the stuff that 
+
+136
+00:08:36,200 --> 00:08:42,100
+that was in the Java j2ee, Java,
+ee ecosystem, the way that 
+
+137
+00:08:42,100 --> 00:08:47,100
+things were done, our are being 
+done again, but being done in 
+
+138
+00:08:47,500 --> 00:08:51,000
+agnostic, platform-agnostic 
+language agnostic ways. 
+
+139
+00:08:51,399 --> 00:08:55,899
+So serverless in some ways is 
+kind of like what we were doing 
+
+140
+00:08:55,899 --> 00:09:00,200
+with war files back in those 
+days. 
+
+141
+00:09:00,399 --> 00:09:02,799
+Now today most people don't use 
+War files. 
+
+142
+00:09:03,000 --> 00:09:06,000
+They they you know just have a 
+jar file that they can run. 
+
+143
+00:09:06,000 --> 00:09:09,200
+They don't have a container that
+they put the thing into and and 
+
+144
+00:09:09,200 --> 00:09:11,600
+all that. 
+But in a lot of ways serverless 
+
+145
+00:09:11,600 --> 00:09:14,799
+is like what we were doing back 
+then, and I think it's worth 
+
+146
+00:09:14,799 --> 00:09:18,299
+pointing out that we had. 
+I think you were here for this. 
+
+147
+00:09:18,299 --> 00:09:25,399
+We had one of our early events 
+appear and I think it was when 
+
+148
+00:09:25,399 --> 00:09:30,299
+Martin Fowler was involved. 
+Yeah, and so we had some fun. 
+
+149
+00:09:30,399 --> 00:09:38,299
+Looks and it became clear that 
+the whole ejb thing was pure 
+
+150
+00:09:38,299 --> 00:09:41,299
+Ivory Tower hit. 
+It was totally untested 
+
+151
+00:09:41,299 --> 00:09:44,100
+thinking. 
+Yeah, that son had said. 
+
+152
+00:09:44,399 --> 00:09:45,700
+Oh, that looks good enough for 
+us. 
+
+153
+00:09:45,700 --> 00:09:48,200
+Let's rush it in and let's start
+promoting it. 
+
+154
+00:09:48,299 --> 00:09:52,100
+Yeah, the think that was, I 
+think that's kind of the biggest
+
+155
+00:09:52,100 --> 00:09:56,299
+problem that I've had with Java 
+is its focus on, you know, 
+
+156
+00:09:56,799 --> 00:10:01,200
+promoting what sounds good 
+rather than Than actually 
+
+157
+00:10:01,200 --> 00:10:04,700
+engineering and figuring out 
+what works. 
+
+158
+00:10:04,700 --> 00:10:08,899
+Yeah. 
+And so as a result it's been way
+
+159
+00:10:08,899 --> 00:10:13,700
+slower than you know, the yeah, 
+the competing Technology Center,
+
+160
+00:10:13,700 --> 00:10:15,200
+outstripped it. 
+Yeah. 
+
+161
+00:10:15,399 --> 00:10:19,200
+Anyway, go on. 
+So, in my blog post, I just 
+
+162
+00:10:19,200 --> 00:10:23,299
+tried to frame the world of like
+what is the Java ecosystem look 
+
+163
+00:10:23,299 --> 00:10:26,000
+like today? 
+And so a big part of it was 
+
+164
+00:10:26,000 --> 00:10:29,899
+around languages because I think
+that that's where a lot of the 
+
+165
+00:10:30,000 --> 00:10:34,700
+for me A lot of the exciting 
+modern stuff lives like yeah, 
+
+166
+00:10:34,700 --> 00:10:40,100
+Java is doing some interesting 
+things in the blog quoted, Brian
+
+167
+00:10:40,100 --> 00:10:42,899
+gathered in quote him. 
+But referenced how he says, like
+
+168
+00:10:42,899 --> 00:10:46,100
+Java in some ways has the last 
+mover Advantage where they 
+
+169
+00:10:46,100 --> 00:10:49,500
+intentionally move slowly, wait 
+for things to kind of get worked
+
+170
+00:10:49,500 --> 00:10:52,200
+out by some other languages and 
+then they added add them in. 
+
+171
+00:10:52,200 --> 00:10:56,100
+We see that with the pattern 
+matching stuff, that's that's 
+
+172
+00:10:56,100 --> 00:10:59,299
+going into Java 16. 
+That was just released this week
+
+173
+00:10:59,299 --> 00:11:02,000
+where they are getting doing a 
+bit better pattern matching. 
+
+174
+00:11:02,100 --> 00:11:05,500
+It's not anywhere as good as 
+Scholars pattern matching, it's 
+
+175
+00:11:06,200 --> 00:11:08,799
+getting closer to like Cotton's 
+pattern matching. 
+
+176
+00:11:09,399 --> 00:11:12,299
+But at least, you know, they're 
+taking some steps to make the 
+
+177
+00:11:12,299 --> 00:11:16,000
+language better. 
+So, so I actually I focus, 
+
+178
+00:11:16,000 --> 00:11:19,000
+mostly, of course, on Colin and 
+Scala and the modern 
+
+179
+00:11:19,000 --> 00:11:22,200
+improvements there, just because
+that's what I have the most 
+
+180
+00:11:22,200 --> 00:11:24,000
+experience with. 
+I haven't really written much 
+
+181
+00:11:24,000 --> 00:11:28,500
+job and the last decade, it's 
+been mostly Scotland and Colin, 
+
+182
+00:11:29,000 --> 00:11:33,700
+of course, I can write, Then and
+do some name's Rachel but but if
+
+183
+00:11:33,700 --> 00:11:36,799
+I'm going to pick up language, 
+I'm going to pick cotton or 
+
+184
+00:11:36,799 --> 00:11:40,100
+Scala. 
+Yeah, you know. 
+
+185
+00:11:40,200 --> 00:11:43,500
+So there was there was some 
+stuff about language Innovation 
+
+186
+00:11:43,500 --> 00:11:49,899
+and if if you want to be modern 
+pick Colin or Scala, you could 
+
+187
+00:11:49,899 --> 00:11:51,700
+you could certainly stick with 
+Java and that's fine. 
+
+188
+00:11:51,700 --> 00:11:56,500
+Like there's go or I did take a 
+shot at go in there. 
+
+189
+00:11:56,799 --> 00:11:59,600
+I called it archaic which some 
+people took offense to. 
+
+190
+00:11:59,899 --> 00:12:09,399
+I don't Cy with no one actually 
+provided a, a cohesive rational 
+
+191
+00:12:09,399 --> 00:12:12,000
+argument for why go is not 
+archaic? 
+
+192
+00:12:13,299 --> 00:12:16,000
+I've which I think it's I think 
+it's pretty intentionally 
+
+193
+00:12:16,000 --> 00:12:21,299
+archaic and if that's what you 
+want it if that if there are 
+
+194
+00:12:21,299 --> 00:12:26,299
+other things that you like about
+go then great use go but don't 
+
+195
+00:12:26,299 --> 00:12:28,399
+don't try to call it a modern 
+language. 
+
+196
+00:12:28,500 --> 00:12:32,500
+I in mine. 
+And it's a replacement for see, 
+
+197
+00:12:33,100 --> 00:12:36,299
+it solves a bunch of problems 
+that see. 
+
+198
+00:12:36,899 --> 00:12:41,000
+It's been stuck not being able 
+to solve for, I mean, especially
+
+199
+00:12:41,399 --> 00:12:43,299
+like easy concurrency. 
+Yeah. 
+
+200
+00:12:43,299 --> 00:12:45,600
+I know. 
+See, you never mastered that as 
+
+201
+00:12:45,600 --> 00:12:47,299
+far as I could see. 
+Yeah. 
+
+202
+00:12:47,899 --> 00:12:49,899
+And then, you know, a number of 
+other things. 
+
+203
+00:12:49,899 --> 00:12:52,000
+It's an improvement over, see 
+ya? 
+
+204
+00:12:52,200 --> 00:12:54,799
+And and if that's if that works 
+for you. 
+
+205
+00:12:54,799 --> 00:12:58,299
+Yeah, great if what you're doing
+is is basically C programming. 
+
+206
+00:12:58,299 --> 00:13:01,799
+Yeah. 
+Then We want to use go rather 
+
+207
+00:13:01,799 --> 00:13:05,799
+than see ya. 
+So somebody who took issue with 
+
+208
+00:13:05,799 --> 00:13:07,500
+me calling or archaic? 
+I responded. 
+
+209
+00:13:07,500 --> 00:13:12,299
+And said yeah here's some of the
+top of my mind language features
+
+210
+00:13:12,600 --> 00:13:18,299
+that I would consider modern. 
+That go does not have hmm and 
+
+211
+00:13:18,299 --> 00:13:24,299
+listed Edom, great pattern 
+matching att's type classes, 
+
+212
+00:13:24,299 --> 00:13:28,100
+immutability by default. 
+She don't really need those 
+
+213
+00:13:28,100 --> 00:13:32,700
+things to you. 
+I can't go back, you know, it's 
+
+214
+00:13:32,700 --> 00:13:38,100
+I do write some go code and when
+I do I'm just like, why is it so
+
+215
+00:13:38,100 --> 00:13:42,399
+hard to filter a list? 
+Hmm, just bits. 
+
+216
+00:13:42,399 --> 00:13:46,299
+And how do we know anything 
+about the efficiency of doing 
+
+217
+00:13:46,299 --> 00:13:47,100
+that? 
+You know? 
+
+218
+00:13:47,299 --> 00:13:49,899
+Yeah. 
+Go supposed to be fast, but you 
+
+219
+00:13:49,899 --> 00:13:51,200
+were having questions. 
+It. 
+
+220
+00:13:51,200 --> 00:13:52,899
+Was he a clear? 
+Yeah, it's not clear. 
+
+221
+00:13:52,899 --> 00:13:54,500
+What was wrong with your? 
+So yeah. 
+
+222
+00:13:54,500 --> 00:13:57,000
+Yeah. 
+It's it's a anyways. 
+
+223
+00:13:57,000 --> 00:14:01,000
+Yeah, I took my little shot at 
+go but but But if people want to
+
+224
+00:14:01,008 --> 00:14:03,700
+use it great, I want to use 
+Colin and Scala. 
+
+225
+00:14:05,399 --> 00:14:12,200
+And then also, I talked about 
+tooling build tooling test, 
+
+226
+00:14:12,200 --> 00:14:18,000
+containers and IDs is being kind
+of the core of my tooling and I 
+
+227
+00:14:18,000 --> 00:14:20,500
+have my issues with every build 
+tool. 
+
+228
+00:14:21,299 --> 00:14:27,000
+I certainly spend a lot of time 
+in the Gradle pain cave and 
+
+229
+00:14:27,399 --> 00:14:30,100
+we've talked about that 
+extensively on this on the show.
+
+230
+00:14:30,299 --> 00:14:34,100
+But didn't use that phrase, 
+which is now embedded. 
+
+231
+00:14:34,799 --> 00:14:39,100
+Yeah, I've also spent my fair 
+share of shine time in the spt 
+
+232
+00:14:39,100 --> 00:14:42,799
+pain gave. 
+I've spent a little bit of time 
+
+233
+00:14:42,799 --> 00:14:46,299
+in the maven paying cave, but 
+not not too bad. 
+
+234
+00:14:46,399 --> 00:14:49,299
+And I think part of that is just
+that the ecosystem, somebody 
+
+235
+00:14:49,299 --> 00:14:52,700
+else's, spent the time in the 
+bank came for me with Maven and 
+
+236
+00:14:52,700 --> 00:14:56,200
+built a plug-in so that I don't 
+have to to go there. 
+
+237
+00:14:57,299 --> 00:15:01,100
+But the, the modern tooling is 
+great and I And I posted in the 
+
+238
+00:15:01,108 --> 00:15:05,399
+blog post to a demo of how I 
+actually use the build tools in 
+
+239
+00:15:05,399 --> 00:15:08,799
+the IDE is in test containers. 
+How I use that all together to 
+
+240
+00:15:08,799 --> 00:15:16,299
+get like one second reload, so 
+that I can test a change within 
+
+241
+00:15:16,299 --> 00:15:19,899
+one or two seconds. 
+How I can easily bootstrap of 
+
+242
+00:15:19,899 --> 00:15:23,399
+new project, pulled into the 
+IDE, get code completion. 
+
+243
+00:15:23,399 --> 00:15:28,200
+Get so I tried to show like what
+my modern tooling looks like 
+
+244
+00:15:28,299 --> 00:15:31,000
+workflow. 
+Looks like with a Used in that 
+
+245
+00:15:31,000 --> 00:15:34,200
+case spring boot Gradle and test
+containers. 
+
+246
+00:15:34,200 --> 00:15:38,299
+But I do the same workflow, even
+if I'm not using those tools, I 
+
+247
+00:15:38,307 --> 00:15:42,000
+always use IntelliJ but vs code,
+certainly an option as well. 
+
+248
+00:15:42,700 --> 00:15:47,100
+Yeah, I I've had in the last 
+week or 10 days, or whatever 
+
+249
+00:15:47,399 --> 00:15:52,399
+some experiences with Gradle 
+again from in the greater 
+
+250
+00:15:52,399 --> 00:15:56,200
+pancake. 
+And but I did this. 
+
+251
+00:15:56,500 --> 00:16:00,100
+Like I'm coming up because I 
+relied on you and other people. 
+
+252
+00:16:00,200 --> 00:16:02,200
+Able to create my Gradle build 
+file. 
+
+253
+00:16:02,200 --> 00:16:03,799
+So I could you realize that was 
+a mistake. 
+
+254
+00:16:03,799 --> 00:16:06,799
+It's like we rely on other 
+people to build for. 
+
+255
+00:16:06,799 --> 00:16:10,899
+Yeah, I've slowly learned it. 
+No, I have to understand all of 
+
+256
+00:16:10,899 --> 00:16:17,200
+the things, but but I finally 
+realized, oh, a great way to 
+
+257
+00:16:17,200 --> 00:16:19,299
+start. 
+And I don't know if you do, this
+
+258
+00:16:19,700 --> 00:16:24,799
+is to go into IntelliJ and have 
+IntelliJ filled, you create your
+
+259
+00:16:25,399 --> 00:16:28,700
+bare bones, great for you 
+because there's some check 
+
+260
+00:16:28,700 --> 00:16:33,100
+boxes, you can put in The thing 
+is and then it actually, you 
+
+261
+00:16:33,100 --> 00:16:36,000
+know, there's you got no files 
+in it but it verifies that. 
+
+262
+00:16:36,299 --> 00:16:41,799
+Yes, the like the Kata 
+structure, the kotlin plug-in 
+
+263
+00:16:42,200 --> 00:16:44,000
+will can be found. 
+Yeah. 
+
+264
+00:16:44,000 --> 00:16:47,000
+And the reason that I had to do 
+this is because I started with 
+
+265
+00:16:47,000 --> 00:16:49,600
+just bare. 
+You know, I was looking at the 
+
+266
+00:16:49,600 --> 00:16:52,000
+things and it says, here's what 
+you put in for the plug-in. 
+
+267
+00:16:52,000 --> 00:16:54,299
+Yeah. 
+And I put it in and I got all 
+
+268
+00:16:54,299 --> 00:16:57,500
+kinds of weird are hostages with
+a dentist before I started using
+
+269
+00:16:57,500 --> 00:16:58,500
+IntelliJ. 
+Yeah. 
+
+270
+00:16:58,899 --> 00:17:01,700
+And then, I thought You know, 
+I'm flailing about trying to 
+
+271
+00:17:01,700 --> 00:17:03,100
+figure out how to get started 
+with this. 
+
+272
+00:17:03,100 --> 00:17:06,200
+Because I could any there, I 
+couldn't find anything on the 
+
+273
+00:17:06,200 --> 00:17:07,700
+internet. 
+I'm going, I must be doing 
+
+274
+00:17:07,700 --> 00:17:11,500
+something wrong, I don't know. 
+Yeah, and then, I did it with 
+
+275
+00:17:11,500 --> 00:17:16,400
+IntelliJ and it built the 
+bare-bones Gradle build file and
+
+276
+00:17:16,400 --> 00:17:20,200
+it worked even though it was, 
+you know, importing this the 
+
+277
+00:17:20,200 --> 00:17:24,700
+kotlin tip and I and then I 
+tried updating it. 
+
+278
+00:17:25,500 --> 00:17:29,400
+I discovered. 
+Oh, IntelliJ is a 6.7 and I 
+
+279
+00:17:29,400 --> 00:17:33,700
+tried update. 26.8 in any 
+version and 6.8 has been out 
+
+280
+00:17:33,700 --> 00:17:37,099
+like five months or something. 
+And they've had three different 
+
+281
+00:17:37,299 --> 00:17:41,700
+sub versions which is maybe a 
+little questionable and it's 
+
+282
+00:17:41,700 --> 00:17:47,400
+like any version of 6.8 that I 
+went to it couldn't find the. 
+
+283
+00:17:48,000 --> 00:17:56,700
+I wonder if this is so the Java 
+world and a lot of ways to cut 
+
+284
+00:17:56,700 --> 00:18:01,599
+unrelated part of this has been 
+Add some issues lately, because 
+
+285
+00:18:01,599 --> 00:18:06,500
+of Ben tre's. 
+Ben Tre his, his had some 
+
+286
+00:18:06,500 --> 00:18:10,000
+outages, and they're shutting 
+down Ben, Tre in May. 
+
+287
+00:18:10,700 --> 00:18:14,400
+And so, there's been a lot of 
+people scrambling to move off of
+
+288
+00:18:14,400 --> 00:18:20,299
+Ben, Tre to Maven Central. 
+And I Maven, Central has been 
+
+289
+00:18:20,700 --> 00:18:23,799
+such a critical part of the 
+whole Java ecosystem and has 
+
+290
+00:18:23,799 --> 00:18:27,299
+been mostly reliable. 
+There's definitely some issues 
+
+291
+00:18:27,299 --> 00:18:31,200
+with deploying new artifacts, 
+but most of the Consumption just
+
+292
+00:18:31,200 --> 00:18:35,400
+works. 
+I've become incredibly thankful 
+
+293
+00:18:35,400 --> 00:18:39,200
+for Maven Central and just split
+up shutting down. 
+
+294
+00:18:39,200 --> 00:18:42,000
+Yeah. 
+And just what a core part of the
+
+295
+00:18:42,000 --> 00:18:46,700
+Java ecosystem. 
+It's been and yeah, but but so 
+
+296
+00:18:46,700 --> 00:18:50,299
+your issues may have been 
+related actually to Json, or 
+
+297
+00:18:50,299 --> 00:18:52,099
+this is always and Maven 
+Central. 
+
+298
+00:18:52,099 --> 00:18:53,700
+You know, there was no been 
+trade all. 
+
+299
+00:18:53,900 --> 00:18:58,500
+But the under, you know, I mean 
+when I was able to go, oh, 
+
+300
+00:18:58,599 --> 00:19:01,099
+IntelliJ makes this Us work for 
+me? 
+
+301
+00:19:01,099 --> 00:19:03,500
+Yeah, it's like okay. 
+I meant I'm more of a fan of 
+
+302
+00:19:03,500 --> 00:19:06,900
+IntelliJ now. 
+So the before the they're still 
+
+303
+00:19:06,900 --> 00:19:10,400
+using, as far as I know, the 
+great, The Groovy great, I'll 
+
+304
+00:19:10,400 --> 00:19:13,900
+send tax. 
+And I've tried to on all of my 
+
+305
+00:19:14,200 --> 00:19:16,799
+projects over the last year, use
+the kotlin syntax. 
+
+306
+00:19:17,200 --> 00:19:18,900
+Well, there's a, there's an 
+option. 
+
+307
+00:19:18,900 --> 00:19:23,400
+So is there a to you can check 
+which I haven't done yet because
+
+308
+00:19:23,400 --> 00:19:25,500
+I'm trying not to change too 
+many things at once. 
+
+309
+00:19:25,500 --> 00:19:29,700
+Yeah. 
+So usually I don't use that way.
+
+310
+00:19:29,700 --> 00:19:31,900
+I've never Use that way to 
+really bootstrap a great. 
+
+311
+00:19:31,900 --> 00:19:36,099
+I'll project I get very 
+particular about my build files 
+
+312
+00:19:36,099 --> 00:19:39,799
+and how they're structured and 
+just things like, you know, and 
+
+313
+00:19:39,900 --> 00:19:45,200
+in the Gradle build file when 
+you specify a dependency on a 
+
+314
+00:19:45,208 --> 00:19:48,500
+kotlin standard library, either,
+you know, there's a bunch of 
+
+315
+00:19:48,500 --> 00:19:52,299
+cotton standard libraries. 
+Like there's the standard one, 
+
+316
+00:19:52,500 --> 00:19:55,799
+then there's the reflection one.
+Then there's a few others. 
+
+317
+00:19:56,000 --> 00:19:59,799
+Anyways, the Gradle has a syntax
+to where you just say. 
+
+318
+00:20:01,900 --> 00:20:07,900
+Implementation and then kotlin 
+and then stand Scotland, 
+
+319
+00:20:08,500 --> 00:20:12,200
+standard whatever, whatever the 
+dependency is there. 
+
+320
+00:20:12,200 --> 00:20:15,799
+So it's this really nice concise
+syntax but a lot of the build 
+
+321
+00:20:15,799 --> 00:20:19,500
+files that I see don't use that 
+nice syntax to pull in those 
+
+322
+00:20:19,500 --> 00:20:21,400
+kotlin standard dependencies 
+stairs. 
+
+323
+00:20:21,500 --> 00:20:24,299
+I'm very particular about my 
+build files and how they're 
+
+324
+00:20:24,299 --> 00:20:28,299
+structured and so I don't I 
+don't let anyone else do that. 
+
+325
+00:20:28,299 --> 00:20:31,299
+So usually what that means is I 
+go find My previous build files 
+
+326
+00:20:31,299 --> 00:20:33,599
+and go copy and paste. 
+Gonna start a new project. 
+
+327
+00:20:33,599 --> 00:20:37,299
+Yeah, it's one of those. 
+Oh, there's more than one way to
+
+328
+00:20:37,299 --> 00:20:40,099
+do the same thing. 
+So yeah, there's a lot of ways 
+
+329
+00:20:40,099 --> 00:20:44,900
+was a plugins or one of the 
+abysmal parts of Gradle where 
+
+330
+00:20:44,900 --> 00:20:48,599
+it's just like God, why do we 
+have so many different ways to 
+
+331
+00:20:48,700 --> 00:20:51,599
+pull in plugins? 
+And then it depends like is the 
+
+332
+00:20:51,599 --> 00:20:55,599
+plug-in on the Gradle plug-in 
+portal or is it on Maven 
+
+333
+00:20:55,599 --> 00:20:58,200
+Central? 
+And if it's on Maven Central 
+
+334
+00:20:58,200 --> 00:21:01,299
+then you had to like put some 
+special all magic syntax in your
+
+335
+00:21:01,299 --> 00:21:07,099
+settings dot Gradle file and it 
+just been my problem when 
+
+336
+00:21:07,099 --> 00:21:09,500
+there's multiple ways to do the 
+same thing. 
+
+337
+00:21:09,500 --> 00:21:14,200
+I look at somebody, you know, 
+file, it's done it differently 
+
+338
+00:21:14,200 --> 00:21:16,900
+and I go oh, that's different. 
+I wonder why. 
+
+339
+00:21:17,200 --> 00:21:20,799
+Yeah, and I have to figure out 
+and then if I come back down and
+
+340
+00:21:20,807 --> 00:21:24,400
+it's like, well, it's not, it's 
+just the same, it's just 
+
+341
+00:21:24,408 --> 00:21:27,599
+different Syntax for doing the 
+same thing, then I'm going, I 
+
+342
+00:21:27,599 --> 00:21:30,099
+just wasted a whole bunch of 
+time figuring that out. 
+
+343
+00:21:30,299 --> 00:21:32,000
+Right? 
+And I don't know when the next 
+
+344
+00:21:32,000 --> 00:21:34,500
+thing is going to be different 
+or the same room. 
+
+345
+00:21:35,700 --> 00:21:38,200
+So if you stay on the happy 
+path, yay. 
+
+346
+00:21:38,400 --> 00:21:42,400
+Then which, which the happy path
+is fairly. 
+
+347
+00:21:42,400 --> 00:21:46,200
+Well paved in some places. 
+So if you go to start dot 
+
+348
+00:21:46,200 --> 00:21:49,599
+spring, the I/O and you go 
+generate a spring project and 
+
+349
+00:21:49,599 --> 00:21:52,400
+you select Gradle for the build 
+tool, what it gives you is 
+
+350
+00:21:52,400 --> 00:21:54,500
+pretty good. 
+Not perfect. 
+
+351
+00:21:54,500 --> 00:21:57,299
+And I have to go make changes 
+but in this is spring boot. 
+
+352
+00:21:57,400 --> 00:21:58,299
+Let's bring boots. 
+Yeah. 
+
+353
+00:21:58,299 --> 00:21:59,500
+Okay. 
+Yeah, yeah. 
+
+354
+00:22:00,500 --> 00:22:03,599
+Same is true for quercus and for
+Micronaut they all have. 
+
+355
+00:22:03,599 --> 00:22:05,799
+They all have websites that 
+don't give you a starter 
+
+356
+00:22:05,799 --> 00:22:10,000
+project. 
+Even if I'm not using spring 
+
+357
+00:22:10,000 --> 00:22:11,700
+know they're really intended 
+for. 
+
+358
+00:22:11,799 --> 00:22:14,900
+I mean you could I could do that
+but it's that stuff out you 
+
+359
+00:22:14,900 --> 00:22:15,599
+could. 
+Yeah. 
+
+360
+00:22:15,599 --> 00:22:18,000
+Okay. 
+But but if you're getting 
+
+361
+00:22:18,000 --> 00:22:20,299
+started with any of the three of
+those the starters that they 
+
+362
+00:22:20,299 --> 00:22:22,799
+give you a pretty good. 
+Give you a pretty good build 
+
+363
+00:22:22,799 --> 00:22:26,099
+definition and so. 
+So I think if you stay on that 
+
+364
+00:22:26,099 --> 00:22:29,000
+happy path, like I'm building a 
+spring boot application and I'm 
+
+365
+00:22:29,000 --> 00:22:32,500
+going to go to start to Spring. 
+And generate like, what you get 
+
+366
+00:22:32,500 --> 00:22:34,299
+out of that is pretty good. 
+Mmm. 
+
+367
+00:22:35,900 --> 00:22:40,500
+So so yeah, so I talked about 
+build stuff and and I'm there 
+
+368
+00:22:40,500 --> 00:22:44,700
+are issues but I'm pretty happy 
+with the state of the developer 
+
+369
+00:22:44,700 --> 00:22:47,500
+tooling side of the Java 
+ecosystem. 
+
+370
+00:22:47,500 --> 00:22:49,200
+And so that was part of the blog
+post. 
+
+371
+00:22:49,799 --> 00:22:55,000
+I feel very productive with it. 
+I've definitely have things that
+
+372
+00:22:55,000 --> 00:22:56,700
+I do. 
+That are probably different from
+
+373
+00:22:56,700 --> 00:23:00,799
+the norm, the I think make me 
+productive Like using test 
+
+374
+00:23:00,799 --> 00:23:05,099
+containers to spin up my service
+dependencies and stuff but um 
+
+375
+00:23:05,599 --> 00:23:08,900
+but generally I'm happy with it 
+and I think that it continues to
+
+376
+00:23:08,900 --> 00:23:17,400
+improve then I also talked about
+Frameworks in in the the Java 
+
+377
+00:23:17,400 --> 00:23:19,700
+ecosystem. 
+I specifically highlighted 
+
+378
+00:23:19,700 --> 00:23:23,900
+spring boot just because it is 
+the standard if you are if you 
+
+379
+00:23:23,900 --> 00:23:29,400
+want to be in the 0 annotation 
+based world like spring boot is 
+
+380
+00:23:29,400 --> 00:23:32,799
+just It works. 
+There's it's a huge ecosystem, 
+
+381
+00:23:32,799 --> 00:23:37,299
+lots of things alternatives to 
+that would be Micronaut orcas. 
+
+382
+00:23:38,000 --> 00:23:41,000
+There's, of course, many, many 
+different Alternatives, but I 
+
+383
+00:23:41,000 --> 00:23:43,099
+think those are the two that 
+stand out for me. 
+
+384
+00:23:44,099 --> 00:23:46,400
+All of them work, great with 
+kotlin. 
+
+385
+00:23:46,799 --> 00:23:50,500
+The one caveat that I said in, 
+there was if you want to do 
+
+386
+00:23:50,500 --> 00:23:53,700
+cotton co-routines spring boot 
+or micronauts are better. 
+
+387
+00:23:53,700 --> 00:23:56,400
+My korkis doesn't yet have 
+curtain support. 
+
+388
+00:23:56,400 --> 00:23:58,099
+Which is unfortunate. 
+I think they're working on it 
+
+389
+00:23:58,099 --> 00:24:03,099
+but and Then. 
+And then in the scholar world, I
+
+390
+00:24:03,099 --> 00:24:06,700
+said, like play framework. 
+I've used play framework a lot 
+
+391
+00:24:07,000 --> 00:24:08,900
+and used to be a big proponent 
+of. 
+
+392
+00:24:08,900 --> 00:24:12,799
+Yeah. 
+And I do like it, but as I've 
+
+393
+00:24:12,799 --> 00:24:17,099
+gotten more, functional 
+programming oriented and tried 
+
+394
+00:24:17,099 --> 00:24:20,599
+to do things more pure 
+functional, play framework, has 
+
+395
+00:24:20,599 --> 00:24:24,400
+become less of something that I 
+want. 
+
+396
+00:24:24,400 --> 00:24:26,799
+I think it's still a great 
+framework in the productivity is
+
+397
+00:24:26,799 --> 00:24:30,900
+great, but it definitely uses 
+the typical Kind of dependency 
+
+398
+00:24:30,900 --> 00:24:35,500
+injection style of things and 
+not the pure functional style of
+
+399
+00:24:35,500 --> 00:24:36,799
+thing. 
+So what do you prefer? 
+
+400
+00:24:36,900 --> 00:24:41,900
+So, Z? 
+0 is 0, is where we're all my 
+
+401
+00:24:41,900 --> 00:24:45,099
+interests are right now. 
+Unfortunately, zo does not yet 
+
+402
+00:24:45,099 --> 00:24:47,299
+have like a full-blown web 
+framework. 
+
+403
+00:24:47,299 --> 00:24:49,799
+That would be a good alternative
+to play framework. 
+
+404
+00:24:50,000 --> 00:24:53,200
+They just announced a HTTP 
+server. 
+
+405
+00:24:53,200 --> 00:24:57,500
+That provides a lot of the 
+foundational pieces to that, but
+
+406
+00:24:57,500 --> 00:24:59,500
+they don't have like the 
+full-blown web. 
+
+407
+00:25:00,000 --> 00:25:00,799
+Work. 
+Yeah. 
+
+408
+00:25:00,799 --> 00:25:05,099
+And so, so 04. 
+A lot of things, I think, is a 
+
+409
+00:25:05,107 --> 00:25:10,900
+great option today, but if you 
+want a web application where you
+
+410
+00:25:10,900 --> 00:25:14,000
+build the front end and the back
+end and the same code base, and 
+
+411
+00:25:14,200 --> 00:25:16,700
+I don't, I don't think Zio's 
+quite there yet. 
+
+412
+00:25:18,299 --> 00:25:22,400
+So talk about Zio's but I said 
+like the the Frameworks in the 
+
+413
+00:25:22,400 --> 00:25:26,599
+Java ecosystem, there's a lot of
+great options there whether 
+
+414
+00:25:26,599 --> 00:25:29,900
+you're doing scholar Colin, or 
+gender mature, their amateur, 
+
+415
+00:25:30,400 --> 00:25:36,000
+Yes yeah yeah I was you I 
+wouldn't say is is is super 
+
+416
+00:25:36,000 --> 00:25:40,400
+mature yet but it's getting 
+there whereas spring boot very 
+
+417
+00:25:40,400 --> 00:25:48,099
+mature Micronaut to my micro not
+is pretty new but but it builds 
+
+418
+00:25:48,099 --> 00:25:51,500
+on a lot of the foundations of 
+other things. 
+
+419
+00:25:51,500 --> 00:25:53,400
+So, technology is pretty 
+amazing. 
+
+420
+00:25:53,400 --> 00:25:57,200
+I mean, this idea of doing 
+dependency injection at compile 
+
+421
+00:25:57,200 --> 00:25:59,599
+time. 
+Yes, quite interesting. 
+
+422
+00:25:59,599 --> 00:26:01,900
+Yeah. 
+Yeah, and which works a lot 
+
+423
+00:26:01,900 --> 00:26:05,700
+better with Gras van, which I 
+also talked about in the blog 
+
+424
+00:26:05,700 --> 00:26:09,000
+post was around. 
+All right, we do have a way to 
+
+425
+00:26:09,000 --> 00:26:13,299
+create native executables so 
+that they start up faster and 
+
+426
+00:26:14,099 --> 00:26:17,900
+and don't have the garbage 
+collection overhead and some of 
+
+427
+00:26:17,900 --> 00:26:22,200
+those things. 
+And and so if you need, if 
+
+428
+00:26:22,200 --> 00:26:25,200
+that's something that you need, 
+then Micronaut may be a better 
+
+429
+00:26:25,200 --> 00:26:27,700
+option than spring boot. 
+Spring boot does have a way to 
+
+430
+00:26:27,700 --> 00:26:32,599
+use grow VM and I've tried it 
+And had limited success with it,
+
+431
+00:26:32,599 --> 00:26:35,700
+just because it's early days. 
+For a lot of that, native 
+
+432
+00:26:35,700 --> 00:26:40,799
+compliation, growl them, native 
+image stuff, and so zo on the 
+
+433
+00:26:40,799 --> 00:26:44,500
+other hand is actually a lot 
+better with that really. 
+
+434
+00:26:44,500 --> 00:26:47,099
+A lot of things in the Scala 
+Code, system are a lot better 
+
+435
+00:26:47,099 --> 00:26:51,599
+with that because if you are 
+purely functional that code can 
+
+436
+00:26:51,599 --> 00:26:56,799
+be much more easily ahead of 
+time compiled whereas in the 
+
+437
+00:26:56,799 --> 00:27:00,700
+typical Java Reflection oriented
+Stuff. 
+
+438
+00:27:01,200 --> 00:27:04,400
+It can't ahead of time. 
+Compiled Dynamic reflection 
+
+439
+00:27:04,400 --> 00:27:08,000
+based stuff and so then you have
+to tell girl VM about it and 
+
+440
+00:27:08,000 --> 00:27:11,500
+that can be challenging and I've
+run into them all sorts of 
+
+441
+00:27:12,400 --> 00:27:14,799
+insurmountable hurdles with 
+that. 
+
+442
+00:27:14,900 --> 00:27:17,700
+But the but the tooling around 
+that is evolving. 
+
+443
+00:27:17,700 --> 00:27:20,099
+And there's something called 
+Spring boot, native or summer 
+
+444
+00:27:20,099 --> 00:27:23,700
+spring native micro now has 
+built-in support, korkis has 
+
+445
+00:27:23,700 --> 00:27:28,200
+great support, but there are 
+challenges it's not a it's not a
+
+446
+00:27:28,200 --> 00:27:32,000
+easy path, I guess. 
+So, It would be an example of 
+
+447
+00:27:32,500 --> 00:27:37,400
+the invariance making things 
+faster. 
+
+448
+00:27:38,500 --> 00:27:41,200
+But if you were talking about 
+earlier, yeah, describe that to 
+
+449
+00:27:41,200 --> 00:27:45,400
+me. 
+Well, just because, you know, 
+
+450
+00:27:45,400 --> 00:27:51,700
+there isn't this Dynamic nature?
+Yeah, it can produce a much 
+
+451
+00:27:51,700 --> 00:27:54,000
+faster optimal. 
+Yeah, I can optimize it. 
+
+452
+00:27:54,000 --> 00:27:59,900
+Yeah, yeah, it's weird to me in 
+the the Java ecosystem. 
+
+453
+00:28:00,599 --> 00:28:07,900
+That we've let so much Dynamic 
+stuff, creep into our world in 
+
+454
+00:28:08,099 --> 00:28:11,299
+there. 
+So, dependency injection, is a 
+
+455
+00:28:11,307 --> 00:28:13,599
+huge one. 
+A lot of it is basically just 
+
+456
+00:28:13,599 --> 00:28:17,500
+dynamic programming, like, 
+Dynamic runtime wiring 
+
+457
+00:28:19,200 --> 00:28:25,200
+serialization is another big one
+Jackson, is the primary Json 
+
+458
+00:28:25,200 --> 00:28:30,400
+library, and the Java ecosystem,
+and a lot of I think They have 
+
+459
+00:28:30,400 --> 00:28:34,500
+some other ways to use it, but 
+essentially, that most of the 
+
+460
+00:28:34,500 --> 00:28:37,400
+ways that people use Jackson and
+the Java world is based on 
+
+461
+00:28:37,400 --> 00:28:43,900
+runtime reflection and then a 
+big one, which just just hurts 
+
+462
+00:28:43,900 --> 00:28:47,400
+me. 
+Is that most of the server-side 
+
+463
+00:28:47,400 --> 00:28:51,400
+templating in the Java. 
+Ecosystem is actually Dynamic, 
+
+464
+00:28:51,400 --> 00:28:55,200
+runtime stuff. 
+I when I, when I started using 
+
+465
+00:28:55,200 --> 00:28:57,799
+play framework, was the first 
+time I started using compile 
+
+466
+00:28:57,799 --> 00:29:02,200
+time server templating. 
+And I can't go back like the 
+
+467
+00:29:02,200 --> 00:29:06,900
+fact that people allow runtime 
+bugs to creep into their coat 
+
+468
+00:29:06,900 --> 00:29:10,799
+into their programs because they
+essentially just are running a 
+
+469
+00:29:10,799 --> 00:29:15,200
+template at runtime and not 
+having compiled time. 
+
+470
+00:29:15,200 --> 00:29:19,900
+Validation just is as much as 
+largest of allegations, the 
+
+471
+00:29:19,900 --> 00:29:24,099
+speed performance, could all 
+you're doing something that 
+
+472
+00:29:24,400 --> 00:29:27,299
+you're doing something over and 
+over again, that only really 
+
+473
+00:29:27,299 --> 00:29:29,900
+needs to be done once. 
+Yeah, yeah, yeah. 
+
+474
+00:29:30,200 --> 00:29:33,799
+I think there is cash and you 
+know whatever, but but yeah, I 
+
+475
+00:29:33,799 --> 00:29:39,700
+won the I think the challenge is
+that you definitely pay a price 
+
+476
+00:29:39,700 --> 00:29:43,099
+on. 
+Yeah, you're compiling, you do 
+
+477
+00:29:43,099 --> 00:29:48,000
+have a compile phase and for 
+your service site templates and 
+
+478
+00:29:48,000 --> 00:29:51,200
+so that can be a bit of a 
+developer Predator. 
+
+479
+00:29:51,200 --> 00:29:54,799
+Can seem like a developer 
+productivity hit, but, but the 
+
+480
+00:29:54,799 --> 00:29:58,299
+validation that you get is so 
+worth it. 
+
+481
+00:29:58,900 --> 00:30:01,200
+Jsps. 
+Actually probably the first 
+
+482
+00:30:01,200 --> 00:30:05,500
+place where I did this because 
+the first, the first way that 
+
+483
+00:30:05,500 --> 00:30:09,500
+people use jsps, where the the 
+first time a request would come 
+
+484
+00:30:09,500 --> 00:30:13,700
+into a JSP javaserver Pages. 
+It would the server would 
+
+485
+00:30:13,700 --> 00:30:17,400
+actually compile that JSP page 
+so it was still basically 
+
+486
+00:30:17,400 --> 00:30:22,099
+runtime but there was a 
+compliation process and then 
+
+487
+00:30:22,099 --> 00:30:25,700
+what happened was people took 
+those GSP compilers and actually
+
+488
+00:30:25,900 --> 00:30:29,900
+built like Maven and amp plug 
+ins for them so that you could 
+
+489
+00:30:30,000 --> 00:30:33,900
+I'll your jsps, so that because 
+what would happen is the first 
+
+490
+00:30:33,900 --> 00:30:36,200
+time, you started your server 
+and somebody would request a 
+
+491
+00:30:36,208 --> 00:30:39,099
+JSP, then they would sit there 
+and wait for the JSP to be 
+
+492
+00:30:39,099 --> 00:30:42,000
+compiled. 
+And obviously that's silly 
+
+493
+00:30:42,200 --> 00:30:44,400
+making your user sit there and 
+wait for your JSP to compile. 
+
+494
+00:30:44,400 --> 00:30:47,299
+So they start doing pre 
+compliation of jsps, which was 
+
+495
+00:30:47,299 --> 00:30:51,400
+good, a good good progress 
+because at least that helped us 
+
+496
+00:30:51,500 --> 00:30:56,599
+get validation that our 
+templates were valid syntax 
+
+497
+00:30:58,000 --> 00:31:01,400
+there. 
+Anyways It's just his wild, how 
+
+498
+00:31:01,400 --> 00:31:05,700
+much Dynamic runtime stuff we 
+typically do in the Java 
+
+499
+00:31:05,700 --> 00:31:08,799
+ecosystem, which I'm glad to 
+see, you know, I'm seeing a lot 
+
+500
+00:31:08,799 --> 00:31:12,000
+of that stuff. 
+Diminish growl VM is part of the
+
+501
+00:31:12,000 --> 00:31:18,500
+motivation for that, but yeah, 
+just it seems like there's 
+
+502
+00:31:18,599 --> 00:31:22,000
+always a line that you cry mean 
+because, you know, at some 
+
+503
+00:31:22,000 --> 00:31:27,900
+point, the software needs to be 
+interactive and dynamic but 
+
+504
+00:31:27,900 --> 00:31:33,000
+where that line is I think if if
+you're doing it in a sloppy way 
+
+505
+00:31:33,400 --> 00:31:35,599
+you go, I will just let the 
+computer. 
+
+506
+00:31:35,599 --> 00:31:39,500
+You know, it'll be like PHP. 
+Yes, computer will just 
+
+507
+00:31:39,500 --> 00:31:42,599
+calculate everything. 
+Everything every time a server 
+
+508
+00:31:42,599 --> 00:31:47,900
+comes in yeah a user comes into.
+That's a page versus oh you 
+
+509
+00:31:47,900 --> 00:31:52,799
+know, maybe that's not yeah, 
+there for many reasons, not just
+
+510
+00:31:52,799 --> 00:31:55,099
+speed. 
+I think when you when you point 
+
+511
+00:31:55,099 --> 00:31:59,799
+out the kinds of tooling the can
+help you find problems. 
+
+512
+00:32:00,299 --> 00:32:03,400
+That's when it becomes really 
+compelling for me. 
+
+513
+00:32:03,400 --> 00:32:07,000
+How does it help the programmer?
+Yeah but at the same time you 
+
+514
+00:32:07,000 --> 00:32:11,799
+get better speed. 
+Yeah so we had a comment from 
+
+515
+00:32:11,799 --> 00:32:19,000
+somebody that sort of fits with.
+Yeah so somebody had said what 
+
+516
+00:32:19,000 --> 00:32:21,200
+about Java 16? 
+It seems like they're getting 
+
+517
+00:32:21,200 --> 00:32:24,900
+some of these language features 
+and in Java 16 with record types
+
+518
+00:32:24,900 --> 00:32:30,900
+and them bit better pattern 
+matching and yet I think There 
+
+519
+00:32:30,900 --> 00:32:34,200
+is question like our Java 
+developers going to actually 
+
+520
+00:32:34,200 --> 00:32:38,900
+ever get the get and use these 
+features or the are most people 
+
+521
+00:32:38,900 --> 00:32:45,500
+just going to use Colin or Scala
+and and you know Java 8 is still
+
+522
+00:32:45,500 --> 00:32:50,200
+being you know, incorporated 
+into the world. 
+
+523
+00:32:50,700 --> 00:32:54,099
+Yeah, I mean most of the 
+production Java apps are running
+
+524
+00:32:54,099 --> 00:32:58,099
+on Java 8 still and not 
+necessarily using many of the 
+
+525
+00:32:58,099 --> 00:33:01,400
+new features that were Operated 
+into Java 8. 
+
+526
+00:33:01,400 --> 00:33:04,099
+Yeah, it's true. 
+Like you if you look around at 
+
+527
+00:33:04,099 --> 00:33:11,200
+Java 8 code whether on stack 
+Overflow or on GitHub or 
+
+528
+00:33:11,200 --> 00:33:14,299
+whatever, you don't see even 
+like a lot of stream usage. 
+
+529
+00:33:14,299 --> 00:33:17,200
+Hmm. 
+Still see a lot of like mutable 
+
+530
+00:33:17,200 --> 00:33:19,299
+for loops and stuff. 
+Sure. 
+
+531
+00:33:19,400 --> 00:33:22,700
+Yeah, because that's what they 
+were doing before in that 
+
+532
+00:33:22,700 --> 00:33:27,200
+worked. 
+And it's a significant mental 
+
+533
+00:33:27,200 --> 00:33:29,900
+shift just to go to something 
+like string. 
+
+534
+00:33:30,200 --> 00:33:33,099
+Yeah. 
+So you add some of these other 
+
+535
+00:33:33,099 --> 00:33:39,000
+features that have been included
+in more recent versions or maybe
+
+536
+00:33:39,000 --> 00:33:43,400
+included that's the other thing 
+is so yeah and I've been 
+
+537
+00:33:43,400 --> 00:33:49,700
+struggling with this. 
+We have the same level of change
+
+538
+00:33:49,799 --> 00:33:54,799
+in you know number change. 
+It was like well, so Java 16 is 
+
+539
+00:33:54,799 --> 00:33:57,700
+out. 
+Well except that how many of 
+
+540
+00:33:57,700 --> 00:34:02,000
+those features are experimental?
+I Don't know if I was a company,
+
+541
+00:34:02,400 --> 00:34:06,400
+I would say, I'm yeah, we're not
+going to mess with that. 
+
+542
+00:34:06,400 --> 00:34:09,199
+We're just going to wait for the
+next long-term support version 
+
+543
+00:34:09,900 --> 00:34:14,400
+and and it's a you know how many
+people are using Java 8 simply 
+
+544
+00:34:14,400 --> 00:34:17,900
+because it's the current 
+long-term support version. 
+
+545
+00:34:17,900 --> 00:34:20,099
+Hmm. 
+You know where as what they're 
+
+546
+00:34:20,099 --> 00:34:23,099
+really doing is programming in 
+Java 5, right? 
+
+547
+00:34:23,800 --> 00:34:31,300
+And I don't know, it's all kind 
+of It's and as we've discussed 
+
+548
+00:34:31,300 --> 00:34:36,500
+before, if you really want the, 
+you know, new and interesting 
+
+549
+00:34:36,500 --> 00:34:41,300
+features art and I think this 
+this user was saying they were 
+
+550
+00:34:41,900 --> 00:34:45,599
+the person who is commenting was
+saying, well, you know, some of 
+
+551
+00:34:45,607 --> 00:34:48,500
+these features are kind of like 
+partial. 
+
+552
+00:34:48,800 --> 00:34:52,800
+Yeah. 
+And so, if I really want, I 
+
+553
+00:34:52,800 --> 00:34:55,199
+don't know pattern matching 
+actions, against if that's an 
+
+554
+00:34:55,199 --> 00:34:58,099
+important feature for me. 
+Wouldn't I want? 
+
+555
+00:34:58,099 --> 00:35:02,599
+A more sophisticated one rather 
+than the partial feature that, 
+
+556
+00:35:02,599 --> 00:35:07,699
+yeah, that's been Incorporated 
+here, which I can't really use 
+
+557
+00:35:07,699 --> 00:35:11,400
+until the driver 17 comes out. 
+And we know what's actually 
+
+558
+00:35:11,400 --> 00:35:15,900
+going to be in it because right 
+now, this is the confusing thing
+
+559
+00:35:15,900 --> 00:35:19,000
+for me is because when you look 
+at at the versions that are 
+
+560
+00:35:19,000 --> 00:35:21,900
+coming out, let's say, okay. 
+Well, this is our, you know, 
+
+561
+00:35:21,900 --> 00:35:25,800
+first I don't know what term 
+that they use first test version
+
+562
+00:35:25,800 --> 00:35:29,400
+of this feature and I Not even 
+know if that feature is going to
+
+563
+00:35:29,400 --> 00:35:32,199
+make it into the long-term 
+support versions, right? 
+
+564
+00:35:33,000 --> 00:35:35,099
+Does the compiler? 
+Give you some morning or do you 
+
+565
+00:35:35,099 --> 00:35:38,000
+have to like specify a compiler 
+parameter to turn on these 
+
+566
+00:35:38,000 --> 00:35:40,900
+features or I don't know how all
+that work. 
+
+567
+00:35:40,900 --> 00:35:42,699
+I don't know. 
+I haven't been. 
+
+568
+00:35:42,900 --> 00:35:49,300
+You know, the I'm not going to 
+write to the intermediate 
+
+569
+00:35:50,400 --> 00:35:52,900
+versions. 
+I wish they would say. 
+
+570
+00:35:52,900 --> 00:35:54,599
+Look, this is an intermediate 
+version. 
+
+571
+00:35:55,199 --> 00:35:58,900
+This isn't, you know, some of 
+these and they do Sort of but 
+
+572
+00:35:58,900 --> 00:36:01,300
+some of these features may be in
+the language and some of them 
+
+573
+00:36:01,300 --> 00:36:06,400
+may not so test features and so 
+I'm not going to put the effort 
+
+574
+00:36:06,400 --> 00:36:08,900
+into figuring them out. 
+Yeah. 
+
+575
+00:36:09,000 --> 00:36:13,699
+Until they're actually real 
+finalized which and I'm just 
+
+576
+00:36:14,000 --> 00:36:16,199
+just have trouble with this 
+idea. 
+
+577
+00:36:16,199 --> 00:36:21,599
+That Java 16. 
+It's got the same number bump as
+
+578
+00:36:21,599 --> 00:36:24,500
+Java 70 but Java 17th, very 
+different. 
+
+579
+00:36:24,599 --> 00:36:30,099
+Yeah, then all of the six-month 
+releases a Come before it just 
+
+580
+00:36:30,500 --> 00:36:32,400
+makes me. 
+I don't know something about it 
+
+581
+00:36:32,400 --> 00:36:33,800
+makes me uncomfortable. 
+Yeah. 
+
+582
+00:36:35,099 --> 00:36:38,500
+Yeah, I don't I don't know if I 
+have much of an opinion on that 
+
+583
+00:36:38,500 --> 00:36:42,300
+just because I'm not I don't do 
+drive a Much Anymore. 
+
+584
+00:36:42,300 --> 00:36:46,599
+Java language stuff, it's a hard
+problem. 
+
+585
+00:36:46,599 --> 00:36:51,900
+Like in the Scala ecosystem, you
+have to opt into language 
+
+586
+00:36:51,900 --> 00:36:56,099
+features that are experimental 
+and you in some cases can do 
+
+587
+00:36:56,099 --> 00:36:58,699
+that through an import. 
+And some cases you can do that 
+
+588
+00:36:58,699 --> 00:37:05,500
+with a compiler setting some 
+cases either and so It's got to 
+
+589
+00:37:05,500 --> 00:37:08,800
+be hard as a language designer 
+because you want to experiment 
+
+590
+00:37:08,800 --> 00:37:13,400
+with things. 
+But how do you convey that? 
+
+591
+00:37:13,400 --> 00:37:17,000
+How do you how do you let people
+know what they're getting into? 
+
+592
+00:37:17,300 --> 00:37:20,699
+But how do you actually have a 
+release that people will try it?
+
+593
+00:37:20,699 --> 00:37:24,500
+Because I think that's one of 
+the challenges is that that you 
+
+594
+00:37:24,599 --> 00:37:27,800
+you need a bunch of people to 
+actually, like really use a 
+
+595
+00:37:27,800 --> 00:37:32,800
+feature so that you can 
+understand what changes need to 
+
+596
+00:37:32,800 --> 00:37:36,599
+be made to it Vanessa. 
+Like somebody's trying to trick 
+
+597
+00:37:36,599 --> 00:37:42,400
+me into using this interesting. 
+Their features and I met 
+
+598
+00:37:42,500 --> 00:37:45,500
+accidentally incorporate one of 
+those features in. 
+
+599
+00:37:45,500 --> 00:37:48,500
+And then later they say, you 
+know, that one didn't work out. 
+
+600
+00:37:48,500 --> 00:37:51,199
+Thanks for testing it for us. 
+Yeah, yeah. 
+
+601
+00:37:51,199 --> 00:37:53,300
+I don't know. 
+I just, yeah, it makes me. 
+
+602
+00:37:55,400 --> 00:38:01,300
+Yeah, uncomfortable, but It's I 
+mean one alternative is that you
+
+603
+00:38:01,300 --> 00:38:06,500
+you somehow have a much more 
+thorough design by committee 
+
+604
+00:38:06,500 --> 00:38:12,400
+process and I don't really like 
+that approach in some ways like 
+
+605
+00:38:12,400 --> 00:38:15,699
+isn't the python improvement, 
+process stuff. 
+
+606
+00:38:15,699 --> 00:38:19,300
+Like, kind of like a design by 
+committee on a feature and then 
+
+607
+00:38:19,300 --> 00:38:22,800
+they, they have some way in 
+Python to like added in as 
+
+608
+00:38:22,800 --> 00:38:25,500
+experimental or something. 
+And then do they do they 
+
+609
+00:38:25,500 --> 00:38:29,400
+incorporate them as experimental
+features but they're very Clear.
+
+610
+00:38:29,400 --> 00:38:32,500
+Yeah, that oh no. 
+We're, you know, we're trying 
+
+611
+00:38:32,500 --> 00:38:35,099
+this feature out. 
+This is an enhancement python. 
+
+612
+00:38:35,099 --> 00:38:37,800
+It's a pet python enhancement 
+proposed, okay. 
+
+613
+00:38:38,099 --> 00:38:41,400
+And you know, we're we're 
+working this out. 
+
+614
+00:38:41,400 --> 00:38:46,400
+We want to see if it works. 
+If it has to be improved is so 
+
+615
+00:38:46,400 --> 00:38:50,300
+yeah there's a lot of you know, 
+open discussion about it. 
+
+616
+00:38:50,400 --> 00:38:53,800
+Yeah and I guess sometimes it 
+gets a little heated and I know 
+
+617
+00:38:53,800 --> 00:38:58,099
+that yeah Guido got tired of 
+being in the middle of all that 
+
+618
+00:38:58,099 --> 00:39:01,699
+and Power to him that he had 
+such a hard thing. 
+
+619
+00:39:01,699 --> 00:39:02,800
+Yeah. 
+Yeah. 
+
+620
+00:39:03,000 --> 00:39:05,500
+And they're want things to move 
+forward and hmm. 
+
+621
+00:39:05,800 --> 00:39:10,500
+But you got to get feedback and 
+then people have strong opinions
+
+622
+00:39:10,500 --> 00:39:13,099
+about it and hmm. 
+Yeah. 
+
+623
+00:39:14,000 --> 00:39:15,699
+That's hard to be a language 
+designer. 
+
+624
+00:39:16,000 --> 00:39:19,300
+Oh, very hard. 
+Glad that's not my job. 
+
+625
+00:39:19,400 --> 00:39:21,500
+No, no. 
+Every once in a while. 
+
+626
+00:39:21,500 --> 00:39:26,500
+Like I've imagined, you know 
+what it would be like to design 
+
+627
+00:39:26,500 --> 00:39:30,099
+the perfect language and Just 
+go, you know, I have a hard 
+
+628
+00:39:30,099 --> 00:39:35,199
+enough time understanding the 
+existing languages and that 
+
+629
+00:39:37,099 --> 00:39:40,800
+that's that's something we were 
+talking about a little coffee. 
+
+630
+00:39:40,900 --> 00:39:48,400
+Was I think there's just not 
+enough focus when you're 
+
+631
+00:39:48,400 --> 00:39:53,400
+certainly when you're trying to 
+explain features and perhaps 
+
+632
+00:39:53,400 --> 00:39:57,300
+motivate features into a 
+language is what problem are we 
+
+633
+00:39:57,300 --> 00:39:58,300
+solving? 
+Yeah. 
+
+634
+00:39:58,400 --> 00:40:03,500
+Yeah, and it's, you know, it's 
+very much like the, you know, 
+
+635
+00:40:03,599 --> 00:40:05,599
+how do you describe a monad? 
+Yeah. 
+
+636
+00:40:05,599 --> 00:40:08,400
+Well it's a burrito or the other
+night. 
+
+637
+00:40:08,400 --> 00:40:11,900
+We since you have small children
+and Bill's about to have a small
+
+638
+00:40:11,900 --> 00:40:15,599
+child, I thought. 
+No, it's actually like a diaper.
+
+639
+00:40:15,699 --> 00:40:18,099
+That's right. 
+Monads are like diapers. 
+
+640
+00:40:18,199 --> 00:40:21,900
+Yeah, full diapers. 
+Yeah, well, in any event is like
+
+641
+00:40:22,800 --> 00:40:28,099
+it doesn't really matter. 
+The, the implementation is not 
+
+642
+00:40:28,199 --> 00:40:31,599
+and It's what people focus on is
+that particular, strategy frame 
+
+643
+00:40:31,599 --> 00:40:34,199
+solve the problem, and not the 
+problem that you're trying to 
+
+644
+00:40:34,199 --> 00:40:36,500
+solve. 
+Yeah, they decide. 
+
+645
+00:40:36,500 --> 00:40:39,599
+Well, that's obvious. 
+I don't know, I'm not sure or 
+
+646
+00:40:39,599 --> 00:40:42,900
+becomes so obvious to them that 
+they stop thinking about it. 
+
+647
+00:40:43,500 --> 00:40:46,300
+And and when you're trying to 
+explain it to somebody, if you 
+
+648
+00:40:46,300 --> 00:40:49,500
+don't start with, what problem 
+are we trying to solve? 
+
+649
+00:40:49,599 --> 00:40:54,800
+Yeah, then it just sounds like, 
+I mean, I use the example of 
+
+650
+00:40:55,900 --> 00:41:00,000
+describing hash functions and if
+I just jump pin and say, so, you
+
+651
+00:41:00,008 --> 00:41:03,599
+know, we have this list of 
+things that we keep fixed size, 
+
+652
+00:41:03,599 --> 00:41:06,599
+and then you can jump into it. 
+And then you have this chain on 
+
+653
+00:41:06,607 --> 00:41:09,300
+me, suddenly, it's overwhelming.
+Why are you doing all this? 
+
+654
+00:41:09,300 --> 00:41:12,599
+Yeah, but if you have to start 
+with, we're trying to make the 
+
+655
+00:41:12,599 --> 00:41:15,300
+fastest look up possible. 
+Yeah, yeah. 
+
+656
+00:41:15,500 --> 00:41:19,000
+And then it all falls into 
+place. 
+
+657
+00:41:19,000 --> 00:41:23,000
+Yeah. 
+And I think that's, that's key. 
+
+658
+00:41:23,000 --> 00:41:25,800
+Well, like when we're 
+describing, you know, we're 
+
+659
+00:41:25,800 --> 00:41:29,099
+trying to figure out type 
+classes and Struggled. 
+
+660
+00:41:29,099 --> 00:41:34,599
+And then finally started going 
+oh this is another form of we 
+
+661
+00:41:34,599 --> 00:41:37,199
+want to write. 
+Well let's just say a function, 
+
+662
+00:41:37,300 --> 00:41:41,099
+we want to write a function and 
+we want to use it for more than 
+
+663
+00:41:41,699 --> 00:41:43,400
+just one time. 
+Yeah. 
+
+664
+00:41:43,500 --> 00:41:47,400
+And there's there's a number of 
+different approaches to that 
+
+665
+00:41:47,400 --> 00:41:50,500
+problem and they all have their 
+strengths and limitations and 
+
+666
+00:41:50,500 --> 00:41:54,599
+type classes is another way to 
+do that is like, oh, okay. 
+
+667
+00:41:54,599 --> 00:41:57,400
+Now it's starting to fit for me.
+Yeah. 
+
+668
+00:41:57,400 --> 00:42:01,400
+Whereas before Or it was just, 
+oh, you do this thing and it 
+
+669
+00:42:01,400 --> 00:42:03,099
+reaches out and grabs this 
+thing. 
+
+670
+00:42:03,099 --> 00:42:07,199
+That's why, why that, you know, 
+what is the point? 
+
+671
+00:42:07,199 --> 00:42:09,500
+And how am I supposed to explain
+this to somebody? 
+
+672
+00:42:09,800 --> 00:42:13,300
+If I don't start with hey, we 
+have a problem. 
+
+673
+00:42:13,400 --> 00:42:15,099
+Yeah. 
+And here's how we're trying to 
+
+674
+00:42:15,099 --> 00:42:16,099
+solve it. 
+Yeah. 
+
+675
+00:42:17,199 --> 00:42:18,599
+Yeah. 
+And I think we talked to all 
+
+676
+00:42:18,599 --> 00:42:22,500
+back about how Elm went through 
+that process of Evan, the 
+
+677
+00:42:22,500 --> 00:42:26,000
+language designer said, said 
+what problem are type classes 
+
+678
+00:42:26,000 --> 00:42:31,300
+trying to solve and and People 
+tried and tried to explain to 
+
+679
+00:42:31,300 --> 00:42:33,500
+him. 
+What problem is trying to solve,
+
+680
+00:42:33,500 --> 00:42:36,900
+but when I checked in on the 
+thread, no one was able to 
+
+681
+00:42:36,900 --> 00:42:41,800
+successfully describe why, what 
+problem type classes are trying 
+
+682
+00:42:41,800 --> 00:42:43,699
+to solve? 
+I think we're going to do it in 
+
+683
+00:42:44,000 --> 00:42:45,900
+Atomic Skull three. 
+Yes, we are. 
+
+684
+00:42:46,099 --> 00:42:48,699
+Because yeah, yeah. 
+Because we have to. 
+
+685
+00:42:49,199 --> 00:42:51,900
+Yeah, but I think let me closer 
+to what's interesting. 
+
+686
+00:42:51,900 --> 00:42:56,000
+Is that a lot of times we when 
+we can't describe the problem or
+
+687
+00:42:56,000 --> 00:43:00,300
+it's very hard to do that. 
+We resort to either analogies 
+
+688
+00:43:00,599 --> 00:43:04,900
+like the burrito for monads or 
+we results or re resort to 
+
+689
+00:43:05,599 --> 00:43:09,800
+specific implementations. 
+So in the cat is the cat. 
+
+690
+00:43:10,699 --> 00:43:13,000
+The case of type classes. 
+We say okay. 
+
+691
+00:43:13,500 --> 00:43:15,599
+Think about adjacency realizer. 
+You know. 
+
+692
+00:43:15,599 --> 00:43:18,099
+So we have detected not help. 
+Yeah. 
+
+693
+00:43:19,199 --> 00:43:20,900
+Yeah. 
+So it's because I could, you 
+
+694
+00:43:20,900 --> 00:43:23,500
+know, solve that problem in a 
+number of different ways which 
+
+695
+00:43:23,500 --> 00:43:25,599
+is actually really important to 
+look at. 
+
+696
+00:43:25,599 --> 00:43:28,300
+Yes, there are more than one way
+to solve this problem. 
+
+697
+00:43:28,400 --> 00:43:31,000
+But what is the problem? 
+Yeah, yeah. 
+
+698
+00:43:32,599 --> 00:43:39,099
+Or we resort to the mathematical
+definition, the category theory,
+
+699
+00:43:39,300 --> 00:43:41,500
+definition of the thing like 
+Vermin. 
+
+700
+00:43:41,500 --> 00:43:44,300
+And what is it? 
+A Mona is a monoid in the 
+
+701
+00:43:44,300 --> 00:43:46,699
+category of endo functors. 
+Yeah. 
+
+702
+00:43:46,800 --> 00:43:49,699
+Why can I remember that? 
+I have no idea what it means, 
+
+703
+00:43:49,699 --> 00:43:51,599
+good. 
+I'm just making noises with my 
+
+704
+00:43:51,599 --> 00:43:54,199
+mouth. 
+Yeah. 
+
+705
+00:43:55,300 --> 00:43:58,300
+Hey, and, and that may be the 
+actual true. 
+
+706
+00:43:58,699 --> 00:44:01,599
+Category theory definition of a 
+monad but it certainly doesn't 
+
+707
+00:44:01,599 --> 00:44:04,500
+help. 
+Anybody understand why you 
+
+708
+00:44:04,500 --> 00:44:08,699
+should use monads, right? 
+What problem they solve, right? 
+
+709
+00:44:09,099 --> 00:44:10,300
+Right. 
+Yeah. 
+
+710
+00:44:10,400 --> 00:44:13,300
+It's been long path. 
+I feel like I'm getting it. 
+
+711
+00:44:13,300 --> 00:44:15,699
+I could be wrong. 
+Yeah, that this experience 
+
+712
+00:44:15,699 --> 00:44:19,400
+before but it was, it was like 
+when I was figuring out what 
+
+713
+00:44:19,500 --> 00:44:26,000
+dynamic binding did, and at 
+first, using the C++ C front 
+
+714
+00:44:26,000 --> 00:44:27,000
+compiler. 
+Yeah. 
+
+715
+00:44:27,000 --> 00:44:30,599
+And I had to look at the Really 
+code and say, wait a minute, 
+
+716
+00:44:30,599 --> 00:44:33,599
+it's looking something up in a 
+table, why the heck is it doing 
+
+717
+00:44:33,599 --> 00:44:34,900
+that? 
+And it took a lot. 
+
+718
+00:44:35,000 --> 00:44:38,099
+I mean, once I understood what 
+it was doing, it took a lot 
+
+719
+00:44:38,099 --> 00:44:40,199
+longer, understand why? 
+Yeah. 
+
+720
+00:44:40,199 --> 00:44:42,300
+Because there wasn't that 
+motivation. 
+
+721
+00:44:42,300 --> 00:44:44,599
+Yeah, yeah. 
+Just oh, we need Dynamic 
+
+722
+00:44:44,599 --> 00:44:46,800
+binding. 
+Yeah, okay. 
+
+723
+00:44:46,800 --> 00:44:53,699
+Well yeah, there's something in 
+here around philosophy and like 
+
+724
+00:44:54,199 --> 00:44:58,300
+Plato's Cave and all that kind 
+of stuff, really. 
+
+725
+00:44:58,400 --> 00:45:04,099
+About how we see reality. 
+And and the difference between 
+
+726
+00:45:04,099 --> 00:45:07,500
+form and what it, what is it in 
+Plato's world? 
+
+727
+00:45:07,500 --> 00:45:10,800
+There's you can have the form of
+the thing and then the object of
+
+728
+00:45:10,800 --> 00:45:11,699
+the thing or something. 
+Like. 
+
+729
+00:45:11,699 --> 00:45:15,599
+Well, he had an idea that there 
+was this, this actual ultimate 
+
+730
+00:45:15,599 --> 00:45:18,199
+truth. 
+And then there was some light 
+
+731
+00:45:18,199 --> 00:45:21,300
+being shine through that. 
+And it made these images on the 
+
+732
+00:45:21,300 --> 00:45:24,099
+wall. 
+Yeah, very much like our yeah, 
+
+733
+00:45:24,099 --> 00:45:25,400
+their screens. 
+Yeah. 
+
+734
+00:45:25,800 --> 00:45:28,300
+And then what. 
+So you were seeing the images? 
+
+735
+00:45:28,500 --> 00:45:30,400
+Were interpreting that as 
+reality. 
+
+736
+00:45:30,500 --> 00:45:33,900
+Yeah. 
+And actually there was some, I 
+
+737
+00:45:33,900 --> 00:45:36,699
+forget how he described it. 
+But, you know, there was some 
+
+738
+00:45:36,900 --> 00:45:40,300
+pure concept that was there. 
+That was generating these 
+
+739
+00:45:40,300 --> 00:45:42,400
+things. 
+It was getting distorted by the 
+
+740
+00:45:42,599 --> 00:45:45,599
+Yeah, by the projection. 
+Yeah. 
+
+741
+00:45:45,599 --> 00:45:53,900
+So in the case of monads, I it 
+took me a long time years to 
+
+742
+00:45:54,199 --> 00:45:58,300
+understand kind of what monads 
+were, but I use them a lot. 
+
+743
+00:45:58,400 --> 00:46:02,000
+Lat. 
+And so if, if I were asked at 
+
+744
+00:46:02,000 --> 00:46:06,199
+that time to describe monads, I 
+would really just be describing 
+
+745
+00:46:06,199 --> 00:46:10,800
+the projection on the wall, my 
+experience of them, but not 
+
+746
+00:46:10,800 --> 00:46:15,800
+describing the actual reality. 
+The, you know, that was behind 
+
+747
+00:46:15,800 --> 00:46:20,000
+that. 
+And and I think in some ways 
+
+748
+00:46:20,599 --> 00:46:26,500
+what we're describing is that to
+be able to understand the why is
+
+749
+00:46:26,500 --> 00:46:31,500
+to recognize the actual A 
+lettieri like you've moved past 
+
+750
+00:46:31,500 --> 00:46:36,300
+the projection to something, 
+something deeper and for me, 
+
+751
+00:46:36,300 --> 00:46:39,199
+it's it's real, maybe for a lot 
+of people. 
+
+752
+00:46:39,199 --> 00:46:42,800
+It's very hard to to go take our
+experience beyond that 
+
+753
+00:46:42,800 --> 00:46:47,099
+projection and our perception of
+our experience. 
+
+754
+00:46:48,199 --> 00:46:54,199
+Do the, the deeper deeper more 
+real Concepts. 
+
+755
+00:46:54,199 --> 00:46:57,500
+Yeah, and just, I don't know how
+my brain works. 
+
+756
+00:46:57,500 --> 00:47:02,900
+I'm stuck. 
+Chuck until cuz I I want to know
+
+757
+00:47:03,199 --> 00:47:06,900
+if you're going to design with 
+something, you have to 
+
+758
+00:47:06,900 --> 00:47:09,400
+understand what design problem 
+yourself. 
+
+759
+00:47:09,400 --> 00:47:11,800
+Hmm. 
+And so, I kind of have to go 
+
+760
+00:47:11,800 --> 00:47:13,800
+from there. 
+And it's just, I guess, because 
+
+761
+00:47:13,800 --> 00:47:15,500
+I've done it this way for so 
+long. 
+
+762
+00:47:15,900 --> 00:47:20,000
+And I don't know why, you know, 
+why does this feature exists? 
+
+763
+00:47:20,000 --> 00:47:25,000
+What what is it doing for me? 
+Yeah, yeah, yes. 
+
+764
+00:47:25,000 --> 00:47:31,300
+And no I think like without Me 
+understanding monads but having 
+
+765
+00:47:31,300 --> 00:47:35,400
+used them, I can then like 
+basically pattern match and be 
+
+766
+00:47:35,400 --> 00:47:38,300
+like, okay, this would be 
+another great place for monads 
+
+767
+00:47:38,599 --> 00:47:43,300
+without really understanding 
+them but I think that that then 
+
+768
+00:47:43,300 --> 00:47:47,800
+my eye my pattern matching is 
+limited on the places where I 
+
+769
+00:47:47,800 --> 00:47:50,500
+could see where monads would 
+apply, whereas you take somebody
+
+770
+00:47:50,500 --> 00:47:53,699
+like, John to goes who and many 
+other people. 
+
+771
+00:47:53,699 --> 00:47:58,699
+But, but who really understand 
+monads, and then can be Like, 
+
+772
+00:47:58,699 --> 00:48:04,000
+oh, there's this universe of 
+places where we can use monads, 
+
+773
+00:48:04,599 --> 00:48:08,599
+because they understand the 
+deeper, the deeper part of it, 
+
+774
+00:48:09,699 --> 00:48:13,500
+the the deeper reality of it. 
+Well, I have to say, I really 
+
+775
+00:48:13,500 --> 00:48:19,199
+admire your ability to wait in 
+and just go. 
+
+776
+00:48:19,900 --> 00:48:22,300
+Oh, here's the thing. 
+Let's try and build something 
+
+777
+00:48:22,300 --> 00:48:23,900
+with. 
+You know what I'm going. 
+
+778
+00:48:23,900 --> 00:48:26,500
+Whoa, I got. 
+No, no. 
+
+779
+00:48:29,500 --> 00:48:32,300
+Why we're doing this before you 
+just go in and start thrashing 
+
+780
+00:48:32,300 --> 00:48:37,599
+around and yet you can learn a 
+huge amount by actually going in
+
+781
+00:48:37,599 --> 00:48:40,699
+and saying, oh, you know, we 
+plug the pieces together and it 
+
+782
+00:48:40,699 --> 00:48:44,000
+works and, and you kind of look 
+forward that way. 
+
+783
+00:48:44,099 --> 00:48:46,599
+Yeah. 
+And I think that is, that is 
+
+784
+00:48:46,599 --> 00:48:50,400
+super cool that you can do 
+different paths to understanding
+
+785
+00:48:50,400 --> 00:48:51,599
+from paths. 
+Yeah. 
+
+786
+00:48:51,699 --> 00:48:56,000
+The object, not the, but I get 
+exact sound up with. 
+
+787
+00:48:56,900 --> 00:49:00,599
+I can't just be sticking 
+Capacitors on this on this 
+
+788
+00:49:00,599 --> 00:49:02,800
+circuit. 
+Without, you know, why am I 
+
+789
+00:49:02,800 --> 00:49:05,000
+doing that? 
+What, what, if I put the wrong 
+
+790
+00:49:05,000 --> 00:49:06,599
+capacitor there? 
+What happens? 
+
+791
+00:49:07,000 --> 00:49:11,400
+I don't know. 
+Yeah, my first experience in 
+
+792
+00:49:11,408 --> 00:49:15,699
+electronics. 
+Was they handed us some some 
+
+793
+00:49:15,699 --> 00:49:18,699
+LEDs, which were like a dollar a
+piece at the time. 
+
+794
+00:49:18,699 --> 00:49:24,099
+Yeah. 
+And and I you know, I think I go
+
+795
+00:49:24,099 --> 00:49:28,000
+oh this will light up if I put 
+current through. 
+
+796
+00:49:28,500 --> 00:49:31,000
+If you put current through, it 
+has no resistance. 
+
+797
+00:49:31,099 --> 00:49:32,900
+Yeah. 
+And so it's just like, goes to 
+
+798
+00:49:32,900 --> 00:49:37,099
+the maximum amount of current in
+the thing pops, sends the end in
+
+799
+00:49:37,099 --> 00:49:39,599
+a little thing across the rib. 
+I'm going on. 
+
+800
+00:49:39,599 --> 00:49:43,500
+I did, you know, I broke it 
+because I didn't understand. 
+
+801
+00:49:43,599 --> 00:49:46,500
+Yeah, what was going on? 
+Yeah, yeah. 
+
+802
+00:49:46,500 --> 00:49:50,599
+And and so I think that's made 
+me careful Constance. 
+
+803
+00:49:50,599 --> 00:49:52,400
+You know, done shine. 
+Probably. 
+
+804
+00:49:52,500 --> 00:49:55,199
+Yeah. 
+And now better understand this 
+
+805
+00:49:55,199 --> 00:49:57,599
+thing or it's going to blow up, 
+it's gonna blow up. 
+
+806
+00:49:57,800 --> 00:50:02,099
+Yep. 
+Yeah, yeah, that's that's 
+
+807
+00:50:02,099 --> 00:50:09,300
+interesting. 
+So Java 16 I don't know. 
+
+808
+00:50:09,400 --> 00:50:12,300
+I mean I'm sure people use it. 
+I'm sure people will like it. 
+
+809
+00:50:12,300 --> 00:50:14,000
+I'm sure there's great 
+improvements there. 
+
+810
+00:50:16,300 --> 00:50:19,800
+I-it's I'm probably not going to
+use it. 
+
+811
+00:50:20,099 --> 00:50:22,300
+I'm not gonna. 
+Oh no, I'm not gonna write about
+
+812
+00:50:22,300 --> 00:50:27,199
+anything until you know, Java 
+17th comes along, and then I go,
+
+813
+00:50:27,199 --> 00:50:31,199
+well, that's a real thing. 
+Yeah, Java 16 isn't real. 
+
+814
+00:50:31,300 --> 00:50:32,800
+I don't know. 
+I mean I guess you're in an 
+
+815
+00:50:32,800 --> 00:50:36,800
+interesting position in the you.
+You actually do write about 
+
+816
+00:50:36,800 --> 00:50:41,900
+these new features for your 
+thinking in Java updates and 
+
+817
+00:50:41,900 --> 00:50:44,199
+stuff. 
+And so so you actually do need 
+
+818
+00:50:44,199 --> 00:50:47,699
+to understand record types. 
+Whereas record types are going 
+
+819
+00:50:47,699 --> 00:50:54,599
+to probably be used by Scala and
+kotlin in some way and I won't 
+
+820
+00:50:55,099 --> 00:50:57,699
+use them directly. 
+So, I'm glad that somebody is 
+
+821
+00:50:57,699 --> 00:51:00,099
+going to Understand them and use
+them. 
+
+822
+00:51:00,099 --> 00:51:03,099
+But why wouldn't you use them 
+all? 
+
+823
+00:51:03,099 --> 00:51:06,199
+Use data classes? 
+Well okay, in case classes and 
+
+824
+00:51:06,199 --> 00:51:09,400
+maybe underneath the covers. 
+You know, they'll turn into 
+
+825
+00:51:09,400 --> 00:51:11,500
+records or something. 
+I don't know how that's going to
+
+826
+00:51:11,500 --> 00:51:13,699
+work. 
+But but but I'm going to let the
+
+827
+00:51:13,699 --> 00:51:15,699
+skull and cotton language 
+designers. 
+
+828
+00:51:15,699 --> 00:51:21,000
+Think about what records mean 
+for Colin and scallop, but but 
+
+829
+00:51:21,000 --> 00:51:26,000
+but you for your writing, you 
+will need to understand these 
+
+830
+00:51:26,000 --> 00:51:27,800
+features for understanding as 
+mm. 
+
+831
+00:51:27,800 --> 00:51:29,000
+Yeah. 
+About them. 
+
+832
+00:51:29,300 --> 00:51:32,599
+Yeah. 
+And I think it will also change 
+
+833
+00:51:32,599 --> 00:51:37,500
+serialization for Java. 
+Yeah because mostly that's what 
+
+834
+00:51:37,500 --> 00:51:40,000
+you're sending back and forth on
+the wire. 
+
+835
+00:51:40,000 --> 00:51:42,199
+Yes. 
+Is records and the general 
+
+836
+00:51:42,199 --> 00:51:47,199
+serialization that they put in 
+was just a complete cluster. 
+
+837
+00:51:47,699 --> 00:51:52,599
+Yeah, you know, it was just yet 
+another Java feature that was 
+
+838
+00:51:53,599 --> 00:51:57,500
+Tossed into the mix without 
+really thinking about what the 
+
+839
+00:51:57,500 --> 00:52:00,599
+impact was. 
+And yeah, this caused apparently
+
+840
+00:52:00,599 --> 00:52:06,000
+all kinds of security issues and
+yeah you know it's amazing that 
+
+841
+00:52:06,000 --> 00:52:10,199
+serialization still is so hard. 
+It still is something that we 
+
+842
+00:52:10,199 --> 00:52:14,400
+all Wrestle with and so many 
+different ways because you 
+
+843
+00:52:14,400 --> 00:52:19,199
+really want it to be automatic 
+and secure, you know. 
+
+844
+00:52:19,199 --> 00:52:23,900
+Yeah. 
+And efficient and I certainly 
+
+845
+00:52:23,900 --> 00:52:29,900
+appreciate schemas so I can 
+validate things and just all 
+
+846
+00:52:29,900 --> 00:52:33,800
+those little and it turns out 
+it's a really hard problem that,
+
+847
+00:52:33,800 --> 00:52:36,500
+you know, 40, 40 years in, we're
+still trying to figure out how 
+
+848
+00:52:36,500 --> 00:52:42,800
+to how to take data out of 
+memory and put it into a form 
+
+849
+00:52:42,800 --> 00:52:44,599
+that we can send it to somewhere
+else. 
+
+850
+00:52:45,400 --> 00:52:48,400
+This object and put it over 
+there. 
+
+851
+00:52:48,800 --> 00:52:52,300
+Why is that? 
+Why is our well and why isn't it
+
+852
+00:52:52,300 --> 00:52:54,099
+a solved problem? 
+Um, why? 
+
+853
+00:52:54,699 --> 00:52:59,199
+Because it and I think it's just
+because on the list of things 
+
+854
+00:52:59,199 --> 00:53:03,000
+that needed to be solved. 
+It's like, let's just do a quick
+
+855
+00:53:03,000 --> 00:53:07,000
+and dirty serialization thing 
+and then later, we'll revisit it
+
+856
+00:53:07,099 --> 00:53:11,199
+and it's 25 years later. 
+That's now they're finally 
+
+857
+00:53:11,199 --> 00:53:14,099
+looking at it. 
+And, yeah, when it turns out 
+
+858
+00:53:14,099 --> 00:53:16,599
+there's, it's actually the 
+surface area of that. 
+
+859
+00:53:16,599 --> 00:53:24,400
+One problem seems simple, but as
+you really get into It, it is 
+
+860
+00:53:24,400 --> 00:53:27,599
+not. 
+There is so many facets to this.
+
+861
+00:53:28,099 --> 00:53:33,300
+That are so many so many pieces 
+to the problem that it turns 
+
+862
+00:53:33,300 --> 00:53:35,500
+out, it's actually a really 
+complicated problem. 
+
+863
+00:53:35,500 --> 00:53:36,699
+If it was simple. 
+I think it. 
+
+864
+00:53:36,699 --> 00:53:40,300
+We would have, it would have 
+been solved already, but it's 
+
+865
+00:53:40,300 --> 00:53:44,400
+not simple wrote Because you've 
+got to think about performance. 
+
+866
+00:53:44,400 --> 00:53:46,900
+You've got to think about size, 
+you've got to think about 
+
+867
+00:53:47,000 --> 00:53:52,500
+interoperability, you've got to 
+think about, you have to think 
+
+868
+00:53:52,500 --> 00:53:56,000
+about, let's See what are some 
+other aspects to serialization 
+
+869
+00:53:57,300 --> 00:53:59,500
+forwards? 
+Compatibility backwards 
+
+870
+00:53:59,500 --> 00:54:05,000
+compatibility, you have to think
+about like one of the nice 
+
+871
+00:54:05,000 --> 00:54:08,500
+things about Jason was that it 
+was easily human-readable that 
+
+872
+00:54:08,500 --> 00:54:11,900
+you could, you know, see it 
+where as binary formats can be 
+
+873
+00:54:11,900 --> 00:54:15,500
+much more efficient, but then 
+you need some tool to look at it
+
+874
+00:54:15,500 --> 00:54:19,699
+when somebody has to think about
+those and I feel like that's 
+
+875
+00:54:19,699 --> 00:54:23,699
+the, you know, compiler designer
+and Here. 
+
+876
+00:54:24,300 --> 00:54:28,400
+That's that's part of their job.
+Yeah, that has been kicked down 
+
+877
+00:54:28,400 --> 00:54:30,699
+the road for 25 years. 
+Yeah. 
+
+878
+00:54:30,900 --> 00:54:37,400
+And you know, I as a end 
+programmer, putting that burden 
+
+879
+00:54:37,400 --> 00:54:42,500
+on me is not a reasonable thing.
+I mean, it's it's very much 
+
+880
+00:54:42,500 --> 00:54:46,500
+like, let's just throw in 
+low-level concurrency. 
+
+881
+00:54:47,199 --> 00:54:52,199
+And then the programmer will 
+have to, you know, they'll know,
+
+882
+00:54:52,199 --> 00:54:55,699
+they'll figure it out. 
+Yeah, and it's like, no, it's 
+
+883
+00:54:55,699 --> 00:54:58,699
+not, they're just so many 
+factors. 
+
+884
+00:54:58,699 --> 00:55:01,000
+Yeah, there that are too 
+complicated. 
+
+885
+00:55:01,400 --> 00:55:07,199
+I think one of the biggest is 
+the the how you map the data, 
+
+886
+00:55:07,199 --> 00:55:11,500
+the serialized format to types 
+in the thing, like that, turns 
+
+887
+00:55:11,500 --> 00:55:16,199
+out to be a really hard problem.
+I just saw some Jason recently, 
+
+888
+00:55:16,199 --> 00:55:21,199
+that put the type information 
+into the Json, which is a little
+
+889
+00:55:21,199 --> 00:55:25,000
+bit awkward because Jason 
+already has Essentially a type 
+
+890
+00:55:25,000 --> 00:55:27,000
+system, it's very limited type 
+system. 
+
+891
+00:55:27,300 --> 00:55:32,599
+But so they in Jason properties 
+would say the type of this thing
+
+892
+00:55:32,599 --> 00:55:39,699
+is a string like actually in the
+data and that I have issues with
+
+893
+00:55:39,699 --> 00:55:42,400
+with that but then you still 
+have to figure out. 
+
+894
+00:55:42,400 --> 00:55:47,699
+Alright the Jason says is saying
+is a foo I need a foo in my 
+
+895
+00:55:47,699 --> 00:55:51,300
+programming language to map that
+thing to what if I don't have a 
+
+896
+00:55:51,300 --> 00:55:55,199
+food type then what do I do? 
+Well and and, you know, I think 
+
+897
+00:55:55,199 --> 00:55:59,599
+this brings up the issue that we
+don't even understand the shape 
+
+898
+00:55:59,599 --> 00:56:03,400
+of the problem because it may be
+that to solve the problem. 
+
+899
+00:56:03,599 --> 00:56:08,800
+You do have to include type 
+information in your package that
+
+900
+00:56:08,800 --> 00:56:12,099
+you're shipping there. 
+You know, that's kind of a PhD 
+
+901
+00:56:12,099 --> 00:56:14,000
+dissertation sort of thing. 
+Yeah. 
+
+902
+00:56:14,000 --> 00:56:18,699
+Do you know that that you need 
+to prove one way or the other? 
+
+903
+00:56:18,699 --> 00:56:20,800
+Yes, you have to have it or no 
+you don't. 
+
+904
+00:56:20,900 --> 00:56:25,099
+And the fact that we haven't 
+even Figured that out. 
+
+905
+00:56:25,199 --> 00:56:27,000
+Yeah. 
+The point where we can say yes 
+
+906
+00:56:27,400 --> 00:56:31,500
+or no. 
+Yeah, I'm pretty Buffs have and 
+
+907
+00:56:31,500 --> 00:56:36,400
+I'm sure many other Technologies
+but this idea that yeah, you you
+
+908
+00:56:36,400 --> 00:56:40,199
+have a representation of the 
+type system and then you 
+
+909
+00:56:40,199 --> 00:56:44,199
+generate the actual types in 
+your programming language and 
+
+910
+00:56:44,199 --> 00:56:49,400
+you, and you also generate the 
+mappers that know how to take 
+
+911
+00:56:49,400 --> 00:56:52,800
+the serialized form and turn it 
+into those types from that 
+
+912
+00:56:52,800 --> 00:56:55,300
+chair. 
+What do you call an ideal for 
+
+913
+00:56:55,300 --> 00:56:59,800
+the center for this description?
+Yeah there was something there's
+
+914
+00:56:59,800 --> 00:57:03,500
+definitely something useful and 
+Innovative there but there's all
+
+915
+00:57:03,500 --> 00:57:06,699
+sorts of trade-offs to that 
+because then you have to 
+
+916
+00:57:06,699 --> 00:57:11,699
+generate code and generating 
+code has all sorts of drawbacks.
+
+917
+00:57:12,800 --> 00:57:17,400
+There's a lot of I think 
+fundamental theory in here that 
+
+918
+00:57:17,400 --> 00:57:23,300
+we just haven't given enough 
+energy to because yeah. 
+
+919
+00:57:23,500 --> 00:57:26,400
+Busy solving. 
+So many of these other problems.
+
+920
+00:57:26,400 --> 00:57:30,500
+But you know what? 
+Wonder this could be one of 
+
+921
+00:57:30,500 --> 00:57:35,099
+those things that justifies a 
+new language at some point in. 
+
+922
+00:57:35,099 --> 00:57:37,199
+Well I mean Unison. 
+We are. 
+
+923
+00:57:37,199 --> 00:57:42,000
+Well, writers is yeah I think is
+making some interesting 
+
+924
+00:57:42,000 --> 00:57:44,900
+strategies in this direction but
+there are others as well. 
+
+925
+00:57:45,099 --> 00:57:53,400
+So, I know that Heather who 
+worked on Scala at epfl and 
+
+926
+00:57:53,500 --> 00:57:57,699
+Listen her. 
+She is now doing a doctoral 
+
+927
+00:57:57,699 --> 00:58:02,000
+program on distributed systems 
+and and looking at some of these
+
+928
+00:58:02,000 --> 00:58:05,599
+problems but off to have her on 
+the show sometime. 
+
+929
+00:58:05,599 --> 00:58:09,800
+But yeah, I mean I think there 
+is a lot of research going into 
+
+930
+00:58:09,800 --> 00:58:14,199
+this, but it's going to take a 
+while for that research to be 
+
+931
+00:58:14,199 --> 00:58:18,900
+something that we all can use, 
+but hopefully, hopefully in a 
+
+932
+00:58:18,900 --> 00:58:21,099
+decade, will be like a thank 
+God. 
+
+933
+00:58:21,099 --> 00:58:23,199
+Somebody saw the serialization 
+problem. 
+
+934
+00:58:24,400 --> 00:58:28,199
+Yeah, and I don't, I think to 
+solve the serialization problem,
+
+935
+00:58:28,500 --> 00:58:31,199
+they'll probably solve end up 
+solving a bunch of other 
+
+936
+00:58:31,199 --> 00:58:32,300
+problems as well. 
+Yeah. 
+
+937
+00:58:32,800 --> 00:58:35,099
+Yes, yeah. 
+Suddenly, you know, that'll be a
+
+938
+00:58:35,099 --> 00:58:38,800
+Leap Forward in our just 
+understanding of computing. 
+
+939
+00:58:38,800 --> 00:58:43,500
+But as things become more and 
+more distributed, we have to all
+
+940
+00:58:43,500 --> 00:58:46,099
+of that stuff is becoming more 
+important. 
+
+941
+00:58:46,099 --> 00:58:50,699
+We can no longer imagine that. 
+We're just running on our little
+
+942
+00:58:50,699 --> 00:58:52,599
+isolated machine. 
+Yeah. 
+
+943
+00:58:53,000 --> 00:58:56,099
+Yeah. 
+It's nice and simple but doesn't
+
+944
+00:58:56,099 --> 00:59:05,400
+match well with reality. 
+Yeah, so Java 16 I look forward 
+
+945
+00:59:05,400 --> 00:59:11,199
+to learning about it from you 
+back real quick to my blog post.
+
+946
+00:59:11,199 --> 00:59:13,300
+There was a couple other topics 
+that I covered in there. 
+
+947
+00:59:13,900 --> 00:59:17,599
+One was reactive and talked 
+about kind of different 
+
+948
+00:59:17,599 --> 00:59:21,000
+fundamental ways to look at 
+reactive and co-routines is part
+
+949
+00:59:21,000 --> 00:59:24,400
+of that and stream processing. 
+Stuff. 
+
+950
+00:59:24,400 --> 00:59:28,900
+And and I think that that's the 
+reactive stuff is a place where 
+
+951
+00:59:28,900 --> 00:59:32,400
+the Java ecosystem really shines
+and is doing a great job. 
+
+952
+00:59:34,099 --> 00:59:38,400
+You know, this has got to be 
+four different podcast, but I'd 
+
+953
+00:59:38,400 --> 00:59:41,800
+like to delve, you know, I've 
+kind of just ignored the whole 
+
+954
+00:59:41,800 --> 00:59:45,699
+reactive world and I'd like to. 
+Yeah, okay, that next up. 
+
+955
+00:59:45,699 --> 00:59:47,400
+So that'll be a fun. 
+Yeah, yeah. 
+
+956
+00:59:47,400 --> 00:59:51,800
+Just kind of pick your brain and
+say, what's going on here and 
+
+957
+00:59:51,800 --> 00:59:53,699
+why what problem? 
+What problem? 
+
+958
+00:59:53,800 --> 00:59:56,699
+Chainsaw. 
+Yeah, I'll give that to you but 
+
+959
+00:59:56,699 --> 00:59:59,900
+yeah, we'll move that to the 
+next episode, right? 
+
+960
+01:00:00,500 --> 01:00:05,699
+The problem that reactive is 
+solving, is that things 
+
+961
+01:00:05,699 --> 01:00:10,199
+sometimes are. 
+Sometimes your programs are just
+
+962
+01:00:10,199 --> 01:00:14,900
+waiting waiting for something to
+happen and it turns out that our
+
+963
+01:00:14,900 --> 01:00:19,500
+programming models are really 
+are our Legacy programming 
+
+964
+01:00:19,500 --> 01:00:21,300
+models. 
+At this point are really 
+
+965
+01:00:21,300 --> 01:00:23,599
+inefficient at handling those 
+waiting state. 
+
+966
+01:00:23,800 --> 01:00:26,099
+It's so really, it's just an 
+efficiency. 
+
+967
+01:00:26,599 --> 01:00:29,099
+Is the problem we're trying to 
+solve is we're trying to make 
+
+968
+01:00:29,599 --> 01:00:33,300
+programs that weight more 
+efficient, just sounds like a 
+
+969
+01:00:33,300 --> 01:00:35,099
+sink. 
+What is it going to special 
+
+970
+01:00:35,099 --> 01:00:37,400
+name? 
+It's just, I think. 
+
+971
+01:00:38,000 --> 01:00:42,099
+Okay, there are some other 
+pieces to it along with, with a 
+
+972
+01:00:42,099 --> 01:00:45,400
+sink. 
+So, yeah, so we'll talk about 
+
+973
+01:00:45,400 --> 01:00:48,199
+that on a future episode, but 
+check out my blog teams 
+
+974
+01:00:48,199 --> 01:00:52,000
+where.com, that's where it is, 
+and hopefully people get 
+
+975
+01:00:52,000 --> 01:00:55,099
+something out of it. 
+But, What anything else? 
+
+976
+01:00:55,300 --> 01:00:57,800
+No, I think we're good. 
+Awesome. 
+
+977
+01:00:57,800 --> 01:00:59,699
+So, see you next week. 
+See you next week.
+

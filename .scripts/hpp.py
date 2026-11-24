@@ -46,6 +46,7 @@ SERIES_SAME_AS = [
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 ITUNES = "{http://www.itunes.com/dtds/podcast-1.0.dtd}"
+PODCAST = "{https://podcastindex.org/namespace/1.0}"
 RE_DISCORD = re.compile(r"\bdiscord\.gg/[A-Za-z0-9-]+")
 
 
@@ -155,6 +156,10 @@ def episodes_from_feed(refresh: bool = False) -> dict[int, dict]:
         except Exception:
             dt = None
         enc = item.find("enclosure")
+        # Spotify's own transcript (Settings → Transcripts → "Distribute
+        # transcripts across other platforms via RSS"); SRT, when an item has one
+        transcripts = {t.get("type", ""): t.get("url", "")
+                       for t in item.findall(PODCAST + "transcript")}
         duration, seconds = iso_duration(item.findtext(ITUNES + "duration") or "")
         out[num] = {
             "published": dt.strftime("%Y-%m-%dT%H:%M:%SZ") if dt else "",
@@ -166,6 +171,7 @@ def episodes_from_feed(refresh: bool = False) -> dict[int, dict]:
             "audio_length": enc.get("length", "") if enc is not None else "",
             # the show's invite closes the description ("Discuss this episode: …");
             # an earlier discord link can be a project's own server
+            "transcript": transcripts.get("application/x-subrip", ""),
             "discord": (["https://" + d for d in RE_DISCORD.findall(
                 item.findtext("description") or "")] or [""])[-1],
         }

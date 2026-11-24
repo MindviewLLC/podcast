@@ -1,0 +1,5460 @@
+1
+00:00:01,080 --> 00:00:03,400
+Welcome to Happy Path 
+Programming. 
+
+2
+00:00:03,760 --> 00:00:05,560
+I'm Bruce Eckle. 
+I'm James Ward. 
+
+3
+00:00:08,760 --> 00:00:12,400
+All right, well, welcome back to
+Happy Path programming. 
+
+4
+00:00:12,680 --> 00:00:14,440
+It's been a little while I've 
+been I've. 
+
+5
+00:00:14,880 --> 00:00:18,320
+Been travelling a lot. 
+Everywhere it's Yeah, I So I 
+
+6
+00:00:18,320 --> 00:00:22,560
+took on this new role and there 
+should be less travel 
+
+7
+00:00:22,560 --> 00:00:26,320
+eventually, but I had to get 
+through all of the things I'd 
+
+8
+00:00:26,320 --> 00:00:29,760
+committed to. 
+So I was at Agent Con, which is 
+
+9
+00:00:29,760 --> 00:00:33,000
+the Agentic AI Foundation that 
+I'm on the technical committee 
+
+10
+00:00:33,000 --> 00:00:35,040
+for. 
+It was their big conference in 
+
+11
+00:00:35,040 --> 00:00:40,000
+San Jose and that was good. 
+I had a session there and did a 
+
+12
+00:00:40,000 --> 00:00:42,520
+bunch of stuff with the Agentic 
+AI Foundation. 
+
+13
+00:00:43,600 --> 00:00:45,800
+I was in Florida with my family 
+before that. 
+
+14
+00:00:45,920 --> 00:00:48,880
+I was on a river this week so 
+been all over the place. 
+
+15
+00:00:49,400 --> 00:00:52,280
+OK. 
+Yeah, so it's good to be. 
+
+16
+00:00:52,280 --> 00:00:54,480
+Back it is. 
+It's nice to have you back. 
+
+17
+00:00:54,480 --> 00:00:57,120
+You. 
+You always say, oh, this time 
+
+18
+00:00:57,120 --> 00:01:01,160
+I'll be travelling less and then
+I don't see you for a long time.
+
+19
+00:01:02,520 --> 00:01:06,160
+Yes. 
+So this week we are interviewing
+
+20
+00:01:06,160 --> 00:01:13,120
+Barry Warsaw, who I have known 
+for, I don't know, 20 years or 
+
+21
+00:01:13,160 --> 00:01:15,480
+longer. 
+So at least at least. 
+
+22
+00:01:16,480 --> 00:01:20,040
+Yeah, I think so. 
+And what's weird is we 
+
+23
+00:01:20,040 --> 00:01:25,760
+discovered that we have had at 
+least one or more weird path 
+
+24
+00:01:25,760 --> 00:01:27,760
+crossings before we even knew 
+each other. 
+
+25
+00:01:27,760 --> 00:01:37,200
+Because when I was at Fluke, I 
+got into new Emacs and I learned
+
+26
+00:01:37,520 --> 00:01:40,160
+Lisp. 
+That's the only Lisp by now is 
+
+27
+00:01:40,880 --> 00:01:45,160
+the Emacs was built on top of 
+Lisp, which is pretty brilliant 
+
+28
+00:01:45,160 --> 00:01:47,960
+decision I think. 
+So I learned that and then I 
+
+29
+00:01:47,960 --> 00:01:57,040
+started the C++ mode for Lis, 
+for new Emacs and like did very 
+
+30
+00:01:57,040 --> 00:02:00,040
+little on it. 
+I mean, just kind of super basic
+
+31
+00:02:00,040 --> 00:02:02,920
+stuff. 
+But then sometime later you came
+
+32
+00:02:02,920 --> 00:02:07,640
+across it and like developed, 
+you know, made a whole bunch of 
+
+33
+00:02:07,640 --> 00:02:11,920
+additions to it, which, yeah, so
+we, we had this, we had this 
+
+34
+00:02:11,920 --> 00:02:15,520
+weird connection that way. 
+And then I don't know, I think 
+
+35
+00:02:15,520 --> 00:02:19,200
+the first time we met was must 
+have been a Python thing. 
+
+36
+00:02:19,720 --> 00:02:20,880
+Yeah, like. 
+Don't. 
+
+37
+00:02:20,880 --> 00:02:23,600
+One in Southern Virginia maybe 
+was. 
+
+38
+00:02:23,840 --> 00:02:28,520
+Yeah, yeah. 
+One of the early IPC's maybe, I 
+
+39
+00:02:28,520 --> 00:02:31,520
+don't remember if it was. 
+That yeah, because, and then I 
+
+40
+00:02:31,520 --> 00:02:39,960
+spoke at the one that that weird
+company ran the conference and 
+
+41
+00:02:40,760 --> 00:02:44,000
+and they would charge so much 
+and then wring their hands and 
+
+42
+00:02:44,000 --> 00:02:46,600
+say we're losing money, let's do
+it again next year. 
+
+43
+00:02:46,600 --> 00:02:50,520
+I was like, Oh my gosh, oh boy, 
+oh boy. 
+
+44
+00:02:50,640 --> 00:02:52,000
+That. 
+And then nobody could come 
+
+45
+00:02:52,000 --> 00:02:55,360
+because it was too expensive. 
+So yeah, yeah, yeah, that was 
+
+46
+00:02:55,360 --> 00:02:56,640
+not. 
+A good way to lose more money. 
+
+47
+00:02:57,720 --> 00:03:01,200
+Yeah, I don't know. 
+Well, you know, Bruce, I got to 
+
+48
+00:03:01,200 --> 00:03:06,400
+say, so I just saw something 
+yesterday or the day before that
+
+49
+00:03:06,400 --> 00:03:11,840
+Emacs has turned 50. 
+And so wow, I, I started 
+
+50
+00:03:11,840 --> 00:03:15,880
+reminiscing about, you know, we 
+have a little, very small group 
+
+51
+00:03:15,880 --> 00:03:18,920
+of Emacs users at work and we 
+have a Slack channel. 
+
+52
+00:03:19,240 --> 00:03:21,960
+And so I was like, you know, I 
+posted it. 
+
+53
+00:03:21,960 --> 00:03:24,040
+I was like, oh, Emacs has turned
+50. 
+
+54
+00:03:24,040 --> 00:03:27,120
+And I started to think about my 
+journey, you know, where I 
+
+55
+00:03:27,120 --> 00:03:31,800
+discovered Emacs, which was 
+basically, it was an intern at 
+
+56
+00:03:31,800 --> 00:03:34,400
+what was at the time National 
+Bureau of Standards. 
+
+57
+00:03:34,400 --> 00:03:37,200
+And we got all these Sun 
+machines. 
+
+58
+00:03:37,200 --> 00:03:38,960
+And I was like, well, I need an 
+editor. 
+
+59
+00:03:38,960 --> 00:03:42,400
+And then, you know, my mentor 
+said here, use this thing, which
+
+60
+00:03:42,400 --> 00:03:47,920
+was Emacs. 
+And then with the C++ mode, you 
+
+61
+00:03:47,920 --> 00:03:53,000
+know, we were doing some C++ and
+with the one thing I remember is
+
+62
+00:03:53,000 --> 00:04:00,360
+it couldn't handle two comment 
+styles or fire per mode. 
+
+63
+00:04:00,360 --> 00:04:04,240
+So because like C only has 1, 
+you know, early C, right, like 
+
+64
+00:04:04,240 --> 00:04:07,000
+only had one comment style, you 
+know, the block comments. 
+
+65
+00:04:07,320 --> 00:04:10,640
+And then C++ came around and 
+they got those line comments 
+
+66
+00:04:10,640 --> 00:04:12,640
+too. 
+And Emacs couldn't handle that. 
+
+67
+00:04:12,640 --> 00:04:21,440
+So that got me into like syntax 
+tables and and when I sort of 
+
+68
+00:04:21,600 --> 00:04:25,320
+started playing with C++ mode 
+and turned it into what became 
+
+69
+00:04:25,320 --> 00:04:31,200
+CC mode, so it handled C and C++
+and Java, that was one of like 
+
+70
+00:04:31,200 --> 00:04:38,360
+my early programming epiphanies.
+And I still think about this 
+
+71
+00:04:38,360 --> 00:04:41,680
+story where, you know, it is 
+C++. 
+
+72
+00:04:41,680 --> 00:04:43,920
+Parsing C++ is incredibly 
+complicated. 
+
+73
+00:04:43,920 --> 00:04:46,360
+It's probably way more 
+complicated now than it was, I 
+
+74
+00:04:46,360 --> 00:04:48,280
+don't know, 30 years ago, 20 
+years ago. 
+
+75
+00:04:48,920 --> 00:04:52,240
+And I couldn't trace my way 
+through all the conditionals, 
+
+76
+00:04:52,520 --> 00:04:56,320
+but I started adding these 
+little I I created a list and I 
+
+77
+00:04:56,320 --> 00:04:59,160
+would add a symbol at the leaf 
+of every conditional. 
+
+78
+00:04:59,160 --> 00:05:02,480
+So I know. 
+OK, yeah, I took this path to 
+
+79
+00:05:02,480 --> 00:05:05,840
+figure out you've got to indent 
+for spaces, right? 
+
+80
+00:05:06,720 --> 00:05:11,160
+And then I had an epiphany that 
+what you could actually do like 
+
+81
+00:05:11,160 --> 00:05:14,080
+that, like those symbols were 
+the important part because that 
+
+82
+00:05:14,080 --> 00:05:18,040
+was telling you, oh, it was 
+parsing the code. 
+
+83
+00:05:18,120 --> 00:05:21,800
+And then I created a table that 
+basically said, oh, if you see 
+
+84
+00:05:22,520 --> 00:05:24,600
+I'm inside of a class, you add 
+4. 
+
+85
+00:05:24,600 --> 00:05:28,000
+And if you see I'm inside of a 
+method, I add another four. 
+
+86
+00:05:28,000 --> 00:05:30,200
+And if I'm inside of an if I add
+another four. 
+
+87
+00:05:30,480 --> 00:05:32,960
+And then when I'm outside of 
+the, if I remove 4. 
+
+88
+00:05:32,960 --> 00:05:38,560
+And so that made the whole thing
+much easier to configure and run
+
+89
+00:05:38,560 --> 00:05:42,880
+and use. 
+And so the epiphany was always 
+
+90
+00:05:42,880 --> 00:05:45,760
+be aware of those things that 
+you do because that might 
+
+91
+00:05:45,760 --> 00:05:49,080
+actually be the like the really 
+valuable thing. 
+
+92
+00:05:49,080 --> 00:05:52,720
+It started as a debugging tool 
+and it became like the central 
+
+93
+00:05:52,720 --> 00:05:56,840
+way that you configure the mode.
+So, you know, it was, it was a 
+
+94
+00:05:56,840 --> 00:05:59,320
+lesson that kind of always stuck
+with me to sort of like those 
+
+95
+00:05:59,320 --> 00:06:03,120
+happy accidents, right? 
+Are the things and that 
+
+96
+00:06:03,120 --> 00:06:06,080
+sometimes are the really the key
+insights? 
+
+97
+00:06:06,720 --> 00:06:14,120
+It is fascinating how you 
+realize that tooling on top of 
+
+98
+00:06:14,120 --> 00:06:20,120
+what you're doing can make your 
+productivity and understanding 
+
+99
+00:06:20,120 --> 00:06:23,960
+so much better. 
+I had the similar experience. 
+
+100
+00:06:23,960 --> 00:06:27,440
+There was somebody who was 
+coaching me at Fluke and they 
+
+101
+00:06:27,440 --> 00:06:30,880
+said oh just use Emacs and my 
+first. 
+
+102
+00:06:30,880 --> 00:06:37,040
+I've been using Wordstar on my K
+Pro and my first impulse was to 
+
+103
+00:06:37,040 --> 00:06:42,200
+remap all of the key bindings to
+whatever Wordstar was. 
+
+104
+00:06:42,520 --> 00:06:47,160
+And this guy said, I don't do 
+that because if I ever have to 
+
+105
+00:06:47,160 --> 00:06:51,720
+go to somebody else's desk to 
+show them how to do things, I 
+
+106
+00:06:51,720 --> 00:06:55,120
+don't know what their key 
+bindings, you know, and right, I
+
+107
+00:06:55,120 --> 00:06:58,400
+that stuck with me forever. 
+I never rebind the keys. 
+
+108
+00:06:58,400 --> 00:07:02,600
+I learn whatever the standard 
+is, even though I don't really 
+
+109
+00:07:02,600 --> 00:07:04,960
+go to people other people's desk
+very much. 
+
+110
+00:07:04,960 --> 00:07:10,160
+But but it's just a habit. 
+It's like it's extra bullshit 
+
+111
+00:07:10,160 --> 00:07:11,960
+that you have to do at the same 
+time. 
+
+112
+00:07:11,960 --> 00:07:15,280
+I don't remember the Emacs key 
+bindings at this point because 
+
+113
+00:07:15,280 --> 00:07:18,600
+I, I stopped just years ago. 
+Oh, you did? 
+
+114
+00:07:19,120 --> 00:07:22,680
+Yeah, I use Zed now, but I, I, 
+yeah, no, I stopped using it. 
+
+115
+00:07:22,960 --> 00:07:27,280
+Well, the thing I tried to do 
+when when I was at Fluke was I 
+
+116
+00:07:27,280 --> 00:07:35,640
+tried to write a term cap for my
+K Pro so that I could dial up 
+
+117
+00:07:35,680 --> 00:07:40,440
+and use the Emacs at work on the
+Sun machines. 
+
+118
+00:07:40,880 --> 00:07:44,080
+But I couldn't. 
+You know, I I learned a lot 
+
+119
+00:07:44,080 --> 00:07:45,920
+about term caps, but I could 
+never quite. 
+
+120
+00:07:46,000 --> 00:07:48,960
+Get it working right? 
+Yeah, and I don't remember 
+
+121
+00:07:48,960 --> 00:07:50,520
+anything about term caps now 
+either. 
+
+122
+00:07:50,840 --> 00:07:54,320
+I wrote an assembler using Emacs
+Lisp. 
+
+123
+00:07:55,520 --> 00:07:57,240
+That's awesome. 
+It was. 
+
+124
+00:07:57,240 --> 00:07:58,440
+It was. 
+It was. 
+
+125
+00:07:58,440 --> 00:07:59,640
+It was. 
+Her hand. 
+
+126
+00:08:00,600 --> 00:08:02,760
+Oh, yeah, I didn't. 
+I didn't have an AI to help me. 
+
+127
+00:08:02,760 --> 00:08:05,320
+I just used. 
+I used the language that was 
+
+128
+00:08:05,320 --> 00:08:09,240
+supposed to be the AI language, 
+you know, Lisp, that's what Lisp
+
+129
+00:08:09,240 --> 00:08:13,520
+was supposed to be. 
+But but yeah, anyway, all that 
+
+130
+00:08:13,520 --> 00:08:16,840
+stuff. 
+You are also a musician. 
+
+131
+00:08:17,760 --> 00:08:23,640
+Yes, mostly a bass player. 
+And although I, you know, I call
+
+132
+00:08:23,640 --> 00:08:25,680
+myself a bass player who has a 
+guitar. 
+
+133
+00:08:26,560 --> 00:08:28,920
+So I play a little bit of that 
+and I play, you know, a little 
+
+134
+00:08:28,920 --> 00:08:31,280
+bit of keyboards and stuff and I
+do stuff at my studio. 
+
+135
+00:08:31,280 --> 00:08:34,799
+But yeah, I've been playing bass
+since I was a kid and I still 
+
+136
+00:08:34,880 --> 00:08:39,720
+still play. 
+And you and I at the at the one 
+
+137
+00:08:39,720 --> 00:08:44,000
+of the Python conferences, we 
+went to the Music Hall of Fame 
+
+138
+00:08:44,560 --> 00:08:47,120
+together. 
+Yes, that was in Cleveland. 
+
+139
+00:08:47,120 --> 00:08:49,240
+Cleveland, yeah, yeah, right. 
+Yeah. 
+
+140
+00:08:49,400 --> 00:08:52,520
+Which was, I mean, you know, 
+it's always fun to go with 
+
+141
+00:08:52,520 --> 00:08:55,680
+somebody who's, you know, more 
+of an expert because there's a 
+
+142
+00:08:55,680 --> 00:08:59,800
+lot of stuff that you knew. 
+So anyway, let's talk about 
+
+143
+00:08:59,800 --> 00:09:04,800
+Python, OK, OK. 
+Because I mean, you've been 
+
+144
+00:09:04,800 --> 00:09:08,520
+involved since, I don't know, 
+like. 
+
+145
+00:09:09,240 --> 00:09:11,040
+Do you remember? 
+Maybe give us the history. 
+
+146
+00:09:11,200 --> 00:09:13,800
+Yeah, give us give us your 
+history with Python. 
+
+147
+00:09:14,960 --> 00:09:18,200
+Well, so I'll, I'll just 
+piggyback a little bit on the 
+
+148
+00:09:18,200 --> 00:09:26,080
+Emacs story because I was using 
+Lucid C++. 
+
+149
+00:09:26,080 --> 00:09:28,760
+I don't know if you remember 
+that it was kind of a cool tool.
+
+150
+00:09:29,560 --> 00:09:32,160
+You know, it would, it was a 
+compiler that had a database on 
+
+151
+00:09:32,160 --> 00:09:37,480
+the back end and has a compiled.
+Your C++ would store things that
+
+152
+00:09:37,480 --> 00:09:40,000
+knew about your program in this 
+database. 
+
+153
+00:09:40,000 --> 00:09:44,000
+And then there was a front end 
+that could query the database 
+
+154
+00:09:44,000 --> 00:09:46,760
+and do things like syntax 
+highlighting or cross references
+
+155
+00:09:46,760 --> 00:09:51,920
+and stuff like that. 
+That was Lucid Emacs, which 
+
+156
+00:09:51,920 --> 00:09:57,880
+Jamie Zawinski had taken, excuse
+me, and he had forked GNU Emacs 
+
+157
+00:09:58,320 --> 00:10:02,000
+and written this Lucid Emacs 
+front end and put like X, you 
+
+158
+00:10:02,000 --> 00:10:06,120
+know, color, you know, made it X
+friendly, X Windows friendly, 
+
+159
+00:10:06,440 --> 00:10:09,680
+colors, frames, all that, all 
+that great stuff. 
+
+160
+00:10:11,360 --> 00:10:15,360
+And so I started using that. 
+And then at some point Jamie was
+
+161
+00:10:15,360 --> 00:10:18,520
+going to move on and do 
+something different, which, you 
+
+162
+00:10:18,520 --> 00:10:21,320
+know, I won't go into his story,
+but he was looking for a 
+
+163
+00:10:21,320 --> 00:10:24,520
+maintainer. 
+And so I flew out in early 1994 
+
+164
+00:10:24,520 --> 00:10:27,280
+to the Bay Area and interviewed 
+for that job. 
+
+165
+00:10:27,720 --> 00:10:30,760
+And as it turns out, because I 
+had been digging into the 
+
+166
+00:10:30,760 --> 00:10:35,880
+internals of VMAX and I had done
+the CCC mode thing, I ended up 
+
+167
+00:10:35,880 --> 00:10:39,000
+not taking that job for various 
+reasons. 
+
+168
+00:10:40,240 --> 00:10:42,240
+At the time, I wasn't ready to 
+move to California. 
+
+169
+00:10:42,240 --> 00:10:48,040
+And so when I came back just a 
+few months later, a friend of 
+
+170
+00:10:48,040 --> 00:10:54,320
+mine had just started at CNRI. 
+And so I was still, you know, 
+
+171
+00:10:54,320 --> 00:10:57,040
+working. 
+See, I was working for a Beltway
+
+172
+00:10:57,400 --> 00:11:01,600
+Bandit at the time, you know, 
+just a contractor and looking 
+
+173
+00:11:01,600 --> 00:11:04,280
+for something different. 
+And so the CNRI job came up and 
+
+174
+00:11:04,280 --> 00:11:06,400
+I thought, oh, it's pretty 
+interesting. 
+
+175
+00:11:06,400 --> 00:11:08,600
+And so I interviewed there and I
+got the job. 
+
+176
+00:11:08,600 --> 00:11:13,840
+And they were building what at 
+the time seems kind of naive 
+
+177
+00:11:13,840 --> 00:11:16,920
+these days, but it wasn't. 
+They called them nobots. 
+
+178
+00:11:16,920 --> 00:11:21,760
+This was Bob Khan's, you know, 
+nonprofit research place. 
+
+179
+00:11:21,760 --> 00:11:27,160
+And they're still around. 
+And so these little agents were 
+
+180
+00:11:27,160 --> 00:11:29,640
+moving around, you know, to 
+different machines. 
+
+181
+00:11:29,640 --> 00:11:32,040
+So it would move to this 
+machine, it would get some 
+
+182
+00:11:32,040 --> 00:11:33,880
+information. 
+It would say, oh, I got to move 
+
+183
+00:11:33,880 --> 00:11:35,440
+over there, do something over 
+there. 
+
+184
+00:11:35,440 --> 00:11:40,880
+And so, yeah, kind of like like 
+maybe a controlled virus. 
+
+185
+00:11:43,600 --> 00:11:48,080
+And we were doing it all on Next
+machines and Objective C Now, as
+
+186
+00:11:48,080 --> 00:11:52,240
+it turns out, a Python, there 
+was an early Python user who was
+
+187
+00:11:52,240 --> 00:11:55,800
+building an Objective C bridge. 
+And it was really good because 
+
+188
+00:11:55,800 --> 00:12:00,680
+under the hood, the runtime 
+models were very similar, right?
+
+189
+00:12:00,680 --> 00:12:03,160
+So the, the language syntax was 
+pretty different, but the 
+
+190
+00:12:03,160 --> 00:12:06,480
+runtime models were compatible 
+enough that you could build this
+
+191
+00:12:06,480 --> 00:12:14,400
+bridge and, and make it work. 
+So around that time, it got me 
+
+192
+00:12:14,400 --> 00:12:18,040
+an e-mail from some of my 
+friends at NIST, the National 
+
+193
+00:12:18,040 --> 00:12:20,640
+Institute of Standard 
+Technology, which is where I 
+
+194
+00:12:20,640 --> 00:12:24,760
+worked my, it was really my 
+first job sort of interning. 
+
+195
+00:12:24,800 --> 00:12:29,000
+That's where I somebody threw 
+Emacs in my hands as an intern. 
+
+196
+00:12:29,360 --> 00:12:32,840
+And then I started working there
+after after graduating high 
+
+197
+00:12:32,840 --> 00:12:34,960
+school through college and then 
+after college. 
+
+198
+00:12:34,960 --> 00:12:39,200
+So it was kind of my first work 
+experience and I still had 
+
+199
+00:12:39,200 --> 00:12:41,120
+friends there. 
+And so I got this e-mail saying,
+
+200
+00:12:41,120 --> 00:12:45,640
+hey, we got this guy, you know, 
+this Dutch guy coming over to 
+
+201
+00:12:45,640 --> 00:12:48,640
+tell us to do like a three day 
+workshop on his language. 
+
+202
+00:12:48,640 --> 00:12:51,160
+Do you want to come? 
+And so we did a little bit of 
+
+203
+00:12:51,200 --> 00:12:53,040
+research. 
+I was like, oh, I thought, OK, 
+
+204
+00:12:53,040 --> 00:12:55,680
+Python, oh, Python And objective
+C work really well together. 
+
+205
+00:12:55,680 --> 00:12:59,840
+We should go. 
+And my colleague at the time, we
+
+206
+00:12:59,840 --> 00:13:03,760
+went and spent three days at 
+this workshop. 
+
+207
+00:13:04,200 --> 00:13:08,400
+And, you know, we have played 
+with Python a little bit before 
+
+208
+00:13:08,400 --> 00:13:10,960
+we had gone just to kind of 
+understand what the language is 
+
+209
+00:13:10,960 --> 00:13:13,840
+about and things like that. 
+And so we had a great time and, 
+
+210
+00:13:13,840 --> 00:13:18,440
+and I just like really connected
+with Guido and loved the loved 
+
+211
+00:13:18,440 --> 00:13:22,600
+the language. 
+I remember I just one more Emacs
+
+212
+00:13:22,600 --> 00:13:27,960
+little thing at the first 
+workshop. 
+
+213
+00:13:27,960 --> 00:13:31,760
+I remember talking to Guido 
+because remember, you know, when
+
+214
+00:13:31,760 --> 00:13:35,520
+you write Emacs list underneath 
+the sick function signature, you
+
+215
+00:13:35,520 --> 00:13:37,680
+can write a little doc string 
+that tells you what that 
+
+216
+00:13:37,680 --> 00:13:40,640
+function does. 
+And so Guido and I agree with an
+
+217
+00:13:40,640 --> 00:13:42,520
+Emacs user and I was an Emacs 
+user. 
+
+218
+00:13:42,520 --> 00:13:45,560
+So we're like, oh, we really, 
+you know, we should add doc 
+
+219
+00:13:45,560 --> 00:13:49,840
+strings to Python. 
+And so where is it going to go? 
+
+220
+00:13:49,840 --> 00:13:52,520
+Oh, well, let's just stick at 
+the same place that Emacs list 
+
+221
+00:13:52,520 --> 00:13:54,920
+does. 
+I think Guido probably like 
+
+222
+00:13:54,920 --> 00:13:58,040
+worked for, you know, hacked on 
+the code for maybe an hour and 
+
+223
+00:13:58,160 --> 00:13:59,680
+he was like, how there you go, 
+it works. 
+
+224
+00:13:59,680 --> 00:14:01,960
+Now I'm just adding to the 
+language of the words. 
+
+225
+00:14:02,400 --> 00:14:04,560
+That's how I remember it. 
+And so that's why we have 
+
+226
+00:14:04,560 --> 00:14:06,920
+docstrings where they are in in 
+Python. 
+
+227
+00:14:08,520 --> 00:14:12,800
+And so anyway, so the workshop 
+was great. 
+
+228
+00:14:12,840 --> 00:14:16,040
+And then I went back to senor, 
+My colleague and I went back to 
+
+229
+00:14:16,040 --> 00:14:18,200
+senor and we're like, Oh my 
+gosh, this is awesome. 
+
+230
+00:14:18,400 --> 00:14:20,800
+We should definitely use Python.
+We should definitely use the 
+
+231
+00:14:20,800 --> 00:14:24,120
+objective C bridge. 
+And one of our coworkers said, 
+
+232
+00:14:24,120 --> 00:14:27,080
+well, why don't, why don't we 
+try to hire Guido? 
+
+233
+00:14:27,320 --> 00:14:30,280
+You know, like, let's just ask 
+him, you know, And it turned out
+
+234
+00:14:30,280 --> 00:14:34,120
+to be like the perfect time for 
+him to come to the states. 
+
+235
+00:14:34,120 --> 00:14:40,000
+And so he came to the US worked,
+worked at CNR in Virginia for I 
+
+236
+00:14:40,000 --> 00:14:43,000
+think we worked together for 
+eight years before he, you know,
+
+237
+00:14:43,000 --> 00:14:47,640
+moved, moved to California. 
+So my journey was through. 
+
+238
+00:14:47,640 --> 00:14:50,280
+That was kind of the, you know, 
+TLDR of my you. 
+
+239
+00:14:50,280 --> 00:14:52,640
+Happened to be in the right 
+place at the right time. 
+
+240
+00:14:53,320 --> 00:14:54,400
+Oh, it is. 
+Totally. 
+
+241
+00:14:54,760 --> 00:14:57,480
+It's so awesome. 
+Yeah, yeah, yeah. 
+
+242
+00:14:58,480 --> 00:15:01,640
+Yeah, then no clue. 
+Yeah, go ahead. 
+
+243
+00:15:01,960 --> 00:15:03,800
+Sorry. 
+Back then, adding features, you 
+
+244
+00:15:03,800 --> 00:15:07,840
+know, you, there was no, no red 
+tape, no process, right? 
+
+245
+00:15:07,840 --> 00:15:09,920
+Just just. 
+Put whatever, whatever. 
+
+246
+00:15:09,920 --> 00:15:11,400
+Changes you want. 
+That's. 
+
+247
+00:15:11,640 --> 00:15:15,360
+Yeah, you contrast. 
+The enjoyability of that versus 
+
+248
+00:15:15,360 --> 00:15:19,600
+all the the over the. 
+There's definitely something. 
+
+249
+00:15:19,720 --> 00:15:22,480
+The walrus operator. 
+Yeah, yeah, yeah. 
+
+250
+00:15:23,120 --> 00:15:29,920
+Well, I, I like right before 
+COVID I had put together a talk 
+
+251
+00:15:31,720 --> 00:15:34,240
+and a bunch of slides for like 
+the early days of Python. 
+
+252
+00:15:34,240 --> 00:15:36,680
+And, and So what I did is I 
+pulled down every version of 
+
+253
+00:15:36,680 --> 00:15:41,360
+Python from like 0.9 point 
+something I think my first 
+
+254
+00:15:41,360 --> 00:15:46,560
+version was like 1.1 maybe or 
+just before 1.1. 
+
+255
+00:15:46,600 --> 00:15:51,560
+And I pulled down every tarball,
+every, you know, e-mail, you 
+
+256
+00:15:51,560 --> 00:15:55,440
+know, announcement message of 
+Guido's and every news, you 
+
+257
+00:15:55,440 --> 00:15:59,840
+know, news change log. 
+And of course, I couldn't build 
+
+258
+00:15:59,840 --> 00:16:04,240
+anything on any modern platforms
+without like changes. 
+
+259
+00:16:04,240 --> 00:16:07,040
+I'm sure, I'm sure the agents 
+could just, you know, just do it
+
+260
+00:16:07,040 --> 00:16:12,840
+for you now. 
+But the way Guido changed the 
+
+261
+00:16:12,840 --> 00:16:16,640
+language in the early days was 
+just like, he just made the 
+
+262
+00:16:16,640 --> 00:16:18,480
+changes. 
+And he's like, I remember the 
+
+263
+00:16:18,480 --> 00:16:22,960
+one point I'm remember 
+incorrectly where the single 
+
+264
+00:16:22,960 --> 00:16:28,640
+equal symbol was both assignment
+and comparison and he just 
+
+265
+00:16:28,640 --> 00:16:31,200
+changed it. 
+He said that's you know I 
+
+266
+00:16:31,200 --> 00:16:34,880
+changed the comparison to double
+equal and just change your code,
+
+267
+00:16:34,880 --> 00:16:37,880
+you know, fix your code. 
+Well, when you say all user base
+
+268
+00:16:38,160 --> 00:16:39,080
+you know. 
+Exactly. 
+
+269
+00:16:39,080 --> 00:16:41,160
+It doesn't matter. 
+They're all in the same room 
+
+270
+00:16:41,160 --> 00:16:43,240
+with you. 
+Yeah, exactly. 
+
+271
+00:16:43,280 --> 00:16:46,000
+Exactly. 
+So that is fun to be able to 
+
+272
+00:16:46,640 --> 00:16:50,360
+iterated that pace and now 
+you're at the other end of the 
+
+273
+00:16:50,360 --> 00:16:53,200
+spectrum. 
+You know exactly where it's 
+
+274
+00:16:53,200 --> 00:16:57,320
+like, you know, everything's got
+to be, you know, a, you know, 20
+
+275
+00:16:57,320 --> 00:17:01,680
+page pep and you know, you know,
+years of discussion to change 
+
+276
+00:17:01,680 --> 00:17:03,800
+anything. 
+But yeah. 
+
+277
+00:17:03,800 --> 00:17:06,880
+Yeah, a lot of people rely on 
+the challenges. 
+
+278
+00:17:06,880 --> 00:17:09,119
+Success like the. 
+Challenges, yes. 
+
+279
+00:17:10,000 --> 00:17:15,400
+Exactly. 
+And now wait, did you work for 
+
+280
+00:17:15,400 --> 00:17:19,359
+the what? 
+Who is what was the soap people?
+
+281
+00:17:19,960 --> 00:17:23,480
+Yeah, it was. 
+It was digital creations at 1st 
+
+282
+00:17:23,480 --> 00:17:25,119
+and then it became SOAP. 
+Corporation. 
+
+283
+00:17:25,319 --> 00:17:26,800
+So yeah, that's right. 
+So it was soap. 
+
+284
+00:17:27,160 --> 00:17:29,560
+You, you you did you work for 
+them for a while. 
+
+285
+00:17:30,560 --> 00:17:37,120
+I did so in 2000 and the.com 
+boom, you know, we kind of got 
+
+286
+00:17:37,120 --> 00:17:42,720
+disillusioned being at CNRI a 
+little bit and thought, oh, all 
+
+287
+00:17:42,720 --> 00:17:45,800
+you have to do is strike out on 
+your own and you'll be rich and 
+
+288
+00:17:45,800 --> 00:17:50,640
+famous, right? 
+So we joined. 
+
+289
+00:17:50,760 --> 00:17:53,520
+So we had this little Python 
+Labs, which was really kind of 
+
+290
+00:17:53,520 --> 00:17:56,200
+an informal thing. 
+Guido and myself and a few other
+
+291
+00:17:56,200 --> 00:18:00,600
+people and actually Tim Peters 
+came in to Python Labs and we 
+
+292
+00:18:00,800 --> 00:18:07,240
+moved over to be open to be open
+another Emacs connection through
+
+293
+00:18:07,440 --> 00:18:13,280
+Bob Weiner and so we created 
+this little, you know 
+
+294
+00:18:13,920 --> 00:18:18,640
+organization with him be open to
+sort of monetize dish. 
+
+295
+00:18:19,080 --> 00:18:23,840
+I found work not lasted I think 
+5 months, like literally 5 
+
+296
+00:18:23,840 --> 00:18:25,520
+months. 
+And then that was gone. 
+
+297
+00:18:26,000 --> 00:18:31,280
+And so we looked around for a 
+new home for Python Labs and the
+
+298
+00:18:31,280 --> 00:18:36,040
+folks that, you know, at the 
+time, digital creations, you 
+
+299
+00:18:36,040 --> 00:18:38,320
+know, we knew them, they would, 
+they had this product called 
+
+300
+00:18:38,320 --> 00:18:44,880
+SOAP and, and they were not far.
+They were in where were they? 
+
+301
+00:18:44,880 --> 00:18:48,480
+Oh, Fredericksburg, VA. 
+So, you know, it's like an less 
+
+302
+00:18:48,480 --> 00:18:50,800
+than an hour drive. 
+And so we really like those 
+
+303
+00:18:50,800 --> 00:18:52,600
+guys. 
+And so then we moved Python labs
+
+304
+00:18:52,600 --> 00:18:57,400
+over to them and, and work there
+until, you know, most of us 
+
+305
+00:18:57,400 --> 00:19:00,040
+moved on. 
+So on a few years. 
+
+306
+00:19:00,040 --> 00:19:03,240
+Yeah, we had a little, we had a 
+little office in Northern 
+
+307
+00:19:03,240 --> 00:19:06,400
+Virginia where the five of us 
+were. 
+
+308
+00:19:06,400 --> 00:19:09,400
+And then we'd go down to 
+Fredericksburg. 
+
+309
+00:19:09,400 --> 00:19:11,920
+Yeah, once or twice a week. 
+Bigger. 
+
+310
+00:19:11,960 --> 00:19:17,400
+Yeah, I went to one of their. 
+I remember, yes, because Jim 
+
+311
+00:19:17,400 --> 00:19:25,520
+Fulton was he was trying to 
+coach us how to use Git and it 
+
+312
+00:19:25,520 --> 00:19:29,840
+made no, it made no, you know, 
+for this workshop, OK, we're 
+
+313
+00:19:29,840 --> 00:19:32,360
+going to use Git for, you know, 
+for all this. 
+
+314
+00:19:32,960 --> 00:19:36,040
+And it's like I it took me 
+years. 
+
+315
+00:19:36,040 --> 00:19:38,000
+It's I mean, I'm still learning 
+Git. 
+
+316
+00:19:38,760 --> 00:19:41,120
+No, I don't need to anymore. 
+No, I don't need to anymore. 
+
+317
+00:19:41,600 --> 00:19:44,240
+Exactly. 
+See, that's, that's been my 
+
+318
+00:19:44,240 --> 00:19:46,560
+experience. 
+You wait long enough and some of
+
+319
+00:19:46,560 --> 00:19:51,600
+these things, my my intuition 
+sometimes goes, no, it seems 
+
+320
+00:19:51,600 --> 00:19:54,840
+important, but don't bother, you
+know, and then eventually it 
+
+321
+00:19:54,840 --> 00:19:56,480
+works out. 
+That's like, yeah, that was 
+
+322
+00:19:56,480 --> 00:19:58,040
+right. 
+Yeah. 
+
+323
+00:19:58,040 --> 00:20:03,760
+But but yeah. 
+And and I I struggled also to 
+
+324
+00:20:03,760 --> 00:20:07,080
+learn SOAP. 
+And even had, oh, Chris 
+
+325
+00:20:07,080 --> 00:20:10,960
+McDonough came up here for like 
+5 days and we worked on 
+
+326
+00:20:10,960 --> 00:20:18,520
+something for SOAP that was, I 
+don't know, it was some sort of 
+
+327
+00:20:19,040 --> 00:20:22,000
+information annotation thing. 
+I don't remember. 
+
+328
+00:20:22,000 --> 00:20:26,320
+It was an idea that I had. 
+Oh, wouldn't it be nice to, you 
+
+329
+00:20:26,320 --> 00:20:28,680
+know, something that you 
+probably wouldn't even notice at
+
+330
+00:20:28,680 --> 00:20:31,480
+this point? 
+But but at the time it seemed 
+
+331
+00:20:31,480 --> 00:20:35,680
+kind of revolutionary. 
+But yeah, SOAP never really. 
+
+332
+00:20:35,880 --> 00:20:38,720
+I never really fully grok SOAP 
+either. 
+
+333
+00:20:39,800 --> 00:20:44,720
+I got yeah it was but. 
+But there were a lot of, there 
+
+334
+00:20:44,720 --> 00:20:49,560
+were a lot of really interesting
+opponents that they built for 
+
+335
+00:20:49,560 --> 00:20:54,120
+SOAP, like the ZODB was really 
+neat. 
+
+336
+00:20:54,120 --> 00:20:57,520
+The Zoap, what are they called? 
+The Zoap component architecture 
+
+337
+00:20:57,520 --> 00:21:01,480
+and Zoap interfaces. 
+And I used all that stuff and I 
+
+338
+00:21:01,480 --> 00:21:05,400
+didn't use the Zo DB, but I used
+the ZCA and interfaces in 
+
+339
+00:21:05,400 --> 00:21:09,280
+Mailman. 
+So I needed a way to do kind of 
+
+340
+00:21:09,280 --> 00:21:13,480
+a lot of the things that Zoap 
+had these little libraries for. 
+
+341
+00:21:13,480 --> 00:21:16,720
+And so I just adopted those, you
+know, because they just did 
+
+342
+00:21:16,720 --> 00:21:18,720
+everything I wanted. 
+Right. 
+
+343
+00:21:18,840 --> 00:21:24,800
+And you when you created 
+mailman, that was, I mean that 
+
+344
+00:21:24,800 --> 00:21:27,760
+was was that before Gmail was 
+around or? 
+
+345
+00:21:28,320 --> 00:21:31,200
+Oh, it was way before Gmail, but
+I didn't create it actually. 
+
+346
+00:21:31,440 --> 00:21:37,560
+OK, a guy named John Viega 
+created it to be the. 
+
+347
+00:21:37,560 --> 00:21:42,880
+He wrote it in Python he was at.
+I forget which school Dave 
+
+348
+00:21:42,880 --> 00:21:46,760
+Matthews was at which. 
+Is it like Charlottesville or 
+
+349
+00:21:46,760 --> 00:21:48,360
+University of Virginia or 
+something like that? 
+
+350
+00:21:48,360 --> 00:21:51,040
+I don't remember. 
+But he was a Dave Matthews fan 
+
+351
+00:21:51,040 --> 00:21:53,000
+and they, they were just a 
+little band. 
+
+352
+00:21:53,000 --> 00:21:54,880
+They were not. 
+They were like just a local band
+
+353
+00:21:54,880 --> 00:21:57,600
+at the time. 
+But they needed a mailing list, 
+
+354
+00:21:57,600 --> 00:22:01,160
+so he wrote mailman. 
+For the Dave Matthews Band. 
+
+355
+00:22:01,680 --> 00:22:05,760
+Dave Matthews Band and we were 
+using Major Domo to run all the 
+
+356
+00:22:05,760 --> 00:22:08,640
+Python mailing lists and we're 
+like, we cannot use Pearl. 
+
+357
+00:22:09,400 --> 00:22:13,960
+That's not right at all. 
+And so we kind of adopted my our
+
+358
+00:22:13,960 --> 00:22:17,880
+friend Ken Mannheimer did a lot 
+of the early work in adopting 
+
+359
+00:22:18,840 --> 00:22:25,040
+mailman for Python use. 
+And and so that we switched over
+
+360
+00:22:25,040 --> 00:22:28,200
+and, and use that and I just, I 
+just really dug it, you know, I 
+
+361
+00:22:28,200 --> 00:22:30,440
+thought it was really cool. 
+Had a lot of interesting 
+
+362
+00:22:30,440 --> 00:22:35,200
+problems solve. 
+And so over time, I just became 
+
+363
+00:22:35,200 --> 00:22:38,760
+the mailman, you know, leader or
+project leader. 
+
+364
+00:22:38,760 --> 00:22:42,120
+Right. 
+Well, and also you came up with 
+
+365
+00:22:42,400 --> 00:22:48,520
+a statistical way to deal with 
+spam that was? 
+
+366
+00:22:49,320 --> 00:22:52,480
+Again. 
+You you used Bayesian analysis. 
+
+367
+00:22:53,600 --> 00:22:56,800
+Yes, yes, I did not invent it. 
+I, I don't think I invent 
+
+368
+00:22:56,800 --> 00:23:00,600
+anything, but you know, I just. 
+You didn't invent C++ mode. 
+
+369
+00:23:00,600 --> 00:23:02,560
+I did. 
+You just made it work. 
+
+370
+00:23:03,600 --> 00:23:05,200
+Exactly. 
+I didn't exactly. 
+
+371
+00:23:05,360 --> 00:23:07,040
+I didn't invent Python mode 
+either. 
+
+372
+00:23:07,040 --> 00:23:10,520
+I I think Tim Peters did and 
+then I took that over for a 
+
+373
+00:23:10,520 --> 00:23:16,240
+while. 
+So, yeah, but yes, I think I 
+
+374
+00:23:16,240 --> 00:23:21,040
+nerd sniped Tim Peters into 
+taking like this Bayesian. 
+
+375
+00:23:21,040 --> 00:23:23,400
+I don't know, we saw a paper 
+somewhere or something about the
+
+376
+00:23:23,400 --> 00:23:26,680
+the Bayesian stuff. 
+And then he created spam bays, 
+
+377
+00:23:26,800 --> 00:23:31,720
+which I think is still running 
+on python.org, like mail that 
+
+378
+00:23:31,720 --> 00:23:36,120
+goes to python.org, which is, 
+you know, less and less these 
+
+379
+00:23:36,120 --> 00:23:37,400
+days. 
+Or like a lot of people don't 
+
+380
+00:23:37,400 --> 00:23:42,520
+want to use e-mail, which I 
+don't either, you know, so you 
+
+381
+00:23:42,520 --> 00:23:45,680
+know, but it, it's, I think spam
+base is still being used to 
+
+382
+00:23:45,680 --> 00:23:51,240
+filter Bam on python.org, Yeah. 
+That's awesome. 
+
+383
+00:23:51,240 --> 00:23:55,480
+Yeah, it was the first time that
+I think I had heard of Bayesian 
+
+384
+00:23:55,480 --> 00:23:58,680
+analysis. 
+And because of YouTube, in the 
+
+385
+00:23:58,680 --> 00:24:03,040
+last few years I've I've started
+to actually grasp what it is 
+
+386
+00:24:04,160 --> 00:24:06,200
+like. 
+The foundation of science 
+
+387
+00:24:06,200 --> 00:24:08,240
+basically. 
+Yeah. 
+
+388
+00:24:08,360 --> 00:24:11,440
+It's it's, yeah. 
+It's pretty fascinating, you 
+
+389
+00:24:11,440 --> 00:24:12,080
+know? 
+Yeah. 
+
+390
+00:24:12,480 --> 00:24:15,200
+So you've cleaned up other 
+people's messes many times, 
+
+391
+00:24:15,840 --> 00:24:17,320
+including Bruce's messes, I 
+guess. 
+
+392
+00:24:17,800 --> 00:24:19,760
+That's. 
+A good way of putting it, yeah. 
+
+393
+00:24:19,880 --> 00:24:20,600
+For. 
+Sure. 
+
+394
+00:24:21,880 --> 00:24:23,720
+Any other messes worth 
+highlighting? 
+
+395
+00:24:24,040 --> 00:24:26,120
+Oh, I'm sure they're out there. 
+They're not. 
+
+396
+00:24:26,120 --> 00:24:30,520
+And you've made contributions 
+to, you know, the the language 
+
+397
+00:24:30,520 --> 00:24:32,600
+features in Python, I think, 
+right? 
+
+398
+00:24:32,960 --> 00:24:36,040
+Yeah, yeah. 
+Which which ones did you? 
+
+399
+00:24:37,160 --> 00:24:40,320
+Well, there's been a lot and a 
+lot rejected. 
+
+400
+00:24:40,320 --> 00:24:42,760
+So I, you know, I feel kind of 
+proud that I've had a lot of 
+
+401
+00:24:42,760 --> 00:24:51,400
+terrible Python ideas too, that 
+the, you know, one of the, one 
+
+402
+00:24:51,400 --> 00:24:55,640
+of the early ones that I can 
+remember was the print Chevron 
+
+403
+00:24:55,640 --> 00:24:59,280
+Chevron, right? 
+Like, because in Python 2, print
+
+404
+00:24:59,320 --> 00:25:02,160
+is a statement. 
+It's not a, not a function. 
+
+405
+00:25:02,400 --> 00:25:06,600
+And so we are we, you know, used
+to be you'd have to like. 
+
+406
+00:25:07,680 --> 00:25:10,840
+Move. 
+You know, switch stud error or 
+
+407
+00:25:11,000 --> 00:25:14,120
+you know, assign stud out to 
+stud error or sign stud error to
+
+408
+00:25:14,120 --> 00:25:17,280
+stud out and then do a print to 
+get anything to standard error. 
+
+409
+00:25:17,760 --> 00:25:24,960
+And I think I wrote the print 
+Efron Chevron statement E word 
+
+410
+00:25:24,960 --> 00:25:29,480
+in Python 2 so that you could 
+print any, you know, any file 
+
+411
+00:25:29,760 --> 00:25:33,080
+object. 
+And it was ugly and terrible, 
+
+412
+00:25:33,840 --> 00:25:36,120
+but it was the best you could do
+I think in Python too. 
+
+413
+00:25:36,160 --> 00:25:40,080
+So thankfully no longer 
+necessary you. 
+
+414
+00:25:41,080 --> 00:25:44,000
+Know. 
+Was the syntax inspired by by 
+
+415
+00:25:44,000 --> 00:25:50,080
+Unix like pipes or something it?
+Was yes, yes and C++ also right?
+
+416
+00:25:50,560 --> 00:25:54,200
+You know you can. 
+I don't even remember the C++. 
+
+417
+00:25:54,200 --> 00:25:55,360
+I haven't used the. 
+Shift. 
+
+418
+00:25:55,480 --> 00:25:58,760
+Yeah, using the shift as the 4C,
+Yeah. 
+
+419
+00:25:59,960 --> 00:26:08,240
+Oh, so I have a, an embarrassing
+admission because years ago, 
+
+420
+00:26:08,280 --> 00:26:14,680
+when I was still mostly in the 
+C++ world, Guido asked me if I 
+
+421
+00:26:14,680 --> 00:26:19,680
+thought C++ was good enough to, 
+to rewrite Python into. 
+
+422
+00:26:19,680 --> 00:26:22,960
+And I said, yes, it's awesome. 
+You should be able to do that. 
+
+423
+00:26:23,280 --> 00:26:27,720
+And I know that there was a, you
+know, there was a period where 
+
+424
+00:26:27,720 --> 00:26:29,400
+it was like, OK, we're going to 
+try this. 
+
+425
+00:26:29,760 --> 00:26:34,600
+And you know, embarrassingly, I 
+in hindsight, I look at it and 
+
+426
+00:26:34,600 --> 00:26:39,720
+go, oh, I would not have made 
+that recommendation if I'd known
+
+427
+00:26:39,720 --> 00:26:45,160
+what I know now. 
+But and but now, and I feel like
+
+428
+00:26:45,160 --> 00:26:49,640
+I, I used up my credibility on 
+that one because now I would 
+
+429
+00:26:49,640 --> 00:26:55,280
+say, OK, Rust might be instead 
+of C. 
+
+430
+00:26:56,160 --> 00:26:59,520
+What's the? 
+Is there any thinking about that
+
+431
+00:26:59,520 --> 00:27:02,080
+or? 
+There is in fact, I don't 
+
+432
+00:27:02,080 --> 00:27:04,760
+remember the pet number. 
+I, I I'm sure we could look it. 
+
+433
+00:27:04,800 --> 00:27:06,440
+Up well there is an 
+implementation. 
+
+434
+00:27:06,760 --> 00:27:10,560
+I mean somebody has has 
+implemented Python And Rust. 
+
+435
+00:27:11,560 --> 00:27:15,200
+Yeah, and you know, I mean, 
+that's been a rich tradition for
+
+436
+00:27:15,200 --> 00:27:19,280
+many, many years, decades 
+probably of re implementing the 
+
+437
+00:27:19,280 --> 00:27:21,520
+language. 
+And that was like J Python, 
+
+438
+00:27:21,520 --> 00:27:24,560
+which became Jython, which I 
+think was really important for 
+
+439
+00:27:24,880 --> 00:27:30,440
+for Python's evolution because 
+unlike some of these like Tickle
+
+440
+00:27:30,440 --> 00:27:33,880
+and Pearl in particular that I'm
+thinking about, you know, the 
+
+441
+00:27:34,240 --> 00:27:36,640
+implementation defined the 
+language. 
+
+442
+00:27:37,120 --> 00:27:42,800
+And so when Jim Hugginen, you 
+know, kind of like challenged 
+
+443
+00:27:42,800 --> 00:27:46,000
+Guido to, you know, I can 
+rewrite Python in Java. 
+
+444
+00:27:47,360 --> 00:27:48,840
+And I think Guido was 
+unconvinced. 
+
+445
+00:27:48,840 --> 00:27:52,600
+And so Jim, good on him, said 
+I'm going to prove you wrong. 
+
+446
+00:27:52,640 --> 00:27:59,240
+You know, it forced Guido in a 
+way to make a decision about 
+
+447
+00:27:59,240 --> 00:28:01,880
+what was language and what was 
+implementation. 
+
+448
+00:28:02,400 --> 00:28:06,360
+You know, there's lots of, you 
+know, corners of steep Python 
+
+449
+00:28:06,640 --> 00:28:08,800
+that are implementation 
+specific. 
+
+450
+00:28:09,240 --> 00:28:13,800
+There's lots and lots. 
+Most of the Python language is 
+
+451
+00:28:13,800 --> 00:28:16,800
+defined in the language spec. 
+So if you're going to rewrite 
+
+452
+00:28:16,800 --> 00:28:20,800
+Python in another implementation
+language, you've got to be 
+
+453
+00:28:20,800 --> 00:28:22,360
+compatible with the language 
+stack. 
+
+454
+00:28:22,960 --> 00:28:25,680
+So I think that that's a really 
+important, that was a really 
+
+455
+00:28:25,680 --> 00:28:32,080
+important evolution in Python, 
+the languages history. 
+
+456
+00:28:32,760 --> 00:28:38,200
+That said, many attempts have 
+been made to re implement Python
+
+457
+00:28:38,200 --> 00:28:40,800
+And other languages and you 
+know, other substrates. 
+
+458
+00:28:41,280 --> 00:28:46,000
+And I don't As for whatever 
+reason, C Python is still, I 
+
+459
+00:28:46,000 --> 00:28:48,480
+mean, I have my, I have my 
+reasons. 
+
+460
+00:28:48,480 --> 00:28:52,200
+I think I know why, but the 
+Python is still the reference 
+
+461
+00:28:52,200 --> 00:28:53,840
+implementation that everybody 
+goes to. 
+
+462
+00:28:55,480 --> 00:28:59,160
+Yeah, it is interesting how how 
+languages go different 
+
+463
+00:28:59,160 --> 00:29:02,200
+directions on that. 
+Like I think like Java has a a 
+
+464
+00:29:02,200 --> 00:29:06,040
+very lengthy comprehensive 
+language specification and 
+
+465
+00:29:06,040 --> 00:29:08,240
+Python does. 
+But then if you look at Kotlin, 
+
+466
+00:29:08,240 --> 00:29:11,880
+I think Kotlin actually does not
+have a language specification. 
+
+467
+00:29:12,120 --> 00:29:14,800
+There is only the implementation
+of the compiler. 
+
+468
+00:29:14,800 --> 00:29:17,840
+And that is if you try to go 
+implement Kotlin. 
+
+469
+00:29:17,840 --> 00:29:21,920
+I was like, yeah, good luck. 
+Well, I think C++ was like that 
+
+470
+00:29:21,920 --> 00:29:24,320
+initially too. 
+So yeah, the reference 
+
+471
+00:29:24,320 --> 00:29:28,120
+implementation was the Bell Labs
+thing. 
+
+472
+00:29:28,280 --> 00:29:32,480
+And because I mean, there wasn't
+that many people working on it 
+
+473
+00:29:32,480 --> 00:29:35,920
+that they could allocate 
+somebody to building a language 
+
+474
+00:29:35,920 --> 00:29:37,880
+specification. 
+I think that's actually why 
+
+475
+00:29:37,880 --> 00:29:42,200
+Strewstrip started. 
+The committee was developed a 
+
+476
+00:29:42,200 --> 00:29:45,640
+language spec, so I'm. 
+So glad Python. 
+
+477
+00:29:46,160 --> 00:29:50,120
+I mean, Python has a steering 
+council, but it's not a 
+
+478
+00:29:50,120 --> 00:29:53,680
+committee in the same way the 
+C++ committee is. 
+
+479
+00:29:53,680 --> 00:29:57,680
+I think that's really to 
+Python's strength, you know? 
+
+480
+00:29:58,080 --> 00:30:00,440
+Yeah. 
+I mean, it's had it's, it's had 
+
+481
+00:30:00,440 --> 00:30:04,600
+it's dramas as well. 
+And my experience of this C++ 
+
+482
+00:30:04,600 --> 00:30:09,400
+committee was in its formative, 
+you know, first eight years and 
+
+483
+00:30:10,040 --> 00:30:14,520
+it seemed, I mean, everybody on 
+it was highly technical and 
+
+484
+00:30:14,520 --> 00:30:23,000
+interested in the technology. 
+And so I've, for me, it was just
+
+485
+00:30:23,000 --> 00:30:27,760
+a wealth of learning from people
+who are way smarter than I was. 
+
+486
+00:30:27,960 --> 00:30:30,000
+That's that's why I went to 
+actually. 
+
+487
+00:30:30,840 --> 00:30:38,280
+But yeah, I don't know the, it's
+an, I guess it's inevitable that
+
+488
+00:30:38,320 --> 00:30:43,440
+we get these evolutions and you 
+have to bring, you know, younger
+
+489
+00:30:43,440 --> 00:30:45,200
+people in and they're going to 
+have. 
+
+490
+00:30:45,200 --> 00:30:48,640
+Absolutely. 
+Their particular bents about 
+
+491
+00:30:48,640 --> 00:30:51,520
+things and you just kind of have
+to ride it out I guess. 
+
+492
+00:30:51,960 --> 00:30:54,000
+Which I think is, is healthy, 
+right? 
+
+493
+00:30:54,000 --> 00:31:00,240
+Like I, I, I mean, you know, 
+the, those of us who have been 
+
+494
+00:31:00,240 --> 00:31:04,120
+in Python for 30 years, you 
+know, we're not going to be 
+
+495
+00:31:04,680 --> 00:31:07,720
+driving Python the next 30 
+years, you know, And so I think 
+
+496
+00:31:07,720 --> 00:31:11,480
+it's really important to bring 
+that the younger engineers and 
+
+497
+00:31:11,480 --> 00:31:18,480
+generous and have them give them
+the opportunity to lead and also
+
+498
+00:31:19,240 --> 00:31:24,280
+encourage their exploring their 
+own vision of what, for example,
+
+499
+00:31:24,280 --> 00:31:28,080
+Python should be. 
+So like with Rust, we actually 
+
+500
+00:31:28,080 --> 00:31:33,160
+are doing a experiment to not 
+rewrite Python And Rust, but 
+
+501
+00:31:33,160 --> 00:31:37,520
+bring Rust the Rust tool chain 
+into C Python so that we could 
+
+502
+00:31:37,520 --> 00:31:40,840
+for example write extension 
+modules in Rust. 
+
+503
+00:31:41,400 --> 00:31:48,000
+I have had the I over the years.
+I have struggled and obviously 
+
+504
+00:31:48,000 --> 00:31:51,440
+it was not easy enough because 
+people kept coming up with new 
+
+505
+00:31:51,640 --> 00:31:55,640
+ways to write extensions. 
+I could never get any of them to
+
+506
+00:31:55,640 --> 00:31:59,960
+work. 
+Rust Instant instantly works 
+
+507
+00:31:59,960 --> 00:32:02,400
+right out-of-the-box, does all 
+the right things. 
+
+508
+00:32:02,560 --> 00:32:06,640
+It's like we yeah, we should not
+have C extensions anymore. 
+
+509
+00:32:06,640 --> 00:32:10,440
+I they're just too hard to 
+create or maintain and Rust 
+
+510
+00:32:10,440 --> 00:32:14,920
+just, and it's usually faster 
+than it has, I mean the 
+
+511
+00:32:14,920 --> 00:32:17,120
+libraries that it has for 
+concurrency. 
+
+512
+00:32:17,120 --> 00:32:21,240
+If if you know your Python 
+concurrency stuff doesn't work, 
+
+513
+00:32:21,240 --> 00:32:23,920
+you know, write a do a Rust 
+extension. 
+
+514
+00:32:23,920 --> 00:32:27,160
+Yeah, it's it's amazing how well
+it works. 
+
+515
+00:32:28,360 --> 00:32:32,360
+And there's a really good Python
+binding layer, you know, for 
+
+516
+00:32:32,360 --> 00:32:36,200
+Rust. 
+And so I think what you know 
+
+517
+00:32:36,200 --> 00:32:39,160
+that it's a long process, right?
+Like you have to figure out 
+
+518
+00:32:39,160 --> 00:32:42,800
+what's the right API to bring 
+into the core that you know, 
+
+519
+00:32:43,160 --> 00:32:46,120
+because Python, that was one of 
+the first things I did when 
+
+520
+00:32:46,560 --> 00:32:49,360
+Guido came to the States was we 
+had this thing called the grand 
+
+521
+00:32:49,360 --> 00:32:53,640
+renaming, and I think it's on 
+Guido's Python history blog. 
+
+522
+00:32:53,640 --> 00:32:58,960
+But all the C symbols were just 
+names, right? 
+
+523
+00:32:58,960 --> 00:33:02,480
+And so they collided with when 
+you try to embed it or extend it
+
+524
+00:33:02,720 --> 00:33:06,240
+or extend an existing C 
+application, the, all the names 
+
+525
+00:33:06,240 --> 00:33:08,080
+would collide, right? 
+There was no name spacing. 
+
+526
+00:33:08,080 --> 00:33:11,840
+So that's when like you now you 
+see Pi object this and π object 
+
+527
+00:33:11,840 --> 00:33:15,920
+that and π tuple this. 
+And you know, so that was a, 
+
+528
+00:33:16,040 --> 00:33:19,760
+that was a early project that I 
+worked on was renaming all the 
+
+529
+00:33:19,760 --> 00:33:24,000
+internal C symbols. 
+And so that effectively is the C
+
+530
+00:33:24,000 --> 00:33:26,520
+API. 
+And so now we, we need a Rust 
+
+531
+00:33:26,520 --> 00:33:31,440
+API so that when people want to 
+do things, want to write Rust 
+
+532
+00:33:31,520 --> 00:33:35,080
+extensions, they can use the 
+really nice binding layer. 
+
+533
+00:33:35,080 --> 00:33:37,560
+That's a third party thing. 
+But what would you do if you 
+
+534
+00:33:37,560 --> 00:33:43,760
+wanted to rewrite Z Lib or 
+struck the one of the built in 
+
+535
+00:33:44,160 --> 00:33:47,160
+extension modules that come with
+Python out-of-the-box? 
+
+536
+00:33:47,160 --> 00:33:51,160
+If you wanted to write that in 
+Rust, you need a Rust API. 
+
+537
+00:33:51,160 --> 00:33:54,000
+And so that that's the work 
+that's being done now. 
+
+538
+00:33:54,000 --> 00:33:56,000
+It's like, how do we define that
+Rust API? 
+
+539
+00:33:56,000 --> 00:33:59,760
+What's how do we make the Rust 
+tool chain work with pythons 
+
+540
+00:33:59,760 --> 00:34:04,880
+like ancient, you know, auto 
+conf stuff, make file based, you
+
+541
+00:34:04,880 --> 00:34:10,199
+know, compilation. 
+So it's it's really, I'm very 
+
+542
+00:34:10,199 --> 00:34:13,400
+optimistic that this is going to
+work out, but it's an experiment
+
+543
+00:34:13,400 --> 00:34:15,600
+that we have to just go through 
+and figure out the things we 
+
+544
+00:34:15,600 --> 00:34:18,840
+don't know and and make that 
+work. 
+
+545
+00:34:18,840 --> 00:34:23,800
+So. 
+So here's a separate question, 
+
+546
+00:34:23,800 --> 00:34:28,000
+which is OK. 
+So I've been working on this. 
+
+547
+00:34:29,560 --> 00:34:33,239
+You, you may remember, May not, 
+I think it was around 2008. 
+
+548
+00:34:33,239 --> 00:34:36,880
+I thought I'm going to write 
+Thinking in Python And I, you 
+
+549
+00:34:36,880 --> 00:34:39,639
+know, kind of worked with it for
+a few years and then gave it up.
+
+550
+00:34:39,679 --> 00:34:47,840
+And then last June, I thought, 
+let's see what Claude can do 
+
+551
+00:34:47,840 --> 00:34:51,800
+with the mess that I have. 
+And it started cleaning it up. 
+
+552
+00:34:51,800 --> 00:34:55,920
+And then I started pouring in 
+all kinds of other projects that
+
+553
+00:34:55,920 --> 00:34:58,800
+I had done, presentations and 
+things put it in. 
+
+554
+00:34:58,800 --> 00:35:05,760
+And so, but one of the things 
+that I've done is static typing 
+
+555
+00:35:05,760 --> 00:35:10,760
+everywhere. 
+And I, I can't go back at this 
+
+556
+00:35:10,760 --> 00:35:15,240
+point, you know, I UN UN 
+statically typed Python. 
+
+557
+00:35:15,800 --> 00:35:20,880
+I, I don't know if I, I would 
+look at it and go, huh, OK, no 
+
+558
+00:35:20,880 --> 00:35:22,400
+idea what's going to happen with
+that. 
+
+559
+00:35:22,920 --> 00:35:31,600
+So, but I'm wondering how is 
+the, how's the uptake of that in
+
+560
+00:35:31,600 --> 00:35:33,000
+the community? 
+Do you know? 
+
+561
+00:35:33,120 --> 00:35:35,040
+I, I think it's been really 
+good. 
+
+562
+00:35:35,080 --> 00:35:41,520
+I think that that is another 
+stage of Python's evolution that
+
+563
+00:35:41,520 --> 00:35:46,240
+really worked out well. 
+And I'll I'll say upfront that I
+
+564
+00:35:46,240 --> 00:35:50,840
+was not a fan of type 
+annotations in the early. 
+
+565
+00:35:50,840 --> 00:35:52,240
+Why was that? 
+Why was that? 
+
+566
+00:35:53,680 --> 00:35:58,040
+Because I like the malleability 
+of Python, I'd like the the 
+
+567
+00:35:58,040 --> 00:36:01,320
+ability to just write some 
+things and have it evolve over 
+
+568
+00:36:01,320 --> 00:36:06,000
+time. 
+And Python was always, it was 
+
+569
+00:36:06,000 --> 00:36:13,280
+like the most Direct Line from 
+what I had in my head, vision 
+
+570
+00:36:13,280 --> 00:36:15,400
+that I had in my head of the 
+thing that I wanted to write. 
+
+571
+00:36:15,840 --> 00:36:19,160
+And I didn't have to worry about
+any boilerplate BS, right? 
+
+572
+00:36:19,160 --> 00:36:22,120
+Like I just could write what I 
+was thinking, speak, you know, 
+
+573
+00:36:22,120 --> 00:36:24,960
+run it right away and have to 
+run through a compiler. 
+
+574
+00:36:25,200 --> 00:36:28,960
+I didn't have to add a bunch of 
+Chrome around things. 
+
+575
+00:36:29,040 --> 00:36:32,160
+I don't know. 
+You can validate. 
+
+576
+00:36:32,240 --> 00:36:37,240
+I thought that years and years 
+ago I said something like Python
+
+577
+00:36:37,240 --> 00:36:39,960
+fits my brain, but it could have
+somebody else. 
+
+578
+00:36:39,960 --> 00:36:42,880
+I don't know. 
+Anyway, yes. 
+
+579
+00:36:43,040 --> 00:36:44,480
+So you liked. 
+Yeah. 
+
+580
+00:36:44,480 --> 00:36:47,000
+And that is fun. 
+I mean, I have to admit that's 
+
+581
+00:36:47,000 --> 00:36:49,960
+fun, Yeah. 
+But, and, and this is what 
+
+582
+00:36:49,960 --> 00:36:54,120
+really changed my mind, the type
+annotation stuff kind of came 
+
+583
+00:36:54,120 --> 00:36:57,880
+out of Instagram, right? 
+Because Instagram, I have no 
+
+584
+00:36:57,880 --> 00:37:01,000
+idea what it is today, but at 
+the time it was just like a big 
+
+585
+00:37:01,000 --> 00:37:05,040
+Python location server side was 
+with the big Python application,
+
+586
+00:37:05,040 --> 00:37:10,160
+like huge Python application. 
+And they were struggling with, 
+
+587
+00:37:11,480 --> 00:37:13,520
+with comprehension of the code 
+base. 
+
+588
+00:37:13,760 --> 00:37:17,080
+Because you know, in a, in a 
+company, you always have 
+
+589
+00:37:17,080 --> 00:37:19,560
+turnover, you have new people 
+come in, people leave. 
+
+590
+00:37:19,840 --> 00:37:25,800
+So how do you bootstrap new 
+people into comprehending the 
+
+591
+00:37:25,800 --> 00:37:30,640
+code base quickly? 
+And so they built this, you 
+
+592
+00:37:30,640 --> 00:37:32,800
+know, the essentially the type 
+annotations. 
+
+593
+00:37:32,800 --> 00:37:36,640
+And so we went to Instagram and,
+you know, talk with the people 
+
+594
+00:37:36,640 --> 00:37:39,000
+who were doing this. 
+And that was the thing that 
+
+595
+00:37:39,000 --> 00:37:44,520
+really, because I had seen in my
+own company, not my company, but
+
+596
+00:37:44,520 --> 00:37:47,880
+the company I was working for, 
+how people struggled with 
+
+597
+00:37:47,880 --> 00:37:50,120
+comprehending existing code 
+bases. 
+
+598
+00:37:50,600 --> 00:37:54,920
+And so I started playing with it
+and I used it a lot, mailman and
+
+599
+00:37:54,920 --> 00:37:56,240
+some of the other systems I was 
+building. 
+
+600
+00:37:56,240 --> 00:38:03,040
+And I was like, oh, Python to 
+me, it's got the right, it's got
+
+601
+00:38:03,040 --> 00:38:06,680
+the right balance because you 
+can still do all that fun. 
+
+602
+00:38:07,880 --> 00:38:11,680
+No boilerplate, you know, just 
+write some code, have an idea, 
+
+603
+00:38:11,680 --> 00:38:14,040
+write some code, test it out, 
+see what it looks like, you 
+
+604
+00:38:14,040 --> 00:38:16,840
+know, you don't have to worry 
+about any of that stuff. 
+
+605
+00:38:16,840 --> 00:38:22,280
+But as your code, you know, 
+increases in size, and as you 
+
+606
+00:38:22,280 --> 00:38:25,960
+start to share it, especially 
+with other people, and they have
+
+607
+00:38:25,960 --> 00:38:30,240
+to understand what your intent 
+was, then that's where the type 
+
+608
+00:38:30,240 --> 00:38:36,760
+annotations come into play. 
+And because they're only there 
+
+609
+00:38:36,760 --> 00:38:44,040
+for the static type checkers and
+and with some asterisks here 
+
+610
+00:38:44,400 --> 00:38:47,080
+don't affect anything at 
+runtime, right? 
+
+611
+00:38:47,080 --> 00:38:50,560
+Like as the Python's runtime 
+ignores the type, the type 
+
+612
+00:38:50,560 --> 00:38:54,680
+annotations it well. 
+So it's not part of the language
+
+613
+00:38:54,680 --> 00:38:57,960
+and I don't need to use them. 
+You don't need to use them, but 
+
+614
+00:38:57,960 --> 00:39:00,720
+they are part of the language at
+this point. 
+
+615
+00:39:01,120 --> 00:39:03,240
+But yeah, you don't, you don't 
+need to use them. 
+
+616
+00:39:03,240 --> 00:39:05,680
+I mean, you can strip them all 
+out and Python will Python, your
+
+617
+00:39:05,680 --> 00:39:09,760
+Python code will still run. 
+But I mean, being able to run a 
+
+618
+00:39:09,760 --> 00:39:14,000
+type checker over your code and 
+say, oh, I'm passing a string 
+
+619
+00:39:14,000 --> 00:39:16,640
+here when I really should only 
+be passing in, it's like, that's
+
+620
+00:39:17,160 --> 00:39:19,480
+incredibly helpful. 
+So I think, I think it's 
+
+621
+00:39:19,480 --> 00:39:22,360
+wonderful. 
+Well, the correct the way that 
+
+622
+00:39:22,400 --> 00:39:26,240
+works, I think is and James and 
+I had an experience. 
+
+623
+00:39:26,240 --> 00:39:32,800
+We wrote a book a long time ago 
+and the language that language 
+
+624
+00:39:32,800 --> 00:39:38,440
+had, it had this idea of gradual
+typing. 
+
+625
+00:39:38,760 --> 00:39:42,560
+And so if you know, normally 
+you'd statically type check 
+
+626
+00:39:42,560 --> 00:39:46,000
+everything, but if you wanted to
+do something funky, you could, 
+
+627
+00:39:46,200 --> 00:39:50,240
+you could do that within one 
+function and then everything 
+
+628
+00:39:50,240 --> 00:39:52,520
+else. 
+And, and it wouldn't be, you 
+
+629
+00:39:52,520 --> 00:39:55,800
+know, I, I guess it's sort of 
+like rusts unsafe mode or 
+
+630
+00:39:55,800 --> 00:39:59,760
+something, which I've, I've 
+never used, but we found that 
+
+631
+00:39:59,760 --> 00:40:03,560
+very liberating. 
+But I, I don't know. 
+
+632
+00:40:03,560 --> 00:40:09,680
+I found for me it's about 
+ensuring that the code is 
+
+633
+00:40:09,680 --> 00:40:12,720
+correct. 
+That's, that's what I find the 
+
+634
+00:40:12,720 --> 00:40:15,920
+type checking gives me. 
+And we had a conversation, I 
+
+635
+00:40:15,920 --> 00:40:19,080
+don't know if it was a month or 
+so ago, where you were saying 
+
+636
+00:40:19,200 --> 00:40:26,160
+that if you had, all we had to 
+do was add one more thing, which
+
+637
+00:40:26,160 --> 00:40:33,680
+was the, the what's the types 
+that where they know their value
+
+638
+00:40:33,680 --> 00:40:35,680
+value. 
+Value dependent types. 
+
+639
+00:40:35,680 --> 00:40:39,160
+Value dependent types. 
+So if we added value dependent 
+
+640
+00:40:39,160 --> 00:40:44,280
+types to a language, we could 
+eliminate unit testing. 
+
+641
+00:40:45,680 --> 00:40:50,160
+Because I know it's a 
+fascinating idea because if you 
+
+642
+00:40:50,160 --> 00:40:52,760
+have all of these other things 
+in place and you add value 
+
+643
+00:40:52,760 --> 00:40:56,520
+dependent types, then the 
+compiler can know everything 
+
+644
+00:40:56,520 --> 00:40:59,560
+about what it's going to do. 
+I mean, you still have, you 
+
+645
+00:40:59,560 --> 00:41:01,880
+still need other kinds of 
+testing, but you wouldn't need 
+
+646
+00:41:01,880 --> 00:41:03,840
+the unit testing. 
+Everything could move to 
+
+647
+00:41:03,840 --> 00:41:07,760
+functional testing, which is I 
+think kind of where we're going 
+
+648
+00:41:07,760 --> 00:41:12,360
+anyway with with AI, you just 
+say not really, don't really 
+
+649
+00:41:12,360 --> 00:41:15,520
+care how you implement it as 
+long as it passes the test. 
+
+650
+00:41:15,960 --> 00:41:19,120
+And in the end, that's all we 
+ever wanted anyway. 
+
+651
+00:41:19,880 --> 00:41:25,360
+Yeah, so just recently I I 
+rewatched a Phillip Wadler talk 
+
+652
+00:41:25,360 --> 00:41:26,720
+on. 
+Gosh. 
+
+653
+00:41:29,000 --> 00:41:32,600
+It's such a great talk for this 
+like moment that we're in and of
+
+654
+00:41:32,600 --> 00:41:35,400
+course it's like like 10 years 
+old or something like that. 
+
+655
+00:41:35,400 --> 00:41:41,920
+But he was it was a talk about 
+types as propositions and it's 
+
+656
+00:41:41,920 --> 00:41:44,640
+the Curry Howard stuff. 
+You know, he but really well 
+
+657
+00:41:44,640 --> 00:41:48,040
+done talk on on how you know 
+your types can represent 
+
+658
+00:41:48,760 --> 00:41:52,320
+essentially a proof. 
+And and I think that that back 
+
+659
+00:41:52,320 --> 00:41:57,840
+to the previous topic of with AI
+so much now of what our programs
+
+660
+00:41:57,840 --> 00:42:01,520
+need to do is or the hard parts 
+of programming are the 
+
+661
+00:42:01,520 --> 00:42:05,320
+validation parts. 
+And so the more that we can, you
+
+662
+00:42:05,320 --> 00:42:08,760
+know, encode into the actual 
+language that generally easier 
+
+663
+00:42:08,760 --> 00:42:12,240
+it is and seen many different 
+experiments around this like now
+
+664
+00:42:12,240 --> 00:42:15,720
+there's like the the aver one 
+that we looked at had like lean 
+
+665
+00:42:15,720 --> 00:42:20,120
+proofs kind of built into the 
+language and that's one 
+
+666
+00:42:20,120 --> 00:42:21,880
+approach. 
+But yeah, one of the 
+
+667
+00:42:21,920 --> 00:42:27,760
+observations that we kind of 
+realized was that previously 
+
+668
+00:42:28,120 --> 00:42:32,960
+introducing a new language was a
+huge effort not only to design 
+
+669
+00:42:32,960 --> 00:42:37,320
+the language, but to introduce 
+and convince the communities to 
+
+670
+00:42:37,320 --> 00:42:40,120
+use it. 
+Now you can create a new 
+
+671
+00:42:40,120 --> 00:42:45,800
+language, you know, throw it at 
+the AI, and you have instant 
+
+672
+00:42:45,800 --> 00:42:48,400
+uptake. 
+And So what we've seen is a 
+
+673
+00:42:48,400 --> 00:42:53,440
+number of people designing new 
+languages with modern features 
+
+674
+00:42:53,800 --> 00:42:59,000
+and a lot of the human 
+affordances that we, well, 
+
+675
+00:42:59,040 --> 00:43:00,560
+especially Python, it's full of 
+them. 
+
+676
+00:43:01,440 --> 00:43:05,800
+The AI doesn't need those. 
+It can do a, it can deal with 
+
+677
+00:43:05,800 --> 00:43:09,680
+the kind of a reduced 
+instruction set in terms of of 
+
+678
+00:43:09,960 --> 00:43:12,800
+language features. 
+And so it's like, I don't know, 
+
+679
+00:43:12,800 --> 00:43:14,760
+all this mind blowing stuff 
+keeps happening. 
+
+680
+00:43:14,920 --> 00:43:21,880
+How much are you using? 
+AII think it's amazingly 
+
+681
+00:43:21,880 --> 00:43:27,560
+fantastic, especially and 
+especially for sort of more 
+
+682
+00:43:27,640 --> 00:43:35,320
+experienced engineers, because 
+you know, I used to think I used
+
+683
+00:43:35,400 --> 00:43:38,360
+to when I was writing things 
+like I would have an idea and 
+
+684
+00:43:38,360 --> 00:43:41,640
+I'd say, you know, it'd be 
+really cool to have that thing, 
+
+685
+00:43:42,000 --> 00:43:45,480
+but I know how hard it would be 
+and how much time it would take 
+
+686
+00:43:45,680 --> 00:43:48,600
+to write the code. 
+And I'm not going to do it, it's
+
+687
+00:43:48,600 --> 00:43:50,640
+too much work. 
+Exactly. 
+
+688
+00:43:50,680 --> 00:43:52,760
+And they? 
+Did that many, many times. 
+
+689
+00:43:53,000 --> 00:43:55,880
+Yeah. 
+And the way I I've described it 
+
+690
+00:43:55,880 --> 00:43:59,880
+is I used to have to think about
+the how, the the what and the 
+
+691
+00:43:59,880 --> 00:44:01,840
+how. 
+And now we only think about the 
+
+692
+00:44:01,840 --> 00:44:05,720
+what. 
+And it is liberating, absolutely
+
+693
+00:44:05,720 --> 00:44:11,000
+liberating. 
+But I don't know if that's, if 
+
+694
+00:44:11,000 --> 00:44:15,240
+that's sort of, I don't know 
+where that's going to lead. 
+
+695
+00:44:15,240 --> 00:44:17,800
+And I don't know where that 
+leaves engineers who are 
+
+696
+00:44:17,800 --> 00:44:21,160
+starting, who don't have the 
+experience to look at something 
+
+697
+00:44:21,160 --> 00:44:24,800
+and go, you know what agent 
+you're wrong, like that's not 
+
+698
+00:44:24,800 --> 00:44:27,000
+right. 
+Or ask questions. 
+
+699
+00:44:27,000 --> 00:44:30,040
+I found I've always found it 
+like the, I think they call it 
+
+700
+00:44:30,040 --> 00:44:32,200
+right. 
+The Socratic method of asking 
+
+701
+00:44:32,200 --> 00:44:34,920
+questions is really, really 
+valuable. 
+
+702
+00:44:34,920 --> 00:44:39,120
+So when you look at some code 
+and you go or the, or the AI 
+
+703
+00:44:39,120 --> 00:44:40,600
+will say, I'm going to do this 
+and this. 
+
+704
+00:44:40,600 --> 00:44:42,760
+And just like, you know what? 
+I don't understand that bullet 
+
+705
+00:44:42,760 --> 00:44:44,040
+point. 
+I don't understand what you're 
+
+706
+00:44:44,040 --> 00:44:48,120
+saying there. 
+Or you just changed my code. 
+
+707
+00:44:48,800 --> 00:44:52,120
+Why did you do that? 
+And just asking it questions and
+
+708
+00:44:52,520 --> 00:44:55,920
+that has been I have found very 
+valuable, but it is. 
+
+709
+00:44:56,160 --> 00:44:59,120
+Oh, you're absolutely right. 
+That's not as good as. 
+
+710
+00:44:59,680 --> 00:45:03,240
+Let me Make it better. 
+But you have asked the question.
+
+711
+00:45:03,560 --> 00:45:05,960
+You have to go. 
+Hey, this doesn't look ragged. 
+
+712
+00:45:05,960 --> 00:45:08,160
+Explain why. 
+Oh, actually, yeah. 
+
+713
+00:45:08,320 --> 00:45:09,800
+Yeah. 
+And it'll it'll. 
+
+714
+00:45:11,280 --> 00:45:14,440
+I think there's I think there's 
+two, I think there's two things 
+
+715
+00:45:14,440 --> 00:45:18,160
+that we have to teach younger 
+engineers as they're coming into
+
+716
+00:45:18,160 --> 00:45:21,000
+this completely new world of 
+like AI driven code. 
+
+717
+00:45:21,000 --> 00:45:24,800
+I don't think I don't think what
+we grew up doing this coding, I 
+
+718
+00:45:25,200 --> 00:45:26,360
+don't think we're going to be 
+coders. 
+
+719
+00:45:26,360 --> 00:45:30,960
+And I and I you, you kind of I 
+kind of have a nostalgic for it,
+
+720
+00:45:30,960 --> 00:45:32,960
+but I also think that we're 
+actually doing we're just 
+
+721
+00:45:33,880 --> 00:45:36,040
+raising the abstraction layer. 
+That's right. 
+
+722
+00:45:36,040 --> 00:45:39,080
+Which is what we've always done.
+Which is what we've always. 
+
+723
+00:45:39,240 --> 00:45:42,800
+Been our goal and you you 
+probably programmed in assembly 
+
+724
+00:45:42,800 --> 00:45:46,080
+language, did you? 
+Oh yeah, OK, because I did my 
+
+725
+00:45:46,080 --> 00:45:48,840
+first few years and then 
+compilers come along and I go, 
+
+726
+00:45:49,280 --> 00:45:53,960
+OK, forget assembly language. 
+It was useful to, you know, look
+
+727
+00:45:53,960 --> 00:45:56,280
+at the output of the compiler. 
+That's actually how I learned 
+
+728
+00:45:56,280 --> 00:46:01,080
+C++. 
+But but it's like OK, I know 
+
+729
+00:46:01,080 --> 00:46:05,560
+assembly language is there but I
+use a compiler and I know 
+
+730
+00:46:05,560 --> 00:46:09,560
+programming languages are there 
+but I and I review it and 
+
+731
+00:46:09,560 --> 00:46:12,120
+everything but I use the AI. 
+Why would I? 
+
+732
+00:46:13,800 --> 00:46:17,880
+Yes, exactly. 
+I think I, I, I, I've talked to 
+
+733
+00:46:17,880 --> 00:46:21,320
+so many people about it and like
+a lot of people, you know, that 
+
+734
+00:46:21,680 --> 00:46:27,560
+work or in, in Python are not 
+using agents to code, right. 
+
+735
+00:46:28,680 --> 00:46:31,080
+And there's a lot like there's a
+like a variety of reasons and 
+
+736
+00:46:31,080 --> 00:46:34,600
+some are using it and there's a 
+whole get, you know, scale of, 
+
+737
+00:46:34,760 --> 00:46:41,000
+of engagement with it. 
+But I think the skills that are 
+
+738
+00:46:41,000 --> 00:46:46,560
+really valuable when using 
+agents are curiosity and 
+
+739
+00:46:46,560 --> 00:46:50,280
+creativity. 
+And if you have those two things
+
+740
+00:46:50,280 --> 00:46:56,000
+that agents are just another 
+tool get the accomplish. 
+
+741
+00:46:56,000 --> 00:47:00,640
+I have gotten things done that 
+I've wanted for 30 years and I'm
+
+742
+00:47:00,640 --> 00:47:05,280
+just like, hey, write me this 
+thing And it's like, boom, you 
+
+743
+00:47:05,280 --> 00:47:07,840
+know, and as long as it does 
+what I wanted to do, I had a 
+
+744
+00:47:07,840 --> 00:47:11,680
+really interesting epiphany 
+several months ago. 
+
+745
+00:47:11,680 --> 00:47:15,440
+I, I wanted this tool that I had
+had on Linux and now that I'm 
+
+746
+00:47:15,440 --> 00:47:18,360
+missing on Mac OS, that tool 
+didn't exist. 
+
+747
+00:47:18,880 --> 00:47:21,720
+I was like, I just, I'll just 
+tell it to, to write this thing.
+
+748
+00:47:21,720 --> 00:47:24,600
+And so it was partly written in 
+Swift and partly written in 
+
+749
+00:47:24,600 --> 00:47:26,760
+Python. 
+And there was a moment where I 
+
+750
+00:47:26,760 --> 00:47:31,720
+was like, OK, now we're going to
+make sure the Python looks the 
+
+751
+00:47:31,720 --> 00:47:35,080
+way I like it to, to look, you 
+know, so I want to get all my, 
+
+752
+00:47:35,400 --> 00:47:39,560
+you know, auto formatting 
+settings the way I like. 
+
+753
+00:47:39,600 --> 00:47:42,760
+And then I was like, wait a 
+second, why am I doing that? 
+
+754
+00:47:42,760 --> 00:47:45,680
+I don't really care, you know, I
+just don't care. 
+
+755
+00:47:45,880 --> 00:47:49,720
+It does what I want it to do. 
+And when it doesn't do a little 
+
+756
+00:47:49,720 --> 00:47:53,840
+thing, I'll just say, hey, by 
+the way, extend yourself now to 
+
+757
+00:47:53,840 --> 00:47:57,600
+do this other thing. 
+And it cranks away and I test it
+
+758
+00:47:57,600 --> 00:48:00,600
+out and it doesn't. 
+And if it works, then it's like 
+
+759
+00:48:01,040 --> 00:48:02,600
+commit and push. 
+I don't care. 
+
+760
+00:48:03,000 --> 00:48:05,760
+I just don't care. 
+So now that's not to say that 
+
+761
+00:48:05,960 --> 00:48:08,680
+that's true of all the code that
+I write, because there is still 
+
+762
+00:48:08,760 --> 00:48:14,640
+code that I really do care a lot
+about the human aesthetics mind 
+
+763
+00:48:14,640 --> 00:48:17,080
+of it. 
+But yeah, yeah, you know, it's. 
+
+764
+00:48:17,160 --> 00:48:18,600
+It's wild. 
+Yeah. 
+
+765
+00:48:18,720 --> 00:48:20,120
+It's a big spectrum. 
+Yeah. 
+
+766
+00:48:20,120 --> 00:48:23,400
+I think on along those lines, 
+there's been a lot of debates 
+
+767
+00:48:23,400 --> 00:48:26,200
+recently around does programming
+language matter? 
+
+768
+00:48:26,200 --> 00:48:28,920
+And some people are like, like 
+everything should just be 
+
+769
+00:48:28,920 --> 00:48:31,240
+written in Rust or everything 
+should be written in Python or 
+
+770
+00:48:31,240 --> 00:48:32,920
+everything, you know, it's 
+everybody's got their their 
+
+771
+00:48:32,920 --> 00:48:36,680
+camp. 
+But I am, I'm, I'm curious about
+
+772
+00:48:36,760 --> 00:48:41,200
+your perspective on this debate 
+is like, like if the agents are 
+
+773
+00:48:41,200 --> 00:48:44,840
+writing on the code, why isn't 
+it all in Rust? 
+
+774
+00:48:44,840 --> 00:48:47,320
+Or, you know, pick, pick 
+whatever the most optimized 
+
+775
+00:48:47,320 --> 00:48:49,600
+language for your target 
+platform or something is. 
+
+776
+00:48:50,000 --> 00:48:53,760
+And like, I don't know, I'm 
+struggling with, with my 
+
+777
+00:48:54,440 --> 00:48:57,200
+rebuttal to that because I've, I
+definitely feel like, like the 
+
+778
+00:48:57,200 --> 00:49:00,560
+languages that I use matter and 
+that I, you know, I want to be 
+
+779
+00:49:00,560 --> 00:49:04,000
+able to choose my language and 
+not like, I think Rust is great,
+
+780
+00:49:04,000 --> 00:49:06,640
+but I want to write everything 
+in Rust. 
+
+781
+00:49:06,640 --> 00:49:08,600
+And maybe, maybe I'm just old 
+and. 
+
+782
+00:49:08,600 --> 00:49:14,960
+Or one of these new languages 
+that are better for the AI and, 
+
+783
+00:49:15,000 --> 00:49:19,360
+and it's like, you know, well, 
+when we had compilers, there 
+
+784
+00:49:19,360 --> 00:49:23,200
+were people who would say, well,
+the compiler will never produce 
+
+785
+00:49:23,640 --> 00:49:26,640
+efficient code. 
+Like I can do it by hand. 
+
+786
+00:49:27,040 --> 00:49:32,240
+And you know, you do need some 
+people who know how that works. 
+
+787
+00:49:32,520 --> 00:49:37,080
+So they can, you know, write 
+LLVM or whatever and they, you 
+
+788
+00:49:37,080 --> 00:49:40,440
+know, they know how assembly 
+language works and how the 
+
+789
+00:49:40,440 --> 00:49:43,040
+machine works, but far fewer of 
+them. 
+
+790
+00:49:43,280 --> 00:49:48,920
+And I think there will still be 
+people who need to know what the
+
+791
+00:49:49,400 --> 00:49:54,200
+how to look at the code that is 
+generated by the AI and analyze 
+
+792
+00:49:54,200 --> 00:49:55,600
+it and understand it and track 
+it. 
+
+793
+00:49:55,800 --> 00:49:59,960
+But again, far fewer of them. 
+And we all become creators and 
+
+794
+00:49:59,960 --> 00:50:03,200
+designers. 
+I think programming languages 
+
+795
+00:50:03,480 --> 00:50:08,240
+exist because it's a human 
+communication medium, right? 
+
+796
+00:50:09,600 --> 00:50:14,840
+Python was so mind blowingly 
+revolutionary because it allowed
+
+797
+00:50:14,840 --> 00:50:17,760
+humans to communicate their 
+intent about what they wanted 
+
+798
+00:50:17,760 --> 00:50:20,960
+their programs to do in a way 
+that felt very natural. 
+
+799
+00:50:21,240 --> 00:50:24,000
+Certainly for English speakers. 
+It felt like we're just 
+
+800
+00:50:24,000 --> 00:50:26,400
+conversing, you know, we're just
+talking about what this thing 
+
+801
+00:50:26,400 --> 00:50:28,120
+is. 
+It's, it looks like English, you
+
+802
+00:50:28,120 --> 00:50:34,240
+know, in a, in a way, right. 
+And I think we're holding on to 
+
+803
+00:50:34,640 --> 00:50:40,480
+that sort of bias when we even 
+talk about Rust, I think that 
+
+804
+00:50:40,480 --> 00:50:44,000
+there will be a moment in time 
+where the agents, whatever you 
+
+805
+00:50:44,000 --> 00:50:46,040
+want to call them, say, you know
+what? 
+
+806
+00:50:46,040 --> 00:50:51,280
+All these these human constructs
+of languages are just slowing us
+
+807
+00:50:51,280 --> 00:50:53,480
+down. 
+Now, humans tell us what you 
+
+808
+00:50:53,480 --> 00:50:55,960
+want. 
+Talk at that higher abstraction 
+
+809
+00:50:55,960 --> 00:51:00,080
+layer and there will be ways for
+us to communicate between humans
+
+810
+00:51:00,080 --> 00:51:04,880
+and from us to communicate to 
+the agents what our intent is. 
+
+811
+00:51:05,640 --> 00:51:09,440
+But what all the stuff 
+underneath that, I don't think I
+
+812
+00:51:09,440 --> 00:51:12,040
+don't think we'll even 
+understand it. 
+
+813
+00:51:12,040 --> 00:51:14,800
+I think eventually the agents 
+will just say we can do this 
+
+814
+00:51:14,800 --> 00:51:20,880
+much more efficiently in 
+language Q or X or Z or M or, 
+
+815
+00:51:20,880 --> 00:51:26,280
+you know, whatever it is, right?
+And and they'll just bypass 
+
+816
+00:51:26,360 --> 00:51:29,000
+bypasses. 
+And you're right, there will be 
+
+817
+00:51:29,520 --> 00:51:34,880
+an ever growing smaller section 
+of people who need to look at 
+
+818
+00:51:34,880 --> 00:51:37,280
+that or want to look at that and
+understand it. 
+
+819
+00:51:37,720 --> 00:51:43,800
+But I think the vast majority of
+people will just not care. 
+
+820
+00:51:44,360 --> 00:51:47,720
+And you mentioned, you said 
+something earlier that really 
+
+821
+00:51:47,720 --> 00:51:50,120
+has resonated with me and I've 
+been thinking about a lot. 
+
+822
+00:51:52,040 --> 00:51:56,920
+You called us creators and in 
+some of the programs, some of 
+
+823
+00:51:56,920 --> 00:52:01,360
+the stuff that I've written 
+recently got written, I don't 
+
+824
+00:52:01,360 --> 00:52:04,680
+actually feel like I'm the 
+author in the, I'm not the 
+
+825
+00:52:04,680 --> 00:52:07,640
+programmer for sure. 
+And I don't know that I'm the 
+
+826
+00:52:08,320 --> 00:52:12,160
+developer. 
+I feel more like in the music 
+
+827
+00:52:12,160 --> 00:52:16,280
+sense, a producer or in the film
+sense, a director, right? 
+
+828
+00:52:16,600 --> 00:52:19,560
+Somebody who is, has got a 
+vision for something. 
+
+829
+00:52:19,880 --> 00:52:23,360
+And I know these tools, I can 
+bring them together and I can 
+
+830
+00:52:23,360 --> 00:52:27,120
+make that vision, I can create 
+that I can bring that vision to 
+
+831
+00:52:27,760 --> 00:52:33,680
+fruition in the way I see it. 
+And it, it's a much more 
+
+832
+00:52:33,680 --> 00:52:37,640
+creative endeavour and I see 
+myself. 
+
+833
+00:52:37,640 --> 00:52:41,520
+So I love the word creator, 
+director, producer, whatever it 
+
+834
+00:52:41,520 --> 00:52:46,080
+is, it's that expense of like, 
+I'm not going to worry myself 
+
+835
+00:52:46,080 --> 00:52:48,880
+about like somebody's got to 
+worry about where to place the 
+
+836
+00:52:48,880 --> 00:52:52,880
+lights and, you know, how to 
+move the faders on the on the, 
+
+837
+00:52:53,320 --> 00:52:57,400
+you know, mixing console. 
+But what I'm hearing and what 
+
+838
+00:52:57,400 --> 00:53:01,600
+I'm seeing and what I envision, 
+that's the thing that I want to,
+
+839
+00:53:01,880 --> 00:53:04,280
+you know, bring to life, so to 
+speak. 
+
+840
+00:53:04,640 --> 00:53:09,120
+I saw an article this morning 
+where they were talking about 
+
+841
+00:53:11,600 --> 00:53:19,080
+how the enterprise level 
+organizations are becoming 
+
+842
+00:53:19,720 --> 00:53:26,360
+unnecessary to do maybe most 
+things because those were 
+
+843
+00:53:26,360 --> 00:53:30,360
+necessary because, you know, you
+built a a company and it started
+
+844
+00:53:30,360 --> 00:53:32,960
+to get too complicated. 
+OK, we have to bring in the 
+
+845
+00:53:33,160 --> 00:53:37,840
+adults, which turned out to be 
+not actually they were Business 
+
+846
+00:53:37,840 --> 00:53:41,680
+School people and they thought 
+they knew what they were doing 
+
+847
+00:53:41,680 --> 00:53:44,520
+and more as more often than not 
+they messed things up. 
+
+848
+00:53:44,880 --> 00:53:47,800
+But anyway, we don't need to do 
+that anymore. 
+
+849
+00:53:47,800 --> 00:53:53,240
+And so, or we're moving in that 
+direction because this is one of
+
+850
+00:53:53,240 --> 00:53:58,560
+the things that I see AI as a 
+huge benefit is what about just 
+
+851
+00:53:59,040 --> 00:54:03,600
+doing all of that company 
+running stuff so you don't have 
+
+852
+00:54:03,600 --> 00:54:08,200
+to and the creatives can focus 
+on creativity and they're not 
+
+853
+00:54:08,200 --> 00:54:13,960
+being driven by the MBAs. 
+They're able to make their 
+
+854
+00:54:13,960 --> 00:54:19,960
+choices and the cut and the, and
+the, the AI is going, oh, you 
+
+855
+00:54:19,960 --> 00:54:23,240
+know, if you make this choice, 
+this may have this impact or 
+
+856
+00:54:23,240 --> 00:54:25,680
+that impact. 
+And they're not saying things 
+
+857
+00:54:25,680 --> 00:54:29,200
+like, well, I'm lonely now. 
+So I want everybody to come back
+
+858
+00:54:29,200 --> 00:54:33,320
+to the office and make, you 
+know, make up reasons for that. 
+
+859
+00:54:33,640 --> 00:54:36,800
+And it's like the more you see 
+this, you, the more you realize 
+
+860
+00:54:36,840 --> 00:54:41,720
+how much BS there is involved in
+all of management. 
+
+861
+00:54:41,720 --> 00:54:45,320
+And so it's like, what if we had
+a manager who was actually 
+
+862
+00:54:45,320 --> 00:54:48,240
+making good decisions for the 
+company rather than good 
+
+863
+00:54:48,240 --> 00:54:53,640
+decisions for themselves? 
+We could, you know, 1000 flowers
+
+864
+00:54:53,640 --> 00:54:57,360
+bloom or whatever. 
+And it's like a few of us say, 
+
+865
+00:54:57,520 --> 00:55:00,680
+Hey, we'd like to, you know, 
+work on this. 
+
+866
+00:55:00,880 --> 00:55:03,880
+And instead of going, oh, we're 
+going to have to get, you know, 
+
+867
+00:55:03,880 --> 00:55:07,760
+people to do all that extra 
+business stuff for us, it's just
+
+868
+00:55:07,760 --> 00:55:09,800
+like, no, just do it. 
+Yeah. 
+
+869
+00:55:10,080 --> 00:55:14,600
+And maybe that's what we need to
+convey to the students who are 
+
+870
+00:55:14,600 --> 00:55:16,920
+in computer. 
+Science and programs today. 
+
+871
+00:55:16,920 --> 00:55:21,040
+I mean, if I was, if I was, 
+yeah, If I was graduating 
+
+872
+00:55:21,040 --> 00:55:27,320
+college today and I realized I 
+had all these tools right at my 
+
+873
+00:55:27,320 --> 00:55:33,480
+fingertips. 
+I, I mean, the, the, the horizon
+
+874
+00:55:33,480 --> 00:55:35,480
+is unlimited. 
+You know, I don't know if that's
+
+875
+00:55:35,480 --> 00:55:38,320
+the right metaphor, but like, 
+like the possibilities are 
+
+876
+00:55:38,320 --> 00:55:39,960
+unlimited. 
+I, I think you're absolutely 
+
+877
+00:55:39,960 --> 00:55:44,880
+right. 
+I think, you know, we are, we're
+
+878
+00:55:44,880 --> 00:55:47,320
+sort of witnessing, like the 
+analogy I think about is the 
+
+879
+00:55:47,360 --> 00:55:49,920
+Internet. 
+And, you know, I, you probably 
+
+880
+00:55:49,920 --> 00:55:54,000
+were, and I certainly was, I was
+on the ARPANET, you know, and I 
+
+881
+00:55:54,000 --> 00:55:57,440
+remember when, you know, like 
+the Domain Name System came out 
+
+882
+00:55:57,440 --> 00:55:59,520
+and it was like, whoa, that's 
+amazing. 
+
+883
+00:55:59,520 --> 00:56:05,960
+And but it was a thing that you 
+had to, you know, like the World
+
+884
+00:56:05,960 --> 00:56:09,120
+Wide Web, right? 
+And so it was a thing that we're
+
+885
+00:56:09,120 --> 00:56:12,120
+like, wow, that is really cool. 
+I don't know what to do with it.
+
+886
+00:56:12,120 --> 00:56:15,200
+Nobody knows what where it's 
+going to go or what to do with 
+
+887
+00:56:15,200 --> 00:56:18,600
+it. 
+And now it is literally it is, 
+
+888
+00:56:18,600 --> 00:56:24,120
+it is at such a pervasive low 
+level that the web and the 
+
+889
+00:56:24,120 --> 00:56:31,120
+Internet, you know, even kids 
+today don't realize I'll, you 
+
+890
+00:56:31,120 --> 00:56:35,000
+know, completely plumbed through
+their everyday experience. 
+
+891
+00:56:35,000 --> 00:56:36,320
+It is. 
+And they don't even think about 
+
+892
+00:56:36,320 --> 00:56:37,520
+it, right? 
+Like they just open up their 
+
+893
+00:56:37,520 --> 00:56:40,000
+phone, they go to, you know, 
+Instagram or whatever it is. 
+
+894
+00:56:40,000 --> 00:56:41,600
+And they're like, OK, cool, 
+blah, blah, blah. 
+
+895
+00:56:41,600 --> 00:56:46,520
+You know, and I think we're, I 
+think right now AI is at that 
+
+896
+00:56:46,800 --> 00:56:49,840
+stage where we're just like, oh,
+it's such an amazing thing. 
+
+897
+00:56:49,840 --> 00:56:53,960
+And there will be time. 
+There will be a time where it is
+
+898
+00:56:53,960 --> 00:56:57,320
+just absolutely pervasive and we
+don't even think about it. 
+
+899
+00:56:57,320 --> 00:57:01,960
+And I think about like 
+everything from like, you know, 
+
+900
+00:57:02,320 --> 00:57:05,000
+modern cars, right? 
+They're basically computers on 
+
+901
+00:57:05,000 --> 00:57:08,840
+wheels, but they have a jillion 
+little options and switches. 
+
+902
+00:57:08,840 --> 00:57:12,720
+And all I want to do is make my 
+temperature 2° cooler, you know,
+
+903
+00:57:12,720 --> 00:57:16,200
+when I walk and I get into it. 
+Or I think about like the music 
+
+904
+00:57:16,200 --> 00:57:19,280
+software that I use, you know, 
+and it's incredibly powerful, 
+
+905
+00:57:19,520 --> 00:57:23,560
+but I know maybe 110th of it, 
+you know, and I want the A and I
+
+906
+00:57:23,560 --> 00:57:27,760
+know what I want and I want to 
+be able to tell the AI, Oh, take
+
+907
+00:57:27,760 --> 00:57:31,600
+this three, these three beats 
+and move them back a millisecond
+
+908
+00:57:31,600 --> 00:57:34,560
+you. 
+Know without having to dive into
+
+909
+00:57:34,560 --> 00:57:36,880
+the user manual, yeah. 
+Exactly. 
+
+910
+00:57:37,120 --> 00:57:39,360
+Exactly. 
+I heard someone call this, this 
+
+911
+00:57:39,360 --> 00:57:43,160
+next generation software, which 
+I don't know if I love the name,
+
+912
+00:57:43,160 --> 00:57:47,640
+but I like the idea that that we
+we now can build, we can build 
+
+913
+00:57:47,640 --> 00:57:49,160
+whatever. 
+And we're also getting to the 
+
+914
+00:57:49,160 --> 00:57:52,120
+place where we can customize 
+whatever and interact in the 
+
+915
+00:57:52,120 --> 00:57:54,760
+ways that we want to interact, 
+like setting settings. 
+
+916
+00:57:54,760 --> 00:57:57,000
+Menus are going to go away. 
+I'm never going to have to 
+
+917
+00:57:57,000 --> 00:57:59,920
+search through settings ever 
+again in the software. 
+
+918
+00:58:00,040 --> 00:58:02,480
+World right? 
+Or menus or any of that crap. 
+
+919
+00:58:02,480 --> 00:58:03,240
+Exactly. 
+Right who? 
+
+920
+00:58:03,840 --> 00:58:07,680
+Cares. 
+I think it's super exciting, but
+
+921
+00:58:07,680 --> 00:58:11,080
+what's weird is that we've as 
+developers mostly focus the 
+
+922
+00:58:11,080 --> 00:58:15,040
+innovation on our tools, right? 
+We've we've taken all this great
+
+923
+00:58:15,080 --> 00:58:17,720
+AI technology and we have 
+applied it to make building 
+
+924
+00:58:17,960 --> 00:58:21,320
+software better. 
+And there will be a moment where
+
+925
+00:58:21,520 --> 00:58:24,840
+where this reaches out to 
+totally other domains. 
+
+926
+00:58:25,200 --> 00:58:28,160
+Last week at the conference I 
+was at, one of the best talks I 
+
+927
+00:58:28,160 --> 00:58:32,520
+saw was just a short keynote on 
+a guy whose dog got cancer. 
+
+928
+00:58:32,840 --> 00:58:36,400
+And he didn't know anything 
+about biology and mRNA stuff, 
+
+929
+00:58:36,400 --> 00:58:41,280
+but he used AI to create a 
+customized MRAMRNA vaccine for 
+
+930
+00:58:41,280 --> 00:58:45,160
+his dog to cure its cancer. 
+And I'm like, that is amazing. 
+
+931
+00:58:45,320 --> 00:58:48,920
+And this is like we're just at 
+the beginning of being able to 
+
+932
+00:58:48,920 --> 00:58:51,960
+use these tools in totally other
+domains. 
+
+933
+00:58:51,960 --> 00:58:55,640
+And I've seen people, you know, 
+they'll write things, they'll go
+
+934
+00:58:56,120 --> 00:59:00,280
+well, AI has only ever been used
+in the tech field. 
+
+935
+00:59:00,280 --> 00:59:02,400
+That's only place where it's 
+making a big difference. 
+
+936
+00:59:02,400 --> 00:59:06,080
+And I'm thinking, no, they've 
+been solving math problems. 
+
+937
+00:59:06,080 --> 00:59:09,360
+They've been solving material 
+science and chemistry. 
+
+938
+00:59:09,360 --> 00:59:12,040
+Self driving. 
+So all kinds of stuff. 
+
+939
+00:59:12,360 --> 00:59:15,600
+And this is well, I don't know, 
+I think this kind of comes from 
+
+940
+00:59:15,600 --> 00:59:20,680
+the and science fiction writers 
+do not do a good job. 
+
+941
+00:59:21,040 --> 00:59:25,280
+You know, a lot of times they'll
+go, well, what happens if I 
+
+942
+00:59:25,280 --> 00:59:28,480
+don't know, take the Klingons. 
+What happens if a Bronze Age 
+
+943
+00:59:28,480 --> 00:59:31,760
+society gets high technology 
+somehow? 
+
+944
+00:59:32,360 --> 00:59:35,160
+And then they're they're just 
+the same. 
+
+945
+00:59:35,160 --> 00:59:39,080
+Their culture never changes. 
+And you're going that can't 
+
+946
+00:59:39,080 --> 00:59:42,720
+that, you know, we see this in 
+our own world. 
+
+947
+00:59:42,720 --> 00:59:46,560
+We have new technology and it 
+obviously changes the culture 
+
+948
+00:59:46,840 --> 00:59:49,720
+and it spreads out and effects 
+other things. 
+
+949
+00:59:49,720 --> 00:59:55,320
+And so I don't know I I'm not. 
+I think you're going to, you're 
+
+950
+00:59:55,320 --> 01:00:01,680
+going to see, I think the next, 
+I think one very valuable thing 
+
+951
+01:00:01,680 --> 01:00:04,440
+to mind if I was writing a 
+software package, it would be 
+
+952
+01:00:04,440 --> 01:00:08,320
+hyper. 
+Customization and I and here's 
+
+953
+01:00:08,320 --> 01:00:10,200
+the analogy. 
+And first of all, like RIP 
+
+954
+01:00:10,360 --> 01:00:13,920
+Patrick Stewart and Walter 
+Koenig, who, you know, sadly, 
+
+955
+01:00:13,920 --> 01:00:16,800
+you know, Wayne didn't both 
+passed away this week. 
+
+956
+01:00:16,800 --> 01:00:18,280
+But. 
+Oh, I didn't know that. 
+
+957
+01:00:18,280 --> 01:00:19,400
+I think. 
+Yeah. 
+
+958
+01:00:19,400 --> 01:00:20,680
+Oh, yeah. 
+Oh, yeah. 
+
+959
+01:00:20,680 --> 01:00:23,840
+It's super sad. 
+Patrick Stewart yesterday. 
+
+960
+01:00:24,360 --> 01:00:28,240
+No. 
+But I think about the Star Trek 
+
+961
+01:00:28,240 --> 01:00:33,600
+analogy and you imagine you've 
+got this amazingly complex 
+
+962
+01:00:33,600 --> 01:00:38,760
+Starship, right, With like 
+dozens of species, OK. 
+
+963
+01:00:39,160 --> 01:00:44,800
+And now you sit down and, you 
+know, like a human or a Klingon 
+
+964
+01:00:44,800 --> 01:00:48,680
+or, you know, you know, some 
+other species has to sit down at
+
+965
+01:00:48,680 --> 01:00:51,040
+this console and drive the 
+Starship. 
+
+966
+01:00:51,840 --> 01:00:54,080
+Well, they've got. 
+Why are they driving the 
+
+967
+01:00:54,080 --> 01:00:59,160
+Starship is question one. 
+Yes, exactly. 
+
+968
+01:01:00,480 --> 01:01:04,840
+But you walk up to any console 
+and it has to adapt to you. 
+
+969
+01:01:04,960 --> 01:01:08,080
+It knows who you are and it has 
+to adapt to the way you work. 
+
+970
+01:01:08,360 --> 01:01:10,200
+And we all. 
+That's why you love. 
+
+971
+01:01:10,440 --> 01:01:13,760
+Yeah, I love Emacs and you love 
+them and you know, like, like 
+
+972
+01:01:14,040 --> 01:01:17,720
+those are, those are very coarse
+grained adaptations to 
+
+973
+01:01:18,120 --> 01:01:21,560
+individual preferences. 
+And I think we're going to get 
+
+974
+01:01:21,560 --> 01:01:27,600
+really hyper, you know, 
+adaptation, hyperly adaptive 
+
+975
+01:01:27,600 --> 01:01:32,280
+programs who just learned like, 
+I mean, even the agents do this 
+
+976
+01:01:32,280 --> 01:01:35,240
+now. 
+Like I have trained my agent, 
+
+977
+01:01:35,240 --> 01:01:42,240
+the one that I use most often, 
+to write ODE and prose the way I
+
+978
+01:01:42,240 --> 01:01:44,880
+would write it. 
+So when it ends up writing 
+
+979
+01:01:44,880 --> 01:01:47,080
+something, I'll go. 
+You know, I wouldn't say it that
+
+980
+01:01:47,080 --> 01:01:49,560
+way, but I do that much less now
+because it is. 
+
+981
+01:01:49,680 --> 01:01:51,600
+It's as. 
+Long though, it keeps getting 
+
+982
+01:01:51,600 --> 01:01:53,840
+better and better. 
+And then every once in a while 
+
+983
+01:01:53,840 --> 01:01:56,880
+I'll come across something and 
+I'm going, This is word salad. 
+
+984
+01:01:57,560 --> 01:02:01,760
+And I'm getting to the point now
+where I say now, because I don't
+
+985
+01:02:01,760 --> 01:02:05,440
+know if you've gotten this, but 
+it'll do this like it has a PhD 
+
+986
+01:02:05,440 --> 01:02:09,920
+in grammar and it'll analyze it 
+goes, oh, well, here's why that 
+
+987
+01:02:09,920 --> 01:02:13,040
+sentence didn't work. 
+And I go, OK, now capture that 
+
+988
+01:02:13,040 --> 01:02:17,640
+analysis and put it in my corpus
+of writing things. 
+
+989
+01:02:17,840 --> 01:02:21,160
+So you don't do that anymore. 
+Yeah, exactly. 
+
+990
+01:02:21,680 --> 01:02:26,440
+I do things like, I don't like M
+dashes, you know, or like, 
+
+991
+01:02:27,200 --> 01:02:31,080
+please use English spelling, you
+know, US English spelling 
+
+992
+01:02:31,360 --> 01:02:34,840
+instead of British English 
+spelling or things like that. 
+
+993
+01:02:34,840 --> 01:02:37,320
+And sometimes you have to teach 
+it multiple times, but 
+
+994
+01:02:37,320 --> 01:02:41,000
+eventually I think it learns out
+how. 
+
+995
+01:02:41,400 --> 01:02:44,440
+And that's, I think the ultimate
+goal, right? 
+
+996
+01:02:44,440 --> 01:02:50,120
+I want it still to be a product 
+of my creativity, but I want it 
+
+997
+01:02:50,120 --> 01:02:53,400
+to be to just take all the toil 
+out of my life. 
+
+998
+01:02:53,400 --> 01:02:56,920
+Like the less toil I have to 
+deal with the better. 
+
+999
+01:02:57,200 --> 01:03:00,720
+But I but it fits my vision 
+well. 
+
+1000
+01:03:00,720 --> 01:03:02,920
+And there are things like, I 
+mean, other people, like there's
+
+1001
+01:03:02,920 --> 01:03:05,480
+a skill based on Strunk and 
+White. 
+
+1002
+01:03:06,760 --> 01:03:09,640
+Yeah, you know, and you can 
+bring all those in, but it 
+
+1003
+01:03:09,640 --> 01:03:12,720
+doesn't cover everything, you 
+know, there's the how you get it
+
+1004
+01:03:12,720 --> 01:03:17,240
+to do active voice. 
+Yes, exactly. 
+
+1005
+01:03:17,720 --> 01:03:21,040
+And, you know, and I'm 
+constantly tuning that, and at 
+
+1006
+01:03:21,040 --> 01:03:25,280
+some point I think my thing 
+would probably be useful for 
+
+1007
+01:03:25,280 --> 01:03:28,200
+other people to use. 
+So yeah, Bruce dot MD. 
+
+1008
+01:03:29,360 --> 01:03:30,680
+Yeah. 
+You know. 
+
+1009
+01:03:30,840 --> 01:03:35,160
+So to bring this full circle to 
+close us, I'd heard someone 
+
+1010
+01:03:35,160 --> 01:03:41,360
+propose that for this generation
+of of like software or deeply 
+
+1011
+01:03:41,360 --> 01:03:45,440
+customizable software, that Lisp
+will actually be the right 
+
+1012
+01:03:45,440 --> 01:03:47,800
+language. 
+And I'm like it actually. 
+
+1013
+01:03:47,800 --> 01:03:50,360
+You said something along these 
+lines at the beginning where is 
+
+1014
+01:03:50,360 --> 01:03:53,840
+like like, yeah, maybe this all 
+just comes back around to Lisp 
+
+1015
+01:03:53,840 --> 01:03:57,280
+and that's, that becomes the the
+thing that enables this kind of 
+
+1016
+01:03:57,280 --> 01:03:59,800
+deep customizability. 
+Yeah. 
+
+1017
+01:04:00,800 --> 01:04:05,720
+You're wrestling with them. 
+I am because, well, I mean like 
+
+1018
+01:04:05,720 --> 01:04:09,040
+what is for example, what does 
+Lisp do with effects? 
+
+1019
+01:04:10,360 --> 01:04:13,680
+Yeah. 
+I saw, oh I saw a little clip 
+
+1020
+01:04:13,680 --> 01:04:15,800
+the other day where somebody was
+going. 
+
+1021
+01:04:16,200 --> 01:04:20,800
+Why did they put an S in lisp? 
+It seems cruel. 
+
+1022
+01:04:26,960 --> 01:04:30,640
+Yeah, yeah, that's funny. 
+Yeah, yeah. 
+
+1023
+01:04:30,680 --> 01:04:35,320
+I, I just don't, I don't know. 
+I'm, I think there's a lot of 
+
+1024
+01:04:35,320 --> 01:04:41,600
+advances since Lisp that I'm not
+sure that that would be the, the
+
+1025
+01:04:41,600 --> 01:04:44,400
+right language. 
+I think probably eventually 
+
+1026
+01:04:44,400 --> 01:04:52,800
+we'll be able to say to the AI, 
+here's our constraints, create a
+
+1027
+01:04:52,800 --> 01:04:55,880
+language that meets them. 
+I mean, why not? 
+
+1028
+01:04:56,080 --> 01:05:00,520
+And if you know, and then you 
+use that language and 
+
+1029
+01:05:00,520 --> 01:05:01,920
+everybody's happy. 
+I don't know. 
+
+1030
+01:05:02,760 --> 01:05:05,440
+Yeah, it's probably gonna be a 
+lisp is what it's gonna. 
+
+1031
+01:05:05,480 --> 01:05:07,200
+You think it'll be a lisp? 
+I don't know. 
+
+1032
+01:05:07,480 --> 01:05:09,280
+It's gonna be, you know, it's 
+gonna be fourth. 
+
+1033
+01:05:09,920 --> 01:05:12,760
+Yeah, that was my, that was my 
+first professional language, was
+
+1034
+01:05:12,760 --> 01:05:13,840
+4th. 
+Really. 
+
+1035
+01:05:13,840 --> 01:05:18,560
+I played with it a little, but I
+don't know if I ever wrote 
+
+1036
+01:05:18,560 --> 01:05:21,440
+anything serious in it. 
+Yeah, that was because that's 
+
+1037
+01:05:21,440 --> 01:05:25,640
+kind of a mind bending thing. 
+No, it's a right only language. 
+
+1038
+01:05:25,920 --> 01:05:29,360
+Yeah, yes, exactly. 
+And I don't know that we want 
+
+1039
+01:05:29,360 --> 01:05:32,360
+that. 
+Or here's another possibility. 
+
+1040
+01:05:32,680 --> 01:05:36,800
+We'll get to the point where we 
+define the problem and the AI 
+
+1041
+01:05:36,800 --> 01:05:40,880
+will go, OK, I'm going to create
+the language that fits that 
+
+1042
+01:05:40,880 --> 01:05:43,480
+problem, which we've done 
+before. 
+
+1043
+01:05:43,560 --> 01:05:46,440
+I mean, we've, you know, like if
+you look at Erlang, that was 
+
+1044
+01:05:46,440 --> 01:05:51,320
+kind of a language designed to 
+fit and, and Go is, I would 
+
+1045
+01:05:51,320 --> 01:05:55,040
+argue, not a universal language,
+but a language designed to solve
+
+1046
+01:05:55,040 --> 01:05:57,360
+a particular problem, set of 
+problems. 
+
+1047
+01:05:57,360 --> 01:06:01,160
+So why? 
+Why wouldn't the AI do the same 
+
+1048
+01:06:01,160 --> 01:06:03,960
+thing at some point? 
+Exactly. 
+
+1049
+01:06:04,440 --> 01:06:09,720
+Which would be a weird a weird 
+world to be in, but I don't 
+
+1050
+01:06:09,720 --> 01:06:11,240
+know. 
+Maybe that's where we're 
+
+1051
+01:06:11,240 --> 01:06:11,640
+heading. 
+It's. 
+
+1052
+01:06:11,960 --> 01:06:14,880
+Kind of be fun, yeah. 
+Yeah, yeah, totally. 
+
+1053
+01:06:15,200 --> 01:06:18,200
+Well, Barry, I know you've got 
+got to drop in a few, but any 
+
+1054
+01:06:18,200 --> 01:06:23,480
+closing thoughts? 
+I always have a good time 
+
+1055
+01:06:23,480 --> 01:06:26,120
+hanging out with Barry. 
+I don't know. 
+
+1056
+01:06:26,280 --> 01:06:27,400
+We got to get them up here to 
+Chris. 
+
+1057
+01:06:27,400 --> 01:06:29,760
+Well, that's. 
+The plan it's really fun. 
+
+1058
+01:06:29,840 --> 01:06:30,760
+That is the. 
+Plan. 
+
+1059
+01:06:31,000 --> 01:06:33,560
+Just to have them come up here 
+sometime and we will. 
+
+1060
+01:06:34,360 --> 01:06:35,800
+Oh, by the way, we forgot to say
+winter. 
+
+1061
+01:06:35,800 --> 01:06:39,760
+Tech Forum coming up. 
+Winter Tech Forum will be March 
+
+1062
+01:06:39,760 --> 01:06:42,240
+1st through 5th. 
+You're in Crested Butte. 
+
+1063
+01:06:42,640 --> 01:06:45,200
+Yeah. 
+And we, as usual, we'll probably
+
+1064
+01:06:45,200 --> 01:06:49,480
+have some new tweaking. 
+We might have the banquet at 
+
+1065
+01:06:49,480 --> 01:06:51,360
+Bill and Halley's new house. 
+I don't know. 
+
+1066
+01:06:51,360 --> 01:06:54,040
+That would be fun. 
+Well, yeah, that might be the. 
+
+1067
+01:06:54,320 --> 01:06:56,280
+Yeah. 
+And I don't know if you ever do 
+
+1068
+01:06:56,280 --> 01:06:59,120
+anything in the winter, but you 
+know, it'd be great to have you 
+
+1069
+01:06:59,120 --> 01:07:00,640
+come up for the for. 
+The. 
+
+1070
+01:07:00,680 --> 01:07:04,720
+Conference. 
+Yeah, put it on the calendar. 
+
+1071
+01:07:04,840 --> 01:07:07,280
+Yeah, yeah, that would be, that 
+would be fun. 
+
+1072
+01:07:07,280 --> 01:07:10,520
+Then you get to see what we're 
+like in the winter, and this 
+
+1073
+01:07:10,520 --> 01:07:13,440
+winter might be a whole ton of 
+snow. 
+
+1074
+01:07:13,440 --> 01:07:16,160
+El Nino, Yeah. 
+Yeah. 
+
+1075
+01:07:16,400 --> 01:07:19,840
+So no, no, yeah. 
+Well, thank you both. 
+
+1076
+01:07:19,840 --> 01:07:21,240
+This is all we thank you, Barry.
+This. 
+
+1077
+01:07:21,240 --> 01:07:24,080
+Has been so much fun. 
+I know it has Python 
+
+1078
+01:07:24,080 --> 01:07:26,680
+conferences. 
+Bruce and I will always try to 
+
+1079
+01:07:26,680 --> 01:07:31,200
+have an evening dinner and get 
+together and we could talk, you 
+
+1080
+01:07:31,200 --> 01:07:34,440
+know, we have talked for hours 
+and hours and hours and, and 
+
+1081
+01:07:34,440 --> 01:07:36,040
+it's always so enjoyable. 
+Fun. 
+
+1082
+01:07:36,400 --> 01:07:39,000
+Yeah. 
+It's, Oh my, it's kind of the 
+
+1083
+01:07:39,000 --> 01:07:43,120
+peak of the conference anymore, 
+you know, those, those few 
+
+1084
+01:07:43,480 --> 01:07:47,120
+events where you're just, you 
+know, yeah, yeah. 
+
+1085
+01:07:47,200 --> 01:07:50,440
+And I'm planning it being at the
+next one, so. 
+
+1086
+01:07:50,440 --> 01:07:52,640
+And I'm sure you will be. 
+Yeah. 
+
+1087
+01:07:52,640 --> 01:07:54,680
+So we'll have to set aside some 
+time. 
+
+1088
+01:07:55,280 --> 01:07:57,400
+You, me and Guido go out to 
+dinner or whatever. 
+
+1089
+01:07:58,920 --> 01:07:59,840
+Yeah. 
+Yeah, definitely. 
+
+1090
+01:08:00,280 --> 01:08:02,200
+All right. 
+Well, thanks, Barry. 
+
+1091
+01:08:02,200 --> 01:08:02,960
+It was great. 
+Thank. 
+
+1092
+01:08:03,000 --> 01:08:05,280
+You thank you very much. 
+Cheers.
+
