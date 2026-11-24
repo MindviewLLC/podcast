@@ -165,11 +165,28 @@ they must not (`verify.py` fails if they are).
 - **Logo:** `images/hpp.jpg` (also the fallback everywhere).
 - **Hosts:** real photos `images/bruce-eckel.jpg`, `images/james-ward.jpg`
   (mindviewllc.com/publicity/BruceEckel.jpg; jamesward.com about-page photo).
-- **Guests → `images/guests/<slug>.jpg`:** only from the guest's OWN
-  name-linked profile in the description (anchor text == guest name — do NOT grab
-  resource/repo links or you get wrong faces/org logos). Resolve via
-  `github.com/<user>.png` or `unavatar.io/{twitter|linkedin}/<user>` or
-  `unavatar.io/<domain>`. No photo → deterministic gradient initials avatar.
+- **Guests → `images/guests/<slug>.jpg`:** a photo of the guest from a page
+  that is about that person. Look in this order:
+  1. A profile the episode description links: a link whose text is the
+     guest's name, or a resource line labelled as theirs
+     (`- Leo on Twitter/X: https://x.com/eulerfx`).
+  2. Otherwise, search for the guest's name plus what the description says
+     about them (employer, project, book, talk). Use their own site, GitHub or
+     social profile, or a conference speaker page (Sessionize, the event's own
+     speaker page, InfoQ/QCon, GOTO, Devoxx, KotlinConf and the like). Many
+     guests are conference speakers, so those pages often have a good photo.
+
+  Before using a photo, confirm it is that guest. The page must name them and
+  match the description (same employer, project or talk subject), or link to
+  a profile you already confirmed. A name match alone isn't enough, because
+  names are shared. Never take the image of a resource, repo or company link
+  (that's how org logos and wrong faces get in), and never use a group photo
+  or a logo. When you can't confirm it, use the initials avatar: a missing
+  photo is better than a wrong one. Say in the run report where each new photo
+  came from. Get the image via `github.com/<user>.png`,
+  `unavatar.io/{twitter|linkedin}/<user>`, `unavatar.io/<domain>`, or the
+  speaker page's own image URL, and crop it square on the face if it isn't
+  square. No photo → deterministic gradient initials avatar.
   Those sources often return PNG: convert to a real JPEG before saving as
   `.jpg`, flattening any transparency onto the `.avatar` gradient (`#0f9d58` →
   `#34d399`, 135°) so it looks the same as it would on the page. `verify.py`
