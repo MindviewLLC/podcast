@@ -88,7 +88,9 @@ Run by hand:
   episodes (from `#109`) whose real-video thumbnail (not the logo still of a
   podcast re-publish) isn't in
   `images/episodes/` yet; `--apply` saves them and deletes the audio-only share
-  card so it redraws. The pages then need to point at the new image.
+  card so it redraws, and writes the 640×360 `<slug>-sm.jpg` copy of any
+  thumbnail that lacks one. The pages then need to point at the new images
+  (the hero at `<slug>.jpg`, the cards at `<slug>-sm.jpg`).
 
 - `make_og_default.py --force` — redraws `images/og-default.jpg`, the branded
   fallback card for the home, list and topic pages. Only needed if the brand

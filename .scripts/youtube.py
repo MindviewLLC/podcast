@@ -3,6 +3,7 @@
 
     python3 .scripts/youtube.py            # list videos by episode, report missing thumbnails
     python3 .scripts/youtube.py --apply    # also save them to images/episodes/<slug>.jpg
+                                           # and write any missing <slug>-sm.jpg
 
 The channel listing is the page's ytInitialData plus `youtubei/v1/browse`
 continuations (AGENTS.md "Images"). The channel holds two kinds of upload: real
@@ -12,6 +13,11 @@ thumbnail with images/hpp.jpg (the logo uploads score under 5, real videos over
 60), so a re-publish never supplies a thumbnail or a "Watch on YouTube" link.
 Video only started at CUTOFF. Saving a thumbnail deletes that episode's
 audio-only share card so `make_cards.py` redraws it with the photo.
+
+Every thumbnail also gets a SMALL copy, images/episodes/<slug>-sm.jpg, for the
+episode cards and the home page's `.latest-art`, which show it at most ~480px
+wide: the full 1280x720 file is ~130 KB, the small one ~40 KB. Small copies
+are write-once, like the share cards.
 """
 from __future__ import annotations
 
@@ -29,6 +35,8 @@ import hpp  # noqa: E402
 CHANNEL = "UCJXWVm6uAKh_Nd1mqkKLW5A"
 CUTOFF = 109
 UA = {"User-Agent": "Mozilla/5.0", "Accept-Language": "en"}
+SMALL = (640, 360)      # 480x270 card slot at ~1.33x; sharp enough on 2x screens
+SMALL_QUALITY = 80
 
 
 def _get(url: str, data: bytes | None = None, headers: dict | None = None) -> bytes:
@@ -156,6 +164,24 @@ def missing_thumbnails(real: dict[int, tuple[str, bytes]]) -> dict[int, tuple[st
             and not os.path.exists(f"images/episodes/{slugs[num]}.jpg")}
 
 
+def small_path(slug: str) -> str:
+    return f"images/episodes/{slug}-sm.jpg"
+
+
+def missing_small() -> list[str]:
+    """Slugs whose images/episodes/<slug>.jpg has no <slug>-sm.jpg yet."""
+    return sorted(slug for slug in hpp.episode_slugs().values()
+                  if os.path.exists(f"images/episodes/{slug}.jpg")
+                  and not os.path.exists(small_path(slug)))
+
+
+def write_small(slug: str) -> None:
+    from PIL import Image, ImageOps
+    img = Image.open(f"images/episodes/{slug}.jpg").convert("RGB")
+    ImageOps.fit(img, SMALL, Image.LANCZOS).save(
+        small_path(slug), "JPEG", quality=SMALL_QUALITY, optimize=True, progressive=True)
+
+
 def main() -> None:
     hpp.require_root()
     vids = videos()
@@ -170,7 +196,6 @@ def main() -> None:
     missing = missing_thumbnails(real)
     if not missing:
         print("thumbnails: none missing")
-        return
     for num, (vid, b) in missing.items():
         slug = slugs[num]
         if "--apply" in sys.argv[1:]:
@@ -182,6 +207,12 @@ def main() -> None:
             print(f"saved images/episodes/{slug}.jpg from {vid} (share card will redraw)")
         else:
             print(f"missing thumbnail: #{num} {slug} <- {vid} (run with --apply)")
+    for slug in missing_small():
+        if "--apply" in sys.argv[1:]:
+            write_small(slug)
+            print(f"wrote {small_path(slug)} (point the episode cards and .latest-art at it)")
+        else:
+            print(f"missing small copy: {small_path(slug)} (run with --apply)")
 
 
 if __name__ == "__main__":

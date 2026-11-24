@@ -12,6 +12,9 @@ Covers the "Verify before finishing" list in AGENTS.md:
   - every <img> has width/height (no layout shift as it loads), and the
     above-the-fold hero images are not lazy-loaded
   - every referenced .jpg really is a JPEG
+  - every episode thumbnail has its small copy (<slug>-sm.jpg), and the episode
+    cards and the home page's .latest-art use it, not the 1280x720 original
+  - every episode card's summary is its episode page's <meta name="description">
   - feed.xml parses and has one item per episode page, each linking to it
   - no URL uses www.happypathprogramming.com (it only redirects)
   - llms.txt links every episode, guest and topic page, and llms-full.txt has
@@ -150,10 +153,33 @@ def check_llms() -> None:
         problems.append(f"llms-full.txt: no section for {url}")
 
 
+def check_small_thumbnails() -> None:
+    """Every images/episodes/<slug>.jpg has the <slug>-sm.jpg that youtube.py writes."""
+    for f in sorted(os.listdir("images/episodes")):
+        if f.endswith(".jpg") and not f.endswith("-sm.jpg"):
+            small = f"images/episodes/{f[:-4]}-sm.jpg"
+            if not os.path.exists(small):
+                problems.append(f"{small} missing (python3 .scripts/youtube.py --apply)")
+
+
+CARD_SUMMARY = re.compile(
+    r'<a href="(?:\.\./)?episodes/([^"]+)\.html">(?:(?!<article).)*?'
+    r'<p class="ep-card-summary">(.*?)</p>', re.S)
+
+
+def meta_descriptions() -> dict[str, str]:
+    """episode slug -> its page's <meta name="description">, unescaped."""
+    return {slug: hpp.unesc(hpp.field(
+                open(f"episodes/{slug}.html", encoding="utf-8").read(),
+                r'<meta name="description" content="(.*?)">'))
+            for slug in hpp.episode_slugs().values()}
+
+
 def main() -> None:
     hpp.require_root()
     paths = hpp.pages()
     ld_blocks = share_rows = 0
+    descriptions = meta_descriptions()
 
     for path in paths:
         doc = open(path, encoding="utf-8").read()
@@ -198,6 +224,17 @@ def main() -> None:
         for img in re.findall(r'<div class="ep-hero-art"><img\b[^>]*>', doc):
             if 'loading="lazy"' in img:
                 problems.append(f"{path}: above-the-fold <img> is lazy-loaded: {img[:80]}")
+        # cards show a thumbnail at most ~480px wide: use the small copy
+        for img in re.findall(r'<a class="ep-card-art"[^>]*>\s*<img\b[^>]*>'
+                              r'|<img class="latest-art"[^>]*>', doc):
+            src = re.search(r'src="([^"]*)"', img).group(1)
+            if "images/episodes/" in src and not src.endswith("-sm.jpg"):
+                problems.append(f"{path}: card uses the full thumbnail {src}, "
+                                f"not its -sm.jpg copy")
+        for ep, summary in CARD_SUMMARY.findall(doc):
+            if ep in descriptions and hpp.unesc(summary) != descriptions[ep]:
+                problems.append(f"{path}: card summary for {ep} isn't that page's "
+                                f'<meta name="description">')
 
         base = os.path.dirname(path)
         for m in re.finditer(r'(?:href|src)="([^"]+)"', doc):
@@ -228,6 +265,7 @@ def main() -> None:
                 if local != want:
                     problems.append(f"{path}: og:image is {local}, expected {want}")
 
+    check_small_thumbnails()
     check_feed()
     check_llms()
     check_transcripts()

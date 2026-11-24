@@ -81,7 +81,11 @@ secrets in `.scripts/`. `.slugignore` keeps it off the site, but the repo is pub
   becomes a `.res-list` link with the label as its text, the prose keeps only
   the sentences before "Resources", and a sentence that runs into the next one
   (`…explains itself.Aver is…`) gets its space back. Write the head's
-  `<meta name="description">` from that same prose.
+  `<meta name="description">` from that same prose (VOICE.md says how).
+  Every card for the episode (`.ep-card-summary` on the home, episodes, guest
+  and topic pages) carries that meta description exactly, never the full prose
+  or a character cut; the CSS clamps it to 3 lines. `verify.py` fails on a card
+  whose summary differs from its page's meta description.
   **The feed's CDN can serve a copy up to a week old** (`s-maxage=605009`; it
   ignores cache-busting query strings and `Cache-Control: no-cache`), so a
   single fetch can be missing the newest episode. `hpp.fetch_feed` retries and
@@ -207,8 +211,16 @@ they must not (`verify.py` fails if they are).
   the same title as the real video, with the logo as a still; its thumbnail is
   the logo, sometimes with unique bytes, so `youtube.real_videos` compares each
   thumbnail with `images/hpp.jpg` instead of comparing bytes. Video only started
-  at episode #109 (cutoff `#109`). Result: ~13 real thumbnails; the rest use the
+  at episode #109 (cutoff `#109`). Result: ~14 real thumbnails; the rest use the
   logo.
+  **Small copy:** `--apply` also writes `images/episodes/<slug>-sm.jpg`
+  (640×360, ~40 KB instead of ~130 KB) for every thumbnail that lacks one
+  (write-once, like the share cards). The places that show a thumbnail at card
+  size use it: every `.ep-card-art` (`width="480" height="270"`) and the home
+  page's `.latest-art` (`width="640" height="360"`; its box is 100% wide and
+  128px tall, so the attributes give the file's shape). The episode page's
+  `.ep-hero-art` and the share cards use the full-size file. `verify.py` fails
+  on a missing `-sm.jpg` or a card that uses the full one.
 - **Per-episode listen/watch links (hero `.pills`, written by
   `.scripts/episode_links.py`):** you write the hero row with "Play on Spotify"
   (the RSS `<link>`). The tool then adds "Play on Apple Podcasts" (the

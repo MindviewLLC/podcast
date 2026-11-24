@@ -144,7 +144,8 @@ yourself:
   as long as the total stays under about 220. Never cut mid-word, and never
   include resource lines. `social.py`
   copies it into `og:description`, `twitter:description` and the JSON-LD,
-  so it is the text people see in search results and link previews.
+  so it is the text people see in search results and link previews. The
+  episode's cards (`.ep-card-summary`) show the same text.
 - **Resource labels**: when the feed gives a bare URL, a bare domain or a
   vague label, write the label using the rules above. Take it from the feed
   when the feed has one in front of the URL ("Challenge details:
